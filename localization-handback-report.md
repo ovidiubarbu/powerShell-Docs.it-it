@@ -1,11 +1,26 @@
 # <a name='report-top'></a> Localization Handback Report
 
 ## Summary
- Total Files | 0
+ Total Files | 1
 
 ## File List
+ Source File | Status | Details 
+ ----------- | ------ | ------- 
+ [dsc\lnxFileLineResource.md](https://github.com/PowerShell/powerShell-Docs/blob/dcacf14d13cc0c3e4bb3b6602ad3ab6b3141471f/dsc/lnxFileLineResource.md) | InSyncHandedBackSuccess | [Details](#0b7aa5b03a19ff1afa79f5ae96f24d034531e4b832)
 
 ## Item Details
+##### <a name='0b7aa5b03a19ff1afa79f5ae96f24d034531e4b832'></a> Source: [dsc\lnxFileLineResource.md](https://github.com/PowerShell/powerShell-Docs/blob/dcacf14d13cc0c3e4bb3b6602ad3ab6b3141471f/dsc/lnxFileLineResource.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [dsc\lnxFileLineResource.md](https://github.com/PowerShell/powerShell-Docs.it-it/blob/4a94bce442ca447646454320a8dd03fcb685d663/dsc/lnxFileLineResource.md)
+* Handoff File: [lnxFileLineResource.d91fc802a4c6cdbff5a2e35f92b34c36c6dbf5eb.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/5fd70febe5c384b222a47629971f6771c14d913b/ol-handoff/PowerShell/powerShell-Docs.it-it/live/lnxFileLineResource.d91fc802a4c6cdbff5a2e35f92b34c36c6dbf5eb.it-it.xlf)
+* Handoff Datetime: 2016-02-23 03:03:15
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [lnxFileLineResource.d91fc802a4c6cdbff5a2e35f92b34c36c6dbf5eb.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/918cafc86de7aeb0be0375c88bc63c047bf27e01/ol-handback/PowerShell/powerShell-Docs.it-it/live/lnxFileLineResource.d91fc802a4c6cdbff5a2e35f92b34c36c6dbf5eb.it-it.xlf)
+* Handback Datetime: 2016-03-22 01:50:28
+* [Back to Top](#report-top)
+
 
 ## Error Details
 
