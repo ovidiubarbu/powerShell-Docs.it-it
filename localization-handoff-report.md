@@ -1,42 +1,26 @@
 # <a name='report-top'></a> Localization Handoff Report
 
 ## Summary
- Total Files | 2
+ Total Files | 1
 
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [dsc\metaConfig.md](https://github.com/PowerShell/powerShell-Docs/blob/4079eca1deaf33162bf90c13bcfeb2255ec26d01/dsc/metaConfig.md) | OutofSyncHandedBackSuccess | [Details](#22147ef6b4045c44d80dc1025ac989e02763a69842)
- [dsc\reportServer.md](https://github.com/PowerShell/powerShell-Docs/blob/4079eca1deaf33162bf90c13bcfeb2255ec26d01/dsc/reportServer.md) | OutofSyncHandedBackSuccess | [Details](#40b0aa8dee0fb9578649c0ec92a5a2cb027a137d55)
+ [dsc\pullServer.md](https://github.com/PowerShell/powerShell-Docs/blob/21ac951a63b01a4181edb84ec80a683ea7da9478/dsc/pullServer.md) | OutofSyncHandedBackSuccess | [Details](#3a0ad4ab86a570279e8ebdec35edb9dafc69e9bf51)
 
 ## Item Details
-##### <a name='22147ef6b4045c44d80dc1025ac989e02763a69842'></a> Source: [dsc\metaConfig.md](https://github.com/PowerShell/powerShell-Docs/blob/4079eca1deaf33162bf90c13bcfeb2255ec26d01/dsc/metaConfig.md)
+##### <a name='3a0ad4ab86a570279e8ebdec35edb9dafc69e9bf51'></a> Source: [dsc\pullServer.md](https://github.com/PowerShell/powerShell-Docs/blob/21ac951a63b01a4181edb84ec80a683ea7da9478/dsc/pullServer.md)
 * Status: OutofSyncHandedBackSuccess
 * Target File: 
-* Handoff File: [metaConfig.915dba9ed66671e4a41c35a16d5248bb4c94e3d6.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/766389e524d77cd64f07453eed0f0c1eaf93f6a7/ol-handoff/PowerShell/powerShell-Docs.it-it/live/metaConfig.915dba9ed66671e4a41c35a16d5248bb4c94e3d6.it-it.xlf)
-* Handoff Datetime: 2016-03-22 23:22:21
+* Handoff File: [pullServer.4b925b277da29998394af746bdbdd508fda48909.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/c3c0faacd5c62903a4980e2eb95c71cb864e768f/ol-handoff/PowerShell/powerShell-Docs.it-it/live/pullServer.4b925b277da29998394af746bdbdd508fda48909.it-it.xlf)
+* Handoff Datetime: 2016-03-22 23:54:12
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [dsc\metaConfig.md](https://github.com/PowerShell/powerShell-Docs.it-it/blob/1f08681627ceedd8ff0dd2f644382e933ed7137e/dsc/metaConfig.md)
-* Current Handback File: [metaConfig.915dba9ed66671e4a41c35a16d5248bb4c94e3d6.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/e67add566414351f0b984378ceaf34f256a9e435/ol-handback/PowerShell/powerShell-Docs.it-it/live/metaConfig.915dba9ed66671e4a41c35a16d5248bb4c94e3d6.it-it.xlf)
-* Current Handback Datetime: 2016-03-22 01:23:06
-* [Back to Top](#report-top)
-
-##### <a name='40b0aa8dee0fb9578649c0ec92a5a2cb027a137d55'></a> Source: [dsc\reportServer.md](https://github.com/PowerShell/powerShell-Docs/blob/4079eca1deaf33162bf90c13bcfeb2255ec26d01/dsc/reportServer.md)
-* Status: OutofSyncHandedBackSuccess
-* Target File: 
-* Handoff File: [reportServer.53df4bc8b7b80c0a19c11434bdf5f4304e8248f7.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/766389e524d77cd64f07453eed0f0c1eaf93f6a7/ol-handoff/PowerShell/powerShell-Docs.it-it/live/reportServer.53df4bc8b7b80c0a19c11434bdf5f4304e8248f7.it-it.xlf)
-* Handoff Datetime: 2016-03-22 23:22:21
-* Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [dsc\reportServer.md](https://github.com/PowerShell/powerShell-Docs.it-it/blob/1f08681627ceedd8ff0dd2f644382e933ed7137e/dsc/reportServer.md)
-* Current Handback File: [reportServer.53df4bc8b7b80c0a19c11434bdf5f4304e8248f7.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/e67add566414351f0b984378ceaf34f256a9e435/ol-handback/PowerShell/powerShell-Docs.it-it/live/reportServer.53df4bc8b7b80c0a19c11434bdf5f4304e8248f7.it-it.xlf)
+* Current Target File: [dsc\pullServer.md](https://github.com/PowerShell/powerShell-Docs.it-it/blob/1f08681627ceedd8ff0dd2f644382e933ed7137e/dsc/pullServer.md)
+* Current Handback File: [pullServer.4b925b277da29998394af746bdbdd508fda48909.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/e67add566414351f0b984378ceaf34f256a9e435/ol-handback/PowerShell/powerShell-Docs.it-it/live/pullServer.4b925b277da29998394af746bdbdd508fda48909.it-it.xlf)
 * Current Handback Datetime: 2016-03-22 01:23:06
 * [Back to Top](#report-top)
 
