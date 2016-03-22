@@ -1,0 +1,39 @@
+# Funzione DSC per eseguire query delle informazioni sui nodi dal server di pull
+
+```powershell
+function QueryNodeInformation
+{
+Param (      
+       [string] $Uri =
+"http://localhost:7070/PSDSCComplianceServer.svc/Status",                         
+       [string] $ContentType = "application/json"           
+     )
+
+  Write-Host "Querying node information from pull server URI  = $Uri" -ForegroundColor Green
+
+  Write-Host "Querying node status in content type  = $ContentType " -ForegroundColor Green
+
+   $response = Invoke-WebRequest -Uri $Uri -Method Get -ContentType $ContentType -UseDefaultCredentials -Headers 
+    @{Accept = $ContentType}
+
+   if($response.StatusCode -ne 200)
+ {
+     Write-Host "node information was not retrieved." -ForegroundColor Red
+ }
+
+ $jsonResponse = ConvertFrom-Json $response.Content
+
+  return $jsonResponse
+}
+```
+
+Sostituire il parametro `Uri` con l'URI del server di pull. Se le informazioni sui nodi ottenute devono essere in formato XML, impostare `ContentType` su `application/xml`.
+
+Per recuperare le informazioni sui nodi dal parametro `$json`, usare lo script seguente:
+
+```powershell
+$json = QueryNodeInformation –Uri http://localhost:7070/PSDSCComplianceServer.svc/Status 
+
+$json.value | Format-Table TargetName, ConfigurationId, ServerChecksum, NodeCompliant, LastComplianceTime, StatusCode
+```
+<!--HONumber=Feb16_HO4-->
