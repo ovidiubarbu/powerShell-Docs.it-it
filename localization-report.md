@@ -375,14 +375,14 @@
 
 ##### <a name='625d4c0a9b1d0b6f23dcf1b07dd3f567699f7cd915'></a> Source: [dsc\configurations.md](https://github.com/PowerShell/powerShell-Docs/blob/dcacf14d13cc0c3e4bb3b6602ad3ab6b3141471f/dsc/configurations.md)
 * Status: InSyncHandedBackSuccess
-* Target File: [dsc\configurations.md](https://github.com/PowerShell/powerShell-Docs.it-it/blob/1f08681627ceedd8ff0dd2f644382e933ed7137e/dsc/configurations.md)
+* Target File: [dsc\configurations.md](https://github.com/PowerShell/powerShell-Docs.it-it/blob/e42330f250a3cd205f49eef94e00fdb3b652eb59/dsc/configurations.md)
 * Handoff File: [configurations.02626ddbf3a00f8ede56fdfd2e46a027800e75b6.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/5fd70febe5c384b222a47629971f6771c14d913b/ol-handoff/PowerShell/powerShell-Docs.it-it/live/configurations.02626ddbf3a00f8ede56fdfd2e46a027800e75b6.it-it.xlf)
 * Handoff Datetime: 2016-02-23 03:03:15
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
-* Handback File: [configurations.02626ddbf3a00f8ede56fdfd2e46a027800e75b6.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/e67add566414351f0b984378ceaf34f256a9e435/ol-handback/PowerShell/powerShell-Docs.it-it/live/configurations.02626ddbf3a00f8ede56fdfd2e46a027800e75b6.it-it.xlf)
-* Handback Datetime: 2016-03-22 01:23:06
+* Handback File: [configurations.02626ddbf3a00f8ede56fdfd2e46a027800e75b6.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/9554d4c0344ee02d6d5e2cf768bcafaf1f578722/ol-handback/PowerShell/powerShell-Docs.it-it/live/configurations.02626ddbf3a00f8ede56fdfd2e46a027800e75b6.it-it.xlf)
+* Handback Datetime: 2016-03-23 04:56:13
 * [Back to Top](#report-top)
 
 ##### <a name='0959c2576a82b63e814b73a95a085e5512c0726f16'></a> Source: [dsc\debugResource.md](https://github.com/PowerShell/powerShell-Docs/blob/22ee8b62b9107e26360466330f82809d4a150f46/dsc/debugResource.md)
@@ -410,9 +410,9 @@
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [dsc\decisionMaker.md](https://github.com/PowerShell/powerShell-Docs.it-it/blob/1f08681627ceedd8ff0dd2f644382e933ed7137e/dsc/decisionMaker.md)
-* Current Handback File: [decisionMaker.01553169f2ba4241995260fad925e2784b5f5567.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/e67add566414351f0b984378ceaf34f256a9e435/ol-handback/PowerShell/powerShell-Docs.it-it/live/decisionMaker.01553169f2ba4241995260fad925e2784b5f5567.it-it.xlf)
-* Current Handback Datetime: 2016-03-22 01:23:06
+* Current Target File: [dsc\decisionMaker.md](https://github.com/PowerShell/powerShell-Docs.it-it/blob/e42330f250a3cd205f49eef94e00fdb3b652eb59/dsc/decisionMaker.md)
+* Current Handback File: [decisionMaker.01553169f2ba4241995260fad925e2784b5f5567.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/9554d4c0344ee02d6d5e2cf768bcafaf1f578722/ol-handback/PowerShell/powerShell-Docs.it-it/live/decisionMaker.01553169f2ba4241995260fad925e2784b5f5567.it-it.xlf)
+* Current Handback Datetime: 2016-03-23 04:56:13
 * [Back to Top](#report-top)
 
 ##### <a name='c0e59ca822ca5bcf841e3a5a8f2f775cc5f8fc1218'></a> Source: [dsc\docfx.json](https://github.com/PowerShell/powerShell-Docs/blob/21ac951a63b01a4181edb84ec80a683ea7da9478/dsc/docfx.json)
@@ -577,9 +577,9 @@
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [dsc\lnxBuiltInResources.md](https://github.com/PowerShell/powerShell-Docs.it-it/blob/1f08681627ceedd8ff0dd2f644382e933ed7137e/dsc/lnxBuiltInResources.md)
-* Current Handback File: [lnxBuiltInResources.12cc0e2a7d17afe6b1e1b9c928760080863926f9.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/e67add566414351f0b984378ceaf34f256a9e435/ol-handback/PowerShell/powerShell-Docs.it-it/live/lnxBuiltInResources.12cc0e2a7d17afe6b1e1b9c928760080863926f9.it-it.xlf)
-* Current Handback Datetime: 2016-03-22 01:23:06
+* Current Target File: [dsc\lnxBuiltInResources.md](https://github.com/PowerShell/powerShell-Docs.it-it/blob/e42330f250a3cd205f49eef94e00fdb3b652eb59/dsc/lnxBuiltInResources.md)
+* Current Handback File: [lnxBuiltInResources.12cc0e2a7d17afe6b1e1b9c928760080863926f9.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/9554d4c0344ee02d6d5e2cf768bcafaf1f578722/ol-handback/PowerShell/powerShell-Docs.it-it/live/lnxBuiltInResources.12cc0e2a7d17afe6b1e1b9c928760080863926f9.it-it.xlf)
+* Current Handback Datetime: 2016-03-23 04:56:13
 * [Back to Top](#report-top)
 
 ##### <a name='ef0812e4b382b5efb6e6f42d8671fab3ab663a4b31'></a> Source: [dsc\lnxEnvironmentResource.md](https://github.com/PowerShell/powerShell-Docs/blob/dcacf14d13cc0c3e4bb3b6602ad3ab6b3141471f/dsc/lnxEnvironmentResource.md)
