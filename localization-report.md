@@ -453,14 +453,14 @@
 
 ##### <a name='ce115dd79b0793718f8e79bb465f244b7cc725b121'></a> Source: [dsc\fileResource.md](https://github.com/PowerShell/powerShell-Docs/blob/dcacf14d13cc0c3e4bb3b6602ad3ab6b3141471f/dsc/fileResource.md)
 * Status: InSyncHandedBackSuccess
-* Target File: [dsc\fileResource.md](https://github.com/PowerShell/powerShell-Docs.it-it/blob/1f08681627ceedd8ff0dd2f644382e933ed7137e/dsc/fileResource.md)
+* Target File: [dsc\fileResource.md](https://github.com/PowerShell/powerShell-Docs.it-it/blob/ee3be85660eecad6c0707b64ad2dd96d8fc30a19/dsc/fileResource.md)
 * Handoff File: [fileResource.ad0d9bba41b615db808e5dfc814b50945863b3da.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/5fd70febe5c384b222a47629971f6771c14d913b/ol-handoff/PowerShell/powerShell-Docs.it-it/live/fileResource.ad0d9bba41b615db808e5dfc814b50945863b3da.it-it.xlf)
 * Handoff Datetime: 2016-02-23 03:03:15
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
-* Handback File: [fileResource.ad0d9bba41b615db808e5dfc814b50945863b3da.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/e67add566414351f0b984378ceaf34f256a9e435/ol-handback/PowerShell/powerShell-Docs.it-it/live/fileResource.ad0d9bba41b615db808e5dfc814b50945863b3da.it-it.xlf)
-* Handback Datetime: 2016-03-22 01:23:06
+* Handback File: [fileResource.ad0d9bba41b615db808e5dfc814b50945863b3da.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/53a699d67b655a44bd4fe6b10b12edc49cff9014/ol-handback/PowerShell/powerShell-Docs.it-it/live/fileResource.ad0d9bba41b615db808e5dfc814b50945863b3da.it-it.xlf)
+* Handback Datetime: 2016-03-23 08:28:53
 * [Back to Top](#report-top)
 
 ##### <a name='2faac24e90c7925eb22d7a5d95ef6f86831284f522'></a> Source: [dsc\gettingStarted.md](https://github.com/PowerShell/powerShell-Docs/blob/a337f528915c0ed3f9235c1a1a6a4414e15fe66c/dsc/gettingStarted.md)
