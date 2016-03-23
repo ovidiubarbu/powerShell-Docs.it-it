@@ -6,19 +6,22 @@
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [wmf\requirements.md](https://github.com/PowerShell/powerShell-Docs/blob/02b9b25c505adbf49630145bc0543d6436edae0b/wmf/requirements.md) | HandedOffSuccess | [Details](#02ce3d08b01e58d6d9506f90142f92cc16304e64148)
+ [dsc\secureMOF.md](https://github.com/PowerShell/powerShell-Docs/blob/11c8cb288104c51ccaf04665a603c1905ab14a62/dsc/secureMOF.md) | OutofSyncHandedBackSuccess | [Details](#c3b61e7f85bc59833548873a73b6ce9559dcea3a60)
 
 ## Item Details
-##### <a name='02ce3d08b01e58d6d9506f90142f92cc16304e64148'></a> Source: [wmf\requirements.md](https://github.com/PowerShell/powerShell-Docs/blob/02b9b25c505adbf49630145bc0543d6436edae0b/wmf/requirements.md)
-* Status: HandedOffSuccess
+##### <a name='c3b61e7f85bc59833548873a73b6ce9559dcea3a60'></a> Source: [dsc\secureMOF.md](https://github.com/PowerShell/powerShell-Docs/blob/11c8cb288104c51ccaf04665a603c1905ab14a62/dsc/secureMOF.md)
+* Status: OutofSyncHandedBackSuccess
 * Target File: 
-* Handoff File: [requirements.ef8332f358d65b1759bfd4c7336b11d1dc8c2d46.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/dc10669610cf407513ebb8ab5ab2455b90b03546/ol-handoff/PowerShell/powerShell-Docs.it-it/live/requirements.ef8332f358d65b1759bfd4c7336b11d1dc8c2d46.it-it.xlf)
-* Handoff Datetime: 2016-03-23 21:11:41
+* Handoff File: [secureMOF.84bae90620632fc30568f4afa595e2b86e8aa6d1.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/ea112ab2115b89328ec21651c2c678838536bfd4/ol-handoff/PowerShell/powerShell-Docs.it-it/live/secureMOF.84bae90620632fc30568f4afa595e2b86e8aa6d1.it-it.xlf)
+* Handoff Datetime: 2016-03-23 22:39:20
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
+* Current Target File: [dsc\secureMOF.md](https://github.com/PowerShell/powerShell-Docs.it-it/blob/a7114126cbf16181c5dbef0403a2c1589bcc76db/dsc/secureMOF.md)
+* Current Handback File: [secureMOF.84bae90620632fc30568f4afa595e2b86e8aa6d1.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/92c3e475e7e142053848ddba7ac86fddd710b4b7/ol-handback/PowerShell/powerShell-Docs.it-it/live/secureMOF.84bae90620632fc30568f4afa595e2b86e8aa6d1.it-it.xlf)
+* Current Handback Datetime: 2016-03-23 04:12:30
 * [Back to Top](#report-top)
 
 
