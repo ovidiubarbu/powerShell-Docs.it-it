@@ -316,14 +316,14 @@
 
 ##### <a name='303b98d41ad471ad7e8a9821225fa8967d7cba5a10'></a> Source: [dsc\authoringResourceMofCS.md](https://github.com/PowerShell/powerShell-Docs/blob/dcacf14d13cc0c3e4bb3b6602ad3ab6b3141471f/dsc/authoringResourceMofCS.md)
 * Status: InSyncHandedBackSuccess
-* Target File: [dsc\authoringResourceMofCS.md](https://github.com/PowerShell/powerShell-Docs.it-it/blob/a7114126cbf16181c5dbef0403a2c1589bcc76db/dsc/authoringResourceMofCS.md)
+* Target File: [dsc\authoringResourceMofCS.md](https://github.com/PowerShell/powerShell-Docs.it-it/blob/4b4e03a5c8e93b79ae8108c09b6eb73bfa9c3d07/dsc/authoringResourceMofCS.md)
 * Handoff File: [authoringResourceMofCS.0647b27b00ec52b2f524a2856e48bc7c29c0f867.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/5fd70febe5c384b222a47629971f6771c14d913b/ol-handoff/PowerShell/powerShell-Docs.it-it/live/authoringResourceMofCS.0647b27b00ec52b2f524a2856e48bc7c29c0f867.it-it.xlf)
 * Handoff Datetime: 2016-02-23 03:03:15
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
-* Handback File: [authoringResourceMofCS.0647b27b00ec52b2f524a2856e48bc7c29c0f867.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/92c3e475e7e142053848ddba7ac86fddd710b4b7/ol-handback/PowerShell/powerShell-Docs.it-it/live/authoringResourceMofCS.0647b27b00ec52b2f524a2856e48bc7c29c0f867.it-it.xlf)
-* Handback Datetime: 2016-03-23 04:12:30
+* Handback File: [authoringResourceMofCS.0647b27b00ec52b2f524a2856e48bc7c29c0f867.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/9003e16e3d9fb308fb5238fb45e8e8a49ef5e647/ol-handback/PowerShell/powerShell-Docs.it-it/live/authoringResourceMofCS.0647b27b00ec52b2f524a2856e48bc7c29c0f867.it-it.xlf)
+* Handback Datetime: 2016-03-24 22:11:22
 * [Back to Top](#report-top)
 
 ##### <a name='a95d0b59a90cbae44ec8d68bdaf59a1e318736d911'></a> Source: [dsc\authoringResourceMofDesigner.md](https://github.com/PowerShell/powerShell-Docs/blob/dcacf14d13cc0c3e4bb3b6602ad3ab6b3141471f/dsc/authoringResourceMofDesigner.md)
