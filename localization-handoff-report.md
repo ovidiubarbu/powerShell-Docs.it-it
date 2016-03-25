@@ -6,21 +6,21 @@
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [dsc\authoringResourceClass.md](https://github.com/PowerShell/powerShell-Docs/blob/dcacf14d13cc0c3e4bb3b6602ad3ab6b3141471f/dsc/authoringResourceClass.md) | OutofSyncHandedBackSuccess | [Details](#aab3ccc2a95b5e1b2e450f38e0f81ec1c4727c307)
+ [dsc\partialConfigs.md](https://github.com/PowerShell/powerShell-Docs/blob/b0829d2ed24d07c337e1775463861c10b5d14cb2/dsc/partialConfigs.md) | OutofSyncHandedBackSuccess | [Details](#da7b4dad0811bf0dc4745b6482c74731448edbdd46)
 
 ## Item Details
-##### <a name='aab3ccc2a95b5e1b2e450f38e0f81ec1c4727c307'></a> Source: [dsc\authoringResourceClass.md](https://github.com/PowerShell/powerShell-Docs/blob/dcacf14d13cc0c3e4bb3b6602ad3ab6b3141471f/dsc/authoringResourceClass.md)
+##### <a name='da7b4dad0811bf0dc4745b6482c74731448edbdd46'></a> Source: [dsc\partialConfigs.md](https://github.com/PowerShell/powerShell-Docs/blob/b0829d2ed24d07c337e1775463861c10b5d14cb2/dsc/partialConfigs.md)
 * Status: OutofSyncHandedBackSuccess
 * Target File: 
-* Handoff File: [authoringResourceClass.3603134df9ad1cad202d10769ff631a083cc3aae.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/d466e99805f92ed4bcc9bbb5da9f73d85c7323a9/ol-handoff/PowerShell/powerShell-Docs.it-it/live/authoringResourceClass.3603134df9ad1cad202d10769ff631a083cc3aae.it-it.xlf)
-* Handoff Datetime: 2016-03-24 22:09:37
+* Handoff File: [partialConfigs.f483ab7fa1511b557780a02b5b807245f730c1b6.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/a06c18ef0ff16705289ee1a4474d36676ecb72f1/ol-handoff/PowerShell/powerShell-Docs.it-it/live/partialConfigs.f483ab7fa1511b557780a02b5b807245f730c1b6.it-it.xlf)
+* Handoff Datetime: 2016-03-25 20:40:14
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [dsc\authoringResourceClass.md](https://github.com/PowerShell/powerShell-Docs.it-it/blob/66d7f7837f0170323eaffc68426ddf24ca48e64e/dsc/authoringResourceClass.md)
-* Current Handback File: [authoringResourceClass.3603134df9ad1cad202d10769ff631a083cc3aae.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/2e23c955b74f91b0f44121fe843fa585a30b2c5c/ol-handback/PowerShell/powerShell-Docs.it-it/live/authoringResourceClass.3603134df9ad1cad202d10769ff631a083cc3aae.it-it.xlf)
+* Current Target File: [dsc\partialConfigs.md](https://github.com/PowerShell/powerShell-Docs.it-it/blob/66d7f7837f0170323eaffc68426ddf24ca48e64e/dsc/partialConfigs.md)
+* Current Handback File: [partialConfigs.f483ab7fa1511b557780a02b5b807245f730c1b6.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/2e23c955b74f91b0f44121fe843fa585a30b2c5c/ol-handback/PowerShell/powerShell-Docs.it-it/live/partialConfigs.f483ab7fa1511b557780a02b5b807245f730c1b6.it-it.xlf)
 * Current Handback Datetime: 2016-03-24 17:15:24
 * [Back to Top](#report-top)
 
