@@ -39,7 +39,6 @@
 #### [Configurare un nodo con più frammenti di configurazione](dsc_partialconfig.md)
 ##### [Supporto di modalità RefreshMode miste](dsc_partialconfig_mixedmode.md)
 #### [Configurare il motore DSC con un nuovo attributo](dsc_metaconfiguration.md)
-#### [Usare in varie combinazioni le modalità PUSH e PULL](dsc_mixedrefreshmode.md)
 #### [Informazioni dettagliate sullo stato di Gestione configurazione locale](dsc_lcmstate.md)
 #### [Non è necessario che le frequenze per RefreshMode e ConfigurationMode siano multipli l'una dell'altra](dsc_freqnomultiple.md)
 #### [Valore aggiunto per la proprietà RefreshMode](dsc_refreshmode.md)
@@ -98,4 +97,4 @@
 
 # [Limitazioni e problemi noti](limitation_overview.md)
 ## [Problemi noti di Desired State Configuration (DSC)](limitation_dsc.md)
-<!--HONumber=Mar16_HO2-->
+<!--HONumber=Mar16_HO3-->
