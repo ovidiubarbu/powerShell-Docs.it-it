@@ -1,67 +1,38 @@
 # <a name='report-top'></a> Localization Handback Report
 
 ## Summary
- Total Files | 4
+ Total Files | 2
 
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [dsc\images\PartialConfig1.jpg](https://github.com/PowerShell/powerShell-Docs/blob/97cfb44dc3db0937a0eaae5af5113210f988aa56/dsc/images/PartialConfig1.jpg) | InSyncHandedBackSuccess | [Details](#3e61149f7b05f74d662d3038233013ffdcbed1a325)
- [dsc\images\PartialConfigPullServer.jpg](https://github.com/PowerShell/powerShell-Docs/blob/97cfb44dc3db0937a0eaae5af5113210f988aa56/dsc/images/PartialConfigPullServer.jpg) | InSyncHandedBackSuccess | [Details](#1ba842005c2b1ce80a3670429b3e010c7b1c1f5926)
- [dsc\images\Pull.png](https://github.com/PowerShell/powerShell-Docs/blob/97cfb44dc3db0937a0eaae5af5113210f988aa56/dsc/images/Pull.png) | InSyncHandedBackSuccess | [Details](#86d829b1fcdd41e648ed0594eaf337b3726c143c27)
- [dsc\images\Push.png](https://github.com/PowerShell/powerShell-Docs/blob/97cfb44dc3db0937a0eaae5af5113210f988aa56/dsc/images/Push.png) | InSyncHandedBackSuccess | [Details](#d3008e3fe7da4c118c693d2b34a0b329780f8d8628)
+ [dsc\images\CredentialEncryptionDiagram1.png](https://github.com/PowerShell/powerShell-Docs/blob/97cfb44dc3db0937a0eaae5af5113210f988aa56/dsc/images/CredentialEncryptionDiagram1.png) | InSyncHandedBackSuccess | [Details](#d9f53a805041164f5070845c0fd216b63d17ae5824)
+ [wmf\TOC.md](https://github.com/PowerShell/powerShell-Docs/blob/dc5696c9540352c5382d57cb8aed3df8f119d091/wmf/TOC.md) | InSyncHandedBackSuccess | [Details](#ab0af09d1888be43952868d9a8f16902fa28c1e1151)
 
 ## Item Details
-##### <a name='3e61149f7b05f74d662d3038233013ffdcbed1a325'></a> Source: [dsc\images\PartialConfig1.jpg](https://github.com/PowerShell/powerShell-Docs/blob/97cfb44dc3db0937a0eaae5af5113210f988aa56/dsc/images/PartialConfig1.jpg)
+##### <a name='d9f53a805041164f5070845c0fd216b63d17ae5824'></a> Source: [dsc\images\CredentialEncryptionDiagram1.png](https://github.com/PowerShell/powerShell-Docs/blob/97cfb44dc3db0937a0eaae5af5113210f988aa56/dsc/images/CredentialEncryptionDiagram1.png)
 * Status: InSyncHandedBackSuccess
-* Target File: [dsc\images\PartialConfig1.jpg](https://github.com/PowerShell/powerShell-Docs.it-it/blob/5e918208e1e020b315609f2ce44714182022ac54/dsc/images/PartialConfig1.jpg)
-* Handoff File: [3e61149f7b05f74d662d3038233013ffdcbed1a3.jpg](https://github.com/PowerShell/powerShell-Docs.handoff/blob/3342598915aed9e7cf1777439f4c4cd2752b5125/ol-handoff/PowerShell/powerShell-Docs.it-it/live/3e61149f7b05f74d662d3038233013ffdcbed1a3.jpg)
+* Target File: [dsc\images\CredentialEncryptionDiagram1.png](https://github.com/PowerShell/powerShell-Docs.it-it/blob/39be1e51b469a38af9bff65e7585b1922d336187/dsc/images/CredentialEncryptionDiagram1.png)
+* Handoff File: [d9f53a805041164f5070845c0fd216b63d17ae58.png](https://github.com/PowerShell/powerShell-Docs.handoff/blob/3342598915aed9e7cf1777439f4c4cd2752b5125/ol-handoff/PowerShell/powerShell-Docs.it-it/live/d9f53a805041164f5070845c0fd216b63d17ae58.png)
 * Handoff Datetime: 2016-03-11 01:04:01
 * Handoff Reason: IsDependency
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
-* Handback File: [3e61149f7b05f74d662d3038233013ffdcbed1a3.jpg](https://github.com/PowerShell/powerShell-Docs.handback/blob/b82d0ea3e71416b73fd8114c042e47748b8226ec/ol-handback/PowerShell/powerShell-Docs.it-it/live/3e61149f7b05f74d662d3038233013ffdcbed1a3.jpg)
-* Handback Datetime: 2016-03-30 18:03:45
-* Dependency From: dsc\partialConfigs.md
+* Handback File: [d9f53a805041164f5070845c0fd216b63d17ae58.png](https://github.com/PowerShell/powerShell-Docs.handback/blob/721d586bec4300c0887937c12ecfdbcdca19ba64/ol-handback/PowerShell/powerShell-Docs.it-it/live/d9f53a805041164f5070845c0fd216b63d17ae58.png)
+* Handback Datetime: 2016-03-30 18:07:12
+* Dependency From: dsc\secureMOF.md
 * [Back to Top](#report-top)
 
-##### <a name='1ba842005c2b1ce80a3670429b3e010c7b1c1f5926'></a> Source: [dsc\images\PartialConfigPullServer.jpg](https://github.com/PowerShell/powerShell-Docs/blob/97cfb44dc3db0937a0eaae5af5113210f988aa56/dsc/images/PartialConfigPullServer.jpg)
+##### <a name='ab0af09d1888be43952868d9a8f16902fa28c1e1151'></a> Source: [wmf\TOC.md](https://github.com/PowerShell/powerShell-Docs/blob/dc5696c9540352c5382d57cb8aed3df8f119d091/wmf/TOC.md)
 * Status: InSyncHandedBackSuccess
-* Target File: [dsc\images\PartialConfigPullServer.jpg](https://github.com/PowerShell/powerShell-Docs.it-it/blob/5e918208e1e020b315609f2ce44714182022ac54/dsc/images/PartialConfigPullServer.jpg)
-* Handoff File: [1ba842005c2b1ce80a3670429b3e010c7b1c1f59.jpg](https://github.com/PowerShell/powerShell-Docs.handoff/blob/3342598915aed9e7cf1777439f4c4cd2752b5125/ol-handoff/PowerShell/powerShell-Docs.it-it/live/1ba842005c2b1ce80a3670429b3e010c7b1c1f59.jpg)
-* Handoff Datetime: 2016-03-11 01:04:01
-* Handoff Reason: IsDependency
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
-* Handback File: [1ba842005c2b1ce80a3670429b3e010c7b1c1f59.jpg](https://github.com/PowerShell/powerShell-Docs.handback/blob/b82d0ea3e71416b73fd8114c042e47748b8226ec/ol-handback/PowerShell/powerShell-Docs.it-it/live/1ba842005c2b1ce80a3670429b3e010c7b1c1f59.jpg)
-* Handback Datetime: 2016-03-30 18:03:45
-* Dependency From: dsc\partialConfigs.md
-* [Back to Top](#report-top)
-
-##### <a name='86d829b1fcdd41e648ed0594eaf337b3726c143c27'></a> Source: [dsc\images\Pull.png](https://github.com/PowerShell/powerShell-Docs/blob/97cfb44dc3db0937a0eaae5af5113210f988aa56/dsc/images/Pull.png)
-* Status: InSyncHandedBackSuccess
-* Target File: [dsc\images\Pull.png](https://github.com/PowerShell/powerShell-Docs.it-it/blob/5e918208e1e020b315609f2ce44714182022ac54/dsc/images/Pull.png)
-* Handoff File: [86d829b1fcdd41e648ed0594eaf337b3726c143c.png](https://github.com/PowerShell/powerShell-Docs.handoff/blob/3342598915aed9e7cf1777439f4c4cd2752b5125/ol-handoff/PowerShell/powerShell-Docs.it-it/live/86d829b1fcdd41e648ed0594eaf337b3726c143c.png)
-* Handoff Datetime: 2016-03-11 01:04:01
-* Handoff Reason: IsDependency
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
-* Handback File: [86d829b1fcdd41e648ed0594eaf337b3726c143c.png](https://github.com/PowerShell/powerShell-Docs.handback/blob/b82d0ea3e71416b73fd8114c042e47748b8226ec/ol-handback/PowerShell/powerShell-Docs.it-it/live/86d829b1fcdd41e648ed0594eaf337b3726c143c.png)
-* Handback Datetime: 2016-03-30 18:03:45
-* Dependency From: dsc\enactingConfigurations.md
-* [Back to Top](#report-top)
-
-##### <a name='d3008e3fe7da4c118c693d2b34a0b329780f8d8628'></a> Source: [dsc\images\Push.png](https://github.com/PowerShell/powerShell-Docs/blob/97cfb44dc3db0937a0eaae5af5113210f988aa56/dsc/images/Push.png)
-* Status: InSyncHandedBackSuccess
-* Target File: [dsc\images\Push.png](https://github.com/PowerShell/powerShell-Docs.it-it/blob/5e918208e1e020b315609f2ce44714182022ac54/dsc/images/Push.png)
-* Handoff File: [d3008e3fe7da4c118c693d2b34a0b329780f8d86.png](https://github.com/PowerShell/powerShell-Docs.handoff/blob/3342598915aed9e7cf1777439f4c4cd2752b5125/ol-handoff/PowerShell/powerShell-Docs.it-it/live/d3008e3fe7da4c118c693d2b34a0b329780f8d86.png)
-* Handoff Datetime: 2016-03-11 01:04:01
-* Handoff Reason: IsDependency
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
-* Handback File: [d3008e3fe7da4c118c693d2b34a0b329780f8d86.png](https://github.com/PowerShell/powerShell-Docs.handback/blob/b82d0ea3e71416b73fd8114c042e47748b8226ec/ol-handback/PowerShell/powerShell-Docs.it-it/live/d3008e3fe7da4c118c693d2b34a0b329780f8d86.png)
-* Handback Datetime: 2016-03-30 18:03:45
-* Dependency From: dsc\enactingConfigurations.md
+* Target File: [wmf\TOC.md](https://github.com/PowerShell/powerShell-Docs.it-it/blob/39be1e51b469a38af9bff65e7585b1922d336187/wmf/TOC.md)
+* Handoff File: [TOC.60497266061c38453b3db893ec675eb65584af89.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/c200a60c8f9450e88c70201a0f8c27e1c3938091/ol-handoff/PowerShell/powerShell-Docs.it-it/live/TOC.60497266061c38453b3db893ec675eb65584af89.it-it.xlf)
+* Handoff Datetime: 2016-03-16 22:52:16
+* Handoff Reason: Include
+* Archive File: [TOC.60497266061c38453b3db893ec675eb65584af89.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/44cfe55f47d11e7aef1b5819d2966080b169e65a/ol-handoff/PowerShell/powerShell-Docs.it-it/live/archive/TOC.60497266061c38453b3db893ec675eb65584af89.it-it.xlf)
+* Archive Datetime: 2016-03-29 13:11:59
+* Handback File: [TOC.60497266061c38453b3db893ec675eb65584af89.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/721d586bec4300c0887937c12ecfdbcdca19ba64/ol-handback/PowerShell/powerShell-Docs.it-it/live/TOC.60497266061c38453b3db893ec675eb65584af89.it-it.xlf)
+* Handback Datetime: 2016-03-30 18:07:12
 * [Back to Top](#report-top)
 
 
