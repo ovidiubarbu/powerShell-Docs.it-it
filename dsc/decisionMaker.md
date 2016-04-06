@@ -4,7 +4,7 @@ Questo documento descrive i vantaggi dell'uso di PowerShell DSC (Desired State C
 
 ## Che cos'è DSC (Desired State Configuration)? ##
 
-Windows PowerShell DSC (Desired State Configuration) fornisce una piattaforma di configurazione integrata in Windows e basata su standard aperti. DSC è sufficientemente flessibile per funzionare in modo affidabile e coerente in ogni fase del ciclo di distribuzione (sviluppo, test, pre-produzione, produzione), nonché quando viene applicata scalabilità orizzontale. 
+Windows PowerShell DSC (Desired State Configuration) è una piattaforma di gestione delle configurazioni integrata in Windows e basata su standard aperti. DSC è sufficientemente flessibile per funzionare in modo affidabile e coerente in ogni fase del ciclo di distribuzione (sviluppo, test, pre-produzione, produzione), nonché quando viene applicata scalabilità orizzontale. 
 
 DSC ha come concetto centrale l'idea di "[configurazioni](https://msdn.microsoft.com/en-us/powershell/dsc/configurations)", ovvero documenti facili da leggere che descrivono un ambiente costituito da computer ("nodi") con caratteristiche specifiche. Queste caratteristiche possono essere semplici, ad esempio per abilitare una funzionalità specifica di Windows, o complesse, ad esempio per la distribuzione di SharePoint. 
 
@@ -12,11 +12,11 @@ In DSC sono anche integrate funzionalità di monitoraggio e creazione di report.
 
 ## Vantaggi dell'uso di DSC (Desired State Configuration) ##
 
-Le configurazioni sono progettate per essere facili da leggere, archiviare e aggiornare. Le configurazioni dichiarano semplicemente lo stato desiderato per i dispositivi di destinazione, senza che sia necessario scrivere istruzioni su come impostare tale stato. In questo modo, DSC semplifica l'apprendimento, l'adozione, l'implementazione e la gestione della configurazione. 
+Le configurazioni sono progettate per essere facili da leggere, archiviare e aggiornare. Le configurazioni dichiarano semplicemente lo stato desiderato per i dispositivi di destinazione, senza che sia necessario scrivere istruzioni su come impostare tale stato. In questo modo, DSC semplifica notevolmente l'apprendimento, l'adozione, l'implementazione e la gestione della configurazione. 
 
 La creazione di configurazioni comporta l'acquisizione di passaggi di distribuzione complessi come "unica origine di dati reali" in un'unica posizione. In questo modo, le distribuzioni ripetute di un set specifico di computer sono molto meno soggette a errori. Ciò rende le distribuzioni più veloci e affidabili. È quindi possibile eseguire distribuzioni complesse in tempi brevi.
 
-Le configurazioni possono anche essere condivise tramite PowerShell Gallery. Ciò significa che potrebbero essere già disponibili scenari comuni e procedure consigliate per il lavoro da svolgere.
+Le configurazioni possono anche essere condivise tramite [PowerShell Gallery](https://powershellgallery.com). Ciò significa che potrebbero essere già disponibili scenari comuni e procedure consigliate per il lavoro da svolgere.
 
 
 ## DSC (Desired State Configuration) e DevOps ##
@@ -31,6 +31,10 @@ Le configurazioni sono anche [guidate dai dati](https://msdn.microsoft.com/en-us
 
 ## DSC e compatibilità ##
 
-Anche se la soluzione DSC è stata introdotta in Windows Server 2012 R2, è disponibile per sistemi operativi di livello inferiore attraverso il pacchetto Windows Management Framework (WMF). Altre informazioni su WMF sono disponibili nella [pagina di destinazione di PowerShell](https://msdn.microsoft.com/en-us/powershell/). 
+Anche se la soluzione DSC è stata introdotta in Windows Server 2012 R2, è disponibile per sistemi operativi di livello inferiore attraverso il pacchetto Windows Management Framework (WMF). Altre informazioni su WMF sono disponibili nella [home page di PowerShell](https://msdn.microsoft.com/en-us/powershell/). 
 
-È possibile usare DSC anche per gestire Linux. Per altre informazioni, vedere [Introduzione a DSC per Linux](https://msdn.microsoft.com/en-us/powershell/dsc/lnxgettingstarted).<!--HONumber=Feb16_HO4-->
+È possibile usare DSC anche per gestire Linux. Per altre informazioni, vedere [Introduzione a DSC per Linux](https://msdn.microsoft.com/en-us/powershell/dsc/lnxgettingstarted).
+
+<!--HONumber=Mar16_HO1-->
+
+

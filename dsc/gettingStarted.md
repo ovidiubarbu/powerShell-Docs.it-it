@@ -10,9 +10,9 @@ Le [**configurazioni**](https://msdn.microsoft.com/en-us/powershell/dsc/configur
 Le configurazioni possono avere svariate forme. Il metodo più semplice per creare una nuova configurazione consiste nel creare un file PS1 (script di PowerShell). A questo scopo, aprire l'editor preferito. PowerShell ISE è un'ottima scelta, perché riconosce DSC in modo nativo. Salvare il codice seguente come file PS1:
 
 ```powershell
-configuration myFirstConfiguration
+configuration MyFirstConfiguration
 {
-    import-dscresource -name WindowsFeature
+    Import-DscResource -Name WindowsFeature
 
     Node localhost
     {
@@ -29,7 +29,7 @@ configuration myFirstConfiguration
 ## Parti di una configurazione ##
 **Configuration** è una parola chiave che è stata aggiunta in PowerShell 4.0. Significa un tipo speciale di funzione di PowerShell usata da DSC (Desired State Configuration). In questo esempio la funzione si chiama myFirstConfiguration. 
 
-La riga successiva è un'istruzione importante, simile all'importazione di un modulo. Questa riga verrà descritta più avanti.
+La riga successiva è un'istruzione di importazione, simile all'importazione di un modulo. Questa riga verrà descritta più avanti.
 
 Il termine "nodo" definisce il nome del computer su cui agirà questa configurazione. Benché questa configurazione venga modificata in locale, le configurazioni possono raggiungere nodi remoti e configurarli. 
 
@@ -50,11 +50,15 @@ Quando la configurazione viene eseguita, crea una cartella con il nome della con
 
 Per applicare la configurazione:
 ```powershell
-Start-DscConfiguration -path ./myFirstConfiguration
+Start-DscConfiguration -Path ./myFirstConfiguration
 ```
-Viene creato un processo di PowerShell che raggiunge i nodi nella configurazione e li configura. Per visualizzare l'output del processo, usare -wait. 
+Viene creato un processo di PowerShell che raggiunge i nodi nella configurazione e li configura. Per visualizzare l'output del processo, usare -Wait. 
 ```powershell
-Start-DscConfiguration -path ./myFirstConfiguration -wait
+Start-DscConfiguration -Path ./myFirstConfiguration -Wait
 ```
 
-<!--HONumber=Feb16_HO4-->
+
+
+<!--HONumber=Mar16_HO1-->
+
+

@@ -63,7 +63,7 @@ configuration Sample_xDscWebService
 1. Eseguire la configurazione, passando l'identificazione personale del certificato autofirmato creato come parametro **certificateThumbPrint**:
 
 ```powershell
-PS:\>$myCert = Get-ChildItem CERT: | Where-Object {$_.Subject -eq 'CN=PSDSCPullServerCert'}
+PS:\>$myCert = Get-ChildItem CERT:\LocalMachine\My | Where-Object {$_.Subject -eq 'CN=PSDSCPullServerCert'}
 PS:\>Sample_xDSCService -certificateThumbprint $myCert.Thumbprint 
 ```
 
@@ -86,7 +86,11 @@ Il file di checksum deve essere presente nella stessa directory del file MOF di 
 >**Nota**: se si modifica il file MOF di configurazione in qualsiasi modo, è necessario ricreare anche il file di checksum.
 
 ## Vedere anche
-* [Panoramica di Windows PowerShell DSC (Desired State Configuration)](overview.md).
+* [Panoramica di Windows PowerShell DSC (Desired State Configuration)](overview.md)
 * [Applicazione delle configurazioni](enactingConfigurations.md)
 * [Come recuperare le informazioni sui nodi dal server di pull DSC](retrieveNodeInfo.md)
-<!--HONumber=Feb16_HO4-->
+
+
+<!--HONumber=Mar16_HO1-->
+
+
