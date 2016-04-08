@@ -52,7 +52,7 @@ Configuration MyDscConfiguration {
 }
 ```
 
-In questo esempio è necessario specificare il nome del nodo passandolo come parametro $computerName quando si [compila la configurazione](# Compilazione della configurazione). Per impostazione predefinita, il nome è "localhost".
+In questo esempio è necessario specificare il nome del nodo passandolo come parametro $computerName quando si [compila la configurazione](# Compiling the configuration). Per impostazione predefinita, il nome è "localhost".
 
 ## Compilazione della configurazione
 Prima di poter applicare una configurazione, è necessario compilarla in un documento MOF. A questo scopo, è necessario chiamare la configurazione allo stesso modo in cui si chiama una funzione di PowerShell.
@@ -118,4 +118,8 @@ Dopo che i moduli vengono inseriti in `$env:PSModulePath` e sono riconosciuti co
 * [Panoramica di Windows PowerShell DSC (Desired State Configuration)](overview.md).
 * [Risorse DSC](resources.md)
 * [Configurazione di Gestione configurazione locale](metaconfig.md)
+
+
 <!--HONumber=Feb16_HO4-->
+
+
