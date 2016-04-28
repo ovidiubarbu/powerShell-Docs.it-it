@@ -19,7 +19,7 @@ Test-DscConfiguration   [-Path] <string>
                         [<CommonParameters>]
 ```
 
-I nuovi set di parametri seguenti usano una singola configurazione DSC solo per eseguire test senza mai applicare la configurazione ai nodi di destinazione specificati. 
+I nuovi set di parametri seguenti usano una singola configurazione DSC solo per eseguire test, senza mai applicare la configurazione ai nodi di destinazione specificati. 
 
 ```PowerShell
 Test-DscConfiguration   -ReferenceConfiguration <string> 
@@ -34,4 +34,9 @@ Test-DscConfiguration   -ReferenceConfiguration <string>
                         [-ThrottleLimit <int>] 
                         [-AsJob] 
                         [<CommonParameters>]
-```<!--HONumber=Mar16_HO2-->
+```
+
+
+<!--HONumber=Mar16_HO5-->
+
+
