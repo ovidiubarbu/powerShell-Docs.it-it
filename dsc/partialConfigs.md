@@ -7,7 +7,7 @@ In PowerShell 5.0, DSC (Desired State Configuration) consente di distribuire le 
 È possibile usare le configurazioni parziali in modalità push o pull o in una combinazione delle due modalità.
 
 ## Configurazioni parziali in modalità push
-Per usare le configurazioni parziali in modalità push, è necessario configurare Gestione configurazione locale nel nodo di destinazione per ricevere le configurazioni parziali. Il push di ogni configurazione parziale nella destinazione viene effettuato usando il cmdlet Publish-DSCConfiguration. Il nodo di destinazione combina quindi la configurazione parziale in una singola configurazione, che è possibile applicare chiamando il cmdlet [Start-DscConfigurationxt](https://technet.microsoft.com/en-us/library/dn521623.aspx).
+Per usare le configurazioni parziali in modalità push, è necessario configurare Gestione configurazione locale nel nodo di destinazione per ricevere le configurazioni parziali. Il push di ogni configurazione parziale nella destinazione viene effettuato usando il cmdlet Publish-DSCConfiguration. Il nodo di destinazione combina quindi la configurazione parziale in una singola configurazione, che è possibile applicare chiamando il cmdlet [Start-DscConfiguration](https://technet.microsoft.com/en-us/library/dn521623.aspx).
 
 ### Configurazione di Gestione configurazione locale per le configurazioni parziali in modalità push
 Per configurare Gestione configurazione locale per le configurazioni parziali in modalità push, è necessario creare una configurazione **DSCLocalConfigurationManager** con un blocco **PartialConfiguration** per ogni configurazione parziale. Per altre informazioni sulla configurazione di Gestione configurazione locale, vedere [Configurazione di Gestione configurazione locale](https://technet.microsoft.com/en-us/library/mt421188.aspx). L'esempio seguente illustra una configurazione di Gestione configurazione locale che prevede due configurazioni parziali, una che distribuisce il sistema operativo e una che distribuisce e configura SharePoint.
@@ -148,4 +148,8 @@ Assegnare i nomi ai documenti di configurazione e posizionare i documenti come d
 **Concetti**
 [Server di pull Windows PowerShell DSC (Desired Configuration Pull)](pullServer.md) 
 [Configurazione di Gestione configurazione locale](https://technet.microsoft.com/en-us/library/mt421188.aspx) 
-<!--HONumber=Feb16_HO4-->
+
+
+<!--HONumber=Mar16_HO4-->
+
+

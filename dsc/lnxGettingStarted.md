@@ -41,6 +41,8 @@ Eseguire il comando seguente per installare OMI in un sistema CentOS 7 x64.
 
 ### Installazione di DSC
 
+DSC per Linux è disponibile per il download [qui](https://github.com/Microsoft/PowerShell-DSC-for-Linux/releases/latest). 
+
 Per installare DSC, installare il pacchetto appropriato per il sistema Linux (RPM o DEB), la versione OpenSSL (ssl_098 o ssl_100) e l'architettura (x64/x86). I pacchetti RPM sono appropriati per CentOS, Red Hat Enterprise Linux, SUSE Linux Enterprise Server e Oracle Linux. I pacchetti DEB sono appropriati per Debian GNU/Linux e Ubuntu Server. I pacchetti ssl_098 sono appropriati per i computer in cui è installato OpenSSL 0.9.8, mentre i pacchetti ssl_100 sono appropriati per i computer in cui è installato OpenSSL 1.0.
 
 > **Nota**: per determinare la versione di OpenSSL installata, eseguire il comando openssl version.
@@ -92,7 +94,7 @@ ExampleConfiguration -OutputPath:"C:\temp"
 
 ### Effettuare il push della configurazione nel computer Linux
 
-È possibile effettuare il push dei documenti di configurazione (file MOF) nel computer Linux usando il cmdlet [Start-DscConfiguration](https://technet.microsoft.com/en-us/library/dn521623.aspx). Per usare questo cmdlet, insieme ai cmdlet [Get-DscConfiguration](https://technet.microsoft.com/en-us/library/dn407379).aspx o [Test-DscConfiguration](https://technet.microsoft.com/en-us/library/dn407382.aspx), in remoto in un computer Linux, è necessario usare una sessione CIMSession. Il cmdlet [New-CimSession](https://technet.microsoft.com/en-us/library/jj590760.aspx) viene usato per creare una sessione CIMSession nel computer Linux.
+È possibile effettuare il push dei documenti di configurazione (file MOF) nel computer Linux usando il cmdlet [Start-DscConfiguration](https://technet.microsoft.com/en-us/library/dn521623.aspx). Per usare questo cmdlet, insieme ai cmdlet [Get-DscConfiguration.aspx](https://technet.microsoft.com/en-us/library/dn407379) o [Test-DscConfiguration](https://technet.microsoft.com/en-us/library/dn407382.aspx), in remoto in un computer Linux, è necessario usare una sessione CIMSession. Il cmdlet [New-CimSession](https://technet.microsoft.com/en-us/library/jj590760.aspx) viene usato per creare una sessione CIMSession nel computer Linux.
 
 Il codice seguente illustra come creare una sessione CIMSession per DSC per Linux.
 
@@ -125,17 +127,17 @@ Le configurazioni possono essere distribuite in un computer Linux con un server 
 ### Uso di configurazioni in locale
 
 DSC per Linux include gli script per usare la configurazione dal computer Linux locale. Questi script si trovano in `/opt/microsoft/dsc/Scripts` e includono quanto segue:
-* GetConfiguration.py
+* GetDscConfiguration.py
 
  Restituisce la configurazione corrente applicata al computer. Simile al cmdlet Get-DscConfiguration di Windows PowerShell.
 
-`# sudo ./GetConfiguration.py`
+`# sudo ./GetDscConfiguration.py`
 
-* GetMetaConfiguration.py
+* GetDscLocalConfigurationManager.py
 
  Restituisce la metaconfigurazione corrente applicata al computer. Simile al cmdlet [Get-DSCLocalConfigurationManager](https://technet.microsoft.com/en-us/library/dn407378.aspx).
 
-`# sudo ./GetMetaConfiguration.py`
+`# sudo ./GetDscLocalConfigurationManager.py`
 
 * InstallModule.py
 
@@ -149,17 +151,17 @@ DSC per Linux include gli script per usare la configurazione dal computer Linux 
 
 `# sudo ./RemoveModule.py cnx_Resource`
 
-* SendConfigurationApply.py
+* StartDscLocalConfigurationManager.py 
 
  Applica un file MOF di configurazione al computer. Simile al cmdlet [Start-DscConfiguration](https://technet.microsoft.com/en-us/library/dn521623.aspx). Richiede il percorso del file MOF di configurazione da applicare.
 
-`# sudo ./RemoveModule.py cnx_Resource`
+`# sudo ./StartDscLocalConfigurationManager.py –configurationmof /tmp/localhost.mof`
 
-* SendMetaConfiguration.py
+* SetDscLocalConfigurationManager.py
 
  Applica un file MOF di metaconfigurazione al computer. Simile al cmdlet [Set-DSCLocalConfigurationManager](https://technet.microsoft.com/en-us/library/dn521621.aspx). Richiede il percorso del file MOF di metaconfigurazione da applicare.
 
-`# sudo ./SendMetaConfiguration.py –configurationmof /tmp/localhost.meta.mof`
+`# sudo ./SetDscLocalConfigurationManager.py –configurationmof /tmp/localhost.meta.mof`
 
 ## File di registro di PowerShell DSC (Desired State Configuration) per Linux
 
@@ -168,4 +170,9 @@ I file di registro seguenti vengono generati per i messaggi di DSC per Linux.
 |File di registro|Directory|Descrizione|
 |---|---|---|
 |omiserver.log|/opt/omi/var/log/|Messaggi relativi al funzionamento del server CIM OMI.|
-|dsc.log|/opt/omi/var/log/|Messaggi relativi al funzionamento delle operazioni delle risorse DSC e di Gestione configurazione locale.|<!--HONumber=Feb16_HO4-->
+|dsc.log|/opt/omi/var/log/|Messaggi relativi al funzionamento delle operazioni delle risorse DSC e di Gestione configurazione locale.|
+
+
+<!--HONumber=Mar16_HO2-->
+
+

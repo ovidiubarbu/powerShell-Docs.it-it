@@ -2,7 +2,7 @@
 
 > Si applica a: Windows PowerShell 4.0, Windows PowerShell 5.0
 
-Windows PowerShell DSC (Desired State Configuration) include un set di risorse di configurazione predefinite. La tabella seguente contiene un elenco in ordine alfabetico di queste risorse, insieme ai collegamenti agli argomenti che le descrivono dettagliatamente. Se è necessario creare risorse aggiuntive, vedere [Creare risorse Windows PowerShell DSC (Desired State Configuration) personalizzate](authoringResource.md)
+Windows PowerShell DSC (Desired State Configuration) include un set di risorse di configurazione predefinite. La tabella seguente contiene un elenco in ordine alfabetico di queste risorse, insieme ai collegamenti agli argomenti che le descrivono dettagliatamente. Se è necessario creare risorse aggiuntive, vedere <ctype="x-NOTFOUND" mdpre="[" mdpost="](authoringResource.md)">Creare risorse Windows PowerShell DSC (Desired State Configuration) personalizzate</ctype="x-NOTFOUND">
 
 * [Risorsa Archive](archiveResource.md)
 * [Risorsa Environment](environmentResource.md)
@@ -16,4 +16,8 @@ Windows PowerShell DSC (Desired State Configuration) include un set di risorse d
 * [Risorsa User](userResource.md)
 * [Risorsa WindowsFeature](windowsFeatureResource.md)
 * [Risorsa WindowsProcess](windowsProcessResource.md)
-<!--HONumber=Feb16_HO4-->
+
+
+<!--HONumber=Mar16_HO3-->
+
+

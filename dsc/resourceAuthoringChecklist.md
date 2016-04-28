@@ -1,5 +1,5 @@
 # Elenco di controllo per la creazione di risorse
-
+Questo elenco di controllo è un elenco di procedure consigliate durante la creazione di una nuova risorsa DSC
 ## Il modulo della risorsa contiene i file psd1 e schema.mof per ogni risorsa. 
 Per prima cosa, è necessario verificare che la risorsa abbia la struttura corretta e contenga tutti i file necessari. Ogni modulo di risorsa deve contenere un file con estensione psd1 e per tutte le risorse non composite deve essere disponibile un file schema.mof. Le risorse senza schema non verranno elencate da **Get-DscResource** e gli utenti non saranno in grado di usare IntelliSense durante la scrittura di codice in base a tali moduli in ISE. 
 La struttura di directory di esempio per la risorsa xRemoteFile, che fa parte del modulo della risorsa xPSDesiredStateConfiguration, potrebbe avere questo aspetto:
@@ -121,7 +121,7 @@ Assicurarsi di testare le funzioni **Get/Set/Test-TargetResource** implementate 
 Testare le funzioni **Get/Set/Test-TargetResource** tramite chiamata diretta è importante, ma in questo modo non verranno individuati tutti i problemi. È consigliabile concentrare una parte significativa delle attività di test sull'uso di **Start-DscConfiguration** o del server di pull. Questo è in effetti il modo in cui gli utenti useranno la risorsa, quindi non sottovalutare l'importanza di questo tipo di test. 
 Possibili tipi di problemi:
 -   Possibili comportamenti diversi delle credenziali e/o della sessione perché l'agente DSC viene eseguito come servizio.  Assicurarsi di sottoporre qualsiasi funzionalità a test end-to-end.
--   Verificare che i messaggi di errore visualizzati dalla risorsa abbiano senso. Ad esempio, gli errori restituiti da **Start-DscConfiguration** potrebbero essere diversi da quelli visualizzati in seguito alla chiamata diretta della funzione **Set TargetResource**.
+-   Verificare che i messaggi di errore visualizzati dalla risorsa abbiano senso. Ad esempio, gli errori restituiti da **Start-DscConfiguration** potrebbero essere diversi da quelli visualizzati in seguito alla chiamata diretta della funzione **Set-TargetResource**.
 
 ## La risorsa si comporta correttamente in tutte le piattaforme supportate da DSC (o in caso contrario restituisce un errore specifico) ##
 La risorsa dovrebbero funzionare in tutte le piattaforme supportate da DSC (Windows Server 2008 R2 e versioni successive). Assicurarsi di installare la versione più recente di WMF (Windows Management Framework) nel sistema operativo per ottenere la versione più recente di DSC. Se la risorsa non funziona in alcune di queste piattaforme da progettazione, deve essere restituito un messaggio di errore specifico. Assicurarsi anche che la risorsa controlli che i cmdlet chiamati siano presenti nel computer specifico. In Windows Server 2012 sono stati aggiunti numerosi cmdlet nuovi, non disponibili in Windows Server 2008 R2 anche con WMF installato. 
@@ -315,4 +315,8 @@ VERBOSE: Operation 'Invoke CimMethod' complete.
 
 Questo conclude l'elenco di controllo. Tenere presente che questo elenco non è esaustivo, ma tiene conto di molti importanti problemi riscontrati durante la progettazione, lo sviluppo e il test di risorse DSC. L'elenco di controllo è utile per assicurarsi di non dimenticare questi aspetti e viene effettivamente usato da Microsoft durante lo sviluppo di risorse DSC. 
 Gli sviluppatori che hanno elaborato linee guida e procedure consigliate per la scrittura e il test di risorse DSC sono invitati a condividerle.
-<!--HONumber=Mar16_HO1-->
+
+
+<!--HONumber=Mar16_HO2-->
+
+

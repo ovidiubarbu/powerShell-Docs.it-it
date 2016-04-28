@@ -27,7 +27,7 @@ PS C:\DebugTest>
 
 
 ## Avvio di una configurazione con il debug abilitato
-Per eseguire il debug di una risorsa DSC, è necessario avviare una configurazione che chiami la risorsa. In questo esempio una semplice configurazione chiama la risorsa [WindowsFeature](windowsfeatureResource.md) per specificare che la funzionalità "WindowsPowerShellWebAccess" è installata:
+Per eseguire il debug di una risorsa DSC, è necessario avviare una configurazione che chiami la risorsa. In questo esempio una semplice configurazione chiama la risorsa [WindowsFeature](windowsfeatureResource.md) per verificare che la funzionalità "WindowsPowerShellWebAccess" sia installata:
 
 ```powershell
 Configuration PSWebAccess
@@ -73,8 +73,20 @@ A questo punto, Gestione configurazione locale ha chiamato la risorsa e ha raggi
 ## Debug dello script della risorsa
 
 Avviare una nuova istanza di PowerShell ISE. Nel riquadro della console immettere le ultime tre righe di output dall'output di `Start-DscConifiguration` come comandi, sostituendo `<credentials>` con
-credenziali utente valide. Ecco l'output risultante.
+credenziali utente valide. Dovrebbe essere visualizzato un messaggio simile a:
+
+```powershell
+[TEST-SRV]: [DBG]: [Process:9000]: [RemoteHost]: PS C:\DebugTest>>
+```
+
+Lo script della risorsa verrà aperto nel riquadro di script e il debugger viene interrotto alla prima riga della funzione **Test-TargetResource** (metodo **Test()** di una risorsa basata su classi).
+A questo punto è possibile usare i comandi di debug in ISE per eseguire lo script della risorsa un'istruzione alla volta, esaminare i valori delle variabili, visualizzare lo stack di chiamate e così via. Per informazioni sul debug in PowerShell ISE,
+vedere [Modalità di esecuzione del debug degli script in Windows PowerShell ISE](https://technet.microsoft.com/en-us/library/dd819480.aspx). Tenere presente che ogni riga nello script della risorsa (o classe) è impostata come punto di interruzione.
+
+## Vedere anche
+- [Scrittura di una risorsa DSC personalizzata con MOF](authoringResourceMOF.md) 
+- [Scrittura di una risorsa DSC personalizzata con classi di PowerShell](authoringResourceClass.md)
+
+<!--HONumber=Mar16_HO2-->
 
 
-
-<!--HONumber=Feb16_HO4-->
