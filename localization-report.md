@@ -5,9 +5,9 @@
  -------- | ----- 
  Total Files | 341
 [ Handoff Failed Files ](#handoff-failed-list)| 0
-[ Handoff Success Files ](#handoff-success-list)| 31
+[ Handoff Success Files ](#handoff-success-list)| 29
 [ Archive Failed Files ](#archive-failed-list)| 0
-[ Archive Success Files ](#archive-success-list)| 76
+[ Archive Success Files ](#archive-success-list)| 78
 [ Handback Failed Files ](#handback-failed-list)| 0
 [ Out Of Sync Handback Files ](#outofsync-handback-success-list)| 34
 [ In Sync Handback Files ](#insync-handback-success-list)| 188
@@ -18,8 +18,6 @@
 ## <a name='handoff-success-list'></a> Handoff Success File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [dsc\crossNodeDependencies.md](https://github.com/PowerShell/powerShell-Docs/blob/4528b4c033ae0a9b7476a60899e5cd0c96607d1c/dsc/crossNodeDependencies.md) | HandedOffSuccess | [Details](#f6b6006e9d1ad8aef62523accf73e5f2dba3689816)
- [dsc\directCallResource.md](https://github.com/PowerShell/powerShell-Docs/blob/4528b4c033ae0a9b7476a60899e5cd0c96607d1c/dsc/directCallResource.md) | HandedOffSuccess | [Details](#156f2a3b3107cfb7501be1a8ddd918f70bcbd25419)
  [dsc\msft-dsclocalconfigurationmanager.md](https://github.com/PowerShell/powerShell-Docs/blob/698b0bd28e85be451769d785e4ad644ad683416e/dsc/msft-dsclocalconfigurationmanager.md) | HandedOffSuccess | [Details](#12e17503c55845ecaa154bd4c8c6b108bb3293c966)
  [dsc\msft-dsclocalconfigurationmanager-applyconfiguration.md](https://github.com/PowerShell/powerShell-Docs/blob/698b0bd28e85be451769d785e4ad644ad683416e/dsc/msft-dsclocalconfigurationmanager-applyconfiguration.md) | HandedOffSuccess | [Details](#deb5fb9243d3b1d61e60991f70479e252b78024347)
  [dsc\msft-dsclocalconfigurationmanager-disabledebugconfiguration.md](https://github.com/PowerShell/powerShell-Docs/blob/698b0bd28e85be451769d785e4ad644ad683416e/dsc/msft-dsclocalconfigurationmanager-disabledebugconfiguration.md) | HandedOffSuccess | [Details](#f343d09519af33d6b913f46d15b464e92601523748)
@@ -55,6 +53,8 @@
 ## <a name='archive-success-list'></a> Archive Success File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
+ [dsc\crossNodeDependencies.md](https://github.com/PowerShell/powerShell-Docs/blob/4528b4c033ae0a9b7476a60899e5cd0c96607d1c/dsc/crossNodeDependencies.md) | ArchivedSuccess | [Details](#f6b6006e9d1ad8aef62523accf73e5f2dba3689816)
+ [dsc\directCallResource.md](https://github.com/PowerShell/powerShell-Docs/blob/4528b4c033ae0a9b7476a60899e5cd0c96607d1c/dsc/directCallResource.md) | ArchivedSuccess | [Details](#156f2a3b3107cfb7501be1a8ddd918f70bcbd25419)
  [scripting\Token\ise_1.md](https://github.com/PowerShell/powerShell-Docs/blob/7221b5bd5ba90da32836d8c4e2bddb18c8f02ba6/scripting/Token/ise_1.md) | ArchivedSuccess | [Details](#f9c29a9e142a47a564dc7b3f87ac1d2eb5f90a2e101)
  [scripting\Token\ise_1_md.md](https://github.com/PowerShell/powerShell-Docs/blob/7221b5bd5ba90da32836d8c4e2bddb18c8f02ba6/scripting/Token/ise_1_md.md) | ArchivedSuccess | [Details](#2a227b561c7b3f0a0946f2caccd252dfb08bb4ef102)
  [scripting\Token\ise_2.md](https://github.com/PowerShell/powerShell-Docs/blob/7221b5bd5ba90da32836d8c4e2bddb18c8f02ba6/scripting/Token/ise_2.md) | ArchivedSuccess | [Details](#e17dc2e36469369e5d0ad23c3130075d05e11dc7103)
@@ -531,8 +531,8 @@
 * Handoff File: [builtInResource.2f855e1582347e986aa4e5e62b842b886596fdc2.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/1df8017a57453507609b0e9b54c64c0163d98ec6/ol-handoff/PowerShell/powerShell-Docs.it-it/live/builtInResource.2f855e1582347e986aa4e5e62b842b886596fdc2.it-it.xlf)
 * Handoff Datetime: 2016-04-10 21:04:55
 * Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
+* Archive File: [builtInResource.2f855e1582347e986aa4e5e62b842b886596fdc2.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/21d4d58e036e1b4fa13de8f3319370b34da98912/ol-handoff/PowerShell/powerShell-Docs.it-it/live/archive/builtInResource.2f855e1582347e986aa4e5e62b842b886596fdc2.it-it.xlf)
+* Archive Datetime: 2016-04-29 00:22:23
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * Current Target File: [dsc\builtInResource.md](https://github.com/PowerShell/powerShell-Docs.it-it/blob/9c6e10f27326f5a9b0f8c4a94241d5b94bd8e754/dsc/builtInResource.md)
@@ -570,8 +570,8 @@
 * Handoff File: [configurations.02626ddbf3a00f8ede56fdfd2e46a027800e75b6.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/5f35c252cbb7dd273f575d6082c9c5f79c4fdb52/ol-handoff/PowerShell/powerShell-Docs.it-it/live/configurations.02626ddbf3a00f8ede56fdfd2e46a027800e75b6.it-it.xlf)
 * Handoff Datetime: 2016-04-11 17:34:42
 * Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
+* Archive File: [configurations.02626ddbf3a00f8ede56fdfd2e46a027800e75b6.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/21d4d58e036e1b4fa13de8f3319370b34da98912/ol-handoff/PowerShell/powerShell-Docs.it-it/live/archive/configurations.02626ddbf3a00f8ede56fdfd2e46a027800e75b6.it-it.xlf)
+* Archive Datetime: 2016-04-29 00:22:23
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * Current Target File: [dsc\configurations.md](https://github.com/PowerShell/powerShell-Docs.it-it/blob/a5f9c208584eaf1f9eeba8f9f6bc2257b59c0991/dsc/configurations.md)
@@ -580,13 +580,13 @@
 * [Back to Top](#report-top)
 
 ##### <a name='f6b6006e9d1ad8aef62523accf73e5f2dba3689816'></a> Source: [dsc\crossNodeDependencies.md](https://github.com/PowerShell/powerShell-Docs/blob/4528b4c033ae0a9b7476a60899e5cd0c96607d1c/dsc/crossNodeDependencies.md)
-* Status: HandedOffSuccess
+* Status: ArchivedSuccess
 * Target File: 
 * Handoff File: [crossNodeDependencies.bd1d65501a23b72cf44e4d417ebad7a3bd5c7139.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/f698371d6bb48c91ef102f6aff03c8d08143c618/ol-handoff/PowerShell/powerShell-Docs.it-it/live/crossNodeDependencies.bd1d65501a23b72cf44e4d417ebad7a3bd5c7139.it-it.xlf)
 * Handoff Datetime: 2016-04-22 22:43:08
 * Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
+* Archive File: [crossNodeDependencies.bd1d65501a23b72cf44e4d417ebad7a3bd5c7139.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/21d4d58e036e1b4fa13de8f3319370b34da98912/ol-handoff/PowerShell/powerShell-Docs.it-it/live/archive/crossNodeDependencies.bd1d65501a23b72cf44e4d417ebad7a3bd5c7139.it-it.xlf)
+* Archive Datetime: 2016-04-29 00:22:23
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
@@ -616,13 +616,13 @@
 * [Back to Top](#report-top)
 
 ##### <a name='156f2a3b3107cfb7501be1a8ddd918f70bcbd25419'></a> Source: [dsc\directCallResource.md](https://github.com/PowerShell/powerShell-Docs/blob/4528b4c033ae0a9b7476a60899e5cd0c96607d1c/dsc/directCallResource.md)
-* Status: HandedOffSuccess
+* Status: ArchivedSuccess
 * Target File: 
 * Handoff File: [directCallResource.7adf3e286a432cf50a90cb04db12b1f70bb586cd.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/f698371d6bb48c91ef102f6aff03c8d08143c618/ol-handoff/PowerShell/powerShell-Docs.it-it/live/directCallResource.7adf3e286a432cf50a90cb04db12b1f70bb586cd.it-it.xlf)
 * Handoff Datetime: 2016-04-22 22:43:08
 * Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
+* Archive File: [directCallResource.7adf3e286a432cf50a90cb04db12b1f70bb586cd.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/21d4d58e036e1b4fa13de8f3319370b34da98912/ol-handoff/PowerShell/powerShell-Docs.it-it/live/archive/directCallResource.7adf3e286a432cf50a90cb04db12b1f70bb586cd.it-it.xlf)
+* Archive Datetime: 2016-04-29 00:22:23
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)

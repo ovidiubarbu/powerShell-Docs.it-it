@@ -11273,9 +11273,9 @@
       "HandbackException": null,
       "HandbackFailureTimes": 0,
       "UpdatedDateTime": "0001-01-01T00:00:00",
-      "ArchiveFilePath": null,
-      "ArchiveFileCommit": null,
-      "ArchiveFileDateTime": "0001-01-01T00:00:00",
+      "ArchiveFilePath": "ol-handoff\\PowerShell\\powerShell-Docs.it-it\\live\\archive\\builtInResource.2f855e1582347e986aa4e5e62b842b886596fdc2.it-it.xlf",
+      "ArchiveFileCommit": "21d4d58e036e1b4fa13de8f3319370b34da98912",
+      "ArchiveFileDateTime": "2016-04-29T00:22:23.2331383Z",
       "ArchiveException": null
     },
     "7ba63baa71ba7b9da21445a2f7c2bef7dadcf2e9": {
@@ -11389,9 +11389,9 @@
       "HandbackException": null,
       "HandbackFailureTimes": 0,
       "UpdatedDateTime": "0001-01-01T00:00:00",
-      "ArchiveFilePath": null,
-      "ArchiveFileCommit": null,
-      "ArchiveFileDateTime": "0001-01-01T00:00:00",
+      "ArchiveFilePath": "ol-handoff\\PowerShell\\powerShell-Docs.it-it\\live\\archive\\configurations.02626ddbf3a00f8ede56fdfd2e46a027800e75b6.it-it.xlf",
+      "ArchiveFileCommit": "21d4d58e036e1b4fa13de8f3319370b34da98912",
+      "ArchiveFileDateTime": "2016-04-29T00:22:23.2331383Z",
       "ArchiveException": null
     },
     "675e0efb2e9853bb2c3c03735779c940faca2414": {
@@ -12317,9 +12317,9 @@
       "HandbackException": null,
       "HandbackFailureTimes": 0,
       "UpdatedDateTime": "0001-01-01T00:00:00",
-      "ArchiveFilePath": null,
-      "ArchiveFileCommit": null,
-      "ArchiveFileDateTime": "0001-01-01T00:00:00",
+      "ArchiveFilePath": "ol-handoff\\PowerShell\\powerShell-Docs.it-it\\live\\archive\\crossNodeDependencies.bd1d65501a23b72cf44e4d417ebad7a3bd5c7139.it-it.xlf",
+      "ArchiveFileCommit": "21d4d58e036e1b4fa13de8f3319370b34da98912",
+      "ArchiveFileDateTime": "2016-04-29T00:22:23.2331383Z",
       "ArchiveException": null
     },
     "156f2a3b3107cfb7501be1a8ddd918f70bcbd254": {
@@ -12346,9 +12346,9 @@
       "HandbackException": null,
       "HandbackFailureTimes": 0,
       "UpdatedDateTime": "0001-01-01T00:00:00",
-      "ArchiveFilePath": null,
-      "ArchiveFileCommit": null,
-      "ArchiveFileDateTime": "0001-01-01T00:00:00",
+      "ArchiveFilePath": "ol-handoff\\PowerShell\\powerShell-Docs.it-it\\live\\archive\\directCallResource.7adf3e286a432cf50a90cb04db12b1f70bb586cd.it-it.xlf",
+      "ArchiveFileCommit": "21d4d58e036e1b4fa13de8f3319370b34da98912",
+      "ArchiveFileDateTime": "2016-04-29T00:22:23.2331383Z",
       "ArchiveException": null
     },
     "a770b81f2fa2457b15e7711b74d0df87637b05e0": {
