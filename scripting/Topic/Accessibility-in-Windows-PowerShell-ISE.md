@@ -19,11 +19,11 @@ Questo argomento descrive le funzioni di accessibilità di [!INCLUDE[ise_1](../T
 [Tasti di scelta rapida per avvio e uscita](#bkmk_7)
 Microsoft cerca di sviluppare prodotti e servizi che siano facili da utilizzare per chiunque. Negli argomenti seguenti sono disponibili informazioni sulle funzionalità, i prodotti e i servizi che migliorano l'accessibilità di [!INCLUDE[ise_2](../Token/ise_2_md.md)] per gli utenti disabili.
 
-[!INCLUDE[ise_2](../Token/ise_2_md.md)] supporta la modalità a contrasto elevato. Per gli utenti con problemi di vista sono disponibili informazioni sui punti di interruzione tramite i cmdlet per la gestione dei punti di interruzione, come [Get-PSBreakpoint](assetId:///0bf48936-00ab-411c-b5e0-9b10a812a3c6) e [Set-PSBreakpoint](assetId:///6afd5d2c-a285-4796-8607-3cbf49471420). Per altre informazioni, vedere "Come gestire i punti di interruzione" in [Come eseguire il debug degli script in Windows PowerShell ISE](../Topic/How-to-Debug-Scripts-in-Windows-PowerShell-ISE.md#bkmk_1). Oltre alle funzionalità e utilità di accessibilità disponibili in Microsoft Windows, le funzionalità seguenti rendono Windows PowerShell ISE più accessibile agli utenti disabili:
+[!INCLUDE[ise_2](../Token/ise_2_md.md)] supporta la modalità a contrasto elevato. Per gli utenti con problemi di vista sono disponibili informazioni sui punti di interruzione tramite i cmdlet per la gestione dei punti di interruzione, come [Get-PSBreakpoint](https://technet.microsoft.com/en-us/library/0bf48936-00ab-411c-b5e0-9b10a812a3c6) e [Set-PSBreakpoint](https://technet.microsoft.com/en-us/library/6afd5d2c-a285-4796-8607-3cbf49471420). Per altre informazioni, vedere "Come gestire i punti di interruzione" in [Come eseguire il debug degli script in Windows PowerShell ISE](../Topic/How-to-Debug-Scripts-in-Windows-PowerShell-ISE.md#bkmk_1). Oltre alle funzionalità e utilità di accessibilità disponibili in Microsoft Windows, le funzionalità seguenti rendono Windows PowerShell ISE più accessibile agli utenti disabili:
 
 -   Tasti di scelta rapida
 
--   Tabella di colorazione della sintassi e la possibilità di modificare diverse altre impostazioni di colore mediante l'oggetto di scripting [$psISE.Options](assetId:///75e2a76f-f3d1-490b-ad5d-e3829946aabb).
+-   Tabella di colorazione della sintassi e la possibilità di modificare diverse altre impostazioni di colore mediante l'oggetto di scripting [$psISE.Options](https://technet.microsoft.com/en-us/library/75e2a76f-f3d1-490b-ad5d-e3829946aabb).
 
 -   Modifica delle dimensioni del testo
 
@@ -149,6 +149,6 @@ Eseguire una delle operazioni seguenti:
 
 
 
-<!--HONumber=Apr16_HO1-->
+<!--HONumber=Apr16_HO2-->
 
 

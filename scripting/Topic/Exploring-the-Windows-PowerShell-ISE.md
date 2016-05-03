@@ -14,7 +14,7 @@ ms.assetid: e0d2c6e8-5126-40e7-a1e1-d1cff29fe94a
 > A partire da [!INCLUDE[ise_2](../Token/ise_2_md.md)] 3.0 i riquadri dei comandi e di output sono stati combinati in un unico riquadro della console.
 
 ## Barra dei menu
-La barra dei menu contiene i menu **File**, **Modifica**, **Visualizza**, **Strumenti**, **Debug**, **Componenti aggiuntivi** e **?**. I pulsanti dei menu consentono di eseguire operazioni relative alla scrittura e all'esecuzione di script, nonché all'esecuzione di comandi in [!INCLUDE[ise_2](../Token/ise_2_md.md)]. Nella barra dei menu può essere inoltre inserito un [menu Componenti aggiuntivi](assetId:///412dd662-417a-4661-ada2-558802d0f6d2#submenus) tramite l'esecuzione di script che usano il [Modello a oggetti di scripting di Windows PowerShell ISE](assetId:///1737ddb7-c20d-4e6b-a0d3-68cc2650f2a1).
+La barra dei menu contiene i menu **File**, **Modifica**, **Visualizza**, **Strumenti**, **Debug**, **Componenti aggiuntivi** e **?**. I pulsanti dei menu consentono di eseguire operazioni relative alla scrittura e all'esecuzione di script, nonché all'esecuzione di comandi in [!INCLUDE[ise_2](../Token/ise_2_md.md)]. Nella barra dei menu può essere inoltre inserito un [menu Componenti aggiuntivi](https://technet.microsoft.com/en-us/library/412dd662-417a-4661-ada2-558802d0f6d2#submenus) tramite l'esecuzione di script che usano il [Modello a oggetti di scripting di Windows PowerShell ISE](https://technet.microsoft.com/en-us/library/1737ddb7-c20d-4e6b-a0d3-68cc2650f2a1).
 
 > [!NOTE]
 > In [!INCLUDE[ise_2](../Token/ise_2_md.md)] 2.0 i menu **Strumenti** e **Componenti aggiuntivi** non sono disponibili.
@@ -73,6 +73,6 @@ La Guida di [!INCLUDE[ise_2](../Token/ise_2_md.md)] è disponibile sul Web nella
 
 
 
-<!--HONumber=Apr16_HO1-->
+<!--HONumber=Apr16_HO2-->
 
 

@@ -26,12 +26,12 @@ Nell'ambiente di debug di Windows PowerShell si possono impostare tre tipi di pu
 
 3.  **Punto di interruzione comando.** Lo script viene sospeso ogni volta che durante il funzionamento dello script sta per essere eseguito il comando specificato. Può includere parametri per filtrare ulteriormente il punto di interruzione alla sola operazione desiderata. Il comando può essere anche una funzione creata dall'utente.
 
-Nell'ambiente di debug di [!INCLUDE[ise_2](../Token/ise_2_md.md)], solo i punti di interruzione riga possono essere impostati usando il menu o i tasti di scelta rapida. Gli altri due tipi di punti di interruzione vanno impostati dal riquadro della console usando il cmdlet [Set-PSBreakpoint [m2]](assetId:///88d2d9ad-17dc-44ae-99aa-f841125b9dc8). Questa sezione illustra come eseguire le attività di debug in [!INCLUDE[ise_2](../Token/ise_2_md.md)] usando i comandi di menu, ove disponibili, e come eseguire una più ampia gamma di comandi dal riquadro della console mediante l'uso di script.
+Nell'ambiente di debug di [!INCLUDE[ise_2](../Token/ise_2_md.md)], solo i punti di interruzione riga possono essere impostati usando il menu o i tasti di scelta rapida. Gli altri due tipi di punti di interruzione vanno impostati dal riquadro della console usando il cmdlet [Set-PSBreakpoint [m2]](https://technet.microsoft.com/en-us/library/88d2d9ad-17dc-44ae-99aa-f841125b9dc8). Questa sezione illustra come eseguire le attività di debug in [!INCLUDE[ise_2](../Token/ise_2_md.md)] usando i comandi di menu, ove disponibili, e come eseguire una più ampia gamma di comandi dal riquadro della console mediante l'uso di script.
 
 ### Per impostare un punto di interruzione
 È possibile impostare un punto di interruzione in uno script solo dopo averlo salvato. Fare clic con il pulsante destro del mouse sulla riga in cui si vuole impostare un punto di interruzione e scegliere **Attiva/disattiva punto di interruzione**. In alternativa, fare clic sulla riga in cui si vuole impostare un punto di interruzione e premere **F9** oppure scegliere **Attiva/disattiva punto di interruzione** dal menu **Debug**.
 
-Lo script seguente è un esempio di come si può impostare un punto di interruzione variabile dal riquadro della console usando il cmdlet [Set-PSBreakpoint](assetId:///6afd5d2c-a285-4796-8607-3cbf49471420).
+Lo script seguente è un esempio di come si può impostare un punto di interruzione variabile dal riquadro della console usando il cmdlet [Set-PSBreakpoint](https://technet.microsoft.com/en-us/library/6afd5d2c-a285-4796-8607-3cbf49471420).
 
 ```
 # This command sets a breakpoint on the Server variable in the Sample.ps1 script.
@@ -41,7 +41,7 @@ set-psbreakpoint -script sample.ps1 -variable Server
 ### Elencare tutti i punti di interruzione
 Questo comando mostra tutti i punti di interruzione nella sessione di [!INCLUDE[wps_1](../Token/wps_1_md.md)] corrente.
 
-Scegliere **Elenca punti di interruzione** dal menu **Debug**. Lo script seguente è un esempio di come si può ottenere un elenco di tutti i punti di interruzione dal riquadro della console usando il cmdlet [Get-PSBreakpoint](assetId:///0bf48936-00ab-411c-b5e0-9b10a812a3c6).
+Scegliere **Elenca punti di interruzione** dal menu **Debug**. Lo script seguente è un esempio di come si può ottenere un elenco di tutti i punti di interruzione dal riquadro della console usando il cmdlet [Get-PSBreakpoint](https://technet.microsoft.com/en-us/library/0bf48936-00ab-411c-b5e0-9b10a812a3c6).
 
 ```
 # This command lists all breakpoints in the current session. 
@@ -49,7 +49,7 @@ get-psbreakpoint
 ```
 
 ### Rimuovere un punto di interruzione
-Rimuovere un punto di interruzione equivale a eliminarlo.  Se si pensa di riutilizzarlo in un momento successivo, si può anche pensare di [disabilitarlo](#bkmk_disable).  Fare clic con il pulsante destro del mouse sulla riga in cui si vuole rimuovere un punto di interruzione e scegliere **Attiva/disattiva punto di interruzione**. In alternativa, fare clic sulla riga in cui si vuole rimuovere un punto di interruzione e scegliere **Attiva/disattiva punto di interruzione** dal menu **Debug**. Lo script seguente è un esempio di come si può rimuovere un punto di interruzione con un ID specificato dal riquadro della console usando il cmdlet [Remove-PSBreakpoint](assetId:///4c877a80-0ea0-4790-9281-88c08ef0ddd6).
+Rimuovere un punto di interruzione equivale a eliminarlo.  Se si pensa di riutilizzarlo in un momento successivo, si può anche pensare di [disabilitarlo](#bkmk_disable).  Fare clic con il pulsante destro del mouse sulla riga in cui si vuole rimuovere un punto di interruzione e scegliere **Attiva/disattiva punto di interruzione**. In alternativa, fare clic sulla riga in cui si vuole rimuovere un punto di interruzione e scegliere **Attiva/disattiva punto di interruzione** dal menu **Debug**. Lo script seguente è un esempio di come si può rimuovere un punto di interruzione con un ID specificato dal riquadro della console usando il cmdlet [Remove-PSBreakpoint](https://technet.microsoft.com/en-us/library/4c877a80-0ea0-4790-9281-88c08ef0ddd6).
 
 ```
 # This command deletes the breakpoint with breakpoint ID 2.
@@ -59,7 +59,7 @@ remove-psbreakpoint -id 2
 ### Rimuovere tutti i punti di interruzione
 Per rimuovere tutti i punti di interruzione definiti nella sessione corrente, scegliere **Rimuovi tutti i punti di interruzione** dal menu **Debug**.
 
-Lo script seguente è un esempio di come si possono rimuovere tutti i punti di interruzione dal riquadro della console usando il cmdlet [Remove-PSBreakpoint](assetId:///4c877a80-0ea0-4790-9281-88c08ef0ddd6).
+Lo script seguente è un esempio di come si possono rimuovere tutti i punti di interruzione dal riquadro della console usando il cmdlet [Remove-PSBreakpoint](https://technet.microsoft.com/en-us/library/4c877a80-0ea0-4790-9281-88c08ef0ddd6).
 
 ```
 # This command deletes all of the breakpoints in the current session.
@@ -67,7 +67,7 @@ get-breakpoint | remove-breakpoint
 ```
 
 ### <a name="bkmk_disable"></a>Disabilitare un punto di interruzione
-La disabilitazione di un punto di interruzione non ne comporta la rimozione, ma la disattivazione fino a quando non viene abilitato di nuovo.  Per disabilitare uno specifico punto di interruzione riga, fare clic con il pulsante destro del mouse sulla riga in cui si trova e quindi scegliere **Disattiva punto di interruzione**. In alternativa, fare clic sulla riga in cui si vuole disabilitare un punto di interruzione e premere **F9** oppure scegliere **Disattiva punto di interruzione** dal menu **Debug**. Lo script seguente è un esempio di come si può rimuovere un punto di interruzione con un ID specificato dal riquadro della console usando il cmdlet [Disable-PSBreakpoint](assetId:///d4974e9b-0aaa-4e20-b87f-f599a413e4e8).
+La disabilitazione di un punto di interruzione non ne comporta la rimozione, ma la disattivazione fino a quando non viene abilitato di nuovo.  Per disabilitare uno specifico punto di interruzione riga, fare clic con il pulsante destro del mouse sulla riga in cui si trova e quindi scegliere **Disattiva punto di interruzione**. In alternativa, fare clic sulla riga in cui si vuole disabilitare un punto di interruzione e premere **F9** oppure scegliere **Disattiva punto di interruzione** dal menu **Debug**. Lo script seguente è un esempio di come si può rimuovere un punto di interruzione con un ID specificato dal riquadro della console usando il cmdlet [Disable-PSBreakpoint](https://technet.microsoft.com/en-us/library/d4974e9b-0aaa-4e20-b87f-f599a413e4e8).
 
 ```
 # This command disables the breakpoint with breakpoint ID 0.
@@ -75,7 +75,7 @@ disable-psbreakpoint -id 0
 ```
 
 ### Disabilitare tutti i punti di interruzione
-La disabilitazione di un punto di interruzione non ne comporta la rimozione, ma la disattivazione fino a quando non viene abilitato di nuovo.  Per disabilitare tutti i punti di interruzione definiti nella sessione corrente, scegliere **Disattiva tutti i punti di interruzione** dal menu **Debug**. Lo script seguente è un esempio di come si possono disabilitare tutti i punti di interruzione dal riquadro della console usando il cmdlet [Disable-PSBreakpoint](assetId:///d4974e9b-0aaa-4e20-b87f-f599a413e4e8).
+La disabilitazione di un punto di interruzione non ne comporta la rimozione, ma la disattivazione fino a quando non viene abilitato di nuovo.  Per disabilitare tutti i punti di interruzione definiti nella sessione corrente, scegliere **Disattiva tutti i punti di interruzione** dal menu **Debug**. Lo script seguente è un esempio di come si possono disabilitare tutti i punti di interruzione dal riquadro della console usando il cmdlet [Disable-PSBreakpoint](https://technet.microsoft.com/en-us/library/d4974e9b-0aaa-4e20-b87f-f599a413e4e8).
 
 ```
 # This command disables all breakpoints in the current session. 
@@ -84,7 +84,7 @@ get-psbreakpoint | disable-psbreakpoint
 ```
 
 ### Abilitare un punto di interruzione
-Per abilitare uno specifico punto di interruzione, fare clic con il pulsante destro del mouse sulla riga in cui si trova e quindi scegliere **Attiva punto di interruzione**. In alternativa, fare clic sulla riga in cui si vuole abilitare un punto di interruzione e premere **F9** oppure scegliere **Attiva punto di interruzione** dal menu **Debug**. Lo script seguente è un esempio di come si possono abilitare specifici punti di interruzione dal riquadro della console usando il cmdlet [Enable-PSBreakpoint](assetId:///739e1091-3b3f-405f-a428-bec7543e5df0).
+Per abilitare uno specifico punto di interruzione, fare clic con il pulsante destro del mouse sulla riga in cui si trova e quindi scegliere **Attiva punto di interruzione**. In alternativa, fare clic sulla riga in cui si vuole abilitare un punto di interruzione e premere **F9** oppure scegliere **Attiva punto di interruzione** dal menu **Debug**. Lo script seguente è un esempio di come si possono abilitare specifici punti di interruzione dal riquadro della console usando il cmdlet [Enable-PSBreakpoint](https://technet.microsoft.com/en-us/library/739e1091-3b3f-405f-a428-bec7543e5df0).
 
 ```
 # This command enables breakpoints with breakpoint IDs 0, 1, and 5.
@@ -92,7 +92,7 @@ enable-psbreakpoint -id 0, 1, 5
 ```
 
 ### Abilitare tutti i punti di interruzione
-Per abilitare tutti i punti di interruzione definiti nella sessione corrente, scegliere **Attiva tutti i punti di interruzione** dal menu **Debug**. Lo script seguente è un esempio di come si possono abilitare tutti i punti di interruzione dal riquadro della console usando il cmdlet [Enable-PSBreakpoint](assetId:///739e1091-3b3f-405f-a428-bec7543e5df0).
+Per abilitare tutti i punti di interruzione definiti nella sessione corrente, scegliere **Attiva tutti i punti di interruzione** dal menu **Debug**. Lo script seguente è un esempio di come si possono abilitare tutti i punti di interruzione dal riquadro della console usando il cmdlet [Enable-PSBreakpoint](https://technet.microsoft.com/en-us/library/739e1091-3b3f-405f-a428-bec7543e5df0).
 
 ```
 # This command enables all breakpoints in the current session. 
@@ -101,7 +101,7 @@ get-psbreakpoint | enable-psbreakpoint
 ```
 
 ## <a name="bkmk_2"></a>Come gestire una sessione di debug
-Prima di avviare il debug è necessario impostare uno o più punti di interruzione. Non si può impostare un punto di interruzione finché lo script di cui si vuole eseguire il debug non è stato salvato. Per istruzioni su come impostare un punto di interruzione, vedere [Come gestire i punti di interruzione](#bkmk_1) o [Set-PSBreakpoint](assetId:///6afd5d2c-a285-4796-8607-3cbf49471420). Dopo avere avviato il debug, non è possibile modificare uno script se non si arresta il debug. Uno script in cui sono impostati uno o più punti di interruzione viene salvato automaticamente prima dell'esecuzione.
+Prima di avviare il debug è necessario impostare uno o più punti di interruzione. Non si può impostare un punto di interruzione finché lo script di cui si vuole eseguire il debug non è stato salvato. Per istruzioni su come impostare un punto di interruzione, vedere [Come gestire i punti di interruzione](#bkmk_1) o [Set-PSBreakpoint](https://technet.microsoft.com/en-us/library/6afd5d2c-a285-4796-8607-3cbf49471420). Dopo avere avviato il debug, non è possibile modificare uno script se non si arresta il debug. Uno script in cui sono impostati uno o più punti di interruzione viene salvato automaticamente prima dell'esecuzione.
 
 ### Per avviare il debug
 Premere **F5** o fare clic sull'icona **Esegui script** sulla barra degli strumenti oppure in alternativa scegliere **Esegui/Continua** dal menu **Debug**. Lo script viene eseguito finché non incontra il primo punto di interruzione. L'esecuzione viene sospesa e la riga in cui è stata sospesa viene evidenziata.
@@ -175,6 +175,6 @@ C:\ps-test\MyScript.ps1
 
 
 
-<!--HONumber=Apr16_HO1-->
+<!--HONumber=Apr16_HO2-->
 
 

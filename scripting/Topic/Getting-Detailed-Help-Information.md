@@ -13,7 +13,7 @@ Windows PowerShell include argomenti dettagliati della Guida che illustrano i co
 È possibile visualizzare gli argomenti della Guida al prompt dei comandi oppure visualizzarne le versioni più aggiornate nella Libreria Microsoft TechNet. Molti programmi che ospitano Windows PowerShell, come Windows PowerShell Integrated Scripting Environment, forniscono funzionalità aggiuntive della Guida, come la Guida sensibile al contesto e il file della Guida compilato (con estensione chm).
 
 ## Ottenere informazioni della Guida per i cmdlet
-Per ottenere informazioni della Guida sui cmdlet di Windows PowerShell, usare il cmdlet [Get-Help [m2]](assetId:///2d7fe1b4-0025-4580-a911-d81922dd6cd2). Per visualizzare ad esempio la Guida per il cmdlet [Get-ChildItem [m2]](assetId:///4b270d63-c995-45b8-b5b4-3f8887efbfcc), digitare:
+Per ottenere informazioni della Guida sui cmdlet di Windows PowerShell, usare il cmdlet [Get-Help [m2]](https://technet.microsoft.com/en-us/library/2d7fe1b4-0025-4580-a911-d81922dd6cd2). Per visualizzare ad esempio la Guida per il cmdlet [Get-ChildItem [m2]](https://technet.microsoft.com/en-us/library/4b270d63-c995-45b8-b5b4-3f8887efbfcc), digitare:
 
 ```
 get-help get-childitem
@@ -126,7 +126,7 @@ get-help c:\ps-test\TestScript.ps1
 
 I parametri progettati per la visualizzazione della Guida dei cmdlet, come *Detailed*, *Full*, *Examples* e *Parameter*, possono essere usati anche per la Guida relativa agli script e alle funzioni. Quando tuttavia si visualizza l'intera Guida, digitando "get-help *", la Guida per le funzioni e gli script non viene visualizzata.
 
-Per informazioni su come scrivere argomenti della Guida per funzioni e script personalizzati, vedere [about_Functions [m2]](assetId:///61d40692-5300-4de9-a9b5-bae31815e105), [about_Scripts](assetId:///7dc08334-dcfe-450b-b949-0554855623af) e [about_Comment_Based_Help](assetId:///99a81ccc-21a0-49ec-a1b3-9efe2b4c0bbf).
+Per informazioni su come scrivere argomenti della Guida per funzioni e script personalizzati, vedere [about_Functions [m2]](https://technet.microsoft.com/en-us/library/61d40692-5300-4de9-a9b5-bae31815e105), [about_Scripts](https://technet.microsoft.com/en-us/library/7dc08334-dcfe-450b-b949-0554855623af) e [about_Comment_Based_Help](https://technet.microsoft.com/en-us/library/99a81ccc-21a0-49ec-a1b3-9efe2b4c0bbf).
 
 ## Ottenere informazioni della Guida online
 Se si è connessi a Internet, uno dei modi migliori per ottenere assistenza è visualizzare gli argomenti della Guida online. Essendo più semplici da aggiornare, gli argomenti della Guida online sono quelli con i contenuti più attuali.
@@ -163,16 +163,16 @@ Di seguito è riportata la prima riga nella sezione Collegamenti correlati dell'
 Online version: http://go.microsoft.com/fwlink/?LinkID=135194
 ```
 
-Per informazioni su come fornire supporto online per argomenti della Guida personalizzati, vedere [about_Comment_Based_Help](assetId:///99a81ccc-21a0-49ec-a1b3-9efe2b4c0bbf) e leggere l'articolo su come scrivere la Guida dei cmdlet ([http://go.microsoft.com/fwlink/?LinkID=123415](http://go.microsoft.com/fwlink/?LinkID=123415)) in MSDN (Microsoft Developer Network) Library.
+Per informazioni su come fornire supporto online per argomenti della Guida personalizzati, vedere [about_Comment_Based_Help](https://technet.microsoft.com/en-us/library/99a81ccc-21a0-49ec-a1b3-9efe2b4c0bbf) e leggere l'articolo su come scrivere la Guida dei cmdlet ([http://go.microsoft.com/fwlink/?LinkID=123415](http://go.microsoft.com/fwlink/?LinkID=123415)) in MSDN (Microsoft Developer Network) Library.
 
 ## Vedere anche
-[about_Functions [m2]](assetId:///61d40692-5300-4de9-a9b5-bae31815e105)
-[about_Scripts](assetId:///7dc08334-dcfe-450b-b949-0554855623af)
-[about_Comment_Based_Help](assetId:///99a81ccc-21a0-49ec-a1b3-9efe2b4c0bbf)
-[Get-Help [m2]](assetId:///2d7fe1b4-0025-4580-a911-d81922dd6cd2)
+[about_Functions [m2]](https://technet.microsoft.com/en-us/library/61d40692-5300-4de9-a9b5-bae31815e105)
+[about_Scripts](https://technet.microsoft.com/en-us/library/7dc08334-dcfe-450b-b949-0554855623af)
+[about_Comment_Based_Help](https://technet.microsoft.com/en-us/library/99a81ccc-21a0-49ec-a1b3-9efe2b4c0bbf)
+[Get-Help [m2]](https://technet.microsoft.com/en-us/library/2d7fe1b4-0025-4580-a911-d81922dd6cd2)
 
 
 
-<!--HONumber=Apr16_HO1-->
+<!--HONumber=Apr16_HO2-->
 
 

@@ -31,13 +31,13 @@ Per eseguire il motore di [!INCLUDE[psversion2](../Token/psversion2_md.md)] in u
 
 Si tratta di un'attività avanzata, che in genere viene eseguita dagli amministratori di sistema.
 
-La procedura seguente usa il parametro **PSVersion** del cmdlet [Register-PSSessionConfiguration](assetId:///e9152ae2-bd6d-4056-9bc7-dc1893aa29ea) per creare una configurazione di sessione che usa il motore di [!INCLUDE[psversion2](../Token/psversion2_md.md)]. Si può anche usare il parametro **PowerShellVersion** del cmdlet [New-PSSessionConfigurationFile](assetId:///5f3e3633-6e90-479c-aea9-ba45a1954866) per creare un file di configurazione per una sessione che carica il motore di [!INCLUDE[psversion2](../Token/psversion2_md.md)]. Per modificare una configurazione di sessione in modo che usi il motore di [!INCLUDE[psversion2](../Token/psversion2_md.md)] si può usare il parametro **PSVersion** del cmdlet [Set-PSSessionConfiguration](assetId:///b21fbad3-1759-4260-b206-dcb8431cd6ea).
+La procedura seguente usa il parametro **PSVersion** del cmdlet [Register-PSSessionConfiguration](https://technet.microsoft.com/en-us/library/e9152ae2-bd6d-4056-9bc7-dc1893aa29ea) per creare una configurazione di sessione che usa il motore di [!INCLUDE[psversion2](../Token/psversion2_md.md)]. Si può anche usare il parametro **PowerShellVersion** del cmdlet [New-PSSessionConfigurationFile](https://technet.microsoft.com/en-us/library/5f3e3633-6e90-479c-aea9-ba45a1954866) per creare un file di configurazione per una sessione che carica il motore di [!INCLUDE[psversion2](../Token/psversion2_md.md)]. Per modificare una configurazione di sessione in modo che usi il motore di [!INCLUDE[psversion2](../Token/psversion2_md.md)] si può usare il parametro **PSVersion** del cmdlet [Set-PSSessionConfiguration](https://technet.microsoft.com/en-us/library/b21fbad3-1759-4260-b206-dcb8431cd6ea).
 
-Per altre informazioni sui file di configurazione della sessione, vedere [about_Session_Configuration_Files](assetId:///c7217447-1ebf-477b-a8ef-4dbe9a1473b8). Per informazioni sulle configurazioni di sessione, incluse impostazione e sicurezza, vedere [about_Session_Configurations [v4]](assetId:///a2fbe12a-350c-4d04-be50-24102824e3ab).
+Per altre informazioni sui file di configurazione della sessione, vedere [about_Session_Configuration_Files](https://technet.microsoft.com/en-us/library/c7217447-1ebf-477b-a8ef-4dbe9a1473b8). Per informazioni sulle configurazioni di sessione, incluse impostazione e sicurezza, vedere [about_Session_Configurations [v4]](https://technet.microsoft.com/en-us/library/a2fbe12a-350c-4d04-be50-24102824e3ab).
 
 #### Per avviare una sessione di [!INCLUDE[psversion2](../Token/psversion2_md.md)] remota
 
-1.  Per creare una configurazione di sessione che richiede il motore di [!INCLUDE[psversion2](../Token/psversion2_md.md)], usare il parametro **PSVersion** del cmdlet [Register-PSSessionConfiguration](assetId:///e9152ae2-bd6d-4056-9bc7-dc1893aa29ea) impostando il valore "2.0". Eseguire questo comando nel computer che si trova sul "lato server" o ricevente della connessione.
+1.  Per creare una configurazione di sessione che richiede il motore di [!INCLUDE[psversion2](../Token/psversion2_md.md)], usare il parametro **PSVersion** del cmdlet [Register-PSSessionConfiguration](https://technet.microsoft.com/en-us/library/e9152ae2-bd6d-4056-9bc7-dc1893aa29ea) impostando il valore "2.0". Eseguire questo comando nel computer che si trova sul "lato server" o ricevente della connessione.
 
     Il comando di esempio seguente crea la configurazione di sessione PS2 nel computer Server01. Per eseguire il comando, avviare [!INCLUDE[psversion4](../Token/psversion4_md.md)] o [!INCLUDE[psversion3](../Token/psversion3_md.md)] con l'opzione **Esegui come amministratore**.
 
@@ -45,7 +45,7 @@ Per altre informazioni sui file di configurazione della sessione, vedere [about_
     Register-PSSessionConfiguration -Name PS2 -PSVersion 2.0
     ```
 
-2.  Per creare nel computer Server01 una sessione che usa la configurazione di sessione PS2, usare il parametro **ConfigurationName** dei cmdlet per la creazione di una sessione remota, ad esempio [New-PSSession](assetId:///76f6628c-054c-4eda-ba7a-a6f28daaa26f).
+2.  Per creare nel computer Server01 una sessione che usa la configurazione di sessione PS2, usare il parametro **ConfigurationName** dei cmdlet per la creazione di una sessione remota, ad esempio [New-PSSession](https://technet.microsoft.com/en-us/library/76f6628c-054c-4eda-ba7a-a6f28daaa26f).
 
     All'avvio di una sessione che usa la configurazione di sessione, il motore di [!INCLUDE[psversion2](../Token/psversion2_md.md)] viene caricato automaticamente.
 
@@ -56,7 +56,7 @@ Per altre informazioni sui file di configurazione della sessione, vedere [about_
     ```
 
 ## Come avviare un processo in background con il motore di [!INCLUDE[psversion2](../Token/psversion2_md.md)]
-Per avviare un processo in background con il motore di [!INCLUDE[psversion2](../Token/psversion2_md.md)], usare il parametro **PSVersion** del cmdlet [Start-Job](assetId:///2bc04935-0deb-4ec0-b856-d7290cca6442).
+Per avviare un processo in background con il motore di [!INCLUDE[psversion2](../Token/psversion2_md.md)], usare il parametro **PSVersion** del cmdlet [Start-Job](https://technet.microsoft.com/en-us/library/2bc04935-0deb-4ec0-b856-d7290cca6442).
 
 Il comando seguente avvia un processo in background con il motore di [!INCLUDE[psversion2](../Token/psversion2_md.md)]
 
@@ -64,10 +64,10 @@ Il comando seguente avvia un processo in background con il motore di [!INCLUDE[p
 Start-Job {Get-Process} -PSVersion 2.0
 ```
 
-Per altre informazioni sui processi in background, vedere [about_Jobs [v4]](assetId:///7362512a-8a4e-4575-b2ea-a740e5c4f002).
+Per altre informazioni sui processi in background, vedere [about_Jobs [v4]](https://technet.microsoft.com/en-us/library/7362512a-8a4e-4575-b2ea-a740e5c4f002).
 
 
 
-<!--HONumber=Apr16_HO1-->
+<!--HONumber=Apr16_HO2-->
 
 
