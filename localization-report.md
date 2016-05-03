@@ -7,9 +7,9 @@
 [ Handoff Failed Files ](#handoff-failed-list)| 0
 [ Handoff Success Files ](#handoff-success-list)| 2
 [ Archive Failed Files ](#archive-failed-list)| 0
-[ Archive Success Files ](#archive-success-list)| 106
+[ Archive Success Files ](#archive-success-list)| 105
 [ Handback Failed Files ](#handback-failed-list)| 0
-[ Out Of Sync Handback Files ](#outofsync-handback-success-list)| 25
+[ Out Of Sync Handback Files ](#outofsync-handback-success-list)| 26
 [ In Sync Handback Files ](#insync-handback-success-list)| 197
 [ Ignored Files ](#ignored-list)| 12
 
@@ -129,7 +129,6 @@
  [scripting\Topic\How-to-Write-and-Run-Scripts-in-the-Windows-PowerShell-ISE.md](https://github.com/PowerShell/powerShell-Docs/blob/54d8f8daa70f889268934121a37dac848846c307/scripting/Topic/How-to-Write-and-Run-Scripts-in-the-Windows-PowerShell-ISE.md) | ArchivedSuccess | [Details](#39991114d99e7d331062068236aef75e24f69bb2204)
  [scripting\Topic\Repeating-a-Task-for-Multiple-Objects--ForEach-Object-.md](https://github.com/PowerShell/powerShell-Docs/blob/7221b5bd5ba90da32836d8c4e2bddb18c8f02ba6/scripting/Topic/Repeating-a-Task-for-Multiple-Objects--ForEach-Object-.md) | ArchivedSuccess | [Details](#6ae3e0440a17d83681aff7c3a8d33f25a4d83a63221)
  [scripting\Topic\Starting-Windows-PowerShell-on-Earlier-Versions-of-Windows.md](https://github.com/PowerShell/powerShell-Docs/blob/7221b5bd5ba90da32836d8c4e2bddb18c8f02ba6/scripting/Topic/Starting-Windows-PowerShell-on-Earlier-Versions-of-Windows.md) | ArchivedSuccess | [Details](#faa7485e649b7c3e00fccd4f1d45f2b07773fcb3228)
- [scripting\Topic\What-s-New-in-Windows-PowerShell.md](https://github.com/PowerShell/powerShell-Docs/blob/54d8f8daa70f889268934121a37dac848846c307/scripting/Topic/What-s-New-in-Windows-PowerShell.md) | ArchivedSuccess | [Details](#ecfbfdf517c86a3acb4a0a40d5534e31bac68a9f242)
  [scripting\Topic\Windows-PowerShell-Integrated-Scripting-Environment--ISE-.md](https://github.com/PowerShell/powerShell-Docs/blob/54d8f8daa70f889268934121a37dac848846c307/scripting/Topic/Windows-PowerShell-Integrated-Scripting-Environment--ISE-.md) | ArchivedSuccess | [Details](#f3c5c7e1dd5961dd05122990816278facba748e6245)
  [scripting\Topic\WinRMSecurity.md](https://github.com/PowerShell/powerShell-Docs/blob/7a7b201f894b746447d9f05a82adb0f731e08f1c/scripting/Topic/WinRMSecurity.md) | ArchivedSuccess | [Details](#00e5a37e5fbe4532a00ead52c14a61558361c719250)
 
@@ -157,6 +156,7 @@
  [scripting\Topic\Running-Remote-Commands.md](https://github.com/PowerShell/powerShell-Docs/blob/54d8f8daa70f889268934121a37dac848846c307/scripting/Topic/Running-Remote-Commands.md) | OutofSyncHandedBackSuccess | [Details](#6529d7299c9d3706a324d392a5e7b9926b6ea99e222)
  [scripting\Topic\Using-Windows-PowerShell.md](https://github.com/PowerShell/powerShell-Docs/blob/54d8f8daa70f889268934121a37dac848846c307/scripting/Topic/Using-Windows-PowerShell.md) | OutofSyncHandedBackSuccess | [Details](#cf6509ed9574aebc7fba01133c1c271549e0e703239)
  [scripting\Topic\What-s-New-in-the-Windows-PowerShell-ISE.md](https://github.com/PowerShell/powerShell-Docs/blob/54d8f8daa70f889268934121a37dac848846c307/scripting/Topic/What-s-New-in-the-Windows-PowerShell-ISE.md) | OutofSyncHandedBackSuccess | [Details](#c1ff24d963d9ef6772e455024f2b28f0a3ecfef0241)
+ [scripting\Topic\What-s-New-in-Windows-PowerShell.md](https://github.com/PowerShell/powerShell-Docs/blob/54d8f8daa70f889268934121a37dac848846c307/scripting/Topic/What-s-New-in-Windows-PowerShell.md) | OutofSyncHandedBackSuccess | [Details](#ecfbfdf517c86a3acb4a0a40d5534e31bac68a9f242)
  [wmf\class_newtype.md](https://github.com/PowerShell/powerShell-Docs/blob/3950bffa1f487b15d380ac2889f0fb17b7518ca6/wmf/class_newtype.md) | OutofSyncHandedBackSuccess | [Details](#b91e3bbb40b2b5eddd1e43be568773c850a9b8e0266)
  [wmf\dsc_classbasedresource.md](https://github.com/PowerShell/powerShell-Docs/blob/5118413ae9c05970e9857b9284c6886007dd484a/wmf/dsc_classbasedresource.md) | OutofSyncHandedBackSuccess | [Details](#7e25c8195c153a2fda21fac320c2750d51678b6a271)
  [wmf\dsc_directaccess.md](https://github.com/PowerShell/powerShell-Docs/blob/4528b4c033ae0a9b7476a60899e5cd0c96607d1c/wmf/dsc_directaccess.md) | OutofSyncHandedBackSuccess | [Details](#dff9d6cfd92efac3f7a5f68b4ebe37719dbce111273)
@@ -3349,7 +3349,7 @@
 * [Back to Top](#report-top)
 
 ##### <a name='ecfbfdf517c86a3acb4a0a40d5534e31bac68a9f242'></a> Source: [scripting\Topic\What-s-New-in-Windows-PowerShell.md](https://github.com/PowerShell/powerShell-Docs/blob/54d8f8daa70f889268934121a37dac848846c307/scripting/Topic/What-s-New-in-Windows-PowerShell.md)
-* Status: ArchivedSuccess
+* Status: OutofSyncHandedBackSuccess
 * Target File: 
 * Handoff File: [What-s-New-in-Windows-PowerShell.166db661c18622ccef728574c4cfbd23b787f663.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/ecaf4d43083330e8f01bae0fc3e70bf8cbacc53b/ol-handoff/PowerShell/powerShell-Docs.it-it/live/What-s-New-in-Windows-PowerShell.166db661c18622ccef728574c4cfbd23b787f663.it-it.xlf)
 * Handoff Datetime: 2016-04-09 01:38:34
@@ -3358,6 +3358,9 @@
 * Archive Datetime: 2016-04-29 00:26:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
+* Current Target File: [scripting\Topic\What-s-New-in-Windows-PowerShell.md](https://github.com/PowerShell/powerShell-Docs.it-it/blob/cfc5a2bfaf794a7b443ec8935179cd4228b44349/scripting/Topic/What-s-New-in-Windows-PowerShell.md)
+* Current Handback File: [What-s-New-in-Windows-PowerShell.166db661c18622ccef728574c4cfbd23b787f663.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/abd5cb96a241c774cce585c96c0c2fd24436afc0/ol-handback/PowerShell/powerShell-Docs.it-it/live/What-s-New-in-Windows-PowerShell.166db661c18622ccef728574c4cfbd23b787f663.it-it.xlf)
+* Current Handback Datetime: 2016-05-03 13:45:47
 * [Back to Top](#report-top)
 
 ##### <a name='070a3d10d24d1cc7f251dd1f7efe1531922650fd243'></a> Source: [scripting\Topic\Windows-PowerShell-Basics.md](https://github.com/PowerShell/powerShell-Docs/blob/7221b5bd5ba90da32836d8c4e2bddb18c8f02ba6/scripting/Topic/Windows-PowerShell-Basics.md)
