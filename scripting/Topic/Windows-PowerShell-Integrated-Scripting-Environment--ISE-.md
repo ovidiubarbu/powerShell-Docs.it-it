@@ -20,7 +20,7 @@ Ecco alcune delle funzionalità che sono state aggiunte in ISE nelle versioni pi
 
 **Frammenti di codice**, ovvero brevi sezioni di codice che è possibile inserire facilmente negli script durante la scrittura. È disponibile una raccolta predefinita di utili frammenti di codice ed è possibile aggiungerne altri tramite il cmdlet **New-Snippet**.
 
-È possibile creare **strumenti aggiuntivi** per aggiungere funzionalità a ISE scrivendo codice che interagisce con il [modello a oggetti di scripting di Windows PowerShell ISE](assetId:///69b047d0-da79-413e-b948-8e45d05d1f85). Questi strumenti possono visualizzare i controlli in un riquadro a schede o funzionare in modo invisibile in background. Il componente aggiuntivo **Comandi** è un buon esempio incluso nella versione 3.0 e successive, che consente di visualizzare un elenco di comandi disponibili e la rispettiva Guida.
+È possibile creare **strumenti aggiuntivi** per aggiungere funzionalità a ISE scrivendo codice che interagisce con il [modello a oggetti di scripting di Windows PowerShell ISE](https://technet.microsoft.com/en-us/library/dd819478.aspx). Questi strumenti possono visualizzare i controlli in un riquadro a schede o funzionare in modo invisibile in background. Il componente aggiuntivo **Comandi** è un buon esempio incluso nella versione 3.0 e successive, che consente di visualizzare un elenco di comandi disponibili e la rispettiva Guida.
 
 Le funzionalità **Gestione riavvio e salvataggio automatico** salvano automaticamente gli script ogni due minuti per evitare di perdere il lavoro in caso di arresto anomalo o un riavvio imprevisto.
 
@@ -62,6 +62,6 @@ ISE è disponibile in qualsiasi computer che supporta l'esecuzione di Windows Po
 
 
 
-<!--HONumber=Apr16_HO1-->
+<!--HONumber=Apr16_HO2-->
 
 

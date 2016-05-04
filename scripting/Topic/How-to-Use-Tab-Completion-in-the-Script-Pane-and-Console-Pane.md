@@ -22,11 +22,11 @@ Nel riquadro dei comandi o nel riquadro di script digitare un cmdlet seguito da 
 Ad esempio, digitare `get-process -` e quindi premere più volte TAB per visualizzare ognuno dei parametri per il cmdlet.
 
 ## Vedere anche
-[Utilizzo di Windows PowerShell ISE](assetId:///777ea82b-dd73-4269-b61a-69a17e6ff16f)
-[Come creare una scheda di PowerShell](assetId:///c57fc210-19c8-47b1-9171-26a2144c907c)
+[Utilizzo di Windows PowerShell ISE](https://technet.microsoft.com/en-us/library/777ea82b-dd73-4269-b61a-69a17e6ff16f)
+[Come creare una scheda di PowerShell](https://technet.microsoft.com/en-us/library/c57fc210-19c8-47b1-9171-26a2144c907c)
 
 
 
-<!--HONumber=Apr16_HO1-->
+<!--HONumber=Apr16_HO2-->
 
 

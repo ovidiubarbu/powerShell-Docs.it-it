@@ -20,7 +20,7 @@ Questo argomento descrive come creare, modificare, eseguire e salvare gli script
 È possibile aprire e modificare i file di [!INCLUDE[wps_1](../Token/wps_1_md.md)] nel riquadro di script. Tipi di file di particolare interesse in [!INCLUDE[wps_1](../Token/wps_1_md.md)] sono i file di script (con estensione ps1), i file di dati degli script (con estensione psd1) e i file di modulo di script (con estensione psm1). In questi file per la visualizzazione della sintassi nell'editor del riquadro di script vengono utilizzati i colori. Altri tipi di file comuni che è possibile aprire nel riquadro di script sono file di configurazione (con estensione ps1xml), file XML e file di testo.
 
 > [!NOTE]
-> I criteri di esecuzione di [!INCLUDE[wps_2](../Token/wps_2_md.md)] determinano se è possibile eseguire script e caricare profili e file di configurazione di Windows PowerShell. I criteri di esecuzione predefiniti prevedono restrizioni e impediscono l'esecuzione di tutti gli script e il caricamento di profili. Per modificare i criteri di esecuzione per consentire il caricamento e l'uso di profili, vedere [Set-ExecutionPolicy[PSITPro5_Security]](assetId:///5690a0e1-495b-4e63-8280-65ead7bf01ab) e [about_Signing [v4]](assetId:///fcbdd3b9-0b9f-4734-b5c7-e0dcc304fa1d).
+> I criteri di esecuzione di [!INCLUDE[wps_2](../Token/wps_2_md.md)] determinano se è possibile eseguire script e caricare profili e file di configurazione di Windows PowerShell. I criteri di esecuzione predefiniti prevedono restrizioni e impediscono l'esecuzione di tutti gli script e il caricamento di profili. Per modificare i criteri di esecuzione per consentire il caricamento e l'uso di profili, vedere [Set-ExecutionPolicy[PSITPro5_Security]](https://technet.microsoft.com/en-us/library/5690a0e1-495b-4e63-8280-65ead7bf01ab) e [about_Signing [v4]](https://technet.microsoft.com/en-us/library/fcbdd3b9-0b9f-4734-b5c7-e0dcc304fa1d).
 
 ### Per creare un nuovo file di script
 Sulla barra degli strumenti fare clic su **Nuovo** o scegliere **Nuovo** dal menu **File**. Il file creato viene visualizzato in una nuova scheda file nella scheda di PowerShell corrente. Tenere presente che le schede di PowerShell sono visibili solo se ne sono presenti più di una. Per impostazione predefinita viene creato un file di tipo script (con estensione ps1), ma è possibile salvarlo con un nuovo nome e un'altra estensione. Nella stessa scheda di PowerShell si possono creare più file di script.
@@ -118,7 +118,7 @@ Premere **CTRL+S**, fare clic sull'icona **Salva** sulla barra degli strumenti o
 4.  Fare clic su **Salva**.
 
 ### Per salvare uno script nella codifica ASCII
-Per impostazione predefinita, [!INCLUDE[ise_2](../Token/ise_2_md.md)] salva i file di script (con estensione ps1), i file di dati degli script (con estensione psd1) e i file di modulo di script ( con estensione psm1) in formato Unicode (BigEndianUnicode). Per salvare uno script in un'altra codifica, ad esempio ASCII (ANSI), usare i metodi **Save** o **SaveAs** sull'oggetto [$psISE.CurrentFile](assetId:///bc3300e4-9c17-4f00-a621-c8867126e3b3#CurrentFile).
+Per impostazione predefinita, [!INCLUDE[ise_2](../Token/ise_2_md.md)] salva i file di script (con estensione ps1), i file di dati degli script (con estensione psd1) e i file di modulo di script ( con estensione psm1) in formato Unicode (BigEndianUnicode). Per salvare uno script in un'altra codifica, ad esempio ASCII (ANSI), usare i metodi **Save** o **SaveAs** sull'oggetto [$psISE.CurrentFile](https://technet.microsoft.com/en-us/library/bc3300e4-9c17-4f00-a621-c8867126e3b3#CurrentFile).
 
 Il comando che segue salva un nuovo script con il nome MyScript.ps1 nella codifica ASCII.
 
@@ -147,6 +147,6 @@ $psise.CurrentFile.encoding
 
 
 
-<!--HONumber=Apr16_HO1-->
+<!--HONumber=Apr16_HO2-->
 
 
