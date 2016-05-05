@@ -1,42 +1,26 @@
 # <a name='report-top'></a> Localization Handoff Report
 
 ## Summary
- Total Files | 2
+ Total Files | 1
 
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [dsc\pullServer.md](https://github.com/PowerShell/powerShell-Docs/blob/4f89541a1821ca4283a39a9a1cb97c75e9e496db/dsc/pullServer.md) | OutofSyncHandedBackSuccess | [Details](#4327f7428aa839fd7bb1788b203d72c838814aa976)
- [wmf\limitation_overview.md](https://github.com/PowerShell/powerShell-Docs/blob/45663ee62b9d9a1ccde45affa2022e88ce92493d/wmf/limitation_overview.md) | OutofSyncHandedBackSuccess | [Details](#c0c0b63ad6fcbfecbd130e1f5a736ab65f301627323)
+ [wmf\limitation_dsc.md](https://github.com/PowerShell/powerShell-Docs/blob/c350e12ff2aea294e8f8f3385eb3a7df80f1c687/wmf/limitation_dsc.md) | OutofSyncHandedBackSuccess | [Details](#fe1c40cbfd2c76f45d170b82d8a099e860b15db8322)
 
 ## Item Details
-##### <a name='4327f7428aa839fd7bb1788b203d72c838814aa976'></a> Source: [dsc\pullServer.md](https://github.com/PowerShell/powerShell-Docs/blob/4f89541a1821ca4283a39a9a1cb97c75e9e496db/dsc/pullServer.md)
+##### <a name='fe1c40cbfd2c76f45d170b82d8a099e860b15db8322'></a> Source: [wmf\limitation_dsc.md](https://github.com/PowerShell/powerShell-Docs/blob/c350e12ff2aea294e8f8f3385eb3a7df80f1c687/wmf/limitation_dsc.md)
 * Status: OutofSyncHandedBackSuccess
 * Target File: 
-* Handoff File: [pullServer.4b925b277da29998394af746bdbdd508fda48909.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/7535f6e2bfa04b7f24f202a8315aee705b510633/ol-handoff/PowerShell/powerShell-Docs.it-it/live/pullServer.4b925b277da29998394af746bdbdd508fda48909.it-it.xlf)
-* Handoff Datetime: 2016-05-03 23:48:45
+* Handoff File: [limitation_dsc.3684c81bb088cba98089dffdb1a1e56e1c098335.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/aed09d5f43a1c13baf144e3844daacf56e61ee8f/ol-handoff/PowerShell/powerShell-Docs.it-it/live/limitation_dsc.3684c81bb088cba98089dffdb1a1e56e1c098335.it-it.xlf)
+* Handoff Datetime: 2016-05-05 21:20:12
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [dsc\pullServer.md](https://github.com/PowerShell/powerShell-Docs.it-it/blob/96d207d7667cb9eeb6d7d977f99f740b1f9ac731/dsc/pullServer.md)
-* Current Handback File: [pullServer.4b925b277da29998394af746bdbdd508fda48909.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/a216c9333aa49149e4086aff30e28026e24a067f/ol-handback/PowerShell/powerShell-Docs.it-it/live/pullServer.4b925b277da29998394af746bdbdd508fda48909.it-it.xlf)
-* Current Handback Datetime: 2016-04-28 23:41:44
-* [Back to Top](#report-top)
-
-##### <a name='c0c0b63ad6fcbfecbd130e1f5a736ab65f301627323'></a> Source: [wmf\limitation_overview.md](https://github.com/PowerShell/powerShell-Docs/blob/45663ee62b9d9a1ccde45affa2022e88ce92493d/wmf/limitation_overview.md)
-* Status: OutofSyncHandedBackSuccess
-* Target File: 
-* Handoff File: [limitation_overview.6cc9c8c028f5912636637d836aed7db0614de522.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/7535f6e2bfa04b7f24f202a8315aee705b510633/ol-handoff/PowerShell/powerShell-Docs.it-it/live/limitation_overview.6cc9c8c028f5912636637d836aed7db0614de522.it-it.xlf)
-* Handoff Datetime: 2016-05-03 23:48:45
-* Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [wmf\limitation_overview.md](https://github.com/PowerShell/powerShell-Docs.it-it/blob/613a637ef55d4ea67a1fbf6c23cd4f6db868c1a4/wmf/limitation_overview.md)
-* Current Handback File: [limitation_overview.6cc9c8c028f5912636637d836aed7db0614de522.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/091187014dab353bf6b3a63bb66ccc21d077524a/ol-handback/PowerShell/powerShell-Docs.it-it/live/limitation_overview.6cc9c8c028f5912636637d836aed7db0614de522.it-it.xlf)
+* Current Target File: [wmf\limitation_dsc.md](https://github.com/PowerShell/powerShell-Docs.it-it/blob/613a637ef55d4ea67a1fbf6c23cd4f6db868c1a4/wmf/limitation_dsc.md)
+* Current Handback File: [limitation_dsc.3684c81bb088cba98089dffdb1a1e56e1c098335.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/091187014dab353bf6b3a63bb66ccc21d077524a/ol-handback/PowerShell/powerShell-Docs.it-it/live/limitation_dsc.3684c81bb088cba98089dffdb1a1e56e1c098335.it-it.xlf)
 * Current Handback Datetime: 2016-03-24 22:16:01
 * [Back to Top](#report-top)
 
