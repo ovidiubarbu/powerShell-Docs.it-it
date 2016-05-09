@@ -9,7 +9,7 @@ Le principali differenze tra una risorsa DSC basata su classe e un provider di r
 * Non è necessaria una sottocartella **DSCResource** nella cartella del modulo.
 * Un file di modulo di PowerShell può contenere più classi di risorse DSC.
 
-Di seguito è riportato un esempio di una risorsa DSC basata su classe che estende l'altra risorsa DSC classe nello stesso file. Il codice di esempio viene salvato come modulo, **MyDSCResource.psm1**. 
+Di seguito è riportato un esempio di una risorsa DSC basata su classe che estende l'altra risorsa DSC classe nello stesso file. Viene salvata come modulo, **MyDSCResource.psm1**.. 
 Si noti che è necessario includere sempre almeno una proprietà Key e un metodo Get, Set, Test in una risorsa DSC basata su classe o nelle relative classi di base.
 
 ```powershell
@@ -60,7 +60,7 @@ NOTE: This property is required because [DscProperty(Mandatory)] is set.
 [string] $SourcePath
 
 <#
-This property reports the file's creation timestamp.
+This property reports the file creation timestamp.
 
 [DscProperty(NotConfigurable)] attribute indicates the property is not configurable in a DSC configuration. Properties marked this way are populated by the Get() method to report additional details about the resource when it is present.
 #>
@@ -212,13 +212,13 @@ class FileResource : BaseFileResource
     [bool] $IsReadOnly
 
     <#
-    This property reports the file's LastAccessTime timestamp.
+    This property reports the file LastAccessTime timestamp.
     #>
     [DscProperty(NotConfigurable)]
     [Nullable[datetime]] $LastAccessTime
 
     <#
-    This property reports the file's LastWriteTime timestamp.
+    This property reports the file LastWriteTime timestamp.
     #>
     [DscProperty(NotConfigurable)]
     [Nullable[datetime]] $LastWriteTime
@@ -252,7 +252,7 @@ class FileResource : BaseFileResource
 }
 ```
 
-Dopo aver creato il provider di risorse DSC basato su classe e averlo salvato come modulo, creare un manifesto del modulo per il modulo. In questo esempio, il manifesto del modulo seguente viene salvato come **MyDscResource.psd1**.
+Dopo aver creato il provider di risorse DSC basato su classe e averlo salvato come modulo, creare un manifesto del modulo per il modulo. Il manifesto del modulo nell'esempio seguente viene salvato come **MyDscResource.psd1**.
 
 ```powershell
 @{
@@ -294,7 +294,7 @@ Copiare i file del modulo e del manifesto del modulo (**MyDscResource.psm1** e *
 
 A questo punto, creare ed eseguire uno script di configurazione come si farebbe con qualsiasi risorsa DSC. 
 Quella che segue è una configurazione che fa riferimento al modulo MyDSCResource. 
-Salvare il codice come script, con il nome **MyResource.ps1**.
+Salvarla come script con il nome **MyResource.ps1**.
 
 ```powershell
 Configuration MyConfig
@@ -333,4 +333,8 @@ In questa versione, sono presenti i seguenti problemi noti per le risorse DSC ba
 
 * Get-DscConfiguration può restituire valori vuoti (null) o errori se viene restituito un tipo complesso dalla funzione Get() di una risorsa DSC basata su classe.
 * Le risorse composite non possono essere scritte come risorsa basata su classe.
-<!--HONumber=Mar16_HO2-->
+
+
+<!--HONumber=Apr16_HO5-->
+
+

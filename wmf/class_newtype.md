@@ -168,7 +168,7 @@ Il tipo restituito è un contratto. Il valore restituito viene convertito nel ti
 
 ## Attributi
 
-Sono stati aggiunti quattro nuovi attributi, **DscResource**, **DscResourceKey**, **DscResourceMandatory** e **DscResourceOut**.
+Sono stati aggiunti due nuovi attributi, **DscResource** e **DscProperty**.
 
 ## Ambito lessicale delle variabili
 
@@ -324,4 +324,8 @@ function Style
 # and then returns the resulting type.
 #
 function Html ([HTML] $doc) { return $doc }
-```<!--HONumber=Mar16_HO2-->
+```
+
+<!--HONumber=Apr16_HO5-->
+
+
