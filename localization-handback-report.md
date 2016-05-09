@@ -1,11 +1,26 @@
 # <a name='report-top'></a> Localization Handback Report
 
 ## Summary
- Total Files | 0
+ Total Files | 1
 
 ## File List
+ Source File | Status | Details 
+ ----------- | ------ | ------- 
+ [scripting\Topic\What-s-New-in-Windows-PowerShell.md](https://github.com/PowerShell/powerShell-Docs/blob/54d8f8daa70f889268934121a37dac848846c307/scripting/Topic/What-s-New-in-Windows-PowerShell.md) | InSyncHandedBackSuccess | [Details](#ecfbfdf517c86a3acb4a0a40d5534e31bac68a9f242)
 
 ## Item Details
+##### <a name='ecfbfdf517c86a3acb4a0a40d5534e31bac68a9f242'></a> Source: [scripting\Topic\What-s-New-in-Windows-PowerShell.md](https://github.com/PowerShell/powerShell-Docs/blob/54d8f8daa70f889268934121a37dac848846c307/scripting/Topic/What-s-New-in-Windows-PowerShell.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [scripting\Topic\What-s-New-in-Windows-PowerShell.md](https://github.com/PowerShell/powerShell-Docs.it-it/blob/bc4ec3043e042e4b6178343c4042f07bf1c5a50f/scripting/Topic/What-s-New-in-Windows-PowerShell.md)
+* Handoff File: [What-s-New-in-Windows-PowerShell.166db661c18622ccef728574c4cfbd23b787f663.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/ecaf4d43083330e8f01bae0fc3e70bf8cbacc53b/ol-handoff/PowerShell/powerShell-Docs.it-it/live/What-s-New-in-Windows-PowerShell.166db661c18622ccef728574c4cfbd23b787f663.it-it.xlf)
+* Handoff Datetime: 2016-04-09 01:38:34
+* Handoff Reason: Include
+* Archive File: [What-s-New-in-Windows-PowerShell.166db661c18622ccef728574c4cfbd23b787f663.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/f638bc0beaeb580a936c75bb1417a2e45aed3ed2/ol-handoff/PowerShell/powerShell-Docs.it-it/live/archive/What-s-New-in-Windows-PowerShell.166db661c18622ccef728574c4cfbd23b787f663.it-it.xlf)
+* Archive Datetime: 2016-04-29 00:26:00
+* Handback File: [What-s-New-in-Windows-PowerShell.166db661c18622ccef728574c4cfbd23b787f663.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/b77bd467979dc238ee57c67cb14d60111a52d182/ol-handback/PowerShell/powerShell-Docs.it-it/live/What-s-New-in-Windows-PowerShell.166db661c18622ccef728574c4cfbd23b787f663.it-it.xlf)
+* Handback Datetime: 2016-05-09 13:24:52
+* [Back to Top](#report-top)
+
 
 ## Error Details
 
