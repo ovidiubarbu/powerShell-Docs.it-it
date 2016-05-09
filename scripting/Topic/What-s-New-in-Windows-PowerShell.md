@@ -324,7 +324,7 @@ Molti aggiornamenti e miglioramenti per [!INCLUDE[wps_2](../Token/wps_2_md.md)] 
 
 ### <a name="BKMK_core"></a>Nuove funzionalità di Windows PowerShell
 
--   **Il servizio Desired State Configuration** (DSC) di [!INCLUDE[wps_2](../Token/wps_2_md.md)] è un nuovo sistema di gestione di [!INCLUDE[psversion4](../Token/psversion4_md.md)] che consente di distribuire e gestire dati di configurazione per i servizi software e per l'ambiente in cui vengono eseguiti. Per altre informazioni, vedere [Introduzione a Windows PowerShell DSC (Desired State Configuration)](assetId:///c134aa32-b085-4656-9a89-955d8ff768d0).
+-   **Il servizio Desired State Configuration** (DSC) di [!INCLUDE[wps_2](../Token/wps_2_md.md)] è un nuovo sistema di gestione di [!INCLUDE[psversion4](../Token/psversion4_md.md)] che consente di distribuire e gestire dati di configurazione per i servizi software e per l'ambiente in cui vengono eseguiti. Per altre informazioni, vedere [Introduzione a Windows PowerShell DSC (Desired State Configuration)](https://technet.microsoft.com/en-us/library/c134aa32-b085-4656-9a89-955d8ff768d0).
 
 -   **Save-Help** consente ora di salvare la Guida per i moduli installati in computer remoti. È possibile usare Save-Help per scaricare la Guida per i moduli da un client connesso a Internet (in cui non sono necessariamente installati tutti i moduli per cui si vogliono informazioni) e quindi copiare la Guida salvata in una cartella condivisa remota o in un computer remoto privo di accesso a Internet.
 
@@ -506,7 +506,7 @@ Molti aggiornamenti e miglioramenti per [!INCLUDE[wps_2](../Token/wps_2_md.md)] 
 -   [Miglioramenti nella gestione di caratteri speciali](../Topic/What-s-New-in-Windows-PowerShell.md#BKMK_CHAR)
 
 ### <a name="BKMK_Workflow"></a>Flusso di lavoro di Windows PowerShell
-[!INCLUDE[ps_workflow_1](../Token/ps_workflow_1_md.md)] introduce la potenza di Windows Workflow Foundation in [!INCLUDE[mshshort](../Token/mshshort_md.md)]. È possibile scrivere flussi di lavoro in XAML o nel linguaggio di [!INCLUDE[mshshort](../Token/mshshort_md.md)] ed eseguirli allo stesso modo dei cmdlet. Il cmdlet [Get-Command](assetId:///59c6d302-6e8c-48b7-a6f6-f0172df936ad) ottiene i comandi del flusso di lavoro e il cmdlet [Get-Help](assetId:///1f46eeb4-49d7-4bec-bb29-395d9b42f54a) visualizza la Guida.
+[!INCLUDE[ps_workflow_1](../Token/ps_workflow_1_md.md)] introduce la potenza di Windows Workflow Foundation in [!INCLUDE[mshshort](../Token/mshshort_md.md)]. È possibile scrivere flussi di lavoro in XAML o nel linguaggio di [!INCLUDE[mshshort](../Token/mshshort_md.md)] ed eseguirli allo stesso modo dei cmdlet. Il cmdlet [Get-Command](https://technet.microsoft.com/en-us/library/59c6d302-6e8c-48b7-a6f6-f0172df936ad) ottiene i comandi del flusso di lavoro e il cmdlet [Get-Help](https://technet.microsoft.com/en-us/library/1f46eeb4-49d7-4bec-bb29-395d9b42f54a) visualizza la Guida.
 
 I flussi di lavoro sono sequenze di attività di gestione di più computer a esecuzione prolungata, ripetibili, frequenti, parallelizzabili, interrompibili, sospendibili e riavviabili. Possono essere ripresi dopo un'interruzione intenzionale o accidentale, come un'interruzione di rete, un riavvio di Windows o un'interruzione dell'alimentazione.
 
@@ -538,7 +538,7 @@ Di seguito sono descritti i vantaggi del [!INCLUDE[ps_workflow_2](../Token/ps_wo
 Per altre informazioni, vedere [Distribuire Accesso Web Windows PowerShell](http://go.microsoft.com/fwlink/p/?LinkID=221050).
 
 ### <a name="BKMK_ISE"></a>Nuove funzionalità di Windows PowerShell ISE
-Per [!INCLUDE[psversion3](../Token/psversion3_md.md)], [!INCLUDE[ise_1](../Token/ise_1_md.md)] include molte nuove funzionalità, tra cui: IntelliSense, finestra Show-Command, riquadro della console unificato, frammenti di codice, controllo della corrispondenza delle parentesi graffe, sezioni espandibili e comprimibili, salvataggio automatico, elenco di elementi recenti, copia di testo formattato, copia in blocco e supporto completo per la scrittura di flussi di lavoro di script di Windows PowerShell. Per altre informazioni, vedere [about_Windows_PowerShell_ISE [v3]](assetId:///dfa54d47-60c6-4fff-8197-c747e8d411bb).
+Per [!INCLUDE[psversion3](../Token/psversion3_md.md)], [!INCLUDE[ise_1](../Token/ise_1_md.md)] include molte nuove funzionalità, tra cui: IntelliSense, finestra Show-Command, riquadro della console unificato, frammenti di codice, controllo della corrispondenza delle parentesi graffe, sezioni espandibili e comprimibili, salvataggio automatico, elenco di elementi recenti, copia di testo formattato, copia in blocco e supporto completo per la scrittura di flussi di lavoro di script di Windows PowerShell. Per altre informazioni, vedere [about_Windows_PowerShell_ISE [v3]](https://technet.microsoft.com/en-us/library/dfa54d47-60c6-4fff-8197-c747e8d411bb).
 
 ### <a name="BKMK_NET4"></a>Supporto per Microsoft .NET Framework 4
 Windows PowerShell è basato su Common Language Runtime 4.0. Gli autori di cmdlet, script e flussi di lavoro possono usare le nuove classi di Microsoft .NET Framework 4 in Windows PowerShell, con funzionalità come la compatibilità e la distribuzione di applicazioni, Managed Extensibility Framework, calcolo parallelo, rete, Windows Communication Foundation e Windows Workflow Foundation.
@@ -551,9 +551,9 @@ A partire da Windows PowerShell 3.0, le sessioni permanenti gestite dall'utente 
 
 È ora possibile disconnettersi da una sessione senza interrompere i comandi in esecuzione al suo interno. È possibile chiudere la sessione e arrestare il computer. In seguito, è possibile riconnettersi alla sessione da una sessione diversa nello stesso computer o in uno diverso.
 
-Il parametro **ComputerName** del cmdlet [Get-PSSession](assetId:///b2b10531-d0df-4746-b877-e75c09955cb6) ottiene ora tutte le sessioni dell'utente che si connettono al computer, anche se sono state avviate in una sessione diversa e in un computer diverso. È ora possibile connettersi alle sessioni, ottenere i risultati dei comandi, avviare nuovi comandi e quindi disconnettersi.
+Il parametro **ComputerName** del cmdlet [Get-PSSession](https://technet.microsoft.com/en-us/library/b2b10531-d0df-4746-b877-e75c09955cb6) ottiene ora tutte le sessioni dell'utente che si connettono al computer, anche se sono state avviate in una sessione diversa e in un computer diverso. È ora possibile connettersi alle sessioni, ottenere i risultati dei comandi, avviare nuovi comandi e quindi disconnettersi.
 
-Sono stati aggiunti nuovi cmdlet per supportare la funzionalità delle sessioni disconnesse, tra cui [Disconnect-PSSession](assetId:///f8f95111-612f-4cba-9098-77904b0473d8), [Connect-PSSession](assetId:///b803dd29-f208-4079-80d4-db04d778f060) e Receive-PSSession. Sono inoltre stati aggiunti nuovi parametri ai cmdlet che gestiscono PSSession, ad esempio il parametro **InDisconnectedSession** del cmdlet [Invoke-Command](assetId:///906b4b41-7da8-4330-9363-e7164e5e6970).
+Sono stati aggiunti nuovi cmdlet per supportare la funzionalità delle sessioni disconnesse, tra cui [Disconnect-PSSession](https://technet.microsoft.com/en-us/library/f8f95111-612f-4cba-9098-77904b0473d8), [Connect-PSSession](https://technet.microsoft.com/en-us/library/b803dd29-f208-4079-80d4-db04d778f060) e Receive-PSSession. Sono inoltre stati aggiunti nuovi parametri ai cmdlet che gestiscono PSSession, ad esempio il parametro **InDisconnectedSession** del cmdlet [Invoke-Command](https://technet.microsoft.com/en-us/library/906b4b41-7da8-4330-9363-e7164e5e6970).
 
 La funzionalità delle sessioni disconnesse è supportata solo se sia il computer all'estremità di origine ("client") che quello all'estremità di destinazione ("server") della connessione eseguono Windows PowerShell 3.0.
 
@@ -565,17 +565,17 @@ Se la sessione disconnessa è stata avviata con InvokeCommand, Windows PowerShel
 Queste funzionalità assicurano un'esperienza di comunicazione remota più affidabile e ripristinabile e consentono agli utenti di eseguire attività a esecuzione prolungata che richiedono sessioni stabili, come i flussi di lavoro.
 
 ### <a name="BKMK_UpHelp"></a>Sistema della Guida aggiornabile
-È ora possibile scaricare file della Guida aggiornati per i cmdlet dei moduli. Il cmdlet [Update-Help](assetId:///93e1d870-ace6-432b-8778-8920291d7545) identifica i file della Guida più recenti, li scarica da Internet, li decomprime, li convalida e li installa nella directory specifica della lingua corretta per il modulo.
+È ora possibile scaricare file della Guida aggiornati per i cmdlet dei moduli. Il cmdlet [Update-Help](https://technet.microsoft.com/en-us/library/93e1d870-ace6-432b-8778-8920291d7545) identifica i file della Guida più recenti, li scarica da Internet, li decomprime, li convalida e li installa nella directory specifica della lingua corretta per il modulo.
 
 Per usare i file della Guida aggiornati, basta digitare `Get-Help`. Non è necessario riavviare Windows o [!INCLUDE[mshshort](../Token/mshshort_md.md)]. Per aggiornare la Guida sui moduli della directory $pshome, avviare [!INCLUDE[mshshort](../Token/mshshort_md.md)] con l'opzione "Esegui come amministratore".
 
-Per supportare gli utenti che non hanno accesso a Internet e quelli che operano in ambienti protetti da firewall, il nuovo cmdlet [Save-Help](assetId:///aed94f90-b73f-4e25-a25d-7c18d9f161fa) scarica i file della Guida in una directory del file system, ad esempio una condivisione file. Gli utenti possono quindi usare il cmdlet [Update-Help](assetId:///93e1d870-ace6-432b-8778-8920291d7545) per recuperare i file della Guida aggiornata dalla condivisione file.
+Per supportare gli utenti che non hanno accesso a Internet e quelli che operano in ambienti protetti da firewall, il nuovo cmdlet [Save-Help](https://technet.microsoft.com/en-us/library/aed94f90-b73f-4e25-a25d-7c18d9f161fa) scarica i file della Guida in una directory del file system, ad esempio una condivisione file. Gli utenti possono quindi usare il cmdlet [Update-Help](https://technet.microsoft.com/en-us/library/93e1d870-ace6-432b-8778-8920291d7545) per recuperare i file della Guida aggiornata dalla condivisione file.
 
-È possibile usare il cmdlet [Update-Help](assetId:///93e1d870-ace6-432b-8778-8920291d7545) per aggiornare i file della Guida per tutti i moduli o solo per alcuni specifici in tutte le impostazioni cultura supportate dell'interfaccia utente. È anche possibile inserire un comando [Update-Help](assetId:///93e1d870-ace6-432b-8778-8920291d7545) nel profilo personale di [!INCLUDE[mshshort](../Token/mshshort_md.md)]. Per impostazione predefinita, [!INCLUDE[mshshort](../Token/mshshort_md.md)] scarica i file della Guida per un modulo non più di una volta al giorno.
+È possibile usare il cmdlet [Update-Help](https://technet.microsoft.com/en-us/library/93e1d870-ace6-432b-8778-8920291d7545) per aggiornare i file della Guida per tutti i moduli o solo per alcuni specifici in tutte le impostazioni cultura supportate dell'interfaccia utente. È anche possibile inserire un comando [Update-Help](https://technet.microsoft.com/en-us/library/93e1d870-ace6-432b-8778-8920291d7545) nel profilo personale di [!INCLUDE[mshshort](../Token/mshshort_md.md)]. Per impostazione predefinita, [!INCLUDE[mshshort](../Token/mshshort_md.md)] scarica i file della Guida per un modulo non più di una volta al giorno.
 
-I moduli di [!INCLUDE[win8_client_2](../Token/win8_client_2_md.md)] e [!INCLUDE[win8_server_2](../Token/win8_server_2_md.md)] non includono file della Guida. Per scaricare i file della Guida più recenti, digitare `Update-Help`. Per altre informazioni, digitare `Get-Help` senza parametri oppure vedere [about_Updatable_Help](assetId:///10bba75c-f4ac-4ca1-bbf3-8f34dd521ffe).
+I moduli di [!INCLUDE[win8_client_2](../Token/win8_client_2_md.md)] e [!INCLUDE[win8_server_2](../Token/win8_server_2_md.md)] non includono file della Guida. Per scaricare i file della Guida più recenti, digitare `Update-Help`. Per altre informazioni, digitare `Get-Help` senza parametri oppure vedere [about_Updatable_Help](https://technet.microsoft.com/en-us/library/10bba75c-f4ac-4ca1-bbf3-8f34dd521ffe).
 
-Se i file della Guida per un cmdlet non sono installati nel computer, il cmdlet [Get-Help](assetId:///1f46eeb4-49d7-4bec-bb29-395d9b42f54a) visualizza ora la Guida generata automaticamente, che include la sintassi dei comandi e le istruzioni per scaricare i file della Guida tramite il cmdlet [Update-Help](assetId:///93e1d870-ace6-432b-8778-8920291d7545).
+Se i file della Guida per un cmdlet non sono installati nel computer, il cmdlet [Get-Help](https://technet.microsoft.com/en-us/library/1f46eeb4-49d7-4bec-bb29-395d9b42f54a) visualizza ora la Guida generata automaticamente, che include la sintassi dei comandi e le istruzioni per scaricare i file della Guida tramite il cmdlet [Update-Help](https://technet.microsoft.com/en-us/library/93e1d870-ace6-432b-8778-8920291d7545).
 
 Qualsiasi autore di moduli può ora supportare la Guida aggiornabile. È possibile includere i file della Guida nel modulo e usare la Guida aggiornabile per aggiornarli oppure omettere tali file e usare la Guida aggiornabile per installarli. Per altre informazioni, vedere [Supporto per la Guida aggiornabile](http://go.microsoft.com/FWLink/?LinkID=242129) in MSDN.
 
@@ -613,22 +613,22 @@ A partire da [!INCLUDE[psversion3](../Token/psversion3_md.md)], è possibile pro
 
 Nelle versioni precedenti di [!INCLUDE[mshshort](../Token/mshshort_md.md)] il controllo a questo livello è disponibile solo per gli utenti in grado di scrivere programmi in C# o complessi script di avvio. Ora qualsiasi membro del gruppo Administrators del computer può personalizzare una configurazione di sessione tramite un file di configurazione.
 
-Per creare un file di configurazione di sessione, usare il cmdlet [New-PSSessionConfigurationFile](assetId:///5f3e3633-6e90-479c-aea9-ba45a1954866). Per applicare il file a una configurazione di sessione, usare il cmdlet [Register-PSSessionConfiguration](assetId:///e9152ae2-bd6d-4056-9bc7-dc1893aa29ea) o [Set-PSSessionConfiguration](assetId:///b21fbad3-1759-4260-b206-dcb8431cd6ea).
+Per creare un file di configurazione di sessione, usare il cmdlet [New-PSSessionConfigurationFile](https://technet.microsoft.com/en-us/library/5f3e3633-6e90-479c-aea9-ba45a1954866). Per applicare il file a una configurazione di sessione, usare il cmdlet [Register-PSSessionConfiguration](https://technet.microsoft.com/en-us/library/e9152ae2-bd6d-4056-9bc7-dc1893aa29ea) o [Set-PSSessionConfiguration](https://technet.microsoft.com/en-us/library/b21fbad3-1759-4260-b206-dcb8431cd6ea).
 
-Per altre informazioni, vedere [about_Session_Configuration_Files](assetId:///c7217447-1ebf-477b-a8ef-4dbe9a1473b8) e [New-PSSessionConfigurationFile](assetId:///5f3e3633-6e90-479c-aea9-ba45a1954866).
+Per altre informazioni, vedere [about_Session_Configuration_Files](https://technet.microsoft.com/en-us/library/c7217447-1ebf-477b-a8ef-4dbe9a1473b8) e [New-PSSessionConfigurationFile](https://technet.microsoft.com/en-us/library/5f3e3633-6e90-479c-aea9-ba45a1954866).
 
 ### <a name="BKMK_ScheduledJob"></a>Processi pianificati e integrazione con l'Utilità di pianificazione
 È ora possibile pianificare i processi in background di [!INCLUDE[mshshort](../Token/mshshort_md.md)] e gestirli in [!INCLUDE[mshshort](../Token/mshshort_md.md)] e nell'Utilità di pianificazione.
 
 I processi pianificati di [!INCLUDE[mshshort](../Token/mshshort_md.md)] sono un utile ibrido di processi in background di [!INCLUDE[mshshort](../Token/mshshort_md.md)] e attività dell'Utilità di pianificazione.
 
-Analogamente ai processi in background di [!INCLUDE[mshshort](../Token/mshshort_md.md)], i processi pianificati vengono eseguiti in modo asincrono in background. Le istanze dei processi pianificati che sono state completate possono essere gestite tramite cmdlet di processo come [Start-Job](assetId:///2bc04935-0deb-4ec0-b856-d7290cca6442) e [Get-Job](assetId:///1352c534-7193-46ca-9ab1-0c5219a661ad).
+Analogamente ai processi in background di [!INCLUDE[mshshort](../Token/mshshort_md.md)], i processi pianificati vengono eseguiti in modo asincrono in background. Le istanze dei processi pianificati che sono state completate possono essere gestite tramite cmdlet di processo come [Start-Job](https://technet.microsoft.com/en-us/library/2bc04935-0deb-4ec0-b856-d7290cca6442) e [Get-Job](https://technet.microsoft.com/en-us/library/1352c534-7193-46ca-9ab1-0c5219a661ad).
 
 Analogamente alle attività dell'Utilità di pianificazione, è possibile eseguire i processi pianificati in base a una pianificazione una tantum o ricorrente oppure in risposta a un'azione o a un evento. È possibile visualizzare e gestire i processi pianificati nell'Utilità di pianificazione, abilitarli e disabilitarli secondo necessità, eseguirli o usarli come modelli e definire le condizioni in base a cui devono essere avviati.
 
 Inoltre, i processi pianificati includono un set personalizzato di cmdlet per gestirli. I cmdlet consentono di creare, modificare, gestire, disabilitare e riabilitare i processi pianificati, creare appositi trigger e impostare le opzioni.
 
-Per altre informazioni sui processi pianificati, vedere [about_Scheduled_Jobs](assetId:///3b546629-703c-4939-b44f-52dd567bce92).
+Per altre informazioni sui processi pianificati, vedere [about_Scheduled_Jobs](https://technet.microsoft.com/en-us/library/3b546629-703c-4939-b44f-52dd567bce92).
 
 ### <a name="BKMK_Lang"></a>Miglioramenti del linguaggio di Windows PowerShell
 [!INCLUDE[psversion3](../Token/psversion3_md.md)] include molte funzionalità progettate per rendere il linguaggio più semplice, più facile da usare e meno soggetto a errori comuni. I miglioramenti includono l'enumerazione di proprietà, le proprietà di conteggio e lunghezza su oggetti scalari, nuovi operatori di reindirizzamento, il modificatore di ambito $Using, la variabile automatica PSItem, una formattazione di script flessibile, attributi di variabili, argomenti degli attributi semplificati, nomi di comandi numerici, operatore Stop-Parsing, splatting delle matrici migliorato, nuovi operatori bit, dizionari ordinati, casting di PSCustomObject e una Guida migliorata basata su commenti.
@@ -675,21 +675,21 @@ Anche i provider di Windows PowerShell sono stati migliorati in modo significati
 ### <a name="BKMK_REM"></a>Importazione e individuazione di moduli remoti
 [!INCLUDE[psversion3](../Token/psversion3_md.md)] estende le funzionalità di individuazione, importazione e comunicazione remota implicita nei computer remoti. I cmdlet Module ottengono i moduli nei computer remoti e li importano in computer remoti o locali tramite la comunicazione remota di Windows PowerShell. Il nuovo supporto per sessioni CIM consente di usare CIM e WMI per gestire computer non Windows importando nel computer locale comandi che vengono eseguiti in modo implicito nel computer remoto.
 
-Per altre informazioni, vedere gli argomenti della Guida per i cmdlet [Get-Module](assetId:///2cccd4c4-9a21-4c77-b691-984ee57242e1) e [Import-Module](assetId:///af616c24-e122-4098-930e-1e3ea2080ade).
+Per altre informazioni, vedere gli argomenti della Guida per i cmdlet [Get-Module](https://technet.microsoft.com/en-us/library/2cccd4c4-9a21-4c77-b691-984ee57242e1) e [Import-Module](https://technet.microsoft.com/en-us/library/af616c24-e122-4098-930e-1e3ea2080ade).
 
 ### <a name="BKMK_TAB"></a>Completamento tramite TAB migliorato
 Nella console di [!INCLUDE[wps_2](../Token/wps_2_md.md)] vengono ora completati tramite TAB i nomi di cmdlet, parametri, valori dei parametri, enumerazioni, tipi di .NET Framework, oggetti COM, directory nascoste e altro ancora. Questa funzionalità è stata completamente riscritta in base a un nuovo albero sintattico astratto e di analisi per supportare più scenari, tra cui alberi di analisi in memoria e completamento tramite TAB sulla riga centrale.
 
 ### <a name="BKMK_AutoLoad"></a>Caricamento automatico dei moduli
-Il cmdlet [Get-Command](assetId:///59c6d302-6e8c-48b7-a6f6-f0172df936ad) ottiene ora tutti i cmdlet e le funzioni da tutti i moduli installati nel computer, anche quelli non importati nella sessione corrente.
+Il cmdlet [Get-Command](https://technet.microsoft.com/en-us/library/59c6d302-6e8c-48b7-a6f6-f0172df936ad) ottiene ora tutti i cmdlet e le funzioni da tutti i moduli installati nel computer, anche quelli non importati nella sessione corrente.
 
 Una volta ottenuto il cmdlet necessario, è possibile usarlo immediatamente senza importare nessun modulo. I moduli di [!INCLUDE[mshshort](../Token/mshshort_md.md)] vengono ora importati automaticamente quando si usa uno dei cmdlet al loro interno. Non è più necessario cercare il modulo e importarlo per usare i relativi cmdlet.
 
-L'importazione automatica dei moduli viene avviata usando il cmdlet in un comando, eseguendo **Get-Command** per un cmdlet senza caratteri jolly oppure eseguendo [Get-Help](assetId:///1f46eeb4-49d7-4bec-bb29-395d9b42f54a) per un cmdlet senza caratteri jolly.
+L'importazione automatica dei moduli viene avviata usando il cmdlet in un comando, eseguendo **Get-Command** per un cmdlet senza caratteri jolly oppure eseguendo [Get-Help](https://technet.microsoft.com/en-us/library/1f46eeb4-49d7-4bec-bb29-395d9b42f54a) per un cmdlet senza caratteri jolly.
 
 È possibile abilitare, disabilitare e configurare l'importazione automatica dei moduli usando la variabile di preferenza **$PSModuleAutoLoadingPreference**.
 
-Per altre informazioni, vedere [about_Modules [v4]](assetId:///94f57429-a539-4aee-bb0d-205cd7e801f9), [about_Preference_Variables [v4]](assetId:///31344314-be29-4286-b039-afa5460cbe8b) e gli argomenti della Guida sui cmdlet [Get-Command](assetId:///59c6d302-6e8c-48b7-a6f6-f0172df936ad) e [Import-Module](assetId:///af616c24-e122-4098-930e-1e3ea2080ade).
+Per altre informazioni, vedere [about_Modules [v4]](https://technet.microsoft.com/en-us/library/94f57429-a539-4aee-bb0d-205cd7e801f9), [about_Preference_Variables [v4]](https://technet.microsoft.com/en-us/library/31344314-be29-4286-b039-afa5460cbe8b) e gli argomenti della Guida sui cmdlet [Get-Command](https://technet.microsoft.com/en-us/library/59c6d302-6e8c-48b7-a6f6-f0172df936ad) e [Import-Module](https://technet.microsoft.com/en-us/library/af616c24-e122-4098-930e-1e3ea2080ade).
 
 ### <a name="BKMK_MOD"></a>Miglioramento dell'esperienza con i moduli
 Windows PowerShell 3.0 offre il supporto di funzionalità avanzate per il modulo, tra cui le nuove funzionalità seguenti.
@@ -706,16 +706,16 @@ Windows PowerShell 3.0 offre il supporto di funzionalità avanzate per il modulo
 
 6.  Requisiti migliorati dei moduli, tra cui il requisito di moduli completi con versione e GUID e l'importazione automatica dei moduli necessari
 
-7.  Funzionamento semplificato del cmdlet [New-ModuleManifest](assetId:///512adced-f42f-4e88-ba7c-834fc9e5d047)
+7.  Funzionamento semplificato del cmdlet [New-ModuleManifest](https://technet.microsoft.com/en-us/library/512adced-f42f-4e88-ba7c-834fc9e5d047)
 
 8.  Nuovo parametro **Module** per #Requires
 
-9. Cmdlet [Import-Module](assetId:///af616c24-e122-4098-930e-1e3ea2080ade) migliorato con entrambi i parametri **MinimumVersion** e **RequiredVersion**.
+9. Cmdlet [Import-Module](https://technet.microsoft.com/en-us/library/af616c24-e122-4098-930e-1e3ea2080ade) migliorato con entrambi i parametri **MinimumVersion** e **RequiredVersion**.
 
 ### <a name="BKMK_SIMPLE"></a>Individuazione semplificata dei comandi
-Non è più necessario importare tutti i moduli per individuare i comandi disponibili nella sessione. In [!INCLUDE[psversion3](../Token/psversion3_md.md)] il cmdlet [Get-Command](assetId:///59c6d302-6e8c-48b7-a6f6-f0172df936ad) ottiene tutti i comandi da tutti i moduli installati. Se inoltre si usa un comando, il modulo che lo esporta viene automaticamente importato nella sessione.
+Non è più necessario importare tutti i moduli per individuare i comandi disponibili nella sessione. In [!INCLUDE[psversion3](../Token/psversion3_md.md)] il cmdlet [Get-Command](https://technet.microsoft.com/en-us/library/59c6d302-6e8c-48b7-a6f6-f0172df936ad) ottiene tutti i comandi da tutti i moduli installati. Se inoltre si usa un comando, il modulo che lo esporta viene automaticamente importato nella sessione.
 
-Il nuovo cmdlet [Show-Command](assetId:///65bba50b-91a8-49d5-80a2-a30fc684ba41) è progettato specificamente per utenti meno esperti. È possibile cercare i comandi in una finestra. È possibile visualizzare tutti i comandi o applicare un filtro per modulo, importare un modulo facendo clic su un pulsante, usare caselle di testo ed elenchi a discesa per creare un comando valido e quindi copiarlo o eseguirlo senza mai uscire dalla finestra.
+Il nuovo cmdlet [Show-Command](https://technet.microsoft.com/en-us/library/65bba50b-91a8-49d5-80a2-a30fc684ba41) è progettato specificamente per utenti meno esperti. È possibile cercare i comandi in una finestra. È possibile visualizzare tutti i comandi o applicare un filtro per modulo, importare un modulo facendo clic su un pulsante, usare caselle di testo ed elenchi a discesa per creare un comando valido e quindi copiarlo o eseguirlo senza mai uscire dalla finestra.
 
 ### <a name="BKMK_LOG"></a>Funzionalità migliorate di registrazione e diagnostica e supporto di Criteri di gruppo
 In [!INCLUDE[psversion3](../Token/psversion3_md.md)] è stato migliorato il supporto per la registrazione e la traccia per comandi e moduli, con il supporto per i log di Event Tracing for Windows (ETW) e una proprietà **LogPipelineExecutionDetails** modificabile dei moduli, oltre all'impostazione di Criteri di gruppo "Attiva registrazione moduli". È ora possibile ottenere i valori dei parametri dai dettagli dei log visualizzando le proprietà dei log.
@@ -726,13 +726,13 @@ Grazie ai nuovi miglioramenti apportati alla formattazione e all'output, gli ute
 ### <a name="BKMK_HOST"></a>Esperienza ottimizzata con l'host della console
 Il programma host della console di [!INCLUDE[wps_2](../Token/wps_2_md.md)] include nuove funzionalità in [!INCLUDE[psversion3](../Token/psversion3_md.md)], tra cui l'apartment a thread singolo per impostazione predefinita. La nuova opzione "Esegui con PowerShell" di Esplora file consente di eseguire gli script in una sessione senza restrizioni facendo semplicemente clic con il pulsante destro del mouse. La nuova logica di avvio dell'host della console avvia più velocemente Windows PowerShell e i nuovi tipi di carattere consentono di personalizzare l'esperienza con la consueta finestra della console.
 
-Per altre informazioni, vedere [about_Run_With_PowerShell](assetId:///c9d9ca5f-eff9-4409-be9d-e43b5b4087eb).
+Per altre informazioni, vedere [about_Run_With_PowerShell](https://technet.microsoft.com/en-us/library/c9d9ca5f-eff9-4409-be9d-e43b5b4087eb).
 
 ### <a name="BKMK_API"></a>Nuove API di cmdlet e hosting
 Le nuove API di cmdlet e hosting includono API AST (Advanced Syntax Tree) e API per il paging delle pipeline, le pipeline annidate, il completamento tramite TAB di pool di spazi di esecuzione, Windows RT, l'attributo Obsolete dei cmdlet e le proprietà Verb e Noun dell'oggetto FunctionInfo.
 
 ### <a name="BKMK_PERF"></a>Miglioramenti delle prestazioni
-I miglioramenti significativi delle prestazioni di Windows PowerShell sono attribuibili al nuovo parser del linguaggio, basato sul linguaggio DLR (Dynamic Runtime Language) di .NET Framework 4, oltre alla compilazione di script di runtime, alla maggiore affidabilità del motore e alle modifiche apportate all'algoritmo di [Get-ChildItem](assetId:///75cf79bb-4db6-4a67-8c36-3d20754e2190), che ne migliorano le prestazioni in particolare per le ricerche nelle condivisioni di rete.
+I miglioramenti significativi delle prestazioni di Windows PowerShell sono attribuibili al nuovo parser del linguaggio, basato sul linguaggio DLR (Dynamic Runtime Language) di .NET Framework 4, oltre alla compilazione di script di runtime, alla maggiore affidabilità del motore e alle modifiche apportate all'algoritmo di [Get-ChildItem](https://technet.microsoft.com/en-us/library/75cf79bb-4db6-4a67-8c36-3d20754e2190), che ne migliorano le prestazioni in particolare per le ricerche nelle condivisioni di rete.
 
 ### <a name="BKMK_RUNAS"></a>Supporto di RunAs e SharedHost
 [!INCLUDE[psversion3](../Token/psversion3_md.md)] include il supporto per le funzionalità RunAs e SharedHost.
@@ -742,15 +742,15 @@ La funzionalità *RunAs*, progettata per il flusso di lavoro di Windows PowerShe
 La funzionalità **SharedHost** consente a più utenti di più computer di connettersi a una sessione del flusso di lavoro contemporaneamente e di monitorare lo stato di un flusso di lavoro. Gli utenti possono avviare un flusso di lavoro in un computer e quindi connettersi alla sessione del flusso di lavoro di un altro computer senza disconnettersi da quella del computer originale. È necessario che gli utenti abbiano le stesse autorizzazioni e usino la stessa configurazione di sessione. Per altre informazioni, vedere la sezione sull'esecuzione di un flusso di lavoro di Windows PowerShell nella guida introduttiva di questa funzionalità.
 
 ### <a name="BKMK_CHAR"></a>Miglioramenti nella gestione di caratteri speciali
-Per consentire a [!INCLUDE[psversion3](../Token/psversion3_md.md)] di interpretare e gestire correttamente i caratteri speciali, il parametro **LiteralPath**, che gestisce i caratteri speciali nei percorsi, è valido in quasi tutti i cmdlet che hanno un parametro **Path**, inclusi i nuovi cmdlet [Update-Help](assetId:///93e1d870-ace6-432b-8778-8920291d7545) e [Save-Help](assetId:///aed94f90-b73f-4e25-a25d-7c18d9f161fa). Il parser include anche una logica speciale per migliorare la gestione del carattere apice inverso (`) e delle parentesi quadre nei nomi file e nei percorsi.
+Per consentire a [!INCLUDE[psversion3](../Token/psversion3_md.md)] di interpretare e gestire correttamente i caratteri speciali, il parametro **LiteralPath**, che gestisce i caratteri speciali nei percorsi, è valido in quasi tutti i cmdlet che hanno un parametro **Path**, inclusi i nuovi cmdlet [Update-Help](https://technet.microsoft.com/en-us/library/93e1d870-ace6-432b-8778-8920291d7545) e [Save-Help](https://technet.microsoft.com/en-us/library/aed94f90-b73f-4e25-a25d-7c18d9f161fa). Il parser include anche una logica speciale per migliorare la gestione del carattere apice inverso (`) e delle parentesi quadre nei nomi file e nei percorsi.
 
 ## Vedere anche
 [about_Windows_PowerShell_4.0](http://technet.microsoft.com/en-us/library/hh847833(v=wps.630).aspx)
-[about_Windows_PowerShell_5.0](assetId:///6d56fa88-371e-40c9-b2de-64a2a0cd49da)
+[about_Windows_PowerShell_5.0](https://technet.microsoft.com/en-us/library/6d56fa88-371e-40c9-b2de-64a2a0cd49da)
 [Windows PowerShell](http://go.microsoft.com/fwlink/?LinkID=107116)
 
 
 
-<!--HONumber=Apr16_HO1-->
+<!--HONumber=Apr16_HO2-->
 
 
