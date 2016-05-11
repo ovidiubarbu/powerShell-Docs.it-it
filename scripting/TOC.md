@@ -44,7 +44,7 @@
 ### [Spostamento in Windows PowerShell](Topic/Windows-PowerShell-Navigation.md)
 #### [Gestione del percorso corrente](Topic/Managing-Current-Location.md)
 #### [Gestione delle unità di Windows PowerShell](Topic/Managing-Windows-PowerShell-Drives.md)
-#### [Gestione di file, cartelle e chiavi del Registro di sistema](Topic/Working-With-Files,-Folders-and-Registry-Keys.md)
+#### [Gestione di file, cartelle e chiavi del Registro di sistema](Topic/Working-With-Files-Folders-and-Registry-Keys.md)
 #### [Manipolazione diretta di elementi](Topic/Manipulating-Items-Directly.md)
 ### [Utilizzo degli oggetti](Topic/Working-with-Objects.md)
 #### [Recupero di oggetti WMI (Get-WmiObject)](Topic/Getting-WMI-Objects--Get-WmiObject-.md)
@@ -67,6 +67,8 @@
 #### [Utilizzo delle chiavi del Registro di sistema](Topic/Working-with-Registry-Keys.md)
 #### [Utilizzo delle voci del Registro di sistema](Topic/Working-with-Registry-Entries.md)
 #### [Esecuzione di comandi remoti](Topic/Running-Remote-Commands.md)
+## Sicurezza di Windows PowerShell
+### [Considerazioni sulla sicurezza della comunicazione remota di PowerShell](Topic/WinRMSecurity.md)
 ## [Novità di Windows PowerShell 5](Topic/What-s-New-in-Windows-PowerShell.md)
 ### [Alias per la compatibilità](Topic/Appendix-1---Compatibility-Aliases.md)
 ### [Creazione di un collegamento personalizzato per PowerShell](Topic/Appendix-2---Creating-a-Custom-PowerShell-Shortcut.md)
@@ -74,6 +76,6 @@
 ## [Glossario di Windows PowerShell](Topic/Windows-PowerShell-Glossary.md)
 
 
-<!--HONumber=Apr16_HO1-->
+<!--HONumber=Apr16_HO4-->
 
 

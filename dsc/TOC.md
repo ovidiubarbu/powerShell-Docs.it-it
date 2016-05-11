@@ -2,11 +2,14 @@
 
 # [Configurazioni](configurations.md)
 ## [Applicazione delle configurazioni](enactingConfigurations.md)
+## [Uso di risorse con più versioni](sxsResource.md)
+## [Specifica delle dipendenze tra nodi](crossNodeDependencies.md)
 ## [Dati di configurazione](configData.md)
 ### [Opzioni delle credenziali nei dati di configurazione](configDataCredentials.md)
 ### [Esecuzione di DSC con le credenziali dell'utente](runAsUser.md)
 ## [Protezione del file MOF di configurazione](secureMOF.md)
 ## [Configurazioni parziali](partialConfigs.md)
+
 # [Risorse](resources.md)
 ## [Risorse predefinite](builtInResource.md)
 ### [Risorsa Archive](archiveResource.md)
@@ -27,6 +30,7 @@
 ### [Risorse personalizzate basate su classe](authoringResourceClass.md)
 ### [Risorse composte](authoringResourceComposite.md)
 ### [Debug di risorse DSC](debugResource.md)
+### [Chiamata diretta dei metodi delle risorse DSC](directCallResource.md)
 ### [Scrittura di una risorsa DSC a istanza singola (procedura consigliata)](singleInstance.md)
 ### [Elenco di controllo per la creazione di risorse](resourceAuthoringChecklist.md)
 
@@ -44,6 +48,8 @@
 
 # [Risoluzione dei problemi relativi a DSC](troubleshooting.md)
 
+# [Uso di DSC in Nano Server](nanoDsc.md)
+
 # DSC su Linux
 ## [Introduzione a DSC per Linux](lnxGettingStarted.md)
 ## [Risorse predefinite per Linux](lnxBuiltInResources.md)
@@ -57,7 +63,32 @@
 ### [Risorsa nxSshAuthorizedKeys](lnxSshAuthorizedKeysResource.md)
 ### [Risorsa nxUser](lnxUserResource.md)
 
+# Riferimento MOF DSC
+## [Classe MSFT_DSCLocalConfigurationManager](msft-dsclocalconfigurationmanager.md)
+### [Metodo ApplyConfiguration della classe MSFT_DSCLocalConfigurationManager](msft-dsclocalconfigurationmanager-applyconfiguration.md)
+### [Metodo DisableDebugConfiguration della classe MSFT_DSCLocalConfigurationManager](msft-dsclocalconfigurationmanager-disabledebugconfiguration.md)
+### [Metodo EnableDebugConfiguration della classe MSFT_DSCLocalConfigurationManager](msft-dsclocalconfigurationmanager-enabledebugconfiguration.md)
+### [Metodo GetConfiguration della classe MSFT_DSCLocalConfigurationManager](msft-dsclocalconfigurationmanager-getconfiguration.md)
+### [Metodo GetConfigurationResultOutput della classe MSFT_DSCLocalConfigurationManager](msft-dsclocalconfigurationmanager-getconfigurationresultoutput.md)
+### [Metodo GetConfigurationStatus della classe MSFT_DSCLocalConfigurationManager](msft-dsclocalconfigurationmanager-getconfigurationstatus.md)
+### [Metodo GetMetaConfiguration della classe MSFT_DSCLocalConfigurationManager](msft-dsclocalconfigurationmanager-getmetaconfiguration.md)
+### [Metodo PerformRequiredConfigurationChecks della classe MSFT_DSCLocalConfigurationManager](msft-dsclocalconfigurationmanager-performrequiredconfigurationchecks.md)
+### [Metodo RemoveConfiguration della classe MSFT_DSCLocalConfigurationManager](msft-dsclocalconfigurationmanager-removeconfiguration.md)
+### [Metodo ResourceGet della classe MSFT_DSCLocalConfigurationManager](msft-dsclocalconfigurationmanager-resourceget.md)
+### [Metodo ResourceSet della classe MSFT_DSCLocalConfigurationManager](msft-dsclocalconfigurationmanager-resourceset.md)
+### [Metodo ResourceTest della classe MSFT_DSCLocalConfigurationManager](msft-dsclocalconfigurationmanager-resourcetest.md)
+### [Metodo RollBack della classe MSFT_DSCLocalConfigurationManager](msft-dsclocalconfigurationmanager-rollback.md)
+### [Metodo SendConfiguration della classe MSFT_DSCLocalConfigurationManager](msft-dsclocalconfigurationmanager-sendconfiguration.md)
+### [Metodo SendConfigurationApply della classe MSFT_DSCLocalConfigurationManager](msft-dsclocalconfigurationmanager-sendconfigurationapply.md)
+### [Metodo SendConfigurationApplyAsync della classe MSFT_DSCLocalConfigurationManager](msft-dsclocalconfigurationmanager-sendconfigurationapplyasync.md)
+### [Metodo SendMetaConfigurationApply della classe MSFT_DSCLocalConfigurationManager](msft-dsclocalconfigurationmanager-sendmetaconfigurationapply.md)
+### [Metodo StopConfiguration della classe MSFT_DSCLocalConfigurationManager](msft-dsclocalconfigurationmanager-stopconfiguration.md)
+### [Metodo TestConfiguration della classe MSFT_DSCLocalConfigurationManager](msft-dsclocalconfigurationmanager-testconfiguration.md)
 
-<!--HONumber=Apr16_HO1-->
+# Ulteriori risorse
+## [White paper](whitepapers.md)
+
+
+<!--HONumber=Apr16_HO4-->
 
 

@@ -168,6 +168,6 @@ Gli argomenti seguenti descrivono in modo dettagliato la configurazione dei clie
 * [Uso di un server di report DSC](reportServer.md)
 
 
-<!--HONumber=Mar16_HO5-->
+<!--HONumber=Apr16_HO2-->
 
 

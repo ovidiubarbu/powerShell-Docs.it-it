@@ -62,7 +62,7 @@ La parola chiave Configuration di Windows PowerShell viene usata per creare una 
 
 1. Importare il modulo nx. Il modulo nx di Windows PowerShell contiene lo schema per le risorse incorporate per DSC per Linux e deve essere installato nel computer locale e importato nella configurazione.
 
-    - Per installare il modulo nx, copiare la directory del modulo nx in `%UserProfile%\Documents\WindowsPowerShell\Modules\` o `C:\windows\system32\WindowsPowerShell\v1.0\Modules`. Il modulo nx è incluso nel pacchetto di installazione (MSI) di DSC per Linux. Per importare il modulo nx nella configurazione, usare il comando __Import-DSCResource__:
+    - Per installare il modulo nx, copiare la directory del modulo nx in `$env:USERPROFILE\Documents\WindowsPowerShell\Modules\` o `$PSHOME\Modules`. Il modulo nx è incluso nel pacchetto di installazione (MSI) di DSC per Linux. Per importare il modulo nx nella configurazione, usare il comando __Import-DSCResource__:
     
 ```powershell
 Configuration ExampleConfiguration{
@@ -76,7 +76,7 @@ Configuration ExampleConfiguration{
 ```powershell
 Configuration ExampleConfiguration{
    
-    Import-DSCResource -Module nx
+    Import-DscResource -Module nx
  
     Node  "linuxhost.contoso.com"{
     nxFile ExampleFile {
@@ -94,7 +94,7 @@ ExampleConfiguration -OutputPath:"C:\temp"
 
 ### Effettuare il push della configurazione nel computer Linux
 
-È possibile effettuare il push dei documenti di configurazione (file MOF) nel computer Linux usando il cmdlet [Start-DscConfiguration](https://technet.microsoft.com/en-us/library/dn521623.aspx). Per usare questo cmdlet, insieme ai cmdlet [Get-DscConfiguration.aspx](https://technet.microsoft.com/en-us/library/dn407379) o [Test-DscConfiguration](https://technet.microsoft.com/en-us/library/dn407382.aspx), in remoto in un computer Linux, è necessario usare una sessione CIMSession. Il cmdlet [New-CimSession](https://technet.microsoft.com/en-us/library/jj590760.aspx) viene usato per creare una sessione CIMSession nel computer Linux.
+È possibile effettuare il push dei documenti di configurazione (file MOF) nel computer Linux usando il cmdlet [Start-DscConfiguration](https://technet.microsoft.com/en-us/library/dn521623.aspx). Per usare questo cmdlet, insieme ai cmdlet [Get-DscConfiguration](https://technet.microsoft.com/en-us/library/dn407379).aspx o [Test-DscConfiguration](https://technet.microsoft.com/en-us/library/dn407382.aspx), in remoto in un computer Linux, è necessario usare una sessione CIMSession. Il cmdlet [New-CimSession](https://technet.microsoft.com/en-us/library/jj590760.aspx) viene usato per creare una sessione CIMSession nel computer Linux.
 
 Il codice seguente illustra come creare una sessione CIMSession per DSC per Linux.
 
@@ -118,7 +118,7 @@ Se il certificato non è considerato attendibile dal computer Windows in cui si 
 
 Eseguire il comando seguente per effettuare il push della configurazione DSC nel nodo Linux.
 
-`Start-DSCConfiguration -Path:"C:\temp" -cimsession:$sess -wait -verbose`
+`Start-DscConfiguration -Path:"C:\temp" -CimSession:$Sess -Wait -Verbose`
 
 ### Distribuire la configurazione con un server di pull
 
@@ -173,6 +173,6 @@ I file di registro seguenti vengono generati per i messaggi di DSC per Linux.
 |dsc.log|/opt/omi/var/log/|Messaggi relativi al funzionamento delle operazioni delle risorse DSC e di Gestione configurazione locale.|
 
 
-<!--HONumber=Mar16_HO2-->
+<!--HONumber=Apr16_HO2-->
 
 

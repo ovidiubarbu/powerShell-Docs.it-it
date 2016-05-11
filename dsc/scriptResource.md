@@ -3,7 +3,16 @@
  
 > Si applica a: Windows PowerShell 4.0, Windows PowerShell 5.0
 
-La risorsa **Script** in Windows PowerShell DSC (Desired State Configuration) fornisce un meccanismo per eseguire blocchi script di Windows PowerShell nei nodi di destinazione.
+La risorsa **Script** in Windows PowerShell DSC (Desired State Configuration) fornisce un meccanismo per eseguire blocchi script di Windows PowerShell nei nodi di destinazione. La risorsa `Script` dispone delle proprietà `GetScript`, `SetScript` e `TestScript`. Queste proprietà devono essere impostate per i blocchi di script che verranno eseguiti in ogni nodo di destinazione. 
+
+Il blocco di script `GetScript` deve restituire una tabella hash che rappresenta lo stato del nodo corrente. Non è necessario restituire alcun valore. DSC non esegue alcuna operazione con l'output di questo blocco di script.
+
+Il blocco di script `TestScript` dovrebbe indicare se il nodo corrente necessita di modifica. Il blocco restituirà `$true` se il nodo è aggiornato. Il blocco restituirà `$false` se la configurazione del nodo non è aggiornata e deve essere aggiornata per il blocco di script `SetScript`. Il blocco di script `TestScript` viene chiamato da DSC.
+
+Il blocco di script `SetScript` deve modificare il nodo. Se il blocco `TestScript` restituisce `$false`, viene chiamato da DSC.
+
+Se è necessario usare le variabili dallo script di configurazione nei blocchi di script `GetScript`, `TestScript` o `SetScript`, usare l'ambito `$using:` (vedere l'esempio di seguito).
+
 
 ## Sintassi
 
@@ -28,7 +37,7 @@ Script [string] #ResourceName
 | Credential| Indica le credenziali da usare per l'esecuzione dello script, se sono necessarie credenziali.| 
 | DependsOn| Indica che prima di configurare la risorsa è necessario eseguire la configurazione di un'altra risorsa. Ad esempio, se l'ID del blocco script di configurazione della risorsa che si vuole eseguire per primo è **ResourceName** e il tipo è **ResourceType**, la sintassi per usare questa proprietà è `DependsOn = "[ResourceType]ResourceName"`.
 
-## Esempio
+## Esempio 1
 ```powershell
 Script ScriptExample
 {
@@ -42,4 +51,35 @@ Script ScriptExample
 }
 ```
 
-<!--HONumber=Feb16_HO4-->
+## Esempio 2
+```powershell
+$version = Get-Content 'version.txt'
+Script UpdateConfigurationVersion
+{
+    GetScript = { 
+        $currentVersion = Get-Content (Join-Path -Path $env:SYSTEMDRIVE -ChildPath 'version.txt')
+        return @{ 'Version' = $currentVersion }
+    }          
+    TestScript = { 
+        $state = GetScript
+        if( $state['Version'] -eq $using:version )
+        {
+            Write-Verbose -Message ('{0} -eq {1}' -f $state['Version'],$using:version)
+            return $true
+        }
+        Write-Verbose -Message ('Version up-to-date: {0}' -f $using:version)
+        return $false
+    }
+    SetScript = { 
+        $using:version | Set-Content -Path (Join-Path -Path $env:SYSTEMDRIVE -ChildPath 'version.txt')
+    }
+}
+```
+
+Questa risorsa scrive la versione della configurazione di un file di testo. Questa versione è disponibile nel computer client, ma non su tutti i nodi, quindi deve essere passata su tutti i blocchi di script della risorsa `Script` con l'ambito `using` di PowerShell. Durante la generazione del file MOF del nodo, il valore della variabile `$version` viene letto da un file di testo nel computer client. DSC sostituisce le variabili `$using:version` in ogni blocco di script con il valore della variabile `$version`.
+
+
+
+<!--HONumber=Apr16_HO2-->
+
+

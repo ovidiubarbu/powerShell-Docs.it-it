@@ -78,7 +78,7 @@ configuration PartialConfigDemo
         {
             Description = 'Configuration for the Sharepoint Server'
             ConfigurationSource = '[ConfigurationRepositoryWeb]CONTOSO-PullSrv'
-            DependsOn = [PartialConfiguration]OSInstall
+            DependsOn = '[PartialConfiguration]OSInstall'
             RefreshMode = 'Pull'
         }
     }
@@ -131,7 +131,7 @@ configuration PartialConfigDemo
            PartialConfiguration SharePointConfig
         {
             Description = 'Configuration for the Sharepoint Server'
-            DependsOn = [PartialConfiguration]OSInstall
+            DependsOn = '[PartialConfiguration]OSInstall'
             RefreshMode = 'Push'
         }
     }
@@ -150,6 +150,6 @@ Assegnare i nomi ai documenti di configurazione e posizionare i documenti come d
 [Configurazione di Gestione configurazione locale](https://technet.microsoft.com/en-us/library/mt421188.aspx) 
 
 
-<!--HONumber=Mar16_HO4-->
+<!--HONumber=Apr16_HO2-->
 
 

@@ -35,6 +35,10 @@ DSC include anche una serie di nuove parole chiave del linguaggio, nonché nuovi
 ## Vedere anche
 * [Configurazioni DSC](configurations.md)
 * [Risorse DSC](resources.md)
-* [Configurazione di Gestione configurazione locale](metaconfig.md)
+* [Configurazione di Gestione configurazione locale](metaConfig.md)
 
-<!--HONumber=Feb16_HO4-->
+
+
+<!--HONumber=Apr16_HO2-->
+
+

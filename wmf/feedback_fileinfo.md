@@ -1,13 +1,17 @@
 # Aggiornamenti dell'oggetto FileInfo
-Le informazioni sulla versione dei file possono essere fuorvianti, in particolare in seguito all'applicazione di patch ai file. In questa versione di WMF Production Preview sono state aggiunte le nuove proprietà di script **FileVersionRaw** e **ProductVersionRaw** per gli oggetti FileInfo. Ecco queste proprietà nel formato visualizzato per powershell.exe:
+Le informazioni sulla versione dei file possono essere fuorvianti, in particolare in seguito all'applicazione di patch ai file. Questa versione di WMF 5.0 aggiunge nuove **FileVersionRaw** e **ProductVersionRaw** 
+proprietà di script degli oggetti FileInfo. Ecco le proprietà come vengono visualizzate per powershell.exe (presupponendo che $pid è l'ID del processo di PowerShell):
 
-PS C:\\&gt; Get-Process -Id $pid -FileVersionInfo | fl \*version\* -Force
+```powershell
+PS C:\> Get-Process -Id $pid -FileVersionInfo | fl *version* -Force
 
-FileVersionRaw : 10.0.10055.0
 
-ProductVersionRaw : 10.0.10055.0
+FileVersionRaw    : 10.0.10586.117
+ProductVersionRaw : 10.0.10586.117
+FileVersion       : 10.0.10586.117 (th2_release.160212-2359)
+ProductVersion    : 10.0.10586.117
 
-FileVersion : 10.0.10055.0 (fbl\_srv2.150402-1826)
 
-ProductVersion : 10.0.10055.0
-<!--HONumber=Mar16_HO2-->
+<!--HONumber=Apr16_HO3-->
+
+
