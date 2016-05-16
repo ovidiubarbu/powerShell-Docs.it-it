@@ -1,8 +1,8 @@
-# Uso di DSC in Nano Server
+# Uso di DSC on Nano Server (DSC su Nano Server)
 
 > Si applica a: Windows PowerShell 5.0
 
-**DSC su Nano Server** è un pacchetto opzionale contenuto nella cartella `NanoServer\Packages` del supporto Windows Server 2016. Il pacchetto può essere installato quando si crea un disco rigido virtuale per un Nano Server
+**DSC on Nano Server** (DSC su Nano Server) è un pacchetto opzionale contenuto nella cartella `NanoServer\Packages` del supporto Windows Server 2016. Il pacchetto può essere installato quando si crea un disco rigido virtuale per un Nano Server
 specificando **Microsoft-NanoServer-DSC-Package** come valore del parametro **Packages** della funzione**New-NanoServerImage**. Ad esempio, se si sta creando un disco rigido virtuale per una macchina
 virtuale, il comando sarebbe simile al seguente:
 
@@ -16,8 +16,8 @@ Per informazioni sull'installazione e l'uso di Nano Server, nonché su come gest
 
 ## Funzionalità DSC disponibili su Nano Server
 
- Poiché Nano Server supporta solo un set limitato di API rispetto a una versione completa di Windows Server, al momento DSC in Nano server non dispone di parità funzionale completa con DSC in esecuzione 
- su SKU completi. DSC in Nano server è in fase di sviluppo attivo e non è ancora completo di tutte le funzionalità.
+ Poiché Nano Server supporta solo un set limitato di API rispetto a una versione completa di Windows Server, al momento DSC on Nano Server (DSC su Nano Server) non dispone di parità funzionale completa con DSC in esecuzione 
+ su SKU completi. DSC on Nano Server (DSC su Nano Server) è in fase di sviluppo attivo e non è ancora completo di tutte le funzionalità.
  
  Le funzionalità DSC seguenti sono attualmente disponibili in Nano Server: 
 
