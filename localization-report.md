@@ -1207,9 +1207,9 @@
 * Archive Datetime: 2016-05-03 15:36:35
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [dsc\nanoDsc.md](https://github.com/PowerShell/powerShell-Docs.it-it/blob/fdbc54a03b5aa2e312544606ca1bf4e603b0f13d/dsc/nanoDsc.md)
-* Current Handback File: [nanoDsc.aab436599c769befa85e33015714db23e0d73ae6.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/b199e22be0b2b06493472e130af5d346434e42c4/ol-handback/PowerShell/powerShell-Docs.it-it/live/nanoDsc.aab436599c769befa85e33015714db23e0d73ae6.it-it.xlf)
-* Current Handback Datetime: 2016-05-11 09:07:55
+* Current Target File: [dsc\nanoDsc.md](https://github.com/PowerShell/powerShell-Docs.it-it/blob/06c6e310ed1dfe10ccdc793c4801867b3a05186c/dsc/nanoDsc.md)
+* Current Handback File: [nanoDsc.aab436599c769befa85e33015714db23e0d73ae6.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/5d54b17133555ffc622e30641b58a52dcb9d57f7/ol-handback/PowerShell/powerShell-Docs.it-it/live/live/nanoDsc.aab436599c769befa85e33015714db23e0d73ae6.it-it.xlf)
+* Current Handback Datetime: 2016-05-16 19:43:25
 * [Back to Top](#report-top)
 
 ##### <a name='06423071b30da53145f9f1ecb5b9f2e3d131467169'></a> Source: [dsc\overview.md](https://github.com/PowerShell/powerShell-Docs/blob/682edfe87872b7b99546c2a78c1b6191d1933ad6/dsc/overview.md)
