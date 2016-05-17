@@ -1,12 +1,15 @@
 ---
-title: Imparare i nomi usati in Windows PowerShell
-ms.custom: na
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: b4d0fd22-8298-4ee6-82ae-9b6f2907c986
+title:  Imparare i nomi usati in Windows PowerShell
+ms.date:  2016-05-11
+keywords:  powershell,cmdlet
+description:  
+ms.topic:  article
+author:  jpjofre
+manager:  dongill
+ms.prod:  powershell
+ms.assetid:  b4d0fd22-8298-4ee6-82ae-9b6f2907c986
 ---
+
 # Imparare i nomi usati in Windows PowerShell
 Nella maggior parte delle interfacce della riga di comando, imparare nomi e parametri dei comandi richiede molto tempo. Il problema è che esistono pochissimi schemi, quindi l'unica possibilità è memorizzare ogni comando e parametro che è necessario usare regolarmente.
 
@@ -92,6 +95,6 @@ Ad esempio, le linee guida consigliano di chiamare un parametro che fa riferimen
 
 
 
-<!--HONumber=Apr16_HO1-->
+<!--HONumber=May16_HO2-->
 
 
