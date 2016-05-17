@@ -9,8 +9,8 @@
 [ Archive Failed Files ](#archive-failed-list)| 0
 [ Archive Success Files ](#archive-success-list)| 98
 [ Handback Failed Files ](#handback-failed-list)| 0
-[ Out Of Sync Handback Files ](#outofsync-handback-success-list)| 98
-[ In Sync Handback Files ](#insync-handback-success-list)| 108
+[ Out Of Sync Handback Files ](#outofsync-handback-success-list)| 97
+[ In Sync Handback Files ](#insync-handback-success-list)| 109
 [ Ignored Files ](#ignored-list)| 14
 
 ## <a name='handoff-failed-list'></a> Handoff Failed File List
@@ -217,7 +217,6 @@
  [scripting\getting-started\fundamental\About-Windows-PowerShell.md](https://github.com/PowerShell/powerShell-Docs/blob/03ac4b90d299b316194f1fa932e7dbf62d4b1c8e/scripting/getting-started/fundamental/About-Windows-PowerShell.md) | OutofSyncHandedBackSuccess | [Details](#b990fb5c6855aaffeb241e9596c333014050e059195)
  [scripting\getting-started\fundamental\Getting-Detailed-Help-Information.md](https://github.com/PowerShell/powerShell-Docs/blob/03ac4b90d299b316194f1fa932e7dbf62d4b1c8e/scripting/getting-started/fundamental/Getting-Detailed-Help-Information.md) | OutofSyncHandedBackSuccess | [Details](#1c514b101f708f11f095e1c95e12d7eff403e3bb197)
  [scripting\getting-started\fundamental\Getting-Information-About-Commands.md](https://github.com/PowerShell/powerShell-Docs/blob/03ac4b90d299b316194f1fa932e7dbf62d4b1c8e/scripting/getting-started/fundamental/Getting-Information-About-Commands.md) | OutofSyncHandedBackSuccess | [Details](#a19601bd785ab91f5d8175acd081113e87a62a57198)
- [scripting\getting-started\fundamental\Learning-Windows-PowerShell-Names.md](https://github.com/PowerShell/powerShell-Docs/blob/03ac4b90d299b316194f1fa932e7dbf62d4b1c8e/scripting/getting-started/fundamental/Learning-Windows-PowerShell-Names.md) | OutofSyncHandedBackSuccess | [Details](#bc504fbde14d0ba743accf644ee5114810afb609199)
  [scripting\getting-started\fundamental\Understanding-Important-Windows-PowerShell-Concepts.md](https://github.com/PowerShell/powerShell-Docs/blob/03ac4b90d299b316194f1fa932e7dbf62d4b1c8e/scripting/getting-started/fundamental/Understanding-Important-Windows-PowerShell-Concepts.md) | OutofSyncHandedBackSuccess | [Details](#db5f410c8f84949c969f21ed59ac48a4e31e91fd202)
  [scripting\getting-started\fundamental\Using-Familiar-Command-Names.md](https://github.com/PowerShell/powerShell-Docs/blob/03ac4b90d299b316194f1fa932e7dbf62d4b1c8e/scripting/getting-started/fundamental/Using-Familiar-Command-Names.md) | OutofSyncHandedBackSuccess | [Details](#2cbc7e5481ecfb21b2f6088191e2e34cf2631992204)
  [scripting\setup\WinRMSecurity.md](https://github.com/PowerShell/powerShell-Docs/blob/7facb78962411d7b96ef6741e3ffa153d5537a0d/scripting/setup/WinRMSecurity.md) | OutofSyncHandedBackSuccess | [Details](#e1827e102a9b35ea214f89395f7ff3c5e0a58506227)
@@ -250,6 +249,7 @@
  [scripting\getting-started\cookbooks\Working-with-Objects.md](https://github.com/PowerShell/powerShell-Docs/blob/03ac4b90d299b316194f1fa932e7dbf62d4b1c8e/scripting/getting-started/cookbooks/Working-with-Objects.md) | InSyncHandedBackSuccess | [Details](#a25734261fdcf657d0b97b1f037580f89b04881d189)
  [scripting\getting-started\cookbooks\Working-with-Printers.md](https://github.com/PowerShell/powerShell-Docs/blob/03ac4b90d299b316194f1fa932e7dbf62d4b1c8e/scripting/getting-started/cookbooks/Working-with-Printers.md) | InSyncHandedBackSuccess | [Details](#27d3d11b71b95cd79817449cf8bdb1a0a26936bd190)
  [scripting\getting-started\cookbooks\Working-with-Registry-Keys.md](https://github.com/PowerShell/powerShell-Docs/blob/03ac4b90d299b316194f1fa932e7dbf62d4b1c8e/scripting/getting-started/cookbooks/Working-with-Registry-Keys.md) | InSyncHandedBackSuccess | [Details](#b979750580ea5c7171569f8982d6aeca883c33ab192)
+ [scripting\getting-started\fundamental\Learning-Windows-PowerShell-Names.md](https://github.com/PowerShell/powerShell-Docs/blob/03ac4b90d299b316194f1fa932e7dbf62d4b1c8e/scripting/getting-started/fundamental/Learning-Windows-PowerShell-Names.md) | InSyncHandedBackSuccess | [Details](#bc504fbde14d0ba743accf644ee5114810afb609199)
  [scripting\getting-started\fundamental\Object-Pipeline.md](https://github.com/PowerShell/powerShell-Docs/blob/03ac4b90d299b316194f1fa932e7dbf62d4b1c8e/scripting/getting-started/fundamental/Object-Pipeline.md) | InSyncHandedBackSuccess | [Details](#56aa32d40d8e5e61f5328d5a373ca5a1bd7ca6e3200)
  [scripting\getting-started\fundamental\Understanding-the-Windows-PowerShell-Pipeline.md](https://github.com/PowerShell/powerShell-Docs/blob/03ac4b90d299b316194f1fa932e7dbf62d4b1c8e/scripting/getting-started/fundamental/Understanding-the-Windows-PowerShell-Pipeline.md) | InSyncHandedBackSuccess | [Details](#233ec6fafbf1e770190601750be3bdcef2337b7f203)
  [scripting\getting-started\fundamental\Using-Variables-to-Store-Objects.md](https://github.com/PowerShell/powerShell-Docs/blob/03ac4b90d299b316194f1fa932e7dbf62d4b1c8e/scripting/getting-started/fundamental/Using-Variables-to-Store-Objects.md) | InSyncHandedBackSuccess | [Details](#c3bcf9dc6f70383e971d9c1ae75ec78860111de9205)
@@ -3009,18 +3009,15 @@
 * [Back to Top](#report-top)
 
 ##### <a name='bc504fbde14d0ba743accf644ee5114810afb609199'></a> Source: [scripting\getting-started\fundamental\Learning-Windows-PowerShell-Names.md](https://github.com/PowerShell/powerShell-Docs/blob/03ac4b90d299b316194f1fa932e7dbf62d4b1c8e/scripting/getting-started/fundamental/Learning-Windows-PowerShell-Names.md)
-* Status: OutofSyncHandedBackSuccess
-* Target File: 
+* Status: InSyncHandedBackSuccess
+* Target File: [scripting\getting-started\fundamental\Learning-Windows-PowerShell-Names.md](https://github.com/PowerShell/powerShell-Docs.it-it/blob/8b731f0acf4b8aed0de481fcc936c48c0334f331/scripting/getting-started/fundamental/Learning-Windows-PowerShell-Names.md)
 * Handoff File: [Learning-Windows-PowerShell-Names.fc1b82ec398316e9fb38af6a070070e1e3773976.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/e57fe7c9b4434464f90ac333bd30c76a5578a4d5/ol-handoff/PowerShell/powerShell-Docs.it-it/live/Learning-Windows-PowerShell-Names.fc1b82ec398316e9fb38af6a070070e1e3773976.it-it.xlf)
 * Handoff Datetime: 2016-05-12 23:23:45
 * Handoff Reason: Include
 * Archive File: [Learning-Windows-PowerShell-Names.fc1b82ec398316e9fb38af6a070070e1e3773976.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/997d4a448878db26ec7cd7959e43a5e3c2e0165a/ol-handoff/PowerShell/powerShell-Docs.it-it/live/archive/Learning-Windows-PowerShell-Names.fc1b82ec398316e9fb38af6a070070e1e3773976.it-it.xlf)
 * Archive Datetime: 2016-05-17 13:26:36
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [scripting\Topic\Learning-Windows-PowerShell-Names.md](https://github.com/PowerShell/powerShell-Docs.it-it/blob/96d207d7667cb9eeb6d7d977f99f740b1f9ac731/scripting/Topic/Learning-Windows-PowerShell-Names.md)
-* Current Handback File: [Learning-Windows-PowerShell-Names.79c02f329a92b085ed458b8b7736100a1147c8e0.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/a216c9333aa49149e4086aff30e28026e24a067f/ol-handback/PowerShell/powerShell-Docs.it-it/live/Learning-Windows-PowerShell-Names.79c02f329a92b085ed458b8b7736100a1147c8e0.it-it.xlf)
-* Current Handback Datetime: 2016-04-28 23:41:44
+* Handback File: [Learning-Windows-PowerShell-Names.fc1b82ec398316e9fb38af6a070070e1e3773976.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/bac868a1893d29094c86391bbf28383ca4107d3b/ol-handback/PowerShell/powerShell-Docs.it-it/live/Learning-Windows-PowerShell-Names.fc1b82ec398316e9fb38af6a070070e1e3773976.it-it.xlf)
+* Handback Datetime: 2016-05-17 21:38:23
 * [Back to Top](#report-top)
 
 ##### <a name='56aa32d40d8e5e61f5328d5a373ca5a1bd7ca6e3200'></a> Source: [scripting\getting-started\fundamental\Object-Pipeline.md](https://github.com/PowerShell/powerShell-Docs/blob/03ac4b90d299b316194f1fa932e7dbf62d4b1c8e/scripting/getting-started/fundamental/Object-Pipeline.md)
