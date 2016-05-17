@@ -1,3 +1,14 @@
+---
+title:   White paper
+ms.date:  2016-05-16
+keywords:  powershell,DSC
+description:  
+ms.topic:  article
+author:  eslesar
+manager:  dongill
+ms.prod:  powershell
+---
+
 # White paper
 
 I seguenti white paper sono stati pubblicati per fornire informazioni aggiuntive sugli argomenti correlati alla configurazione dello stato desiderato tramite PowerShell.
@@ -7,6 +18,8 @@ L'applicazione dei modelli e delle procedure delle tecniche usate dagli sviluppa
 
 **[Scarica il PDF](http://aka.ms/thereleasepipelinemodelpdf)**
 
-<!--HONumber=Apr16_HO2-->
+
+
+<!--HONumber=May16_HO3-->
 
 

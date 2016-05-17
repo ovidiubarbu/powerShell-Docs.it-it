@@ -1,12 +1,15 @@
 ---
-title: Informazioni sulla pipeline di Windows PowerShell
-ms.custom: na
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 6be50926-7943-4ef7-9499-4490d72a63fb
+title:  Informazioni sulla pipeline di Windows PowerShell
+ms.date:  2016-05-11
+keywords:  powershell,cmdlet
+description:  
+ms.topic:  article
+author:  jpjofre
+manager:  dongill
+ms.prod:  powershell
+ms.assetid:  6be50926-7943-4ef7-9499-4490d72a63fb
 ---
+
 # Informazioni sulla pipeline di Windows PowerShell
 Il piping è usato praticamente ovunque in Windows PowerShell. Anche se sullo schermo viene visualizzato del testo, Windows PowerShell non invia tramite pipe testo tra i comandi, bensì oggetti.
 
@@ -62,6 +65,6 @@ Nel resto di questa sezione viene spiegato come individuare la struttura di ogge
 
 
 
-<!--HONumber=Apr16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

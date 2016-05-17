@@ -1,3 +1,14 @@
+---
+title:   Gestione configurazione locale di Windows PowerShell 4.0 DSC (Desired State Configuration)
+ms.date:  2016-05-16
+keywords:  powershell,DSC
+description:  
+ms.topic:  article
+author:  eslesar
+manager:  dongill
+ms.prod:  powershell
+---
+
 # Gestione configurazione locale di Windows PowerShell 4.0 DSC (Desired State Configuration)
 
 >Si applica a: Windows PowerShell 4.0, Windows PowerShell 5.0
@@ -61,4 +72,10 @@ Set-DscLocalConfigurationManager -Path "c:\users\public\dsc"
 
 > **Nota**: per il parametro **Path**, è necessario specificare lo stesso percorso specificato per il parametro **OutputPath** quando è stata richiamata la configurazione nell'esempio precedente.
 
-Per visualizzare le impostazioni di Gestione configurazione locale correnti, è possibile usare il cmdlet **Get-DscLocalConfigurationManager**. Se richiamato senza parametri, per impostazione predefinita questo cmdlet ottiene le impostazioni di Gestione configurazione locale per il nodo in cui viene eseguito. Per specificare un altro nodo, usare il parametro **CimSession** con questo cmdlet.<!--HONumber=Feb16_HO4-->
+Per visualizzare le impostazioni di Gestione configurazione locale correnti, è possibile usare il cmdlet **Get-DscLocalConfigurationManager**. Se richiamato senza parametri, per impostazione predefinita questo cmdlet ottiene le impostazioni di Gestione configurazione locale per il nodo in cui viene eseguito. Per specificare un altro nodo, usare il parametro **CimSession** con questo cmdlet.
+
+
+
+<!--HONumber=May16_HO3-->
+
+

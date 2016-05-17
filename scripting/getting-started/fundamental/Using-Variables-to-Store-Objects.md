@@ -1,12 +1,15 @@
 ---
-title: Uso di variabili per l'archiviazione di oggetti
-ms.custom: na
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: b1688d73-c173-491e-9ba6-6d0c1cc852de
+title:  Uso di variabili per l'archiviazione di oggetti
+ms.date:  2016-05-11
+keywords:  powershell,cmdlet
+description:  
+ms.topic:  article
+author:  jpjofre
+manager:  dongill
+ms.prod:  powershell
+ms.assetid:  b1688d73-c173-491e-9ba6-6d0c1cc852de
 ---
+
 # Uso di variabili per l'archiviazione di oggetti
 Windows PowerShell opera sugli oggetti. Windows PowerShell consente di creare variabili, ovvero fondamentalmente oggetti denominati, per salvare l'output in modo da portelo usare in seguito. Se si è abituati a usare le variabili in altre shell, tenere presente che le variabili di Windows PowerShell sono oggetti e non testo.
 
@@ -98,6 +101,6 @@ C:\WINDOWS
 
 
 
-<!--HONumber=Apr16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

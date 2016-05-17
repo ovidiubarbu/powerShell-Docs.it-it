@@ -1,3 +1,14 @@
+---
+title:   Configurazione di un client di pull DSC
+ms.date:  2016-05-16
+keywords:  powershell,DSC
+description:  
+ms.topic:  article
+author:  eslesar
+manager:  dongill
+ms.prod:  powershell
+---
+
 # Configurazione di un client di pull DSC
 
 > Si applica a: Windows PowerShell 4.0, Windows PowerShell 5.0
@@ -10,9 +21,10 @@ Gli argomenti seguenti illustrano come configurare i client di pull:
 * [Configurazione di un client di pull usando nomi di configurazione](pullClientConfigNames.md)
 * [Configurazione di un client di pull usando un ID configurazione](pullClientConfigID.md)
 
-> <ctype="x-NOTFOUND" mdpre="**" mdpost="**">Nota</ctype="x-NOTFOUND">: questi argomenti si applicano a PowerShell 5.0. Per configurare un client di pull in PowerShell 4.0, vedere <ctype="x-NOTFOUND" mdpre="[" mdpost="](pullClientConfigID4.md)">Configurazione di un client di pull usando un ID configurazione in PowerShell 4.0</ctype="x-NOTFOUND">.
+> **Nota**: questi argomenti si applicano a PowerShell 5.0. Per configurare un client di pull in PowerShell 4.0, vedere [Configurazione di un client di pull usando un ID configurazione in PowerShell 4.0](pullClientConfigID4.md).
 
 
-<!--HONumber=Mar16_HO4-->
+
+<!--HONumber=May16_HO3-->
 
 

@@ -1,3 +1,14 @@
+---
+title:   Risorse Windows PowerShell DSC (Desired State Configuration) predefinite
+ms.date:  2016-05-16
+keywords:  powershell,DSC
+description:  
+ms.topic:  article
+author:  eslesar
+manager:  dongill
+ms.prod:  powershell
+---
+
 # Risorse Windows PowerShell DSC (Desired State Configuration) predefinite
 
 > Si applica a: Windows PowerShell 4.0, Windows PowerShell 5.0
@@ -18,6 +29,7 @@ Windows PowerShell DSC (Desired State Configuration) include un set di risorse d
 * [Risorsa WindowsProcess](windowsProcessResource.md)
 
 
-<!--HONumber=Apr16_HO2-->
+
+<!--HONumber=May16_HO3-->
 
 

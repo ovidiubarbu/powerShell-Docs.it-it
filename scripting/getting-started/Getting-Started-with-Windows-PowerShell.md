@@ -1,12 +1,15 @@
 ---
-title: Guida introduttiva a Windows PowerShell
-ms.custom: na
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: b0e2ad92-875f-421d-b612-f624e644aa69
+title:  Guida introduttiva a Windows PowerShell
+ms.date:  2016-05-11
+keywords:  powershell,cmdlet
+description:  
+ms.topic:  article
+author:  jpjofre
+manager:  dongill
+ms.prod:  powershell
+ms.assetid:  b0e2ad92-875f-421d-b612-f624e644aa69
 ---
+
 # Guida introduttiva a Windows PowerShell
 Windows PowerShell è una nuova shell da riga di comando di Windows progettata appositamente per gli amministratori di sistema. Windows PowerShell include un prompt interattivo e un ambiente di scripting che può essere usato in modo indipendente o in combinazione.
 

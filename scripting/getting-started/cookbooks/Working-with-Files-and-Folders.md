@@ -1,12 +1,15 @@
 ---
-title: Utilizzo di file e cartelle
-ms.custom: na
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: c0ceb96b-e708-45f3-803b-d1f61a48f4c1
+title:  Utilizzo di file e cartelle
+ms.date:  2016-05-11
+keywords:  powershell,cmdlet
+description:  
+ms.topic:  article
+author:  jpjofre
+manager:  dongill
+ms.prod:  powershell
+ms.assetid:  c0ceb96b-e708-45f3-803b-d1f61a48f4c1
 ---
+
 # Utilizzo di file e cartelle
 Gli spostamenti nelle unità di Windows PowerShell e la modifica degli elementi in tali unità è simile alla modifica di file e cartelle nelle unità disco fisiche di Windows. In questa sezione verranno illustrate le procedure per gestire attività specifiche di manipolazione di file e cartelle.
 
@@ -140,6 +143,6 @@ $Computers = Get-Content -Path C:\temp\DomainMembers.txt
 
 
 
-<!--HONumber=Apr16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

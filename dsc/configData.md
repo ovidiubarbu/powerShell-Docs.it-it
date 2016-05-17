@@ -1,3 +1,14 @@
+---
+title:   Separazione dei dati di configurazione e dell'ambiente
+ms.date:  2016-05-16
+keywords:  powershell,DSC
+description:  
+ms.topic:  article
+author:  eslesar
+manager:  dongill
+ms.prod:  powershell
+---
+
 # Separazione dei dati di configurazione e dell'ambiente
 
 >Si applica a: Windows PowerShell 4.0, Windows PowerShell 5.0
@@ -207,4 +218,9 @@ configuration MyConfiguration
 ```
 
 Un esempio completo è incluso nel [modulo xWebAdministration](https://powershellgallery.com/packages/xWebAdministration).
-<!--HONumber=Feb16_HO4-->
+
+
+
+<!--HONumber=May16_HO3-->
+
+

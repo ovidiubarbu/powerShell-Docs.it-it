@@ -1,12 +1,15 @@
 ---
-title: Utilizzo delle chiavi del Registro di sistema
-ms.custom: na
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 91bfaecd-8684-48b4-ad86-065dfe6dc90a
+title:  Utilizzo delle chiavi del Registro di sistema
+ms.date:  2016-05-11
+keywords:  powershell,cmdlet
+description:  
+ms.topic:  article
+author:  jpjofre
+manager:  dongill
+ms.prod:  powershell
+ms.assetid:  91bfaecd-8684-48b4-ad86-065dfe6dc90a
 ---
+
 # Utilizzo delle chiavi del Registro di sistema
 Dato che le chiavi del Registro di sistema sono elementi nelle unità di Windows PowerShell, il loro utilizzo è molto simile a quello di file e cartelle. Una differenza fondamentale è che ogni elemento in un'unità di Windows PowerShell basata sul Registro di sistema è un contenitore, come una cartella in un'unità del file system. Tuttavia, le voci del Registro di sistema e i relativi valori associati sono proprietà degli elementi e non elementi distinti.
 
@@ -117,6 +120,6 @@ Remove-Item -Path HKCU:\CurrentVersion\* -Recurse
 
 
 
-<!--HONumber=Apr16_HO1-->
+<!--HONumber=May16_HO2-->
 
 
