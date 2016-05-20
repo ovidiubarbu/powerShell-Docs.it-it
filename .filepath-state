@@ -194,6 +194,9 @@
   "0f4922e1df8725aad839211dbe0dfc532692f606": [
     "dsc\\logResource.md"
   ],
+  "1ecef855e4bfc0ee0e5109fd0ecfb9ca395854d5": [
+    "dsc\\metaConfig.md"
+  ],
   "b699b737e0be2bc485a36644c40b4087dac28414": [
     "dsc\\metaConfig.md"
   ],
@@ -217,6 +220,9 @@
   ],
   "9c9f1da0b560c44c9760583c4193bdf4eaee09f7": [
     "dsc\\packageResource.md"
+  ],
+  "6a5acd3ead098b79c6a85c7dcf618190b526ccb3": [
+    "dsc\\partialConfigs.md"
   ],
   "77448cde004f357cfd64dd84337205197d904615": [
     "dsc\\partialConfigs.md"
@@ -1573,6 +1579,9 @@
   ],
   "ecd54fd1b79b3e7b1411f37aa74f003f6f838b67": [
     "scripting\\whats-new\\What-s-New-in-the-PowerShell-50-ISE.md"
+  ],
+  "87e4a23f93d19219a8d00671f319ef93a96fbbf6": [
+    "scripting\\whats-new\\What-s-New-in-Windows-PowerShell-50.md"
   ],
   "84cafb3d71bc55063de7faae555762318768d061": [
     "scripting\\whats-new\\What-s-New-in-Windows-PowerShell-50.md"
