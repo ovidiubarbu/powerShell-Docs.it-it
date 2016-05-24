@@ -5,7 +5,7 @@ Modifica di rilievo: i certificati usati per crittografare/decrittografare le pa
 
 Nelle versioni WMF 4.0 e WMF 5.0 Preview, DSC non consente lunghezze maggiori di 121 caratteri per le password nella configurazione. DSC imponeva l'uso di password brevi anche se erano preferibili password lunghe e complesse. Questa modifica consente una lunghezza arbitraria per le password nella configurazione DSC.
 
-**Soluzione:** creare nuovamente il certificato con utilizzo chiavi Crittografia dati o Crittografia chiavi e l'utilizzo chiavi avanzato Crittografia documento (1.3.6.1.4.1.311.80.1). In questo articolo Technet <https://technet.microsoft.com/en-us/library/dn807171.aspx> sono disponibili altre informazioni.
+**Soluzione:** creare nuovamente il certificato con utilizzo chiavi Crittografia dati o Crittografia chiavi e l'utilizzo chiavi avanzato Crittografia documento (1.3.6.1.4.1.311.80.1). Per altre informazioni, vedere l'articolo di Technet <https://technet.microsoft.com/en-us/library/dn807171.aspx>.
 
 
 Potrebbero verificarsi problemi con i cmdlet DSC dopo l'installazione di WMF 5.0 RTM
@@ -173,40 +173,26 @@ WindowsOptionalFeature non è disponibile in Windows 7
 
 La risorsa DSC WindowsOptionalFeature non è disponibile in Windows 7. La risorsa richiede il modulo Gestione e manutenzione immagini distribuzione e i cmdlet di Gestione e manutenzione immagini distribuzione disponibili a partire da Windows 8 e nelle versioni più recenti del sistema operativo Windows.
 
+Per le risorse DSC basate su classi, Import-DscResource -ModuleVersion potrebbe non funzionare come previsto   
+------------------------------------------------------------------------------------------
+Se il nodo di compilazione include più versioni di un modulo di risorse DSC basato su classi, `Import-DscResource -ModuleVersion` non recupera la versione specificata e genera l'errore di compilazione seguente.
 
-L'esecuzione di Set-DscLocalConfigurationManager per impostare la metaconfigurazione in build di WMF 4.0 o WMF 5.0 Production Preview non funziona
----------------------------------------------------------------------------------------------------------------------------------------
-
-È presente un problema di compatibilità con le versioni precedenti durante l'esecuzione di Set-DscLocalConfiguration in build precedenti di WMF. Verrà visualizzato questo errore che segnala che il nuovo parametro -Force non è disponibile nel computer di destinazione.
-```powershell
-Set-DscLocalConfigurationManager -Path . -Verbose -ComputerName WIN-3B576EM3669
-VERBOSE: Performing the operation "Start-DscConfiguration: SendMetaConfigurationApply" on target "MSFT_DSCLocalConfigurationManager".
-VERBOSE: Perform operation 'Invoke CimMethod' with following parameters, ''methodName' = SendMetaConfigurationApply,'className' = MSFT_DSCLocalConfigurationManager,'namespaceName' = root/Microsoft/Windows/DesiredStateConfiguration'.
-The WinRM client cannot process the request. The object contains an unrecognized argument: "Force". Verify that the spelling of the argument name is correct.
-+ CategoryInfo : MetadataError: (root/Microsoft/...gurationManager:String) [], CimException
-+ FullyQualifiedErrorId : HRESULT 0x803381e1
-+ PSComputerName : WIN-3B576EM3669
-VERBOSE: Operation 'Invoke CimMethod' complete.
-VERBOSE: Set-DscLocalConfigurationManager finished in 0.121 seconds.
 ```
-**Soluzione:** eseguire questi passaggi per usare Invoke-CimMethod per chiamare il metodo CIM sottostante direttamente per impostare la metaconfigurazione.
-```powershell
-$computerName = "WIN-3B576EM3669"
-$mofPath = "C:\$computerName.meta.mof"
-$configurationData = [Byte[]][System.IO.File]::ReadAllBytes($mofPath)
-$totalSize = [System.BitConverter]::GetBytes($configurationData.Length + 4 )
-$configurationData = $totalSize + $configurationData
-Invoke-CimMethod -Namespace root/microsoft/windows/desiredstateconfiguration -Class MSFT_DSCLocalConfigurationManager -Name SendMetaConfigurationApply -Arguments @{ConfigurationData = [Byte[]]$configurationData} -Verbose -ComputerName $computerName
-VERBOSE: Performing the operation "Invoke-CimMethod: SendMetaConfigurationApply" on target "MSFT_DSCLocalConfigurationManager".
-VERBOSE: Perform operation 'Invoke CimMethod' with following parameters, ''methodName' = SendMetaConfigurationApply,'className' = MSFT_DSCLocalConfigurationManager,'namespaceName' = root/microsoft/windows/desiredstateconfiguration'.
-VERBOSE: An LCM method call arrived from computer WIN-3B576EM3669 with user sid S-1-5-21-2127521184-1604012920-1887927527-5557045.
-VERBOSE: [WIN-3B576EM3669]: LCM: [ Start Set ]
-VERBOSE: [WIN-3B576EM3669]: LCM: [ Start Resource ] [MSFT_DSCMetaConfiguration]
-VERBOSE: [WIN-3B576EM3669]: LCM: [ Start Set ] [MSFT_DSCMetaConfiguration]
-VERBOSE: [WIN-3B576EM3669]: LCM: [ End Set ] [MSFT_DSCMetaConfiguration] in 0.4060 seconds.
-VERBOSE: [WIN-3B576EM3669]: LCM: [ End Resource ] [MSFT_DSCMetaConfiguration]
-VERBOSE: [WIN-3B576EM3669]: LCM: [ End Set ] in 0.4807 seconds.
-VERBOSE: Operation 'Invoke CimMethod' complete.
+ImportClassResourcesFromModule : Exception calling "ImportClassResourcesFromModule" with "3" argument(s): "Keyword 'MyTestResource' already defined in the configuration."
+At C:\Windows\system32\WindowsPowerShell\v1.0\Modules\PSDesiredStateConfiguration\PSDesiredStateConfiguration.psm1:2035 char:35
++ ... rcesFound = ImportClassResourcesFromModule -Module $mod -Resources $r ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [ImportClassResourcesFromModule], MethodInvocationException
+    + FullyQualifiedErrorId : PSInvalidOperationException,ImportClassResourcesFromModule
 ```
 
-<!--HONumber=Mar16_HO2-->
+**Soluzione:** importare la versione richiesta definendo l'oggetto *ModuleSpecification* in `-ModuleName` con la chiave `RequiredVersion` specificata come riportato di seguito:
+``` PowerShell  
+Import-DscResource -ModuleName @{ModuleName='MyModuleName';RequiredVersion='1.2'}  
+```  
+
+
+
+<!--HONumber=May16_HO1-->
+
+
