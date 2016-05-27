@@ -1,12 +1,15 @@
 ---
-title: Accessibilità in Windows PowerShell ISE
-ms.custom: na
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: a078f9d1-dd6b-4323-b16d-0622cd993aa8
+title:  Accessibilità in Windows PowerShell ISE
+ms.date:  2016-05-11
+keywords:  powershell,cmdlet
+description:  
+ms.topic:  article
+author:  jpjofre
+manager:  dongill
+ms.prod:  powershell
+ms.assetid:  a078f9d1-dd6b-4323-b16d-0622cd993aa8
 ---
+
 # Accessibilità in Windows PowerShell ISE
 Questo argomento descrive le funzionalità di accessibilità di Windows PowerShell® Integrated Scripting Environment (ISE) che potrebbero risultare utili.
 
@@ -40,11 +43,11 @@ Windows PowerShell ISE supporta la modalità a contrasto elevato. Per gli utenti
 ### Per spostare il riquadro di script e il riquadro della console
 Eseguire una delle operazioni seguenti:
 
--   Per spostare il riquadro di script sopra i riquadri dei comandi e di output, premere **CTRL+1** o, nella barra degli strumenti, fare clic sull'icona **Mostra riquadro di script in alto** oppure scegliere **Mostra riquadro di script in alto** dal menu **Visualizza**..
+-   Per spostare il riquadro di script sopra i riquadri dei comandi e di output, premere **CTRL+1** o sulla barra degli strumenti fare clic sull'icona **Mostra riquadro di script in alto** oppure scegliere **Mostra riquadro di script in alto** dal menu **Visualizza**.
 
--   Per spostare il riquadro di script a destra del riquadro della console, premere **CTRL+2** o, nella barra degli strumenti, fare clic sull'icona **Mostra riquadro di script a destra** oppure scegliere **Mostra riquadro di script a destra** dal menu **Visualizza**..
+-   Per spostare il riquadro di script a destra del riquadro della console, premere **CTRL+2** o sulla barra degli strumenti fare clic sull'icona **Mostra riquadro di script a destra** oppure scegliere **Mostra riquadro di script a destra** dal menu **Visualizza**.
 
--   Per ingrandire il riquadro di script, premere **CTRL+3** o, nella barra degli strumenti, fare clic sull'icona **Mostra riquadro di script ingrandito** oppure scegliere **Mostra riquadro di script ingrandito** dal menu **Visualizza**..
+-   Per ingrandire il riquadro di script, premere **CTRL+3** o sulla barra degli strumenti fare clic sull'icona **Mostra riquadro di script ingrandito** oppure scegliere **Mostra riquadro di script ingrandito** dal menu **Visualizza**.
 
 -   Per ingrandire il riquadro della console e nascondere il riquadro di script, all'estrema destra della riga di schede fare clic sull'icona **Nascondi riquadro di script** oppure nel menu **Visualizza** fare clic per deselezionare l'opzione di menu **Mostra riquadro di script**.
 

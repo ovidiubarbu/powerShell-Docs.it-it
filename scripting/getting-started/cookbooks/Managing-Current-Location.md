@@ -1,12 +1,15 @@
 ---
-title: Gestione del percorso corrente
-ms.custom: na
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: a9f9e7a7-3ea8-47d3-bbb4-6e437f6d4a4a
+title:  Gestione del percorso corrente
+ms.date:  2016-05-11
+keywords:  powershell,cmdlet
+description:  
+ms.topic:  article
+author:  jpjofre
+manager:  dongill
+ms.prod:  powershell
+ms.assetid:  a9f9e7a7-3ea8-47d3-bbb4-6e437f6d4a4a
 ---
+
 # Gestione del percorso corrente
 Nei sistemi di cartelle in Esplora file è in genere presente un percorso di lavoro specifico, ossia la cartella attualmente aperta. Per manipolare gli elementi della cartella, è sufficiente fare clic su di essi. Per le interfacce della riga di comando come Cmd.exe, quando ci si trova nella stessa cartella di un determinato file è possibile accedervi specificando un nome relativamente breve, invece dell'intero percorso del file. La directory corrente si chiama directory di lavoro.
 
@@ -47,10 +50,7 @@ Il parametro **-PassThru** può essere usato con molti comandi Set in Windows Po
 
 Ad esempio, nel percorso della cartella **C:\Windows** un punto (**.**) rappresenta **C:\Windows** e un doppio punto (**..**) rappresenta **C:**. Per passare dal percorso corrente alla radice dell'unità C:, digitare:
 
-<pre>PS> Set-Location -Path .. -PassThru
-Path
-----
-C:\</pre>
+<pre>PS> Set-Location -Path .. -PassThru Path ---- C:\</pre>
 
 La stessa tecnica funziona nelle unità di Windows PowerShell diverse dalle unità di file system, ad esempio **HKLM:**. Per impostare il percorso sulla chiave HKLM\Software nel Registro di sistema, digitare:
 
@@ -168,6 +168,6 @@ Se si usa un'interfaccia della riga di comando, non è consigliabile usare Esplo
 
 
 
-<!--HONumber=Apr16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

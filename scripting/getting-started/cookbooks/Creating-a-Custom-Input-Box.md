@@ -1,12 +1,15 @@
 ---
-title: Creazione di una casella di input personalizzata
-ms.custom: na
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 0b12e56c-299f-40ee-afbf-d30d23ed2565
+title:  Creazione di una casella di input personalizzata
+ms.date:  2016-05-11
+keywords:  powershell,cmdlet
+description:  
+ms.topic:  article
+author:  jpjofre
+manager:  dongill
+ms.prod:  powershell
+ms.assetid:  0b12e56c-299f-40ee-afbf-d30d23ed2565
 ---
+
 # Creazione di una casella di input personalizzata
 Eseguire lo script di una casella di input grafica personalizzata usando le funzionalità di compilazione moduli di Microsoft .NET Framework in Windows PowerShell 3.0 e versioni successive.
 
@@ -153,12 +156,12 @@ if ($result -eq [System.Windows.Forms.DialogResult]::OK)
 ```
 
 ## Vedere anche
-[Blog Hey Scripting Guy: perché questi esempi di GUI di PowerShell non funzionano?](http://go.microsoft.com/fwlink/?LinkId=506644)
-[GitHub: WinFormsExampleUpdates di Dave Wyatt](https://github.com/dlwyatt/WinFormsExampleUpdates)
-[Suggerimento della settimana su Windows PowerShell: Creazione di una casella di input personalizzata](http://technet.microsoft.com/library/ff730941.aspx)
+[Hey Scripting Guy:  Why don't these PowerShell GUI examples work?](http://go.microsoft.com/fwlink/?LinkId=506644)
+[GitHub: Dave Wyatt's WinFormsExampleUpdates](https://github.com/dlwyatt/WinFormsExampleUpdates)
+[Windows PowerShell Tip of the Week: Creating a Custom Input Box](http://technet.microsoft.com/library/ff730941.aspx)
 
 
 
-<!--HONumber=Apr16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

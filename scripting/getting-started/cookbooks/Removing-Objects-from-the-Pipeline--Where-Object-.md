@@ -1,12 +1,15 @@
 ---
-title: Rimozione di oggetti dalla pipeline (Where-Object)
-ms.custom: na
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 01df8b22-2d22-4e2c-a18d-c004cd3cc284
+title:  Rimozione di oggetti dalla pipeline (Where-Object) 
+ms.date:  2016-05-11
+keywords:  powershell,cmdlet
+description:  
+ms.topic:  article
+author:  jpjofre
+manager:  dongill
+ms.prod:  powershell
+ms.assetid:  01df8b22-2d22-4e2c-a18d-c004cd3cc284
 ---
+
 # Rimozione di oggetti dalla pipeline (Where-Object)
 In Windows PowerShell spesso si generano e si passano più oggetti a una pipeline di quelli desiderati. È possibile specificare le proprietà di oggetti specifici da visualizzare usando i cmdlet **Format**, ma questo non consente di risolvere il problema della rimozione di interi oggetti dalla visualizzazione. Si consiglia di filtrare gli oggetti prima della fine di una pipeline, in modo da eseguire operazioni solo su un sottoinsieme degli oggetti generati inizialmente.
 
@@ -15,8 +18,7 @@ Windows PowerShell include un cmdlet **Where-Object** che consente di testare og
 ### Esecuzione di test semplici con Where-Object
 Il valore di **FilterScript** è un *blocco di script*, uno o più comandi di Windows PowerShell racchiusi tra parentesi graffe ({}), che restituisce true o false. Questi blocchi di script possono essere molto semplici, ma per la loro creazione è richiesta familiarità con un altro concetto di Windows PowerShell, gli operatori di confronto. Un operatore di confronto mette a confronto gli elementi visualizzati alle sue due estremità. Gli operatori di confronto iniziano con un carattere "-" e sono seguiti da un nome. Gli operatori di confronto di base possono essere usati con qualsiasi tipo di oggetto. Quelli più avanzati potrebbero funzionare solo su testo o array.
 
-> [!NOTE]
-> Per impostazione predefinita, quando si lavora sul testo, gli operatori di confronto di Windows PowerShell non fanno distinzione tra maiuscole e minuscole.
+> [!NOTE] Per impostazione predefinita, quando si lavora sul testo, gli operatori di confronto di Windows PowerShell non fanno distinzione tra maiuscole e minuscole.
 
 In base a considerazioni a livello di analisi, i simboli come <,> e = non sono usati come operatori di confronto. Al contrario, gli operatori di confronto possono essere costituiti da lettere. Nella tabella seguente sono elencati gli operatori di confronto di base.
 
@@ -102,6 +104,6 @@ Nella tabella seguente sono elencati gli operatori logici standard.
 
 
 
-<!--HONumber=Apr16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

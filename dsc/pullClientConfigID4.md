@@ -1,3 +1,14 @@
+---
+title:   Configurazione di un client di pull usando un ID configurazione in PowerShell 4.0
+ms.date:  2016-05-16
+keywords:  powershell,DSC
+description:  
+ms.topic:  article
+author:  eslesar
+manager:  dongill
+ms.prod:  powershell
+---
+
 # Configurazione di un client di pull usando un ID configurazione in PowerShell 4.0
 
 >Si applica a: Windows PowerShell 4.0, Windows PowerShell 5.0
@@ -15,7 +26,7 @@ Configuration SimpleMetaConfigurationForPull
         RefreshMode = "PULL";
         DownloadManagerName = "WebDownloadManager";
         RebootNodeIfNeeded = $true;
-        RefreshFrequencyMins = 15;
+        RefreshFrequencyMins = 30;
         ConfigurationModeFrequencyMins = 30; 
         ConfigurationMode = "ApplyAndAutoCorrect";
         DownloadManagerCustomData = @{ServerUrl = "http://PullServer:8080/PSDSCPullServer/PSDSCPullServer.svc"; AllowUnsecureConnection = “TRUE”}
@@ -39,8 +50,7 @@ Lo script imposta la proprietà **ConfigurationID** di Gestione configurazione l
 ## Pull da un server SMB
 
 Se il server di pull viene configurato come condivisione file SMB, piuttosto che come servizio Web, specificare **DscFileDownloadManager** invece di **WebDownLoadManager**.
-**DscFileDownloadManager** accetta una proprietà **SourcePath** invece di **ServerUrl**. Lo script seguente configura Gestione configurazione locale per il pull delle configurazioni da una condivisione SMB denominata
-"SmbDscShare" in un server denominato "CONTOSO-SERVER":
+**DscFileDownloadManager** accetta una proprietà **SourcePath** invece di **ServerUrl**. Lo script seguente configura Gestione configurazione locale per il pull da una condivisione SMB denominata "SmbDscShare" su un server chiamato "CONTOSO-SERVER":
 
 ```powershell
 Configuration SimpleMetaConfigurationForPull 
@@ -51,7 +61,7 @@ Configuration SimpleMetaConfigurationForPull
         RefreshMode = "PULL";
         DownloadManagerName = "DscFileDownloadManager";
         RebootNodeIfNeeded = $true;
-        RefreshFrequencyMins = 15;
+        RefreshFrequencyMins = 30;
         ConfigurationModeFrequencyMins = 30; 
         ConfigurationMode = "ApplyAndAutoCorrect";
         DownloadManagerCustomData = @{ServerUrl = "\\CONTOSO-SERVER\SmbDscShare"}
@@ -65,6 +75,8 @@ SimpleMetaConfigurationForPull -Output "."
 - [Configurazione di un server di pull Web DSC](pullServer.md)
 - [Configurazione di un server di pull SMB DSC](pullServerSMB.md)
 
-<!--HONumber=Mar16_HO2-->
+
+
+<!--HONumber=May16_HO3-->
 
 

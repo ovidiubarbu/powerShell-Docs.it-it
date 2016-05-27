@@ -1,12 +1,15 @@
 ---
-title: Creazione di un controllo grafico di selezione data
-ms.custom: na
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: c1cb722c-41e9-4baa-be83-59b4653222e9
+title:  Creazione di un controllo grafico di selezione data
+ms.date:  2016-05-11
+keywords:  powershell,cmdlet
+description:  
+ms.topic:  article
+author:  jpjofre
+manager:  dongill
+ms.prod:  powershell
+ms.assetid:  c1cb722c-41e9-4baa-be83-59b4653222e9
 ---
+
 # Creazione di un controllo grafico di selezione data
 Usare Windows PowerShell 3.0 e versioni successive per creare un modulo con un controllo grafico di tipo calendario che consenta agli utenti di selezionare un giorno del mese.
 
@@ -131,12 +134,12 @@ if ($result -eq [System.Windows.Forms.DialogResult]::OK)
 ```
 
 ## Vedere anche
-[Blog Hey Scripting Guy: perché questi esempi di GUI di PowerShell non funzionano?](http://go.microsoft.com/fwlink/?LinkId=506644)
-[GitHub: WinFormsExampleUpdates di Dave Wyatt](https://github.com/dlwyatt/WinFormsExampleUpdates)
-[Suggerimento della settimana su Windows PowerShell: Creazione di un controllo grafico di selezione data](http://technet.microsoft.com/library/ff730942.aspx)
+[Hey Scripting Guy:  Why don't these PowerShell GUI examples work?](http://go.microsoft.com/fwlink/?LinkId=506644)
+[GitHub: Dave Wyatt's WinFormsExampleUpdates](https://github.com/dlwyatt/WinFormsExampleUpdates)
+[Windows PowerShell Tip of the Week:  Creating a Graphical Date Picker](http://technet.microsoft.com/library/ff730942.aspx)
 
 
 
-<!--HONumber=Apr16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

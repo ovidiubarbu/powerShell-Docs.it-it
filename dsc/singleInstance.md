@@ -1,10 +1,19 @@
+---
+title:   Scrittura di una risorsa DSC a istanza singola (procedura consigliata)
+ms.date:  2016-05-16
+keywords:  powershell,DSC
+description:  
+ms.topic:  article
+author:  eslesar
+manager:  dongill
+ms.prod:  powershell
+---
+
 # Scrittura di una risorsa DSC a istanza singola (procedura consigliata)
 
->**Nota:** questo argomento illustra una procedura consigliata per la definizione di una risorsa DSC che consenta solo una singola istanza in una configurazione. Attualmente, non esiste una funzionalità DSC predefinita per eseguire questa operazione. La situazione potrebbe
->cambiare in futuro.
+>**Nota:** questo argomento illustra una procedura consigliata per la definizione di una risorsa DSC che consenta solo una singola istanza in una configurazione. Attualmente, non esiste una funzionalità DSC predefinita per eseguire questa operazione. La situazione potrebbe cambiare in futuro.
 
-In alcuni casi non si vuole consentire di usare più volte una risorsa in una configurazione. Ad esempio, in una precedente implementazione della risorsa 
-[xTimeZone](https://github.com/PowerShell/xTimeZone), una configurazione poteva chiamare la risorsa più volte, impostando il fuso orario su un'impostazione diversa in ogni blocco di risorse:
+In alcuni casi non si vuole consentire di usare più volte una risorsa in una configurazione. Ad esempio, in un'implementazione precedente della risorsa [xTimeZone](https://github.com/PowerShell/xTimeZone) una configurazione può chiamare la risorsa più volte, impostando il fuso orario su un'impostazione diversa in ogni blocco di risorse:
 
 ```powershell
 Configuration SetTimeZone 
@@ -37,10 +46,7 @@ Configuration SetTimeZone
 } 
 ```
 
-Questo dipende dal funzionamento delle chiavi della risorsa DSC. Una risorsa deve avere almeno una proprietà chiave. L'istanza di una risorsa viene considerata univoca se la combinazione dei valori di tutte 
-le proprietà chiave è univoca. Nell'implementazione precedente la risorsa [xTimeZone](https://github.com/PowerShell/xTimeZone) aveva una sola proprietà, **TimeZone**, che doveva fungere 
-da chiave. Per questo motivo, una configurazione come quella illustrata sopra poteva essere compilata ed eseguita senza alcun avviso. Ogni blocco di risorse **xTimeZone** viene considerato univoco. Di conseguenza, la 
-configurazione veniva applicata ripetutamente al nodo, determinando lo spostamento del fuso orario.
+Questo dipende dal funzionamento delle chiavi della risorsa DSC. Una risorsa deve avere almeno una proprietà chiave. L'istanza di una risorsa viene considerata univoca se la combinazione dei valori di tutte le relative proprietà chiave è univoca. Nell'implementazione precedente la risorsa [xTimeZone](https://github.com/PowerShell/xTimeZone) ha una sola proprietà, **TimeZone**, che deve essere necessariamente una chiave. Per questo motivo, una configurazione come quella illustrata sopra poteva essere compilata ed eseguita senza alcun avviso. Ogni blocco di risorse **xTimeZone** viene considerato univoco. Di conseguenza, la configurazione viene applicata ripetutamente al nodo, determinando lo spostamento del fuso orario.
 
 Per fare in modo che una configurazione potesse impostare il fuso orario per un nodo di destinazione solo una volta, la risorsa è stata aggiornata per aggiungere una seconda proprietà, **IsSingleInstance**, che è diventata la proprietà chiave. 
 La proprietà **IsSingleInstance** è limitata a un singolo valore, "Yes", tramite **ValueMap**. Lo schema MOF precedente per la risorsa era:
@@ -197,8 +203,7 @@ Function Set-TimeZone {
 Export-ModuleMember -Function *-TargetResource
 ```
 
-Si noti che la proprietà **TimeZone** non è più una chiave. Se una configurazione tenta di impostare due volte il fuso orario (con due diversi blocchi **xTimeZone** con valori **TimeZone**
-diversi), il tentativo di compilazione della configurazione genererà un errore:
+Si noti che la proprietà **TimeZone** non è più una chiave. Se una configurazione tenta di impostare due volte il fuso orario, usando due blocchi **xTimeZone** diversi con valori **TimeZone** diversi, il tentativo di compilazione della configurazione genererà un errore:
 
 ```powershell
 Test-ConflictingResources : A conflict was detected between resources '[xTimeZone]TimeZoneExample (::15::10::xTimeZone)' and 
@@ -219,6 +224,7 @@ At C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules\PSDesiredStateConfiguratio
 ```
    
 
-<!--HONumber=Apr16_HO2-->
+
+<!--HONumber=May16_HO3-->
 
 

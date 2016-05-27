@@ -1,3 +1,14 @@
+---
+title:   Risorse DSC
+ms.date:  2016-05-16
+keywords:  powershell,DSC
+description:  
+ms.topic:  article
+author:  eslesar
+manager:  dongill
+ms.prod:  powershell
+---
+
 # Risorse DSC
 
 >Si applica a: Windows PowerShell 4.0, Windows PowerShell 5.0
@@ -8,6 +19,12 @@ Una risorsa può modellare un elemento generico come un file o uno specifico com
 
 Le risorse DSC vengono descritte negli argomenti seguenti:
 
-- [Risorse DSC predefinite](builtInResource.md)
-- [Creare risorse DSC personalizzate](authoringResource.md)
-- [Risorse DSC predefinite per Linux](lnxBuiltInResources.md)<!--HONumber=Feb16_HO4-->
+- [Risorse Windows PowerShell DSC (Desired State Configuration) predefinite](builtInResource.md)
+- [Creare risorse Windows PowerShell DSC (Desired State Configuration) personalizzate](authoringResource.md)
+- [Risorse DSC (Desired State Configuration) predefinite per Linux](lnxBuiltInResources.md)
+
+
+
+<!--HONumber=May16_HO3-->
+
+

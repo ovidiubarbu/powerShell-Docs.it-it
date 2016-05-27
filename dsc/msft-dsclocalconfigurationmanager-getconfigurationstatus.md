@@ -1,9 +1,12 @@
 ---
-DCS.appliesToProduct: 'WindowsServer\_Dev'
-Description: 'Ottenere la cronologia dello stato della configurazione.'
-MS-HAID: 'cimwin32a.MSFT_DSCLocalConfigurationManager\_getconfigurationstatus'
-MSHAttr: 'PreferredLib:/library'
-title: 'Metodo GetConfigurationStatus della classe MSFT_DSCLocalConfigurationManager'
+title:  Metodo GetConfigurationStatus della classe MSFT_DSCLocalConfigurationManager
+ms.date:  2016-05-16
+keywords:  powershell,DSC
+description:  
+ms.topic:  article
+author:  eslesar
+manager:  dongill
+ms.prod:  powershell
 ---
 
 # Metodo GetConfigurationStatus della classe MSFT_DSCLocalConfigurationManager
@@ -24,8 +27,7 @@ Parametri
 ----------
 
 *All* \[in\]  
-**true** se questo metodo deve restituire informazioni relative a tutte le esecuzioni di configurazione sulla macchina, tra cui
-l'applicazione di configurazione e la verifica di coerenza.
+**true** se questo metodo deve restituire informazioni relative a tutte le esecuzioni di configurazione sulla macchina, compresa l'applicazione di configurazione e la verifica coerenza.
 
 *configurationStatus* \[out\]  
 In fase di restituzione, contiene un'istanza incorporata della classe **MSFT_DSCConfigurationStatus** che definisce le impostazioni.
@@ -60,6 +62,6 @@ Si tratta di un metodo statico.
 
 
 
-<!--HONumber=Apr16_HO2-->
+<!--HONumber=May16_HO3-->
 
 

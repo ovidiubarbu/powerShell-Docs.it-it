@@ -1,12 +1,15 @@
 ---
-title: Reindirizzamento dei dati con i cmdlet Out-*
-ms.custom: na
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 2a4acd33-041d-43a5-a3e9-9608a4c52b0c
+title:  Reindirizzamento dei dati con i cmdlet Out
+ms.date:  2016-05-11
+keywords:  powershell,cmdlet
+description:  
+ms.topic:  article
+author:  jpjofre
+manager:  dongill
+ms.prod:  powershell
+ms.assetid:  2a4acd33-041d-43a5-a3e9-9608a4c52b0c
 ---
+
 # Reindirizzamento dei dati con i cmdlet Out-*
 In Windows PowerShell sono disponibili diversi cmdlet che consentono di controllare direttamente l'output dei dati. Questi cmdlet hanno in comune due importanti caratteristiche.
 
@@ -61,8 +64,7 @@ Name    : explorer
 
 Ciò si applica a tutti i cmdlet **Out**. Un cmdlet **Out** deve essere sempre visualizzato alla fine della pipeline.
 
-> [!NOTE]
-> Tutti i cmdlet **Out** eseguono il rendering dell'output come testo, usando la formattazione esistente per la finestra della console, inclusi i limiti di lunghezza delle righe.
+> [!NOTE]Tutti i cmdlet **Out** eseguono il rendering dell'output come testo, usando la formattazione esistente per la finestra della console, inclusi i limiti di lunghezza delle righe.
 
 #### Paging dell'output della console (Out-Host)
 Per impostazione predefinita, Windows PowerShell invia dati alla finestra host, che è esattamente quello che fa il cmdlet Out-Host. L'uso principale del cmdlet Out-Host è il paging dei dati come descritto in precedenza. Il comando seguente usa ad esempio Out-Host per il paging dell'output del cmdlet Get-Command:
@@ -153,6 +155,6 @@ Il cmdlet **Out-File** è particolarmente utile quando si vuole salvare l'output
 
 
 
-<!--HONumber=Apr16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

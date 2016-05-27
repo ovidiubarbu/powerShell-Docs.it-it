@@ -1,12 +1,15 @@
 ---
-title: Gestione dei servizi
-ms.custom: na
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 7a410e4d-514b-4813-ba0c-0d8cef88df31
+title:  Gestione dei servizi
+ms.date:  2016-05-11
+keywords:  powershell,cmdlet
+description:  
+ms.topic:  article
+author:  jpjofre
+manager:  dongill
+ms.prod:  powershell
+ms.assetid:  7a410e4d-514b-4813-ba0c-0d8cef88df31
 ---
+
 # Gestione dei servizi
 Sono disponibili otto cmdlet Service principali, progettati per una vasta gamma di attività dei servizi. Verranno esaminati solo l'elenco e la modifica dello stato di esecuzione dei servizi, ma è possibile ottenere un elenco di cmdlet Service usando **Get-Help *-Service**, oltre a trovare informazioni sui diversi cmdlet Service con **Get-Help<Nome-Cmdlet>**, ad esempio **Get-Help New-Service**.
 
@@ -146,6 +149,6 @@ Per altre informazioni, vedere [Set-Service [m2]](https://technet.microsoft.com/
 
 
 
-<!--HONumber=Apr16_HO2-->
+<!--HONumber=May16_HO2-->
 
 

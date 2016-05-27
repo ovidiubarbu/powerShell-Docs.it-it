@@ -1,9 +1,12 @@
 ---
-DCS.appliesToProduct: 'WindowsServer\_Dev'
-Description: 'Rimozione dei file di configurazione.'
-MS-HAID: 'cimwin32a.MSFT_DSCLocalConfigurationManager\_removeconfiguration'
-MSHAttr: 'PreferredLib:/library'
-title: 'Metodo RemoveConfiguration della classe MSFT_DSCLocalConfigurationManager'
+title:  Metodo RemoveConfiguration della classe MSFT_DSCLocalConfigurationManager
+ms.date:  2016-05-16
+keywords:  powershell,DSC
+description:  
+ms.topic:  article
+author:  eslesar
+manager:  dongill
+ms.prod:  powershell
 ---
 
 # Metodo RemoveConfiguration della classe MSFT_DSCLocalConfigurationManager
@@ -65,6 +68,6 @@ Si tratta di un metodo statico.
 
 
 
-<!--HONumber=Apr16_HO2-->
+<!--HONumber=May16_HO3-->
 
 

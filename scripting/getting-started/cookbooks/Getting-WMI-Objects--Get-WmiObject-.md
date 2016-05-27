@@ -1,12 +1,15 @@
 ---
-title: Recupero di oggetti WMI (Get-WmiObject)
-ms.custom: na
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: f0ddfc7d-6b5e-4832-82de-2283597ea70d
+title:  Recupero di oggetti WMI (Get-WmiObject) 
+ms.date:  2016-05-11
+keywords:  powershell,cmdlet
+description:  
+ms.topic:  article
+author:  jpjofre
+manager:  dongill
+ms.prod:  powershell
+ms.assetid:  f0ddfc7d-6b5e-4832-82de-2283597ea70d
 ---
+
 # Recupero di oggetti WMI (Get-WmiObject)
 
 ## Recupero di oggetti WMI (Get-WmiObject)
@@ -114,8 +117,7 @@ TotalVirtualMemorySize TotalVisibleMem FreePhysicalMem FreeVirtualMemo FreeSpace
         2097024          785904          305808         2056724         1558232
 ```
 
-> [!NOTE]
-> I caratteri jolly possono essere usati con i nomi delle proprietà in **Format-Table**, pertanto l'elemento finale della pipeline può essere ridotto a **Format-Table -Property TotalV*,Free***
+> [!NOTE]I caratteri jolly possono essere usati con i nomi delle proprietà in **Format\-Table**, pertanto l'elemento finale della pipeline può essere ridotto a **Format\-Table \-Property TotalV\&#42;,Free\&#42;**
 
 I dati relativi alla memoria potrebbero essere più leggibili se si formattano come elenco digitando:
 
@@ -131,6 +133,6 @@ FreeSpaceInPagingFiles : 1556644
 
 
 
-<!--HONumber=Apr16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

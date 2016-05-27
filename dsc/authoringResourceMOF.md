@@ -1,3 +1,14 @@
+---
+title:   Scrittura di una risorsa DSC personalizzata con MOF
+ms.date:  2016-05-16
+keywords:  powershell,DSC
+description:  
+ms.topic:  article
+author:  eslesar
+manager:  dongill
+ms.prod:  powershell
+---
+
 # Scrittura di una risorsa DSC personalizzata con MOF
 
 > Si applica a: Windows PowerShell 4.0, Windows PowerShell 5.0
@@ -26,7 +37,7 @@ Si noti che è necessario creare una cartella denominata DSCResources nella cart
 
 ### Contenuto del file MOF
 
-Di seguito è illustrato un esempio di file MOF che è possibile usare per una risorsa di sito Web personalizzata. Per seguire questo esempio, salvare lo schema in un file e denominare il file *Demo_IISWebsite.schema.mof*..
+Di seguito è illustrato un esempio di file MOF che è possibile usare per una risorsa di sito Web personalizzata. Per seguire questo esempio, salvare lo schema in un file e denominare il file *Demo_IISWebsite.schema.mof*.
 
 ```
 [ClassVersion("1.0.0"), FriendlyName("Website")] 
@@ -50,7 +61,7 @@ Si noti quanto segue in relazione al codice precedente:
 * Il qualificatore di tipo, `[Key]`, in una proprietà indica che questa proprietà identificherà in modo univoco l'istanza di risorsa. È obbligatoria almeno una proprietà `[Key]`.
 * Il qualificatore `[Required]` indica che la proprietà è obbligatoria (è necessario specificare un valore in ogni script di configurazione che usa questa risorsa).
 * Il qualificatore `[write]` indica che questa proprietà è facoltativa quando si usa la risorsa personalizzata in uno script di configurazione. Il qualificatore `[read]` indica che una proprietà non può essere impostata da una configurazione e serve solo a scopo di creazione di report.
-* `Values` limita i valori che possono essere assegnati alla proprietà nll'elenco di valori definiti in `ValueMap`. Per altre informazioni, vedere l'articolo relativo ai [qualificatori ValueMap e Value](https://msdn.microsoft.com/library/windows/desktop/aa393965.aspx)..
+* `Values` limita i valori che possono essere assegnati alla proprietà nll'elenco di valori definiti in `ValueMap`. Per altre informazioni, vedere l'articolo relativo ai [qualificatori ValueMap e Value](https://msdn.microsoft.com/library/windows/desktop/aa393965.aspx).
 * È consigliabile includere una proprietà denominata `Ensure` con i valori `Present` e `Absent` nella risorsa per mantenere uno stile coerente con le risorse DSC predefinite.
 * Assegnare un nome al file di schema per la risorsa personalizzata in base al formato seguente: `classname.schema.mof`, dove `classname` è l'identificatore che segue la parola chiave `class` nella definizione di schema.
 
@@ -154,7 +165,7 @@ function Set-TargetResource
 }
 ```
 
-Infine, la funzione **Test-TargetResource** deve accettare lo stesso set di parametri di **Get-TargetResource** e **Set-TargetResource**. Nell'implementazione di **Test-TargetResource** controllare lo stato dell'istanza di risorsa specificato nei parametri chiave. Se lo stato effettivo dell'istanza di risorsa non corrisponde ai valori specificati nel set di parametri, restituire **$false**. In caso contrario, restituire **$true**..
+Infine, la funzione **Test-TargetResource** deve accettare lo stesso set di parametri di **Get-TargetResource** e **Set-TargetResource**. Nell'implementazione di **Test-TargetResource** controllare lo stato dell'istanza di risorsa specificato nei parametri chiave. Se lo stato effettivo dell'istanza di risorsa non corrisponde ai valori specificati nel set di parametri, restituire **$false**. In caso contrario, restituire **$true**.
 
 Il codice seguente implementa la funzione **Test-TargetResource**.
 
@@ -262,6 +273,7 @@ FunctionsToExport = @("Get-TargetResource", "Set-TargetResource", "Test-TargetRe
 ```
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=May16_HO3-->
 
 

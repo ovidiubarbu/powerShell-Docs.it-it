@@ -1,12 +1,15 @@
 ---
-title: Come usare il riquadro della console in Windows PowerShell ISE
-ms.custom: na
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 44d67705-87c7-4a69-a53e-6471fdebb757
+title:  Come usare il riquadro della console in Windows PowerShell ISE
+ms.date:  2016-05-11
+keywords:  powershell,cmdlet
+description:  
+ms.topic:  article
+author:  jpjofre
+manager:  dongill
+ms.prod:  powershell
+ms.assetid:  44d67705-87c7-4a69-a53e-6471fdebb757
 ---
+
 # Come usare il riquadro della console in Windows PowerShell ISE
 Il riquadro della console in Windows PowerShell® Integrated Scripting Environment (ISE) funziona esattamente come la finestra della console di Windows PowerShell ISE autonoma.
 
@@ -20,7 +23,7 @@ A partire da Windows PowerShell v3, il riquadro di output è unito al riquadro d
 
 -   Incollare il testo selezionato in una posizione corrente del cursore. Fare clic sull'icona **Incolla** nella barra degli strumenti.
 
--   Cancellare tutto il testo nel riquadro della console. Per cancellare il contenuto del riquadro della console, è possibile fare clic sull'icona **Cancella riquadro Console** nella barra degli strumenti oppure eseguire il comando **Clear-Host** o il relativo alias, **cls**..
+-   Cancellare tutto il testo nel riquadro della console. Per cancellare il contenuto del riquadro della console, è possibile fare clic sull'icona **Cancella riquadro Console** nella barra degli strumenti oppure eseguire il comando **Clear-Host** o il relativo alias, **cls**.
 
 ## Vedere anche
 [Uso di Windows PowerShell ISE](Using-the-Windows-PowerShell-ISE.md)

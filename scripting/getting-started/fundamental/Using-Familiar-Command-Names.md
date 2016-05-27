@@ -1,12 +1,15 @@
 ---
-title: Uso di nomi di comandi familiari
-ms.custom: na
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 021e2424-c64e-4fa5-aa98-aa6405758d5d
+title:  Uso di nomi di comandi familiari
+ms.date:  2016-05-11
+keywords:  powershell,cmdlet
+description:  
+ms.topic:  article
+author:  jpjofre
+manager:  dongill
+ms.prod:  powershell
+ms.assetid:  021e2424-c64e-4fa5-aa98-aa6405758d5d
 ---
+
 # Uso di nomi di comandi familiari
 Usando un meccanismo chiamato *aliasing*, Windows PowerShell consente agli utenti di fare riferimento ai comandi con nomi alternativi. L'aliasing consente agli utenti che hanno esperienza con altre shell di riusare i nomi dei comandi comuni che già conoscono per eseguire operazioni simili in Windows PowerShell. Anche se non si parlerà in dettaglio degli alias di Windows PowerShell, è possibile usarli per acquisire familiarità con Windows PowerShell.
 
@@ -59,13 +62,11 @@ Set-Alias -Name gcm -Value Get-Command
 
 Internamente, Windows PowerShell usa comandi simili durante l'avvio, ma questi alias non sono modificabili. Se si tenta di eseguire effettivamente uno di questi comandi, si otterrà un errore per segnalare che l'alias non può essere modificato. Ad esempio:
 
-<pre>PS> Set-Alias -Name gi -Value Get-Item
-Set-Alias : Impossibile scrivere sull'alias. L'alias gi è di sola lettura o costante e non è possibile eseguire operazioni di scrittura su di esso.
-In riga:1 car:10
-+ Set-Alias  <<<< -Name gi -Value Get-Item</pre>
+<pre>PS> Set-Alias -Name gi -Value Get-Item Set-Alias: Impossibile scrivere sull'alias. L'alias gi è di sola lettura o costante e non è possibile eseguire operazioni di scrittura su di esso.
+At line:1 char:10 + Set-Alias  <<<< -Name gi -Value Get-Item</pre>
 
 
 
-<!--HONumber=Apr16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

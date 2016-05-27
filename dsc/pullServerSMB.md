@@ -1,9 +1,19 @@
+---
+title:   Configurazione di un server di pull SMB DSC
+ms.date:  2016-05-16
+keywords:  powershell,DSC
+description:  
+ms.topic:  article
+author:  eslesar
+manager:  dongill
+ms.prod:  powershell
+---
+
 # Configurazione di un server di pull SMB DSC
 
 >Si applica a: Windows PowerShell 4.0, Windows PowerShell 5.0
 
-Un server di pull [SMB](https://technet.microsoft.com/en-us/library/hh831795.aspx) DSC è una condivisione file SMB che rende disponibili i file di configurazione DSC e/o le risorse DSC
-per i nodi di destinazione su richiesta di questi nodi.
+Un server di pull [SMB](https://technet.microsoft.com/en-us/library/hh831795.aspx) DSC è una condivisione file SMB che rende disponibili i file di configurazione DSC e/o le risorse DSC ai nodi di destinazione quando tali nodi li richiedono.
 
 Per usare un server di pull SMB per DSC, è necessario:
 - Configurare una condivisione file SMB in un server che esegue PowerShell 4.0 o versione successiva
@@ -16,9 +26,7 @@ Esistono diversi modi per configurare una condivisione file SMB, ma ecco come è
 ### Installare la risorsa xSmbShare
 
 Chiamare il cmdlet [Install-Module](https://technet.microsoft.com/en-us/library/dn807162.aspx) per installare il modulo **xSmbShare**.
->**Nota**: il cmdlet **Install-Module** è incluso nel modulo **PowerShellGet**, disponibile in PowerShell 5.0. È possibile scaricare il modulo **PowerShellGet** per PowerShell 3.0 e 4.0
->in [Anteprima dei moduli di PowerShell PackageManagement](https://www.microsoft.com/en-us/download/details.aspx?id=49186). **xSmbShare** contiene la risorsa DSC **xSmbShare**, che può essere usata
-per creare una condivisione file SMB.
+>**Nota**: il cmdlet **Install-Module** è incluso nel modulo **PowerShellGet**, disponibile in PowerShell 5.0. È possibile scaricare il modulo **PowerShellGet** per PowerShell 3.0 e 4.0 dalla pagina dell'[anteprima dei moduli PackageManagement di PowerShell](https://www.microsoft.com/en-us/download/details.aspx?id=49186). **xSmbShare** contiene la risorsa DSC **xSmbShare**, che può essere usata per creare una condivisione file SMB.
 
 ### Creare la directory e la condivisione file
 
@@ -57,16 +65,12 @@ Import-DscResource -ModuleName xSmbShare
 }
 ```
 
-La configurazione crea la directory `C:\DscSmbShare` se non esiste già e quindi usa tale directory come condivisione file SMB. L'autorizzazione **FullAccess** dovrebbe essere concessa a qualsiasi
-account che deve eseguire operazioni di scrittura o eliminazione nella condivisione file, mentre **ReadAccess** deve essere concessa a qualsiasi nodo client che riceverà le configurazioni e/o le risorse DSC dalla condivisione.
-Questo avviene perché DSC viene eseguito con l'account di sistema per impostazione predefinita, pertanto il computer stesso deve avere accesso alla condivisione.
+La configurazione crea la directory `C:\DscSmbShare` se non esiste già e quindi usa tale directory come condivisione file SMB. È necessario assegnare **FullAccess** all'account che deve scrivere o eliminare dalla condivisione file mentre **ReadAccess** ai nodi client che recupereranno i file di configurazione e/o le risorse DSC dalla condivisione, poiché, per impostazione predefinita, DSC viene eseguito come account di sistema. Il computer stesso deve pertanto avere accesso alla condivisione.
 
 
 ### Consentire l'accesso al file system al client di pull
 
-L'assegnazione di **ReadAccess** a un nodo client consente a tale nodo di accedere alla condivisione SMB, ma non a file o cartelle al suo interno. È necessario concedere esplicitamente l'accesso alle cartelle e sottocartelle della condivisione SMB
-ai nodi client. È possibile farlo con DSC con la risorsa **cNtfsPermissionEntry**, contenuta nel modulo [CNtfsAccessControl](https://www.powershellgallery.com/packages/cNtfsAccessControl/1.2.0)
-. La configurazione seguente aggiunge un blocco **cNtfsPermissionEntry** che concede l'accesso ReadAndExecute al client di pull:
+L'assegnazione di **ReadAccess** a un nodo client consente a tale nodo di accedere alla condivisione SMB, ma non a file o cartelle al suo interno. È quindi necessario concedere in modo esplicito ai nodi client l'accesso alla cartella e alle sottocartelle della condivisione SMB. DSC consente tale operazione usando la risorsa **cNtfsPermissionEntry**, contenuta nel modulo [CNtfsAccessControl](https://www.powershellgallery.com/packages/cNtfsAccessControl/1.2.0). La configurazione seguente aggiunge un blocco **cNtfsPermissionEntry** che concede l'accesso ReadAndExecute al client di pull:
 
 ```powershell
 Configuration DSCSMB {
@@ -125,8 +129,7 @@ Import-DscResource -ModuleName cNtfsAccessControl
 
 Salvare nella condivisione SMB tutti i file MOF di configurazione e/o le risorse DSC che si vuole siano disponibili per il pull dai nodi client.
 
-Qualsiasi file MOF di configurazione deve essere denominato _ConfigurationID.mof_, dove _ConfigurationID_ è il valore della proprietà **ConfigurationID** di Gestione configurazione locale del nodo di destinazione. Per altre informazioni sulla
-configurazione dei client di pull, vedere [Configurazione di un client di pull usando un ID configurazione](pullClientConfigID.md).
+Qualsiasi file MOF di configurazione deve essere denominato _ConfigurationID.mof_, dove _ConfigurationID_ è il valore della proprietà **ConfigurationID** di Gestione configurazione locale del nodo di destinazione. Per altre informazioni sulla configurazione di client di pull, vedere [Configurazione di un client di pull usando un ID configurazione](pullClientConfigID.md).
 
 >**Nota:** se si usa un server di pull SMB, è necessario usare gli ID di configurazione. I nomi di configurazione non sono supportati per SMB.
 
@@ -134,8 +137,7 @@ Tutte le risorse necessarie per il client devono essere posizionate nella cartel
 
 ## Creazione del checksum per il file MOF
 Un file MOF di configurazione deve essere associato a un file di checksum in modo che Gestione configurazione locale in un nodo di destinazione possa convalidare la configurazione. 
-Per creare un checksum, chiamare il cmdlet [New-DSCCheckSum](https://technet.microsoft.com/en-us/library/dn521622.aspx). Il cmdlet accetta un parametro **Path** che specifica la cartella 
-in cui si trova il file MOF di configurazione. Il cmdlet crea un file di checksum denominato `ConfigurationMOFName.mof.checksum`, in cui `ConfigurationMOFName` è il nome del file MOF di configurazione. 
+Per creare un checksum, chiamare il cmdlet [New-DSCCheckSum](https://technet.microsoft.com/en-us/library/dn521622.aspx). Il cmdlet accetta un parametro **Path** che specifica la cartella in cui si trova il file MOF di configurazione. Il cmdlet crea un file di checksum denominato `ConfigurationMOFName.mof.checksum`, in cui `ConfigurationMOFName` è il nome del file MOF di configurazione. 
 Se nella cartella specificata sono presenti più file MOF di configurazione, viene creato un checksum per ogni configurazione nella cartella.
 
 Il file di checksum deve essere presente nella stessa directory del file MOF di configurazione (`$env:PROGRAMFILES\WindowsPowerShell\DscService\Configuration` per impostazione predefinita) e avere lo stesso nome, con estensione `.checksum`.
@@ -156,6 +158,7 @@ Un ringraziamento speciale per:
 
  
 
-<!--HONumber=Mar16_HO2-->
+
+<!--HONumber=May16_HO3-->
 
 

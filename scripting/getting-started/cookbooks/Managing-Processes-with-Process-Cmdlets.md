@@ -1,12 +1,15 @@
 ---
-title: Gestione dei processi con i cmdlet Process
-ms.custom: na
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 5038f612-d149-4698-8bbb-999986959e31
+title:  Gestione dei processi con i cmdlet Process
+ms.date:  2016-05-11
+keywords:  powershell,cmdlet
+description:  
+ms.topic:  article
+author:  jpjofre
+manager:  dongill
+ms.prod:  powershell
+ms.assetid:  5038f612-d149-4698-8bbb-999986959e31
 ---
+
 # Gestione dei processi con i cmdlet Process
 È possibile usare i cmdlet Process in Windows PowerShell per gestire i processi locali e remoti in Windows PowerShell.
 
@@ -174,6 +177,6 @@ Windows PowerShell include anche cmdlet per avviare (o riavviare) un processo, e
 
 
 
-<!--HONumber=Apr16_HO2-->
+<!--HONumber=May16_HO2-->
 
 

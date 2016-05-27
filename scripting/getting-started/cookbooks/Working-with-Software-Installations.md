@@ -1,12 +1,15 @@
 ---
-title: Gestione delle installazioni di software
-ms.custom: na
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 51a12fe9-95f6-4ffc-81a5-4fa72a5bada9
+title:  Gestione delle installazioni di software
+ms.date:  2016-05-11
+keywords:  powershell,cmdlet
+description:  
+ms.topic:  article
+author:  jpjofre
+manager:  dongill
+ms.prod:  powershell
+ms.assetid:  51a12fe9-95f6-4ffc-81a5-4fa72a5bada9
 ---
+
 # Gestione delle installazioni di software
 Le applicazioni progettate per l'uso di Windows Installer sono accessibili tramite la classe **Win32_Product** di WMI, ma non tutte le applicazioni oggi disponibili prevedono l'uso di Windows Installer. Poiché Windows Installer offre la gamma più ampia di tecniche standard per la gestione di applicazioni installabili, questo articolo è incentrato principalmente su tali applicazioni. Le applicazioni che prevedono l'uso di procedure di installazione alternative non vengono in genere gestite da Windows Installer. Le tecniche specifiche per la gestione di queste applicazioni variano in base al software del programma di installazione e alle decisioni prese dallo sviluppatore.
 
@@ -137,8 +140,7 @@ SKC  VC Name                           Property
 ### Installazione di applicazioni
 È possibile usare la classe **Win32_Product** per installare i pacchetti di Windows Installer, in remoto o in locale.
 
-> [!NOTE]
-> In Windows Vista, Windows Server 2008 e nelle versioni più recenti di Windows, per installare un'applicazione è necessario avviare Windows PowerShell con l'opzione "Esegui come amministratore".
+> [!NOTE] In Windows Vista, Windows Server 2008 e nelle versioni più recenti di Windows, per installare un'applicazione è necessario avviare Windows PowerShell con l'opzione "Esegui come amministratore".
 
 Per l'installazione in remoto, usare un percorso di rete UNC (Universal Naming Convention) per specificare il percorso del pacchetto MSI, perché il sottosistema WMI non riconosce i percorsi di Windows PowerShell. Ad esempio, per installare il pacchetto NewPackage.msi situato nella condivisione di rete \\AppServ\dsp nel computer remoto PC01, digitare il comando seguente al prompt di Windows PowerShell:
 
@@ -178,6 +180,6 @@ Per aggiornare un'applicazione, è necessario conoscerne il nome e il percorso d
 
 
 
-<!--HONumber=Apr16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

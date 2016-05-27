@@ -1,9 +1,12 @@
 ---
-DCS.appliesToProduct: 'WindowsServer\_Dev'
-Description: 'Recuperare l'output dell'agente di configurazione relativo a un processo specifico.'
-MS-HAID: 'cimwin32a.MSFT_DSCLocalConfigurationManager\_getconfigurationresultoutput'
-MSHAttr: 'PreferredLib:/library'
-title: 'Metodo GetConfigurationResultOutput della classe MSFT_DSCLocalConfigurationManager'
+title:  Metodo GetConfigurationResultOutput della classe MSFT_DSCLocalConfigurationManager
+ms.date:  2016-05-16
+keywords:  powershell,DSC
+description:  
+ms.topic:  article
+author:  eslesar
+manager:  dongill
+ms.prod:  powershell
 ---
 
 # Metodo GetConfigurationResultOutput della classe MSFT_DSCLocalConfigurationManager
@@ -62,6 +65,6 @@ Si tratta di un metodo statico.
 
 
 
-<!--HONumber=Apr16_HO2-->
+<!--HONumber=May16_HO3-->
 
 

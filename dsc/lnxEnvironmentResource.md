@@ -1,3 +1,14 @@
+---
+title:   Risorsa nxEnvironment DSC per Linux
+ms.date:  2016-05-16
+keywords:  powershell,DSC
+description:  
+ms.topic:  article
+author:  eslesar
+manager:  dongill
+ms.prod:  powershell
+---
+
 # Risorsa nxEnvironment DSC per Linux
 
 La risorsa **nxEnvironment** in PowerShell DSC (Desired State Configuration) fornisce un meccanismo per gestire le variabili di ambiente di sistema in un nodo Linux.
@@ -48,4 +59,8 @@ nxEnvironment EnvironmentExample
 ```
 
 
-<!--HONumber=Feb16_HO4-->
+
+
+<!--HONumber=May16_HO3-->
+
+

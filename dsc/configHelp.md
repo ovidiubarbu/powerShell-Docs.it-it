@@ -1,10 +1,19 @@
+---
+title:   Guida alla scrittura per le configurazioni DSC
+ms.date:  2016-05-16
+keywords:  powershell,DSC
+description:  
+ms.topic:  article
+author:  eslesar
+manager:  dongill
+ms.prod:  powershell
+---
+
 # Guida alla scrittura per le configurazioni DSC
 
 >Si applica a: Windows PowerShell 5.0
 
-È possibile usare la Guida basata sui commenti nelle configurazioni DSC. Gli utenti possono accedere alla Guida chiamando la funzione di configurazione con `-?` oppure usando il 
-cmdlet [Get-Help](https://technet.microsoft.com/en-us/library/hh849696.aspx). Per altre informazioni sulla Guida basata sui commenti di PowerShell, vedere 
-[about_Comment_Based_Help](https://technet.microsoft.com/en-us/library/hh847834.aspx).
+È possibile usare la Guida basata sui commenti nelle configurazioni DSC. Gli utenti possono accedere alla Guida chiamando la funzione di configurazione con `-?` oppure usando il cmdlet [Get-Help](https://technet.microsoft.com/en-us/library/hh849696.aspx). Per altre informazioni sulla Guida basata sui commenti di PowerShell, vedere [about_Comment_Based_Help](https://technet.microsoft.com/en-us/library/hh847834.aspx).
 
 L'esempio seguente mostra uno script che contiene due configurazioni e la Guida basata sui commenti per ogni configurazione:
 
@@ -52,8 +61,7 @@ configuration HelpSample1
 
 ## Visualizzazione della Guida di configurazione
 
-Per visualizzare la Guida per una configurazione, usare il cmdlet **Get-Help** con il nome della funzione oppure digitare il nome della funzione seguito da `-?`. Di seguito è riportato l'output
-della funzione precedente quando viene passato a **Get-Help**:
+Per visualizzare la Guida per una configurazione, usare il cmdlet **Get-Help** con il nome della funzione oppure digitare il nome della funzione seguito da `-?`. Di seguito viene riportato l'output della funzione precedente quando viene passato a **Get-Help**:
 
 ```powershell
 PS C:\> Get-Help HelpSample1
@@ -85,6 +93,8 @@ REMARKS
 ## Vedere anche
 * [Configurazioni DSC](configurations.md)
 
-<!--HONumber=Apr16_HO5-->
+
+
+<!--HONumber=May16_HO3-->
 
 

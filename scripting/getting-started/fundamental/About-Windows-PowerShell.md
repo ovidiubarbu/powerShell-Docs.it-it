@@ -1,12 +1,15 @@
 ---
-title: Informazioni su Windows PowerShell
-ms.custom: na
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 979654ae-7994-47f8-be43-d79e7a140143
+title:  Informazioni su Windows PowerShell
+ms.date:  2016-05-11
+keywords:  powershell,cmdlet
+description:  
+ms.topic:  article
+author:  jpjofre
+manager:  dongill
+ms.prod:  powershell
+ms.assetid:  979654ae-7994-47f8-be43-d79e7a140143
 ---
+
 # Informazioni su Windows PowerShell
 Windows PowerShell è progettato per migliorare la riga di comando e l'ambiente di scripting eliminando problemi di lunga data e aggiungendo nuove funzionalità.
 
@@ -14,19 +17,18 @@ Windows PowerShell è progettato per migliorare la riga di comando e l'ambiente 
 È facile individuare le funzionalità di Windows PowerShell. Ad esempio, per trovare un elenco dei cmdlet che consentono di visualizzare e modificare i servizi di Windows, digitare:
 
 ```
-get-command *-service
+Get-Command *-Service
 ```
 
 Dopo aver individuato il cmdlet che esegue un'attività, è possibile ottenere altre informazioni con il cmdlet Get-Help. Per visualizzare la Guida per il cmdlet Get-Service, ad esempio, digitare:
 
 ```
-get-help get-service
+Get-Help Get-Service
 ```
-
-Per una migliore comprensione dell'output del cmdlet, inviarne l'output tramite pipe al cmdlet Get-Member. Il comando seguente, ad esempio, visualizza informazioni sui membri dell'oggetto restituito dal cmdlet Get-Service.
+La maggior parte dei cmdlet genera oggetti che possono essere modificati e di cui è possibile eseguire il rendering in testo per la visualizzazione. Per una migliore comprensione dell'output del cmdlet, inviarne l'output tramite pipe al cmdlet Get-Member. Il comando seguente, ad esempio, visualizza informazioni sui membri dell'oggetto restituito dal cmdlet Get-Service.
 
 ```
-get-service | get-member
+Get-Service | Get-Member
 ```
 
 ## Coerenza
@@ -51,6 +53,6 @@ Con Windows PowerShell è facile passare dalla digitazione interattiva di comand
 
 
 
-<!--HONumber=Apr16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

@@ -1,3 +1,14 @@
+---
+title:   Opzioni delle credenziali nei dati di configurazione
+ms.date:  2016-05-16
+keywords:  powershell,DSC
+description:  
+ms.topic:  article
+author:  eslesar
+manager:  dongill
+ms.prod:  powershell
+---
+
 # Opzioni delle credenziali nei dati di configurazione
 >Si applica a: Windows PowerShell 5.0
 
@@ -15,7 +26,7 @@ Le risorse di configurazione DSC vengono eseguite come `Local System` per impost
 Tuttavia, per alcune risorse è necessaria una credenziale, ad esempio quando la risorsa `Package` deve installare software nell'ambito di un account utente specifico.
 
 Le risorse delle versioni precedenti usano un nome di proprietà `Credential` hardcoded per gestire questo caso.
-In WMF 5.0 è stata aggiunta una proprietà `PsDscRunAsCredential` automatica per tutte le risorse.
+In WMF 5.0 è stata aggiunta una proprietà `PsDscRunAsCredential` automatica per tutte le risorse. Per informazioni sull'uso di `PsDscRunAsCredential`, vedere [Esecuzione di DSC con le credenziali dell'utente](runAsUser.md).
 Le risorse più recenti e quelle personalizzate possono usare questa proprietà automatica invece di creare una proprietà personalizzata per le credenziali.
 
 *Si noti che la progettazione di alcune risorse prevede l'uso di più credenziali per un motivo specifico e tali risorse hanno proprietà delle credenziali proprie.*
@@ -161,7 +172,7 @@ L'uso di un account locale elimina la potenziale esposizione delle credenziali d
 
 **Quando si usano credenziali con risorse DSC, se possibile preferire un account locale a un account di dominio.**
 
-Se la proprietà `Username` della credenziale contiene un carattere "\" o "@", DSC la considera un account di dominio.
+Se la proprietà `Username` della credenziale contiene un carattere "\'" o "@", DSC la considera un account di dominio.
 Un'eccezione riguarda "localhost", "127.0.0.1" e "::1" nella parte del dominio del nome utente.
 
 ## PSDscAllowDomainUser
@@ -183,4 +194,9 @@ $cd = @{
 ```
 
 Lo script di configurazione genera ora il file MOF senza errori o avvisi.
-<!--HONumber=Feb16_HO4-->
+
+
+
+<!--HONumber=May16_HO3-->
+
+

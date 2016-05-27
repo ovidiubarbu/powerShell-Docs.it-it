@@ -1,3 +1,14 @@
+---
+title:  informazioni di riferimento per l'installazione
+ms.date:  2016-05-11
+keywords:  powershell,cmdlet
+description:  
+ms.topic:  article
+author:  jpjofre
+manager:  dongill
+ms.prod:  powershell
+---
+
 #  Guida alla configurazione
 
 -  [Accessibilità in Windows PowerShell ISE](Accessibility-in-Windows-PowerShell-ISE.md)
@@ -12,6 +23,7 @@
 -  [Avvio di Windows PowerShell](Starting-Windows-PowerShell.md)
 -  [Requisiti di sistema di Windows PowerShell](Windows-PowerShell-System-Requirements.md)
 -  [WinRMSecurity](WinRMSecurity.md)
+
 
 
 <!--HONumber=May16_HO2-->

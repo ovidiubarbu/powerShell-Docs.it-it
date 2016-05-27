@@ -1,3 +1,14 @@
+---
+title:   Introduzione a DSC (Desired State Configuration) per Linux
+ms.date:  2016-05-16
+keywords:  powershell,DSC
+description:  
+ms.topic:  article
+author:  eslesar
+manager:  dongill
+ms.prod:  powershell
+---
+
 # Introduzione a DSC (Desired State Configuration) per Linux
 
 Questo argomento illustra come iniziare a usare PowerShell DSC (Desired State Configuration) per Linux. Per informazioni generali su DSC, vedere [Introduzione a Windows PowerShell DSC (Desired State Configuration)](overview.md).
@@ -173,6 +184,7 @@ I file di registro seguenti vengono generati per i messaggi di DSC per Linux.
 |dsc.log|/opt/omi/var/log/|Messaggi relativi al funzionamento delle operazioni delle risorse DSC e di Gestione configurazione locale.|
 
 
-<!--HONumber=Apr16_HO2-->
+
+<!--HONumber=May16_HO3-->
 
 

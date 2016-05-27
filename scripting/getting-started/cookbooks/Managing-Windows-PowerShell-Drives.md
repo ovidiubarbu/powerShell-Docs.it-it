@@ -1,12 +1,15 @@
 ---
-title: Gestione delle unità di Windows PowerShell
-ms.custom: na
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: bd809e38-8de9-437a-a250-f30a667d11b4
+title:  Gestione delle unità di Windows PowerShell
+ms.date:  2016-05-11
+keywords:  powershell,cmdlet
+description:  
+ms.topic:  article
+author:  jpjofre
+manager:  dongill
+ms.prod:  powershell
+ms.assetid:  bd809e38-8de9-437a-a250-f30a667d11b4
 ---
+
 # Gestione delle unità di Windows PowerShell
 Un'*unità di Windows PowerShell* è un percorso di archivio dati a cui è possibile accedere come un'unità di file system in Windows PowerShell. I provider di Windows PowerShell creano automaticamente alcune unità, ad esempio le unità di file system (incluse C: e D:), le unità del Registro di sistema (HKCU: e HKLM:) e l'unità dei certificati (Cert:). È inoltre possibile creare unità di Windows PowerShell personalizzate. Queste unità sono molto utili, ma sono disponibili solo all'interno di Windows PowerShell. Non è possibile accedervi con altri strumenti di Windows, ad esempio Esplora file o Cmd.exe.
 
@@ -56,20 +59,11 @@ D          FileSystem    D:\
 
 Per visualizzare le unità di Windows PowerShell che rappresentano hive del Registro di sistema, usare il parametro **PSProvider** in modo da visualizzare solo le unità di Windows PowerShell supportate dal provider Registry di Windows PowerShell:
 
-<pre>PS> Get-PSDrive -PSProvider Registry
-Name       Provider      Root                                   CurrentLocation
-----       --------      ----                                   ---------------
-HKCU       Registry      HKEY_CURRENT_USER
-HKLM       Registry      HKEY_LOCAL_MACHINE</pre>
+<pre>PS> Get-PSDrive -PSProvider Registry Name       Provider      Root                                   CurrentLocation ----       --------      ----                                   --------------- HKCU       Registry      HKEY_CURRENT_USER HKLM       Registry      HKEY_LOCAL_MACHINE</pre>
 
 È anche possibile usare i cmdlet Location standard con le unità di Windows PowerShell:
 
-<pre>PS> Set-Location HKLM:\SOFTWARE
-PS> Push-Location .\Microsoft
-PS> Get-Location
-Path
-----
-HKLM:\SOFTWARE\Microsoft</pre>
+<pre>PS> Set-Location HKLM:\SOFTWARE PS> Push-Location .\Microsoft PS> Get-Location Path ---- HKLM:\SOFTWARE\Microsoft</pre>
 
 ### Aggiunta di nuove unità di Windows PowerShell (New-PSDrive)
 È possibile aggiungere unità di Windows PowerShell personalizzate tramite il comando **New-PSDrive**. Per ottenere la sintassi del comando **New-PSDrive**, immettere il comando **Get-Command** con il parametro **Syntax**:
@@ -101,18 +95,13 @@ Name       Provider      Root                                   CurrentLocation
 Office     FileSystem    C:\Program Files\Microsoft Offic...
 ```
 
-> [!NOTE]
-> In generale, per i percorsi non viene fatta distinzione tra maiuscole e minuscole.
+> [!NOTE] In generale, per i percorsi non viene fatta distinzione tra maiuscole e minuscole.
 
 È possibile fare riferimento alla nuova unità di Windows PowerShell come di consueto, ossia specificando il nome seguito da due punti (**:**).
 
 Le unità di Windows PowerShell semplificano notevolmente molte attività. Ad esempio, alcune delle chiavi più importanti del Registro di sistema hanno percorsi estremamente lunghi, che sono complicati da accedere e difficili da ricordare. Le informazioni di configurazione critiche si trovano in **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion**. Per visualizzare e cambiare elementi nella chiave del Registro di sistema CurrentVersion, è possibile creare un'unità di Windows PowerShell la cui radice si trova in tale chiave digitando:
 
-<pre>PS> New-PSDrive -Name cvkey -PSProvider Registry -Root HKLM\Software\Microsoft\W
-indows\CurrentVersion
-Name       Provider      Root                                   CurrentLocation
-----       --------      ----                                   ---------------
-cvkey      Registry      HKLM\Software\Microsoft\Windows\...</pre>
+<pre>PS> New-PSDrive -Name cvkey -PSProvider Registry -Root HKLM\Software\Microsoft\W indows\CurrentVersion Name       Provider      Root                                   CurrentLocation ----       --------      ----                                   --------------- cvkey      Registry      HKLM\Software\Microsoft\Windows\...</pre>
 
 È quindi possibile passare all'unità **cvkey:** come si farebbe per qualsiasi altra unità:
 
@@ -120,10 +109,7 @@ cvkey      Registry      HKLM\Software\Microsoft\Windows\...</pre>
 
 oppure:
 
-<pre>PS> Set-Location cvkey: -PassThru
-Path
-----
-cvkey:\</pre>
+<pre>PS> Set-Location cvkey: -PassThru Path ---- cvkey:\</pre>
 
 Il cmdlet New-PsDrive aggiunge la nuova unità solo nella sessione corrente di Windows PowerShell. Se si chiude la finestra di Windows PowerShell, la nuova unità va persa. Per salvare un'unità di Windows PowerShell, usare il cmdlet Export-Console per esportare la sessione corrente di Windows PowerShell e quindi il parametro **PSConsoleFile** di PowerShell.exe per importarla. In alternativa, aggiungere la nuova unità nel proprio profilo Windows PowerShell.
 
@@ -157,6 +143,6 @@ Windows PowerShell rileva le unità di file system aggiunte o rimosse da Windows
 
 
 
-<!--HONumber=Apr16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

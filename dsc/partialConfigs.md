@@ -1,3 +1,14 @@
+---
+title:   Configurazioni parziali di PowerShell DSC (Desired State Configuration)
+ms.date:  2016-05-16
+keywords:  powershell,DSC
+description:  
+ms.topic:  article
+author:  eslesar
+manager:  dongill
+ms.prod:  powershell
+---
+
 # Configurazioni parziali di PowerShell DSC (Desired State Configuration)
 
 >Si applica a: Windows PowerShell 5.0
@@ -93,7 +104,7 @@ Dopo aver creato la metaconfigurazione, è necessario eseguirla per creare un do
 ### Assegnazione dei nomi ai documenti di configurazione e posizionamento nei server di pull
 
 I documenti di configurazione parziale devono essere inseriti nella cartella specificata come **ConfigurationPath** nel file `web.config` per il server di pull (in genere `C:\Program Files\WindowsPowerShell\DscService\Configuration`). I documenti di configurazione devono essere denominati come segue: _ConfigurationName_. _ConfigurationID_`.mof`, dove _ConfigurationName_ è il nome della configurazione parziale e _ConfigurationID_ è l'ID della configurazione definita in Gestione configurazione locale nel nodo di destinazione. Per questo esempio, i nomi dei documenti di configurazione devono essere quelli indicati di seguito.
-![Nomi delle configurazioni parziali nel server di pull](images/PartialConfigPullServer.jpg)
+![Nomi PartialConfig su server di pull](images/PartialConfigPullServer.jpg)
 
 ### Esecuzione di configurazioni parziali da un server di pull
 
@@ -146,10 +157,11 @@ Assegnare i nomi ai documenti di configurazione e posizionare i documenti come d
 ##Vedere anche 
 
 **Concetti**
-[Server di pull Windows PowerShell DSC (Desired Configuration Pull)](pullServer.md) 
+[Configurazione di un server di pull Web DSC](pullServer.md) 
 [Configurazione di Gestione configurazione locale](https://technet.microsoft.com/en-us/library/mt421188.aspx) 
 
 
-<!--HONumber=Apr16_HO2-->
+
+<!--HONumber=May16_HO3-->
 
 

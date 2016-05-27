@@ -1,3 +1,14 @@
+---
+title:   Risorsa Script DSC
+ms.date:  2016-05-16
+keywords:  powershell,DSC
+description:  
+ms.topic:  article
+author:  eslesar
+manager:  dongill
+ms.prod:  powershell
+---
+
 # Risorsa Script DSC
 
  
@@ -80,6 +91,6 @@ Questa risorsa scrive la versione della configurazione di un file di testo. Ques
 
 
 
-<!--HONumber=Apr16_HO2-->
+<!--HONumber=May16_HO3-->
 
 

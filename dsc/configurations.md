@@ -1,3 +1,14 @@
+---
+title:   Configurazioni DSC
+ms.date:  2016-05-16
+keywords:  powershell,DSC
+description:  
+ms.topic:  article
+author:  eslesar
+manager:  dongill
+ms.prod:  powershell
+---
+
 # Configurazioni DSC
 
 >Si applica a: Windows PowerShell 4.0, Windows PowerShell 5.0
@@ -37,9 +48,9 @@ All'interno di un blocco **Configuration** è possibile eseguire tutte le operaz
 Configuration MyDscConfiguration {
 
     param(
-        [string[]]$computerName="localhost"
+        [string[]]$ComputerName="localhost"
     )
-    Node $computerName {
+    Node $ComputerName {
         WindowsFeature MyFeatureInstance {
             Ensure = "Present"
             Name =  "RSAT"
@@ -52,7 +63,7 @@ Configuration MyDscConfiguration {
 }
 ```
 
-In questo esempio è necessario specificare il nome del nodo passandolo come parametro $computerName quando si [compila la configurazione](# Compiling the configuration). Per impostazione predefinita, il nome è "localhost".
+In questo esempio è necessario specificare il nome del nodo passandolo come parametro $ComputerName quando si [compila la configurazione](# Compiling the configuration). Per impostazione predefinita, il nome è "localhost".
 
 ## Compilazione della configurazione
 Prima di poter applicare una configurazione, è necessario compilarla in un documento MOF. A questo scopo, è necessario chiamare la configurazione allo stesso modo in cui si chiama una funzione di PowerShell.
@@ -80,7 +91,7 @@ Se la configurazione accetta un parametro, come nel secondo esempio, il parametr
 
 ```powershell
 PS C:\users\default\Documents\DSC Configurations> . .\MyDscConfiguration.ps1
-PS C:\users\default\Documents\DSC Configurations> MyDscConfiguration -computerName 'MyTestNode'
+PS C:\users\default\Documents\DSC Configurations> MyDscConfiguration -ComputerName 'MyTestNode'
     Directory: C:\users\default\Documents\DSC Configurations\MyDscConfiguration
 Mode                LastWriteTime         Length Name                                                                                              
 ----                -------------         ------ ----                                                                                         
@@ -121,6 +132,7 @@ Dopo che i moduli vengono inseriti in `$env:PSModulePath` e sono riconosciuti co
 * [Configurazione di Gestione configurazione locale](metaConfig.md)
 
 
-<!--HONumber=Apr16_HO2-->
+
+<!--HONumber=May16_HO3-->
 
 

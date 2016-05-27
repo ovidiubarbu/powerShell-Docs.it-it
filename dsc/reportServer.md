@@ -1,25 +1,29 @@
+---
+title:   Uso di un server di report DSC
+ms.date:  2016-05-16
+keywords:  powershell,DSC
+description:  
+ms.topic:  article
+author:  eslesar
+manager:  dongill
+ms.prod:  powershell
+---
+
 # Uso di un server di report DSC
 
 > Si applica a: Windows PowerShell 5.0
 
 >**Nota:** il server di report descritto in questo argomento non è disponibile in PowerShell 4.0.
 
-È possibile configurare Gestione configurazione locale in un nodo per inviare report sullo stato della configurazione a un server di pull, su cui è quindi possibile eseguire query per recuperare i dati. Ogni volta che il nodo controlla e applica
-una configurazione, invia un report al server di report. Questi report vengono archiviati in un database nel server e possono essere recuperati chiamando il servizio Web di gestione dei report. Ogni report contiene
-informazioni come le configurazioni applicate e l'esito dell'applicazione, le risorse usate, eventuali errori generati e le ore di inizio e fine.
+È possibile configurare Gestione configurazione locale in un nodo per inviare report sullo stato della configurazione a un server di pull, su cui è quindi possibile eseguire query per recuperare i dati. Ogni volta che il nodo controlla e applica una configurazione, invia un report al server di report. Questi report vengono archiviati in un database nel server e possono essere recuperati chiamando il servizio Web di gestione dei report. Ogni report contiene informazioni come le configurazioni applicate e l'esito dell'applicazione, le risorse usate, eventuali errori generati e le ore di inizio e fine.
 
 ## Configurazione di un nodo per l'invio di report
 
-Per richiedere a un nodo di inviare report a un server, è possibile usare un blocco **ReportServerWeb** nella configurazione di Gestione configurazione locale del nodo (per informazioni sulla configurazione di Gestione configurazione locale,
-vedere [Configurazione di Gestione configurazione locale](metaConfig.md)). Il server a cui il nodo invia i report deve essere configurato come server di pull Web (non è possibile inviare report
-a una condivisione SMB). Per informazioni sulla configurazione di un server di pull, vedere [Configurazione di un server di pull Web DSC](pullServer.md). Il server di report può corrispondere al servizio da cui
-il nodo effettua il pull delle configurazioni e ottiene le risorse oppure può essere un servizio diverso.
+Per chiedere a un nodo di inviare report a un server, è possibile usare un blocco **ReportServerWeb** nella configurazione di Gestione configurazione locale del nodo. Per informazioni sulla configurazione di Gestione configurazione locale, vedere [Configurazione di Gestione configurazione locale](metaConfig.md). Il server a cui il nodo invia i report deve essere configurato come server di pull Web. Non è possibile inviare report a una condivisione SMB. Per informazioni sulla configurazione di un server di pull, vedere [Configurazione di un server di pull Web DSC](pullServer.md). Il server di report può corrispondere al servizio da cui il nodo effettua il pull delle configurazioni e ottiene le risorse oppure può essere un servizio diverso.
  
-Nel blocco **ReportServerWeb** specificare l'URL del servizio pull
-e una chiave di registrazione nota al server.
+Nel blocco **ReportServerWeb** specificare l'URL del servizio di pull e una chiave di registrazione nota al server.
  
-La configurazione seguente consente di impostare un nodo per il pull delle configurazioni da un servizio e l'invio di report
-a un servizio in un server diverso. 
+La configurazione seguente consente di impostare un nodo per il pull delle configurazioni da un servizio e l'invio di report a un servizio in un server diverso. 
  
 ```powershell
 [DSCLocalConfigurationManager()]
@@ -88,11 +92,7 @@ PullClientConfig
 
 ## Recupero dei dati dei report
 
-I report inviati al server di pull vengono immessi in un database nel server. I report sono disponibili tramite chiamate al servizio Web. Per recuperare i report per un nodo specifico, 
-inviare una richiesta HTTP al servizio Web di report nel formato seguente:
-`http://CONTOSO-REPORT:8080/PSDSCReportServer.svc/Nodes(AgentID = MyNodeAgentId)/Reports` 
-dove `MyNodeAgentId` è il valore di AgentId del nodo per cui ottenere i report. È possibile ottenere il valore di AgentID per un nodo chiamando [Get-DscLocalConfigurationManager](https://technet.microsoft.com/en-us/library/dn407378.aspx)
-in tale nodo.
+I report inviati al server di pull vengono immessi in un database nel server. I report sono disponibili tramite chiamate al servizio Web. Per recuperare i report per un nodo specifico, inviare una richiesta HTTP al servizio Web di report nel formato seguente: `http://CONTOSO-REPORT:8080/PSDSCReportServer.svc/Nodes(AgentID = MyNodeAgentId)/Reports` dove `MyNodeAgentId` è il valore di AgentId del nodo per cui ottenere i report. È possibile ottenere il valore di AgentID per un nodo chiamando [Get-DscLocalConfigurationManager](https://technet.microsoft.com/en-us/library/dn407378.aspx) in tale nodo.
 
 I report vengono restituiti come matrice di oggetti JSON.
 
@@ -160,8 +160,7 @@ $reportsByStartTime = $reports | Sort-Object -Property StartTime -Descending
 $reportMostRecent = $reportsByStartTime[0]
 ```
 
-Si noti che la proprietà **StatusData** è un oggetto con un numero di proprietà. Qui viene ospitata gran parte dei dati di report. Esaminiamo i singoli campi della proprietà
-**StatusData** per il report più recente:
+Si noti che la proprietà **StatusData** è un oggetto con un numero di proprietà. Qui viene ospitata gran parte dei dati di report. Esaminiamo i singoli campi della proprietà **StatusData** per il report più recente:
 
 ```powershell
 $statusData = $reportMostRecent.StatusData | ConvertFrom-Json
@@ -199,8 +198,7 @@ Locale                     : en-US
 Mode                       : Pull
 ```
 
-Tra le altre cose, viene indicato che la configurazione più recente ha chiamato due risorse, di cui una era nello stato desiderato e una no. È possibile ottenere
-un output più leggibile della proprietà **ResourcesNotInDesiredState**:
+Tra le altre cose, viene indicato che la configurazione più recente ha chiamato due risorse, di cui una era nello stato desiderato e una no. È possibile ottenere un output più leggibile della proprietà **ResourcesNotInDesiredState**:
 
 ```powershell
 $statusData.ResourcesInDesiredState
@@ -218,8 +216,7 @@ ConfigurationName : Sample_ArchiveFirewall
 InDesiredState    : True
 ```
 
-Si noti che questi esempi servono solo per dare un'idea di cosa è possibile fare con i dati dei report. Per informazioni introduttive sull'uso di JSON in PowerShell, vedere il post di blog
-[Playing with JSON and PowerShell](https://blogs.technet.microsoft.com/heyscriptingguy/2015/10/08/playing-with-json-and-powershell/).
+Si noti che questi esempi servono solo per dare un'idea di cosa è possibile fare con i dati dei report. Per informazioni introduttive sull'uso di JSON in PowerShell, vedere il post di blog [Playing with JSON and PowerShell](https://blogs.technet.microsoft.com/heyscriptingguy/2015/10/08/playing-with-json-and-powershell/).
 
 ## Vedere anche
 - [Configurazione di Gestione configurazione locale](metaConfig.md)
@@ -227,6 +224,7 @@ Si noti che questi esempi servono solo per dare un'idea di cosa è possibile far
 - [Configurazione di un client di pull usando nomi di configurazione](pullClientConfigNames.md)
 
 
-<!--HONumber=Apr16_HO1-->
+
+<!--HONumber=May16_HO3-->
 
 

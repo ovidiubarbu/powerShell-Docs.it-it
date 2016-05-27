@@ -1,12 +1,15 @@
 ---
-title: Ottenere informazioni dettagliate della Guida
-ms.custom: na
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 6fb4daf7-8607-4a3e-b692-f77631adc1b9
+title:  Ottenere informazioni dettagliate della Guida
+ms.date:  2016-05-11
+keywords:  powershell,cmdlet
+description:  
+ms.topic:  article
+author:  jpjofre
+manager:  dongill
+ms.prod:  powershell
+ms.assetid:  6fb4daf7-8607-4a3e-b692-f77631adc1b9
 ---
+
 # Ottenere informazioni dettagliate della Guida
 Windows PowerShell include argomenti dettagliati della Guida che illustrano i concetti e il linguaggio di Windows PowerShell. Sono inoltre disponibili argomenti della Guida per tutti i cmdlet e i provider, nonché per molti script e funzioni.
 
@@ -173,6 +176,6 @@ Per informazioni su come fornire supporto online per argomenti della Guida perso
 
 
 
-<!--HONumber=Apr16_HO2-->
+<!--HONumber=May16_HO2-->
 
 

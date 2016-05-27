@@ -1,10 +1,14 @@
 ---
-DCS.appliesToProduct: 'WindowsServer\_Dev'
-Description: 'Eseguire il metodo Test direttamente sul provider.'
-MS-HAID: 'cimwin32a.MSFT_DSCLocalConfigurationManager\_resourcetest'
-MSHAttr: 'PreferredLib:/library'
-title: 'Metodo ResourceTest della classe MSFT_DSCLocalConfigurationManager'
+title:  Metodo ResourceTest della classe MSFT_DSCLocalConfigurationManager
+ms.date:  2016-05-16
+keywords:  powershell,DSC
+description:  
+ms.topic:  article
+author:  eslesar
+manager:  dongill
+ms.prod:  powershell
 ---
+
 
 # Metodo ResourceTest della classe MSFT_DSCLocalConfigurationManager
 
@@ -32,8 +36,7 @@ Il nome della risorsa da chiamare.
 Il nome del modulo che contiene la risorsa da chiamare.
 
 *resourceProperty* \[in\]  
-Specifica il nome della proprietà delle risorse e il relativo valore in una tabella hash rispettivamente come chiave e valore. Usare l'articolo
-Cmdlet [Get-DscResource](https://technet.microsoft.com/en-us/library/dn521625.aspx) per individuare le proprietà delle risorse e i relativi tipi.
+Specifica il nome della proprietà delle risorse e il relativo valore in una tabella hash rispettivamente come chiave e valore. Usare il cmdlet [Get-DscResource](https://technet.microsoft.com/en-us/library/dn521625.aspx) per individuare le proprietà delle risorse e i relativi tipi.
 
 *InDesiredState* \[out\]  
 In fase di restituzione, questa proprietà è impostata su **true** se il nodo di destinazione è nello stato desiderato.
@@ -68,6 +71,6 @@ Si tratta di un metodo statico.
 
 
 
-<!--HONumber=Apr16_HO2-->
+<!--HONumber=May16_HO3-->
 
 

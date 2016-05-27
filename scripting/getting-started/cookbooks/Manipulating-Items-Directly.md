@@ -1,12 +1,15 @@
 ---
-title: Manipolazione diretta di elementi
-ms.custom: na
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 8cbd4867-917d-41ea-9ff0-b8e765509735
+title:  Manipolazione diretta di elementi
+ms.date:  2016-05-11
+keywords:  powershell,cmdlet
+description:  
+ms.topic:  article
+author:  jpjofre
+manager:  dongill
+ms.prod:  powershell
+ms.assetid:  8cbd4867-917d-41ea-9ff0-b8e765509735
 ---
+
 # Manipolazione diretta di elementi
 Gli elementi visualizzati nelle unità di Windows PowerShell, ad esempio file e cartelle nelle unità di file system, e le chiavi del Registro di sistema nelle unità del Registro di sistema di Windows PowerShell sono denominati *elementi* in Windows PowerShell. I cmdlet per gestire gli elementi includono il sostantivo **Item** nei relativi nomi.
 
@@ -86,7 +89,7 @@ SKC  VC Name                           Property
   3   0 OptionalComponents             {}
 ```
 
-Anche se sarebbe comodo trattare le voci del Registro di sistema come elementi, non è possibile specificare un percorso di una voce in modo da assicurarsi che sia univoco. La notazione del percorso non distingue la sottochiave del Registro di sistema denominata **Run** dalla voce del Registro di sistema **(Default)** nella sottochiave **Run**. Inoltre, poiché i nomi delle voci del Registro di sistema possono contenere il carattere barra rovesciata (**\**), se le voci fossero elementi non si potrebbe usare la notazione del percorso per distinguere una voce del Registro di sistema denominata **Windows\CurrentVersion\Run** dalla sottochiave situata in tale percorso.
+Anche se sarebbe comodo trattare le voci del Registro di sistema come elementi, non è possibile specificare un percorso di una voce in modo da assicurarsi che sia univoco. La notazione del percorso non distingue la sottochiave del Registro di sistema denominata **Run** dalla voce del Registro di sistema **(Default)** nella sottochiave **Run**. Si noti anche che, poiché i nomi delle voci del Registro di sistema possono contenere il carattere barra rovesciata (**\\**), se le voci fossero elementi non si potrebbe usare la notazione del percorso per distinguere una voce del Registro di sistema denominata **Windows\\CurrentVersion\\Run** dalla sottochiave situata in tale percorso.
 
 ### Ridenominazione di elementi esistenti (Rename-Item)
 Per cambiare il nome di un file o di una cartella, usare il cmdlet **Rename-Item**. Il comando seguente cambia il nome del file **file1.txt** in **fileOne.txt**.
@@ -197,6 +200,6 @@ Se il tipo di file con estensione ini è associato al Blocco note, il file boot.
 
 
 
-<!--HONumber=Apr16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

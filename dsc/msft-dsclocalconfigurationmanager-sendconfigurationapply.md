@@ -1,10 +1,14 @@
 ---
-DCS.appliesToProduct: 'WindowsServer\_Dev'
-Description: 'Inviare il documento di configurazione al nodo gestito e usare l'agente di configurazione per applicare la configurazione.'
-MS-HAID: 'cimwin32a.MSFT_DSCLocalConfigurationManager\_sendconfigurationapply'
-MSHAttr: 'PreferredLib:/library'
-title: 'Metodo SendConfigurationApply della classe MSFT_DSCLocalConfigurationManager'
+title:  Metodo SendConfigurationApply della classe MSFT_DSCLocalConfigurationManager
+ms.date:  2016-05-16
+keywords:  powershell,DSC
+description:  
+ms.topic:  article
+author:  eslesar
+manager:  dongill
+ms.prod:  powershell
 ---
+
 
 # Metodo SendConfigurationApply della classe MSFT_DSCLocalConfigurationManager
 
@@ -59,6 +63,6 @@ Si tratta di un metodo statico.
 
 
 
-<!--HONumber=Apr16_HO2-->
+<!--HONumber=May16_HO3-->
 
 

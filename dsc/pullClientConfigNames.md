@@ -1,3 +1,14 @@
+---
+title:   Configurazione di un client di pull usando nomi di configurazione
+ms.date:  2016-05-16
+keywords:  powershell,DSC
+description:  
+ms.topic:  article
+author:  eslesar
+manager:  dongill
+ms.prod:  powershell
+---
+
 # Configurazione di un client di pull usando nomi di configurazione
 
 > Si applica a: Windows PowerShell 5.0
@@ -44,10 +55,7 @@ Per applicare la configurazione, chiamare il cmdlet **Set-DscLocalConfigurationM
 
 ## Server delle risorse e di report
 
-Se si specifica solo un blocco **ConfigurationRepositoryWeb** o **ConfigurationRepositoryShare** nella configurazione di Gestione configurazione locale (come nell'esempio precedente), il client di pull eseguirà il pull 
-delle risorse dal server specificato, ma non invierà report a tale server. È possibile usare un singolo server di pull per le configurazioni, le risorse e i report, ma è necessario creare un blocco 
-**ReportRepositoryWeb** per configurare la gestione dei report. Nell'esempio seguente viene illustrata una metaconfigurazione che configura un client per il pull di configurazioni e risorse e per l'invio dei dati di report a un singolo
-server di pull.
+Se si specifica solo un blocco **ConfigurationRepositoryWeb** o **ConfigurationRepositoryShare** nella configurazione di Gestione configurazione locale, come nell'esempio precedente, il client di pull eseguirà il pull delle risorse dal server specificato, ma non invierà report al server. È possibile usare un singolo server di pull per le configurazioni, le risorse e i report, ma è necessario creare un blocco **ReportRepositoryWeb** per configurare la creazione di report. Nell'esempio seguente viene illustrata una metaconfigurazione che configura un client per il pull di configurazioni e risorse e per l'invio di dati di report a un singolo server di pull.
 
 ```powershell
 [DSCLocalConfigurationManager()]
@@ -80,8 +88,7 @@ PullClientConfigID
 ```
 
 
-È anche possibile specificare server di pull diversi per le risorse e i report. Per specificare un server delle risorse, usare un blocco **ResourceRepositoryWeb** (per un server di pull Web) o 
-**ResourceRepositoryShare** (per un server di pull SMB).
+È anche possibile specificare server di pull diversi per le risorse e i report. Per specificare un server delle risorse, usare un blocco **ResourceRepositoryWeb** (per un server di pull Web) o **ResourceRepositoryShare** (per un server di pull SMB).
 Per specificare un server di report, usare un blocco **ReportRepositoryWeb**. Un server di report non può essere un server SMB.
 La metaconfigurazione seguente configura un client di pull in modo da ottenere le configurazioni da **CONTOSO-PullSrv** e le risorse da **CONTOSO-ResourceSrv** e inviare i report sullo stato a **CONTOSO-ReportSrv**:
 
@@ -126,6 +133,7 @@ PullClientConfigID
 * [Configurazione di un server di pull Web DSC](pullServer.md)
 
 
-<!--HONumber=Apr16_HO2-->
+
+<!--HONumber=May16_HO3-->
 
 

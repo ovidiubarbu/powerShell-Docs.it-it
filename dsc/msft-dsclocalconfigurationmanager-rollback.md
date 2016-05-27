@@ -1,10 +1,14 @@
 ---
-DCS.appliesToProduct: 'WindowsServer\_Dev'
-Description: 'Eseguire il rollback alla configurazione precedente.'
-MS-HAID: 'cimwin32a.MSFT_DSCLocalConfigurationManager\_rollback'
-MSHAttr: 'PreferredLib:/library'
-title: 'Metodo RollBack della classe MSFT_DSCLocalConfigurationManager'
+title: Metodo RollBack della classe MSFT_DSCLocalConfigurationManager 
+ms.date:  2016-05-16
+keywords:  powershell,DSC
+description:  
+ms.topic:  article
+author:  eslesar
+manager:  dongill
+ms.prod:  powershell
 ---
+
 
 # Metodo RollBack della classe MSFT_DSCLocalConfigurationManager
 
@@ -55,6 +59,6 @@ Si tratta di un metodo statico.
 
 
 
-<!--HONumber=Apr16_HO2-->
+<!--HONumber=May16_HO3-->
 
 

@@ -1,12 +1,15 @@
 ---
-title: Uso di classi e metodi statici
-ms.custom: na
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 418ad766-afa6-4b8c-9a44-471889af7fd9
+title:  Uso di classi e metodi statici
+ms.date:  2016-05-11
+keywords:  powershell,cmdlet
+description:  
+ms.topic:  article
+author:  jpjofre
+manager:  dongill
+ms.prod:  powershell
+ms.assetid:  418ad766-afa6-4b8c-9a44-471889af7fd9
 ---
+
 # Uso di classi e metodi statici
 Non tutte le classi .NET Framework possono essere create usando **New-Object**. Ad esempio, se si prova a creare un oggetto **System.Environment** o **System.Math** con **New-Object**, verranno visualizzati i messaggi di errore seguenti:
 
@@ -113,8 +116,7 @@ False
 ### Eseguire operazioni matematiche con System.Math
 La classe statica System.Math è utile per l'esecuzione di operazioni matematiche. I membri importanti di **System.Math** sono per lo più metodi, che è possibile visualizzare usando **Get-Member**.
 
-> [!NOTE]
-> System.Math ha diversi metodi con lo stesso nome, che si distinguono in base al tipo dei relativi parametri.
+> [!NOTE] System.Math ha diversi metodi con lo stesso nome, che si distinguono in base al tipo dei relativi parametri.
 
 Digitare il comando seguente per elencare i metodi della classe **System.Math**.
 
@@ -182,6 +184,6 @@ PS> [System.Math]::Truncate(-9.3)
 
 
 
-<!--HONumber=Apr16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

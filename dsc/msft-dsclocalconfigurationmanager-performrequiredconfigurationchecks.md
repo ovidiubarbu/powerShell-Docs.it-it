@@ -1,10 +1,14 @@
 ---
-DCS.appliesToProduct: 'WindowsServer\_Dev'
-Description: 'Avvia una verifica di coerenza.'
-MS-HAID: 'cimwin32a.MSFT_DSCLocalConfigurationManager\_performrequiredconfigurationchecks'
-MSHAttr: 'PreferredLib:/library'
-title: 'Metodo PerformRequiredConfigurationChecks della classe MSFT_DSCLocalConfigurationManager'
+title: Metodo PerformRequiredConfigurationChecks della classe MSFT_DSCLocalConfigurationManager 
+ms.date:  2016-05-16
+keywords:  powershell,DSC
+description:  
+ms.topic:  article
+author:  eslesar
+manager:  dongill
+ms.prod:  powershell
 ---
+
 
 # Metodo PerformRequiredConfigurationChecks della classe MSFT_DSCLocalConfigurationManager
 
@@ -62,6 +66,6 @@ Si tratta di un metodo statico.
 
 
 
-<!--HONumber=Apr16_HO2-->
+<!--HONumber=May16_HO3-->
 
 

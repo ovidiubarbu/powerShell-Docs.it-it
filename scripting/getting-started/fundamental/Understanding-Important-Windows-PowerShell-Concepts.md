@@ -1,12 +1,15 @@
 ---
-title: Informazioni sui concetti importanti di Windows PowerShell
-ms.custom: na
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 3e601e38-4520-4578-a48d-b6779f1d35ee
+title:  Informazioni sui concetti importanti di Windows PowerShell
+ms.date:  2016-05-11
+keywords:  powershell,cmdlet
+description:  
+ms.topic:  article
+author:  jpjofre
+manager:  dongill
+ms.prod:  powershell
+ms.assetid:  3e601e38-4520-4578-a48d-b6779f1d35ee
 ---
+
 # Informazioni sui concetti importanti di Windows PowerShell
 La progettazione di Windows PowerShell integra concetti relativi a molti ambienti diversi. Alcuni di essi sono già noti agli utenti con esperienza di shell o ambienti di programmazione specifici, ma in pochi li conosceranno tutti. La comprensione di alcuni di questi concetti assicura un'utile conoscenza generale della shell.
 
@@ -28,7 +31,7 @@ A causa della speciale natura dei comandi interni di Windows PowerShell, saranno
 ### Windows PowerShell gestisce l'input e la visualizzazione della console
 Quando si digita un comando, l'input della riga di comando viene sempre elaborato direttamente. Windows PowerShell formatta inoltre l'output visualizzato sullo schermo. Questo aspetto è fondamentale perché riduce il lavoro richiesto a ogni cmdlet e assicura di poter sempre eseguire le operazioni nello stesso modo, indipendentemente dal cmdlet usato. Un esempio di come ciò semplifichi le cose per gli sviluppatori di strumenti e gli utenti è costituito dalla Guida della riga di comando.
 
-Gli strumenti da riga di comando tradizionali hanno i propri schemi per la richiesta e la visualizzazione della Guida. Alcuni strumenti da riga di comando usano **/?** per attivare la visualizzazione della Guida, mentre altri usano **-?**, **/H** o addirittura **//**. Alcuni visualizzano la Guida in una finestra GUI, invece che nella visualizzazione della console. Alcuni strumenti complessi, come quelli di aggiornamento delle applicazioni, decomprimono i file interni prima di visualizzare la Guida. Se si usa il parametro sbagliato, lo strumento potrebbe ignorare quanto è stato digitato e iniziare a eseguire automaticamente un'attività.
+Gli strumenti da riga di comando tradizionali hanno i propri schemi per la richiesta e la visualizzazione della Guida. Alcuni strumenti da riga di comando usano **/?** per attivare la visualizzazione della Guida, mentre altri usano **\-?**, **\/H** o addirittura **\/\/**. Alcuni visualizzano la Guida in una finestra GUI, invece che nella visualizzazione della console. Alcuni strumenti complessi, come quelli di aggiornamento delle applicazioni, decomprimono i file interni prima di visualizzare la Guida. Se si usa il parametro sbagliato, lo strumento potrebbe ignorare quanto è stato digitato e iniziare a eseguire automaticamente un'attività.
 
 Quando si immette un comando in Windows PowerShell, tutto ciò che si digita viene analizzato e pre-elaborato automaticamente. Se si usa il parametro **-?** con un cmdlet di Windows PowerShell, significa sempre "Mostra Guida per il comando". Gli sviluppatori di cmdlet non devono analizzare il comando, ma si limitano a fornire il testo della Guida.
 
@@ -44,6 +47,6 @@ Per chi non programma in C#, questa analogia non è importante. Se tuttavia si h
 
 
 
-<!--HONumber=Apr16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

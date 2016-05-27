@@ -1,12 +1,15 @@
 ---
-title: Creazione di oggetti .NET e COM (New-Object)
-ms.custom: na
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 2057b113-efeb-465e-8b44-da2f20dbf603
+title:  Creazione di oggetti .NET e COM (New-Object) 
+ms.date:  2016-05-11
+keywords:  powershell,cmdlet
+description:  
+ms.topic:  article
+author:  jpjofre
+manager:  dongill
+ms.prod:  powershell
+ms.assetid:  2057b113-efeb-465e-8b44-da2f20dbf603
 ---
+
 # Creazione di oggetti .NET e COM (New-Object)
 Sono disponibili componenti software con interfacce .NET Framework e COM che consentono di eseguire molte attività di amministrazione di sistema. Windows PowerShell consente di usare questi componenti, in modo da non essere limitati alle attività eseguibili con i cmdlet. Molti dei cmdlet nella versione iniziale di Windows PowerShell non funzionano su computer remoti. Verrà illustrato come aggirare questa limitazione per la gestione dei registri eventi con la classe **System.Diagnostics.EventLog** di .NET Framework direttamente da Windows PowerShell.
 
@@ -175,20 +178,11 @@ $Home\Desktop\PSHome.lnk
 
 Ora esiste una variabile denominata **$lnk** che contiene un riferimento al nuovo collegamento. Per visualizzarne tutti i membri, è possibile inviarla tramite pipe a **Get-Member**. L'output seguente mostra i membri che è necessario usare per completare la creazione del collegamento:
 
-<pre>PS> $lnk | Get-Member
-TypeName: System.__ComObject#{f935dc23-1cf0-11d0-adb9-00c04fd58a0b}
-Name             MemberType   Definition
-----             ----------   ----------
-...
-Save             Method       void Save ()
-...
-TargetPath       Property     string TargetPath () {get} {set}
-...</pre>
+<pre>PS> $lnk | Get-Member TypeName: System.__ComObject#{f935dc23-1cf0-11d0-adb9-00c04fd58a0b} Name             MemberType   Definition ----             ----------   ---------- ... Save             Method       void Save () ... TargetPath       Property     string TargetPath () {get} {set} ...</pre>
 
 È necessario specificare **TargetPath**, ovvero la cartella dell'applicazione per Windows PowerShell e quindi salvare il collegamento **$lnk** chiamando il metodo **Save**. Il percorso della cartella dell'applicazione Windows PowerShell è archiviato nella variabile **$PSHome**, quindi è possibile eseguire questa operazione digitando:
 
-<pre>$lnk.TargetPath = $PSHome
-$lnk.Save()</pre>
+<pre>$lnk.TargetPath = $PSHome $lnk.Save()</pre>
 
 ### Uso di Internet Explorer da Windows PowerShell
 Molte applicazioni, compresa la famiglia di applicazioni Microsoft Office e Internet Explorer, possono essere automatizzate tramite COM. Internet Explorer dimostra alcune delle tecniche tipiche e dei problemi correlati all'uso delle applicazioni basate su COM.
@@ -266,6 +260,6 @@ Anche se l'oggetto viene comunque creato, viene segnalato che non si tratta di u
 
 
 
-<!--HONumber=Apr16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

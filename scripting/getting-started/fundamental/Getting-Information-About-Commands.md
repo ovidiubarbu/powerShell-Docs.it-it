@@ -1,12 +1,15 @@
 ---
-title: Recupero di informazioni sui comandi
-ms.custom: na
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 56f8e5b4-d97c-4e59-abbe-bf13e464eb0d
+title:  Recupero di informazioni sui comandi
+ms.date:  2016-05-11
+keywords:  powershell,cmdlet
+description:  
+ms.topic:  article
+author:  jpjofre
+manager:  dongill
+ms.prod:  powershell
+ms.assetid:  56f8e5b4-d97c-4e59-abbe-bf13e464eb0d
 ---
+
 # Recupero di informazioni sui comandi
 Il cmdlet **Get-Command** di Windows PowerShell ottiene tutti i comandi disponibili nella sessione corrente. Quando si digita **Get-Command** al prompt di Windows PowerShell, verrà visualizzato un output simile al seguente:
 
@@ -78,6 +81,6 @@ Get-Command -CommandType Script
 
 
 
-<!--HONumber=Apr16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

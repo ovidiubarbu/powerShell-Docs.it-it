@@ -1,12 +1,15 @@
 ---
-title: Appendice 2 - Creazione di un collegamento personalizzato per PowerShell
-ms.custom: na
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 5d4fd421-5d43-4ec7-86fd-acfe887b066e
+title:  Appendice 2 - Creazione di un collegamento personalizzato per PowerShell
+ms.date:  2016-05-11
+keywords:  powershell,cmdlet
+description:  
+ms.topic:  article
+author:  jpjofre
+manager:  dongill
+ms.prod:  powershell
+ms.assetid:  5d4fd421-5d43-4ec7-86fd-acfe887b066e
 ---
+
 # Appendice 2 - Creazione di un collegamento personalizzato per PowerShell
 La procedura seguente descrive come creare un collegamento a Windows PowerShell con diverse opzioni utili personalizzate.
 
@@ -38,6 +41,6 @@ La procedura seguente descrive come creare un collegamento a Windows PowerShell 
 
 
 
-<!--HONumber=Apr16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

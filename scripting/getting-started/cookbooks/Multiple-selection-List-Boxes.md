@@ -1,12 +1,15 @@
 ---
-title: Caselle di riepilogo a selezione multipla
-ms.custom: na
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: f74cd5d9-da57-4802-b614-0b194a7bc8f8
+title:  Caselle di riepilogo a selezione multipla
+ms.date:  2016-05-11
+keywords:  powershell,cmdlet
+description:  
+ms.topic:  article
+author:  jpjofre
+manager:  dongill
+ms.prod:  powershell
+ms.assetid:  f74cd5d9-da57-4802-b614-0b194a7bc8f8
 ---
+
 # Caselle di riepilogo a selezione multipla
 Usare Windows PowerShell 3.0 e versioni successive per creare un controllo casella di riepilogo a selezione multipla in un Windows Form personalizzato.
 
@@ -177,12 +180,12 @@ if ($result -eq [System.Windows.Forms.DialogResult]::OK)
 ```
 
 ## Vedere anche
-[Blog Hey Scripting Guy: perché questi esempi di GUI di PowerShell non funzionano?](http://go.microsoft.com/fwlink/?LinkId=506644)
-[GitHub: WinFormsExampleUpdates di Dave Wyatt](https://github.com/dlwyatt/WinFormsExampleUpdates)
-[Suggerimento della settimana su Windows PowerShell: Caselle di riepilogo a selezione multipla e altro ancora!](http://technet.microsoft.com/library/ff730950.aspx)
+Post di blog [Hey Scripting Guy:  Why don't these PowerShell GUI examples work?](http://go.microsoft.com/fwlink/?LinkId=506644)
+[GitHub: aggiornamento di esempi di Windows Form di Dave Wyatt](https://github.com/dlwyatt/WinFormsExampleUpdates)
+[Windows PowerShell Tip of the Week:  Creating a Graphical Date Picker](http://technet.microsoft.com/library/ff730950.aspx) (Suggerimento settimanale di Windows PowerShell: caselle di riepilogo a selezione multipla e non solo!)
 
 
 
-<!--HONumber=Apr16_HO1-->
+<!--HONumber=May16_HO2-->
 
 

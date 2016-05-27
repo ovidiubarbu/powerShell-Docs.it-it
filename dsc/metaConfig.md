@@ -1,3 +1,14 @@
+---
+title:   Configurazione di Gestione configurazione locale
+ms.date:  2016-05-16
+keywords:  powershell,DSC
+description:  
+ms.topic:  article
+author:  eslesar
+manager:  dongill
+ms.prod:  powershell
+---
+
 # Configurazione di Gestione configurazione locale
 
 > Si applica a: Windows PowerShell 5.0
@@ -138,15 +149,15 @@ Per definire una configurazione parziale, creare un blocco **PartialConfiguratio
 ## Vedere anche 
 
 ### Concetti
-Introduzione a Windows PowerShell DSC (Desired State Configuration) 
-[Configurazione di un server di pull DSC](pullServer.md) 
-[Gestione configurazione locale di Windows PowerShell 4.0 DSC (Desired State Configuration)](metaConfig4.md) 
+Introduzione a Windows PowerShell DSC [Configurazione di un server di pull DSC](pullServer.md) 
+[ Gestione configurazione locale di Windows PowerShell 4.0 DSC](metaConfig4.md) 
 
 ### Risorse aggiuntive
 [Set-DscLocalConfigurationManager](https://technet.microsoft.com/en-us/library/dn521621.aspx) 
-[Configurazione di un client di pull con nomi di configurazione](pullClientConfigNames.md) 
+[Configurazione di un client di pull usando nomi di configurazione](pullClientConfigNames.md) 
 
 
-<!--HONumber=Mar16_HO4-->
+
+<!--HONumber=May16_HO3-->
 
 

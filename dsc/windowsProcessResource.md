@@ -1,3 +1,14 @@
+---
+title:   Risorsa WindowsProcess DSC
+ms.date:  2016-05-16
+keywords:  powershell,DSC
+description:  
+ms.topic:  article
+author:  eslesar
+manager:  dongill
+ms.prod:  powershell
+---
+
 # Risorsa WindowsProcess DSC
 
 > Si applica a: Windows PowerShell 4.0, Windows PowerShell 5.0
@@ -33,4 +44,9 @@ WindowsProcess [string] #ResourceName
 | StandardInputPath| Indica il percorso di input standard.| 
 | StandardOutputPath| Indica il percorso in cui scrivere l'output standard. Qualsiasi file esistente verrà sovrascritto.| 
 | WorkingDirectory| Indica il percorso che verrà usato come directory di lavoro corrente per il processo.| 
-<!--HONumber=Feb16_HO4-->
+
+
+
+<!--HONumber=May16_HO3-->
+
+

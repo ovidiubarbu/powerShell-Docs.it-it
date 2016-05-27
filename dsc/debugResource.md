@@ -1,3 +1,14 @@
+---
+title:   Debug di risorse DSC
+ms.date:  2016-05-16
+keywords:  powershell,DSC
+description:  
+ms.topic:  article
+author:  eslesar
+manager:  dongill
+ms.prod:  powershell
+---
+
 # Debug di risorse DSC
 
 > Si applica a: Windows PowerShell 5.0
@@ -5,7 +16,10 @@
 In PowerShell 5.0 è stata introdotta una nuova funzionalità in DSC (Desired State Configuration) che permette di eseguire il debug di una risorsa DSC durante l'applicazione di una configurazione.
 
 ## Abilitazione del debug di DSC
-Prima di poter eseguire il debug di una risorsa, è necessario abilitare il debug chiamando il cmdlet [Enable-DscDebug](https://technet.microsoft.com/en-us/library/mt517870.aspx). Questo cmdlet accetta il parametro obbligatorio **BreakAll**. È possibile verificare che il debug sia stato abilitato osservando il risultato di una chiamata a [Get-DscLocalConfigurationManager](https://technet.microsoft.com/en-us/library/dn407378.aspx). L'output di PowerShell seguente mostra il risultato dell'abilitazione del debug:
+Prima di poter eseguire il debug di una risorsa, è necessario abilitare il debug chiamando il cmdlet [Enable-DscDebug](https://technet.microsoft.com/en-us/library/mt517870.aspx). Questo cmdlet accetta il parametro obbligatorio **BreakAll**. 
+
+È possibile verificare che il debug sia stato abilitato osservando il risultato di una chiamata a [Get-DscLocalConfigurationManager](https://technet.microsoft.com/en-us/library/dn407378.aspx). 
+L'output di PowerShell seguente mostra il risultato dell'abilitazione del debug:
 
 
 ```powershell
@@ -44,9 +58,7 @@ Configuration PSWebAccess
     }
 PSWebAccess
 ```
-Dopo aver compilato la configurazione, avviarla chiamando [Start-DscConfiguration](https://technet.microsoft.com/en-us/library/dn521623.aspx). La configurazione verrà arrestata quando
-Gestione configurazione locale esegue una chiamata nella prima risorsa nella configurazione. Se si usano i parametri `-Verbose` e `-Wait`, l'output visualizza le righe che devono essere immesse
-per avviare il debug.
+Dopo aver compilato la configurazione, avviarla chiamando [Start-DscConfiguration](https://technet.microsoft.com/en-us/library/dn521623.aspx). La configurazione verrà arrestata quando Gestione configurazione locale chiama la prima risorsa nella configurazione. Se si usano i parametri `-Verbose` e `-Wait`, l'output visualizza le righe che devono essere immesse per avviare il debug.
 
 ```powershell
 PS C:\DebugTest> Start-DscConfiguration .\PSWebAccess -Wait -Verbose
@@ -72,21 +84,28 @@ A questo punto, Gestione configurazione locale ha chiamato la risorsa e ha raggi
 
 ## Debug dello script della risorsa
 
-Avviare una nuova istanza di PowerShell ISE. Nel riquadro della console immettere le ultime tre righe di output dall'output di `Start-DscConifiguration` come comandi, sostituendo `<credentials>` con
-credenziali utente valide. Dovrebbe essere visualizzato un messaggio simile a:
+Avviare una nuova istanza di PowerShell ISE. Nel riquadro della console immettere le ultime tre righe di output dall'output di `Start-DscConifiguration` come comandi, sostituendo `<credentials>` con credenziali utente valide. Dovrebbe essere visualizzato un messaggio simile a:
 
 ```powershell
 [TEST-SRV]: [DBG]: [Process:9000]: [RemoteHost]: PS C:\DebugTest>>
 ```
 
 Lo script della risorsa verrà aperto nel riquadro di script e il debugger viene interrotto alla prima riga della funzione **Test-TargetResource** (metodo **Test()** di una risorsa basata su classi).
-A questo punto è possibile usare i comandi di debug in ISE per eseguire lo script della risorsa un'istruzione alla volta, esaminare i valori delle variabili, visualizzare lo stack di chiamate e così via. Per informazioni sul debug in PowerShell ISE,
-vedere [Modalità di esecuzione del debug degli script in Windows PowerShell ISE](https://technet.microsoft.com/en-us/library/dd819480.aspx). Tenere presente che ogni riga nello script della risorsa (o classe) è impostata come punto di interruzione.
+A questo punto è possibile usare i comandi di debug in ISE per eseguire lo script della risorsa un'istruzione alla volta, esaminare i valori delle variabili, visualizzare lo stack di chiamate e così via. Per informazioni sul debug in PowerShell ISE, vedere [How to Debug Scripts in Windows PowerShell ISE](https://technet.microsoft.com/en-us/library/dd819480.aspx) (Come eseguire il debug degli script in Windows PowerShell ISE). Tenere presente che ogni riga nello script della risorsa (o classe) è impostata come punto di interruzione.
+
+## Disabilitare il debug di DSC
+
+Dopo la chiamata di [Enable-DscDebug](https://technet.microsoft.com/en-us/library/mt517870.aspx), tutte le chiamate a [Start-DscConfiguration](https://technet.microsoft.com/en-us/library/dn521623.aspx) comporteranno l'interruzione della configurazione nel debugger. Per consentire la normale esecuzione delle configurazioni, è necessario disabilitare il debug chiamando il cmdlet [Disable-DscDebug](https://technet.microsoft.com/en-us/library/mt517872.aspx).
+
+>**Nota:** il riavvio non modifica lo stato di debug della Gestione configurazione locale. Se il debug è abilitato, quando si avvia una configurazione questa verrà interrotta nel debugger dopo il riavvio.
+
 
 ## Vedere anche
 - [Scrittura di una risorsa DSC personalizzata con MOF](authoringResourceMOF.md) 
 - [Scrittura di una risorsa DSC personalizzata con classi di PowerShell](authoringResourceClass.md)
 
-<!--HONumber=Mar16_HO2-->
+
+
+<!--HONumber=May16_HO3-->
 
 

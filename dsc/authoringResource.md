@@ -1,3 +1,14 @@
+---
+title:   Creare risorse Windows PowerShell DSC (Desired State Configuration) personalizzate
+ms.date:  2016-05-16
+keywords:  powershell,DSC
+description:  
+ms.topic:  article
+author:  eslesar
+manager:  dongill
+ms.prod:  powershell
+---
+
 # Creare risorse Windows PowerShell DSC (Desired State Configuration) personalizzate
 
 > Si applica a: Windows PowerShell 4.0, Windows PowerShell 5.0
@@ -12,4 +23,10 @@ Una risorsa DSC è un modulo di Windows PowerShell. Il modulo contiene sia lo sc
 * [Implementazione di una risorsa DSC in C#](authoringResourceMofCS.md) 
 * [Scrittura di una risorsa DSC personalizzata con classi di PowerShell](authoringResourceClass.md) 
 * [Risorse composite: uso di una configurazione DSC come risorsa](authoringResourceComposite.md) 
-* [Uso dello strumento di progettazione risorse](authoringResourceMofDesigner.md) <!--HONumber=Feb16_HO4-->
+* [Uso dello strumento di progettazione risorse](authoringResourceMofDesigner.md) 
+
+
+
+<!--HONumber=May16_HO3-->
+
+
