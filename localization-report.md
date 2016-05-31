@@ -5,9 +5,9 @@
  -------- | ----- 
  Total Files | 318
 [ Handoff Failed Files ](#handoff-failed-list)| 0
-[ Handoff Success Files ](#handoff-success-list)| 3
+[ Handoff Success Files ](#handoff-success-list)| 0
 [ Archive Failed Files ](#archive-failed-list)| 0
-[ Archive Success Files ](#archive-success-list)| 0
+[ Archive Success Files ](#archive-success-list)| 3
 [ Handback Failed Files ](#handback-failed-list)| 0
 [ Out Of Sync Handback Files ](#outofsync-handback-success-list)| 84
 [ In Sync Handback Files ](#insync-handback-success-list)| 217
@@ -16,15 +16,15 @@
 ## <a name='handoff-failed-list'></a> Handoff Failed File List
 
 ## <a name='handoff-success-list'></a> Handoff Success File List
- Source File | Status | Details 
- ----------- | ------ | ------- 
- [scripting\getting-started\fundamental\Scripting-with-Windows-PowerShell.md](https://github.com/PowerShell/powerShell-Docs/blob/03ac4b90d299b316194f1fa932e7dbf62d4b1c8e/scripting/getting-started/fundamental/Scripting-with-Windows-PowerShell.md) | HandedOffSuccess | [Details](#0148f4631e34e65a4336c5d1d50e313fb6639748201)
- [scripting\PowerShell-Scripting.md](https://github.com/PowerShell/powerShell-Docs/blob/03ac4b90d299b316194f1fa932e7dbf62d4b1c8e/scripting/PowerShell-Scripting.md) | HandedOffSuccess | [Details](#5398df704bc69fc4f333e23b5d9f21efc0859dff215)
- [scripting\setup\Installing-the-Windows-PowerShell-SDK.md](https://github.com/PowerShell/powerShell-Docs/blob/03ac4b90d299b316194f1fa932e7dbf62d4b1c8e/scripting/setup/Installing-the-Windows-PowerShell-SDK.md) | HandedOffSuccess | [Details](#9ba9ef3efe6a8ae85d96b59db53ad3a16bf57699218)
 
 ## <a name='archive-failed-list'></a> Archive Failed File List
 
 ## <a name='archive-success-list'></a> Archive Success File List
+ Source File | Status | Details 
+ ----------- | ------ | ------- 
+ [scripting\getting-started\fundamental\Scripting-with-Windows-PowerShell.md](https://github.com/PowerShell/powerShell-Docs/blob/03ac4b90d299b316194f1fa932e7dbf62d4b1c8e/scripting/getting-started/fundamental/Scripting-with-Windows-PowerShell.md) | ArchivedSuccess | [Details](#0148f4631e34e65a4336c5d1d50e313fb6639748201)
+ [scripting\PowerShell-Scripting.md](https://github.com/PowerShell/powerShell-Docs/blob/03ac4b90d299b316194f1fa932e7dbf62d4b1c8e/scripting/PowerShell-Scripting.md) | ArchivedSuccess | [Details](#5398df704bc69fc4f333e23b5d9f21efc0859dff215)
+ [scripting\setup\Installing-the-Windows-PowerShell-SDK.md](https://github.com/PowerShell/powerShell-Docs/blob/03ac4b90d299b316194f1fa932e7dbf62d4b1c8e/scripting/setup/Installing-the-Windows-PowerShell-SDK.md) | ArchivedSuccess | [Details](#9ba9ef3efe6a8ae85d96b59db53ad3a16bf57699218)
 
 ## <a name='handback-failed-list'></a> Handback Failed File List
 
@@ -1226,8 +1226,8 @@
 * Handoff File: [partialConfigs.f483ab7fa1511b557780a02b5b807245f730c1b6.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/c73e65362b6e8459272b637783a27d39cc01969e/ol-handoff/PowerShell/powerShell-Docs.it-it/live/partialConfigs.f483ab7fa1511b557780a02b5b807245f730c1b6.it-it.xlf)
 * Handoff Datetime: 2016-05-27 23:55:04
 * Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
+* Archive File: [partialConfigs.f483ab7fa1511b557780a02b5b807245f730c1b6.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/0e2cfd3f4b523b617830f9d7a6886da063a32f61/ol-handoff/PowerShell/powerShell-Docs.it-it/live/archive/partialConfigs.f483ab7fa1511b557780a02b5b807245f730c1b6.it-it.xlf)
+* Archive Datetime: 2016-05-31 13:21:52
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * Current Target File: [dsc\partialConfigs.md](https://github.com/PowerShell/powerShell-Docs.it-it/blob/d6f85f78d1a39b4f068671fec0b9db006f5cd41e/dsc/partialConfigs.md)
@@ -1289,8 +1289,8 @@
 * Handoff File: [pullServer.4b925b277da29998394af746bdbdd508fda48909.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/dd78c8dacbe6860b289ca95c53949ccc39144f0b/ol-handoff/PowerShell/powerShell-Docs.it-it/live/pullServer.4b925b277da29998394af746bdbdd508fda48909.it-it.xlf)
 * Handoff Datetime: 2016-05-27 16:55:58
 * Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
+* Archive File: [pullServer.4b925b277da29998394af746bdbdd508fda48909.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/0e2cfd3f4b523b617830f9d7a6886da063a32f61/ol-handoff/PowerShell/powerShell-Docs.it-it/live/archive/pullServer.4b925b277da29998394af746bdbdd508fda48909.it-it.xlf)
+* Archive Datetime: 2016-05-31 13:21:52
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * Current Target File: [dsc\pullServer.md](https://github.com/PowerShell/powerShell-Docs.it-it/blob/fbd0076d1d7fc080e449ce170b688592b0b60a0e/dsc/pullServer.md)
@@ -1340,8 +1340,8 @@
 * Handoff File: [reportServer.53df4bc8b7b80c0a19c11434bdf5f4304e8248f7.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/c5fc7ed19d65ec6c89a57c13203f454fd0175ba6/ol-handoff/PowerShell/powerShell-Docs.it-it/live/reportServer.53df4bc8b7b80c0a19c11434bdf5f4304e8248f7.it-it.xlf)
 * Handoff Datetime: 2016-05-27 16:25:16
 * Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
+* Archive File: [reportServer.53df4bc8b7b80c0a19c11434bdf5f4304e8248f7.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/0e2cfd3f4b523b617830f9d7a6886da063a32f61/ol-handoff/PowerShell/powerShell-Docs.it-it/live/archive/reportServer.53df4bc8b7b80c0a19c11434bdf5f4304e8248f7.it-it.xlf)
+* Archive Datetime: 2016-05-31 13:21:52
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * Current Target File: [dsc\reportServer.md](https://github.com/PowerShell/powerShell-Docs.it-it/blob/d6f85f78d1a39b4f068671fec0b9db006f5cd41e/dsc/reportServer.md)
@@ -2279,8 +2279,8 @@
 * Handoff File: [Running-Remote-Commands.625cb4f9a4da4433a285f1820cb5aa2ba4546438.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/c5fc7ed19d65ec6c89a57c13203f454fd0175ba6/ol-handoff/PowerShell/powerShell-Docs.it-it/live/Running-Remote-Commands.625cb4f9a4da4433a285f1820cb5aa2ba4546438.it-it.xlf)
 * Handoff Datetime: 2016-05-27 16:25:16
 * Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
+* Archive File: [Running-Remote-Commands.625cb4f9a4da4433a285f1820cb5aa2ba4546438.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/0e2cfd3f4b523b617830f9d7a6886da063a32f61/ol-handoff/PowerShell/powerShell-Docs.it-it/live/archive/Running-Remote-Commands.625cb4f9a4da4433a285f1820cb5aa2ba4546438.it-it.xlf)
+* Archive Datetime: 2016-05-31 13:21:52
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * Current Target File: [scripting\core-powershell\Running-Remote-Commands.md](https://github.com/PowerShell/powerShell-Docs.it-it/blob/d6f85f78d1a39b4f068671fec0b9db006f5cd41e/scripting/core-powershell/Running-Remote-Commands.md)
@@ -2961,13 +2961,13 @@
 * [Back to Top](#report-top)
 
 ##### <a name='0148f4631e34e65a4336c5d1d50e313fb6639748201'></a> Source: [scripting\getting-started\fundamental\Scripting-with-Windows-PowerShell.md](https://github.com/PowerShell/powerShell-Docs/blob/03ac4b90d299b316194f1fa932e7dbf62d4b1c8e/scripting/getting-started/fundamental/Scripting-with-Windows-PowerShell.md)
-* Status: HandedOffSuccess
+* Status: ArchivedSuccess
 * Target File: 
 * Handoff File: [Scripting-with-Windows-PowerShell.2db569b949f9f41122774e4819582e471a7b8657.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/ca2e562d4a24ccbf4e3d8a3d8a9c2083975bbad9/ol-handoff/PowerShell/powerShell-Docs.it-it/live/Scripting-with-Windows-PowerShell.2db569b949f9f41122774e4819582e471a7b8657.it-it.xlf)
 * Handoff Datetime: 2016-05-25 03:22:45
 * Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
+* Archive File: [Scripting-with-Windows-PowerShell.2db569b949f9f41122774e4819582e471a7b8657.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/0e2cfd3f4b523b617830f9d7a6886da063a32f61/ol-handoff/PowerShell/powerShell-Docs.it-it/live/archive/Scripting-with-Windows-PowerShell.2db569b949f9f41122774e4819582e471a7b8657.it-it.xlf)
+* Archive Datetime: 2016-05-31 13:21:52
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
@@ -3159,13 +3159,13 @@
 * [Back to Top](#report-top)
 
 ##### <a name='5398df704bc69fc4f333e23b5d9f21efc0859dff215'></a> Source: [scripting\PowerShell-Scripting.md](https://github.com/PowerShell/powerShell-Docs/blob/03ac4b90d299b316194f1fa932e7dbf62d4b1c8e/scripting/PowerShell-Scripting.md)
-* Status: HandedOffSuccess
+* Status: ArchivedSuccess
 * Target File: 
 * Handoff File: [PowerShell-Scripting.8f5d79e74e333fb9812de946411a1b4ef2060582.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/ca2e562d4a24ccbf4e3d8a3d8a9c2083975bbad9/ol-handoff/PowerShell/powerShell-Docs.it-it/live/PowerShell-Scripting.8f5d79e74e333fb9812de946411a1b4ef2060582.it-it.xlf)
 * Handoff Datetime: 2016-05-25 03:22:45
 * Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
+* Archive File: [PowerShell-Scripting.8f5d79e74e333fb9812de946411a1b4ef2060582.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/0e2cfd3f4b523b617830f9d7a6886da063a32f61/ol-handoff/PowerShell/powerShell-Docs.it-it/live/archive/PowerShell-Scripting.8f5d79e74e333fb9812de946411a1b4ef2060582.it-it.xlf)
+* Archive Datetime: 2016-05-31 13:21:52
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
@@ -3198,13 +3198,13 @@
 * [Back to Top](#report-top)
 
 ##### <a name='9ba9ef3efe6a8ae85d96b59db53ad3a16bf57699218'></a> Source: [scripting\setup\Installing-the-Windows-PowerShell-SDK.md](https://github.com/PowerShell/powerShell-Docs/blob/03ac4b90d299b316194f1fa932e7dbf62d4b1c8e/scripting/setup/Installing-the-Windows-PowerShell-SDK.md)
-* Status: HandedOffSuccess
+* Status: ArchivedSuccess
 * Target File: 
 * Handoff File: [Installing-the-Windows-PowerShell-SDK.bfd31a5fc654dd34236aff66cf62844476672b64.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/ca2e562d4a24ccbf4e3d8a3d8a9c2083975bbad9/ol-handoff/PowerShell/powerShell-Docs.it-it/live/Installing-the-Windows-PowerShell-SDK.bfd31a5fc654dd34236aff66cf62844476672b64.it-it.xlf)
 * Handoff Datetime: 2016-05-25 03:22:45
 * Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
+* Archive File: [Installing-the-Windows-PowerShell-SDK.bfd31a5fc654dd34236aff66cf62844476672b64.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/0e2cfd3f4b523b617830f9d7a6886da063a32f61/ol-handoff/PowerShell/powerShell-Docs.it-it/live/archive/Installing-the-Windows-PowerShell-SDK.bfd31a5fc654dd34236aff66cf62844476672b64.it-it.xlf)
+* Archive Datetime: 2016-05-31 13:21:52
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
@@ -4274,8 +4274,8 @@
 * Handoff File: [productincompat.62bb00299c0283b5297001553476a745e28a49cb.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/9c1de055a579024fd8190121581638fe13118fb8/ol-handoff/PowerShell/powerShell-Docs.it-it/live/productincompat.62bb00299c0283b5297001553476a745e28a49cb.it-it.xlf)
 * Handoff Datetime: 2016-05-27 20:55:25
 * Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
+* Archive File: [productincompat.62bb00299c0283b5297001553476a745e28a49cb.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/0e2cfd3f4b523b617830f9d7a6886da063a32f61/ol-handoff/PowerShell/powerShell-Docs.it-it/live/archive/productincompat.62bb00299c0283b5297001553476a745e28a49cb.it-it.xlf)
+* Archive Datetime: 2016-05-31 13:21:52
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * Current Target File: [wmf\productincompat.md](https://github.com/PowerShell/powerShell-Docs.it-it/blob/fdbc54a03b5aa2e312544606ca1bf4e603b0f13d/wmf/productincompat.md)
