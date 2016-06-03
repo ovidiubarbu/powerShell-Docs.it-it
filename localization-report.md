@@ -9,8 +9,8 @@
 [ Archive Failed Files ](#archive-failed-list)| 0
 [ Archive Success Files ](#archive-success-list)| 0
 [ Handback Failed Files ](#handback-failed-list)| 0
-[ Out Of Sync Handback Files ](#outofsync-handback-success-list)| 83
-[ In Sync Handback Files ](#insync-handback-success-list)| 221
+[ Out Of Sync Handback Files ](#outofsync-handback-success-list)| 82
+[ In Sync Handback Files ](#insync-handback-success-list)| 222
 [ Ignored Files ](#ignored-list)| 16
 
 ## <a name='handoff-failed-list'></a> Handoff Failed File List
@@ -113,7 +113,6 @@
  [scripting\whats-new\What-s-New-in-Windows-PowerShell-50.md](https://github.com/PowerShell/powerShell-Docs/blob/ca7ab17f7ba2615c7a39d1e3dd944501bab4e72c/scripting/whats-new/What-s-New-in-Windows-PowerShell-50.md) | OutofSyncHandedBackSuccess | [Details](#87e4a23f93d19219a8d00671f319ef93a96fbbf6236)
  [scripting\whats-new\What-s-New-With-PowerShell.md](https://github.com/PowerShell/powerShell-Docs/blob/03ac4b90d299b316194f1fa932e7dbf62d4b1c8e/scripting/whats-new/What-s-New-With-PowerShell.md) | OutofSyncHandedBackSuccess | [Details](#abb8a868b735a2eb39a2276da6ece611d5423a16237)
  [wmf\productincompat.md](https://github.com/PowerShell/powerShell-Docs/blob/6462873e1dde8822c96c2863b5462a7e0ca40875/wmf/productincompat.md) | OutofSyncHandedBackSuccess | [Details](#5998288f1a82980b5988eb6d4fff1833ba5067e1310)
- [wmf\TOC.md](https://github.com/PowerShell/powerShell-Docs/blob/fb3eaba21c7ca7d09e398a302076ecb1651e6c61/wmf/TOC.md) | OutofSyncHandedBackSuccess | [Details](#af8aee96244140094066b8e2df65fdb525a94811321)
 
 ## <a name='insync-handback-success-list'></a> In Sync Handback File Success List
  Source File | Status | Details 
@@ -338,6 +337,7 @@
  [wmf\releasenotes.md](https://github.com/PowerShell/powerShell-Docs/blob/743c597c721d4abe67d657eaabd03ecc5cf19690/wmf/releasenotes.md) | InSyncHandedBackSuccess | [Details](#37ba02e8b09b56312fbcf8b031b9ef49a53e5436318)
  [wmf\requirements.md](https://github.com/PowerShell/powerShell-Docs/blob/02b9b25c505adbf49630145bc0543d6436edae0b/wmf/requirements.md) | InSyncHandedBackSuccess | [Details](#02ce3d08b01e58d6d9506f90142f92cc16304e64319)
  [wmf\sil_overview.md](https://github.com/PowerShell/powerShell-Docs/blob/743c597c721d4abe67d657eaabd03ecc5cf19690/wmf/sil_overview.md) | InSyncHandedBackSuccess | [Details](#edc1a0383cebfbe89b18b0238a13bb28e4d25c5a320)
+ [wmf\TOC.md](https://github.com/PowerShell/powerShell-Docs/blob/fb3eaba21c7ca7d09e398a302076ecb1651e6c61/wmf/TOC.md) | InSyncHandedBackSuccess | [Details](#af8aee96244140094066b8e2df65fdb525a94811321)
  [wmf\uninstall.md](https://github.com/PowerShell/powerShell-Docs/blob/743c597c721d4abe67d657eaabd03ecc5cf19690/wmf/uninstall.md) | InSyncHandedBackSuccess | [Details](#f97722883acccd0addb49cc473fc1cce5300c184322)
 
 ## <a name='ignored-list'></a> Ignored File List
@@ -929,9 +929,9 @@
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [dsc\metaConfig.md](https://github.com/PowerShell/powerShell-Docs.it-it/blob/d6f85f78d1a39b4f068671fec0b9db006f5cd41e/dsc/metaConfig.md)
-* Current Handback File: [metaConfig.915dba9ed66671e4a41c35a16d5248bb4c94e3d6.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/ad5fdf088166b9b0fc4a866489161af702d9a0fd/ol-handback/PowerShell/powerShell-Docs.it-it/live/metaConfig.915dba9ed66671e4a41c35a16d5248bb4c94e3d6.it-it.xlf)
-* Current Handback Datetime: 2016-05-27 16:30:53
+* Current Target File: [dsc\metaConfig.md](https://github.com/PowerShell/powerShell-Docs.it-it/blob/f5112122786854478d5a390f040966403ca40bd0/dsc/metaConfig.md)
+* Current Handback File: [metaConfig.915dba9ed66671e4a41c35a16d5248bb4c94e3d6.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/e5e196bf917c0713f7a6187b0801a864daf37dc5/ol-handback/PowerShell/powerShell-Docs.it-it/live/metaConfig.915dba9ed66671e4a41c35a16d5248bb4c94e3d6.it-it.xlf)
+* Current Handback Datetime: 2016-06-03 12:42:08
 * [Back to Top](#report-top)
 
 ##### <a name='25195166f4d9dd668427d6bb5d748ef61273cdee47'></a> Source: [dsc\metaConfig4.md](https://github.com/PowerShell/powerShell-Docs/blob/6477ae8575c83fc24150f9502515ff5b82bc8198/dsc/metaConfig4.md)
@@ -1235,9 +1235,9 @@
 * Archive Datetime: 2016-05-31 13:21:52
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [dsc\partialConfigs.md](https://github.com/PowerShell/powerShell-Docs.it-it/blob/d6f85f78d1a39b4f068671fec0b9db006f5cd41e/dsc/partialConfigs.md)
-* Current Handback File: [partialConfigs.f483ab7fa1511b557780a02b5b807245f730c1b6.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/ad5fdf088166b9b0fc4a866489161af702d9a0fd/ol-handback/PowerShell/powerShell-Docs.it-it/live/partialConfigs.f483ab7fa1511b557780a02b5b807245f730c1b6.it-it.xlf)
-* Current Handback Datetime: 2016-05-27 16:30:53
+* Current Target File: [dsc\partialConfigs.md](https://github.com/PowerShell/powerShell-Docs.it-it/blob/f5112122786854478d5a390f040966403ca40bd0/dsc/partialConfigs.md)
+* Current Handback File: [partialConfigs.f483ab7fa1511b557780a02b5b807245f730c1b6.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/e5e196bf917c0713f7a6187b0801a864daf37dc5/ol-handback/PowerShell/powerShell-Docs.it-it/live/partialConfigs.f483ab7fa1511b557780a02b5b807245f730c1b6.it-it.xlf)
+* Current Handback Datetime: 2016-06-03 12:42:08
 * [Back to Top](#report-top)
 
 ##### <a name='95f49fecdf13a54049caf27345d2a48c98b8f09b72'></a> Source: [dsc\pullClient.md](https://github.com/PowerShell/powerShell-Docs/blob/6477ae8575c83fc24150f9502515ff5b82bc8198/dsc/pullClient.md)
@@ -4340,9 +4340,9 @@
 * Archive Datetime: 2016-05-31 13:21:52
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [wmf\productincompat.md](https://github.com/PowerShell/powerShell-Docs.it-it/blob/fdbc54a03b5aa2e312544606ca1bf4e603b0f13d/wmf/productincompat.md)
-* Current Handback File: [productincompat.62bb00299c0283b5297001553476a745e28a49cb.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/b199e22be0b2b06493472e130af5d346434e42c4/ol-handback/PowerShell/powerShell-Docs.it-it/live/productincompat.62bb00299c0283b5297001553476a745e28a49cb.it-it.xlf)
-* Current Handback Datetime: 2016-05-11 09:07:55
+* Current Target File: [wmf\productincompat.md](https://github.com/PowerShell/powerShell-Docs.it-it/blob/f5112122786854478d5a390f040966403ca40bd0/wmf/productincompat.md)
+* Current Handback File: [productincompat.62bb00299c0283b5297001553476a745e28a49cb.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/e5e196bf917c0713f7a6187b0801a864daf37dc5/ol-handback/PowerShell/powerShell-Docs.it-it/live/productincompat.62bb00299c0283b5297001553476a745e28a49cb.it-it.xlf)
+* Current Handback Datetime: 2016-06-03 12:42:08
 * [Back to Top](#report-top)
 
 ##### <a name='4dfab3c01259382cb4a7ecfb9954d2fa7eb07aed311'></a> Source: [wmf\psget_module_overview.md](https://github.com/PowerShell/powerShell-Docs/blob/743c597c721d4abe67d657eaabd03ecc5cf19690/wmf/psget_module_overview.md)
@@ -4466,18 +4466,15 @@
 * [Back to Top](#report-top)
 
 ##### <a name='af8aee96244140094066b8e2df65fdb525a94811321'></a> Source: [wmf\TOC.md](https://github.com/PowerShell/powerShell-Docs/blob/fb3eaba21c7ca7d09e398a302076ecb1651e6c61/wmf/TOC.md)
-* Status: OutofSyncHandedBackSuccess
-* Target File: 
+* Status: InSyncHandedBackSuccess
+* Target File: [wmf\TOC.md](https://github.com/PowerShell/powerShell-Docs.it-it/blob/f5112122786854478d5a390f040966403ca40bd0/wmf/TOC.md)
 * Handoff File: [TOC.60497266061c38453b3db893ec675eb65584af89.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/499b82fcf0f138ee67d9a63401b147fd6cbec47d/ol-handoff/PowerShell/powerShell-Docs.it-it/live/TOC.60497266061c38453b3db893ec675eb65584af89.it-it.xlf)
 * Handoff Datetime: 2016-05-23 18:51:39
 * Handoff Reason: Include
 * Archive File: [TOC.60497266061c38453b3db893ec675eb65584af89.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/f07d88e76f6e57289b79834ed33cec3943ea69ba/ol-handoff/PowerShell/powerShell-Docs.it-it/live/archive/TOC.60497266061c38453b3db893ec675eb65584af89.it-it.xlf)
 * Archive Datetime: 2016-05-24 13:17:50
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [wmf\TOC.md](https://github.com/PowerShell/powerShell-Docs.it-it/blob/39be1e51b469a38af9bff65e7585b1922d336187/wmf/TOC.md)
-* Current Handback File: [TOC.60497266061c38453b3db893ec675eb65584af89.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/721d586bec4300c0887937c12ecfdbcdca19ba64/ol-handback/PowerShell/powerShell-Docs.it-it/live/TOC.60497266061c38453b3db893ec675eb65584af89.it-it.xlf)
-* Current Handback Datetime: 2016-03-30 18:07:12
+* Handback File: [TOC.60497266061c38453b3db893ec675eb65584af89.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/e5e196bf917c0713f7a6187b0801a864daf37dc5/ol-handback/PowerShell/powerShell-Docs.it-it/live/TOC.60497266061c38453b3db893ec675eb65584af89.it-it.xlf)
+* Handback Datetime: 2016-06-03 12:42:08
 * [Back to Top](#report-top)
 
 ##### <a name='f97722883acccd0addb49cc473fc1cce5300c184322'></a> Source: [wmf\uninstall.md](https://github.com/PowerShell/powerShell-Docs/blob/743c597c721d4abe67d657eaabd03ecc5cf19690/wmf/uninstall.md)
