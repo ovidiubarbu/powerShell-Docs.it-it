@@ -1,5 +1,5 @@
 ---
-title:  
+title: Classe MSFT_DSCLocalConfigurationManager 
 ms.date:  2016-05-16
 keywords:  powershell,DSC
 description:  
@@ -30,7 +30,7 @@ class MSFT_DSCLocalConfigurationManager
 
 La classe **MSFT_DSCLocalConfigurationManager** dispone dei membri seguenti:
 
--   [Methods][]
+-   [Metodo][]
 
 ### Metodo
 
