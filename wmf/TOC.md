@@ -2,9 +2,9 @@
 
 # [Dettagli dell'installazione](requirements.md)
 
-# [Incompatibilità note del prodotto](productincompat.md)
+# [Stato di compatibilità del prodotto](productincompat.md)
 
-# [Commenti e suggerimenti](feedback.md)
+# [Feedback](feedback.md)
 
 # [Scenari supportarti da WMF 5.0]()
 ## [JEA (Just Enough Administration)](jea_overview.md)
@@ -97,4 +97,8 @@
 
 # [Limitazioni e problemi noti](limitation_overview.md)
 ## [Problemi noti di Desired State Configuration (DSC)](limitation_dsc.md)
-<!--HONumber=Mar16_HO3-->
+
+
+<!--HONumber=May16_HO4-->
+
+

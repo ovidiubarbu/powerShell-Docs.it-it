@@ -22,7 +22,7 @@ Gestione configurazione locale è il motore di Windows PowerShell DSC (Desired S
 
 Per configurare Gestione configurazione locale in modo da specificare ognuno di questi comportamenti, è necessario usare un tipo speciale di configurazione. Le sezioni seguenti descrivono come configurare Gestione configurazione locale.
 
-> **Nota**: questo argomento si applica alla versione di Gestione configurazione locale introdotta in Windows PowerShell 5.0. Per informazioni sulla configurazione di Gestione configurazione locale in Windows PowerShell 4.0, vedere Gestione configurazione locale di Windows PowerShell 4.0 DSC (Desired State Configuration).
+> **Nota**: questo argomento si applica alla versione di Gestione configurazione locale introdotta in Windows PowerShell 5.0. Per informazioni sulla configurazione di Gestione configurazione locale in Windows PowerShell 4.0, vedere [Gestione configurazione locale di Windows PowerShell 4.0 DSC (Desired State Configuration)](metaconfig4.md).
 
 ## Scrittura e applicazione di una configurazione di Gestione configurazione locale
 
@@ -42,7 +42,7 @@ configuration LCMConfig
 } 
 ```
 
-È necessario chiamare ed eseguire la configurazione per creare il file MOF di configurazione, proprio come per una configurazione normale. Per informazioni sulla creazione del file MOF di configurazione, vedere Introduzione a Windows PowerShell DSC (Desired State Configuration). Diversamente dalle configurazioni normali, evitare di applicare una configurazione di Gestione configurazione locale chiamando il cmdlet [Start-DscConfiguration](https://technet.microsoft.com/en-us/library/dn521623.aspx). Chiamare invece il cmdlet Set-DscLocalConfigurationManager, specificando il percorso del file MOF di configurazione come parametro. Dopo aver applicato la configurazione, è possibile visualizzare le proprietà di Gestione configurazione locale chiamando il cmdlet [Get-DscLocalConfigurationManager](https://technet.microsoft.com/en-us/library/dn407378.aspx).
+È necessario chiamare ed eseguire la configurazione per creare il file MOF di configurazione, proprio come per una configurazione normale. Per informazioni sulla creazione del file MOF di configurazione, vedere [Compilazione della configurazione](configurations#compiling-the-configuration). Diversamente dalle configurazioni normali, evitare di applicare una configurazione di Gestione configurazione locale chiamando il cmdlet [Start-DscConfiguration](https://technet.microsoft.com/en-us/library/dn521623.aspx). Chiamare invece il cmdlet [Set-DscLocalConfigurationManager](https://technet.microsoft.com/en-us/library/dn521621.aspx), specificando il percorso del file MOF di configurazione come parametro. Dopo aver applicato la configurazione, è possibile visualizzare le proprietà di Gestione configurazione locale chiamando il cmdlet [Get-DscLocalConfigurationManager](https://technet.microsoft.com/en-us/library/dn407378.aspx).
 
 Una configurazione di Gestione configurazione locale può contenere blocchi solo per un set limitato di risorse. Nell'esempio precedente l'unica risorsa chiamata è **Settings**. Le altre risorse disponibili sono le seguenti:
 
@@ -50,7 +50,7 @@ Una configurazione di Gestione configurazione locale può contenere blocchi solo
 * **ConfigurationRepositoryShare**: specifica un server di pull SMB per le configurazioni.
 * **ResourceRepositoryWeb**: specifica un server di pull HTTP per i moduli.
 * **ResourceRepositoryShare**: specifica un server di pull SMB per i moduli.
-* **ReportServerWeb**: specifica un server di pull HTTP a cui inviare i report.
+* **ReportServerWeb**: specifica un server di pull HTTP cui vengono inviati report.
 * **PartialConfiguration**: specifica configurazioni parziali.
 
 ## Impostazioni di base
@@ -63,15 +63,15 @@ Oltre a specificare i server di pull e le configurazioni parziali, tutte le altr
 | RebootNodeIfNeeded| bool| Impostare questa proprietà su __$true__ per riavviare automaticamente il nodo dopo aver applicato una configurazione che richiede il riavvio. In caso contrario, sarà necessario riavviare manualmente il nodo per qualsiasi configurazione che lo richiede. Il valore predefinito è __$false__.| 
 | ConfigurationMode| string | Specifica il modo in cui Gestione configurazione locale applica effettivamente la configurazione ai nodi di destinazione. Può accettare questi valori: __"ApplyOnly"__: DSC applica la configurazione e non esegue altre operazioni, a meno che non venga effettuato il push di una nuova configurazione nel nodo di destinazione o quando viene effettuato il pull di una nuova configurazione da un server. Dopo l'applicazione iniziale di una nuova configurazione, DSC non verifica l'eventuale desincronizzazione da uno stato configurato in precedenza. __"ApplyAndMonitor"__: questo è il valore predefinito. Gestione configurazione locale applica tutte le nuove configurazioni. Se dopo l'applicazione iniziale di una nuova configurazione il nodo di destinazione non è sincronizzato con lo stato desiderato, DSC segnala la discrepanza nei log. __"ApplyAndAutoCorrect"__: DSC applica tutte le nuove configurazioni. Se dopo l'applicazione iniziale di una nuova configurazione il nodo di destinazione non è sincronizzato con lo stato desiderato, DSC segnala la discrepanza nei log e quindi riapplica la configurazione corrente.| 
 | ActionAfterReboot| string| Specifica che cosa avviene dopo un riavvio durante l'applicazione di una configurazione. I possibili valori sono: __"ContinueConfiguration"__: si continua ad applicare la configurazione corrente. __"StopConfiguration"__: la configurazione corrente viene arrestata.| 
-| RefreshMode| string| Specifica il modo in cui Gestione configurazione locale ottiene le configurazioni. I possibili valori sono: __"Disabled"__: le configurazioni DSC sono disabilitate per questo nodo. __"Push"__: le configurazioni vengono avviate chiamando il cmdlet Start-DscConfiguration. La configurazione viene applicata immediatamente al nodo. Questo è il valore predefinito. __Pull__: il nodo è configurato per controllare regolarmente le configurazioni da un server di pull. Se questa proprietà è impostata su Pull, è necessario specificare un server di pull in un blocco __ConfigurationRepositoryWeb__ o __ConfigurationRepositoryShare__. Per altre informazioni sui server di pull, vedere [Configurazione di un server di pull DSC](pullServer.md).| 
+| RefreshMode| string| Specifica il modo in cui Gestione configurazione locale ottiene le configurazioni. I possibili valori sono: __"Disabled"__: le configurazioni DSC sono disabilitate per questo nodo. __"Push"__: le configurazioni vengono avviate chiamando il cmdlet Start-DscConfiguration. La configurazione viene applicata immediatamente al nodo. Questo è il valore predefinito. __Pull:__ il nodo è configurato per controllare regolarmente le configurazioni da un server di pull. Se questa proprietà è impostata su Pull, è necessario specificare un server di pull in un blocco __ConfigurationRepositoryWeb__ o __ConfigurationRepositoryShare__. Per altre informazioni sui server di pull, vedere [Configurazione di un server di pull DSC](pullServer.md).| 
 | CertificateID| string| GUID che specifica un certificato usato per proteggere le credenziali per l'accesso alla configurazione. Per altre informazioni, vedere [Protezione delle credenziali in Windows PowerShell DSC (Desired State Configuration)](http://blogs.msdn.com/b/powershell/archive/2014/01/31/want-to-secure-credentials-in-windows-powershell-desired-state-configuration.aspx).| 
-| ConfigurationID| string| GUID che identifica il file di configurazione da ottenere da un server di pull in modalità pull. Nodo con configurazioni pull nel server di pull se il nome del file MOF di configurazione è ConfigurationID.mof. __Nota:__ se si imposta questa proprietà, la registrazione del nodo in un server di pull con __RegistryKeys__ non funziona. Per altre informazioni, vedere [Configurazione di un client di pull con nomi di configurazione](pullClientConfigNames.md).| 
-| RefreshFrequencyMins| UInt32| Intervallo di tempo, in minuti, durante il quale Gestione configurazione locale controlla un server di pull per ottenere configurazioni aggiornate. Questo valore viene ignorato se Gestione configurazione locale non è configurato in modalità pull. Il valore predefinito è 30. __Nota__: il valore di questa proprietà deve essere un multiplo del valore della proprietà __ConfigurationModeFrequencyMins__ oppure il valore della proprietà __ConfigurationModeFrequencyMins__ deve essere un multiplo di questa proprietà.| 
+| ConfigurationID| string| GUID che identifica il file di configurazione da ottenere da un server di pull in modalità pull. Nodo con configurazioni pull nel server di pull se il nome del file MOF di configurazione è ConfigurationID.mof. __Nota:__ se si imposta questa proprietà, la registrazione del nodo con un server di pull usando __RegistryKeys__ non funziona. Per altre informazioni, vedere [Configurazione di un client di pull con nomi di configurazione](pullClientConfigNames.md).| 
+| RefreshFrequencyMins| UInt32| Intervallo di tempo, in minuti, durante il quale Gestione configurazione locale controlla un server di pull per ottenere configurazioni aggiornate. Questo valore viene ignorato se Gestione configurazione locale non è configurato in modalità pull. Il valore predefinito è 30. __Nota:__ il valore di questa proprietà deve essere un multiplo del valore della proprietà __ConfigurationModeFrequencyMins__ oppure il valore della proprietà __ConfigurationModeFrequencyMins__ deve essere un multiplo di questa proprietà.| 
 | AllowModuleOverwrite| bool| __$TRUE__ se le nuove configurazioni scaricate dal server di configurazione possono sovrascrivere quelle meno recenti nel nodo di destinazione. In caso contrario, $FALSE.| 
-| DebugMode| stringa| I possibili valori sono __None__ (predefinito), __ForceModuleImport__ e __All__. <ul><li>Impostare questa proprietà su __None__ per usare risorse memorizzate nella cache. Questa è l'impostazione predefinita e deve essere usata negli scenari di produzione.</li><li>L'impostazione __ForceModuleImport__ fa sì che Gestione configurazione locale ricarichi tutti i moduli di risorse DSC, anche se sono stati caricati e memorizzati nella cache in precedenza. Questa impostazione ha impatto sulle prestazioni delle operazioni di DSC, perché ogni modulo viene ricaricato al momento dell'uso. Questo valore viene in genere usato durante il debug di una risorsa.</li><li>In questa versione __All__ equivale a __ForceModuleImport__.</li></ul> |
-| ConfigurationDownloadManagers| CimInstance[]| Obsoleto. Usare blocchi __ConfigurationRepositoryWeb__ e __ConfigurationRepositoryShare__ per definire i server di pull di configurazione.| 
-| ResourceModuleManagers| CimInstance[]| Obsoleto. Usare blocchi __ResourceRepositoryWeb__ e __ResourceRepositoryShare__ per definire i server di pull di risorse.| 
-| ReportManagers| CimInstance[]| Obsoleto. Usare blocchi __ReportServerWeb__ per definire i server di pull di report.| 
+| DebugMode| string| I possibili valori sono __None(Default)__, __ForceModuleImport__ e __All__. <ul><li>Impostare questa proprietà su __None__ per usare risorse memorizzate nella cache. Questa è l'impostazione predefinita e deve essere usata negli scenari di produzione.</li><li>L'impostazione __ForceModuleImport__ fa sì che Gestione configurazione locale ricarichi tutti i moduli di risorse DSC, anche se sono stati caricati e memorizzati nella cache in precedenza. Questa impostazione ha impatto sulle prestazioni delle operazioni di DSC, perché ogni modulo viene ricaricato al momento dell'uso. Questo valore viene in genere usato durante il debug di una risorsa.</li><li>In questa versione __All__ equivale a __ForceModuleImport__.</li></ul> |
+| ConfigurationDownloadManagers| CimInstance[]| Obsoleta. Usare blocchi __ConfigurationRepositoryWeb__ e __ConfigurationRepositoryShare__ per definire i server di pull di configurazione.| 
+| ResourceModuleManagers| CimInstance[]| Obsoleta. Usare blocchi __ConfigurationRepositoryWeb__ e __ConfigurationRepositoryShare__ per definire i server di pull di risorse.| 
+| ReportManagers| CimInstance[]| Obsoleta. Usare blocchi __ReportServerWeb__ per definire i server di pull di report.| 
 | PartialConfigurations| CimInstance| Non implementata. Non utilizzare.| 
 | StatusRetentionTimeInDays | UInt32| Numero di giorni per i quali Gestione configurazione locale mantiene lo stato della configurazione corrente.| 
 
@@ -79,7 +79,7 @@ Oltre a specificare i server di pull e le configurazioni parziali, tutte le altr
 
 Un server di pull è una condivisione SMB o un servizio Web OData usato come posizione centrale per i file DSC. La configurazione di Gestione configurazione locale supporta la definizione dei tipi seguenti di server di pull:
 
-* **Server di configurazione**: repository per le configurazioni DSC. Per definire i server di configurazione, usare blocchi **ConfigurationRepositoryWeb** (per server basati sul Web) e **ConfigurationRepositoryShare** (per server basati su SMB).
+* **Server di configurazione**: repository per configurazioni DSC. Per definire i server di configurazione, usare blocchi **ConfigurationRepositoryWeb** (per server basati sul Web) e **ConfigurationRepositoryShare** (per server basati su SMB).
 * Server di risorse: repository per risorse DSC, inclusi in pacchetti come moduli di PowerShell. Per definire i server di risorse, usare blocchi **ResourceRepositoryWeb** (per server basati sul Web) e **ResourceRepositoryShare** (per server basati su SMB).
 * Server di report: servizio a cui DSC invia dati di report. Per definire i server di report, usare blocchi **ReportServerWeb**. Un server di report deve essere un servizio Web.
 
@@ -135,7 +135,7 @@ Un server di report deve essere un servizio Web OData. Per definire un server di
 
 ## Configurazioni parziali
 
-Per definire una configurazione parziale, creare un blocco **PartialConfiguration**. Per altre informazioni sulle configurazioni parziali, vedere [Configurazioni parziali DSC](partialConfigs.md). Un blocco **PartialConfiguration** definisce le proprietà seguenti.
+Per definire una configurazione parziale, creare un blocco **PartialConfiguration**. Per altre informazioni sulle configurazioni parziali, vedere la pagina sulle [configurazioni parziali DSC](partialConfigs.md). Un blocco **PartialConfiguration** definisce le proprietà seguenti.
 
 |Proprietà|Tipo|Descrizione|
 |---|---|---| 
@@ -144,17 +144,21 @@ Per definire una configurazione parziale, creare un blocco **PartialConfiguratio
 |Description|string|Testo usato per descrivere la configurazione parziale.|
 |ExclusiveResources|string[]|Matrice di risorse esclusive per questa configurazione parziale.|
 |RefreshMode|string|Specifica il modo in cui DSC ottiene la configurazione parziale. I possibili valori sono: **Disabled**: la configurazione parziale è disabilitata. **Push**: viene effettuato il push della configurazione parziale nel nodo chiamando il cmdlet [Publish-DscConfiguration](https://technet.microsoft.com/en-us/library/mt517875.aspx). Dopo il push o il pull di tutte le configurazioni parziali per il nodo da un server, la configurazione può essere avviata chiamando `Start-DscConfiguration –UseExisting`. Questo è il valore predefinito. **Pull**: il nodo è configurato per controllare regolarmente la configurazione parziale da un server di pull. Se questa proprietà è impostata su "Pull", è necessario specificare un server di pull impostando la proprietà **ConfigurationSource**. Per altre informazioni sui server di pull, vedere [Configurazione di un server di pull DSC](pullServer.md).|
-|ResourceModuleSource|string[]|Matrice di nomi dei server di risorse da cui scaricare le risorse necessarie per questa configurazione parziale. Questi nomi devono fare riferimento ai server di risorse definiti in precedenza in blocchi **ResourceRepositoryWeb** e **ResourceRepositoryShare**.|
+|ResourceModuleSource|string[]|Matrice di nomi dei server di risorse da cui scaricare le risorse necessarie per questa configurazione parziale. Questi nomi devono fare riferimento ai server di risorse definiti in precedenza in blocchi **ResourceRepositoryWeb** e **ResourceRepositoryShare**|
 
 ## Vedere anche 
 
 ### Concetti
-Introduzione a Windows PowerShell DSC [Configurazione di un server di pull DSC](pullServer.md) 
-[ Gestione configurazione locale di Windows PowerShell 4.0 DSC](metaConfig4.md) 
+[Panoramica di Windows PowerShell DSC (Desired State Configuration)](overview.md)
+ 
+[Configurazione di un server di pull DSC](pullServer.md) 
+
+[Gestione configurazione locale di Windows PowerShell 4.0 DSC (Desired State Configuration)](metaConfig4.md) 
 
 ### Risorse aggiuntive
 [Set-DscLocalConfigurationManager](https://technet.microsoft.com/en-us/library/dn521621.aspx) 
-[Configurazione di un client di pull usando nomi di configurazione](pullClientConfigNames.md) 
+
+[Configurazione di un client di pull con nomi di configurazione](pullClientConfigNames.md) 
 
 
 
