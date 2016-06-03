@@ -1,12 +1,15 @@
 ---
-title: Modulo PSScheduledJob
-ms.custom: na
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 9ab43b8d-3f4d-48fe-a274-9116f1bc4b60
+title:  Modulo PSScheduledJob
+ms.date:  2016-05-11
+keywords:  powershell,cmdlet
+description:  
+ms.topic:  article
+author:  jpjofre
+manager:  dongill
+ms.prod:  powershell
+ms.assetid:  9ab43b8d-3f4d-48fe-a274-9116f1bc4b60
 ---
+
 # Modulo PSScheduledJob
 Questa sezione contiene gli argomenti della Guida per il modulo **PSScheduledJob**, che gestisce i processi pianificati in Windows PowerShell. Questo modulo viene installato con Windows PowerShell.
 
@@ -23,7 +26,7 @@ Questa sezione contiene gli argomenti della Guida per il modulo **PSScheduledJob
 
 ## Vedere anche
 [Windows PowerShell 5.0](Windows-PowerShell-5.0.md)
-[Componenti di sistema di Windows PowerShell](https://technet.microsoft.com/en-us/library/4b75f1e4-f327-48f3-92ab-bf5435094d41)
+[Windows PowerShell Core](https://technet.microsoft.com/en-us/library/4b75f1e4-f327-48f3-92ab-bf5435094d41) (Componenti di sistema di Windows PowerShell)
 [Scrittura di script con Windows PowerShell](../../getting-started/fundamental/Scripting-with-Windows-PowerShell.md)
 
 

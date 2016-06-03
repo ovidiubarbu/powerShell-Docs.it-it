@@ -1,3 +1,14 @@
+---
+title:  usare la console di Windows PowerShell basata sul Web
+ms.date:  2016-05-11
+keywords:  powershell,cmdlet
+description:  
+ms.topic:  article
+author:  jpjofre
+manager:  dongill
+ms.prod:  powershell
+---
+
 #  Usare la console di Windows PowerShell basata sul Web
 
 Ultimo aggiornamento: 24 giugno 2013
@@ -63,7 +74,7 @@ Per usare la console di Accesso Web Windows PowerShell basata sul Web, i browser
 
 -   Consentire i cookie dal sito Web del gateway di Accesso Web Windows PowerShell.
 
--   Poter aprire e leggere le pagine HTTPS.
+-   Sia in grado di aprire e leggere le pagine HTTPS.
 
 -   Aprire ed eseguire siti Web che usano JavaScript.
 
@@ -74,7 +85,7 @@ Per usare la console di Accesso Web Windows PowerShell basata sul Web, i browser
 
 ------------------------------------------------------------------------
 
-L'amministratore di Accesso Web Windows PowerShell deve fornire all'utente l'URL corrispondente all'indirizzo del sito Web del gateway di Accesso Web Windows PowerShell dell'organizzazione. Per impostazione predefinita, l'indirizzo di questo sito Web è https://&lt;nome_server&gt;/pswa. Prima di accedere ad Accesso Web Windows PowerShell, assicurarsi di avere il nome o l'indirizzo IP del computer remoto da gestire. È necessario essere un utente autorizzato nel computer remoto, che deve essere configurato per consentire la gestione remota. Per altre informazioni sulla configurazione del computer per consentire la gestione remota, vedere [Abilitare e usare i comandi remoti in Windows PowerShell](https://technet.microsoft.com/magazine/ff700227.aspx). Il metodo di configurazione del computer più semplice per consentire la gestione remota consiste nell'eseguire il cmdlet **Enable-PSRemoting -force** nel computer, in una sessione di Windows PowerShell aperta con diritti utente elevati, ovvero **Esegui come amministratore**.).
+L'amministratore di Accesso Web Windows PowerShell deve fornire all'utente l'URL corrispondente all'indirizzo del sito Web del gateway di Accesso Web Windows PowerShell dell'organizzazione. Per impostazione predefinita, l'indirizzo di questo sito Web è https://&lt;nome_server&gt;/pswa. Prima di accedere ad Accesso Web Windows PowerShell, assicurarsi di avere il nome o l'indirizzo IP del computer remoto da gestire. È necessario essere un utente autorizzato nel computer remoto, che deve essere configurato per consentire la gestione remota. Per altre informazioni sulla configurazione del computer per consentire la gestione remota, vedere [Abilitare e usare i comandi remoti in Windows PowerShell](https://technet.microsoft.com/magazine/ff700227.aspx). Il metodo di configurazione del computer più semplice per consentire la gestione remota consiste nell'eseguire il cmdlet **Enable-PSRemoting -force** nel computer, in una sessione di Windows PowerShell aperta con diritti utente elevati, ovvero **Esegui come amministratore**.
 
 ### Per connettersi ad Accesso Web Windows PowerShell
 
@@ -94,15 +105,15 @@ L'amministratore di Accesso Web Windows PowerShell deve fornire all'utente l'URL
     <tbody>
     <tr class="odd">
     <td><ul>
-    <li><p>Se il computer di destinazione fa parte di un gruppo di lavoro, usare la sintassi seguente per specificare il nome utente e accedere al computer: &lt;<em>nome_gruppo di lavoro</em>&gt;\&lt;<em>nome_utente.</em>&gt;.</p></li>
+    <li><p>Se il computer di destinazione fa parte di un gruppo di lavoro, usare la sintassi seguente per specificare il nome utente e accedere al computer: &lt;<em>nome_gruppo di lavoro</em>&gt;\&lt;<em>nome_utente</em>&gt;.</p></li>
     <li><p>Se il computer di destinazione è il server gateway, è possibile specificare <strong>localhost</strong> nel campo <strong>Nome computer</strong>.</p></li>
-    <li><p>Se il computer di destinazione è il server gateway e questo fa parte di un gruppo di lavoro, è possibile usare <strong>localhost</strong> nel campo <strong>Nome computer</strong>, ma non localhost&lt;<em>nome_utente</em>&gt; nel campo <strong>Nome utente</strong>. È necessario usare &lt;<em>nome_gruppo di lavoro</em>&gt;\&lt;<em>nome_utente.</em>&gt;.</p></li>
+    <li><p>Se il computer di destinazione è il server gateway e questo fa parte di un gruppo di lavoro, è possibile usare <strong>localhost</strong> nel campo <strong>Nome computer</strong>, ma non localhost&lt;<em>nome_utente</em>&gt; nel campo <strong>Nome utente</strong>. È necessario usare &lt;<em>nome_gruppo di lavoro</em>&gt;\&lt;<em>nome_utente</em>&gt;.</p></li>
     </ul></td>
     </tr>
     </tbody>
     </table>
 
-3.  La sezione **Impostazioni di connessione facoltative** è relativa ai requisiti di autorizzazione del computer remoto che si vuole gestire. Per altre informazioni sui parametri equivalenti alle impostazioni di connessione facoltative, vedere [Guida del cmdlet Enter-PSSession](https://technet.microsoft.com/library/dd315384.aspx)..
+3.  La sezione **Impostazioni di connessione facoltative** è relativa ai requisiti di autorizzazione del computer remoto che si vuole gestire. Per altre informazioni sui parametri equivalenti alle impostazioni di connessione facoltative, vedere [Enter-PSSession](https://technet.microsoft.com/library/dd315384.aspx).
 
     In genere, le credenziali che si usano per il passaggio attraverso il gateway di Accesso Web Windows PowerShell sono le stesse riconosciute dal computer remoto che si vuole gestire. Se tuttavia si preferisce usare credenziali diverse per gestire il computer remoto specificato nel passaggio 2, espandere la sezione **Impostazioni di connessione facoltative** e fornire le credenziali alternative. In caso contrario, andare al passaggio 6.
 
@@ -110,7 +121,7 @@ L'amministratore di Accesso Web Windows PowerShell deve fornire all'utente l'URL
 
 5.  Mantenere il valore di **Tipo di autenticazione** impostato su **Predefinito**, a meno che l'amministratore di Accesso Web Windows PowerShell non abbia fornito istruzioni per procedere diversamente.
 
-6.  Fare clic su **Accedi**..
+6.  Fare clic su **Accedi**.
 
 <a href="" id="BKMK_timeout"></a>
 
@@ -129,7 +140,7 @@ Una qualsiasi delle operazioni seguenti causa la disconnessione dell'utente da u
 
 -   Provare ad accedere per gestire un computer remoto diverso nella stessa sessione del browser o in una nuova scheda della stessa sessione del browser. Questo approccio non è applicabile se il server gateway esegue Windows Server 2012 R2. L'esecuzione di Accesso Web Windows PowerShell in Windows Server 2012 R2 consente più sessioni utente in nuove schede della stessa sessione del browser. Per altre informazioni su come usare più sessioni attive nello stesso computer, vedere "Connessione a più computer di destinazione contemporaneamente" nella sezione [Limitazioni della console basata sul Web](#BKMK_limits) di questo argomento.
 
--   20 minuti di inattività della sessione. L'amministratore del gateway può personalizzare il periodo di timeout di inattività. Per altre informazioni, vedere [Gestione delle sessioni](https://technet.microsoft.com/en-us/library/dn282394(v=ws.11).aspx#BKMK_sesmgmt)..
+-   20 minuti di inattività della sessione. L'amministratore del gateway può personalizzare il periodo di timeout di inattività. Per altre informazioni, vedere [Gestione delle sessioni](https://technet.microsoft.com/en-us/library/dn282394(v=ws.11).aspx#BKMK_sesmgmt).
 
     -   Se si viene disconnessi da una sessione nella console basata sul Web a causa di un errore di rete o di un altro arresto o errore non pianificato e non perché la sessione è stata volutamente chiusa, la sessione di Accesso Web Windows PowerShell rimane in esecuzione e connessa al computer di destinazione, finché non sarà trascorso il periodo di timeout sul lato client. Per impostazione predefinita, questo periodo di timeout è di 20 minuti e viene configurato dall'amministratore del gateway. La sessione viene disconnessa trascorsi i 20 minuti predefiniti o dopo il periodo di timeout specificato dall'amministratore del gateway, a seconda del valore inferiore.
 
@@ -304,7 +315,7 @@ Quasi tutte le funzionalità host di Windows PowerShell sono disponibili nella c
 
     -   Modificare l'altezza e la larghezza delle finestre della console con un cmdlet.
 
-        La finestra della console per Accesso Web Windows PowerShell può essere configurata con i cmdlet, come indicato di seguito. Nell'esempio seguente un utente modifica la larghezza della console di Accesso Web Windows PowerShell in **20**..
+        La finestra della console per Accesso Web Windows PowerShell può essere configurata con i cmdlet, come indicato di seguito. Nell'esempio seguente un utente modifica la larghezza della console di Accesso Web Windows PowerShell in **20**.
 
         [Copy](javascript:if%20(window.epx.codeSnippet)window.epx.codeSnippet.copyCode('CodeSnippetContainerCode_778d5e55-9195-4bd7-b313-d1fbca7876e4'); "Copia negli Appunti.")
 
@@ -317,30 +328,27 @@ Quasi tutte le funzionalità host di Windows PowerShell sono disponibili nella c
 
         Si può modificare l'altezza della console in modo simile.
 
-        Altri esempi per personalizzare la visualizzazione della console sono disponibili nel [Blog del Team di Windows PowerShell](http://blogs.msdn.com/b/powershell/)..
+        Altri esempi per personalizzare la visualizzazione della console sono disponibili nel [blog del team di Windows PowerShell](http://blogs.msdn.com/b/powershell/).
 
 <a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Collapse"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Vedere anche</span></a>
 <a href="/en-us/library/hh831417(v=ws.11).aspx#Anchor_4" class="LW_CollapsibleArea_Anchor_Img" title="Right-click to copy and share the link for this section"></a>
 
 ------------------------------------------------------------------------
 
-[Informazioni di riferimento per i cmdlet di Windows PowerShell](https://technet.microsoft.com/library/ee407531(ws.10).aspx)
-[Windows PowerShell su Microsoft TechNet](https://technet.microsoft.com/library/bb978526.aspx)
-[Archivio di Script Center su Technet](http://gallery.technet.microsoft.com/scriptcenter)
-[Script Center: blog "Hey, Scripting Guy!"](https://technet.microsoft.com/scriptcenter)
-[Blog del team di Windows PowerShell](http://blogs.msdn.com/b/powershell/)
+[Cmdlet Reference for Windows Server 2008 R2](https://technet.microsoft.com/library/ee407531(ws.10).aspx) (Informazioni di riferimento per i cmdlet di Windows PowerShell) 
+[Scrittura di script con Windows PowerShell](https://technet.microsoft.com/library/bb978526.aspx)
+[Risorse script per i professionisti IT](http://gallery.technet.microsoft.com/scriptcenter)
+[Microsoft Script Center](https://technet.microsoft.com/scriptcenter)
+[Windows PowerShell Blog](http://blogs.msdn.com/b/powershell/) (Blog di Windows PowerShell)
 
 <span>Show:</span> Inherited Protected
 
 <span class="stdr-votetitle">Questa pagina è stata utile?</span>
-Sì
-No
+Sì No
 
 Altri suggerimenti?
 
-<span class="stdr-count"><span class="stdr-charcnt">1500</span> caratteri rimanenti</span>
-Invia
-Ignora
+<span class="stdr-count"><span class="stdr-charcnt">1500</span> caratteri rimanenti</span> Invia Ignora
 
 <span class="stdr-thankyou">Grazie.</span> <span class="stdr-appreciate">I suggerimenti degli utenti sono importanti.</span>
 
@@ -348,22 +356,21 @@ Ignora
 
 |
 
-<a href="javascript:void(0)" id="SiteFeedbackLinkOpener"><span id="FeedbackButton" class="FeedbackButton clip20x21"> <img src="https://i-technet.sec.s-msft.com/Areas/Epx/Content/Images/ImageSprite.png?v=635975720914499532" alt="Site Feedback" id="feedBackImg" class="cl_footer_feedback_icon" /> </span> Commenti e suggerimenti sul sito</a>
-Commenti e suggerimenti sul sito
+<a href="javascript:void(0)" id="SiteFeedbackLinkOpener"><span id="FeedbackButton" class="FeedbackButton clip20x21"> <img src="https://i-technet.sec.s-msft.com/Areas/Epx/Content/Images/ImageSprite.png?v=635975720914499532" alt="Site Feedback" id="feedBackImg" class="cl_footer_feedback_icon" /> </span> Commenti e suggerimenti sul sito</a> Commenti e suggerimenti sul sito
 
 <a href="javascript:void(0)" id="SiteFeedbackLinkCloser">x</a>
 
 Raccontaci la tua esperienza
 
-La pagina è stata caricata rapidamente?
+La pagina si è caricata velocemente?
 
 <span> Sì<span> </span></span> <span> No<span> </span></span>
 
-Ti piace la grafica?
+La grafica della pagina è piacevole?
 
 <span> Sì<span> </span></span> <span> No<span> </span></span>
 
-Parla con noi
+Altre informazioni
 
 -   [Newsletter Flash](https://technet.microsoft.com/cc543196.aspx)
 -   |
@@ -382,6 +389,7 @@ Parla con noi
 
 Il codice e gli script di terze parti, collegati al presente sito o a cui il sito Web fa riferimento, vengono ceduti in licenza all'utente dalle terze parti proprietarie di tale codice, non da Microsoft. Vedere le Condizioni per l'utilizzo di Ajax CDN di ASP.NET – http://www.asp.net/ajaxlibrary/CDN.ashx.
 <img src="https://m.webtrends.com/dcsjwb9vb00000c932fd0rjc7_5p3t/njs.gif?dcsuri=/nojavascript&amp;WT.js=No" alt="DCSIMG" id="Img1" width="1" height="1" />
+
 
 
 <!--HONumber=May16_HO2-->

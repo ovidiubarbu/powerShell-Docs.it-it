@@ -1,12 +1,15 @@
 ---
-title: Oggetto ISEOptions
-ms.custom: na
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 75e2a76f-f3d1-490b-ad5d-e3829946aabb
+title:  Oggetto ISEOptions
+ms.date:  2016-05-11
+keywords:  powershell,cmdlet
+description:  
+ms.topic:  article
+author:  jpjofre
+manager:  dongill
+ms.prod:  powershell
+ms.assetid:  75e2a76f-f3d1-490b-ad5d-e3829946aabb
 ---
+
 # Oggetto ISEOptions
   L'oggetto **ISEOptions** rappresenta varie impostazioni per Windows PowerShell ISE. È un'istanza della classe **Microsoft.PowerShell.Host.ISE.ISEOptions**.
 
@@ -142,7 +145,7 @@ $psISE.Options.RestoreDefaultTokenColors()
 ###  <a name="rdxtc"></a> RestoreDefaultXmlTokenColors()
   Supportato in Windows PowerShell ISE 3.0 e versioni successive e non presente nelle versioni precedenti.
 
- Ripristina i valori predefiniti dei colori dei token per gli elementi XML che vengono visualizzati in Windows PowerShell ISE. Vedere anche [XmlTokenColors](#xtc).
+ Ripristina i valori predefiniti dei colori dei token per gli elementi XML che vengono visualizzati in Windows PowerShell ISE. Vedere anche [XmlTokenColors](#xtc)
 
 ```
 # Changes the color of the comments in XML data to red and then restores it to its default value.
@@ -163,7 +166,7 @@ $psISE.Options.AutoSaveMinuteInterval = 3
 ```
 
 ###  <a name="cpbc"></a> CommandPaneBackgroundColor
-  Questa funzionalità è presente in Windows PowerShell ISE 2.0, ma è stata rimossa o rinominata nelle versioni successive di ISE.  Per le versioni successive, vedere [ConsolePaneBackgroundColor](#conpbc)..
+  Questa funzionalità è presente in Windows PowerShell ISE 2.0, ma è stata rimossa o rinominata nelle versioni successive di ISE.  Per le versioni successive, vedere [ConsolePaneBackgroundColor](#conpbc).
 
  Specifica il colore di sfondo per il riquadro dei comandi. È un'istanza della classe **System.Windows.Media.Color**.
 
@@ -356,7 +359,7 @@ $psISE.Options.MruCount = 5
 ```
 
 ###  <a name="opbc"></a> OutputPaneBackgroundColor
-  Questa funzionalità è presente in Windows PowerShell ISE 2.0, ma è stata rimossa o rinominata nelle versioni successive di ISE.  Per le versioni successive, vedere [ConsolePaneBackgroundColor](#conpbc)..
+  Questa funzionalità è presente in Windows PowerShell ISE 2.0, ma è stata rimossa o rinominata nelle versioni successive di ISE.  Per le versioni successive, vedere [ConsolePaneBackgroundColor](#conpbc).
 
  Proprietà di lettura/scrittura che ottiene o imposta il colore di sfondo per il riquadro di output. È un'istanza della classe **System.Windows.Media.Color**.
 
@@ -367,7 +370,7 @@ $psISE.Options.OutputPaneForegroundColor = "gold"
 ```
 
 ###  <a name="optfc"></a> OutputPaneTextForegroundColor
-  Questa funzionalità è presente in Windows PowerShell ISE 2.0, ma è stata rimossa o rinominata nelle versioni successive di ISE.  Per le versioni successive, vedere [ConsolePaneForegroundColor](#conpfc)..
+  Questa funzionalità è presente in Windows PowerShell ISE 2.0, ma è stata rimossa o rinominata nelle versioni successive di ISE.  Per le versioni successive, vedere [ConsolePaneForegroundColor](#conpfc).
 
  Proprietà di lettura/scrittura che modifica il colore primo piano del testo nel riquadro di output in Windows PowerShell ISE 2.0.
 
@@ -378,7 +381,7 @@ $psISE.Options.OutputPaneTextForegroundColor  = "blue"
 ```
 
 ###  <a name="optbc"></a> OutputPaneTextBackgroundColor
-  Questa funzionalità è presente in Windows PowerShell ISE 2.0, ma è stata rimossa o rinominata nelle versioni successive di ISE.  Per le versioni successive, vedere [ConsolePaneTextBackgroundColor](#conptbc)..
+  Questa funzionalità è presente in Windows PowerShell ISE 2.0, ma è stata rimossa o rinominata nelle versioni successive di ISE.  Per le versioni successive, vedere [ConsolePaneTextBackgroundColor](#conptbc).
 
  Proprietà di lettura/scrittura che modifica il colore di sfondo del testo nel riquadro di output.
 
@@ -429,7 +432,7 @@ $psISE.Options.SelectedScriptPaneState = "Maximized"
 ###  <a name="sds"></a> ShowDefaultSnippets
   Supportato in Windows PowerShell ISE 3.0 e versioni successive e non presente nelle versioni precedenti.
 
- Specifica se l'elenco di frammenti di codice di **CTRL+J** comprende il set iniziale incluso in Windows PowerShell. Se è impostato su **$false**, vengono visualizzati solo i frammenti di codice definiti dall'utente nell'elenco **CTRL+J**. Il valore predefinito è **$true**..
+ Specifica se l'elenco di frammenti di codice di **CTRL+J** comprende il set iniziale incluso in Windows PowerShell. Se è impostato su **$false**, vengono visualizzati solo i frammenti di codice definiti dall'utente nell'elenco **CTRL+J**. Il valore predefinito è **$true**.
 
 ```
 # Hide the default snippets from the CTRL+J list.
@@ -439,7 +442,7 @@ $psISe.Options.ShowDefaultSnippets = $false
 ###  <a name="siicp"></a> ShowIntellisenseInConsolePane
   Supportato in Windows PowerShell ISE 3.0 e versioni successive e non presente nelle versioni precedenti.
 
- Specifica se IntelliSense offre suggerimenti relativi a sintassi, parametri e valori nel riquadro della console. Il valore predefinito è **$true**..
+ Specifica se IntelliSense offre suggerimenti relativi a sintassi, parametri e valori nel riquadro della console. Il valore predefinito è **$true**.
 
 ```
 # Turn off IntelliSense in the console pane.
@@ -449,7 +452,7 @@ $psISe.Options.ShowIntellisenseInConsolePane = $false
 ###  <a name="siisp"></a> ShowIntellisenseInScriptPane
   Supportato in Windows PowerShell ISE 3.0 e versioni successive e non presente nelle versioni precedenti.
 
- Specifica se IntelliSense offre suggerimenti relativi a sintassi, parametri e valori nel riquadro di script. Il valore predefinito è **$true**..
+ Specifica se IntelliSense offre suggerimenti relativi a sintassi, parametri e valori nel riquadro di script. Il valore predefinito è **$true**.
 
 ```
 # Turn off IntelliSense in the Script pane.
@@ -459,7 +462,7 @@ $psISe.Options.ShowIntellisenseInScriptPane = $false
 ###  <a name="sln"></a> ShowLineNumbers
   Supportato in Windows PowerShell ISE 3.0 e versioni successive e non presente nelle versioni precedenti.
 
- Specifica se il riquadro di script visualizza i numeri di riga nel margine sinistro. Il valore predefinito è **$true**..
+ Specifica se il riquadro di script visualizza i numeri di riga nel margine sinistro. Il valore predefinito è **$true**.
 
 ```
 # Turn off line numbers in the Script pane.
@@ -469,7 +472,7 @@ $psISe.Options.ShowLineNumbers = $false
 ###  <a name="so"></a> ShowOutlining
   Supportato in Windows PowerShell ISE 3.0 e versioni successive e non presente nelle versioni precedenti.
 
- Specifica se il riquadro di script visualizza le parentesi espandibili e comprimibili accanto alle sezioni di codice nel margine sinistro. Quando sono visualizzate, è possibile fare clic sull'icona del segno meno (-) accanto a un blocco di testo per comprimerlo o sull'icona del segno più (+) per espanderlo. Il valore predefinito è **$true**..
+ Specifica se il riquadro di script visualizza le parentesi espandibili e comprimibili accanto alle sezioni di codice nel margine sinistro. Quando sono visualizzate, è possibile fare clic sull'icona del segno meno (-) accanto a un blocco di testo per comprimerlo o sull'icona del segno più (+) per espanderlo. Il valore predefinito è **$true**.
 
 ```
 # Turn off outlining in the Script pane.
@@ -479,7 +482,7 @@ $psISe.Options.ShowOutlining = $false
 ###  <a name="stb"></a> ShowToolBar
   Supportato in Windows PowerShell ISE 2.0 e versioni successive.
 
- Specifica se la barra degli strumenti ISE viene visualizzata nella parte superiore della finestra di Windows PowerShell ISE. Il valore predefinito è **$true**..
+ Specifica se la barra degli strumenti ISE viene visualizzata nella parte superiore della finestra di Windows PowerShell ISE. Il valore predefinito è **$true**.
 
 ```
 # Show the toolbar.
@@ -489,7 +492,7 @@ $psISe.Options.ShowToolBar = $true
 ###  <a name="swbsor"></a> ShowWarningBeforeSavingOnRun
   Supportato in Windows PowerShell ISE 2.0 e versioni successive.
 
- Specifica se viene visualizzato un messaggio di avviso quando uno script viene salvato automaticamente prima di essere eseguito. Il valore predefinito è **$true**..
+ Specifica se viene visualizzato un messaggio di avviso quando uno script viene salvato automaticamente prima di essere eseguito. Il valore predefinito è **$true**.
 
 ```
 # Enable the warning message when an attempt
@@ -501,7 +504,7 @@ $psISE.Options.ShowWarningBeforeSavingOnRun=$true
 ###  <a name="swfdf"></a> ShowWarningForDuplicateFiles
   Supportato in Windows PowerShell ISE 2.0 e versioni successive.
 
- Specifica se viene visualizzato un messaggio di avviso quando lo stesso file viene aperto in diverse schede di PowerShell. Se è impostato su **$true**, quando si apre lo stesso file in più schede, viene visualizzato il messaggio: "Una copia del file è aperta in un'altra scheda di PowerShell. Le modifiche apportate al file interesseranno tutte le copie aperte". Il valore predefinito è **$true**..
+ Specifica se viene visualizzato un messaggio di avviso quando lo stesso file viene aperto in diverse schede di PowerShell. Se è impostato su **$true**, quando si apre lo stesso file in più schede, viene visualizzato il messaggio: "Una copia del file è aperta in un'altra scheda di PowerShell. Le modifiche apportate al file interesseranno tutte le copie aperte". Il valore predefinito è **$true**.
 
 ```
 # Enable the warning message when a file is
@@ -526,7 +529,7 @@ $psISE.Options.TokenColors["Keyword"] = "magenta"
 ###  <a name="uetsicpi"></a> UseEnterToSelectInConsolePaneIntellisense
   Supportato in Windows PowerShell ISE 3.0 e versioni successive e non presente nelle versioni precedenti.
 
- Specifica se è possibile usare INVIO per selezionare un'opzione fornita da IntelliSense nel riquadro della console. Il valore predefinito è **$true**..
+ Specifica se è possibile usare INVIO per selezionare un'opzione fornita da IntelliSense nel riquadro della console. Il valore predefinito è **$true**.
 
 ```
 # Turn off using the ENTER key to select an IntelliSense provided option in the Console pane.
@@ -537,7 +540,7 @@ $psISE.Options.UseEnterToSelectInConsolePaneIntellisense=$false
 ###  <a name="uetsispi"></a> UseEnterToSelectInScriptPaneIntellisense
   Supportato in Windows PowerShell ISE 3.0 e versioni successive e non presente nelle versioni precedenti.
 
- Specifica se è possibile usare INVIO per selezionare un'opzione fornita da IntelliSense nel riquadro di script. Il valore predefinito è **$true**..
+ Specifica se è possibile usare INVIO per selezionare un'opzione fornita da IntelliSense nel riquadro di script. Il valore predefinito è **$true**.
 
 ```
 # Turn on using the Enter key to select an IntelliSense provided option in the Console pane.
@@ -601,7 +604,7 @@ $psISE.Options.WarningForegroundColor =”yellow”
 ###  <a name="xtc"></a> XmlTokenColors
   Supportato in Windows PowerShell ISE 3.0 e versioni successive e non presente nelle versioni precedenti.
 
- Specifica un oggetto dizionario che contiene le coppie nome/valore dei tipi e dei colori dei token per il contenuto XML visualizzato in Windows PowerShell ISE. I colori dei token possono essere impostati per gli elementi seguenti: Attribute, Command, CommandArgument, CommandParameter, Comment, GroupEnd, GroupStart, Keyword, LineContinuation, LoopLabel, Member, NewLine, Number, Operator, Position, StatementSeparator, String, Type, Unknown, Variable. Vedere anche [RestoreDefaultXmlTokenColors()](#rdxtc)..
+ Specifica un oggetto dizionario che contiene le coppie nome/valore dei tipi e dei colori dei token per il contenuto XML visualizzato in Windows PowerShell ISE. I colori dei token possono essere impostati per gli elementi seguenti: Attribute, Command, CommandArgument, CommandParameter, Comment, GroupEnd, GroupStart, Keyword, LineContinuation, LoopLabel, Member, NewLine, Number, Operator, Position, StatementSeparator, String, Type, Unknown, Variable. Vedere anche [RestoreDefaultXmlTokenColors()](#rdxtc).
 
 ```
 # Sets the color of XML element names to green.
@@ -622,8 +625,9 @@ $psISE.Options.Zoom = 200
 ```
 
 ## Vedere anche
- [Modello a oggetti di scripting di Windows PowerShell ISE](The-Windows-PowerShell-ISE-Scripting-Object-Model.md)
+ [The Windows PowerShell ISE Scripting Object Model](The-Windows-PowerShell-ISE-Scripting-Object-Model.md) (Modello a oggetti di scripting di Windows PowerShell ISE)
  [Riferimenti al modello a oggetti di Windows PowerShell ISE](Windows-PowerShell-ISE-Object-Model-Reference.md)
+
 
 
 <!--HONumber=May16_HO2-->

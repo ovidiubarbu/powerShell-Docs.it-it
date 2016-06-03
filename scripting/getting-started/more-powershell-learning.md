@@ -1,6 +1,29 @@
+---
+title:  altre risorse di formazione per PowerShell
+ms.date:  2016-05-11
+keywords:  powershell,cmdlet
+description:  
+ms.topic:  article
+author:  jpjofre
+manager:  dongill
+ms.prod:  powershell
+---
+
 #  Altre risorse di formazione per PowerShell
 
-Altre fonti per informazioni su PowerShell
+Altre fonti per informazioni su PowerShell  
+
+## Risorse per gli utenti di Windows PowerShell
+
+Oltre alla Guida disponibile dalla riga di comando, le risorse seguenti offrono altre informazioni per gli utenti che vogliono eseguire Windows PowerShell.
+
+-   [Windows PowerShell Blog](http://blogs.msdn.com/b/powershell/) (Blog di Windows PowerShell). La risorsa ottimale per acquisire informazioni direttamente dal team di prodotto di Windows PowerShell.
+-   [Windows PowerShell Customer Connection](http://Connect.Microsoft.com/PowerShell). Inviare commenti e suggerimenti o segnalare un bug al team di Windows PowerShell. È possibile segnalare un bug del codice, della documentazione o della localizzazione (traduzione).
+-   Il [blog Hey, Scripting Guy! Il blog](http://www.scriptingguys.com/blog) pubblica nuovi contenuti sette giorni alla settimana e viene costantemente valutato tra i primi cinque di tutti i blog Microsoft. Gli articoli, basati su scenario, sono scritti in modo coinvolgente e brillante.
+-   [La pagina di informazioni su PowerShell](http://www.scriptingguys.com/learnpowershell) è l'hub di Windows PowerShell su TechNet Script Center. Questa pagina ospita una serie di sessioni video per principianti condotte dal Microsoft Scripting Guy Ed Wilson. Contiene anche quiz su Windows PowerShell, collegamenti a contenuti della community e altro ancora.
+-   In caso di domande su Windows PowerShell, è possibile entrare in contatto con centinaia di altre persone con interessi simili nel [forum ufficiale per autori di script](http://social.technet.microsoft.com/forums/itcg/threads/).
+-   [Microsoft Script Center](https://technet.microsoft.com/scriptcenter). Un portale con molte risorse utili di Windows PowerShell, incluse le [Risorse script per i professionisti IT](http://gallery.technet.microsoft.com/scriptcenter/). Uno dei modi migliori per imparare a scrivere script consiste nel vedere esempi reali. È possibile cercare tra migliaia di script di Windows PowerShell, che possono essere valutati e adattati a specifiche esigenze.
+-   Community degli utenti di Windows PowerShell. Vedere la pagina [Script Center Community](https://technet.microsoft.com/scriptcenter/hh182567.aspx) per individuare il gruppo di utenti di Windows PowerShell più vicino tra le decine esistenti. È inoltre possibile tenersi aggiornati con le attività della community di Microsoft Scripting Guy.
 
 ## Video di formazione
 
@@ -22,6 +45,14 @@ Altre fonti per informazioni su PowerShell
 -  [Windows PowerShell: apprenderne con calma il funzionamento prima che diventi un requisito essenziale - Parte 3](http://dlbmodigital.microsoft.com/webcasts/wmv/1032481548_Dnl_L.wmv)
 -  [Windows PowerShell: apprenderne con calma il funzionamento prima che diventi un requisito essenziale - Parte 4](http://dlbmodigital.microsoft.com/webcasts/wmv/1032481552_Dnl_L.wmv)
 -  [Windows PowerShell: apprenderne con calma il funzionamento prima che diventi un requisito essenziale - Parte 5](http://dlbmodigital.microsoft.com/webcasts/wmv/1032481554_Dnl_L.wmv)
+
+## Risorse per sviluppatori di Windows PowerShell
+
+Le risorse seguenti consentono agli sviluppatori di creare moduli, funzioni, cmdlet, provider e applicazioni di hosting di Windows PowerShell.
+
+-   [Windows PowerShell Reference](http://go.microsoft.com/fwlink/p/?LinkID=89595) (Informazioni di riferimento di Windows PowerShell). Fornisce contenuti di riferimento.
+-   [Windows PowerShell](http://go.microsoft.com/fwlink/p/?LinkID=89596). Fornisce esercitazioni. Contiene anche informazioni sui concetti di base di Windows PowerShell.
+
 
 
 <!--HONumber=May16_HO2-->

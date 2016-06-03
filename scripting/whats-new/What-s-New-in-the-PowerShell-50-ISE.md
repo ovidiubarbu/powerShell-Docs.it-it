@@ -1,19 +1,22 @@
 ---
-title: Novità di Windows PowerShell ISE
-ms.custom: na
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 38648d47-7c27-4b37-a40e-ad29948519c2
+title:  Novità di PowerShell 5.0 ISE
+ms.date:  2016-05-11
+keywords:  powershell,cmdlet
+description:  
+ms.topic:  article
+author:  jpjofre
+manager:  dongill
+ms.prod:  powershell
+ms.assetid:  38648d47-7c27-4b37-a40e-ad29948519c2
 ---
+
 # Novità di Windows PowerShell ISE
 Questo argomento illustra le funzionalità nuove e aggiornate introdotte nelle varie versioni di Windows PowerShell® Integrated Scripting Environment (ISE).
 
 ## <a name="overview"></a>Descrizione delle funzionalità
 Windows PowerShell ISE è un'applicazione host che consente di scrivere, eseguire e testare script e moduli in un ambiente grafico e intuitivo. Le principali funzionalità, come la colorazione della sintassi, il completamento tramite TAB, il debug visivo, la conformità a Unicode e la Guida sensibile al contesto garantiscono un'esperienza di scripting più avanzata.
 
-Per un'introduzione a Windows PowerShell ISE, vedere [Panoramica di Windows PowerShell Integrated Scripting Environment](https://technet.microsoft.com/en-us/library/3c1892c2-bf84-4cb6-af26-1f453be9e671)..
+Per una panoramica di Windows PowerShell ISE, vedere [Windows PowerShell 3.0 Integrated Scripting Environment (ISE)](https://technet.microsoft.com/en-us/library/3c1892c2-bf84-4cb6-af26-1f453be9e671).
 
 ## <a name="versions"></a>Funzionalità nuove e modificate in Windows PowerShell ISE
 Nella tabella seguente sono elencate alcune delle funzionalità nuove e modificate per questa versione di Windows PowerShell ISE in Windows PowerShell.
@@ -55,12 +58,12 @@ Con i frammenti di codice è possibile assemblare e creare script rapidamente pe
 
 **Differenze di funzionamento**
 
-Per usare i frammenti di codice in Windows PowerShell 3.0 o versione successiva, scegliere **Avvia frammenti** dal menu **Modifica** o premere **CTRL+J**..
+Per usare i frammenti di codice in Windows PowerShell 3.0 o versione successiva, scegliere **Avvia frammenti** dal menu **Modifica** o premere **CTRL\-J**.
 
 ### <a name="BKMK_AddOnTools"></a>Strumenti aggiuntivi
 **Funzionalità aggiunta in PowerShell 3.0**
 
-Windows PowerShell ISE supporta ora strumenti aggiuntivi, ovvero controlli Windows Presentation Foundation (WPF) aggiunti usando il modello a oggetti. Gli strumenti aggiuntivi possono essere visualizzati nella console come riquadro verticale o orizzontale. Più strumenti aggiuntivi in un riquadro vengono visualizzati come controllo a schede. È anche possibile aggiungere o rimuovere strumenti aggiuntivi prodotti da fornitori non Microsoft. Per altre informazioni su come importare o rimuovere strumenti aggiuntivi, vedere [Operazioni di Windows PowerShell ISE](http://technet.microsoft.com/library/cc732148.aspx)..
+Windows PowerShell ISE supporta ora strumenti aggiuntivi, ovvero controlli Windows Presentation Foundation (WPF) aggiunti usando il modello a oggetti. Gli strumenti aggiuntivi possono essere visualizzati nella console come riquadro verticale o orizzontale. Più strumenti aggiuntivi in un riquadro vengono visualizzati come controllo a schede. È anche possibile aggiungere o rimuovere strumenti aggiuntivi prodotti da fornitori non Microsoft. Per altre informazioni su come importare o rimuovere strumenti aggiuntivi, vedere [Operazioni di Windows PowerShell ISE](http://technet.microsoft.com/library/cc732148.aspx).
 
 **Valore aggiunto da queste modifiche**
 
@@ -77,7 +80,7 @@ Windows PowerShell ISE 3.0 e versioni successive includono il componente aggiunt
 
 Windows PowerShell ISE ora salva gli script aperti automaticamente ogni due minuti, in una posizione separata.  Se Windows PowerShell ISE si interrompe o il sistema operativo viene riavviato, dopo il riavvio di Windows PowerShell ISE vengono ripristinati gli script aperti nell'ultima sessione, anche se non erano stati salvati.
 
-Per modificare l'intervallo di salvataggio automatico eseguire il comando seguente nel riquadro console: **$psise.Options.AutoSaveMinuteInterval**..
+Per modificare l'intervallo di salvataggio automatico eseguire il comando seguente nel riquadro della console: **$psise.Options.AutoSaveMinuteInterval**.
 
 **Valore aggiunto da queste modifiche**
 
@@ -92,7 +95,7 @@ Windows PowerShell ISE 2.0 non salva gli script automaticamente in caso di riavv
 
 Windows PowerShell ISE ora include un elenco dei file usati di recente. Quando si apre un file in Windows PowerShell ISE, il file viene aggiunto all'elenco degli elementi usati di recente nel menu **File**.
 
-Per modificare il numero predefinito di file nell'elenco degli elementi usati di recente, eseguire il comando seguente nel riquadro della console: **$psise.Options.MruCount**..
+Per modificare il numero predefinito di file nell'elenco degli elementi usati di recente, eseguire il comando seguente nel riquadro della console: **$psise.Options.MruCount**.
 
 **Valore aggiunto da queste modifiche**
 
@@ -148,7 +151,7 @@ Se si avvia Windows PowerShell ISE dalla riga di comando digitando **Powershell_
 
 -   *-Help*: visualizza una finestra della Guida
 
--   *-mta*: avvia Windows PowerShell ISE in modalità apartment a thread multipli. La modalità operativa predefinita per Windows PowerShell ISE è apartment a thread singolo o *-sta*..
+-   *-mta*: avvia Windows PowerShell ISE in modalità apartment a thread multipli. La modalità operativa predefinita per Windows PowerShell ISE è apartment a thread singolo o *\-sta*.
 
 **Valore aggiunto da queste modifiche**
 
@@ -167,7 +170,7 @@ Altre funzionalità di modifica di Windows PowerShell ISE includono:
 
 -   **Corrispondenza delle parentesi graffe** Windows PowerShell ISE include l'individuazione delle parentesi graffe corrispondenti e la loro evidenziazione e può essere usata in vari modi. Ad esempio, è possibile usare il comando **Vai a corrispondenza** o **CTRL+]** per trovare la parentesi graffa di chiusura, se è selezionata una parentesi graffa di apertura.
 
--   **Visualizzazione struttura** Il riquadro di script supporta la struttura, che consente di comprimere o espandere sezioni di codice facendo clic sui segni più o meno nel margine sinistro. È possibile usare le parentesi graffe oppure i tag **\#region** ed **\#endregion** per contrassegnare l'inizio o la fine di una sezione comprimibile. Per espandere o comprimere tutte le aree, premere **CTRL+M**..
+-   **Visualizzazione struttura** Il riquadro di script supporta la struttura, che consente di comprimere o espandere sezioni di codice facendo clic sui segni più o meno nel margine sinistro. È possibile usare le parentesi graffe oppure i tag **\#region** ed **\#endregion** per contrassegnare l'inizio o la fine di una sezione comprimibile. Per espandere o comprimere tutte le aree, premere **CTRL+M**.
 
 -   **Modifica del testo con trascinamento della selezione** Windows PowerShell ISE supporta ora il trascinamento del testo per la modifica. È possibile selezionare qualsiasi blocco di testo e trascinarlo in un'altra posizione nell'editor o nella console per spostarlo. Se si tiene premuto il tasto CTRL mentre si trascina il testo selezionato, quando si rilascia il pulsante del mouse il testo viene copiato nella nuova posizione. In questa versione, così come nella versione precedente, i file trascinati in Windows PowerShell ISE vengono aperti.
 
@@ -177,7 +180,7 @@ Altre funzionalità di modifica di Windows PowerShell ISE includono:
 
 -   **Operazioni di copia e incolla di testo formattato** Con la copia negli Appunti in Windows PowerShell ISE vengono mantenute le informazioni relative a tipo di carattere, dimensioni e colore della selezione originale.
 
--   **Selezione di blocchi** È possibile selezionare un blocco di testo tenendo premuto ALT mentre si seleziona il testo nel riquadro di script con il mouse oppure premendo **ALT+MAIUSC+FRECCIA**..
+-   **Selezione di blocchi** È possibile selezionare un blocco di testo tenendo premuto ALT mentre si seleziona il testo nel riquadro di script con il mouse oppure premendo **ALT+MAIUSC+FRECCIA**.
 
 **Valore aggiunto da queste modifiche**
 
@@ -190,7 +193,7 @@ Questi miglioramenti non erano presenti in Windows PowerShell ISE 2.0.
 ### <a name="BKMK_NewHelpViewer"></a>Nuova finestra di visualizzazione della Guida
 **Funzionalità aggiunta in PowerShell 3.0**
 
-Se si preme **F1** mentre il cursore si trova in un cmdlet oppure si evidenzia parte di un cmdlet, nel nuovo visualizzatore della Guida verrà visualizzata la Guida sensibile al contesto per il cmdlet evidenziato. Per visualizzare la Guida Informazioni su Windows PowerShell, digitare **operators** nel riquadro console e quindi premere **F1**..
+Se si preme **F1** mentre il cursore si trova in un cmdlet oppure si evidenzia parte di un cmdlet, nel nuovo visualizzatore della Guida verrà visualizzata la Guida sensibile al contesto per il cmdlet evidenziato. Per visualizzare la Guida di Windows PowerShell, digitare **operators** nel riquadro della console e quindi premere **F1**.
 
 Prima di usare questa funzionalità, scaricare la versione aggiornata degli argomenti della Guida di Windows PowerShell dal sito Web Microsoft. Il modo più semplice per scaricare gli argomenti della Guida consiste nell'eseguire il cmdlet **Update-Help** nel riquadro della console durante l'esecuzione di Windows PowerShell ISE come amministratore.
 
@@ -225,6 +228,7 @@ Per altre informazioni sull'uso di Windows PowerShell ISE in Windows PowerShell,
 -   [ISE nel Wiki di TechNet](http://social.technet.microsoft.com/wiki/search/searchresults.aspx?q=ISE)
 
 -   [Script Center](http://technet.microsoft.com/scriptcenter/default)
+
 
 
 <!--HONumber=May16_HO2-->

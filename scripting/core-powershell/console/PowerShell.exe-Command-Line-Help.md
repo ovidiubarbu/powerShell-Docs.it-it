@@ -1,12 +1,15 @@
 ---
-title: Guida della riga di comando PowerShell.exe
-ms.custom: na
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 1ab7b93b-6785-42c6-a1c9-35ff686a958f
+title:  Guida alla riga di comando PowerShell.exe
+ms.date:  2016-05-11
+keywords:  powershell,cmdlet
+description:  
+ms.topic:  article
+author:  jpjofre
+manager:  dongill
+ms.prod:  powershell
+ms.assetid:  1ab7b93b-6785-42c6-a1c9-35ff686a958f
 ---
+
 # Guida della riga di comando PowerShell.exe
 Avvia una sessione di Windows PowerShell. È possibile usare PowerShell.exe per avviare una sessione di Windows PowerShell dalla riga di comando di un altro strumento, come Cmd.exe, o usarlo nella riga di comando di Windows PowerShell per avviare una nuova sessione. Usare i parametri per personalizzare la sessione.
 
@@ -82,7 +85,7 @@ Avvia la versione specificata di Windows PowerShell. La versione specificata dev
 
 Se Windows PowerShell 3.0 non è installato, l'unico valore valido è "2.0". Gli altri valori sono ignorati.
 
-Per altre informazioni, vedere "Installazione di Windows PowerShell" nella [Guida introduttiva a Windows PowerShell [OLD MSDN]](https://technet.microsoft.com/en-us/library/69555d95-b481-43e1-86e7-b46d68b3e2dd)..
+Per altre informazioni, vedere "Installazione di Windows PowerShell" nella [Guida introduttiva a Windows PowerShell [OLD MSDN]](https://technet.microsoft.com/en-us/library/69555d95-b481-43e1-86e7-b46d68b3e2dd).
 
 ### -WindowStyle <Window style>
 Imposta lo stile della finestra per la sessione. I valori validi sono Normal, Minimized, Maximized e Hidden.
@@ -107,8 +110,7 @@ in cui le virgolette indicano una stringa e l'operatore invoke (&) causa l'esecu
 ### -Help, -?, /?
 Mostra questo messaggio. Se si digita un comando PowerShell.exe in Windows PowerShell, anteporre ai parametri del comando un trattino (-) e non una barra (/). In Cmd.exe è possibile usare sia il trattino che la barra.
 
-> [!NOTE]
-> Nota relativa alla risoluzione dei problemi: in Windows PowerShell 2.0 l'avvio di alcuni programmi nella console di Windows PowerShell genera un errore con LastExitCode uguale a 0xc0000142.
+> [!NOTE] Nota relativa alla risoluzione dei problemi: in Windows PowerShell 2.0 l'avvio di alcuni programmi nella console di Windows PowerShell genera un errore con LastExitCode uguale a 0xc0000142.
 
 ## ESEMPI
 

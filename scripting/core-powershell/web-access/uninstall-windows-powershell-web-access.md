@@ -1,3 +1,14 @@
+---
+title:  disinstallare Accesso Web Windows PowerShell
+ms.date:  2016-05-11
+keywords:  powershell,cmdlet
+description:  
+ms.topic:  article
+author:  jpjofre
+manager:  dongill
+ms.prod:  powershell
+---
+
 #  Disinstallare Accesso Web Windows PowerShell
 
 Ultimo aggiornamento: 24 giugno 2013
@@ -10,7 +21,7 @@ Seguire i passaggi indicati in questo argomento per eliminare l'applicazione e i
 
 ------------------------------------------------------------------------
 
-Prima di disinstallare Accesso Web Windows PowerShell dal server gateway, eseguire il cmdlet <span class="code">Uninstall-PswaWebApplication</span> per rimuovere il sito Web e le applicazioni Web di Accesso Web Windows PowerShell oppure eseguire la procedura [Per eliminare le applicazioni Web e il sito Web di Accesso Web Windows PowerShell in Gestione IIS](#BKMK_delsite)..
+Prima di disinstallare Accesso Web Windows PowerShell dal server gateway, eseguire il cmdlet <span class="code">Uninstall-PswaWebApplication</span> per rimuovere il sito Web e le applicazioni Web di Accesso Web Windows PowerShell oppure eseguire la procedura [Per eliminare le applicazioni Web e il sito Web di Accesso Web Windows PowerShell in Gestione IIS](#BKMK_delsite).
 
 La procedura di disinstallazione di Accesso Web Windows PowerShell non disinstalla IIS o le altre funzionalità installate automaticamente, perché sono necessarie per l'esecuzione di Accesso Web Windows PowerShell. La procedura di disinstallazione mantiene installate le funzionalità da cui dipende Accesso Web Windows PowerShell. Se necessario, è possibile disinstallare tali funzionalità separatamente.
 
@@ -35,9 +46,9 @@ Se è stato specificato il nome del sito Web personalizzato, aggiungere il param
 
     -   Nel desktop di Windows fare clic con il pulsante destro del mouse su **Windows PowerShell** nella barra delle applicazioni.
 
-    -   Nella schermata **Start** di Windows fare clic su **Windows PowerShell**..
+    -   Nella schermata **Start** di Windows fare clic su **Windows PowerShell**.
 
-2.  Digitare **Uninstall-PswaWebApplication** e quindi premere **INVIO**..
+2.  Digitare **Uninstall-PswaWebApplication** e quindi premere **INVIO**.
 
 3.  Se si usa un certificato di prova, aggiungere il parametro <span class="code">DeleteTestCertificate</span> al cmdlet come mostrato nell'esempio seguente.
 
@@ -55,9 +66,9 @@ Se è stato specificato il nome del sito Web personalizzato, aggiungere il param
 
 1.  Per aprire una sessione di Windows PowerShell con diritti utente elevati, eseguire una di queste operazioni. Se è presente una sessione aperta, continuare con il passaggio successivo.
 
-    -   Nel desktop di Windows fare clic con il pulsante destro del mouse su **Windows PowerShell** nella barra delle applicazioni e scegliere **Esegui come amministratore**..
+    -   Nel desktop di Windows fare clic con il pulsante destro del mouse su **Windows PowerShell** nella barra delle applicazioni e scegliere **Esegui come amministratore**.
 
-    -   Nella schermata **Start** di Windows fare clic con il pulsante destro del mouse su **Windows PowerShell** e scegliere **Esegui come amministratore**..
+    -   Nella schermata **Start** di Windows fare clic con il pulsante destro del mouse su **Windows PowerShell**, quindi scegliere **Esegui come amministratore**.
 
 2.  Digitare il codice seguente e premere **INVIO**, dove *nome_computer* rappresenta un server remoto da cui si vuole rimuovere Accesso Web Windows PowerShell. Il parametro <span class="code">–Restart</span> riavvia automaticamente i server di destinazione, se richiesto dalla procedura di rimozione.
 
@@ -90,15 +101,15 @@ Le procedure in questa sezione consentono di disinstallare l'applicazione Web Ac
 
 1.  Aprire la console Gestione IIS eseguendo una delle operazioni seguenti. Se è già aperta, continuare con il passaggio successivo.
 
-    -   Nel desktop di Windows avviare Server Manager facendo clic su **Server Manager** nella barra delle applicazioni di Windows. Nel menu **Strumenti** di Server Manager fare clic su **Gestione Internet Information Services (IIS)**..
+    -   Nel desktop di Windows avviare Server Manager facendo clic su **Server Manager** nella barra delle applicazioni di Windows. Nel menu **Strumenti** di Server Manager fare clic su **Gestione Internet Information Services (IIS)**.
 
     -   Nella schermata **Start** di Windows digitare una parte qualsiasi del nome **Gestione Internet Information Services (IIS)**. Fare clic sul collegamento quando viene visualizzato nell'elenco dei risultati **App**.
 
 2.  Nel riquadro dell'albero di Gestione IIS selezionare il sito Web che esegue l'applicazione Web Accesso Web Windows PowerShell.
 
-3.  Nel riquadro **Azioni**, in **Gestisci sito Web** fare clic su **Arresta**..
+3.  Nel riquadro **Azioni**, in **Gestisci sito Web** fare clic su **Arresta**.
 
-4.  Nel riquadro dell'albero fare clic con il pulsante destro del mouse sull'applicazione Web nel sito Web che esegue l'applicazione Web di Accesso Web Windows PowerShell, quindi fare clic su **Rimuovi**..
+4.  Nel riquadro dell'albero fare clic con il pulsante destro del mouse sull'applicazione Web nel sito Web che esegue l'applicazione Web di Accesso Web Windows PowerShell, quindi fare clic su **Rimuovi**.
 
 5.  Nel riquadro dell'albero selezionare **Pool di applicazioni**, selezionare la cartella del pool di applicazioni di Accesso Web Windows PowerShell, fare clic su **Arresta** nel riquadro **Azioni**, quindi fare clic su **Rimuovi** nel riquadro del contenuto.
 
@@ -132,37 +143,34 @@ Le procedure in questa sezione consentono di disinstallare l'applicazione Web Ac
 
     -   Nel desktop di Windows avviare Server Manager facendo clic su **Server Manager** nella barra delle applicazioni di Windows.
 
-    -   Nella schermata **Start** di Windows fare clic su **Server Manager**..
+    -   Nella schermata **Start** di Windows fare clic su **Server Manager**.
 
-2.  Scegliere **Rimuovi ruoli e funzionalità** dal menu **Gestione**..
+2.  Scegliere **Rimuovi ruoli e funzionalità** dal menu **Gestisci**.
 
-3.  Nella pagina **Selezione server di destinazione** selezionare il server o il disco rigido virtuale offline da cui si vuole rimuovere la funzionalità. Per selezionare un disco rigido virtuale offline, selezionare innanzitutto il server in cui montare il disco rigido virtuale, quindi selezionare il file del disco rigido virtuale. Dopo aver selezionato il server di destinazione, fare clic su **Avanti**..
+3.  Nella pagina **Selezione server di destinazione** selezionare il server o il disco rigido virtuale offline da cui si vuole rimuovere la funzionalità. Per selezionare un disco rigido virtuale offline, selezionare innanzitutto il server in cui montare il disco rigido virtuale, quindi selezionare il file del disco rigido virtuale. Dopo aver selezionato il server di destinazione, fare clic su **Avanti**.
 
 4.  Fare di nuovo clic su **Avanti** per ignorare la pagina **Rimuovi funzionalità**.
 
-5.  Deselezionare la casella di controllo **Accesso Web Windows PowerShell** e fare clic su **Avanti**..
+5.  Deselezionare la casella di controllo **Accesso Web Windows PowerShell** e fare clic su **Avanti**.
 
-6.  Nella pagina **Conferma selezioni per la rimozione** fare clic su **Rimuovi**..
+6.  Nella pagina **Conferma selezioni per la rimozione** fare clic su **Rimuovi**.
 
 <a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Collapse"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Vedere anche</span></a>
 <a href="/en-us/library/dn282396(v=ws.11).aspx#Anchor_3" class="LW_CollapsibleArea_Anchor_Img" title="Right-click to copy and share the link for this section"></a>
 
 ------------------------------------------------------------------------
 
-[Installare e usare Accesso Web Windows PowerShell](https://technet.microsoft.com/en-us/library/hh831611(v=ws.11).aspx)
-[Guida di Gestione IIS 7.0](https://technet.microsoft.com/library/cc732664.aspx)
+[Distribuire Accesso Web Windows PowerShell](https://technet.microsoft.com/en-us/library/hh831611(v=ws.11).aspx)
+[Guida di Gestione IIS](https://technet.microsoft.com/library/cc732664.aspx)
 
 <span>Show:</span> Inherited Protected
 
 <span class="stdr-votetitle">Questa pagina è stata utile?</span>
-Sì
-No
+Sì No
 
 Altri suggerimenti?
 
-<span class="stdr-count"><span class="stdr-charcnt">1500</span> caratteri rimanenti</span>
-Invia
-Ignora
+<span class="stdr-count"><span class="stdr-charcnt">1500</span> caratteri rimanenti</span> Invia Ignora
 
 <span class="stdr-thankyou">Grazie.</span> <span class="stdr-appreciate">I suggerimenti degli utenti sono importanti.</span>
 
@@ -170,22 +178,21 @@ Ignora
 
 |
 
-<a href="javascript:void(0)" id="SiteFeedbackLinkOpener"><span id="FeedbackButton" class="FeedbackButton clip20x21"> <img src="https://i-technet.sec.s-msft.com/Areas/Epx/Content/Images/ImageSprite.png?v=635975720914499532" alt="Site Feedback" id="feedBackImg" class="cl_footer_feedback_icon" /> </span> Commenti e suggerimenti sul sito</a>
-Commenti e suggerimenti sul sito
+<a href="javascript:void(0)" id="SiteFeedbackLinkOpener"><span id="FeedbackButton" class="FeedbackButton clip20x21"> <img src="https://i-technet.sec.s-msft.com/Areas/Epx/Content/Images/ImageSprite.png?v=635975720914499532" alt="Site Feedback" id="feedBackImg" class="cl_footer_feedback_icon" /> </span> Commenti e suggerimenti sul sito</a> Commenti e suggerimenti sul sito
 
 <a href="javascript:void(0)" id="SiteFeedbackLinkCloser">x</a>
 
 Raccontaci la tua esperienza
 
-La pagina è stata caricata rapidamente?
+La pagina si è caricata velocemente?
 
 <span> Sì<span> </span></span> <span> No<span> </span></span>
 
-Ti piace la grafica?
+La grafica della pagina è piacevole?
 
 <span> Sì<span> </span></span> <span> No<span> </span></span>
 
-Parla con noi
+Altre informazioni
 
 -   [Newsletter Flash](https://technet.microsoft.com/cc543196.aspx)
 -   |
@@ -204,6 +211,7 @@ Parla con noi
 
 Il codice e gli script di terze parti, collegati al presente sito o a cui il sito Web fa riferimento, vengono ceduti in licenza all'utente dalle terze parti proprietarie di tale codice, non da Microsoft. Vedere le Condizioni per l'utilizzo di Ajax CDN di ASP.NET – http://www.asp.net/ajaxlibrary/CDN.ashx.
 <img src="https://m.webtrends.com/dcsjwb9vb00000c932fd0rjc7_5p3t/njs.gif?dcsuri=/nojavascript&amp;WT.js=No" alt="DCSIMG" id="Img1" width="1" height="1" />
+
 
 
 <!--HONumber=May16_HO2-->

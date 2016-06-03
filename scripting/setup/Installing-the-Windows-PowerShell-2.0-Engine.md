@@ -1,12 +1,15 @@
 ---
-title: Installazione del motore di Windows PowerShell 2.0
-ms.custom: na
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 82928f2b-f96a-4ae6-a0d0-6e7b181da308
+title:  Installazione del motore di Windows PowerShell 2.0
+ms.date:  2016-05-11
+keywords:  powershell,cmdlet
+description:  
+ms.topic:  article
+author:  jpjofre
+manager:  dongill
+ms.prod:  powershell
+ms.assetid:  82928f2b-f96a-4ae6-a0d0-6e7b181da308
 ---
+
 # Installazione del motore di Windows PowerShell 2.0
 Questo argomento illustra come installare il motore di Windows PowerShell 2.0.
 
@@ -16,16 +19,16 @@ Per mantenere la compatibilità con le versioni precedenti di comandi e programm
 
 Il motore di Windows PowerShell 2.0 è una funzionalità facoltativa di Windows Server 2012 R2, Windows 8.1, Windows® 8 e Windows Server® 2012. Nelle versioni precedenti di Windows, quando si installa Windows Management Framework 3.0, l'installazione di Windows PowerShell 3.0 sostituisce completamente l'installazione di Windows PowerShell 2.0 nella directory di installazione di Windows PowerShell. Il motore di Windows PowerShell 2.0, invece, viene mantenuto.
 
-Per informazioni sull'avvio del motore di Windows PowerShell 2.0, vedere [Avvio del motore di Windows PowerShell 2.0](Starting-the-Windows-PowerShell-2.0-Engine.md)..
+Per informazioni sull'avvio del motore di Windows PowerShell 2.0, vedere [Avvio del motore di Windows PowerShell 2.0](Starting-the-Windows-PowerShell-2.0-Engine.md).
 
 ## In Windows 8.1 e Windows 8
 In Windows 8.1 e Windows 8, la funzionalità del motore di Windows PowerShell 2.0 è attivata per impostazione predefinita. Tuttavia, per usarla è necessario attivare l'opzione per Microsoft .NET Framework 3.5 richiesta. Questa sezione spiega anche come attivare e disattivare la funzionalità del motore di Windows PowerShell 2.0.
 
 #### Per attivare .NET Framework 3.5
 
-1.  Nella schermata **Start** digitare **funzionalità di Windows**..
+1.  Nella schermata **Start** digitare **funzionalità di Windows**.
 
-2.  Nella barra delle** **app fare clic su **Impostazioni**, quindi fare clic su **Attiva o disattiva funzionalità di Windows**..
+2.  Nella barra delle app** ** fare clic su **Impostazioni** e quindi su **Attivazione o disattivazione delle funzionalità Windows**.
 
 3.  Nella casella **Funzionalità Windows** fare clic su **.NET Framework 3.5 (include .NET 2.0 e 3.0** per selezionarlo.
 
@@ -33,9 +36,9 @@ In Windows 8.1 e Windows 8, la funzionalità del motore di Windows PowerShell 2.
 
 #### Per attivare e disattivare il motore di Windows PowerShell 2.0
 
-1.  Nella schermata **Start** digitare **funzionalità di Windows**..
+1.  Nella schermata **Start** digitare **funzionalità di Windows**.
 
-2.  Nella barra delle** **app fare clic su **Impostazioni**, quindi fare clic su **Attiva o disattiva funzionalità di Windows**..
+2.  Nella barra delle app** ** fare clic su **Impostazioni** e quindi su **Attivazione o disattivazione delle funzionalità Windows**.
 
 3.  Nella finestra **Funzionalità Windows** espandere il nodo **Windows PowerShell 2.0** e fare clic sulla casella **Motore di Windows PowerShell 2.0** per selezionarla o deselezionarla.
 
@@ -46,11 +49,11 @@ Usare le procedure seguenti per aggiungere le funzionalità Motore di Windows Po
 
 1.  In **Server Manager** scegliere **Aggiungi ruoli e funzionalità** dal menu **Gestione**.
 
-    In alternativa, in **Server Manager** fare clic su **Tutti i server**, fare clic con il pulsante destro del mouse sul nome di un server e scegliere **Aggiungi ruoli e funzionalità**.
+    In alternativa, in **Server Manager** fare clic su **Tutti i server**, fare clic con il pulsante destro del mouse sul nome di un server e quindi selezionare **Aggiungi ruoli e funzionalità**.
 
-2.  Nella pagina **Tipo di installazione** selezionare **Installazione basata su ruoli o basata su funzionalità**..
+2.  Nella pagina **Tipo di installazione** selezionare **Installazione basata su ruoli o basata su funzionalità**.
 
-3.  Nella pagina **Funzionalità** espandere il nodo **Funzionalità di .NET Framework 3.5** e selezionare **.NET Framework 3.5 (include .NET 2.0 e 3.0)**..
+3.  Nella pagina **Funzionalità** espandere il nodo **Funzionalità di .NET Framework 3.5** e selezionare **.NET Framework 3.5 (include .NET 2.0 e 3.0)**.
 
     Le altre opzioni di tale nodo non sono necessarie per il motore di Windows PowerShell 2.0.
 
@@ -58,13 +61,13 @@ Usare le procedure seguenti per aggiungere le funzionalità Motore di Windows Po
 
 -   In **Server Manager** scegliere **Aggiungi ruoli e funzionalità** dal menu **Gestione**.
 
-    In alternativa, in **Server Manager** fare clic su **Tutti i server**, fare clic con il pulsante destro del mouse sul nome di un server e scegliere **Aggiungi ruoli e funzionalità**.
+    In alternativa, in **Server Manager** fare clic su **Tutti i server**, fare clic con il pulsante destro del mouse sul nome di un server e quindi selezionare **Aggiungi ruoli e funzionalità**.
 
--   Nella pagina **Tipo di installazione** selezionare **Installazione basata su ruoli o basata su funzionalità**..
+-   Nella pagina **Tipo di installazione** selezionare **Installazione basata su ruoli o basata su funzionalità**.
 
--   Nella pagina **Funzionalità** espandere il nodo **Windows PowerShell (installato)** e selezionare **Motore di Windows PowerShell 2.0**.
+-   Nella pagina **Funzionalità** espandere il nodo **Windows PowerShell (installato)** e selezionare **Motore di Windows PowerShell 2.0**
 
-Per informazioni sull'avvio del motore di Windows PowerShell 2.0, vedere [Avvio del motore di Windows PowerShell 2.0](Starting-the-Windows-PowerShell-2.0-Engine.md)..
+Per informazioni sull'avvio del motore di Windows PowerShell 2.0, vedere [Avvio del motore di Windows PowerShell 2.0](Starting-the-Windows-PowerShell-2.0-Engine.md).
 
 ## Nei sistemi precedenti
 Il pacchetto [Windows Management Framework 4.0](http://go.microsoft.com/fwlink/?LinkID=293881) che installa Windows PowerShell 4.0 in Windows 7, Windows Server 2008 R2 e Windows Server 2012 include il motore di Windows PowerShell 2.0. Il motore di Windows PowerShell 2.0 è abilitato e pronto per l'uso, se necessario, senza altri interventi di installazione, configurazione o impostazione.

@@ -1,12 +1,15 @@
 ---
-title: Come creare una scheda di PowerShell in Windows PowerShell ISE
-ms.custom: na
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: c10c18c7-9ece-4fd0-83dc-a19c53d4fd83
+title:  Come creare una scheda di PowerShell in Windows PowerShell ISE
+ms.date:  2016-05-11
+keywords:  powershell,cmdlet
+description:  
+ms.topic:  article
+author:  jpjofre
+manager:  dongill
+ms.prod:  powershell
+ms.assetid:  c10c18c7-9ece-4fd0-83dc-a19c53d4fd83
 ---
+
 # Come creare una scheda di PowerShell in Windows PowerShell ISE
 Le schede in Windows PowerShell® Integrated Scripting Environment (ISE) consentono di creare e usare simultaneamente diversi ambienti di esecuzione all'interno della stessa applicazione. Ogni scheda di PowerShell corrisponde a una sessione o a un ambiente di esecuzione separato.
 
@@ -32,11 +35,11 @@ Per chiudere una scheda, è possibile usare una delle tecniche seguenti:
 
 -   Nel menu **File** fare clic su **Chiudi scheda di PowerShell** o fare clic sul pulsante Chiudi (**X**) in una scheda attiva per chiuderla.
 
-Se sono presenti file non salvati aperti nella scheda di PowerShell che si vuole chiudere, viene richiesto di salvare o rimuovere tali file. Per altre informazioni su come salvare uno script, vedere [Come salvare uno script](https://technet.microsoft.com/en-us/library/162f594d-efd3-4234-9960-45e56e6eadc8)..
+Se sono presenti file non salvati aperti nella scheda di PowerShell che si vuole chiudere, viene richiesto di salvare o rimuovere tali file. Per altre informazioni su come salvare uno script, vedere [Come salvare uno script](https://technet.microsoft.com/en-us/library/162f594d-efd3-4234-9960-45e56e6eadc8).
 
 ## Vedere anche
 [Uso di Windows PowerShell ISE](Using-the-Windows-PowerShell-ISE.md)
-[Come usare il riquadro della console in Windows PowerShell ISE](How-to-Use-the-Console-Pane-in-the-Windows-PowerShell-ISE.md)
+[How to Use the Console Pane in the Windows PowerShell ISE](How-to-Use-the-Console-Pane-in-the-Windows-PowerShell-ISE.md) (Come usare il riquadro della console in Windows PowerShell ISE)
 
 
 

@@ -1,15 +1,18 @@
 ---
-title: Introduzione a Windows PowerShell ISE
-ms.custom: na
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: a0de70ca-909a-4807-94d1-6da86e5b52a0
+title:  Introduzione a Windows PowerShell ISE
+ms.date:  2016-05-11
+keywords:  powershell,cmdlet
+description:  
+ms.topic:  article
+author:  jpjofre
+manager:  dongill
+ms.prod:  powershell
+ms.assetid:  a0de70ca-909a-4807-94d1-6da86e5b52a0
 ---
+
 # Introduzione a Windows PowerShell ISE
 Windows PowerShell Integrated Scripting Environment (ISE) è un'applicazione host per Windows PowerShell. In Windows PowerShell ISE è possibile eseguire comandi, nonché scrivere script, testarli e sottoporli a debug in una singola interfaccia utente grafica basata su Windows con funzionalità di modifica su più righe, completamento tramite tasto TAB, colorazione della sintassi, esecuzione selettiva, Guida sensibile al contesto e supporto per lingue da destra a sinistra.
-È possibile usare voci di menu e tasti di scelta rapida per completare molte delle stesse attività eseguibili nella console di Windows PowerShell.  Ad esempio, durante il debug di uno script in Windows PowerShell ISE, per impostare un punto di interruzione riga in uno script, fare clic con il pulsante destro del mouse sulla riga di codice e quindi fare clic su **Attiva/disattiva punto di interruzione**..
+È possibile usare voci di menu e tasti di scelta rapida per completare molte delle stesse attività eseguibili nella console di Windows PowerShell.  Ad esempio, durante il debug di uno script in Windows PowerShell ISE per impostare un punto di interruzione riga in uno script, fare clic con il pulsante destro del mouse sulla riga di codice e quindi fare clic su **Attiva/disattiva punto di interruzione**.
 
 Provare queste funzionalità in Windows PowerShell ISE.
 
@@ -25,9 +28,9 @@ Windows PowerShell ISE consente di personalizzarne l'aspetto in vari modi. Inclu
 
 1.  Eseguire una delle operazioni seguenti:
 
-    -   Fare clic sul pulsante **Start**, scegliere **Tutti i programmi**, fare clic su **Windows PowerShell V2** e quindi su **Windows PowerShell ISE**..
+    -   Fare clic sul pulsante **Start**, selezionare **Tutti i programmi**, selezionare **Windows PowerShell V2** e quindi fare clic su **Windows PowerShell ISE**.
 
-    -   In Cmd.exe della console di Windows PowerShell oppure nella casella Esegui digitare **powershell_ise.exe**..
+    -   In Cmd.exe della console di Windows PowerShell oppure nella casella Esegui digitare **powershell\_ise.exe**.
 
 ### Per visualizzare la Guida in Windows PowerShell ISE
 

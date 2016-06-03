@@ -1,12 +1,15 @@
 ---
-title: Avvio del motore di Windows PowerShell 2.0
-ms.custom: na
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: edafc2fa-7576-49c2-bbba-9336f4bcfc28
+title:  Avvio del motore di Windows PowerShell 2.0
+ms.date:  2016-05-11
+keywords:  powershell,cmdlet
+description:  
+ms.topic:  article
+author:  jpjofre
+manager:  dongill
+ms.prod:  powershell
+ms.assetid:  edafc2fa-7576-49c2-bbba-9336f4bcfc28
 ---
+
 # Avvio del motore di Windows PowerShell 2.0
 Questa sezione spiega come avviare il motore di Windows PowerShell 2.0 in Windows 8.1, Windows Server 2012 R2, Windows 8 e Windows Server 2012, che includono il motore di Windows PowerShell 2.0, e in altri sistemi in cui sono invece installati Windows PowerShell 2.0, Windows PowerShell 3.0 e Windows PowerShell 4.0.
 
@@ -15,9 +18,9 @@ Windows PowerShell 4.0 e Windows PowerShell 3.0 sono progettati per essere compa
 Molte applicazioni che richiedono l'uso del motore di Windows PowerShell 2.0 lo avviano automaticamente. Queste istruzioni sono incluse per i rari casi in cui è necessario avviare il motore manualmente.
 
 ## Installazione e abilitazione delle applicazioni necessarie
-Prima di avviare il motore di Windows PowerShell 2.0, abilitare il motore di Windows PowerShell 2.0 Engine e Microsoft .NET Framework 3.5 con Service Pack 1. Per istruzioni, vedere [Installazione di Windows PowerShell](Installing-Windows-PowerShell.md)..
+Prima di avviare il motore di Windows PowerShell 2.0, abilitare il motore di Windows PowerShell 2.0 Engine e Microsoft .NET Framework 3.5 con Service Pack 1. Per istruzioni, vedere [Installazione di Windows PowerShell](Installing-Windows-PowerShell.md).
 
-I sistemi in cui è installato [Windows Management Framework 4.0](http://go.microsoft.com/fwlink/?LinkID=293881) o Windows Management Framework 3.0 hanno tutti i componenti necessari. Non è richiesta alcuna configurazione aggiuntiva. Per informazioni sull'installazione di [Windows Management Framework 4.0](http://go.microsoft.com/fwlink/?LinkID=293881) o Windows Management Framework 3.0, vedere [Installazione di Windows PowerShell](Installing-Windows-PowerShell.md).
+I sistemi in cui è installato [Windows Management Framework 4.0](http://go.microsoft.com/fwlink/?LinkID=293881) o Windows Management Framework 3.0 hanno tutti i componenti necessari. Non è richiesta alcuna configurazione aggiuntiva. Per informazioni sull'installazione di [Windows Management Framework 4.0](http://go.microsoft.com/fwlink/?LinkID=293881) o Windows Management Framework 3.0, vedere [Installazione di Windows PowerShell](Installing-Windows-PowerShell.md)
 
 ## Come avviare il motore di Windows PowerShell 2.0
 Quando si avvia Windows PowerShell, per impostazione predefinita viene eseguita la versione più recente. Per avviare Windows PowerShell con il motore di Windows PowerShell 2.0, usare il parametro Version di PowerShell.exe. Si può eseguire il comando in qualsiasi prompt dei comandi, inclusi Windows PowerShell e Cmd.exe.

@@ -1,16 +1,19 @@
 ---
-title: Provider di sistema di Windows PowerShell
-ms.custom: na
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 6e24bf6d-4c70-4edf-956a-1e8e4779ba10
+title:  Provider di sistema di Windows PowerShell
+ms.date:  2016-05-11
+keywords:  powershell,cmdlet
+description:  
+ms.topic:  article
+author:  jpjofre
+manager:  dongill
+ms.prod:  powershell
+ms.assetid:  6e24bf6d-4c70-4edf-956a-1e8e4779ba10
 ---
+
 # Provider di sistema di Windows PowerShell
 Questa sezione contiene gli argomenti della Guida che descrivono i provider di Windows PowerShell disponibili nel modulo **Microsoft.PowerShell.Core**.
 
-I provider di Windows PowerShell sono programmi .NET che rendono disponibili in Windows PowerShell i dati presenti in archivi dati speciali, consentendo di visualizzarli e gestirli agevolmente. I dati esposti da un provider vengono visualizzati in un'unità, molto simile a un'unità di file system. Per altre informazioni, vedere [about_Providers [v4]](https://technet.microsoft.com/en-us/library/2d9b3f32-be78-49ad-a547-21231c803242).
+I provider di Windows PowerShell sono programmi .NET che rendono disponibili in Windows PowerShell i dati presenti in archivi dati speciali, consentendo di visualizzarli e gestirli agevolmente. I dati esposti da un provider vengono visualizzati in un'unità, molto simile a un'unità di file system. Per altre informazioni, vedere [about_Providers [v4]](https://technet.microsoft.com/en-us/library/2d9b3f32-be78-49ad-a547-21231c803242)
 
 |Provider|Descrizione|
 |------------|---------------|

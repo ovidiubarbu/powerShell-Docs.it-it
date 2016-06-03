@@ -1,12 +1,15 @@
 ---
-title: Oggetto ISEFile
-ms.custom: na
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 1c6d91f3-c556-42a2-a017-79b6b7b4b7db
+title:  Oggetto ISEFile
+ms.date:  2016-05-11
+keywords:  powershell,cmdlet
+description:  
+ms.topic:  article
+author:  jpjofre
+manager:  dongill
+ms.prod:  powershell
+ms.assetid:  1c6d91f3-c556-42a2-a017-79b6b7b4b7db
 ---
+
 # Oggetto ISEFile
   Un oggetto **ISEFile** rappresenta un file in Windows PowerShell® Integrated Scripting Environment (ISE). È un'istanza della classe Microsoft.PowerShell.Host.ISE.ISEFile. Questo argomento elenca i relativi metodi membro e le proprietà del membro. L'oggetto **$psISE.CurrentFile** e i file nella raccolta File in una scheda di PowerShell sono tutte istanze della classe Microsoft.PowerShell.Host.ISE.ISEFile.
 
@@ -17,7 +20,7 @@ ms.assetid: 1c6d91f3-c556-42a2-a017-79b6b7b4b7db
 
  Salva il file su disco.
 
- **[saveEncoding]** – optional [System.Text.Encoding](http://msdn.microsoft.com/library/system.text.encoding.aspx)
+ **\[saveEncoding\]** (facoltativo): [System.Text.Encoding](http://msdn.microsoft.com/library/system.text.encoding.aspx)
  Parametro di codifica caratteri facoltativo da usare per il file salvato. Il valore predefinito è **UTF8**.
 
  **Eccezioni**
@@ -41,10 +44,9 @@ $myfile.Encoding
 
  Salva il file con il nome file e la codifica specificati.
 
- **filename** - String
- Nome da usare per salvare il file.
+ **filename**: stringa  Nome da usare per salvare il file.
 
- **[saveEncoding]** – optional [System.Text.Encoding](http://msdn.microsoft.com/library/system.text.encoding.aspx)
+ **\[saveEncoding\]** (facoltativo): [System.Text.Encoding](http://msdn.microsoft.com/library/system.text.encoding.aspx)
  Parametro di codifica caratteri facoltativo da usare per il file salvato. Il valore predefinito è **UTF8**.
 
  **Eccezioni**
@@ -135,8 +137,8 @@ $psISE.CurrentFile.IsUntitled
 ```
 
 ## Vedere anche
- [Oggetto ISEFileCollectionObject](The-ISEFileCollection-Object.md) 
- [Modello a oggetti di scripting di Windows PowerShell ISE](The-Windows-PowerShell-ISE-Scripting-Object-Model.md) 
+ [Oggetto ISEFileCollection](The-ISEFileCollection-Object.md) 
+ [The Windows PowerShell ISE Scripting Object Model](The-Windows-PowerShell-ISE-Scripting-Object-Model.md) (Modello a oggetti di scripting di Windows PowerShell ISE) 
  [Riferimenti al modello a oggetti di Windows PowerShell ISE](Windows-PowerShell-ISE-Object-Model-Reference.md) 
  [Gerarchia del modello a oggetti ISE](The-ISE-Object-Model-Hierarchy.md)
 

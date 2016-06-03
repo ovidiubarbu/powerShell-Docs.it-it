@@ -1,12 +1,15 @@
 ---
-title: Oggetto ISEMenuItem
-ms.custom: na
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: a16660bd-0aee-46fd-ac17-3f022165d089
+title:  Oggetto ISEMenuItem
+ms.date:  2016-05-11
+keywords:  powershell,cmdlet
+description:  
+ms.topic:  article
+author:  jpjofre
+manager:  dongill
+ms.prod:  powershell
+ms.assetid:  a16660bd-0aee-46fd-ac17-3f022165d089
 ---
+
 # Oggetto ISEMenuItem
   Un oggetto **ISEMenuItem** è un'istanza della classe Microsoft.PowerShell.Host.ISE.ISEMenuItem. Tutti gli oggetti nel menu **Componenti aggiuntivi** sono istanze della classe **Microsoft.PowerShell.Host.ISE.ISEMenuItem**.
 
@@ -84,7 +87,7 @@ $parentAdded.SubMenus.Add("_Dir",{dir},"Alt+D")
 
 ## Vedere anche
  [Oggetto ISEMenuItemCollection](The-ISEMenuItemCollection-Object.md) 
- [Modello a oggetti di scripting di Windows PowerShell ISE](The-Windows-PowerShell-ISE-Scripting-Object-Model.md) 
+ [The Windows PowerShell ISE Scripting Object Model](The-Windows-PowerShell-ISE-Scripting-Object-Model.md) (Modello a oggetti di scripting di Windows PowerShell ISE) 
  [Riferimenti al modello a oggetti di Windows PowerShell ISE](Windows-PowerShell-ISE-Object-Model-Reference.md) 
  [Gerarchia del modello a oggetti ISE](The-ISE-Object-Model-Hierarchy.md)
 

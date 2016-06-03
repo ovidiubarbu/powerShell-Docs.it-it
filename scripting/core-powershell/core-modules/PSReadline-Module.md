@@ -1,12 +1,15 @@
 ---
-title: Modulo PSReadline
-ms.custom: na
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: bf079dec-4d26-40e7-b7a9-154c69e485ba
+title:  Modulo PSReadline
+ms.date:  2016-05-11
+keywords:  powershell,cmdlet
+description:  
+ms.topic:  article
+author:  jpjofre
+manager:  dongill
+ms.prod:  powershell
+ms.assetid:  bf079dec-4d26-40e7-b7a9-154c69e485ba
 ---
+
 # Modulo PSReadline
 Questa sezione contiene gli argomenti della Guida per il modulo **PSReadline**. Il modulo **PSReadline** contiene i cmdlet che consentono di personalizzare l'ambiente di modifica da riga di comando in Windows PowerShell.
 

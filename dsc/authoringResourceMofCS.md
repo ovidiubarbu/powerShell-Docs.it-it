@@ -1,10 +1,21 @@
+---
+title:   Creazione di una risorsa DSC in C`
+ms.date:  2016-05-16
+keywords:  powershell,DSC
+description:  
+ms.topic:  article
+author:  eslesar
+manager:  dongill
+ms.prod:  powershell
+---
+
 # Creazione di una risorsa DSC in C`#`
 
 > Si applica a: Windows PowerShell 4.0, Windows PowerShell 5.0
 
-In genere, una risorsa personalizzata di Windows PowerShell DSC (Desired State Configuration) viene implementata in uno script di PowerShell. È tuttavia anche possibile implementare la funzionalità di una risorsa DSC personalizzata scrivendo cmdlet in C#. Per informazioni introduttive sulla scrittura di cmdlet in C#, vedere [Scrittura di un cmdlet di Windows PowerShell](https://technet.microsoft.com/en-us/library/dd878294.aspx)..
+In genere, una risorsa personalizzata di Windows PowerShell DSC (Desired State Configuration) viene implementata in uno script di PowerShell. È tuttavia anche possibile implementare la funzionalità di una risorsa DSC personalizzata scrivendo cmdlet in C#. Per informazioni introduttive sulla scrittura di cmdlet in C#, vedere [Scrittura di un cmdlet di Windows PowerShell](https://technet.microsoft.com/en-us/library/dd878294.aspx).
 
-A parte l'implementazione della risorsa in C# come cmdlet, i processi di creazione dello schema MOF, creazione della struttura di cartelle, importazione e uso della risorsa DSC personalizzata sono uguali a quelli descritti in [Scrittura di una risorsa DSC personalizzata con MOF](authoringResourceMOF.md)..
+A parte l'implementazione della risorsa in C# come cmdlet, i processi di creazione dello schema MOF, creazione della struttura di cartelle, importazione e uso della risorsa DSC personalizzata sono uguali a quelli descritti in [Scrittura di una risorsa DSC personalizzata con MOF](authoringResourceMOF.md).
 
 ## Scrittura di una risorsa basata su cmdlet
 Per questo esempio verrà implementata una risorsa semplice che gestisce un file di testo e il relativo contenuto.
@@ -29,9 +40,9 @@ class MSFT_XDemoFile : OMI_BaseResource
 1. Aprire Visual Studio.
 1. Creare un progetto C# e specificare il nome.
 1. Selezionare **Libreria di classi** dai modelli di progetto disponibili.
-1. Fare clic su **OK**..
+1. Fare clic su **OK**.
 1. Aggiungere un riferimento all'assembly System.Automation.Management.dll al progetto.
-1. Modificare il nome dell'assembly in modo che corrisponda al nome della risorsa. In questo caso, il nome dell'assembly deve essere **MSFT_XDemoFile**..
+1. Modificare il nome dell'assembly in modo che corrisponda al nome della risorsa. In questo caso, il nome dell'assembly deve essere **MSFT_XDemoFile**.
 
 ### Scrittura del codice del cmdlet
 
@@ -165,6 +176,7 @@ $env: psmodulepath (folder)
 [Scrittura di un cmdlet di Windows PowerShell](https://msdn.microsoft.com/en-us/library/dd878294.aspx)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=May16_HO3-->
 
 

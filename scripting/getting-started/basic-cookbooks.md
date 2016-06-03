@@ -1,3 +1,14 @@
+---
+title:  guide di riferimento dettagliate di base
+ms.date:  2016-05-11
+keywords:  powershell,cmdlet
+description:  
+ms.topic:  article
+author:  jpjofre
+manager:  dongill
+ms.prod:  powershell
+---
+
 #  [Riferimento di base alle guide di riferimento dettagliate](cookbooks/basic-cookbooks-reference.md)
 
 -  [Modifica dello stato del computer](cookbooks/Changing-Computer-State.md)
@@ -33,6 +44,7 @@
 -  [Gestione delle voci del Registro di sistema](cookbooks/Working-with-Registry-Entries.md)
 -  [Utilizzo delle chiavi del Registro di sistema](cookbooks/Working-with-Registry-Keys.md)
 -  [Gestione delle installazioni di software](cookbooks/Working-with-Software-Installations.md)
+
 
 
 <!--HONumber=May16_HO2-->

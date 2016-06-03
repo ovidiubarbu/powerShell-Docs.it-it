@@ -1,12 +1,15 @@
 ---
-title: Argomenti di informazioni sui componenti di sistema di Windows PowerShell
-ms.custom: na
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 8b950138-9782-4dfe-bd5f-6bdcea7060da
+title:  Argomenti di informazioni sui componenti di sistema di Windows PowerShell
+ms.date:  2016-05-11
+keywords:  powershell,cmdlet
+description:  
+ms.topic:  article
+author:  jpjofre
+manager:  dongill
+ms.prod:  powershell
+ms.assetid:  8b950138-9782-4dfe-bd5f-6bdcea7060da
 ---
+
 # Argomenti di informazioni sui componenti di sistema di Windows PowerShell
 Questa sezione contiene gli argomenti della Guida concettuale ("Informazioni su") applicabili a tutti i moduli di Windows PowerShell. Per gli altri moduli, vedere gli argomenti della Guida specifici.
 
@@ -128,12 +131,12 @@ Questa sezione contiene gli argomenti della Guida concettuale ("Informazioni su"
 
 ## Vedere anche
 [Scrittura di script con Windows PowerShell](../../getting-started/fundamental/Scripting-with-Windows-PowerShell.md)
-[Componenti di sistema di Windows PowerShell](https://technet.microsoft.com/en-us/library/4b75f1e4-f327-48f3-92ab-bf5435094d41)
+[Windows PowerShell Core](https://technet.microsoft.com/en-us/library/4b75f1e4-f327-48f3-92ab-bf5435094d41) (Componenti di sistema di Windows PowerShell)
 [Windows PowerShell 5.0](Windows-PowerShell-5.0.md)
 [about_Scheduled_Jobs](https://technet.microsoft.com/en-us/library/3b546629-703c-4939-b44f-52dd567bce92)
 [about_WMI_Cmdlets [v3]](https://technet.microsoft.com/en-us/library/9c56b172-3b25-47b2-b6e0-86db649b1c45)
 [about_WS-Management_Cmdlets](https://technet.microsoft.com/en-us/library/6ed3370a-ea10-45a5-9493-696aeace27ed)
-[Windows PowerShell SDK](http://go.microsoft.com/fwlink/?LinkID=107032)
+[Windows PowerShell Reference](http://go.microsoft.com/fwlink/?LinkID=107032) (Informazioni di riferimento di Windows PowerShell)
 
 
 

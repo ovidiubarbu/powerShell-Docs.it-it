@@ -1,12 +1,15 @@
 ---
-title: Oggetto ISEMenuItemCollection
-ms.custom: na
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 0c0f5484-3320-408e-8534-5bd1c8e48512
+title:  Oggetto ISEMenuItemCollection
+ms.date:  2016-05-11
+keywords:  powershell,cmdlet
+description:  
+ms.topic:  article
+author:  jpjofre
+manager:  dongill
+ms.prod:  powershell
+ms.assetid:  0c0f5484-3320-408e-8534-5bd1c8e48512
 ---
+
 # Oggetto ISEMenuItemCollection
   Un oggetto **ISEMenuItemCollection** è una raccolta di oggetti **ISEMenuItem**. È un'istanza della classe Microsoft.PowerShell.Host.ISE.ISEMenuItemCollection. Un esempio è l'oggetto **$psISE.CurrentPowerShellTab.AddOnsMenu.Submenus**, usato per personalizzare il menu **Componenti aggiuntivi** in Windows PowerShell® Integrated Scripting Environment (ISE).
 
@@ -18,16 +21,16 @@ ms.assetid: 0c0f5484-3320-408e-8534-5bd1c8e48512
  Aggiunge una voce di menu alla raccolta.
 
  **DisplayName**
- Il nome visualizzato del menu da aggiungere.
+ Nome visualizzato del menu da aggiungere.
 
- **Azione**
+ **Action**
  Oggetto **System.Management.Automation.ScriptBlock** che specifica l'azione associata alla voce di menu.
 
- **Collegamento**
+ **Shortcut**
  Tasto di scelta rapida per l'azione.
 
- **Returns**
- Oggetto ISEMenuItem appena aggiunto.
+ **Restituisce**
+ L'oggetto ISEMenuItem appena aggiunto.
 
 ```
 # Create an Add-ons menu with an fast access key and a shortcut.
@@ -48,7 +51,7 @@ $psISE.CurrentPowerShellTab.AddOnsMenu.Submenus.Clear()
 
 ## Vedere anche
  [Oggetto ISEMenuItem](The-ISEMenuItem-Object.md) 
- [Modello a oggetti di scripting di Windows PowerShell ISE](The-Windows-PowerShell-ISE-Scripting-Object-Model.md) 
+ [The Windows PowerShell ISE Scripting Object Model](The-Windows-PowerShell-ISE-Scripting-Object-Model.md) (Modello a oggetti di scripting di Windows PowerShell ISE) 
  [Riferimenti al modello a oggetti di Windows PowerShell ISE](Windows-PowerShell-ISE-Object-Model-Reference.md) 
  [Gerarchia del modello a oggetti ISE](The-ISE-Object-Model-Hierarchy.md)
 

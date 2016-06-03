@@ -1,12 +1,15 @@
 ---
-title: Oggetto ISEAddOnTool
-ms.custom: na
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: ce84d8bc-07ba-41f6-bdde-d6f3fddcd1e3
+title:  Oggetto ISEAddOnTool
+ms.date:  2016-05-11
+keywords:  powershell,cmdlet
+description:  
+ms.topic:  article
+author:  jpjofre
+manager:  dongill
+ms.prod:  powershell
+ms.assetid:  ce84d8bc-07ba-41f6-bdde-d6f3fddcd1e3
 ---
+
 # Oggetto ISEAddOnTool
   Un oggetto **ISEAddonTool** rappresenta uno strumento aggiuntivo installato che offre funzionalità aggiuntive a Windows PowerShell ISE. Un esempio è lo strumento **Comandi** che è possibile visualizzare facendo clic su **Visualizza** quindi su **Mostra componente aggiuntivo comandi**. Questo strumento è quindi accessibile all'utente modificando i vari oggetti **ISEAddOnTool** disponibili.
 
@@ -162,9 +165,10 @@ Commands
 
 ## Vedere anche
  [Oggetto ISEAddOnToolCollection](The-ISEAddOnToolCollection-Object.md)
- [Modello a oggetti di scripting di Windows PowerShell ISE](The-Windows-PowerShell-ISE-Scripting-Object-Model.md)
+ [The Windows PowerShell ISE Scripting Object Model](The-Windows-PowerShell-ISE-Scripting-Object-Model.md) (Modello a oggetti di scripting di Windows PowerShell ISE)
  [Riferimenti al modello a oggetti di Windows PowerShell ISE](Windows-PowerShell-ISE-Object-Model-Reference.md)
  [Gerarchia del modello a oggetti ISE](The-ISE-Object-Model-Hierarchy.md)
+
 
 
 <!--HONumber=May16_HO2-->

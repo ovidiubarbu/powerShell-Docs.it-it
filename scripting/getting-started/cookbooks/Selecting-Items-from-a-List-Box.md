@@ -1,12 +1,15 @@
 ---
-title: Selezione di elementi di una casella di riepilogo
-ms.custom: na
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 327c7cc5-21d0-4ace-b151-aa1491d1d3c2
+title:  Selezione di elementi di una casella di riepilogo
+ms.date:  2016-05-11
+keywords:  powershell,cmdlet
+description:  
+ms.topic:  article
+author:  jpjofre
+manager:  dongill
+ms.prod:  powershell
+ms.assetid:  327c7cc5-21d0-4ace-b151-aa1491d1d3c2
 ---
+
 # Selezione di elementi di una casella di riepilogo
 Usare Windows PowerShell 3.0 e versioni successive per creare una finestra di dialogo che consente agli utenti di selezionare gli elementi da un controllo casella di riepilogo.
 
@@ -137,7 +140,7 @@ $listBox.Height = 80
 Nella sezione seguente, specificare i valori che si vuole vengano visualizzati nella casella di riepilogo.
 
 > [!NOTE]
-> La casella di riepilogo creata da questo script consente di effettuare un'unica selezione. Per creare un controllo casella di riepilogo che consenta di eseguire selezioni multiple, specificare un valore per la proprietà **SelectionMode**, in modo simile al seguente:  `$listBox.SelectionMode = "MultiExtended"`. Per altre informazioni, vedere [Caselle di riepilogo a selezione multipla](Multiple-selection-List-Boxes.md)..
+> La casella di riepilogo creata da questo script consente di effettuare un'unica selezione. Per creare un controllo casella di riepilogo che consenta di eseguire selezioni multiple, specificare un valore per la proprietà **SelectionMode**, in modo simile al seguente:  `$listBox.SelectionMode = "MultiExtended"`. Per altre informazioni, vedere [Caselle di riepilogo a selezione multipla](Multiple-selection-List-Boxes.md).
 
 ```
 [void] $listBox.Items.Add("atl-dc-001")
@@ -173,9 +176,9 @@ if ($result -eq [System.Windows.Forms.DialogResult]::OK)
 ```
 
 ## Vedere anche
-[Blog Hey Scripting Guy: perché questi esempi di GUI di PowerShell non funzionano?](http://go.microsoft.com/fwlink/?LinkId=506644)
-[GitHub: WinFormsExampleUpdates di Dave Wyatt](https://github.com/dlwyatt/WinFormsExampleUpdates)
-[Suggerimento della settimana su Windows PowerShell: Selezione di elementi di una casella di riepilogo](http://technet.microsoft.com/library/ff730949.aspx)
+[Hey, Scripting Guy! Blog - Weekend Scripter: Fixing PowerShell GUI Examples](http://go.microsoft.com/fwlink/?LinkId=506644)
+[GitHub: dlwyatt/WinFormsExampleUpdates](https://github.com/dlwyatt/WinFormsExampleUpdates)
+[Windows PowerShell Tip of the Week](http://technet.microsoft.com/library/ff730949.aspx) (Windows PowerShell: suggerimento della settimana)
 
 
 

@@ -1,3 +1,14 @@
+---
+title:  riferimento alle guide di riferimento dettagliate di base
+ms.date:  2016-05-11
+keywords:  powershell,cmdlet
+description:  
+ms.topic:  article
+author:  jpjofre
+manager:  dongill
+ms.prod:  powershell
+---
+
 #  Riferimento di base alle guide di riferimento dettagliate
 
 -  [Modifica dello stato del computer](Changing-Computer-State.md)
@@ -33,6 +44,7 @@
 -  [Gestione delle voci del Registro di sistema](Working-with-Registry-Entries.md)
 -  [Utilizzo delle chiavi del Registro di sistema](Working-with-Registry-Keys.md)
 -  [Gestione delle installazioni di software](Working-with-Software-Installations.md)
+
 
 
 <!--HONumber=May16_HO2-->

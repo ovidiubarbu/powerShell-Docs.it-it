@@ -1,12 +1,15 @@
 ---
-title: Oggetto ISEEditor
-ms.custom: na
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 0101daf8-4e31-4e4c-ab89-01d95dcb8f46
+title:  Oggetto ISEEditor
+ms.date:  2016-05-11
+keywords:  powershell,cmdlet
+description:  
+ms.topic:  article
+author:  jpjofre
+manager:  dongill
+ms.prod:  powershell
+ms.assetid:  0101daf8-4e31-4e4c-ab89-01d95dcb8f46
 ---
+
 # Oggetto ISEEditor
   Un oggetto **ISEEditor** è un'istanza della classe Microsoft.PowerShell.Host.ISE.ISEEditor. Il riquadro della console è un oggetto **ISEEditor**. Ogni oggetto [ISEFile](The-ISEFile-Object.md) ha un oggetto **ISEEditor** associato. Le sezioni seguenti elencano i metodi e proprietà di un oggetto **ISEEditor**.
 
@@ -55,7 +58,7 @@ $psISE.CurrentPowerShellTab.ConsolePane.Focus()
  **lineNumber**
  Numero della riga di cui ottenere la lunghezza.
 
- **Returns**
+ **Restituisce**
  La lunghezza della riga per il numero di riga specificato.
 
 ```
@@ -66,7 +69,7 @@ $psIse.CurrentPowerShellTab.ConsolePane.GetLineLength(1)
 ### GoToMatch()
   Supportato in Windows PowerShell ISE 3.0 e versioni successive e non presente nelle versioni precedenti. 
 
- Sposta il cursore sul carattere corrispondente se la proprietà **CanGoToMatch** dell'oggetto editor è **$true**, che si verifica quando il cursore si trova immediatamente prima di una parentesi, di una parentesi quadra o di una parentesi graffa di apertura, (, [, {, o immediatamente dopo una parentesi, di una parentesi quadra o di una parentesi graffa di chiusura, ), ], }.  Il cursore viene posizionato prima di un carattere di apertura o dopo un carattere di chiusura. Se la proprietà **CanGoToMatch** è **$false**, questo metodo non esegue alcuna operazione. Vedere [CanGoToMatch](#cangotomatch)..
+ Sposta il cursore sul carattere corrispondente se la proprietà **CanGoToMatch** dell'oggetto editor è **$true**, che si verifica quando il cursore si trova immediatamente prima di una parentesi, di una parentesi quadra o di una parentesi graffa di apertura, (, [, {, o immediatamente dopo una parentesi, di una parentesi quadra o di una parentesi graffa di chiusura, ), ], }.  Il cursore viene posizionato prima di un carattere di apertura o dopo un carattere di chiusura. Se la proprietà **CanGoToMatch** è **$false**, questo metodo non esegue alcuna operazione. Vedere [CanGoToMatch](#cangotomatch).
 
 ```
 # Test to see if the caret is next to a parenthesis, bracket, or brace.
@@ -77,8 +80,7 @@ $psIse.CurrentPowerShellTab.ConsolePane.GetLineLength(1)
 
  Sostituisce la selezione con un testo o inserisce il testo nella posizione corrente del cursore.
 
- **text**- String
- Il testo da inserire.
+ **text**: stringa  Il testo da inserire.
 
  Vedere [Esempio di script](#example) più avanti in questo argomento.
 
@@ -87,17 +89,13 @@ $psIse.CurrentPowerShellTab.ConsolePane.GetLineLength(1)
 
  Seleziona il testo dai parametri **startLine**, **startColumn**, **endLine** ed **endColumn**.
 
- **startLine**- Integer
- La riga in cui inizia la selezione.
+ **startLine**: Integer  La riga in cui inizia la selezione.
 
- **startColumn**- Integer
- La colonna all'interno della riga di inizio in cui inizia la selezione.
+ **startColumn** Integer  La colonna all'interno della riga in cui inizia la selezione.
 
- **endLine**- Integer
- La riga in cui termina la selezione.
+ **endLine**: Integer  La riga in cui termina la selezione.
 
- **endColumn**- Integer
- La colonna all'interno della riga finale in cui termina la selezione.
+ **endColumn** Integer  La colonna all'interno della riga in cui termina la selezione.
 
  Vedere [Esempio di script](#example) più avanti in questo argomento.
 
@@ -119,11 +117,9 @@ $psIse.CurrentFile.Editor.SelectCaretLine()
 
  Imposta la posizione del cursore sul numero di riga e sul numero di colonna. Genera un'eccezione se il numero di riga del cursore o il numero di colonna del cursore non è compreso nei relativi intervalli validi.
 
- **lineNumber**- Integer
- Il numero di riga del cursore.
+ **lineNumber**: Integer  Il numero di riga del cursore.
 
- **columnNumber**- Integer
- Il numero di colonna del cursore.
+ **columnNumber**: Integer  Il numero di colonna del cursore.
 
 ```
 # Set the CaretPosition.
@@ -146,7 +142,7 @@ $psIse.CurrentFile.Editor.ToggleOutliningExpansion()
 ###  <a name="CanGoToMatch"></a> CanGoToMatch
   Supportato in Windows PowerShell ISE 3.0 e versioni successive e non presente nelle versioni precedenti. 
 
- Proprietà di sola lettura booleana che indica se il cursore è accanto a una parentesi, a una parentesi quadra o a una parentesi graffa (), [], {}. Se il cursore si trova immediatamente prima del carattere di apertura o immediatamente dopo il carattere di chiusura di una coppia, il valore di questa proprietà è **$true**. In caso contrario, è **$false**..
+ Proprietà di sola lettura booleana che indica se il cursore è accanto a una parentesi, a una parentesi quadra o a una parentesi graffa (), [], {}. Se il cursore si trova immediatamente prima del carattere di apertura o immediatamente dopo il carattere di chiusura di una coppia, il valore di questa proprietà è **$true**. In caso contrario, è **$false**.
 
 ```
 # Test to see if the caret is next to a parenthesis, bracket, or brace
@@ -243,9 +239,9 @@ $myEditor.InsertText($selection.ToLower())
 ```
 
 ## Vedere anche
- [Oggetto ISEFile](The-ISEFile-Object.md) 
+ [Oggetto ISEFile ](The-ISEFile-Object.md) 
  [Oggetto PowerShellTab](The-PowerShellTab-Object.md) 
- [Modello a oggetti di scripting di Windows PowerShell ISE](The-Windows-PowerShell-ISE-Scripting-Object-Model.md) 
+ [The Windows PowerShell ISE Scripting Object Model](The-Windows-PowerShell-ISE-Scripting-Object-Model.md) (Modello a oggetti di scripting di Windows PowerShell ISE) 
  [Riferimenti al modello a oggetti di Windows PowerShell ISE](Windows-PowerShell-ISE-Object-Model-Reference.md) 
  [Gerarchia del modello a oggetti ISE](The-ISE-Object-Model-Hierarchy.md)
 

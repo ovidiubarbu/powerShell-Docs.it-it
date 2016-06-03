@@ -1,3 +1,14 @@
+---
+title:  informazioni di riferimento sui concetti
+ms.date:  2016-05-11
+keywords:  powershell,cmdlet
+description:  
+ms.topic:  article
+author:  jpjofre
+manager:  dongill
+ms.prod:  powershell
+---
+
 # Informazioni sui concetti
 
 *  Oggetti in PowerShell  
@@ -16,6 +27,7 @@
 *  Provider
 *  Driver
 *  Guida all'aggiornamento 
+
 
 
 <!--HONumber=May16_HO2-->

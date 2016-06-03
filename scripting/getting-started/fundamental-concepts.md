@@ -1,3 +1,14 @@
+---
+title:  concetti fondamentali
+ms.date:  2016-05-11
+keywords:  powershell,cmdlet
+description:  
+ms.topic:  article
+author:  jpjofre
+manager:  dongill
+ms.prod:  powershell
+---
+
 #  Concetti fondamentali
 
 -  [Informazioni su Windows PowerShell](fundamental/About-Windows-PowerShell.md)
@@ -15,6 +26,7 @@
 -  [Tramite Windows PowerShell](fundamental/Using-Windows-PowerShell.md)
 -  [Nozioni di base su Windows PowerShell](fundamental/Windows-PowerShell-Basics.md)
 -  [Windows PowerShell Integrated Scripting Environment (ISE) ](fundamental/Windows-PowerShell-Integrated-Scripting-Environment--ISE-.md)
+
 
 
 <!--HONumber=May16_HO2-->

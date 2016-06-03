@@ -1,12 +1,15 @@
 ---
-title: Altri oggetti di scripting utili
-ms.custom: na
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 4d781196-720b-4ccc-90d2-c570e5e719f5
+title:  Altri oggetti di scripting utili
+ms.date:  2016-05-11
+keywords:  powershell,cmdlet
+description:  
+ms.topic:  article
+author:  jpjofre
+manager:  dongill
+ms.prod:  powershell
+ms.assetid:  4d781196-720b-4ccc-90d2-c570e5e719f5
 ---
+
 # Altri oggetti di scripting utili
   Gli oggetti seguenti forniscono ulteriori funzionalità di scripting in Windows PowerShell ISE. Non fanno parte della gerarchia **$psISE**.
 
@@ -26,7 +29,7 @@ psUnsupportedConsoleApplications
 ```
 
 ### $psLocalHelp
- Si tratta di un oggetto Dictionary che conserva un mapping sensibile al contesto tra gli argomenti della Guida e i relativi collegamenti associati nel file della Guida HTML compilato locale. Viene usato per trovare la Guida locale per un determinato argomento. È possibile aggiungere o eliminare argomenti da questo elenco. L'esempio di codice seguente mostra alcune coppie chiave-valore contenute in **$psLocalHelp**..
+ Si tratta di un oggetto Dictionary che conserva un mapping sensibile al contesto tra gli argomenti della Guida e i relativi collegamenti associati nel file della Guida HTML compilato locale. Viene usato per trovare la Guida locale per un determinato argomento. È possibile aggiungere o eliminare argomenti da questo elenco. L'esempio di codice seguente visualizza alcune coppie chiave\-valore contenute in **$psLocalHelp**.
 
 ```
 # See the local help map
@@ -34,7 +37,7 @@ $psLocalHelp |Format-List
 
 ```
 
-### Output di esempio
+### Esempio di output
 
 |||
 |-|-|

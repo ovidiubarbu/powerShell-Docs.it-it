@@ -1,12 +1,15 @@
 ---
-title: Gerarchia del modello a oggetti ISE
-ms.custom: na
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: bc3300e4-9c17-4f00-a621-c8867126e3b3
+title:  Gerarchia del modello a oggetti ISE
+ms.date:  2016-05-11
+keywords:  powershell,cmdlet
+description:  
+ms.topic:  article
+author:  jpjofre
+manager:  dongill
+ms.prod:  powershell
+ms.assetid:  bc3300e4-9c17-4f00-a621-c8867126e3b3
 ---
+
 # Gerarchia del modello a oggetti ISE
   Questo argomento illustra la gerarchia di oggetti che fanno parte di Windows PowerShell Integrated Scripting Environment (ISE). Windows PowerShell ISE è incluso in Windows PowerShell 3.0 e in Windows PowerShell 4.0. Fare clic su un oggetto per accedere alla documentazione di riferimento per la classe che definisce l'oggetto.
 
@@ -206,8 +209,9 @@ ms.assetid: bc3300e4-9c17-4f00-a621-c8867126e3b3
  L'oggetto **$psISE.PowerShellTabs** è un'istanza della classe [PowerShellTabCollection](The-PowerShellTabCollection-Object.md). È una raccolta di tutte le schede di PowerShell attualmente aperte che rappresentano gli ambienti di esecuzione di Windows PowerShell disponibili nel computer locale o nei computer remoti connessi. Ogni membro della raccolta è un'istanza della classe [PowerShellTab](The-PowerShellTab-Object.md).
 
 ## Vedere anche
- [Modello a oggetti di scripting di Windows PowerShell ISE](The-Windows-PowerShell-ISE-Scripting-Object-Model.md)
+ [The Windows PowerShell ISE Scripting Object Model](The-Windows-PowerShell-ISE-Scripting-Object-Model.md) (Modello a oggetti di scripting di Windows PowerShell ISE)
  [Riferimenti al modello a oggetti di Windows PowerShell ISE](Windows-PowerShell-ISE-Object-Model-Reference.md)
+
 
 
 <!--HONumber=May16_HO2-->

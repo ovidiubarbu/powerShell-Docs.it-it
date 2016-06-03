@@ -1,3 +1,14 @@
+---
+title:  guida dei flussi di lavoro
+ms.date:  2016-05-11
+keywords:  powershell,cmdlet
+description:  
+ms.topic:  article
+author:  jpjofre
+manager:  dongill
+ms.prod:  powershell
+---
+
 # Modulo PSWorkflow
 Questa sezione contiene gli argomenti della Guida per il modulo **PSWorkflow**, che include i cmdlet che supportano la funzionalità del flusso di lavoro di Windows PowerShell. Il modulo **PSWorkflow** viene installato con Windows PowerShell.
 
@@ -25,6 +36,7 @@ Questa sezione contiene gli argomenti della Guida per il modulo **PSWorkflow**, 
 [about_Suspend-Workflow](https://technet.microsoft.com/en-us/library/be2ded75-1eca-493e-96c1-758f92b5f199)
 
 [Cmdlet di utilità del flusso di lavoro di PowerShell](https://technet.microsoft.com/en-us/library/a5a32019-0d68-4041-935f-1b1cacaf6d3d)
+
 
 
 <!--HONumber=May16_HO2-->

@@ -1,12 +1,15 @@
 ---
-title: Oggetto PowerShellTabCollection
-ms.custom: na
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 81f4bf4a-83bf-415e-8378-1703792fbb58
+title:  Oggetto PowerShellTabCollection
+ms.date:  2016-05-11
+keywords:  powershell,cmdlet
+description:  
+ms.topic:  article
+author:  jpjofre
+manager:  dongill
+ms.prod:  powershell
+ms.assetid:  81f4bf4a-83bf-415e-8378-1703792fbb58
 ---
+
 # Oggetto PowerShellTabCollection
   L'oggetto della raccolta **PowerShellTab** è una raccolta di oggetti **PowerShellTab**. Ogni oggetto **PowerShellTab** funziona come un ambiente di runtime separato. È un'istanza della classe Microsoft.PowerShell.Host.ISE.PowerShellTabs. Un esempio è l'oggetto **$psISE.PowerShellTabs**.
 
@@ -60,7 +63,7 @@ $psISE.PowerShellTabs.SelectedPowerShellTab=$oldtab
 
 ## Vedere anche
  [Oggetto PowerShellTab](The-PowerShellTab-Object.md) 
- [Modello a oggetti di scripting di Windows PowerShell ISE](../ise/The-Windows-PowerShell-ISE-Scripting-Object-Model.md) 
+ [The Windows PowerShell ISE Scripting Object Model](../ise/The-Windows-PowerShell-ISE-Scripting-Object-Model.md) (Modello a oggetti di scripting di Windows PowerShell ISE) 
  [Riferimenti al modello a oggetti di Windows PowerShell ISE](../ise/Windows-PowerShell-ISE-Object-Model-Reference.md) 
  [Gerarchia del modello a oggetti ISE](../ise/The-ISE-Object-Model-Hierarchy.md)
 

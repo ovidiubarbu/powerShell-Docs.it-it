@@ -1,12 +1,15 @@
 ---
-title: Modulo PSWorkflowUtility
-ms.custom: na
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: c62a363a-caa2-4b6e-a079-d6e8543bc4c6
+title:  Modulo PSWorkflowUtility
+ms.date:  2016-05-11
+keywords:  powershell,cmdlet
+description:  
+ms.topic:  article
+author:  jpjofre
+manager:  dongill
+ms.prod:  powershell
+ms.assetid:  c62a363a-caa2-4b6e-a079-d6e8543bc4c6
 ---
+
 # Modulo PSWorkflowUtility
 Questa sezione contiene gli argomenti della Guida per il modulo **PSWorkflowUtility**, che include i comandi che gestiscono la funzionalità del flusso di lavoro di Windows PowerShell. Il modulo **PSWorkflowUtility** viene installato con Windows PowerShell.
 
@@ -21,10 +24,11 @@ Questa sezione contiene gli argomenti della Guida per il modulo **PSWorkflowUtil
 
 ## Vedere anche
 [Informazioni sul flusso di lavoro di Windows PowerShell](https://technet.microsoft.com/en-us/library/jj134242.aspx)
-[Come scrivere un flusso di lavoro di Windows PowerShell](https://technet.microsoft.com/en-us/library/jj574157.aspx)
+[Writing a Windows PowerShell Workflow](https://technet.microsoft.com/en-us/library/jj574157.aspx) (Scrittura di un flusso di lavoro di Windows PowerShell) 
 [Windows PowerShell 5.0](../core-modules/Windows-PowerShell-5.0.md)
 [Argomenti di informazioni sui componenti di sistema di Windows PowerShell](../core-modules/Windows-PowerShell-Core-About-Topics.md)
 [Scrittura di script con Windows PowerShell](../../getting-started/fundamental/Scripting-with-Windows-PowerShell.md)
+
 
 
 <!--HONumber=May16_HO2-->
