@@ -11,7 +11,7 @@ ms.assetid:  d6938b56-7dc8-44ba-b4d4-cd7b169fd74d
 ---
 
 # Esecuzione di comandi remoti
-È possibile eseguire comandi in uno o in centinaia di computer con un singolo comando di Windows PowerShell. Windows PowerShell supporta l'elaborazione remota tramite varie tecnologie, tra cui WMI, RPC e WS-Management.
+È possibile eseguire comandi in uno o in centinaia di computer con un singolo comando di Windows PowerShell. Windows PowerShell supporta l'elaborazione remota grazie all'uso di varie tecnologie, tra cui WMI, RPC e WS\-Management.
 
 ## Comunicazione remota senza configurazione
 Molti cmdlet di Windows PowerShell hanno un parametro ComputerName che consente di raccogliere dati e cambiare le impostazioni di uno o più computer remoti. Usano un'ampia varietà di tecnologie per le comunicazioni, molte delle quali funzionano in tutti i sistemi operativi Windows supportati da Windows PowerShell senza nessuna configurazione speciale.
@@ -45,7 +45,7 @@ get-command | where { $_.parameters.keys -contains "ComputerName" -and $_.parame
 ```
 
 ## Comunicazione remota di Windows PowerShell
-La comunicazione remota di Windows PowerShell, basata sul protocollo WS-Management, consente di eseguire qualsiasi comando di Windows PowerShell in uno o più computer remoti. È possibile stabilire connessioni permanenti, avviare sessioni interattive 1:1 ed eseguire script in più computer.
+La comunicazione remota di Windows PowerShell, basata sul protocollo WS\-Management, consente di eseguire qualsiasi comando di Windows PowerShell in uno o più computer remoti. È possibile stabilire connessioni permanenti, avviare sessioni interattive 1:1 ed eseguire script in più computer.
 
 Per usare la comunicazione remota di Windows PowerShell, è necessario che il computer remoto sia configurato per la gestione remota. Per altre informazioni, incluse le istruzioni, vedere [about_Remote_Requirements](https://technet.microsoft.com/en-us/library/dd315349.aspx).
 
@@ -66,11 +66,11 @@ Per terminare una sessione interattiva, digitare:
 exit-pssession
 ```
 
-Per altre informazioni sui cmdlet Enter-PSSession ed Exit-PSSession, vedere [Enter-PSSession](https://technet.microsoft.com/en-us/library/dd315384.aspx) ed [Exit-PSSession](https://technet.microsoft.com/en-us/library/dd315322.aspx).
+Per altre informazioni sui cmdlet Enter\-PSSession e Exit\-PSSession, vedere [Enter-PSSession](https://technet.microsoft.com/en-us/library/dd315384.aspx) ed [Exit-PSSession](https://technet.microsoft.com/en-us/library/dd315322.aspx).
 
 ### Eseguire un comando remoto
 Per eseguire qualsiasi comando in uno o più computer remoti, usare il cmdlet [Invoke-Command](https://technet.microsoft.com/en-us/library/dd347578.aspx).
- Ad esempio, per eseguire un comando [Get-UICulture](https://technet.microsoft.com/en-us/library/dd347742.aspx) nei computer remoti Server01 e Server02, digitare:
+Ad esempio, per eseguire un comando [Get-UICulture](https://technet.microsoft.com/en-us/library/dd347742.aspx) nei computer remoti Server01 e Server02, digitare:
 
 ```
 invoke-command -computername Server01, Server02 {get-UICulture}
@@ -85,10 +85,10 @@ LCID    Name     DisplayName               PSComputerName
 1033    en-US    English (United States)   server02.corp.fabrikam.com
 ```
 
-Per altre informazioni sul cmdlet Invoke-Command, vedere [Invoke-Command](https://technet.microsoft.com/en-us/library/22fd98ba-1874-492e-95a5-c069467b8462).
+Per altre informazioni sul cmdlet Invoke\-Command, vedere [Invoke-Command](https://technet.microsoft.com/en-us/library/22fd98ba-1874-492e-95a5-c069467b8462).
 
 ### Eseguire uno script
-Per eseguire uno script in uno o più computer remoti, usare il parametro FilePath del cmdlet Invoke-Command. Lo script deve essere attivo o accessibile sul computer locale. I risultati vengono restituiti al computer locale.
+Per eseguire uno script in uno o più computer remoti, usare il parametro FilePath del cmdlet Invoke\-Command. Lo script deve essere attivo o accessibile sul computer locale. I risultati vengono restituiti al computer locale.
 
 Ad esempio, il comando seguente esegue lo script DiskCollect.ps1 nei computer remoti Server01 e Server02.
 
@@ -96,10 +96,10 @@ Ad esempio, il comando seguente esegue lo script DiskCollect.ps1 nei computer re
 invoke-command -computername Server01, Server02 -filepath c:\Scripts\DiskCollect.ps1
 ```
 
-Per altre informazioni sul cmdlet Invoke-Command, vedere [Invoke-Command](https://technet.microsoft.com/en-us/library/dd347578.aspx).
+Per altre informazioni sul cmdlet Invoke\-Command, vedere [Invoke-Command](https://technet.microsoft.com/en-us/library/dd347578.aspx).
 
 ### Stabilire una connessione permanente
-Per eseguire una serie di comandi correlati che condividono dati, creare una sessione nel computer remoto e quindi usare il cmdlet Invoke-Command per eseguire i comandi nella sessione creata. Per creare una sessione remota, usare il cmdlet New-PSSession.
+Per eseguire una serie di comandi correlati che condividono dati, creare una sessione nel computer remoto e quindi usare il cmdlet Invoke\-Command per eseguire i comandi nella sessione creata. Per creare una sessione remota, usare il cmdlet New\-PSSession.
 
 Ad esempio, il comando seguente crea una sessione remota nel computer Server01 e un'altra nel computer Server02. Gli oggetti sessione vengono salvati nella variabile $s.
 
@@ -109,7 +109,7 @@ $s = new-pssession -computername Server01, Server02
 
 Una volta stabilite le sessioni, è possibile eseguire qualsiasi comando al loro interno. Inoltre, poiché le sessioni sono permanenti, è possibile raccogliere dati in un comando e usarli in un comando successivo.
 
-Ad esempio, il comando seguente esegue un comando Get-Hotfix nelle sessioni nella variabile $s e salva i risultati nella variabile $h. La variabile $h viene creata in ogni sessione in $s, ma non esiste nella sessione locale.
+Ad esempio, il comando seguente esegue un comando Get\-Hotfix nelle sessioni nella variabile $s e salva i risultati nella variabile $h. La variabile $h viene creata in ogni sessione in $s, ma non esiste nella sessione locale.
 
 ```
 invoke-command -session $s {$h = get-hotfix}
@@ -118,14 +118,14 @@ invoke-command -session $s {$h = get-hotfix}
 A questo punto è possibile usare i dati della variabile $h nei comandi successivi, ad esempio il seguente. I risultati vengono visualizzati nel computer locale.
 
 ```
-invoke-command -session $s {$h | where {$_.installedby -ne "NTAUTHORITY\SYSTEM"
+invoke-command -session $s {$h | where {$_.installedby -ne "NTAUTHORITY\SYSTEM"} }
 ```
 
 ### Comunicazione remota avanzata
 La gestione remota di Windows PowerShell ha inizio in questo ambito. Usando i cmdlet installati con Windows PowerShell, è possibile stabilire e configurare sessioni remote dalle estremità locali e remote, creare sessioni personalizzate e con restrizioni, consentire agli utenti di importare comandi da una sessione remota che vengono effettivamente eseguiti in modo implicito nella sessione remota, configurare la sicurezza di una sessione remota e altro ancora.
 
 Per semplificare la configurazione remota, Windows PowerShell include un provider WSMan. L'unità WSMAN: creata dal provider consente di spostarsi in una gerarchia di impostazioni di configurazione nel computer locale e nei computer remoti.
- Per altre informazioni sul provider di WS-Management, vedere [WSMan Provider](https://technet.microsoft.com/en-us/library/dd819476.aspx) (Provider di WS-Management) e   [about_WS-Management_Cmdlets](https://technet.microsoft.com/en-us/library/dd819481.aspx) oppure digitare "get-help wsman" nella console di Windows PowerShell.
+Per altre informazioni sul provider di WS-Management, vedere [WSMan Provider](https://technet.microsoft.com/en-us/library/dd819476.aspx) (Provider di WS-Management) e   [about_WS-Management_Cmdlets](https://technet.microsoft.com/en-us/library/dd819481.aspx) oppure digitare "get\-help wsman" nella console di Windows PowerShell.
 
 Per altre informazioni, vedere:
 - [about_Remote_FAQ](https://technet.microsoft.com/en-us/library/dd315359.aspx)
@@ -149,6 +149,6 @@ Per informazioni sugli errori di comunicazione remota, vedere [about_Remote_Trou
 
 
 
-<!--HONumber=May16_HO2-->
+<!--HONumber=May16_HO4-->
 
 

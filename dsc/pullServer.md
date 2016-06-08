@@ -92,7 +92,7 @@ configuration Sample_xDscPullServer
 dir Cert:\LocalMachine\my
 
 # Then include this thumbprint when running the configuration
-Sample_xDSCPullServer -certificateThumbprint 'A7000024B753FA6FFF88E966FD6E19301FAE9CCC' -RegistrationKey '140a952b-b9d6-406b-b416-e0f759c9c0e4' -OutpuPath c:\Configs\PullServer
+Sample_xDSCPullServer -certificateThumbprint 'A7000024B753FA6FFF88E966FD6E19301FAE9CCC' -RegistrationKey '140a952b-b9d6-406b-b416-e0f759c9c0e4' -OutputPath c:\Configs\PullServer
 
 # Run the compiled configuration to make the target node a DSC Pull Server
 Start-DscConfiguration -Path c:\Configs\PullServer -Wait -Verbose
@@ -144,7 +144,7 @@ L'assenza della proprietà **ConfigurationID** nel file di metaconfigurazione si
 Dopo il completamento della configurazione del server di pull, le cartelle definite dalle proprietà **ConfigurationPath** e **ModulePath** nella configurazione del server di pull si trovano nella posizione in cui verranno posizionati i moduli e le configurazioni disponibili per il pull dai nodi di destinazione. Questi file devono avere un formato specifico per consentire la corretta elaborazione dal server di pull. 
 
 ### Formato del pacchetto dei moduli di risorse DSC
-Ogni modulo di risorse deve essere compresso e denominato in base a questa convenzione **{Nome modulo}_{Versione modulo}.zip**. Ad esempio, un modulo denominato xWebAdminstration con versione 3.1.2.0 verrebbe denominato 'xWebAdministration_3.2.1.0.zip'. Ogni versione di un modulo deve essere contenuta in un unico file ZIP. Dato che esiste solo un'unica versione di una risorsa in ogni file ZIP, non è supportato il formato di modulo aggiunto in WMF 5.0 che supporta più versioni del modulo in una singola directory. Ciò significa che prima di creare un pacchetto per i moduli di risorse DSC da usare con il server di pull è necessario apportare una piccola modifica alla struttura di directory. Il formato predefinito dei moduli contenenti risorse DSC WMF 5.0 è '{Cartella modulo}\{{Versione modulo}\DscResources\{{Cartella risorsa DSC}\'. Prima di creare il pacchetto per il server di pull, rimuovere semplicemente la cartella **{Versione modulo}** in modo che il percorso diventi '{Cartella modulo}\DscResources\{{Cartella risorsa DSC}\'. Con questa modifica, comprimere la cartella come descritto in precedenza e posizionare i file ZIP nella cartella **ModulePath**.
+Ogni modulo di risorse deve essere compresso e denominato in base a questa convenzione **{Nome modulo}_{Versione modulo}.zip**. Ad esempio, un modulo denominato xWebAdminstration con versione 3.1.2.0 verrebbe denominato 'xWebAdministration_3.2.1.0.zip'. Ogni versione di un modulo deve essere contenuta in un unico file ZIP. Dato che esiste solo un'unica versione di una risorsa in ogni file ZIP, non è supportato il formato di modulo aggiunto in WMF 5.0 che supporta più versioni del modulo in una singola directory. Ciò significa che prima di creare un pacchetto per i moduli di risorse DSC da usare con il server di pull è necessario apportare una piccola modifica alla struttura di directory. Il formato predefinito dei moduli contenenti risorse DSC in WMF 5.0 è '{Cartella modulo}\{Versione modulo}\DscResources\{Cartella risorsa DSC}\'. Prima di creare il pacchetto per il server di pull, rimuovere la cartella **{Versione modulo}** in modo che il percorso diventi '{Cartella modulo}\DscResources\{Cartella risorsa DSC}\'. Con questa modifica, comprimere la cartella come descritto in precedenza e posizionare i file ZIP nella cartella **ModulePath**.
 
 ### Formato del file MOF di configurazione 
 Un file MOF di configurazione deve essere associato a un file di checksum in modo che Gestione configurazione locale in un nodo di destinazione possa convalidare la configurazione. Per creare un checksum, chiamare il cmdlet [New-DSCCheckSum](https://technet.microsoft.com/en-us/library/dn521622.aspx). Il cmdlet accetta un parametro **Path** che specifica la cartella in cui si trova il file MOF di configurazione. Il cmdlet crea un file di checksum denominato `ConfigurationMOFName.mof.checksum`, in cui `ConfigurationMOFName` è il nome del file MOF di configurazione. Se nella cartella specificata sono presenti più file MOF di configurazione, viene creato un checksum per ogni configurazione nella cartella. Posizionare i file MOF e i file di checksum associati nella cartella **ConfigurationPath**.
@@ -182,6 +182,6 @@ Gli argomenti seguenti descrivono in modo dettagliato la configurazione dei clie
 
 
 
-<!--HONumber=May16_HO3-->
+<!--HONumber=May16_HO4-->
 
 

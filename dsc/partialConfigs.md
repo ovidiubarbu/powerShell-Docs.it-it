@@ -58,39 +58,81 @@ Chiamare quindi **Publish-DSCConfiguration** per ogni configurazione, passando l
 
 ### Configurazione di Gestione configurazione locale per le configurazioni dei nodi di pull
 
-Per configurare Gestione configurazione locale per il pull di configurazioni parziali da un server di pull, è necessario definire il server di pull in un blocco **ConfigurationRepositoryWeb** (per un server di pull HTTP) o **ConfigurationRepositoryShare** (per un server di pull SMB). Creare quindi blocchi **PartialConfiguration** che fanno riferimento al server di pull usando la proprietà **ConfigurationSource**. È anche necessario creare un blocco Settings per specificare che Gestione configurazione locale usa la modalità pull, nonché specificare il valore di ConfigurationID usato dal server di pull e dal nodo di destinazione per identificare le configurazioni. La metaconfigurazione seguente definisce un server di pull HTTP denominato CONTOSO-PullSrv e due configurazioni parziali che usano tale server di pull.
+Per configurare Gestione configurazione locale per il pull di configurazioni parziali da un server di pull, è necessario definire il server di pull in un blocco **ConfigurationRepositoryWeb** (per un server di pull HTTP) o **ConfigurationRepositoryShare** (per un server di pull SMB). Creare quindi blocchi **PartialConfiguration** che fanno riferimento al server di pull usando la proprietà **ConfigurationSource**. È anche necessario creare un blocco **Settings** per specificare che Gestione configurazione locale usa la modalità pull, nonché specificare il valore di **ConfigurationNames** o **ConfigurationID** usato dal server di pull e dal nodo di destinazione per identificare le configurazioni. La metaconfigurazione seguente definisce un server di pull HTTP denominato CONTOSO-PullSrv e due configurazioni parziali che usano tale server di pull.
+
+Per informazioni sulla configurazione di Gestione configurazione locale tramite **ConfigurationNames**, vedere [Configurazione di un client di pull usando nomi di configurazione](pullClientConfigNames.md). Per informazioni sulla configurazione di Gestione configurazione locale tramite **ConfigurationID**, vedere [Configurazione di un client di pull usando un ID configurazione](pullClientConfigID.md).
+
+#### Configurazione di Gestione configurazione locale per configurazioni di modalità pull tramite nomi di configurazione
+
+```powershell
+[DscLocalConfigurationManager()]
+Configuration PartialConfigDemoConfigNames
+{
+        Settings
+        {
+            RefreshFrequencyMins            = 30;
+            RefreshMode                     = "PULL";
+            ConfigurationMode               ="ApplyAndAutocorrect";
+            AllowModuleOverwrite            = $true;
+            RebootNodeIfNeeded              = $true;
+            ConfigurationModeFrequencyMins  = 60;
+        }
+        ConfigurationRepositoryWeb CONTOSO-PullSrv
+        {
+            ServerURL                       = 'https://CONTOSO-PullSrv:8080/PSDSCPullServer.svc'    
+            RegistrationKey                 = 5b41f4e6-5e6d-45f5-8102-f2227468ef38     
+            ConfigurationNames              = @("OSInstall", "SharePointConfig")
+        }     
+        
+        PartialConfiguration Part1 
+        {
+            Description                     = "OSInstall"
+            ConfigurationSource             = @("[ConfigurationRepositoryWeb]CONTOSO-PullSrv") 
+        }
+ 
+        PartialConfiguration SharePointConfig
+        {
+            Description                     = "SharePointConfig"
+            ConfigurationSource             = @("[ConfigurationRepositoryWeb]CONTOSO-PullSrv")
+            DependsOn                       = '[PartialConfiguration]OSInstall'
+        }
+   
+}
+``` 
+
+#### Configurazione di Gestione configurazione locale per configurazioni di modalità pull tramite ID configurazione
 
 ```powershell
 [DSCLocalConfigurationManager()]
-configuration PartialConfigDemo
+configuration PartialConfigDemoConfigID
 {
     Node localhost
     {
         Settings
         {
-            RefreshMode = 'Pull'
-            ConfigurationID = '1d545e3b-60c3-47a0-bf65-5afc05182fd0'
-            RefreshFrequencyMins = 30 
-            RebootNodeIfNeeded = $true
+            RefreshMode                     = 'Pull'
+            ConfigurationID                 = '1d545e3b-60c3-47a0-bf65-5afc05182fd0'
+            RefreshFrequencyMins            = 30 
+            RebootNodeIfNeeded              = $true
         }
         ConfigurationRepositoryWeb CONTOSO-PullSrv
         {
-            ServerURL = 'https://CONTOSO-PullSrv:8080/PSDSCPullServer.svc'
+            ServerURL                       = 'https://CONTOSO-PullSrv:8080/PSDSCPullServer.svc'
             
         }
         
            PartialConfiguration OSInstall
         {
-            Description = 'Configuration for the Base OS'
-            ConfigurationSource = '[ConfigurationRepositoryWeb]CONTOSO-PullSrv'
-            RefreshMode = 'Pull'
+            Description                     = 'Configuration for the Base OS'
+            ConfigurationSource             = '[ConfigurationRepositoryWeb]CONTOSO-PullSrv'
+            RefreshMode                     = 'Pull'
         }
            PartialConfiguration SharePointConfig
         {
-            Description = 'Configuration for the Sharepoint Server'
-            ConfigurationSource = '[ConfigurationRepositoryWeb]CONTOSO-PullSrv'
-            DependsOn = '[PartialConfiguration]OSInstall'
-            RefreshMode = 'Pull'
+            Description                     = 'Configuration for the Sharepoint Server'
+            ConfigurationSource             = '[ConfigurationRepositoryWeb]CONTOSO-PullSrv'
+            DependsOn                       = '[PartialConfiguration]OSInstall'
+            RefreshMode                     = 'Pull'
         }
     }
 }
@@ -101,18 +143,78 @@ PartialConfigDemo
 
 Dopo aver creato la metaconfigurazione, è necessario eseguirla per creare un documento di configurazione (un file MOF) e quindi chiamare [Set-DscLocalConfigurationManager](https://technet.microsoft.com/en-us/library/dn521621(v=wps.630).aspx) per configurare Gestione configurazione locale.
 
-### Assegnazione dei nomi ai documenti di configurazione e posizionamento nei server di pull
+### Denominazione e posizionamento dei documenti di configurazione nel server di pull (ConfigurationNames)
 
-I documenti di configurazione parziale devono essere inseriti nella cartella specificata come **ConfigurationPath** nel file `web.config` per il server di pull (in genere `C:\Program Files\WindowsPowerShell\DscService\Configuration`). I documenti di configurazione devono essere denominati come segue: _ConfigurationName_. _ConfigurationID_`.mof`, dove _ConfigurationName_ è il nome della configurazione parziale e _ConfigurationID_ è l'ID della configurazione definita in Gestione configurazione locale nel nodo di destinazione. Per questo esempio, i nomi dei documenti di configurazione devono essere quelli indicati di seguito.
-![Nomi delle configurazioni parziali nel server di pull](images/PartialConfigPullServer.jpg)
+I documenti di configurazione parziale devono essere inseriti nella cartella specificata come **ConfigurationPath** nel file `web.config` per il server di pull (in genere `C:\Program Files\WindowsPowerShell\DscService\Configuration`). I documenti di configurazione devono essere denominati come segue: `ConfigurationName.mof`, dove _ConfigurationName_ è il nome della configurazione parziale. In questo esempio i nomi dei documenti di configurazione devono essere quelli indicati di seguito:
+
+```
+OSInstall.mof
+OSInstall.mof.checksum
+SharePointConfig.mof
+SharePointConfig.mof.checksum
+```
+
+### Denominazione e posizionamento dei documenti di configurazione nel server di pull (ConfigurationID)
+
+I documenti di configurazione parziale devono essere inseriti nella cartella specificata come **ConfigurationPath** nel file `web.config` per il server di pull (in genere `C:\Program Files\WindowsPowerShell\DscService\Configuration`). I documenti di configurazione devono essere denominati come segue: _ConfigurationName_. _ConfigurationID_`.mof`, dove _ConfigurationName_ è il nome della configurazione parziale e _ConfigurationID_ è l'ID della configurazione definita in Gestione configurazione locale nel nodo di destinazione. In questo esempio i nomi dei documenti di configurazione devono essere quelli indicati di seguito:
+
+```
+OSInstall.1d545e3b-60c3-47a0-bf65-5afc05182fd0.mof
+OSInstall.1d545e3b-60c3-47a0-bf65-5afc05182fd0.mof.checksum
+SharePointConfig.1d545e3b-60c3-47a0-bf65-5afc05182fd0.mof
+SharePointConfig.1d545e3b-60c3-47a0-bf65-5afc05182fd0.mof.checksum
+```
+
 
 ### Esecuzione di configurazioni parziali da un server di pull
 
-Dopo aver configurato Gestione configurazione locale nel nodo di destinazione e dopo aver creato i documenti di configurazione e aver assegnato loro i nomi appropriati nel server di pull, il nodo di destinazione effettuerà il pull delle configurazioni parziali, le combinerà e applicherà la configurazione risultante a intervalli regolari, come specificato dalla proprietà **RefreshFrequencyMins** di Gestione configurazione locale. Se si vuole forzare un aggiornamento, è possibile chiamare il cmdlet Update-DscConfiguration per effettuare il pull delle configurazioni e quindi `Start-DSCConfiguration –UseExisting` per applicare la configurazione.
+Dopo aver configurato Gestione configurazione locale nel nodo di destinazione e dopo aver creato i documenti di configurazione e aver assegnato loro i nomi appropriati nel server di pull, il nodo di destinazione effettuerà il pull delle configurazioni parziali, le combinerà e applicherà la configurazione risultante a intervalli regolari, come specificato dalla proprietà **RefreshFrequencyMins** di Gestione configurazione locale. Se si vuole forzare un aggiornamento, è possibile chiamare il cmdlet [Update-DscConfiguration](https://technet.microsoft.com/en-us/library/mt143541.aspx) per effettuare il pull delle configurazioni e quindi `Start-DSCConfiguration –UseExisting` per applicare le configurazioni.
+
 
 ## Configurazioni parziali in modalità mista push e pull
 
 È anche possibile combinare le modalità push e pull per le configurazioni parziali. In altre parole, è possibile usare una configurazione parziale di cui viene effettuato il pull da un server di pull e un'altra configurazione parziale di cui viene effettuato il push. Ogni configurazione parziale viene trattata in base alla relativa modalità di aggiornamento, come descritto nelle sezioni precedenti. Ad esempio, la metaconfigurazione seguente descrive lo stesso esempio, con la configurazione parziale del sistema operativo in modalità pull e la configurazione parziale di SharePoint in modalità push.
+
+### Modalità miste push e pull che usano ConfigurationNames
+
+```powershell
+[DscLocalConfigurationManager()]
+Configuration PartialConfigDemoConfigNames
+{
+        Settings
+        {
+            RefreshFrequencyMins            = 30;
+            RefreshMode                     = "PULL";
+            ConfigurationMode               = "ApplyAndAutocorrect";
+            AllowModuleOverwrite            = $true;
+            RebootNodeIfNeeded              = $true;
+            ConfigurationModeFrequencyMins  = 60;
+        }
+        ConfigurationRepositoryWeb CONTOSO-PullSrv
+        {
+            ServerURL                       = 'https://CONTOSO-PullSrv:8080/PSDSCPullServer.svc'    
+            RegistrationKey                 = 5b41f4e6-5e6d-45f5-8102-f2227468ef38     
+            ConfigurationNames              = @("OSInstall", "SharePointConfig")
+        }     
+        
+        PartialConfiguration OSInstall 
+        {
+            Description                     = "OSInstall"
+            ConfigurationSource             = @("[ConfigurationRepositoryWeb]CONTOSO-PullSrv")
+            RefreshMode                     = 'Pull' 
+        }
+ 
+        PartialConfiguration SharePointConfig
+        {
+            Description                     = "SharePointConfig"
+            DependsOn                       = '[PartialConfiguration]OSInstall'
+            RefreshMode                     = 'Push'
+        }
+   
+}
+``` 
+
+### Modalità miste push e pull che usano ConfigurationID
 
 ```powershell
 [DSCLocalConfigurationManager()]
@@ -122,28 +224,28 @@ configuration PartialConfigDemo
     {
         Settings
         {
-            RefreshMode = 'Pull'
-            ConfigurationID = '1d545e3b-60c3-47a0-bf65-5afc05182fd0'
-            RefreshFrequencyMins = 30 
-            RebootNodeIfNeeded = $true
+            RefreshMode             = 'Pull'
+            ConfigurationID         = '1d545e3b-60c3-47a0-bf65-5afc05182fd0'
+            RefreshFrequencyMins    = 30 
+            RebootNodeIfNeeded      = $true
         }
         ConfigurationRepositoryWeb CONTOSO-PullSrv
         {
-            ServerURL = 'https://CONTOSO-PullSrv:8080/PSDSCPullServer.svc'
+            ServerURL               = 'https://CONTOSO-PullSrv:8080/PSDSCPullServer.svc'
             
         }
         
            PartialConfiguration OSInstall
         {
-            Description = 'Configuration for the Base OS'
-            ConfigurationSource = '[ConfigurationRepositoryWeb]CONTOSO-PullSrv'
-            RefreshMode = 'Pull'
+            Description             = 'Configuration for the Base OS'
+            ConfigurationSource     = '[ConfigurationRepositoryWeb]CONTOSO-PullSrv'
+            RefreshMode             = 'Pull'
         }
            PartialConfiguration SharePointConfig
         {
-            Description = 'Configuration for the Sharepoint Server'
-            DependsOn = '[PartialConfiguration]OSInstall'
-            RefreshMode = 'Push'
+            Description             = 'Configuration for the Sharepoint Server'
+            DependsOn               = '[PartialConfiguration]OSInstall'
+            RefreshMode             = 'Push'
         }
     }
 }
@@ -152,9 +254,9 @@ PartialConfigDemo
 
 Si noti che il valore di **RefreshMode** specificato nel blocco Settings è "Pull", mentre il valore di **RefreshMode** per la configurazione parziale OSInstall è "Push".
 
-Assegnare i nomi ai file MOF di configurazione e posizionarli come descritto in precedenza per le relative modalità di aggiornamento. Chiamare **Publish-DSCConfiguration** per pubblicare la configurazione parziale di `SharePointInstall` e attendere il pull della configurazione di `OSInstall` dal server di pull oppure forzare un aggiornamento chiamando [Update-DscConfiguration](https://technet.microsoft.com/en-us/library/mt143541(v=wps.630).aspx).
+Denominare e posizionare i file MOF di configurazione come descritto in precedenza per le relative modalità di aggiornamento. Chiamare **Publish-DSCConfiguration** per pubblicare la `SharePointInstall`configurazione parziale e attendere il pull della configurazione `OSInstall` dal server di pull oppure forzare un aggiornamento chiamando [Update-DscConfiguration](https://technet.microsoft.com/en-us/library/mt143541(v=wps.630).aspx).
 
-## Esempio di configurazione di OSInstall parziale
+## Esempio di configurazione parziale di OSInstall
 
 ```powershell
 Configuration OSInstall
@@ -173,25 +275,25 @@ Configuration OSInstall
     {
         Group LocalAdmins
         {
-            GroupName = 'Administrators'
-            MembersToInclude = 'domain\sharepoint_svc',
-                               'admins@example.domain'
-            Ensure = 'Present'
-            Credential = $Credential
+            GroupName           = 'Administrators'
+            MembersToInclude    = 'domain\sharepoint_svc',
+                                  'admins@example.domain'
+            Ensure              = 'Present'
+            Credential          = $Credential
             
         }
 
         WindowsFeature Telnet
         {
-            Name = 'Telnet-Server'
-            Ensure = 'Absent'
+            Name                = 'Telnet-Server'
+            Ensure              = 'Absent'
         }
     }
 }
 OSInstall
 
 ```
-## Esempio di configurazione di SharePointConfig parziale
+## Esempio di configurazione parziale di SharePointConfig
 ```powershell
 Configuration SharePointConfig
 {
@@ -207,9 +309,9 @@ Configuration SharePointConfig
     {
         xSPInstall SharePointDefault
         {
-            Ensure = 'Present'
-            BinaryDir = '\\FileServer\Installers\Sharepoint\'
-            ProductKey = $ProductKey
+            Ensure      = 'Present'
+            BinaryDir   = '\\FileServer\Installers\Sharepoint\'
+            ProductKey  = $ProductKey
         }
     }
 }
