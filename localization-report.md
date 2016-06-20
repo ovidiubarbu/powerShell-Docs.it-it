@@ -1738,9 +1738,9 @@
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [jea\README.md](https://github.com/PowerShell/powerShell-Docs.it-it/blob/a8f1d1cac57049cd042fd007f83019497cd28e08/jea/README.md)
-* Current Handback File: [README.21b5f679157a942d8da32daf52be349e47cf03ae.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/8a9167a0f549592c5f3fc97be4488bc7cab9d4e2/ol-handback/PowerShell/powerShell-Docs.it-it/live/README.21b5f679157a942d8da32daf52be349e47cf03ae.it-it.xlf)
-* Current Handback Datetime: 2016-06-14 19:37:50
+* Current Target File: [jea\README.md](https://github.com/PowerShell/powerShell-Docs.it-it/blob/4ae9e7dc6cf98642118c35b9f77c18b98d08063d/jea/README.md)
+* Current Handback File: [README.21b5f679157a942d8da32daf52be349e47cf03ae.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/8e6f6a2a97d794e6ba78810690a395542e4e5491/ol-handback/PowerShell/powerShell-Docs.it-it/live/README.21b5f679157a942d8da32daf52be349e47cf03ae.it-it.xlf)
+* Current Handback Datetime: 2016-06-20 12:21:50
 * Bilingual File: [README.21b5f679157a942d8da32daf52be349e47cf03ae.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/8a9167a0f549592c5f3fc97be4488bc7cab9d4e2/ol-handback/PowerShell/powerShell-Docs.it-it/live/README.21b5f679157a942d8da32daf52be349e47cf03ae.it-it.xlf)
 * Bilingual Datetime: 2016-06-16 14:32:26
 * [Back to Top](#report-top)
