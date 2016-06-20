@@ -55,13 +55,13 @@ Gli account virtuali appartengono al gruppo di sicurezza "Administrators" locale
 
 ### Esplorare la guida all'esperienza
 Quando si è pronti a creare il primo endpoint JEA,
-vedere la [guida all'esperienza di JEA](./JEA Guide.md) per sapere come creare, distribuire e usare il proprio endpoint JEA.
+vedere la [guida all'esperienza di JEA](jea-uide.md) per sapere come creare, distribuire e usare il proprio endpoint JEA.
 La guida consente di iniziare rapidamente con un endpoint JEA predefinito per avere un'idea di come sarà l'esperienza per l'utente finale, quindi spiega come ricreare l'endpoint da zero illustrando le configurazioni di sessione e le capacità del ruolo.
 
 ### Iniziare a creare i propri endpoint JEA
 È facile creare un endpoint JEA: è sufficiente un sistema abilitato per JEA e un editor di testo, ad esempio PowerShell ISE.
 Un suggerimento utile per iniziare è creare i file scheletro usando `New-PSRoleCapabilityFile -Path <path>` e `New-PSSessionCapabilityFile -Path <Path>` senza altri argomenti.
-I file scheletro contengono tutti i campi di configurazione applicabili oltre a commenti utili che spiegano per cosa può essere usato ogni campo. 
+I file scheletro contengono tutti i campi di configurazione applicabili oltre a commenti utili che spiegano per cosa può essere usato ogni campo.
 
 Per semplificare ulteriormente la creazione degli endpoint JEA, vedere il [JEA Toolkit Helper](http://blogs.technet.com/b/privatecloud/archive/2015/12/20/introducing-the-updated-jea-helper-tool.aspx) che offre un'interfaccia utente grafica con cui è possibile creare file di configurazione di sessione e file di capacità del ruolo.
 È supportata anche la generazione di capacità del ruolo in base ai registri di PowerShell per iniziare a gestire i comandi eseguiti regolarmente dagli utenti per svolgere le proprie attività.
