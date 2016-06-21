@@ -30,10 +30,10 @@
 #### [Risorse basate su MOF in C#](authoringResourceMofCS.md)
 ### [Risorse personalizzate basate su classe](authoringResourceClass.md)
 ### [Risorse composte](authoringResourceComposite.md)
-### [Debug di risorse DSC](debugResource.md)
-### [Chiamata diretta dei metodi delle risorse DSC](directCallResource.md)
 ### [Scrittura di una risorsa DSC a istanza singola (procedura consigliata)](singleInstance.md)
 ### [Elenco di controllo per la creazione di risorse](resourceAuthoringChecklist.md)
+## [Debug di risorse DSC](debugResource.md)
+## [Chiamata diretta dei metodi delle risorse DSC](directCallResource.md)
 
 # [Configurazione di Gestione configurazione locale](metaConfig.md)
 ## [Configurazione di Gestione configurazione locale in PowerShell 4.0](metaConfig4.md)
@@ -91,6 +91,6 @@
 
 
 
-<!--HONumber=May16_HO3-->
+<!--HONumber=Jun16_HO3-->
 
 
