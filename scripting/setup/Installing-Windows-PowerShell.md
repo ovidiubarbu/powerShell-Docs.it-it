@@ -30,7 +30,7 @@ Questo argomento include le sezioni seguenti:
 -   [Installazione del motore di Windows PowerShell 2.0](Installing-the-Windows-PowerShell-2.0-Engine.md)
 
 ## <a name="BKMK_InstallingOnWindows8andWindowsServer2012"></a>Installazione di Windows PowerShell in Windows 8 e Windows Server 2012
-Windows PowerShell 3.0 viene fornito già installato, configurato e pronto per l'uso. Windows PowerShell Integrated Scripting Environment (ISE) viene installato e abilitato. Per informazioni sull'avvio di Windows PowerShell, vedere [Starting Windows PowerShell on Windows 8 and Windows](https://technet.microsoft.com/en-us/library/d7be1668-8617-4890-ad90-dd9765fbd2c3) (Avvio di Windows PowerShell in Windows 8 e Windows) e [Starting Windows PowerShell on Windows Server](https://technet.microsoft.com/en-us/library/4fc0110a-cc0c-42a4-bbb5-3cc89a0fc968) (Avvio di Windows PowerShell in Windows Server).
+Windows PowerShell 3.0 viene fornito già installato, configurato e pronto per l'uso. Windows PowerShell Integrated Scripting Environment (ISE) viene installato e abilitato. Per informazioni sull'avvio di Windows PowerShell, vedere [Avvio di Windows PowerShell in Windows 8](https://technet.microsoft.com/en-us/library/d7be1668-8617-4890-ad90-dd9765fbd2c3) e [Avvio di Windows PowerShell in Windows Server 2012](https://technet.microsoft.com/library/hh831491.aspx#BKMK_powershell).
 
 ## <a name="BKMK_InstallingOnWindows7andWindowsServer2008R2"></a>Installazione di Windows PowerShell in Windows 7 e Windows Server 2008 R2
 Queste istruzioni spiegano come installare Windows PowerShell 3.0 nei computer che eseguono Windows 7 con Service Pack 1 e Windows Server 2008 R2 con Service Pack 1. Di seguito sono disponibili istruzioni di installazione separate per i computer con l'opzione di installazione Server Core di Windows Server 2008 R2.
@@ -43,11 +43,11 @@ Queste istruzioni spiegano come installare Windows PowerShell 3.0 nei computer c
 
 1.  Installare la versione completa di Microsoft .NET Framework 4 (dotNetFx40\_Full\_setup.exe) dall'Area download Microsoft all'indirizzo [http://go.microsoft.com/fwlink/?LinkID=212547](http://go.microsoft.com/fwlink/?LinkID=212547).
 
-    Oppure installare Microsoft .NET Framework 4.5 (dotNetFx45\_Full\_setup.exe) dall'Area download Microsoft all'indirizzo [http://go.microsoft.com/fwlink/?LinkID=242919](http://go.microsoft.com/fwlink/?LinkID=242919).
+    In alternativa, installare Microsoft .NET Framework 4.5 (dotNetFx45\_Full\_setup.exe) dall'Area download Microsoft all'indirizzo [http://go.microsoft.com/fwlink/?LinkID=242919](http://go.microsoft.com/fwlink/?LinkID=242919).
 
 2.  Installare Windows Management Framework 3.0 dall'Area download Microsoft all'indirizzo [http://go.microsoft.com/fwlink/?LinkID=240290](http://go.microsoft.com/fwlink/?LinkID=240290).
 
-Per informazioni sull'avvio di Windows PowerShell 3.0, vedere [Starting Windows PowerShell on Earlier Versions of Windows](Starting-Windows-PowerShell-on-Earlier-Versions-of-Windows.md) (Avvio di Windows PowerShell in versioni precedenti di Windows).
+Per informazioni sull'avvio di Windows PowerShell 3.0, vedere [Avvio di Windows PowerShell in versioni precedenti di Windows](Starting-Windows-PowerShell-on-Earlier-Versions-of-Windows.md).
 
 ## <a name="BKMK_InstallingOnServerCore"></a>Installazione di Windows PowerShell in Server Core
 Queste istruzioni spiegano come installare Windows PowerShell 3.0 nei computer che eseguono l'opzione di installazione Server Core di Windows Server 2008 R2 con Service Pack 1.
@@ -91,7 +91,7 @@ Nei sistemi Windows Server 2008, Windows Management Framework (Windows PowerShel
 
 3.  Installare la versione completa di Microsoft .NET Framework 4 (dotNetFx40\_Full\_setup.exe) dall'Area download Microsoft all'indirizzo [http://go.microsoft.com/fwlink/?LinkID=212547](http://go.microsoft.com/fwlink/?LinkID=212547).
 
-    Oppure installare Microsoft .NET Framework 4.5 (dotNetFx45\_Full\_setup.exe) dall'Area download Microsoft all'indirizzo [http://go.microsoft.com/fwlink/?LinkID=242919](http://go.microsoft.com/fwlink/?LinkID=242919).
+    In alternativa, installare Microsoft .NET Framework 4.5 (dotNetFx45\_Full\_setup.exe) dall'Area download Microsoft all'indirizzo [http://go.microsoft.com/fwlink/?LinkID=242919](http://go.microsoft.com/fwlink/?LinkID=242919).
 
 4.  Installare la "protezione estesa per l'autenticazione" (KB 968389) da [http://go.microsoft.com/fwlink/?LinkID=186398](http://go.microsoft.com/fwlink/?LinkID=186398).
 
@@ -102,7 +102,6 @@ Nei sistemi Windows Server 2008, Windows Management Framework (Windows PowerShel
 [Avvio di Windows PowerShell [ps]](https://technet.microsoft.com/en-us/library/8ec8c2d7-8e7c-4722-a3d2-498fe5739a8e)
 
 
-
-<!--HONumber=May16_HO2-->
+<!--HONumber=Jun16_HO3-->
 
 

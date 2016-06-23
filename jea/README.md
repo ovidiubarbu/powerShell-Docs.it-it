@@ -6,7 +6,7 @@ Con JEA, è possibile:
 - **Seguire da vicino le attività degli utenti** e capirle meglio grazie a trascrizioni "over-the-shoulder" che indicano esattamente quali comandi eseguono gli utenti durante una sessione.
 
 Perché tutto questo è importante?
-Consideriamo uno scenario comune in cui i server DNS condividono il percorso con i controller di dominio Active Directory.
+Si consideri uno scenario comune in cui i server DNS condividono il percorso con i controller di dominio Active Directory.
 Gli amministratori DNS devono avere privilegi di amministratore locale per risolvere i problemi del server DNS, ma per farlo è necessario che siano membri del gruppo di sicurezza con privilegi elevati "Domain Admins".
 In questo modo saranno in grado di controllare l'intero dominio e di accedere a tutte le risorse del computer.
 
@@ -67,6 +67,6 @@ Per semplificare ulteriormente la creazione degli endpoint JEA, vedere il [JEA T
 È supportata anche la generazione di capacità del ruolo in base ai registri di PowerShell per iniziare a gestire i comandi eseguiti regolarmente dagli utenti per svolgere le proprie attività.
 
 
-<!--HONumber=Jun16_HO1-->
+<!--HONumber=Jun16_HO3-->
 
 
