@@ -1,13 +1,17 @@
 ---
-title:  Come usare la funzionalità di completamento tramite TAB nel riquadro di script e nel riquadro della console
-ms.date:  2016-05-11
-keywords:  powershell,cmdlet
-description:  
-ms.topic:  article
-author:  jpjofre
-manager:  dongill
-ms.prod:  powershell
-ms.assetid:  3b752c3c-0bd0-4eca-a2d3-2d5a37fd9d84
+title: "Come usare la funzionalità di completamento tramite TAB nel riquadro di script e nel riquadro della console"
+ms.date: 2016-05-11
+keywords: powershell,cmdlet
+description: 
+ms.topic: article
+author: jpjofre
+manager: dongill
+ms.prod: powershell
+ms.assetid: 3b752c3c-0bd0-4eca-a2d3-2d5a37fd9d84
+translationtype: Human Translation
+ms.sourcegitcommit: 03ac4b90d299b316194f1fa932e7dbf62d4b1c8e
+ms.openlocfilehash: 07f7fb6b4e5d94de31551566ca8faff263817383
+
 ---
 
 # Come usare la funzionalità di completamento tramite TAB nel riquadro di script e nel riquadro della console
@@ -30,6 +34,7 @@ Ad esempio, digitare `get-process -` e quindi premere più volte TAB per visuali
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -1,12 +1,16 @@
 ---
-title:   Configurazione di Gestione configurazione locale
-ms.date:  2016-05-16
-keywords:  powershell,DSC
-description:  
-ms.topic:  article
-author:  eslesar
-manager:  dongill
-ms.prod:  powershell
+title: Configurazione di Gestione configurazione locale
+ms.date: 2016-05-16
+keywords: powershell,DSC
+description: 
+ms.topic: article
+author: eslesar
+manager: dongill
+ms.prod: powershell
+translationtype: Human Translation
+ms.sourcegitcommit: 901cf8190252ac344182bf49d550a8adade559a0
+ms.openlocfilehash: c66b8d6abf4886143f71c0de823cbfde86d875ba
+
 ---
 
 # Configurazione di Gestione configurazione locale
@@ -162,6 +166,7 @@ Per definire una configurazione parziale, creare un blocco **PartialConfiguratio
 
 
 
-<!--HONumber=Jun16_HO3-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -1,12 +1,16 @@
 ---
-title:   Debug di risorse DSC
-ms.date:  2016-05-16
-keywords:  powershell,DSC
-description:  
-ms.topic:  article
-author:  eslesar
-manager:  dongill
-ms.prod:  powershell
+title: Debug di risorse DSC
+ms.date: 2016-05-16
+keywords: powershell,DSC
+description: 
+ms.topic: article
+author: eslesar
+manager: dongill
+ms.prod: powershell
+translationtype: Human Translation
+ms.sourcegitcommit: 6477ae8575c83fc24150f9502515ff5b82bc8198
+ms.openlocfilehash: f5290e085c8949f6b3cdf23f3244a7142da6248d
+
 ---
 
 # Debug di risorse DSC
@@ -18,8 +22,7 @@ In PowerShell 5.0 è stata introdotta una nuova funzionalità in DSC (Desired St
 ## Abilitazione del debug di DSC
 Prima di poter eseguire il debug di una risorsa, è necessario abilitare il debug chiamando il cmdlet [Enable-DscDebug](https://technet.microsoft.com/en-us/library/mt517870.aspx). Questo cmdlet accetta il parametro obbligatorio **BreakAll**. 
 
-È possibile verificare che il debug sia stato abilitato osservando il risultato di una chiamata a [Get-DscLocalConfigurationManager](https://technet.microsoft.com/en-us/library/dn407378.aspx). 
-L'output di PowerShell seguente mostra il risultato dell'abilitazione del debug:
+È possibile verificare che il debug sia stato abilitato osservando il risultato di una chiamata a [Get-DscLocalConfigurationManager](https://technet.microsoft.com/en-us/library/dn407378.aspx). L'output di PowerShell seguente mostra il risultato dell'abilitazione del debug:
 
 
 ```powershell
@@ -106,6 +109,7 @@ Dopo la chiamata di [Enable-DscDebug](https://technet.microsoft.com/en-us/librar
 
 
 
-<!--HONumber=May16_HO3-->
+
+<!--HONumber=Jun16_HO4-->
 
 
