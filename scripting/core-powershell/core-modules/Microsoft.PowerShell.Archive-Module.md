@@ -1,13 +1,17 @@
 ---
-title:  Modulo Microsoft.PowerShell.Archive
-ms.date:  2016-05-11
-keywords:  powershell,cmdlet
-description:  
-ms.topic:  article
-author:  jpjofre
-manager:  dongill
-ms.prod:  powershell
-ms.assetid:  71a727b5-49a5-47a9-8034-161c86cf042b
+title: Modulo Microsoft.PowerShell.Archive
+ms.date: 2016-05-11
+keywords: powershell,cmdlet
+description: 
+ms.topic: article
+author: jpjofre
+manager: dongill
+ms.prod: powershell
+ms.assetid: 71a727b5-49a5-47a9-8034-161c86cf042b
+translationtype: Human Translation
+ms.sourcegitcommit: 03ac4b90d299b316194f1fa932e7dbf62d4b1c8e
+ms.openlocfilehash: 249a0ece77a11fd9aa54a6ff4170e44f42b377c9
+
 ---
 
 # Modulo Microsoft.PowerShell.Archive
@@ -25,6 +29,7 @@ Questa sezione contiene gli argomenti della Guida per i cmdlet installati con il
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

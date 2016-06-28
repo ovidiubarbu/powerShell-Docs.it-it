@@ -8,4 +8,8 @@ PackageManagement (noto anche come OneGet) è un nuovo modo per individuare e in
 -   Installare, disinstallare ed effettuare l'inventario dei pacchetti in uno o più repository di software con facilità
 
 Per altri dettagli, vedere http://oneget.org/.
-<!--HONumber=Mar16_HO2-->
+
+
+<!--HONumber=Jun16_HO4-->
+
+

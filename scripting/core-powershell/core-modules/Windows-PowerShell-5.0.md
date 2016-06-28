@@ -1,13 +1,17 @@
 ---
-title:  Windows PowerShell 5.0
-ms.date:  2016-05-11
-keywords:  powershell,cmdlet
-description:  
-ms.topic:  article
-author:  jpjofre
-manager:  dongill
-ms.prod:  powershell
-ms.assetid:  2ae52a0d-2eb5-4c71-971f-fb3f612d281b
+title: Windows PowerShell 5.0
+ms.date: 2016-05-11
+keywords: powershell,cmdlet
+description: 
+ms.topic: article
+author: jpjofre
+manager: dongill
+ms.prod: powershell
+ms.assetid: 2ae52a0d-2eb5-4c71-971f-fb3f612d281b
+translationtype: Human Translation
+ms.sourcegitcommit: 03ac4b90d299b316194f1fa932e7dbf62d4b1c8e
+ms.openlocfilehash: 8adf724740b2f09bff6d5cafb822566f4747780c
+
 ---
 
 # Windows PowerShell 5.0
@@ -15,7 +19,8 @@ Questo argomento elenca i moduli di funzioni e cmdlet inclusi in Windows PowerSh
 
 La tabella seguente illustra anche la versione pubblicata più recente della Guida su ogni modulo. La Guida è disponibile nella Libreria TechNet tramite i collegamenti seguenti o come file della Guida aggiornabile. La Guida aggiornabile, introdotta con Windows PowerShell 3.0, consente di avere a disposizione gli argomenti della Guida più recenti in locale nel computer. Per altre informazioni, vedere [about_Updatable_Help](http://technet.microsoft.com/library/hh847735.aspx).
 
-> [!NOTE]Per informazioni sulle versioni precedenti di Windows PowerShell, vedere [http://technet.microsoft.com/library/hh847741(v=wps.620).aspx](http://technet.microsoft.com/library/hh847741(v=wps.620).aspx) nella Libreria TechNet.
+> [!NOTE]
+> Per informazioni sulle versioni precedenti di Windows PowerShell, vedere [http://technet.microsoft.com/library/hh847741(v=wps.620).aspx](http://technet.microsoft.com/library/hh847741(v=wps.620).aspx) nella libreria TechNet.
 
 ## Moduli di sistema di Windows PowerShell
 
@@ -43,6 +48,7 @@ La tabella seguente illustra anche la versione pubblicata più recente della Gui
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 
