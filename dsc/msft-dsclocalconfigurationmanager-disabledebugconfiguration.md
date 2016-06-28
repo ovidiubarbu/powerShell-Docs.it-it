@@ -1,12 +1,16 @@
 ---
-title:  Metodo DisableDebugConfiguration della classe MSFT_DSCLocalConfigurationManager
-ms.date:  2016-05-16
-keywords:  powershell,DSC
-description:  
-ms.topic:  article
-author:  eslesar
-manager:  dongill
-ms.prod:  powershell
+title: Metodo DisableDebugConfiguration della classe MSFT_DSCLocalConfigurationManager
+ms.date: 2016-05-16
+keywords: powershell,DSC
+description: 
+ms.topic: article
+author: eslesar
+manager: dongill
+ms.prod: powershell
+translationtype: Human Translation
+ms.sourcegitcommit: 919438862ca9786447b690d2db10e905da0a7c42
+ms.openlocfilehash: 97ad8a5711d469a80a7a61056d71b7e2b69cfd27
+
 ---
 
 # Metodo DisableDebugConfiguration della classe MSFT_DSCLocalConfigurationManager
@@ -54,6 +58,7 @@ Si tratta di un metodo statico.
 
 
 
-<!--HONumber=May16_HO3-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -8,4 +8,8 @@ La creazione di configurazioni DSC in Windows PowerShell ISE è molto più sempl
 - Completamento tramite TAB migliorato per i valori delle proprietà della risorsa.
 
 **Nota:** è necessario disporre di una stringa vuota per i valori della proprietà della risorsa prima di poter usare CTRL+BARRA SPAZIATRICE per visualizzare l'elenco di opzioni. Premendo **TAB** è possibile scorrere le opzioni.
-<!--HONumber=Mar16_HO2-->
+
+
+<!--HONumber=Jun16_HO4-->
+
+

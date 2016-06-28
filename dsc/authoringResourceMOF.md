@@ -1,12 +1,16 @@
 ---
-title:   Scrittura di una risorsa DSC personalizzata con MOF
-ms.date:  2016-05-16
-keywords:  powershell,DSC
-description:  
-ms.topic:  article
-author:  eslesar
-manager:  dongill
-ms.prod:  powershell
+title: Scrittura di una risorsa DSC personalizzata con MOF
+ms.date: 2016-05-16
+keywords: powershell,DSC
+description: 
+ms.topic: article
+author: eslesar
+manager: dongill
+ms.prod: powershell
+translationtype: Human Translation
+ms.sourcegitcommit: 6477ae8575c83fc24150f9502515ff5b82bc8198
+ms.openlocfilehash: 4d685e518acd3a18f4872417b645dbe66f758421
+
 ---
 
 # Scrittura di una risorsa DSC personalizzata con MOF
@@ -67,7 +71,7 @@ Si noti quanto segue in relazione al codice precedente:
 
 ### Scrittura dello script di risorsa
 
-Lo script di risorsa implementa la logica della risorsa. In questo modulo è necessario includere tre funzioni denominate **Get-TargetResource**, **Set-TargetResource** e **Test-TargetResource**. Tutte e tre le funzioni devono accettare un set di parametri identico al set di proprietà definito nello schema MOF creato per la risorsa. In questo documento il set di proprietà è detto "proprietà della risorsa". Archiviare queste tre funzioni in un file denominato <ResourceName>psm1. Nell'esempio seguente le funzioni vengono archiviate in un file denominato Demo_IISWebsite.psm1.
+Lo script di risorsa implementa la logica della risorsa. In questo modulo è necessario includere tre funzioni denominate **Get-TargetResource**, **Set-TargetResource** e **Test-TargetResource**. Tutte e tre le funzioni devono accettare un set di parametri identico al set di proprietà definito nello schema MOF creato per la risorsa. In questo documento il set di proprietà è detto "proprietà della risorsa". Archiviare queste tre funzioni in un file denominato <ResourceName>.psm1. Nell'esempio seguente le funzioni vengono archiviate in un file denominato Demo_IISWebsite.psm1.
 
 > **Nota**: quando si esegue lo stesso script di configurazione nella risorsa più volte, non devono venire generati errori e la risorsa deve rimanere nello stesso stato impostato quando si esegue lo script una sola volta. A tale scopo, verificare che le funzioni **Get-TargetResource** e **Test-TargetResource** non modifichino la risorsa e che richiamando la funzione **Set-TargetResource** più di una volta in una sequenza con gli stessi valori dei parametri si ottenga lo stesso risultato che si ottiene richiamandola una sola volta.
 
@@ -218,7 +222,7 @@ $result
 
 ### Creazione del manifesto del modulo
 
-Usare infine il cmdlet **New-ModuleManifest** per definire <ResourceName>un file psd1 per il modulo della risorsa personalizzata. Quando si richiama questo cmdlet, fare riferimento al file di modulo di script (con estensione psm1) descritto nella sezione precedente. Includere **Get-TargetResource**, **Set-TargetResource** e **Test-TargetResource** nell'elenco delle funzioni da esportare. Di seguito è riportato un file manifesto di esempio.
+Usare infine il cmdlet **New-ModuleManifest** per definire un file <ResourceName>.psd1 per il modulo della risorsa personalizzata. Quando si richiama questo cmdlet, fare riferimento al file di modulo di script (con estensione psm1) descritto nella sezione precedente. Includere **Get-TargetResource**, **Set-TargetResource** e **Test-TargetResource** nell'elenco delle funzioni da esportare. Di seguito è riportato un file manifesto di esempio.
 
 ```powershell
 # Module manifest for module 'Demo.IIS.Website'
@@ -274,6 +278,7 @@ FunctionsToExport = @("Get-TargetResource", "Set-TargetResource", "Test-TargetRe
 
 
 
-<!--HONumber=May16_HO3-->
+
+<!--HONumber=Jun16_HO4-->
 
 
