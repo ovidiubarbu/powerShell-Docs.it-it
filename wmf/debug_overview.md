@@ -41,4 +41,8 @@ Sono stati aggiunti nuovi cmdlet che consentono di elencare gli spazi di esecuzi
 È ora possibile collegarsi a qualsiasi processo di computer con Windows PowerShell caricato. A tale scopo, si avvia una sessione interattiva con il processo, in modo analogo a come si avvia una sessione remota interattiva eseguendo il cmdlet Enter-PSSession:
 
 -   Enter-PSHostProcess
--   Exit-PSHostProcess<!--HONumber=Mar16_HO2-->
+-   Exit-PSHostProcess
+
+<!--HONumber=Jun16_HO4-->
+
+

@@ -1,12 +1,16 @@
 ---
-title:   Scrittura di una risorsa DSC a istanza singola (procedura consigliata)
-ms.date:  2016-05-16
-keywords:  powershell,DSC
-description:  
-ms.topic:  article
-author:  eslesar
-manager:  dongill
-ms.prod:  powershell
+title: Scrittura di una risorsa DSC a istanza singola (procedura consigliata)
+ms.date: 2016-05-16
+keywords: powershell,DSC
+description: 
+ms.topic: article
+author: eslesar
+manager: dongill
+ms.prod: powershell
+translationtype: Human Translation
+ms.sourcegitcommit: 6477ae8575c83fc24150f9502515ff5b82bc8198
+ms.openlocfilehash: 4b1e8a6d3fb4feca426a9d7861c40d194e612c22
+
 ---
 
 # Scrittura di una risorsa DSC a istanza singola (procedura consigliata)
@@ -48,8 +52,7 @@ Configuration SetTimeZone
 
 Questo dipende dal funzionamento delle chiavi della risorsa DSC. Una risorsa deve avere almeno una proprietà chiave. L'istanza di una risorsa viene considerata univoca se la combinazione dei valori di tutte le relative proprietà chiave è univoca. Nell'implementazione precedente la risorsa [xTimeZone](https://github.com/PowerShell/xTimeZone) ha una sola proprietà, **TimeZone**, che deve essere necessariamente una chiave. Per questo motivo, una configurazione come quella illustrata sopra poteva essere compilata ed eseguita senza alcun avviso. Ogni blocco di risorse **xTimeZone** viene considerato univoco. Di conseguenza, la configurazione viene applicata ripetutamente al nodo, determinando lo spostamento del fuso orario.
 
-Per fare in modo che una configurazione potesse impostare il fuso orario per un nodo di destinazione solo una volta, la risorsa è stata aggiornata per aggiungere una seconda proprietà, **IsSingleInstance**, che è diventata la proprietà chiave. 
-La proprietà **IsSingleInstance** è limitata a un singolo valore, "Yes", tramite **ValueMap**. Lo schema MOF precedente per la risorsa era:
+Per fare in modo che una configurazione potesse impostare il fuso orario per un nodo di destinazione solo una volta, la risorsa è stata aggiornata per aggiungere una seconda proprietà, **IsSingleInstance**, che è diventata la proprietà chiave. La proprietà **IsSingleInstance** è limitata a un singolo valore, "Yes", tramite **ValueMap**. Lo schema MOF precedente per la risorsa era:
 
 ```powershell
 [ClassVersion("1.0.0.0"), FriendlyName("xTimeZone")]
@@ -225,6 +228,7 @@ At C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules\PSDesiredStateConfiguratio
    
 
 
-<!--HONumber=May16_HO3-->
+
+<!--HONumber=Jun16_HO4-->
 
 
