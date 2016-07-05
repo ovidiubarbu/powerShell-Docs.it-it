@@ -1310,8 +1310,8 @@
 * Archive Datetime: 2016-06-28 13:30:16
 * Handback File: [nanoDsc.aab436599c769befa85e33015714db23e0d73ae6.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/599f530073fea384887a24eb0bccd62e6ae1ccd5/ol-handback/PowerShell/powerShell-Docs.it-it/live/nanoDsc.aab436599c769befa85e33015714db23e0d73ae6.it-it.xlf)
 * Handback Datetime: 2016-07-05 13:12:17
-* Bilingual File: [nanoDsc.aab436599c769befa85e33015714db23e0d73ae6.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/ad5fdf088166b9b0fc4a866489161af702d9a0fd/ol-handback/PowerShell/powerShell-Docs.it-it/live/nanoDsc.aab436599c769befa85e33015714db23e0d73ae6.it-it.xlf)
-* Bilingual Datetime: 2016-06-16 14:32:26
+* Bilingual File: [nanoDsc.aab436599c769befa85e33015714db23e0d73ae6.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/599f530073fea384887a24eb0bccd62e6ae1ccd5/ol-handback/PowerShell/powerShell-Docs.it-it/live/nanoDsc.aab436599c769befa85e33015714db23e0d73ae6.it-it.xlf)
+* Bilingual Datetime: 2016-07-05 13:13:02
 * [Back to Top](#report-top)
 
 ##### <a name='1a796658eb30bdf5c37ea3677f94767260a34b4569'></a> Source: [dsc\overview.md](https://github.com/PowerShell/powerShell-Docs/blob/6477ae8575c83fc24150f9502515ff5b82bc8198/dsc/overview.md)
@@ -1492,8 +1492,8 @@
 * Archive Datetime: 2016-06-28 13:30:16
 * Handback File: [resourceAuthoringChecklist.3b9ae254d826cc45519d37d06044f28a69bdfa69.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/599f530073fea384887a24eb0bccd62e6ae1ccd5/ol-handback/PowerShell/powerShell-Docs.it-it/live/resourceAuthoringChecklist.3b9ae254d826cc45519d37d06044f28a69bdfa69.it-it.xlf)
 * Handback Datetime: 2016-07-05 13:12:17
-* Bilingual File: [resourceAuthoringChecklist.3b9ae254d826cc45519d37d06044f28a69bdfa69.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/ad5fdf088166b9b0fc4a866489161af702d9a0fd/ol-handback/PowerShell/powerShell-Docs.it-it/live/resourceAuthoringChecklist.3b9ae254d826cc45519d37d06044f28a69bdfa69.it-it.xlf)
-* Bilingual Datetime: 2016-06-16 14:32:26
+* Bilingual File: [resourceAuthoringChecklist.3b9ae254d826cc45519d37d06044f28a69bdfa69.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/599f530073fea384887a24eb0bccd62e6ae1ccd5/ol-handback/PowerShell/powerShell-Docs.it-it/live/resourceAuthoringChecklist.3b9ae254d826cc45519d37d06044f28a69bdfa69.it-it.xlf)
+* Bilingual Datetime: 2016-07-05 13:13:02
 * [Back to Top](#report-top)
 
 ##### <a name='0a27a40b995393c41f0496a5f7fa3f56fbd865dd82'></a> Source: [dsc\resources.md](https://github.com/PowerShell/powerShell-Docs/blob/6477ae8575c83fc24150f9502515ff5b82bc8198/dsc/resources.md)
@@ -1632,8 +1632,8 @@
 * Archive Datetime: 2016-06-28 13:30:16
 * Handback File: [troubleshooting.bcb1039de4ec46bfb0ab2d224be50829d0891e7d.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/599f530073fea384887a24eb0bccd62e6ae1ccd5/ol-handback/PowerShell/powerShell-Docs.it-it/live/troubleshooting.bcb1039de4ec46bfb0ab2d224be50829d0891e7d.it-it.xlf)
 * Handback Datetime: 2016-07-05 13:12:17
-* Bilingual File: [troubleshooting.bcb1039de4ec46bfb0ab2d224be50829d0891e7d.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/ad5fdf088166b9b0fc4a866489161af702d9a0fd/ol-handback/PowerShell/powerShell-Docs.it-it/live/troubleshooting.bcb1039de4ec46bfb0ab2d224be50829d0891e7d.it-it.xlf)
-* Bilingual Datetime: 2016-06-16 14:32:26
+* Bilingual File: [troubleshooting.bcb1039de4ec46bfb0ab2d224be50829d0891e7d.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/599f530073fea384887a24eb0bccd62e6ae1ccd5/ol-handback/PowerShell/powerShell-Docs.it-it/live/troubleshooting.bcb1039de4ec46bfb0ab2d224be50829d0891e7d.it-it.xlf)
+* Bilingual Datetime: 2016-07-05 13:13:02
 * [Back to Top](#report-top)
 
 ##### <a name='5c7878bdfc8a3f118b569a9e43be6c7e4333ad2c92'></a> Source: [dsc\userResource.md](https://github.com/PowerShell/powerShell-Docs/blob/6477ae8575c83fc24150f9502515ff5b82bc8198/dsc/userResource.md)
@@ -1702,6 +1702,8 @@
 * Archive Datetime: 2016-06-28 13:30:16
 * Handback File: [common-role-capability-pitfalls.dfaa23ae81cb39f04c2fe16d9e7917452e8b7b3b.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/599f530073fea384887a24eb0bccd62e6ae1ccd5/ol-handback/PowerShell/powerShell-Docs.it-it/live/common-role-capability-pitfalls.dfaa23ae81cb39f04c2fe16d9e7917452e8b7b3b.it-it.xlf)
 * Handback Datetime: 2016-07-05 13:12:17
+* Bilingual File: [common-role-capability-pitfalls.dfaa23ae81cb39f04c2fe16d9e7917452e8b7b3b.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/599f530073fea384887a24eb0bccd62e6ae1ccd5/ol-handback/PowerShell/powerShell-Docs.it-it/live/common-role-capability-pitfalls.dfaa23ae81cb39f04c2fe16d9e7917452e8b7b3b.it-it.xlf)
+* Bilingual Datetime: 2016-07-05 13:13:02
 * [Back to Top](#report-top)
 
 ##### <a name='9f3f79a29e0fb7ec5a5111284bb7985548e1774997'></a> Source: [jea\considerations-when-limiting-commands.md](https://github.com/PowerShell/powerShell-Docs/blob/7504fe496a8913718847e45115d126caf4049bef/jea/considerations-when-limiting-commands.md)
@@ -1768,6 +1770,8 @@
 * Archive Datetime: 2016-06-28 13:30:16
 * Handback File: [introduction.2a4123ad7daaab75b6f7151a8cf0e41bd634f4da.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/599f530073fea384887a24eb0bccd62e6ae1ccd5/ol-handback/PowerShell/powerShell-Docs.it-it/live/introduction.2a4123ad7daaab75b6f7151a8cf0e41bd634f4da.it-it.xlf)
 * Handback Datetime: 2016-07-05 13:12:17
+* Bilingual File: [introduction.2a4123ad7daaab75b6f7151a8cf0e41bd634f4da.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/599f530073fea384887a24eb0bccd62e6ae1ccd5/ol-handback/PowerShell/powerShell-Docs.it-it/live/introduction.2a4123ad7daaab75b6f7151a8cf0e41bd634f4da.it-it.xlf)
+* Bilingual Datetime: 2016-07-05 13:13:02
 * [Back to Top](#report-top)
 
 ##### <a name='178fea44987b0c457b8e5d23fbe851ee12f03b31102'></a> Source: [jea\key-concepts-used-throughout-this-guide.md](https://github.com/PowerShell/powerShell-Docs/blob/7504fe496a8913718847e45115d126caf4049bef/jea/key-concepts-used-throughout-this-guide.md)
@@ -1822,6 +1826,8 @@
 * Archive Datetime: 2016-06-28 13:30:16
 * Handback File: [prerequisites.c7c64787c6d6d670a4d099b82dfa08e0cdc17727.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/599f530073fea384887a24eb0bccd62e6ae1ccd5/ol-handback/PowerShell/powerShell-Docs.it-it/live/prerequisites.c7c64787c6d6d670a4d099b82dfa08e0cdc17727.it-it.xlf)
 * Handback Datetime: 2016-07-05 13:12:17
+* Bilingual File: [prerequisites.c7c64787c6d6d670a4d099b82dfa08e0cdc17727.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/599f530073fea384887a24eb0bccd62e6ae1ccd5/ol-handback/PowerShell/powerShell-Docs.it-it/live/prerequisites.c7c64787c6d6d670a4d099b82dfa08e0cdc17727.it-it.xlf)
+* Bilingual Datetime: 2016-07-05 13:13:02
 * [Back to Top](#report-top)
 
 ##### <a name='1cecf1b6bf5a55ed785c8ff43bdd4a0a41e96cd0106'></a> Source: [jea\README.md](https://github.com/PowerShell/powerShell-Docs/blob/47593773fb0f34e0b52d35617522d7b1db7f48e6/jea/README.md)
@@ -1834,8 +1840,8 @@
 * Archive Datetime: 2016-06-28 13:30:16
 * Handback File: [README.21b5f679157a942d8da32daf52be349e47cf03ae.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/599f530073fea384887a24eb0bccd62e6ae1ccd5/ol-handback/PowerShell/powerShell-Docs.it-it/live/README.21b5f679157a942d8da32daf52be349e47cf03ae.it-it.xlf)
 * Handback Datetime: 2016-07-05 13:12:17
-* Bilingual File: [README.21b5f679157a942d8da32daf52be349e47cf03ae.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/276af3286905790aa1098161cf6a02a882eb583f/ol-handback/PowerShell/powerShell-Docs.it-it/live/README.21b5f679157a942d8da32daf52be349e47cf03ae.it-it.xlf)
-* Bilingual Datetime: 2016-06-23 16:33:01
+* Bilingual File: [README.21b5f679157a942d8da32daf52be349e47cf03ae.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/599f530073fea384887a24eb0bccd62e6ae1ccd5/ol-handback/PowerShell/powerShell-Docs.it-it/live/README.21b5f679157a942d8da32daf52be349e47cf03ae.it-it.xlf)
+* Bilingual Datetime: 2016-07-05 13:13:02
 * [Back to Top](#report-top)
 
 ##### <a name='dabb5023012e90ace3fbc5f347c17821abd92595107'></a> Source: [jea\remake-the-demo-endpoint.md](https://github.com/PowerShell/powerShell-Docs/blob/7504fe496a8913718847e45115d126caf4049bef/jea/remake-the-demo-endpoint.md)
@@ -1848,6 +1854,8 @@
 * Archive Datetime: 2016-06-28 13:30:16
 * Handback File: [remake-the-demo-endpoint.b73e14db6512c128ca4b53500097a6d93e4c7ab5.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/599f530073fea384887a24eb0bccd62e6ae1ccd5/ol-handback/PowerShell/powerShell-Docs.it-it/live/remake-the-demo-endpoint.b73e14db6512c128ca4b53500097a6d93e4c7ab5.it-it.xlf)
 * Handback Datetime: 2016-07-05 13:12:17
+* Bilingual File: [remake-the-demo-endpoint.b73e14db6512c128ca4b53500097a6d93e4c7ab5.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/599f530073fea384887a24eb0bccd62e6ae1ccd5/ol-handback/PowerShell/powerShell-Docs.it-it/live/remake-the-demo-endpoint.b73e14db6512c128ca4b53500097a6d93e4c7ab5.it-it.xlf)
+* Bilingual Datetime: 2016-07-05 13:13:02
 * [Back to Top](#report-top)
 
 ##### <a name='d867a6462e9fa8b6e16c8c2103899c72b380116c108'></a> Source: [jea\reporting-on-jea.md](https://github.com/PowerShell/powerShell-Docs/blob/7504fe496a8913718847e45115d126caf4049bef/jea/reporting-on-jea.md)
@@ -2092,8 +2100,8 @@
 * Archive Datetime: 2016-06-28 13:30:16
 * Handback File: [Microsoft.WSMan.Management-Module.f24f503e4d28823e358502b180e5f5a39405fdaa.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/599f530073fea384887a24eb0bccd62e6ae1ccd5/ol-handback/PowerShell/powerShell-Docs.it-it/live/Microsoft.WSMan.Management-Module.f24f503e4d28823e358502b180e5f5a39405fdaa.it-it.xlf)
 * Handback Datetime: 2016-07-05 13:12:17
-* Bilingual File: [Microsoft.WSMan.Management-Module.f24f503e4d28823e358502b180e5f5a39405fdaa.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/feca3e12510ddb73d0b94e5d7eae345f4ab332f3/ol-handback/PowerShell/powerShell-Docs.it-it/live/Microsoft.WSMan.Management-Module.f24f503e4d28823e358502b180e5f5a39405fdaa.it-it.xlf)
-* Bilingual Datetime: 2016-06-16 14:32:26
+* Bilingual File: [Microsoft.WSMan.Management-Module.f24f503e4d28823e358502b180e5f5a39405fdaa.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/599f530073fea384887a24eb0bccd62e6ae1ccd5/ol-handback/PowerShell/powerShell-Docs.it-it/live/Microsoft.WSMan.Management-Module.f24f503e4d28823e358502b180e5f5a39405fdaa.it-it.xlf)
+* Bilingual Datetime: 2016-07-05 13:13:02
 * [Back to Top](#report-top)
 
 ##### <a name='dfca9909da78dc45cd72cbfaff5ab4c441762c60126'></a> Source: [scripting\core-powershell\core-modules\PackageManagement-Module.md](https://github.com/PowerShell/powerShell-Docs/blob/03ac4b90d299b316194f1fa932e7dbf62d4b1c8e/scripting/core-powershell/core-modules/PackageManagement-Module.md)
@@ -2162,8 +2170,8 @@
 * Archive Datetime: 2016-06-28 13:30:16
 * Handback File: [PSScriptAnalyzer-Module.daa11005454fffd8b6ed60eca71fcea4c800c4d3.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/599f530073fea384887a24eb0bccd62e6ae1ccd5/ol-handback/PowerShell/powerShell-Docs.it-it/live/PSScriptAnalyzer-Module.daa11005454fffd8b6ed60eca71fcea4c800c4d3.it-it.xlf)
 * Handback Datetime: 2016-07-05 13:12:17
-* Bilingual File: [PSScriptAnalyzer-Module.daa11005454fffd8b6ed60eca71fcea4c800c4d3.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/feca3e12510ddb73d0b94e5d7eae345f4ab332f3/ol-handback/PowerShell/powerShell-Docs.it-it/live/PSScriptAnalyzer-Module.daa11005454fffd8b6ed60eca71fcea4c800c4d3.it-it.xlf)
-* Bilingual Datetime: 2016-06-16 14:32:26
+* Bilingual File: [PSScriptAnalyzer-Module.daa11005454fffd8b6ed60eca71fcea4c800c4d3.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/599f530073fea384887a24eb0bccd62e6ae1ccd5/ol-handback/PowerShell/powerShell-Docs.it-it/live/PSScriptAnalyzer-Module.daa11005454fffd8b6ed60eca71fcea4c800c4d3.it-it.xlf)
+* Bilingual Datetime: 2016-07-05 13:13:02
 * [Back to Top](#report-top)
 
 ##### <a name='8adf724740b2f09bff6d5cafb822566f4747780c131'></a> Source: [scripting\core-powershell\core-modules\Windows-PowerShell-5.0.md](https://github.com/PowerShell/powerShell-Docs/blob/03ac4b90d299b316194f1fa932e7dbf62d4b1c8e/scripting/core-powershell/core-modules/Windows-PowerShell-5.0.md)
@@ -2204,8 +2212,8 @@
 * Archive Datetime: 2016-06-28 13:30:16
 * Handback File: [Windows-PowerShell-Core-Providers.bcff2b847a340e422ebfc93deb36b35a46b009ad.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/599f530073fea384887a24eb0bccd62e6ae1ccd5/ol-handback/PowerShell/powerShell-Docs.it-it/live/Windows-PowerShell-Core-Providers.bcff2b847a340e422ebfc93deb36b35a46b009ad.it-it.xlf)
 * Handback Datetime: 2016-07-05 13:12:17
-* Bilingual File: [Windows-PowerShell-Core-Providers.bcff2b847a340e422ebfc93deb36b35a46b009ad.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/feca3e12510ddb73d0b94e5d7eae345f4ab332f3/ol-handback/PowerShell/powerShell-Docs.it-it/live/Windows-PowerShell-Core-Providers.bcff2b847a340e422ebfc93deb36b35a46b009ad.it-it.xlf)
-* Bilingual Datetime: 2016-06-16 14:32:26
+* Bilingual File: [Windows-PowerShell-Core-Providers.bcff2b847a340e422ebfc93deb36b35a46b009ad.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/599f530073fea384887a24eb0bccd62e6ae1ccd5/ol-handback/PowerShell/powerShell-Docs.it-it/live/Windows-PowerShell-Core-Providers.bcff2b847a340e422ebfc93deb36b35a46b009ad.it-it.xlf)
+* Bilingual Datetime: 2016-07-05 13:13:02
 * [Back to Top](#report-top)
 
 ##### <a name='4c22e1a2543690a971836813cb32ace74ababb4a134'></a> Source: [scripting\core-powershell\core-powershell.md](https://github.com/PowerShell/powerShell-Docs/blob/cd6e130d9f6f70449084d25eb386a3c0a2b84737/scripting/core-powershell/core-powershell.md)
@@ -2232,8 +2240,8 @@
 * Archive Datetime: 2016-06-28 13:30:16
 * Handback File: [How-to-Create-a-PowerShell-Tab-in-Windows-PowerShell-ISE.19fa26d960530a6380ba6696826a19c8b09eea47.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/599f530073fea384887a24eb0bccd62e6ae1ccd5/ol-handback/PowerShell/powerShell-Docs.it-it/live/How-to-Create-a-PowerShell-Tab-in-Windows-PowerShell-ISE.19fa26d960530a6380ba6696826a19c8b09eea47.it-it.xlf)
 * Handback Datetime: 2016-07-05 13:12:17
-* Bilingual File: [How-to-Create-a-PowerShell-Tab-in-Windows-PowerShell-ISE.19fa26d960530a6380ba6696826a19c8b09eea47.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/feca3e12510ddb73d0b94e5d7eae345f4ab332f3/ol-handback/PowerShell/powerShell-Docs.it-it/live/How-to-Create-a-PowerShell-Tab-in-Windows-PowerShell-ISE.19fa26d960530a6380ba6696826a19c8b09eea47.it-it.xlf)
-* Bilingual Datetime: 2016-06-16 14:32:26
+* Bilingual File: [How-to-Create-a-PowerShell-Tab-in-Windows-PowerShell-ISE.19fa26d960530a6380ba6696826a19c8b09eea47.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/599f530073fea384887a24eb0bccd62e6ae1ccd5/ol-handback/PowerShell/powerShell-Docs.it-it/live/How-to-Create-a-PowerShell-Tab-in-Windows-PowerShell-ISE.19fa26d960530a6380ba6696826a19c8b09eea47.it-it.xlf)
+* Bilingual Datetime: 2016-07-05 13:13:02
 * [Back to Top](#report-top)
 
 ##### <a name='c6d79fc7ef5a896bb3b686468adb540d4327605e137'></a> Source: [scripting\core-powershell\ise\How-to-Debug-Scripts-in-Windows-PowerShell-ISE.md](https://github.com/PowerShell/powerShell-Docs/blob/03ac4b90d299b316194f1fa932e7dbf62d4b1c8e/scripting/core-powershell/ise/How-to-Debug-Scripts-in-Windows-PowerShell-ISE.md)
@@ -2302,8 +2310,8 @@
 * Archive Datetime: 2016-06-28 13:30:16
 * Handback File: [How-to-Write-and-Run-Scripts-in-the-Windows-PowerShell-ISE.1d5273a3389d28903b210dd8461757538ccbbad2.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/599f530073fea384887a24eb0bccd62e6ae1ccd5/ol-handback/PowerShell/powerShell-Docs.it-it/live/How-to-Write-and-Run-Scripts-in-the-Windows-PowerShell-ISE.1d5273a3389d28903b210dd8461757538ccbbad2.it-it.xlf)
 * Handback Datetime: 2016-07-05 13:12:17
-* Bilingual File: [How-to-Write-and-Run-Scripts-in-the-Windows-PowerShell-ISE.1d5273a3389d28903b210dd8461757538ccbbad2.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/ad5fdf088166b9b0fc4a866489161af702d9a0fd/ol-handback/PowerShell/powerShell-Docs.it-it/live/How-to-Write-and-Run-Scripts-in-the-Windows-PowerShell-ISE.1d5273a3389d28903b210dd8461757538ccbbad2.it-it.xlf)
-* Bilingual Datetime: 2016-06-16 14:32:26
+* Bilingual File: [How-to-Write-and-Run-Scripts-in-the-Windows-PowerShell-ISE.1d5273a3389d28903b210dd8461757538ccbbad2.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/599f530073fea384887a24eb0bccd62e6ae1ccd5/ol-handback/PowerShell/powerShell-Docs.it-it/live/How-to-Write-and-Run-Scripts-in-the-Windows-PowerShell-ISE.1d5273a3389d28903b210dd8461757538ccbbad2.it-it.xlf)
+* Bilingual Datetime: 2016-07-05 13:13:02
 * [Back to Top](#report-top)
 
 ##### <a name='64afa8599f29279798445a5694fe467143d29bec142'></a> Source: [scripting\core-powershell\ise\Introducing-the-Windows-PowerShell-ISE.md](https://github.com/PowerShell/powerShell-Docs/blob/03ac4b90d299b316194f1fa932e7dbf62d4b1c8e/scripting/core-powershell/ise/Introducing-the-Windows-PowerShell-ISE.md)
@@ -2330,8 +2338,8 @@
 * Archive Datetime: 2016-06-28 13:30:16
 * Handback File: [ISE-Module.4b5489bbbd41c45ee6b994a4c2c42bddbd5551a4.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/599f530073fea384887a24eb0bccd62e6ae1ccd5/ol-handback/PowerShell/powerShell-Docs.it-it/live/ISE-Module.4b5489bbbd41c45ee6b994a4c2c42bddbd5551a4.it-it.xlf)
 * Handback Datetime: 2016-07-05 13:12:17
-* Bilingual File: [ISE-Module.4b5489bbbd41c45ee6b994a4c2c42bddbd5551a4.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/feca3e12510ddb73d0b94e5d7eae345f4ab332f3/ol-handback/PowerShell/powerShell-Docs.it-it/live/ISE-Module.4b5489bbbd41c45ee6b994a4c2c42bddbd5551a4.it-it.xlf)
-* Bilingual Datetime: 2016-06-16 14:32:26
+* Bilingual File: [ISE-Module.4b5489bbbd41c45ee6b994a4c2c42bddbd5551a4.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/599f530073fea384887a24eb0bccd62e6ae1ccd5/ol-handback/PowerShell/powerShell-Docs.it-it/live/ISE-Module.4b5489bbbd41c45ee6b994a4c2c42bddbd5551a4.it-it.xlf)
+* Bilingual Datetime: 2016-07-05 13:13:02
 * [Back to Top](#report-top)
 
 ##### <a name='df4fc6e4a501bc7cbeae83b6bf90f05544c6a6ac144'></a> Source: [scripting\core-powershell\ise\Keyboard-Shortcuts-for-the-Windows-PowerShell-ISE.md](https://github.com/PowerShell/powerShell-Docs/blob/03ac4b90d299b316194f1fa932e7dbf62d4b1c8e/scripting/core-powershell/ise/Keyboard-Shortcuts-for-the-Windows-PowerShell-ISE.md)
@@ -2344,8 +2352,8 @@
 * Archive Datetime: 2016-06-28 13:30:16
 * Handback File: [Keyboard-Shortcuts-for-the-Windows-PowerShell-ISE.fafa427058ad68f27ad38041d5743b74ff894bd6.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/599f530073fea384887a24eb0bccd62e6ae1ccd5/ol-handback/PowerShell/powerShell-Docs.it-it/live/Keyboard-Shortcuts-for-the-Windows-PowerShell-ISE.fafa427058ad68f27ad38041d5743b74ff894bd6.it-it.xlf)
 * Handback Datetime: 2016-07-05 13:12:17
-* Bilingual File: [Keyboard-Shortcuts-for-the-Windows-PowerShell-ISE.fafa427058ad68f27ad38041d5743b74ff894bd6.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/feca3e12510ddb73d0b94e5d7eae345f4ab332f3/ol-handback/PowerShell/powerShell-Docs.it-it/live/Keyboard-Shortcuts-for-the-Windows-PowerShell-ISE.fafa427058ad68f27ad38041d5743b74ff894bd6.it-it.xlf)
-* Bilingual Datetime: 2016-06-16 14:32:26
+* Bilingual File: [Keyboard-Shortcuts-for-the-Windows-PowerShell-ISE.fafa427058ad68f27ad38041d5743b74ff894bd6.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/599f530073fea384887a24eb0bccd62e6ae1ccd5/ol-handback/PowerShell/powerShell-Docs.it-it/live/Keyboard-Shortcuts-for-the-Windows-PowerShell-ISE.fafa427058ad68f27ad38041d5743b74ff894bd6.it-it.xlf)
+* Bilingual Datetime: 2016-07-05 13:13:02
 * [Back to Top](#report-top)
 
 ##### <a name='41c508e7aebc3501f29be7246ca817f95180ef2f145'></a> Source: [scripting\core-powershell\ise\Purpose-of-the-Windows-PowerShell-ISE-Scripting-Object-Model.md](https://github.com/PowerShell/powerShell-Docs/blob/03ac4b90d299b316194f1fa932e7dbf62d4b1c8e/scripting/core-powershell/ise/Purpose-of-the-Windows-PowerShell-ISE-Scripting-Object-Model.md)
@@ -2414,8 +2422,8 @@
 * Archive Datetime: 2016-06-28 13:30:16
 * Handback File: [The-ISEFileCollection-Object.9e3c57287642456ae02b8c57dfbc4b4a98261726.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/599f530073fea384887a24eb0bccd62e6ae1ccd5/ol-handback/PowerShell/powerShell-Docs.it-it/live/The-ISEFileCollection-Object.9e3c57287642456ae02b8c57dfbc4b4a98261726.it-it.xlf)
 * Handback Datetime: 2016-07-05 13:12:17
-* Bilingual File: [The-ISEFileCollection-Object.9e3c57287642456ae02b8c57dfbc4b4a98261726.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/feca3e12510ddb73d0b94e5d7eae345f4ab332f3/ol-handback/PowerShell/powerShell-Docs.it-it/live/The-ISEFileCollection-Object.9e3c57287642456ae02b8c57dfbc4b4a98261726.it-it.xlf)
-* Bilingual Datetime: 2016-06-16 14:32:26
+* Bilingual File: [The-ISEFileCollection-Object.9e3c57287642456ae02b8c57dfbc4b4a98261726.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/599f530073fea384887a24eb0bccd62e6ae1ccd5/ol-handback/PowerShell/powerShell-Docs.it-it/live/The-ISEFileCollection-Object.9e3c57287642456ae02b8c57dfbc4b4a98261726.it-it.xlf)
+* Bilingual Datetime: 2016-07-05 13:13:02
 * [Back to Top](#report-top)
 
 ##### <a name='ce9364e8fb73a2d31b728430c590fef4175ebe26150'></a> Source: [scripting\core-powershell\ise\The-ISEFile-Object.md](https://github.com/PowerShell/powerShell-Docs/blob/03ac4b90d299b316194f1fa932e7dbf62d4b1c8e/scripting/core-powershell/ise/The-ISEFile-Object.md)
@@ -2540,8 +2548,8 @@
 * Archive Datetime: 2016-06-28 13:30:16
 * Handback File: [The-PowerShellTabCollection-Object.a2b2b49a9b0542cb693b54f1dc6b5f4602d24cbc.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/599f530073fea384887a24eb0bccd62e6ae1ccd5/ol-handback/PowerShell/powerShell-Docs.it-it/live/The-PowerShellTabCollection-Object.a2b2b49a9b0542cb693b54f1dc6b5f4602d24cbc.it-it.xlf)
 * Handback Datetime: 2016-07-05 13:12:17
-* Bilingual File: [The-PowerShellTabCollection-Object.a2b2b49a9b0542cb693b54f1dc6b5f4602d24cbc.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/feca3e12510ddb73d0b94e5d7eae345f4ab332f3/ol-handback/PowerShell/powerShell-Docs.it-it/live/The-PowerShellTabCollection-Object.a2b2b49a9b0542cb693b54f1dc6b5f4602d24cbc.it-it.xlf)
-* Bilingual Datetime: 2016-06-16 14:32:26
+* Bilingual File: [The-PowerShellTabCollection-Object.a2b2b49a9b0542cb693b54f1dc6b5f4602d24cbc.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/599f530073fea384887a24eb0bccd62e6ae1ccd5/ol-handback/PowerShell/powerShell-Docs.it-it/live/The-PowerShellTabCollection-Object.a2b2b49a9b0542cb693b54f1dc6b5f4602d24cbc.it-it.xlf)
+* Bilingual Datetime: 2016-07-05 13:13:02
 * [Back to Top](#report-top)
 
 ##### <a name='cad77145053b9f13f482f860310891da9366e53b158'></a> Source: [scripting\core-powershell\ise\The-PowerShellTab-Object.md](https://github.com/PowerShell/powerShell-Docs/blob/03ac4b90d299b316194f1fa932e7dbf62d4b1c8e/scripting/core-powershell/ise/The-PowerShellTab-Object.md)
@@ -2582,8 +2590,8 @@
 * Archive Datetime: 2016-06-28 13:30:16
 * Handback File: [Using-the-Windows-PowerShell-ISE.88e5c7c38e58fe4a132fd25a09265d8c01620f82.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/599f530073fea384887a24eb0bccd62e6ae1ccd5/ol-handback/PowerShell/powerShell-Docs.it-it/live/Using-the-Windows-PowerShell-ISE.88e5c7c38e58fe4a132fd25a09265d8c01620f82.it-it.xlf)
 * Handback Datetime: 2016-07-05 13:12:17
-* Bilingual File: [Using-the-Windows-PowerShell-ISE.88e5c7c38e58fe4a132fd25a09265d8c01620f82.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/feca3e12510ddb73d0b94e5d7eae345f4ab332f3/ol-handback/PowerShell/powerShell-Docs.it-it/live/Using-the-Windows-PowerShell-ISE.88e5c7c38e58fe4a132fd25a09265d8c01620f82.it-it.xlf)
-* Bilingual Datetime: 2016-06-16 14:32:26
+* Bilingual File: [Using-the-Windows-PowerShell-ISE.88e5c7c38e58fe4a132fd25a09265d8c01620f82.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/599f530073fea384887a24eb0bccd62e6ae1ccd5/ol-handback/PowerShell/powerShell-Docs.it-it/live/Using-the-Windows-PowerShell-ISE.88e5c7c38e58fe4a132fd25a09265d8c01620f82.it-it.xlf)
+* Bilingual Datetime: 2016-07-05 13:13:02
 * [Back to Top](#report-top)
 
 ##### <a name='9bfb74ba438dd27fc2799263fc12a20edd2bb8cb162'></a> Source: [scripting\core-powershell\ise\Windows-PowerShell-ISE-Object-Model-Reference.md](https://github.com/PowerShell/powerShell-Docs/blob/03ac4b90d299b316194f1fa932e7dbf62d4b1c8e/scripting/core-powershell/ise/Windows-PowerShell-ISE-Object-Model-Reference.md)
@@ -2596,8 +2604,8 @@
 * Archive Datetime: 2016-06-28 13:30:16
 * Handback File: [Windows-PowerShell-ISE-Object-Model-Reference.b7881a7d0cd485d731d26e1fc83eab2823736ab8.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/599f530073fea384887a24eb0bccd62e6ae1ccd5/ol-handback/PowerShell/powerShell-Docs.it-it/live/Windows-PowerShell-ISE-Object-Model-Reference.b7881a7d0cd485d731d26e1fc83eab2823736ab8.it-it.xlf)
 * Handback Datetime: 2016-07-05 13:12:17
-* Bilingual File: [Windows-PowerShell-ISE-Object-Model-Reference.b7881a7d0cd485d731d26e1fc83eab2823736ab8.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/feca3e12510ddb73d0b94e5d7eae345f4ab332f3/ol-handback/PowerShell/powerShell-Docs.it-it/live/Windows-PowerShell-ISE-Object-Model-Reference.b7881a7d0cd485d731d26e1fc83eab2823736ab8.it-it.xlf)
-* Bilingual Datetime: 2016-06-16 14:32:26
+* Bilingual File: [Windows-PowerShell-ISE-Object-Model-Reference.b7881a7d0cd485d731d26e1fc83eab2823736ab8.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/599f530073fea384887a24eb0bccd62e6ae1ccd5/ol-handback/PowerShell/powerShell-Docs.it-it/live/Windows-PowerShell-ISE-Object-Model-Reference.b7881a7d0cd485d731d26e1fc83eab2823736ab8.it-it.xlf)
+* Bilingual Datetime: 2016-07-05 13:13:02
 * [Back to Top](#report-top)
 
 ##### <a name='053a4fd734b1e86c5f8ca22c8197ce4e80b6fce6135'></a> Source: [scripting\core-powershell\ise-guide.md](https://github.com/PowerShell/powerShell-Docs/blob/03ac4b90d299b316194f1fa932e7dbf62d4b1c8e/scripting/core-powershell/ise-guide.md)
@@ -2652,8 +2660,8 @@
 * Archive Datetime: 2016-06-28 13:30:16
 * Handback File: [authorization-rules-and-security-features-of-windows-powershell-web-access.c317fe9a78ba1130929bd001738c2eb57f0037dd.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/599f530073fea384887a24eb0bccd62e6ae1ccd5/ol-handback/PowerShell/powerShell-Docs.it-it/live/authorization-rules-and-security-features-of-windows-powershell-web-access.c317fe9a78ba1130929bd001738c2eb57f0037dd.it-it.xlf)
 * Handback Datetime: 2016-07-05 13:12:17
-* Bilingual File: [authorization-rules-and-security-features-of-windows-powershell-web-access.c317fe9a78ba1130929bd001738c2eb57f0037dd.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/feca3e12510ddb73d0b94e5d7eae345f4ab332f3/ol-handback/PowerShell/powerShell-Docs.it-it/live/authorization-rules-and-security-features-of-windows-powershell-web-access.c317fe9a78ba1130929bd001738c2eb57f0037dd.it-it.xlf)
-* Bilingual Datetime: 2016-06-16 14:32:26
+* Bilingual File: [authorization-rules-and-security-features-of-windows-powershell-web-access.c317fe9a78ba1130929bd001738c2eb57f0037dd.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/599f530073fea384887a24eb0bccd62e6ae1ccd5/ol-handback/PowerShell/powerShell-Docs.it-it/live/authorization-rules-and-security-features-of-windows-powershell-web-access.c317fe9a78ba1130929bd001738c2eb57f0037dd.it-it.xlf)
+* Bilingual Datetime: 2016-07-05 13:13:02
 * [Back to Top](#report-top)
 
 ##### <a name='d2f78148402f06992f5f58cd40e8c4f624b5e4b5166'></a> Source: [scripting\core-powershell\web-access\install-and-use-windows-powershell-web-access.md](https://github.com/PowerShell/powerShell-Docs/blob/03ac4b90d299b316194f1fa932e7dbf62d4b1c8e/scripting/core-powershell/web-access/install-and-use-windows-powershell-web-access.md)
@@ -2666,8 +2674,8 @@
 * Archive Datetime: 2016-06-28 13:30:16
 * Handback File: [install-and-use-windows-powershell-web-access.b0ab653c895ebd67ec078d852bf20804e9c72a1c.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/599f530073fea384887a24eb0bccd62e6ae1ccd5/ol-handback/PowerShell/powerShell-Docs.it-it/live/install-and-use-windows-powershell-web-access.b0ab653c895ebd67ec078d852bf20804e9c72a1c.it-it.xlf)
 * Handback Datetime: 2016-07-05 13:12:17
-* Bilingual File: [install-and-use-windows-powershell-web-access.b0ab653c895ebd67ec078d852bf20804e9c72a1c.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/feca3e12510ddb73d0b94e5d7eae345f4ab332f3/ol-handback/PowerShell/powerShell-Docs.it-it/live/install-and-use-windows-powershell-web-access.b0ab653c895ebd67ec078d852bf20804e9c72a1c.it-it.xlf)
-* Bilingual Datetime: 2016-06-16 14:32:26
+* Bilingual File: [install-and-use-windows-powershell-web-access.b0ab653c895ebd67ec078d852bf20804e9c72a1c.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/599f530073fea384887a24eb0bccd62e6ae1ccd5/ol-handback/PowerShell/powerShell-Docs.it-it/live/install-and-use-windows-powershell-web-access.b0ab653c895ebd67ec078d852bf20804e9c72a1c.it-it.xlf)
+* Bilingual Datetime: 2016-07-05 13:13:02
 * [Back to Top](#report-top)
 
 ##### <a name='6366ec9c49f721b758b6a520f68cf2b3c5ee0caf167'></a> Source: [scripting\core-powershell\web-access\troubleshooting-access-problems-in-windows-powershell-web-access.md](https://github.com/PowerShell/powerShell-Docs/blob/03ac4b90d299b316194f1fa932e7dbf62d4b1c8e/scripting/core-powershell/web-access/troubleshooting-access-problems-in-windows-powershell-web-access.md)
@@ -2680,8 +2688,8 @@
 * Archive Datetime: 2016-06-28 13:30:16
 * Handback File: [troubleshooting-access-problems-in-windows-powershell-web-access.1c7875e668a4ef265134d93052c69465d51413d7.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/599f530073fea384887a24eb0bccd62e6ae1ccd5/ol-handback/PowerShell/powerShell-Docs.it-it/live/troubleshooting-access-problems-in-windows-powershell-web-access.1c7875e668a4ef265134d93052c69465d51413d7.it-it.xlf)
 * Handback Datetime: 2016-07-05 13:12:17
-* Bilingual File: [troubleshooting-access-problems-in-windows-powershell-web-access.1c7875e668a4ef265134d93052c69465d51413d7.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/feca3e12510ddb73d0b94e5d7eae345f4ab332f3/ol-handback/PowerShell/powerShell-Docs.it-it/live/troubleshooting-access-problems-in-windows-powershell-web-access.1c7875e668a4ef265134d93052c69465d51413d7.it-it.xlf)
-* Bilingual Datetime: 2016-06-16 14:32:26
+* Bilingual File: [troubleshooting-access-problems-in-windows-powershell-web-access.1c7875e668a4ef265134d93052c69465d51413d7.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/599f530073fea384887a24eb0bccd62e6ae1ccd5/ol-handback/PowerShell/powerShell-Docs.it-it/live/troubleshooting-access-problems-in-windows-powershell-web-access.1c7875e668a4ef265134d93052c69465d51413d7.it-it.xlf)
+* Bilingual Datetime: 2016-07-05 13:13:02
 * [Back to Top](#report-top)
 
 ##### <a name='ee5e88ece27add955fcef3a9df0a441a08251e77168'></a> Source: [scripting\core-powershell\web-access\uninstall-windows-powershell-web-access.md](https://github.com/PowerShell/powerShell-Docs/blob/03ac4b90d299b316194f1fa932e7dbf62d4b1c8e/scripting/core-powershell/web-access/uninstall-windows-powershell-web-access.md)
@@ -2694,8 +2702,8 @@
 * Archive Datetime: 2016-06-28 13:30:16
 * Handback File: [uninstall-windows-powershell-web-access.95bac7bf293e2b8b9e3aecf2e955c5e893499e71.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/599f530073fea384887a24eb0bccd62e6ae1ccd5/ol-handback/PowerShell/powerShell-Docs.it-it/live/uninstall-windows-powershell-web-access.95bac7bf293e2b8b9e3aecf2e955c5e893499e71.it-it.xlf)
 * Handback Datetime: 2016-07-05 13:12:17
-* Bilingual File: [uninstall-windows-powershell-web-access.95bac7bf293e2b8b9e3aecf2e955c5e893499e71.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/feca3e12510ddb73d0b94e5d7eae345f4ab332f3/ol-handback/PowerShell/powerShell-Docs.it-it/live/uninstall-windows-powershell-web-access.95bac7bf293e2b8b9e3aecf2e955c5e893499e71.it-it.xlf)
-* Bilingual Datetime: 2016-06-16 14:32:26
+* Bilingual File: [uninstall-windows-powershell-web-access.95bac7bf293e2b8b9e3aecf2e955c5e893499e71.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/599f530073fea384887a24eb0bccd62e6ae1ccd5/ol-handback/PowerShell/powerShell-Docs.it-it/live/uninstall-windows-powershell-web-access.95bac7bf293e2b8b9e3aecf2e955c5e893499e71.it-it.xlf)
+* Bilingual Datetime: 2016-07-05 13:13:02
 * [Back to Top](#report-top)
 
 ##### <a name='02964dd763ccccbf27a963c0f8eef20aa23cc117169'></a> Source: [scripting\core-powershell\web-access\use-the-web-based-windows-powershell-console.md](https://github.com/PowerShell/powerShell-Docs/blob/03ac4b90d299b316194f1fa932e7dbf62d4b1c8e/scripting/core-powershell/web-access/use-the-web-based-windows-powershell-console.md)
@@ -2708,8 +2716,8 @@
 * Archive Datetime: 2016-06-28 13:30:16
 * Handback File: [use-the-web-based-windows-powershell-console.a8b4c6032c977748f5d93f5365f50e8e8c8fc1ee.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/599f530073fea384887a24eb0bccd62e6ae1ccd5/ol-handback/PowerShell/powerShell-Docs.it-it/live/use-the-web-based-windows-powershell-console.a8b4c6032c977748f5d93f5365f50e8e8c8fc1ee.it-it.xlf)
 * Handback Datetime: 2016-07-05 13:12:17
-* Bilingual File: [use-the-web-based-windows-powershell-console.a8b4c6032c977748f5d93f5365f50e8e8c8fc1ee.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/feca3e12510ddb73d0b94e5d7eae345f4ab332f3/ol-handback/PowerShell/powerShell-Docs.it-it/live/use-the-web-based-windows-powershell-console.a8b4c6032c977748f5d93f5365f50e8e8c8fc1ee.it-it.xlf)
-* Bilingual Datetime: 2016-06-16 14:32:26
+* Bilingual File: [use-the-web-based-windows-powershell-console.a8b4c6032c977748f5d93f5365f50e8e8c8fc1ee.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/599f530073fea384887a24eb0bccd62e6ae1ccd5/ol-handback/PowerShell/powerShell-Docs.it-it/live/use-the-web-based-windows-powershell-console.a8b4c6032c977748f5d93f5365f50e8e8c8fc1ee.it-it.xlf)
+* Bilingual Datetime: 2016-07-05 13:13:02
 * [Back to Top](#report-top)
 
 ##### <a name='9de4d91359cf3c52d804749027f8d05cbffce743171'></a> Source: [scripting\core-powershell\workflows\PSWorkflow-Module.md](https://github.com/PowerShell/powerShell-Docs/blob/03ac4b90d299b316194f1fa932e7dbf62d4b1c8e/scripting/core-powershell/workflows/PSWorkflow-Module.md)
@@ -2722,8 +2730,8 @@
 * Archive Datetime: 2016-06-28 13:30:16
 * Handback File: [PSWorkflow-Module.921d75cae6b7a7d92b6ecea5e55ba16e085b9ec6.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/599f530073fea384887a24eb0bccd62e6ae1ccd5/ol-handback/PowerShell/powerShell-Docs.it-it/live/PSWorkflow-Module.921d75cae6b7a7d92b6ecea5e55ba16e085b9ec6.it-it.xlf)
 * Handback Datetime: 2016-07-05 13:12:17
-* Bilingual File: [PSWorkflow-Module.921d75cae6b7a7d92b6ecea5e55ba16e085b9ec6.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/feca3e12510ddb73d0b94e5d7eae345f4ab332f3/ol-handback/PowerShell/powerShell-Docs.it-it/live/PSWorkflow-Module.921d75cae6b7a7d92b6ecea5e55ba16e085b9ec6.it-it.xlf)
-* Bilingual Datetime: 2016-06-16 14:32:26
+* Bilingual File: [PSWorkflow-Module.921d75cae6b7a7d92b6ecea5e55ba16e085b9ec6.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/599f530073fea384887a24eb0bccd62e6ae1ccd5/ol-handback/PowerShell/powerShell-Docs.it-it/live/PSWorkflow-Module.921d75cae6b7a7d92b6ecea5e55ba16e085b9ec6.it-it.xlf)
+* Bilingual Datetime: 2016-07-05 13:13:02
 * [Back to Top](#report-top)
 
 ##### <a name='62cb6e90637373791e66ad1f94af085de00e4666172'></a> Source: [scripting\core-powershell\workflows\PSWorkflowUtility-Module.md](https://github.com/PowerShell/powerShell-Docs/blob/03ac4b90d299b316194f1fa932e7dbf62d4b1c8e/scripting/core-powershell/workflows/PSWorkflowUtility-Module.md)
@@ -2736,8 +2744,8 @@
 * Archive Datetime: 2016-06-28 13:30:16
 * Handback File: [PSWorkflowUtility-Module.8481930e48267ee01309cb3e5f01579dfdfcf0af.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/599f530073fea384887a24eb0bccd62e6ae1ccd5/ol-handback/PowerShell/powerShell-Docs.it-it/live/PSWorkflowUtility-Module.8481930e48267ee01309cb3e5f01579dfdfcf0af.it-it.xlf)
 * Handback Datetime: 2016-07-05 13:12:17
-* Bilingual File: [PSWorkflowUtility-Module.8481930e48267ee01309cb3e5f01579dfdfcf0af.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/feca3e12510ddb73d0b94e5d7eae345f4ab332f3/ol-handback/PowerShell/powerShell-Docs.it-it/live/PSWorkflowUtility-Module.8481930e48267ee01309cb3e5f01579dfdfcf0af.it-it.xlf)
-* Bilingual Datetime: 2016-06-16 14:32:26
+* Bilingual File: [PSWorkflowUtility-Module.8481930e48267ee01309cb3e5f01579dfdfcf0af.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/599f530073fea384887a24eb0bccd62e6ae1ccd5/ol-handback/PowerShell/powerShell-Docs.it-it/live/PSWorkflowUtility-Module.8481930e48267ee01309cb3e5f01579dfdfcf0af.it-it.xlf)
+* Bilingual Datetime: 2016-07-05 13:13:02
 * [Back to Top](#report-top)
 
 ##### <a name='8c3f76e53465b9d4eb90355cb6200abd871fa7b3170'></a> Source: [scripting\core-powershell\workflows-guide.md](https://github.com/PowerShell/powerShell-Docs/blob/03ac4b90d299b316194f1fa932e7dbf62d4b1c8e/scripting/core-powershell/workflows-guide.md)
@@ -2790,8 +2798,8 @@
 * Archive Datetime: 2016-06-28 13:30:16
 * Handback File: [Appendix-1---Compatibility-Aliases.1e82caf8ddab51a17d518f635e351df370bbc743.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/599f530073fea384887a24eb0bccd62e6ae1ccd5/ol-handback/PowerShell/powerShell-Docs.it-it/live/Appendix-1---Compatibility-Aliases.1e82caf8ddab51a17d518f635e351df370bbc743.it-it.xlf)
 * Handback Datetime: 2016-07-05 13:12:17
-* Bilingual File: [Appendix-1---Compatibility-Aliases.1e82caf8ddab51a17d518f635e351df370bbc743.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/ad5fdf088166b9b0fc4a866489161af702d9a0fd/ol-handback/PowerShell/powerShell-Docs.it-it/live/Appendix-1---Compatibility-Aliases.1e82caf8ddab51a17d518f635e351df370bbc743.it-it.xlf)
-* Bilingual Datetime: 2016-06-16 14:32:26
+* Bilingual File: [Appendix-1---Compatibility-Aliases.1e82caf8ddab51a17d518f635e351df370bbc743.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/599f530073fea384887a24eb0bccd62e6ae1ccd5/ol-handback/PowerShell/powerShell-Docs.it-it/live/Appendix-1---Compatibility-Aliases.1e82caf8ddab51a17d518f635e351df370bbc743.it-it.xlf)
+* Bilingual Datetime: 2016-07-05 13:13:02
 * [Back to Top](#report-top)
 
 ##### <a name='24e9b67cf51b99156db3f0bdfb446996b9d3df76176'></a> Source: [scripting\getting-started\cookbooks\Appendix-2---Creating-a-Custom-PowerShell-Shortcut.md](https://github.com/PowerShell/powerShell-Docs/blob/03ac4b90d299b316194f1fa932e7dbf62d4b1c8e/scripting/getting-started/cookbooks/Appendix-2---Creating-a-Custom-PowerShell-Shortcut.md)
@@ -2947,8 +2955,8 @@
 * Archive Datetime: 2016-06-28 13:30:16
 * Handback File: [Managing-Services.6af555cdf1bed42d8fbea56b1540ab3d1472685c.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/599f530073fea384887a24eb0bccd62e6ae1ccd5/ol-handback/PowerShell/powerShell-Docs.it-it/live/Managing-Services.6af555cdf1bed42d8fbea56b1540ab3d1472685c.it-it.xlf)
 * Handback Datetime: 2016-07-05 13:12:17
-* Bilingual File: [Managing-Services.6af555cdf1bed42d8fbea56b1540ab3d1472685c.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/ad5fdf088166b9b0fc4a866489161af702d9a0fd/ol-handback/PowerShell/powerShell-Docs.it-it/live/Managing-Services.6af555cdf1bed42d8fbea56b1540ab3d1472685c.it-it.xlf)
-* Bilingual Datetime: 2016-06-16 14:32:26
+* Bilingual File: [Managing-Services.6af555cdf1bed42d8fbea56b1540ab3d1472685c.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/599f530073fea384887a24eb0bccd62e6ae1ccd5/ol-handback/PowerShell/powerShell-Docs.it-it/live/Managing-Services.6af555cdf1bed42d8fbea56b1540ab3d1472685c.it-it.xlf)
+* Bilingual Datetime: 2016-07-05 13:13:02
 * [Back to Top](#report-top)
 
 ##### <a name='23d4f8d23170c4992092a2070baaedf4375be0d8187'></a> Source: [scripting\getting-started\cookbooks\Managing-Windows-PowerShell-Drives.md](https://github.com/PowerShell/powerShell-Docs/blob/03ac4b90d299b316194f1fa932e7dbf62d4b1c8e/scripting/getting-started/cookbooks/Managing-Windows-PowerShell-Drives.md)
@@ -3087,8 +3095,8 @@
 * Archive Datetime: 2016-06-28 13:30:16
 * Handback File: [Selecting-Items-from-a-List-Box.afbdc6b6a2c0471cc31c7a41f3dcb7f0911919c5.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/599f530073fea384887a24eb0bccd62e6ae1ccd5/ol-handback/PowerShell/powerShell-Docs.it-it/live/Selecting-Items-from-a-List-Box.afbdc6b6a2c0471cc31c7a41f3dcb7f0911919c5.it-it.xlf)
 * Handback Datetime: 2016-07-05 13:12:17
-* Bilingual File: [Selecting-Items-from-a-List-Box.afbdc6b6a2c0471cc31c7a41f3dcb7f0911919c5.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/feca3e12510ddb73d0b94e5d7eae345f4ab332f3/ol-handback/PowerShell/powerShell-Docs.it-it/live/Selecting-Items-from-a-List-Box.afbdc6b6a2c0471cc31c7a41f3dcb7f0911919c5.it-it.xlf)
-* Bilingual Datetime: 2016-06-16 14:32:26
+* Bilingual File: [Selecting-Items-from-a-List-Box.afbdc6b6a2c0471cc31c7a41f3dcb7f0911919c5.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/599f530073fea384887a24eb0bccd62e6ae1ccd5/ol-handback/PowerShell/powerShell-Docs.it-it/live/Selecting-Items-from-a-List-Box.afbdc6b6a2c0471cc31c7a41f3dcb7f0911919c5.it-it.xlf)
+* Bilingual Datetime: 2016-07-05 13:13:02
 * [Back to Top](#report-top)
 
 ##### <a name='c5ec8b902096f85e4d5f5575587434f2adf7c6a1197'></a> Source: [scripting\getting-started\cookbooks\Selecting-Parts-of-Objects--Select-Object-.md](https://github.com/PowerShell/powerShell-Docs/blob/03ac4b90d299b316194f1fa932e7dbf62d4b1c8e/scripting/getting-started/cookbooks/Selecting-Parts-of-Objects--Select-Object-.md)
@@ -3115,8 +3123,8 @@
 * Archive Datetime: 2016-06-28 13:30:16
 * Handback File: [Sorting-Objects.756929e616c834f3f60e351c4478aeb3fe04ecd5.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/599f530073fea384887a24eb0bccd62e6ae1ccd5/ol-handback/PowerShell/powerShell-Docs.it-it/live/Sorting-Objects.756929e616c834f3f60e351c4478aeb3fe04ecd5.it-it.xlf)
 * Handback Datetime: 2016-07-05 13:12:17
-* Bilingual File: [Sorting-Objects.756929e616c834f3f60e351c4478aeb3fe04ecd5.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/9695cf55fed7ca2503c2f40a673d5a52992af773/ol-handback/PowerShell/powerShell-Docs.it-it/live/Sorting-Objects.756929e616c834f3f60e351c4478aeb3fe04ecd5.it-it.xlf)
-* Bilingual Datetime: 2016-06-16 14:32:26
+* Bilingual File: [Sorting-Objects.756929e616c834f3f60e351c4478aeb3fe04ecd5.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/599f530073fea384887a24eb0bccd62e6ae1ccd5/ol-handback/PowerShell/powerShell-Docs.it-it/live/Sorting-Objects.756929e616c834f3f60e351c4478aeb3fe04ecd5.it-it.xlf)
+* Bilingual Datetime: 2016-07-05 13:13:02
 * [Back to Top](#report-top)
 
 ##### <a name='411923bac650f0f4a11808a86acaca1de7e1c076199'></a> Source: [scripting\getting-started\cookbooks\Using-Format-Commands-to-Change-Output-View.md](https://github.com/PowerShell/powerShell-Docs/blob/03ac4b90d299b316194f1fa932e7dbf62d4b1c8e/scripting/getting-started/cookbooks/Using-Format-Commands-to-Change-Output-View.md)
@@ -3143,8 +3151,8 @@
 * Archive Datetime: 2016-06-28 13:30:16
 * Handback File: [Using-Static-Classes-and-Methods.040e055ba5ec9e3a6d642990063a18388cce271f.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/599f530073fea384887a24eb0bccd62e6ae1ccd5/ol-handback/PowerShell/powerShell-Docs.it-it/live/Using-Static-Classes-and-Methods.040e055ba5ec9e3a6d642990063a18388cce271f.it-it.xlf)
 * Handback Datetime: 2016-07-05 13:12:17
-* Bilingual File: [Using-Static-Classes-and-Methods.040e055ba5ec9e3a6d642990063a18388cce271f.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/ad5fdf088166b9b0fc4a866489161af702d9a0fd/ol-handback/PowerShell/powerShell-Docs.it-it/live/Using-Static-Classes-and-Methods.040e055ba5ec9e3a6d642990063a18388cce271f.it-it.xlf)
-* Bilingual Datetime: 2016-06-16 14:32:26
+* Bilingual File: [Using-Static-Classes-and-Methods.040e055ba5ec9e3a6d642990063a18388cce271f.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/599f530073fea384887a24eb0bccd62e6ae1ccd5/ol-handback/PowerShell/powerShell-Docs.it-it/live/Using-Static-Classes-and-Methods.040e055ba5ec9e3a6d642990063a18388cce271f.it-it.xlf)
+* Bilingual Datetime: 2016-07-05 13:13:02
 * [Back to Top](#report-top)
 
 ##### <a name='8cd074bc4314aeb8d50fa31d74d9a1b2d2a37469201'></a> Source: [scripting\getting-started\cookbooks\Viewing-Object-Structure--Get-Member-.md](https://github.com/PowerShell/powerShell-Docs/blob/03ac4b90d299b316194f1fa932e7dbf62d4b1c8e/scripting/getting-started/cookbooks/Viewing-Object-Structure--Get-Member-.md)
@@ -3199,8 +3207,8 @@
 * Archive Datetime: 2016-06-28 13:30:16
 * Handback File: [Working-with-Objects.b9d0a3ad133a85d90825e330449e244ca0a2613d.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/599f530073fea384887a24eb0bccd62e6ae1ccd5/ol-handback/PowerShell/powerShell-Docs.it-it/live/Working-with-Objects.b9d0a3ad133a85d90825e330449e244ca0a2613d.it-it.xlf)
 * Handback Datetime: 2016-07-05 13:12:17
-* Bilingual File: [Working-with-Objects.b9d0a3ad133a85d90825e330449e244ca0a2613d.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/9695cf55fed7ca2503c2f40a673d5a52992af773/ol-handback/PowerShell/powerShell-Docs.it-it/live/Working-with-Objects.b9d0a3ad133a85d90825e330449e244ca0a2613d.it-it.xlf)
-* Bilingual Datetime: 2016-06-16 14:32:26
+* Bilingual File: [Working-with-Objects.b9d0a3ad133a85d90825e330449e244ca0a2613d.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/599f530073fea384887a24eb0bccd62e6ae1ccd5/ol-handback/PowerShell/powerShell-Docs.it-it/live/Working-with-Objects.b9d0a3ad133a85d90825e330449e244ca0a2613d.it-it.xlf)
+* Bilingual Datetime: 2016-07-05 13:13:02
 * [Back to Top](#report-top)
 
 ##### <a name='27d3d11b71b95cd79817449cf8bdb1a0a26936bd205'></a> Source: [scripting\getting-started\cookbooks\Working-with-Printers.md](https://github.com/PowerShell/powerShell-Docs/blob/03ac4b90d299b316194f1fa932e7dbf62d4b1c8e/scripting/getting-started/cookbooks/Working-with-Printers.md)
@@ -3213,8 +3221,8 @@
 * Archive Datetime: 2016-06-28 13:30:16
 * Handback File: [Working-with-Printers.5f47c7acf0cbe2a6824abd01c2e75fec38389375.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/599f530073fea384887a24eb0bccd62e6ae1ccd5/ol-handback/PowerShell/powerShell-Docs.it-it/live/Working-with-Printers.5f47c7acf0cbe2a6824abd01c2e75fec38389375.it-it.xlf)
 * Handback Datetime: 2016-07-05 13:12:17
-* Bilingual File: [Working-with-Printers.5f47c7acf0cbe2a6824abd01c2e75fec38389375.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/9695cf55fed7ca2503c2f40a673d5a52992af773/ol-handback/PowerShell/powerShell-Docs.it-it/live/Working-with-Printers.5f47c7acf0cbe2a6824abd01c2e75fec38389375.it-it.xlf)
-* Bilingual Datetime: 2016-06-16 14:32:26
+* Bilingual File: [Working-with-Printers.5f47c7acf0cbe2a6824abd01c2e75fec38389375.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/599f530073fea384887a24eb0bccd62e6ae1ccd5/ol-handback/PowerShell/powerShell-Docs.it-it/live/Working-with-Printers.5f47c7acf0cbe2a6824abd01c2e75fec38389375.it-it.xlf)
+* Bilingual Datetime: 2016-07-05 13:13:02
 * [Back to Top](#report-top)
 
 ##### <a name='d7fb731bc2527e324271bc75f00112a67a1147e3206'></a> Source: [scripting\getting-started\cookbooks\Working-with-Registry-Entries.md](https://github.com/PowerShell/powerShell-Docs/blob/03ac4b90d299b316194f1fa932e7dbf62d4b1c8e/scripting/getting-started/cookbooks/Working-with-Registry-Entries.md)
@@ -3521,8 +3529,8 @@
 * Archive Datetime: 2016-06-28 13:30:16
 * Handback File: [more-powershell-learning.00ec2b0492cda79380c66d0136e44b73cc496123.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/599f530073fea384887a24eb0bccd62e6ae1ccd5/ol-handback/PowerShell/powerShell-Docs.it-it/live/more-powershell-learning.00ec2b0492cda79380c66d0136e44b73cc496123.it-it.xlf)
 * Handback Datetime: 2016-07-05 13:12:17
-* Bilingual File: [more-powershell-learning.00ec2b0492cda79380c66d0136e44b73cc496123.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/feca3e12510ddb73d0b94e5d7eae345f4ab332f3/ol-handback/PowerShell/powerShell-Docs.it-it/live/more-powershell-learning.00ec2b0492cda79380c66d0136e44b73cc496123.it-it.xlf)
-* Bilingual Datetime: 2016-06-16 14:32:26
+* Bilingual File: [more-powershell-learning.00ec2b0492cda79380c66d0136e44b73cc496123.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/599f530073fea384887a24eb0bccd62e6ae1ccd5/ol-handback/PowerShell/powerShell-Docs.it-it/live/more-powershell-learning.00ec2b0492cda79380c66d0136e44b73cc496123.it-it.xlf)
+* Bilingual Datetime: 2016-07-05 13:13:02
 * [Back to Top](#report-top)
 
 ##### <a name='0888b7db506881c4f97d9398b838a617e62c7c4a228'></a> Source: [scripting\getting-started\understanding-concepts-reference.md](https://github.com/PowerShell/powerShell-Docs/blob/03ac4b90d299b316194f1fa932e7dbf62d4b1c8e/scripting/getting-started/understanding-concepts-reference.md)
@@ -3673,8 +3681,8 @@
 * Archive Datetime: 2016-06-28 13:30:16
 * Handback File: [Starting-the-Windows-PowerShell-2.0-Engine.0df3c4544d747196fba6c23b324ae9b0a2731dbf.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/599f530073fea384887a24eb0bccd62e6ae1ccd5/ol-handback/PowerShell/powerShell-Docs.it-it/live/Starting-the-Windows-PowerShell-2.0-Engine.0df3c4544d747196fba6c23b324ae9b0a2731dbf.it-it.xlf)
 * Handback Datetime: 2016-07-05 13:12:17
-* Bilingual File: [Starting-the-Windows-PowerShell-2.0-Engine.0df3c4544d747196fba6c23b324ae9b0a2731dbf.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/feca3e12510ddb73d0b94e5d7eae345f4ab332f3/ol-handback/PowerShell/powerShell-Docs.it-it/live/Starting-the-Windows-PowerShell-2.0-Engine.0df3c4544d747196fba6c23b324ae9b0a2731dbf.it-it.xlf)
-* Bilingual Datetime: 2016-06-16 14:32:26
+* Bilingual File: [Starting-the-Windows-PowerShell-2.0-Engine.0df3c4544d747196fba6c23b324ae9b0a2731dbf.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/599f530073fea384887a24eb0bccd62e6ae1ccd5/ol-handback/PowerShell/powerShell-Docs.it-it/live/Starting-the-Windows-PowerShell-2.0-Engine.0df3c4544d747196fba6c23b324ae9b0a2731dbf.it-it.xlf)
+* Bilingual Datetime: 2016-07-05 13:13:02
 * [Back to Top](#report-top)
 
 ##### <a name='f8406a2066ef54ea0fdaaff6e612bb0d43b12ab6240'></a> Source: [scripting\setup\Starting-Windows-PowerShell.md](https://github.com/PowerShell/powerShell-Docs/blob/03ac4b90d299b316194f1fa932e7dbf62d4b1c8e/scripting/setup/Starting-Windows-PowerShell.md)
@@ -3687,8 +3695,8 @@
 * Archive Datetime: 2016-06-28 13:30:16
 * Handback File: [Starting-Windows-PowerShell.a3dcf25852cd345b654f8612f2d32861f0ccad4f.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/599f530073fea384887a24eb0bccd62e6ae1ccd5/ol-handback/PowerShell/powerShell-Docs.it-it/live/Starting-Windows-PowerShell.a3dcf25852cd345b654f8612f2d32861f0ccad4f.it-it.xlf)
 * Handback Datetime: 2016-07-05 13:12:17
-* Bilingual File: [Starting-Windows-PowerShell.a3dcf25852cd345b654f8612f2d32861f0ccad4f.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/feca3e12510ddb73d0b94e5d7eae345f4ab332f3/ol-handback/PowerShell/powerShell-Docs.it-it/live/Starting-Windows-PowerShell.a3dcf25852cd345b654f8612f2d32861f0ccad4f.it-it.xlf)
-* Bilingual Datetime: 2016-06-16 14:32:26
+* Bilingual File: [Starting-Windows-PowerShell.a3dcf25852cd345b654f8612f2d32861f0ccad4f.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/599f530073fea384887a24eb0bccd62e6ae1ccd5/ol-handback/PowerShell/powerShell-Docs.it-it/live/Starting-Windows-PowerShell.a3dcf25852cd345b654f8612f2d32861f0ccad4f.it-it.xlf)
+* Bilingual Datetime: 2016-07-05 13:13:02
 * [Back to Top](#report-top)
 
 ##### <a name='1fe8c9e872b1646746ad2e3426bc816393e68fe8239'></a> Source: [scripting\setup\Starting-Windows-PowerShell-on-Earlier-Versions-of-Windows.md](https://github.com/PowerShell/powerShell-Docs/blob/03ac4b90d299b316194f1fa932e7dbf62d4b1c8e/scripting/setup/Starting-Windows-PowerShell-on-Earlier-Versions-of-Windows.md)
@@ -3830,8 +3838,8 @@
 * Archive Datetime: 2016-06-28 13:30:16
 * Handback File: [audit_cms.3e422ca243ac938b46bfcf1497a703e55bde970e.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/599f530073fea384887a24eb0bccd62e6ae1ccd5/ol-handback/PowerShell/powerShell-Docs.it-it/live/audit_cms.3e422ca243ac938b46bfcf1497a703e55bde970e.it-it.xlf)
 * Handback Datetime: 2016-07-05 13:12:17
-* Bilingual File: [audit_cms.3e422ca243ac938b46bfcf1497a703e55bde970e.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/091187014dab353bf6b3a63bb66ccc21d077524a/ol-handback/PowerShell/powerShell-Docs.it-it/live/audit_cms.3e422ca243ac938b46bfcf1497a703e55bde970e.it-it.xlf)
-* Bilingual Datetime: 2016-06-16 14:32:26
+* Bilingual File: [audit_cms.3e422ca243ac938b46bfcf1497a703e55bde970e.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/599f530073fea384887a24eb0bccd62e6ae1ccd5/ol-handback/PowerShell/powerShell-Docs.it-it/live/audit_cms.3e422ca243ac938b46bfcf1497a703e55bde970e.it-it.xlf)
+* Bilingual Datetime: 2016-07-05 13:13:02
 * [Back to Top](#report-top)
 
 ##### <a name='94d24bd3b67d1eceb71af4ffe704f2e03bf0806c250'></a> Source: [wmf\audit_overview.md](https://github.com/PowerShell/powerShell-Docs/blob/743c597c721d4abe67d657eaabd03ecc5cf19690/wmf/audit_overview.md)
@@ -3844,8 +3852,8 @@
 * Archive Datetime: 2016-06-28 13:30:16
 * Handback File: [audit_overview.fc5b51e2734a2af986c9edf42b4395b1aad2435d.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/599f530073fea384887a24eb0bccd62e6ae1ccd5/ol-handback/PowerShell/powerShell-Docs.it-it/live/audit_overview.fc5b51e2734a2af986c9edf42b4395b1aad2435d.it-it.xlf)
 * Handback Datetime: 2016-07-05 13:12:17
-* Bilingual File: [audit_overview.fc5b51e2734a2af986c9edf42b4395b1aad2435d.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/091187014dab353bf6b3a63bb66ccc21d077524a/ol-handback/PowerShell/powerShell-Docs.it-it/live/audit_overview.fc5b51e2734a2af986c9edf42b4395b1aad2435d.it-it.xlf)
-* Bilingual Datetime: 2016-06-16 14:32:26
+* Bilingual File: [audit_overview.fc5b51e2734a2af986c9edf42b4395b1aad2435d.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/599f530073fea384887a24eb0bccd62e6ae1ccd5/ol-handback/PowerShell/powerShell-Docs.it-it/live/audit_overview.fc5b51e2734a2af986c9edf42b4395b1aad2435d.it-it.xlf)
+* Bilingual Datetime: 2016-07-05 13:13:02
 * [Back to Top](#report-top)
 
 ##### <a name='654c0d5e83b9832524298b5c96eae094f371330f251'></a> Source: [wmf\audit_script.md](https://github.com/PowerShell/powerShell-Docs/blob/743c597c721d4abe67d657eaabd03ecc5cf19690/wmf/audit_script.md)
@@ -3858,8 +3866,8 @@
 * Archive Datetime: 2016-06-28 13:30:16
 * Handback File: [audit_script.e89f3a9316d1125e1efd23b41b756a3a6161016b.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/599f530073fea384887a24eb0bccd62e6ae1ccd5/ol-handback/PowerShell/powerShell-Docs.it-it/live/audit_script.e89f3a9316d1125e1efd23b41b756a3a6161016b.it-it.xlf)
 * Handback Datetime: 2016-07-05 13:12:17
-* Bilingual File: [audit_script.e89f3a9316d1125e1efd23b41b756a3a6161016b.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/091187014dab353bf6b3a63bb66ccc21d077524a/ol-handback/PowerShell/powerShell-Docs.it-it/live/audit_script.e89f3a9316d1125e1efd23b41b756a3a6161016b.it-it.xlf)
-* Bilingual Datetime: 2016-06-16 14:32:26
+* Bilingual File: [audit_script.e89f3a9316d1125e1efd23b41b756a3a6161016b.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/599f530073fea384887a24eb0bccd62e6ae1ccd5/ol-handback/PowerShell/powerShell-Docs.it-it/live/audit_script.e89f3a9316d1125e1efd23b41b756a3a6161016b.it-it.xlf)
+* Bilingual Datetime: 2016-07-05 13:13:02
 * [Back to Top](#report-top)
 
 ##### <a name='61364255f33378d71724705658d9924a7730b74e252'></a> Source: [wmf\audit_transcript.md](https://github.com/PowerShell/powerShell-Docs/blob/743c597c721d4abe67d657eaabd03ecc5cf19690/wmf/audit_transcript.md)
@@ -3942,8 +3950,8 @@
 * Archive Datetime: 2016-06-28 13:30:16
 * Handback File: [class_newtype.a9f52b670970046f8b1147d4ba646b73abb430dc.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/599f530073fea384887a24eb0bccd62e6ae1ccd5/ol-handback/PowerShell/powerShell-Docs.it-it/live/class_newtype.a9f52b670970046f8b1147d4ba646b73abb430dc.it-it.xlf)
 * Handback Datetime: 2016-07-05 13:12:17
-* Bilingual File: [class_newtype.a9f52b670970046f8b1147d4ba646b73abb430dc.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/2de9655d4b0f9b4a8b11ea5efa7f6f2d848e7e16/ol-handback/PowerShell/powerShell-Docs.it-it/live/class_newtype.a9f52b670970046f8b1147d4ba646b73abb430dc.it-it.xlf)
-* Bilingual Datetime: 2016-06-16 14:32:26
+* Bilingual File: [class_newtype.a9f52b670970046f8b1147d4ba646b73abb430dc.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/599f530073fea384887a24eb0bccd62e6ae1ccd5/ol-handback/PowerShell/powerShell-Docs.it-it/live/class_newtype.a9f52b670970046f8b1147d4ba646b73abb430dc.it-it.xlf)
+* Bilingual Datetime: 2016-07-05 13:13:02
 * [Back to Top](#report-top)
 
 ##### <a name='3010b1ce497d8a5e45ada003587d9e104eddd8b1258'></a> Source: [wmf\class_overview.md](https://github.com/PowerShell/powerShell-Docs/blob/743c597c721d4abe67d657eaabd03ecc5cf19690/wmf/class_overview.md)
@@ -4010,8 +4018,8 @@
 * Archive Datetime: 2016-06-28 13:30:16
 * Handback File: [dsc_classbasedresource.a3d6b22652db939b51db1218584247396454ae0f.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/599f530073fea384887a24eb0bccd62e6ae1ccd5/ol-handback/PowerShell/powerShell-Docs.it-it/live/dsc_classbasedresource.a3d6b22652db939b51db1218584247396454ae0f.it-it.xlf)
 * Handback Datetime: 2016-07-05 13:12:17
-* Bilingual File: [dsc_classbasedresource.a3d6b22652db939b51db1218584247396454ae0f.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/2de9655d4b0f9b4a8b11ea5efa7f6f2d848e7e16/ol-handback/PowerShell/powerShell-Docs.it-it/live/dsc_classbasedresource.a3d6b22652db939b51db1218584247396454ae0f.it-it.xlf)
-* Bilingual Datetime: 2016-06-16 14:32:26
+* Bilingual File: [dsc_classbasedresource.a3d6b22652db939b51db1218584247396454ae0f.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/599f530073fea384887a24eb0bccd62e6ae1ccd5/ol-handback/PowerShell/powerShell-Docs.it-it/live/dsc_classbasedresource.a3d6b22652db939b51db1218584247396454ae0f.it-it.xlf)
+* Bilingual Datetime: 2016-07-05 13:13:02
 * [Back to Top](#report-top)
 
 ##### <a name='00d17803fd93cd7492be149f8c6335c4a7e1d42b263'></a> Source: [wmf\dsc_confighelp.md](https://github.com/PowerShell/powerShell-Docs/blob/d367048eab0ba3fd67baed2ee27332ce0827d5ac/wmf/dsc_confighelp.md)
@@ -4024,8 +4032,8 @@
 * Archive Datetime: 2016-06-28 13:30:16
 * Handback File: [dsc_confighelp.bcfa7e85acae98499089edc9fba25b68953d7bbf.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/599f530073fea384887a24eb0bccd62e6ae1ccd5/ol-handback/PowerShell/powerShell-Docs.it-it/live/dsc_confighelp.bcfa7e85acae98499089edc9fba25b68953d7bbf.it-it.xlf)
 * Handback Datetime: 2016-07-05 13:12:17
-* Bilingual File: [dsc_confighelp.bcfa7e85acae98499089edc9fba25b68953d7bbf.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/091187014dab353bf6b3a63bb66ccc21d077524a/ol-handback/PowerShell/powerShell-Docs.it-it/live/dsc_confighelp.bcfa7e85acae98499089edc9fba25b68953d7bbf.it-it.xlf)
-* Bilingual Datetime: 2016-06-16 14:32:26
+* Bilingual File: [dsc_confighelp.bcfa7e85acae98499089edc9fba25b68953d7bbf.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/599f530073fea384887a24eb0bccd62e6ae1ccd5/ol-handback/PowerShell/powerShell-Docs.it-it/live/dsc_confighelp.bcfa7e85acae98499089edc9fba25b68953d7bbf.it-it.xlf)
+* Bilingual Datetime: 2016-07-05 13:13:02
 * [Back to Top](#report-top)
 
 ##### <a name='cd9360babcd367c621455b0fce6316137fd83a3d264'></a> Source: [wmf\dsc_directaccess.md](https://github.com/PowerShell/powerShell-Docs/blob/d367048eab0ba3fd67baed2ee27332ce0827d5ac/wmf/dsc_directaccess.md)
@@ -4038,8 +4046,8 @@
 * Archive Datetime: 2016-06-28 13:30:16
 * Handback File: [dsc_directaccess.014c91015162b26b678e0a5fdfd453a3bf6e41b0.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/599f530073fea384887a24eb0bccd62e6ae1ccd5/ol-handback/PowerShell/powerShell-Docs.it-it/live/dsc_directaccess.014c91015162b26b678e0a5fdfd453a3bf6e41b0.it-it.xlf)
 * Handback Datetime: 2016-07-05 13:12:17
-* Bilingual File: [dsc_directaccess.014c91015162b26b678e0a5fdfd453a3bf6e41b0.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/b199e22be0b2b06493472e130af5d346434e42c4/ol-handback/PowerShell/powerShell-Docs.it-it/live/dsc_directaccess.014c91015162b26b678e0a5fdfd453a3bf6e41b0.it-it.xlf)
-* Bilingual Datetime: 2016-06-16 14:32:26
+* Bilingual File: [dsc_directaccess.014c91015162b26b678e0a5fdfd453a3bf6e41b0.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/599f530073fea384887a24eb0bccd62e6ae1ccd5/ol-handback/PowerShell/powerShell-Docs.it-it/live/dsc_directaccess.014c91015162b26b678e0a5fdfd453a3bf6e41b0.it-it.xlf)
+* Bilingual Datetime: 2016-07-05 13:13:02
 * [Back to Top](#report-top)
 
 ##### <a name='20dee3be52962c04f04666893eed4a5ea1c27d0a265'></a> Source: [wmf\dsc_encryptedmof.md](https://github.com/PowerShell/powerShell-Docs/blob/743c597c721d4abe67d657eaabd03ecc5cf19690/wmf/dsc_encryptedmof.md)
@@ -4066,8 +4074,8 @@
 * Archive Datetime: 2016-06-28 13:30:16
 * Handback File: [dsc_freqnomultiple.2848e52c73280aca59e73136bac0c2c7ae02aad6.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/599f530073fea384887a24eb0bccd62e6ae1ccd5/ol-handback/PowerShell/powerShell-Docs.it-it/live/dsc_freqnomultiple.2848e52c73280aca59e73136bac0c2c7ae02aad6.it-it.xlf)
 * Handback Datetime: 2016-07-05 13:12:17
-* Bilingual File: [dsc_freqnomultiple.2848e52c73280aca59e73136bac0c2c7ae02aad6.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/091187014dab353bf6b3a63bb66ccc21d077524a/ol-handback/PowerShell/powerShell-Docs.it-it/live/dsc_freqnomultiple.2848e52c73280aca59e73136bac0c2c7ae02aad6.it-it.xlf)
-* Bilingual Datetime: 2016-06-16 14:32:26
+* Bilingual File: [dsc_freqnomultiple.2848e52c73280aca59e73136bac0c2c7ae02aad6.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/599f530073fea384887a24eb0bccd62e6ae1ccd5/ol-handback/PowerShell/powerShell-Docs.it-it/live/dsc_freqnomultiple.2848e52c73280aca59e73136bac0c2c7ae02aad6.it-it.xlf)
+* Bilingual Datetime: 2016-07-05 13:13:02
 * [Back to Top](#report-top)
 
 ##### <a name='3ff2fc261e539b230f30dc5776533ae09807f008267'></a> Source: [wmf\dsc_getconfigurationstatus.md](https://github.com/PowerShell/powerShell-Docs/blob/d367048eab0ba3fd67baed2ee27332ce0827d5ac/wmf/dsc_getconfigurationstatus.md)
@@ -4080,8 +4088,8 @@
 * Archive Datetime: 2016-06-28 13:30:16
 * Handback File: [dsc_getconfigurationstatus.1705e4bcaa9dfd9d69f00aecdc7ef0d04bf44899.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/599f530073fea384887a24eb0bccd62e6ae1ccd5/ol-handback/PowerShell/powerShell-Docs.it-it/live/dsc_getconfigurationstatus.1705e4bcaa9dfd9d69f00aecdc7ef0d04bf44899.it-it.xlf)
 * Handback Datetime: 2016-07-05 13:12:17
-* Bilingual File: [dsc_getconfigurationstatus.1705e4bcaa9dfd9d69f00aecdc7ef0d04bf44899.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/091187014dab353bf6b3a63bb66ccc21d077524a/ol-handback/PowerShell/powerShell-Docs.it-it/live/dsc_getconfigurationstatus.1705e4bcaa9dfd9d69f00aecdc7ef0d04bf44899.it-it.xlf)
-* Bilingual Datetime: 2016-06-16 14:32:26
+* Bilingual File: [dsc_getconfigurationstatus.1705e4bcaa9dfd9d69f00aecdc7ef0d04bf44899.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/599f530073fea384887a24eb0bccd62e6ae1ccd5/ol-handback/PowerShell/powerShell-Docs.it-it/live/dsc_getconfigurationstatus.1705e4bcaa9dfd9d69f00aecdc7ef0d04bf44899.it-it.xlf)
+* Bilingual Datetime: 2016-07-05 13:13:02
 * [Back to Top](#report-top)
 
 ##### <a name='a257f792d39f360a2c9e638f42ffac5fed282b00268'></a> Source: [wmf\dsc_identicalduplicate.md](https://github.com/PowerShell/powerShell-Docs/blob/d367048eab0ba3fd67baed2ee27332ce0827d5ac/wmf/dsc_identicalduplicate.md)
@@ -4108,8 +4116,8 @@
 * Archive Datetime: 2016-06-28 13:30:16
 * Handback File: [dsc_importdscresource.a0169ad862dfcaa5c958c07ecd52c856d5dc8436.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/599f530073fea384887a24eb0bccd62e6ae1ccd5/ol-handback/PowerShell/powerShell-Docs.it-it/live/dsc_importdscresource.a0169ad862dfcaa5c958c07ecd52c856d5dc8436.it-it.xlf)
 * Handback Datetime: 2016-07-05 13:12:17
-* Bilingual File: [dsc_importdscresource.a0169ad862dfcaa5c958c07ecd52c856d5dc8436.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/091187014dab353bf6b3a63bb66ccc21d077524a/ol-handback/PowerShell/powerShell-Docs.it-it/live/dsc_importdscresource.a0169ad862dfcaa5c958c07ecd52c856d5dc8436.it-it.xlf)
-* Bilingual Datetime: 2016-06-16 14:32:26
+* Bilingual File: [dsc_importdscresource.a0169ad862dfcaa5c958c07ecd52c856d5dc8436.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/599f530073fea384887a24eb0bccd62e6ae1ccd5/ol-handback/PowerShell/powerShell-Docs.it-it/live/dsc_importdscresource.a0169ad862dfcaa5c958c07ecd52c856d5dc8436.it-it.xlf)
+* Bilingual Datetime: 2016-07-05 13:13:02
 * [Back to Top](#report-top)
 
 ##### <a name='336c6bc43b482eda6524ebed0381240868261f64270'></a> Source: [wmf\dsc_improvements.md](https://github.com/PowerShell/powerShell-Docs/blob/743c597c721d4abe67d657eaabd03ecc5cf19690/wmf/dsc_improvements.md)
@@ -4178,8 +4186,8 @@
 * Archive Datetime: 2016-06-28 13:30:16
 * Handback File: [dsc_nodeid.e3c9049aa6c1d151f8b286f28502537b2f8d22a4.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/599f530073fea384887a24eb0bccd62e6ae1ccd5/ol-handback/PowerShell/powerShell-Docs.it-it/live/dsc_nodeid.e3c9049aa6c1d151f8b286f28502537b2f8d22a4.it-it.xlf)
 * Handback Datetime: 2016-07-05 13:12:17
-* Bilingual File: [dsc_nodeid.e3c9049aa6c1d151f8b286f28502537b2f8d22a4.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/091187014dab353bf6b3a63bb66ccc21d077524a/ol-handback/PowerShell/powerShell-Docs.it-it/live/dsc_nodeid.e3c9049aa6c1d151f8b286f28502537b2f8d22a4.it-it.xlf)
-* Bilingual Datetime: 2016-06-16 14:32:26
+* Bilingual File: [dsc_nodeid.e3c9049aa6c1d151f8b286f28502537b2f8d22a4.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/599f530073fea384887a24eb0bccd62e6ae1ccd5/ol-handback/PowerShell/powerShell-Docs.it-it/live/dsc_nodeid.e3c9049aa6c1d151f8b286f28502537b2f8d22a4.it-it.xlf)
+* Bilingual Datetime: 2016-07-05 13:13:02
 * [Back to Top](#report-top)
 
 ##### <a name='73d6ffec22390fa09e258f283fab2cdca001de16275'></a> Source: [wmf\dsc_partialconfig.md](https://github.com/PowerShell/powerShell-Docs/blob/d367048eab0ba3fd67baed2ee27332ce0827d5ac/wmf/dsc_partialconfig.md)
@@ -4262,8 +4270,8 @@
 * Archive Datetime: 2016-06-28 13:30:16
 * Handback File: [dsc_reporting.b042cd21b9bcfc8e50bc361ddee59333602fad42.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/599f530073fea384887a24eb0bccd62e6ae1ccd5/ol-handback/PowerShell/powerShell-Docs.it-it/live/dsc_reporting.b042cd21b9bcfc8e50bc361ddee59333602fad42.it-it.xlf)
 * Handback Datetime: 2016-07-05 13:12:17
-* Bilingual File: [dsc_reporting.b042cd21b9bcfc8e50bc361ddee59333602fad42.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/091187014dab353bf6b3a63bb66ccc21d077524a/ol-handback/PowerShell/powerShell-Docs.it-it/live/dsc_reporting.b042cd21b9bcfc8e50bc361ddee59333602fad42.it-it.xlf)
-* Bilingual Datetime: 2016-06-16 14:32:26
+* Bilingual File: [dsc_reporting.b042cd21b9bcfc8e50bc361ddee59333602fad42.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/599f530073fea384887a24eb0bccd62e6ae1ccd5/ol-handback/PowerShell/powerShell-Docs.it-it/live/dsc_reporting.b042cd21b9bcfc8e50bc361ddee59333602fad42.it-it.xlf)
+* Bilingual Datetime: 2016-07-05 13:13:02
 * [Back to Top](#report-top)
 
 ##### <a name='d9da7ea2674b0428118ec1585c705b90a886ca44281'></a> Source: [wmf\dsc_repository.md](https://github.com/PowerShell/powerShell-Docs/blob/d367048eab0ba3fd67baed2ee27332ce0827d5ac/wmf/dsc_repository.md)
@@ -4276,8 +4284,8 @@
 * Archive Datetime: 2016-06-28 13:30:16
 * Handback File: [dsc_repository.ec5040a823a6b64e969393e00f3d859fd0b4551c.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/599f530073fea384887a24eb0bccd62e6ae1ccd5/ol-handback/PowerShell/powerShell-Docs.it-it/live/dsc_repository.ec5040a823a6b64e969393e00f3d859fd0b4551c.it-it.xlf)
 * Handback Datetime: 2016-07-05 13:12:17
-* Bilingual File: [dsc_repository.ec5040a823a6b64e969393e00f3d859fd0b4551c.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/091187014dab353bf6b3a63bb66ccc21d077524a/ol-handback/PowerShell/powerShell-Docs.it-it/live/dsc_repository.ec5040a823a6b64e969393e00f3d859fd0b4551c.it-it.xlf)
-* Bilingual Datetime: 2016-06-16 14:32:26
+* Bilingual File: [dsc_repository.ec5040a823a6b64e969393e00f3d859fd0b4551c.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/599f530073fea384887a24eb0bccd62e6ae1ccd5/ol-handback/PowerShell/powerShell-Docs.it-it/live/dsc_repository.ec5040a823a6b64e969393e00f3d859fd0b4551c.it-it.xlf)
+* Bilingual Datetime: 2016-07-05 13:13:02
 * [Back to Top](#report-top)
 
 ##### <a name='fa0f232c7ed02cb6358b1c181a40bab8a1e2e640282'></a> Source: [wmf\dsc_resourcedebugging.md](https://github.com/PowerShell/powerShell-Docs/blob/d367048eab0ba3fd67baed2ee27332ce0827d5ac/wmf/dsc_resourcedebugging.md)
@@ -4304,8 +4312,8 @@
 * Archive Datetime: 2016-06-28 13:30:16
 * Handback File: [dsc_runas.9e19a42a6d5e1ea1772358a6fd8ff24b98a5b6ba.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/599f530073fea384887a24eb0bccd62e6ae1ccd5/ol-handback/PowerShell/powerShell-Docs.it-it/live/dsc_runas.9e19a42a6d5e1ea1772358a6fd8ff24b98a5b6ba.it-it.xlf)
 * Handback Datetime: 2016-07-05 13:12:17
-* Bilingual File: [dsc_runas.9e19a42a6d5e1ea1772358a6fd8ff24b98a5b6ba.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/091187014dab353bf6b3a63bb66ccc21d077524a/ol-handback/PowerShell/powerShell-Docs.it-it/live/dsc_runas.9e19a42a6d5e1ea1772358a6fd8ff24b98a5b6ba.it-it.xlf)
-* Bilingual Datetime: 2016-06-16 14:32:26
+* Bilingual File: [dsc_runas.9e19a42a6d5e1ea1772358a6fd8ff24b98a5b6ba.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/599f530073fea384887a24eb0bccd62e6ae1ccd5/ol-handback/PowerShell/powerShell-Docs.it-it/live/dsc_runas.9e19a42a6d5e1ea1772358a6fd8ff24b98a5b6ba.it-it.xlf)
+* Bilingual Datetime: 2016-07-05 13:13:02
 * [Back to Top](#report-top)
 
 ##### <a name='97cd3cb5658f3acabf4f980d1e3fa99fe84e0d04284'></a> Source: [wmf\dsc_setdsclcm.md](https://github.com/PowerShell/powerShell-Docs/blob/d367048eab0ba3fd67baed2ee27332ce0827d5ac/wmf/dsc_setdsclcm.md)
@@ -4318,8 +4326,8 @@
 * Archive Datetime: 2016-06-28 13:30:16
 * Handback File: [dsc_setdsclcm.1f0e3cab81cf5fc1feda678f202451fe150632e3.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/599f530073fea384887a24eb0bccd62e6ae1ccd5/ol-handback/PowerShell/powerShell-Docs.it-it/live/dsc_setdsclcm.1f0e3cab81cf5fc1feda678f202451fe150632e3.it-it.xlf)
 * Handback Datetime: 2016-07-05 13:12:17
-* Bilingual File: [dsc_setdsclcm.1f0e3cab81cf5fc1feda678f202451fe150632e3.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/091187014dab353bf6b3a63bb66ccc21d077524a/ol-handback/PowerShell/powerShell-Docs.it-it/live/dsc_setdsclcm.1f0e3cab81cf5fc1feda678f202451fe150632e3.it-it.xlf)
-* Bilingual Datetime: 2016-06-16 14:32:26
+* Bilingual File: [dsc_setdsclcm.1f0e3cab81cf5fc1feda678f202451fe150632e3.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/599f530073fea384887a24eb0bccd62e6ae1ccd5/ol-handback/PowerShell/powerShell-Docs.it-it/live/dsc_setdsclcm.1f0e3cab81cf5fc1feda678f202451fe150632e3.it-it.xlf)
+* Bilingual Datetime: 2016-07-05 13:13:02
 * [Back to Top](#report-top)
 
 ##### <a name='98a8a8f27661042bef27d0edceccf9a67c9153d1285'></a> Source: [wmf\dsc_statestatus.md](https://github.com/PowerShell/powerShell-Docs/blob/743c597c721d4abe67d657eaabd03ecc5cf19690/wmf/dsc_statestatus.md)
@@ -4332,8 +4340,8 @@
 * Archive Datetime: 2016-06-28 13:30:16
 * Handback File: [dsc_statestatus.b6f3670f776a8f63a705ba16bed2f20be34fc48f.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/599f530073fea384887a24eb0bccd62e6ae1ccd5/ol-handback/PowerShell/powerShell-Docs.it-it/live/dsc_statestatus.b6f3670f776a8f63a705ba16bed2f20be34fc48f.it-it.xlf)
 * Handback Datetime: 2016-07-05 13:12:17
-* Bilingual File: [dsc_statestatus.b6f3670f776a8f63a705ba16bed2f20be34fc48f.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/091187014dab353bf6b3a63bb66ccc21d077524a/ol-handback/PowerShell/powerShell-Docs.it-it/live/dsc_statestatus.b6f3670f776a8f63a705ba16bed2f20be34fc48f.it-it.xlf)
-* Bilingual Datetime: 2016-06-16 14:32:26
+* Bilingual File: [dsc_statestatus.b6f3670f776a8f63a705ba16bed2f20be34fc48f.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/599f530073fea384887a24eb0bccd62e6ae1ccd5/ol-handback/PowerShell/powerShell-Docs.it-it/live/dsc_statestatus.b6f3670f776a8f63a705ba16bed2f20be34fc48f.it-it.xlf)
+* Bilingual Datetime: 2016-07-05 13:13:02
 * [Back to Top](#report-top)
 
 ##### <a name='866429453239ceef799dff1acb99abd27e9b24c4286'></a> Source: [wmf\dsc_sxsresource.md](https://github.com/PowerShell/powerShell-Docs/blob/d367048eab0ba3fd67baed2ee27332ce0827d5ac/wmf/dsc_sxsresource.md)
@@ -4346,8 +4354,8 @@
 * Archive Datetime: 2016-06-28 13:30:16
 * Handback File: [dsc_sxsresource.c9d4ce6109370ac1cbc1fb07f191e02f9a61d5d3.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/599f530073fea384887a24eb0bccd62e6ae1ccd5/ol-handback/PowerShell/powerShell-Docs.it-it/live/dsc_sxsresource.c9d4ce6109370ac1cbc1fb07f191e02f9a61d5d3.it-it.xlf)
 * Handback Datetime: 2016-07-05 13:12:17
-* Bilingual File: [dsc_sxsresource.c9d4ce6109370ac1cbc1fb07f191e02f9a61d5d3.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/091187014dab353bf6b3a63bb66ccc21d077524a/ol-handback/PowerShell/powerShell-Docs.it-it/live/dsc_sxsresource.c9d4ce6109370ac1cbc1fb07f191e02f9a61d5d3.it-it.xlf)
-* Bilingual Datetime: 2016-06-16 14:32:26
+* Bilingual File: [dsc_sxsresource.c9d4ce6109370ac1cbc1fb07f191e02f9a61d5d3.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/599f530073fea384887a24eb0bccd62e6ae1ccd5/ol-handback/PowerShell/powerShell-Docs.it-it/live/dsc_sxsresource.c9d4ce6109370ac1cbc1fb07f191e02f9a61d5d3.it-it.xlf)
+* Bilingual Datetime: 2016-07-05 13:13:02
 * [Back to Top](#report-top)
 
 ##### <a name='df6b5db79c8c165e7fb3c1570838ac7a696b5a55287'></a> Source: [wmf\dsc_testconfiguration.md](https://github.com/PowerShell/powerShell-Docs/blob/183dddd89bd4d152de12e2ca122fc0305b420cb4/wmf/dsc_testconfiguration.md)
@@ -4391,8 +4399,8 @@
 * Archive Datetime: 2016-06-28 13:30:16
 * Handback File: [dsc_waitfor.2b09933f08f1020166ce0f0cd7548a5a3845c48f.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/599f530073fea384887a24eb0bccd62e6ae1ccd5/ol-handback/PowerShell/powerShell-Docs.it-it/live/dsc_waitfor.2b09933f08f1020166ce0f0cd7548a5a3845c48f.it-it.xlf)
 * Handback Datetime: 2016-07-05 13:12:17
-* Bilingual File: [dsc_waitfor.2b09933f08f1020166ce0f0cd7548a5a3845c48f.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/52dde9c26dd9a08ae264fc0efe907de319912a9b/ol-handback/PowerShell/powerShell-Docs.it-it/live/dsc_waitfor.2b09933f08f1020166ce0f0cd7548a5a3845c48f.it-it.xlf)
-* Bilingual Datetime: 2016-06-16 14:32:26
+* Bilingual File: [dsc_waitfor.2b09933f08f1020166ce0f0cd7548a5a3845c48f.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/599f530073fea384887a24eb0bccd62e6ae1ccd5/ol-handback/PowerShell/powerShell-Docs.it-it/live/dsc_waitfor.2b09933f08f1020166ce0f0cd7548a5a3845c48f.it-it.xlf)
+* Bilingual Datetime: 2016-07-05 13:13:02
 * [Back to Top](#report-top)
 
 ##### <a name='59206d28411ca6d4591cff5b3f158f4f5b78cc6a290'></a> Source: [wmf\dsc_wow64.md](https://github.com/PowerShell/powerShell-Docs/blob/743c597c721d4abe67d657eaabd03ecc5cf19690/wmf/dsc_wow64.md)
@@ -4447,8 +4455,8 @@
 * Archive Datetime: 2016-06-28 13:30:16
 * Handback File: [feedback_clipboard.872e5c147ef02cb86067651f41e3c00b55386664.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/599f530073fea384887a24eb0bccd62e6ae1ccd5/ol-handback/PowerShell/powerShell-Docs.it-it/live/feedback_clipboard.872e5c147ef02cb86067651f41e3c00b55386664.it-it.xlf)
 * Handback Datetime: 2016-07-05 13:12:17
-* Bilingual File: [feedback_clipboard.872e5c147ef02cb86067651f41e3c00b55386664.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/b199e22be0b2b06493472e130af5d346434e42c4/ol-handback/PowerShell/powerShell-Docs.it-it/live/feedback_clipboard.872e5c147ef02cb86067651f41e3c00b55386664.it-it.xlf)
-* Bilingual Datetime: 2016-06-16 14:32:26
+* Bilingual File: [feedback_clipboard.872e5c147ef02cb86067651f41e3c00b55386664.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/599f530073fea384887a24eb0bccd62e6ae1ccd5/ol-handback/PowerShell/powerShell-Docs.it-it/live/feedback_clipboard.872e5c147ef02cb86067651f41e3c00b55386664.it-it.xlf)
+* Bilingual Datetime: 2016-07-05 13:13:02
 * [Back to Top](#report-top)
 
 ##### <a name='2e8c46c95663135229a189f4d9c07da362aec299294'></a> Source: [wmf\feedback_cmdlets.md](https://github.com/PowerShell/powerShell-Docs/blob/743c597c721d4abe67d657eaabd03ecc5cf19690/wmf/feedback_cmdlets.md)
@@ -4475,8 +4483,8 @@
 * Archive Datetime: 2016-06-28 13:30:16
 * Handback File: [feedback_convertfromString.acdeaa33e8fa59b93649b6abf3a7d5ef64fb7664.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/599f530073fea384887a24eb0bccd62e6ae1ccd5/ol-handback/PowerShell/powerShell-Docs.it-it/live/feedback_convertfromString.acdeaa33e8fa59b93649b6abf3a7d5ef64fb7664.it-it.xlf)
 * Handback Datetime: 2016-07-05 13:12:17
-* Bilingual File: [feedback_convertfromString.acdeaa33e8fa59b93649b6abf3a7d5ef64fb7664.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/091187014dab353bf6b3a63bb66ccc21d077524a/ol-handback/PowerShell/powerShell-Docs.it-it/live/feedback_convertfromString.acdeaa33e8fa59b93649b6abf3a7d5ef64fb7664.it-it.xlf)
-* Bilingual Datetime: 2016-06-16 14:32:26
+* Bilingual File: [feedback_convertfromString.acdeaa33e8fa59b93649b6abf3a7d5ef64fb7664.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/599f530073fea384887a24eb0bccd62e6ae1ccd5/ol-handback/PowerShell/powerShell-Docs.it-it/live/feedback_convertfromString.acdeaa33e8fa59b93649b6abf3a7d5ef64fb7664.it-it.xlf)
+* Bilingual Datetime: 2016-07-05 13:13:02
 * [Back to Top](#report-top)
 
 ##### <a name='71e9f46958b59abce912278677217cd632629439296'></a> Source: [wmf\feedback_convertstring.md](https://github.com/PowerShell/powerShell-Docs/blob/743c597c721d4abe67d657eaabd03ecc5cf19690/wmf/feedback_convertstring.md)
@@ -4503,8 +4511,8 @@
 * Archive Datetime: 2016-06-28 13:30:16
 * Handback File: [feedback_fileinfo.0192edad2d6504d26a9632f95fc9e5b66ffd8003.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/599f530073fea384887a24eb0bccd62e6ae1ccd5/ol-handback/PowerShell/powerShell-Docs.it-it/live/feedback_fileinfo.0192edad2d6504d26a9632f95fc9e5b66ffd8003.it-it.xlf)
 * Handback Datetime: 2016-07-05 13:12:17
-* Bilingual File: [feedback_fileinfo.0192edad2d6504d26a9632f95fc9e5b66ffd8003.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/b199e22be0b2b06493472e130af5d346434e42c4/ol-handback/PowerShell/powerShell-Docs.it-it/live/feedback_fileinfo.0192edad2d6504d26a9632f95fc9e5b66ffd8003.it-it.xlf)
-* Bilingual Datetime: 2016-06-16 14:32:26
+* Bilingual File: [feedback_fileinfo.0192edad2d6504d26a9632f95fc9e5b66ffd8003.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/599f530073fea384887a24eb0bccd62e6ae1ccd5/ol-handback/PowerShell/powerShell-Docs.it-it/live/feedback_fileinfo.0192edad2d6504d26a9632f95fc9e5b66ffd8003.it-it.xlf)
+* Bilingual Datetime: 2016-07-05 13:13:02
 * [Back to Top](#report-top)
 
 ##### <a name='81803dcb8d5f0fac392cf13883b9240da3321f53298'></a> Source: [wmf\feedback_formathex.md](https://github.com/PowerShell/powerShell-Docs/blob/743c597c721d4abe67d657eaabd03ecc5cf19690/wmf/feedback_formathex.md)
@@ -4517,8 +4525,8 @@
 * Archive Datetime: 2016-06-28 13:30:16
 * Handback File: [feedback_formathex.f97931c887efb620e5f4314facc1f0e20e3dffbe.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/599f530073fea384887a24eb0bccd62e6ae1ccd5/ol-handback/PowerShell/powerShell-Docs.it-it/live/feedback_formathex.f97931c887efb620e5f4314facc1f0e20e3dffbe.it-it.xlf)
 * Handback Datetime: 2016-07-05 13:12:17
-* Bilingual File: [feedback_formathex.f97931c887efb620e5f4314facc1f0e20e3dffbe.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/091187014dab353bf6b3a63bb66ccc21d077524a/ol-handback/PowerShell/powerShell-Docs.it-it/live/feedback_formathex.f97931c887efb620e5f4314facc1f0e20e3dffbe.it-it.xlf)
-* Bilingual Datetime: 2016-06-16 14:32:26
+* Bilingual File: [feedback_formathex.f97931c887efb620e5f4314facc1f0e20e3dffbe.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/599f530073fea384887a24eb0bccd62e6ae1ccd5/ol-handback/PowerShell/powerShell-Docs.it-it/live/feedback_formathex.f97931c887efb620e5f4314facc1f0e20e3dffbe.it-it.xlf)
+* Bilingual Datetime: 2016-07-05 13:13:02
 * [Back to Top](#report-top)
 
 ##### <a name='c3f3f9a8b16731dd1483eb65386ba0422b04370c299'></a> Source: [wmf\feedback_getchilditem.md](https://github.com/PowerShell/powerShell-Docs/blob/743c597c721d4abe67d657eaabd03ecc5cf19690/wmf/feedback_getchilditem.md)
@@ -4531,8 +4539,8 @@
 * Archive Datetime: 2016-06-28 13:30:16
 * Handback File: [feedback_getchilditem.ce02ca20cc4417a80fe65eb509a8e92f2cecc79c.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/599f530073fea384887a24eb0bccd62e6ae1ccd5/ol-handback/PowerShell/powerShell-Docs.it-it/live/feedback_getchilditem.ce02ca20cc4417a80fe65eb509a8e92f2cecc79c.it-it.xlf)
 * Handback Datetime: 2016-07-05 13:12:17
-* Bilingual File: [feedback_getchilditem.ce02ca20cc4417a80fe65eb509a8e92f2cecc79c.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/091187014dab353bf6b3a63bb66ccc21d077524a/ol-handback/PowerShell/powerShell-Docs.it-it/live/feedback_getchilditem.ce02ca20cc4417a80fe65eb509a8e92f2cecc79c.it-it.xlf)
-* Bilingual Datetime: 2016-06-16 14:32:26
+* Bilingual File: [feedback_getchilditem.ce02ca20cc4417a80fe65eb509a8e92f2cecc79c.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/599f530073fea384887a24eb0bccd62e6ae1ccd5/ol-handback/PowerShell/powerShell-Docs.it-it/live/feedback_getchilditem.ce02ca20cc4417a80fe65eb509a8e92f2cecc79c.it-it.xlf)
+* Bilingual Datetime: 2016-07-05 13:13:02
 * [Back to Top](#report-top)
 
 ##### <a name='f2f968b1cd304009b3b29cdc793b61461e605812300'></a> Source: [wmf\feedback_moduleversionranges.md](https://github.com/PowerShell/powerShell-Docs/blob/743c597c721d4abe67d657eaabd03ecc5cf19690/wmf/feedback_moduleversionranges.md)
@@ -4601,8 +4609,8 @@
 * Archive Datetime: 2016-06-28 13:30:16
 * Handback File: [feedback_tempfile.fc029065af6bbba3a8c4abbf36023bede7d1416d.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/599f530073fea384887a24eb0bccd62e6ae1ccd5/ol-handback/PowerShell/powerShell-Docs.it-it/live/feedback_tempfile.fc029065af6bbba3a8c4abbf36023bede7d1416d.it-it.xlf)
 * Handback Datetime: 2016-07-05 13:12:17
-* Bilingual File: [feedback_tempfile.fc029065af6bbba3a8c4abbf36023bede7d1416d.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/091187014dab353bf6b3a63bb66ccc21d077524a/ol-handback/PowerShell/powerShell-Docs.it-it/live/feedback_tempfile.fc029065af6bbba3a8c4abbf36023bede7d1416d.it-it.xlf)
-* Bilingual Datetime: 2016-06-16 14:32:26
+* Bilingual File: [feedback_tempfile.fc029065af6bbba3a8c4abbf36023bede7d1416d.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/599f530073fea384887a24eb0bccd62e6ae1ccd5/ol-handback/PowerShell/powerShell-Docs.it-it/live/feedback_tempfile.fc029065af6bbba3a8c4abbf36023bede7d1416d.it-it.xlf)
+* Bilingual Datetime: 2016-07-05 13:13:02
 * [Back to Top](#report-top)
 
 ##### <a name='ba1897f38317f5fe38f2d8caf0efcc57bc8bb19d305'></a> Source: [wmf\images\DscResourceDebugging.jpg](https://github.com/PowerShell/powerShell-Docs/blob/97cfb44dc3db0937a0eaae5af5113210f988aa56/wmf/images/DscResourceDebugging.jpg)
@@ -4668,8 +4676,8 @@
 * Archive Datetime: 2016-06-28 13:30:16
 * Handback File: [install.317fc924c0f766547c4725878af59c3c9d8facba.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/599f530073fea384887a24eb0bccd62e6ae1ccd5/ol-handback/PowerShell/powerShell-Docs.it-it/live/install.317fc924c0f766547c4725878af59c3c9d8facba.it-it.xlf)
 * Handback Datetime: 2016-07-05 13:12:17
-* Bilingual File: [install.317fc924c0f766547c4725878af59c3c9d8facba.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/091187014dab353bf6b3a63bb66ccc21d077524a/ol-handback/PowerShell/powerShell-Docs.it-it/live/install.317fc924c0f766547c4725878af59c3c9d8facba.it-it.xlf)
-* Bilingual Datetime: 2016-06-16 14:32:26
+* Bilingual File: [install.317fc924c0f766547c4725878af59c3c9d8facba.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/599f530073fea384887a24eb0bccd62e6ae1ccd5/ol-handback/PowerShell/powerShell-Docs.it-it/live/install.317fc924c0f766547c4725878af59c3c9d8facba.it-it.xlf)
+* Bilingual Datetime: 2016-07-05 13:13:02
 * [Back to Top](#report-top)
 
 ##### <a name='061fb3a39191f7aaf3f5e51b12f56cac84031f49310'></a> Source: [wmf\jea_endpoint.md](https://github.com/PowerShell/powerShell-Docs/blob/743c597c721d4abe67d657eaabd03ecc5cf19690/wmf/jea_endpoint.md)
@@ -4738,8 +4746,8 @@
 * Archive Datetime: 2016-06-28 13:30:16
 * Handback File: [limitation_overview.6cc9c8c028f5912636637d836aed7db0614de522.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/599f530073fea384887a24eb0bccd62e6ae1ccd5/ol-handback/PowerShell/powerShell-Docs.it-it/live/limitation_overview.6cc9c8c028f5912636637d836aed7db0614de522.it-it.xlf)
 * Handback Datetime: 2016-07-05 13:12:17
-* Bilingual File: [limitation_overview.6cc9c8c028f5912636637d836aed7db0614de522.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/81f79a69955146f5443d5b2bc52311a265baff4e/ol-handback/PowerShell/powerShell-Docs.it-it/live/limitation_overview.6cc9c8c028f5912636637d836aed7db0614de522.it-it.xlf)
-* Bilingual Datetime: 2016-06-16 14:32:26
+* Bilingual File: [limitation_overview.6cc9c8c028f5912636637d836aed7db0614de522.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/599f530073fea384887a24eb0bccd62e6ae1ccd5/ol-handback/PowerShell/powerShell-Docs.it-it/live/limitation_overview.6cc9c8c028f5912636637d836aed7db0614de522.it-it.xlf)
+* Bilingual Datetime: 2016-07-05 13:13:02
 * [Back to Top](#report-top)
 
 ##### <a name='755db60abb7859af5065e2c5ddfbfc6cfb7aeeda315'></a> Source: [wmf\md.style](https://github.com/PowerShell/powerShell-Docs/blob/d915872415e419a4c80c774af2bf6c28ac449213/wmf/md.style)
@@ -4764,8 +4772,8 @@
 * Archive Datetime: 2016-06-28 13:30:16
 * Handback File: [networkswitch_overview.7a87eb0741cd43b8b9284ea6cb605920c4961b79.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/599f530073fea384887a24eb0bccd62e6ae1ccd5/ol-handback/PowerShell/powerShell-Docs.it-it/live/networkswitch_overview.7a87eb0741cd43b8b9284ea6cb605920c4961b79.it-it.xlf)
 * Handback Datetime: 2016-07-05 13:12:17
-* Bilingual File: [networkswitch_overview.7a87eb0741cd43b8b9284ea6cb605920c4961b79.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/091187014dab353bf6b3a63bb66ccc21d077524a/ol-handback/PowerShell/powerShell-Docs.it-it/live/networkswitch_overview.7a87eb0741cd43b8b9284ea6cb605920c4961b79.it-it.xlf)
-* Bilingual Datetime: 2016-06-16 14:32:26
+* Bilingual File: [networkswitch_overview.7a87eb0741cd43b8b9284ea6cb605920c4961b79.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/599f530073fea384887a24eb0bccd62e6ae1ccd5/ol-handback/PowerShell/powerShell-Docs.it-it/live/networkswitch_overview.7a87eb0741cd43b8b9284ea6cb605920c4961b79.it-it.xlf)
+* Bilingual Datetime: 2016-07-05 13:13:02
 * [Back to Top](#report-top)
 
 ##### <a name='8849fb46853f12318dd34781d07085419737d196317'></a> Source: [wmf\odata_overview.md](https://github.com/PowerShell/powerShell-Docs/blob/743c597c721d4abe67d657eaabd03ecc5cf19690/wmf/odata_overview.md)
@@ -4848,8 +4856,8 @@
 * Archive Datetime: 2016-06-28 13:30:16
 * Handback File: [psget_modulecmdlets.1f808cfdf9a9aa920f88e15f7f5fa4701fe805e3.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/599f530073fea384887a24eb0bccd62e6ae1ccd5/ol-handback/PowerShell/powerShell-Docs.it-it/live/psget_modulecmdlets.1f808cfdf9a9aa920f88e15f7f5fa4701fe805e3.it-it.xlf)
 * Handback Datetime: 2016-07-05 13:12:17
-* Bilingual File: [psget_modulecmdlets.1f808cfdf9a9aa920f88e15f7f5fa4701fe805e3.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/091187014dab353bf6b3a63bb66ccc21d077524a/ol-handback/PowerShell/powerShell-Docs.it-it/live/psget_modulecmdlets.1f808cfdf9a9aa920f88e15f7f5fa4701fe805e3.it-it.xlf)
-* Bilingual Datetime: 2016-06-16 14:32:26
+* Bilingual File: [psget_modulecmdlets.1f808cfdf9a9aa920f88e15f7f5fa4701fe805e3.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/599f530073fea384887a24eb0bccd62e6ae1ccd5/ol-handback/PowerShell/powerShell-Docs.it-it/live/psget_modulecmdlets.1f808cfdf9a9aa920f88e15f7f5fa4701fe805e3.it-it.xlf)
+* Bilingual Datetime: 2016-07-05 13:13:02
 * [Back to Top](#report-top)
 
 ##### <a name='f723a03aa04ea613f28d31c019b0c4d7e8af7f00323'></a> Source: [wmf\psget_moduledependency.md](https://github.com/PowerShell/powerShell-Docs/blob/743c597c721d4abe67d657eaabd03ecc5cf19690/wmf/psget_moduledependency.md)
@@ -4946,8 +4954,8 @@
 * Archive Datetime: 2016-06-28 13:30:16
 * Handback File: [requirements.ef8332f358d65b1759bfd4c7336b11d1dc8c2d46.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/599f530073fea384887a24eb0bccd62e6ae1ccd5/ol-handback/PowerShell/powerShell-Docs.it-it/live/requirements.ef8332f358d65b1759bfd4c7336b11d1dc8c2d46.it-it.xlf)
 * Handback Datetime: 2016-07-05 13:12:17
-* Bilingual File: [requirements.ef8332f358d65b1759bfd4c7336b11d1dc8c2d46.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/9f7796e5d713ec6c6c5cc7d6219525d35ddd90d4/ol-handback/PowerShell/powerShell-Docs.it-it/live/requirements.ef8332f358d65b1759bfd4c7336b11d1dc8c2d46.it-it.xlf)
-* Bilingual Datetime: 2016-06-22 19:00:33
+* Bilingual File: [requirements.ef8332f358d65b1759bfd4c7336b11d1dc8c2d46.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/599f530073fea384887a24eb0bccd62e6ae1ccd5/ol-handback/PowerShell/powerShell-Docs.it-it/live/requirements.ef8332f358d65b1759bfd4c7336b11d1dc8c2d46.it-it.xlf)
+* Bilingual Datetime: 2016-07-05 13:13:02
 * [Back to Top](#report-top)
 
 ##### <a name='edc1a0383cebfbe89b18b0238a13bb28e4d25c5a330'></a> Source: [wmf\sil_overview.md](https://github.com/PowerShell/powerShell-Docs/blob/743c597c721d4abe67d657eaabd03ecc5cf19690/wmf/sil_overview.md)
@@ -4960,8 +4968,8 @@
 * Archive Datetime: 2016-06-28 13:30:16
 * Handback File: [sil_overview.a2b1f7c716aad317993a5eaffba21fa28ce0c0d8.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/599f530073fea384887a24eb0bccd62e6ae1ccd5/ol-handback/PowerShell/powerShell-Docs.it-it/live/sil_overview.a2b1f7c716aad317993a5eaffba21fa28ce0c0d8.it-it.xlf)
 * Handback Datetime: 2016-07-05 13:12:17
-* Bilingual File: [sil_overview.a2b1f7c716aad317993a5eaffba21fa28ce0c0d8.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/091187014dab353bf6b3a63bb66ccc21d077524a/ol-handback/PowerShell/powerShell-Docs.it-it/live/sil_overview.a2b1f7c716aad317993a5eaffba21fa28ce0c0d8.it-it.xlf)
-* Bilingual Datetime: 2016-06-16 14:32:26
+* Bilingual File: [sil_overview.a2b1f7c716aad317993a5eaffba21fa28ce0c0d8.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/599f530073fea384887a24eb0bccd62e6ae1ccd5/ol-handback/PowerShell/powerShell-Docs.it-it/live/sil_overview.a2b1f7c716aad317993a5eaffba21fa28ce0c0d8.it-it.xlf)
+* Bilingual Datetime: 2016-07-05 13:13:02
 * [Back to Top](#report-top)
 
 ##### <a name='af8aee96244140094066b8e2df65fdb525a94811331'></a> Source: [wmf\TOC.md](https://github.com/PowerShell/powerShell-Docs/blob/fb3eaba21c7ca7d09e398a302076ecb1651e6c61/wmf/TOC.md)
