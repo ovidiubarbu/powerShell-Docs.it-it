@@ -1,30 +1,30 @@
 ---
-title:  Scripting di PowerShell
-ms.date:  2016-05-11
-keywords:  powershell,cmdlet
-description:  
-ms.topic:  article
-author:  jpjofre
-manager:  dongill
-ms.prod:  powershell
+title: Scripting di PowerShell
+ms.date: 2016-05-11
+keywords: powershell,cmdlet
+description: 
+ms.topic: article
+author: jpjofre
+manager: dongill
+ms.prod: powershell
+ms.sourcegitcommit: 32b4e11f150fe0374472d2d4c75f8de6c3575abb
+ms.openlocfilehash: 8ef9ea5b00c9c0ac0d14370a39d1ed7970e65cc3
+
 ---
 
 #  Scripting di PowerShell
 
-Questa è la pagina principale del set di documentazione ufficiale di PowerShell.  
-Da questa pagina è possibile trovare tutte le informazioni necessarie su PowerShell.
-
 La raccolta della documentazione è organizzata in quattro sezioni principali:
 
-##  1.  [Novità di PowerShell](whats-new/What-s-New-With-PowerShell.md)
+##  [Novità di PowerShell](whats-new/What-s-New-With-PowerShell.md)
 Questa sezione contiene gli annunci sul prodotto, per ogni singola versione.
 
-##  2.  [Installazione di PowerShell](setup/setup-reference.md)
+##  [Installazione di PowerShell](setup/setup-reference.md)
 Questa sezione contiene le informazioni necessarie per installare tutte le versioni di PowerShell in ogni ambiente supportato.  
 
 Viene descritto anche come configurare il prodotto per sicurezza, accessibilità, gestione e accesso remoti, flussi di lavoro e accesso Web.
 
-##  3.  [Introduzione a PowerShell](getting-started/Getting-Started-with-Windows-PowerShell.md)
+##  [Introduzione a PowerShell](getting-started/Getting-Started-with-Windows-PowerShell.md)
 Questa sezione è dedicata ai nuovi utenti di PowerShell, che qui accedono a tutte le informazioni necessarie per iniziare a usare il prodotto.  
 In questa sezione:
 -   [Preparazione all'uso di Windows PowerShell](getting-started/Getting-Ready-to-Use-Windows-PowerShell.md), che descrive i passaggi necessari per configurare PowerShell in modo da eseguire e provare tutti i frammenti di codice e comandi presentati nella sezione "Introduzione a PowerShell".
@@ -33,11 +33,9 @@ In questa sezione:
 -  Una serie di [informazioni di riferimento dettagliate di base per l'&lt;utilizzo&gt;](getting-started/cookbooks/basic-cookbooks-reference.md), che forniscono le istruzioni per eseguire attività standard riguardo a file, file system, Registro di sistema, processi, servizi e altri argomenti simili per l'uso quotidiano.
 -  Guida accurata ad altre fonti per l'[apprendimento di PowerShell](getting-started/more-powershell-learning.md).
 
-##  4.  [Documentazione di base di PowerShell](core-powershell/core-powershell.md)
+##  [PowerShell Core](core-powershell/core-powershell.md)
 Questa sezione contiene tutti i materiali di riferimento e le guide dettagliate per PowerShell.  
 In questa sezione:
--  [Guida allo scripting di PowerShell](core-powershell/scripting-guide.md)
--  [Guida al linguaggio di PowerShell](core-powershell/language-guide.md)
 -  [Guida ai moduli di PowerShell Core](core-powershell/core-modules.md)
 -  [Guida di PowerShell Integrated Scripting Environment (ISE)](core-powershell/ise-guide.md)
 -  [Guida alla finestra della console di PowerShell](core-powershell/console-guide.md)
@@ -48,6 +46,7 @@ In questa sezione:
 
 
 
-<!--HONumber=May16_HO4-->
+
+<!--HONumber=Jun16_HO4-->
 
 

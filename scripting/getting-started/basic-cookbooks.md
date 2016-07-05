@@ -1,12 +1,16 @@
 ---
-title:  guide di riferimento dettagliate di base
-ms.date:  2016-05-11
-keywords:  powershell,cmdlet
-description:  
-ms.topic:  article
-author:  jpjofre
-manager:  dongill
-ms.prod:  powershell
+title: guide di riferimento dettagliate di base
+ms.date: 2016-05-11
+keywords: powershell,cmdlet
+description: 
+ms.topic: article
+author: jpjofre
+manager: dongill
+ms.prod: powershell
+translationtype: Human Translation
+ms.sourcegitcommit: 03ac4b90d299b316194f1fa932e7dbf62d4b1c8e
+ms.openlocfilehash: e1c94c281a39b3ae026bbeea9811ecc71b9cdb1c
+
 ---
 
 #  [Riferimento di base alle guide di riferimento dettagliate](cookbooks/basic-cookbooks-reference.md)
@@ -47,6 +51,7 @@ ms.prod:  powershell
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

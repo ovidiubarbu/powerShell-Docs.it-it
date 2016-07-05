@@ -1,12 +1,16 @@
 ---
-title:  riferimento alle guide di riferimento dettagliate di base
-ms.date:  2016-05-11
-keywords:  powershell,cmdlet
-description:  
-ms.topic:  article
-author:  jpjofre
-manager:  dongill
-ms.prod:  powershell
+title: riferimento di base alle guide di riferimento dettagliate
+ms.date: 2016-05-11
+keywords: powershell,cmdlet
+description: 
+ms.topic: article
+author: jpjofre
+manager: dongill
+ms.prod: powershell
+translationtype: Human Translation
+ms.sourcegitcommit: 03ac4b90d299b316194f1fa932e7dbf62d4b1c8e
+ms.openlocfilehash: a5bfad60f1cb254f1899723c40751cd8b96ef54e
+
 ---
 
 #  Riferimento di base alle guide di riferimento dettagliate
@@ -47,6 +51,7 @@ ms.prod:  powershell
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

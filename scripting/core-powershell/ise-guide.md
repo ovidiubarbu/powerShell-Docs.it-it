@@ -1,12 +1,16 @@
 ---
-title:  guida di ISE
-ms.date:  2016-05-11
-keywords:  powershell,cmdlet
-description:  
-ms.topic:  article
-author:  jpjofre
-manager:  dongill
-ms.prod:  powershell
+title: Guida di ISE
+ms.date: 2016-05-11
+keywords: powershell,cmdlet
+description: 
+ms.topic: article
+author: jpjofre
+manager: dongill
+ms.prod: powershell
+translationtype: Human Translation
+ms.sourcegitcommit: 03ac4b90d299b316194f1fa932e7dbf62d4b1c8e
+ms.openlocfilehash: 053a4fd734b1e86c5f8ca22c8197ce4e80b6fce6
+
 ---
 
 # Guida di ISE
@@ -41,6 +45,7 @@ ms.prod:  powershell
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

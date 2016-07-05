@@ -98,4 +98,8 @@ Il cmdlet Export-ODataEndpointProxy e i cmdlet proxy generati da questo cmdlet s
 
 Export-ODataEndpointProxy -Uri $endPointUri -OutputModule $generatedProxyModuleDir -Force -AllowUnSecureConnection -Verbose -Headers @{'subscription-key'='XXXX'}
 ```
-<!--HONumber=Mar16_HO2-->
+
+
+<!--HONumber=Jun16_HO4-->
+
+
