@@ -1,6 +1,5 @@
 # Cmdlet Clipboard
-**Get-Clipboard** e **Set-Clipboard** rendono più semplice il trasferimento del contenuto in e da una sessione di Windows PowerShell. Ad esempio, se si usa Esplora risorse per copiare tre file
-negli Appunti (selezionandoli e premendo `ctrl-c` ad esempio), è possibile accedere facilmente al contenuto degli Appunti come elenco di file:
+**Get-Clipboard** e **Set-Clipboard** rendono più semplice il trasferimento del contenuto in e da una sessione di Windows PowerShell. Se ad esempio si usa Esplora risorse per copiare tre file negli Appunti (selezionandoli e premendo `ctrl-c` ad esempio), è possibile accedere facilmente al contenuto degli Appunti come elenco di file:
 
 ```powershell 
 PS C:\\&gt; Get-Clipboard -Format FileDropList
@@ -22,6 +21,6 @@ Mode LastWriteTime Length Name
 I cmdlet Clipboard supportano immagini, file audio, elenchi di file e testo.
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=Jun16_HO4-->
 
 

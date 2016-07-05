@@ -1,13 +1,17 @@
 ---
-title:  Modulo PSWorkflow
-ms.date:  2016-05-11
-keywords:  powershell,cmdlet
-description:  
-ms.topic:  article
-author:  jpjofre
-manager:  dongill
-ms.prod:  powershell
-ms.assetid:  117316fe-2f82-4fc9-b5dc-794ae9e3f258
+title: Modulo PSWorkflow
+ms.date: 2016-05-11
+keywords: powershell,cmdlet
+description: 
+ms.topic: article
+author: jpjofre
+manager: dongill
+ms.prod: powershell
+ms.assetid: 117316fe-2f82-4fc9-b5dc-794ae9e3f258
+translationtype: Human Translation
+ms.sourcegitcommit: 03ac4b90d299b316194f1fa932e7dbf62d4b1c8e
+ms.openlocfilehash: 9de4d91359cf3c52d804749027f8d05cbffce743
+
 ---
 
 # Modulo PSWorkflow
@@ -39,14 +43,15 @@ Questa sezione contiene gli argomenti della Guida per il modulo **PSWorkflow**, 
 [about_Suspend-Workflow](https://technet.microsoft.com/en-us/library/be2ded75-1eca-493e-96c1-758f92b5f199)
 
 ## Vedere anche
-[Informazioni sul flusso di lavoro di Windows PowerShell](http://go.microsoft.com/fwlink/?LinkID=252592)
-[Writing a Windows PowerShell Workflow](https://technet.microsoft.com/en-us/library/2551ceed-836f-4275-9fc0-ea68446d6a35) (Scrittura di un flusso di lavoro di Windows PowerShell) 
+[Guida introduttiva al flusso di lavoro di Windows PowerShell](http://go.microsoft.com/fwlink/?LinkID=252592)
+[Come scrivere un flusso di lavoro di Windows PowerShell](https://technet.microsoft.com/en-us/library/2551ceed-836f-4275-9fc0-ea68446d6a35)
 [Windows PowerShell 5.0](../core-modules/Windows-PowerShell-5.0.md)
 [Argomenti di informazioni sui componenti di sistema di Windows PowerShell](../core-modules/Windows-PowerShell-Core-About-Topics.md)
 [Scrittura di script con Windows PowerShell](../../getting-started/fundamental/Scripting-with-Windows-PowerShell.md)
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

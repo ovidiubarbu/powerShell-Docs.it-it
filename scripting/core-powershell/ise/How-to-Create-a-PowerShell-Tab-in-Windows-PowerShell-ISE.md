@@ -1,13 +1,17 @@
 ---
-title:  Come creare una scheda di PowerShell in Windows PowerShell ISE
-ms.date:  2016-05-11
-keywords:  powershell,cmdlet
-description:  
-ms.topic:  article
-author:  jpjofre
-manager:  dongill
-ms.prod:  powershell
-ms.assetid:  c10c18c7-9ece-4fd0-83dc-a19c53d4fd83
+title: Come creare una scheda di PowerShell in Windows PowerShell ISE
+ms.date: 2016-05-11
+keywords: powershell,cmdlet
+description: 
+ms.topic: article
+author: jpjofre
+manager: dongill
+ms.prod: powershell
+ms.assetid: c10c18c7-9ece-4fd0-83dc-a19c53d4fd83
+translationtype: Human Translation
+ms.sourcegitcommit: 03ac4b90d299b316194f1fa932e7dbf62d4b1c8e
+ms.openlocfilehash: 8af4de973a95352fd41d2bb2823b9382899ef5bf
+
 ---
 
 # Come creare una scheda di PowerShell in Windows PowerShell ISE
@@ -39,10 +43,11 @@ Se sono presenti file non salvati aperti nella scheda di PowerShell che si vuole
 
 ## Vedere anche
 [Uso di Windows PowerShell ISE](Using-the-Windows-PowerShell-ISE.md)
-[How to Use the Console Pane in the Windows PowerShell ISE](How-to-Use-the-Console-Pane-in-the-Windows-PowerShell-ISE.md) (Come usare il riquadro della console in Windows PowerShell ISE)
+[Come usare il riquadro della console in Windows PowerShell ISE](How-to-Use-the-Console-Pane-in-the-Windows-PowerShell-ISE.md)
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

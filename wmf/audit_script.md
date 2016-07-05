@@ -27,7 +27,7 @@ Quando si abilita la registrazione dettagliata, la funzionalità scrive indicato
 | Attività    | CommandStart (/ CommandStop)                           |
 | Parola chiave | Spazio di esecuzione                                               |
 | ID evento | ScriptBlock\_Invoke\_Start\_Detail (0x1009 = 4105) / </br> ScriptBlock\_Invoke\_Complete\_Detail (0x100A = 4106) |
-| Messaggio | Chiamata ID ScriptBlock avviata (/ completata): %1 </br> ID spazio di esecuzione: %2 |
+| Message | Chiamata ID ScriptBlock avviata (/ completata): %1 </br> ID spazio di esecuzione: %2 |
 
 L'ID è il GUID che rappresenta il blocco di script (correlabile con l'ID evento 0x1008) e l'ID dello spazio di esecuzione rappresenta lo spazio di esecuzione in cui è stato eseguito il blocco di script.
 
@@ -96,4 +96,8 @@ $mergedScript = -join ($sortedScripts | % { $_.Properties[2].Value })
 ```
 
 Come per tutti i sistemi di registrazione con un buffer limitato per la conservazione (ad esempio, i log ETW), un attacco contro questa infrastruttura si basa sull'inondare (flood) il log di eventi spuri per nascondere prove precedenti. Per proteggersi da questo tipo di attacco, assicurarsi di aver configurato una qualche forma di raccolta del registro eventi (ad esempio, l'inoltro degli eventi di Windows o il [monitoraggio del registro eventi di Windows per individuare i nemici](http://www.nsa.gov/ia/_files/app/Spotting_the_Adversary_with_Windows_Event_Log_Monitoring.pdf)) per spostare i registri eventi in una posizione al di fuori del computer non appena possibile.
-<!--HONumber=Mar16_HO2-->
+
+
+<!--HONumber=Jun16_HO4-->
+
+

@@ -1,13 +1,17 @@
 ---
-title:  Modulo PSWorkflowUtility
-ms.date:  2016-05-11
-keywords:  powershell,cmdlet
-description:  
-ms.topic:  article
-author:  jpjofre
-manager:  dongill
-ms.prod:  powershell
-ms.assetid:  c62a363a-caa2-4b6e-a079-d6e8543bc4c6
+title: Modulo PSWorkflowUtility
+ms.date: 2016-05-11
+keywords: powershell,cmdlet
+description: 
+ms.topic: article
+author: jpjofre
+manager: dongill
+ms.prod: powershell
+ms.assetid: c62a363a-caa2-4b6e-a079-d6e8543bc4c6
+translationtype: Human Translation
+ms.sourcegitcommit: 03ac4b90d299b316194f1fa932e7dbf62d4b1c8e
+ms.openlocfilehash: 62cb6e90637373791e66ad1f94af085de00e4666
+
 ---
 
 # Modulo PSWorkflowUtility
@@ -24,13 +28,14 @@ Questa sezione contiene gli argomenti della Guida per il modulo **PSWorkflowUtil
 
 ## Vedere anche
 [Informazioni sul flusso di lavoro di Windows PowerShell](https://technet.microsoft.com/en-us/library/jj134242.aspx)
-[Writing a Windows PowerShell Workflow](https://technet.microsoft.com/en-us/library/jj574157.aspx) (Scrittura di un flusso di lavoro di Windows PowerShell) 
+[Come scrivere un flusso di lavoro di Windows PowerShell](https://technet.microsoft.com/en-us/library/jj574157.aspx)
 [Windows PowerShell 5.0](../core-modules/Windows-PowerShell-5.0.md)
 [Argomenti di informazioni sui componenti di sistema di Windows PowerShell](../core-modules/Windows-PowerShell-Core-About-Topics.md)
 [Scrittura di script con Windows PowerShell](../../getting-started/fundamental/Scripting-with-Windows-PowerShell.md)
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

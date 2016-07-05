@@ -3,13 +3,13 @@
 - Installare gli ultimi aggiornamenti di Windows prima di installare WMF 5.0 RTM.
 - È possibile installare WMF 5.0 RTM solo nei sistemi operativi seguenti:
 
-    | Sistema operativo       | Edizioni         | Prerequisiti        | Collegamenti al pacchetto |
+    | Sistema operativo       | Edizioni         | Prerequisiti        |  Collegamenti al pacchetto |
     |------------------------|--------------|------------------|----------------------| --------------|
-    | Windows Server 2012 R2 |  |  | [Win8.1AndW2K12R2-KB3134758-x64.msu](http://go.microsoft.com/fwlink/?LinkId=717507) |
+    | Windows Server 2012 R2 |  |  | [Win8.1AndW2K12R2-KB3134758-x64.msu](http://go.microsoft.com/fwlink/?LinkId=717507) |
     | Windows Server 2012    |  |  | [W2K12-KB3134759-x64.msu](http://go.microsoft.com/fwlink/?LinkId=717506) |
-    | Windows Server 2008 R2 SP1 | Tutte, ad eccezione di IA64 | Installazione di [WMF 4.0](http://www.microsoft.com/en-us/download/details.aspx?id=40855) e [.NET Framework 4.5 o versioni successive](https://msdn.microsoft.com/en-us/library/5a4x27ek.aspx)| [Win7AndW2K8R2-KB3134760-x64.msu](http://go.microsoft.com/fwlink/?LinkId=717504)|
+    | Windows Server 2008 R2 SP1 | Tutti, tranne IA64 | [WMF 4.0](http://www.microsoft.com/en-us/download/details.aspx?id=40855) e [.NET Framework 4.5 o versione successiva](https://msdn.microsoft.com/en-us/library/5a4x27ek.aspx) sono installati| [Win7AndW2K8R2-KB3134760-x64.msu](http://go.microsoft.com/fwlink/?LinkId=717504)|
     | Windows 8.1 | Pro, Enterprise | | **x64:**  [Win8.1AndW2K12R2-KB3134758-x64.msu](http://go.microsoft.com/fwlink/?LinkId=717507) </br> **x86:**  [Win8.1-KB3134758-x86.msu](http://go.microsoft.com/fwlink/?LinkID=717963)|
-    | Windows 7 SP1 | Tutte | Installazione di [WMF 4.0](http://www.microsoft.com/en-us/download/details.aspx?id=40855) e [.NET Framework 4.5 o versioni successive ](https://msdn.microsoft.com/en-us/library/5a4x27ek.aspx)| **x64:** [Win7AndW2K8R2-KB3134760-x64.msu](http://go.microsoft.com/fwlink/?LinkId=717504)  </br> **x86:**  [Win7-KB3134760-x86.msu](http://go.microsoft.com/fwlink/?LinkID=717962)|
+    | Windows 7 SP1 | Tutto | [WMF 4.0](http://www.microsoft.com/en-us/download/details.aspx?id=40855) e [.NET Framework 4.5 o versione successiva](https://msdn.microsoft.com/en-us/library/5a4x27ek.aspx) sono installati | **x64:**  [Win7AndW2K8R2-KB3134760-x64.msu](http://go.microsoft.com/fwlink/?LinkId=717504)  </br> **x86:**  [Win7-KB3134760-x86.msu](http://go.microsoft.com/fwlink/?LinkID=717962)|
 
 # Istruzioni di installazione
 
@@ -84,9 +84,9 @@ wusa /uninstall /kb:3134760
 
 3.  Fare clic su **Visualizza aggiornamenti installati**.
 
-4.  Selezionare **Windows Management Framework 5.0** nell'elenco degli aggiornamenti installati. Corrisponde a *KB3134758*, *KB3134759* o *KB3134760*. Fare clic su **Disinstalla**.
+4.  Selezionare **Windows Management Framework 5.0** nell'elenco degli aggiornamenti installati. Questi aggiornamenti corrispondono a *KB3134758*, *KB3134759* o *KB3134760*. Fare clic su **Disinstalla**.
 
 
-<!--HONumber=Mar16_HO4-->
+<!--HONumber=Jun16_HO4-->
 
 

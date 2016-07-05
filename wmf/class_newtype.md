@@ -4,8 +4,7 @@ Con PowerShell 5.0 sono stati introdotti i seguenti elementi del linguaggio nuov
 
 ## Parola chiave class
 
-La parola chiave **class** definisce una nuova classe. Si tratta di un vero tipo .NET Framework. 
-I membri di classe sono pubblici, ma solo all'interno dell'ambito del modulo.
+La parola chiave **class** definisce una nuova classe. Si tratta di un vero tipo .NET Framework. I membri di classe sono pubblici, ma solo all'interno dell'ambito del modulo.
 È possibile fare riferimento al nome del tipo come stringa (ad esempio, `New-Object` non funziona) e, in questa versione, è possibile usare un valore letterale di tipo (ad esempio, `[MyClass]`) all'esterno del file di script o modulo in cui è definita la classe.
 
 ```powershell
@@ -80,7 +79,7 @@ Tutti i membri sono pubblici.
 
 ## Costruttori e creazione di istanze
 
-Le classi di Windows PowerShell possono avere costruttori, con lo stesso nome della classe. I costruttori possono essere sottoposti a overload. Sono supportati i costruttori statici. Le proprietà con espressioni di inizializzazione vengono inizializzate prima di eseguire qualsiasi codice in un costruttore. Le proprietà statiche vengono inizializzate prima del corpo di un costruttore statico e le proprietà dell'istanza vengono inizializzate prima del corpo del costruttore non statico. Attualmente non è disponibile alcuna sintassi per chiamare un costruttore da un altro costruttore (come la sintassi C\# ": this()"). La soluzione consiste nel definire un metodo Init comune. 
+Le classi di Windows PowerShell possono avere costruttori, con lo stesso nome della classe. I costruttori possono essere sottoposti a overload. Sono supportati i costruttori statici. Le proprietà con espressioni di inizializzazione vengono inizializzate prima di eseguire qualsiasi codice in un costruttore. Le proprietà statiche vengono inizializzate prima del corpo di un costruttore statico e le proprietà dell'istanza vengono inizializzate prima del corpo del costruttore non statico. Attualmente non è disponibile alcuna sintassi per chiamare un costruttore da un altro costruttore (analoga alla sintassi C\# ": this()"). La soluzione consiste nel definire un metodo Init comune. 
 
 Gli esempi seguenti illustrano i modi disponibili per la creazione di istanze di classi in questa versione.
 
@@ -200,8 +199,7 @@ $v -eq $d # true
 
 ## Esempio end-to-end
 
-L'esempio seguente crea diverse classi nuove personalizzate per implementare un documento DSL (Dynamic Stylesheet Language) HTML. 
-L'esempio aggiunge quindi funzioni helper per creare tipi di elemento specifici come parte della classe Element, ad esempio stili del titolo e tabelle, poiché i tipi non possono essere usati all'esterno dell'ambito di un modulo.
+L'esempio seguente crea diverse classi nuove personalizzate per implementare un documento DSL (Dynamic Stylesheet Language) HTML. L'esempio aggiunge quindi funzioni helper per creare tipi di elemento specifici come parte della classe Element, ad esempio stili del titolo e tabelle, poiché i tipi non possono essere usati all'esterno dell'ambito di un modulo.
 
 ```powershell
 # Classes that define the structure of the document
@@ -326,6 +324,6 @@ function Style
 function Html ([HTML] $doc) { return $doc }
 ```
 
-<!--HONumber=Apr16_HO5-->
+<!--HONumber=Jun16_HO4-->
 
 

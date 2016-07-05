@@ -39,8 +39,7 @@ Quando si installa WMF 5.0 in un computer Windows Server 2012 R2 in cui è già 
 Get-ChildItem non funziona se si usano insieme -LiteralPath e -Recurse
 --------------------------------------------------------------------------
 
-Se un nome di directory contiene un carattere jolly non valido, Get-ChildItem non produrrà i risultati previsti quando si usano insieme entrambe le opzioni
--LiteralPath e - Recurse.
+Se un nome di directory contiene un carattere jolly non valido, Get-ChildItem non produrrà i risultati previsti quando si usano insieme entrambe le opzioni -LiteralPath e -Recurse.
 
 **Soluzione:** non è ideale, ma la soluzione attuale consiste nell'implementare la ricorsione nello script anziché affidarsi al cmdlet.
 
@@ -100,6 +99,6 @@ Esistono due possibili soluzioni al problema in base alla versione di Windows Se
 
 
 
-<!--HONumber=May16_HO1-->
+<!--HONumber=Jun16_HO4-->
 
 

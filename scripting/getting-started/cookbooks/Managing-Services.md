@@ -1,20 +1,24 @@
 ---
-title:  Gestione dei servizi
-ms.date:  2016-05-11
-keywords:  powershell,cmdlet
-description:  
-ms.topic:  article
-author:  jpjofre
-manager:  dongill
-ms.prod:  powershell
-ms.assetid:  7a410e4d-514b-4813-ba0c-0d8cef88df31
+title: Gestione dei servizi
+ms.date: 2016-05-11
+keywords: powershell,cmdlet
+description: 
+ms.topic: article
+author: jpjofre
+manager: dongill
+ms.prod: powershell
+ms.assetid: 7a410e4d-514b-4813-ba0c-0d8cef88df31
+translationtype: Human Translation
+ms.sourcegitcommit: 03ac4b90d299b316194f1fa932e7dbf62d4b1c8e
+ms.openlocfilehash: a9d6ece1df3b66090b2abf9d85019fee4db946b5
+
 ---
 
 # Gestione dei servizi
-Sono disponibili otto cmdlet Service principali, progettati per una vasta gamma di attività dei servizi. Verranno esaminati solo l'elenco e la modifica dello stato di esecuzione dei servizi, ma è possibile ottenere un elenco di cmdlet Service usando **Get-Help *-Service**, oltre a trovare informazioni sui diversi cmdlet Service con **Get-Help<Nome-Cmdlet>**, ad esempio **Get-Help New-Service**.
+Sono disponibili otto cmdlet Service principali, progettati per una vasta gamma di attività dei servizi. Verranno esaminati solo l'elenco e la modifica dello stato di esecuzione dei servizi, ma è possibile ottenere un elenco di cmdlet Service usando **Get\-Help \&#42;\-Service**, oltre a trovare informazioni sui diversi cmdlet Service con **Get\-Help<Cmdlet\-Name>**, ad esempio **Get\-Help New\-Service**.
 
 ## Ottenere servizi
-È possibile ottenere servizi in un computer locale o remoto usando il cmdlet **Get-Service**. Come con **Get-Process**, l'uso del comando **Get-Service** senza parametri restituisce tutti i servizi. È possibile filtrare per nome, usando anche un asterisco come carattere jolly:
+È possibile ottenere servizi in un computer locale o remoto usando il cmdlet **Get\-Service**. Come con **Get\-Process**, l'uso del comando **Get\-Service** senza parametri restituisce tutti i servizi. È possibile filtrare per nome, usando anche un asterisco come carattere jolly:
 
 ```
 PS> Get-Service -Name se*
@@ -43,16 +47,16 @@ Running  lanmanserver       Server
 Stopped  ServiceLayer       ServiceLayer
 ```
 
-Il parametro ComputerName del cmdlet Get-Service può essere usato per ottenere servizi in computer remoti. Il parametro ComputerName accetta più valori e i caratteri jolly, pertanto è possibile recuperare i servizi di più computer con un unico comando. Il comando seguente ottiene ad esempio i servizi nel computer remoto Server01.
+Il parametro ComputerName del cmdlet Get\-Service può essere usato per ottenere servizi in computer remoti. Il parametro ComputerName accetta più valori e i caratteri jolly, pertanto è possibile recuperare i servizi di più computer con un unico comando. Il comando seguente ottiene ad esempio i servizi nel computer remoto Server01.
 
 ```
 Get-Service -ComputerName Server01
 ```
 
 ## Ottenere i servizi richiesti e dipendenti
-Il cmdlet Get-Service include due parametri molto utili per l'amministrazione dei servizi. Il parametro DependentServices ottiene i servizi che dipendono dal servizio. Il parametro RequiredServices ottiene i servizi da cui dipende questo servizio.
+Il cmdlet Get\-Service include due parametri molto utili per l'amministrazione dei servizi. Il parametro DependentServices ottiene i servizi che dipendono dal servizio. Il parametro RequiredServices ottiene i servizi da cui dipende questo servizio.
 
-Questi parametri visualizzano solo i valori delle proprietà DependentServices e ServicesDependedOn (alias=RequiredServices) dell'oggetto System.ServiceProcess.ServiceController restituito da Get-Service, ma semplificano i comandi e rendono più semplice ottenere queste informazioni.
+Questi parametri visualizzano solo i valori delle proprietà DependentServices e ServicesDependedOn (alias\=RequiredServices) dell'oggetto System.ServiceProcess.ServiceController restituito da Get\-Service, ma semplificano i comandi e rendono più semplice ottenere queste informazioni.
 
 Il comando seguente ottiene i servizi richiesti dal servizio LanmanWorkstation.
 
@@ -78,7 +82,7 @@ Stopped  Browser            Computer Browser
 Running  BITS               Background Intelligent Transfer Ser...
 ```
 
-È anche possibile ottenere tutti i servizi che hanno dipendenze. Il comando seguente ha proprio questo scopo e usa il cmdlet Format-Table per visualizzare le proprietà Status, Name, RequiredServices e DependentServices dei servizi nel computer.
+È anche possibile ottenere tutti i servizi che hanno dipendenze. Il comando seguente ha proprio questo scopo e usa il cmdlet Format\-Table per visualizzare le proprietà Status, Name, RequiredServices e DependentServices dei servizi nel computer.
 
 ```
 Get-Service -Name * | where {$_.RequiredServices -or $_.DependentServices} | Format-Table -Property Status, Name, RequiredServices, DependentServices -auto
@@ -103,7 +107,7 @@ Per sospendere lo spooler di stampa, usare:
 Suspend-Service -Name spooler
 ```
 
-Il cmdlet **Restart-Service** funziona esattamente come gli altri cmdlet Service, ma di seguito sono disponibili alcuni esempi più complessi. Il suo uso più semplice prevede che venga specificato il nome del servizio:
+Il cmdlet **Restart\-Service** funziona esattamente come gli altri cmdlet Service, ma di seguito sono disponibili alcuni esempi più complessi. Il suo uso più semplice prevede che venga specificato il nome del servizio:
 
 ```
 PS> Restart-Service -Name spooler
@@ -128,16 +132,16 @@ WARNING: Waiting for service 'Print Spooler (Spooler)' to finish starting...
 WARNING: Waiting for service 'Print Spooler (Spooler)' to finish starting...
 ```
 
-Questi cmdlet Service non hanno un parametro ComputerName, ma è possibile eseguirli in un computer remoto usando il cmdlet Invoke-Command. Il comando seguente riavvia ad esempio il servizio Spooler nel computer remoto Server01.
+Questi cmdlet Service non hanno un parametro ComputerName, ma è possibile eseguirli in un computer remoto usando il cmdlet Invoke\-Command. Il comando seguente riavvia ad esempio il servizio Spooler nel computer remoto Server01.
 
 ```
 Invoke-Command -ComputerName Server01 {Restart-Service Spooler}
 ```
 
 ## Impostazione delle proprietà dei servizi
-Il cmdlet Set-Service consente di modificare le proprietà di un servizio in un computer locale o remoto. Poiché lo stato del servizio è una proprietà, è possibile usare questo cmdlet per avviare, arrestare e sospendere un servizio. Il cmdlet Set-Service ha anche un parametro StartupType che consente di modificare il tipo di avvio del servizio.
+Il cmdlet Set\-Service consente di modificare le proprietà di un servizio in un computer locale o remoto. Poiché lo stato del servizio è una proprietà, è possibile usare questo cmdlet per avviare, arrestare e sospendere un servizio. Il cmdlet Set\-Service ha anche un parametro StartupType che consente di modificare il tipo di avvio del servizio.
 
-Per usare Set-Service in Windows Vista e versioni successive di Windows, aprire Windows PowerShell con l'opzione "Esegui come amministratore".
+Per usare Set\-Service in Windows Vista e versioni successive di Windows, aprire Windows PowerShell con l'opzione "Esegui come amministratore".
 
 Per altre informazioni, vedere [Set-Service [m2]](https://technet.microsoft.com/en-us/library/b71e29ed-372b-4e32-a4b7-5eb6216e56c3).
 
@@ -149,6 +153,7 @@ Per altre informazioni, vedere [Set-Service [m2]](https://technet.microsoft.com/
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

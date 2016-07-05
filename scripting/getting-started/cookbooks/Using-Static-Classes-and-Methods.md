@@ -1,17 +1,21 @@
 ---
-title:  Uso di classi e metodi statici
-ms.date:  2016-05-11
-keywords:  powershell,cmdlet
-description:  
-ms.topic:  article
-author:  jpjofre
-manager:  dongill
-ms.prod:  powershell
-ms.assetid:  418ad766-afa6-4b8c-9a44-471889af7fd9
+title: Uso di classi e metodi statici
+ms.date: 2016-05-11
+keywords: powershell,cmdlet
+description: 
+ms.topic: article
+author: jpjofre
+manager: dongill
+ms.prod: powershell
+ms.assetid: 418ad766-afa6-4b8c-9a44-471889af7fd9
+translationtype: Human Translation
+ms.sourcegitcommit: 03ac4b90d299b316194f1fa932e7dbf62d4b1c8e
+ms.openlocfilehash: 50ebc8a737b50aba5a5af49716b59905da74669a
+
 ---
 
 # Uso di classi e metodi statici
-Non tutte le classi .NET Framework possono essere create usando **New-Object**. Ad esempio, se si prova a creare un oggetto **System.Environment** o **System.Math** con **New-Object**, verranno visualizzati i messaggi di errore seguenti:
+Non tutte le classi .NET Framework possono essere create usando **New\-Object**. Ad esempio, se si prova a creare un oggetto **System.Environment** o **System.Math** con **New\-Object**, verranno visualizzati i messaggi di errore seguenti:
 
 ```
 PS> New-Object System.Environment
@@ -29,7 +33,7 @@ At line:1 char:11
 Questi errori si verificano perché non è possibile creare un nuovo oggetto da queste classi. Queste classi sono librerie di riferimento di metodi e proprietà che non cambiano stato. Non devono essere create, ma solo usate. I metodi e le classi di questo tipo sono denominate *classi statiche*, perché non vengono create, eliminate o modificate. Per chiarire il concetto verranno forniti esempi che usano le classi statiche.
 
 ### Recupero di dati dell'ambiente con System.Environment
-In genere, il primo passaggio quando si lavora con un oggetto in Windows PowerShell consiste nell'usare Get-Member per scoprire quali membri contiene. Con le classi statiche, il processo è leggermente diverso perché la classe non è realmente un oggetto.
+In genere, il primo passaggio quando si lavora con un oggetto in Windows PowerShell consiste nell'usare Get\-Member per scoprire quali membri contiene. Con le classi statiche, il processo è leggermente diverso perché la classe non è realmente un oggetto.
 
 #### Riferimento alla classe statica System.Environment
 Si può fare riferimento a una classe statica racchiudendo il nome della classe tra parentesi quadre. Ad esempio, si può fare riferimento a **System.Environment** digitando il nome tra parentesi quadre. In questo modo vengono visualizzate alcune informazioni di tipo generico:
@@ -43,11 +47,11 @@ True     False    Environment                              System.Object
 ```
 
 > [!NOTE]
-> Come accennato in precedenza, Windows PowerShell antepone automaticamente '**System.**' ai nomi di tipo quando si usa **New-Object**. Lo stesso avviene quando si usa un nome di tipo tra parentesi quadre, dunque è possibile specificare **[System.Environment]** come **[Environment]**.
+> Come accennato in precedenza, Windows PowerShell antepone automaticamente '**System.**' ai nomi di tipo quando si usa **New\-Object**. Lo stesso avviene quando si usa un nome di tipo tra parentesi quadre, quindi è possibile specificare **\[System.Environment]** come **\[Environment]**.
 
 La classe **System.Environment** contiene informazioni generali sull'ambiente di lavoro per il processo corrente, che quando si lavora in Windows PowerShell è powershell.exe.
 
-Se si prova a visualizzare i dettagli di questa classe digitando **[System.Environment] | Get-Member**, il tipo di oggetto restituito è **System.RuntimeType**, non **System.Environment**:
+Se si prova a visualizzare i dettagli di questa classe digitando**\[System.Environment] | Get\-Member**, il tipo di oggetto restituito è **System.RuntimeType** , non **System.Environment**:
 
 ```
 PS> [System.Environment] | Get-Member
@@ -55,7 +59,7 @@ PS> [System.Environment] | Get-Member
    TypeName: System.RuntimeType
 ```
 
-Per visualizzare i membri statici con Get-Member, specificare il parametro **Static**:
+Per visualizzare i membri statici con Get\-Member, specificare il parametro **Static**:
 
 ```
 PS> [System.Environment] | Get-Member -Static
@@ -114,9 +118,10 @@ False
 ```
 
 ### Eseguire operazioni matematiche con System.Math
-La classe statica System.Math è utile per l'esecuzione di operazioni matematiche. I membri importanti di **System.Math** sono per lo più metodi, che è possibile visualizzare usando **Get-Member**.
+La classe statica System.Math è utile per l'esecuzione di operazioni matematiche. I membri importanti di **System.Math** sono per lo più metodi, che è possibile visualizzare usando **Get\-Member**.
 
-> [!NOTE] System.Math ha diversi metodi con lo stesso nome, che si distinguono in base al tipo dei relativi parametri.
+> [!NOTE]
+> System.Math ha diversi metodi con lo stesso nome, che si distinguono in base al tipo dei relativi parametri.
 
 Digitare il comando seguente per elencare i metodi della classe **System.Math**.
 
@@ -184,6 +189,7 @@ PS> [System.Math]::Truncate(-9.3)
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

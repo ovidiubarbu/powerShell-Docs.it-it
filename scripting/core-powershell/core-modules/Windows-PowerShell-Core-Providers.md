@@ -1,19 +1,23 @@
 ---
-title:  Provider di sistema di Windows PowerShell
-ms.date:  2016-05-11
-keywords:  powershell,cmdlet
-description:  
-ms.topic:  article
-author:  jpjofre
-manager:  dongill
-ms.prod:  powershell
-ms.assetid:  6e24bf6d-4c70-4edf-956a-1e8e4779ba10
+title: Provider di sistema di Windows PowerShell
+ms.date: 2016-05-11
+keywords: powershell,cmdlet
+description: 
+ms.topic: article
+author: jpjofre
+manager: dongill
+ms.prod: powershell
+ms.assetid: 6e24bf6d-4c70-4edf-956a-1e8e4779ba10
+translationtype: Human Translation
+ms.sourcegitcommit: 03ac4b90d299b316194f1fa932e7dbf62d4b1c8e
+ms.openlocfilehash: f6b1ca1a3253c941c76826c6644079a14f19ddcf
+
 ---
 
 # Provider di sistema di Windows PowerShell
 Questa sezione contiene gli argomenti della Guida che descrivono i provider di Windows PowerShell disponibili nel modulo **Microsoft.PowerShell.Core**.
 
-I provider di Windows PowerShell sono programmi .NET che rendono disponibili in Windows PowerShell i dati presenti in archivi dati speciali, consentendo di visualizzarli e gestirli agevolmente. I dati esposti da un provider vengono visualizzati in un'unità, molto simile a un'unità di file system. Per altre informazioni, vedere [about_Providers [v4]](https://technet.microsoft.com/en-us/library/2d9b3f32-be78-49ad-a547-21231c803242)
+I provider di Windows PowerShell sono programmi .NET che rendono disponibili in Windows PowerShell i dati presenti in archivi dati speciali, consentendo di visualizzarli e gestirli agevolmente. I dati esposti da un provider vengono visualizzati in un'unità, molto simile a un'unità di file system. Per altre informazioni, vedere [about_Providers [v4]](https://technet.microsoft.com/en-us/library/2d9b3f32-be78-49ad-a547-21231c803242).
 
 |Provider|Descrizione|
 |------------|---------------|
@@ -25,13 +29,14 @@ I provider di Windows PowerShell sono programmi .NET che rendono disponibili in 
 |[Provider Variable [v3]](https://technet.microsoft.com/en-us/library/78dbcbbd-7946-4b9b-b75b-146f247f821c)|Fornisce l'accesso alle variabili di Windows PowerShell e ai relativi valori.|
 
 ## Vedere anche
-[Provider Certificate [v3]](https://technet.microsoft.com/en-us/library/3f743541-d0c6-4670-809a-b16fb01f7c4d)
-[Provider WSMan [v3]](https://technet.microsoft.com/en-us/library/4c3d8d36-4f7a-4211-996f-64110e4b2eb7)
+[Certificate Provider [v3]](https://technet.microsoft.com/en-us/library/3f743541-d0c6-4670-809a-b16fb01f7c4d)
+[WSMan Provider [v3]](https://technet.microsoft.com/en-us/library/4c3d8d36-4f7a-4211-996f-64110e4b2eb7)
 [about_Providers [v4]](https://technet.microsoft.com/en-us/library/2d9b3f32-be78-49ad-a547-21231c803242)
-[Modulo Microsoft.PowerShell.Core](Microsoft.PowerShell.Core-Module.md)
+[Microsoft.PowerShell.Core Module](Microsoft.PowerShell.Core-Module.md)
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

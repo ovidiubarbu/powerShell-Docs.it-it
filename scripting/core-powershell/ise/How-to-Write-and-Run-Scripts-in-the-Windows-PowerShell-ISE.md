@@ -1,13 +1,17 @@
 ---
-title:  Come scrivere ed eseguire script in Windows PowerShell ISE
-ms.date:  2016-05-11
-keywords:  powershell,cmdlet
-description:  
-ms.topic:  article
-author:  jpjofre
-manager:  dongill
-ms.prod:  powershell
-ms.assetid:  62f916d9-b3a1-484a-bdfb-41f57112c22b
+title: Come scrivere ed eseguire script in Windows PowerShell ISE
+ms.date: 2016-05-11
+keywords: powershell,cmdlet
+description: 
+ms.topic: article
+author: jpjofre
+manager: dongill
+ms.prod: powershell
+ms.assetid: 62f916d9-b3a1-484a-bdfb-41f57112c22b
+translationtype: Human Translation
+ms.sourcegitcommit: 03ac4b90d299b316194f1fa932e7dbf62d4b1c8e
+ms.openlocfilehash: 1c1534bc37d0a53262caffdfa60400e1ff8d98e7
+
 ---
 
 # Come scrivere ed eseguire script in Windows PowerShell ISE
@@ -53,7 +57,7 @@ Sulla barra degli strumenti fare clic su **Esegui script** o scegliere **Esegui*
 2.  Sulla barra degli strumenti fare clic su **Esegui selezione** o scegliere **Esegui selezione** dal menu **File**.
 
 ### Per arrestare l'esecuzione di uno script
-Sulla barra degli strumenti fare clic su **Arresta operazione**, premere CTRL+INTERR. o scegliere **Arresta operazione** dal menu **File**. È anche possibile premere **CTRL+C**, a meno che non sia attualmente selezionato del testo. In quel caso, **CTRL+C** corrisponderà alla funzione di copia del testo selezionato.
+Sulla barra degli strumenti fare clic su **Arresta operazione**, premere CTRL\+INTERR oppure dal menu **File** scegliere **Arresta operazione**. È anche possibile premere **CTRL\+C**, a meno che non sia selezionata parte del testo. In questo caso **CTRL\+C** corrisponderà alla funzione di copia del testo selezionato.
 
 ## <a name="bkmk_2"></a>Come scrivere e modificare testo nel riquadro di script
 Per modificare il testo nel riquadro di script, usare la procedura seguente. È possibile copiare, tagliare, incollare, trovare e sostituire testo. È anche possibile annullare e ripetere l'ultima operazione eseguita. I tasti di scelta rapida per eseguire queste operazioni sono identici a quelli usati in tutte le applicazioni di Windows.
@@ -68,18 +72,18 @@ Per modificare il testo nel riquadro di script, usare la procedura seguente. È 
 
 ### Per trovare testo nel riquadro di script
 
-1.  Per trovare testo in qualsiasi punto, premere **CTRL+F** o scegliere **Trova nello script** dal menu **Modifica**.
+1.  Per trovare testo in qualsiasi punto, premere **CTRL\+F** oppure dal menu **Modifica** scegliere **Trova nello script**.
 
 2.  Per trovare testo dopo il cursore, premere **F3** o scegliere **Trova successivo nello script** dal menu **Modifica**.
 
-3.  Per trovare testo prima del cursore, premere **MAIUSC+F3** o scegliere **Trova precedente nello script** dal menu **Modifica**.
+3.  Per trovare testo prima del cursore, premere **MAIUSC\+F3** oppure dal menu **Modifica** scegliere **Trova precedente nello script**.
 
 ### Per trovare e sostituire testo nel riquadro di script
-Premere **CRTL+H** o scegliere **Sostituisci nello script** dal menu **Modifica**. Immettere sia il testo da trovare che il testo con cui sostituirlo e quindi premere **INVIO**.
+Premere **CRTL\+H** oppure dal menu **Modifica** scegliere **Sostituisci nello script**. Immettere sia il testo da trovare che il testo con cui sostituirlo e quindi premere **INVIO**.
 
 ### Per passare a una specifica riga di testo nel riquadro di script
 
-1.  Nel riquadro di script premere **CTRL+G** o scegliere **Vai alla riga** dal menu **Modifica**.
+1.  Nel riquadro di script premere **CTRL\+G** oppure dal menu **Modifica** scegliere **Vai alla riga**.
 
 2.  Immettere un numero di riga.
 
@@ -87,28 +91,28 @@ Premere **CRTL+H** o scegliere **Sostituisci nello script** dal menu **Modifica*
 
 1.  Nel riquadro di script selezionare il testo da copiare.
 
-2.  Premere **CTRL+C**, fare clic sull'icona **Copia** sulla barra degli strumenti o scegliere **Copia** dal menu **Modifica**.
+2.  Premere **CTRL\+C**. In alternativa, sulla barra degli strumenti fare clic sull'icona **Copia** oppure dal menu **Modifica** scegliere **Copia**.
 
 ### Per tagliare testo nel riquadro di script
 
 1.  Nel riquadro di script selezionare il testo da tagliare.
 
-2.  Premere **CTRL+X**, fare clic sull'icona **Taglia** sulla barra degli strumenti o scegliere **Taglia** dal menu **Modifica**.
+2.  Premere **CTRL\+X**. In alternativa, sulla barra degli strumenti fare clic sull'icona **Taglia** oppure dal menu **Modifica** scegliere **Taglia**.
 
 ### Per incollare testo nel riquadro di script
-Premere **CTRL+V**, fare clic sull'icona **Incolla** sulla barra degli strumenti o scegliere **Incolla** dal menu **Modifica**.
+Premere **CTRL\+V**. In alternativa, sulla barra degli strumenti fare clic sull'icona **Incolla** oppure dal menu **Modifica** scegliere **Incolla**.
 
 ### Per annullare un'azione nel riquadro di script
-Premere **CTRL+Z**, fare clic sull'icona **Annulla** sulla barra degli strumenti o scegliere **Annulla** dal menu **Modifica**.
+Premere **CTRL\+Z**. In alternativa, sulla barra degli strumenti fare clic sull'icona **Annulla** oppure dal menu **Modifica** scegliere **Annulla**.
 
 ### Per ripetere un'azione nel riquadro di script
-Premere **CTRL+Y**, fare clic sull'icona **Ripeti** sulla barra degli strumenti o scegliere **Ripeti** dal menu **Modifica**.
+Premere **CTRL\+Y**. In alternativa, sulla barra degli strumenti fare clic sull'icona **Ripeti** oppure dal menu **Modifica** scegliere **Ripeti**.
 
 ## <a name="bkmk_3"></a>Come salvare uno script
 Per salvare uno script e assegnargli un nome, usare la procedura seguente. Accanto al nome di uno script che non è stato ancora salvato dopo una modifica, compare un asterisco. L'asterisco sparirà dopo il salvataggio del file.
 
 ### Per salvare uno script
-Premere **CTRL+S**, fare clic sull'icona **Salva** sulla barra degli strumenti o scegliere **Salva** dal menu **File**.
+Premere **CTRL\+S**. In alternativa, sulla barra degli strumenti fare clic sull'icona **Salva** oppure dal menu **File** scegliere **Salva**.
 
 ### Per salvare uno script e assegnargli un nome
 
@@ -116,7 +120,7 @@ Premere **CTRL+S**, fare clic sull'icona **Salva** sulla barra degli strumenti o
 
 2.  Nella casella **Nome file** immettere un nome per il file.
 
-3.  Nella casella **Salva come** selezionare un tipo di file. Ad esempio, nella casella **Salva come** selezionare "Script di PowerShell (*.ps1)".
+3.  Nella casella **Salva come** selezionare un tipo di file. Ad esempio, nella casella **Salva come** selezionare "Script di PowerShell (\* .ps1)".
 
 4.  Fare clic su **Salva**.
 
@@ -150,6 +154,7 @@ Windows PowerShell ISE non modifica la codifica degli script creati in altri edi
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

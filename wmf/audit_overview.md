@@ -2,4 +2,8 @@
 
 [Opzioni avanzate di trascrizione](audit_transcript.md)
 [Traccia e registrazione degli script](audit_script.md)
-[Cmdlet CMS (Cryptographic Message Syntax)](audit_cms.md)<!--HONumber=Mar16_HO2-->
+[Cmdlet CMS (Cryptographic Message Syntax)](audit_cms.md)
+
+<!--HONumber=Jun16_HO4-->
+
+

@@ -196,7 +196,7 @@ d----- 4/21/2015 5:40 PM RequiredModule3
 ## Cmdlet Update-ModuleManifest
 Questo nuovo cmdlet viene usato per facilitare l'aggiornamento del file manifesto con i valori delle proprietà di input. Accetta tutti i parametri supportati da Test-ModuleManifest.
 
-Abbiamo notato che molti autori di moduli vorrebbero specificare "\*" nei valori esportati, come FunctionsToExport, CmdletsToExport e così via. Durante la pubblicazione di un modulo in PowerShell Gallery, le funzioni e i comandi non specificati non verranno popolati correttamente nella raccolta. Pertanto, è consigliabile che gli autori dei moduli aggiornino i relativi manifesti con i valori appropriati.
+Molti autori di moduli vorrebbero specificare "\*" nei valori esportati, ad esempio FunctionsToExport, CmdletsToExport e così via. Durante la pubblicazione di un modulo in PowerShell Gallery, le funzioni e i comandi non specificati non verranno popolati correttamente nella raccolta. Pertanto, è consigliabile che gli autori dei moduli aggiornino i relativi manifesti con i valori appropriati.
 
 In presenza di moduli con proprietà esportate, Update-ModuleManifest compilerà il file manifesto specificato con le informazioni provenienti da funzioni, cmdlet, variabili e altri elementi esportati:
 ```powershell
@@ -277,4 +277,8 @@ PrivateData = @{
 } # End of PrivateData hashtable
 ```
 ***Nota:*** DscResourcesToExport è supportato solo nella versione più recente di PowerShell, la versione 5.0. Non sarà possibile aggiornare il campo in una versione precedente di PowerShell.
-<!--HONumber=Mar16_HO2-->
+
+
+<!--HONumber=Jun16_HO4-->
+
+

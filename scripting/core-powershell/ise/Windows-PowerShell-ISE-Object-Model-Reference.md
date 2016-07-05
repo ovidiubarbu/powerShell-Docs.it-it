@@ -1,13 +1,17 @@
 ---
-title:  Riferimenti al modello a oggetti di Windows PowerShell ISE
-ms.date:  2016-05-11
-keywords:  powershell,cmdlet
-description:  
-ms.topic:  article
-author:  jpjofre
-manager:  dongill
-ms.prod:  powershell
-ms.assetid:  e1a9e7d1-0fd5-47de-8d9b-f1be1ed13b0c
+title: Riferimenti al modello a oggetti di Windows PowerShell ISE
+ms.date: 2016-05-11
+keywords: powershell,cmdlet
+description: 
+ms.topic: article
+author: jpjofre
+manager: dongill
+ms.prod: powershell
+ms.assetid: e1a9e7d1-0fd5-47de-8d9b-f1be1ed13b0c
+translationtype: Human Translation
+ms.sourcegitcommit: 03ac4b90d299b316194f1fa932e7dbf62d4b1c8e
+ms.openlocfilehash: 9bfb74ba438dd27fc2799263fc12a20edd2bb8cb
+
 ---
 
 # Riferimenti al modello a oggetti di Windows PowerShell ISE
@@ -38,7 +42,7 @@ ms.assetid:  e1a9e7d1-0fd5-47de-8d9b-f1be1ed13b0c
  Esempi: $psISE.Options, $psISE.Options.DefaultOptions.
 
  [Oggetto ObjectModelRoot](The-ObjectModelRoot-Object.md)
- Esempio: oggetto $psISE radice.
+ Esempio: The root $psISE object.
 
  [Oggetto PowerShellTab](The-PowerShellTab-Object.md)
  Esempi: $psISE.CurrentPowerShellTab, $psISE.PowerShellTabs\[0\].
@@ -52,6 +56,7 @@ ms.assetid:  e1a9e7d1-0fd5-47de-8d9b-f1be1ed13b0c
   
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

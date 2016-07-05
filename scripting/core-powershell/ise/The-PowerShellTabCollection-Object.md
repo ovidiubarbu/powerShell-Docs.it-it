@@ -1,13 +1,17 @@
 ---
-title:  Oggetto PowerShellTabCollection
-ms.date:  2016-05-11
-keywords:  powershell,cmdlet
-description:  
-ms.topic:  article
-author:  jpjofre
-manager:  dongill
-ms.prod:  powershell
-ms.assetid:  81f4bf4a-83bf-415e-8378-1703792fbb58
+title: Oggetto PowerShellTabCollection
+ms.date: 2016-05-11
+keywords: powershell,cmdlet
+description: 
+ms.topic: article
+author: jpjofre
+manager: dongill
+ms.prod: powershell
+ms.assetid: 81f4bf4a-83bf-415e-8378-1703792fbb58
+translationtype: Human Translation
+ms.sourcegitcommit: 03ac4b90d299b316194f1fa932e7dbf62d4b1c8e
+ms.openlocfilehash: 4456b1e165130fd52249ffdbd7c22ff591061a8e
+
 ---
 
 # Oggetto PowerShellTabCollection
@@ -15,7 +19,7 @@ ms.assetid:  81f4bf4a-83bf-415e-8378-1703792fbb58
 
 ## Metodo
 
-### Add()
+### Add\(\)
   Supportato in Windows PowerShell ISE 2.0 e versioni successive. 
 
  Aggiunge una nuova scheda di PowerShell alla raccolta. Restituisce la scheda appena aggiunta.
@@ -25,7 +29,7 @@ $NewTab=$psISE.PowerShellTabs.Add()
 $newTab.DisplayName="Brand New Tab"
 ```
 
-### Remove(Microsoft.PowerShell.Host.ISE.PowerShellTab psTab)
+### Remove\(Microsoft.PowerShell.Host.ISE.PowerShellTab psTab\)
   Supportato in Windows PowerShell ISE 2.0 e versioni successive. 
 
  Rimuove la scheda specificata dal parametro **psTab**.
@@ -42,7 +46,7 @@ sleep 5
 $psISE.PowerShellTabs.Remove($newTab)
 ```
 
-### SetSelectedPowerShellTab(Microsoft.PowerShell.Host.ISE.PowerShellTab psTab)
+### SetSelectedPowerShellTab\(Microsoft.PowerShell.Host.ISE.PowerShellTab psTab\)
   Supportato in Windows PowerShell ISE 2.0 e versioni successive. 
 
  Seleziona la scheda di PowerShell specificata dal parametro **psTab** in modo che diventi la scheda di PowerShell attualmente attiva.
@@ -63,13 +67,14 @@ $psISE.PowerShellTabs.SelectedPowerShellTab=$oldtab
 
 ## Vedere anche
  [Oggetto PowerShellTab](The-PowerShellTab-Object.md) 
- [The Windows PowerShell ISE Scripting Object Model](../ise/The-Windows-PowerShell-ISE-Scripting-Object-Model.md) (Modello a oggetti di scripting di Windows PowerShell ISE) 
+ [Modello a oggetti di Scripting di Windows PowerShell ISE](../ise/The-Windows-PowerShell-ISE-Scripting-Object-Model.md) 
  [Riferimenti al modello a oggetti di Windows PowerShell ISE](../ise/Windows-PowerShell-ISE-Object-Model-Reference.md) 
  [Gerarchia del modello a oggetti ISE](../ise/The-ISE-Object-Model-Hierarchy.md)
 
   
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

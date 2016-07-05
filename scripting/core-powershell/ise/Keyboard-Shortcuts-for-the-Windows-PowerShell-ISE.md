@@ -1,13 +1,17 @@
 ---
-title:  Tasti di scelta rapida per Windows PowerShell ISE
-ms.date:  2016-05-11
-keywords:  powershell,cmdlet
-description:  
-ms.topic:  article
-author:  jpjofre
-manager:  dongill
-ms.prod:  powershell
-ms.assetid:  8328b946-0f02-4ef4-ac28-2743a1b4043b
+title: Tasti di scelta rapida per Windows PowerShell ISE
+ms.date: 2016-05-11
+keywords: powershell,cmdlet
+description: 
+ms.topic: article
+author: jpjofre
+manager: dongill
+ms.prod: powershell
+ms.assetid: 8328b946-0f02-4ef4-ac28-2743a1b4043b
+translationtype: Human Translation
+ms.sourcegitcommit: 03ac4b90d299b316194f1fa932e7dbf62d4b1c8e
+ms.openlocfilehash: df4fc6e4a501bc7cbeae83b6bf90f05544c6a6ac
+
 ---
 
 # Tasti di scelta rapida per Windows PowerShell ISE
@@ -18,65 +22,65 @@ Usare i tasti di scelta rapida seguenti per eseguire azioni in Windows PowerShel
 
 |Azione|Tasti di scelta rapida|Posizione|
 |----------|----------------------|----------|
-|**?**|F1|Riquadro di script **Importante:** è possibile specificare che la Guida F1 provenga dalla libreria TechNet sul Web o dalla Guida scaricata (vedere Update-Help). Per selezionare, fare clic su **Strumenti**, **Opzioni** e quindi nella scheda **Impostazioni generali** impostare o deselezionare **Usa contenuto della Guida locale anziché contenuto online.**|
-|**Copiare**|CTRL+C|Riquadro di script, riquadro dei comandi, riquadro di output|
-|**Taglia**|CTRL+X|Riquadro di script, riquadro dei comandi|
-|**Espandi o comprimi struttura**|CTRL+M|Riquadro di script|
-|**Trova nello script**|CTRL+F|Riquadro di script|
+|**?**|F1|Riquadro di script **Importante:** è possibile specificare che la Guida F1 provenga dalla libreria TechNet sul Web o dalla Guida scaricata (vedere Update\-Help). Per selezionare, fare clic su **Strumenti**, **Opzioni** e quindi nella scheda **Impostazioni generali** impostare o deselezionare **Usa contenuto della Guida locale anziché contenuto online.**|
+|**Copiare**|CTRL\+C|Riquadro di script, riquadro dei comandi, riquadro di output|
+|**Taglia**|CTRL\+X|Riquadro di script, riquadro dei comandi|
+|**Espandi o comprimi struttura**|CTRL\+M|Riquadro di script|
+|**Trova nello script**|CTRL\+F|Riquadro di script|
 |**Trova successivo nello script**|F3|Riquadro di script|
-|**Trova precedente nello script**|MAIUSC+F3|Riquadro di script|
-|**Trova parentesi graffa corrispondente**|CTRL+]|Riquadro di script|
-|**Incolla**|CTRL+V|Riquadro di script, riquadro dei comandi|
-|**Ripeti**|CTRL+Y|Riquadro di script, riquadro dei comandi|
-|**Sostituisci nello script**|CTRL+H|Riquadro di script|
-|**Salva**|CTRL+S|Riquadro di script|
-|**Seleziona tutto**|CTRL+A|Riquadro di script, riquadro dei comandi, riquadro di output|
-|**Mostra frammenti**|CTRL+J|Riquadro di script, riquadro dei comandi|
-|**Annulla**|CTRL+Z|Riquadro di script, riquadro dei comandi|
+|**Trova precedente nello script**|MAIUSC\+F3|Riquadro di script|
+|**Trova parentesi graffa corrispondente**|CTRL\+]|Riquadro di script|
+|**Incolla**|CTRL\+V|Riquadro di script, riquadro dei comandi|
+|**Ripeti**|CTRL\+Y|Riquadro di script, riquadro dei comandi|
+|**Sostituisci nello script**|CTRL\+H|Riquadro di script|
+|**Salva**|CTRL\+S|Riquadro di script|
+|**Seleziona tutto**|CTRL\+A|Riquadro di script, riquadro dei comandi, riquadro di output|
+|**Mostra frammenti**|CTRL\+J|Riquadro di script, riquadro dei comandi|
+|**Annulla**|CTRL\+Z|Riquadro di script, riquadro dei comandi|
 
 ## Tasti di scelta rapida per l'esecuzione di script
 È possibile usare i tasti di scelta rapida seguenti durante l'esecuzione di script nel riquadro di script.
 
 |Azione|Tasto di scelta rapida|
 |----------|---------------------|
-|**Nuovo**|CTRL+N|
-|**Apri**|CTRL+O|
+|**Nuovo**|CTRL\+N|
+|**Apri**|CTRL\+O|
 |**Esegui**|F5|
 |**Esegui selezione**|F8|
-|**Arresta operazione**|CTRL+INTERR. È possibile usare CTRL+C quando il contesto non è ambiguo (in assenza di testo selezionato).|
-|**TAB** (passaggio allo script successivo)|CTRL+TAB **Nota:** la pressione di TAB per passare allo script successivo funziona solo quando è aperta una sola scheda di Windows PowerShell o quando sono aperte più schede di Windows PowerShell, ma lo stato attivo si trova nel riquadro di script.|
-|**TAB** (passaggio allo script precedente)|CTRL+MAIUSC+TAB **Nota:** la pressione di TAB per passare allo script precedente funziona solo quando è aperta una sola scheda di Windows PowerShell o quando sono aperte più schede di Windows PowerShell, ma lo stato attivo si trova nel riquadro di script.|
+|**Arresta operazione**|CTRL\+INTERR. È possibile usare CTRL\+C quando il contesto non è ambiguo (in assenza di testo selezionato).|
+|**TAB** (passaggio allo script successivo)|CTRL\+TAB **Nota**: la pressione di TAB per passare allo script successivo funziona solo quando è aperta una sola scheda di Windows PowerShell o quando sono aperte più schede di Windows PowerShell, ma lo stato attivo si trova nel riquadro di script.|
+|**TAB** (passaggio allo script precedente)|CTRL\+MAIUSC\+TAB **Nota:** la pressione di TAB per passare allo script precedente funziona solo quando è aperta una sola scheda di Windows PowerShell o quando sono aperte più schede di Windows PowerShell e lo stato attivo si trova nel riquadro di script.|
 
 ## Tasti di scelta rapida per la personalizzazione della visualizzazione
 È possibile usare i tasti di scelta rapida seguenti per personalizzare la visualizzazione in Windows PowerShell ISE. Sono accessibili da tutti i riquadri nell'applicazione.
 
 |Azione|Tasto di scelta rapida|
 |----------|---------------------|
-|**Vai al riquadro dei comandi (v2) o della console (v3 e versioni successive)**|CTRL+D|
-|**Vai al riquadro di output (solo v2)**|CTRL+MAIUSC+O|
-|**Vai a riquadro di script**|CTRL+I|
-|**Mostra riquadro di script**|CTRL+R|
-|**Nascondi riquadro di script**|CTRL+R|
-|**Sposta riquadro di script in alto**|CTRL+1|
-|**Sposta riquadro di script a destra**|CTRL+2|
-|**Ingrandisci riquadro di script**|CTRL+3|
-|**Zoom avanti**|CTRL+SEGNO PIÙ|
-|**Zoom indietro**|CTRL+SEGNO MENO|
+|**Vai al riquadro dei comandi (v2) o della console (v3 e versioni successive)**|CTRL\+D|
+|**Vai al riquadro di output (solo v2)**|CTRL\+MAIUSC\+O|
+|**Vai a riquadro di script**|CTRL\+I|
+|**Mostra riquadro di script**|CTRL\+R|
+|**Nascondi riquadro di script**|CTRL\+R|
+|**Sposta riquadro di script in alto**|CTRL\+1|
+|**Sposta riquadro di script a destra**|CTRL\+2|
+|**Ingrandisci riquadro di script**|CTRL\+3|
+|**Zoom avanti**|CTRL\+SEGNO PIÙ|
+|**Zoom indietro**|CTRL\+SEGNO MENO|
 
 ## Tasti di scelta rapida per il debug di script
 È possibile usare i tasti di scelta rapida seguenti durante il debug di script.
 
 |Azione|Tasto di scelta rapida|Posizione|
 |----------|---------------------|----------|
-|**Esegui/Continua**|F5|Riquadro di script, durante il debug di uno script|
+|**Esegui\/Continua**|F5|Riquadro di script, durante il debug di uno script|
 |**Esegui istruzione**|F11|Riquadro di script, durante il debug di uno script|
 |**Esegui istruzione/routine**|F10|Riquadro di script, durante il debug di uno script|
-|**Esci da istruzione/routine**|MAIUSC+F11|Riquadro di script, durante il debug di uno script|
-|**Visualizza stack chiamate**|CTRL+MAIUSC+D|Riquadro di script, durante il debug di uno script|
-|**Elenca punti di interruzione**|CTRL+MAIUSC+L|Riquadro di script, durante il debug di uno script|
+|**Esci da istruzione/routine**|MAIUSC\+F11|Riquadro di script, durante il debug di uno script|
+|**Visualizza stack chiamate**|CTRL\+MAIUSC\+D|Riquadro di script, durante il debug di uno script|
+|**Elenca punti di interruzione**|CTRL\+MAIUSC\+L|Riquadro di script, durante il debug di uno script|
 |**Attiva/disattiva punto di interruzione**|F9|Riquadro di script, durante il debug di uno script|
-|**Rimuovi tutti i punti di interruzione**|CTRL+MAIUSC+F9|Riquadro di script, durante il debug di uno script|
-|**Arresta debugger**|MAIUSC+F5|Riquadro di script, durante il debug di uno script|
+|**Rimuovi tutti i punti di interruzione**|CTRL\+MAIUSC\+F9|Riquadro di script, durante il debug di uno script|
+|**Arresta debugger**|MAIUSC\+F5|Riquadro di script, durante il debug di uno script|
 
 > [!NOTE]
 > È anche possibile usare i tasti di scelta rapida progettati per la console di Windows PowerShell durante il debug degli script in Windows PowerShell ISE. Per usare questi tasti di scelta rapida, è necessario digitarli nel riquadro dei comandi e premere INVIO.
@@ -98,24 +102,25 @@ Usare i tasti di scelta rapida seguenti per eseguire azioni in Windows PowerShel
 
 |Azione|Tasto di scelta rapida|
 |----------|---------------------|
-|**Chiudi scheda di PowerShell**|CTRL+W|
-|**Nuova scheda di PowerShell**|CTRL+T|
-|**Scheda precedente di PowerShell**|CTRL+MAIUSC+TAB. Questo tasto di scelta rapida funziona solo se non ci sono file aperti in alcuna scheda di Windows PowerShell.|
-|**Scheda successiva di Windows PowerShell**|CTRL+TAB. Questo tasto di scelta rapida funziona solo se non ci sono file aperti in alcuna scheda di Windows PowerShell.|
+|**Chiudi scheda di PowerShell**|CTRL\+W|
+|**Nuova scheda di PowerShell**|CTRL\+T|
+|**Scheda precedente di PowerShell**|CTRL\+MAIUSC\+TAB. Questo tasto di scelta rapida funziona solo se non ci sono file aperti in alcuna scheda di Windows PowerShell.|
+|**Scheda successiva di Windows PowerShell**|CTRL\+TAB. Questo tasto di scelta rapida funziona solo se non ci sono file aperti in alcuna scheda di Windows PowerShell.|
 
 ## Tasti di scelta rapida per avvio e uscita
 È possibile usare i tasti di scelta rapida seguenti per avviare la console di Windows PowerShell (PowerShell.exe) o per uscire da Windows PowerShell ISE.
 
 |Azione|Tasto di scelta rapida|
 |----------|---------------------|
-|**Esci**|ALT+F4|
-|**Avviare PowerShell.exe** (console di Windows PowerShell).|CTRL+MAIUSC+P|
+|**Esci**|ALT\+F4|
+|**Avviare PowerShell.exe** (console di Windows PowerShell).|CTRL\+MAIUSC\+P|
 
 ## Vedere anche
 [PowerShell Magazine: l'elenco completo dei tasti di scelta rapida di Windows PowerShell ISE](http://www.powershellmagazine.com/2013/01/29/the-complete-list-of-powershell-ise-3-0-keyboard-shortcuts/)
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

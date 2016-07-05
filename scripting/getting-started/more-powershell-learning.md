@@ -1,12 +1,16 @@
 ---
-title:  altre risorse di formazione per PowerShell
-ms.date:  2016-05-11
-keywords:  powershell,cmdlet
-description:  
-ms.topic:  article
-author:  jpjofre
-manager:  dongill
-ms.prod:  powershell
+title: altre risorse di formazione per PowerShell
+ms.date: 2016-05-11
+keywords: powershell,cmdlet
+description: 
+ms.topic: article
+author: jpjofre
+manager: dongill
+ms.prod: powershell
+translationtype: Human Translation
+ms.sourcegitcommit: 03ac4b90d299b316194f1fa932e7dbf62d4b1c8e
+ms.openlocfilehash: 05205ff8fcf0a3b23e66a6ac756be0d9a5055bd2
+
 ---
 
 #  Altre risorse di formazione per PowerShell
@@ -17,13 +21,13 @@ Altre fonti per informazioni su PowerShell
 
 Oltre alla Guida disponibile dalla riga di comando, le risorse seguenti offrono altre informazioni per gli utenti che vogliono eseguire Windows PowerShell.
 
--   [Windows PowerShell Blog](http://blogs.msdn.com/b/powershell/) (Blog di Windows PowerShell). La risorsa ottimale per acquisire informazioni direttamente dal team di prodotto di Windows PowerShell.
--   [Windows PowerShell Customer Connection](http://Connect.Microsoft.com/PowerShell). Inviare commenti e suggerimenti o segnalare un bug al team di Windows PowerShell. È possibile segnalare un bug del codice, della documentazione o della localizzazione (traduzione).
--   Il [blog Hey, Scripting Guy! Il blog](http://www.scriptingguys.com/blog) pubblica nuovi contenuti sette giorni alla settimana e viene costantemente valutato tra i primi cinque di tutti i blog Microsoft. Gli articoli, basati su scenario, sono scritti in modo coinvolgente e brillante.
--   [La pagina di informazioni su PowerShell](http://www.scriptingguys.com/learnpowershell) è l'hub di Windows PowerShell su TechNet Script Center. Questa pagina ospita una serie di sessioni video per principianti condotte dal Microsoft Scripting Guy Ed Wilson. Contiene anche quiz su Windows PowerShell, collegamenti a contenuti della community e altro ancora.
+-   [Blog del team di Windows PowerShell](http://blogs.msdn.com/b/powershell/). La risorsa ottimale per acquisire informazioni direttamente dal team di prodotto di Windows PowerShell.
+-   [Windows PowerShell Customer Connection](http://Connect.Microsoft.com/PowerShell). Consente di inviare commenti e suggerimenti o segnalare un bug al team di Windows PowerShell. È possibile segnalare un bug del codice, della documentazione o della localizzazione (traduzione).
+-   Il blog [The Hey, Scripting Guy! ](http://www.scriptingguys.com/blog) pubblica nuovi contenuti sette giorni alla settimana e viene costantemente valutato tra i primi cinque di tutti i blog Microsoft. Gli articoli, basati su scenario, sono scritti in modo coinvolgente e brillante.
+-   La [pagina di formazioni su PowerShell](http://www.scriptingguys.com/learnpowershell) rappresenta l'hub di Windows PowerShell in TechNet Script Center. Questa pagina ospita una serie di sessioni video per principianti condotte dal Microsoft Scripting Guy Ed Wilson. Contiene anche quiz su Windows PowerShell, collegamenti a contenuti della community e altro ancora.
 -   In caso di domande su Windows PowerShell, è possibile entrare in contatto con centinaia di altre persone con interessi simili nel [forum ufficiale per autori di script](http://social.technet.microsoft.com/forums/itcg/threads/).
--   [Microsoft Script Center](https://technet.microsoft.com/scriptcenter). Un portale con molte risorse utili di Windows PowerShell, incluse le [Risorse script per i professionisti IT](http://gallery.technet.microsoft.com/scriptcenter/). Uno dei modi migliori per imparare a scrivere script consiste nel vedere esempi reali. È possibile cercare tra migliaia di script di Windows PowerShell, che possono essere valutati e adattati a specifiche esigenze.
--   Community degli utenti di Windows PowerShell. Vedere la pagina [Script Center Community](https://technet.microsoft.com/scriptcenter/hh182567.aspx) per individuare il gruppo di utenti di Windows PowerShell più vicino tra le decine esistenti. È inoltre possibile tenersi aggiornati con le attività della community di Microsoft Scripting Guy.
+-   [Microsoft Script Center](https://technet.microsoft.com/scriptcenter). Un portale con molte risorse utili per Windows PowerShell, tra cui lo [Center Script Repository](http://gallery.technet.microsoft.com/scriptcenter/). Uno dei modi migliori per imparare a scrivere script consiste nel vedere esempi reali. È possibile cercare tra migliaia di script di Windows PowerShell, che possono essere valutati e adattati a specifiche esigenze.
+-   È consigliabile entrare nella community degli utenti di Windows PowerShell. Vedere la [pagina dedicata alla community dello Script Center](https://technet.microsoft.com/scriptcenter/hh182567.aspx) per scoprire la posizione di decine di gruppi di utenti di Windows PowerShell. È probabile che si riesca a trovarne uno non lontano. È inoltre possibile tenersi aggiornati con le attività della community di Microsoft Scripting Guy.
 
 ## Video di formazione
 
@@ -48,13 +52,14 @@ Oltre alla Guida disponibile dalla riga di comando, le risorse seguenti offrono 
 
 ## Risorse per sviluppatori di Windows PowerShell
 
-Le risorse seguenti consentono agli sviluppatori di creare moduli, funzioni, cmdlet, provider e applicazioni di hosting di Windows PowerShell.
+Le risorse seguenti consentono agli sviluppatori di creare moduli, funzioni, cmdlet e applicazioni di hosting di Windows PowerShell.
 
--   [Windows PowerShell Reference](http://go.microsoft.com/fwlink/p/?LinkID=89595) (Informazioni di riferimento di Windows PowerShell). Fornisce contenuti di riferimento.
--   [Windows PowerShell](http://go.microsoft.com/fwlink/p/?LinkID=89596). Fornisce esercitazioni. Contiene anche informazioni sui concetti di base di Windows PowerShell.
+-   [Windows PowerShell SDK](http://go.microsoft.com/fwlink/p/?LinkID=89595). Fornisce contenuti di riferimento.
+-   [Manuale del programmatore di Windows PowerShell](http://go.microsoft.com/fwlink/p/?LinkID=89596). Fornisce esercitazioni. Contiene anche informazioni sui concetti di base di Windows PowerShell.
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

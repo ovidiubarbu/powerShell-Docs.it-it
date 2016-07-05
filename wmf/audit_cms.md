@@ -17,7 +17,7 @@ Unprotect-CmsMessage [-LiteralPath] <string> [[-To] <CmsMessageRecipient[]>] [-I
 
 Lo standard di crittografia CMS implementa la crittografia a chiave pubblica, in cui le chiavi usate per crittografare il contenuto (*chiave pubblica*) e le chiavi usate per decrittografare il contenuto (*chiave privata*) sono separate.
 
-La chiave pubblica può essere condivisa liberamente e non contiene dati sensibili. Eventuale contenuto crittografato con la chiave pubblica potrà essere decrittografato solo con la chiave privata. Per altre informazioni su PKCS (Public Key Cryptography Standards), vedere: <http://en.wikipedia.org/wiki/Public-key_cryptography>.
+La chiave pubblica può essere condivisa liberamente e non contiene dati sensibili. Eventuale contenuto crittografato con la chiave pubblica potrà essere decrittografato solo con la chiave privata. Per altre informazioni sulla crittografia a chiave pubblica, vedere: <http://en.wikipedia.org/wiki/Public-key_cryptography>.
 
 Per essere riconosciuti in PowerShell, i certificati di crittografia richiedono un identificatore univoco di utilizzo delle chiavi (EKU) per identificarli come certificati di crittografia dei dati, ad esempio identificatori per la firma del codice o per la posta crittografata.
 
@@ -81,4 +81,8 @@ Per visualizzare i certificati di crittografia dei documenti nel provider di cer
 
 ```powershell
 dir -DocumentEncryptionCert
-```<!--HONumber=Mar16_HO2-->
+```
+
+<!--HONumber=Jun16_HO4-->
+
+

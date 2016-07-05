@@ -73,17 +73,16 @@ Da questo set di esempi, **ConvertFrom-String** può ora estrarre automaticament
 
 > 2 \[C:\\temp\]
 >
-> &gt;&gt; Get-Content .\\addresses.output.txt | ConvertFrom-String -TemplateFile .\\addresses.template.txt |
-> &gt;&gt;&gt; Format-Table -Auto
+> &gt;&gt; Get-Content .\\addresses.output.txt | ConvertFrom-String -TemplateFile .\\addresses.template.txt | &gt;&gt;&gt; Format-Table -Auto
 >
 > ExtentText                     Name               City     State
 > ----------                     ----               ----     -----
-> Ana Trujillo...                Ana Trujillo       Redmond  WA
-> Antonio Moreno...              Antonio Moreno     Renton   WA
-> Thomas Hardy...                Thomas Hardy       Seattle  WA
-> Christina Berglund...          Christina Berglund Redmond  WA
-> Hanna Moos...                  Hanna Moos         Puyallup WA
+> Ana Trujillo...                Ana Trujillo       Redmond  WA Antonio Moreno...              Antonio Moreno     Renton   WA Thomas Hardy...                Thomas Hardy       Seattle  WA Christina Berglund...          Christina Berglund Redmond  WA Hanna Moos...                  Hanna Moos         Puyallup WA
 
-Per apportare ulteriori modifiche ai dati nel testo estratto, la proprietà **ExtentText** acquisisce il testo non elaborato da cui è stato estratto il record. Per fornire commenti e suggerimenti su questa funzionalità o per condividere contenuto per cui risulta problematica la scrittura di esempi, inviare un messaggio di posta elettronica a <psdmfb@microsoft.com>.
+Per apportare ulteriori modifiche ai dati nel testo estratto, la proprietà **ExtentText** acquisisce il testo non elaborato da cui è stato estratto il record. Per fornire commenti e suggerimenti su questa funzionalità o per condividere contenuto per cui risulta problematica la scrittura di esempi, inviare un messaggio di posta elettronica all'indirizzo <psdmfb@microsoft.com>.
 
-<!--HONumber=Mar16_HO2-->
+
+
+<!--HONumber=Jun16_HO4-->
+
+

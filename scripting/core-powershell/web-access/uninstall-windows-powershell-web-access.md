@@ -1,12 +1,16 @@
 ---
-title:  disinstallare Accesso Web Windows PowerShell
-ms.date:  2016-05-11
-keywords:  powershell,cmdlet
-description:  
-ms.topic:  article
-author:  jpjofre
-manager:  dongill
-ms.prod:  powershell
+title: disinstallare accesso web windows powershell
+ms.date: 2016-05-11
+keywords: powershell,cmdlet
+description: 
+ms.topic: article
+author: jpjofre
+manager: dongill
+ms.prod: powershell
+translationtype: Human Translation
+ms.sourcegitcommit: 03ac4b90d299b316194f1fa932e7dbf62d4b1c8e
+ms.openlocfilehash: ee5e88ece27add955fcef3a9df0a441a08251e77
+
 ---
 
 #  Disinstallare Accesso Web Windows PowerShell
@@ -68,9 +72,9 @@ Se è stato specificato il nome del sito Web personalizzato, aggiungere il param
 
     -   Nel desktop di Windows fare clic con il pulsante destro del mouse su **Windows PowerShell** nella barra delle applicazioni e scegliere **Esegui come amministratore**.
 
-    -   Nella schermata **Start** di Windows fare clic con il pulsante destro del mouse su **Windows PowerShell**, quindi scegliere **Esegui come amministratore**.
+    -   Nella schermata **Start** di Windows fare clic con il pulsante destro del mouse su **Windows PowerShell** e quindi scegliere **Esegui come amministratore**.
 
-2.  Digitare il codice seguente e premere **INVIO**, dove *nome_computer* rappresenta un server remoto da cui si vuole rimuovere Accesso Web Windows PowerShell. Il parametro <span class="code">–Restart</span> riavvia automaticamente i server di destinazione, se richiesto dalla procedura di rimozione.
+2.  Digitare il codice seguente e premere **INVIO**, dove *nome\_computer* rappresenta un server remoto da cui si vuole rimuovere Accesso Web Windows PowerShell. Il parametro <span class="code">–Restart</span> riavvia automaticamente i server di destinazione, se richiesto dalla procedura di rimozione.
 
     [Copy](javascript:if%20(window.epx.codeSnippet)window.epx.codeSnippet.copyCode('CodeSnippetContainerCode_7b534520-f292-471f-89e3-a1079c03e369'); "Copia negli Appunti.")
 
@@ -82,7 +86,7 @@ Se è stato specificato il nome del sito Web personalizzato, aggiungere il param
 
         Uninstall-WindowsFeature –Name WindowsPowerShellWebAccess –VHD <path> -ComputerName <computer_name> -Restart
 
-3.  Terminata la rimozione verificare che Accesso Web Windows PowerShell sia stato rimosso, aprendo la pagina **Tutti i server** in Server Manager, selezionando un server da cui è stata rimossa la funzionalità e visualizzando il riquadro **Ruoli e funzionalità** nella pagina del server selezionato. È anche possibile eseguire il cmdlet <span class="code">Get-WindowsFeature</span> indicando come destinazione il server selezionato (Get-WindowsFeature -ComputerName &lt;*nome_computer*&gt;) per visualizzare un elenco di ruoli e funzionalità installati nel server.
+3.  Terminata la rimozione verificare che Accesso Web Windows PowerShell sia stato rimosso, aprendo la pagina **Tutti i server** in Server Manager, selezionando un server da cui è stata rimossa la funzionalità e visualizzando il riquadro **Ruoli e funzionalità** nella pagina del server selezionato. È anche possibile eseguire il cmdlet <span class="code">Get-WindowsFeature</span> indicando come destinazione il server selezionato (Get-WindowsFeature -ComputerName &lt;*nome\_computer*&gt;) per visualizzare un elenco di ruoli e funzionalità installati nel server.
 
 <a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Collapse"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Disinstallazione personalizzata</span></a>
 <a href="/en-us/library/dn282396(v=ws.11).aspx#Anchor_2" class="LW_CollapsibleArea_Anchor_Img" title="Right-click to copy and share the link for this section"></a>
@@ -160,8 +164,8 @@ Le procedure in questa sezione consentono di disinstallare l'applicazione Web Ac
 
 ------------------------------------------------------------------------
 
-[Distribuire Accesso Web Windows PowerShell](https://technet.microsoft.com/en-us/library/hh831611(v=ws.11).aspx)
-[Guida di Gestione IIS](https://technet.microsoft.com/library/cc732664.aspx)
+[Installare e usare Accesso Web Windows PowerShell](https://technet.microsoft.com/en-us/library/hh831611(v=ws.11).aspx)
+[Guida di Gestione IIS 7.0](https://technet.microsoft.com/library/cc732664.aspx)
 
 <span>Show:</span> Inherited Protected
 
@@ -184,15 +188,15 @@ Altri suggerimenti?
 
 Raccontaci la tua esperienza
 
-La pagina si è caricata velocemente?
+La pagina è stata caricata rapidamente?
 
 <span> Sì<span> </span></span> <span> No<span> </span></span>
 
-La grafica della pagina è piacevole?
+Ti piace la grafica?
 
 <span> Sì<span> </span></span> <span> No<span> </span></span>
 
-Altre informazioni
+Parla con noi
 
 -   [Newsletter Flash](https://technet.microsoft.com/cc543196.aspx)
 -   |
@@ -214,6 +218,7 @@ Il codice e gli script di terze parti, collegati al presente sito o a cui il sit
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -1,26 +1,30 @@
 ---
-title:  Avvio del motore di Windows PowerShell 2.0
-ms.date:  2016-05-11
-keywords:  powershell,cmdlet
-description:  
-ms.topic:  article
-author:  jpjofre
-manager:  dongill
-ms.prod:  powershell
-ms.assetid:  edafc2fa-7576-49c2-bbba-9336f4bcfc28
+title: Avvio del motore di Windows PowerShell 2.0
+ms.date: 2016-05-11
+keywords: powershell,cmdlet
+description: 
+ms.topic: article
+author: jpjofre
+manager: dongill
+ms.prod: powershell
+ms.assetid: edafc2fa-7576-49c2-bbba-9336f4bcfc28
+translationtype: Human Translation
+ms.sourcegitcommit: 03ac4b90d299b316194f1fa932e7dbf62d4b1c8e
+ms.openlocfilehash: 45102cbc730d8eaac9ebdcb73456b1d1e149c6f2
+
 ---
 
 # Avvio del motore di Windows PowerShell 2.0
 Questa sezione spiega come avviare il motore di Windows PowerShell 2.0 in Windows 8.1, Windows Server 2012 R2, Windows 8 e Windows Server 2012, che includono il motore di Windows PowerShell 2.0, e in altri sistemi in cui sono invece installati Windows PowerShell 2.0, Windows PowerShell 3.0 e Windows PowerShell 4.0.
 
-Windows PowerShell 4.0 e Windows PowerShell 3.0 sono progettati per essere compatibili con Windows PowerShell 2.0. I cmdlet, i provider, gli snap-in, i moduli e gli script scritti per Windows PowerShell 2.0 possono essere eseguiti senza modifiche in Windows PowerShell 4.0 e Windows PowerShell 3.0. Tuttavia, a causa di una modifica nei criteri di attivazione di runtime in Microsoft .NET Framework 4, i programmi host di Windows PowerShell scritti per Windows PowerShell 2.0 e compilati con Common Language Runtime (CLR) 2.0 non possono essere eseguiti senza modifiche in Windows PowerShell 3.0 o Windows PowerShell 4.0, che sono compilati con CLR 4.0. Il motore di Windows PowerShell 2.0 deve essere usato solo quando non è possibile eseguire un programma host o uno script esistente perché non è compatibile con Windows PowerShell 4.0, Windows PowerShell 3.0 o Microsoft .NET Framework 4. È previsto che questi casi siano rari.
+Windows PowerShell 4.0 e Windows PowerShell 3.0 sono progettati per essere compatibili con Windows PowerShell 2.0. I cmdlet, i provider, gli snap\-in, i moduli e gli script scritti per Windows PowerShell 2.0 possono essere eseguiti senza modifiche in Windows PowerShell 4.0 e Windows PowerShell 3.0. Tuttavia, a causa di una modifica nei criteri di attivazione di runtime in Microsoft .NET Framework 4, i programmi host di Windows PowerShell scritti per Windows PowerShell 2.0 e compilati con Common Language Runtime (CLR) 2.0 non possono essere eseguiti senza modifiche in Windows PowerShell 3.0 o Windows PowerShell 4.0, che sono compilati con CLR 4.0. Il motore di Windows PowerShell 2.0 deve essere usato solo quando non è possibile eseguire un programma host o uno script esistente perché non è compatibile con Windows PowerShell 4.0, Windows PowerShell 3.0 o Microsoft .NET Framework 4. È previsto che questi casi siano rari.
 
 Molte applicazioni che richiedono l'uso del motore di Windows PowerShell 2.0 lo avviano automaticamente. Queste istruzioni sono incluse per i rari casi in cui è necessario avviare il motore manualmente.
 
 ## Installazione e abilitazione delle applicazioni necessarie
 Prima di avviare il motore di Windows PowerShell 2.0, abilitare il motore di Windows PowerShell 2.0 Engine e Microsoft .NET Framework 3.5 con Service Pack 1. Per istruzioni, vedere [Installazione di Windows PowerShell](Installing-Windows-PowerShell.md).
 
-I sistemi in cui è installato [Windows Management Framework 4.0](http://go.microsoft.com/fwlink/?LinkID=293881) o Windows Management Framework 3.0 hanno tutti i componenti necessari. Non è richiesta alcuna configurazione aggiuntiva. Per informazioni sull'installazione di [Windows Management Framework 4.0](http://go.microsoft.com/fwlink/?LinkID=293881) o Windows Management Framework 3.0, vedere [Installazione di Windows PowerShell](Installing-Windows-PowerShell.md)
+I sistemi in cui è installato [Windows Management Framework 4.0](http://go.microsoft.com/fwlink/?LinkID=293881) o Windows Management Framework 3.0 hanno tutti i componenti necessari. Non è richiesta alcuna configurazione aggiuntiva. Per informazioni sull'installazione di [Windows Management Framework 4.0](http://go.microsoft.com/fwlink/?LinkID=293881) o Windows Management Framework 3.0, vedere [Installazione di Windows PowerShell](Installing-Windows-PowerShell.md).
 
 ## Come avviare il motore di Windows PowerShell 2.0
 Quando si avvia Windows PowerShell, per impostazione predefinita viene eseguita la versione più recente. Per avviare Windows PowerShell con il motore di Windows PowerShell 2.0, usare il parametro Version di PowerShell.exe. Si può eseguire il comando in qualsiasi prompt dei comandi, inclusi Windows PowerShell e Cmd.exe.
@@ -71,6 +75,7 @@ Per altre informazioni sui processi in background, vedere [about_Jobs [v4]](http
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

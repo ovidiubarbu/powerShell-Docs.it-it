@@ -1,12 +1,16 @@
 ---
-title:  risoluzione dei problemi di accesso in Accesso Web Windows PowerShell
-ms.date:  2016-05-11
-keywords:  powershell,cmdlet
-description:  
-ms.topic:  article
-author:  jpjofre
-manager:  dongill
-ms.prod:  powershell
+title: risoluzione dei problemi di accesso in accesso web windows powershell
+ms.date: 2016-05-11
+keywords: powershell,cmdlet
+description: 
+ms.topic: article
+author: jpjofre
+manager: dongill
+ms.prod: powershell
+translationtype: Human Translation
+ms.sourcegitcommit: 03ac4b90d299b316194f1fa932e7dbf62d4b1c8e
+ms.openlocfilehash: 6366ec9c49f721b758b6a520f68cf2b3c5ee0caf
+
 ---
 
 #  Risoluzione dei problemi di accesso in Accesso Web Windows PowerShell
@@ -38,7 +42,7 @@ La tabella seguente illustra alcuni problemi comuni che possono verificarsi quan
 <td><p>Il problema può essere dovuto a uno dei motivi seguenti.</p>
 <ul>
 <li><p>Non esiste una regola di autorizzazione che consenta all'utente di accedere al computer o a una configurazione di sessione specifica sul computer remoto. La sicurezza di Accesso Web Windows PowerShell è restrittiva, quindi è necessario consentire esplicitamente agli utenti l'accesso ai computer remoti, usando le regole di autorizzazione. Per altre informazioni sulla creazione delle regole di autorizzazione, vedere la sezione <a href="https://technet.microsoft.com/en-us/library/dn282394(v=ws.11).aspx">Regole di autorizzazione e funzionalità di sicurezza di Accesso Web Windows PowerShell</a> in questo argomento.</p></li>
-<li><p>L'utente non è autorizzato ad accedere al computer di destinazione. Tale autorizzazione è determinata dagli elenchi di controllo di accesso (ACL). Per altre informazioni, vedere la sezione "Connessione ad Accesso Web Windows PowerShell" in <a href="https://technet.microsoft.com/en-us/library/hh831417(v=ws.11).aspx">Usare la console di Windows PowerShell basata sul Web</a> o il <a href="https://msdn.microsoft.com/library/windows/desktop/ee706585.aspx">blog del team di Windows PowerShell</a>.</p>
+<li><p>L'utente non è autorizzato ad accedere al computer di destinazione. Tale autorizzazione è determinata dagli elenchi di controllo di accesso (ACL). Per altre informazioni, vedere la sezione "Connessione ad Accesso Web Windows PowerShell" dell'articolo <a href="https://technet.microsoft.com/en-us/library/hh831417(v=ws.11).aspx">Usare la console di Windows PowerShell basata sul Web</a> o consultare il <a href="https://msdn.microsoft.com/library/windows/desktop/ee706585.aspx">blog del team di Windows PowerShell</a>.</p>
 <ul>
 <li><p>La gestione remota di Windows PowerShell potrebbe non essere abilitata nel computer di destinazione. Verificare che tale funzione sia abilitata nel computer a cui l'utente sta tentando di connettersi. Per altre informazioni, vedere la sezione "Modalità di configurazione del computer per la comunicazione remota" dell'argomento <a href="https://technet.microsoft.com/library/dd315349.aspx">about_Remote_Requirements</a> negli argomenti della Guida di Windows PowerShell.</p></li>
 </ul></li>
@@ -48,24 +52,24 @@ La tabella seguente illustra alcuni problemi comuni che possono verificarsi quan
 <td><p>Quando gli utenti provano a connettersi a Accesso Web Windows PowerShell da una finestra di Internet Explorer, viene visualizzata una pagina di <strong>Errore interno del server</strong> oppure Internet Explorer smette di rispondere. Si tratta di un problema specifico di Internet Explorer.</p></td>
 <td><p>Questo problema può verificarsi per gli utenti che effettuano l'accesso con un nome di dominio contenente caratteri cinesi, oppure se il nome del server gateway contiene uno o più caratteri cinesi. Per risolvere il problema, l'utente deve <a href="http://ie.microsoft.com/testdrive/info/downloads/Default.html">installare ed eseguire Internet Explorer 10</a>, quindi effettuare la procedura seguente.</p>
 <ol>
-<li><p>Impostare la <strong>Modalità documento</strong> di Internet Explorer su <strong>Standard IE10</strong>.</p>
+<li><p>Impostare su <strong>Standard di IE10</strong> la <strong>Modalità documento</strong> di Internet Explorer.</p>
 <ol>
 <li><p>Premere <strong>F12</strong> per aprire la console degli strumenti di sviluppo.</p></li>
-<li><p>In Internet Explorer 10 fare clic su <strong>Modalità browser</strong>, quindi selezionare <strong>Internet Explorer 10</strong>.</p></li>
-<li><p>Fare clic su <strong>Modalità documento</strong>, quindi fare clic su <strong>Standard IE10</strong>.</p></li>
+<li><p>In Internet Explorer 10 fare clic su <strong>Modalità browser</strong> e selezionare <strong>Internet Explorer 10</strong>.</p></li>
+<li><p>Fare clic su <strong>Modalità documento</strong> e fare clic su <strong>Standard di IE10</strong>.</p></li>
 <li><p>Premere di nuovo <strong>F12</strong> per chiudere la console degli strumenti di sviluppo.</p></li>
 </ol></li>
 <li><p>Disabilitare la configurazione automatica del proxy.</p>
 <ol>
-<li><p>In Internet Explorer 10 fare clic su <strong>Strumenti</strong>, quindi su <strong>Opzioni Internet</strong>.</p></li>
-<li><p>Nella finestra di dialogo <strong>Opzioni Internet</strong>, nella scheda <strong>Connessioni</strong>, fare clic su <strong>Impostazioni LAN</strong>.</p></li>
+<li><p>In Internet Explorer 10 scegliere <strong>Opzioni Internet</strong> dal menu <strong>Strumenti</strong>.</p></li>
+<li><p>Nella finestra di dialogo <strong>Opzioni Internet</strong> passare alla scheda <strong>Connessioni</strong> e fare clic su <strong>Impostazioni LAN</strong>.</p></li>
 <li><p>Deselezionare la casella di controllo <strong>Rileva automaticamente impostazioni</strong>. Fare clic su <strong>OK</strong>, quindi fare di nuovo clic su <strong>OK</strong> per chiudere la finestra di dialogo <strong>Opzioni Internet</strong>.</p></li>
 </ol></li>
 </ol></td>
 </tr>
 <tr class="odd">
 <td><p>Non è possibile connettersi a un computer remoto del gruppo di lavoro</p></td>
-<td><p>Se il computer di destinazione è membro di un gruppo di lavoro, usare la sintassi seguente per fornire il nome utente e accedere al computer: &lt;<em>nome_gruppo_di_lavoro</em>&gt;\&lt;<em>nome_utente.</em>&gt;</p></td>
+<td><p>Se il computer di destinazione è membro di un gruppo di lavoro, usare la sintassi seguente per fornire il nome utente e accedere al computer: &lt;<em>nome_gruppo_di_lavoro</em>&gt;\&lt;<em>nome_utente</em>&gt;</p></td>
 </tr>
 <tr class="even">
 <td><p>Non è possibile trovare gli strumenti di gestione del server Web (IIS) anche se il ruolo corrispondente è stato installato</p></td>
@@ -127,7 +131,7 @@ La tabella seguente illustra alcuni problemi comuni che possono verificarsi quan
 </tr>
 <tr class="even">
 <td><p>Non è possibile accedere a un computer di destinazione che nelle regole di autorizzazione è stato specificato sotto forma di indirizzo IPv6 di dominio</p></td>
-<td><p>Le regole di autorizzazione non supportano gli indirizzi IPv6 nel formato dei nomi di dominio. Per specificare un computer di destinazione tramite un indirizzo IPv6, nella regola di autorizzazione utilizzare l'indirizzo IPv6 originale, che contiene due punti (:). Sia i nomi di dominio che gli indirizzi IPv6 in formato numerico, ovvero con i due punti (:) sono supportati come nome del computer di destinazione nella pagina di accesso di Accesso Web Windows PowerShell, ma non nelle regole di autorizzazione. Per altre informazioni sugli indirizzi IPv6, vedere <a href="https://technet.microsoft.com/library/cc781672.aspx">How IPv6 Works</a> (Come funziona IPv6).</p></td>
+<td><p>Le regole di autorizzazione non supportano gli indirizzi IPv6 nel formato dei nomi di dominio. Per specificare un computer di destinazione tramite un indirizzo IPv6, nella regola di autorizzazione utilizzare l'indirizzo IPv6 originale, che contiene due punti (:). Sia i nomi di dominio che gli indirizzi IPv6 in formato numerico, ovvero con i due punti (:) sono supportati come nome del computer di destinazione nella pagina di accesso di Accesso Web Windows PowerShell, ma non nelle regole di autorizzazione. Per altre informazioni sugli indirizzi IPv6, vedere l'articolo <a href="https://technet.microsoft.com/library/cc781672.aspx">Funzionamento di IPv6</a>.</p></td>
 </tr>
 </tbody>
 </table>
@@ -162,15 +166,15 @@ Altri suggerimenti?
 
 Raccontaci la tua esperienza
 
-La pagina si è caricata velocemente?
+La pagina è stata caricata rapidamente?
 
 <span> Sì<span> </span></span> <span> No<span> </span></span>
 
-La grafica della pagina è piacevole?
+Ti piace la grafica?
 
 <span> Sì<span> </span></span> <span> No<span> </span></span>
 
-Altre informazioni
+Parla con noi
 
 -   [Newsletter Flash](https://technet.microsoft.com/cc543196.aspx)
 -   |
@@ -192,6 +196,7 @@ Il codice e gli script di terze parti, collegati al presente sito o a cui il sit
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

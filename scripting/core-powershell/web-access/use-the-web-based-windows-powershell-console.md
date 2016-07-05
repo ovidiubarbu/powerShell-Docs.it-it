@@ -1,12 +1,16 @@
 ---
-title:  usare la console di Windows PowerShell basata sul Web
-ms.date:  2016-05-11
-keywords:  powershell,cmdlet
-description:  
-ms.topic:  article
-author:  jpjofre
-manager:  dongill
-ms.prod:  powershell
+title: usare la console di windows powershell basata sul web
+ms.date: 2016-05-11
+keywords: powershell,cmdlet
+description: 
+ms.topic: article
+author: jpjofre
+manager: dongill
+ms.prod: powershell
+translationtype: Human Translation
+ms.sourcegitcommit: 03ac4b90d299b316194f1fa932e7dbf62d4b1c8e
+ms.openlocfilehash: 02964dd763ccccbf27a963c0f8eef20aa23cc117
+
 ---
 
 #  Usare la console di Windows PowerShell basata sul Web
@@ -85,7 +89,7 @@ Per usare la console di Accesso Web Windows PowerShell basata sul Web, i browser
 
 ------------------------------------------------------------------------
 
-L'amministratore di Accesso Web Windows PowerShell deve fornire all'utente l'URL corrispondente all'indirizzo del sito Web del gateway di Accesso Web Windows PowerShell dell'organizzazione. Per impostazione predefinita, l'indirizzo di questo sito Web è https://&lt;nome_server&gt;/pswa. Prima di accedere ad Accesso Web Windows PowerShell, assicurarsi di avere il nome o l'indirizzo IP del computer remoto da gestire. È necessario essere un utente autorizzato nel computer remoto, che deve essere configurato per consentire la gestione remota. Per altre informazioni sulla configurazione del computer per consentire la gestione remota, vedere [Abilitare e usare i comandi remoti in Windows PowerShell](https://technet.microsoft.com/magazine/ff700227.aspx). Il metodo di configurazione del computer più semplice per consentire la gestione remota consiste nell'eseguire il cmdlet **Enable-PSRemoting -force** nel computer, in una sessione di Windows PowerShell aperta con diritti utente elevati, ovvero **Esegui come amministratore**.
+L'amministratore di Accesso Web Windows PowerShell deve fornire all'utente l'URL corrispondente all'indirizzo del sito Web del gateway di Accesso Web Windows PowerShell dell'organizzazione. Per impostazione predefinita, l'indirizzo di questo sito Web è https://&lt;nome\_server&gt;/pswa. Prima di accedere ad Accesso Web Windows PowerShell, assicurarsi di avere il nome o l'indirizzo IP del computer remoto da gestire. È necessario essere un utente autorizzato nel computer remoto, che deve essere configurato per consentire la gestione remota. Per altre informazioni sulla configurazione del computer per consentire la gestione remota, vedere [Abilitare e usare i comandi remoti in Windows PowerShell](https://technet.microsoft.com/magazine/ff700227.aspx). Il metodo di configurazione del computer più semplice per consentire la gestione remota consiste nell'eseguire il cmdlet **Enable-PSRemoting -force** nel computer, in una sessione di Windows PowerShell aperta con diritti utente elevati, ovvero **Esegui come amministratore**.
 
 ### Per connettersi ad Accesso Web Windows PowerShell
 
@@ -105,19 +109,19 @@ L'amministratore di Accesso Web Windows PowerShell deve fornire all'utente l'URL
     <tbody>
     <tr class="odd">
     <td><ul>
-    <li><p>Se il computer di destinazione fa parte di un gruppo di lavoro, usare la sintassi seguente per specificare il nome utente e accedere al computer: &lt;<em>nome_gruppo di lavoro</em>&gt;\&lt;<em>nome_utente</em>&gt;.</p></li>
+    <li><p>Se il computer di destinazione fa parte di un gruppo di lavoro, usare la sintassi seguente per fornire il nome utente e accedere al computer:&lt;<em>nome_gruppo di lavoro</em>&gt;\&lt;<em>nome_utente</em>&gt;.</p></li>
     <li><p>Se il computer di destinazione è il server gateway, è possibile specificare <strong>localhost</strong> nel campo <strong>Nome computer</strong>.</p></li>
-    <li><p>Se il computer di destinazione è il server gateway e questo fa parte di un gruppo di lavoro, è possibile usare <strong>localhost</strong> nel campo <strong>Nome computer</strong>, ma non localhost&lt;<em>nome_utente</em>&gt; nel campo <strong>Nome utente</strong>. È necessario usare &lt;<em>nome_gruppo di lavoro</em>&gt;\&lt;<em>nome_utente</em>&gt;.</p></li>
+    <li><p>Se il computer di destinazione è il server gateway e questo fa parte di un gruppo di lavoro, è possibile usare <strong>localhost</strong> nel campo <strong>Nome computer</strong>, ma non localhost\&lt;<em>nome_utente</em>&gt; nel campo <strong>Nome utente</strong>. È necessario usare &lt;<em>nome_gruppo di lavoro</em>&gt;\&lt;<em>nome_utente</em>&gt;.</p></li>
     </ul></td>
     </tr>
     </tbody>
     </table>
 
-3.  La sezione **Impostazioni di connessione facoltative** è relativa ai requisiti di autorizzazione del computer remoto che si vuole gestire. Per altre informazioni sui parametri equivalenti alle impostazioni di connessione facoltative, vedere [Enter-PSSession](https://technet.microsoft.com/library/dd315384.aspx).
+3.  La sezione **Impostazioni di connessione facoltative** è relativa ai requisiti di autorizzazione del computer remoto che si vuole gestire. Per altre informazioni sui parametri equivalenti alle impostazioni di connessione facoltative, vedere [Guida del cmdlet Enter-PSSession](https://technet.microsoft.com/library/dd315384.aspx).
 
     In genere, le credenziali che si usano per il passaggio attraverso il gateway di Accesso Web Windows PowerShell sono le stesse riconosciute dal computer remoto che si vuole gestire. Se tuttavia si preferisce usare credenziali diverse per gestire il computer remoto specificato nel passaggio 2, espandere la sezione **Impostazioni di connessione facoltative** e fornire le credenziali alternative. In caso contrario, andare al passaggio 6.
 
-4.  Se l'amministratore di Accesso Web Windows PowerShell ha creato una configurazione di sessione personalizzata per gli utenti di Accesso Web Windows PowerShell, digitare il nome della configurazione di sessione nel campo **Nome configurazione**. Per altre informazioni sulle configurazioni di sessione, vedere [about_Session_Configurations](https://technet.microsoft.com/library/dd819508.aspx) nel sito Web Microsoft.
+4.  Se l'amministratore di Accesso Web Windows PowerShell ha creato una configurazione di sessione personalizzata per gli utenti di Accesso Web Windows PowerShell, digitare il nome della configurazione di sessione nel campo **Nome configurazione**. Per altre informazioni sulle configurazioni di sessione, vedere [about\_Session\_Configurations](https://technet.microsoft.com/library/dd819508.aspx) nel sito Web Microsoft.
 
 5.  Mantenere il valore di **Tipo di autenticazione** impostato su **Predefinito**, a meno che l'amministratore di Accesso Web Windows PowerShell non abbia fornito istruzioni per procedere diversamente.
 
@@ -328,18 +332,18 @@ Quasi tutte le funzionalità host di Windows PowerShell sono disponibili nella c
 
         Si può modificare l'altezza della console in modo simile.
 
-        Altri esempi per personalizzare la visualizzazione della console sono disponibili nel [blog del team di Windows PowerShell](http://blogs.msdn.com/b/powershell/).
+        Altri esempi per personalizzare la visualizzazione della console sono disponibili nel [Blog del Team di Windows PowerShell](http://blogs.msdn.com/b/powershell/).
 
 <a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Collapse"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Vedere anche</span></a>
 <a href="/en-us/library/hh831417(v=ws.11).aspx#Anchor_4" class="LW_CollapsibleArea_Anchor_Img" title="Right-click to copy and share the link for this section"></a>
 
 ------------------------------------------------------------------------
 
-[Cmdlet Reference for Windows Server 2008 R2](https://technet.microsoft.com/library/ee407531(ws.10).aspx) (Informazioni di riferimento per i cmdlet di Windows PowerShell) 
-[Scrittura di script con Windows PowerShell](https://technet.microsoft.com/library/bb978526.aspx)
-[Risorse script per i professionisti IT](http://gallery.technet.microsoft.com/scriptcenter)
-[Microsoft Script Center](https://technet.microsoft.com/scriptcenter)
-[Windows PowerShell Blog](http://blogs.msdn.com/b/powershell/) (Blog di Windows PowerShell)
+[Informazioni di riferimento per i cmdlet di Windows PowerShell](https://technet.microsoft.com/library/ee407531(ws.10).aspx)
+[Windows PowerShell su Microsoft TechNet](https://technet.microsoft.com/library/bb978526.aspx)
+[Archivio di Script Center su TechNet](http://gallery.technet.microsoft.com/scriptcenter)
+[Script Center: blog "Hey, Scripting Guy!"](https://technet.microsoft.com/scriptcenter)
+[Blog del team di Windows PowerShell](http://blogs.msdn.com/b/powershell/)
 
 <span>Show:</span> Inherited Protected
 
@@ -362,15 +366,15 @@ Altri suggerimenti?
 
 Raccontaci la tua esperienza
 
-La pagina si è caricata velocemente?
+La pagina è stata caricata rapidamente?
 
 <span> Sì<span> </span></span> <span> No<span> </span></span>
 
-La grafica della pagina è piacevole?
+Ti piace la grafica?
 
 <span> Sì<span> </span></span> <span> No<span> </span></span>
 
-Altre informazioni
+Parla con noi
 
 -   [Newsletter Flash](https://technet.microsoft.com/cc543196.aspx)
 -   |
@@ -392,6 +396,7 @@ Il codice e gli script di terze parti, collegati al presente sito o a cui il sit
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

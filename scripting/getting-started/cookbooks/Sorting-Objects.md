@@ -1,19 +1,23 @@
 ---
-title:  Ordinamento degli oggetti
-ms.date:  2016-05-11
-keywords:  powershell,cmdlet
-description:  
-ms.topic:  article
-author:  jpjofre
-manager:  dongill
-ms.prod:  powershell
-ms.assetid:  8530caa8-3ed4-4c56-aed7-1295dd9ba199
+title: Ordinamento degli oggetti
+ms.date: 2016-05-11
+keywords: powershell,cmdlet
+description: 
+ms.topic: article
+author: jpjofre
+manager: dongill
+ms.prod: powershell
+ms.assetid: 8530caa8-3ed4-4c56-aed7-1295dd9ba199
+translationtype: Human Translation
+ms.sourcegitcommit: 03ac4b90d299b316194f1fa932e7dbf62d4b1c8e
+ms.openlocfilehash: 72d0c66e8fe1c87561af89821e16032f25c3b1b5
+
 ---
 
 # Ordinamento degli oggetti
-È possibile organizzare i dati visualizzati per semplificarne l'analisi tramite il cmdlet **Sort-Object**. **Sort-Object** acquisisce il nome di una o più proprietà in base a cui ordinare e restituisce i dati ordinati in base ai valori di tali proprietà.
+È possibile organizzare i dati visualizzati per semplificarne l'analisi usando il cmdlet **Sort\-Object**. **Sort\-Object** acquisisce il nome di una o più proprietà in base a cui ordinare e restituisce i dati ordinati in base ai valori di tali proprietà.
 
-Un esempio può essere costituito dall'esigenza di elencare le istanze Win32_SystemDriver. Se si vuole ordinare in base a **State** e quindi in base a **Name**, è possibile digitare:
+Un esempio può essere costituito dall'esigenza di elencare le istanze Win32\_SystemDriver. Se si vuole ordinare in base a **State** e quindi in base a **Name**, è possibile digitare:
 
 ```
 Get-WmiObject -Class Win32_SystemDriver | Sort-Object -Property State,Name | Format-Table -Property Name,State,Started,DisplayName -AutoSize -Wrap
@@ -53,6 +57,7 @@ Wanarp         Running    True Remote Access IP ARP Driver
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

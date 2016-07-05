@@ -1,19 +1,22 @@
 ---
-title:   Elenco di controllo per la creazione di risorse
-ms.date:  2016-05-16
-keywords:  powershell,DSC
-description:  
-ms.topic:  article
-author:  eslesar
-manager:  dongill
-ms.prod:  powershell
+title: Elenco di controllo per la creazione di risorse
+ms.date: 2016-05-16
+keywords: powershell,DSC
+description: 
+ms.topic: article
+author: eslesar
+manager: dongill
+ms.prod: powershell
+translationtype: Human Translation
+ms.sourcegitcommit: 6477ae8575c83fc24150f9502515ff5b82bc8198
+ms.openlocfilehash: bd6af2cbf746e71aa59f509eae14664e647a1b05
+
 ---
 
 # Elenco di controllo per la creazione di risorse
 Questo elenco di controllo è un elenco di procedure consigliate durante la creazione di una nuova risorsa DSC
 ## Il modulo della risorsa contiene i file psd1 e schema.mof per ogni risorsa. 
-Per prima cosa, è necessario verificare che la risorsa abbia la struttura corretta e contenga tutti i file necessari. Ogni modulo di risorsa deve contenere un file con estensione psd1 e per tutte le risorse non composite deve essere disponibile un file schema.mof. Le risorse senza schema non verranno elencate da **Get-DscResource** e gli utenti non saranno in grado di usare IntelliSense durante la scrittura di codice in base a tali moduli in ISE. 
-La struttura di directory di esempio per la risorsa xRemoteFile, che fa parte del modulo della risorsa xPSDesiredStateConfiguration, potrebbe avere questo aspetto:
+Per prima cosa, è necessario verificare che la risorsa abbia la struttura corretta e contenga tutti i file necessari. Ogni modulo di risorsa deve contenere un file con estensione psd1 e per tutte le risorse non composite deve essere disponibile un file schema.mof. Le risorse senza schema non verranno elencate da **Get-DscResource** e gli utenti non saranno in grado di usare IntelliSense durante la scrittura di codice in base a tali moduli in ISE. La struttura di directory di esempio per la risorsa xRemoteFile, che fa parte del modulo della risorsa xPSDesiredStateConfiguration, potrebbe avere questo aspetto:
 
 
 ```
@@ -32,8 +35,7 @@ xPSDesiredStateConfiguration
 ```
 
 ## La risorsa e lo schema sono corretti e sono stati verificati con i cmdlet di DscResourceDesigner ##
-Un altro aspetto importante è verificare il file di schema della risorsa (*.schema.mof). 
-Verificare che:
+Un altro aspetto importante è verificare il file di schema della risorsa (*.schema.mof). Verificare che:
 -   I tipi di proprietà siano corretti (ad esempio, non usare il tipo String per proprietà che accettano valori numerici, ma usare invece UInt32 o altri tipi numerici)
 -   Gli attributi delle proprietà siano specificati correttamente ([key], [required], [write], [read])
 
@@ -126,8 +128,7 @@ Assicurarsi di testare le funzioni **Get/Set/Test-TargetResource** implementate 
 
 ## La risorsa è stata sottoposta a una verifica end-to-end tramite **Start-DscConfiguration** ##
 
-Testare le funzioni **Get/Set/Test-TargetResource** tramite chiamata diretta è importante, ma in questo modo non verranno individuati tutti i problemi. È consigliabile concentrare una parte significativa delle attività di test sull'uso di **Start-DscConfiguration** o del server di pull. Questo è in effetti il modo in cui gli utenti useranno la risorsa, quindi non sottovalutare l'importanza di questo tipo di test. 
-Possibili tipi di problemi:
+Testare le funzioni **Get/Set/Test-TargetResource** tramite chiamata diretta è importante, ma in questo modo non verranno individuati tutti i problemi. È consigliabile concentrare una parte significativa delle attività di test sull'uso di **Start-DscConfiguration** o del server di pull. Questo è in effetti il modo in cui gli utenti useranno la risorsa, quindi non sottovalutare l'importanza di questo tipo di test. Possibili tipi di problemi:
 -   Possibili comportamenti diversi delle credenziali e/o della sessione perché l'agente DSC viene eseguito come servizio.  Assicurarsi di sottoporre qualsiasi funzionalità a test end-to-end.
 -   Verificare che i messaggi di errore visualizzati dalla risorsa abbiano senso. Ad esempio, gli errori restituiti da **Start-DscConfiguration** potrebbero essere diversi da quelli visualizzati in seguito alla chiamata diretta della funzione **Set-TargetResource**.
 
@@ -179,8 +180,7 @@ configuration Sample_xRemoteFile_DownloadFile
     }
 } 
 ```
--   È buona norma includere un esempio di come chiamare la configurazione con i valori effettivi alla fine dello script di esempio, impostandolo come commento. 
-Ad esempio, nella configurazione precedente non sarà evidente per tutti gli utenti che è il modo migliore per specificare UserAgent è:
+-   È buona norma includere un esempio di come chiamare la configurazione con i valori effettivi alla fine dello script di esempio, impostandolo come commento. Ad esempio, nella configurazione precedente non sarà evidente per tutti gli utenti che è il modo migliore per specificare UserAgent è:
 
 `UserAgent = [Microsoft.PowerShell.Commands.PSUserAgent]::InternetExplorer`  
 Per questo motivo è consigliabile includere un commento con l'esecuzione di esempio della configurazione:
@@ -208,8 +208,7 @@ Per essere utili, i messaggi di errore devono essere:
 ## I messaggi dei log sono facili da capire e informativi (inclusi i log -verbose, -debug ed ETW) ##
 Assicurarsi che i log generati dalla risorsa siano facili da comprendere e offrano informazioni utili all'utente. Le risorse dovrebbero offrire come output tutte le informazioni che potrebbero essere utili all'utente, ma non sempre la disponibilità di più log è un vantaggio. È consigliabile evitare la ridondanza e output di dati senza valore aggiunto, in modo da non costringere gli utenti a scorrere centinaia di voci di log per trovare quello che cercano. Naturalmente, anche l'assenza di log non è una soluzione accettabile per questo problema. 
 
-Durante il test, è necessario analizzare anche i log dettagliati e di debug (eseguendo **Start-DscConfiguration** con le opzioni -verbose e -debug in modo appropriato), oltre ai log ETW. Per visualizzare i log ETW di DSC, nel Visualizzatore eventi aprire la cartella seguente: Registri applicazioni e servizi - Microsoft - Windows - Desired State Configuration.  Per impostazione predefinita è visualizzato il canale Operativo, ma assicurarsi di abilitare i canali Analitico e Debug prima di eseguire la configurazione. 
-Per abilitare i canali Analitico/Debug, è possibile eseguire lo script riportato di seguito:
+Durante il test, è necessario analizzare anche i log dettagliati e di debug (eseguendo **Start-DscConfiguration** con le opzioni -verbose e -debug in modo appropriato), oltre ai log ETW. Per visualizzare i log ETW di DSC, nel Visualizzatore eventi aprire la cartella seguente: Registri applicazioni e servizi - Microsoft - Windows - Desired State Configuration.  Per impostazione predefinita è visualizzato il canale Operativo, ma assicurarsi di abilitare i canali Analitico e Debug prima di eseguire la configurazione. Per abilitare i canali Analitico/Debug, è possibile eseguire lo script riportato di seguito:
 ```powershell
 $statusEnabled = $true
 # Use "Analytic" to enable Analytic channel
@@ -256,14 +255,13 @@ Le funzioni **Get/Set/Test-TargetResource** dovrebbero essere eseguite automatic
 ## La funzionalità della risorsa è stata accuratamente testata ##
 Lo sviluppatore ha la responsabilità di assicurarsi che il comportamento della risorsa sia corretto, quindi è necessario testarne le funzionalità manualmente o, meglio ancora, scrivere codice di automazione dei test. Questo elenco di controllo contiene gli elementi che è importante testare e/o che vengono spesso dimenticati. Ci sono molti test, principalmente funzionali, specifici della risorsa da testare e che non sono menzionati in questo articolo. Non dimenticarsi dei test case negativi. Questi rappresenteranno probabilmente la parte più onerosa a livello di tempo dei test della risorsa. 
 ## Procedura consigliata: il modulo della risorsa contiene una cartella Test con lo script ResourceDesignerTests.ps1 ##
-È buona norma creare una cartella "Test" all'interno del modulo della risorsa, creare il file ResourceDesignerTests.ps1 e aggiungere i test con **Test-xDscResource** e **Test-xDscSchema** per tutte le risorse nel modulo specificato. 
-In questo modo è possibile convalidare rapidamente gli schemi di tutte le risorse da moduli specifici ed eseguire test di integrità prima della pubblicazione.
+È buona norma creare una cartella "Test" all'interno del modulo della risorsa, creare il file ResourceDesignerTests.ps1 e aggiungere i test con **Test-xDscResource** e **Test-xDscSchema** per tutte le risorse nel modulo specificato. In questo modo è possibile convalidare rapidamente gli schemi di tutte le risorse da moduli specifici ed eseguire test di integrità prima della pubblicazione.
 Per xRemoteFile, il file ResourceTests.ps1 potrebbe essere semplice come questo:
 ```powershell
 Test-xDscResource ..\DSCResources\MSFT_xRemoteFile
 Test-xDscSchema ..\DSCResources\MSFT_xRemoteFile\MSFT_xRemoteFile.schema.mof 
 ```
-**Procedura consigliata: la cartella delle risorse contiene lo script di progettazione delle risorse per la generazione dello schema** Ogni risorsa deve contenere uno script di progettazione delle risorse per la generazione di uno schema MOF della risorsa. Questo file deve essere inserito in <ResourceName>\ResourceDesignerScripts e denominato Generate<ResourceName>Schema.ps1. Per la risorsa xRemoteFile questo file deve essere chiamato GenerateXRemoteFileSchema.ps1 e deve contenere:
+**Procedura consigliata: la cartella delle risorse contiene lo script di progettazione delle risorse per la generazione dello schema** Ogni risorsa deve contenere uno script di progettazione delle risorse per la generazione di uno schema MOF della risorsa. Questo file deve essere inserito in <ResourceName>\ResourceDesignerScripts e denominato Generate<ResourceName>Schema.ps1 Per la risorsa xRemoteFile il file è denominato GenerateXRemoteFileSchema.ps1 e contiene:
 ```powershell 
 $DestinationPath = New-xDscResourceProperty -Name DestinationPath -Type String -Attribute Key -Description 'Path under which downloaded or copied file should be accessible after operation.'
 $Uri = New-xDscResourceProperty -Name Uri -Type String -Attribute Required -Description 'Uri of a file which should be copied or downloaded. This parameter supports HTTP and HTTPS values.'
@@ -276,8 +274,7 @@ $CertificateThumbprint = New-xDscResourceProperty -Name CertificateThumbprint -T
 New-xDscResource -Name MSFT_xRemoteFile -Property @($DestinationPath, $Uri, $Headers, $UserAgent, $Ensure, $Credential, $CertificateThumbprint) -ModuleName xPSDesiredStateConfiguration2 -FriendlyName xRemoteFile 
 ```
 22  Procedura consigliata: la risorsa supporta -whatif. Se la risorsa esegue operazioni "pericolose", è consigliabile implementare la funzionalità -whatif. Verificare poi che l'output di whatif descriva correttamente le operazioni che verrebbero eseguite se il comando venisse eseguito senza l'opzione whatif.
-Verificare anche che le operazioni non vengono eseguite, ovvero non vengano apportate modifiche allo stato del nodo, quando è presente l'opzione -whatif. 
-Si supponga, ad esempio, di dover eseguire il test della risorsa File. Quella che segue è una configurazione semplice che crea il file "test.txt" con il contenuto "test":
+Verificare anche che le operazioni non vengono eseguite, ovvero non vengano apportate modifiche allo stato del nodo, quando è presente l'opzione -whatif. Si supponga, ad esempio, di dover eseguire il test della risorsa File. Quella che segue è una configurazione semplice che crea il file "test.txt" con il contenuto "test":
 ```powershell
 configuration config
 {
@@ -317,11 +314,11 @@ VERBOSE: [X]: LCM:  [ End    Set      ]    in  0.1050 seconds.
 VERBOSE: Operation 'Invoke CimMethod' complete.
 ```
 
-Questo conclude l'elenco di controllo. Tenere presente che questo elenco non è esaustivo, ma tiene conto di molti importanti problemi riscontrati durante la progettazione, lo sviluppo e il test di risorse DSC. L'elenco di controllo è utile per assicurarsi di non dimenticare questi aspetti e viene effettivamente usato da Microsoft durante lo sviluppo di risorse DSC. 
-Gli sviluppatori che hanno elaborato linee guida e procedure consigliate per la scrittura e il test di risorse DSC sono invitati a condividerle.
+Questo conclude l'elenco di controllo. Tenere presente che questo elenco non è esaustivo, ma tiene conto di molti importanti problemi riscontrati durante la progettazione, lo sviluppo e il test di risorse DSC. L'elenco di controllo è utile per assicurarsi di non dimenticare questi aspetti e viene effettivamente usato da Microsoft durante lo sviluppo di risorse DSC. Gli sviluppatori che hanno elaborato linee guida e procedure consigliate per la scrittura e il test di risorse DSC sono invitati a condividerle.
 
 
 
-<!--HONumber=May16_HO3-->
+
+<!--HONumber=Jun16_HO4-->
 
 

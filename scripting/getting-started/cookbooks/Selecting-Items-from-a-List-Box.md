@@ -1,13 +1,17 @@
 ---
-title:  Selezione di elementi di una casella di riepilogo
-ms.date:  2016-05-11
-keywords:  powershell,cmdlet
-description:  
-ms.topic:  article
-author:  jpjofre
-manager:  dongill
-ms.prod:  powershell
-ms.assetid:  327c7cc5-21d0-4ace-b151-aa1491d1d3c2
+title: Selezione di elementi di una casella di riepilogo
+ms.date: 2016-05-11
+keywords: powershell,cmdlet
+description: 
+ms.topic: article
+author: jpjofre
+manager: dongill
+ms.prod: powershell
+ms.assetid: 327c7cc5-21d0-4ace-b151-aa1491d1d3c2
+translationtype: Human Translation
+ms.sourcegitcommit: 03ac4b90d299b316194f1fa932e7dbf62d4b1c8e
+ms.openlocfilehash: 7e8fd05cfedd500c51f2d7e4f6adbb7d1f27cb00
+
 ---
 
 # Selezione di elementi di una casella di riepilogo
@@ -176,12 +180,13 @@ if ($result -eq [System.Windows.Forms.DialogResult]::OK)
 ```
 
 ## Vedere anche
-[Hey, Scripting Guy! Blog - Weekend Scripter: Fixing PowerShell GUI Examples](http://go.microsoft.com/fwlink/?LinkId=506644)
-[GitHub: dlwyatt/WinFormsExampleUpdates](https://github.com/dlwyatt/WinFormsExampleUpdates)
-[Windows PowerShell Tip of the Week](http://technet.microsoft.com/library/ff730949.aspx) (Windows PowerShell: suggerimento della settimana)
+[Post del blog Hey Scripting Guy:  perché questi esempi di GUI di PowerShell non funzionano?](http://go.microsoft.com/fwlink/?LinkId=506644)
+[GitHub: post di Dave Wyatt sull'aggiornamento degli esempi di Windows Form](https://github.com/dlwyatt/WinFormsExampleUpdates)
+[Suggerimento della settimana di Windows PowerShell:  selezione di elementi di una casella di riepilogo](http://technet.microsoft.com/library/ff730949.aspx)
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 
