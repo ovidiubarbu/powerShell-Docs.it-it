@@ -2812,8 +2812,8 @@
 * Archive Datetime: 2016-06-28 13:30:16
 * Handback File: [Appendix-2---Creating-a-Custom-PowerShell-Shortcut.43122497f916b1aacf07b6760d601b606e4719f8.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/abe06f2e8e6eeee6583517b4e0b0f6ff4f8a190d/ol-handback/PowerShell/powerShell-Docs.it-it/live/Appendix-2---Creating-a-Custom-PowerShell-Shortcut.43122497f916b1aacf07b6760d601b606e4719f8.it-it.xlf)
 * Handback Datetime: 2016-07-06 14:33:18
-* Bilingual File: [Appendix-2---Creating-a-Custom-PowerShell-Shortcut.43122497f916b1aacf07b6760d601b606e4719f8.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/ad5fdf088166b9b0fc4a866489161af702d9a0fd/ol-handback/PowerShell/powerShell-Docs.it-it/live/Appendix-2---Creating-a-Custom-PowerShell-Shortcut.43122497f916b1aacf07b6760d601b606e4719f8.it-it.xlf)
-* Bilingual Datetime: 2016-06-16 14:32:26
+* Bilingual File: [Appendix-2---Creating-a-Custom-PowerShell-Shortcut.43122497f916b1aacf07b6760d601b606e4719f8.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/abe06f2e8e6eeee6583517b4e0b0f6ff4f8a190d/ol-handback/PowerShell/powerShell-Docs.it-it/live/Appendix-2---Creating-a-Custom-PowerShell-Shortcut.43122497f916b1aacf07b6760d601b606e4719f8.it-it.xlf)
+* Bilingual Datetime: 2016-07-06 14:33:56
 * [Back to Top](#report-top)
 
 ##### <a name='a5bfad60f1cb254f1899723c40751cd8b96ef54e177'></a> Source: [scripting\getting-started\cookbooks\basic-cookbooks-reference.md](https://github.com/PowerShell/powerShell-Docs/blob/03ac4b90d299b316194f1fa932e7dbf62d4b1c8e/scripting/getting-started/cookbooks/basic-cookbooks-reference.md)
