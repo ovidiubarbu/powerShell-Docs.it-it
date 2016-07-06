@@ -1,0 +1,104 @@
+# [Panoramica e note sulla versione di WMF](releasenotes.md)
+
+# [Dettagli dell'installazione](requirements.md)
+
+# [Stato di compatibilità del prodotto](productincompat.md)
+
+# [Feedback](feedback.md)
+
+# [Scenari supportarti da WMF 5.0]()
+## [JEA (Just Enough Administration)](jea_overview.md)
+### [Creazione e connessione a un endpoint JEA](jea_endpoint.md)
+### [Creazione di report per JEA](jea_report.md)
+
+## [Creazione di tipi personalizzati con le classi di PowerShell](class_overview.md)
+### [Definire tipi personalizzati](class_newtype.md)
+### [Dichiarare una classe di base](class_base.md)
+### [Dichiarare l'interfaccia implementata](class_interface.md)
+### [Chiamare il costruttore della classe di base](class_baseconstructor.md)
+### [Chiamare il metodo della classe di base](class_basemethod.md)
+
+## [Miglioramenti per il debug degli script di PowerShell](debug_overview.md)
+
+## [Miglioramenti per Desired State Configuration (DSC)](dsc_improvements.md)
+### [Configurazioni]()
+#### [Specifica delle dipendenze tra nodi](dsc_waitfor.md)
+#### [File MOF crittografati](dsc_encryptedmof.md)
+#### [Supporto della Guida per le configurazioni DSC](dsc_confighelp.md)
+#### [Miglioramenti per la creazione di configurazioni con PowerShell ISE](dsc_authoring.md)
+#### [Consentire risorse duplicate identiche in una configurazione](dsc_identicalduplicate.md)
+#### [La parola chiave Import-DscResource supporta il parametro -moduleversion](dsc_importdscresource.md)
+#### [Supporto di WOW64 per la parola chiave Configuration](dsc_wow64.md)
+### [Risorse]()
+#### [Risorse DSC basate su classi](dsc_classbasedresource.md)
+#### [Debug degli script per risorse DSC](dsc_resourcedebugging.md)
+#### [Supporto di RunAs automatico per le risorse DSC](dsc_runas.md)
+#### [Supporto delle versioni di moduli side-by-side per le risorse DSC](dsc_sxsresource.md)
+#### [Nuove risorse incluse](dsc_newresources.md)
+### [Gestione configurazione locale]()
+#### [Configurare un nodo con più frammenti di configurazione](dsc_partialconfig.md)
+##### [Supporto di modalità RefreshMode miste](dsc_partialconfig_mixedmode.md)
+#### [Configurare il motore DSC con un nuovo attributo](dsc_metaconfiguration.md)
+#### [Informazioni dettagliate sullo stato di Gestione configurazione locale](dsc_lcmstate.md)
+#### [Non è necessario che le frequenze per RefreshMode e ConfigurationMode siano multipli l'una dell'altra](dsc_freqnomultiple.md)
+#### [Valore aggiunto per la proprietà RefreshMode](dsc_refreshmode.md)
+### [Cmdlet]()
+#### [Informazioni dettagliate sullo stato della configurazione](dsc_getconfigurationstatus.md)
+#### [Il cmdlet Test-DscConfiguration supporta configurazioni di riferimento](dsc_testconfiguration.md)
+#### [Accesso diretto ai metodi delle risorse DSC](dsc_directaccess.md)
+#### [Recapitare un documento di configurazione senza applicarlo](dsc_publishconfig.md)
+#### [Rimuovere i documenti DSC](dsc_removeconfigdoc.md)
+#### [Rappresentazione degli stati unificata e coerente](dsc_statestatus.md)
+#### [Il cmdlet Set-DscLocalConfigurationManager supporta il parametro -Force](dsc_setdsclcm.md)
+### [Modalità pull]()
+#### [PULL su richiesta delle configurazioni DSC](dsc_updateconfig.md)
+#### [Separazione degli ID per nodi e configurazioni](dsc_nodeid.md)
+#### [Separazione dei repository per configurazioni, risorse e report](dsc_repository.md)
+#### [Invio di report sullo stato della configurazione in una posizione centrale](dsc_reporting.md)
+
+## [Controllare l'utilizzo di PowerShell tramite trascrizione e registrazione](audit_overview.md)
+### [Opzioni avanzate di trascrizione](audit_transcript.md)
+### [Traccia e registrazione degli script](audit_script.md)
+### [Cmdlet CMS (Cryptographic Message Syntax)](audit_cms.md)
+
+## [Individuazione, installazione e inventario del software con PackageManagement](oneget_overview.md)
+### [Cmdlet PackageManagement](oneget_cmdlets.md)
+
+## [Individuazione, installazione e inventario dei moduli di PowerShell con PowerShellGet](psget_module_overview.md)
+### [Registrare un repository di PowerShell](psget_psrepository.md)
+### [Supporto delle versioni side-by-side in PowerShell 5.0 o versione successiva](psget_modulesxsinstall.md)
+### [Installazione delle dipendenze del modulo](psget_moduledependency.md)
+### [Cmdlet di PowerShellGet per la gestione dei moduli](psget_modulecmdlets.md)
+
+## [Individuazione, installazione e gestione di script di PowerShell con PowerShellGet](psget_script_overview.md)
+### [Cmdlet di PowerShellGet per la gestione degli script](psget_scriptcmdlets.md)
+
+## [Cmdlet nuovi e aggiornati in base ai suggerimenti della community ](feedback_cmdlets.md)
+### [Collegamenti simbolici con i cmdlet Item](feedback_symbolic.md)
+### [Cmdlet Archive](feedback_archive.md)
+### [Cmdlet Clipboard](feedback_clipboard.md)
+### [Convert-String](feedback_convertstring.md)
+### [Estrarre e analizzare oggetti strutturati da contenuto String](feedback_convertfromString.md)
+### [Format-Hex](feedback_formathex.md)
+### [Parametro NoNewLine](feedback_nonewline.md)
+### [New-TemporaryFile](feedback_tempfile.md)
+### [New-Guid](feedback_newguid.md)
+### [Parametro -Depth per Get-ChildItem](feedback_getchilditem.md)
+### [Aggiornamenti dell'oggetto FileInfo](feedback_fileinfo.md)
+### [Supporto di moduli per la dichiarazione di intervalli di versione (1.* e così via)](feedback_moduleversionranges.md)
+
+## [Flusso di informazioni](informationstream_overview.md)
+
+## [Generare cmdlet di PowerShell in base a un endpoint OData](odata_overview.md)
+
+## [Gestione del commutatore di rete con PowerShell](networkswitch_overview.md)
+
+## [Registrazione inventario software (SIL)](sil_overview.md)
+
+# [Limitazioni e problemi noti](limitation_overview.md)
+## [Problemi noti di Desired State Configuration (DSC)](limitation_dsc.md)
+
+
+<!--HONumber=May16_HO4-->
+
+
