@@ -1,11 +1,28 @@
 # <a name='report-top'></a> Localization Handback Report
 
 ## Summary
- Total Files | 0
+ Total Files | 1
 
 ## File List
+ Source File | Status | Details 
+ ----------- | ------ | ------- 
+ [wmf\class_baseconstructor.md](https://github.com/PowerShell/powerShell-Docs/blob/743c597c721d4abe67d657eaabd03ecc5cf19690/wmf/class_baseconstructor.md) | InSyncHandedBackSuccess | [Details](#a70d965afdb4edd71fa5dfd42d4c0f7ae7d65f29254)
 
 ## Item Details
+##### <a name='a70d965afdb4edd71fa5dfd42d4c0f7ae7d65f29254'></a> Source: [wmf\class_baseconstructor.md](https://github.com/PowerShell/powerShell-Docs/blob/743c597c721d4abe67d657eaabd03ecc5cf19690/wmf/class_baseconstructor.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [wmf\class_baseconstructor.md](https://github.com/PowerShell/powerShell-Docs.it-it/blob/6b9e8a4fa7ff1b6876b1f111d3c7411dec42ed05/wmf/class_baseconstructor.md)
+* Handoff File: [class_baseconstructor.82f951e800b06ccc68090b1be9923c8210a233ac.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/94df07b95a3659c155086c8551e8da5ae94fcb77/ol-handoff/PowerShell/powerShell-Docs.it-it/live/class_baseconstructor.82f951e800b06ccc68090b1be9923c8210a233ac.it-it.xlf)
+* Handoff Datetime: 2016-06-27 20:21:21
+* Handoff Reason: Include
+* Archive File: [class_baseconstructor.82f951e800b06ccc68090b1be9923c8210a233ac.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/4c0cfe42da551852c76be3d7063a6ffd3db44e3c/ol-handoff/PowerShell/powerShell-Docs.it-it/live/archive/class_baseconstructor.82f951e800b06ccc68090b1be9923c8210a233ac.it-it.xlf)
+* Archive Datetime: 2016-06-28 13:30:16
+* Handback File: [class_baseconstructor.82f951e800b06ccc68090b1be9923c8210a233ac.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/1122a1819dfc75b599d616de5d934216a830dd29/ol-handback/PowerShell/powerShell-Docs.it-it/live/class_baseconstructor.82f951e800b06ccc68090b1be9923c8210a233ac.it-it.xlf)
+* Handback Datetime: 2016-07-06 13:35:39
+* Bilingual File: [class_baseconstructor.82f951e800b06ccc68090b1be9923c8210a233ac.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/091187014dab353bf6b3a63bb66ccc21d077524a/ol-handback/PowerShell/powerShell-Docs.it-it/live/class_baseconstructor.82f951e800b06ccc68090b1be9923c8210a233ac.it-it.xlf)
+* Bilingual Datetime: 2016-06-16 14:32:26
+* [Back to Top](#report-top)
+
 
 ## Error Details
 
