@@ -1,6 +1,6 @@
 {
   "LastProcessedCommit": "d915872415e419a4c80c774af2bf6c28ac449213",
-  "LastTranslatedCommit": "6b9e8a4fa7ff1b6876b1f111d3c7411dec42ed05",
+  "LastTranslatedCommit": "5667dfe18ad8171e02b2b7065adfc668e6bb4851",
   "Items": {
     "81efeb79a70df604ef8c126c0ebd17b4f4711a44": {
       "FileHash": "81efeb79a70df604ef8c126c0ebd17b4f4711a44",
@@ -21301,14 +21301,14 @@
       "HandoffPriority": "",
       "HandoffException": null,
       "HandoffFailureTimes": 0,
-      "TargetFileCommit": "d6f85f78d1a39b4f068671fec0b9db006f5cd41e",
+      "TargetFileCommit": "5667dfe18ad8171e02b2b7065adfc668e6bb4851",
       "TargetFilePath": "scripting\\getting-started\\cookbooks\\Appendix-2---Creating-a-Custom-PowerShell-Shortcut.md",
       "HandbackFilePath": "ol-handback\\PowerShell\\powerShell-Docs.it-it\\live\\Appendix-2---Creating-a-Custom-PowerShell-Shortcut.43122497f916b1aacf07b6760d601b606e4719f8.it-it.xlf",
-      "HandbackFileCommit": "ad5fdf088166b9b0fc4a866489161af702d9a0fd",
-      "HandbackDateTime": "2016-05-27T16:30:53.0700629Z",
+      "HandbackFileCommit": "abe06f2e8e6eeee6583517b4e0b0f6ff4f8a190d",
+      "HandbackDateTime": "2016-07-06T14:33:18.5596715Z",
       "HandbackException": null,
       "HandbackFailureTimes": 0,
-      "UpdatedDateTime": "2016-05-27T16:30:53.0700629Z",
+      "UpdatedDateTime": "2016-07-06T14:33:18.5596715Z",
       "ArchiveFilePath": "ol-handoff\\PowerShell\\powerShell-Docs.it-it\\live\\archive\\Appendix-2---Creating-a-Custom-PowerShell-Shortcut.43122497f916b1aacf07b6760d601b606e4719f8.it-it.xlf",
       "ArchiveFileCommit": "4c0cfe42da551852c76be3d7063a6ffd3db44e3c",
       "ArchiveFileDateTime": "2016-06-28T13:30:16.1386996Z",
