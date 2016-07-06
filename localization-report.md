@@ -3905,8 +3905,8 @@
 * Archive Datetime: 2016-06-28 13:30:16
 * Handback File: [class_baseconstructor.82f951e800b06ccc68090b1be9923c8210a233ac.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/1122a1819dfc75b599d616de5d934216a830dd29/ol-handback/PowerShell/powerShell-Docs.it-it/live/class_baseconstructor.82f951e800b06ccc68090b1be9923c8210a233ac.it-it.xlf)
 * Handback Datetime: 2016-07-06 13:35:39
-* Bilingual File: [class_baseconstructor.82f951e800b06ccc68090b1be9923c8210a233ac.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/091187014dab353bf6b3a63bb66ccc21d077524a/ol-handback/PowerShell/powerShell-Docs.it-it/live/class_baseconstructor.82f951e800b06ccc68090b1be9923c8210a233ac.it-it.xlf)
-* Bilingual Datetime: 2016-06-16 14:32:26
+* Bilingual File: [class_baseconstructor.82f951e800b06ccc68090b1be9923c8210a233ac.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/1122a1819dfc75b599d616de5d934216a830dd29/ol-handback/PowerShell/powerShell-Docs.it-it/live/class_baseconstructor.82f951e800b06ccc68090b1be9923c8210a233ac.it-it.xlf)
+* Bilingual Datetime: 2016-07-06 13:36:44
 * [Back to Top](#report-top)
 
 ##### <a name='09ff4761ecdcf1d4433c4f40701cb7af3be44c8f255'></a> Source: [wmf\class_basemethod.md](https://github.com/PowerShell/powerShell-Docs/blob/743c597c721d4abe67d657eaabd03ecc5cf19690/wmf/class_basemethod.md)
