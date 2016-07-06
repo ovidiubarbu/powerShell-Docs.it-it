@@ -1,13 +1,17 @@
 ---
-title:  Glossario di Windows PowerShell
-ms.date:  2016-05-11
-keywords:  powershell,cmdlet
-description:  
-ms.topic:  article
-author:  jpjofre
-manager:  dongill
-ms.prod:  powershell
-ms.assetid:  b0f88cbe-cb83-4912-a301-184534cb35c7
+title: Glossario di Windows PowerShell
+ms.date: 2016-05-11
+keywords: powershell,cmdlet
+description: 
+ms.topic: article
+author: jpjofre
+manager: dongill
+ms.prod: powershell
+ms.assetid: b0f88cbe-cb83-4912-a301-184534cb35c7
+translationtype: Human Translation
+ms.sourcegitcommit: 03ac4b90d299b316194f1fa932e7dbf62d4b1c8e
+ms.openlocfilehash: 0cd377653a3ca82052b1b88f00bfe92830f2020f
+
 ---
 
 # Glossario di Windows PowerShell
@@ -18,7 +22,7 @@ ms.assetid:  b0f88cbe-cb83-4912-a301-184534cb35c7
 |modulo binario|Modulo di Windows PowerShell il cui modulo radice è un file di modulo binario (con estensione dll). Un modulo binario può includere o meno un manifesto del modulo.|
 |parametro comune|Parametro aggiunto a tutti i cmdlet e tutte le funzioni avanzate dal motore di Windows PowerShell.|
 |dot sourcing|In Windows PowerShell, avviare un comando digitando un punto e uno spazio prima del comando. I comandi con dot sourcing vengono eseguiti nell'ambito corrente anziché in un nuovo ambito. Qualsiasi variabile, alias, funzione o unità creata dal comando viene creato nell'ambito corrente ed è disponibile per gli utenti dopo il completamento del comando.|
-|modulo dinamico|Modulo che esiste solo in memoria. Il cmdlet Import-PSSession crea moduli dinamici.|
+|modulo dinamico|Modulo che esiste solo in memoria. Il cmdlet Import\-PSSession crea moduli dinamici.|
 |parametro dinamico|Parametro aggiunto a un cmdlet, una funzione o uno script di Windows PowerShell in determinate condizioni. I cmdlet, le funzioni, i provider e gli script possono aggiungere parametri dinamici.|
 |file di formattazione|File XML di Windows PowerShell con estensione format.ps1xml che definisce la modalità di visualizzazione di un oggetto in Windows PowerShell in base al relativo tipo .NET Framework.|
 |stato della sessione globale|Stato della sessione contenente i dati accessibili all'utente di una sessione di Windows PowerShell.|
@@ -28,7 +32,7 @@ ms.assetid:  b0f88cbe-cb83-4912-a301-184534cb35c7
 |modulo manifesto|Modulo di Windows PowerShell che ha un manifesto e la cui chiave ModulesToProcess è vuota.|
 |manifesto del modulo|File di dati di Windows PowerShell (con estensione psd1) che descrive il contenuto di un modulo e che controlla la modalità di elaborazione di un modulo.|
 |stato della sessione del modulo|Stato della sessione contenente i dati pubblici e privati di un modulo di Windows PowerShell. I dati privati nello stato della sessione non sono disponibili per l'utente di una sessione di Windows PowerShell.|
-|errore non fatale|Errore che non impedisce a Windows PowerShell di continuare a elaborare il comando.|
+|errore \-fatale|Errore che non impedisce a Windows PowerShell di continuare a elaborare il comando.|
 |sostantivo|Parola che segue il segno meno nel nome di un cmdlet di Windows PowerShell. Il sostantivo descrive le risorse su cui agisce il cmdlet.|
 |set di parametri|Gruppo di parametri utilizzabili nello stesso comando per eseguire un'azione specifica.|
 |inviare tramite pipe|In Windows PowerShell inviare i risultati del comando precedente come input al comando successivo nella pipeline.|
@@ -54,11 +58,12 @@ ms.assetid:  b0f88cbe-cb83-4912-a301-184534cb35c7
 |provider di Windows PowerShell|Programma basato su Microsoft .NET Framework che rende disponibili in Windows PowerShell i dati presenti in archivi dati speciali, consentendo di visualizzarli e gestirli.|
 |script di Windows PowerShell|Script scritto nel linguaggio di Windows PowerShell.|
 |file di script di Windows PowerShell|File con estensione ps1 che contiene uno script che viene scritto nel linguaggio di Windows PowerShell.|
-|snap-in Windows PowerShell|Risorsa che definisce un set di cmdlet, provider e tipi di Microsoft .NET Framework che possono essere aggiunti all'ambiente di Windows PowerShell.|
+|Schede di Windows PowerShell|Risorsa che definisce un set di cmdlet, provider e tipi di Microsoft .NET Framework che possono essere aggiunti all'ambiente di Windows PowerShell.|
 |Flusso di lavoro di Windows PowerShell|Un flusso di lavoro è una sequenza di passaggi programmati e connessi che consentono di eseguire attività di lunga durata o richiedono il coordinamento di più passaggi tra più dispositivi o nodi gestiti. Il flusso di lavoro di Windows PowerShell consente a professionisti IT e sviluppatori di creare sequenze di attività di gestione di più dispositivi o singole attività all'interno di un flusso di lavoro come flussi di lavoro. Il flusso di lavoro di Windows PowerShell consente di adattare ed eseguire sia script di Windows PowerShell che file XAML come flussi di lavoro.|
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

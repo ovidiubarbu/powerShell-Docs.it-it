@@ -1,13 +1,17 @@
 ---
-title:  Altri oggetti di scripting utili
-ms.date:  2016-05-11
-keywords:  powershell,cmdlet
-description:  
-ms.topic:  article
-author:  jpjofre
-manager:  dongill
-ms.prod:  powershell
-ms.assetid:  4d781196-720b-4ccc-90d2-c570e5e719f5
+title: Altri oggetti di scripting utili
+ms.date: 2016-05-11
+keywords: powershell,cmdlet
+description: 
+ms.topic: article
+author: jpjofre
+manager: dongill
+ms.prod: powershell
+ms.assetid: 4d781196-720b-4ccc-90d2-c570e5e719f5
+translationtype: Human Translation
+ms.sourcegitcommit: 03ac4b90d299b316194f1fa932e7dbf62d4b1c8e
+ms.openlocfilehash: 9f97cc71d42200fef268e344c9e20c5967b376f2
+
 ---
 
 # Altri oggetti di scripting utili
@@ -29,7 +33,7 @@ psUnsupportedConsoleApplications
 ```
 
 ### $psLocalHelp
- Si tratta di un oggetto Dictionary che conserva un mapping sensibile al contesto tra gli argomenti della Guida e i relativi collegamenti associati nel file della Guida HTML compilato locale. Viene usato per trovare la Guida locale per un determinato argomento. È possibile aggiungere o eliminare argomenti da questo elenco. L'esempio di codice seguente visualizza alcune coppie chiave\-valore contenute in **$psLocalHelp**.
+ Si tratta di un oggetto dizionario che mantiene un mapping sensibile al contesto tra gli argomenti della Guida e i relativi collegamenti associati nel file della Guida HTML compilato locale. Viene usato per trovare la Guida locale per un determinato argomento. È possibile aggiungere o eliminare argomenti da questo elenco. L'esempio di codice seguente illustra alcune coppie chiave\-valore contenute in **$psLocalHelp**.
 
 ```
 # See the local help map
@@ -37,12 +41,12 @@ $psLocalHelp |Format-List
 
 ```
 
-### Esempio di output
+### Output di esempio
 
 |||
 |-|-|
-|Chiave: Add-Computer|Valore: WindowsPowerShellHelp.chm::/html/093f660c-b8d5-43cf-aa0c-54e5e54e76f9.htm|
-|Chiave: Add-Content|Valore: WindowsPowerShellHelp.chm::/html/0c836a1b-f389-4e9a-9325-0f415686d194.htm|
+|Chiave : Add\-Computer|Valore : WindowsPowerShellHelp.chm::\/html\/093f660c\-b8d5\-43cf\-aa0c\-54e5e54e76f9.htm|
+|Chiave : Add\-Content|Valore : WindowsPowerShellHelp.chm::\/html\/0c836a1b\-f389\-4e9a\-9325\-0f415686d194.htm|
 
  Lo script seguente aggiunge una voce all'elenco.
 
@@ -51,7 +55,7 @@ $psLocalHelp.Add("get-myNoun","c:\MyFolder\MyHelpChm.chm::/html/0198854a-1298-57
 ```
 
 ### $psOnlineHelp
- Si tratta di un oggetto Dictionary che conserva un mapping sensibile al contesto tra i titoli degli argomenti della Guida e i relativi URL esterni associati. Viene usato per trovare la Guida per un determinato argomento nel Web. È possibile aggiungere o eliminare argomenti da questo elenco.
+ Si tratta di un oggetto dizionario che mantiene un mapping sensibile al contesto tra i titoli degli argomenti della Guida e i relativi URL esterni associati. Viene usato per trovare la Guida per un determinato argomento nel Web. È possibile aggiungere o eliminare argomenti da questo elenco.
 
 ```
 $psOnlineHelp |format-list
@@ -62,8 +66,8 @@ $psOnlineHelp |format-list
 
 |||
 |-|-|
-|Chiave: Add-Computer|Valore: http://go.microsoft.com/fwlink/p/?LinkID=135194|
-|Chiave: Add-Content|Valore: http://go.microsoft.com/fwlink/p/?LinkID=113278|
+|Chiave : Add\-Computer|Valore : http:\/\/go.microsoft.com\/fwlink\/p\/?LinkID\=135194|
+|Chiave : Add\-Content|Valore : http:\/\/go.microsoft.com\/fwlink\/p\/?LinkID\=113278|
 
  Lo script seguente aggiunge una voce all'elenco.
 
@@ -77,6 +81,7 @@ $psOnlineHelp.Add("get-myNoun","http://www.mydomain.com/MyNoun.html")
   
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -1,13 +1,17 @@
 ---
-title:  Windows PowerShell Integrated Scripting Environment (ISE) 
-ms.date:  2016-05-11
-keywords:  powershell,cmdlet
-description:  
-ms.topic:  article
-author:  jpjofre
-manager:  dongill
-ms.prod:  powershell
-ms.assetid:  f156b92d-0203-46d2-89c7-b4989d32e3d2
+title: Windows PowerShell Integrated Scripting Environment (ISE)
+ms.date: 2016-05-11
+keywords: powershell,cmdlet
+description: 
+ms.topic: article
+author: jpjofre
+manager: dongill
+ms.prod: powershell
+ms.assetid: f156b92d-0203-46d2-89c7-b4989d32e3d2
+translationtype: Human Translation
+ms.sourcegitcommit: 03ac4b90d299b316194f1fa932e7dbf62d4b1c8e
+ms.openlocfilehash: fcb516c5d7bdc14c2e23bdb9d96e8e19c383eda5
+
 ---
 
 # Windows PowerShell Integrated Scripting Environment (ISE)
@@ -21,7 +25,7 @@ Ecco alcune delle funzionalità che sono state aggiunte in ISE nelle versioni pi
 ### Aggiunta in PowerShell 3.0 (Windows Server 2012, Windows 8)
 **IntelliSense** consente di completare automaticamente i comandi visualizzando menu di cmdlet, parametri, valori di parametri, file o cartelle corrispondenti durante la digitazione.
 
-**Frammenti di codice**, ovvero brevi sezioni di codice che è possibile inserire facilmente negli script durante la scrittura. È disponibile una raccolta predefinita di utili frammenti di codice ed è possibile aggiungerne altri tramite il cmdlet **New-Snippet**.
+**Frammenti di codice**, ovvero brevi sezioni di codice che è possibile inserire facilmente negli script durante la scrittura. È disponibile una raccolta predefinita di utili frammenti di codice ed è possibile aggiungerne altri usando il cmdlet **New\-Snippet**.
 
 È possibile creare **strumenti aggiuntivi** per aggiungere funzionalità a ISE scrivendo codice che interagisce con il [modello a oggetti di scripting di Windows PowerShell ISE](https://technet.microsoft.com/en-us/library/dd819478.aspx). Questi strumenti possono visualizzare i controlli in un riquadro a schede o funzionare in modo invisibile in background. Il componente aggiuntivo **Comandi** è un buon esempio incluso nella versione 3.0 e successive, che consente di visualizzare un elenco di comandi disponibili e la rispettiva Guida.
 
@@ -31,13 +35,13 @@ L'**elenco degli elementi usati di recente** fa ora parte del menu Apri File in 
 
 **Riquadro della console unito**. Nelle versioni precedenti di ISE sono disponibili riquadri separati per i comandi e l'output. Questi riquadri sono ora riuniti in un unico riquadro che riproduce in modo più fedele la visualizzazione disponibile nella console di Windows PowerShell.
 
-**Opzioni della riga di comando** Diverse nuove opzioni della riga di comando offrono maggiore controllo sul funzionamento di ISE. -NoProfile avvia ISE senza eseguire un profilo di script. -Help apre una finestra della Guida con ISE. -mta avvia ISE in "modalità apartment a thread multipli". L'impostazione predefinita è la modalità apartment a thread singolo.
+**Opzioni della riga di comando**. Diverse nuove opzioni della riga di comando offrono maggiore controllo sul funzionamento di ISE. -NoProfile avvia ISE senza eseguire un profilo di script. -Help apre una finestra della Guida con ISE. -mta avvia ISE in "modalità apartment a thread multipli". L'impostazione predefinita è la modalità apartment a thread singolo.
 
 **Nuove funzionalità dell'editor** rendono più semplice creare e leggere il codice:
 
 -   **Colorazione della sintassi XML**. L'editor ISE ora applica colori alla sintassi XML nello stesso modo usato per la sintassi del codice di Windows PowerShell.
 
--   **Corrispondenza delle parentesi graffe**. ISEWindows PowerShell ISE evidenzia le parentesi graffe corrispondenti per facilitare il controllo del numero corretto di parentesi graffe di chiusura corrispondenti a quelle di apertura. È possibile usare CTRL+[ per individuare la parentesi graffa di chiusura corrispondente a quella di apertura su cui si trova il cursore.
+-   **Corrispondenza delle parentesi graffe**. ISEWindows PowerShell ISE evidenzia le parentesi graffe corrispondenti per facilitare il controllo del numero corretto di parentesi graffe di chiusura corrispondenti a quelle di apertura. È possibile usare CTRL\-\[ per individuare la parentesi graffa di chiusura corrispondente a quella di apertura su cui si trova il cursore.
 
 -   **Visualizzazione struttura**. È possibile comprimere o espandere sezioni del codice facendo clic sul segno più e meno nel margine sinistro. In questo modo è più semplice trovare il codice che si sta cercando in uno script lungo.
 
@@ -49,7 +53,7 @@ L'**elenco degli elementi usati di recente** fa ora parte del menu Apri File in 
 
 -   **Operazioni di copia e incolla di testo formattato**. Quando si esegue una copia negli Appunti da ISE vengono incluse le informazioni relative a tipo di carattere, dimensioni e colore del testo selezionato.
 
--   **Selezione di blocchi**. È possibile selezionare una parte di testo a forma di blocco tenendo premuto ALT mentre si seleziona il testo nel riquadro di script con il mouse oppure premendo **ALT+MAIUSC+FRECCIA**.
+-   **Selezione di blocchi**. È possibile selezionare una parte di testo a forma di blocco tenendo premuto ALT mentre si seleziona il testo nel riquadro di script con il mouse oppure premendo **ALT\+MAIUSC\+FRECCIA**.
 
 ### Aggiunta in PowerShell 2.0 (Windows Server 2008 R2, Windows 7)
 L'ambiente ISE è stato introdotto in PowerShell 2.0.
@@ -57,13 +61,15 @@ L'ambiente ISE è stato introdotto in PowerShell 2.0.
 ## Requisiti per l'esecuzione di Windows PowerShell ISE
 ISE è disponibile in qualsiasi computer che supporta l'esecuzione di Windows PowerShell 2.0 o versione successiva. Ogni versione di Windows e Windows Server include una versione di Windows PowerShell e ISE, ma è possibile eseguire l'aggiornamento alla versione più recente disponibile tramite l'installazione di Windows Management Framework. Eseguire questa ricerca per trovare l'ultima versione disponibile: [Download](http://www.microsoft.com/en-us/search/DownloadResults.aspx?q=%22windows%20management%20framework%22%20PowerShell&sortby=Relevancy~Descending). Si noti che tutte le voci con etichetta "Preview" rappresentano codice preliminare e non includono funzionalità complete.
 
-> [!NOTE] Windows PowerShell ISE richiede un'interfaccia utente grafica, quindi non è possibile eseguirlo nell'opzione Server Core di Windows Server.
+> [!NOTE]
+> Windows PowerShell ISE richiede un'interfaccia utente grafica, quindi non è possibile eseguirlo nell'opzione Server Core di Windows Server.
 
 ## <a name="BKMK_LINKS"></a>Vedere anche
 [Uso di Windows PowerShell ISE (Integrated Scripting Environment)](http://technet.microsoft.com/library/cc732148.aspx)
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

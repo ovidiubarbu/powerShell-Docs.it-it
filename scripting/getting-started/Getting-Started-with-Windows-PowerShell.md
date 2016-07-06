@@ -1,13 +1,17 @@
 ---
-title:  Guida introduttiva a Windows PowerShell
-ms.date:  2016-05-11
-keywords:  powershell,cmdlet
-description:  
-ms.topic:  article
-author:  jpjofre
-manager:  dongill
-ms.prod:  powershell
-ms.assetid:  b0e2ad92-875f-421d-b612-f624e644aa69
+title: Guida introduttiva a Windows PowerShell
+ms.date: 2016-05-11
+keywords: powershell,cmdlet
+description: 
+ms.topic: article
+author: jpjofre
+manager: dongill
+ms.prod: powershell
+ms.assetid: b0e2ad92-875f-421d-b612-f624e644aa69
+translationtype: Human Translation
+ms.sourcegitcommit: 03ac4b90d299b316194f1fa932e7dbf62d4b1c8e
+ms.openlocfilehash: bee671bf537a100bd8ad407f34ccd5fe63c7f9a8
+
 ---
 
 # Guida introduttiva a Windows PowerShell
@@ -15,7 +19,7 @@ Windows PowerShell è una nuova shell da riga di comando di Windows progettata a
 
 A differenza della maggior parte delle shell, che accetta e restituisce testo, Windows PowerShell si basa su CLR (Common Language Runtime) .NET Framework e su .NET Framework e accetta e restituisce oggetti .NET Framework. Questa modifica fondamentale nell'ambiente offre metodi e strumenti totalmente nuovi per la gestione e la configurazione di Windows.
 
-Windows PowerShell introduce il concetto di cmdlet (si pronuncia "command-let"), un semplice strumento da riga di comando con una singola funzione, incorporato nella shell. È possibile usare ogni cmdlet separatamente, ma il potenziale di questi semplici strumenti viene espresso appieno quando vengono usati in combinazione per eseguire attività complesse. Windows PowerShell include oltre cento cmdlet di sistema di base ed è possibile scrivere cmdlet personalizzati e condividerli con altri utenti.
+Windows PowerShell introduce il concetto di cmdlet (si pronuncia "command\-let"), un semplice strumento da riga di comando con una singola funzione, incorporato nella shell. È possibile usare ogni cmdlet separatamente, ma il potenziale di questi semplici strumenti viene espresso appieno quando vengono usati in combinazione per eseguire attività complesse. Windows PowerShell include oltre cento cmdlet di sistema di base ed è possibile scrivere cmdlet personalizzati e condividerli con altri utenti.
 
 Come molte shell, Windows PowerShell consente di accedere al file system nel computer. Inoltre, i *provider* di Windows PowerShell consentono di accedere ad altri archivi dati, ad esempio il Registro di sistema e gli archivi di certificati con firma digitale, con la stessa facilità con cui si accede al file system.
 
@@ -33,6 +37,7 @@ In questo argomento
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -1,19 +1,23 @@
 ---
-title:  Ripetizione di un'attività per più oggetti (ForEach-Object) 
-ms.date:  2016-05-11
-keywords:  powershell,cmdlet
-description:  
-ms.topic:  article
-author:  jpjofre
-manager:  dongill
-ms.prod:  powershell
-ms.assetid:  6697a12d-2470-4ed6-b5bb-c35e5d525eb6
+title: "Ripetizione di un'attività per più oggetti (ForEach-Object)"
+ms.date: 2016-05-11
+keywords: powershell,cmdlet
+description: 
+ms.topic: article
+author: jpjofre
+manager: dongill
+ms.prod: powershell
+ms.assetid: 6697a12d-2470-4ed6-b5bb-c35e5d525eb6
+translationtype: Human Translation
+ms.sourcegitcommit: 03ac4b90d299b316194f1fa932e7dbf62d4b1c8e
+ms.openlocfilehash: 8a8ebbaecde15efa15aa7a23a4c31db5e808d454
+
 ---
 
 # Ripetizione di un'attività per più oggetti (ForEach-Object)
-Il cmdlet **ForEach-Object** usa blocchi di script e il descrittore $_ per l'oggetto pipeline corrente per consentire di eseguire un comando in ogni oggetto della pipeline. Può essere usato per eseguire alcune attività complesse.
+Il cmdlet **ForEach\-Object** usa blocchi di script e il descrittore $\_ per l'oggetto pipeline corrente per consentire di eseguire un comando in ogni oggetto della pipeline. Può essere usato per eseguire alcune attività complesse.
 
-Un caso in cui può risultare utile è la manipolazione dei dati per renderli più utili. Ad esempio, la classe Win32_LogicalDisk di WMI può essere usata per restituire informazioni sullo spazio disponibile per ogni disco locale. Tuttavia, i dati vengono restituiti in termini di byte, cosa che rende difficile la lettura:
+Un caso in cui può risultare utile è la manipolazione dei dati per renderli più utili. Ad esempio, la classe Win32\_LogicalDisk di WMI può essere usata per restituire informazioni sullo spazio disponibile per ogni disco locale. Tuttavia, i dati vengono restituiti in termini di byte, cosa che rende difficile la lettura:
 
 ```
 PS> Get-WmiObject -Class Win32_LogicalDisk
@@ -26,7 +30,7 @@ Size         : 203912880128
 VolumeName   : Local Disk
 ```
 
-È possibile convertire il valore FreeSpace in megabyte dividendo due volte ogni valore per 1024. Dopo la prima divisione, i dati saranno in kilobyte e dopo la seconda divisione saranno in megabyte. È possibile eseguire questa operazione in un blocco di script ForEach-Object digitando:
+È possibile convertire il valore FreeSpace in megabyte dividendo due volte ogni valore per 1024. Dopo la prima divisione, i dati saranno in kilobyte e dopo la seconda divisione saranno in megabyte. È possibile eseguire questa operazione in un blocco di script ForEach\-Object digitando:
 
 ```
 Get-WmiObject -Class Win32_LogicalDisk | ForEach-Object -Process {($_.FreeSpace)/1024.0/1024.0}
@@ -48,10 +52,11 @@ At line:1 char:70
 eeSpace = ($_.FreeSpace)/1024.0/1024.0}
 ```
 
-È possibile riorganizzare i dati usando alcune tecniche avanzate, ma un approccio più semplice consiste nel creare un nuovo oggetto, usando **Select-Object**.
+È possibile riorganizzare i dati usando alcune tecniche avanzate, ma un approccio più semplice consiste nel creare un nuovo oggetto, usando **Select\-Object**.
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

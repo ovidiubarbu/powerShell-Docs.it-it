@@ -1,13 +1,17 @@
 ---
-title:  Oggetto ISEMenuItem
-ms.date:  2016-05-11
-keywords:  powershell,cmdlet
-description:  
-ms.topic:  article
-author:  jpjofre
-manager:  dongill
-ms.prod:  powershell
-ms.assetid:  a16660bd-0aee-46fd-ac17-3f022165d089
+title: Oggetto ISEMenuItem
+ms.date: 2016-05-11
+keywords: powershell,cmdlet
+description: 
+ms.topic: article
+author: jpjofre
+manager: dongill
+ms.prod: powershell
+ms.assetid: a16660bd-0aee-46fd-ac17-3f022165d089
+translationtype: Human Translation
+ms.sourcegitcommit: 03ac4b90d299b316194f1fa932e7dbf62d4b1c8e
+ms.openlocfilehash: 8b8c960604457fd41f5f7fefe0035003b675e13a
+
 ---
 
 # Oggetto ISEMenuItem
@@ -58,7 +62,7 @@ $psISE.CurrentPowerShellTab.AddOnsMenu.Submenus[0].Shortcut
 ###  <a name="Submenus"></a> Sottomenu
   Supportato in Windows PowerShell ISE 2.0 e versioni successive. 
 
- Proprietà di sola lettura che ottiene l'[elenco di sottomenu](The-ISEMenuItemCollection-Object.md) della voce di menu.
+ Proprietà di sola lettura che ottiene [l'elenco di sottomenu](The-ISEMenuItemCollection-Object.md) della voce di menu.
 
 ```
 # List the submenus of the Add-ons menu
@@ -87,13 +91,14 @@ $parentAdded.SubMenus.Add("_Dir",{dir},"Alt+D")
 
 ## Vedere anche
  [Oggetto ISEMenuItemCollection](The-ISEMenuItemCollection-Object.md) 
- [The Windows PowerShell ISE Scripting Object Model](The-Windows-PowerShell-ISE-Scripting-Object-Model.md) (Modello a oggetti di scripting di Windows PowerShell ISE) 
+ [Modello a oggetti di Scripting di Windows PowerShell ISE](The-Windows-PowerShell-ISE-Scripting-Object-Model.md) 
  [Riferimenti al modello a oggetti di Windows PowerShell ISE](Windows-PowerShell-ISE-Object-Model-Reference.md) 
  [Gerarchia del modello a oggetti ISE](The-ISE-Object-Model-Hierarchy.md)
 
   
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

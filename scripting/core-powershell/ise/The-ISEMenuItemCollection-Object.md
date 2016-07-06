@@ -1,13 +1,17 @@
 ---
-title:  Oggetto ISEMenuItemCollection
-ms.date:  2016-05-11
-keywords:  powershell,cmdlet
-description:  
-ms.topic:  article
-author:  jpjofre
-manager:  dongill
-ms.prod:  powershell
-ms.assetid:  0c0f5484-3320-408e-8534-5bd1c8e48512
+title: Oggetto ISEMenuItemCollection
+ms.date: 2016-05-11
+keywords: powershell,cmdlet
+description: 
+ms.topic: article
+author: jpjofre
+manager: dongill
+ms.prod: powershell
+ms.assetid: 0c0f5484-3320-408e-8534-5bd1c8e48512
+translationtype: Human Translation
+ms.sourcegitcommit: 03ac4b90d299b316194f1fa932e7dbf62d4b1c8e
+ms.openlocfilehash: c54c51ab8f5a5a5542ca4b78ea1100d5a4344d26
+
 ---
 
 # Oggetto ISEMenuItemCollection
@@ -15,13 +19,13 @@ ms.assetid:  0c0f5484-3320-408e-8534-5bd1c8e48512
 
 ## Metodo
 
-### Add(string DisplayName, System.Management.Automation.ScriptBlock Action, System.Windows.Input.KeyGesture Shortcut)
+### Add\(string DisplayName, System.Management.Automation.ScriptBlock Action, System.Windows.Input.KeyGesture Shortcut) \)
   Supportato in Windows PowerShell ISE 2.0 e versioni successive. 
 
  Aggiunge una voce di menu alla raccolta.
 
  **DisplayName**
- Nome visualizzato del menu da aggiungere.
+Il nome visualizzato del menu da aggiungere.
 
  **Action**
  Oggetto **System.Management.Automation.ScriptBlock** che specifica l'azione associata alla voce di menu.
@@ -29,8 +33,8 @@ ms.assetid:  0c0f5484-3320-408e-8534-5bd1c8e48512
  **Shortcut**
  Tasto di scelta rapida per l'azione.
 
- **Restituisce**
- L'oggetto ISEMenuItem appena aggiunto.
+ **Returns**
+ Oggetto ISEMenuItem appena aggiunto.
 
 ```
 # Create an Add-ons menu with an fast access key and a shortcut.
@@ -38,7 +42,7 @@ ms.assetid:  0c0f5484-3320-408e-8534-5bd1c8e48512
 $menuAdded = $psISE.CurrentPowerShellTab.AddOnsMenu.SubMenus.Add("_Process",{get-process},"Alt+P")
 ```
 
-### Clear()
+### Cancella\(\)
   Supportato in Windows PowerShell ISE 2.0 e versioni successive. 
 
  Rimuove tutti i sottomenu dalla voce di menu.
@@ -51,13 +55,14 @@ $psISE.CurrentPowerShellTab.AddOnsMenu.Submenus.Clear()
 
 ## Vedere anche
  [Oggetto ISEMenuItem](The-ISEMenuItem-Object.md) 
- [The Windows PowerShell ISE Scripting Object Model](The-Windows-PowerShell-ISE-Scripting-Object-Model.md) (Modello a oggetti di scripting di Windows PowerShell ISE) 
+ [Modello a oggetti di Scripting di Windows PowerShell ISE](The-Windows-PowerShell-ISE-Scripting-Object-Model.md) 
  [Riferimenti al modello a oggetti di Windows PowerShell ISE](Windows-PowerShell-ISE-Object-Model-Reference.md) 
  [Gerarchia del modello a oggetti ISE](The-ISE-Object-Model-Hierarchy.md)
 
   
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

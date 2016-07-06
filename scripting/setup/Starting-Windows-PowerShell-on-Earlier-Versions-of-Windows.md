@@ -1,13 +1,17 @@
 ---
-title:  Avvio di Windows PowerShell in versioni precedenti di Windows
-ms.date:  2016-05-11
-keywords:  powershell,cmdlet
-description:  
-ms.topic:  article
-author:  jpjofre
-manager:  dongill
-ms.prod:  powershell
-ms.assetid:  57125436-3d1e-4e7f-b5c4-8f0ecb49d642
+title: Avvio di Windows PowerShell in versioni precedenti di Windows
+ms.date: 2016-05-11
+keywords: powershell,cmdlet
+description: 
+ms.topic: article
+author: jpjofre
+manager: dongill
+ms.prod: powershell
+ms.assetid: 57125436-3d1e-4e7f-b5c4-8f0ecb49d642
+translationtype: Human Translation
+ms.sourcegitcommit: 03ac4b90d299b316194f1fa932e7dbf62d4b1c8e
+ms.openlocfilehash: 1fe8c9e872b1646746ad2e3426bc816393e68fe8
+
 ---
 
 # Avvio di Windows PowerShell in versioni precedenti di Windows
@@ -84,6 +88,7 @@ Per abilitare Windows PowerShell ISE in Windows PowerShell 2.0 per Windows Serve
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

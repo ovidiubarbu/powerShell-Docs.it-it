@@ -1,13 +1,17 @@
 ---
-title:  Tramite Windows PowerShell
-ms.date:  2016-05-11
-keywords:  powershell,cmdlet
-description:  
-ms.topic:  article
-author:  jpjofre
-manager:  dongill
-ms.prod:  powershell
-ms.assetid:  cf06f1e5-3945-47e4-98be-412f5a1f43fe
+title: Tramite Windows PowerShell
+ms.date: 2016-05-11
+keywords: powershell,cmdlet
+description: 
+ms.topic: article
+author: jpjofre
+manager: dongill
+ms.prod: powershell
+ms.assetid: cf06f1e5-3945-47e4-98be-412f5a1f43fe
+translationtype: Human Translation
+ms.sourcegitcommit: 03ac4b90d299b316194f1fa932e7dbf62d4b1c8e
+ms.openlocfilehash: 1d00a67656fc6682675a934645bddcb300a48808
+
 ---
 
 # Tramite Windows PowerShell
@@ -35,7 +39,7 @@ Windows PowerShell fa parte di una famiglia di tecnologie di scripting correlate
 
 -   [Flusso di lavoro di Windows PowerShell](http://technet.microsoft.com/library/jj134242.aspx). Introdotto per la prima volta in Windows PowerShell 3.0, il flusso di lavoro di Windows PowerShell consente a professionisti IT e sviluppatori di sfruttare i vantaggi di [Windows Workflow Foundation](http://msdn.microsoft.com/library/ee342461.aspx) con le funzionalità di automazione e la semplicità d'uso di Windows PowerShell.
 
--   [Accesso Web di Windows PowerShell](http://technet.microsoft.com/library/hh831611.aspx). Introdotta per la prima volta in Windows Server 2012, la funzionalità Accesso Web Windows PowerShell funge da gateway di Windows PowerShell, fornendo una console di Windows PowerShell basata sul Web destinata a un computer remoto. Consente ai professionisti IT di eseguire comandi e script di Windows PowerShell da una console di Windows PowerShell in un Web browser, senza installare Windows PowerShell, software di gestione remoto o plug-in del browser nel dispositivo client.
+-   [Accesso Web di Windows PowerShell](http://technet.microsoft.com/library/hh831611.aspx). Introdotta per la prima volta in Windows Server 2012, la funzionalità Accesso Web Windows PowerShell funge da gateway di Windows PowerShell, offrendo una console di Windows PowerShell basata sul Web destinata a un computer remoto. Consente ai professionisti IT di eseguire comandi e script di Windows PowerShell da una console di Windows PowerShell in un Web browser, senza installare Windows PowerShell, software di gestione remoto o plug\-in del browser nel dispositivo client.
 
 -   [Servizi Web di Windows PowerShell (Estensione IIS OData gestione)](http://msdn.microsoft.com/library/windows/desktop/hh880865.aspx). I servizi Web di Windows PowerShell sono costituiti da un framework che semplifica l'esposizione dei cmdlet di Windows PowerShell con un servizio Web basato su OData eseguito in Web Server (IIS).
 
@@ -65,14 +69,15 @@ Gli argomenti seguenti descrivono come ottenere la versione più recente della G
 
 -   Cmdlet [Update-Help](http://technet.microsoft.com/library/hh849720.aspx). Cmdlet di Windows PowerShell che scarica e installa le versioni più recenti degli argomenti della Guida sui moduli di Windows PowerShell nel computer.
 
-    Per altre informazioni sul sistema di Guida aggiornabile in Windows PowerShell e su come installarla in computer con isolamento di rete, vedere [about_Updatable_Help](http://technet.microsoft.com/library/hh847735.aspx), [Save-Help](http://technet.microsoft.com/library/hh849724.aspx) e [Supporto per la Guida aggiornabile](http://msdn.microsoft.com/library/hh852754.aspx).
+    Per altre informazioni sul sistema della Guida aggiornabile di Windows PowerShell e su come installarlo in computer con isolamento di rete, vedere [about_Updatable_Help](http://technet.microsoft.com/library/hh847735.aspx), [Save-Help](http://technet.microsoft.com/library/hh849724.aspx) e [Supporto per la Guida aggiornabile](http://msdn.microsoft.com/library/hh852754.aspx).
 
--   cmdlet [Get-Help](http://technet.microsoft.com/library/hh849696(v=wps.630).aspx). Cmdlet di Windows PowerShell che consente di acquisire informazioni sui cmdlet e i provider installati nel sistema.
+-   Cmdlet [Get-Help](http://technet.microsoft.com/library/hh849696(v=wps.630).aspx). Cmdlet di Windows PowerShell che consente di acquisire informazioni sui cmdlet e i provider installati nel sistema.
 
 -   È possibile ricevere notifiche su tutti gli aggiornamenti applicati ai file della Guida pubblicati sottoscrivendo il feed RSS seguente: [http://sxp.microsoft.com/feeds/msdntn/PowerShellHelpVersions](http://sxp.microsoft.com/feeds/msdntn/PowerShellHelpVersions).
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -1,13 +1,17 @@
 ---
-title:  Nozioni di base su Windows PowerShell
-ms.date:  2016-05-11
-keywords:  powershell,cmdlet
-description:  
-ms.topic:  article
-author:  jpjofre
-manager:  dongill
-ms.prod:  powershell
-ms.assetid:  6b3cbbc8-060c-4877-b00b-7300dbbe4e28
+title: Nozioni di base su Windows PowerShell
+ms.date: 2016-05-11
+keywords: powershell,cmdlet
+description: 
+ms.topic: article
+author: jpjofre
+manager: dongill
+ms.prod: powershell
+ms.assetid: 6b3cbbc8-060c-4877-b00b-7300dbbe4e28
+translationtype: Human Translation
+ms.sourcegitcommit: 03ac4b90d299b316194f1fa932e7dbf62d4b1c8e
+ms.openlocfilehash: 8d4a801c534075db568cb38eb51cb11db40cce15
+
 ---
 
 # Nozioni di base su Windows PowerShell
@@ -19,18 +23,19 @@ La maggior parte delle interfacce della riga di comando non include schemi o mod
 
 Windows PowerShell è stato progettato per sfruttare le conoscenze storiche delle interfacce della riga di comando degli utenti. In questo capitolo verranno presentati alcuni strumenti e concetti di base utili per acquisire rapidamente familiarità con Windows PowerShell. Tali impostazioni includono:
 
--   Uso di Get-Command
+-   Uso di Get\-Command
 
 -   Uso di Cmd.exe e dei comandi UNIX
 
 -   Uso di comandi esterni
 
--   Uso di Tab-Completion
+-   Uso di Tab\-Completion
 
--   Uso di Get-Help
+-   Uso di Get\-Help
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

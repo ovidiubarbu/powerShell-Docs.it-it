@@ -1,13 +1,17 @@
 ---
-title:  Scopo del modello a oggetti di scripting di Windows PowerShell ISE
-ms.date:  2016-05-11
-keywords:  powershell,cmdlet
-description:  
-ms.topic:  article
-author:  jpjofre
-manager:  dongill
-ms.prod:  powershell
-ms.assetid:  d176a131-ab0c-43ee-80c1-f824ab8e4a05
+title: Scopo del modello a oggetti di scripting di Windows PowerShell ISE
+ms.date: 2016-05-11
+keywords: powershell,cmdlet
+description: 
+ms.topic: article
+author: jpjofre
+manager: dongill
+ms.prod: powershell
+ms.assetid: d176a131-ab0c-43ee-80c1-f824ab8e4a05
+translationtype: Human Translation
+ms.sourcegitcommit: 03ac4b90d299b316194f1fa932e7dbf62d4b1c8e
+ms.openlocfilehash: 41c508e7aebc3501f29be7246ca817f95180ef2f
+
 ---
 
 # Scopo del modello a oggetti di scripting di Windows PowerShell ISE
@@ -69,11 +73,12 @@ ms.assetid:  d176a131-ab0c-43ee-80c1-f824ab8e4a05
 ## Vedere anche
  [Gerarchia del modello a oggetti ISE](The-ISE-Object-Model-Hierarchy.md) 
  [Riferimenti al modello a oggetti di Windows PowerShell ISE](Windows-PowerShell-ISE-Object-Model-Reference.md) 
- [The Windows PowerShell ISE Scripting Object Model](The-Windows-PowerShell-ISE-Scripting-Object-Model.md) (Modello a oggetti di scripting di Windows PowerShell ISE)
+ [Modello a oggetti di scripting di Windows PowerShell ISE](The-Windows-PowerShell-ISE-Scripting-Object-Model.md)
 
   
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -1,13 +1,17 @@
 ---
-title:  Oggetto ISEAddOnToolCollection
-ms.date:  2016-05-11
-keywords:  powershell,cmdlet
-description:  
-ms.topic:  article
-author:  jpjofre
-manager:  dongill
-ms.prod:  powershell
-ms.assetid:  634eab89-0845-4016-974b-361b09bb8f7b
+title: Oggetto ISEAddOnToolCollection
+ms.date: 2016-05-11
+keywords: powershell,cmdlet
+description: 
+ms.topic: article
+author: jpjofre
+manager: dongill
+ms.prod: powershell
+ms.assetid: 634eab89-0845-4016-974b-361b09bb8f7b
+translationtype: Human Translation
+ms.sourcegitcommit: 03ac4b90d299b316194f1fa932e7dbf62d4b1c8e
+ms.openlocfilehash: 811cdcc3466d366f89fe43b90f928019d7405039
+
 ---
 
 # Oggetto ISEAddOnToolCollection
@@ -15,16 +19,16 @@ ms.assetid:  634eab89-0845-4016-974b-361b09bb8f7b
 
 ## Metodo
 
-### Add( Name, ControlType, [IsVisible] )
+### Add\( Name, ControlType, \[IsVisible\] \)
   Supportato in Windows PowerShell ISE 3.0 e versioni successive e non presente nelle versioni precedenti. 
 
  Aggiunge un nuovo strumento aggiuntivo alla raccolta. Restituisce lo strumento aggiuntivo appena aggiunto. Prima di eseguire questo comando, è necessario installare lo strumento aggiuntivo nel computer locale e caricare l'assembly.
 
- **Name**: stringa  Specifica il nome visualizzato dello strumento aggiuntivo che viene aggiunto a Windows PowerShell ISE.
+ **Name** – Stringa Specifica il nome visualizzato dello strumento aggiuntivo che viene aggiunto a Windows PowerShell ISE.
 
- **ControlType**: tipo  Specifica il controllo aggiunto.
+ **ControlType** – Tipo Specifica il controllo aggiunto.
 
- **\[IsVisible\]** (facoltativo): booleano  Se impostato su **$true**, lo strumento aggiuntivo è immediatamente visibile nel riquadro degli strumenti associato.
+ **\[IsVisible\]** – Valore booleano facoltativo Se impostato su **$true**, lo strumento aggiuntivo è immediatamente visibile nel riquadro degli strumenti associato.
 
 ```
 # Load a DLL with an add-on and then add it to the ISE
@@ -33,12 +37,12 @@ $psISE.CurrentPowerShellTab.VerticalAddOnTools.Add("Solutions", [ISESimpleSoluti
 
 ```
 
-### Remove( Item )
+### Remove\( Item \)
   Supportato in Windows PowerShell ISE 3.0 e versioni successive e non presente nelle versioni precedenti. 
 
  Rimuove lo strumento aggiuntivo specificato dalla raccolta.
 
- **Item**: Microsoft.PowerShell.Host.ISE.ISEAddOnTool  Specifica l'oggetto da rimuovere da Windows PowerShell ISE.
+ **Item** – Microsoft.PowerShell.Host.ISE.ISEAddOnTool Specifica l'oggetto che deve essere rimosso da Windows PowerShell ISE.
 
 ```
 # Load a DLL with an add-on and then add it to the ISE
@@ -47,12 +51,12 @@ $psISE.CurrentPowerShellTab.VerticalAddOnTools.Add("Solutions", [ISESimpleSoluti
 
 ```
 
-### SetSelectedPowerShellTab( psTab )
+### SetSelectedPowerShellTab\( psTab \)
   Supportato in Windows PowerShell ISE 3.0 e versioni successive e non presente nelle versioni precedenti. 
 
  Seleziona la scheda di PowerShell specificata dal parametro **psTab**.
 
- **psTab**: Microsoft.PowerShell.Host.ISE.PowerShellTab  Scheda di PowerShell da selezionare.
+ **psTab** – Microsoft.PowerShell.Host.ISE.PowerShellTab Scheda di PowerShell da selezionare.
 
 ```
 
@@ -62,12 +66,12 @@ $newTab.DisplayName="Brand New Tab"
 
 ```
 
-### Remove( psTab )
+### Remove\( psTab \)
   Supportato in Windows PowerShell ISE 3.0 e versioni successive e non presente nelle versioni precedenti. 
 
  Rimuove la scheda di PowerShell specificata dal parametro **psTab**.
 
- **psTab**: Microsoft.PowerShell.Host.ISE.PowerShellTab  Scheda di PowerShell da rimuovere.
+ **psTab** – Microsoft.PowerShell.Host.ISE.PowerShellTab Scheda di PowerShell da rimuovere.
 
 ```
 
@@ -80,13 +84,14 @@ $psISE.PowerShellTabs.Remove($newTab)
 
 ## Vedere anche
  [Oggetto PowerShellTab](The-PowerShellTab-Object.md) 
- [The Windows PowerShell ISE Scripting Object Model](The-Windows-PowerShell-ISE-Scripting-Object-Model.md) (Modello a oggetti di scripting di Windows PowerShell ISE) 
+ [Modello a oggetti di Scripting di Windows PowerShell ISE](The-Windows-PowerShell-ISE-Scripting-Object-Model.md) 
  [Riferimenti al modello a oggetti di Windows PowerShell ISE](Windows-PowerShell-ISE-Object-Model-Reference.md) 
  [Gerarchia del modello a oggetti ISE](The-ISE-Object-Model-Hierarchy.md)
 
   
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

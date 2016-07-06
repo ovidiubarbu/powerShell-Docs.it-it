@@ -1,13 +1,17 @@
 ---
-title:  Novità di PowerShell 5.0 ISE
-ms.date:  2016-05-11
-keywords:  powershell,cmdlet
-description:  
-ms.topic:  article
-author:  jpjofre
-manager:  dongill
-ms.prod:  powershell
-ms.assetid:  38648d47-7c27-4b37-a40e-ad29948519c2
+title: "Novità di PowerShell 5.0 ISE"
+ms.date: 2016-05-11
+keywords: powershell,cmdlet
+description: 
+ms.topic: article
+author: jpjofre
+manager: dongill
+ms.prod: powershell
+ms.assetid: 38648d47-7c27-4b37-a40e-ad29948519c2
+translationtype: Human Translation
+ms.sourcegitcommit: 03ac4b90d299b316194f1fa932e7dbf62d4b1c8e
+ms.openlocfilehash: 7be11016317a65565dd9af2a3f65e8f00b3818f3
+
 ---
 
 # Novità di Windows PowerShell ISE
@@ -16,12 +20,12 @@ Questo argomento illustra le funzionalità nuove e aggiornate introdotte nelle v
 ## <a name="overview"></a>Descrizione delle funzionalità
 Windows PowerShell ISE è un'applicazione host che consente di scrivere, eseguire e testare script e moduli in un ambiente grafico e intuitivo. Le principali funzionalità, come la colorazione della sintassi, il completamento tramite TAB, il debug visivo, la conformità a Unicode e la Guida sensibile al contesto garantiscono un'esperienza di scripting più avanzata.
 
-Per una panoramica di Windows PowerShell ISE, vedere [Windows PowerShell 3.0 Integrated Scripting Environment (ISE)](https://technet.microsoft.com/en-us/library/3c1892c2-bf84-4cb6-af26-1f453be9e671).
+Per un'introduzione a Windows PowerShell ISE, vedere [Panoramica di Windows PowerShell Integrated Scripting Environment](https://technet.microsoft.com/en-us/library/3c1892c2-bf84-4cb6-af26-1f453be9e671).
 
 ## <a name="versions"></a>Funzionalità nuove e modificate in Windows PowerShell ISE
 Nella tabella seguente sono elencate alcune delle funzionalità nuove e modificate per questa versione di Windows PowerShell ISE in Windows PowerShell.
 
-|Funzionalità|Windows PowerShell ISE 4.0|Windows PowerShell ISE 3.0|Windows PowerShell ISE 2.0|
+|Funzione\/funzionalità|Windows PowerShell ISE 4.0|Windows PowerShell ISE 3.0|Windows PowerShell ISE 2.0|
 |--------------------------|-----------------------------------------------|-----------------------------------------------|-----------------------------------------------|
 |**[Intellisense](#BKMK_Intellisense)**|X|X||
 |**[Frammenti di codice](#bkmk_snippets)**|X|X||
@@ -50,7 +54,7 @@ Quando si digitano cmdlet in Windows PowerShell ISE 3.0 o versione successiva vi
 ### <a name="BKMK_Snippets"></a>Frammenti di codice
 **Funzionalità aggiunta in ISE 3.0**
 
-I *frammenti di codice* sono brevi sezioni di codice di Windows PowerShell che è possibile inserire negli script creati in Windows PowerShell ISE. Windows PowerShell ISE include un set predefinito di frammenti di codice. È possibile aggiungere frammenti di codice con il cmdlet **New-Snippet** mentre si lavora in Windows PowerShell ISE.
+I *frammenti di codice* sono brevi sezioni di codice di Windows PowerShell che è possibile inserire negli script creati in Windows PowerShell ISE. Windows PowerShell ISE include un set predefinito di frammenti di codice. È possibile aggiungere frammenti di codice con il cmdlet **New\-Snippet** mentre si lavora in Windows PowerShell ISE.
 
 **Valore aggiunto da queste modifiche**
 
@@ -122,7 +126,7 @@ I riquadri distinti di comandi e output disponibili nella prima versione di Wind
 
 -   Guida sensibile al contesto con **F1**
 
--   Show-Command sensibile al contesto con **CTRL+F1**
+-   **CTRL\+F1** per finestra ShowCommand sensibile al contesto
 
 -   Supporto per script complessi e con scrittura da destra a sinistra
 
@@ -145,13 +149,13 @@ Windows PowerShell ISE 2.0 include riquadri separati per comandi e output.
 ### <a name="BKMK_CommandLine"></a>Opzioni della riga di comando
 **Funzionalità aggiunta in PowerShell 3.0**
 
-Se si avvia Windows PowerShell ISE dalla riga di comando digitando **Powershell_ise.exe**, è possibile aggiungere le nuove opzioni della riga di comando seguenti:
+Se si avvia Windows PowerShell ISE dalla riga di comando digitando **Powershellise.exe**, è possibile aggiungere le nuove opzioni della riga di comando seguenti.
 
--   *-NoProfile*: avvia Windows PowerShell ISE senza eseguire **$profile**
+-   *\-NoProfile*: avvia Windows PowerShell ISE senza eseguire **$profile**
 
--   *-Help*: visualizza una finestra della Guida
+-   *\-Help*: visualizza una finestra della Guida
 
--   *-mta*: avvia Windows PowerShell ISE in modalità apartment a thread multipli. La modalità operativa predefinita per Windows PowerShell ISE è apartment a thread singolo o *\-sta*.
+-   *\-mta*: avvia Windows PowerShell ISE in modalità apartment a thread multipli. La modalità operativa predefinita per Windows PowerShell ISE è apartment a thread singolo o *\-sta*.
 
 **Valore aggiunto da queste modifiche**
 
@@ -168,9 +172,9 @@ Altre funzionalità di modifica di Windows PowerShell ISE includono:
 
 -   **Colorazione della sintassi XML** Windows PowerShell ISE ora applica colori alla sintassi XML nello stesso modo usato per la sintassi di Windows PowerShell.
 
--   **Corrispondenza delle parentesi graffe** Windows PowerShell ISE include l'individuazione delle parentesi graffe corrispondenti e la loro evidenziazione e può essere usata in vari modi. Ad esempio, è possibile usare il comando **Vai a corrispondenza** o **CTRL+]** per trovare la parentesi graffa di chiusura, se è selezionata una parentesi graffa di apertura.
+-   **Corrispondenza delle parentesi graffe** Windows PowerShell ISE include l'individuazione delle parentesi graffe corrispondenti e la loro evidenziazione e può essere usata in vari modi. Ad esempio, è possibile usare il comando **Vai a corrispondenza** o **CTRL \+ ]** per trovare la parentesi graffa di chiusura, se è selezionata una parentesi graffa di apertura.
 
--   **Visualizzazione struttura** Il riquadro di script supporta la struttura, che consente di comprimere o espandere sezioni di codice facendo clic sui segni più o meno nel margine sinistro. È possibile usare le parentesi graffe oppure i tag **\#region** ed **\#endregion** per contrassegnare l'inizio o la fine di una sezione comprimibile. Per espandere o comprimere tutte le aree, premere **CTRL+M**.
+-   **Visualizzazione struttura** Il riquadro di script supporta la struttura, che consente di comprimere o espandere sezioni di codice facendo clic sui segni più o meno nel margine sinistro. È possibile usare le parentesi graffe oppure i tag **\#region** ed **\#endregion** per contrassegnare l'inizio o la fine di una sezione comprimibile. Per espandere o comprimere tutte le aree, premere **CTRL\+M**.
 
 -   **Modifica del testo con trascinamento della selezione** Windows PowerShell ISE supporta ora il trascinamento del testo per la modifica. È possibile selezionare qualsiasi blocco di testo e trascinarlo in un'altra posizione nell'editor o nella console per spostarlo. Se si tiene premuto il tasto CTRL mentre si trascina il testo selezionato, quando si rilascia il pulsante del mouse il testo viene copiato nella nuova posizione. In questa versione, così come nella versione precedente, i file trascinati in Windows PowerShell ISE vengono aperti.
 
@@ -180,7 +184,7 @@ Altre funzionalità di modifica di Windows PowerShell ISE includono:
 
 -   **Operazioni di copia e incolla di testo formattato** Con la copia negli Appunti in Windows PowerShell ISE vengono mantenute le informazioni relative a tipo di carattere, dimensioni e colore della selezione originale.
 
--   **Selezione di blocchi** È possibile selezionare un blocco di testo tenendo premuto ALT mentre si seleziona il testo nel riquadro di script con il mouse oppure premendo **ALT+MAIUSC+FRECCIA**.
+-   **Selezione di blocchi** È possibile selezionare un blocco di testo tenendo premuto ALT mentre si seleziona il testo nel riquadro di script con il mouse oppure premendo **ALT\+MAIUSC\+FRECCIA**.
 
 **Valore aggiunto da queste modifiche**
 
@@ -193,9 +197,9 @@ Questi miglioramenti non erano presenti in Windows PowerShell ISE 2.0.
 ### <a name="BKMK_NewHelpViewer"></a>Nuova finestra di visualizzazione della Guida
 **Funzionalità aggiunta in PowerShell 3.0**
 
-Se si preme **F1** mentre il cursore si trova in un cmdlet oppure si evidenzia parte di un cmdlet, nel nuovo visualizzatore della Guida verrà visualizzata la Guida sensibile al contesto per il cmdlet evidenziato. Per visualizzare la Guida di Windows PowerShell, digitare **operators** nel riquadro della console e quindi premere **F1**.
+Se si preme **F1** mentre il cursore si trova in un cmdlet oppure si evidenzia parte di un cmdlet, nel nuovo visualizzatore della Guida verrà visualizzata la Guida sensibile al contesto per il cmdlet evidenziato. Per visualizzare la Guida Informazioni su Windows PowerShell, digitare **operators** nel riquadro della console e quindi premere **F1**.
 
-Prima di usare questa funzionalità, scaricare la versione aggiornata degli argomenti della Guida di Windows PowerShell dal sito Web Microsoft. Il modo più semplice per scaricare gli argomenti della Guida consiste nell'eseguire il cmdlet **Update-Help** nel riquadro della console durante l'esecuzione di Windows PowerShell ISE come amministratore.
+Prima di usare questa funzionalità, scaricare la versione aggiornata degli argomenti della Guida di Windows PowerShell dal sito Web Microsoft. Il modo più semplice per scaricare gli argomenti della Guida consiste nell'eseguire il cmdlet **Update\-Help** nel riquadro della console durante l'esecuzione di Windows PowerShell ISE come amministratore.
 
 È possibile modificare la posizione in cui **F1** cerca la Guida. Nel menu **Strumenti**\/**Opzioni**, nella scheda **Impostazioni generali**, in **Altre impostazioni** è possibile selezionare o deselezionare la casella di controllo **Usa contenuto della Guida locale anziché contenuto online**. Se si seleziona la casella di controllo, il client cerca la Guida per il cmdlet nella Guida scaricata disponibile nella cartella dei moduli.  Se la casella di controllo viene deselezionata, il client cerca la Guida per il cmdlet nella libreria TechNet.
 
@@ -207,18 +211,18 @@ La possibilità di accedere alla Guida sensibile al contesto senza uscire dal cm
 
 Premendo F1 nelle versioni precedenti di Windows PowerShell ISE viene aperto il file della Guida nel computer locale. In Windows PowerShell ISE 3.0 e versioni successive viene visualizzata una finestra che contiene la Guida per il cmdlet, configurabile e nella quale è possibile eseguire ricerche. Questa esperienza della Guida è una novità di Windows PowerShell ISE 3.0 e la Guida aggiornabile è una novità di Windows PowerShell ISE 3.0.
 
-### <a name="BKMK_ShowCommand"></a>Cmdlet Show-Command
+### <a name="BKMK_ShowCommand"></a>Cmdlet Show\-Command
 **Funzionalità aggiunta in PowerShell 3.0**
 
-Il cmdlet **Show-Command** consente di comporre o eseguire un cmdlet o una funzione compilando un modulo grafico. Questo modulo consente agli utenti di usare Windows PowerShell in un ambiente grafico. **Show-Command** consente anche agli utenti esperti di script di creare un'interfaccia utente grafica rapida basata su Windows PowerShell.
+Il cmdlet **Show\-Command** consente di comporre o eseguire un cmdlet o una funzione compilando un modulo grafico. Questo modulo consente agli utenti di usare Windows PowerShell in un ambiente grafico. **Show-Command** consente anche agli utenti esperti di script di creare un'interfaccia utente grafica rapida basata su Windows PowerShell.
 
 **Valore aggiunto da queste modifiche**
 
-L'uso di **Show-Command** negli script di Windows PowerShell consente di offrire agli utenti l'ambiente grafico con cui hanno familiarità. **Show-Command** può anche essere utile agli utenti meno esperti per l'apprendimento di Windows PowerShell.
+L'uso di **Show\-Command** negli script di Windows PowerShell consente di offrire agli utenti l'ambiente grafico con cui hanno familiarità. **Show\-Command** può anche essere utile agli utenti meno esperti per l'apprendimento di Windows PowerShell.
 
 **Differenze di funzionamento**
 
-Show-Command è una novità di Windows PowerShell ISE 3.0.
+Show\-Command è una novità di Windows PowerShell ISE 3.0.
 
 ## <a name="BKMK_LINKS"></a>Vedere anche
 Per altre informazioni sull'uso di Windows PowerShell ISE in Windows PowerShell, vedere i collegamenti seguenti.
@@ -231,6 +235,7 @@ Per altre informazioni sull'uso di Windows PowerShell ISE in Windows PowerShell,
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

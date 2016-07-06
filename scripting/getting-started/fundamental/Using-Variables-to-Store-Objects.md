@@ -1,13 +1,17 @@
 ---
-title:  Uso di variabili per l'archiviazione di oggetti
-ms.date:  2016-05-11
-keywords:  powershell,cmdlet
-description:  
-ms.topic:  article
-author:  jpjofre
-manager:  dongill
-ms.prod:  powershell
-ms.assetid:  b1688d73-c173-491e-9ba6-6d0c1cc852de
+title: Uso di variabili per l'archiviazione di oggetti
+ms.date: 2016-05-11
+keywords: powershell,cmdlet
+description: 
+ms.topic: article
+author: jpjofre
+manager: dongill
+ms.prod: powershell
+ms.assetid: b1688d73-c173-491e-9ba6-6d0c1cc852de
+translationtype: Human Translation
+ms.sourcegitcommit: 03ac4b90d299b316194f1fa932e7dbf62d4b1c8e
+ms.openlocfilehash: c3bcf9dc6f70383e971d9c1ae75ec78860111de9
+
 ---
 
 # Uso di variabili per l'archiviazione di oggetti
@@ -39,7 +43,7 @@ Path
 C:\temp
 ```
 
-È possibile usare **Get-Member** per visualizzare informazioni sul contenuto delle variabili. L'invio tramite pipe di $loc a Get-Member mostrerà che si tratta di un oggetto **PathInfo**, proprio come l'output da Get-Location:
+È possibile usare **Get\-Member** per visualizzare informazioni sul contenuto delle variabili. L'invio tramite pipe di $loc a Get\-Member indicherà che si tratta di un oggetto **PathInfo**, proprio come l'output da Get\-Location:
 
 ```
 PS> $loc | Get-Member -MemberType Property
@@ -61,7 +65,7 @@ Windows PowerShell include diversi comandi per la manipolazione delle variabili.
 Get-Command -Noun Variable | Format-Table -Property Name,Definition -AutoSize -Wrap
 ```
 
-Oltre alle variabili create nella sessione corrente di Windows PowerShell, esistono diverse variabili definite dal sistema. È possibile usare il cmdlet **Remove-Variable** per cancellare tutte le variabili non controllate da Windows PowerShell. Digitare il comando seguente per cancellare tutte le variabili:
+Oltre alle variabili create nella sessione corrente di Windows PowerShell, esistono diverse variabili definite dal sistema. È possibile usare il cmdlet **Remove\-Variable** per cancellare tutte le variabili non controllate da Windows PowerShell. Digitare il comando seguente per cancellare tutte le variabili:
 
 ```
 Remove-Variable -Name * -Force -ErrorAction SilentlyContinue
@@ -77,7 +81,7 @@ Performing operation "Remove Variable" on Target "Name: Error".
 (default is "Y"):A
 ```
 
-Se si esegue poi il cmdlet **Get-Variable**, verranno visualizzate le variabili di Windows PowerShell rimanenti. Dato che esiste anche un'unità di Windows PowerShell per le variabili, è possibile visualizzare tutte le variabili di Windows PowerShell anche digitando:
+Se successivamente si esegue il cmdlet **Get\-Variable**, verranno visualizzate le variabili di Windows PowerShell rimanenti. Dato che esiste anche un'unità di Windows PowerShell per le variabili, è possibile visualizzare tutte le variabili di Windows PowerShell anche digitando:
 
 ```
 Get-ChildItem variable:
@@ -101,6 +105,7 @@ C:\WINDOWS
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

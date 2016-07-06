@@ -1,13 +1,17 @@
 ---
-title:  Accessibilità in Windows PowerShell ISE
-ms.date:  2016-05-11
-keywords:  powershell,cmdlet
-description:  
-ms.topic:  article
-author:  jpjofre
-manager:  dongill
-ms.prod:  powershell
-ms.assetid:  a078f9d1-dd6b-4323-b16d-0622cd993aa8
+title: "Accessibilità in Windows PowerShell ISE"
+ms.date: 2016-05-11
+keywords: powershell,cmdlet
+description: 
+ms.topic: article
+author: jpjofre
+manager: dongill
+ms.prod: powershell
+ms.assetid: a078f9d1-dd6b-4323-b16d-0622cd993aa8
+translationtype: Human Translation
+ms.sourcegitcommit: 03ac4b90d299b316194f1fa932e7dbf62d4b1c8e
+ms.openlocfilehash: a6581fe76bf29a0090f9dfa5ad41ec4fc7572998
+
 ---
 
 # Accessibilità in Windows PowerShell ISE
@@ -43,11 +47,11 @@ Windows PowerShell ISE supporta la modalità a contrasto elevato. Per gli utenti
 ### Per spostare il riquadro di script e il riquadro della console
 Eseguire una delle operazioni seguenti:
 
--   Per spostare il riquadro di script sopra i riquadri dei comandi e di output, premere **CTRL+1** o sulla barra degli strumenti fare clic sull'icona **Mostra riquadro di script in alto** oppure scegliere **Mostra riquadro di script in alto** dal menu **Visualizza**.
+-   Per spostare il riquadro di script sopra i riquadri dei comandi e di output, premere **CTRL\+1** o sulla barra degli strumenti fare clic sull'icona **Mostra riquadro di script in alto** oppure scegliere **Mostra riquadro di script in alto** dal menu **Visualizza**.
 
--   Per spostare il riquadro di script a destra del riquadro della console, premere **CTRL+2** o sulla barra degli strumenti fare clic sull'icona **Mostra riquadro di script a destra** oppure scegliere **Mostra riquadro di script a destra** dal menu **Visualizza**.
+-   Per spostare il riquadro di script a destra del riquadro della console, premere **CTRL\+2** o sulla barra degli strumenti fare clic sull'icona **Mostra riquadro di script a destra** oppure scegliere **Mostra riquadro di script a destra** dal menu **Visualizza**.
 
--   Per ingrandire il riquadro di script, premere **CTRL+3** o sulla barra degli strumenti fare clic sull'icona **Mostra riquadro di script ingrandito** oppure scegliere **Mostra riquadro di script ingrandito** dal menu **Visualizza**.
+-   Per ingrandire il riquadro di script, premere **CTRL\+3** o sulla barra degli strumenti fare clic sull'icona **Mostra riquadro di script ingrandito** oppure scegliere **Mostra riquadro di script ingrandito** dal menu **Visualizza**.
 
 -   Per ingrandire il riquadro della console e nascondere il riquadro di script, all'estrema destra della riga di schede fare clic sull'icona **Nascondi riquadro di script** oppure nel menu **Visualizza** fare clic per deselezionare l'opzione di menu **Mostra riquadro di script**.
 
@@ -58,62 +62,62 @@ Eseguire una delle operazioni seguenti:
 
 |Azione|Tasti di scelta rapida|Posizione|
 |----------|----------------------|----------|
-|**Copiare**|CTRL+C|Riquadro di script, riquadro dei comandi, riquadro di output|
-|**Taglia**|CTRL+X|Riquadro di script, riquadro dei comandi|
-|**Trova nello script**|CTRL+F|Riquadro di script|
+|**Copiare**|CTRL\+C|Riquadro di script, riquadro dei comandi, riquadro di output|
+|**Taglia**|CTRL\+X|Riquadro di script, riquadro dei comandi|
+|**Trova nello script**|CTRL\+F|Riquadro di script|
 |**Trova successivo nello script**|F3|Riquadro di script|
-|**Trova precedente nello script**|MAIUSC+F3|Riquadro di script|
-|**Incolla**|CTRL+V|Riquadro di script, riquadro dei comandi|
-|**Ripeti**|CTRL+Y|Riquadro di script, riquadro dei comandi|
-|**Sostituisci nello script**|CTRL+H|Riquadro di script|
-|**Salva**|CTRL+S|Riquadro di script|
-|**Seleziona tutto**|CTRL+A|Riquadro di script, riquadro dei comandi, riquadro di output|
-|**Annulla**|CTRL+Z|Riquadro di script, riquadro dei comandi|
+|**Trova precedente nello script**|MAIUSC\+F3|Riquadro di script|
+|**Incolla**|CTRL\+V|Riquadro di script, riquadro dei comandi|
+|**Ripeti**|CTRL\+Y|Riquadro di script, riquadro dei comandi|
+|**Sostituisci nello script**|CTRL\+H|Riquadro di script|
+|**Salva**|CTRL\+S|Riquadro di script|
+|**Seleziona tutto**|CTRL\+A|Riquadro di script, riquadro dei comandi, riquadro di output|
+|**Annulla**|CTRL\+Z|Riquadro di script, riquadro dei comandi|
 
 ## <a name="bkmk_3"></a>Tasti di scelta rapida per l'esecuzione di script
 È possibile usare i tasti di scelta rapida seguenti durante l'esecuzione di script nel riquadro di script.
 
 |Azione|Tasto di scelta rapida|
 |----------|---------------------|
-|**Nuovo**|CTRL+N|
-|**Apri**|CTRL+O|
+|**Nuovo**|CTRL\+N|
+|**Apri**|CTRL\+O|
 |**Esegui**|F5|
 |**Esegui selezione**|F8|
-|**Arresta operazione**|CTRL+INTERR. È possibile usare CTRL+C quando il contesto non è ambiguo (in assenza di testo selezionato).|
-|**TAB** (passaggio allo script successivo)|CTRL+TAB **Nota:** la pressione di TAB per passare allo script successivo funziona solo quando è aperta una sola scheda di PowerShell o quando sono aperte più schede di PowerShell, ma lo stato attivo si trova nel riquadro di script.|
-|**TAB** (passaggio allo script precedente)|CTRL+MAIUSC+TAB **Nota:** la pressione di TAB per passare allo script precedente funziona solo quando è aperta una sola scheda di PowerShell o quando sono aperte più schede di PowerShell, ma lo stato attivo si trova nel riquadro di script.|
+|**Arresta operazione**|CTRL\+INTERR. È possibile usare CTRL\+C quando il contesto non è ambiguo (in assenza di testo selezionato).|
+|**TAB** (passaggio allo script successivo)|CTRL\+TAB **Nota**: la pressione di TAB per passare allo script successivo funziona solo quando è aperta una sola scheda di PowerShell o quando sono aperte più schede di PowerShell, ma lo stato attivo si trova nel riquadro di script.|
+|**TAB** (passaggio allo script precedente)|CTRL\+MAIUSC\+TAB **Nota:** la pressione di TAB per passare allo script precedente funziona solo quando è aperta una sola scheda di PowerShell o quando sono aperte più schede di PowerShell e lo stato attivo si trova nel riquadro di script.|
 
 ## <a name="bkmk_4"></a>Tasti di scelta rapida per la personalizzazione della visualizzazione
 È possibile usare i tasti di scelta rapida seguenti per personalizzare la visualizzazione in Windows PowerShell ISE. Sono accessibili da tutti i riquadri nell'applicazione.
 
 |Azione|Tasto di scelta rapida|
 |----------|---------------------|
-|**Vai al riquadro dei comandi**|CTRL+D|
-|**Vai al riquadro di output**|CTRL+MAIUSC+O|
-|**Vai a riquadro di script**|CTRL+I|
-|**Mostra riquadro di script**|CTRL+R|
-|**Nascondi riquadro di script**|CTRL+R|
+|**Vai al riquadro dei comandi**|CTRL\+D|
+|**Vai al riquadro di output**|CTRL\+MAIUSC\+O|
+|**Vai a riquadro di script**|CTRL\+I|
+|**Mostra riquadro di script**|CTRL\+R|
+|**Nascondi riquadro di script**|CTRL\+R|
 ||
-|**Sposta riquadro di script in alto**|CTRL+1|
-|**Sposta riquadro di script a destra**|CTRL+2|
-|**Ingrandisci riquadro di script**|CTRL+3|
-|**Zoom avanti**|CTRL+SEGNO PIÙ|
-|**Zoom indietro**|CTRL+SEGNO MENO|
+|**Sposta riquadro di script in alto**|CTRL\+1|
+|**Sposta riquadro di script a destra**|CTRL\+2|
+|**Ingrandisci riquadro di script**|CTRL\+3|
+|**Zoom avanti**|CTRL\+SEGNO PIÙ|
+|**Zoom indietro**|CTRL\+SEGNO MENO|
 
 ## <a name="bkmk_5"></a>Tasti di scelta rapida per il debug di script
 È possibile usare i tasti di scelta rapida seguenti durante il debug di script.
 
 |Azione|Tasto di scelta rapida|Posizione|
 |----------|---------------------|----------|
-|**Esegui/Continua**|F5|Riquadro di script, durante il debug di uno script|
+|**Run\/Continue**|F5|Riquadro di script, durante il debug di uno script|
 |**Esegui istruzione**|F11|Riquadro di script, durante il debug di uno script|
 |**Esegui istruzione/routine**|F10|Riquadro di script, durante il debug di uno script|
-|**Esci da istruzione/routine**|MAIUSC+F11|Riquadro di script, durante il debug di uno script|
-|**Visualizza stack chiamate**|CTRL+MAIUSC+D|Riquadro di script, durante il debug di uno script|
-|**Elenca punti di interruzione**|CTRL+MAIUSC+L|Riquadro di script, durante il debug di uno script|
+|**Esci da istruzione/routine**|MAIUSC\+F11|Riquadro di script, durante il debug di uno script|
+|**Visualizza stack chiamate**|CTRL\+MAIUSC\+D|Riquadro di script, durante il debug di uno script|
+|**Elenca punti di interruzione**|CTRL\+MAIUSC\+L|Riquadro di script, durante il debug di uno script|
 |**Attiva/disattiva punto di interruzione**|F9|Riquadro di script, durante il debug di uno script|
-|**Rimuovi tutti i punti di interruzione**|CTRL+MAIUSC+F9|Riquadro di script, durante il debug di uno script|
-|**Arresta debugger**|MAIUSC+F5|Riquadro di script, durante il debug di uno script|
+|**Rimuovi tutti i punti di interruzione**|CTRL\+MAIUSC\+F9|Riquadro di script, durante il debug di uno script|
+|**Arresta debugger**|MAIUSC\+F5|Riquadro di script, durante il debug di uno script|
 
 > [!NOTE]
 > È anche possibile usare i tasti di scelta rapida progettati per la console di Windows PowerShell durante il debug degli script in Windows PowerShell ISE. Per usare questi tasti di scelta rapida, è necessario digitarli nel riquadro dei comandi e premere INVIO.
@@ -135,24 +139,25 @@ Eseguire una delle operazioni seguenti:
 
 |Azione|Tasto di scelta rapida|
 |----------|---------------------|
-|**Chiudi scheda di PowerShell**|CTRL+W|
-|**Nuova scheda di PowerShell**|CTRL+T|
-|**Scheda precedente di PowerShell**|CTRL+MAIUSC+TAB. Questo tasto di scelta rapida funziona solo se non ci sono file aperti in alcuna scheda di PowerShell.|
-|**Scheda successiva di Windows PowerShell**|CTRL+TAB. Questo tasto di scelta rapida funziona solo se non ci sono file aperti in alcuna scheda di PowerShell.|
+|**Chiudi scheda di PowerShell**|CTRL\+W|
+|**Nuova scheda di PowerShell**|CTRL\+T|
+|**Scheda precedente di PowerShell**|CTRL\+MAIUSC\+TAB. Questo tasto di scelta rapida funziona solo se non ci sono file aperti in alcuna scheda di PowerShell.|
+|**Scheda successiva di Windows PowerShell**|CTRL\+TAB. Questo tasto di scelta rapida funziona solo se non ci sono file aperti in alcuna scheda di PowerShell.|
 
 ## <a name="bkmk_7"></a>Tasti di scelta rapida per avvio e uscita
 È possibile usare i tasti di scelta rapida seguenti per avviare la console di Windows PowerShell (PowerShell.exe) o per uscire da Windows PowerShell ISE.
 
 |Azione|Tasto di scelta rapida|
 |----------|---------------------|
-|**Esci**|ALT+F4|
-|**Avviare PowerShell.exe** (console di Windows PowerShell).|CTRL+MAIUSC+P|
+|**Esci**|ALT\+F4|
+|**Avviare PowerShell.exe** (console di Windows PowerShell).|CTRL\+MAIUSC\+P|
 
 ## Vedere anche
 [Uso di Windows PowerShell ISE](../core-powershell/ise/Using-the-Windows-PowerShell-ISE.md)
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

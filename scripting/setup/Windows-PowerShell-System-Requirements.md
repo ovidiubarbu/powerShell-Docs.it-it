@@ -1,13 +1,17 @@
 ---
-title:  Requisiti di sistema di Windows PowerShell
-ms.date:  2016-05-11
-keywords:  powershell,cmdlet
-description:  
-ms.topic:  article
-author:  jpjofre
-manager:  dongill
-ms.prod:  powershell
-ms.assetid:  6d1d3c75-3be4-4fc9-8805-ca9b2c454d42
+title: Requisiti di sistema di Windows PowerShell
+ms.date: 2016-05-11
+keywords: powershell,cmdlet
+description: 
+ms.topic: article
+author: jpjofre
+manager: dongill
+ms.prod: powershell
+ms.assetid: 6d1d3c75-3be4-4fc9-8805-ca9b2c454d42
+translationtype: Human Translation
+ms.sourcegitcommit: 1ae9150b226147c039acf0738690de4da8686a71
+ms.openlocfilehash: e2e129c1c90ab7561861a7d9c71fb654569d5712
+
 ---
 
 # Requisiti di sistema di Windows PowerShell
@@ -43,12 +47,12 @@ Windows PowerShell 4.0 richiede l'installazione completa di Microsoft .NET Frame
 
 Windows PowerShell 3.0 richiede l'installazione completa di Microsoft .NET Framework 4. Windows 8 e Windows Server 2012 includono Microsoft .NET Framework 4.5 per impostazione predefinita, che soddisfa questo requisito.
 
-Per installare Microsoft .NET Framework 4.5 (dotNetFx45_Full_setup.exe), vedere [Microsoft .NET Framework 4.5](http://go.microsoft.com/fwlink/?LinkID=242919) nell'Area download Microsoft.
+Per installare Microsoft .NET Framework 4.5 (dotNetFx45Fullsetup\_Full\_setup.exe), vedere [Microsoft .NET Framework 4.5](http://go.microsoft.com/fwlink/?LinkID=242919) nell'Area download Microsoft.
 
-Per installare la versione completa di Microsoft .NET Framework 4 (dotNetFx40_Full_setup.exe), vedere [Microsoft .NET Framework 4 (Web Installer)](http://go.microsoft.com/fwlink/?LinkID=212931) nell'Area download Microsoft.
+Per installare la versione completa di Microsoft .NET Framework 4 (dotNetFx40\_Full\_setupFullsetup.exe), vedere [Microsoft .NET Framework 4 (Web Installer)](http://go.microsoft.com/fwlink/?LinkID=212931) nell'Area download Microsoft.
 
-## WS-Management 3.0
-Windows PowerShell 3.0 e Windows PowerShell 4.0 richiedono WS-Management 3.0, che supporta il servizio WinRM e il protocollo WS-Management. Questo programma è incluso in Windows 8.1, Windows Server 2012 R2, Windows 8, Windows Server 2012, Windows Management Framework 4.0 e Windows Management Framework 3.0.
+## WS\-Management 3.0
+Windows PowerShell 3.0 e Windows PowerShell 4.0 richiedono WS\-Management 3.0, che supporta il servizio WinRM e il protocollo WSMan. Questo programma è incluso in Windows 8.1, Windows Server 2012 R2, Windows 8, Windows Server 2012, Windows Management Framework 4.0 e Windows Management Framework 3.0.
 
 ## Strumentazione gestione Windows 3.0
 Windows PowerShell 3.0 e Windows PowerShell 4.0 richiedono Strumentazione gestione Windows 3.0 (WMI). Questo programma è incluso in Windows 8.1, Windows Server 2012 R2, Windows 8, Windows Server 2012, Windows Management Framework 4.0 e Windows Management Framework 3.0. Se il programma non è installato nel computer, le funzionalità che richiedono WMI, ad esempio i comandi CIM, non vengono eseguite.
@@ -77,10 +81,10 @@ Per alcuni elementi come i seguenti, tuttavia, è necessaria un'interfaccia uten
 
     1.  Parametro **ShowWindow** del cmdlet [Get-Help](https://technet.microsoft.com/en-us/library/1f46eeb4-49d7-4bec-bb29-395d9b42f54a).
 
-    2.  Parametro **ShowSecurityDescriptorUI** dei cmdlet [Register-PSSessionConfiguration](https://technet.microsoft.com/en-us/library/e9152ae2-bd6d-4056-9bc7-dc1893aa29ea) e [Set-PSSessionConfiguration](https://technet.microsoft.com/en-us/library/b21fbad3-1759-4260-b206-dcb8431cd6ea).
+    2.  Parametro **ShowSecurityDescriptorUi** dei cmdlet [Register-PSSessionConfiguration](https://technet.microsoft.com/en-us/library/e9152ae2-bd6d-4056-9bc7-dc1893aa29ea) e [Set-PSSessionConfiguration](https://technet.microsoft.com/en-us/library/b21fbad3-1759-4260-b206-dcb8431cd6ea).
 
 ## Requisiti del motore di Windows PowerShell
-Windows PowerShell 4.0 è progettato per essere compatibile con Windows PowerShell 3.0 e Windows PowerShell 2.0. I cmdlet, i provider, gli snap-in, i moduli e gli script scritti per Windows PowerShell 2.0 possono essere eseguiti senza modifiche in Windows PowerShell 3.0 e Windows PowerShell 4.0.
+Windows PowerShell 4.0 è progettato per essere compatibile con Windows PowerShell 3.0 e Windows PowerShell 2.0. I cmdlet, i provider, gli snap\-in, i moduli e gli script scritti per Windows PowerShell 2.0 e Windows PowerShell 3.0 possono essere eseguiti senza modifiche in Windows PowerShell 4.0.
 
 Tuttavia, a causa di una modifica nei criteri di attivazione di runtime in Microsoft .NET Framework 4, i programmi host di Windows PowerShell scritti per Windows PowerShell 2.0 e compilati con Common Language Runtime (CLR) 2.0 non possono essere eseguiti senza modifiche in Windows PowerShell 3.0, compilato con CLR 4.0.
 
@@ -101,7 +105,7 @@ Windows PowerShell 2.0, Windows PowerShell 3.0 e Windows PowerShell 4.0 eseguiti
 
 -   [Update-Help](https://technet.microsoft.com/en-us/library/93e1d870-ace6-432b-8778-8920291d7545)
 
-Il servizio **WinRM**, poi, non è presente in Windows PE.
+Il servizio **WinRm** non è presente in Windows PE.
 
 ## Vedere anche
 [Guida introduttiva a Windows PowerShell](../getting-started/Getting-Started-with-Windows-PowerShell.md)
@@ -112,6 +116,7 @@ Il servizio **WinRM**, poi, non è presente in Windows PE.
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -1,13 +1,17 @@
 ---
-title:  Oggetto ISEFile
-ms.date:  2016-05-11
-keywords:  powershell,cmdlet
-description:  
-ms.topic:  article
-author:  jpjofre
-manager:  dongill
-ms.prod:  powershell
-ms.assetid:  1c6d91f3-c556-42a2-a017-79b6b7b4b7db
+title: Oggetto ISEFile
+ms.date: 2016-05-11
+keywords: powershell,cmdlet
+description: 
+ms.topic: article
+author: jpjofre
+manager: dongill
+ms.prod: powershell
+ms.assetid: 1c6d91f3-c556-42a2-a017-79b6b7b4b7db
+translationtype: Human Translation
+ms.sourcegitcommit: 03ac4b90d299b316194f1fa932e7dbf62d4b1c8e
+ms.openlocfilehash: ce9364e8fb73a2d31b728430c590fef4175ebe26
+
 ---
 
 # Oggetto ISEFile
@@ -15,13 +19,13 @@ ms.assetid:  1c6d91f3-c556-42a2-a017-79b6b7b4b7db
 
 ## Metodo
 
-###  <a name="save-override"></a> Save( [saveEncoding] )
+###  <a name="save-override"></a> Save\( \[saveEncoding\] \)
   Supportato in Windows PowerShell ISE 2.0 e versioni successive. 
 
  Salva il file su disco.
 
- **\[saveEncoding\]** (facoltativo): [System.Text.Encoding](http://msdn.microsoft.com/library/system.text.encoding.aspx)
- Parametro di codifica caratteri facoltativo da usare per il file salvato. Il valore predefinito è **UTF8**.
+ **\[saveEncoding\]** – [System.Text.Encoding](http://msdn.microsoft.com/library/system.text.encoding.aspx)
+ facoltativo Parametro di codifica caratteri facoltativo da usare per il file salvato. Il valore predefinito è **UTF8**.
 
  **Eccezioni**
  -   **System.IO.IOException**: non è stato possibile salvare il file.
@@ -39,15 +43,15 @@ $myfile.Encoding
 
 ```
 
-###  <a name="saveas"></a> SaveAs(filename, [saveEncoding])
+###  <a name="saveas"></a> SaveAs\(filename, \[saveEncoding\]\)
   Supportato in Windows PowerShell ISE 2.0 e versioni successive. 
 
  Salva il file con il nome file e la codifica specificati.
 
- **filename**: stringa  Nome da usare per salvare il file.
+ **filename** \- Stringa Nome da usare per salvare il file.
 
- **\[saveEncoding\]** (facoltativo): [System.Text.Encoding](http://msdn.microsoft.com/library/system.text.encoding.aspx)
- Parametro di codifica caratteri facoltativo da usare per il file salvato. Il valore predefinito è **UTF8**.
+ **\[saveEncoding\]** – [System.Text.Encoding](http://msdn.microsoft.com/library/system.text.encoding.aspx)
+ facoltativo Parametro di codifica caratteri facoltativo da usare per il file salvato. Il valore predefinito è **UTF8**.
 
  **Eccezioni**
  -   **System.ArgumentNullException**: il parametro **filename** è Null.
@@ -70,7 +74,7 @@ $psIse.CurrentFile.SaveAs( $fullPath, [System.Text.Encoding]::UTF8 )
 ###  <a name="Displayname"></a> DisplayName
   Supportato in Windows PowerShell ISE 2.0 e versioni successive. 
 
- Proprietà di sola lettura che ottiene la stringa contenente il nome visualizzato di questo file. Il nome viene visualizzato nella scheda **File** nella parte superiore dell'editor. La presenza di un asterisco (*) alla fine del nome indica che il file contiene modifiche che non sono state salvate.
+ Proprietà di sola lettura che ottiene la stringa contenente il nome visualizzato di questo file. Il nome viene visualizzato nella scheda **File** nella parte superiore dell'editor. La presenza di un asterisco (\(\*\)) alla fine del nome indica che il file contiene modifiche che non sono state salvate.
 
 ```
 # Shows the display name of the file.
@@ -81,7 +85,7 @@ $psIse.CurrentFile.DisplayName
 ###  <a name="Editor"></a> Editor
   Supportato in Windows PowerShell ISE 2.0 e versioni successive. 
 
- Proprietà di sola lettura che ottiene l'[oggetto editor](The-ISEEditor-Object.md) usato per il file specificato.
+ Proprietà di sola lettura che ottiene [l'oggetto editor](The-ISEEditor-Object.md) usato per il file specificato.
 
 ```
 # Gets the editor and the text.
@@ -138,13 +142,14 @@ $psISE.CurrentFile.IsUntitled
 
 ## Vedere anche
  [Oggetto ISEFileCollection](The-ISEFileCollection-Object.md) 
- [The Windows PowerShell ISE Scripting Object Model](The-Windows-PowerShell-ISE-Scripting-Object-Model.md) (Modello a oggetti di scripting di Windows PowerShell ISE) 
+ [Modello a oggetti di Scripting di Windows PowerShell ISE](The-Windows-PowerShell-ISE-Scripting-Object-Model.md) 
  [Riferimenti al modello a oggetti di Windows PowerShell ISE](Windows-PowerShell-ISE-Object-Model-Reference.md) 
  [Gerarchia del modello a oggetti ISE](The-ISE-Object-Model-Hierarchy.md)
 
   
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 
