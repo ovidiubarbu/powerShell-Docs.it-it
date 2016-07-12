@@ -8,6 +8,7 @@ keywords: powershell,cmdlet,jea
 ms.date: 2016-06-22
 title: blacklist
 ms.technology: powershell
+translationtype: Human Translation
 ms.sourcegitcommit: 7504fe496a8913718847e45115d126caf4049bef
 ms.openlocfilehash: 8892e5e08a763fbc66d782bbc9252d1f3a7dcfcf
 
@@ -35,6 +36,6 @@ Il numero di comandi che possono essere esposti in base a una blacklist è da ge
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO1-->
 
 

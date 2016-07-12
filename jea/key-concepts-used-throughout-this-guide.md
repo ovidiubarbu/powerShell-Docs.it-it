@@ -8,6 +8,7 @@ keywords: powershell,cmdlet,jea
 ms.date: 2016-06-22
 title: concetti principali usati in questa guida
 ms.technology: powershell
+translationtype: Human Translation
 ms.sourcegitcommit: 7504fe496a8913718847e45115d126caf4049bef
 ms.openlocfilehash: 178fea44987b0c457b8e5d23fbe851ee12f03b31
 
@@ -56,6 +57,6 @@ I comandi eseguiti da questo utente vengono eseguiti nel contesto dell'utente Ru
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO1-->
 
 
