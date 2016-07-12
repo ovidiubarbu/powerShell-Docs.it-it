@@ -9,8 +9,8 @@ manager: dongill
 ms.prod: powershell
 ms.assetid: 4d781196-720b-4ccc-90d2-c570e5e719f5
 translationtype: Human Translation
-ms.sourcegitcommit: 03ac4b90d299b316194f1fa932e7dbf62d4b1c8e
-ms.openlocfilehash: 9f97cc71d42200fef268e344c9e20c5967b376f2
+ms.sourcegitcommit: ebf9d61bd67cc352d6d6404a9b592f856c99759e
+ms.openlocfilehash: c68e6d7d26a8a9b1e32a35e82dd705d95480c9bf
 
 ---
 
@@ -37,7 +37,7 @@ psUnsupportedConsoleApplications
 
 ```
 # See the local help map
-$psLocalHelp |Format-List
+$psLocalHelp | Format-List
 
 ```
 
@@ -58,7 +58,7 @@ $psLocalHelp.Add("get-myNoun","c:\MyFolder\MyHelpChm.chm::/html/0198854a-1298-57
  Si tratta di un oggetto dizionario che mantiene un mapping sensibile al contesto tra i titoli degli argomenti della Guida e i relativi URL esterni associati. Viene usato per trovare la Guida per un determinato argomento nel Web. È possibile aggiungere o eliminare argomenti da questo elenco.
 
 ```
-$psOnlineHelp |format-list
+$psOnlineHelp | Format-List
 
 ```
 
@@ -82,6 +82,6 @@ $psOnlineHelp.Add("get-myNoun","http://www.mydomain.com/MyNoun.html")
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO1-->
 
 
