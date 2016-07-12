@@ -2354,8 +2354,8 @@
 * Archive Datetime: 2016-07-12 13:13:49
 * Handback File: [core-powershell.94ba5d1996717b25414c15a5364425d4d49e05f1.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/f95aa0c6dc5ffea60646d6af7416be81b49cca7e/ol-handback/PowerShell/powerShell-Docs.it-it/live/core-powershell.94ba5d1996717b25414c15a5364425d4d49e05f1.it-it.xlf)
 * Handback Datetime: 2016-07-12 20:07:56
-* Bilingual File: [core-powershell.94ba5d1996717b25414c15a5364425d4d49e05f1.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/6e7c5d31de7a0d4c98d80051587726e0bde15ca7/ol-handback/PowerShell/powerShell-Docs.it-it/live/core-powershell.94ba5d1996717b25414c15a5364425d4d49e05f1.it-it.xlf)
-* Bilingual Datetime: 2016-07-05 12:55:28
+* Bilingual File: [core-powershell.94ba5d1996717b25414c15a5364425d4d49e05f1.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/f95aa0c6dc5ffea60646d6af7416be81b49cca7e/ol-handback/PowerShell/powerShell-Docs.it-it/live/core-powershell.94ba5d1996717b25414c15a5364425d4d49e05f1.it-it.xlf)
+* Bilingual Datetime: 2016-07-12 20:08:50
 * [Back to Top](#report-top)
 
 ##### <a name='8af4de973a95352fd41d2bb2823b9382899ef5bf142'></a> Source: [scripting\core-powershell\ise\How-to-Create-a-PowerShell-Tab-in-Windows-PowerShell-ISE.md](https://github.com/PowerShell/powerShell-Docs/blob/03ac4b90d299b316194f1fa932e7dbf62d4b1c8e/scripting/core-powershell/ise/How-to-Create-a-PowerShell-Tab-in-Windows-PowerShell-ISE.md)
@@ -3145,8 +3145,8 @@
 * Archive Datetime: 2016-07-12 13:13:49
 * Handback File: [Other-Useful-Scripting-Objects.459706091ef015585d8b721094a9c46e2e9926b5.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/f95aa0c6dc5ffea60646d6af7416be81b49cca7e/ol-handback/PowerShell/powerShell-Docs.it-it/live/Other-Useful-Scripting-Objects.459706091ef015585d8b721094a9c46e2e9926b5.it-it.xlf)
 * Handback Datetime: 2016-07-12 20:07:56
-* Bilingual File: [Other-Useful-Scripting-Objects.459706091ef015585d8b721094a9c46e2e9926b5.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/b023d92cd444e6d107b50b4e91dca9b5dead6742/ol-handback/PowerShell/powerShell-Docs.it-it/live/Other-Useful-Scripting-Objects.459706091ef015585d8b721094a9c46e2e9926b5.it-it.xlf)
-* Bilingual Datetime: 2016-07-06 11:37:25
+* Bilingual File: [Other-Useful-Scripting-Objects.459706091ef015585d8b721094a9c46e2e9926b5.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/f95aa0c6dc5ffea60646d6af7416be81b49cca7e/ol-handback/PowerShell/powerShell-Docs.it-it/live/Other-Useful-Scripting-Objects.459706091ef015585d8b721094a9c46e2e9926b5.it-it.xlf)
+* Bilingual Datetime: 2016-07-12 20:08:50
 * [Back to Top](#report-top)
 
 ##### <a name='6d878b89a4cd49948cb465525e74e92db819c192197'></a> Source: [scripting\getting-started\cookbooks\Performing-Networking-Tasks.md](https://github.com/PowerShell/powerShell-Docs/blob/03ac4b90d299b316194f1fa932e7dbf62d4b1c8e/scripting/getting-started/cookbooks/Performing-Networking-Tasks.md)
