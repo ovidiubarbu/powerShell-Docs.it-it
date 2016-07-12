@@ -9,8 +9,8 @@
 [ Archive Failed Files ](#archive-failed-list)| 0
 [ Archive Success Files ](#archive-success-list)| 37
 [ Handback Failed Files ](#handback-failed-list)| 0
-[ Out Of Sync Handback Files ](#outofsync-handback-success-list)| 75
-[ In Sync Handback Files ](#insync-handback-success-list)| 225
+[ Out Of Sync Handback Files ](#outofsync-handback-success-list)| 73
+[ In Sync Handback Files ](#insync-handback-success-list)| 227
 [ Ignored Files ](#ignored-list)| 17
 
 ## <a name='handoff-failed-list'></a> Handoff Failed File List
@@ -107,11 +107,9 @@
  [jea\remake-the-demo-endpoint.md](https://github.com/PowerShell/powerShell-Docs/blob/d20ea8418cb7389d756de94ea752cf604b8d07af/jea/remake-the-demo-endpoint.md) | OutofSyncHandedBackSuccess | [Details](#acd2cfbd038250a26236c875d0e8b03a32cd84f9113)
  [jea\role-capabilities.md](https://github.com/PowerShell/powerShell-Docs/blob/81fd386d58576a8930093b4f18ce36a4ff6cecd0/jea/role-capabilities.md) | OutofSyncHandedBackSuccess | [Details](#a3dd4a217f5b1fd80e97adf802c65073ca015bbc115)
  [jea\using-jea.md](https://github.com/PowerShell/powerShell-Docs/blob/88ce340c09efdbb3d81a72fe6113c1187a9152f2/jea/using-jea.md) | OutofSyncHandedBackSuccess | [Details](#9db7a5a91d25d459313117da34af63016f03c241117)
- [scripting\core-powershell\core-powershell.md](https://github.com/PowerShell/powerShell-Docs/blob/cd6e130d9f6f70449084d25eb386a3c0a2b84737/scripting/core-powershell/core-powershell.md) | OutofSyncHandedBackSuccess | [Details](#4c22e1a2543690a971836813cb32ace74ababb4a140)
  [scripting\core-powershell\Running-Remote-Commands.md](https://github.com/PowerShell/powerShell-Docs/blob/0f77e2d13a26c58d2a4813e57a76ba54dbcaac46/scripting/core-powershell/Running-Remote-Commands.md) | OutofSyncHandedBackSuccess | [Details](#48385de53964217b2f7d263d85bfb99b1dbf6507169)
  [scripting\getting-started\cookbooks\Changing-Computer-State.md](https://github.com/PowerShell/powerShell-Docs/blob/c6b87ed59a16ccb147fdd3d98e48cfa1c0aa748d/scripting/getting-started/cookbooks/Changing-Computer-State.md) | OutofSyncHandedBackSuccess | [Details](#d1f3c08451b385c56d0c4e084dce8fa5795c278e184)
  [scripting\getting-started\cookbooks\Collecting-Information-About-Computers.md](https://github.com/PowerShell/powerShell-Docs/blob/d698cdd29bfe165b87494696ca2dc3486be4ab0e/scripting/getting-started/cookbooks/Collecting-Information-About-Computers.md) | OutofSyncHandedBackSuccess | [Details](#96204a0ce674cacd5b830f9f8b820ce3e1cbbc20185)
- [scripting\getting-started\cookbooks\Other-Useful-Scripting-Objects.md](https://github.com/PowerShell/powerShell-Docs/blob/ebf9d61bd67cc352d6d6404a9b592f856c99759e/scripting/getting-started/cookbooks/Other-Useful-Scripting-Objects.md) | OutofSyncHandedBackSuccess | [Details](#c68e6d7d26a8a9b1e32a35e82dd705d95480c9bf196)
  [scripting\getting-started\fundamental\Scripting-with-Windows-PowerShell.md](https://github.com/PowerShell/powerShell-Docs/blob/03ac4b90d299b316194f1fa932e7dbf62d4b1c8e/scripting/getting-started/fundamental/Scripting-with-Windows-PowerShell.md) | OutofSyncHandedBackSuccess | [Details](#0148f4631e34e65a4336c5d1d50e313fb6639748222)
  [scripting\getting-started\Getting-Started-with-Windows-PowerShell.md](https://github.com/PowerShell/powerShell-Docs/blob/35dafe18719cd26977966a26d2781fc99cbf4097/scripting/getting-started/Getting-Started-with-Windows-PowerShell.md) | OutofSyncHandedBackSuccess | [Details](#d0f5fb26844edd4e07265a8c7d638f30a51244f7232)
  [scripting\setup\Accessibility-in-Windows-PowerShell-ISE.md](https://github.com/PowerShell/powerShell-Docs/blob/51b2182de7b563daefb9d64434bdc8b8ab5e0343/scripting/setup/Accessibility-in-Windows-PowerShell-ISE.md) | OutofSyncHandedBackSuccess | [Details](#cdf1f553d0bea91e2dcd051faef42417ad0cbc7a237)
@@ -223,6 +221,7 @@
  [scripting\core-powershell\core-modules\Windows-PowerShell-5.0.md](https://github.com/PowerShell/powerShell-Docs/blob/03ac4b90d299b316194f1fa932e7dbf62d4b1c8e/scripting/core-powershell/core-modules/Windows-PowerShell-5.0.md) | InSyncHandedBackSuccess | [Details](#8adf724740b2f09bff6d5cafb822566f4747780c137)
  [scripting\core-powershell\core-modules\Windows-PowerShell-Core-About-Topics.md](https://github.com/PowerShell/powerShell-Docs/blob/03ac4b90d299b316194f1fa932e7dbf62d4b1c8e/scripting/core-powershell/core-modules/Windows-PowerShell-Core-About-Topics.md) | InSyncHandedBackSuccess | [Details](#cc44c1deb8c3162b0d2188c2af313bf064290267138)
  [scripting\core-powershell\core-modules\Windows-PowerShell-Core-Providers.md](https://github.com/PowerShell/powerShell-Docs/blob/03ac4b90d299b316194f1fa932e7dbf62d4b1c8e/scripting/core-powershell/core-modules/Windows-PowerShell-Core-Providers.md) | InSyncHandedBackSuccess | [Details](#f6b1ca1a3253c941c76826c6644079a14f19ddcf139)
+ [scripting\core-powershell\core-powershell.md](https://github.com/PowerShell/powerShell-Docs/blob/cd6e130d9f6f70449084d25eb386a3c0a2b84737/scripting/core-powershell/core-powershell.md) | InSyncHandedBackSuccess | [Details](#4c22e1a2543690a971836813cb32ace74ababb4a140)
  [scripting\core-powershell\ise\How-to-Create-a-PowerShell-Tab-in-Windows-PowerShell-ISE.md](https://github.com/PowerShell/powerShell-Docs/blob/03ac4b90d299b316194f1fa932e7dbf62d4b1c8e/scripting/core-powershell/ise/How-to-Create-a-PowerShell-Tab-in-Windows-PowerShell-ISE.md) | InSyncHandedBackSuccess | [Details](#8af4de973a95352fd41d2bb2823b9382899ef5bf142)
  [scripting\core-powershell\ise\How-to-Debug-Scripts-in-Windows-PowerShell-ISE.md](https://github.com/PowerShell/powerShell-Docs/blob/03ac4b90d299b316194f1fa932e7dbf62d4b1c8e/scripting/core-powershell/ise/How-to-Debug-Scripts-in-Windows-PowerShell-ISE.md) | InSyncHandedBackSuccess | [Details](#c6d79fc7ef5a896bb3b686468adb540d4327605e143)
  [scripting\core-powershell\ise\How-to-Use-Profiles-in-Windows-PowerShell-ISE.md](https://github.com/PowerShell/powerShell-Docs/blob/03ac4b90d299b316194f1fa932e7dbf62d4b1c8e/scripting/core-powershell/ise/How-to-Use-Profiles-in-Windows-PowerShell-ISE.md) | InSyncHandedBackSuccess | [Details](#a8b729612c54e5f0f95497a71a192f16e2a9d32a144)
@@ -274,6 +273,7 @@
  [scripting\getting-started\cookbooks\Managing-Windows-PowerShell-Drives.md](https://github.com/PowerShell/powerShell-Docs/blob/03ac4b90d299b316194f1fa932e7dbf62d4b1c8e/scripting/getting-started/cookbooks/Managing-Windows-PowerShell-Drives.md) | InSyncHandedBackSuccess | [Details](#23d4f8d23170c4992092a2070baaedf4375be0d8193)
  [scripting\getting-started\cookbooks\Manipulating-Items-Directly.md](https://github.com/PowerShell/powerShell-Docs/blob/03ac4b90d299b316194f1fa932e7dbf62d4b1c8e/scripting/getting-started/cookbooks/Manipulating-Items-Directly.md) | InSyncHandedBackSuccess | [Details](#b7e752a1615da4540106ec32754f873c5d7aa5d9194)
  [scripting\getting-started\cookbooks\Multiple-selection-List-Boxes.md](https://github.com/PowerShell/powerShell-Docs/blob/03ac4b90d299b316194f1fa932e7dbf62d4b1c8e/scripting/getting-started/cookbooks/Multiple-selection-List-Boxes.md) | InSyncHandedBackSuccess | [Details](#84030be8564e10ce33e15c21f41bda79ea8fad7d195)
+ [scripting\getting-started\cookbooks\Other-Useful-Scripting-Objects.md](https://github.com/PowerShell/powerShell-Docs/blob/ebf9d61bd67cc352d6d6404a9b592f856c99759e/scripting/getting-started/cookbooks/Other-Useful-Scripting-Objects.md) | InSyncHandedBackSuccess | [Details](#c68e6d7d26a8a9b1e32a35e82dd705d95480c9bf196)
  [scripting\getting-started\cookbooks\Performing-Networking-Tasks.md](https://github.com/PowerShell/powerShell-Docs/blob/03ac4b90d299b316194f1fa932e7dbf62d4b1c8e/scripting/getting-started/cookbooks/Performing-Networking-Tasks.md) | InSyncHandedBackSuccess | [Details](#6d878b89a4cd49948cb465525e74e92db819c192197)
  [scripting\getting-started\cookbooks\PowerShellGet-Module.md](https://github.com/PowerShell/powerShell-Docs/blob/03ac4b90d299b316194f1fa932e7dbf62d4b1c8e/scripting/getting-started/cookbooks/PowerShellGet-Module.md) | InSyncHandedBackSuccess | [Details](#3093c4c307ff61151946c417d18cde8fe56278bc198)
  [scripting\getting-started\cookbooks\Redirecting-Data-with-Out---Cmdlets.md](https://github.com/PowerShell/powerShell-Docs/blob/03ac4b90d299b316194f1fa932e7dbf62d4b1c8e/scripting/getting-started/cookbooks/Redirecting-Data-with-Out---Cmdlets.md) | InSyncHandedBackSuccess | [Details](#955d00f61a8222ff83797fbc923357c6d85cad7a199)
@@ -2345,15 +2345,15 @@
 * [Back to Top](#report-top)
 
 ##### <a name='4c22e1a2543690a971836813cb32ace74ababb4a140'></a> Source: [scripting\core-powershell\core-powershell.md](https://github.com/PowerShell/powerShell-Docs/blob/cd6e130d9f6f70449084d25eb386a3c0a2b84737/scripting/core-powershell/core-powershell.md)
-* Status: OutofSyncHandedBackSuccess
-* Target File: [scripting\core-powershell\core-powershell.md](https://github.com/PowerShell/powerShell-Docs.it-it/blob/635e2e7b8d2595cd29ea9ced96e844361f6171cc/scripting/core-powershell/core-powershell.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [scripting\core-powershell\core-powershell.md](https://github.com/PowerShell/powerShell-Docs.it-it/blob/1f42455c4b9c9b50407b8b6e6aa71a9160504830/scripting/core-powershell/core-powershell.md)
 * Handoff File: [core-powershell.94ba5d1996717b25414c15a5364425d4d49e05f1.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/a2d1b3c522e3c3159f9079170a1a709302666217/ol-handoff/PowerShell/powerShell-Docs.it-it/live/core-powershell.94ba5d1996717b25414c15a5364425d4d49e05f1.it-it.xlf)
 * Handoff Datetime: 2016-07-06 23:50:37
 * Handoff Reason: Include
 * Archive File: [core-powershell.94ba5d1996717b25414c15a5364425d4d49e05f1.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/bbed98c58cebb983dc3eb59e9788377c66e8cc93/ol-handoff/PowerShell/powerShell-Docs.it-it/live/archive/core-powershell.94ba5d1996717b25414c15a5364425d4d49e05f1.it-it.xlf)
 * Archive Datetime: 2016-07-12 13:13:49
-* Handback File: [core-powershell.94ba5d1996717b25414c15a5364425d4d49e05f1.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/6e7c5d31de7a0d4c98d80051587726e0bde15ca7/ol-handback/PowerShell/powerShell-Docs.it-it/live/core-powershell.94ba5d1996717b25414c15a5364425d4d49e05f1.it-it.xlf)
-* Handback Datetime: 2016-07-05 12:54:44
+* Handback File: [core-powershell.94ba5d1996717b25414c15a5364425d4d49e05f1.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/f95aa0c6dc5ffea60646d6af7416be81b49cca7e/ol-handback/PowerShell/powerShell-Docs.it-it/live/core-powershell.94ba5d1996717b25414c15a5364425d4d49e05f1.it-it.xlf)
+* Handback Datetime: 2016-07-12 20:07:56
 * Bilingual File: [core-powershell.94ba5d1996717b25414c15a5364425d4d49e05f1.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/6e7c5d31de7a0d4c98d80051587726e0bde15ca7/ol-handback/PowerShell/powerShell-Docs.it-it/live/core-powershell.94ba5d1996717b25414c15a5364425d4d49e05f1.it-it.xlf)
 * Bilingual Datetime: 2016-07-05 12:55:28
 * [Back to Top](#report-top)
@@ -3136,18 +3136,15 @@
 * [Back to Top](#report-top)
 
 ##### <a name='c68e6d7d26a8a9b1e32a35e82dd705d95480c9bf196'></a> Source: [scripting\getting-started\cookbooks\Other-Useful-Scripting-Objects.md](https://github.com/PowerShell/powerShell-Docs/blob/ebf9d61bd67cc352d6d6404a9b592f856c99759e/scripting/getting-started/cookbooks/Other-Useful-Scripting-Objects.md)
-* Status: OutofSyncHandedBackSuccess
-* Target File: 
+* Status: InSyncHandedBackSuccess
+* Target File: [scripting\getting-started\cookbooks\Other-Useful-Scripting-Objects.md](https://github.com/PowerShell/powerShell-Docs.it-it/blob/1f42455c4b9c9b50407b8b6e6aa71a9160504830/scripting/getting-started/cookbooks/Other-Useful-Scripting-Objects.md)
 * Handoff File: [Other-Useful-Scripting-Objects.459706091ef015585d8b721094a9c46e2e9926b5.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/0903c28ad41c55e05a65b71a1bddd5467989649a/ol-handoff/PowerShell/powerShell-Docs.it-it/live/Other-Useful-Scripting-Objects.459706091ef015585d8b721094a9c46e2e9926b5.it-it.xlf)
 * Handoff Datetime: 2016-07-07 21:12:55
 * Handoff Reason: Include
 * Archive File: [Other-Useful-Scripting-Objects.459706091ef015585d8b721094a9c46e2e9926b5.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/bbed98c58cebb983dc3eb59e9788377c66e8cc93/ol-handoff/PowerShell/powerShell-Docs.it-it/live/archive/Other-Useful-Scripting-Objects.459706091ef015585d8b721094a9c46e2e9926b5.it-it.xlf)
 * Archive Datetime: 2016-07-12 13:13:49
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [scripting\getting-started\cookbooks\Other-Useful-Scripting-Objects.md](https://github.com/PowerShell/powerShell-Docs.it-it/blob/4f287b6b254a2866b5f6b9fc5473209f443bf252/scripting/getting-started/cookbooks/Other-Useful-Scripting-Objects.md)
-* Current Handback File: [Other-Useful-Scripting-Objects.459706091ef015585d8b721094a9c46e2e9926b5.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/b023d92cd444e6d107b50b4e91dca9b5dead6742/ol-handback/PowerShell/powerShell-Docs.it-it/live/Other-Useful-Scripting-Objects.459706091ef015585d8b721094a9c46e2e9926b5.it-it.xlf)
-* Current Handback Datetime: 2016-07-06 11:36:21
+* Handback File: [Other-Useful-Scripting-Objects.459706091ef015585d8b721094a9c46e2e9926b5.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/f95aa0c6dc5ffea60646d6af7416be81b49cca7e/ol-handback/PowerShell/powerShell-Docs.it-it/live/Other-Useful-Scripting-Objects.459706091ef015585d8b721094a9c46e2e9926b5.it-it.xlf)
+* Handback Datetime: 2016-07-12 20:07:56
 * Bilingual File: [Other-Useful-Scripting-Objects.459706091ef015585d8b721094a9c46e2e9926b5.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/b023d92cd444e6d107b50b4e91dca9b5dead6742/ol-handback/PowerShell/powerShell-Docs.it-it/live/Other-Useful-Scripting-Objects.459706091ef015585d8b721094a9c46e2e9926b5.it-it.xlf)
 * Bilingual Datetime: 2016-07-06 11:37:25
 * [Back to Top](#report-top)
