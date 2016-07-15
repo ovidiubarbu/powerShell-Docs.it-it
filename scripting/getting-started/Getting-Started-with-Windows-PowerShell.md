@@ -9,13 +9,13 @@ manager: dongill
 ms.prod: powershell
 ms.assetid: b0e2ad92-875f-421d-b612-f624e644aa69
 translationtype: Human Translation
-ms.sourcegitcommit: 03ac4b90d299b316194f1fa932e7dbf62d4b1c8e
-ms.openlocfilehash: bee671bf537a100bd8ad407f34ccd5fe63c7f9a8
+ms.sourcegitcommit: 35dafe18719cd26977966a26d2781fc99cbf4097
+ms.openlocfilehash: d0f5fb26844edd4e07265a8c7d638f30a51244f7
 
 ---
 
 # Guida introduttiva a Windows PowerShell
-Windows PowerShell è una nuova shell da riga di comando di Windows progettata appositamente per gli amministratori di sistema. Windows PowerShell include un prompt interattivo e un ambiente di scripting che può essere usato in modo indipendente o in combinazione.
+Windows PowerShell è una shell da riga di comando di Windows progettata appositamente per gli amministratori di sistema. Windows PowerShell include un prompt interattivo e un ambiente di scripting che può essere usato in modo indipendente o in combinazione.
 
 A differenza della maggior parte delle shell, che accetta e restituisce testo, Windows PowerShell si basa su CLR (Common Language Runtime) .NET Framework e su .NET Framework e accetta e restituisce oggetti .NET Framework. Questa modifica fondamentale nell'ambiente offre metodi e strumenti totalmente nuovi per la gestione e la configurazione di Windows.
 
@@ -38,6 +38,6 @@ In questo argomento
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO1-->
 
 

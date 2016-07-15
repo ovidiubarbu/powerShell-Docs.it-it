@@ -8,8 +8,8 @@ author: eslesar
 manager: dongill
 ms.prod: powershell
 translationtype: Human Translation
-ms.sourcegitcommit: 6477ae8575c83fc24150f9502515ff5b82bc8198
-ms.openlocfilehash: 801a0491746c17061d14d6d4938e7182650f6ff3
+ms.sourcegitcommit: e1d217b8e633779f55e195fbf80aeee83db01409
+ms.openlocfilehash: ad2b20a3a977dc33b27f8a1096a2b48fcb3abe0e
 
 ---
 
@@ -20,7 +20,7 @@ ms.openlocfilehash: 801a0491746c17061d14d6d4938e7182650f6ff3
 
 La risorsa **Script** in Windows PowerShell DSC (Desired State Configuration) fornisce un meccanismo per eseguire blocchi script di Windows PowerShell nei nodi di destinazione. La risorsa `Script` dispone delle proprietà `GetScript`, `SetScript` e `TestScript`. Queste proprietà devono essere impostate per i blocchi di script che verranno eseguiti in ogni nodo di destinazione. 
 
-Il blocco di script `GetScript` deve restituire una tabella hash che rappresenta lo stato del nodo corrente. Non è necessario restituire alcun valore. DSC non esegue alcuna operazione con l'output di questo blocco di script.
+Il blocco di script `GetScript` deve restituire una tabella hash che rappresenta lo stato del nodo corrente. La tabella hash deve contenere solo una chiave `Result` e il valore deve essere di tipo `String`. Non è necessario restituire alcun valore. DSC non esegue alcuna operazione con l'output di questo blocco di script.
 
 Il blocco di script `TestScript` dovrebbe indicare se il nodo corrente necessita di modifica. Il blocco restituirà `$true` se il nodo è aggiornato. Il blocco restituirà `$false` se la configurazione del nodo non è aggiornata e deve essere aggiornata per il blocco di script `SetScript`. Il blocco di script `TestScript` viene chiamato da DSC.
 
@@ -46,7 +46,7 @@ Script [string] #ResourceName
 
 |  Proprietà  |  Descrizione   | 
 |---|---| 
-| GetScript| Fornisce un blocco script di Windows PowerShell eseguito quando si richiama il cmdlet [Get-DscConfiguration](https://technet.microsoft.com/en-us/library/dn407379.aspx). Questo blocco deve restituire una tabella hash.| 
+| GetScript| Fornisce un blocco script di Windows PowerShell eseguito quando si richiama il cmdlet [Get-DscConfiguration](https://technet.microsoft.com/en-us/library/dn407379.aspx). Questo blocco deve restituire una tabella hash. La tabella hash deve contenere solo una chiave **Result** e il valore deve essere di tipo **String**.| 
 | SetScript| Fornisce un blocco script di Windows PowerShell. Quando si richiama il cmdlet [Start-DscConfiguration](https://technet.microsoft.com/en-us/library/dn521623.aspx), il blocco **TestScript** viene eseguito per primo. Se il blocco **TestScript** restituisce **$false**, il blocco **SetScript** viene eseguito. Se il blocco **TestScript** restituisce **$true**, il blocco **SetScript** non viene eseguito.| 
 | TestScript| Fornisce un blocco script di Windows PowerShell. Quando si richiama il cmdlet [Start-DscConfiguration](https://technet.microsoft.com/en-us/library/dn521623.aspx), questo blocco viene eseguito. Se restituisce **$false**, il blocco SetScript viene eseguito. Se restituisce **$true**, il blocco SetScript non viene eseguito. Il blocco **TestScript** viene eseguito anche quando si richiama il cmdlet [Test-DscConfiguration](https://technet.microsoft.com/en-us/library/dn407382.aspx). In questo caso, tuttavia, il blocco **SetScript** non viene eseguito, indipendentemente dal valore restituito dal blocco TestScript. Il blocco **TestScript** deve restituire True se l'effettiva configurazione corrisponde alla configurazione dello stato desiderato corrente e False in caso contrario. La configurazione dello stato desiderato corrente è l'ultima configurazione applicata nel nodo che usa DSC.| 
 | Credential| Indica le credenziali da usare per l'esecuzione dello script, se sono necessarie credenziali.| 
@@ -62,7 +62,7 @@ Script ScriptExample
         $sw.Close()
     }
     TestScript = { Test-Path "C:\TempFolder\TestFile.txt" }
-    GetScript = { <# This must return a hash table #> }          
+    GetScript = { @{ Result = (Get-Content C:\TempFolder\TestFile.txt) } }          
 }
 ```
 
@@ -73,7 +73,7 @@ Script UpdateConfigurationVersion
 {
     GetScript = { 
         $currentVersion = Get-Content (Join-Path -Path $env:SYSTEMDRIVE -ChildPath 'version.txt')
-        return @{ 'Version' = $currentVersion }
+        return @{ 'Result' = "Version: $currentVersion" }
     }          
     TestScript = { 
         $state = GetScript
@@ -96,6 +96,6 @@ Questa risorsa scrive la versione della configurazione di un file di testo. Ques
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO1-->
 
 

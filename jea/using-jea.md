@@ -8,8 +8,9 @@ keywords: powershell,cmdlet,jea
 ms.date: 2016-06-22
 title: uso di jea
 ms.technology: powershell
-ms.sourcegitcommit: 7504fe496a8913718847e45115d126caf4049bef
-ms.openlocfilehash: 3bac5932c3ed57713bdb08e3a9ed435b228518bc
+translationtype: Human Translation
+ms.sourcegitcommit: 88ce340c09efdbb3d81a72fe6113c1187a9152f2
+ms.openlocfilehash: 9db7a5a91d25d459313117da34af63016f03c241
 
 ---
 
@@ -49,7 +50,7 @@ Get-Command
 ```
 
 Come si può vedere, si tratta di un subset molto limitato dei comandi disponibili in una normale finestra di PowerShell, che spesso può includere diverse migliaia di comandi.
-In particolare, visualizza solo i 7 cmdlet JEA predefiniti (Clear-Host, Exit-PSSession, Get-Command, Get-FormatData, Get-Help, Measure-Object, Out-Default, Select-Object) e i due comandi inclusi in modo esplicito nel file di capacità del ruolo per la manutenzione.
+In particolare, visualizza solo gli 8 comandi JEA predefiniti (Clear-Host, Exit-PSSession, Get-Command, Get-FormatData, Get-Help, Measure-Object, Out-Default, Select-Object) e i due comandi inclusi in modo esplicito nel file di capacità del ruolo per la manutenzione.
 
 Osservare quindi il contesto utente in cui opera questa sessione richiamando la funzione personalizzata inclusa nel file di capacità del ruolo per la manutenzione:
 
@@ -96,6 +97,6 @@ In questo modo l'utente viene disconnesso dalla sessione di PowerShell remota.
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO1-->
 
 

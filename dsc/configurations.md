@@ -1,20 +1,23 @@
 ---
-title:   Configurazioni DSC
-ms.date:  2016-05-16
-keywords:  powershell,DSC
-description:  
-ms.topic:  article
-author:  eslesar
-manager:  dongill
-ms.prod:  powershell
+title: Configurazioni DSC
+ms.date: 2016-05-16
+keywords: powershell,DSC
+description: 
+ms.topic: article
+author: eslesar
+manager: dongill
+ms.prod: powershell
+translationtype: Human Translation
+ms.sourcegitcommit: 59bf4cff540dabeeb77038ea84177f7c6bac2b4b
+ms.openlocfilehash: e5412a3168a18d1dbd117ed8b3eb6dd42a8d8f70
+
 ---
 
 # Configurazioni DSC
 
 >Si applica a: Windows PowerShell 4.0, Windows PowerShell 5.0
 
-Le configurazioni DSC sono script di PowerShell che definiscono un tipo speciale di funzione. 
-Per definire una configurazione, usare la parola chiave __Configuration__ di PowerShell.
+Le configurazioni DSC sono script di PowerShell che definiscono un tipo speciale di funzione. Per definire una configurazione, usare la parola chiave __Configuration__ di PowerShell.
 
 ```powershell
 Configuration MyDscConfiguration {
@@ -69,10 +72,11 @@ In questo esempio è necessario specificare il nome del nodo passandolo come par
 Prima di poter applicare una configurazione, è necessario compilarla in un documento MOF. A questo scopo, è necessario chiamare la configurazione allo stesso modo in cui si chiama una funzione di PowerShell.
 >__Nota:__ per chiamare una configurazione, la funzione deve essere nell'ambito globale (come per qualsiasi funzione di PowerShell). A questo scopo, è possibile effettuare il "dot-sourcing" dello script oppure eseguire lo script di configurazione premendo F5 o facendo clic sul pulsante __Esegui script__ in ISE. Per effettuare il dot-sourcing dello script, eseguire il comando `. .\myConfig.ps1`, dove `myConfig.ps1` è il nome del file di script che contiene la configurazione.
 
-Quando si chiama la configurazione, vengono creati gli elementi seguenti:
+Quando si chiama la configurazione, si verificano gli scenari seguenti:
 
-- Una cartella nella directory locale con lo stesso nome della configurazione.
-- Un file denominato _NomeNodo_.mof nella nuova directory, dove _NomeNodo_ è il nome del nodo di destinazione della configurazione. In presenza di più nodi, viene creato un file MOF per ognuno.
+- Risoluzione di tutte le variabili 
+- Creazione di una cartella nella directory corrente con lo stesso nome della configurazione.
+- Creazione di un file denominato _NomeNodo_.mof nella nuova directory, dove _NomeNodo_ è il nome del nodo di destinazione della configurazione. In presenza di più nodi, viene creato un file MOF per ognuno.
 
 >__Nota__: il file MOF contiene tutte le informazioni di configurazione per il nodo di destinazione. Per questo motivo, è importante garantirne la sicurezza. Per altre informazioni, vedere [Protezione del file MOF](secureMOF.md).
 
@@ -121,8 +125,7 @@ Configuration DependsOnExample {
 
 ## Uso di nuove risorse nella configurazione
 Eseguendo gli esempi precedenti, si ricevere un avviso che informa che è stata usata una risorsa senza importarla in modo esplicito.
-Oggi DSC include 12 risorse come parte del modulo PSDesiredStateConfiguration. Le altre risorse nei moduli esterni devono essere inserite in `$env:PSModulePath` nell'ordine perché Gestione configurazione locale sia in grado di riconoscerle. È possibile usare un nuovo cmdlet, [Get-DscResource](https://technet.microsoft.com/en-us/library/dn521625.aspx), per determinare le risorse installate nel sistema e disponibili per l'uso da parte di Gestione configurazione locale. 
-Dopo che i moduli vengono inseriti in `$env:PSModulePath` e sono riconosciuti correttamente da [Get-DscResource](https://technet.microsoft.com/en-us/library/dn521625.aspx), devono comunque essere caricati nella configurazione. __Import-DscResource__ è una parola chiave dinamica che può essere riconosciuta solo all'interno di un blocco __Configuration__, ovvero non è un cmdlet. __Import-DscResource__ supporta due parametri:
+Oggi DSC include 12 risorse come parte del modulo PSDesiredStateConfiguration. Le altre risorse nei moduli esterni devono essere inserite in `$env:PSModulePath` nell'ordine perché Gestione configurazione locale sia in grado di riconoscerle. È possibile usare un nuovo cmdlet, [Get-DscResource](https://technet.microsoft.com/en-us/library/dn521625.aspx), per determinare le risorse installate nel sistema e disponibili per l'uso da parte di Gestione configurazione locale. Dopo che i moduli vengono inseriti in `$env:PSModulePath` e sono riconosciuti correttamente da [Get-DscResource](https://technet.microsoft.com/en-us/library/dn521625.aspx), devono comunque essere caricati nella configurazione. __Import-DscResource__ è una parola chiave dinamica che può essere riconosciuta solo all'interno di un blocco __Configuration__, ovvero non è un cmdlet. __Import-DscResource__ supporta due parametri:
 * __ModuleName__ corrisponde al modo consigliato di usare __Import-DscResource__. Questo parametro accetta il nome del modulo che contiene le risorse da importare, nonché una matrice di stringhe di nomi di modulo. 
 * __Name__ è il nome della risorsa da importare. Non si tratta del nome descrittivo restituito come "Name" da [Get-DscResource](https://technet.microsoft.com/en-us/library/dn521625.aspx), ma del nome di classe usato per definire lo schema della risorsa (restituito come __ResourceType__ da [Get-DscResource](https://technet.microsoft.com/en-us/library/dn521625.aspx)). 
 
@@ -133,6 +136,7 @@ Dopo che i moduli vengono inseriti in `$env:PSModulePath` e sono riconosciuti co
 
 
 
-<!--HONumber=May16_HO3-->
+
+<!--HONumber=Jul16_HO1-->
 
 

@@ -8,8 +8,8 @@ author: eslesar
 manager: dongill
 ms.prod: powershell
 translationtype: Human Translation
-ms.sourcegitcommit: d367048eab0ba3fd67baed2ee27332ce0827d5ac
-ms.openlocfilehash: a09f228cf232ff9d7cf2ba20c73808fd92c9d560
+ms.sourcegitcommit: 02ef02d4eeeaa5e080b74ec220812d3b5316f244
+ms.openlocfilehash: 369b6379c3ddc4b7ccd1000aec9b0b002e1934b3
 
 ---
 
@@ -296,8 +296,7 @@ SRV1   5          6/23/2016 4:36:51 PM  Success                                 
 
 ### Acquisizione dei dettagli degli eventi DSC
 
-Il `Trace-xDscOperation1 cmdlet returns an object containing a collection of events, their event types, and the message output generated from a particular DSC operation. Typically, when you find a failure 
-in any of the operations using `Get-xDscOperation, è necessario tracciare l'operazione per scoprire quali eventi hanno causato un errore.
+`Trace-xDscOperation1 cmdlet returns an object containing a collection of events, their event types, and the message output generated from a particular DSC operation. Typically, when you find a failure in any of the operations using `Get-xDscOperation si traccia l'operazione per scoprire quali eventi hanno causato un errore.
 
 Usare il parametro `SequenceID` per ottenere gli eventi per un'operazione specifica in un computer specifico. Ad esempio, se si specifica 9 come `SequenceID`, `Trace-xDscOperaion` ottiene la traccia per l'operazione DSC al nono posto dopo l'ultima operazione:
 
@@ -628,6 +627,6 @@ onlyProperty                            PSComputerName
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO1-->
 
 

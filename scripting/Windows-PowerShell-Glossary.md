@@ -9,8 +9,8 @@ manager: dongill
 ms.prod: powershell
 ms.assetid: b0f88cbe-cb83-4912-a301-184534cb35c7
 translationtype: Human Translation
-ms.sourcegitcommit: 03ac4b90d299b316194f1fa932e7dbf62d4b1c8e
-ms.openlocfilehash: 0cd377653a3ca82052b1b88f00bfe92830f2020f
+ms.sourcegitcommit: ea25f98e60050a52fc1d72c7e529985855eeed36
+ms.openlocfilehash: ab41246eda58eb384500daa1f99aa9a8f9e019e1
 
 ---
 
@@ -22,7 +22,7 @@ ms.openlocfilehash: 0cd377653a3ca82052b1b88f00bfe92830f2020f
 |modulo binario|Modulo di Windows PowerShell il cui modulo radice è un file di modulo binario (con estensione dll). Un modulo binario può includere o meno un manifesto del modulo.|
 |parametro comune|Parametro aggiunto a tutti i cmdlet e tutte le funzioni avanzate dal motore di Windows PowerShell.|
 |dot sourcing|In Windows PowerShell, avviare un comando digitando un punto e uno spazio prima del comando. I comandi con dot sourcing vengono eseguiti nell'ambito corrente anziché in un nuovo ambito. Qualsiasi variabile, alias, funzione o unità creata dal comando viene creato nell'ambito corrente ed è disponibile per gli utenti dopo il completamento del comando.|
-|modulo dinamico|Modulo che esiste solo in memoria. Il cmdlet Import\-PSSession crea moduli dinamici.|
+|modulo dinamico|Modulo che esiste solo in memoria. I cmdlet New-Module e Import-PSSession creano moduli dinamici.|
 |parametro dinamico|Parametro aggiunto a un cmdlet, una funzione o uno script di Windows PowerShell in determinate condizioni. I cmdlet, le funzioni, i provider e gli script possono aggiungere parametri dinamici.|
 |file di formattazione|File XML di Windows PowerShell con estensione format.ps1xml che definisce la modalità di visualizzazione di un oggetto in Windows PowerShell in base al relativo tipo .NET Framework.|
 |stato della sessione globale|Stato della sessione contenente i dati accessibili all'utente di una sessione di Windows PowerShell.|
@@ -64,6 +64,6 @@ ms.openlocfilehash: 0cd377653a3ca82052b1b88f00bfe92830f2020f
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO1-->
 
 

@@ -9,8 +9,8 @@ manager: dongill
 ms.prod: powershell
 ms.assetid: a078f9d1-dd6b-4323-b16d-0622cd993aa8
 translationtype: Human Translation
-ms.sourcegitcommit: 03ac4b90d299b316194f1fa932e7dbf62d4b1c8e
-ms.openlocfilehash: a6581fe76bf29a0090f9dfa5ad41ec4fc7572998
+ms.sourcegitcommit: 51b2182de7b563daefb9d64434bdc8b8ab5e0343
+ms.openlocfilehash: cdf1f553d0bea91e2dcd051faef42417ad0cbc7a
 
 ---
 
@@ -47,7 +47,7 @@ Windows PowerShell ISE supporta la modalità a contrasto elevato. Per gli utenti
 ### Per spostare il riquadro di script e il riquadro della console
 Eseguire una delle operazioni seguenti:
 
--   Per spostare il riquadro di script sopra i riquadri dei comandi e di output, premere **CTRL\+1** o sulla barra degli strumenti fare clic sull'icona **Mostra riquadro di script in alto** oppure scegliere **Mostra riquadro di script in alto** dal menu **Visualizza**.
+-   Per spostare Riquadro di script sopra Riquadro console, premere **CTRL\+1** o sulla barra degli strumenti fare clic sull'icona **Mostra riquadro di script in alto** oppure scegliere **Mostra riquadro di script in alto** dal menu **Visualizza**.
 
 -   Per spostare il riquadro di script a destra del riquadro della console, premere **CTRL\+2** o sulla barra degli strumenti fare clic sull'icona **Mostra riquadro di script a destra** oppure scegliere **Mostra riquadro di script a destra** dal menu **Visualizza**.
 
@@ -62,17 +62,17 @@ Eseguire una delle operazioni seguenti:
 
 |Azione|Tasti di scelta rapida|Posizione|
 |----------|----------------------|----------|
-|**Copiare**|CTRL\+C|Riquadro di script, riquadro dei comandi, riquadro di output|
-|**Taglia**|CTRL\+X|Riquadro di script, riquadro dei comandi|
+|**Copiare**|CTRL\+C|Riquadro di script, Riquadro Console|
+|**Taglia**|CTRL\+X|Riquadro di script, Riquadro Console|
 |**Trova nello script**|CTRL\+F|Riquadro di script|
 |**Trova successivo nello script**|F3|Riquadro di script|
 |**Trova precedente nello script**|MAIUSC\+F3|Riquadro di script|
-|**Incolla**|CTRL\+V|Riquadro di script, riquadro dei comandi|
-|**Ripeti**|CTRL\+Y|Riquadro di script, riquadro dei comandi|
+|**Incolla**|CTRL\+V|Riquadro di script, Riquadro Console|
+|**Ripeti**|CTRL\+Y|Riquadro di script, Riquadro Console|
 |**Sostituisci nello script**|CTRL\+H|Riquadro di script|
 |**Salva**|CTRL\+S|Riquadro di script|
-|**Seleziona tutto**|CTRL\+A|Riquadro di script, riquadro dei comandi, riquadro di output|
-|**Annulla**|CTRL\+Z|Riquadro di script, riquadro dei comandi|
+|**Seleziona tutto**|CTRL\+A|Riquadro di script, Riquadro Console|
+|**Annulla**|CTRL\+Z|Riquadro di script, Riquadro Console|
 
 ## <a name="bkmk_3"></a>Tasti di scelta rapida per l'esecuzione di script
 È possibile usare i tasti di scelta rapida seguenti durante l'esecuzione di script nel riquadro di script.
@@ -92,8 +92,7 @@ Eseguire una delle operazioni seguenti:
 
 |Azione|Tasto di scelta rapida|
 |----------|---------------------|
-|**Vai al riquadro dei comandi**|CTRL\+D|
-|**Vai al riquadro di output**|CTRL\+MAIUSC\+O|
+|**Vai a Riquadro console**|CTRL\+D|
 |**Vai a riquadro di script**|CTRL\+I|
 |**Mostra riquadro di script**|CTRL\+R|
 |**Nascondi riquadro di script**|CTRL\+R|
@@ -109,7 +108,7 @@ Eseguire una delle operazioni seguenti:
 
 |Azione|Tasto di scelta rapida|Posizione|
 |----------|---------------------|----------|
-|**Run\/Continue**|F5|Riquadro di script, durante il debug di uno script|
+|**Esegui/Continua**|F5|Riquadro di script, durante il debug di uno script|
 |**Esegui istruzione**|F11|Riquadro di script, durante il debug di uno script|
 |**Esegui istruzione/routine**|F10|Riquadro di script, durante il debug di uno script|
 |**Esci da istruzione/routine**|MAIUSC\+F11|Riquadro di script, durante il debug di uno script|
@@ -120,19 +119,19 @@ Eseguire una delle operazioni seguenti:
 |**Arresta debugger**|MAIUSC\+F5|Riquadro di script, durante il debug di uno script|
 
 > [!NOTE]
-> È anche possibile usare i tasti di scelta rapida progettati per la console di Windows PowerShell durante il debug degli script in Windows PowerShell ISE. Per usare questi tasti di scelta rapida, è necessario digitarli nel riquadro dei comandi e premere INVIO.
+> È anche possibile usare i tasti di scelta rapida progettati per la console di Windows PowerShell durante il debug degli script in Windows PowerShell ISE. Per usare questi tasti di scelta rapida, è necessario digitarli in Riquadro console e premere INVIO.
 
 |Azione|Tasto di scelta rapida|Posizione|
 |----------|---------------------|----------|
-|**Continua**|C|Riquadro dei comandi, durante il debug di uno script|
-|**Esegui istruzione**|S|Riquadro dei comandi, durante il debug di uno script|
-|**Esegui istruzione/routine**|V|Riquadro dei comandi, durante il debug di uno script|
-|**Esci da istruzione/routine**|O|Riquadro dei comandi, durante il debug di uno script|
-|**Ripeti ultimo comando** (per Esegui istruzione o Esegui istruzione/routine)|INVIO|Riquadro dei comandi, durante il debug di uno script|
-|**Visualizza stack chiamate**|K|Riquadro dei comandi, durante il debug di uno script|
-|**Arresta debug**|Q|Riquadro dei comandi, durante il debug di uno script|
-|**Elenca lo script**|L|Riquadro dei comandi, durante il debug di uno script|
-|**Visualizza i comandi di debug della console**|H o ?|Riquadro dei comandi, durante il debug di uno script|
+|**Continua**|C|Riquadro della console, durante il debug di uno script|
+|**Esegui istruzione**|S|Riquadro della console, durante il debug di uno script|
+|**Esegui istruzione/routine**|V|Riquadro della console, durante il debug di uno script|
+|**Esci da istruzione/routine**|O|Riquadro della console, durante il debug di uno script|
+|**Ripeti ultimo comando** (per Esegui istruzione o Esegui istruzione/routine)|INVIO|Riquadro della console, durante il debug di uno script|
+|**Visualizza stack chiamate**|K|Riquadro della console, durante il debug di uno script|
+|**Arresta debug**|Q|Riquadro della console, durante il debug di uno script|
+|**Elenca lo script**|L|Riquadro della console, durante il debug di uno script|
+|**Visualizza i comandi di debug della console**|H o ?|Riquadro della console, durante il debug di uno script|
 
 ## <a name="bkmk_6"></a>Tasti di scelta rapida per le schede di Windows PowerShell
 È possibile usare i tasti di scelta rapida seguenti durante l'uso delle schede di PowerShell.
@@ -158,6 +157,6 @@ Eseguire una delle operazioni seguenti:
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO1-->
 
 

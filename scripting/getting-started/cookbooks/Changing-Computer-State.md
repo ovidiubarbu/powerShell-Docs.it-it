@@ -9,8 +9,8 @@ manager: dongill
 ms.prod: powershell
 ms.assetid: 8093268b-27f8-4a49-8871-142c5cc33f01
 translationtype: Human Translation
-ms.sourcegitcommit: 03ac4b90d299b316194f1fa932e7dbf62d4b1c8e
-ms.openlocfilehash: 13b1fd65b9dddf2570e7ab9c5420c0a6d18ce35e
+ms.sourcegitcommit: c6b87ed59a16ccb147fdd3d98e48cfa1c0aa748d
+ms.openlocfilehash: d1f3c08451b385c56d0c4e084dce8fa5795c278e
 
 ---
 
@@ -31,7 +31,7 @@ Quando si blocca una workstation mentre è abilitata la funzionalità Cambio rap
 Per arrestare una sessione specifica in Terminal Server, usare lo strumento da riga di comando **tsshutdn.exe**.
 
 ### Disconnessione dalla sessione corrente
-È possibile usare alcune tecniche diverse per disconnettersi da una sessione nel sistema locale. Il modo più semplice è usare lo strumento da riga di comando di Desktop remoto\/Servizi terminal, **logoff.exe**. Per altri dettagli, al prompt di Windows PowerShell digitare **logoff \/?**. Per disconnettere la sessione attiva corrente, digitare **logoff** senza argomenti.
+È possibile usare alcune tecniche diverse per disconnettersi da una sessione nel sistema locale. Il modo più semplice consiste nell'usare lo strumento da riga di comando di Desktop remoto/Servizi terminal, **logoff.exe**. Per altre informazioni dettagliate, al prompt di Windows PowerShell digitare **logoff /?**. Per disconnettere la sessione attiva corrente, digitare **logoff** senza argomenti.
 
 È anche possibile usare lo strumento **shutdown.exe** con la relativa opzione di disconnessione:
 
@@ -48,7 +48,7 @@ Una terza opzione prevede l'uso di WMI. La classe Win32\_OperatingSystem include
 Per altre informazioni e per individuare altre funzionalità del metodo Win32Shutdown, vedere "Metodo Win32Shutdown della classe Win32\_OperatingSystem" in MSDN.
 
 ### Arresto o riavvio di un computer
-L'arresto e il riavvio dei computer sono in genere gli stessi tipi di attività. Gli strumenti per l'arresto di un computer di solito consentono anche di riavviarlo e viceversa. Sono disponibili due opzioni semplici per riavviare un computer da Windows PowerShell. Usare Tsshutdn.exe o Shutdown.exe con gli argomenti appropriati. È possibile ottenere informazioni dettagliate sull'utilizzo con **tsshutdn.exe \/?** o **shutdown.exe \/?**.
+L'arresto e il riavvio dei computer sono in genere gli stessi tipi di attività. Gli strumenti per l'arresto di un computer di solito consentono anche di riavviarlo e viceversa. Sono disponibili due opzioni semplici per riavviare un computer da Windows PowerShell. Usare Tsshutdn.exe o Shutdown.exe con gli argomenti appropriati. È possibile ottenere informazioni dettagliate sull'utilizzo con **tsshutdn.exe /?** o **shutdown.exe /?**.
 
 È possibile eseguire le operazioni di arresto e riavvio anche usando **Win32\_OperatingSystem** direttamente da Windows PowerShell.
 
@@ -67,6 +67,6 @@ Per riavviare il sistema operativo, usare il metodo Win32Shutdown con il contras
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO1-->
 
 

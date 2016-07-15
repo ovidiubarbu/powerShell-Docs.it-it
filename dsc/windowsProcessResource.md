@@ -1,12 +1,16 @@
 ---
-title:   Risorsa WindowsProcess DSC
-ms.date:  2016-05-16
-keywords:  powershell,DSC
-description:  
-ms.topic:  article
-author:  eslesar
-manager:  dongill
-ms.prod:  powershell
+title: Risorsa WindowsProcess DSC
+ms.date: 2016-05-16
+keywords: powershell,DSC
+description: 
+ms.topic: article
+author: eslesar
+manager: dongill
+ms.prod: powershell
+translationtype: Human Translation
+ms.sourcegitcommit: 97714d3fa9a1c00fb3d2e79cc873280ca945a840
+ms.openlocfilehash: 0fe5e7d9679d44bb50c897badf8c6517b95049e2
+
 ---
 
 # Risorsa WindowsProcess DSC
@@ -36,7 +40,7 @@ WindowsProcess [string] #ResourceName
 |  Proprietà  |  Descrizione   | 
 |---|---| 
 | Arguments| Indica una stringa di argomenti da passare al processo come è. Se è necessario passare più argomenti, inserirli tutti in questa stringa.| 
-| Path| Indica il percorso dell'eseguibile del processo. Se si imposta questa proprietà sul nome dell'eseguibile, DSC cercherà nella variabile __Path__. Se si fornisce un nome di dominio completo, il processo deve esistere, perché DSC in questo caso non controllerà la variabile __Path__.| 
+| Path| Percorso dell'eseguibile del processo. Se è il nome del file eseguibile (non il percorso completo), la risorsa DSC cercherà il file eseguibile nella variabile **Path** di ambiente (`$env:Path`). Se il valore di questa proprietà è un percorso completo, DSC non userà la variabile **Path** di ambiente per individuare il file e genererà un errore se il percorso non esiste. I percorsi relativi non sono consentiti.| 
 | Credential| Indica le credenziali per l'avvio del processo.| 
 | Ensure| Indica se il processo esiste. Impostare questa proprietà su "Present" per specificare che il processo esiste. In caso contrario, impostarla su "Absent". Il valore predefinito è "Present".| 
 | DependsOn | Indica che prima di configurare la risorsa è necessario eseguire la configurazione di un'altra risorsa. Ad esempio, se l'ID del blocco script di configurazione della risorsa che si vuole eseguire per primo è __ResourceName__ e il tipo è __ResourceType__, la sintassi per usare questa proprietà è `DependsOn = "[ResourceType]ResourceName"``.| 
@@ -47,6 +51,7 @@ WindowsProcess [string] #ResourceName
 
 
 
-<!--HONumber=May16_HO3-->
+
+<!--HONumber=Jul16_HO1-->
 
 

@@ -8,8 +8,9 @@ keywords: powershell,cmdlet,jea
 ms.date: 2016-06-22
 title: ricreare l'endpoint dimostrativo
 ms.technology: powershell
-ms.sourcegitcommit: 7504fe496a8913718847e45115d126caf4049bef
-ms.openlocfilehash: dabb5023012e90ace3fbc5f347c17821abd92595
+translationtype: Human Translation
+ms.sourcegitcommit: d20ea8418cb7389d756de94ea752cf604b8d07af
+ms.openlocfilehash: acd2cfbd038250a26236c875d0e8b03a32cd84f9
 
 ---
 
@@ -63,7 +64,7 @@ Aprire il file in PowerShell ISE o in un editor di testo.
 ise "$env:ProgramData\JEAConfiguration\JEADemo2.pssc"
 ```
 
-Aggiornare i campi seguenti nel file con i valori riportati di seguito (ricordarsi di sostituire i valori nel proprio gruppo di sicurezza non amministratore):
+Aggiornare i campi seguenti nel file con i valori seguenti (ricordarsi di sostituire i valori nel proprio gruppo di sicurezza non amministratore):
 
 ```PowerShell
 # OLD: SessionType = 'Default'
@@ -91,7 +92,7 @@ L'effetto di queste impostazioni è un punto di partenza minimo e sicuro per la 
 Definisce chi fa cosa come un account con privilegi.
 Con questo campo è possibile specificare le funzionalità disponibili per qualsiasi utente connesso in base all'appartenenza al gruppo.
 Questo è l'elemento di base della funzionalità RBAC di JEA.
-In questo esempio, si espone la capacità del ruolo "Demo" predefinita per i membri del gruppo "Contoso\JEA_NonAdmin_Operator".
+In questo esempio, si espone la capacità del ruolo "Maintenance" predefinita per i membri del gruppo "Contoso\JEA_NonAdmin_Operator".
 
 3.  Il campo *RunAsVirtualAccount* indica che PowerShell deve "essere eseguito come" account virtuale per questo endpoint.
 Per impostazione predefinita, l'account virtuale è un membro del gruppo Administrators incorporato.
@@ -124,7 +125,7 @@ Congratulazioni, l'impostazione dell'endpoint JEA è stata completata.
 
 ## Testare l'endpoint
 Eseguire di nuovo i passaggi riportati nella sezione [Uso di JEA](using-jea.md) per il nuovo endpoint per verificare se funziona come previsto.
-Assicurarsi di usare il nome del nuovo endpoint (JEADemo2) quando si specifica il nome della configurazione per Enter-PSSession.
+Assicurarsi di usare il nome del nuovo endpoint (JEADemo2) quando si specifica il nome della configurazione per `Enter-PSSession`.
 
 ```PowerShell
 Enter-PSSession -ComputerName . -ConfigurationName JEADemo2 -Credential $NonAdminCred
@@ -152,6 +153,6 @@ Per altre informazioni sulle trascrizioni, vedere questo [post del blog](https:/
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO1-->
 
 
