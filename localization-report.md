@@ -5075,6 +5075,8 @@
 * Archive Datetime: 2016-07-12 13:13:49
 * Handback File: [compatibility.c48662c8b1c8f8765c91c89c348a9a64174fcb50.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/4a473ca389b2d838175ce4b811d8bd9f9df5f4d8/ol-handback/PowerShell/powerShell-Docs.it-it/live/compatibility.c48662c8b1c8f8765c91c89c348a9a64174fcb50.it-it.xlf)
 * Handback Datetime: 2016-07-15 13:37:07
+* Bilingual File: [compatibility.c48662c8b1c8f8765c91c89c348a9a64174fcb50.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/4a473ca389b2d838175ce4b811d8bd9f9df5f4d8/ol-handback/PowerShell/powerShell-Docs.it-it/live/compatibility.c48662c8b1c8f8765c91c89c348a9a64174fcb50.it-it.xlf)
+* Bilingual Datetime: 2016-07-15 13:37:46
 * [Back to Top](#report-top)
 
 ##### <a name='3e5d5e93231b772b65d1913a4dbafc86d4edb950336'></a> Source: [wmf\5.1\features-scenarios-cache\analysis_cache.md](https://github.com/PowerShell/powerShell-Docs/blob/9ce218a2807dd7b1c69f81efdbd6132321e6a815/wmf/5.1/features-scenarios-cache/analysis_cache.md)
@@ -5328,6 +5330,8 @@
 * Archive Datetime: 2016-07-12 13:13:49
 * Handback File: [README.3f33d618813a6a11bfd02271ad6bb9c112763721.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/4a473ca389b2d838175ce4b811d8bd9f9df5f4d8/ol-handback/PowerShell/powerShell-Docs.it-it/live/README.3f33d618813a6a11bfd02271ad6bb9c112763721.it-it.xlf)
 * Handback Datetime: 2016-07-15 13:37:07
+* Bilingual File: [README.3f33d618813a6a11bfd02271ad6bb9c112763721.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/4a473ca389b2d838175ce4b811d8bd9f9df5f4d8/ol-handback/PowerShell/powerShell-Docs.it-it/live/README.3f33d618813a6a11bfd02271ad6bb9c112763721.it-it.xlf)
+* Bilingual Datetime: 2016-07-15 13:37:46
 * [Back to Top](#report-top)
 
 ##### <a name='75cb9979ed85239448c50445465aaf0b62be1382354'></a> Source: [wmf\TOC.md](https://github.com/PowerShell/powerShell-Docs/blob/1f6f18e46537d4b9f5e64c9e808e46e82b2d3050/wmf/TOC.md)
