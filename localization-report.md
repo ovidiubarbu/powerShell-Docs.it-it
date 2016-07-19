@@ -9,8 +9,8 @@
 [ Archive Failed Files ](#archive-failed-list)| 0
 [ Archive Success Files ](#archive-success-list)| 17
 [ Handback Failed Files ](#handback-failed-list)| 0
-[ Out Of Sync Handback Files ](#outofsync-handback-success-list)| 65
-[ In Sync Handback Files ](#insync-handback-success-list)| 271
+[ Out Of Sync Handback Files ](#outofsync-handback-success-list)| 62
+[ In Sync Handback Files ](#insync-handback-success-list)| 274
 [ Ignored Files ](#ignored-list)| 29
 
 ## <a name='handoff-failed-list'></a> Handoff Failed File List
@@ -78,7 +78,6 @@
  [dsc\TOC.md](https://github.com/PowerShell/powerShell-Docs/blob/7c58908c91eb2913a848ff7845f03d05e13fe634/dsc/TOC.md) | OutofSyncHandedBackSuccess | [Details](#924d5878a6d93e846adbd9cb4c69bea79e104bcd93)
  [dsc\userResource.md](https://github.com/PowerShell/powerShell-Docs/blob/6477ae8575c83fc24150f9502515ff5b82bc8198/dsc/userResource.md) | OutofSyncHandedBackSuccess | [Details](#5c7878bdfc8a3f118b569a9e43be6c7e4333ad2c95)
  [dsc\windowsfeatureResource.md](https://github.com/PowerShell/powerShell-Docs/blob/6477ae8575c83fc24150f9502515ff5b82bc8198/dsc/windowsfeatureResource.md) | OutofSyncHandedBackSuccess | [Details](#522dbea958a60f76e98abe32e11e6491ea6d457c97)
- [scripting\core-powershell\ise\How-to-Debug-Scripts-in-Windows-PowerShell-ISE.md](https://github.com/PowerShell/powerShell-Docs/blob/669bbe8da3d6b5f4955b86474c21c11c3cfe495b/scripting/core-powershell/ise/How-to-Debug-Scripts-in-Windows-PowerShell-ISE.md) | OutofSyncHandedBackSuccess | [Details](#080cbfd63838472d9d5405e4b232cda1cc1d028a143)
  [scripting\getting-started\fundamental\Scripting-with-Windows-PowerShell.md](https://github.com/PowerShell/powerShell-Docs/blob/03ac4b90d299b316194f1fa932e7dbf62d4b1c8e/scripting/getting-started/fundamental/Scripting-with-Windows-PowerShell.md) | OutofSyncHandedBackSuccess | [Details](#0148f4631e34e65a4336c5d1d50e313fb6639748222)
  [scripting\setup\setup-reference.md](https://github.com/PowerShell/powerShell-Docs/blob/03ac4b90d299b316194f1fa932e7dbf62d4b1c8e/scripting/setup/setup-reference.md) | OutofSyncHandedBackSuccess | [Details](#63f7597ba91fb839252de451c6c9380b5b19c0ec242)
  [scripting\TOC.md](https://github.com/PowerShell/powerShell-Docs/blob/2fe345e6dc0734769a78bd91a0e831d413fcd7c1/scripting/TOC.md) | OutofSyncHandedBackSuccess | [Details](#c3d86239550566a7704405930f72c598d140cdb8249)
@@ -103,8 +102,6 @@
  [wmf\5.0\TOC.md](https://github.com/PowerShell/powerShell-Docs/blob/b32cb86b7a18fee929cc81360d81f479571a74c2/wmf/5.0/TOC.md) | OutofSyncHandedBackSuccess | [Details](#af8aee96244140094066b8e2df65fdb525a94811332)
  [wmf\5.0\uninstall.md](https://github.com/PowerShell/powerShell-Docs/blob/b32cb86b7a18fee929cc81360d81f479571a74c2/wmf/5.0/uninstall.md) | OutofSyncHandedBackSuccess | [Details](#f97722883acccd0addb49cc473fc1cce5300c184333)
  [wmf\5.1\features-scenarios-cache\oneget-improvement.md](https://github.com/PowerShell/powerShell-Docs/blob/3b5a3bb0ef9cf123c0cee4a36890ac61431c85ff/wmf/5.1/features-scenarios-cache/oneget-improvement.md) | OutofSyncHandedBackSuccess | [Details](#bb1129e6aa20b64e94ddb6d7b7cf7b51b1df9ca3353)
- [wmf\5.1\features-scenarios-cache\ps-engine-enhancements.md](https://github.com/PowerShell/powerShell-Docs/blob/6813902aec214aee9ede27ff79dd291364e9f443/wmf/5.1/features-scenarios-cache/ps-engine-enhancements.md) | OutofSyncHandedBackSuccess | [Details](#f864850128f118704d7545b09110835ab1d51b8e355)
- [wmf\5.1\features-scenarios-cache\using-module.md](https://github.com/PowerShell/powerShell-Docs/blob/e39aa2e5cbda0c83e24e21c4459d957d8baaff25/wmf/5.1/features-scenarios-cache/using-module.md) | OutofSyncHandedBackSuccess | [Details](#e09cfe0994ac523fd10658955731a93b6c176c88357)
  [wmf\5.1\install-configure.md](https://github.com/PowerShell/powerShell-Docs/blob/26da6c80568327faadc6746099ac9869f2018fcf/wmf/5.1/install-configure.md) | OutofSyncHandedBackSuccess | [Details](#8a10903c421f62311a28c9f32e352bba75f21052358)
  [wmf\5.1\known-issues.md](https://github.com/PowerShell/powerShell-Docs/blob/57049ff138604b0e13c8fd949ae14da05cb03a4b/wmf/5.1/known-issues.md) | OutofSyncHandedBackSuccess | [Details](#387ebc0467b9f154444292f391af0f4b77123639360)
  [wmf\5.1\release-notes.md](https://github.com/PowerShell/powerShell-Docs/blob/9c763f92b8e342b0208204f997c079c725891933/wmf/5.1/release-notes.md) | OutofSyncHandedBackSuccess | [Details](#d25a22b0448e82a85e45c302a998abc35bd4c1b6361)
@@ -210,6 +207,7 @@
  [scripting\core-powershell\core-modules\Windows-PowerShell-Core-Providers.md](https://github.com/PowerShell/powerShell-Docs/blob/03ac4b90d299b316194f1fa932e7dbf62d4b1c8e/scripting/core-powershell/core-modules/Windows-PowerShell-Core-Providers.md) | InSyncHandedBackSuccess | [Details](#f6b1ca1a3253c941c76826c6644079a14f19ddcf139)
  [scripting\core-powershell\core-powershell.md](https://github.com/PowerShell/powerShell-Docs/blob/cd6e130d9f6f70449084d25eb386a3c0a2b84737/scripting/core-powershell/core-powershell.md) | InSyncHandedBackSuccess | [Details](#4c22e1a2543690a971836813cb32ace74ababb4a140)
  [scripting\core-powershell\ise\How-to-Create-a-PowerShell-Tab-in-Windows-PowerShell-ISE.md](https://github.com/PowerShell/powerShell-Docs/blob/03ac4b90d299b316194f1fa932e7dbf62d4b1c8e/scripting/core-powershell/ise/How-to-Create-a-PowerShell-Tab-in-Windows-PowerShell-ISE.md) | InSyncHandedBackSuccess | [Details](#8af4de973a95352fd41d2bb2823b9382899ef5bf142)
+ [scripting\core-powershell\ise\How-to-Debug-Scripts-in-Windows-PowerShell-ISE.md](https://github.com/PowerShell/powerShell-Docs/blob/669bbe8da3d6b5f4955b86474c21c11c3cfe495b/scripting/core-powershell/ise/How-to-Debug-Scripts-in-Windows-PowerShell-ISE.md) | InSyncHandedBackSuccess | [Details](#080cbfd63838472d9d5405e4b232cda1cc1d028a143)
  [scripting\core-powershell\ise\How-to-Use-Profiles-in-Windows-PowerShell-ISE.md](https://github.com/PowerShell/powerShell-Docs/blob/03ac4b90d299b316194f1fa932e7dbf62d4b1c8e/scripting/core-powershell/ise/How-to-Use-Profiles-in-Windows-PowerShell-ISE.md) | InSyncHandedBackSuccess | [Details](#a8b729612c54e5f0f95497a71a192f16e2a9d32a144)
  [scripting\core-powershell\ise\How-to-Use-Tab-Completion-in-the-Script-Pane-and-Console-Pane.md](https://github.com/PowerShell/powerShell-Docs/blob/03ac4b90d299b316194f1fa932e7dbf62d4b1c8e/scripting/core-powershell/ise/How-to-Use-Tab-Completion-in-the-Script-Pane-and-Console-Pane.md) | InSyncHandedBackSuccess | [Details](#07f7fb6b4e5d94de31551566ca8faff263817383145)
  [scripting\core-powershell\ise\How-to-Use-the-Console-Pane-in-the-Windows-PowerShell-ISE.md](https://github.com/PowerShell/powerShell-Docs/blob/03ac4b90d299b316194f1fa932e7dbf62d4b1c8e/scripting/core-powershell/ise/How-to-Use-the-Console-Pane-in-the-Windows-PowerShell-ISE.md) | InSyncHandedBackSuccess | [Details](#29e73b1bfd8efea2b53299c52bf65117f7c535f5146)
@@ -379,7 +377,9 @@
  [wmf\5.1\compatibility.md](https://github.com/PowerShell/powerShell-Docs/blob/1f6f18e46537d4b9f5e64c9e808e46e82b2d3050/wmf/5.1/compatibility.md) | InSyncHandedBackSuccess | [Details](#8e7dd69fc5ba29e719aec353afcac2471ecb2352336)
  [wmf\5.1\features-scenarios-cache\analysis_cache.md](https://github.com/PowerShell/powerShell-Docs/blob/9ce218a2807dd7b1c69f81efdbd6132321e6a815/wmf/5.1/features-scenarios-cache/analysis_cache.md) | InSyncHandedBackSuccess | [Details](#3e5d5e93231b772b65d1913a4dbafc86d4edb950340)
  [wmf\5.1\features-scenarios-cache\console-enhancements.md](https://github.com/PowerShell/powerShell-Docs/blob/9ce218a2807dd7b1c69f81efdbd6132321e6a815/wmf/5.1/features-scenarios-cache/console-enhancements.md) | InSyncHandedBackSuccess | [Details](#e6653a02421e3aec3910a70c64f7cf7cecd696ab342)
+ [wmf\5.1\features-scenarios-cache\ps-engine-enhancements.md](https://github.com/PowerShell/powerShell-Docs/blob/6813902aec214aee9ede27ff79dd291364e9f443/wmf/5.1/features-scenarios-cache/ps-engine-enhancements.md) | InSyncHandedBackSuccess | [Details](#f864850128f118704d7545b09110835ab1d51b8e355)
  [wmf\5.1\features-scenarios-cache\template.md](https://github.com/PowerShell/powerShell-Docs/blob/a952a27ec1695ce9951c352446194cf72d18f50a/wmf/5.1/features-scenarios-cache/template.md) | InSyncHandedBackSuccess | [Details](#dfba55f1eae5468df95309e14b3ee256511badf4356)
+ [wmf\5.1\features-scenarios-cache\using-module.md](https://github.com/PowerShell/powerShell-Docs/blob/e39aa2e5cbda0c83e24e21c4459d957d8baaff25/wmf/5.1/features-scenarios-cache/using-module.md) | InSyncHandedBackSuccess | [Details](#e09cfe0994ac523fd10658955731a93b6c176c88357)
  [wmf\5.1\known-issues-cache\template.md](https://github.com/PowerShell/powerShell-Docs/blob/a952a27ec1695ce9951c352446194cf72d18f50a/wmf/5.1/known-issues-cache/template.md) | InSyncHandedBackSuccess | [Details](#cfe0a6562743f1df81acb81e33c120cb67f9042c359)
  [wmf\images\DscResourceDebugging.jpg](https://github.com/PowerShell/powerShell-Docs/blob/97cfb44dc3db0937a0eaae5af5113210f988aa56/wmf/images/DscResourceDebugging.jpg) | InSyncHandedBackSuccess | [Details](#ba1897f38317f5fe38f2d8caf0efcc57bc8bb19d366)
  [wmf\images\Import-DscResource-Modversion.jpg](https://github.com/PowerShell/powerShell-Docs/blob/97cfb44dc3db0937a0eaae5af5113210f988aa56/wmf/images/Import-DscResource-Modversion.jpg) | InSyncHandedBackSuccess | [Details](#e6ed57c70f1b1380eb67c6998a1c9c67f3f246fc367)
@@ -2386,18 +2386,15 @@
 * [Back to Top](#report-top)
 
 ##### <a name='080cbfd63838472d9d5405e4b232cda1cc1d028a143'></a> Source: [scripting\core-powershell\ise\How-to-Debug-Scripts-in-Windows-PowerShell-ISE.md](https://github.com/PowerShell/powerShell-Docs/blob/669bbe8da3d6b5f4955b86474c21c11c3cfe495b/scripting/core-powershell/ise/How-to-Debug-Scripts-in-Windows-PowerShell-ISE.md)
-* Status: OutofSyncHandedBackSuccess
-* Target File: 
+* Status: InSyncHandedBackSuccess
+* Target File: [scripting\core-powershell\ise\How-to-Debug-Scripts-in-Windows-PowerShell-ISE.md](https://github.com/PowerShell/powerShell-Docs.it-it/blob/c31049f9dddfbe363cc6a19087957911a0c26f75/scripting/core-powershell/ise/How-to-Debug-Scripts-in-Windows-PowerShell-ISE.md)
 * Handoff File: [How-to-Debug-Scripts-in-Windows-PowerShell-ISE.fe1e91b6be8b768d0e36f102791ffd867cff9b45.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/9e050e99163935cec342b0d071965970b17da00b/ol-handoff/PowerShell/powerShell-Docs.it-it/live/How-to-Debug-Scripts-in-Windows-PowerShell-ISE.fe1e91b6be8b768d0e36f102791ffd867cff9b45.it-it.xlf)
 * Handoff Datetime: 2016-07-12 21:21:29
 * Handoff Reason: Include
 * Archive File: [How-to-Debug-Scripts-in-Windows-PowerShell-ISE.fe1e91b6be8b768d0e36f102791ffd867cff9b45.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/da7433accfae34f1c8ac078d0c985e2443ab92a9/ol-archive/PowerShell/powerShell-Docs.it-it/live/How-to-Debug-Scripts-in-Windows-PowerShell-ISE.fe1e91b6be8b768d0e36f102791ffd867cff9b45.it-it.xlf)
 * Archive Datetime: 2016-07-19 13:11:02
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [scripting\core-powershell\ise\How-to-Debug-Scripts-in-Windows-PowerShell-ISE.md](https://github.com/PowerShell/powerShell-Docs.it-it/blob/4f287b6b254a2866b5f6b9fc5473209f443bf252/scripting/core-powershell/ise/How-to-Debug-Scripts-in-Windows-PowerShell-ISE.md)
-* Current Handback File: [How-to-Debug-Scripts-in-Windows-PowerShell-ISE.fe1e91b6be8b768d0e36f102791ffd867cff9b45.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/b023d92cd444e6d107b50b4e91dca9b5dead6742/ol-handback/PowerShell/powerShell-Docs.it-it/live/How-to-Debug-Scripts-in-Windows-PowerShell-ISE.fe1e91b6be8b768d0e36f102791ffd867cff9b45.it-it.xlf)
-* Current Handback Datetime: 2016-07-06 11:36:21
+* Handback File: [How-to-Debug-Scripts-in-Windows-PowerShell-ISE.fe1e91b6be8b768d0e36f102791ffd867cff9b45.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/806d3d01fc449674118d2b176e0bc0b731a08666/ol-handback/PowerShell/powerShell-Docs.it-it/live/How-to-Debug-Scripts-in-Windows-PowerShell-ISE.fe1e91b6be8b768d0e36f102791ffd867cff9b45.it-it.xlf)
+* Handback Datetime: 2016-07-19 14:28:19
 * Bilingual File: [How-to-Debug-Scripts-in-Windows-PowerShell-ISE.fe1e91b6be8b768d0e36f102791ffd867cff9b45.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/b023d92cd444e6d107b50b4e91dca9b5dead6742/ol-handback/PowerShell/powerShell-Docs.it-it/live/How-to-Debug-Scripts-in-Windows-PowerShell-ISE.fe1e91b6be8b768d0e36f102791ffd867cff9b45.it-it.xlf)
 * Bilingual Datetime: 2016-07-06 11:37:25
 * [Back to Top](#report-top)
@@ -5342,18 +5339,15 @@
 * [Back to Top](#report-top)
 
 ##### <a name='f864850128f118704d7545b09110835ab1d51b8e355'></a> Source: [wmf\5.1\features-scenarios-cache\ps-engine-enhancements.md](https://github.com/PowerShell/powerShell-Docs/blob/6813902aec214aee9ede27ff79dd291364e9f443/wmf/5.1/features-scenarios-cache/ps-engine-enhancements.md)
-* Status: OutofSyncHandedBackSuccess
-* Target File: 
+* Status: InSyncHandedBackSuccess
+* Target File: [wmf\5.1\features-scenarios-cache\ps-engine-enhancements.md](https://github.com/PowerShell/powerShell-Docs.it-it/blob/c31049f9dddfbe363cc6a19087957911a0c26f75/wmf/5.1/features-scenarios-cache/ps-engine-enhancements.md)
 * Handoff File: [ps-engine-enhancements.51ba717e1fb1db2a8fb647083ba968b9f58c4a82.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/9e050e99163935cec342b0d071965970b17da00b/ol-handoff/PowerShell/powerShell-Docs.it-it/live/ps-engine-enhancements.51ba717e1fb1db2a8fb647083ba968b9f58c4a82.it-it.xlf)
 * Handoff Datetime: 2016-07-12 21:21:29
 * Handoff Reason: Include
 * Archive File: [ps-engine-enhancements.51ba717e1fb1db2a8fb647083ba968b9f58c4a82.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/da7433accfae34f1c8ac078d0c985e2443ab92a9/ol-archive/PowerShell/powerShell-Docs.it-it/live/ps-engine-enhancements.51ba717e1fb1db2a8fb647083ba968b9f58c4a82.it-it.xlf)
 * Archive Datetime: 2016-07-19 13:11:02
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [wmf\5.1\features-scenarios-cache\ps-engine-enhancements.md](https://github.com/PowerShell/powerShell-Docs.it-it/blob/6c8279b6a5d6cacd9b24cba6ef13afe071e86abd/wmf/5.1/features-scenarios-cache/ps-engine-enhancements.md)
-* Current Handback File: [ps-engine-enhancements.51ba717e1fb1db2a8fb647083ba968b9f58c4a82.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/379d0bcb9e9b8d300cf03e09f4f8e27ec39f608d/ol-handback/PowerShell/powerShell-Docs.it-it/live/ps-engine-enhancements.51ba717e1fb1db2a8fb647083ba968b9f58c4a82.it-it.xlf)
-* Current Handback Datetime: 2016-07-15 05:57:01
+* Handback File: [ps-engine-enhancements.51ba717e1fb1db2a8fb647083ba968b9f58c4a82.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/806d3d01fc449674118d2b176e0bc0b731a08666/ol-handback/PowerShell/powerShell-Docs.it-it/live/ps-engine-enhancements.51ba717e1fb1db2a8fb647083ba968b9f58c4a82.it-it.xlf)
+* Handback Datetime: 2016-07-19 14:28:19
 * Bilingual File: [ps-engine-enhancements.51ba717e1fb1db2a8fb647083ba968b9f58c4a82.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/379d0bcb9e9b8d300cf03e09f4f8e27ec39f608d/ol-handback/PowerShell/powerShell-Docs.it-it/live/ps-engine-enhancements.51ba717e1fb1db2a8fb647083ba968b9f58c4a82.it-it.xlf)
 * Bilingual Datetime: 2016-07-15 05:57:55
 * [Back to Top](#report-top)
@@ -5373,18 +5367,15 @@
 * [Back to Top](#report-top)
 
 ##### <a name='e09cfe0994ac523fd10658955731a93b6c176c88357'></a> Source: [wmf\5.1\features-scenarios-cache\using-module.md](https://github.com/PowerShell/powerShell-Docs/blob/e39aa2e5cbda0c83e24e21c4459d957d8baaff25/wmf/5.1/features-scenarios-cache/using-module.md)
-* Status: OutofSyncHandedBackSuccess
-* Target File: 
+* Status: InSyncHandedBackSuccess
+* Target File: [wmf\5.1\features-scenarios-cache\using-module.md](https://github.com/PowerShell/powerShell-Docs.it-it/blob/c31049f9dddfbe363cc6a19087957911a0c26f75/wmf/5.1/features-scenarios-cache/using-module.md)
 * Handoff File: [using-module.dfdedb618ec7d188918f7f3f705c8c39bbb26521.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/303f52a9bece9423b0f8c9fe60d7814f7396108a/ol-handoff/PowerShell/powerShell-Docs.it-it/live/using-module.dfdedb618ec7d188918f7f3f705c8c39bbb26521.it-it.xlf)
 * Handoff Datetime: 2016-07-15 16:21:03
 * Handoff Reason: Include
 * Archive File: [using-module.dfdedb618ec7d188918f7f3f705c8c39bbb26521.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/da7433accfae34f1c8ac078d0c985e2443ab92a9/ol-archive/PowerShell/powerShell-Docs.it-it/live/using-module.dfdedb618ec7d188918f7f3f705c8c39bbb26521.it-it.xlf)
 * Archive Datetime: 2016-07-19 13:11:02
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [wmf\5.1\features-scenarios-cache\using-module.md](https://github.com/PowerShell/powerShell-Docs.it-it/blob/6c8279b6a5d6cacd9b24cba6ef13afe071e86abd/wmf/5.1/features-scenarios-cache/using-module.md)
-* Current Handback File: [using-module.dfdedb618ec7d188918f7f3f705c8c39bbb26521.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/379d0bcb9e9b8d300cf03e09f4f8e27ec39f608d/ol-handback/PowerShell/powerShell-Docs.it-it/live/using-module.dfdedb618ec7d188918f7f3f705c8c39bbb26521.it-it.xlf)
-* Current Handback Datetime: 2016-07-15 05:57:01
+* Handback File: [using-module.dfdedb618ec7d188918f7f3f705c8c39bbb26521.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/806d3d01fc449674118d2b176e0bc0b731a08666/ol-handback/PowerShell/powerShell-Docs.it-it/live/using-module.dfdedb618ec7d188918f7f3f705c8c39bbb26521.it-it.xlf)
+* Handback Datetime: 2016-07-19 14:28:19
 * Bilingual File: [using-module.dfdedb618ec7d188918f7f3f705c8c39bbb26521.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/379d0bcb9e9b8d300cf03e09f4f8e27ec39f608d/ol-handback/PowerShell/powerShell-Docs.it-it/live/using-module.dfdedb618ec7d188918f7f3f705c8c39bbb26521.it-it.xlf)
 * Bilingual Datetime: 2016-07-15 05:57:55
 * [Back to Top](#report-top)
