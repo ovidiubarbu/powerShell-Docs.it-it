@@ -1,6 +1,6 @@
 {
   "LastProcessedCommit": "30bf1f69f1bbdf7e69379e86ddbfc9e7fd90e5d5",
-  "LastTranslatedCommit": "7347858d44747a8c9fe28cd307a2bc879f0e8207",
+  "LastTranslatedCommit": "ad36504375efbc44e00e44a77b1764ff99c3bf9c",
   "Items": {
     "81efeb79a70df604ef8c126c0ebd17b4f4711a44": {
       "FileHash": "81efeb79a70df604ef8c126c0ebd17b4f4711a44",
@@ -21039,14 +21039,14 @@
       "HandoffPriority": "",
       "HandoffException": null,
       "HandoffFailureTimes": 0,
-      "TargetFileCommit": "cfd8cb226f605eb34387d87760377acbc346cb94",
+      "TargetFileCommit": "ad36504375efbc44e00e44a77b1764ff99c3bf9c",
       "TargetFilePath": "scripting\\core-powershell\\web-access\\install-and-use-windows-powershell-web-access.md",
       "HandbackFilePath": "ol-handback\\PowerShell\\powerShell-Docs.it-it\\live\\install-and-use-windows-powershell-web-access.b0ab653c895ebd67ec078d852bf20804e9c72a1c.it-it.xlf",
-      "HandbackFileCommit": "599f530073fea384887a24eb0bccd62e6ae1ccd5",
-      "HandbackDateTime": "2016-07-05T13:12:17.5044454Z",
+      "HandbackFileCommit": "9f6b687bbd02acb924b3f8a43eb239e9ddd3e161",
+      "HandbackDateTime": "2016-07-19T10:40:32.0346723Z",
       "HandbackException": null,
       "HandbackFailureTimes": 0,
-      "UpdatedDateTime": "2016-07-05T13:12:17.5044454Z",
+      "UpdatedDateTime": "2016-07-19T10:40:32.0346723Z",
       "ArchiveFilePath": "ol-handoff\\PowerShell\\powerShell-Docs.it-it\\live\\archive\\install-and-use-windows-powershell-web-access.b0ab653c895ebd67ec078d852bf20804e9c72a1c.it-it.xlf",
       "ArchiveFileCommit": "4c0cfe42da551852c76be3d7063a6ffd3db44e3c",
       "ArchiveFileDateTime": "2016-06-28T13:30:16.1386996Z",
