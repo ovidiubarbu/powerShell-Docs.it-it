@@ -8,4 +8,8 @@ Sono stati introdotti miglioramenti per l'esposizione dei dettagli sullo stato d
 * **PendingConfiguration**
 
 È stata anche aggiunta una proprietà LCMStateDetail che contiene ulteriori informazioni sullo stato.
-<!--HONumber=Mar16_HO2-->
+
+
+<!--HONumber=Jun16_HO4-->
+
+

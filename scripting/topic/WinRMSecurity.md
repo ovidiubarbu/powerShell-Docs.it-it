@@ -1,13 +1,17 @@
 ---
-title:  WinRMSecurityRedirect
-ms.date:  2016-05-11
-keywords:  powershell,cmdlet
-description:  
-ms.topic:  article
-author:  eslesar
-manager:  dongill
-ms.prod:  powershell
+title: WinRMSecurityRedirect
+ms.date: 2016-05-11
+keywords: powershell,cmdlet
+description: 
+ms.topic: article
+author: eslesar
+manager: dongill
+ms.prod: powershell
 redirect_url: https://msdn.microsoft.com/powershell/scripting/setup/winrmsecurity
+translationtype: Human Translation
+ms.sourcegitcommit: afa259b8611f995bbf5b824179a12e3d8f15df86
+ms.openlocfilehash: 207792452c563ec6cca5c17fbcd122372442d8ac
+
 ---
 
 # Considerazioni sulla sicurezza della comunicazione remota di PowerShell
@@ -35,8 +39,7 @@ Sulle reti private, la regola del firewall di Windows predefinita per la comunic
 
 ## Isolamento del processo
 
-La comunicazione remota di PowerShell usa [Gestione remota Windows (WinRM)](https://msdn.microsoft.com/en-us/library/windows/desktop/aa384426) per la comunicazione tra computer. 
-WinRM viene eseguito come servizio dell'account del servizio di rete e genera processi isolati eseguiti come account utente per ospitare le istanze di PowerShell. Un'istanza di PowerShell in esecuzione per un solo utente non ha accesso a un processo che esegue un'istanza di PowerShell con un altro account utente.
+La comunicazione remota di PowerShell usa [Gestione remota Windows (WinRM)](https://msdn.microsoft.com/en-us/library/windows/desktop/aa384426) per la comunicazione tra computer. WinRM viene eseguito come servizio dell'account del servizio di rete e genera processi isolati eseguiti come account utente per ospitare le istanze di PowerShell. Un'istanza di PowerShell in esecuzione per un solo utente non ha accesso a un processo che esegue un'istanza di PowerShell con un altro account utente.
 
 ## Registri eventi generati dalla comunicazione remota di Powershell
 
@@ -80,8 +83,7 @@ Dopo aver completato l'autenticazione iniziale, il [Protocollo di comunicazione 
 ## Esecuzione del secondo hop
 
 Per impostazione predefinita, la comunicazione remota di PowerShell usa Kerberos (se disponibile) o NTLM per l'autenticazione. Entrambi questi protocolli eseguono l'autenticazione al computer remoto senza inviare le credenziali.
-Si tratta del modo più sicuro per eseguire l'autenticazione. Tuttavia, dal momento che il computer remoto non dispone delle credenziali dell'utente, non può accedere ad altri computer e servizi per conto dell'utente. 
-Questo problema è conosciuto come "Doppio Hop".
+Si tratta del modo più sicuro per eseguire l'autenticazione. Tuttavia, dal momento che il computer remoto non dispone delle credenziali dell'utente, non può accedere ad altri computer e servizi per conto dell'utente. Questo problema è conosciuto come "Doppio Hop".
 
 Esistono diversi modi per evitare questo problema:
 
@@ -119,6 +121,7 @@ Per altre informazioni sugli attacchi con furto di credenziali, vedere [Mitigati
 
 
 
-<!--HONumber=May16_HO3-->
+
+<!--HONumber=Jun16_HO4-->
 
 

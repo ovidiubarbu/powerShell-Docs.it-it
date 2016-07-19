@@ -4,7 +4,7 @@
 
 # [Stato di compatibilità del prodotto](productincompat.md)
 
-# [Feedback](feedback.md)
+# [Commenti e suggerimenti](feedback.md)
 
 # [Scenari supportarti da WMF 5.0]()
 ## [JEA (Just Enough Administration)](jea_overview.md)
@@ -99,6 +99,6 @@
 ## [Problemi noti di Desired State Configuration (DSC)](limitation_dsc.md)
 
 
-<!--HONumber=May16_HO4-->
+<!--HONumber=Jun16_HO4-->
 
 

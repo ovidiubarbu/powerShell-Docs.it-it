@@ -136,4 +136,8 @@ La connessione a un Endpoint JEA funziona nello stesso modo della connessione a 
 ```powershell
 Enter-PSSession -ConfigurationName Maintenance -ComputerName localhost
 ```
-Dopo essersi connessi alla sessione JEA, sarà consentita solo l'esecuzione dei comandi inclusi tra le capacità del ruolo a cui si ha accesso. Se si tenta di eseguire qualsiasi comando non consentito per il ruolo, si verificherà un errore.<!--HONumber=Mar16_HO2-->
+Dopo essersi connessi alla sessione JEA, sarà consentita solo l'esecuzione dei comandi inclusi tra le capacità del ruolo a cui si ha accesso. Se si tenta di eseguire qualsiasi comando non consentito per il ruolo, si verificherà un errore.
+
+<!--HONumber=Jun16_HO4-->
+
+

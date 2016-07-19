@@ -1,12 +1,16 @@
 ---
-title:   Configurazione di un client di pull usando un ID configurazione
-ms.date:  2016-05-16
-keywords:  powershell,DSC
-description:  
-ms.topic:  article
-author:  eslesar
-manager:  dongill
-ms.prod:  powershell
+title: Configurazione di un client di pull usando un ID configurazione
+ms.date: 2016-05-16
+keywords: powershell,DSC
+description: 
+ms.topic: article
+author: eslesar
+manager: dongill
+ms.prod: powershell
+translationtype: Human Translation
+ms.sourcegitcommit: 6477ae8575c83fc24150f9502515ff5b82bc8198
+ms.openlocfilehash: f6569220fbafdba49bac9ac9dca3e6036a7aad08
+
 ---
 
 # Configurazione di un client di pull usando un ID configurazione
@@ -159,6 +163,7 @@ PullClientConfigID
 
 
 
-<!--HONumber=May16_HO3-->
+
+<!--HONumber=Jun16_HO4-->
 
 

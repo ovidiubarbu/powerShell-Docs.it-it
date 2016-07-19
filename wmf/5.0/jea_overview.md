@@ -7,4 +7,8 @@ Il funzionamento di JEA è basato sulla possibilità di creare endpoint vincolat
 
 1. Gli utenti che si connettono a tali endpoint possono eseguire azioni con un account virtuale con privilegi elevati che esiste solo per la durata della sessione remota.  Per impostazione predefinita, questo account virtuale è un membro del gruppo Administrators predefinito e del gruppo Domain Administrators nei controller di dominio (nota: queste autorizzazioni sono configurabili). La possibilità di connettersi con un account utente e di eseguire operazioni con un account diverso con privilegi elevati, permette di consentire agli utenti senza privilegi elevati di eseguire specifiche attività amministrative senza concedere loro diritti amministrativi per i sistemi.
 2. L'endpoint è bloccato.  Questo significa che PowerShell viene eseguito nella modalità linguaggio NoLanguage.  Per l'utente sono visibili solo comandi, script e file eseguibili specifici.
-3. Ai diversi utenti che si connettono viene presentato un set diverso di capacità in base ai gruppi di appartenenza.  È possibile specificare capacità diverse per ruoli diversi sullo stesso endpoint.<!--HONumber=Mar16_HO2-->
+3. Ai diversi utenti che si connettono viene presentato un set diverso di capacità in base ai gruppi di appartenenza.  È possibile specificare capacità diverse per ruoli diversi sullo stesso endpoint.
+
+<!--HONumber=Jun16_HO4-->
+
+

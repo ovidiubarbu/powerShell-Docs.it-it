@@ -1,12 +1,16 @@
 ---
-title:   Applicazione delle configurazioni
-ms.date:  2016-05-16
-keywords:  powershell,DSC
-description:  
-ms.topic:  article
-author:  eslesar
-manager:  dongill
-ms.prod:  powershell
+title: Applicazione delle configurazioni
+ms.date: 2016-05-16
+keywords: powershell,DSC
+description: 
+ms.topic: article
+author: eslesar
+manager: dongill
+ms.prod: powershell
+translationtype: Human Translation
+ms.sourcegitcommit: 6477ae8575c83fc24150f9502515ff5b82bc8198
+ms.openlocfilehash: 4c802002c6a03a27d02221dd713677911a77c30b
+
 ---
 
 # Applicazione delle configurazioni
@@ -30,8 +34,7 @@ Dopo la creazione e la compilazione di una configurazione, è possibile applicar
 
 ![Modalità pull](images/Pull.png "How pull mode works")
 
-In modalità pull, i client di pull sono configurati per ottenere le relative configurazioni DSC da un server di pull remoto. Analogamente, il server di pull è stato configurato per ospitare il servizio DSC e ne è stato effettuato il provisioning con le configurazioni e le risorse necessarie per i client di pull. Ogni client di pull ha un'attività pianificata che esegue un controllo di conformità periodico sulla configurazione del nodo. Quando l'evento viene generato per la prima volta, Gestione configurazione locale nel client di pull convalida la configurazione. 
-Se il client di pull è configurato come desiderato, non accade nulla. In caso contrario, Gestione configurazione locale invia una richiesta al server di pull per ottenere una determinata configurazione. Se tale configurazione è disponibile nel server di pull e supera i controlli di convalida iniziali, viene trasmessa al client di pull, dove viene quindi eseguita da Gestione configurazione locale.
+In modalità pull, i client di pull sono configurati per ottenere le relative configurazioni DSC da un server di pull remoto. Analogamente, il server di pull è stato configurato per ospitare il servizio DSC e ne è stato effettuato il provisioning con le configurazioni e le risorse necessarie per i client di pull. Ogni client di pull ha un'attività pianificata che esegue un controllo di conformità periodico sulla configurazione del nodo. Quando l'evento viene generato per la prima volta, Gestione configurazione locale nel client di pull convalida la configurazione. Se il client di pull è configurato come desiderato, non accade nulla. In caso contrario, Gestione configurazione locale invia una richiesta al server di pull per ottenere una determinata configurazione. Se tale configurazione è disponibile nel server di pull e supera i controlli di convalida iniziali, viene trasmessa al client di pull, dove viene quindi eseguita da Gestione configurazione locale.
 
 Per altre informazioni sulla distribuzione di un server di pull DSC in locale, vedere la guida alla pianificazione e configurazione di server di pull DSC.
 
@@ -45,6 +48,7 @@ Gli argomenti seguenti illustrano come configurare i client e i server di pull:
 
 
 
-<!--HONumber=May16_HO3-->
+
+<!--HONumber=Jun16_HO4-->
 
 

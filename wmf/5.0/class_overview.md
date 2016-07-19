@@ -8,4 +8,8 @@
 -   Definire tipi personalizzati in PowerShell usando costrutti noti della programmazione orientata agli oggetti, come classi, proprietà, metodi e così via.
 -   Supporto dell'ereditarietà con le classi in PowerShell e le risorse DSC basate su classi
 -   Eseguire il debug di tipi con il linguaggio di PowerShell
--   Generare e gestire le eccezioni tramite meccanismi formali, al giusto livello<!--HONumber=Mar16_HO2-->
+-   Generare e gestire le eccezioni tramite meccanismi formali, al giusto livello
+
+<!--HONumber=Jun16_HO4-->
+
+
