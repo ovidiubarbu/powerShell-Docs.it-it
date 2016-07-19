@@ -2,8 +2,8 @@
 title: Miglioramenti apportati al motore di PowerShell
 author: jasonsh
 translationtype: Human Translation
-ms.sourcegitcommit: 9ce218a2807dd7b1c69f81efdbd6132321e6a815
-ms.openlocfilehash: 90d8067c0d3eacf60260da654c2a8b8caeca20a2
+ms.sourcegitcommit: 6813902aec214aee9ede27ff79dd291364e9f443
+ms.openlocfilehash: f864850128f118704d7545b09110835ab1d51b8e
 
 ---
 
@@ -26,7 +26,7 @@ Alcuni miglioramenti di esempio (i risultati possono variare in base all'hardwar
 | `powershell -command "echo 1"` | 900 | 250 |
 | Prima esecuzione di PowerShell: `powershell -command "Unknown-Command"` | 30000 | 13000 |
 | Cache di analisi del comando integrata: `powershell -command "Unknown-Command"` | 7000 | 520 |
-| `1..1000000 | % { }` | 1400 | 750 |
+| <code>1..1000000 &#124; % { }</code> | 1400 | 750 |
   
 Una modifica correlata all'avvio può avere impatto su alcuni scenari non supportati. PowerShell non legge i file `$pshome\*.ps1xml`: questi file sono stati convertiti in C# per evitare il sovraccarico dell'elaborazione di file XML da parte di alcuni file e della CPU. I file supportano ancora V2 side-by-side, pertanto se si modifica il contenuto del file, la modifica non avrà alcun impatto su V5, ma solo su V2. Si noti che la modifica dei contenuti di questi file non ha mai costituito uno scenario supportato.
 
@@ -35,20 +35,6 @@ Per altre informazioni dettagliate, vedere [analysis_cache.md]().
 
 A partire dalla versione 5.1, PowerShell è disponibile in diverse edizioni che indicano vari set di funzionalità e compatibilità della piattaforma.
 
-
-## Supporto per nomi file lunghi ##
-
-Andrew...
-
-
-## Moduli ##
-
-Chunqing...
-
-
-## PSEdition ##
-
-Mani...
 
 
 ## Correzioni di bug ##
@@ -136,6 +122,7 @@ In WMF 5.1 il problema è stato risolto restituendo la Guida per la versione pi�
 Get-Help non fornisce un modo per specificare la versione per la quale si vuole visualizzare la Guida. La soluzione alternativa consiste nel passare alla directory dei moduli e visualizzare la Guida direttamente con uno strumento come il proprio editor preferito. 
 
 
-<!--HONumber=Jul16_HO1-->
+
+<!--HONumber=Jul16_HO2-->
 
 

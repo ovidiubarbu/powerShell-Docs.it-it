@@ -1,9 +1,10 @@
 ---
 title: FullyQuilifiedModuleName per 'uso del modulo'
-author: vors
+author: jaimeo
+contributor: vors
 translationtype: Human Translation
-ms.sourcegitcommit: cd1d4803497eefad1b5cf476824ec8a2fa263e32
-ms.openlocfilehash: ec5a425d17b841f24e94167be946cf9e2daf3316
+ms.sourcegitcommit: e39aa2e5cbda0c83e24e21c4459d957d8baaff25
+ms.openlocfilehash: e09cfe0994ac523fd10658955731a93b6c176c88
 
 ---
 
@@ -31,6 +32,6 @@ WMF 5.1
 
 
 
-<!--HONumber=Jul16_HO1-->
+<!--HONumber=Jul16_HO3-->
 
 
