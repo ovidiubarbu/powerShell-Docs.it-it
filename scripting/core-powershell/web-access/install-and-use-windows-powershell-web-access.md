@@ -163,7 +163,7 @@ Per usare la console di Accesso Web Windows PowerShell basata sul Web, i browser
     </tbody>
     </table>
 
-2.  Digitare il codice seguente, in cui *nome\_computer* rappresenta un computer remoto in cui si vuole installare Accesso Web Windows PowerShell, se applicabile, quindi premere **INVIO**. Il parametro <span class="code">Restart</span> riavvia automaticamente i server di destinazione, se necessario.
+2.  Digitare il codice seguente, in cui **nome**computer* rappresenta un computer remoto in cui si vuole installare Accesso Web Windows PowerShell, se applicabile, quindi premere \_INVIO*. Il parametro <span class="code">Restart</span> riavvia automaticamente i server di destinazione, se necessario.
 
     [Copy](javascript:if%20(window.epx.codeSnippet)window.epx.codeSnippet.copyCode('CodeSnippetContainerCode_374a9c21-4f6e-471e-b957-bb190a594533'); "Copia negli Appunti.")
 
@@ -361,7 +361,7 @@ Per altre informazioni sulla sicurezza e le regole di autorizzazione di Accesso 
 
     -   Nella schermata **Start** di Windows fare clic con il pulsante destro del mouse su **Windows PowerShell** e quindi scegliere **Esegui come amministratore**.
 
-2.  <span class="label">Passaggio facoltativo per la limitazione dell'accesso utente con configurazioni di sessione:</span> verificare che le configurazioni di sessione da usare nelle proprie regole esistano già. Se non sono ancora state create, usare le istruzioni per la creazione di configurazioni di sessione disponibili nell'articolo [about\_Session\_Configuration\_Files](https://msdn.microsoft.com/library/windows/desktop/hh847838.aspx) di MSDN.
+2.  <span class="label">Passaggio facoltativo per la limitazione dell'accesso utente con configurazioni di sessione:</span> verificare che le configurazioni di sessione da usare nelle proprie regole esistano già. Se non sono ancora state create, usare le istruzioni per la creazione di configurazioni di sessione disponibili nell'articolo [about\_Session\_Configuration\_Files](https://msdn.microsoft.com/library/windows/desktop/hh847838.aspx) (Informazioni sui file di configurazione di sessione) di MSDN.
 
 3.  Digitare il comando seguente e quindi premere **INVIO**.
 
@@ -523,7 +523,7 @@ Le istruzioni in questa sezione mostrano come installare l'applicazione Web Acce
 
 4.  Digitare un nome per il sito Web, ad esempio **Accesso Web Windows PowerShell**.
 
-5.  Per il nuovo sito Web viene automaticamente creato un pool di applicazioni. Per usare un pool di applicazioni diverso, fare clic su **Seleziona** per selezionare un pool di applicazioni da associare al nuovo sito Web. Selezionare il pool di applicazioni alternativo nella finestra di dialogo **Seleziona pool di applicazioni**, quindi fare clic su **OK**.
+5.  Per il nuovo sito Web viene automaticamente creato un pool di applicazioni. Per usare un pool di applicazioni diverso, fare clic su **Seleziona** per selezionare un pool di applicazioni da associare al nuovo sito Web. Selezionare il pool di applicazioni alternativo nella finestra di dialogo **Seleziona pool di applicazioni** e fare clic su **OK**.
 
 6.  Nella casella di testo **Percorso fisico** accedere a %*windir*%/Web/PowerShellWebAccess/wwwroot.
 
@@ -585,7 +585,7 @@ Le istruzioni in questa sezione mostrano come installare l'applicazione Web Acce
 
 Dopo che Accesso Web Windows PowerShell è stato installato e il gateway è stato configurato, gli utenti possono aprire la pagina di accesso in un browser, ma non possono accedere finché l'amministratore di Accesso Web Windows PowerShell non concede esplicitamente l'accesso. Il controllo di accesso di Accesso Web Windows PowerShell viene gestito con il set di cmdlet di Windows PowerShell descritto nella tabella seguente. Non esiste un'interfaccia grafica paragonabile per aggiungere o gestire le regole di autorizzazione. Per informazioni dettagliate sui cmdlet di Accesso Web Windows PowerShell, vedere gli argomenti di riferimento sui cmdlet in [Cmdlet di Accesso Web Windows PowerShell](https://technet.microsoft.com/library/hh918342.aspx).
 
-Per altre informazioni sulla sicurezza e le regole di autorizzazione di Accesso Web Windows PowerShell, vedere [Regole di autorizzazione e funzionalità di sicurezza di Accesso Web Windows PowerShell](https://technet.microsoft.com/en-us/library/dn282394(v=ws.11).aspx).
+Per altre informazioni sulla sicurezza e sulle regole di autorizzazione di Accesso Web Windows PowerShell, vedere [Regole di autorizzazione e funzionalità di sicurezza di Accesso Web Windows PowerShell](https://technet.microsoft.com/en-us/library/dn282394(v=ws.11).aspx).
 
 #### Per aggiungere una regola di autorizzazione restrittiva
 
@@ -595,7 +595,7 @@ Per altre informazioni sulla sicurezza e le regole di autorizzazione di Accesso 
 
     -   Nella schermata **Start** di Windows fare clic con il pulsante destro del mouse su **Windows PowerShell** e quindi scegliere **Esegui come amministratore**.
 
-2.  <span class="label">Passaggio facoltativo per la limitazione dell'accesso utente con configurazioni di sessione:</span> verificare che le configurazioni di sessione da usare nelle proprie regole esistano già. Se non sono ancora state create, usare le istruzioni per la creazione di configurazioni di sessione disponibili nell'articolo [about\_Session\_Configuration\_Files](https://msdn.microsoft.com/library/windows/desktop/hh847838.aspx) di MSDN.
+2.  <span class="label">Passaggio facoltativo per la limitazione dell'accesso utente con configurazioni di sessione:</span> verificare che le configurazioni di sessione da usare nelle proprie regole esistano già. Se non sono ancora state create, usare le istruzioni per la creazione di configurazioni di sessione disponibili nell'articolo [about\_Session\_Configuration\_Files](https://msdn.microsoft.com/library/windows/desktop/hh847838.aspx) (Informazioni sui file di configurazione di sessione) di MSDN.
 
 3.  Digitare il comando seguente e quindi premere **INVIO**.
 
@@ -640,7 +640,7 @@ Per un ambiente di produzione sicuro, usare sempre un certificato SSL valido fir
 
 5.  Nella finestra di dialogo **Aggiungi binding sito** aggiungere un binding **https** al sito, se non è già visualizzato. Se non si utilizza un certificato autofirmato, specificare il nome host del passaggio 3 di questa procedura. Se si utilizza un certificato autofirmato, questo passaggio non è necessario.
 
-6.  Selezionare il certificato ottenuto o creato nel passaggio 3 di questa procedura, quindi fare clic su **OK**.
+6.  Selezionare il certificato ottenuto o creato nel passaggio 3 di questa procedura e quindi fare clic su **OK**.
 
 <a href="" id="BKMK_using"></a>
 
@@ -656,10 +656,10 @@ Dopo avere installato Accesso Web Windows PowerShell e completato la configurazi
 
 ------------------------------------------------------------------------
 
-[Documentazione di Internet Information Services (IIS) 7.0](https://technet.microsoft.com/library/cc753433.aspx)
-[Guida di Gestione IIS 7.0](https://technet.microsoft.com/library/cc732664.aspx)
-[Configurare la sicurezza del server Web (IIS 7)](https://technet.microsoft.com/library/cc731278.aspx)
-[Risorse sulla distribuzione di IPsec](https://technet.microsoft.com/network/bb531150)
+[Internet Information Services (IIS) 7.0 Documentation (Documentazione di Internet Information Services (IIS) 7.0)](https://technet.microsoft.com/library/cc753433.aspx)
+[IIS Manager 7.0 Help (Guida di Gestione IIS 7.0)](https://technet.microsoft.com/library/cc732664.aspx)
+[Configure Web Server Security (IIS 7) (Configurare la sicurezza del server Web (IIS 7))](https://technet.microsoft.com/library/cc731278.aspx)
+[IPsec Deployment Resources (Risorse sulla distribuzione di IPsec)](https://technet.microsoft.com/network/bb531150)
 
 <span>Show:</span> Inherited Protected
 
