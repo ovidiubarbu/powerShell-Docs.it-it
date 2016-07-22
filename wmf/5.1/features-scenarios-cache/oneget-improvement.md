@@ -2,8 +2,8 @@
 title: Miglioramenti apportati a PackageManagement (OneGet)
 contributor: jianyunt, quoctruong
 translationtype: Human Translation
-ms.sourcegitcommit: 4c1b57f221d0f502313eecb21dd36b5e85c2de4d
-ms.openlocfilehash: e2646a59c7a241491ef934c62fdfb6d649d16191
+ms.sourcegitcommit: 3b5a3bb0ef9cf123c0cee4a36890ac61431c85ff
+ms.openlocfilehash: bb1129e6aa20b64e94ddb6d7b7cf7b51b1df9ca3
 
 ---
 
@@ -36,9 +36,9 @@ Una soluzione alternativa consiste nell'eliminazione manuale della versione prec
 **Scenario**: in uno scenario aziendale gli utenti operano in un ambiente in cui non è presente alcun accesso Internet, ma solo Intranet. In WMF 5.0, OneGet non supportava questo caso.
 
 **Soluzione**:
-- è possibile scaricare il provider NuGet usando un altro computer con connessione Internet tramite il comando Install-PackageProvider NuGet.
+- È possibile scaricare il provider NuGet in un altro computer con connessione Internet tramite il comando "Install-PackageProvider -Name NuGet".
 
-- Trovare il provider NuGet in $env:Programmi\PackageManagement\ProviderAssemblies\nuget o $env:LOCALAPPDATA\PackageManagement\ProviderAssemblies\nuget. 
+- Il provider NuGet appena installato si trova in $env:Programmi\PackageManagement\ProviderAssemblies\nuget oppure in $env:LOCALAPPDATA\PackageManagement\ProviderAssemblies\nuget. 
 
 - Copiare i file binari in una cartella o in una condivisione di rete a cui il computer (quello senza Internet) ha accesso troppo accedere e installare il provider NuGet con "Install-PackageProvider NuGet -Source <Path to folder>".
 
@@ -60,6 +60,6 @@ Find-Package -Source http://www.nuget.org/api/v2/ -Proxy http://www.myproxyserve
 
 
 
-<!--HONumber=Jul16_HO1-->
+<!--HONumber=Jul16_HO3-->
 
 
