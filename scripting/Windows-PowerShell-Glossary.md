@@ -36,7 +36,7 @@ ms.openlocfilehash: ab41246eda58eb384500daa1f99aa9a8f9e019e1
 |sostantivo|Parola che segue il segno meno nel nome di un cmdlet di Windows PowerShell. Il sostantivo descrive le risorse su cui agisce il cmdlet.|
 |set di parametri|Gruppo di parametri utilizzabili nello stesso comando per eseguire un'azione specifica.|
 |inviare tramite pipe|In Windows PowerShell inviare i risultati del comando precedente come input al comando successivo nella pipeline.|
-|pipeline|Serie di comandi connessi con operatori pipeline (|) (ASCII 124). Ogni operatore pipeline invia i risultati del comando precedente come input al comando successivo.|
+|pipeline|Serie di comandi connessi con operatori pipeline (&#124;) (ASCII 124). Ogni operatore pipeline invia i risultati del comando precedente come input al comando successivo.|
 |PSSession|Tipo di sessione di Windows PowerShell creata, gestita e chiusa dall'utente.|
 |modulo radice|Modulo specificato nella chiave ModuleToProcess in un manifesto del modulo.|
 |spazio di esecuzione|In Windows PowerShell, l'ambiente operativo in cui viene eseguito ogni comando in una pipeline.|
