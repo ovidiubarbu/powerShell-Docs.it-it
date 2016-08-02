@@ -5,9 +5,9 @@
  -------- | ----- 
  Total Files | 447
 [ Handoff Failed Files ](#handoff-failed-list)| 0
-[ Handoff Success Files ](#handoff-success-list)| 7
+[ Handoff Success Files ](#handoff-success-list)| 0
 [ Archive Failed Files ](#archive-failed-list)| 0
-[ Archive Success Files ](#archive-success-list)| 59
+[ Archive Success Files ](#archive-success-list)| 66
 [ Handback Failed Files ](#handback-failed-list)| 5
 [ Out Of Sync Handback Files ](#outofsync-handback-success-list)| 9
 [ In Sync Handback Files ](#insync-handback-success-list)| 336
@@ -16,21 +16,14 @@
 ## <a name='handoff-failed-list'></a> Handoff Failed File List
 
 ## <a name='handoff-success-list'></a> Handoff Success File List
- Source File | Status | Details 
- ----------- | ------ | ------- 
- [dsc\index.md](https://github.com/PowerShell/powerShell-Docs/blob/8248ea4c6e353ae6df1662e080b2aa0156a4fb51/dsc/index.md) | HandedOffSuccess | [Details](#865258c0b403d4e7979d7ee32d3f87b63a349f0833)
- [gallery\index.md](https://github.com/PowerShell/powerShell-Docs/blob/8c31a7878b8c16469fd709d76af8bb9f1b39af1e/gallery/index.md) | HandedOffSuccess | [Details](#97403b5ae385aa568d0eba44eabac2e10b130a76104)
- [jea\index.md](https://github.com/PowerShell/powerShell-Docs/blob/ce159cee54f6a118edfc99e5901c16eced5fc178/jea/index.md) | HandedOffSuccess | [Details](#865258c0b403d4e7979d7ee32d3f87b63a349f08168)
- [scripting\index.md](https://github.com/PowerShell/powerShell-Docs/blob/ce159cee54f6a118edfc99e5901c16eced5fc178/scripting/index.md) | HandedOffSuccess | [Details](#865258c0b403d4e7979d7ee32d3f87b63a349f08296)
- [wmf\5.1\features-scenarios-cache\jea-improvements.md](https://github.com/PowerShell/powerShell-Docs/blob/598bfd856d45e8763525df68fad7696900af4dff/wmf/5.1/features-scenarios-cache/jea-improvements.md) | HandedOffSuccess | [Details](#7d2f293f000d3d82f4a227d3b3760988d9f02be7413)
- [wmf\5.1\known-issues-cache\NetworkingSwitchCmdletInput.md](https://github.com/PowerShell/powerShell-Docs/blob/34337749a77f4379b841a8478d4e6e3bc97e7ada/wmf/5.1/known-issues-cache/NetworkingSwitchCmdletInput.md) | HandedOffSuccess | [Details](#180158033e0c960f73dba66a3d77b15765e3e382421)
- [wmf\index.md](https://github.com/PowerShell/powerShell-Docs/blob/ce159cee54f6a118edfc99e5901c16eced5fc178/wmf/index.md) | HandedOffSuccess | [Details](#865258c0b403d4e7979d7ee32d3f87b63a349f08443)
 
 ## <a name='archive-failed-list'></a> Archive Failed File List
 
 ## <a name='archive-success-list'></a> Archive Success File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
+ [dsc\index.md](https://github.com/PowerShell/powerShell-Docs/blob/8248ea4c6e353ae6df1662e080b2aa0156a4fb51/dsc/index.md) | ArchivedSuccess | [Details](#865258c0b403d4e7979d7ee32d3f87b63a349f0833)
+ [gallery\index.md](https://github.com/PowerShell/powerShell-Docs/blob/8c31a7878b8c16469fd709d76af8bb9f1b39af1e/gallery/index.md) | ArchivedSuccess | [Details](#97403b5ae385aa568d0eba44eabac2e10b130a76104)
  [gallery\psgallery\contributing_to_psgallery_documentation.md](https://github.com/PowerShell/powerShell-Docs/blob/316caf861c7aff7e7a587fe2a8065933c0b67404/gallery/psgallery/contributing_to_psgallery_documentation.md) | ArchivedSuccess | [Details](#443d343d6f5c79c562e36ba59cd822d990de8715105)
  [gallery\psgallery\Creating-and-Publishing-an-item.md](https://github.com/PowerShell/powerShell-Docs/blob/316caf861c7aff7e7a587fe2a8065933c0b67404/gallery/psgallery/Creating-and-Publishing-an-item.md) | ArchivedSuccess | [Details](#9dab14b25815ac7c005b915df421300a1cc72033106)
  [gallery\psgallery\Deleting-Items.md](https://github.com/PowerShell/powerShell-Docs/blob/316caf861c7aff7e7a587fe2a8065933c0b67404/gallery/psgallery/Deleting-Items.md) | ArchivedSuccess | [Details](#8d6ca21b735c61aabd82ee9dd116082651133cf3107)
@@ -87,9 +80,14 @@
  [gallery\psget\script\Script_Versioning.md](https://github.com/PowerShell/powerShell-Docs/blob/ce159cee54f6a118edfc99e5901c16eced5fc178/gallery/psget/script/Script_Versioning.md) | ArchivedSuccess | [Details](#57218c316b6921e2cd61027a2387edc31a2d9471160)
  [gallery\readme.md](https://github.com/PowerShell/powerShell-Docs/blob/a494bb44e9463a167b4a75db9d0e847a1e5551c5/gallery/readme.md) | ArchivedSuccess | [Details](#d526066f543a99b765299c678d85c152a319d60b161)
  [gallery\TOC.md](https://github.com/PowerShell/powerShell-Docs/blob/a494bb44e9463a167b4a75db9d0e847a1e5551c5/gallery/TOC.md) | ArchivedSuccess | [Details](#263ec9e1dd297df2a70ef2846566a7004282aa92162)
+ [jea\index.md](https://github.com/PowerShell/powerShell-Docs/blob/ce159cee54f6a118edfc99e5901c16eced5fc178/jea/index.md) | ArchivedSuccess | [Details](#865258c0b403d4e7979d7ee32d3f87b63a349f08168)
+ [scripting\index.md](https://github.com/PowerShell/powerShell-Docs/blob/ce159cee54f6a118edfc99e5901c16eced5fc178/scripting/index.md) | ArchivedSuccess | [Details](#865258c0b403d4e7979d7ee32d3f87b63a349f08296)
  [wmf\5.1\features-scenarios-cache\DSCSigningValidations.md](https://github.com/PowerShell/powerShell-Docs/blob/5c97ca6e93d31aaffc7e2207facc7658ee36dfb4/wmf/5.1/features-scenarios-cache/DSCSigningValidations.md) | ArchivedSuccess | [Details](#817fadb79716e41ce8cc8f4245dedc66347ac413407)
+ [wmf\5.1\features-scenarios-cache\jea-improvements.md](https://github.com/PowerShell/powerShell-Docs/blob/598bfd856d45e8763525df68fad7696900af4dff/wmf/5.1/features-scenarios-cache/jea-improvements.md) | ArchivedSuccess | [Details](#7d2f293f000d3d82f4a227d3b3760988d9f02be7413)
  [wmf\5.1\features-scenarios-cache\PowerShellGet-Enhancements.md](https://github.com/PowerShell/powerShell-Docs/blob/8c55ca4b972c8d708a09b922f27eec585ddc33d0/wmf/5.1/features-scenarios-cache/PowerShellGet-Enhancements.md) | ArchivedSuccess | [Details](#025565404b60cebefac27e51c70d70edb5e47bc9416)
+ [wmf\5.1\known-issues-cache\NetworkingSwitchCmdletInput.md](https://github.com/PowerShell/powerShell-Docs/blob/34337749a77f4379b841a8478d4e6e3bc97e7ada/wmf/5.1/known-issues-cache/NetworkingSwitchCmdletInput.md) | ArchivedSuccess | [Details](#180158033e0c960f73dba66a3d77b15765e3e382421)
  [wmf\5.1\package-management-improvements.md](https://github.com/PowerShell/powerShell-Docs/blob/9c742da1d1996d9142d438c591c048ff32b503dc/wmf/5.1/package-management-improvements.md) | ArchivedSuccess | [Details](#bfe75745b736ffd97aff97f8450fa1ece5647dd1424)
+ [wmf\index.md](https://github.com/PowerShell/powerShell-Docs/blob/ce159cee54f6a118edfc99e5901c16eced5fc178/wmf/index.md) | ArchivedSuccess | [Details](#865258c0b403d4e7979d7ee32d3f87b63a349f08443)
 
 ## <a name='handback-failed-list'></a> Handback Failed File List
  Source File | Status | Details 
@@ -738,8 +736,8 @@
 * Handoff File: [debugResource.ac634156affe5c723cc149a298f5aa4268d17016.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/8467ef86d74900e4ee9c29cfc848dca4d63c594e/ol-handoff/PowerShell/powerShell-Docs.it-it/live/debugResource.ac634156affe5c723cc149a298f5aa4268d17016.it-it.xlf)
 * Handoff Datetime: 2016-07-29 05:41:46
 * Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
+* Archive File: [debugResource.ac634156affe5c723cc149a298f5aa4268d17016.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/ed6584c6dc2fd8c5f4c6b236d66a05849433356e/ol-archive/PowerShell/powerShell-Docs.it-it/live/debugResource.ac634156affe5c723cc149a298f5aa4268d17016.it-it.xlf)
+* Archive Datetime: 2016-08-02 13:12:38
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * Current Target File: [dsc\debugResource.md](https://github.com/PowerShell/powerShell-Docs.it-it/blob/9977884dcea7dffab99e2cedc8ac0626bfdf1fd5/dsc/debugResource.md)
@@ -937,13 +935,13 @@
 * [Back to Top](#report-top)
 
 ##### <a name='865258c0b403d4e7979d7ee32d3f87b63a349f0833'></a> Source: [dsc\index.md](https://github.com/PowerShell/powerShell-Docs/blob/8248ea4c6e353ae6df1662e080b2aa0156a4fb51/dsc/index.md)
-* Status: HandedOffSuccess
+* Status: ArchivedSuccess
 * Target File: 
 * Handoff File: [index.087529cd8972c61293d437c5b3a72507e4d1e1d9.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/765fea2d316605860fafc9f4694e8bdde99808f5/ol-handoff/PowerShell/powerShell-Docs.it-it/live/index.087529cd8972c61293d437c5b3a72507e4d1e1d9.it-it.xlf)
 * Handoff Datetime: 2016-07-29 17:43:00
 * Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
+* Archive File: [index.087529cd8972c61293d437c5b3a72507e4d1e1d9.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/ed6584c6dc2fd8c5f4c6b236d66a05849433356e/ol-archive/PowerShell/powerShell-Docs.it-it/live/index.087529cd8972c61293d437c5b3a72507e4d1e1d9.it-it.xlf)
+* Archive Datetime: 2016-08-02 13:12:38
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
@@ -1925,13 +1923,13 @@
 * [Back to Top](#report-top)
 
 ##### <a name='97403b5ae385aa568d0eba44eabac2e10b130a76104'></a> Source: [gallery\index.md](https://github.com/PowerShell/powerShell-Docs/blob/8c31a7878b8c16469fd709d76af8bb9f1b39af1e/gallery/index.md)
-* Status: HandedOffSuccess
+* Status: ArchivedSuccess
 * Target File: 
 * Handoff File: [index.fb851c60ffb7fc30c83dbadbcac26716f6e1f16d.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/0d37b325286c4ed326f0c5dea5685051ce89b8ab/ol-handoff/PowerShell/powerShell-Docs.it-it/live/index.fb851c60ffb7fc30c83dbadbcac26716f6e1f16d.it-it.xlf)
 * Handoff Datetime: 2016-07-29 18:12:56
 * Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
+* Archive File: [index.fb851c60ffb7fc30c83dbadbcac26716f6e1f16d.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/ed6584c6dc2fd8c5f4c6b236d66a05849433356e/ol-archive/PowerShell/powerShell-Docs.it-it/live/index.fb851c60ffb7fc30c83dbadbcac26716f6e1f16d.it-it.xlf)
+* Archive Datetime: 2016-08-02 13:12:38
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
@@ -2701,13 +2699,13 @@
 * [Back to Top](#report-top)
 
 ##### <a name='865258c0b403d4e7979d7ee32d3f87b63a349f08168'></a> Source: [jea\index.md](https://github.com/PowerShell/powerShell-Docs/blob/ce159cee54f6a118edfc99e5901c16eced5fc178/jea/index.md)
-* Status: HandedOffSuccess
+* Status: ArchivedSuccess
 * Target File: 
 * Handoff File: [index.087529cd8972c61293d437c5b3a72507e4d1e1d9.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/765fea2d316605860fafc9f4694e8bdde99808f5/ol-handoff/PowerShell/powerShell-Docs.it-it/live/index.087529cd8972c61293d437c5b3a72507e4d1e1d9.it-it.xlf)
 * Handoff Datetime: 2016-07-29 17:43:00
 * Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
+* Archive File: [index.087529cd8972c61293d437c5b3a72507e4d1e1d9.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/ed6584c6dc2fd8c5f4c6b236d66a05849433356e/ol-archive/PowerShell/powerShell-Docs.it-it/live/index.087529cd8972c61293d437c5b3a72507e4d1e1d9.it-it.xlf)
+* Archive Datetime: 2016-08-02 13:12:38
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
@@ -2788,8 +2786,8 @@
 * Handoff File: [README.21b5f679157a942d8da32daf52be349e47cf03ae.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/885c46f1690cd93fed610355b1d327b85ed07d44/ol-handoff/PowerShell/powerShell-Docs.it-it/live/README.21b5f679157a942d8da32daf52be349e47cf03ae.it-it.xlf)
 * Handoff Datetime: 2016-07-28 12:41:14
 * Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
+* Archive File: [README.21b5f679157a942d8da32daf52be349e47cf03ae.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/ed6584c6dc2fd8c5f4c6b236d66a05849433356e/ol-archive/PowerShell/powerShell-Docs.it-it/live/README.21b5f679157a942d8da32daf52be349e47cf03ae.it-it.xlf)
+* Archive Datetime: 2016-08-02 13:12:38
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * Current Target File: [jea\README.md](https://github.com/PowerShell/powerShell-Docs.it-it/blob/6c8279b6a5d6cacd9b24cba6ef13afe071e86abd/jea/README.md)
@@ -4488,13 +4486,13 @@
 * [Back to Top](#report-top)
 
 ##### <a name='865258c0b403d4e7979d7ee32d3f87b63a349f08296'></a> Source: [scripting\index.md](https://github.com/PowerShell/powerShell-Docs/blob/ce159cee54f6a118edfc99e5901c16eced5fc178/scripting/index.md)
-* Status: HandedOffSuccess
+* Status: ArchivedSuccess
 * Target File: 
 * Handoff File: [index.087529cd8972c61293d437c5b3a72507e4d1e1d9.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/765fea2d316605860fafc9f4694e8bdde99808f5/ol-handoff/PowerShell/powerShell-Docs.it-it/live/index.087529cd8972c61293d437c5b3a72507e4d1e1d9.it-it.xlf)
 * Handoff Datetime: 2016-07-29 17:43:00
 * Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
+* Archive File: [index.087529cd8972c61293d437c5b3a72507e4d1e1d9.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/ed6584c6dc2fd8c5f4c6b236d66a05849433356e/ol-archive/PowerShell/powerShell-Docs.it-it/live/index.087529cd8972c61293d437c5b3a72507e4d1e1d9.it-it.xlf)
+* Archive Datetime: 2016-08-02 13:12:38
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
@@ -5948,8 +5946,8 @@
 * Handoff File: [engine-improvements.c5dd46175ad980e169540bcebd2cac560021ece6.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/8467ef86d74900e4ee9c29cfc848dca4d63c594e/ol-handoff/PowerShell/powerShell-Docs.it-it/live/engine-improvements.c5dd46175ad980e169540bcebd2cac560021ece6.it-it.xlf)
 * Handoff Datetime: 2016-07-29 05:41:46
 * Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
+* Archive File: [engine-improvements.c5dd46175ad980e169540bcebd2cac560021ece6.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/ed6584c6dc2fd8c5f4c6b236d66a05849433356e/ol-archive/PowerShell/powerShell-Docs.it-it/live/engine-improvements.c5dd46175ad980e169540bcebd2cac560021ece6.it-it.xlf)
+* Archive Datetime: 2016-08-02 13:12:38
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * Current Target File: [wmf\5.1\engine-improvements.md](https://github.com/PowerShell/powerShell-Docs.it-it/blob/602ccf75da1f7b72b3b6fe1df45e576d31fdb4d5/wmf/5.1/engine-improvements.md)
@@ -6121,13 +6119,13 @@
 * [Back to Top](#report-top)
 
 ##### <a name='7d2f293f000d3d82f4a227d3b3760988d9f02be7413'></a> Source: [wmf\5.1\features-scenarios-cache\jea-improvements.md](https://github.com/PowerShell/powerShell-Docs/blob/598bfd856d45e8763525df68fad7696900af4dff/wmf/5.1/features-scenarios-cache/jea-improvements.md)
-* Status: HandedOffSuccess
+* Status: ArchivedSuccess
 * Target File: 
 * Handoff File: [jea-improvements.7d497b331a525c0e4042c5417438af356075d0e5.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/885c46f1690cd93fed610355b1d327b85ed07d44/ol-handoff/PowerShell/powerShell-Docs.it-it/live/jea-improvements.7d497b331a525c0e4042c5417438af356075d0e5.it-it.xlf)
 * Handoff Datetime: 2016-07-28 12:41:14
 * Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
+* Archive File: [jea-improvements.7d497b331a525c0e4042c5417438af356075d0e5.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/ed6584c6dc2fd8c5f4c6b236d66a05849433356e/ol-archive/PowerShell/powerShell-Docs.it-it/live/jea-improvements.7d497b331a525c0e4042c5417438af356075d0e5.it-it.xlf)
+* Archive Datetime: 2016-08-02 13:12:38
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
@@ -6219,8 +6217,8 @@
 * Handoff File: [install-configure.d23935c7edf43234f7208217daa4ff7870a16d7c.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/8467ef86d74900e4ee9c29cfc848dca4d63c594e/ol-handoff/PowerShell/powerShell-Docs.it-it/live/install-configure.d23935c7edf43234f7208217daa4ff7870a16d7c.it-it.xlf)
 * Handoff Datetime: 2016-07-29 05:41:46
 * Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
+* Archive File: [install-configure.d23935c7edf43234f7208217daa4ff7870a16d7c.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/ed6584c6dc2fd8c5f4c6b236d66a05849433356e/ol-archive/PowerShell/powerShell-Docs.it-it/live/install-configure.d23935c7edf43234f7208217daa4ff7870a16d7c.it-it.xlf)
+* Archive Datetime: 2016-08-02 13:12:38
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * Current Target File: [wmf\5.1\install-configure.md](https://github.com/PowerShell/powerShell-Docs.it-it/blob/602ccf75da1f7b72b3b6fe1df45e576d31fdb4d5/wmf/5.1/install-configure.md)
@@ -6245,13 +6243,13 @@
 * [Back to Top](#report-top)
 
 ##### <a name='180158033e0c960f73dba66a3d77b15765e3e382421'></a> Source: [wmf\5.1\known-issues-cache\NetworkingSwitchCmdletInput.md](https://github.com/PowerShell/powerShell-Docs/blob/34337749a77f4379b841a8478d4e6e3bc97e7ada/wmf/5.1/known-issues-cache/NetworkingSwitchCmdletInput.md)
-* Status: HandedOffSuccess
+* Status: ArchivedSuccess
 * Target File: 
 * Handoff File: [NetworkingSwitchCmdletInput.eed91b2188e6217c0c49c260c2510c33d4434177.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/ab214237b39ba14995e7f8b1ea4525f4bd9c514e/ol-handoff/PowerShell/powerShell-Docs.it-it/live/NetworkingSwitchCmdletInput.eed91b2188e6217c0c49c260c2510c33d4434177.it-it.xlf)
 * Handoff Datetime: 2016-07-31 08:41:49
 * Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
+* Archive File: [NetworkingSwitchCmdletInput.eed91b2188e6217c0c49c260c2510c33d4434177.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/ed6584c6dc2fd8c5f4c6b236d66a05849433356e/ol-archive/PowerShell/powerShell-Docs.it-it/live/NetworkingSwitchCmdletInput.eed91b2188e6217c0c49c260c2510c33d4434177.it-it.xlf)
+* Archive Datetime: 2016-08-02 13:12:38
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
@@ -6288,8 +6286,8 @@
 * Handoff File: [release-notes.218509b1bab21c093b32cb5d4953c42d1cb90cb4.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/ab214237b39ba14995e7f8b1ea4525f4bd9c514e/ol-handoff/PowerShell/powerShell-Docs.it-it/live/release-notes.218509b1bab21c093b32cb5d4953c42d1cb90cb4.it-it.xlf)
 * Handoff Datetime: 2016-07-31 08:41:49
 * Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
+* Archive File: [release-notes.218509b1bab21c093b32cb5d4953c42d1cb90cb4.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/ed6584c6dc2fd8c5f4c6b236d66a05849433356e/ol-archive/PowerShell/powerShell-Docs.it-it/live/release-notes.218509b1bab21c093b32cb5d4953c42d1cb90cb4.it-it.xlf)
+* Archive Datetime: 2016-08-02 13:12:38
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * Current Target File: [wmf\5.1\release-notes.md](https://github.com/PowerShell/powerShell-Docs.it-it/blob/602ccf75da1f7b72b3b6fe1df45e576d31fdb4d5/wmf/5.1/release-notes.md)
@@ -6512,13 +6510,13 @@
 * [Back to Top](#report-top)
 
 ##### <a name='865258c0b403d4e7979d7ee32d3f87b63a349f08443'></a> Source: [wmf\index.md](https://github.com/PowerShell/powerShell-Docs/blob/ce159cee54f6a118edfc99e5901c16eced5fc178/wmf/index.md)
-* Status: HandedOffSuccess
+* Status: ArchivedSuccess
 * Target File: 
 * Handoff File: [index.087529cd8972c61293d437c5b3a72507e4d1e1d9.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/765fea2d316605860fafc9f4694e8bdde99808f5/ol-handoff/PowerShell/powerShell-Docs.it-it/live/index.087529cd8972c61293d437c5b3a72507e4d1e1d9.it-it.xlf)
 * Handoff Datetime: 2016-07-29 17:43:00
 * Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
+* Archive File: [index.087529cd8972c61293d437c5b3a72507e4d1e1d9.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/ed6584c6dc2fd8c5f4c6b236d66a05849433356e/ol-archive/PowerShell/powerShell-Docs.it-it/live/index.087529cd8972c61293d437c5b3a72507e4d1e1d9.it-it.xlf)
+* Archive Datetime: 2016-08-02 13:12:38
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
@@ -6555,8 +6553,8 @@
 * Handoff File: [TOC.60497266061c38453b3db893ec675eb65584af89.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/885c46f1690cd93fed610355b1d327b85ed07d44/ol-handoff/PowerShell/powerShell-Docs.it-it/live/TOC.60497266061c38453b3db893ec675eb65584af89.it-it.xlf)
 * Handoff Datetime: 2016-07-28 12:41:14
 * Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
+* Archive File: [TOC.60497266061c38453b3db893ec675eb65584af89.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/ed6584c6dc2fd8c5f4c6b236d66a05849433356e/ol-archive/PowerShell/powerShell-Docs.it-it/live/TOC.60497266061c38453b3db893ec675eb65584af89.it-it.xlf)
+* Archive Datetime: 2016-08-02 13:12:38
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * Current Target File: [wmf\TOC.md](https://github.com/PowerShell/powerShell-Docs.it-it/blob/602ccf75da1f7b72b3b6fe1df45e576d31fdb4d5/wmf/TOC.md)
