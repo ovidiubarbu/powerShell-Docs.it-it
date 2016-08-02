@@ -1,26 +1,11 @@
 # <a name='report-top'></a> Localization Handback Report
 
 ## Summary
- Total Files | 1
+ Total Files | 0
 
 ## File List
- Source File | Status | Details 
- ----------- | ------ | ------- 
- [gallery\index.md](https://github.com/PowerShell/powerShell-Docs/blob/8c31a7878b8c16469fd709d76af8bb9f1b39af1e/gallery/index.md) | InSyncHandedBackSuccess | [Details](#97403b5ae385aa568d0eba44eabac2e10b130a76104)
 
 ## Item Details
-##### <a name='97403b5ae385aa568d0eba44eabac2e10b130a76104'></a> Source: [gallery\index.md](https://github.com/PowerShell/powerShell-Docs/blob/8c31a7878b8c16469fd709d76af8bb9f1b39af1e/gallery/index.md)
-* Status: InSyncHandedBackSuccess
-* Target File: [gallery\index.md](https://github.com/PowerShell/powerShell-Docs.it-it/blob/eb4b6ed464b443c7558bd449afc65ef17307d790/gallery/index.md)
-* Handoff File: [index.fb851c60ffb7fc30c83dbadbcac26716f6e1f16d.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/0d37b325286c4ed326f0c5dea5685051ce89b8ab/ol-handoff/PowerShell/powerShell-Docs.it-it/live/index.fb851c60ffb7fc30c83dbadbcac26716f6e1f16d.it-it.xlf)
-* Handoff Datetime: 2016-07-29 18:12:56
-* Handoff Reason: Include
-* Archive File: [index.fb851c60ffb7fc30c83dbadbcac26716f6e1f16d.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/ed6584c6dc2fd8c5f4c6b236d66a05849433356e/ol-archive/PowerShell/powerShell-Docs.it-it/live/index.fb851c60ffb7fc30c83dbadbcac26716f6e1f16d.it-it.xlf)
-* Archive Datetime: 2016-08-02 13:12:38
-* Handback File: [index.fb851c60ffb7fc30c83dbadbcac26716f6e1f16d.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/65980f109f2e08127d40d4381420e9984e02ee88/ol-handback/PowerShell/powerShell-Docs.it-it/live/index.fb851c60ffb7fc30c83dbadbcac26716f6e1f16d.it-it.xlf)
-* Handback Datetime: 2016-08-02 14:03:03
-* [Back to Top](#report-top)
-
 
 ## Error Details
 
