@@ -2642,8 +2642,8 @@
 * Archive Datetime: 2016-07-12 13:13:49
 * Handback File: [common-role-capability-pitfalls.dfaa23ae81cb39f04c2fe16d9e7917452e8b7b3b.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/abf92c831ef98ad63003318b74d42e89436d6adc/ol-handback/PowerShell/powerShell-Docs.it-it/live/common-role-capability-pitfalls.dfaa23ae81cb39f04c2fe16d9e7917452e8b7b3b.it-it.xlf)
 * Handback Datetime: 2016-08-02 22:21:33
-* Bilingual File: [common-role-capability-pitfalls.dfaa23ae81cb39f04c2fe16d9e7917452e8b7b3b.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/6eb8d1e2c6f1a11c050900261d0efd34ef4f89b0/ol-handback/PowerShell/powerShell-Docs.it-it/live/common-role-capability-pitfalls.dfaa23ae81cb39f04c2fe16d9e7917452e8b7b3b.it-it.xlf)
-* Bilingual Datetime: 2016-07-12 18:26:31
+* Bilingual File: [common-role-capability-pitfalls.dfaa23ae81cb39f04c2fe16d9e7917452e8b7b3b.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/abf92c831ef98ad63003318b74d42e89436d6adc/ol-handback/PowerShell/powerShell-Docs.it-it/live/common-role-capability-pitfalls.dfaa23ae81cb39f04c2fe16d9e7917452e8b7b3b.it-it.xlf)
+* Bilingual Datetime: 2016-08-02 22:22:27
 * [Back to Top](#report-top)
 
 ##### <a name='9f3f79a29e0fb7ec5a5111284bb7985548e17749164'></a> Source: [jea\considerations-when-limiting-commands.md](https://github.com/PowerShell/powerShell-Docs/blob/7504fe496a8913718847e45115d126caf4049bef/jea/considerations-when-limiting-commands.md)
@@ -2656,8 +2656,8 @@
 * Archive Datetime: 2016-07-12 13:13:49
 * Handback File: [considerations-when-limiting-commands.f94b8dd0f9c77bf7e8a6286eb8ff8f20609bf593.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/abf92c831ef98ad63003318b74d42e89436d6adc/ol-handback/PowerShell/powerShell-Docs.it-it/live/considerations-when-limiting-commands.f94b8dd0f9c77bf7e8a6286eb8ff8f20609bf593.it-it.xlf)
 * Handback Datetime: 2016-08-02 22:21:33
-* Bilingual File: [considerations-when-limiting-commands.f94b8dd0f9c77bf7e8a6286eb8ff8f20609bf593.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/6eb8d1e2c6f1a11c050900261d0efd34ef4f89b0/ol-handback/PowerShell/powerShell-Docs.it-it/live/considerations-when-limiting-commands.f94b8dd0f9c77bf7e8a6286eb8ff8f20609bf593.it-it.xlf)
-* Bilingual Datetime: 2016-07-12 18:26:31
+* Bilingual File: [considerations-when-limiting-commands.f94b8dd0f9c77bf7e8a6286eb8ff8f20609bf593.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/abf92c831ef98ad63003318b74d42e89436d6adc/ol-handback/PowerShell/powerShell-Docs.it-it/live/considerations-when-limiting-commands.f94b8dd0f9c77bf7e8a6286eb8ff8f20609bf593.it-it.xlf)
+* Bilingual Datetime: 2016-08-02 22:22:27
 * [Back to Top](#report-top)
 
 ##### <a name='8473eb668e4da5bab01c2f2b7647cbced413bd22165'></a> Source: [jea\creating-a-domain-controller.md](https://github.com/PowerShell/powerShell-Docs/blob/d4a72a7c5883b1d3ba8de3dbc9cfe016a6fb3498/jea/creating-a-domain-controller.md)
@@ -2670,8 +2670,8 @@
 * Archive Datetime: 2016-07-12 13:13:49
 * Handback File: [creating-a-domain-controller.b6645bbc4de5b0de067c85719afba2a9b0dcc9fb.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/abf92c831ef98ad63003318b74d42e89436d6adc/ol-handback/PowerShell/powerShell-Docs.it-it/live/creating-a-domain-controller.b6645bbc4de5b0de067c85719afba2a9b0dcc9fb.it-it.xlf)
 * Handback Datetime: 2016-08-02 22:21:33
-* Bilingual File: [creating-a-domain-controller.b6645bbc4de5b0de067c85719afba2a9b0dcc9fb.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/6eb8d1e2c6f1a11c050900261d0efd34ef4f89b0/ol-handback/PowerShell/powerShell-Docs.it-it/live/creating-a-domain-controller.b6645bbc4de5b0de067c85719afba2a9b0dcc9fb.it-it.xlf)
-* Bilingual Datetime: 2016-07-12 18:26:31
+* Bilingual File: [creating-a-domain-controller.b6645bbc4de5b0de067c85719afba2a9b0dcc9fb.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/abf92c831ef98ad63003318b74d42e89436d6adc/ol-handback/PowerShell/powerShell-Docs.it-it/live/creating-a-domain-controller.b6645bbc4de5b0de067c85719afba2a9b0dcc9fb.it-it.xlf)
+* Bilingual Datetime: 2016-08-02 22:22:27
 * [Back to Top](#report-top)
 
 ##### <a name='fa5ac04e8f04a6f033fbb4726f384a693551251e166'></a> Source: [jea\docfx.json](https://github.com/PowerShell/powerShell-Docs/blob/ce159cee54f6a118edfc99e5901c16eced5fc178/jea/docfx.json)
@@ -2696,8 +2696,8 @@
 * Archive Datetime: 2016-07-12 13:13:49
 * Handback File: [end-to-end---active-directory.3ad98916a8ab304f831ad3b5b15c64e1b086b1f5.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/abf92c831ef98ad63003318b74d42e89436d6adc/ol-handback/PowerShell/powerShell-Docs.it-it/live/end-to-end---active-directory.3ad98916a8ab304f831ad3b5b15c64e1b086b1f5.it-it.xlf)
 * Handback Datetime: 2016-08-02 22:21:33
-* Bilingual File: [end-to-end---active-directory.3ad98916a8ab304f831ad3b5b15c64e1b086b1f5.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/379d0bcb9e9b8d300cf03e09f4f8e27ec39f608d/ol-handback/PowerShell/powerShell-Docs.it-it/live/end-to-end---active-directory.3ad98916a8ab304f831ad3b5b15c64e1b086b1f5.it-it.xlf)
-* Bilingual Datetime: 2016-07-15 05:57:55
+* Bilingual File: [end-to-end---active-directory.3ad98916a8ab304f831ad3b5b15c64e1b086b1f5.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/abf92c831ef98ad63003318b74d42e89436d6adc/ol-handback/PowerShell/powerShell-Docs.it-it/live/end-to-end---active-directory.3ad98916a8ab304f831ad3b5b15c64e1b086b1f5.it-it.xlf)
+* Bilingual Datetime: 2016-08-02 22:22:27
 * [Back to Top](#report-top)
 
 ##### <a name='865258c0b403d4e7979d7ee32d3f87b63a349f08168'></a> Source: [jea\index.md](https://github.com/PowerShell/powerShell-Docs/blob/ce159cee54f6a118edfc99e5901c16eced5fc178/jea/index.md)
@@ -2736,8 +2736,8 @@
 * Archive Datetime: 2016-07-12 13:13:49
 * Handback File: [key-concepts-used-throughout-this-guide.eeae4004227673667762c01ddd04d19b5c6f9c39.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/abf92c831ef98ad63003318b74d42e89436d6adc/ol-handback/PowerShell/powerShell-Docs.it-it/live/key-concepts-used-throughout-this-guide.eeae4004227673667762c01ddd04d19b5c6f9c39.it-it.xlf)
 * Handback Datetime: 2016-08-02 22:21:33
-* Bilingual File: [key-concepts-used-throughout-this-guide.eeae4004227673667762c01ddd04d19b5c6f9c39.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/6eb8d1e2c6f1a11c050900261d0efd34ef4f89b0/ol-handback/PowerShell/powerShell-Docs.it-it/live/key-concepts-used-throughout-this-guide.eeae4004227673667762c01ddd04d19b5c6f9c39.it-it.xlf)
-* Bilingual Datetime: 2016-07-12 18:26:31
+* Bilingual File: [key-concepts-used-throughout-this-guide.eeae4004227673667762c01ddd04d19b5c6f9c39.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/abf92c831ef98ad63003318b74d42e89436d6adc/ol-handback/PowerShell/powerShell-Docs.it-it/live/key-concepts-used-throughout-this-guide.eeae4004227673667762c01ddd04d19b5c6f9c39.it-it.xlf)
+* Bilingual Datetime: 2016-08-02 22:22:27
 * [Back to Top](#report-top)
 
 ##### <a name='784806197a64eb30af1ecea4af55575434ce7b87171'></a> Source: [jea\multi-machine-deployment-and-maintenance.md](https://github.com/PowerShell/powerShell-Docs/blob/7504fe496a8913718847e45115d126caf4049bef/jea/multi-machine-deployment-and-maintenance.md)
@@ -2750,8 +2750,8 @@
 * Archive Datetime: 2016-07-12 13:13:49
 * Handback File: [multi-machine-deployment-and-maintenance.32608fd7371edc69c27c934c12cb704b31023002.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/abf92c831ef98ad63003318b74d42e89436d6adc/ol-handback/PowerShell/powerShell-Docs.it-it/live/multi-machine-deployment-and-maintenance.32608fd7371edc69c27c934c12cb704b31023002.it-it.xlf)
 * Handback Datetime: 2016-08-02 22:21:33
-* Bilingual File: [multi-machine-deployment-and-maintenance.32608fd7371edc69c27c934c12cb704b31023002.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/6eb8d1e2c6f1a11c050900261d0efd34ef4f89b0/ol-handback/PowerShell/powerShell-Docs.it-it/live/multi-machine-deployment-and-maintenance.32608fd7371edc69c27c934c12cb704b31023002.it-it.xlf)
-* Bilingual Datetime: 2016-07-12 18:26:31
+* Bilingual File: [multi-machine-deployment-and-maintenance.32608fd7371edc69c27c934c12cb704b31023002.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/abf92c831ef98ad63003318b74d42e89436d6adc/ol-handback/PowerShell/powerShell-Docs.it-it/live/multi-machine-deployment-and-maintenance.32608fd7371edc69c27c934c12cb704b31023002.it-it.xlf)
+* Bilingual Datetime: 2016-08-02 22:22:27
 * [Back to Top](#report-top)
 
 ##### <a name='8892e5e08a763fbc66d782bbc9252d1f3a7dcfcf172'></a> Source: [jea\on-blacklisting.md](https://github.com/PowerShell/powerShell-Docs/blob/7504fe496a8913718847e45115d126caf4049bef/jea/on-blacklisting.md)
@@ -2778,8 +2778,8 @@
 * Archive Datetime: 2016-07-12 13:13:49
 * Handback File: [prerequisites.c7c64787c6d6d670a4d099b82dfa08e0cdc17727.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/abf92c831ef98ad63003318b74d42e89436d6adc/ol-handback/PowerShell/powerShell-Docs.it-it/live/prerequisites.c7c64787c6d6d670a4d099b82dfa08e0cdc17727.it-it.xlf)
 * Handback Datetime: 2016-08-02 22:21:33
-* Bilingual File: [prerequisites.c7c64787c6d6d670a4d099b82dfa08e0cdc17727.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/6eb8d1e2c6f1a11c050900261d0efd34ef4f89b0/ol-handback/PowerShell/powerShell-Docs.it-it/live/prerequisites.c7c64787c6d6d670a4d099b82dfa08e0cdc17727.it-it.xlf)
-* Bilingual Datetime: 2016-07-12 18:26:31
+* Bilingual File: [prerequisites.c7c64787c6d6d670a4d099b82dfa08e0cdc17727.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/abf92c831ef98ad63003318b74d42e89436d6adc/ol-handback/PowerShell/powerShell-Docs.it-it/live/prerequisites.c7c64787c6d6d670a4d099b82dfa08e0cdc17727.it-it.xlf)
+* Bilingual Datetime: 2016-08-02 22:22:27
 * [Back to Top](#report-top)
 
 ##### <a name='bfee5ef59a4085f0350ff454f634fc0bf5d6d837174'></a> Source: [jea\README.md](https://github.com/PowerShell/powerShell-Docs/blob/bd7f637d0889fd0f56c3fa653389819341d2ccff/jea/README.md)
