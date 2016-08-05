@@ -8,8 +8,8 @@ author: eslesar
 manager: dongill
 ms.prod: powershell
 translationtype: Human Translation
-ms.sourcegitcommit: 6477ae8575c83fc24150f9502515ff5b82bc8198
-ms.openlocfilehash: f5290e085c8949f6b3cdf23f3244a7142da6248d
+ms.sourcegitcommit: 83ca45d507e39b77751ac7feb6a7b65ae2834280
+ms.openlocfilehash: e1922008a92f00c9ddab28598735839c25219d24
 
 ---
 
@@ -61,7 +61,7 @@ Configuration PSWebAccess
     }
 PSWebAccess
 ```
-Dopo aver compilato la configurazione, avviarla chiamando [Start-DscConfiguration](https://technet.microsoft.com/en-us/library/dn521623.aspx). La configurazione verrà arrestata quando Gestione configurazione locale chiama la prima risorsa nella configurazione. Se si usano i parametri `-Verbose` e `-Wait`, l'output visualizza le righe che devono essere immesse per avviare il debug.
+Dopo aver compilato la configurazione, avviarla chiamando [Start-DscConfiguration](https://technet.microsoft.com/en-us/library/dn521623.aspx). La configurazione verrà arrestata quando Gestione configurazione locale effettua una chiamata alla prima risorsa nella configurazione. Se si usano i parametri `-Verbose` e `-Wait`, l'output visualizza le righe che devono essere immesse per avviare il debug.
 
 ```powershell
 PS C:\DebugTest> Start-DscConfiguration .\PSWebAccess -Wait -Verbose
@@ -87,7 +87,7 @@ A questo punto, Gestione configurazione locale ha chiamato la risorsa e ha raggi
 
 ## Debug dello script della risorsa
 
-Avviare una nuova istanza di PowerShell ISE. Nel riquadro della console immettere le ultime tre righe di output dall'output di `Start-DscConifiguration` come comandi, sostituendo `<credentials>` con credenziali utente valide. Dovrebbe essere visualizzato un messaggio simile a:
+Avviare una nuova istanza di PowerShell ISE. Nel riquadro della console immettere le ultime tre righe di output dall'output di `Start-DscConfiguration` come comandi, sostituendo `<credentials>` con credenziali utente valide. Dovrebbe essere visualizzato un messaggio simile a:
 
 ```powershell
 [TEST-SRV]: [DBG]: [Process:9000]: [RemoteHost]: PS C:\DebugTest>>
@@ -110,6 +110,6 @@ Dopo la chiamata di [Enable-DscDebug](https://technet.microsoft.com/en-us/librar
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO5-->
 
 

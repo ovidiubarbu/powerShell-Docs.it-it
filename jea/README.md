@@ -9,8 +9,8 @@ ms.date: 2016-06-22
 title: FILE LEGGIMI
 ms.technology: powershell
 translationtype: Human Translation
-ms.sourcegitcommit: d4e46653ff31ea7cda71f1c92b12ce5f2811b8a7
-ms.openlocfilehash: e24757029fd3ac9a70f710a7a755c35f440f087c
+ms.sourcegitcommit: bd7f637d0889fd0f56c3fa653389819341d2ccff
+ms.openlocfilehash: bfee5ef59a4085f0350ff454f634fc0bf5d6d837
 
 ---
 
@@ -92,6 +92,6 @@ Per semplificare ulteriormente la creazione degli endpoint JEA, vedere il [JEA T
 
 
 
-<!--HONumber=Jul16_HO1-->
+<!--HONumber=Jul16_HO4-->
 
 

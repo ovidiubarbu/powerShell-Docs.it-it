@@ -2,11 +2,11 @@
 
 # [WMF 5.1](5.1/release-notes.md)
 ## [Nuovi scenari e funzionalità](5.1/scenarios-features.md)
-### [Problemi risolti in WMF 5.1](5.1/bugfixes.md)
+### [Miglioramenti per Desired State Configuration (DSC)](5.1/DSC-improvements.md)
 ### [Miglioramenti apportati alla console di PowerShell](5.1/console-improvements.md)
 ### [Miglioramenti apportati al motore di PowerShell](5.1/engine-improvements.md)
-### [Miglioramenti per Desired State Configuration (DSC)](5.1/DSC-improvements.md)
-### [Improvements in OneGet]
+### [Miglioramenti appartati a Gestione pacchetti](5/1/package-management-improvements.md)
+### [Problemi risolti in WMF 5.1](5.1/bugfixes.md)
 ## [Installazione e configurazione](5.1/install-configure.md)
 ## [Problemi noti](5.1/known-issues.md)
 ## [Compatibilità](5.1/Compatibility.md)
@@ -94,6 +94,6 @@
 ### [Registrazione inventario software (SIL)](5.0/sil_overview.md)
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Jul16_HO4-->
 
 
