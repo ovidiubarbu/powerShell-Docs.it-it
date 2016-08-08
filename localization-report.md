@@ -7,10 +7,10 @@
 [ Handoff Failed Files ](#handoff-failed-list)| 0
 [ Handoff Success Files ](#handoff-success-list)| 0
 [ Archive Failed Files ](#archive-failed-list)| 0
-[ Archive Success Files ](#archive-success-list)| 59
+[ Archive Success Files ](#archive-success-list)| 63
 [ Handback Failed Files ](#handback-failed-list)| 5
-[ Out Of Sync Handback Files ](#outofsync-handback-success-list)| 3
-[ In Sync Handback Files ](#insync-handback-success-list)| 349
+[ Out Of Sync Handback Files ](#outofsync-handback-success-list)| 0
+[ In Sync Handback Files ](#insync-handback-success-list)| 348
 [ Ignored Files ](#ignored-list)| 31
 
 ## <a name='handoff-failed-list'></a> Handoff Failed File List
@@ -78,25 +78,24 @@
  [gallery\psget\script\Script_Versioning.md](https://github.com/PowerShell/powerShell-Docs/blob/ce159cee54f6a118edfc99e5901c16eced5fc178/gallery/psget/script/Script_Versioning.md) | ArchivedSuccess | [Details](#57218c316b6921e2cd61027a2387edc31a2d9471160)
  [gallery\readme.md](https://github.com/PowerShell/powerShell-Docs/blob/a494bb44e9463a167b4a75db9d0e847a1e5551c5/gallery/readme.md) | ArchivedSuccess | [Details](#d526066f543a99b765299c678d85c152a319d60b161)
  [gallery\TOC.md](https://github.com/PowerShell/powerShell-Docs/blob/a494bb44e9463a167b4a75db9d0e847a1e5551c5/gallery/TOC.md) | ArchivedSuccess | [Details](#263ec9e1dd297df2a70ef2846566a7004282aa92162)
+ [scripting\TOC.md](https://github.com/PowerShell/powerShell-Docs/blob/2fe345e6dc0734769a78bd91a0e831d413fcd7c1/scripting/TOC.md) | ArchivedSuccess | [Details](#c3d86239550566a7704405930f72c598d140cdb8311)
+ [wmf\5.1\DSC-improvements.md](https://github.com/PowerShell/powerShell-Docs/blob/d7832582ee3332b191da3a73386b084ac9abaf99/wmf/5.1/DSC-improvements.md) | ArchivedSuccess | [Details](#3ea12a7b669cd7f4714f949a84459b1c8099abb8399)
+ [wmf\5.1\features-scenarios-cache\DSCPartialConfigNaming.md](https://github.com/PowerShell/powerShell-Docs/blob/dfa487a11528e26faf5b0e8637b75983abe0b1c8/wmf/5.1/features-scenarios-cache/DSCPartialConfigNaming.md) | ArchivedSuccess | [Details](#368c26766961e760fd2de8c99057121bea076158405)
  [wmf\5.1\features-scenarios-cache\DSCSigningValidations.md](https://github.com/PowerShell/powerShell-Docs/blob/5c97ca6e93d31aaffc7e2207facc7658ee36dfb4/wmf/5.1/features-scenarios-cache/DSCSigningValidations.md) | ArchivedSuccess | [Details](#817fadb79716e41ce8cc8f4245dedc66347ac413407)
  [wmf\5.1\features-scenarios-cache\PowerShellGet-Enhancements.md](https://github.com/PowerShell/powerShell-Docs/blob/8c55ca4b972c8d708a09b922f27eec585ddc33d0/wmf/5.1/features-scenarios-cache/PowerShellGet-Enhancements.md) | ArchivedSuccess | [Details](#025565404b60cebefac27e51c70d70edb5e47bc9416)
  [wmf\5.1\package-management-improvements.md](https://github.com/PowerShell/powerShell-Docs/blob/9c742da1d1996d9142d438c591c048ff32b503dc/wmf/5.1/package-management-improvements.md) | ArchivedSuccess | [Details](#bfe75745b736ffd97aff97f8450fa1ece5647dd1424)
+ [wmf\5.1\scenarios-features.md](https://github.com/PowerShell/powerShell-Docs/blob/9c742da1d1996d9142d438c591c048ff32b503dc/wmf/5.1/scenarios-features.md) | ArchivedSuccess | [Details](#49bc62fccc5b3dfd88fb06082fa84dc86327595f426)
 
 ## <a name='handback-failed-list'></a> Handback Failed File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
+ [dsc\authoringResourceComposite.md](https://github.com/PowerShell/powerShell-Docs/blob/48cfed9e0c31e24c441eafb388a799bd7fc7415f/dsc/authoringResourceComposite.md) | HandedBackFailed | [Details](#6631d60d7d82e71c315c26a0196aa3e4c1b60b158)
  [wmf\5.1\features-scenarios-cache\catalog-cmdlets.md](https://github.com/PowerShell/powerShell-Docs/blob/e39aa2e5cbda0c83e24e21c4459d957d8baaff25/wmf/5.1/features-scenarios-cache/catalog-cmdlets.md) | HandedBackFailed | [Details](#7ca0f3b5a6655a8b7fd5371ad8d6a91be3d5e9a1402)
- [wmf\5.1\features-scenarios-cache\DSCPartialConfigNaming.md](https://github.com/PowerShell/powerShell-Docs/blob/dfa487a11528e26faf5b0e8637b75983abe0b1c8/wmf/5.1/features-scenarios-cache/DSCPartialConfigNaming.md) | HandedBackFailed | [Details](#368c26766961e760fd2de8c99057121bea076158405)
  [wmf\5.1\features-scenarios-cache\DSCRunAsCredentialCompositeResources.md](https://github.com/PowerShell/powerShell-Docs/blob/e39aa2e5cbda0c83e24e21c4459d957d8baaff25/wmf/5.1/features-scenarios-cache/DSCRunAsCredentialCompositeResources.md) | HandedBackFailed | [Details](#7505e063fad84999af786f2af0602d204ed973b7406)
  [wmf\5.1\features-scenarios-cache\improved-pullclient-security.md](https://github.com/PowerShell/powerShell-Docs/blob/e39aa2e5cbda0c83e24e21c4459d957d8baaff25/wmf/5.1/features-scenarios-cache/improved-pullclient-security.md) | HandedBackFailed | [Details](#8bb3f7173559c349d033d175f5784d80b7a16ed0410)
  [wmf\5.1\features-scenarios-cache\PesterUpdates.md](https://github.com/PowerShell/powerShell-Docs/blob/e39aa2e5cbda0c83e24e21c4459d957d8baaff25/wmf/5.1/features-scenarios-cache/PesterUpdates.md) | HandedBackFailed | [Details](#dd7905bfd221201919d028ec158cd5ef349335e2415)
 
 ## <a name='outofsync-handback-success-list'></a> Out Of Sync Handback Success File List
- Source File | Status | Details 
- ----------- | ------ | ------- 
- [scripting\TOC.md](https://github.com/PowerShell/powerShell-Docs/blob/2fe345e6dc0734769a78bd91a0e831d413fcd7c1/scripting/TOC.md) | OutofSyncHandedBackSuccess | [Details](#c3d86239550566a7704405930f72c598d140cdb8311)
- [wmf\5.1\DSC-improvements.md](https://github.com/PowerShell/powerShell-Docs/blob/d7832582ee3332b191da3a73386b084ac9abaf99/wmf/5.1/DSC-improvements.md) | OutofSyncHandedBackSuccess | [Details](#3ea12a7b669cd7f4714f949a84459b1c8099abb8399)
- [wmf\5.1\scenarios-features.md](https://github.com/PowerShell/powerShell-Docs/blob/9c742da1d1996d9142d438c591c048ff32b503dc/wmf/5.1/scenarios-features.md) | OutofSyncHandedBackSuccess | [Details](#49bc62fccc5b3dfd88fb06082fa84dc86327595f426)
 
 ## <a name='insync-handback-success-list'></a> In Sync Handback File Success List
  Source File | Status | Details 
@@ -104,7 +103,6 @@
  [dsc\archiveResource.md](https://github.com/PowerShell/powerShell-Docs/blob/6477ae8575c83fc24150f9502515ff5b82bc8198/dsc/archiveResource.md) | InSyncHandedBackSuccess | [Details](#1d4d2d9106ef76d6628f93cf86234807dbb121ed5)
  [dsc\authoringResource.md](https://github.com/PowerShell/powerShell-Docs/blob/6477ae8575c83fc24150f9502515ff5b82bc8198/dsc/authoringResource.md) | InSyncHandedBackSuccess | [Details](#5b43723f7b14eb4bca06d0430b5981c3663c58016)
  [dsc\authoringResourceClass.md](https://github.com/PowerShell/powerShell-Docs/blob/6477ae8575c83fc24150f9502515ff5b82bc8198/dsc/authoringResourceClass.md) | InSyncHandedBackSuccess | [Details](#553ef07e42a4c41e5f0dc9e80c54f828d9c625c37)
- [dsc\authoringResourceComposite.md](https://github.com/PowerShell/powerShell-Docs/blob/48cfed9e0c31e24c441eafb388a799bd7fc7415f/dsc/authoringResourceComposite.md) | InSyncHandedBackSuccess | [Details](#6631d60d7d82e71c315c26a0196aa3e4c1b60b158)
  [dsc\authoringResourceMOF.md](https://github.com/PowerShell/powerShell-Docs/blob/6477ae8575c83fc24150f9502515ff5b82bc8198/dsc/authoringResourceMOF.md) | InSyncHandedBackSuccess | [Details](#4d685e518acd3a18f4872417b645dbe66f7584219)
  [dsc\authoringResourceMofCS.md](https://github.com/PowerShell/powerShell-Docs/blob/644d08a69a8bb70f49e12c1504aa46c4b57a51fc/dsc/authoringResourceMofCS.md) | InSyncHandedBackSuccess | [Details](#991a324945289b2eff0b706d093b2d345352fb1510)
  [dsc\authoringResourceMofDesigner.md](https://github.com/PowerShell/powerShell-Docs/blob/6477ae8575c83fc24150f9502515ff5b82bc8198/dsc/authoringResourceMofDesigner.md) | InSyncHandedBackSuccess | [Details](#be2141330dda803a22fdce6d65a1e379adf14fed11)
@@ -590,7 +588,7 @@
 * [Back to Top](#report-top)
 
 ##### <a name='6631d60d7d82e71c315c26a0196aa3e4c1b60b158'></a> Source: [dsc\authoringResourceComposite.md](https://github.com/PowerShell/powerShell-Docs/blob/48cfed9e0c31e24c441eafb388a799bd7fc7415f/dsc/authoringResourceComposite.md)
-* Status: InSyncHandedBackSuccess
+* Status: HandedBackFailed
 * Target File: [dsc\authoringResourceComposite.md](https://github.com/PowerShell/powerShell-Docs.it-it/blob/a8f1d1cac57049cd042fd007f83019497cd28e08/dsc/authoringResourceComposite.md)
 * Handoff File: [authoringResourceComposite.6d5d1e53e83e25cfc63e26078da390a4fa6737f2.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/94df07b95a3659c155086c8551e8da5ae94fcb77/ol-handoff/PowerShell/powerShell-Docs.it-it/live/authoringResourceComposite.6d5d1e53e83e25cfc63e26078da390a4fa6737f2.it-it.xlf)
 * Handoff Datetime: 2016-06-27 20:21:21
@@ -4694,7 +4692,7 @@
 * [Back to Top](#report-top)
 
 ##### <a name='c3d86239550566a7704405930f72c598d140cdb8311'></a> Source: [scripting\TOC.md](https://github.com/PowerShell/powerShell-Docs/blob/2fe345e6dc0734769a78bd91a0e831d413fcd7c1/scripting/TOC.md)
-* Status: OutofSyncHandedBackSuccess
+* Status: ArchivedSuccess
 * Target File: [scripting\TOC.md](https://github.com/PowerShell/powerShell-Docs.it-it/blob/392c6d3324936d4d344e84e12254a3c8ae2caa4a/scripting/TOC.md)
 * Handoff File: [TOC.94c88eadcdc1b167fb0a17837d186c734f84dea9.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/a600b31b6f702065bbbffb1e062b9a232ac9b147/ol-handoff/PowerShell/powerShell-Docs.it-it/live/TOC.94c88eadcdc1b167fb0a17837d186c734f84dea9.it-it.xlf)
 * Handoff Datetime: 2016-07-20 16:58:46
@@ -5926,7 +5924,7 @@
 * [Back to Top](#report-top)
 
 ##### <a name='3ea12a7b669cd7f4714f949a84459b1c8099abb8399'></a> Source: [wmf\5.1\DSC-improvements.md](https://github.com/PowerShell/powerShell-Docs/blob/d7832582ee3332b191da3a73386b084ac9abaf99/wmf/5.1/DSC-improvements.md)
-* Status: OutofSyncHandedBackSuccess
+* Status: ArchivedSuccess
 * Target File: 
 * Handoff File: [DSC-improvements.34bcd4169d438016a90bb7d385251ff174844f98.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/a600b31b6f702065bbbffb1e062b9a232ac9b147/ol-handoff/PowerShell/powerShell-Docs.it-it/live/DSC-improvements.34bcd4169d438016a90bb7d385251ff174844f98.it-it.xlf)
 * Handoff Datetime: 2016-07-20 16:58:46
@@ -5979,7 +5977,7 @@
 * Archive File: [catalog-cmdlets.3fb2b42ac619c6fd99ffe4114805b65c71476b3b.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/da7433accfae34f1c8ac078d0c985e2443ab92a9/ol-archive/PowerShell/powerShell-Docs.it-it/live/catalog-cmdlets.3fb2b42ac619c6fd99ffe4114805b65c71476b3b.it-it.xlf)
 * Archive Datetime: 2016-07-19 13:11:02
 * Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
+* Handback Datetime: 2016-07-22 11:11:51
 * Handback Error: [handback_transform_failed](#7ca0f3b5a6655a8b7fd5371ad8d6a91be3d5e9a1402handback_transform_failed)
 * [Back to Top](#report-top)
 
@@ -6012,7 +6010,7 @@
 * [Back to Top](#report-top)
 
 ##### <a name='368c26766961e760fd2de8c99057121bea076158405'></a> Source: [wmf\5.1\features-scenarios-cache\DSCPartialConfigNaming.md](https://github.com/PowerShell/powerShell-Docs/blob/dfa487a11528e26faf5b0e8637b75983abe0b1c8/wmf/5.1/features-scenarios-cache/DSCPartialConfigNaming.md)
-* Status: HandedBackFailed
+* Status: ArchivedSuccess
 * Target File: 
 * Handoff File: [DSCPartialConfigNaming.0fa686a40e3e562fa831fc87a2ac2b8b81cfba33.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/a600b31b6f702065bbbffb1e062b9a232ac9b147/ol-handoff/PowerShell/powerShell-Docs.it-it/live/DSCPartialConfigNaming.0fa686a40e3e562fa831fc87a2ac2b8b81cfba33.it-it.xlf)
 * Handoff Datetime: 2016-07-20 16:58:46
@@ -6032,7 +6030,7 @@
 * Archive File: [DSCRunAsCredentialCompositeResources.f65c22955818dede6f97031e1a087a8a60d20d6c.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/da7433accfae34f1c8ac078d0c985e2443ab92a9/ol-archive/PowerShell/powerShell-Docs.it-it/live/DSCRunAsCredentialCompositeResources.f65c22955818dede6f97031e1a087a8a60d20d6c.it-it.xlf)
 * Archive Datetime: 2016-07-19 13:11:02
 * Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
+* Handback Datetime: 2016-07-22 11:11:51
 * Handback Error: [handback_transform_failed](#7505e063fad84999af786f2af0602d204ed973b7406handback_transform_failed)
 * [Back to Top](#report-top)
 
@@ -6085,7 +6083,7 @@
 * Archive File: [improved-pullclient-security.cf456de8ef304f3ca033ba4bc6092fd1be84dc09.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/da7433accfae34f1c8ac078d0c985e2443ab92a9/ol-archive/PowerShell/powerShell-Docs.it-it/live/improved-pullclient-security.cf456de8ef304f3ca033ba4bc6092fd1be84dc09.it-it.xlf)
 * Archive Datetime: 2016-07-19 13:11:02
 * Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
+* Handback Datetime: 2016-07-22 11:11:51
 * Handback Error: [handback_transform_failed](#8bb3f7173559c349d033d175f5784d80b7a16ed0410handback_transform_failed)
 * [Back to Top](#report-top)
 
@@ -6154,7 +6152,7 @@
 * Archive File: [PesterUpdates.1e4976b79d08b1906a0f335de1892decc168f7a5.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/da7433accfae34f1c8ac078d0c985e2443ab92a9/ol-archive/PowerShell/powerShell-Docs.it-it/live/PesterUpdates.1e4976b79d08b1906a0f335de1892decc168f7a5.it-it.xlf)
 * Archive Datetime: 2016-07-19 13:11:02
 * Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
+* Handback Datetime: 2016-07-22 11:11:51
 * Handback Error: [handback_transform_failed](#dd7905bfd221201919d028ec158cd5ef349335e2415handback_transform_failed)
 * [Back to Top](#report-top)
 
@@ -6295,7 +6293,7 @@
 * [Back to Top](#report-top)
 
 ##### <a name='49bc62fccc5b3dfd88fb06082fa84dc86327595f426'></a> Source: [wmf\5.1\scenarios-features.md](https://github.com/PowerShell/powerShell-Docs/blob/9c742da1d1996d9142d438c591c048ff32b503dc/wmf/5.1/scenarios-features.md)
-* Status: OutofSyncHandedBackSuccess
+* Status: ArchivedSuccess
 * Target File: 
 * Handoff File: [scenarios-features.88cb2bdf7b7e45a4af286640d319a76b1f602647.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/a600b31b6f702065bbbffb1e062b9a232ac9b147/ol-handoff/PowerShell/powerShell-Docs.it-it/live/scenarios-features.88cb2bdf7b7e45a4af286640d319a76b1f602647.it-it.xlf)
 * Handoff Datetime: 2016-07-20 16:58:46
