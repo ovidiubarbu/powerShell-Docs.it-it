@@ -9,8 +9,8 @@ manager: dongill
 ms.prod: powershell
 ms.assetid: 4d781196-720b-4ccc-90d2-c570e5e719f5
 translationtype: Human Translation
-ms.sourcegitcommit: ebf9d61bd67cc352d6d6404a9b592f856c99759e
-ms.openlocfilehash: c68e6d7d26a8a9b1e32a35e82dd705d95480c9bf
+ms.sourcegitcommit: 3222a0ba54e87b214c5ebf64e587f920d531956a
+ms.openlocfilehash: 83aa2ceb63497c7a12ec80d4b1472327284acf5b
 
 ---
 
@@ -33,7 +33,7 @@ psUnsupportedConsoleApplications
 ```
 
 ### $psLocalHelp
- Si tratta di un oggetto dizionario che mantiene un mapping sensibile al contesto tra gli argomenti della Guida e i relativi collegamenti associati nel file della Guida HTML compilato locale. Viene usato per trovare la Guida locale per un determinato argomento. È possibile aggiungere o eliminare argomenti da questo elenco. L'esempio di codice seguente illustra alcune coppie chiave\-valore contenute in **$psLocalHelp**.
+ Si tratta di un oggetto Dictionary che conserva un mapping sensibile al contesto tra gli argomenti della Guida e i relativi collegamenti associati nel file della Guida HTML compilato locale. Viene usato per trovare la Guida locale per un determinato argomento. È possibile aggiungere o eliminare argomenti da questo elenco. L'esempio di codice seguente mostra alcune coppie chiave-valore contenute in **$psLocalHelp**.
 
 ```
 # See the local help map
@@ -45,8 +45,8 @@ $psLocalHelp | Format-List
 
 |||
 |-|-|
-|Chiave : Add\-Computer|Valore : WindowsPowerShellHelp.chm::\/html\/093f660c\-b8d5\-43cf\-aa0c\-54e5e54e76f9.htm|
-|Chiave : Add\-Content|Valore : WindowsPowerShellHelp.chm::\/html\/0c836a1b\-f389\-4e9a\-9325\-0f415686d194.htm|
+|Chiave: Add-Computer|Valore: WindowsPowerShellHelp.chm::/html/093f660c-b8d5-43cf-aa0c-54e5e54e76f9.htm|
+|Chiave: Add-Content|Valore: WindowsPowerShellHelp.chm::/html/0c836a1b-f389-4e9a-9325-0f415686d194.htm|
 
  Lo script seguente aggiunge una voce all'elenco.
 
@@ -55,7 +55,7 @@ $psLocalHelp.Add("get-myNoun","c:\MyFolder\MyHelpChm.chm::/html/0198854a-1298-57
 ```
 
 ### $psOnlineHelp
- Si tratta di un oggetto dizionario che mantiene un mapping sensibile al contesto tra i titoli degli argomenti della Guida e i relativi URL esterni associati. Viene usato per trovare la Guida per un determinato argomento nel Web. È possibile aggiungere o eliminare argomenti da questo elenco.
+ Si tratta di un oggetto Dictionary che conserva un mapping sensibile al contesto tra i titoli degli argomenti della Guida e i relativi URL esterni associati. Viene usato per trovare la Guida per un determinato argomento nel Web. È possibile aggiungere o eliminare argomenti da questo elenco.
 
 ```
 $psOnlineHelp | Format-List
@@ -66,8 +66,8 @@ $psOnlineHelp | Format-List
 
 |||
 |-|-|
-|Chiave : Add\-Computer|Valore : http:\/\/go.microsoft.com\/fwlink\/p\/?LinkID\=135194|
-|Chiave : Add\-Content|Valore : http:\/\/go.microsoft.com\/fwlink\/p\/?LinkID\=113278|
+|Chiave: Add-Computer|Valore : http://go.microsoft.com/fwlink/p/?LinkID=135194|
+|Chiave: Add-Content|Valore: http://go.microsoft.com/fwlink/p/?LinkID=113278|
 
  Lo script seguente aggiunge una voce all'elenco.
 
@@ -82,6 +82,6 @@ $psOnlineHelp.Add("get-myNoun","http://www.mydomain.com/MyNoun.html")
 
 
 
-<!--HONumber=Jul16_HO1-->
+<!--HONumber=Aug16_HO4-->
 
 

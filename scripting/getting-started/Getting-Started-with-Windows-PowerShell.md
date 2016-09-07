@@ -9,8 +9,8 @@ manager: dongill
 ms.prod: powershell
 ms.assetid: b0e2ad92-875f-421d-b612-f624e644aa69
 translationtype: Human Translation
-ms.sourcegitcommit: 35dafe18719cd26977966a26d2781fc99cbf4097
-ms.openlocfilehash: d0f5fb26844edd4e07265a8c7d638f30a51244f7
+ms.sourcegitcommit: 3222a0ba54e87b214c5ebf64e587f920d531956a
+ms.openlocfilehash: a031bad99e8aca1d7598f99e157723bf4360cf56
 
 ---
 
@@ -19,7 +19,7 @@ Windows PowerShell è una shell da riga di comando di Windows progettata apposit
 
 A differenza della maggior parte delle shell, che accetta e restituisce testo, Windows PowerShell si basa su CLR (Common Language Runtime) .NET Framework e su .NET Framework e accetta e restituisce oggetti .NET Framework. Questa modifica fondamentale nell'ambiente offre metodi e strumenti totalmente nuovi per la gestione e la configurazione di Windows.
 
-Windows PowerShell introduce il concetto di cmdlet (si pronuncia "command\-let"), un semplice strumento da riga di comando con una singola funzione, incorporato nella shell. È possibile usare ogni cmdlet separatamente, ma il potenziale di questi semplici strumenti viene espresso appieno quando vengono usati in combinazione per eseguire attività complesse. Windows PowerShell include oltre cento cmdlet di sistema di base ed è possibile scrivere cmdlet personalizzati e condividerli con altri utenti.
+Windows PowerShell introduce il concetto di cmdlet (si pronuncia "command-let"), un semplice strumento da riga di comando con una singola funzione, incorporato nella shell. È possibile usare ogni cmdlet separatamente, ma il potenziale di questi semplici strumenti viene espresso appieno quando vengono usati in combinazione per eseguire attività complesse. Windows PowerShell include oltre cento cmdlet di sistema di base ed è possibile scrivere cmdlet personalizzati e condividerli con altri utenti.
 
 Come molte shell, Windows PowerShell consente di accedere al file system nel computer. Inoltre, i *provider* di Windows PowerShell consentono di accedere ad altri archivi dati, ad esempio il Registro di sistema e gli archivi di certificati con firma digitale, con la stessa facilità con cui si accede al file system.
 
@@ -38,6 +38,6 @@ In questo argomento
 
 
 
-<!--HONumber=Jul16_HO1-->
+<!--HONumber=Aug16_HO4-->
 
 

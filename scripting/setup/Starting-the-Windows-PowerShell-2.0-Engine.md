@@ -9,15 +9,15 @@ manager: dongill
 ms.prod: powershell
 ms.assetid: edafc2fa-7576-49c2-bbba-9336f4bcfc28
 translationtype: Human Translation
-ms.sourcegitcommit: 03ac4b90d299b316194f1fa932e7dbf62d4b1c8e
-ms.openlocfilehash: 45102cbc730d8eaac9ebdcb73456b1d1e149c6f2
+ms.sourcegitcommit: 3222a0ba54e87b214c5ebf64e587f920d531956a
+ms.openlocfilehash: 094c3c9f240457fc884031e7d82dcdc1e81e582d
 
 ---
 
 # Avvio del motore di Windows PowerShell 2.0
 Questa sezione spiega come avviare il motore di Windows PowerShell 2.0 in Windows 8.1, Windows Server 2012 R2, Windows 8 e Windows Server 2012, che includono il motore di Windows PowerShell 2.0, e in altri sistemi in cui sono invece installati Windows PowerShell 2.0, Windows PowerShell 3.0 e Windows PowerShell 4.0.
 
-Windows PowerShell 4.0 e Windows PowerShell 3.0 sono progettati per essere compatibili con Windows PowerShell 2.0. I cmdlet, i provider, gli snap\-in, i moduli e gli script scritti per Windows PowerShell 2.0 possono essere eseguiti senza modifiche in Windows PowerShell 4.0 e Windows PowerShell 3.0. Tuttavia, a causa di una modifica nei criteri di attivazione di runtime in Microsoft .NET Framework 4, i programmi host di Windows PowerShell scritti per Windows PowerShell 2.0 e compilati con Common Language Runtime (CLR) 2.0 non possono essere eseguiti senza modifiche in Windows PowerShell 3.0 o Windows PowerShell 4.0, che sono compilati con CLR 4.0. Il motore di Windows PowerShell 2.0 deve essere usato solo quando non è possibile eseguire un programma host o uno script esistente perché non è compatibile con Windows PowerShell 4.0, Windows PowerShell 3.0 o Microsoft .NET Framework 4. È previsto che questi casi siano rari.
+Windows PowerShell 4.0 e Windows PowerShell 3.0 sono progettati per essere compatibili con Windows PowerShell 2.0. I cmdlet, i provider, gli snap-in, i moduli e gli script scritti per Windows PowerShell 2.0 possono essere eseguiti senza modifiche in Windows PowerShell 4.0 e Windows PowerShell 3.0. Tuttavia, a causa di una modifica nei criteri di attivazione di runtime in Microsoft .NET Framework 4, i programmi host di Windows PowerShell scritti per Windows PowerShell 2.0 e compilati con Common Language Runtime (CLR) 2.0 non possono essere eseguiti senza modifiche in Windows PowerShell 3.0 o Windows PowerShell 4.0, che sono compilati con CLR 4.0. Il motore di Windows PowerShell 2.0 deve essere usato solo quando non è possibile eseguire un programma host o uno script esistente perché non è compatibile con Windows PowerShell 4.0, Windows PowerShell 3.0 o Microsoft .NET Framework 4. È previsto che questi casi siano rari.
 
 Molte applicazioni che richiedono l'uso del motore di Windows PowerShell 2.0 lo avviano automaticamente. Queste istruzioni sono incluse per i rari casi in cui è necessario avviare il motore manualmente.
 
@@ -76,6 +76,6 @@ Per altre informazioni sui processi in background, vedere [about_Jobs [v4]](http
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO4-->
 
 

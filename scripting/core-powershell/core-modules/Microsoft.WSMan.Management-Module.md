@@ -9,13 +9,13 @@ manager: dongill
 ms.prod: powershell
 ms.assetid: 687cb04d-541c-44f6-a896-75c9686cb04e
 translationtype: Human Translation
-ms.sourcegitcommit: 03ac4b90d299b316194f1fa932e7dbf62d4b1c8e
-ms.openlocfilehash: 49a97d15fdef0d7fa60e94636fc200e8f70943f7
+ms.sourcegitcommit: 3222a0ba54e87b214c5ebf64e587f920d531956a
+ms.openlocfilehash: de6a4fcc1b07ed1bd41f4b2f6b6cd68e2cd66f84
 
 ---
 
 # Modulo Microsoft.WSMan.Management
-Questa sezione contiene gli argomenti della Guida per il modulo **Microsoft.WSMan.Management**, che contiene il [provider WSMan [v3]](https://technet.microsoft.com/en-us/library/4c3d8d36-4f7a-4211-996f-64110e4b2eb7) e i cmdlet che gestiscono WS\-Management (Servizi Web per la gestione) e WinRM (Gestione remota Windows). Il modulo **Microsoft.WSMan.Management** viene installato con Windows PowerShell.
+Questa sezione contiene gli argomenti della Guida per il modulo **Microsoft.WSMan.Management**, che contiene il [provider WSMan [v3]](https://technet.microsoft.com/en-us/library/4c3d8d36-4f7a-4211-996f-64110e4b2eb7) e i cmdlet che gestiscono WS-Management (Servizi Web per la gestione) e WinRM (Gestione remota Windows). Il modulo **Microsoft.WSMan.Management** viene installato con Windows PowerShell.
 
 ## Argomenti della Guida
 [Cmdlet di Windows PowerShell WS-Management](http://go.microsoft.com/fwlink/?LinkID=245863)
@@ -32,6 +32,6 @@ Questa sezione contiene gli argomenti della Guida per il modulo **Microsoft.WSMa
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO4-->
 
 

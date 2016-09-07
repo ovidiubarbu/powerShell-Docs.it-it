@@ -9,8 +9,8 @@ manager: dongill
 ms.prod: powershell
 ms.assetid: a9b58556-951b-4f48-b3ae-b351b7564360
 translationtype: Human Translation
-ms.sourcegitcommit: 03ac4b90d299b316194f1fa932e7dbf62d4b1c8e
-ms.openlocfilehash: cad77145053b9f13f482f860310891da9366e53b
+ms.sourcegitcommit: 3222a0ba54e87b214c5ebf64e587f920d531956a
+ms.openlocfilehash: f3f2d27c3c82406f8e8967fd1784a6e07579c1fa
 
 ---
 
@@ -27,7 +27,7 @@ ms.openlocfilehash: cad77145053b9f13f482f860310891da9366e53b
 > [!NOTE]
 >  Questo metodo funziona solo su altre schede di PowerShell, non sulla scheda da cui viene eseguito. Non restituisce oggetti o valori. Se il codice modifica una variabile, le modifiche vengono mantenute nella scheda in cui è stato richiamato il comando.
 
- **Script** \- System.Management.Automation.ScriptBlock or String Il blocco di script da eseguire.
+ **Script** - System.Management.Automation.ScriptBlock or String Il blocco di script da eseguire.
 
 ```
 # Manually create a second PowerShell tab before running this script.
@@ -43,12 +43,12 @@ $psise.PowerShellTabs[1].Invoke({dir})
 > [!NOTE]
 >  Questo metodo funziona solo su altre schede di PowerShell, non sulla scheda da cui viene eseguito. Il blocco di script viene eseguito e qualsiasi valore restituito dallo script viene restituito all'ambiente di esecuzione da cui è stato richiamato il comando. Se l'esecuzione del comando richiede più tempo rispetto al valore specificato in **millesecondsTimeout**, il comando non riesce con l'eccezione: "Timeout dell'operazione".
 
- **Script** \- System.Management.Automation.ScriptBlock or String Il blocco di script da eseguire.
+ **Script** - System.Management.Automation.ScriptBlock or String Il blocco di script da eseguire.
 
- **\[useNewScope\]** \-  Valore booleano facoltativo impostato su **$true**
+ **\[useNewScope\]** - Valore booleano facoltativo impostato su **$true**
  Se impostato su **$true**, viene creato un nuovo ambito in cui eseguire il comando. Non modifica l'ambiente di runtime della scheda di PowerShell specificato dal comando.
 
- **\[millisecondsTimeout\]** \-  Numero intero facoltativo impostato su **500** per impostazione predefinita.
+ **\[millisecondsTimeout\]** - Numero intero facoltativo impostato su **500** per impostazione predefinita.
 Se il comando non viene completato entro il tempo specificato, genera **TimeoutException** con il messaggio "Timeout dell'operazione".
 
 ```
@@ -124,7 +124,7 @@ $psISE.CurrentPowerShellTab.ConsolePane
 ###  <a name="Displayname"></a> DisplayName
   Supportato in Windows PowerShell ISE 2.0 e versioni successive. 
 
- Proprietà di lettura/scrittura che ottiene o imposta il testo visualizzato nella scheda di PowerShell. Per impostazione predefinita, le schede sono denominate "PowerShell \#", dove \# rappresenta un numero.
+ Proprietà di lettura/scrittura che ottiene o imposta il testo visualizzato nella scheda di PowerShell. Per impostazione predefinita, le schede sono denominate "PowerShell #", dove # rappresenta un numero.
 
 ```
 $newTab = $psise.PowerShellTabs.Add()
@@ -135,7 +135,7 @@ $newTab.DisplayName="Brand New Tab"
 ###  <a name="ExpandedScript"></a> ExpandedScript
   Supportato in Windows PowerShell ISE 2.0 e versioni successive. 
 
- Proprietà di lettura\-scrittura booleana che determina se il riquadro di script è espanso o nascosto.
+ Proprietà di lettura/scrittura booleana che determina se il riquadro di script è espanso o nascosto.
 
 ```
 # Toggle the expanded script property to see its effect.
@@ -158,7 +158,7 @@ $newFile.Editor.LineCount
 ###  <a name="Output"></a> Output
   Questa funzionalità è presente in Windows PowerShell ISE 2.0, ma è stata rimossa o rinominata nelle versioni successive di ISE.  Nelle versioni successive di Windows PowerShell ISE, è possibile usare l'oggetto **ConsolePane** per gli stessi scopi.
 
- Proprietà di sola lettura che ottiene il riquadro di output del'[editor](../ise/The-ISEEditor-Object.md) corrente.
+ Proprietà di sola lettura che ottiene il riquadro di output dell'[editor](../ise/The-ISEEditor-Object.md) corrente.
 
 ```
 # Clears the text in the Output pane.
@@ -178,7 +178,7 @@ $psISE.CurrentPowerShellTab.Prompt
 ###  <a name="ShowCommands"></a> ShowCommands
   Supportato in Windows PowerShell ISE 3.0 e versioni successive e non presente nelle versioni precedenti. 
 
- Proprietà di lettura\-scrittura che indica se il riquadro dei comandi è attualmente visualizzato.
+ Proprietà di lettura/scrittura che indica se il riquadro dei comandi è attualmente visualizzato.
 
 ```
 # Gets the current status of the Commands pane and stores it in the $a variable
@@ -229,6 +229,6 @@ $psISE.CurrentPowerShellTab.HorizontalAddOnToolsPaneOpened
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO4-->
 
 

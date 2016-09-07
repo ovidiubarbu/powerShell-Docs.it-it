@@ -9,8 +9,8 @@ manager: dongill
 ms.prod: powershell
 ms.assetid: 0101daf8-4e31-4e4c-ab89-01d95dcb8f46
 translationtype: Human Translation
-ms.sourcegitcommit: 03ac4b90d299b316194f1fa932e7dbf62d4b1c8e
-ms.openlocfilehash: 4812092dea24fa61245af7e06d1c5924ec812218
+ms.sourcegitcommit: 3222a0ba54e87b214c5ebf64e587f920d531956a
+ms.openlocfilehash: 05255e63ae34e239003e5847c9f3b7fb2f4e3a0a
 
 ---
 
@@ -73,7 +73,7 @@ $psIse.CurrentPowerShellTab.ConsolePane.GetLineLength(1)
 ### GoToMatch\(\)
   Supportato in Windows PowerShell ISE 3.0 e versioni successive e non presente nelle versioni precedenti. 
 
- Sposta il cursore sul carattere corrispondente se la proprietà **CanGoToMatch** dell'oggetto editor è **$true**, che si verifica quando il cursore si trova immediatamente prima di una parentesi, di una parentesi quadra o di una parentesi graffa di apertura, \-, \(, \[, \- o immediatamente dopo una parentesi, una parentesi quadra o una parentesi graffa di chiusura, \- \),\].  Il cursore viene posizionato prima di un carattere di apertura o dopo un carattere di chiusura. Se la proprietà **CanGoToMatch** è **$false**, questo metodo non esegue alcuna operazione. Vedere [CanGoToMatch](#cangotomatch).
+ Sposta il cursore sul carattere corrispondente se la proprietà **CanGoToMatch** dell'oggetto editor è **$true**, il che si verifica quando il cursore si trova immediatamente prima di una parentesi, di una parentesi quadra o di una parentesi graffa di apertura, \(, \[, { o immediatamente dopo una parentesi, una parentesi quadra o una parentesi graffa di chiusura, \), \], }.  Il cursore viene posizionato prima di un carattere di apertura o dopo un carattere di chiusura. Se la proprietà **CanGoToMatch** è **$false**, questo metodo non esegue alcuna operazione. Vedere [CanGoToMatch](#cangotomatch).
 
 ```
 # Test to see if the caret is next to a parenthesis, bracket, or brace.
@@ -84,7 +84,7 @@ $psIse.CurrentPowerShellTab.ConsolePane.GetLineLength(1)
 
  Sostituisce la selezione con un testo o inserisce il testo nella posizione corrente del cursore.
 
- **text** \- Stringa Il testo da inserire.
+ **text** - Stringa Il testo da inserire.
 
  Vedere [Esempio di script](#example) più avanti in questo argomento.
 
@@ -93,13 +93,13 @@ $psIse.CurrentPowerShellTab.ConsolePane.GetLineLength(1)
 
  Seleziona il testo dai parametri **startLine**, **startColumn**, **endLine** ed **endColumn**.
 
- **startLine** \- Intero La riga in cui inizia la selezione.
+ **startLine** - Intero La riga in cui inizia la selezione.
 
- **startColumn** \- Intero La colonna all'interno della riga di inizio in cui inizia la selezione.
+ **startColumn** - Intero La colonna all'interno della riga di inizio in cui inizia la selezione.
 
- **endLine** \- Intero La riga in cui termina la selezione.
+ **endLine** - Intero La riga in cui termina la selezione.
 
- **endColumn** \- Intero La colonna all'interno della riga di fine in cui termina la selezione.
+ **endColumn** - Intero La colonna all'interno della riga di fine in cui termina la selezione.
 
  Vedere [Esempio di script](#example) più avanti in questo argomento.
 
@@ -121,9 +121,9 @@ $psIse.CurrentFile.Editor.SelectCaretLine()
 
  Imposta la posizione del cursore sul numero di riga e sul numero di colonna. Genera un'eccezione se il numero di riga del cursore o il numero di colonna del cursore non è compreso nei relativi intervalli validi.
 
- **lineNumber** \- Intero il numero di riga del cursore.
+ **lineNumber** - Intero Il numero di riga del cursore.
 
- **columnNumber** \- Intero il numero di colonna del cursore.
+ **columnNumber** - Intero Il numero di colonna del cursore.
 
 ```
 # Set the CaretPosition.
@@ -146,7 +146,7 @@ $psIse.CurrentFile.Editor.ToggleOutliningExpansion()
 ###  <a name="CanGoToMatch"></a> CanGoToMatch
   Supportato in Windows PowerShell ISE 3.0 e versioni successive e non presente nelle versioni precedenti. 
 
- Proprietà di sola lettura booleana che indica se il cursore è accanto a una parentesi, una parentesi quadra o una parentesi graffa \(\), \[\], {}. Se il cursore si trova immediatamente prima del carattere di apertura o immediatamente dopo il carattere di chiusura di una coppia, il valore di questa proprietà è **$true**. In caso contrario, è **$false**.
+ Proprietà di sola lettura booleana che indica se il cursore è accanto a una parentesi, a una parentesi quadra o a una parentesi graffa, \(\), \[\], {}. Se il cursore si trova immediatamente prima del carattere di apertura o immediatamente dopo il carattere di chiusura di una coppia, il valore di questa proprietà è **$true**. In caso contrario, è **$false**.
 
 ```
 # Test to see if the caret is next to a parenthesis, bracket, or brace
@@ -208,7 +208,7 @@ $psIse.CurrentFile.Editor.LineCount
 ###  <a name="Text"></a> Testo
   Supportato in Windows PowerShell ISE 2.0 e versioni successive. 
 
- Proprietà di lettura\/scrittura che ottiene o imposta il testo nell'editor.
+ Proprietà di lettura/scrittura che ottiene o imposta il testo nell'editor.
 
  Vedere [Esempio di script](#example) più avanti in questo argomento.
 
@@ -253,6 +253,6 @@ $myEditor.InsertText($selection.ToLower())
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO4-->
 
 

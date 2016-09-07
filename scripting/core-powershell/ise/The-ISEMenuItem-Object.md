@@ -9,8 +9,8 @@ manager: dongill
 ms.prod: powershell
 ms.assetid: a16660bd-0aee-46fd-ac17-3f022165d089
 translationtype: Human Translation
-ms.sourcegitcommit: 03ac4b90d299b316194f1fa932e7dbf62d4b1c8e
-ms.openlocfilehash: 8b8c960604457fd41f5f7fefe0035003b675e13a
+ms.sourcegitcommit: 3222a0ba54e87b214c5ebf64e587f920d531956a
+ms.openlocfilehash: e067519d58ca381fc4e5c746fe9bbd16bdc68c60
 
 ---
 
@@ -62,7 +62,7 @@ $psISE.CurrentPowerShellTab.AddOnsMenu.Submenus[0].Shortcut
 ###  <a name="Submenus"></a> Sottomenu
   Supportato in Windows PowerShell ISE 2.0 e versioni successive. 
 
- Proprietà di sola lettura che ottiene [l'elenco di sottomenu](The-ISEMenuItemCollection-Object.md) della voce di menu.
+ Proprietà di sola lettura che ottiene l'[elenco di sottomenu](The-ISEMenuItemCollection-Object.md) della voce di menu.
 
 ```
 # List the submenus of the Add-ons menu
@@ -99,6 +99,6 @@ $parentAdded.SubMenus.Add("_Dir",{dir},"Alt+D")
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO4-->
 
 

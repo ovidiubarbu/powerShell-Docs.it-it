@@ -9,8 +9,8 @@ manager: dongill
 ms.prod: powershell
 ms.assetid: f156b92d-0203-46d2-89c7-b4989d32e3d2
 translationtype: Human Translation
-ms.sourcegitcommit: 03ac4b90d299b316194f1fa932e7dbf62d4b1c8e
-ms.openlocfilehash: fcb516c5d7bdc14c2e23bdb9d96e8e19c383eda5
+ms.sourcegitcommit: 3222a0ba54e87b214c5ebf64e587f920d531956a
+ms.openlocfilehash: 061e22c26853664c89adc023d43802628859b9a6
 
 ---
 
@@ -25,11 +25,11 @@ Ecco alcune delle funzionalità che sono state aggiunte in ISE nelle versioni pi
 ### Aggiunta in PowerShell 3.0 (Windows Server 2012, Windows 8)
 **IntelliSense** consente di completare automaticamente i comandi visualizzando menu di cmdlet, parametri, valori di parametri, file o cartelle corrispondenti durante la digitazione.
 
-**Frammenti di codice**, ovvero brevi sezioni di codice che è possibile inserire facilmente negli script durante la scrittura. È disponibile una raccolta predefinita di utili frammenti di codice ed è possibile aggiungerne altri usando il cmdlet **New\-Snippet**.
+**Frammenti di codice**, ovvero brevi sezioni di codice che è possibile inserire facilmente negli script durante la scrittura. È disponibile una raccolta predefinita di utili frammenti di codice ed è possibile aggiungerne altri tramite il cmdlet **New-Snippet**.
 
-È possibile creare **strumenti aggiuntivi** per aggiungere funzionalità a ISE scrivendo codice che interagisce con il [modello a oggetti di scripting di Windows PowerShell ISE](https://technet.microsoft.com/en-us/library/dd819478.aspx). Questi strumenti possono visualizzare i controlli in un riquadro a schede o funzionare in modo invisibile in background. Il componente aggiuntivo **Comandi** è un buon esempio incluso nella versione 3.0 e successive, che consente di visualizzare un elenco di comandi disponibili e la rispettiva Guida.
+È possibile creare **strumenti aggiuntivi** per aggiungere funzionalità a ISE scrivendo codice che interagisce con il [Modello a oggetti di scripting di Windows PowerShell ISE](https://technet.microsoft.com/en-us/library/dd819478.aspx). Questi strumenti possono visualizzare i controlli in un riquadro a schede o funzionare in modo invisibile in background. Il componente aggiuntivo **Comandi** è un buon esempio incluso nella versione 3.0 e successive, che consente di visualizzare un elenco di comandi disponibili e la rispettiva Guida.
 
-Le funzionalità **Gestione riavvio e salvataggio automatico** salvano automaticamente gli script ogni due minuti per evitare di perdere il lavoro in caso di arresto anomalo o un riavvio imprevisto.
+Le funzionalità **Gestione riavvio e Salvataggio automatico** salvano automaticamente gli script ogni due minuti per evitare di perdere il lavoro in caso di arresto anomalo o di un riavvio imprevisto.
 
 L'**elenco degli elementi usati di recente** fa ora parte del menu Apri File in modo da facilitare l'accesso ai file usati più frequentemente.
 
@@ -41,7 +41,7 @@ L'**elenco degli elementi usati di recente** fa ora parte del menu Apri File in 
 
 -   **Colorazione della sintassi XML**. L'editor ISE ora applica colori alla sintassi XML nello stesso modo usato per la sintassi del codice di Windows PowerShell.
 
--   **Corrispondenza delle parentesi graffe**. ISEWindows PowerShell ISE evidenzia le parentesi graffe corrispondenti per facilitare il controllo del numero corretto di parentesi graffe di chiusura corrispondenti a quelle di apertura. È possibile usare CTRL\-\[ per individuare la parentesi graffa di chiusura corrispondente a quella di apertura su cui si trova il cursore.
+-   **Corrispondenza delle parentesi graffe**. ISEWindows PowerShell ISE evidenzia le parentesi graffe corrispondenti per facilitare il controllo del numero corretto di parentesi graffe di chiusura corrispondenti a quelle di apertura. È possibile usare CTRL-\[ per individuare la parentesi graffa di chiusura corrispondente a quella di apertura su cui si trova il cursore.
 
 -   **Visualizzazione struttura**. È possibile comprimere o espandere sezioni del codice facendo clic sul segno più e meno nel margine sinistro. In questo modo è più semplice trovare il codice che si sta cercando in uno script lungo.
 
@@ -53,7 +53,7 @@ L'**elenco degli elementi usati di recente** fa ora parte del menu Apri File in 
 
 -   **Operazioni di copia e incolla di testo formattato**. Quando si esegue una copia negli Appunti da ISE vengono incluse le informazioni relative a tipo di carattere, dimensioni e colore del testo selezionato.
 
--   **Selezione di blocchi**. È possibile selezionare una parte di testo a forma di blocco tenendo premuto ALT mentre si seleziona il testo nel riquadro di script con il mouse oppure premendo **ALT\+MAIUSC\+FRECCIA**.
+-   **Selezione di blocchi**. È possibile selezionare una parte di testo a forma di blocco tenendo premuto ALT mentre si seleziona il testo nel riquadro di script con il mouse oppure premendo **ALT+MAIUSC+FRECCIA**.
 
 ### Aggiunta in PowerShell 2.0 (Windows Server 2008 R2, Windows 7)
 L'ambiente ISE è stato introdotto in PowerShell 2.0.
@@ -70,6 +70,6 @@ ISE è disponibile in qualsiasi computer che supporta l'esecuzione di Windows Po
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO4-->
 
 

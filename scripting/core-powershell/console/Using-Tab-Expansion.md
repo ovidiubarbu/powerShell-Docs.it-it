@@ -9,8 +9,8 @@ manager: dongill
 ms.prod: powershell
 ms.assetid: c8730471-bf6a-43b8-ab1d-f9ef5a74f04e
 translationtype: Human Translation
-ms.sourcegitcommit: 03ac4b90d299b316194f1fa932e7dbf62d4b1c8e
-ms.openlocfilehash: 644dbbb51e98efda9735f0ff23489e936f6b28a2
+ms.sourcegitcommit: 3222a0ba54e87b214c5ebf64e587f920d531956a
+ms.openlocfilehash: fd950429d80972b6025e67ea727aa49ef195e882
 
 ---
 
@@ -22,9 +22,9 @@ Le shell da riga di comando offrono spesso un modo per completare automaticament
 
 Per immettere automaticamente un nome di file o un percorso usando le scelte disponibili, digitare parte del nome e premere **TAB**. Windows PowerShell espanderà automaticamente il nome usando la prima corrispondenza trovata. Premendo più volte **TAB** è possibile visualizzare in sequenza tutte le scelte disponibili.
 
-L'espansione tramite TAB dei nomi di cmdlet è leggermente diversa. Per usare l'espansione tramite TAB per un nome di cmdlet, digitare per intero la prima parte del nome (il verbo) e il trattino che segue. È possibile immettere anche una parte più lunga del nome per ottenere una corrispondenza parziale. Ad esempio, se si digita **get\-co** e quindi si preme **TAB**, Windows PowerShell espande automaticamente il nome in **Get\-Command**. Notare che viene cambiata anche la combinazione di maiuscole/minuscole in base al formato standard. Se si preme di nuovo **TAB**, Windows PowerShell lo sostituisce con l'unico altro nome di cmdlet corrispondente, ossia **Get\-Content**.
+L'espansione tramite TAB dei nomi di cmdlet è leggermente diversa. Per usare l'espansione tramite TAB per un nome di cmdlet, digitare per intero la prima parte del nome (il verbo) e il trattino che segue. È possibile immettere anche una parte più lunga del nome per ottenere una corrispondenza parziale. Ad esempio, se si digita **get-co** e quindi si preme **TAB**, Windows PowerShell proporrà automaticamente l'espansione al cmdlet **Get-Command**. Notare che viene cambiata anche la combinazione di maiuscole/minuscole in base al formato standard. Se si preme di nuovo **TAB**, Windows PowerShell lo sostituisce con l'unico altro nome di cmdlet corrispondente, ossia **Get-Content**.
 
-È possibile usare l'espansione dei nomi tramite TAB più volte sulla stessa riga. Ad esempio, è possibile usare l'espansione tramite TAB per il nome del cmdlet **Get\-Content** immettendo:
+È possibile usare l'espansione dei nomi tramite TAB più volte sulla stessa riga. Ad esempio, è possibile usare l'espansione tramite TAB per il nome del cmdlet **Get-Content** cmdlet immettendo:
 
 ```
 PS> Get-Con<Tab>
@@ -54,6 +54,6 @@ PS> Get-Content C:\windows\actsetup.log
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO4-->
 
 

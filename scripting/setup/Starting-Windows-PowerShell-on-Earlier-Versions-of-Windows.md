@@ -9,8 +9,8 @@ manager: dongill
 ms.prod: powershell
 ms.assetid: 57125436-3d1e-4e7f-b5c4-8f0ecb49d642
 translationtype: Human Translation
-ms.sourcegitcommit: 03ac4b90d299b316194f1fa932e7dbf62d4b1c8e
-ms.openlocfilehash: 1fe8c9e872b1646746ad2e3426bc816393e68fe8
+ms.sourcegitcommit: 3222a0ba54e87b214c5ebf64e587f920d531956a
+ms.openlocfilehash: 6cdb6bb5d901c9bc7d2b7f5051e372337bbb69f9
 
 ---
 
@@ -89,6 +89,6 @@ Per abilitare Windows PowerShell ISE in Windows PowerShell 2.0 per Windows Serve
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO4-->
 
 

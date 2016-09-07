@@ -9,8 +9,8 @@ manager: dongill
 ms.prod: powershell
 ms.assetid: 91bfaecd-8684-48b4-ad86-065dfe6dc90a
 translationtype: Human Translation
-ms.sourcegitcommit: 03ac4b90d299b316194f1fa932e7dbf62d4b1c8e
-ms.openlocfilehash: b979750580ea5c7171569f8982d6aeca883c33ab
+ms.sourcegitcommit: 3222a0ba54e87b214c5ebf64e587f920d531956a
+ms.openlocfilehash: 4809eb60ba1a5529343c2ab3c88493bf2c32389b
 
 ---
 
@@ -18,7 +18,7 @@ ms.openlocfilehash: b979750580ea5c7171569f8982d6aeca883c33ab
 Dato che le chiavi del Registro di sistema sono elementi nelle unità di Windows PowerShell, il loro utilizzo è molto simile a quello di file e cartelle. Una differenza fondamentale è che ogni elemento in un'unità di Windows PowerShell basata sul Registro di sistema è un contenitore, come una cartella in un'unità del file system. Tuttavia, le voci del Registro di sistema e i relativi valori associati sono proprietà degli elementi e non elementi distinti.
 
 ### Elenco di tutte le sottochiavi di una chiave del Registro di sistema
-È possibile usare **Get\-ChildItem** per visualizzare tutti gli elementi direttamente all'interno di una chiave del Registro di sistema. Aggiungere il parametro facoltativo **Force** per visualizzare elementi nascosti o di sistema. Questo comando, ad esempio, visualizza gli elementi direttamente all'interno dell'unità di Windows PowerShell HKCU:, che corrisponde all'hive del Registro di sistema HKEY\_CURRENT\_USER:
+È possibile usare **Get-ChildItem** per visualizzare tutti gli elementi direttamente all'interno di una chiave del Registro di sistema. Aggiungere il parametro facoltativo **Force** per visualizzare elementi nascosti o di sistema. Questo comando, ad esempio, visualizza gli elementi direttamente all'interno dell'unità di Windows PowerShell HKCU:, che corrisponde all'hive del Registro di sistema HKEY_CURRENT_USER:
 
 ```
 PS> Get-ChildItem -Path hkcu:\
@@ -36,7 +36,7 @@ SKC  VC Name                           Property
 ...
 ```
 
-Si tratta delle \-chiavi di primo livello visibili in HKEY\_CURRENT\_USER nell'Editor del Registro di sistema (Regedit.exe).
+Si tratta delle chiavi di primo livello visibili in HKEY_CURRENT_USER nell'editor del Registro di sistema (Regedit.exe).
 
 È possibile specificare questo percorso del Registro di sistema anche specificando il nome del provider del Registro di sistema, seguito da "**::**". Il nome completo del provider del Registro di sistema è **Microsoft.PowerShell.Core\\Registry**, ma può essere abbreviato semplicemente in **Registry**. I comandi seguenti consentono di elencare il contenuto direttamente in HKCU:
 
@@ -54,20 +54,20 @@ Questi comandi consentono di elencare solo gli elementi contenuti direttamente, 
 Get-ChildItem -Path hkcu:\ -Recurse
 ```
 
-**Get\-ChildItem** consente di applicare funzionalità di filtro complesse tramite i parametri **Path**, **Filter**, **Include** ed **Exclude**, ma questi parametri sono solitamente basati solo sul nome. È possibile eseguire operazioni di filtraggio complesse in base ad altre proprietà degli elementi tramite il cmdlet **Where\-Object**. Il comando seguente consente di trovare tutte le chiavi all'interno di HKCU:\\Software che non hanno più di una sottochiave e hanno inoltre esattamente quattro valori:
+**Get-ChildItem** consente di applicare funzionalità di filtro complesse tramite i parametri **Path**, **Filter**, **Include** ed **Exclude**, ma questi parametri sono solitamente basati solo sul nome. È possibile eseguire operazioni di filtraggio complesse in base ad altre proprietà degli elementi tramite il cmdlet **Where-Object**. Il comando seguente consente di trovare tutte le chiavi all'interno di HKCU:\\Software che non hanno più di una sottochiave e hanno inoltre esattamente quattro valori:
 
 ```
 Get-ChildItem -Path HKCU:\Software -Recurse | Where-Object -FilterScript {($_.SubKeyCount -le 1) -and ($_.ValueCount -eq 4) }
 ```
 
 ### Copia di chiavi
-La copia viene eseguita con **Copy\-Item**. Il comando seguente copia HKLM:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion e tutte le relative proprietà in HKCU:\\, creando una nuova chiave denominata "CurrentVersion":
+La copia viene eseguita con **Copy-Item**. Il comando seguente copia HKLM:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion e tutte le relative proprietà in HKCU:\\, creando una nuova chiave denominata "CurrentVersion":
 
 ```
 Copy-Item -Path 'HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion' -Destination hkcu:
 ```
 
-Se si esamina questa nuova chiave nell'editor del Registro di sistema o tramite **Get\-ChildItem**, si noterà che non sono disponibili copie delle sottochiavi contenute nella nuova posizione. Per copiare tutto il contenuto di un contenitore, è necessario specificare il parametro **Recurse**. Per rendere ricorsivo il comando di copia precedente, è possibile usare questo comando:
+Se si esamina questa nuova chiave nell'editor del Registro di sistema o tramite **Get-ChildItem**, si noterà che non sono disponibili copie delle sottochiavi contenute nella nuova posizione. Per copiare tutto il contenuto di un contenitore, è necessario specificare il parametro **Recurse**. Per rendere ricorsivo il comando di copia precedente, è possibile usare questo comando:
 
 ```
 Copy-Item -Path 'HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion' -Destination hkcu: -Recurse
@@ -79,25 +79,25 @@ Per eseguire copie nel file system, è comunque possibile continuare a usare alt
 La creazione di nuove chiavi nel Registro di sistema è più semplice rispetto alla creazione di un nuovo elemento in un file system. Dato che tutte le chiavi del Registro di sistema sono contenitori, non è necessario specificare il tipo di elemento, ma è sufficiente indicare un percorso esplicito, ad esempio:
 
 ```
-New-Item -Path hkcu:\software\_DeleteMe
+New-Item -Path hkcu:\software_DeleteMe
 ```
 
 Per specificare una chiave, è anche possibile usare un percorso basato su provider:
 
 ```
-New-Item -Path Registry::HKCU\_DeleteMe
+New-Item -Path Registry::HKCU_DeleteMe
 ```
 
 ### Eliminazione di chiavi
 L'eliminazione di elementi è un'attività fondamentalmente identica per tutti i provider. I comandi seguenti consentono di rimuovere elementi in modo invisibile all'utente:
 
 ```
-Remove-Item -Path hkcu:\Software\_DeleteMe
+Remove-Item -Path hkcu:\Software_DeleteMe
 Remove-Item -Path 'hkcu:\key with spaces in the name'
 ```
 
 ### Rimozione di tutte le chiavi in una chiave specifica
-È possibile rimuovere gli elementi contenuti tramite **Remove\-Item**, ma verrà richiesto di confermare la rimozione, se l'elemento contiene altri elementi. Ad esempio, se si tenta di eliminare la sottochiave HKCU:\\CurrentVersion creata, verrà visualizzato il messaggio seguente:
+È possibile rimuovere gli elementi contenuti tramite **Remove-Item**, ma verrà richiesto di confermare la rimozione, se l'elemento contiene altri elementi. Ad esempio, se si tenta di eliminare la sottochiave HKCU:\\CurrentVersion creata, verrà visualizzato il messaggio seguente:
 
 ```
 Remove-Item -Path hkcu:\CurrentVersion
@@ -110,7 +110,7 @@ parameter was not specified. If you continue, all children will be removed with
 (default is "Y"):
 ```
 
-Per eliminare gli elementi contenuti senza prompt, specificare il parametro **\-Recurse**:
+Per eliminare gli elementi contenuti senza che venga richiesta la conferma dell'eliminazione, specificare il parametro **-Recurse**:
 
 ```
 Remove-Item -Path HKCU:\CurrentVersion -Recurse
@@ -125,6 +125,6 @@ Remove-Item -Path HKCU:\CurrentVersion\* -Recurse
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO4-->
 
 

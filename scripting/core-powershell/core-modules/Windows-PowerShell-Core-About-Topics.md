@@ -9,8 +9,8 @@ manager: dongill
 ms.prod: powershell
 ms.assetid: 8b950138-9782-4dfe-bd5f-6bdcea7060da
 translationtype: Human Translation
-ms.sourcegitcommit: 03ac4b90d299b316194f1fa932e7dbf62d4b1c8e
-ms.openlocfilehash: cc44c1deb8c3162b0d2188c2af313bf064290267
+ms.sourcegitcommit: 3222a0ba54e87b214c5ebf64e587f920d531956a
+ms.openlocfilehash: 4d33ebe2a067781d708ca3b0f8dc4dd2848ba4d4
 
 ---
 
@@ -25,7 +25,7 @@ Questa sezione contiene gli argomenti della Guida concettuale ("Informazioni su"
 |[about_Assignment_Operators [v4]](https://technet.microsoft.com/en-us/library/ac2e399d-9cdc-422c-8b44-7746d93d1db5)|Descrive gli operatori che assegnano valori alle variabili.|
 |[about_Automatic_Variables [v4]](https://technet.microsoft.com/en-us/library/68bc622f-eb7e-4cf5-9c56-a289737efc99)|Descrive le variabili automatiche che archiviano informazioni sullo stato per Windows PowerShell.|
 |[about_Break [v4]](https://technet.microsoft.com/en-us/library/fb810374-761e-46f2-8748-eac12557cf54)|Spiega come usare **Break**, un'istruzione che esce immediatamente dalle istruzioni **Foreach**, **For**, **While**, **Do** e **Switch**.|
-|[about_Checkpoint-Workflow](https://technet.microsoft.com/en-us/library/3a309488-1e7a-4807-b83b-dedbeac3ee1c)|Descrive l'attività Checkpoint\-Workflow, che acquisisce un checkpoint in un flusso di lavoro.|
+|[about_Checkpoint-Workflow](https://technet.microsoft.com/en-us/library/3a309488-1e7a-4807-b83b-dedbeac3ee1c)|Descrive l'attività Checkpoint-Workflow, che acquisisce un checkpoint in un flusso di lavoro.|
 |[about_Command_Precedence [v4]](https://technet.microsoft.com/en-us/library/fb14a05e-d461-432d-a253-e9371b54bd2e)|Descrive il modo in cui Windows PowerShell determina quale comando eseguire.|
 |[about_Command_Syntax [v4]](https://technet.microsoft.com/en-us/library/f39782e8-fe76-46ea-b8b5-b50bbee8da4b)|Spiega il formato dei comandi in Windows PowerShell.|
 |[about_Comment_Based_Help [v4]](https://technet.microsoft.com/en-us/library/c270e198-6da2-4825-b6eb-35d5c8a5cf3d)|Illustra come scrivere argomenti della Guida basati su commenti per funzioni e script.|
@@ -74,7 +74,7 @@ Questa sezione contiene gli argomenti della Guida concettuale ("Informazioni su"
 |[about_Path_Syntax [v4]](https://technet.microsoft.com/en-us/library/4d2789b0-8c37-4227-acf3-717a0bc155bc)|Descrive i formati dei percorsi completi e relativi in Windows PowerShell.|
 |[about_Pipelines [v4]](https://technet.microsoft.com/en-us/library/f39a6658-4309-42a7-afe8-871bd4c6b01a)|Spiega come combinare i comandi in pipeline in Windows PowerShell.|
 |[about_PowerShell.exe](https://technet.microsoft.com/en-us/library/d5548671-5362-4b0b-b22c-4360c71d7f26)|Visualizza la Guida per lo strumento da riga di comando PowerShell.exe.|
-|[about_PowerShell_Ise.exe](https://technet.microsoft.com/en-us/library/f78d2891-de05-4403-8c91-e856abbd4fb6)|Visualizza la Guida per lo strumento da riga di comando PowerShell\_ISE.exe.|
+|[about_PowerShell_Ise.exe](https://technet.microsoft.com/en-us/library/f78d2891-de05-4403-8c91-e856abbd4fb6)|Visualizza la Guida per lo strumento da riga di comando PowerShell_ISE.exe.|
 |[about_Preference_Variables [v4]](https://technet.microsoft.com/en-us/library/31344314-be29-4286-b039-afa5460cbe8b)|Descrive le variabili di preferenza che personalizzano Windows PowerShell.|
 |[about_Profiles [v4]](https://technet.microsoft.com/en-us/library/e1d9e30a-70cc-4f36-949f-fc7cd96b4054)|Spiega come creare e usare un profilo di Windows PowerShell.|
 |[about_Prompts [v4]](https://technet.microsoft.com/en-us/library/251843dc-4db3-4e21-aac6-acd3135b3ef6)|Spiega come creare e usare un profilo di Windows PowerShell.|
@@ -82,7 +82,7 @@ Questa sezione contiene gli argomenti della Guida concettuale ("Informazioni su"
 |[about_Providers [v4]](https://technet.microsoft.com/en-us/library/2d9b3f32-be78-49ad-a547-21231c803242)|Descrive i provider di Windows PowerShell e illustra come usare i dati che espongono.|
 |[about_PSSessions [v4]](https://technet.microsoft.com/en-us/library/747682ac-6499-4031-8dcc-5f22e831b549)|Descrive le sessioni di Windows PowerShell (PSSession) e spiega come usarle per eseguire comandi remoti.|
 |[about_PSSession_Details [v4]](https://technet.microsoft.com/en-us/library/d2c594e8-bcf6-4db5-8335-6487adcaf7eb)|Fornisce informazioni dettagliate sulle sessioni di Windows PowerShell.|
-|[about_PSSnapins [v4]](https://technet.microsoft.com/en-us/library/87afc358-9075-4264-a94e-3edf39eb52aa)|Descrive gli snap\-in di Windows PowerShell e spiega come usarli per estendere Windows PowerShell.|
+|[about_PSSnapins [v4]](https://technet.microsoft.com/en-us/library/87afc358-9075-4264-a94e-3edf39eb52aa)|Descrive gli snap-in di Windows PowerShell e spiega come usarli per estendere Windows PowerShell.|
 |[about_Quoting_Rules [v4]](https://technet.microsoft.com/en-us/library/295e444a-4219-40c6-b16f-3685c7c7bc52)|Spiega le regole per usare virgolette singole e doppie in Windows PowerShell, incluse le stringhe di tipo here.|
 |[about_Redirection [v4]](https://technet.microsoft.com/en-us/library/328167e4-1247-4f7e-a179-b5bb15cf617c)|Spiega come reindirizzare l'output a variabili e file di testo. Include gli operatori di reindirizzamento.|
 |[about_Ref [v4]](https://technet.microsoft.com/en-us/library/2e015309-2833-48f9-b9cd-bc176317de22)|Illustra come creare e usare un tipo di variabile di riferimento.|
@@ -95,7 +95,7 @@ Questa sezione contiene gli argomenti della Guida concettuale ("Informazioni su"
 |[about_Remote_Requirements [v4]](https://technet.microsoft.com/en-us/library/e4642458-4ac7-4643-af1b-78d3e7594c42)|Requisiti di sistema e di configurazione per eseguire comandi remoti in Windows PowerShell.|
 |[about_Remote_Troubleshooting [v4]](https://technet.microsoft.com/en-us/library/81b8bd3d-73f6-4e1b-a6a0-d03cd575029b)|Risoluzione dei problemi relativi alle operazioni remote in Windows PowerShell.|
 |[about_Remote_Variables](https://technet.microsoft.com/en-us/library/a31e2e7f-7c66-492c-86ef-d588912feb7d)|Illustra come usare le variabili locali e remote nei comandi remoti.|
-|[about_Requires [v4]](https://technet.microsoft.com/en-us/library/0f9a5a00-f64c-4305-b2e7-076aab68ca6f)|Descrive l'istruzione **Requires**, che impedisce l'esecuzione di uno script senza i necessari snap\-in e versioni.|
+|[about_Requires [v4]](https://technet.microsoft.com/en-us/library/0f9a5a00-f64c-4305-b2e7-076aab68ca6f)|Descrive l'istruzione **Requires**, che impedisce l'esecuzione di uno script senza le versioni e gli snap-in necessari.|
 |[about_Reserved_Words [v4]](https://technet.microsoft.com/en-us/library/f3dc2da5-d6c3-4a28-8a13-51fbc61c4e51)|Elenca le parole riservate per Windows PowerShell.|
 |[about_Return [v4]](https://technet.microsoft.com/en-us/library/5c4e116d-a8be-4e13-906c-c4f74bb06f46)|Esce dall'ambito corrente, che può essere una funzione, uno script o un blocco di script.|
 |[about_Run_With_PowerShell](https://technet.microsoft.com/en-us/library/c9d9ca5f-eff9-4409-be9d-e43b5b4087eb)|Illustra come usare la funzionalità "Esegui con PowerShell" per eseguire uno script facendo clic con il pulsante destro del mouse sulla relativa voce in Esplora file.|
@@ -128,10 +128,10 @@ Questa sezione contiene gli argomenti della Guida concettuale ("Informazioni su"
 |[about_Windows_PowerShell_ISE [v3]](https://technet.microsoft.com/en-us/library/dfa54d47-60c6-4fff-8197-c747e8d411bb)|Descrive Windows PowerShell® Integrated Scripting Environment (ISE).|
 |[about_Workflows](https://technet.microsoft.com/en-us/library/f2897bdd-1b9d-4679-8b19-09840bd40a22)|Fornisce una breve introduzione alla funzionalità del flusso di lavoro di Windows PowerShell.|
 |[about_WorkflowCommonParameters](https://technet.microsoft.com/en-us/library/119f968e-618e-439c-b76c-cdd17e6df27c)|Descrive i parametri validi in tutti i comandi del flusso di lavoro di Windows PowerShell.|
-|[about_WMI](https://technet.microsoft.com/en-us/library/32da7221-c213-48ad-8466-fad82285e4e8)|Descrive Strumentazione gestione Windows (WMI), l'implementazione Microsoft dello standard di settore Web\-Based Enterprise Management (WBEM).|
+|[about_WMI](https://technet.microsoft.com/en-us/library/32da7221-c213-48ad-8466-fad82285e4e8)|Descrive Strumentazione gestione Windows (WMI), l'implementazione Microsoft dello standard di settore Web-Based Enterprise Management (WBEM).|
 |[about_WMI_Cmdlets [v3]](https://technet.microsoft.com/en-us/library/9c56b172-3b25-47b2-b6e0-86db649b1c45)|Fornisce informazioni complementari su Strumentazione gestione Windows (WMI) e Windows PowerShell.|
 |[about_WQL](https://technet.microsoft.com/en-us/library/820b2d23-3473-46f5-a188-5910704c7905)|Descrive il linguaggio WMI Query Language (WQL) che può essere usato per ottenere oggetti WMI in Windows PowerShell.|
-|[about_WS-Management_Cmdlets [v3]](https://technet.microsoft.com/en-us/library/22738d36-4d49-472c-ae51-9365b9bbd7c2)|Descrive i cmdlet del modulo Microsoft.WsMan.Management. Spiega come usarli insieme per gestire le funzionalità di WS\-Management, tra cui l'unità del provider WSMan.|
+|[about_WS-Management_Cmdlets [v3]](https://technet.microsoft.com/en-us/library/22738d36-4d49-472c-ae51-9365b9bbd7c2)|Descrive i cmdlet del modulo Microsoft.WsMan.Management. Spiega come usarli insieme per gestire le funzionalità di WS-Management, tra cui l'unità del provider WSMan.|
 
 ## Vedere anche
 [Scrittura di script con Windows PowerShell](../../getting-started/fundamental/Scripting-with-Windows-PowerShell.md)
@@ -145,6 +145,6 @@ Questa sezione contiene gli argomenti della Guida concettuale ("Informazioni su"
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO4-->
 
 

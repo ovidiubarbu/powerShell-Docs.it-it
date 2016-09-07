@@ -9,15 +9,15 @@ manager: dongill
 ms.prod: powershell
 ms.assetid: 8cbd4867-917d-41ea-9ff0-b8e765509735
 translationtype: Human Translation
-ms.sourcegitcommit: 03ac4b90d299b316194f1fa932e7dbf62d4b1c8e
-ms.openlocfilehash: b7e752a1615da4540106ec32754f873c5d7aa5d9
+ms.sourcegitcommit: 3222a0ba54e87b214c5ebf64e587f920d531956a
+ms.openlocfilehash: b21af4711cc5a846517c3e286c9e90f858612ccb
 
 ---
 
 # Manipolazione diretta di elementi
 Gli elementi visualizzati nelle unità di Windows PowerShell, ad esempio file e cartelle nelle unità di file system, e le chiavi del Registro di sistema nelle unità del Registro di sistema di Windows PowerShell sono denominati *elementi* in Windows PowerShell. I cmdlet per gestire gli elementi includono il sostantivo **Item** nei relativi nomi.
 
-L'output del comando **Get\-Command \-Noun Item** indica che ci sono nove cmdlet di tipo elemento in Windows PowerShell.
+L'output del comando **Get-Command -Noun Item** indica che ci sono nove cmdlet di tipo elemento in Windows PowerShell.
 
 ```
 PS> Get-Command -Noun Item
@@ -35,8 +35,8 @@ Cmdlet          Rename-Item                     Rename-Item [-Path] <String>...
 Cmdlet          Set-Item                        Set-Item [-Path] <String[]> ...
 ```
 
-### Creazione di nuovi elementi (New\-Item)
-Per creare un nuovo elemento nel file system, usare il cmdlet **New\-Item**. Includere il parametro **Path** con il percorso dell'elemento e il parametro **ItemType** con il valore "file" o "directory".
+### Creazione di nuovi elementi (New-Item)
+Per creare un nuovo elemento nel file system, usare il cmdlet **New-Item**. Includere il parametro **Path** con il percorso dell'elemento e il parametro **ItemType** con il valore "file" o "directory".
 
 Ad esempio, per creare una nuova directory denominata "New.Directory" nella directory C:\\Temp, digitare:
 
@@ -62,10 +62,10 @@ Mode                LastWriteTime     Length Name
 -a---        2006-05-18  11:44 AM          0 file1
 ```
 
-È possibile usare la stessa tecnica per creare una nuova chiave del Registro di sistema. In realtà, una chiave è più facile da creare perché si tratta dell'unico tipo di elemento del Registro di sistema di Windows. Le voci del Registro di sistema corrispondono invece a *proprietà* elemento. Ad esempio, per creare una chiave denominata "\_Test" nella sottochiave CurrentVersion, digitare:
+È possibile usare la stessa tecnica per creare una nuova chiave del Registro di sistema. In realtà, una chiave è più facile da creare perché si tratta dell'unico tipo di elemento del Registro di sistema di Windows. Le voci del Registro di sistema corrispondono invece a *proprietà* elemento. Ad esempio, per creare una chiave denominata "_Test" nella sottochiave CurrentVersion, digitare:
 
 ```
-PS> New-Item -Path HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\_Test
+PS> New-Item -Path HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion_Test
 
    Hive: Microsoft.PowerShell.Core\Registry::HKEY_LOCAL_MACHINE\SOFTWARE\Micros
 oft\Windows\CurrentVersion
@@ -78,11 +78,11 @@ SKC  VC Name                           Property
 Quando si digita un percorso del Registro di sistema, assicurarsi di includere i due punti (**:**) nei nomi delle unità di Windows PowerShell, HKLM: e HKCU:. Senza i due punti, Windows PowerShell non riconosce il nome dell'unità nel percorso.
 
 ### Perché i valori del Registro di sistema non sono elementi
-Quando si usa il cmdlet **Get\-ChildItem** per trovare gli elementi di una chiave del Registro di sistema, in realtà non si vedranno mai le voci effettive del Registro di sistema o i relativi valori.
+Quando si usa il cmdlet **Get-ChildItem** per trovare gli elementi di una chiave del Registro di sistema, in realtà non si vedranno mai le voci effettive del Registro di sistema o i relativi valori.
 
-Ad esempio, la chiave del Registro di sistema **HKEY\_LOCAL\_MACHINE\\Software\\Microsoft\\Windows\\CurrentVersion\\Run** contiene in genere diverse voci del Registro di sistema che rappresentano le applicazioni eseguite all'avvio del sistema.
+Ad esempio, la chiave del Registro di sistema **HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Windows\\CurrentVersion\\Run** contiene in genere diverse voci del Registro di sistema che rappresentano le applicazioni eseguite all'avvio del sistema.
 
-Tuttavia, quando si usa **Get\-ChildItem** per cercare gli elementi figlio nella chiave, si vedrà solo la sottochiave **OptionalComponents**:
+Tuttavia, quando si usa **Get-ChildItem** per cercare gli elementi figlio nella chiave, si vedrà solo la sottochiave **OptionalComponents**:
 
 ```
 PS> Get-ChildItem HKLM:\Software\Microsoft\Windows\CurrentVersion\Run
@@ -95,14 +95,14 @@ SKC  VC Name                           Property
 
 Anche se sarebbe comodo trattare le voci del Registro di sistema come elementi, non è possibile specificare un percorso di una voce in modo da assicurarsi che sia univoco. La notazione del percorso non distingue la sottochiave del Registro di sistema denominata **Run** dalla voce del Registro di sistema **(Default)** nella sottochiave **Run**. Si noti anche che, poiché i nomi delle voci del Registro di sistema possono contenere il carattere barra rovesciata (**\\**), se le voci fossero elementi non si potrebbe usare la notazione del percorso per distinguere una voce del Registro di sistema denominata **Windows\\CurrentVersion\\Run** dalla sottochiave situata in tale percorso.
 
-### Ridenominazione di elementi esistenti (Rename\-Item)
-Per cambiare il nome di un file o di una cartella, usare il cmdlet **Rename\-Item**. Il comando seguente cambia il nome del file **file1.txt** in **fileOne.txt**.
+### Ridenominazione di elementi esistenti (Rename-Item)
+Per cambiare il nome di un file o di una cartella, usare il cmdlet **Rename-Item**. Il comando seguente cambia il nome del file **file1.txt** in **fileOne.txt**.
 
 ```
 PS> Rename-Item -Path C:\temp\New.Directory\file1.txt fileOne.txt
 ```
 
-Il cmdlet **Rename\-Item** può cambiare il nome di un file o di una cartella, ma non può spostare un elemento. Il comando seguente non riesce perché tenta di spostare il file dalla directory New.Directory alla directory Temp.
+Il cmdlet **Rename-Item** è in grado di cambiare il nome di un file o di una cartella, ma non di spostare un elemento. Il comando seguente non riesce perché tenta di spostare il file dalla directory New.Directory alla directory Temp.
 
 ```
 PS> Rename-Item -Path C:\temp\New.Directory\fileOne.txt c:\temp\fileOne.txt
@@ -111,10 +111,10 @@ At line:1 char:12
 + Rename-Item  <<<< -Path C:\temp\New.Directory\fileOne c:\temp\fileOne.txt
 ```
 
-### Spostamento di elementi (Move\-Item)
-Per spostare un file o una cartella, usare il cmdlet **Move\-Item**.
+### Spostamento di elementi (Move-Item)
+Per spostare un file o una cartella, usare il cmdlet **Move-Item**.
 
-Ad esempio, il comando seguente sposta la directory New.Directory dalla directory C:\\temp alla radice dell'unità C:. Per verificare che l'elemento sia stato spostato, includere il parametro **PassThru** del cmdlet **Move\-Item**. Senza il parametro **Passthru**, il cmdlet **Move\-Item** non visualizza risultati.
+Ad esempio, il comando seguente sposta la directory New.Directory dalla directory C:\\temp alla radice dell'unità C:. Per verificare che l'elemento sia stato spostato, includere il parametro **PassThru** del cmdlet **Move-Item**. Senza il parametro **Passthru**, il cmdlet **Move-Item** non visualizza i risultati.
 
 ```
 PS> Move-Item -Path C:\temp\New.Directory -Destination C:\ -PassThru
@@ -126,8 +126,8 @@ Mode                LastWriteTime     Length Name
 d----        2006-05-18  12:14 PM            New.Directory
 ```
 
-### Copia di elementi (Copy\-Item)
-Se si ha familiarità con le operazioni di copia in altre shell, il comportamento del cmdlet **Copy\-Item** in Windows PowerShell potrebbe risultare insolito. Quando si copia un elemento da una posizione a un'altra, Copy\-Item non ne copia il contenuto per impostazione predefinita.
+### Copia di elementi (Copy-Item)
+Se si ha familiarità con le operazioni di copia in altre shell, il comportamento del cmdlet **Copy-Item** in Windows PowerShell potrebbe risultare insolito. Quando si copia un elemento da una posizione a un'altra, Copy-Item non ne copia il contenuto per impostazione predefinita.
 
 Ad esempio, se si copia la directory **New.Directory** dall'unità C: nella directory C:\\temp, il comando riesce, ma i file della directory New.Directory non vengono copiati.
 
@@ -142,11 +142,11 @@ PS> Get-ChildItem -Path C:\temp\New.Directory
 PS>
 ```
 
-Perché il cmdlet **Copy\-Item** non copia il contenuto nella nuova posizione?
+Perché il cmdlet **Copy-Item** non copia il contenuto nella nuova posizione?
 
-Il cmdlet **Copy\-Item** è stato progettato per essere generico, non per la copia di file e cartelle. Inoltre, anche se si copiano file e cartelle, si potrebbe scegliere di copiare solo il contenitore e non gli elementi al suo interno.
+Il cmdlet **Copy-Item** è stato progettato per essere generico, non per la copia di file e cartelle. Inoltre, anche se si copiano file e cartelle, si potrebbe scegliere di copiare solo il contenitore e non gli elementi al suo interno.
 
-Per copiare tutto il contenuto di una cartella, includere nel comando il parametro **Recurse** del cmdlet **Copy\-Item**. Se è già stata copiata la directory senza il suo contenuto, aggiungere il parametro **Force**, che consente di sovrascrivere la cartella vuota.
+Per copiare tutto il contenuto di una cartella, includere il parametro **Recurse** del cmdlet **Copy-Item** nel comando. Se è già stata copiata la directory senza il suo contenuto, aggiungere il parametro **Force**, che consente di sovrascrivere la cartella vuota.
 
 ```
 PS> Copy-Item -Path C:\New.Directory -Destination C:\temp -Recurse -Force -Passthru
@@ -163,8 +163,8 @@ Mode                LastWriteTime     Length Name
 -a---        2006-05-18  11:44 AM          0 file1
 ```
 
-### Eliminazione di elementi (Remove\-Item)
-Per eliminare file e cartelle, usare il cmdlet **Remove\-Item**. I cmdlet di Windows PowerShell che possono apportare modifiche significative e irreversibili, come **Remove\-Item**, spesso chiedono conferma quando si immettono i relativi comandi. Se ad esempio si prova a rimuovere la cartella **New.Directory**, verrà chiesto di confermare il comando perché la cartella contiene file:
+### Eliminazione di elementi (Remove-Item)
+Per eliminare file e cartelle, usare il cmdlet **Remove-Item**. I cmdlet di Windows PowerShell, come **Remove-Item**, che possono apportare modifiche significative e irreversibili spesso chiedono conferma quando si immettono i relativi comandi. Se ad esempio si prova a rimuovere la cartella **New.Directory**, verrà chiesto di confermare il comando perché la cartella contiene file:
 
 ```
 PS> Remove-Item C:\New.Directory
@@ -177,14 +177,14 @@ specified. If you continue, all children will be removed with the item. Are you
 (default is "Y"):
 ```
 
-Poiché la risposta predefinita è **Sì**, per eliminare la cartella e i relativi file premere **INVIO**. Per rimuovere la cartella senza confermare, usare il parametro **\-Recurse**.
+Poiché la risposta predefinita è **Sì**, per eliminare la cartella e i relativi file premere **INVIO**. Per rimuovere la cartella senza confermare, usare il parametro **-Recurse**.
 
 ```
 PS> Remove-Item C:\temp\New.Directory -Recurse
 ```
 
-### Esecuzione di elementi (Invoke\-Item)
-Windows PowerShell usa il cmdlet **Invoke\-Item** per eseguire un'azione predefinita per un file o una cartella. L'azione predefinita è determinata dal gestore dell'applicazione predefinito nel Registro di sistema. L'effetto è identico a quello che si ottiene facendo doppio clic sull'elemento in Esplora file.
+### Esecuzione di elementi (Invoke-Item)
+Windows PowerShell usa il cmdlet **Invoke-Item** per eseguire un'azione predefinita per un file o una cartella. L'azione predefinita è determinata dal gestore dell'applicazione predefinito nel Registro di sistema. L'effetto è identico a quello che si ottiene facendo doppio clic sull'elemento in Esplora file.
 
 Si supponga ad esempio di eseguire il comando seguente:
 
@@ -205,6 +205,6 @@ Se il tipo di file con estensione ini è associato al Blocco note, il file boot.
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO4-->
 
 

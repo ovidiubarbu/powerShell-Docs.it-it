@@ -9,8 +9,8 @@ manager: dongill
 ms.prod: powershell
 ms.assetid: 979654ae-7994-47f8-be43-d79e7a140143
 translationtype: Human Translation
-ms.sourcegitcommit: 03ac4b90d299b316194f1fa932e7dbf62d4b1c8e
-ms.openlocfilehash: b990fb5c6855aaffeb241e9596c333014050e059
+ms.sourcegitcommit: 3222a0ba54e87b214c5ebf64e587f920d531956a
+ms.openlocfilehash: 548cb522ecf8f8f5e82fb43e709c6b8bf3a05096
 
 ---
 
@@ -24,12 +24,12 @@ Windows PowerShell è progettato per migliorare la riga di comando e l'ambiente 
 Get-Command *-Service
 ```
 
-Dopo aver individuato il cmdlet che esegue un'attività, è possibile ottenere altre informazioni con il cmdlet Get\-Help. Per visualizzare la Guida per il cmdlet Get\-Service, ad esempio, digitare:
+Dopo aver individuato il cmdlet che esegue un'attività, è possibile ottenere altre informazioni con il cmdlet Get-Help. Per visualizzare la Guida per il cmdlet Get-Service, ad esempio, digitare:
 
 ```
 Get-Help Get-Service
 ```
-La maggior parte dei cmdlet genera oggetti che possono essere modificati e di cui è possibile eseguire il rendering in testo per la visualizzazione. Per una migliore comprensione dell'output del cmdlet, inviarne l'output tramite pipe al cmdlet Get\-Member. Il comando seguente, ad esempio, visualizza informazioni sui membri dell'oggetto restituito dal cmdlet Get\-Service.
+La maggior parte dei cmdlet genera oggetti che possono essere modificati e di cui è possibile eseguire il rendering in testo per la visualizzazione. Per una migliore comprensione dell'output del cmdlet, inviarne l'output tramite pipe al cmdlet Get-Member. Il comando seguente, ad esempio, visualizza informazioni sui membri dell'oggetto restituito dal cmdlet Get-Service.
 
 ```
 Get-Service | Get-Member
@@ -38,7 +38,7 @@ Get-Service | Get-Member
 ## Coerenza
 La gestione dei sistemi può essere un'impresa complicata e gli strumenti con un'interfaccia coerente sono utili per esercitare un maggiore controllo sulla complessità intrinseca. Sfortunatamente, gli strumenti da riga di comando o gli oggetti COM gestibili tramite script non sono certo noti per la loro coerenza.
 
-La coerenza di Windows PowerShell è una delle sue principali risorse. Ad esempio, dopo aver imparato a usare il cmdlet Sort\-Object, è possibile usare tali conoscenze per ordinare l'output di qualsiasi cmdlet. Non occorre imparare le diverse routine di ordinamento di ogni cmdlet.
+La coerenza di Windows PowerShell è una delle sue principali risorse. Ad esempio, dopo aver imparato a usare il cmdlet Sort-Object, è possibile usare tali conoscenze per ordinare l'output di qualsiasi cmdlet. Non occorre imparare le diverse routine di ordinamento di ogni cmdlet.
 
 Gli sviluppatori di cmdlet, inoltre, non devono progettare funzionalità di ordinamento per i loro cmdlet. Windows PowerShell offre loro un framework che fornisce le funzionalità di base e impone la coerenza per molti aspetti dell'interfaccia. Il framework elimina alcune delle scelte che sono in genere compito dello sviluppatore, ma, in cambio, semplifica notevolmente lo sviluppo di cmdlet affidabili e facili da usare.
 
@@ -58,6 +58,6 @@ Con Windows PowerShell è facile passare dalla digitazione interattiva di comand
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO4-->
 
 

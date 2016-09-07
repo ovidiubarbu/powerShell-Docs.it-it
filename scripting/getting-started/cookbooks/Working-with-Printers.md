@@ -9,8 +9,8 @@ manager: dongill
 ms.prod: powershell
 ms.assetid: 4f29ead3-f83b-4706-ac3e-f2154ff38dc5
 translationtype: Human Translation
-ms.sourcegitcommit: 03ac4b90d299b316194f1fa932e7dbf62d4b1c8e
-ms.openlocfilehash: 27d3d11b71b95cd79817449cf8bdb1a0a26936bd
+ms.sourcegitcommit: 3222a0ba54e87b214c5ebf64e587f920d531956a
+ms.openlocfilehash: c013124d12a551245152c1703e5f1d8a3f8f5f70
 
 ---
 
@@ -18,7 +18,7 @@ ms.openlocfilehash: 27d3d11b71b95cd79817449cf8bdb1a0a26936bd
 È possibile usare Windows PowerShell per gestire le stampanti tramite WMI e l'oggetto COM WScript.Network da WSH. Verranno usati entrambi gli strumenti per illustrare le attività specifiche.
 
 ### Elenco delle connessioni a stampanti
-Il modo più semplice per elencare le stampanti installate in un computer consiste nell'usare la classe WMI **Win32\_Printer**:
+Il modo più semplice per elencare le stampanti installate in un computer consiste nell'usare la classe WMI **Win32_Printer**:
 
 ```
 Get-WmiObject -Class Win32_Printer -ComputerName
@@ -40,7 +40,7 @@ Per aggiungere una nuova stampante di rete, usare **WScript.Network**:
 ```
 
 ### Impostazione di una stampante predefinita
-Per usare WMI per impostare la stampante predefinita, individuare la stampante nella raccolta **Win32\_Printer** e quindi chiamare il metodo **SetDefaultPrinter**:
+Per usare WMI per impostare la stampante predefinita, individuare la stampante nella raccolta **Win32_Printer** e quindi richiamare il metodo **SetDefaultPrinter**:
 
 ```
 (Get-WmiObject -ComputerName . -Class Win32_Printer -Filter "Name='HP LaserJet 5Si'").SetDefaultPrinter()
@@ -62,6 +62,6 @@ Per rimuovere una connessione alla stampante, usare il metodo **WScript.Network 
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO4-->
 
 

@@ -9,15 +9,15 @@ manager: dongill
 ms.prod: powershell
 ms.assetid: 6be50926-7943-4ef7-9499-4490d72a63fb
 translationtype: Human Translation
-ms.sourcegitcommit: 03ac4b90d299b316194f1fa932e7dbf62d4b1c8e
-ms.openlocfilehash: 233ec6fafbf1e770190601750be3bdcef2337b7f
+ms.sourcegitcommit: 3222a0ba54e87b214c5ebf64e587f920d531956a
+ms.openlocfilehash: d90bf940a1047b629f7b59d239aab50a78748251
 
 ---
 
 # Informazioni sulla pipeline di Windows PowerShell
 Il piping è usato praticamente ovunque in Windows PowerShell. Anche se sullo schermo viene visualizzato del testo, Windows PowerShell non invia tramite pipe testo tra i comandi, bensì oggetti.
 
-La notazione usata per le pipeline è simile a quella usata in altre shell, pertanto, a prima vista, potrebbe non essere evidente che Windows PowerShell stia introducendo qualcosa di nuovo. Se ad esempio si usa il cmdlet **Out\-Host** per forzare una visualizzazione pagina per pagina dell'output di un altro comando, l'output avrà lo stesso aspetto del normale testo visualizzato sullo schermo, suddiviso in pagine:
+La notazione usata per le pipeline è simile a quella usata in altre shell, pertanto, a prima vista, potrebbe non essere evidente che Windows PowerShell stia introducendo qualcosa di nuovo. Se ad esempio si usa il cmdlet **Out-Host** per forzare una visualizzazione pagina per pagina dell'output di un altro comando, l'output avrà lo stesso aspetto del normale testo visualizzato sullo schermo, suddiviso in pagine:
 
 ```
 PS> Get-ChildItem -Path C:\WINDOWS\System32 | Out-Host -Paging
@@ -43,9 +43,9 @@ Mode                LastWriteTime     Length Name
 ...
 ```
 
-Il comando Out\-Host \-Paging è un elemento della pipeline utile in caso di output lungo da visualizzare lentamente. La sua utilità si rivela in particolare se l'operazione richiede un uso elevato della CPU. Dal momento che l'elaborazione viene trasferita al cmdlet Out\-Host quando dispone di una pagina completa pronta per la visualizzazione, i cmdlet che lo precedono nella pipeline interrompono l'operazione finché non è disponibile la pagina successiva di output. È possibile vedere questo comportamento se si usa Gestione attività Windows per monitorare l'uso della CPU e della memoria da parte di Windows PowerShell.
+Il comando Out-Host -Paging è un elemento della pipeline utile in caso di output lungo da visualizzare lentamente. La sua utilità si rivela in particolare se l'operazione richiede un uso elevato della CPU. Dal momento che l'elaborazione viene trasferita al cmdlet Out-Host quando dispone di una pagina completa pronta per la visualizzazione, i cmdlet che lo precedono nella pipeline interrompono l'operazione finché non è disponibile la pagina successiva di output. È possibile vedere questo comportamento se si usa Gestione attività Windows per monitorare l'uso della CPU e della memoria da parte di Windows PowerShell.
 
-Eseguire il comando seguente: **Get\-ChildItem C:\\Windows \-Recurse**. Confrontare l'uso della CPU e della memoria con questo comando: **Get\-ChildItem C:\\Windows \-Recurse | Out\-Host \-Paging**. Quello che si vede sullo schermo è testo, poiché è necessario rappresentare gli oggetti come testo in una finestra della console. Questa è solo una rappresentazione di quello che accade veramente in Windows PowerShell. Si consideri ad esempio il cmdlet Get\-Location. Se si digita **Get\-Location** mentre il percorso corrente è la radice dell'unità C, verrà visualizzato l'output seguente:
+Eseguire il comando seguente: **Get-ChildItem C:\\Windows -Recurse**. Confrontare l'uso della CPU e della memoria con questo comando: **Get-ChildItem C:\\Windows -Recurse | Out-Host -Paging**. Quello che si vede sullo schermo è testo, poiché è necessario rappresentare gli oggetti come testo in una finestra della console. Questa è solo una rappresentazione di quello che accade veramente in Windows PowerShell. Si consideri ad esempio il cmdlet Get-Location. Se si digita **Get-Location** mentre il percorso corrente è la radice dell'unità C, verrà visualizzato l'output seguente:
 
 ```
 PS> Get-Location
@@ -55,21 +55,21 @@ Path
 C:\
 ```
 
-Se Windows PowerShell ha inviato il testo tramite pipe, emettendo un comando come **Get\-Location | Out\-Host**, passerà da **Get\-Location** a **Out\-Host** un set di caratteri nell'ordine in cui sono visualizzati sullo schermo. In altre parole, se le informazioni dell'intestazione venissero ignorate, **Out\-Host** riceverebbe per prima cosa il carattere "**C"**, quindi il carattere "**:"** e infine il carattere "**\\"**. Il cmdlet **Out\-Host** non è in grado di determinare quale significato associare all'output di caratteri del cmdlet **Get\-Location**.
+Se Windows PowerShell ha inviato il testo attraverso una pipe, emettendo un comando come **Get-Location | Out-Host**, passerà da **Get-Location** a **Out-Host** un set di caratteri nell'ordine in cui sono visualizzati sullo schermo. In altre parole, se le informazioni dell'intestazione venissero ignorate, **Out-Host** riceverebbe per prima cosa il carattere "**C"**, quindi il carattere "**:"** e infine il carattere "**\\"**. Il cmdlet **Out-Host** non è in grado di determinare quale significato associare all'output di caratteri del cmdlet **Get-Location**.
 
 Invece di usare del testo per consentire ai comandi in una pipeline di comunicare, Windows PowerShell usa oggetti. Dal punto di vista di un utente, gli oggetti impacchettano le informazioni correlate in un modulo che rende più semplice manipolare le informazioni come unità ed estrarre gli specifici elementi richiesti.
 
-Il comando **Get\-Location** non restituisce testo contenente il percorso corrente, ma un pacchetto di informazioni denominato oggetto **PathInfo** che contiene il percorso corrente insieme ad altre informazioni. Il cmdlet **Out\-Host** invia quindi questo oggetto **PathInfo** sullo schermo e Windows PowerShell decide quali informazioni visualizzare e come visualizzarle in base alle proprie regole di formattazione.
+Il comando **Get-Location** non restituisce testo contenente il percorso corrente, ma un pacchetto di informazioni denominato oggetto **PathInfo** che contiene il percorso corrente insieme ad altre informazioni. Il cmdlet **Out-Host** invia quindi questo oggetto **PathInfo** sullo schermo e Windows PowerShell decide quali informazioni visualizzare e come visualizzarle in base alle proprie regole di formattazione.
 
-In realtà, l'output delle informazioni dell'intestazione del cmdlet **Get\-Location** viene aggiunto solo alla fine del processo, durante la formattazione dei dati per la visualizzazione sullo schermo. Ciò che compare sullo schermo è un riepilogo delle informazioni e non una rappresentazione completa dell'oggetto di output.
+In realtà, l'output delle informazioni dell'intestazione del cmdlet **Get-Location** viene aggiunto solo alla fine del processo, durante la formattazione dei dati per la visualizzazione sullo schermo. Ciò che compare sullo schermo è un riepilogo delle informazioni e non una rappresentazione completa dell'oggetto di output.
 
-Dato che possono esserci più output di informazioni da un comando di Windows PowerShell rispetto a quelli visualizzati nella finestra della console, in che modo è possibile recuperare gli elementi non visibili? Come si visualizzano i dati aggiuntivi? E cosa accade se si vogliono visualizzare i dati in un formato diverso da quello che Windows PowerShell usa normalmente?
+Dato che possono esistere più output di informazioni da un comando di Windows PowerShell rispetto a quelli visualizzati nella finestra della console, in che modo è possibile recuperare gli elementi non visibili? Come si visualizzano i dati aggiuntivi? E cosa accade se si vogliono visualizzare i dati in un formato diverso da quello che Windows PowerShell usa normalmente?
 
 Nel resto di questa sezione viene spiegato come individuare la struttura di oggetti specifici di Windows PowerShell, selezionando elementi specifici e formattandoli per una visualizzazione più semplice, e come inviare queste informazioni a percorsi di output alternativi, ad esempio file e stampanti.
 
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO4-->
 
 

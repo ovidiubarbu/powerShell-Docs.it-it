@@ -9,8 +9,8 @@ manager: dongill
 ms.prod: powershell
 ms.assetid: 1c6d91f3-c556-42a2-a017-79b6b7b4b7db
 translationtype: Human Translation
-ms.sourcegitcommit: 03ac4b90d299b316194f1fa932e7dbf62d4b1c8e
-ms.openlocfilehash: ce9364e8fb73a2d31b728430c590fef4175ebe26
+ms.sourcegitcommit: 3222a0ba54e87b214c5ebf64e587f920d531956a
+ms.openlocfilehash: c1744841e23aa9c2fedf3eb92230ef422c36f0cd
 
 ---
 
@@ -48,7 +48,7 @@ $myfile.Encoding
 
  Salva il file con il nome file e la codifica specificati.
 
- **filename** \- Stringa Nome da usare per salvare il file.
+ **filename** - Stringa Nome da usare per salvare il file.
 
  **\[saveEncoding\]** – [System.Text.Encoding](http://msdn.microsoft.com/library/system.text.encoding.aspx)
  facoltativo Parametro di codifica caratteri facoltativo da usare per il file salvato. Il valore predefinito è **UTF8**.
@@ -85,7 +85,7 @@ $psIse.CurrentFile.DisplayName
 ###  <a name="Editor"></a> Editor
   Supportato in Windows PowerShell ISE 2.0 e versioni successive. 
 
- Proprietà di sola lettura che ottiene [l'oggetto editor](The-ISEEditor-Object.md) usato per il file specificato.
+ Proprietà di sola lettura che ottiene l'[oggetto editor](The-ISEEditor-Object.md) usato per il file specificato.
 
 ```
 # Gets the editor and the text.
@@ -150,6 +150,6 @@ $psISE.CurrentFile.IsUntitled
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO4-->
 
 

@@ -9,8 +9,8 @@ manager: dongill
 ms.prod: powershell
 ms.assetid: 6dc6d8f9-8978-46e9-a92f-169af37e2817
 translationtype: Human Translation
-ms.sourcegitcommit: 669bbe8da3d6b5f4955b86474c21c11c3cfe495b
-ms.openlocfilehash: 080cbfd63838472d9d5405e4b232cda1cc1d028a
+ms.sourcegitcommit: 3222a0ba54e87b214c5ebf64e587f920d531956a
+ms.openlocfilehash: ca0fee919b89628527a00b17e49fec1012f6f43a
 
 ---
 
@@ -36,7 +36,7 @@ Nell'ambiente di debug di Windows PowerShell si possono impostare tre tipi di pu
 Nell'ambiente di debug di Windows PowerShell ISE solo i punti di interruzione riga possono essere impostati usando il menu o i tasti di scelta rapida. Gli altri due tipi di punti di interruzione vanno impostati dal riquadro della console usando il cmdlet [Set-PSBreakpoint [m2]](https://technet.microsoft.com/en-us/library/88d2d9ad-17dc-44ae-99aa-f841125b9dc8). Questa sezione illustra come eseguire le attività di debug in Windows PowerShell ISE usando i comandi di menu, ove disponibili, e come eseguire una gamma di comandi più ampia dal riquadro della console usando gli script.
 
 ### Per impostare un punto di interruzione
-È possibile impostare un punto di interruzione in uno script solo dopo averlo salvato. Fare clic con il pulsante destro del mouse sulla riga in cui si vuole impostare un punto di interruzione, quindi scegliere **Attiva/disattiva punto di interruzione**. In alternativa, fare clic sulla riga in cui si vuole impostare un punto di interruzione e premere **F9** oppure scegliere **Attiva/disattiva punto di interruzione** dal menu **Debug**.
+È possibile impostare un punto di interruzione in uno script solo dopo averlo salvato. Fare clic con il pulsante destro del mouse sulla riga in cui si vuole impostare un punto di interruzione e scegliere **Attiva/disattiva punto di interruzione**. In alternativa, fare clic sulla riga in cui si vuole impostare un punto di interruzione e premere **F9** oppure scegliere **Attiva/disattiva punto di interruzione** dal menu **Debug**.
 
 Lo script seguente è un esempio di come si può impostare un punto di interruzione variabile dal riquadro della console usando il cmdlet [Set-PSBreakpoint](https://technet.microsoft.com/en-us/library/6afd5d2c-a285-4796-8607-3cbf49471420).
 
@@ -56,7 +56,7 @@ get-psbreakpoint
 ```
 
 ### Rimuovere un punto di interruzione
-Rimuovere un punto di interruzione equivale a eliminarlo.  Se si pensa di riutilizzarlo in un momento successivo, si può anche pensare di [disabilitarlo](#bkmk_disable).  Fare clic con il pulsante destro del mouse sulla riga da cui si vuole rimuovere un punto di interruzione, quindi scegliere **Attiva/disattiva punto di interruzione**. In alternativa, fare clic sulla riga in cui si vuole rimuovere un punto di interruzione e scegliere **Attiva/disattiva punto di interruzione** dal menu **Debug**. Lo script seguente è un esempio di come si può rimuovere un punto di interruzione con un ID specificato dal riquadro della console usando il cmdlet [Remove-PSBreakpoint](https://technet.microsoft.com/en-us/library/4c877a80-0ea0-4790-9281-88c08ef0ddd6).
+Rimuovere un punto di interruzione equivale a eliminarlo.  Se si pensa di riutilizzarlo in un momento successivo, si può anche pensare di [disabilitarlo](#bkmk_disable).  Fare clic con il pulsante destro del mouse sulla riga in cui si vuole rimuovere un punto di interruzione e scegliere **Attiva/disattiva punto di interruzione**. In alternativa, fare clic sulla riga in cui si vuole rimuovere un punto di interruzione e scegliere **Attiva/disattiva punto di interruzione** dal menu **Debug**. Lo script seguente è un esempio di come si può rimuovere un punto di interruzione con un ID specificato dal riquadro della console usando il cmdlet [Remove-PSBreakpoint](https://technet.microsoft.com/en-us/library/4c877a80-0ea0-4790-9281-88c08ef0ddd6).
 
 ```
 # This command deletes the breakpoint with breakpoint ID 2.
@@ -74,7 +74,7 @@ get-psbreakpoint | remove-psbreakpoint
 ```
 
 ### <a name="bkmk_disable"></a>Disabilitare un punto di interruzione
-La disabilitazione di un punto di interruzione non ne comporta la rimozione, ma la disattivazione fino a quando non viene abilitato di nuovo.  Per disabilitare un punto di interruzione specifico su una riga, fare clic con il pulsante destro del mouse sulla riga in cui si trova, quindi scegliere **Disattiva punto di interruzione**. In alternativa, fare clic sulla riga in cui si vuole disabilitare un punto di interruzione e premere **F9** oppure scegliere **Disattiva punto di interruzione** dal menu **Debug**. Lo script seguente è un esempio di come si può rimuovere un punto di interruzione con un ID specificato dal riquadro della console usando il cmdlet [Disable-PSBreakpoint](https://technet.microsoft.com/en-us/library/d4974e9b-0aaa-4e20-b87f-f599a413e4e8).
+La disabilitazione di un punto di interruzione non ne comporta la rimozione, ma la disattivazione fino a quando non viene abilitato di nuovo.  Per disabilitare uno specifico punto di interruzione riga, fare clic con il pulsante destro del mouse sulla riga in cui si trova e quindi scegliere **Disattiva punto di interruzione**. In alternativa, fare clic sulla riga in cui si vuole disabilitare un punto di interruzione e premere **F9** oppure scegliere **Disattiva punto di interruzione** dal menu **Debug**. Lo script seguente è un esempio di come si può rimuovere un punto di interruzione con un ID specificato dal riquadro della console usando il cmdlet [Disable-PSBreakpoint](https://technet.microsoft.com/en-us/library/d4974e9b-0aaa-4e20-b87f-f599a413e4e8).
 
 ```
 # This command disables the breakpoint with breakpoint ID 0.
@@ -111,18 +111,18 @@ get-psbreakpoint | enable-psbreakpoint
 Prima di avviare il debug è necessario impostare uno o più punti di interruzione. Non si può impostare un punto di interruzione finché lo script di cui si vuole eseguire il debug non è stato salvato. Per istruzioni su come impostare un punto di interruzione, vedere [Come gestire i punti di interruzione](#bkmk_1) o [Set-PSBreakpoint](https://technet.microsoft.com/en-us/library/6afd5d2c-a285-4796-8607-3cbf49471420). Dopo avere avviato il debug, non è possibile modificare uno script se non si arresta il debug. Uno script in cui sono impostati uno o più punti di interruzione viene salvato automaticamente prima dell'esecuzione.
 
 ### Per avviare il debug
-Premere **F5** o fare clic sull'icona **Esegui script** sulla barra degli strumenti oppure dal menu **Debug** scegliere **Esegui\/Continua**. Lo script viene eseguito finché non incontra il primo punto di interruzione. L'esecuzione viene sospesa e la riga in cui è stata sospesa viene evidenziata.
+Premere **F5** o fare clic sull'icona **Esegui script** sulla barra degli strumenti oppure in alternativa scegliere **Esegui/Continua** dal menu **Debug**. Lo script viene eseguito finché non incontra il primo punto di interruzione. L'esecuzione viene sospesa e la riga in cui è stata sospesa viene evidenziata.
 
 ### Per continuare il debug
-Premere **F5** o fare clic sull'icona **Esegui script** sulla barra degli strumenti. In alternativa, dal menu **Debug** scegliere **Esegui\/Continua** oppure nel riquadro della console digitare **C** e quindi premere **INVIO**. In questo modo, l'esecuzione dello script continua fino al punto di interruzione successivo o, se non ne sono presenti altri, fino al termine dello script.
+Premere **F5** o fare clic sull'icona **Esegui script** sulla barra degli strumenti. In alternativa, scegliere **Esegui/Continua** dal menu **Debug** oppure digitare **C** nel riquadro della console e premere **INVIO**. In questo modo, l'esecuzione dello script continua fino al punto di interruzione successivo o, se non ne sono presenti altri, fino al termine dello script.
 
 ### Per visualizzare lo stack di chiamate
-Lo stack di chiamate mostra la posizione di esecuzione corrente nello script. Se lo script è in esecuzione in una funzione chiamata da una funzione diversa, questa situazione viene rappresentata visualizzando righe aggiuntive nell'output. L'ultima riga visualizza lo script originale e la riga in cui è stata chiamata una funzione. La riga successiva mostra tale funzione e la riga in cui potrebbe essere stata chiamata un'altra funzione.  La prima riga visualizza il contesto corrente della riga corrente in cui è impostato il punto di interruzione.
+Lo stack di chiamate mostra la posizione di esecuzione corrente nello script. Se lo script è in esecuzione in una funzione chiamata da una funzione diversa, questa situazione viene rappresentata visualizzando righe aggiuntive nell'output. L'ultima riga mostra lo script originale e la riga in cui è stata chiamata una funzione. La riga successiva mostra tale funzione e la riga in cui potrebbe essere stata chiamata un'altra funzione.  La prima riga mostra il contesto corrente della riga corrente in cui è impostato il punto di interruzione.
 
-Per vedere lo stack di chiamate corrente mentre l'esecuzione è sospesa, premere **CTRL\+SHIFT\+D**. In alternativa, dal menu **Debug** scegliere **Visualizza lo stack di chiamate** oppure nel riquadro della console digitare **K** e quindi premere **INVIO**.
+Per vedere lo stack di chiamate corrente mentre l'esecuzione è sospesa, premere **CTRL+MAIUSC+D**. In alternativa, scegliere **Visualizza lo stack di chiamate** dal menu **Debug** oppure digitare **K** nel riquadro della console e premere **INVIO**.
 
 ### Per arrestare il debug
-Premere **MAIUSC\-F5**. In alternativa, dal menu **Debug** scegliere **Arresta debugger** oppure nel riquadro della console digitare **Q** e quindi premere **INVIO**.
+Premere **MAIUSC+F5**, scegliere **Arresta debugger** dal menu **Debug** oppure digitare **Q** nel riquadro della console e premere **INVIO**.
 
 ## <a name="bkmk_3"></a>Come eseguire un'istruzione/routine, eseguire un'istruzione e uscire da un'istruzione/routine durante il debug
 Per il debug è fondamentale eseguire le istruzioni una alla volta in varie modalità. È possibile arrestare il debug in corrispondenza di una riga di codice ed esaminare i valori delle variabili e lo stato del sistema. La tabella seguente descrive le attività di debug comuni, ad esempio eseguire un'istruzione/routine, eseguire un'istruzione e uscire da un'istruzione/routine.
@@ -132,8 +132,8 @@ Per il debug è fondamentale eseguire le istruzioni una alla volta in varie moda
 |**Attività di debug**|**Descrizione**|**Modalità di esecuzione in PowerShell ISE**|
 |**Esegui istruzione**|Esegue l'istruzione corrente e quindi arresta l'esecuzione in corrispondenza dell'istruzione successiva. Se l'istruzione corrente è una chiamata di funzione o di script, il debugger esegue tale funzione o script. In caso contrario, si ferma in corrispondenza dell'istruzione successiva.|Premere **F11**, scegliere **Esegui istruzione** dal menu **Debug** oppure digitare **S** nel riquadro della console e premere **INVIO**.|
 |**Esegui istruzione/routine**|Esegue l'istruzione corrente e quindi arresta l'esecuzione in corrispondenza dell'istruzione successiva. Se l'istruzione corrente è una chiamata di funzione o di script, il debugger esegue l'intera funzione o script e si ferma in corrispondenza dell'istruzione successiva alla chiamata di funzione.|Premere **F10**, scegliere **Esegui istruzione/routine** dal menu **Debug** oppure digitare **V** nel riquadro della console e premere **INVIO**.|
-|**Esci da istruzione/routine**|Esce dall'istruzione/routine della funzione corrente e risale di un livello se la funzione è nidificata. Se si trova nel corpo principale, lo script viene eseguito fino al termine o fino al punto di interruzione successivo. Le istruzioni ignorate vengono eseguite, ma non una alla volta.|Premere **MAIUSC\+F11**. In alternativa, dal menu **Debug** scegliere **Esci da istruzione/routine** oppure nel riquadro della console digitare **O** e quindi premere **INVIO**.|
-|**Continua**|Continua l'esecuzione fino al termine o fino al punto di interruzione successivo. Le funzioni e le chiamate ignorate vengono eseguite, ma non una alla volta.|Premere **F5**. In alternativa, dal menu **Debug** scegliere **Esegui\/Continua** oppure nel riquadro della console digitare **C** e quindi premere **INVIO**.|
+|**Esci da istruzione/routine**|Esce dall'istruzione/routine della funzione corrente e risale di un livello se la funzione è nidificata. Se si trova nel corpo principale, lo script viene eseguito fino al termine o fino al punto di interruzione successivo. Le istruzioni ignorate vengono eseguite, ma non una alla volta.|Premere **MAIUSC+F11**, scegliere **Esci da istruzione/routine** dal menu **Debug** oppure digitare **O** nel riquadro della console e premere **INVIO**.|
+|**Continua**|Continua l'esecuzione fino al termine o fino al punto di interruzione successivo. Le funzioni e le chiamate ignorate vengono eseguite, ma non una alla volta.|Premere **F5**, scegliere **Esegui/Continua** dal menu **Debug** oppure digitare **C** nel riquadro della console e premere **INVIO**.|
 
 ## <a name="bkmk_4"></a>Come visualizzare i valori delle variabili durante il debug
 È possibile visualizzare i valori correnti delle variabili mentre si esamina il codice.
@@ -150,7 +150,7 @@ In Windows PowerShell ISE, tutti i riquadri si trovano sempre nello stesso ambit
 ### Per visualizzare i valori delle variabili automatiche
 Si può usare il metodo precedente per visualizzare il valore di quasi tutte le variabili durante il debug di uno script. Tuttavia, questi metodi non funzionano per le variabili automatiche seguenti.
 
--   $\_
+-   $_
 
 -   $Input
 
@@ -160,7 +160,7 @@ Si può usare il metodo precedente per visualizzare il valore di quasi tutte le 
 
 -   $Args
 
-Se si prova a visualizzare il valore di una di queste variabili, si ottiene il valore della variabile per una pipeline interna usata dal debugger, non il valore della variabile nello script. Per alcune variabili ($\_, $Input, $MyInvocation, $PSBoundParameters e $Args) si può risolvere il problema usando il metodo seguente:
+Se si prova a visualizzare il valore di una di queste variabili, si ottiene il valore della variabile per una pipeline interna usata dal debugger, non il valore della variabile nello script. Per alcune variabili ($_, $Input, $MyInvocation, $PSBoundParameters e $Args) si può risolvere il problema usando il metodo seguente:
 
 1.  Nello script assegnare il valore della variabile automatica a una nuova variabile.
 
@@ -183,6 +183,6 @@ C:\ps-test\MyScript.ps1
 
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Aug16_HO4-->
 
 

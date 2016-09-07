@@ -9,8 +9,8 @@ manager: dongill
 ms.prod: powershell
 ms.assetid: b0f88cbe-cb83-4912-a301-184534cb35c7
 translationtype: Human Translation
-ms.sourcegitcommit: ea25f98e60050a52fc1d72c7e529985855eeed36
-ms.openlocfilehash: ab41246eda58eb384500daa1f99aa9a8f9e019e1
+ms.sourcegitcommit: 3222a0ba54e87b214c5ebf64e587f920d531956a
+ms.openlocfilehash: 5c6f660f9de9039355f3a991da440b75e97275eb
 
 ---
 
@@ -32,7 +32,7 @@ ms.openlocfilehash: ab41246eda58eb384500daa1f99aa9a8f9e019e1
 |modulo manifesto|Modulo di Windows PowerShell che ha un manifesto e la cui chiave ModulesToProcess è vuota.|
 |manifesto del modulo|File di dati di Windows PowerShell (con estensione psd1) che descrive il contenuto di un modulo e che controlla la modalità di elaborazione di un modulo.|
 |stato della sessione del modulo|Stato della sessione contenente i dati pubblici e privati di un modulo di Windows PowerShell. I dati privati nello stato della sessione non sono disponibili per l'utente di una sessione di Windows PowerShell.|
-|errore \-fatale|Errore che non impedisce a Windows PowerShell di continuare a elaborare il comando.|
+|errore non fatale|Errore che non impedisce a Windows PowerShell di continuare a elaborare il comando.|
 |sostantivo|Parola che segue il segno meno nel nome di un cmdlet di Windows PowerShell. Il sostantivo descrive le risorse su cui agisce il cmdlet.|
 |set di parametri|Gruppo di parametri utilizzabili nello stesso comando per eseguire un'azione specifica.|
 |inviare tramite pipe|In Windows PowerShell inviare i risultati del comando precedente come input al comando successivo nella pipeline.|
@@ -54,16 +54,16 @@ ms.openlocfilehash: ab41246eda58eb384500daa1f99aa9a8f9e019e1
 |file di dati di Windows PowerShell|File di testo con estensione psd1. Windows PowerShell usa i file di dati per vari scopi, ad esempio l'archiviazione dei dati del manifesto del modulo e l'archiviazione delle stringhe tradotte per l'internazionalizzazione degli script.|
 |unità di Windows PowerShell|Unità virtuale che consente l'accesso diretto a un archivio dati. Può essere definita da un provider di Windows PowerShell o creata nella riga di comando. Le unità create nella riga di comando sono specifiche della sessione e non sono più disponibili dopo la chiusura della sessione.|
 |Windows PowerShell Integrated Scripting Environment (ISE)|Applicazione host di Windows PowerShell che consente di eseguire comandi e di scrivere, testare ed eseguire il debug di script in un ambiente conforme a Unicode, familiare e con sintassi a colori.|
-|modulo di Windows PowerShell|Unità indipendente e riutilizzabile per il partizionamento, l'organizzazione e l'astrazione del codice di Windows PowerShell. Un modulo può contenere cmdlet, provider, funzioni, variabili e altri tipi di risorse che possono essere importati come singola unità.|
+|modulo di Windows PowerShell|Unità autosufficiente e riutilizzabile per il partizionamento, l'organizzazione e l'astrazione del codice di Windows PowerShell. Un modulo può contenere cmdlet, provider, funzioni, variabili e altri tipi di risorse che possono essere importati come singola unità.|
 |provider di Windows PowerShell|Programma basato su Microsoft .NET Framework che rende disponibili in Windows PowerShell i dati presenti in archivi dati speciali, consentendo di visualizzarli e gestirli.|
 |script di Windows PowerShell|Script scritto nel linguaggio di Windows PowerShell.|
 |file di script di Windows PowerShell|File con estensione ps1 che contiene uno script che viene scritto nel linguaggio di Windows PowerShell.|
-|Schede di Windows PowerShell|Risorsa che definisce un set di cmdlet, provider e tipi di Microsoft .NET Framework che possono essere aggiunti all'ambiente di Windows PowerShell.|
+|Snap-in di Windows PowerShell|Risorsa che definisce un set di cmdlet, provider e tipi di Microsoft .NET Framework che possono essere aggiunti all'ambiente di Windows PowerShell.|
 |Flusso di lavoro di Windows PowerShell|Un flusso di lavoro è una sequenza di passaggi programmati e connessi che consentono di eseguire attività di lunga durata o richiedono il coordinamento di più passaggi tra più dispositivi o nodi gestiti. Il flusso di lavoro di Windows PowerShell consente a professionisti IT e sviluppatori di creare sequenze di attività di gestione di più dispositivi o singole attività all'interno di un flusso di lavoro come flussi di lavoro. Il flusso di lavoro di Windows PowerShell consente di adattare ed eseguire sia script di Windows PowerShell che file XAML come flussi di lavoro.|
 
 
 
 
-<!--HONumber=Jul16_HO1-->
+<!--HONumber=Aug16_HO4-->
 
 

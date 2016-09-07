@@ -9,8 +9,8 @@ manager: dongill
 ms.prod: powershell
 ms.assetid: 6dc7052d-cc5a-4220-950f-98f963a2b587
 translationtype: Human Translation
-ms.sourcegitcommit: 03ac4b90d299b316194f1fa932e7dbf62d4b1c8e
-ms.openlocfilehash: fdf7b47e2222ec94783fc17aba839dcc3e78ab53
+ms.sourcegitcommit: 3222a0ba54e87b214c5ebf64e587f920d531956a
+ms.openlocfilehash: 52d55ff10a9118bea2a34a53452fd252d1e17580
 
 ---
 
@@ -25,7 +25,7 @@ Dopo l'installazione e l'avvio di Windows PowerShell, prendere in considerazione
 
 -   **Abilitare la comunicazione remota.** Il sistema è già configurato per l'esecuzione di comandi remoti in altri computer. In Windows Server 2012 R2 e Windows Server 2012 il sistema è configurato anche per ricevere comandi remoti, ovvero per consentire ad altri computer di eseguire comandi remoti nel computer locale. Per consentire ai computer che eseguono altre versioni di Windows di ricevere comandi remoti, eseguire il cmdlet [Enable-PSRemoting](https://technet.microsoft.com/en-us/library/19437c28-33b8-4ac1-9113-8439cc8beffb) nel computer che si vuole gestire in remoto. Solo i membri del gruppo Administrators nel computer possono eseguire questo cmdlet. Per altre informazioni, vedere [about_Remote](https://technet.microsoft.com/en-us/library/9b4a5c87-9162-4adf-bdfe-fbc80b9b8970).
 
-    NOTA: se la comunicazione remota è abilitata in un computer che esegue Windows PowerShell 2.0, resta abilitata dopo l'installazione di Windows Management Framework 3.0. Tuttavia, in Windows Server 2008, ma non in Windows Server 2008 R2, dopo l'installazione di Windows Management Framework 3.0 è necessario riabilitare la comunicazione remota.
+    NOTA: se la comunicazione remota è abilitata in un computer che esegue Windows PowerShell 2.0, resta abilitata dopo l'installazione di Windows Management Framework 3.0. Tuttavia, in Windows Server 2008, ma non in Windows Server 2008 R2, è necessario riabilitare la comunicazione remota dopo l'installazione di Windows Management Framework 3.0.
 
 ## Vedere anche
 [Installazione di Windows PowerShell](../setup/Installing-Windows-PowerShell.md)
@@ -34,6 +34,6 @@ Dopo l'installazione e l'avvio di Windows PowerShell, prendere in considerazione
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO4-->
 
 

@@ -8,8 +8,8 @@ author: jpjofre
 manager: dongill
 ms.prod: powershell
 translationtype: Human Translation
-ms.sourcegitcommit: 03ac4b90d299b316194f1fa932e7dbf62d4b1c8e
-ms.openlocfilehash: 6366ec9c49f721b758b6a520f68cf2b3c5ee0caf
+ms.sourcegitcommit: 3222a0ba54e87b214c5ebf64e587f920d531956a
+ms.openlocfilehash: df935247806f108705c9528e4c5454ce499becef
 
 ---
 
@@ -143,7 +143,7 @@ La tabella seguente illustra alcuni problemi comuni che possono verificarsi quan
 
 [Regole di autorizzazione e funzionalità di sicurezza di Accesso Web Windows PowerShell](https://technet.microsoft.com/en-us/library/dn282394(v=ws.11).aspx)
 [Usare la console di Windows PowerShell basata sul Web](https://technet.microsoft.com/en-us/library/hh831417(v=ws.11).aspx)
-[about\_Remote\_Requirements](https://technet.microsoft.com/library/dd315349.aspx)
+[about_Remote_Requirements](https://technet.microsoft.com/library/dd315349.aspx)
 
 <span>Show:</span> Inherited Protected
 
@@ -197,6 +197,6 @@ Il codice e gli script di terze parti, collegati al presente sito o a cui il sit
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO4-->
 
 

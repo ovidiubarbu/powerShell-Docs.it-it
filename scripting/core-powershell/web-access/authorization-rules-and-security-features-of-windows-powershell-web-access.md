@@ -8,8 +8,8 @@ author: jpjofre
 manager: dongill
 ms.prod: powershell
 translationtype: Human Translation
-ms.sourcegitcommit: 03ac4b90d299b316194f1fa932e7dbf62d4b1c8e
-ms.openlocfilehash: ed586e55f4533ce5be7c68564e5cc537fed05016
+ms.sourcegitcommit: 3222a0ba54e87b214c5ebf64e587f920d531956a
+ms.openlocfilehash: dc50a729855a71d61c187da9d698bd294f740546
 
 ---
 
@@ -178,7 +178,7 @@ I quattro livelli di sicurezza fra l'utente finale e il computer di destinazione
 
 In genere gli amministratori vogliono applicare agli utenti di Accesso Web Windows PowerShell le stesse regole di autorizzazione già definite nell'ambiente per la gestione remota di Windows PowerShell. La prima procedura di questa sezione illustra come aggiungere una regola di autorizzazione sicura che consente l'accesso a un singolo utente per la gestione di un singolo computer con una singola configurazione di sessione. La seconda procedura illustra come rimuovere una regola di autorizzazione non più necessaria.
 
-Se si prevede di usare configurazioni di sessione personalizzate per consentire a utenti specifici di lavorare esclusivamente in spazi di esecuzione di Accesso Web Windows PowerShell con restrizioni, creare le configurazioni di sessione personalizzate prima di aggiungere le regole di autorizzazione che vi fanno riferimento. Non è possibile usare i cmdlet di Accesso Web Windows PowerShell per creare configurazioni di sessione personalizzate. Per altre informazioni sulla creazione di configurazioni di sessione personalizzate, vedere [about\_Session\_Configuration\_Files](https://msdn.microsoft.com/library/windows/desktop/hh847838.aspx) su MSDN.
+Se si prevede di usare configurazioni di sessione personalizzate per consentire a utenti specifici di lavorare esclusivamente in spazi di esecuzione di Accesso Web Windows PowerShell con restrizioni, creare le configurazioni di sessione personalizzate prima di aggiungere le regole di autorizzazione che vi fanno riferimento. Non è possibile usare i cmdlet di Accesso Web Windows PowerShell per creare configurazioni di sessione personalizzate. Per altre informazioni sulla creazione di configurazioni di sessione personalizzate, vedere [about_Session_Configuration_Files](https://msdn.microsoft.com/library/windows/desktop/hh847838.aspx) su MSDN.
 
 L'unico carattere jolly supportato dai cmdlet di Accesso Web Windows PowerShell è l'asterisco ( \* ). I caratteri jolly all'interno delle stringhe non sono supportati. Utilizzare un singolo asterisco per proprietà (utenti, computer o configurazioni di sessione).
 
@@ -206,7 +206,7 @@ L'unico carattere jolly supportato dai cmdlet di Accesso Web Windows PowerShell 
 
     -   Nella schermata **Start** di Windows fare clic con il pulsante destro del mouse su **Windows PowerShell** e quindi scegliere **Esegui come amministratore**.
 
-2.  <span class="label">Passaggio facoltativo per la limitazione dell'accesso utente con configurazioni di sessione:</span> verificare che le configurazioni di sessione da usare nelle proprie regole esistano già. Se non sono ancora state create, usare le istruzioni per la creazione di configurazioni di sessione disponibili nell'articolo [about\_Session\_Configuration\_Files](https://msdn.microsoft.com/library/windows/desktop/hh847838.aspx) di MSDN.
+2.  <span class="label">Passaggio facoltativo per la limitazione dell'accesso utente con configurazioni di sessione:</span> verificare che le configurazioni di sessione da usare nelle proprie regole esistano già. Se non sono ancora state create, utilizzare le istruzioni per la creazione di configurazioni di sessione disponibili nell'articolo [about_Session_Configuration_Files](https://msdn.microsoft.com/library/windows/desktop/hh847838.aspx) di MSDN.
 
 3.  Digitare il comando seguente e quindi premere **INVIO**.
 
@@ -214,13 +214,13 @@ L'unico carattere jolly supportato dai cmdlet di Accesso Web Windows PowerShell 
 
         Add-PswaAuthorizationRule –UserName <domain\user | computer\user> -ComputerName <computer_name> -ConfigurationName <session_configuration_name>
 
-    Questa regola di autorizzazione consente a un utente specifico di accedere a un computer della rete a cui ha accesso normalmente, tramite una specifica configurazione di sessione con ambito limitato alle esigenze tipiche di utilizzo di script e cmdlet dell'utente. Nell'esempio seguente, a un utente di nome <span class="code">JSmith</span> nel dominio <span class="code">Contoso</span> viene consentito l'accesso per la gestione del computer <span class="code">Contoso\_214</span>, con una configurazione di sessione denominata <span class="code">NewAdminsOnly</span>.
+    Questa regola di autorizzazione consente a un utente specifico di accedere a un computer della rete a cui ha accesso normalmente, tramite una specifica configurazione di sessione con ambito limitato alle esigenze tipiche di utilizzo di script e cmdlet dell'utente. Nell'esempio seguente, a un utente di nome <span class="code">JSmith</span> nel dominio <span class="code">Contoso</span> viene consentito l'accesso per la gestione del computer <span class="code">Contoso_214</span>, con una configurazione di sessione denominata <span class="code">NewAdminsOnly</span>.
 
     [Copy](javascript:if%20(window.epx.codeSnippet)window.epx.codeSnippet.copyCode('CodeSnippetContainerCode_4e760377-e401-4ef4-988f-7a0aec1b2a90'); "Copia negli Appunti.")
 
         Add-PswaAuthorizationRule –UserName Contoso\JSmith -ComputerName Contoso_214 -ConfigurationName NewAdminsOnly
 
-4.  Per verificare che la regola sia stata creata, eseguire il cmdlet **Get-PswaAuthorizationRule** o il cmdlet **Test-PswaAuthorizationRule -UserName &lt;dominio\\utente | computer\\utente&gt; -ComputerName** &lt;nome\_computer&gt;. Ad esempio, **Test-PswaAuthorizationRule -UserName Contoso\\JSmith -ComputerName Contoso\_214**.
+4.  Per verificare che la regola sia stata creata, eseguire il cmdlet **Get-PswaAuthorizationRule** o **Test-PswaAuthorizationRule -UserName &lt;dominio\\utente | computer\\utente&gt; -ComputerName** &lt;nome_computer&gt;. Ad esempio, **Test-PswaAuthorizationRule -UserName Contoso\\JSmith -ComputerName Contoso_214**.
 
 #### Per rimuovere una regola di autorizzazione
 
@@ -257,7 +257,7 @@ L'unico carattere jolly supportato dai cmdlet di Accesso Web Windows PowerShell 
 
 ------------------------------------------------------------------------
 
-Per ogni sessione di Windows PowerShell viene usata una configurazione di sessione. Se non è specificata, Windows PowerShell usa la configurazione di sessione predefinita incorporata in Windows PowerShell, denominata Microsoft.PowerShell, che include tutti i cmdlet disponibili in un computer. Gli amministratori possono limitare l'accesso a tutti i computer definendo una configurazione di sessione basata su uno spazio di esecuzione con restrizioni, ovvero un insieme limitato di attività e cmdlet che possono essere eseguiti dagli utenti finali. Se si consente a un utente di accedere a un computer, con accesso al linguaggio completo o solo ai cmdlet di Windows PowerShell per la gestione remota, tale utente potrà connettersi agli altri computer connessi al primo. Definendo uno spazio di esecuzione con restrizioni si impedisce agli utenti di accedere ad altri computer dal relativo spazio di esecuzione di Windows PowerShell consentito, aumentando la sicurezza dell'ambiente Accesso Web Windows PowerShell. La configurazione di sessione può essere distribuita, usando Criteri di gruppo, a tutti i computer che gli amministratori vogliono rendere accessibili con Accesso Web Windows PowerShell. Per altre informazioni sulle configurazioni di sessione, vedere [about\_Session\_Configurations](https://technet.microsoft.com/library/dd819508.aspx). Di seguito sono riportati alcuni esempi relativi a questo scenario.
+Per ogni sessione di Windows PowerShell viene usata una configurazione di sessione. Se non è specificata, Windows PowerShell usa la configurazione di sessione predefinita incorporata in Windows PowerShell, denominata Microsoft.PowerShell, che include tutti i cmdlet disponibili in un computer. Gli amministratori possono limitare l'accesso a tutti i computer definendo una configurazione di sessione basata su uno spazio di esecuzione con restrizioni, ovvero un insieme limitato di attività e cmdlet che possono essere eseguiti dagli utenti finali. Se si consente a un utente di accedere a un computer, con accesso al linguaggio completo o solo ai cmdlet di Windows PowerShell per la gestione remota, tale utente potrà connettersi agli altri computer connessi al primo. Definendo uno spazio di esecuzione con restrizioni si impedisce agli utenti di accedere ad altri computer dal relativo spazio di esecuzione di Windows PowerShell consentito, aumentando la sicurezza dell'ambiente Accesso Web Windows PowerShell. La configurazione di sessione può essere distribuita, usando Criteri di gruppo, a tutti i computer che gli amministratori vogliono rendere accessibili con Accesso Web Windows PowerShell. Per altre informazioni sulle configurazioni di sessione, vedere [about_Session_Configurations](https://technet.microsoft.com/library/dd819508.aspx). Di seguito sono riportati alcuni esempi relativi a questo scenario.
 
 -   Un amministratore crea un endpoint, denominato **EndpointPswa** e basato su uno spazio di esecuzione con restrizioni, quindi crea la regola **\*,\*,EndpointPswa**, e distribuisce l'endpoint agli altri computer. La regola consente a tutti gli utenti di accedere a tutti i computer con endpoint **EndpointPswa**. Se questa è l'unica regola di autorizzazione definita nel set di regole, i computer che non dispongono di tale endpoint non sono accessibili.
 
@@ -293,7 +293,7 @@ Per ogni sessione di Windows PowerShell viene usata una configurazione di sessio
 
     Nello scenario precedente Accesso Web Windows PowerShell può stabilire la connessione al computer di destinazione solo se le operazioni seguenti riescono e sono consentite almeno da una regola di autorizzazione.
 
-    1.  Autenticazione nel server gateway del gruppo di lavoro, con l'aggiunta di un nome utente con formato *nome\_server*\\*nome\_utente* alla regola di autorizzazione
+    1.  Autenticazione nel server gateway del gruppo di lavoro, con l'aggiunta di un nome utente con formato *nome_server*\\*nome_utente* alla regola di autorizzazione
 
     2.  Autenticazione nel computer di destinazione con le credenziali alternative specificate nell'area **Impostazioni di connessione facoltative** della pagina di accesso
 
@@ -373,7 +373,7 @@ Se il server gateway esegue Windows Server 2012 R2, Accesso Web Windows PowerShe
 ------------------------------------------------------------------------
 
 [Installare e usare Accesso Web Windows PowerShell](https://technet.microsoft.com/en-us/library/hh831611(v=ws.11).aspx)
-[about\_Session\_Configurations](https://technet.microsoft.com/library/dd819508.aspx)
+[about_Session_Configurations](https://technet.microsoft.com/library/dd819508.aspx)
 [Cmdlet di Accesso Web Windows PowerShell](https://technet.microsoft.com/library/hh918342.aspx)
 
 <span>Show:</span> Inherited Protected
@@ -428,6 +428,6 @@ Il codice e gli script di terze parti, collegati al presente sito o a cui il sit
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO4-->
 
 
