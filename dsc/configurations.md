@@ -8,8 +8,8 @@ author: eslesar
 manager: dongill
 ms.prod: powershell
 translationtype: Human Translation
-ms.sourcegitcommit: 59bf4cff540dabeeb77038ea84177f7c6bac2b4b
-ms.openlocfilehash: e5412a3168a18d1dbd117ed8b3eb6dd42a8d8f70
+ms.sourcegitcommit: 6c5f3d3321b7e50215cf58267e1864b7da827764
+ms.openlocfilehash: d84bb35ada3588367436e6f5e3c6696b90c3661b
 
 ---
 
@@ -45,7 +45,7 @@ Uno script di configurazione è costituito dalle parti seguenti:
 - Uno o più blocchi **Node**. Definiscono i nodi (computer o macchine virtuali) configurati. La configurazione precedente include un blocco **Node** che ha come destinazione un computer chiamato "TEST-PC1".
 - Uno o più blocchi di risorse. Si tratta del punto in cui la configurazione imposta le proprietà per le risorse configurate. In questo caso, sono presenti due blocchi di risorse, ognuno dei quali chiama la risorsa "WindowsFeature".
 
-All'interno di un blocco **Configuration** è possibile eseguire tutte le operazioni che è possibile eseguire anche in una funzione di PowerShell. Ad esempio, se nell'esempio precedente non si vuole codificare il nome del computer di destinazione nella configurazione, è possibile aggiungere un parametro per il nome del nodo:
+All'interno di un blocco **Configuration** è possibile eseguire tutte le operazioni che sono consentite anche in una funzione di PowerShell. Ad esempio, se nell'esempio precedente non si vuole codificare il nome del computer di destinazione nella configurazione, è possibile aggiungere un parametro per il nome del nodo:
 
 ```powershell
 Configuration MyDscConfiguration {
@@ -137,6 +137,6 @@ Oggi DSC include 12 risorse come parte del modulo PSDesiredStateConfiguration. L
 
 
 
-<!--HONumber=Jul16_HO1-->
+<!--HONumber=Aug16_HO5-->
 
 

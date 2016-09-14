@@ -9,8 +9,8 @@ ms.date: 2016-06-22
 title: end-to-end Active Directory
 ms.technology: powershell
 translationtype: Human Translation
-ms.sourcegitcommit: 5954eb797df43de6f132a434ecad7049ee0221fb
-ms.openlocfilehash: 204909c16d5e3e2099f6ba4247929d61445cd654
+ms.sourcegitcommit: 33e92c7fd6039a1e3f5f784470c7bd0e43a7f030
+ms.openlocfilehash: e7ea3957ce3bbd3ce0fc072a82cd108606f05614
 
 ---
 
@@ -27,7 +27,7 @@ In questa sezione verrà illustrata la creazione di una configurazione di sessio
 Per seguire le istruzioni dettagliate di questa sezione, è necessario lavorare su un controller di dominio.
 Se non si ha accesso al proprio controller di dominio non è un problema.
 Provare a seguire la procedura lavorando in un altro scenario o ruolo con cui si ha familiarità.
-Per configurare rapidamente un nuovo controller di dominio, consultare l'appendice [Creazione di un controller di dominio](#creating-a-domain-controller).
+Per configurare rapidamente un nuovo controller di dominio, vedere l'appendice [Creazione di un controller di dominio](.\creating-a-domain-controller.md).
 
 ## Procedura per la creazione di una nuova capacità del ruolo e una configurazione di sessione
 
@@ -163,7 +163,7 @@ Set-ADUser -Identity $Identity -ChangePasswordAtLogon
 A questo punto, gli utenti possono semplicemente chiamare `Reset-ContosoUserPassword` senza dover ricordare la sintassi richiesta per creare una stringa sicura inline.
 
 ## Passaggio 4: Modificare il file di capacità del ruolo
-Nella sezione [Creazione di capacità del ruolo](#role-capability-creation) è stato creato un file di capacità del ruolo vuoto.
+Nella sezione [Creazione di capacità del ruolo](./role-capabilities.md#role-capability-creation) è stato creato un file di capacità del ruolo vuoto.
 In questa sezione verranno inseriti i valori nel file.
 
 Innanzitutto, aprire il file di capacità del ruolo in PowerShell ISE.
@@ -273,6 +273,6 @@ ValidatePattern è un'espressione regolare a cui gli argomenti per il parametro 
 
 
 
-<!--HONumber=Jul16_HO1-->
+<!--HONumber=Aug16_HO5-->
 
 

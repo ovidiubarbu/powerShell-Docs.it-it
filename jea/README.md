@@ -9,8 +9,8 @@ ms.date: 2016-06-22
 title: FILE LEGGIMI
 ms.technology: powershell
 translationtype: Human Translation
-ms.sourcegitcommit: bd7f637d0889fd0f56c3fa653389819341d2ccff
-ms.openlocfilehash: bfee5ef59a4085f0350ff454f634fc0bf5d6d837
+ms.sourcegitcommit: 8149f656f0aacbb23cacc8a1a9b45ed59866b92f
+ms.openlocfilehash: 7bb5635832e912b39ec387e8ac93ada24a434ff8
 
 ---
 
@@ -83,7 +83,7 @@ Informazioni su come controllare tutte le azioni e l'infrastruttura di JEA e cre
 
 ## Iniziare a creare i propri endpoint JEA
 È facile creare un endpoint JEA: è sufficiente un sistema abilitato per JEA e un editor di testo, ad esempio PowerShell ISE.
-Un suggerimento utile per iniziare è creare i file scheletro usando `New-PSRoleCapabilityFile -Path <path>` e `New-PSSessionCapabilityFile -Path <Path>` senza altri argomenti.
+Un suggerimento utile per iniziare è creare i file scheletro usando [`New-PSRoleCapabilityFile -Path <path>`](https://technet.microsoft.com/library/mt631422.aspx) e [`New-PSSessionConfigurationFile -Path <Path>`](https://technet.microsoft.com/library/mt631422.aspx) senza altri argomenti.
 I file scheletro contengono tutti i campi di configurazione applicabili oltre a commenti utili che spiegano per cosa può essere usato ogni campo.
 
 Per semplificare ulteriormente la creazione degli endpoint JEA, vedere il [JEA Toolkit Helper](http://blogs.technet.com/b/privatecloud/archive/2015/12/20/introducing-the-updated-jea-helper-tool.aspx) che offre un'interfaccia utente grafica con cui è possibile creare file di configurazione di sessione e file di capacità del ruolo.
@@ -92,6 +92,6 @@ Per semplificare ulteriormente la creazione degli endpoint JEA, vedere il [JEA T
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO5-->
 
 
