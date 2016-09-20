@@ -8,8 +8,8 @@ author: eslesar
 manager: dongill
 ms.prod: powershell
 translationtype: Human Translation
-ms.sourcegitcommit: 6477ae8575c83fc24150f9502515ff5b82bc8198
-ms.openlocfilehash: 32ff157c7c8366cf0c9847dec4815d2d4b9cc5fa
+ms.sourcegitcommit: b617ae80ae6a555e531469efde07e443d83c51d8
+ms.openlocfilehash: 02721f0f6f68cc78ae0430205d06f079e3e7465a
 
 ---
 
@@ -25,7 +25,7 @@ Lo script seguente configura Gestione configurazione locale per il pull delle co
 
 ```powershell
 [DSCLocalConfigurationManager()]
-configuration PullClientConfigID
+configuration PullClientConfigNames
 {
     Node localhost
     {
@@ -44,18 +44,22 @@ configuration PullClientConfigID
         }      
     }
 }
-PullClientConfigID
+PullClientConfigNames
 ```
 
 Nello script il blocco **ConfigurationRepositoryWeb** definisce il server di pull. La proprietà **ServerURL** specifica l'endpoint per il server di pull.
 
-La proprietà **RegistrationKey** è una chiave condivisa tra tutti i nodi client per un server di pull e il server di pull stesso. Lo stesso valore viene archiviato in un file nel server di pull. La proprietà **ConfigurationNames** specifica il nome della configurazione per il nodo client. Nel server di pull il file MOF di configurazione per il nodo client deve essere denominato *ConfigurationNames*.mof, dove *ConfigurationNames* corrisponde al valore della proprietà **ConfigurationNames** impostata in questa metaconfigurazione.
+La proprietà **RegistrationKey** è una chiave condivisa tra tutti i nodi client per un server di pull e il server di pull stesso. Lo stesso valore viene archiviato in un file nel server di pull. 
 
-Dopo essere stato eseguito, questo script crea una nuova cartella di output denominata **PullClientConfigID** e inserisce in questa cartella un file MOF di metaconfigurazione. In questo caso, il file MOF di metaconfigurazione sarà denominato `localhost.meta.mof`.
+La proprietà **ConfigurationNames** è una matrice che specifica i nomi delle configurazioni per il nodo client. Nel server di pull il file MOF di configurazione per il nodo client deve essere denominato *ConfigurationNames*.mof, dove *ConfigurationNames* corrisponde al valore della proprietà **ConfigurationNames** impostata in questa metaconfigurazione.
 
-Per applicare la configurazione, chiamare il cmdlet **Set-DscLocalConfigurationManager**, con il valore di **Path** impostato sul percorso del file MOF di metaconfigurazione. Ad esempio: `Set-DSCLocalConfigurationManager localhost –Path .\PullClientConfigID –Verbose.`
+>**Nota:** se si specifica più di un valore in **ConfigurationNames**, è necessario specificare nella configurazione anche i blocchi di **PartialConfiguration**. Per informazioni sulle configurazioni parziali, vedere [configurazioni parziali di PowerShell DSC](partialConfigs.md).
 
-> **Nota**: le chiavi di registrazione funzionano solo con i server di pull Web. Con un server di pull SMB è necessario usare **ConfigurationID**. Per informazioni sulla configurazione di un server di pull usando **ConfigurationID**, vedere [Configurazione di un client di pull usando un ID configurazione](pullClientConfigID.md).
+Dopo essere stato eseguito, questo script crea una nuova cartella di output denominata **PullClientConfigNames** e inserisce in questa cartella un file MOF di metaconfigurazione. In questo caso, il file MOF di metaconfigurazione sarà denominato `localhost.meta.mof`.
+
+Per applicare la configurazione, chiamare il cmdlet **Set-DscLocalConfigurationManager**, con il valore di **Path** impostato sul percorso del file MOF di metaconfigurazione. Ad esempio: `Set-DSCLocalConfigurationManager localhost –Path .\PullClientConfigNames –Verbose.`
+
+> **Nota**: le chiavi di registrazione funzionano solo con i server di pull Web. Con un server di pull SMB è necessario usare **ConfigurationID**. Per informazioni sulla configurazione di un server di pull usando **ConfigurationID**, vedere [Configurazione di un client di pull usando un ID configurazione](PullClientConfigNames.md).
 
 ## Server delle risorse e di report
 
@@ -63,7 +67,7 @@ Se si specifica solo un blocco **ConfigurationRepositoryWeb** o **ConfigurationR
 
 ```powershell
 [DSCLocalConfigurationManager()]
-configuration PullClientConfigID
+configuration PullClientConfigNames
 {
     Node localhost
     {
@@ -80,17 +84,14 @@ configuration PullClientConfigID
             RegistrationKey = 'fbc6ef09-ad98-4aad-a062-92b0e0327562'
         }
         
-        
-
         ReportServerWeb CONTOSO-PullSrv
         {
             ServerURL = 'https://CONTOSO-PullSrv:8080/PSDSCPullServer.svc'
         }
     }
 }
-PullClientConfigID
+PullClientConfigNames
 ```
-
 
 È anche possibile specificare server di pull diversi per le risorse e i report. Per specificare un server delle risorse, usare un blocco **ResourceRepositoryWeb** (per un server di pull Web) o **ResourceRepositoryShare** (per un server di pull SMB).
 Per specificare un server di report, usare un blocco **ReportRepositoryWeb**. Un server di report non può essere un server SMB.
@@ -98,7 +99,7 @@ La metaconfigurazione seguente configura un client di pull in modo da ottenere l
 
 ```powershell
 [DSCLocalConfigurationManager()]
-configuration PullClientConfigID
+configuration PullClientConfigNames
 {
     Node localhost
     {
@@ -128,17 +129,17 @@ configuration PullClientConfigID
         }
     }
 }
-PullClientConfigID
+PullClientConfigNames
 ```
 
 ## Vedere anche
 
-* [Configurazione di un client di pull usando un ID configurazione](pullClientConfigID.md)
+* [Configurazione di un client di pull usando un ID configurazione](PullClientConfigNames.md)
 * [Configurazione di un server di pull Web DSC](pullServer.md)
 
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Sep16_HO3-->
 
 
