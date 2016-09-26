@@ -9,8 +9,8 @@ manager: dongill
 ms.prod: powershell
 ms.assetid: 3b752c3c-0bd0-4eca-a2d3-2d5a37fd9d84
 translationtype: Human Translation
-ms.sourcegitcommit: 03ac4b90d299b316194f1fa932e7dbf62d4b1c8e
-ms.openlocfilehash: 07f7fb6b4e5d94de31551566ca8faff263817383
+ms.sourcegitcommit: b14aaee5a66a80295420fe9b517ba1fc652c86bf
+ms.openlocfilehash: 290d9237e20b35ec603f0967854b1e0d193e6cbb
 
 ---
 
@@ -26,15 +26,15 @@ Nel riquadro dei comandi o nel riquadro di script digitare alcuni caratteri di u
 ## Per completare automaticamente una voce di parametro cmdlet
 Nel riquadro dei comandi o nel riquadro di script digitare un cmdlet seguito da un trattino e quindi premere TAB.
 
-Ad esempio, digitare `get-process -` e quindi premere più volte TAB per visualizzare ognuno dei parametri per il cmdlet.and then press TAB multiple times to display each of the parameters for the cmdlet in turn.
+Ad esempio, digitare `Get-Process -` e quindi premere più volte TAB per visualizzare ognuno dei parametri per il cmdlet.
 
 ## Vedere anche
-[Windows PowerShell ISE ](using-the-windows-powershell-ise.md)(Uso di PowerShell ISE)
-[How to Create a PowerShell Tab](How-to-Create-a-PowerShell-Tab-in-Windows-PowerShell-ISE.md) (Procedura: Creare una scheda di PowerShell)
+- [Utilizzo di Windows PowerShell ISE](using-the-windows-powershell-ise.md)
+- [Come creare una scheda di PowerShell](How-to-Create-a-PowerShell-Tab-in-Windows-PowerShell-ISE.md)
 
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Sep16_HO3-->
 
 

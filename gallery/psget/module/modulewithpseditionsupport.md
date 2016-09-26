@@ -65,8 +65,23 @@ Di seguito sono riportate le due opzioni per creare il pacchetto del modulo con 
 ### Opzione 1: creazione di un modulo destinabile a più versioni e più edizioni di PowerShell
 
 #### Contenuto della cartella del modulo
-
- Microsoft.Windows.PowerShell.ScriptAnalyzer.BuiltinRules.dll Microsoft.Windows.PowerShell.ScriptAnalyzer.dll PSScriptAnalyzer.psd1 PSScriptAnalyzer.psm1 ScriptAnalyzer.format.ps1xml ScriptAnalyzer.types.ps1xml coreclr\Microsoft.Windows.PowerShell.ScriptAnalyzer.BuiltinRules.dll coreclr\Microsoft.Windows.PowerShell.ScriptAnalyzer.dll en-US\about_PSScriptAnalyzer.help.txt en-US\Microsoft.Windows.PowerShell.ScriptAnalyzer.dll-Help.xml PSv3\Microsoft.Windows.PowerShell.ScriptAnalyzer.BuiltinRules.dll PSv3\Microsoft.Windows.PowerShell.ScriptAnalyzer.dll Settings\CmdletDesign.psd1 Settings\DSC.psd1 Settings\ScriptFunctions.psd1 Settings\ScriptingStyle.psd1 Settings\ScriptSecurity.psd1
+- Microsoft.Windows.PowerShell.ScriptAnalyzer.BuiltinRules.dll 
+- Microsoft.Windows.PowerShell.ScriptAnalyzer.BuiltinRules.dll 
+- PSScriptAnalyzer.psd1
+- PSScriptAnalyzer.psm1
+- ScriptAnalyzer.format.ps1xml
+- ScriptAnalyzer.types.ps1xml
+- coreclr\Microsoft.Windows.PowerShell.ScriptAnalyzer.BuiltinRules.dll 
+- coreclr\Microsoft.Windows.PowerShell.ScriptAnalyzer.dll 
+- en-US\about_PSScriptAnalyzer.help.txt
+- en-US\Microsoft.Windows.PowerShell.ScriptAnalyzer.dll-Help.xml
+- PSv3\Microsoft.Windows.PowerShell.ScriptAnalyzer.BuiltinRules.dll 
+- PSv3\Microsoft.Windows.PowerShell.ScriptAnalyzer.dll 
+- Impostazioni\CmdletDesign.psd1
+- Impostazioni\DSC.psd1
+- Impostazioni\ScriptFunctions.psd1
+- Impostazioni\ScriptingStyle.psd1
+- Impostazioni\ScriptSecurity.psd1
 
 #### Contenuto del file PSScriptAnalyzer.psd1
 
@@ -214,8 +229,9 @@ Find-Module -Tag PSEditon_Core
 ## Altri dettagli
 ### [Script con PSEditions](../script/scriptwithpseditionsupport.md)
 ### [Supporto di PSEditions nella raccolta di PowerShell](../../psgallery/psgallery_pseditions.md)
+### [Manifesto del modulo aggiornamento] (./psget_update-modulemanifest.md)
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Sep16_HO2-->
 
 

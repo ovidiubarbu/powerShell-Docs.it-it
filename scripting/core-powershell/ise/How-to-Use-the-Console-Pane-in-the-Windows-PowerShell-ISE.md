@@ -9,8 +9,8 @@ manager: dongill
 ms.prod: powershell
 ms.assetid: 44d67705-87c7-4a69-a53e-6471fdebb757
 translationtype: Human Translation
-ms.sourcegitcommit: 3222a0ba54e87b214c5ebf64e587f920d531956a
-ms.openlocfilehash: d48ea75b99ef3d20c3e180ccec7f35adf6290a63
+ms.sourcegitcommit: 117b3fe541b7a92479e9c68e07fa21fc8add9678
+ms.openlocfilehash: 4588577c0c05fadee6b443e2fa4c32049cf99ac3
 
 ---
 
@@ -35,6 +35,6 @@ A partire da Windows PowerShell v3, il riquadro di output è unito al riquadro d
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO3-->
 
 

@@ -9,8 +9,8 @@ manager: dongill
 ms.prod: powershell
 ms.assetid: c10c18c7-9ece-4fd0-83dc-a19c53d4fd83
 translationtype: Human Translation
-ms.sourcegitcommit: 03ac4b90d299b316194f1fa932e7dbf62d4b1c8e
-ms.openlocfilehash: 8af4de973a95352fd41d2bb2823b9382899ef5bf
+ms.sourcegitcommit: d015dfae1990c66ea75aa45004b366d1609fb36f
+ms.openlocfilehash: 460ab6d82b694266d31b09779866f746b56c9f51
 
 ---
 
@@ -20,7 +20,7 @@ Le schede in Windows PowerShell® Integrated Scripting Environment (ISE) consent
 > [!NOTE]
 > Variabili, funzioni e alias creati in una scheda non vengono riportati in un'altra scheda. Si tratta di diverse sessioni di Windows PowerShell.
 
-Usare la procedura seguente per aprire o chiudere una scheda in Windows PowerShell. Per rinominare una scheda, impostare la proprietà [DisplayName](https://technet.microsoft.com/en-us/library/a9b58556-951b-4f48-b3ae-b351b7564360#Displayname) nell'oggetto di scripting della scheda di Windows PowerShell.
+Usare la procedura seguente per aprire o chiudere una scheda in Windows PowerShell. Per rinominare una scheda, impostare la proprietà [DisplayName](The-PowerShellTab-Object.md#Displayname) nell'oggetto di scripting della scheda di Windows PowerShell.
 
 ## Per creare e usare una nuova scheda di PowerShell
 Nel menu **File** fare clic su **Nuova scheda di PowerShell**. La nuova scheda di PowerShell viene visualizzata sempre come finestra attiva. Le schede di PowerShell sono numerate in modo incrementale nell'ordine di apertura. Ogni scheda è associata alla propria finestra della console di Windows PowerShell. È possibile tenere aperte fino a 32 schede di PowerShell con le rispettive sessioni per volta. In Windows PowerShell ISE 2.0 questa opzione è limitata a 8 schede.
@@ -39,15 +39,15 @@ Per chiudere una scheda, è possibile usare una delle tecniche seguenti:
 
 -   Nel menu **File** fare clic su **Chiudi scheda di PowerShell** o fare clic sul pulsante Chiudi (**X**) in una scheda attiva per chiuderla.
 
-Se sono presenti file non salvati aperti nella scheda di PowerShell che si vuole chiudere, viene richiesto di salvare o rimuovere tali file. Per altre informazioni su come salvare uno script, vedere [Come salvare uno script](https://technet.microsoft.com/en-us/library/162f594d-efd3-4234-9960-45e56e6eadc8).
+Se sono presenti file non salvati aperti nella scheda di PowerShell che si vuole chiudere, viene richiesto di salvare o rimuovere tali file. Per altre informazioni su come salvare uno script, vedere [Come salvare uno script](https://technet.microsoft.com/library/162f594d-efd3-4234-9960-45e56e6eadc8).
 
 ## Vedere anche
-[Uso di Windows PowerShell ISE](Using-the-Windows-PowerShell-ISE.md)
-[Come usare il riquadro della console in Windows PowerShell ISE](How-to-Use-the-Console-Pane-in-the-Windows-PowerShell-ISE.md)
+- [Uso di Windows PowerShell ISE](Using-the-Windows-PowerShell-ISE.md)
+- [Come usare il riquadro della console in Windows PowerShell ISE](How-to-Use-the-Console-Pane-in-the-Windows-PowerShell-ISE.md)
 
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Sep16_HO3-->
 
 

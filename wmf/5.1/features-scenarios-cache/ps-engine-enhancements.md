@@ -2,8 +2,8 @@
 title: Miglioramenti apportati al motore di PowerShell
 author: jasonsh
 translationtype: Human Translation
-ms.sourcegitcommit: 6813902aec214aee9ede27ff79dd291364e9f443
-ms.openlocfilehash: f864850128f118704d7545b09110835ab1d51b8e
+ms.sourcegitcommit: 47c963343c541d0f2ace194f365de5fcd809ccc5
+ms.openlocfilehash: 1b35a25312b44d14ec8771be9e17aaa43e270b61
 
 ---
 
@@ -49,7 +49,7 @@ WMF 5.1 modifica questo comportamento per rispettare `$env:PSModulePath` complet
 
 ### Reindirizzamento del file non più come hardcoded `-Encoding Unicode` ###
 
-In tutte le versioni precedenti di PowerShell, non era possibile controllare la codifica del file usato dall'operatore di reindirizzamento di file, ad esempio `get-childitem > out.txt` perché PowerShell aveva aggiunto `-Encoding Unicode`.
+In tutte le versioni precedenti di PowerShell, non era possibile controllare la codifica del file usato dall'operatore di reindirizzamento di file, ad esempio `Get-ChildItem > out.txt`, perché PowerShell aveva aggiunto `-Encoding Unicode`.
 
 A partire da WMF 5.1, è ora possibile modificare la codifica del file di reindirizzamento impostando `$PSDefaultParameterValues`, ad esempio
 
@@ -60,7 +60,7 @@ $PSDefaultParameterValues["Out-File:Encoding"] = "Ascii"
 ### Correzione di una regressione nell'accesso dei membri di `System.Reflection.TypeInfo` ###
 
 Una regressione introdotta in WMF 5.0 interrompeva l'accesso ai membri di `System.Reflection.RuntimeType`, ad esempio `[int].ImplementedInterfaces`.
-Questo bug è stato risolto in WMF 5.1.
+Questo bug è stato corretto in WMF 5.1.
 
 
 ### Risolti alcuni problemi con gli oggetti COM ###
@@ -73,7 +73,7 @@ Questo nuovo strumento di associazione ha migliorato in modo significativo le pr
 Nell'esempio seguente:
 
 ```
-$obj = new-object -com wscript.shell
+$obj = New-Object -ComObject WScript.Shell
 $obj.SendKeys([char]173)
 ```
 
@@ -100,7 +100,7 @@ Nell'esempio precedente, WMF 5.0 ha scritto in modo errato Scripting.Dictionary 
 
 ### `[ordered]` non è consentito all'interno delle classi ###
 
-In WMF 5 sono state introdotte classi con la convalida dei valori letterali di tipo per le classi.  `[ordered]` è simile a un valore letterale di tipo ma non è un tipo .Net.  WMF 5 restituiva erroneamente un errore relativo a `[ordered]` in una classe:
+In WMF 5 sono state introdotte classi con la convalida dei valori letterali di tipo per le classi.  `[ordered]` è simile a un valore letterale di tipo, ma non è un tipo .NET.  WMF 5 restituiva erroneamente un errore relativo a `[ordered]` in una classe:
 
 ```
 class CThing
@@ -123,6 +123,6 @@ Get-Help non fornisce un modo per specificare la versione per la quale si vuole 
 
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Sep16_HO3-->
 
 
