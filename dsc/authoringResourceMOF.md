@@ -65,7 +65,7 @@ Si noti quanto segue in relazione al codice precedente:
 * Il qualificatore di tipo, `[Key]`, in una proprietà indica che questa proprietà identificherà in modo univoco l'istanza di risorsa. È obbligatoria almeno una proprietà `[Key]`.
 * Il qualificatore `[Required]` indica che la proprietà è obbligatoria (è necessario specificare un valore in ogni script di configurazione che usa questa risorsa).
 * Il qualificatore `[write]` indica che questa proprietà è facoltativa quando si usa la risorsa personalizzata in uno script di configurazione. Il qualificatore `[read]` indica che una proprietà non può essere impostata da una configurazione e serve solo a scopo di creazione di report.
-* `Values` limita i valori che possono essere assegnati alla proprietà nll'elenco di valori definiti in `ValueMap`. Per altre informazioni, vedere l'articolo relativo ai [qualificatori ValueMap e Value](https://msdn.microsoft.com/library/windows/desktop/aa393965.aspx).
+* `Values` limita i valori che possono essere assegnati alla proprietà nell'elenco di valori definiti in `ValueMap`. Per altre informazioni, vedere l'articolo relativo ai [qualificatori ValueMap e Value](https://msdn.microsoft.com/library/windows/desktop/aa393965.aspx).
 * È consigliabile includere una proprietà denominata `Ensure` con i valori `Present` e `Absent` nella risorsa per mantenere uno stile coerente con le risorse DSC predefinite.
 * Assegnare un nome al file di schema per la risorsa personalizzata in base al formato seguente: `classname.schema.mof`, dove `classname` è l'identificatore che segue la parola chiave `class` nella definizione di schema.
 
@@ -279,6 +279,6 @@ FunctionsToExport = @("Get-TargetResource", "Set-TargetResource", "Test-TargetRe
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 
