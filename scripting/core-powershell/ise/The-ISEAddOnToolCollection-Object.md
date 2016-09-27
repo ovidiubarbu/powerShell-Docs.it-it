@@ -9,8 +9,8 @@ manager: dongill
 ms.prod: powershell
 ms.assetid: 634eab89-0845-4016-974b-361b09bb8f7b
 translationtype: Human Translation
-ms.sourcegitcommit: 3222a0ba54e87b214c5ebf64e587f920d531956a
-ms.openlocfilehash: eb02179871cd6dc6ff6cc5ba16d2074a037dbfa1
+ms.sourcegitcommit: 457451343b51891e336b0df6f979c285fb6144eb
+ms.openlocfilehash: 0a8f19693085b9b878fae60953a2cdc358ba8f4c
 
 ---
 
@@ -30,11 +30,10 @@ ms.openlocfilehash: eb02179871cd6dc6ff6cc5ba16d2074a037dbfa1
 
  **\[IsVisible\]** – Valore booleano facoltativo Se impostato su **$true**, lo strumento aggiuntivo è immediatamente visibile nel riquadro degli strumenti associato.
 
-```
+```PowerShell
 # Load a DLL with an add-on and then add it to the ISE
 [reflection.assembly]::LoadFile("c:\test\ISESimpleSolution\ISESimpleSolution.dll")
 $psISE.CurrentPowerShellTab.VerticalAddOnTools.Add("Solutions", [ISESimpleSolution.Solution], $true)
-
 ```
 
 ### Remove\( Item \)
@@ -44,11 +43,10 @@ $psISE.CurrentPowerShellTab.VerticalAddOnTools.Add("Solutions", [ISESimpleSoluti
 
  **Item** – Microsoft.PowerShell.Host.ISE.ISEAddOnTool Specifica l'oggetto che deve essere rimosso da Windows PowerShell ISE.
 
-```
+```PowerShell
 # Load a DLL with an add-on and then add it to the ISE
 [reflection.assembly]::LoadFile("c:\test\ISESimpleSolution\ISESimpleSolution.dll")
 $psISE.CurrentPowerShellTab.VerticalAddOnTools.Add("Solutions", [ISESimpleSolution.Solution], $true)
-
 ```
 
 ### SetSelectedPowerShellTab\( psTab \)
@@ -58,12 +56,10 @@ $psISE.CurrentPowerShellTab.VerticalAddOnTools.Add("Solutions", [ISESimpleSoluti
 
  **psTab** – Microsoft.PowerShell.Host.ISE.PowerShellTab Scheda di PowerShell da selezionare.
 
-```
-
+```PowerShell
       $newTab = $psISE.PowerShellTabs.Add()
 # Change the DisplayName of the new PowerShell tab. 
 $newTab.DisplayName="Brand New Tab"
-
 ```
 
 ### Remove\( psTab \)
@@ -73,8 +69,7 @@ $newTab.DisplayName="Brand New Tab"
 
  **psTab** – Microsoft.PowerShell.Host.ISE.PowerShellTab Scheda di PowerShell da rimuovere.
 
-```
-
+```PowerShell
 $newTab = $psISE.PowerShellTabs.Add()
 Change the DisplayName of the new PowerShell tab. 
 $newTab.DisplayName="This tab will go away in 5 seconds" 
@@ -83,15 +78,15 @@ $psISE.PowerShellTabs.Remove($newTab)
 ```
 
 ## Vedere anche
- [Oggetto PowerShellTab](The-PowerShellTab-Object.md) 
- [Modello a oggetti di Scripting di Windows PowerShell ISE](The-Windows-PowerShell-ISE-Scripting-Object-Model.md) 
- [Riferimenti al modello a oggetti di Windows PowerShell ISE](Windows-PowerShell-ISE-Object-Model-Reference.md) 
- [Gerarchia del modello a oggetti ISE](The-ISE-Object-Model-Hierarchy.md)
+- [Oggetto PowerShellTab](The-PowerShellTab-Object.md) 
+- [Modello a oggetti di scripting di Windows PowerShell ISE](The-Windows-PowerShell-ISE-Scripting-Object-Model.md) 
+- [Riferimenti al modello a oggetti di Windows PowerShell ISE](Windows-PowerShell-ISE-Object-Model-Reference.md) 
+- [Gerarchia del modello a oggetti ISE](The-ISE-Object-Model-Hierarchy.md)
 
   
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO4-->
 
 
