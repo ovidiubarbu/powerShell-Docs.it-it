@@ -9,14 +9,18 @@ manager: dongill
 ms.prod: powershell
 ms.technology: WMF
 translationtype: Human Translation
-ms.sourcegitcommit: f413ba6470985622e55bb4bd175d7c5d4b94c7d9
-ms.openlocfilehash: e545d49381a92ef3f7cc6a27316cbfc3a036a8c9
+ms.sourcegitcommit: 3dde62efa7ba595ed5160cc81b4e2b17a54e52a2
+ms.openlocfilehash: d4c9e88ddd6cfaec611527d19d00cbd4db9f5d1d
 
 ---
 
 #Problemi noti in WMF 5.1 (anteprima) #
 
 > Nota: queste informazioni sono provvisorie e soggette a modifiche.
+
+##Avvio del collegamento di PowerShell come amministratore
+Dopo l'installazione di WMF, se si tenta di avviare PowerShell come amministratore dal collegamento, è possibile che venga visualizzato il messaggio "Errore non specificato".
+Riaprire il collegamento non usando l'accesso come amministratore e il collegamento funzionerà ora anche con l'accesso come amministratore.
 
 ##Pester
 In questa versione vi sono due problemi che è necessario tenere presenti quando si usa Pester o Nano Server:
@@ -30,6 +34,6 @@ In questa versione vi sono due problemi che è necessario tenere presenti quando
 
 
 
-<!--HONumber=Sep16_HO3-->
+<!--HONumber=Sep16_HO4-->
 
 
