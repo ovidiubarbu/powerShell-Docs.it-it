@@ -8,8 +8,8 @@ author: eslesar
 manager: dongill
 ms.prod: powershell
 translationtype: Human Translation
-ms.sourcegitcommit: 6477ae8575c83fc24150f9502515ff5b82bc8198
-ms.openlocfilehash: 553ef07e42a4c41e5f0dc9e80c54f828d9c625c3
+ms.sourcegitcommit: c243385d2cf2cae2f7e7d52dcd529878cd1e4f5b
+ms.openlocfilehash: 05683faf5ef0baf823cb365a17c82af57fc4942e
 
 ---
 
@@ -30,7 +30,7 @@ Per altre informazioni sulle risorse DSC, vedere [Creare risorse Windows PowerSh
 Per implementare una risorsa DSC personalizzata con una classe di PowerShell, creare la struttura di cartelle seguente. La classe è definita in **MyDscResource.psm1** e il manifesto del modulo è definito in **MyDscResource.psd1**.
 
 ```
-$env: psmodulepath (folder)
+$env: ProgramFiles\WindowsPowerShell\Modules (folder)
     |- MyDscResource (folder)
         |- MyDscResource.psm1 
            MyDscResource.psd1 
@@ -481,6 +481,6 @@ Start-DscConfiguration -Wait -Force Test
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Sep16_HO5-->
 
 
