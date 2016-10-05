@@ -68,6 +68,6 @@ Sintassi dei cmdlet per la condivisione degli script:
 ```
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

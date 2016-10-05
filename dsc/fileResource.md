@@ -55,7 +55,7 @@ File [string] #ResourceName
 | Recurse| Indica se le sottodirectory sono incluse. Impostare questa proprietà su __$true__ per indicare che le sottodirectory devono essere incluse. Il valore predefinito è __$false__. **Nota**: questa proprietà è valida solo quando la proprietà Type è impostata su Directory.| 
 | DependsOn | Indica che prima di configurare la risorsa è necessario eseguire la configurazione di un'altra risorsa. Ad esempio, se l'ID del blocco script di configurazione della risorsa che si vuole eseguire per primo è __ResourceName__ e il tipo è __ResourceType__, la sintassi per usare questa proprietà è `DependsOn = "[ResourceType]ResourceName"`.| 
 | SourcePath| Indica il percorso da cui copiare la risorsa file o cartella.| 
-| Type| Indica se la risorsa configurata è una directory o un file. Impostare questa proprietà su "Directory" per indicare che la risorsa è una directory. Impostarla su "File" per indicare che la risorsa è un file. Il valore predefinito è "File".| 
+| Tipo| Indica se la risorsa configurata è una directory o un file. Impostare questa proprietà su "Directory" per indicare che la risorsa è una directory. Impostarla su "File" per indicare che la risorsa è un file. Il valore predefinito è "File".| 
 | MatchSource| Se questa proprietà è impostata sul valore predefinito __$false__, tutti i file nell'origine (ad esempio i file A, B e C) verranno aggiunti nella destinazione la prima volta che viene applicata la configurazione. Se viene aggiunto un nuovo file (D) nell'origine, non verrà aggiunto nella destinazione, anche quando la configurazione viene applicata di nuovo in un secondo momento. Se il valore è __$true__, ogni volta che la configurazione viene applicata, i nuovi file trovati successivamente nell'origine (ad esempio il file D in questo esempio) vengono aggiunti nella destinazione. Il valore predefinito è **$false**.| 
 
 ## Esempio
@@ -89,6 +89,6 @@ Configuration FileResourceDemo
 
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Aug16_HO3-->
 
 

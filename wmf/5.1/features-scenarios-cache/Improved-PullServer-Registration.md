@@ -15,6 +15,6 @@ Ciò era dovuto a un modello errato che veniva usato per accedere al database ES
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Aug16_HO3-->
 
 

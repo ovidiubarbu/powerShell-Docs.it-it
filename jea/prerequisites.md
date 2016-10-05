@@ -129,6 +129,6 @@ Nota: è possibile abilitare la trascrizione PowerShell a livello di sistema anc
 
 
 
-<!--HONumber=Jul16_HO1-->
+<!--HONumber=Aug16_HO3-->
 
 
