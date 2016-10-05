@@ -43,6 +43,6 @@ Sono stati aggiunti nuovi cmdlet che consentono di elencare gli spazi di esecuzi
 -   Enter-PSHostProcess
 -   Exit-PSHostProcess
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

@@ -4,6 +4,6 @@ In questa versione viene offerta tutta la flessibilità necessaria per elaborare
 
 Per altre informazioni, vedere [Configurazione di un client di pull usando un ID configurazione](https://msdn.microsoft.com/powershell/dsc/pullclientconfigid) o [Configurazione di un client di pull usando nomi di configurazione](https://msdn.microsoft.com/powershell/dsc/pullclientconfignames).
 
-<!--HONumber=Jul16_HO1-->
+<!--HONumber=Aug16_HO3-->
 
 

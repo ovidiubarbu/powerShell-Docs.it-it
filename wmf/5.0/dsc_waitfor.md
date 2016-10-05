@@ -4,6 +4,6 @@ Grazie alle risorse predefinite WaitFor\* (`WaitForAll`, `WaitForAny` e `WaitFor
 
 Per altre informazioni, vedere [Specifica delle dipendenze tra nodi](https://msdn.microsoft.com/powershell/dsc/crossnodedependencies).
 
-<!--HONumber=Jul16_HO1-->
+<!--HONumber=Aug16_HO3-->
 
 

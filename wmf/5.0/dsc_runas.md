@@ -4,6 +4,6 @@ WMF 5.0 include il supporto per l'esecuzione di **qualsiasi** risorsa DSC con un
 
 Per altre informazioni, vedere [Esecuzione di DSC con le credenziali dell'utente](https://msdn.microsoft.com/powershell/dsc/runasuser).
 
-<!--HONumber=Jul16_HO1-->
+<!--HONumber=Aug16_HO3-->
 
 

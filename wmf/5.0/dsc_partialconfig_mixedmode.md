@@ -4,6 +4,6 @@ Quando si usano configurazioni parziali, è ora possibile definire una modalità
 
 
 
-<!--HONumber=Jul16_HO1-->
+<!--HONumber=Aug16_HO3-->
 
 

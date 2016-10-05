@@ -10,6 +10,6 @@ Sono stati introdotti miglioramenti per l'esposizione dei dettagli sullo stato d
 È stata anche aggiunta una proprietà LCMStateDetail che contiene ulteriori informazioni sullo stato.
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

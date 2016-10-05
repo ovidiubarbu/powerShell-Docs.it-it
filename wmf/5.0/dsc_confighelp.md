@@ -4,6 +4,6 @@
 
 Per altre informazioni, vedere [Guida alla scrittura per le configurazioni DSC](https://msdn.microsoft.com/powershell/dsc/confighelp).
 
-<!--HONumber=Jul16_HO1-->
+<!--HONumber=Aug16_HO3-->
 
 

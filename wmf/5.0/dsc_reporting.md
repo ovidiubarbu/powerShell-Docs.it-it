@@ -4,6 +4,6 @@
 
 Per altre informazioni, vedere [Uso di un server di report DSC](https://msdn.microsoft.com/powershell/dsc/reportserver).
 
-<!--HONumber=Jul16_HO1-->
+<!--HONumber=Aug16_HO3-->
 
 

@@ -4,6 +4,6 @@ Nella versione precedente di DSC, Gestione configurazione locale gestisce `Refre
 
 Per altre informazioni, vedere [Configurazione di Gestione configurazione locale](https://msdn.microsoft.com/powershell/dsc/metaconfig).
 
-<!--HONumber=Jul16_HO1-->
+<!--HONumber=Aug16_HO3-->
 
 

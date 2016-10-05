@@ -14,6 +14,6 @@ Per altre informazioni, vedere [Configurazione di un client di pull con nomi di 
 
 
 
-<!--HONumber=Jul16_HO1-->
+<!--HONumber=Aug16_HO3-->
 
 
