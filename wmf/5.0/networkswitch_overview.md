@@ -59,6 +59,6 @@ PS> Get-Command *-NetworkSwitch*
 Altre informazioni sono disponibili nel post di blog dell'annuncio dell'anteprima di WMF 5.0 di Jeffrey Snover: <http://blogs.technet.com/b/windowsserver/archive/2014/04/03/windows-management-framework-v5-preview.aspx>
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

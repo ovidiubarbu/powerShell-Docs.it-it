@@ -4,6 +4,6 @@ Quando un documento di configurazione viene recapitato a DSC, il documento passa
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

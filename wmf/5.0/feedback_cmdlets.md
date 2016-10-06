@@ -2,6 +2,6 @@
 Abbiamo aggiunto alcune nuovi cmdlet di utilità e aggiornato alcuni cmdlet esistenti in base ai commenti e ai suggerimenti della community tramite [Connect](https://connect.microsoft.com/powershell). Continuiamo a esaminare i commenti e i suggerimenti, per soddisfare la maggior parte possibile delle richieste dei clienti.
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

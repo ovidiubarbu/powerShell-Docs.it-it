@@ -9,19 +9,19 @@ manager: dongill
 ms.prod: powershell
 ms.technology: WMF
 translationtype: Human Translation
-ms.sourcegitcommit: 0a53817d6af625822d9183d2a0d5bc7bf4d2b264
-ms.openlocfilehash: 058d18deeb3d4926970ea25a157f92ad14836e4b
+ms.sourcegitcommit: c88163b5a7d8805d0dea82d321796d8f41d17bb8
+ms.openlocfilehash: 26a325dc7a18ba167ddc56ca226fce3eded79f52
 
 ---
 
 # Installare e configurare WMF 5.1 (anteprima) #
 
 ## Installare .Net 4.6
-Per usare WMF 5.1, è necessario installare .Net Framework 4.6. Questo requisito consente di abilitare le nuove funzionalità di firma del catalogo, con un impatto sulle diverse aree di caricamento di moduli e script in WMF 5.1. 
+Per usare WMF 5.1, è necessario installare .NET Framework 4.6. Questo requisito consente di abilitare le nuove funzionalità di firma del catalogo, con un impatto sulle diverse aree di caricamento di moduli e script in WMF 5.1. 
 
-[.Net Framework 4.6 è disponibile come KB 3045560](https://support.microsoft.com/en-us/kb/3045560). Le istruzioni di installazione sono disponibili nel percorso di download.
+[.NET Framework 4.6 è disponibile come KB 3045560](https://support.microsoft.com/en-us/kb/3045560). Le istruzioni di installazione sono disponibili nel percorso di download.
 
-> **Nota:** è un problema noto che il requisito .NET 4.6 non viene rilevato dal programma di installazione WMF 5.1 (anteprima). Sarà quindi possibile installare WMF 5.1 (anteprima) prima di .Net 4.6. I test hanno dimostrato che è possibile installare .Net 4.6 dopo l'installazione di WMF 5.1 (anteprima). La versione finale di WMF 5.1 sarà in grado di controllare correttamente questo prerequisito prima di procedere all'installazione. 
+> **Nota:** è un problema noto che il requisito .NET 4.6 non viene rilevato dal programma di installazione WMF 5.1 (anteprima). Sarà quindi possibile installare WMF 5.1 (anteprima) prima di .NET 4.6. I test hanno dimostrato che è possibile installare .NET 4.6 dopo l'installazione di WMF 5.1 (anteprima). La versione finale di WMF 5.1 sarà in grado di controllare correttamente questo prerequisito prima di procedere all'installazione. 
 
 ## Scaricare e installare WMF 5.1 (anteprima)
 
@@ -44,7 +44,7 @@ Scaricare il pacchetto WMF 5.1 per il sistema operativo e l'architettura in cui 
 
 ## Installare WMF 5.1 dal prompt dei comandi##
 
-1. Dopo aver scaricato il pacchetto corretto per l'architettura del computer, aprire una finestra del prompt dei comandi con diritti utente elevati (Esegui come amministratore). Con le opzioni di installazione dei componenti di base di Windows Server 2012 R2 o Windows Server 2012 o Windows Server 2008 R2 SP1, il prompt dei comandi viene aperto con diritti utente elevati per impostazione predefinita.
+1. Dopo aver scaricato il pacchetto corretto per l'architettura del computer, aprire una finestra del prompt dei comandi con diritti utente elevati (Esegui come amministratore). Con le opzioni di installazione dei componenti di base di Windows Server 2012 R2, Windows Server 2012 o Windows Server 2008 R2 SP1, il prompt dei comandi viene aperto con diritti utente elevati per impostazione predefinita.
 
 2. Passare alla cartella in cui è stato scaricato o copiato il pacchetto di installazione di WMF 5.1.
 
@@ -62,11 +62,11 @@ L'installazione di WMF 5.1 in Windows Server 2008 SP1 o Windows 7 SP1, richiede 
 - WMF 5.1 richiede [Microsoft .NET Framework 4.6](https://support.microsoft.com/en-us/kb/3045560). È possibile installare Microsoft .NET Framework 4.6 seguendo le istruzioni disponibili nel percorso di download.
 - Aggiornamento della sicurezza per la [firma del codice SHA-2](https://technet.microsoft.com/en-us/library/security/3033929). Questo aggiornamento è necessario per usare nuovi cmdlet di PowerShell per i file di catalogo di Windows. 
 
-> **Dipendenza da WnRM:** il servizio di configurazione dello stato desiderato (DSC) tramite Windows PowerShell dipende da WinRM. WinRM non è abilitato per impostazione predefinita in Windows Server 2008 R2 e Windows 7. Per abilitare WinRM, in una sessione di Windows PowerShell con privilegi elevati eseguire `Set-WSManQuickConfig`.
+> **Dipendenza da WnRM:** il servizio di configurazione dello stato desiderato (DSC) tramite Windows PowerShell dipende da WinRM. WinRM non è abilitato per impostazione predefinita in Windows Server 2008 R2 e Windows 7. Per abilitare WinRM, eseguire `Set-WSManQuickConfig` in una sessione di Windows PowerShell con privilegi elevati.
 
 
 
 
-<!--HONumber=Jul16_HO5-->
+<!--HONumber=Aug16_HO3-->
 
 

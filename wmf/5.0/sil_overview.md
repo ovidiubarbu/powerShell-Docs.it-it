@@ -11,6 +11,6 @@ Nessuno di questi dati viene inviato a Microsoft con questa funzionalità. I dat
 Per altre informazioni e documentazione sui cmdlet di Registrazione inventario software, vedere le risorse online per Windows Server 2012 R2 all'indirizzo <http://technet.microsoft.com/library/dn383584.aspx>.
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

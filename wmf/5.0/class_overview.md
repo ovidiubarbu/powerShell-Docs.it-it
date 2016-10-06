@@ -10,6 +10,6 @@
 -   Eseguire il debug di tipi con il linguaggio di PowerShell
 -   Generare e gestire le eccezioni tramite meccanismi formali, al giusto livello
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

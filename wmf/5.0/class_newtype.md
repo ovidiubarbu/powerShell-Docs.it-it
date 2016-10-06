@@ -165,7 +165,7 @@ I membri nascosti non vengono inclusi quando si usa il completamento con TAB o I
 
 Il tipo restituito è un contratto. Il valore restituito viene convertito nel tipo previsto. Se non viene specificato alcun tipo restituito, il tipo restituito è void. Non sono supportati flussi di oggetti. Non è possibile scrivere gli oggetti nella pipeline intenzionalmente o accidentalmente.
 
-## Attributi
+## Attributes
 
 Sono stati aggiunti due nuovi attributi, **DscResource** e **DscProperty**.
 
@@ -324,6 +324,6 @@ function Style
 function Html ([HTML] $doc) { return $doc }
 ```
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

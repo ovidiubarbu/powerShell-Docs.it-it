@@ -29,7 +29,7 @@ class MSFT_DSCLocalConfigurationManager
 };
 ```
 
-## Membri
+## Members
 -------
 
 La classe **MSFT_DSCLocalConfigurationManager** ha i membri seguenti:
@@ -83,6 +83,6 @@ La classe **MSFT_DSCLocalConfigurationManager** dispone di questi metodi.
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

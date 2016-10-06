@@ -9,8 +9,8 @@ manager: dongill
 ms.prod: powershell
 ms.technology: WMF
 translationtype: Human Translation
-ms.sourcegitcommit: 57049ff138604b0e13c8fd949ae14da05cb03a4b
-ms.openlocfilehash: 90d57af0c8b90e709769525455ae39557b9c7176
+ms.sourcegitcommit: be3659b02cb1bc58cc13aa9d8f92946b2afa37b1
+ms.openlocfilehash: 8a7774b36f15ff790c31d4c1a8bc69be257b8508
 
 ---
 
@@ -28,9 +28,9 @@ WMF 5.1 modifica questo comportamento per rispettare `$env:PSModulePath` complet
 
 ### Reindirizzamento del file non più come hardcoded `-Encoding Unicode` ###
 
-In tutte le versioni precedenti di PowerShell, non era possibile controllare la codifica del file usato dall'operatore di reindirizzamento di file, ad esempio `get-childitem > out.txt` perché PowerShell aveva aggiunto `-Encoding Unicode`.
+In tutte le versioni precedenti di PowerShell, non era possibile controllare la codifica del file usato dall'operatore di reindirizzamento di file, ad esempio `Get-ChildItem > out.txt`, perché PowerShell aveva aggiunto `-Encoding Unicode`.
 
-A partire da WMF 5.1, è ora possibile modificare la codifica del file di reindirizzamento impostando `$PSDefaultParameterValues`, ad esempio
+A partire da WMF 5.1, è ora possibile modificare la codifica del file di reindirizzamento impostando `$PSDefaultParameterValues`:
 
 ```
 $PSDefaultParameterValues["Out-File:Encoding"] = "Ascii"
@@ -39,20 +39,19 @@ $PSDefaultParameterValues["Out-File:Encoding"] = "Ascii"
 ### Correzione di una regressione nell'accesso dei membri di `System.Reflection.TypeInfo` ###
 
 Una regressione introdotta in WMF 5.0 interrompeva l'accesso ai membri di `System.Reflection.RuntimeType`, ad esempio `[int].ImplementedInterfaces`.
-Questo bug è stato risolto in WMF 5.1.
+Questo bug è stato corretto in WMF 5.1.
 
 
 ### Risolti alcuni problemi con gli oggetti COM ###
 
-In WMF 5.0 è stato introdotto un nuovo strumento di associazione COM per richiamare metodi su oggetti COM e accedere alle proprietà degli oggetti COM.
-Questo nuovo strumento di associazione ha migliorato in modo significativo le prestazioni e ha inoltre introdotto alcuni bug che sono stati corretti in WMF 5.1.
+In WMF 5.0 è stato introdotto un nuovo strumento di associazione COM per richiamare metodi su oggetti COM e accedere alle proprietà degli oggetti COM. Questo nuovo strumento di associazione ha migliorato in modo significativo le prestazioni e ha inoltre introdotto alcuni bug che sono stati corretti in WMF 5.1.
 
 #### Le conversioni di argomenti non venivano sempre eseguite correttamente ####
 
 Nell'esempio seguente:
 
 ```
-$obj = new-object -com wscript.shell
+$obj = New-Object -ComObject WScript.Shell
 $obj.SendKeys([char]173)
 ```
 
@@ -76,11 +75,12 @@ $x = Get-COMDictionary
 
 Nell'esempio precedente, WMF 5.0 ha scritto in modo errato Scripting.Dictionary nella pipeline anziché enumerare le coppie chiave-valore.
 
-Questa modifica concerne anche i [problemi 1752224 su Connect](https://connect.microsoft.com/PowerShell/feedback/details/1752224)
+Questa modifica riguarda anche i [problemi 1752224 su Connect](https://connect.microsoft.com/PowerShell/feedback/details/1752224)
 
 ### `[ordered]` non è consentito all'interno delle classi ###
 
-In WMF 5 sono state introdotte classi con la convalida dei valori letterali di tipo per le classi.  `[ordered]` è simile a un valore letterale di tipo ma non è un tipo .Net.  WMF 5 restituiva erroneamente un errore relativo a `[ordered]` in una classe:
+In WMF 5.0 sono state introdotte classi con la convalida dei valori letterali di tipo per le classi.  
+`[ordered]` è simile a un valore letterale di tipo, ma non è un tipo .NET. WMF 5.0 restituiva erroneamente un errore relativo a `[ordered]` in una classe:
 
 ```
 class CThing
@@ -99,10 +99,10 @@ Prima di WMF 5.1, se erano installate più versioni di un modulo e tutte condivi
 
 In WMF 5.1 il problema è stato risolto restituendo la Guida per la versione più recente dell'argomento.
 
-Get-Help non fornisce un modo per specificare la versione per la quale si vuole visualizzare la Guida. Per risolvere il problema, passare alla directory dei moduli e visualizzare la Guida direttamente con uno strumento come il proprio editor preferito. 
+`Get-Help` non fornisce un modo per specificare la versione per la quale si vuole visualizzare la Guida. Per risolvere il problema, passare alla directory dei moduli e visualizzare la Guida direttamente con uno strumento come il proprio editor preferito. 
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Aug16_HO3-->
 
 

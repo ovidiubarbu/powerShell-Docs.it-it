@@ -30,6 +30,6 @@ Gli argomenti seguenti illustrano come configurare i client di pull:
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

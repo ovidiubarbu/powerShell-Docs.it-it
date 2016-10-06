@@ -32,6 +32,6 @@ Una risorsa DSC è un modulo di Windows PowerShell. Il modulo contiene sia lo sc
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

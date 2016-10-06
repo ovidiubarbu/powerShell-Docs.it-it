@@ -99,7 +99,7 @@ Per informazioni sull'installazione e l'uso di Nano Server e su come gestire Nan
   * WaitForSome. Vedere [Specifica delle dipendenze tra nodi](crossNodeDependencies.md)
 
 * Risorse parzialmente funzionanti
-  * [Gruppo](groupResource.md)
+  * [Group](groupResource.md)
   * GroupSet
   
   **Problema:** le risorse indicate sopra non funzionano se l'istanza specifica viene chiamata due volte, vale a dire se la stessa configurazione viene eseguita due volte
@@ -133,6 +133,6 @@ A causa di un set limitato di API Windows e alle librerie CLR disponibili in Nan
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

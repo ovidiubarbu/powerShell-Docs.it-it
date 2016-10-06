@@ -33,6 +33,6 @@ Per creare un report delle _azioni_ eseguite dagli utenti durante una sessione J
 1. Abilitare le trascrizioni "Over The Shoulder" per l'endpoint JEA e vedere la directory delle trascrizioni per un log completo delle azioni di ogni utente
 2. Attivare la registrazione per i moduli di PowerShell ed esaminare i registri eventi di PowerShell.
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

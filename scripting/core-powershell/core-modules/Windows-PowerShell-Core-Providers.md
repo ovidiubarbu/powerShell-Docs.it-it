@@ -37,6 +37,6 @@ I provider di Windows PowerShell sono programmi .NET che rendono disponibili in 
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

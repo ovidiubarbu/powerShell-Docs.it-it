@@ -97,6 +97,6 @@ l'oggetto funziona anche in PowerShell 5.0, ma è consigliabile usare il paramet
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

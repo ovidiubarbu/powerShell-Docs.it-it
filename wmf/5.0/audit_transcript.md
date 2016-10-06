@@ -7,6 +7,6 @@ Oltre a estendere la disponibilità della trascrizione, è stata aggiornata anch
 Le opzioni per la trascrizione (inclusa l'attivazione di una trascrizione a livello di sistema) possono essere configurate con l'impostazione di Criteri di gruppo **Attiva trascrizione di PowerShell** in Modelli amministrativi -> Componenti di Windows -> Windows PowerShell.
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

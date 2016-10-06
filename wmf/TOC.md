@@ -5,7 +5,7 @@
 ### [Miglioramenti per Desired State Configuration (DSC)](5.1/DSC-improvements.md)
 ### [Miglioramenti apportati alla console di PowerShell](5.1/console-improvements.md)
 ### [Miglioramenti apportati al motore di PowerShell](5.1/engine-improvements.md)
-### [Miglioramenti appartati a Gestione pacchetti](5/1/package-management-improvements.md)
+### [Miglioramenti appartati a Gestione pacchetti](5.1/package-management-improvements.md)
 ### [Problemi risolti in WMF 5.1](5.1/bugfixes.md)
 ## [Installazione e configurazione](5.1/install-configure.md)
 ## [Problemi noti](5.1/known-issues.md)
@@ -34,7 +34,7 @@
 ##### [Supporto della Guida per le configurazioni DSC](5.0/dsc_confighelp.md)
 ##### [Miglioramenti per la creazione di configurazioni con PowerShell ISE](5.0/dsc_authoring.md)
 ##### [Consentire risorse duplicate identiche in una configurazione](5.0/dsc_identicalduplicate.md)
-##### [La parola chiave Import-DscResource supporta il parametro -moduleversion](5.0/dsc_importdscresource.md)
+##### [Supporto della parola chiave Import-DscResource per il parametro -ModuleVersion](5.0/dsc_importdscresource.md)
 ##### [Supporto di WOW64 per la parola chiave Configuration](5.0/dsc_wow64.md)
 #### [Risorse]()
 ##### [Risorse DSC basate su classi](5.0/dsc_classbasedresource.md)
@@ -47,11 +47,11 @@
 ###### [Supporto di modalità RefreshMode miste](5.0/dsc_partialconfig_mixedmode.md)
 ##### [Configurare il motore DSC con un nuovo attributo](5.0/dsc_metaconfiguration.md)
 ##### [Informazioni dettagliate sullo stato di Gestione configurazione locale](5.0/dsc_lcmstate.md)
-##### [Non è necessario che le frequenze per RefreshMode e ConfigurationMode siano multipli l'una dell'altra](5.0/dsc_freqnomultiple.md)
+##### [Le frequenze per RefreshMode e ConfigurationMode non devono essere multiple l'una dell'altra](5.0/dsc_freqnomultiple.md)
 ##### [Valore aggiunto per la proprietà RefreshMode](5.0/dsc_refreshmode.md)
 #### [Cmdlet]()
 ##### [Informazioni dettagliate sullo stato della configurazione](5.0/dsc_getconfigurationstatus.md)
-##### [Il cmdlet Test-DscConfiguration supporta configurazioni di riferimento](5.0/dsc_testconfiguration.md)
+##### [Il cmdlet Test-DscConfiguration supporta le configurazioni di riferimento](5.0/dsc_testconfiguration.md)
 ##### [Accesso diretto ai metodi delle risorse DSC](5.0/dsc_directaccess.md)
 ##### [Recapitare un documento di configurazione senza applicarlo](5.0/dsc_publishconfig.md)
 ##### [Rimuovere i documenti DSC](5.0/dsc_removeconfigdoc.md)
@@ -65,7 +65,7 @@
 ### [Controllare l'utilizzo di PowerShell tramite trascrizione e registrazione](5.0/audit_overview.md)
 #### [Opzioni avanzate di trascrizione](5.0/audit_transcript.md)
 #### [Traccia e registrazione degli script](5.0/audit_script.md)
-#### [Cmdlet CMS (Cryptographic Message Syntax)](5.0/audit_cms.md)\
+#### [Cmdlet CMS (Cryptographic Message Syntax)](5.0/audit_cms.md)
 ### [Individuazione, installazione e inventario del software con PackageManagement](5.0/oneget_overview.md)
 #### [Cmdlet PackageManagement](5.0/oneget_cmdlets.md)
 ### [Individuazione, installazione e inventario dei moduli di PowerShell con PowerShellGet](5.0/psget_module_overview.md)
@@ -75,7 +75,7 @@
 #### [Cmdlet di PowerShellGet per la gestione dei moduli](5.0/psget_modulecmdlets.md)
 ### [Individuazione, installazione e gestione di script di PowerShell con PowerShellGet](5.0/psget_script_overview.md)
 #### [Cmdlet di PowerShellGet per la gestione degli script](5.0/psget_scriptcmdlets.md)
-### [Cmdlet nuovi e aggiornati in base ai suggerimenti della community ](5.0/feedback_cmdlets.md)
+### [Cmdlet nuovi e aggiornati in base ai suggerimenti della community](5.0/feedback_cmdlets.md)
 #### [Collegamenti simbolici con i cmdlet Item](5.0/feedback_symbolic.md)
 #### [Cmdlet Archive](5.0/feedback_archive.md)
 #### [Cmdlet Clipboard](5.0/feedback_clipboard.md)
@@ -94,6 +94,6 @@
 ### [Registrazione inventario software (SIL)](5.0/sil_overview.md)
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

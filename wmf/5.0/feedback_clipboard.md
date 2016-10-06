@@ -21,6 +21,6 @@ Mode LastWriteTime Length Name
 I cmdlet Clipboard supportano immagini, file audio, elenchi di file e testo.
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

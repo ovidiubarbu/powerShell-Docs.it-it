@@ -25,6 +25,6 @@ Prestare particolare attenzione quando si espongono comandi come `Copy-Item`.
 
 
 
-<!--HONumber=Jul16_HO1-->
+<!--HONumber=Aug16_HO3-->
 
 

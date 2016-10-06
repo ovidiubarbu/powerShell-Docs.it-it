@@ -44,7 +44,7 @@ User [string] #ResourceName
 |  Proprietà  |  Descrizione   | 
 |---|---| 
 | UserName| Indica il nome dell'account per cui si vuole specificare un determinato stato.| 
-| Description| Indica la descrizione che si vuole usare per l'account utente.| 
+| Descrizione| Indica la descrizione che si vuole usare per l'account utente.| 
 | Disabled| Indica se l'account è abilitato. Impostare questa proprietà su __$true__ per specificare che l'account è disabilitato e su __$false__ per specificare che è abilitato.| 
 | Ensure| Indica se l'account esiste. Impostare questa proprietà su "Present" per specificare che l'account esiste e su "Absent" per specificare che non esiste.| 
 | FullName| Rappresenta una stringa che contiene il nome completo da usare per l'account utente.| 
@@ -69,6 +69,6 @@ User UserExample
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

@@ -53,6 +53,6 @@ Anche se la soluzione DSC è stata introdotta in Windows Server 2012 R2, è disp
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

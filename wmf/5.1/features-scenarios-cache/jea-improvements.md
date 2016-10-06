@@ -85,6 +85,6 @@ In WMF 5.1 è ora possibile usare account virtuali in Windows Server 2008 R2, ab
 Gli account virtuali continuano a non essere supportati quando si usa JEA in Windows 7.
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

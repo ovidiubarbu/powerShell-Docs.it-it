@@ -25,6 +25,6 @@ A partire dalla versione 5.1, PowerShell è disponibile in diverse edizioni che 
 
 
 
-<!--HONumber=Jul16_HO1-->
+<!--HONumber=Aug16_HO3-->
 
 

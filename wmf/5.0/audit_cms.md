@@ -83,6 +83,6 @@ Per visualizzare i certificati di crittografia dei documenti nel provider di cer
 dir -DocumentEncryptionCert
 ```
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

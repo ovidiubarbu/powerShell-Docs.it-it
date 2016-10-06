@@ -11,6 +11,6 @@ In base ai commenti e ai suggerimenti ricevuti, la creazione di risorse DSC basa
 Per altre informazioni, vedere [Scrittura di una risorsa DSC personalizzata con classi di PowerShell](https://msdn.microsoft.com/powershell/dsc/authoringresource).
 
 
-<!--HONumber=Jul16_HO1-->
+<!--HONumber=Aug16_HO3-->
 
 
