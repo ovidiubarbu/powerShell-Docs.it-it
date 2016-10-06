@@ -8,8 +8,8 @@ author: jpjofre
 manager: dongill
 ms.prod: powershell
 translationtype: Human Translation
-ms.sourcegitcommit: 03ac4b90d299b316194f1fa932e7dbf62d4b1c8e
-ms.openlocfilehash: 0888b7db506881c4f97d9398b838a617e62c7c4a
+ms.sourcegitcommit: 119b4d50423498e08383f02e56ae76653d06e555
+ms.openlocfilehash: e3cac149d549400b6a180b4a4fd6ff1a13a8130b
 
 ---
 
@@ -23,7 +23,7 @@ ms.openlocfilehash: 0888b7db506881c4f97d9398b838a617e62c7c4a
 *  Operatori
 *  Variabili e assegnazione
 *  Esecuzione di comandi o cmdlet
-*  Esecuzione di app native e passaggio di parametri.
+*  Esecuzione di app native e passaggio di parametri
 *  Formattazione implicita ed esplicita dell'output
 *  Sviluppo di un file di formattazione
 *  Elementi del linguaggio di scripting
@@ -35,6 +35,6 @@ ms.openlocfilehash: 0888b7db506881c4f97d9398b838a617e62c7c4a
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Sep16_HO5-->
 
 
