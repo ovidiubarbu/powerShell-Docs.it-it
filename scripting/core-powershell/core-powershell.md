@@ -8,25 +8,24 @@ author: jpjofre
 manager: dongill
 ms.prod: powershell
 translationtype: Human Translation
-ms.sourcegitcommit: cd6e130d9f6f70449084d25eb386a3c0a2b84737
-ms.openlocfilehash: 4c22e1a2543690a971836813cb32ace74ababb4a
+ms.sourcegitcommit: ab536969fac8ded0e540da3eb138448b4f444f67
+ms.openlocfilehash: c8f97c3b565e0718b38a8e62a2b9cb9558451fc5
 
 ---
 
-#  PowerShell Core
+#  PowerShell comune
 Questa sezione contiene tutti i materiali di riferimento e le guide dettagliate per PowerShell.  
 In questa sezione:
--  [Guida ai moduli di PowerShell Core](core-modules.md)
--  [Guida di PowerShell Integrated Scripting Environment (ISE)](ise-guide.md)
--  [Guida alla finestra della console di PowerShell](console-guide.md)
--  [Guida alla gestione remota di PowerShell](Running-Remote-Commands.md)
--  [Guida ai flussi di lavoro di PowerShell](workflows-guide.md)
--  [Guida ad Accesso Web di PowerShell](web-access.md)
+-  [Moduli comuni di PowerShell](core-modules.md)
+-  [PowerShell Integrated Scripting Environment -ISE-](ise-guide.md)
+-  [Finestra della console di PowerShell](console-guide.md)
+-  [Gestione remota di PowerShell](Running-Remote-Commands.md)
+-  [Flussi di lavoro di PowerShell](workflows-guide.md)
+-  [Accesso Web di PowerShell](web-access.md)
 -  [Glossario di PowerShell](../Windows-PowerShell-Glossary.md)
 
 
 
-
-<!--HONumber=Jul16_HO1-->
+<!--HONumber=Aug16_HO3-->
 
 

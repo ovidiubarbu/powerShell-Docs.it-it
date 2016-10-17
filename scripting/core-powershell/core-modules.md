@@ -8,14 +8,14 @@ author: jpjofre
 manager: dongill
 ms.prod: powershell
 translationtype: Human Translation
-ms.sourcegitcommit: 03ac4b90d299b316194f1fa932e7dbf62d4b1c8e
-ms.openlocfilehash: d891d849156b990c600672341ad18ffeebdd9bf8
+ms.sourcegitcommit: ab536969fac8ded0e540da3eb138448b4f444f67
+ms.openlocfilehash: 3bee547fc53d1164d3cbf17f033083d4f1099ae7
 
 ---
 
-#  Guida ai moduli di PowerShell Core
+#  Moduli comuni di PowerShell
 
-I moduli di PowerShell Core forniscono le funzionalità di base di PowerShell.
+I moduli comuni di PowerShell offrono le funzionalità di base di PowerShell.
 Le aree principali coperte da questi moduli sono:
 
 -  [Modulo Archive](core-modules/Microsoft.PowerShell.Archive-Module.md)
@@ -37,7 +37,6 @@ Le aree principali coperte da questi moduli sono:
 
 
 
-
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 

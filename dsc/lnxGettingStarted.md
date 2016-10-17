@@ -8,8 +8,8 @@ author: eslesar
 manager: dongill
 ms.prod: powershell
 translationtype: Human Translation
-ms.sourcegitcommit: 6477ae8575c83fc24150f9502515ff5b82bc8198
-ms.openlocfilehash: c05b48d2c903e59f8b65c4c8c289d2dd5c23c3f9
+ms.sourcegitcommit: e4385f0ed482b97e8794cde968de549902cc358e
+ms.openlocfilehash: 2283e797275f426b624119bd1191e58080780c09
 
 ---
 
@@ -184,12 +184,12 @@ I file di registro seguenti vengono generati per i messaggi di DSC per Linux.
 
 |File di registro|Directory|Descrizione|
 |---|---|---|
-|omiserver.log|/opt/omi/var/log/|Messaggi relativi al funzionamento del server CIM OMI.|
-|dsc.log|/opt/omi/var/log/|Messaggi relativi al funzionamento delle operazioni delle risorse DSC e di Gestione configurazione locale.|
+|omiserver.log|/var/opt/omi/log|Messaggi relativi al funzionamento del server CIM OMI.|
+|dsc.log|/var/opt/omi/log|Messaggi relativi al funzionamento delle operazioni delle risorse DSC e di Gestione configurazione locale.|
 
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO4-->
 
 
