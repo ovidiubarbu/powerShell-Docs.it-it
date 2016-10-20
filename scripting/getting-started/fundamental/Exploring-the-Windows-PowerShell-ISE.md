@@ -9,13 +9,13 @@ manager: dongill
 ms.prod: powershell
 ms.assetid: e0d2c6e8-5126-40e7-a1e1-d1cff29fe94a
 translationtype: Human Translation
-ms.sourcegitcommit: 3222a0ba54e87b214c5ebf64e587f920d531956a
-ms.openlocfilehash: c1f285a1d1beb35c931c17f5944d7ec697cb152e
+ms.sourcegitcommit: 16608d8b97ec816d77ec7b8ac2438a4d64b55fba
+ms.openlocfilehash: 09e9006286ca960efafe7badd250f0357b21f608
 
 ---
 
 # Esplorazione di Windows PowerShell ISE
-È possibile usare Windows PowerShell® Integrated Scripting Environment (ISE) per creare, eseguire ed eseguire il debug di script e comandi. Windows PowerShell ISE include la barra dei menu, le schede di Windows PowerShell, la barra degli strumenti, le schede degli script, un riquadro di script, un riquadro della console, una barra di stato, un dispositivo di scorrimento per le dimensioni del testo e una Guida sensibile al contesto.
+È possibile usare Windows PowerShell® Integrated Scripting Environment (ISE) per creare ed eseguire il debug di script e comandi ed eseguire gli stessi script e comandi. Windows PowerShell ISE include la barra dei menu, le schede di Windows PowerShell, la barra degli strumenti, le schede degli script, un riquadro di script, un riquadro della console, una barra di stato, un dispositivo di scorrimento per le dimensioni del testo e una Guida sensibile al contesto.
 
 > [!NOTE]
 > A partire da Windows PowerShell ISE 3.0 i riquadri dei comandi e di output sono stati combinati in un unico riquadro della console.
@@ -76,11 +76,11 @@ Aumenta o diminuisce le dimensioni del testo sullo schermo.
 La Guida di Windows PowerShell ISE è disponibile sul Web nella libreria TechNet. È possibile aprire la Guida scegliendo **Guida di Windows PowerShell ISE** dal menu **?** o premendo F1 in un punto qualsiasi tranne quando il cursore si trova sul nome di un cmdlet nel riquadro di script o in quello della console. Dal menu **?** è anche possibile eseguire il cmdlet Update-Help e visualizzare la finestra di comando che offre assistenza per la creazione di comandi visualizzando tutti i parametri di un cmdlet e consentendo di specificare i parametri in un modulo di semplice uso.
 
 ## Vedere anche
-[Uso di Windows PowerShell ISE](../../core-powershell/ise/Using-the-Windows-PowerShell-ISE.md)
+- [Uso di Windows PowerShell ISE](../../core-powershell/ise/Using-the-Windows-PowerShell-ISE.md)
 
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Oct16_HO2-->
 
 

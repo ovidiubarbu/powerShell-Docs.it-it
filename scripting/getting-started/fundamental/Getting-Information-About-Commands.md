@@ -9,8 +9,8 @@ manager: dongill
 ms.prod: powershell
 ms.assetid: 56f8e5b4-d97c-4e59-abbe-bf13e464eb0d
 translationtype: Human Translation
-ms.sourcegitcommit: 3222a0ba54e87b214c5ebf64e587f920d531956a
-ms.openlocfilehash: c60f0f63b0d64c82a3ae0716743087ee2b8740c0
+ms.sourcegitcommit: fe3d7885b7c031a24a737f58523c8018cfc36146
+ms.openlocfilehash: 57ccd656e0b869da8aadece97e9bb871764c3f70
 
 ---
 
@@ -27,7 +27,7 @@ Cmdlet          Add-Member                      Add-Member [-MemberType] <PS...
 ...
 ```
 
-Questo output è simile all'output della Guida di Cmd.exe, ossia un riepilogo di comandi interni in formato tabella. Nell'estratto dell'output del comando **Get-Command** illustrato sopra, ogni comando visualizzato ha un cmdlet di tipo CommandType. Un cmdlet è un tipo di comando intrinseco di Windows PowerShell, che corrisponde approssimativamente ai comandi **dir** e **cd** di Cmd.exe e ai comandi predefiniti delle shell UNIX, come BASH.
+Questo output è simile all'output della Guida di Cmd.exe, ossia un riepilogo di comandi interni in formato tabella. Nell'estratto dell'output del comando **Get-Command** illustrato sopra, ogni comando visualizzato ha un cmdlet di tipo CommandType. Un cmdlet è un tipo di comando intrinseco di Windows PowerShell, che corrisponde approssimativamente ai comandi **dir** e **cd** di Cmd.exe e ai comandi predefiniti delle shell UNIX, ad esempio BASH.
 
 Nell'output del comando **Get-Command** tutte le definizioni terminano con puntini di sospensione (...) per indicare che PowerShell non può visualizzare tutto il contenuto nello spazio disponibile. Quando Windows PowerShell visualizza l'output, lo formatta come testo e quindi lo dispone in modo che i dati si adattino perfettamente alla finestra. Questo aspetto verrà trattato più avanti nella sezione sui formattatori.
 
@@ -86,6 +86,6 @@ Get-Command -CommandType Script
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Oct16_HO2-->
 
 

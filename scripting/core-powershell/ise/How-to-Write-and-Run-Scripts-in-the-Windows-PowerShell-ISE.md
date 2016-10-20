@@ -9,8 +9,8 @@ manager: dongill
 ms.prod: powershell
 ms.assetid: 62f916d9-b3a1-484a-bdfb-41f57112c22b
 translationtype: Human Translation
-ms.sourcegitcommit: 3222a0ba54e87b214c5ebf64e587f920d531956a
-ms.openlocfilehash: 6e58c298725254a84819856070b9702340fcf81d
+ms.sourcegitcommit: 16608d8b97ec816d77ec7b8ac2438a4d64b55fba
+ms.openlocfilehash: c378e9f38c6cc9ea94ce07c320d7a42dd3f102b5
 
 ---
 
@@ -24,7 +24,7 @@ Questo argomento descrive come creare, modificare, eseguire e salvare gli script
 -   [Come salvare uno script](#bkmk_3)
 
 ## <a name="bkmk_1"></a>Come creare ed eseguire script
-È possibile aprire e modificare i file di Windows PowerShell® nel riquadro di script. Tipi di file di particolare interesse in Windows PowerShell® sono i file di script (con estensione ps1), i file di dati degli script (con estensione psd1) e i file di modulo di script (con estensione psm1). In questi file per la visualizzazione della sintassi nell'editor del riquadro di script vengono utilizzati i colori. Altri tipi di file comuni che è possibile aprire nel riquadro di script sono file di configurazione (con estensione ps1xml), file XML e file di testo.
+È possibile aprire e modificare i file di Windows PowerShell® nel riquadro di script. Tipi di file di particolare interesse in Windows PowerShell® sono i file di script (con estensione PS1), i file di dati degli script (con estensione PSD1) e i file di modulo di script (con estensione PSM1). In questi file per la visualizzazione della sintassi nell'editor del riquadro di script vengono utilizzati i colori. Altri tipi di file comuni che è possibile aprire nel riquadro di script sono file di configurazione (con estensione ps1xml), file XML e file di testo.
 
 > [!NOTE]
 > I criteri di esecuzione di Windows PowerShell determinano se è possibile eseguire script e caricare profili e file di configurazione di Windows PowerShell. I criteri di esecuzione predefiniti prevedono restrizioni e impediscono l'esecuzione di tutti gli script e il caricamento di profili. Per modificare i criteri di esecuzione per consentire il caricamento e l'uso di profili, vedere [Set-ExecutionPolicy[PSITPro5_Security]](https://technet.microsoft.com/en-us/library/5690a0e1-495b-4e63-8280-65ead7bf01ab) e [about_Signing [v4]](https://technet.microsoft.com/en-us/library/fcbdd3b9-0b9f-4734-b5c7-e0dcc304fa1d).
@@ -150,11 +150,11 @@ Windows PowerShell ISE supporta le opzioni di codifica seguenti: ASCII, BigEndia
 Windows PowerShell ISE non modifica la codifica degli script creati in altri editor, anche se si usano i comandi Salva o Salva con nome in Windows PowerShell ISE.
 
 ## Vedere anche
-[Uso di Windows PowerShell ISE](Using-the-Windows-PowerShell-ISE.md)
+- [Uso di Windows PowerShell ISE](Using-the-Windows-PowerShell-ISE.md)
 
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Oct16_HO2-->
 
 

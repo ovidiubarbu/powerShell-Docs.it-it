@@ -8,8 +8,8 @@ author: jpjofre
 manager: dongill
 ms.prod: powershell
 translationtype: Human Translation
-ms.sourcegitcommit: 3222a0ba54e87b214c5ebf64e587f920d531956a
-ms.openlocfilehash: 75e9b6525d74a8bc632b9fe2e64183717f59776f
+ms.sourcegitcommit: fe3d7885b7c031a24a737f58523c8018cfc36146
+ms.openlocfilehash: fe79ca70ff1f9a3960b79747221a70adc46b7c67
 
 ---
 
@@ -167,7 +167,7 @@ Per usare la console di Accesso Web Windows PowerShell basata sul Web, i browser
 
     [Copy](javascript:if%20(window.epx.codeSnippet)window.epx.codeSnippet.copyCode('CodeSnippetContainerCode_374a9c21-4f6e-471e-b957-bb190a594533'); "Copia negli Appunti.")
 
-        Install-WindowsFeature –Name WindowsPowerShellWebAccess -ComputerName <computer_name> -IncludeManagementTools -Restart
+        Install-WindowsFeature -Name WindowsPowerShellWebAccess -ComputerName <computer_name> -IncludeManagementTools -Restart
 
     <table>
     <colgroup>
@@ -189,7 +189,7 @@ Per usare la console di Accesso Web Windows PowerShell basata sul Web, i browser
 
     [Copy](javascript:if%20(window.epx.codeSnippet)window.epx.codeSnippet.copyCode('CodeSnippetContainerCode_d841d509-347e-49d0-bf54-8d1f306bece6'); "Copia negli Appunti.")
 
-        Install-WindowsFeature –Name WindowsPowerShellWebAccess –VHD <path> -ComputerName <computer_name> -IncludeManagementTools -Restart
+        Install-WindowsFeature -Name WindowsPowerShellWebAccess -VHD <path> -ComputerName <computer_name> -IncludeManagementTools -Restart
 
 3.  Al termine dell'installazione verificare che Accesso Web Windows PowerShell sia stato installato nei server di destinazione eseguendo il cmdlet **Get-WindowsFeature** in un server di destinazione, all'interno di una console di Windows PowerShell aperta con diritti utente elevati. È anche possibile verificare che Accesso Web Windows PowerShell sia stato installato nella console di Server Manager selezionando un server di destinazione nella pagina **Tutti i server** e quindi visualizzando il riquadro **Ruoli e funzionalità** per il server selezionato. È anche possibile visualizzare il file Leggimi per Accesso Web Windows PowerShell.
 
@@ -266,7 +266,7 @@ Per completare la configurazione dell'applicazione Web Accesso Web Windows Power
 
     -   PhysicalPath: %*windir*%/Web/PowerShellWebAccess/wwwroot
 
-    <span class="label">Esempio:</span> <span class="code">Install-PswaWebApplication –webApplicationName myWebApp –useTestCertificate</span>
+    <span class="label">Esempio:</span> <span class="code">Install-PswaWebApplication -webApplicationName myWebApp -useTestCertificate</span>
 
     In questo esempio l'indirizzo del sito Web di Accesso Web Windows PowerShell risultante è https://&lt; *nome_server*&gt;/myWebApp.
 
@@ -367,13 +367,13 @@ Per altre informazioni sulla sicurezza e sulle regole di autorizzazione di Acces
 
     [Copy](javascript:if%20(window.epx.codeSnippet)window.epx.codeSnippet.copyCode('CodeSnippetContainerCode_f9e7959b-75d0-4d63-8f8e-02334a8dd09d'); "Copia negli Appunti.")
 
-        Add-PswaAuthorizationRule –UserName <domain\user | computer\user> -ComputerName <computer_name> -ConfigurationName <session_configuration_name>
+        Add-PswaAuthorizationRule -UserName <domain\user | computer\user> -ComputerName <computer_name> -ConfigurationName <session_configuration_name>
 
     Questa regola di autorizzazione consente a un utente specifico di accedere a un computer della rete a cui ha accesso normalmente, tramite una specifica configurazione di sessione con ambito limitato alle esigenze tipiche di utilizzo di script e cmdlet dell'utente. Nell'esempio seguente, a un utente di nome <span class="code">JSmith</span> nel dominio <span class="code">Contoso</span> viene consentito l'accesso per la gestione del computer <span class="code">Contoso_214</span>, con una configurazione di sessione denominata <span class="code">NewAdminsOnly</span>.
 
     [Copy](javascript:if%20(window.epx.codeSnippet)window.epx.codeSnippet.copyCode('CodeSnippetContainerCode_ebd5bc5e-ec5d-4955-a86a-63843e480e37'); "Copia negli Appunti.")
 
-        Add-PswaAuthorizationRule –UserName Contoso\JSmith -ComputerName Contoso_214 -ConfigurationName NewAdminsOnly
+        Add-PswaAuthorizationRule -UserName Contoso\JSmith -ComputerName Contoso_214 -ConfigurationName NewAdminsOnly
 
 4.  Per verificare che la regola sia stata creata, eseguire il cmdlet **Get-PswaAuthorizationRule** o **Test-PswaAuthorizationRule -UserName &lt;dominio\\utente | computer\\utente&gt; -ComputerName** &lt;nome_computer&gt;. Ad esempio, **Test-PswaAuthorizationRule -UserName Contoso\\JSmith -ComputerName Contoso_214**.
 
@@ -601,13 +601,13 @@ Per altre informazioni sulla sicurezza e sulle regole di autorizzazione di Acces
 
     [Copy](javascript:if%20(window.epx.codeSnippet)window.epx.codeSnippet.copyCode('CodeSnippetContainerCode_4df22c91-f56f-4bb5-91e7-99f9b365ed5d'); "Copia negli Appunti.")
 
-        Add-PswaAuthorizationRule –UserName <domain\user | computer\user> -ComputerName <computer_name> -ConfigurationName <session_configuration_name>
+        Add-PswaAuthorizationRule -UserName <domain\user | computer\user> -ComputerName <computer_name> -ConfigurationName <session_configuration_name>
 
     Questa regola di autorizzazione consente a un utente specifico di accedere a un computer della rete a cui ha accesso normalmente, tramite una specifica configurazione di sessione con ambito limitato alle esigenze tipiche di utilizzo di script e cmdlet dell'utente. Nell'esempio seguente, a un utente di nome <span class="code">JSmith</span> nel dominio <span class="code">Contoso</span> viene consentito l'accesso per la gestione del computer <span class="code">Contoso_214</span>, con una configurazione di sessione denominata <span class="code">NewAdminsOnly</span>.
 
     [Copy](javascript:if%20(window.epx.codeSnippet)window.epx.codeSnippet.copyCode('CodeSnippetContainerCode_efc3999a-2905-453f-86cd-014b41658ffc'); "Copia negli Appunti.")
 
-        Add-PswaAuthorizationRule –UserName Contoso\JSmith -ComputerName Contoso_214 -ConfigurationName NewAdminsOnly
+        Add-PswaAuthorizationRule -UserName Contoso\JSmith -ComputerName Contoso_214 -ConfigurationName NewAdminsOnly
 
 4.  Per verificare che la regola sia stata creata, eseguire il cmdlet **Get-PswaAuthorizationRule** o **Test-PswaAuthorizationRule -UserName &lt;dominio\\utente | computer\\utente&gt; -ComputerName** &lt;nome_computer&gt;. Ad esempio, **Test-PswaAuthorizationRule -UserName Contoso\\JSmith -ComputerName Contoso_214**.
 
@@ -707,12 +707,12 @@ Parla con noi
 
 © 2016 Microsoft
 
-Il codice e gli script di terze parti, collegati al presente sito o a cui il sito Web fa riferimento, vengono ceduti in licenza all'utente dalle terze parti proprietarie di tale codice, non da Microsoft. Vedere le Condizioni per l'utilizzo di Ajax CDN di ASP.NET – http://www.asp.net/ajaxlibrary/CDN.ashx.
+Il codice e gli script di terze parti, collegati al presente sito o a cui il sito Web fa riferimento, vengono ceduti in licenza all'utente dalle terze parti proprietarie di tale codice, non da Microsoft. Vedere le condizioni d'uso di Ajax CDN di ASP.NET – http://www.asp.net/ajaxlibrary/CDN.ashx.
 <img src="https://m.webtrends.com/dcsjwb9vb00000c932fd0rjc7_5p3t/njs.gif?dcsuri=/nojavascript&amp;WT.js=No" alt="DCSIMG" id="Img1" width="1" height="1" />
 
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Oct16_HO2-->
 
 

@@ -8,8 +8,8 @@ author: jpjofre
 manager: dongill
 ms.prod: powershell
 translationtype: Human Translation
-ms.sourcegitcommit: 03ac4b90d299b316194f1fa932e7dbf62d4b1c8e
-ms.openlocfilehash: 05205ff8fcf0a3b23e66a6ac756be0d9a5055bd2
+ms.sourcegitcommit: fe3d7885b7c031a24a737f58523c8018cfc36146
+ms.openlocfilehash: ba4f79742e21e23fb3745ca8c7833679d398ccf4
 
 ---
 
@@ -27,7 +27,7 @@ Oltre alla Guida disponibile dalla riga di comando, le risorse seguenti offrono 
 -   La [pagina di formazioni su PowerShell](http://www.scriptingguys.com/learnpowershell) rappresenta l'hub di Windows PowerShell in TechNet Script Center. Questa pagina ospita una serie di sessioni video per principianti condotte dal Microsoft Scripting Guy Ed Wilson. Contiene anche quiz su Windows PowerShell, collegamenti a contenuti della community e altro ancora.
 -   In caso di domande su Windows PowerShell, è possibile entrare in contatto con centinaia di altre persone con interessi simili nel [forum ufficiale per autori di script](http://social.technet.microsoft.com/forums/itcg/threads/).
 -   [Microsoft Script Center](https://technet.microsoft.com/scriptcenter). Un portale con molte risorse utili per Windows PowerShell, tra cui lo [Center Script Repository](http://gallery.technet.microsoft.com/scriptcenter/). Uno dei modi migliori per imparare a scrivere script consiste nel vedere esempi reali. È possibile cercare tra migliaia di script di Windows PowerShell, che possono essere valutati e adattati a specifiche esigenze.
--   È consigliabile entrare nella community degli utenti di Windows PowerShell. Vedere la [pagina dedicata alla community dello Script Center](https://technet.microsoft.com/scriptcenter/hh182567.aspx) per scoprire la posizione di decine di gruppi di utenti di Windows PowerShell. È probabile che si riesca a trovarne uno non lontano. È inoltre possibile tenersi aggiornati con le attività della community di Microsoft Scripting Guy.
+-   È consigliabile entrare nella community degli utenti di Windows PowerShell. Vedere la [pagina della community di Script Center](https://technet.microsoft.com/scriptcenter/hh182567.aspx) dove vengono elencati decine di gruppi di utenti di Windows PowerShell con rispettiva ubicazione. È probabile che sia incluso un gruppo nelle vicinanze. È inoltre possibile tenersi aggiornati con le attività della community di Microsoft Scripting Guy.
 
 ## Video di formazione
 
@@ -60,6 +60,6 @@ Le risorse seguenti consentono agli sviluppatori di creare moduli, funzioni, cmd
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Oct16_HO2-->
 
 

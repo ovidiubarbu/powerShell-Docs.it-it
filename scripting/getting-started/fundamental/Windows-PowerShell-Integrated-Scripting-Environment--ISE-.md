@@ -9,8 +9,8 @@ manager: dongill
 ms.prod: powershell
 ms.assetid: f156b92d-0203-46d2-89c7-b4989d32e3d2
 translationtype: Human Translation
-ms.sourcegitcommit: 3222a0ba54e87b214c5ebf64e587f920d531956a
-ms.openlocfilehash: 061e22c26853664c89adc023d43802628859b9a6
+ms.sourcegitcommit: fe3d7885b7c031a24a737f58523c8018cfc36146
+ms.openlocfilehash: bfb36e6313379080ee071ec1df41992b945d2d83
 
 ---
 
@@ -19,7 +19,7 @@ Windows PowerShell Integrated Scripting Environment (ISE) è uno dei due host pe
 
 Con ISE è possibile eseguire i comandi in un riquadro della console, ma sono supportati anche riquadri che consentono di visualizzare contemporaneamente il codice sorgente dello script e altri strumenti integrabili in ISE. È anche possibile aprire più finestre di script contemporaneamente, opzione particolarmente utile quando si esegue il debug di uno script che usa funzioni definite in altri script o moduli.
 
-## <a name="BKMK_NEW"></a>Novità
+## Novità
 Ecco alcune delle funzionalità che sono state aggiunte in ISE nelle versioni più recenti di PowerShell.
 
 ### Aggiunta in PowerShell 3.0 (Windows Server 2012, Windows 8)
@@ -64,12 +64,12 @@ ISE è disponibile in qualsiasi computer che supporta l'esecuzione di Windows Po
 > [!NOTE]
 > Windows PowerShell ISE richiede un'interfaccia utente grafica, quindi non è possibile eseguirlo nell'opzione Server Core di Windows Server.
 
-## <a name="BKMK_LINKS"></a>Vedere anche
-[Uso di Windows PowerShell ISE (Integrated Scripting Environment)](http://technet.microsoft.com/library/cc732148.aspx)
+## Vedere anche
+- [Uso di Windows PowerShell ISE (Integrated Scripting Environment)](http://technet.microsoft.com/library/cc732148.aspx)
 
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Oct16_HO2-->
 
 
