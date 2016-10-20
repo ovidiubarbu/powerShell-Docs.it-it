@@ -9,8 +9,8 @@ manager: dongill
 ms.prod: powershell
 ms.assetid: 1476722e-947e-425d-a86c-50037488dc6e
 translationtype: Human Translation
-ms.sourcegitcommit: 3222a0ba54e87b214c5ebf64e587f920d531956a
-ms.openlocfilehash: 666590df32157a7477d385961dd5665094275868
+ms.sourcegitcommit: fe3d7885b7c031a24a737f58523c8018cfc36146
+ms.openlocfilehash: 9e012dd8218a256e4236c2263babefd29ecdb016
 
 ---
 
@@ -170,7 +170,7 @@ Molti aggiornamenti e miglioramenti per Windows PowerShell Desired State Configu
 
 -   I cmdlet New-Item, Remove-Item e Get-ChildItem sono stati migliorati per supportare la creazione e gestione di [collegamenti simbolici](http://en.wikipedia.org/wiki/Symbolic_link). Il parametro **-ItemType** per New-Item accetta il nuovo valore **SymbolicLink**. Per creare collegamenti simbolici, è ora sufficiente una sola riga con il cmdlet New-Item.
 
--   Get-ChildItem include ora il nuovo parametro -Depth utilizzabile con il parametro -Recurse per limitare la ricorsione. Ad esempio, Get-ChildItem -Recurse -Depth 2 restituisce risultati dalla cartella corrente, da tutte le cartelle figlio all'interno della cartella corrente e da tutte le cartelle all'interno delle cartelle figlio.
+-   Get-ChildItem include ora il nuovo parametro -Depth da usare con il parametro -Recurse per limitare la ricorsione. Ad esempio, Get-ChildItem -Recurse -Depth 2 restituisce risultati dalla cartella corrente, da tutte le cartelle figlio all'interno della cartella corrente e da tutte le cartelle all'interno delle cartelle figlio.
 
 -   Copy-Item consente ora di copiare file o cartelle da una sessione di Windows PowerShell a un'altra. Ciò significa che è possibile copiare i file in sessioni connesse a computer remoti, inclusi i computer che eseguono [Nano Server](http://blogs.technet.com/b/windowsserver/archive/2015/04/08/microsoft-announces-nano-server-for-modern-apps-and-cloud.aspx) e quindi non hanno altre interfacce. Per copiare file, specificare gli ID di PSSession come valore per i nuovi parametri -FromSession e -ToSession e aggiungere -Path e -Destination per specificare rispettivamente il percorso e la destinazione. Ad esempio, Copy-Item -Path c:\\file.txt -ToSession $s -Destination d:\\cartellaDestinazione.
 
@@ -367,7 +367,7 @@ Windows PowerShell 4.0 include le nuove funzionalità seguenti.
 
 -   Il valore di **$PSVersionTable.PSVersion** è stato aggiornato alla versione 4.0.
 
--   Il comportamento dell'operatore **Where()** è cambiato. `Collection.Where('property –match name')` L'accettazione di un'espressione stringa nel formato `"Property –CompareOperator Value"` non è più supportata. Tuttavia, l'operatore **Where()** accetta espressioni stringa nel formato di un blocco di script. Questa funzionalità è ancora supportata.
+-   Il comportamento dell'operatore **Where()** è cambiato. `Collection.Where('property -match name')` L'accettazione di un'espressione stringa nel formato `"Property -CompareOperator Value"` non è più supportata. Tuttavia, l'operatore **Where()** accetta espressioni stringa nel formato di un blocco di script. Questa funzionalità è ancora supportata.
 
 ### <a name="BKMK_ise"></a>Nuove funzionalità di Windows PowerShell ISE (Integrated Scripting Environment)
 
@@ -540,12 +540,12 @@ I vantaggi del flusso di lavoro di Windows PowerShell sono descritti di seguito.
 -   **Limitazione di connessioni e flussi di lavoro.** L'esecuzione dei flussi di lavoro e le connessioni ai nodi possono essere limitate, rendendo possibili scenari di scalabilità e disponibilità elevata.
 
 ### <a name="BKMK_WebAccess"></a>Accesso Web di Windows PowerShell
-Accesso Web Windows PowerShellÂ® è una funzionalità di Windows Server 2012 che consente agli utenti di eseguire comandi e script di Windows PowerShell in una console basata sul Web. I dispositivi che usano la console basata sul Web non richiedono Windows PowerShell, un software di gestione remota o l'installazione di plug-in del browser. È richiesto solo un gateway di Accesso Web Windows PowerShell configurato correttamente e un browser del dispositivo client che supporti JavaScript® e accetti cookie.
+Accesso Web Windows PowerShell® è una funzionalità di Windows Server 2012 che consente agli utenti di eseguire comandi e script di Windows PowerShell in una console basata sul Web. I dispositivi che usano la console basata sul Web non richiedono Windows PowerShell, un software di gestione remota o l'installazione di plug-in del browser. È richiesto solo un gateway di Accesso Web Windows PowerShell configurato correttamente e un browser del dispositivo client che supporti JavaScript® e accetti cookie.
 
 Per altre informazioni, vedere [Distribuire Accesso Web Windows PowerShell](http://go.microsoft.com/fwlink/p/?LinkID=221050).
 
 ### <a name="BKMK_ISE"></a>Nuove funzionalità di Windows PowerShell ISE
-Windows PowerShellÂ® Integrated Scripting Environment (ISE) include molte nuove funzionalità per Windows PowerShell 3.0, tra cui: IntelliSense, finestra Show-Command, riquadro della console unificato, frammenti di codice, controllo della corrispondenza delle parentesi graffe, sezioni espandibili e comprimibili, salvataggio automatico, elenco di elementi recenti, copia di testo formattato, copia in blocco e supporto completo per la scrittura di flussi di lavoro di script di Windows PowerShell. Per altre informazioni, vedere [about_Windows_PowerShell_ISE [v3]](https://technet.microsoft.com/en-us/library/dfa54d47-60c6-4fff-8197-c747e8d411bb).
+Per Windows PowerShell 3.0, Windows PowerShell® Integrated Scripting Environment (ISE) include molte nuove funzionalità, tra cui IntelliSense, finestra Show-Command, riquadro della console unificato, frammenti di codice, controllo della corrispondenza delle parentesi graffe, sezioni espandibili e comprimibili, salvataggio automatico, elenco di elementi recenti, copia di testo formattato, copia in blocco e supporto completo per la scrittura di flussi di lavoro di script di Windows PowerShell. Per altre informazioni, vedere [about_Windows_PowerShell_ISE [v3]](https://technet.microsoft.com/en-us/library/dfa54d47-60c6-4fff-8197-c747e8d411bb).
 
 ### <a name="BKMK_NET4"></a>Supporto per Microsoft .NET Framework 4
 Windows PowerShell è basato su Common Language Runtime 4.0. Gli autori di cmdlet, script e flussi di lavoro possono usare le nuove classi di Microsoft .NET Framework 4 in Windows PowerShell, con funzionalità come la compatibilità e la distribuzione di applicazioni, Managed Extensibility Framework, calcolo parallelo, rete, Windows Communication Foundation e Windows Workflow Foundation.
@@ -759,6 +759,6 @@ Per migliorare le capacità di Windows PowerShell 3.0 di interpretare e gestire 
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Oct16_HO2-->
 
 

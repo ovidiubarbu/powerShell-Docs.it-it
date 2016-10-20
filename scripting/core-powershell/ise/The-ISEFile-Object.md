@@ -9,8 +9,8 @@ manager: dongill
 ms.prod: powershell
 ms.assetid: 1c6d91f3-c556-42a2-a017-79b6b7b4b7db
 translationtype: Human Translation
-ms.sourcegitcommit: 3222a0ba54e87b214c5ebf64e587f920d531956a
-ms.openlocfilehash: c1744841e23aa9c2fedf3eb92230ef422c36f0cd
+ms.sourcegitcommit: fe3d7885b7c031a24a737f58523c8018cfc36146
+ms.openlocfilehash: 9063e17928c433db8c3c9d26d41d31c2675e413c
 
 ---
 
@@ -24,8 +24,8 @@ ms.openlocfilehash: c1744841e23aa9c2fedf3eb92230ef422c36f0cd
 
  Salva il file su disco.
 
- **\[saveEncoding\]** – [System.Text.Encoding](http://msdn.microsoft.com/library/system.text.encoding.aspx)
- facoltativo Parametro di codifica caratteri facoltativo da usare per il file salvato. Il valore predefinito è **UTF8**.
+ **\[saveEncoding\]** - [System.Text.Encoding](http://msdn.microsoft.com/library/system.text.encoding.aspx)
+ facoltativo: parametro di codifica caratteri facoltativo da usare per il file salvato. Il valore predefinito è **UTF8**.
 
  **Eccezioni**
  -   **System.IO.IOException**: non è stato possibile salvare il file.
@@ -50,8 +50,8 @@ $myfile.Encoding
 
  **filename** - Stringa Nome da usare per salvare il file.
 
- **\[saveEncoding\]** – [System.Text.Encoding](http://msdn.microsoft.com/library/system.text.encoding.aspx)
- facoltativo Parametro di codifica caratteri facoltativo da usare per il file salvato. Il valore predefinito è **UTF8**.
+ **\[saveEncoding\]** - [System.Text.Encoding](http://msdn.microsoft.com/library/system.text.encoding.aspx)
+ facoltativo: parametro di codifica caratteri facoltativo da usare per il file salvato. Il valore predefinito è **UTF8**.
 
  **Eccezioni**
  -   **System.ArgumentNullException**: il parametro **filename** è Null.
@@ -150,6 +150,6 @@ $psISE.CurrentFile.IsUntitled
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Oct16_HO2-->
 
 

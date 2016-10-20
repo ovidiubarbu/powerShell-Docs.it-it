@@ -9,8 +9,8 @@ manager: dongill
 ms.prod: powershell
 ms.assetid: 0f86a427-ea38-4bce-85f8-06c98d30d508
 translationtype: Human Translation
-ms.sourcegitcommit: 03ac4b90d299b316194f1fa932e7dbf62d4b1c8e
-ms.openlocfilehash: c334a38d6686be45101f4569f38411e9703c8fea
+ms.sourcegitcommit: fe3d7885b7c031a24a737f58523c8018cfc36146
+ms.openlocfilehash: 109d93df4ebe6dbc354d333e038846ad2c3cb984
 
 ---
 
@@ -24,7 +24,7 @@ ms.openlocfilehash: c334a38d6686be45101f4569f38411e9703c8fea
 
  Crea e restituisce un nuovo file senza nome e lo aggiunge alla raccolta. La proprietà **IsUntitled** del file appena creato è **$true**.
 
- **\[fullPath\]** - Stringa facoltativa Il percorso completo del file. Viene generata un'eccezione se si includono il parametro **fullPath** e un percorso relativo o se si usa un nome di file anziché il percorso completo.
+ **\[fullPath\]**: stringa facoltativa che specifica il percorso completo del file. Viene generata un'eccezione se si includono il parametro **fullPath** e un percorso relativo o se si usa un nome di file anziché il percorso completo.
 
 ```
 # Adds a new untitled file to the collection of files in the current PowerShell tab.
@@ -40,9 +40,9 @@ $psISE.CurrentPowerShellTab.Files.Add("$pshome\Examples\profile.ps1")
 
  Rimuove un file specificato dalla scheda PowerShell corrente.
 
- **File** - Stringa Il file ISEFile che si vuole rimuovere dalla raccolta. Se il file non è stato salvato, questo metodo genera un'eccezione. Usare il parametro opzionale **Force** per forzare la rimozione di un file non salvato.
+ **File**: stringa che specifica il file ISEFile che si vuole rimuovere dalla raccolta. Se il file non è stato salvato, questo metodo genera un'eccezione. Usare il parametro opzionale **Force** per forzare la rimozione di un file non salvato.
 
- **\[Force\]** - valore booleano facoltativo Se impostato su **$true**, concede l'autorizzazione necessaria per rimuovere il file anche se non è stato salvato dopo l'ultimo uso. Il valore predefinito è **$false**.
+ **\[Force\]**: valore booleano facoltativo, che se impostato su **$true**, concede l'autorizzazione necessaria per rimuovere il file anche se non è stato salvato dopo l'ultimo uso. Il valore predefinito è **$false**.
 
 ```
 # Removes the first opened file from the file collection associated with the current PowerShell tab.
@@ -60,7 +60,7 @@ $psISE.CurrentPowerShellTab.Files.Remove($firstfile, $true)
 
  Seleziona il file specificato dal parametro **selectedFile**.
 
- **selectedFile** - Microsoft.PowerShell.Host.ISE.ISEFile Il file ISEFile che si vuole selezionare.
+ **selectedFile**: Microsoft.PowerShell.Host.ISE.ISEFile specifica il file ISEFile che si vuole selezionare.
 
 ```
 
@@ -80,6 +80,6 @@ $psISE.CurrentPowerShellTab.Files.SetSelectedFile($firstfile)
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Oct16_HO2-->
 
 

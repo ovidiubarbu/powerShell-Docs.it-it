@@ -9,8 +9,8 @@ manager: dongill
 ms.prod: powershell
 ms.assetid: 51a12fe9-95f6-4ffc-81a5-4fa72a5bada9
 translationtype: Human Translation
-ms.sourcegitcommit: 3222a0ba54e87b214c5ebf64e587f920d531956a
-ms.openlocfilehash: 13fdac5369d70289d7a0b5115a04879f707e47fc
+ms.sourcegitcommit: fe3d7885b7c031a24a737f58523c8018cfc36146
+ms.openlocfilehash: 4334a1ff099072c2287af299d65caed3f16032fe
 
 ---
 
@@ -117,7 +117,7 @@ $UninstallableApplications = Get-ChildItem -Path Uninstall:
 ```
 
 > [!NOTE]
-> In questo caso per chiarezza viene usato un nome di variabile lungo. Nell'uso effettivo, non c'è alcun motivo per usare nomi lunghi. Sebbene sia possibile usare il tasto TAB per completare i nomi delle variabili, è anche possibile usare nomi di 1-2 caratteri per velocizzare l'immissione. I nomi descrittivi più lunghi risultano più utili quando si sviluppa codice per il riutilizzo.
+> In questo caso per chiarezza viene usato un nome di variabile lungo. Nell'uso effettivo, non c'è alcun motivo per usare nomi lunghi. Sebbene sia possibile usare il completamento tramite tasto TAB per i nomi delle variabili, è anche possibile usare nomi di 1 o 2 caratteri per operazioni rapide. I nomi descrittivi più lunghi risultano più utili quando si sviluppa codice per il riutilizzo.
 
 Per visualizzare i valori delle voci del Registro di sistema nelle chiavi sotto Uninstall, usare il metodo GetValue delle chiavi del Registro di sistema. Il valore del metodo corrisponde al nome della voce del Registro di sistema.
 
@@ -186,6 +186,6 @@ Per aggiornare un'applicazione, è necessario conoscerne il nome e il percorso d
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Oct16_HO2-->
 
 

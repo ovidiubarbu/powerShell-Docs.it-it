@@ -9,13 +9,13 @@ manager: dongill
 ms.prod: powershell
 ms.assetid: 64fb5f37-90a8-4b89-9fc8-c6b8fcc0c7d0
 translationtype: Human Translation
-ms.sourcegitcommit: 03ac4b90d299b316194f1fa932e7dbf62d4b1c8e
-ms.openlocfilehash: 117a7a3e031ffde70ebcbcb5d180c2d7b822ac76
+ms.sourcegitcommit: 16608d8b97ec816d77ec7b8ac2438a4d64b55fba
+ms.openlocfilehash: 78e9875815adfbe18f675023e9d9d0742aca2786
 
 ---
 
 # Uso di Windows PowerShell ISE
-Gli argomenti in questo documento descrivono come usare le funzionalità di Windows PowerShell® Integrated Scripting Environment (ISE) per essere più produttivi.
+Gli argomenti in questo documento descrivono come usare le funzionalità di Windows PowerShell® Integrated Scripting Environment (ISE) per aumentare la produttività.
 
 [Come usare la funzionalità di completamento tramite TAB nel riquadro di script e nel riquadro della console](How-to-Use-Tab-Completion-in-the-Script-Pane-and-Console-Pane.md) Illustra la procedura per usare il completamento tramite TAB nel riquadro di script e nel riquadro della console.
 
@@ -37,6 +37,6 @@ Gli argomenti in questo documento descrivono come usare le funzionalità di Wind
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Oct16_HO2-->
 
 

@@ -9,13 +9,13 @@ manager: dongill
 ms.prod: powershell
 ms.assetid: 57125436-3d1e-4e7f-b5c4-8f0ecb49d642
 translationtype: Human Translation
-ms.sourcegitcommit: 3222a0ba54e87b214c5ebf64e587f920d531956a
-ms.openlocfilehash: 6cdb6bb5d901c9bc7d2b7f5051e372337bbb69f9
+ms.sourcegitcommit: c40ab96196531d36001e4d94a3821d20612cbfce
+ms.openlocfilehash: 333469a642a4b88442a7d3ca8fa65f5755c69bcc
 
 ---
 
 # Avvio di Windows PowerShell in versioni precedenti di Windows
-Questa sezione illustra come avviare Windows PowerShell e Windows PowerShell Integrated Scripting Environment (ISE) in Windows® 7, Windows Server® 2008 R2 e Windows Server 2008. Spiega anche come abilitare la funzionalità facoltativa per Windows PowerShell ISE in Windows PowerShell 2.0 per Windows Server® 2008 R2 e Windows Server 2008.
+Questa sezione illustra come avviare Windows PowerShell e Windows PowerShell Integrated Scripting Environment (ISE) in Windows® 7, Windows Server® 2008 R2 e Windows Server® 2008. Descrive anche come abilitare la funzionalità facoltativa per Windows PowerShell ISE in Windows PowerShell 2.0 per Windows Server® 2008 R2 e Windows Server® 2008.
 
 Per installare Windows PowerShell 4.0 nei sistemi supportati, scaricare e installare [Windows Management Framework 4.0](http://go.microsoft.com/fwlink/?LinkID=293881). Per altre informazioni, vedere [Installazione di Windows PowerShell](Installing-Windows-PowerShell.md).
 
@@ -89,6 +89,6 @@ Per abilitare Windows PowerShell ISE in Windows PowerShell 2.0 per Windows Serve
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Oct16_HO2-->
 
 
