@@ -8,8 +8,8 @@ author: eslesar
 manager: dongill
 ms.prod: powershell
 translationtype: Human Translation
-ms.sourcegitcommit: 67ef350559f9b3d17232f3c93d67634b3e939c60
-ms.openlocfilehash: b1addddd50368fadcbb2581673d3ebc7cad8e32a
+ms.sourcegitcommit: 4ddd5099ce33263d43dcbad0930e654b573a8937
+ms.openlocfilehash: fa7e5c84ac82fa72836536ece507f1751e099077
 
 ---
 
@@ -86,10 +86,6 @@ Si tratta del modo più sicuro per eseguire l'autenticazione. Tuttavia, dal mome
 
 Esistono diversi modi per evitare questo problema:
 
-### Delega vincolata Kerberos
-
-Per i server a elevata attendibilità, è possibile abilitare la [delega vincolata Kerberos](https://technet.microsoft.com/en-us/library/cc995228.aspx). In questo modo il server remoto è in grado di rappresentare l'utente autenticato a un elenco specificato di computer e servizi.
-
 ### Attendibilità tra computer remoti
 
 Se si considerano attendibili gli utenti connessi in remoto a *Server1* alle risorse di *Server2*, è possibile concedere esplicitamente l'accesso a *Server1* per queste risorse.
@@ -121,6 +117,6 @@ Per altre informazioni sugli attacchi con furto di credenziali, vedere [Mitigati
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Oct16_HO2-->
 
 
