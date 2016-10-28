@@ -1,3 +1,20 @@
+---
+description: 
+manager: carolz
+ms.topic: article
+author: jpjofre
+ms.prod: powershell
+keywords: powershell,cmdlet,gallery
+ms.date: 2016-10-14
+contributor: manikb
+title: bootstrapping_nuget_proivder_and_exe
+ms.technology: powershell
+translationtype: Human Translation
+ms.sourcegitcommit: e6c526d1074f61154d03b92b6bf6f599976f5936
+ms.openlocfilehash: 0e0e1287dbe0912e90dfeabee8e22cdf78d9e82a
+
+---
+
 # Avviare sia il provider NuGet che il file NuGet.exe per operazioni di pubblicazione con messaggio di richiesta singolo e avviare solo il provider NuGet per operazioni non di pubblicazione
 
 Il file NuGet.exe è stato rimosso dalla versione più recente del provider NuGet. Per la pubblicazione di un modulo o uno script con PowerShellGet, è necessario il file NuGet.exe per creare un file con estensione nupkg ed effettuarne il push nel repository. Il provider NuGet è necessario per eseguire operazioni non di pubblicazione come ricerca, installazione, aggiornamento e salvataggio.
@@ -84,6 +101,9 @@ VERBOSE: Installing NuGet.exe.
 VERBOSE: Successfully published module 'Contoso' to the module publish location 'C:\LocalGallery'. Please allow few minutes for 'Contoso' to show up in the search results.
 ```
 
-<!--HONumber=Aug16_HO3-->
+
+
+
+<!--HONumber=Oct16_HO2-->
 
 

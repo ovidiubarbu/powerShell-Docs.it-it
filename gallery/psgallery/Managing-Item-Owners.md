@@ -1,3 +1,20 @@
+---
+description: 
+manager: carolz
+ms.topic: article
+author: jpjofre
+ms.prod: powershell
+keywords: powershell,cmdlet,gallery
+ms.date: 2016-10-14
+contributor: manikb
+title: Gestione dei proprietari di elementi
+ms.technology: powershell
+translationtype: Human Translation
+ms.sourcegitcommit: e6c526d1074f61154d03b92b6bf6f599976f5936
+ms.openlocfilehash: 00fe57762c6b2bb690255ecaea642f97124f4328
+
+---
+
 # Gestione dei proprietari di elementi
 
 La proprietà di un elemento in PowerShell Gallery è definita dalla persona che ha pubblicato l'elemento in questione in PowerShell Gallery.
@@ -67,6 +84,9 @@ Se stabiliscono che l'utente deve essere un proprietario dell'elemento, gli ammi
 Gli amministratori agiranno in questo modo solo dopo aver verificato il diritto dell'utente a essere un proprietario. Questo tipo di processo varia a seconda delle circostanze.
 Spesso gli amministratori useranno l'URL di progetto dell'elemento per contattare il proprietario del progetto stesso. In alternativa, per contattare il proprietario del progetto potranno essere usati Twitter, la posta elettronica o altri sistemi.
 
-<!--HONumber=Aug16_HO3-->
+
+
+
+<!--HONumber=Oct16_HO2-->
 
 

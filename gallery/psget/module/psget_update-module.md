@@ -1,3 +1,20 @@
+---
+description: 
+manager: carolz
+ms.topic: article
+author: jpjofre
+ms.prod: powershell
+keywords: powershell,cmdlet,gallery
+ms.date: 2016-10-14
+contributor: manikb
+title: psget_update module
+ms.technology: powershell
+translationtype: Human Translation
+ms.sourcegitcommit: e6c526d1074f61154d03b92b6bf6f599976f5936
+ms.openlocfilehash: c7eb34252ad912c83168bc763425e0dc76e27813
+
+---
+
 # Update-Module
 
 Scarica e installa la versione più recente dei moduli specificati da una raccolta online nel computer locale.
@@ -98,6 +115,9 @@ Version    Name                                Repository  Description
 2.0        TestDepWithNestedRequiredModules1   LocalRepo   TestDepWithNestedRequiredModules1 module
 ```
 
-<!--HONumber=Aug16_HO3-->
+
+
+
+<!--HONumber=Oct16_HO2-->
 
 

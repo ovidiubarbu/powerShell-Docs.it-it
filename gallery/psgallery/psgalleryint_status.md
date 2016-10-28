@@ -1,3 +1,19 @@
+---
+description: 
+manager: carolz
+ms.topic: article
+author: jpjofre
+ms.prod: powershell
+keywords: powershell,cmdlet,gallery
+ms.date: 2016-10-14
+contributor: manikb
+title: psgalleryint_status
+ms.technology: powershell
+translationtype: Human Translation
+ms.sourcegitcommit: e6c526d1074f61154d03b92b6bf6f599976f5936
+ms.openlocfilehash: 49f15c88a3bb0e52ed53555f8f59737a622a3b87
+
+---
 
 Stato di PowerShell Gallery
 =========================
@@ -11,6 +27,7 @@ __Passaggi successivi__: se in questo periodo è stato usato il collegamento Con
 
 
 
-<!--HONumber=Sep16_HO2-->
+
+<!--HONumber=Oct16_HO2-->
 
 

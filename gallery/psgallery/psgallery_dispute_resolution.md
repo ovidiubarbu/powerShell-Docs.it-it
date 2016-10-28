@@ -1,3 +1,20 @@
+---
+description: 
+manager: carolz
+ms.topic: article
+author: jpjofre
+ms.prod: powershell
+keywords: powershell,cmdlet,gallery
+ms.date: 2016-10-14
+contributor: manikb
+title: psgallery_dispute_resolution
+ms.technology: powershell
+translationtype: Human Translation
+ms.sourcegitcommit: e6c526d1074f61154d03b92b6bf6f599976f5936
+ms.openlocfilehash: 6d7015a14f0d0a75bc28e201dceefe6c9c682b31
+
+---
+
 # Risoluzione delle controversie
 
 In questo documento viene illustrato un processo consigliato per la risoluzione delle controversie. Tale processo è indirizzato ai membri della community, per supportarli nella risoluzione di controversie con altri autori in PowerShell Gallery.
@@ -29,6 +46,8 @@ Se si rileva un elemento o un'azione dei tipi sopra elencati, fare clic sul coll
 **Questo criterio è soggetto a modifiche a discrezione di PowerShell Gallery.**
 
 
-<!--HONumber=Aug16_HO3-->
+
+
+<!--HONumber=Oct16_HO2-->
 
 

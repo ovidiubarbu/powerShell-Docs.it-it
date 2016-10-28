@@ -1,3 +1,20 @@
+---
+description: 
+manager: carolz
+ms.topic: article
+author: jpjofre
+ms.prod: powershell
+keywords: powershell,cmdlet,gallery
+ms.date: 2016-10-14
+contributor: manikb
+title: psgallery_items_tab
+ms.technology: powershell
+translationtype: Human Translation
+ms.sourcegitcommit: e6c526d1074f61154d03b92b6bf6f599976f5936
+ms.openlocfilehash: 6edf1451cb869f0b9400b353b3143c99c3568382
+
+---
+
 Scheda Items (Elementi)
 ==========
 
@@ -35,6 +52,9 @@ L'elenco a discesa Sort By (Ordina per) consente agli utenti di ordinare i risul
 La casella di ricerca consente di cercare gli elementi in base a parole chiave.  
 Vedere [Sintassi di ricerca di PowerShell Gallery](./psgallery_search_syntax.md) per altre informazioni.
 
-<!--HONumber=Aug16_HO3-->
+
+
+
+<!--HONumber=Oct16_HO2-->
 
 

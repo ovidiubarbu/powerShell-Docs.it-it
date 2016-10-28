@@ -1,3 +1,20 @@
+---
+description: 
+manager: carolz
+ms.topic: article
+author: jpjofre
+ms.prod: powershell
+keywords: powershell,cmdlet,gallery
+ms.date: 2016-10-14
+contributor: manikb
+title: psgallery_gettingstarted
+ms.technology: powershell
+translationtype: Human Translation
+ms.sourcegitcommit: e6c526d1074f61154d03b92b6bf6f599976f5936
+ms.openlocfilehash: d6f36a62c95a4444f456cf7c14f7f3dc08236447
+
+---
+
 # Introduzione a PowerShell Gallery
 
 ## Che cos'è PowerShell Gallery?
@@ -105,6 +122,8 @@ Per scoprire quali moduli sono stati installati da PowerShell Gallery, eseguire 
 Analogamente, per scoprire quali script sono stati installati da PowerShell Gallery, eseguire il cmdlet [**Get-InstalledScript**](http://go.microsoft.com/fwlink/?LinkID=760387&clcid=0x409). Questo comando elenca tutti gli script presenti nel sistema che sono stati installati direttamente da PowerShell Gallery.
 
 
-<!--HONumber=Aug16_HO3-->
+
+
+<!--HONumber=Oct16_HO2-->
 
 
