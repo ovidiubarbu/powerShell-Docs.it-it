@@ -9,15 +9,15 @@ manager: dongill
 ms.prod: powershell
 ms.assetid: 2057b113-efeb-465e-8b44-da2f20dbf603
 translationtype: Human Translation
-ms.sourcegitcommit: 3222a0ba54e87b214c5ebf64e587f920d531956a
-ms.openlocfilehash: 4c0f405a46e16935211b3886a40c9f7d1afc7260
+ms.sourcegitcommit: 41647fc2b323292e496340f68bc92fd9a997ce0e
+ms.openlocfilehash: 662d0823749c142a716b74164ad57a8612833ccd
 
 ---
 
-# Creazione di oggetti .NET e COM (New-Object)
+# <a name="creating-net-and-com-objects-newobject"></a>Creazione di oggetti .NET e COM (New-Object)
 Sono disponibili componenti software con interfacce .NET Framework e COM che consentono di eseguire molte attività di amministrazione di sistema. Windows PowerShell consente di usare questi componenti, in modo da non essere limitati alle attività eseguibili con i cmdlet. Molti dei cmdlet nella versione iniziale di Windows PowerShell non funzionano su computer remoti. Verrà illustrato come aggirare questa limitazione per la gestione dei registri eventi con la classe **System.Diagnostics.EventLog** di .NET Framework direttamente da Windows PowerShell.
 
-### Uso di New-Object per l'accesso ai registri eventi
+### <a name="using-newobject-for-event-log-access"></a>Uso di New-Object per l'accesso ai registri eventi
 La libreria di classi .NET Framework include una classe denominata **System.Diagnostics.EventLog** che può essere usata per gestire i registri eventi. È possibile creare una nuova istanza della classe di .NET Framework tramite il cmdlet **New-Object** con il parametro **TypeName**. Il comando seguente, ad esempio, crea un riferimento a un registro eventi:
 
 ```
@@ -29,7 +29,7 @@ PS> New-Object -TypeName System.Diagnostics.EventLog
 
 Anche se il comando ha creato un'istanza della classe EventLog, l'istanza non include dati, perché non è stato specificato un registro eventi specifico. Come ottenere un registro eventi reale?
 
-#### Uso dei costruttori con New-Object
+#### <a name="using-constructors-with-newobject"></a>Uso dei costruttori con New-Object
 Per fare riferimento a un registro eventi particolare, è necessario specificare il nome del registro. **New-Object** include il parametro **ArgumentList**. Gli argomenti passati come valori per questo parametro vengono usati da un metodo di avvio speciale dell'oggetto. Il metodo è chiamato *costruttore* perché viene usato per costruire l'oggetto. Ad esempio, per ottenere un riferimento al registro applicazioni, specificare la stringa 'Application' come argomento:
 
 ```
@@ -43,7 +43,7 @@ Max(K) Retain OverflowAction        Entries Name
 > [!NOTE]
 > Dato che la maggior parte delle classi principali di .NET Framework è contenuta nello spazio dei nomi System, Windows PowerShell tenterà automaticamente di trovare le classi specificate nello spazio dei nomi System se non viene trovata una corrispondenza per il nome di tipo specificato. Questo significa che è possibile specificare Diagnostics.EventLog invece di System.Diagnostics.EventLog.
 
-#### Archiviazione di oggetti nelle variabili
+#### <a name="storing-objects-in-variables"></a>Archiviazione di oggetti nelle variabili
 Può essere utile archiviare un riferimento a un oggetto, in modo da poterlo usare nella shell corrente. Anche se Windows PowerShell consente di eseguire numerose operazioni con le pipeline, riducendo la necessità di ricorrere alle variabili, in alcuni casi l'archiviazione di riferimenti agli oggetti nelle variabili rende più semplice la modifica di tali oggetti.
 
 Windows PowerShell consente di creare variabili, che sono fondamentalmente oggetti denominati. L'output di qualsiasi comando di Windows PowerShell valido può essere archiviato in una variabile. I nomi di variabile iniziano sempre con il carattere $. Per archiviare il riferimento al registro applicazioni in una variabile denominata $AppLog, digitare il nome della variabile, seguito da un segno di uguale e quindi digitare il comando usato per creare l'oggetto registro applicazioni:
@@ -62,7 +62,7 @@ PS> $AppLog
   16,384      7 OverwriteOlder          2,160 Application
 ```
 
-#### Accesso a un registro eventi remoto con New-Object
+#### <a name="accessing-a-remote-event-log-with-newobject"></a>Accesso a un registro eventi remoto con New-Object
 I comandi usati nella sezione precedente sono destinati al computer locale. Questa operazione può essere eseguita con il cmdlet **Get-EventLog**. Per accedere al registro applicazioni in un computer remoto, è necessario specificare sia il nome del registro che il nome (o indirizzo IP) di un computer come argomenti.
 
 ```
@@ -76,7 +76,7 @@ PS> $RemoteAppLog
 
 Dopo aver ottenuto un riferimento a un registro eventi archiviato nella variabile $RemoteAppLog, quali attività è possibile eseguire su di esso?
 
-#### Cancellazione di un registro eventi con i metodi degli oggetti
+#### <a name="clearing-an-event-log-with-object-methods"></a>Cancellazione di un registro eventi con i metodi degli oggetti
 Gli oggetti spesso includono metodi che possono essere chiamati per eseguire attività. È possibile usare **Get-Member** per visualizzare i metodi associati a un oggetto. Il comando seguente e l'output selezionato mostrano alcuni dei metodi della classe EventLog:
 
 ```
@@ -116,7 +116,7 @@ PS> $RemoteAppLog
      512      7 OverwriteOlder              0 Application
 ```
 
-### Creazione di oggetti COM con New-Object
+### <a name="creating-com-objects-with-newobject"></a>Creazione di oggetti COM con New-Object
 È possibile usare **New-Object** per lavorare con componenti COM (Component Object Model). I componenti includono varie librerie incluse in Windows Script Host (WSH) e applicazioni ActiveX come Internet Explorer installate nella maggior parte dei sistemi.
 
 **New-Object** usa Runtime Callable Wrapper di .NET Framework per creare oggetti COM, quindi esistono le stesse limitazioni valide per .NET Framework per la chiamata di oggetti COM. Per creare un oggetto COM, è necessario specificare il parametro **ComObject** con l'identificatore programmatico o *ProgId* della classe COM da usare. Una descrizione completa delle limitazioni per l'uso di COM e di come determinare i ProgId disponibili in un sistema esula dagli scopi di questo manuale dell'utente, ma la maggior parte degli oggetti noti da ambienti come WSH può essere usata all'interno di Windows PowerShell.
@@ -132,7 +132,7 @@ New-Object -ComObject Scripting.FileSystemObject
 
 Anche se la maggior parte delle funzionalità di queste classi viene resa disponibile in altri modi in Windows PowerShell, alcune attività, come la creazione di collegamenti, sono ancora più semplici da eseguire usando le classi WSH.
 
-### Creazione di un collegamento sul desktop con WScript.Shell
+### <a name="creating-a-desktop-shortcut-with-wscriptshell"></a>Creazione di un collegamento sul desktop con WScript.Shell
 Un'attività che può essere eseguita rapidamente con un oggetto COM è la creazione di un collegamento. Si supponga di voler creare un collegamento sul desktop per la home directory di Windows PowerShell. È prima di tutto necessario creare un riferimento a **Wscript.Shell**, che verrà archiviato in una variabile denominata **$WshShell**:
 
 ```
@@ -154,6 +154,7 @@ CreateShortcut           Method                IDispatch CreateShortcut (str...
 ```
 
 **Get-Member** include un parametro facoltativo **InputObject** utilizzabile al posto dell'invio tramite pipe per fornire l'input a **Get-Member**. Si potrebbe ottenere lo stesso output di cui sopra usando il comando **Get-Member -InputObject $WshShell**. Se si usa **InputObject**, il relativo argomento viene gestito come singolo elemento. Questo significa che in presenza di più oggetti in una variabile, **Get-Member** li gestisce come una matrice di oggetti. Ad esempio:
+
 
 ```
 PS> $a = 1,2,"three"
@@ -182,13 +183,25 @@ $Home\Desktop\PSHome.lnk
 
 Ora esiste una variabile denominata **$lnk** che contiene un riferimento al nuovo collegamento. Per visualizzarne tutti i membri, è possibile inviarla tramite pipe a **Get-Member**. L'output seguente mostra i membri che è necessario usare per completare la creazione del collegamento:
 
-<pre>PS> $lnk | Get-Member TypeName: System.__ComObject#{f935dc23-1cf0-11d0-adb9-00c04fd58a0b} Name             MemberType   Definition ----             ----------   ---------- ... Save             Method       void Save () ... TargetPath       Property     string TargetPath () {get} {set} ...</pre>
+```
+PS> $lnk | Get-Member
+TypeName: System.__ComObject#{f935dc23-1cf0-11d0-adb9-00c04fd58a0b}
+Name             MemberType   Definition
+----             ----------   ----------
+...
+Save             Method       void Save ()
+...
+TargetPath       Property     string TargetPath () {get} {set}
+```
 
 È necessario specificare **TargetPath**, ovvero la cartella dell'applicazione per Windows PowerShell e quindi salvare il collegamento **$lnk** chiamando il metodo **Save**. Il percorso della cartella dell'applicazione Windows PowerShell è archiviato nella variabile **$PSHome**, quindi è possibile eseguire questa operazione digitando:
 
-<pre>$lnk.TargetPath = $PSHome $lnk.Save()</pre>
+```
+$lnk.TargetPath = $PSHome
+$lnk.Save()
+```
 
-### Uso di Internet Explorer da Windows PowerShell
+### <a name="using-internet-explorer-from-windows-powershell"></a>Uso di Internet Explorer da Windows PowerShell
 Molte applicazioni, compresa la famiglia di applicazioni Microsoft Office e Internet Explorer, possono essere automatizzate tramite COM. Internet Explorer dimostra alcune delle tecniche tipiche e dei problemi correlati all'uso delle applicazioni basate su COM.
 
 Per creare un'istanza di Internet Explorer, è necessario specificare il ProgId di Internet Explorer, ovvero **InternetExplorer.Application**:
@@ -246,7 +259,7 @@ Remove-Variable ie
 > [!NOTE]
 > Non esiste uno standard comune che stabilisce se gli eseguibili ActiveX devono essere interrotti o continuare l'esecuzione quando si rimuove un riferimento a uno di essi. L'applicazione può essere o meno chiusa a seconda delle circostanze, ad esempio se l'applicazione è visibile, se al suo interno è in esecuzione un documento modificato e persino se Windows PowerShell è ancora in esecuzione. Per questo motivo, è consigliabile testare il comportamento di terminazione per ogni eseguibile ActiveX da usare in Windows PowerShell.
 
-### Ottenere avvisi sugli oggetti COM con wrapping di .NET Framework
+### <a name="getting-warnings-about-net-frameworkwrapped-com-objects"></a>Ottenere avvisi sugli oggetti COM con wrapping di .NET Framework
 In alcuni casi, un oggetto COM potrebbe disporre di un *Runtime Callable Wrapper* (RCW) di .NET Framework associato e questo verrà usato da **New-Object**. Dato che il comportamento dell'RCW potrebbe essere diverso da quello del normale oggetto COM, **New-Object** include un parametro **Strict** per avvisare in caso di accesso a un RCW. Se si specifica il parametro **Strict** e poi si crea un oggetto COM che usa un RCW, viene visualizzato un messaggio di avviso:
 
 ```
@@ -265,6 +278,6 @@ Anche se l'oggetto viene comunque creato, viene segnalato che non si tratta di u
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Nov16_HO1-->
 
 

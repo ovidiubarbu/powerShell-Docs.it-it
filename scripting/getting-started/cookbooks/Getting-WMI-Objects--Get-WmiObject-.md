@@ -14,12 +14,12 @@ ms.openlocfilehash: de9e8af7908ac6a72a100fd2c86b52c30c390c39
 
 ---
 
-# Recupero di oggetti WMI (Get-WmiObject)
+# <a name="getting-wmi-objects-getwmiobject"></a>Recupero di oggetti WMI (Get-WmiObject)
 
-## Recupero di oggetti WMI (Get-WmiObject)
+## <a name="getting-wmi-objects-getwmiobject"></a>Recupero di oggetti WMI (Get-WmiObject)
 Strumentazione gestione Windows (WMI) è una tecnologia fondamentale per l'amministrazione del sistema Windows poiché espone un'ampia gamma di informazioni in modo uniforme. Considerando le potenzialità d'uso di WMI, il cmdlet di Windows PowerShell per l'accesso agli oggetti WMI, **Get-WmiObject**, è uno dei più utili per eseguire il lavoro effettivo. Verrà illustrato come usare Get-WmiObject per accedere agli oggetti WMI e quindi in che modo usare tali oggetti per eseguire operazioni specifiche.
 
-### Elenco delle classi WMI
+### <a name="listing-wmi-classes"></a>Elenco delle classi WMI
 Il primo problema che la maggior parte degli utenti di WMI si trova ad affrontare è scoprire che cosa si può fare con WMI. Le classi WMI descrivono le risorse che possono essere gestite. Sono disponibili centinaia di classi WMI, alcune delle quali contengono decine di proprietà.
 
 **Get-WmiObject** affronta questo problema rendendo individuabile Strumentazione gestione Windows (WMI). È possibile ottenere un elenco delle classi WMI disponibili nel computer locale digitando:
@@ -72,7 +72,7 @@ __Provider                              __Win32Provider
 ...
 ```
 
-### Visualizzazione dei dettagli della classe WMI
+### <a name="displaying-wmi-class-details"></a>Visualizzazione dei dettagli della classe WMI
 Se si conosce già il nome di una classe WMI, è possibile usarlo per ottenere immediatamente informazioni. Una delle classi WMI comunemente usate per il recupero di informazioni su un computer è ad esempio **Win32_OperatingSystem**.
 
 ```
@@ -109,7 +109,7 @@ BuildNumber                               Property   System.String BuildNumb...
 ...
 ```
 
-#### Visualizzazione di proprietà non predefinite con i cmdlet Format
+#### <a name="displaying-nondefault-properties-with-format-cmdlets"></a>Visualizzazione di proprietà non predefinite con i cmdlet Format
 Se si necessita di informazioni contenute nella classe **Win32_OperatingSystem** che non sono visualizzate per impostazione predefinita, è possibile visualizzarle usando i cmdlet **Format**. Se ad esempio si vogliono visualizzare i dati disponibili relativi alla memoria, digitare:
 
 ```
@@ -139,6 +139,6 @@ FreeSpaceInPagingFiles : 1556644
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Nov16_HO1-->
 
 
