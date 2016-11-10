@@ -9,8 +9,8 @@ manager: dongill
 ms.prod: powershell
 ms.assetid: 327c7cc5-21d0-4ace-b151-aa1491d1d3c2
 translationtype: Human Translation
-ms.sourcegitcommit: 03ac4b90d299b316194f1fa932e7dbf62d4b1c8e
-ms.openlocfilehash: 7e8fd05cfedd500c51f2d7e4f6adbb7d1f27cb00
+ms.sourcegitcommit: f891988cce205b5729d0da6c4ce23da5fbd53b7f
+ms.openlocfilehash: ce74f3c7cb26632269e42dfddb941fee11dcdc87
 
 ---
 
@@ -180,13 +180,13 @@ if ($result -eq [System.Windows.Forms.DialogResult]::OK)
 ```
 
 ## Vedere anche
-[Post del blog Hey Scripting Guy:  perché questi esempi di GUI di PowerShell non funzionano?](http://go.microsoft.com/fwlink/?LinkId=506644)
-[GitHub: post di Dave Wyatt sull'aggiornamento degli esempi di Windows Form](https://github.com/dlwyatt/WinFormsExampleUpdates)
-[Suggerimento della settimana di Windows PowerShell:  selezione di elementi di una casella di riepilogo](http://technet.microsoft.com/library/ff730949.aspx)
+- [Blog Hey Scripting Guy: perché questi esempi di GUI di PowerShell non funzionano?](http://go.microsoft.com/fwlink/?LinkId=506644)
+- [GitHub: WinFormsExampleUpdates di Dave Wyatt](https://github.com/dlwyatt/WinFormsExampleUpdates)
+- [Suggerimento della settimana su Windows PowerShell: Selezione di elementi di una casella di riepilogo](http://technet.microsoft.com/library/ff730949.aspx)
 
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Oct16_HO3-->
 
 
