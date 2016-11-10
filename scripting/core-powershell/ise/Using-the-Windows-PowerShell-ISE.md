@@ -9,8 +9,8 @@ manager: dongill
 ms.prod: powershell
 ms.assetid: 64fb5f37-90a8-4b89-9fc8-c6b8fcc0c7d0
 translationtype: Human Translation
-ms.sourcegitcommit: 16608d8b97ec816d77ec7b8ac2438a4d64b55fba
-ms.openlocfilehash: 78e9875815adfbe18f675023e9d9d0742aca2786
+ms.sourcegitcommit: 6c666e2e23cb74818e37293410dafc9033057733
+ms.openlocfilehash: 6363aff01a6018f1fc3a850c6e40ad96e485f554
 
 ---
 
@@ -30,13 +30,13 @@ Gli argomenti in questo documento descrivono come usare le funzionalità di Wind
 [Come usare i profili in Windows PowerShell ISE](How-to-Use-Profiles-in-Windows-PowerShell-ISE.md) Include informazioni e procedure per la creazione e l'uso di profili in Windows PowerShell ISE.
 
 ## Vedere anche
-[Esplorazione di Windows PowerShell ISE](../../getting-started/fundamental/Exploring-the-Windows-PowerShell-ISE.md)
-[Accessibilità in Windows PowerShell ISE](../../setup/Accessibility-in-Windows-PowerShell-ISE.md)
-[Modello a oggetti di scripting di Windows PowerShell ISE](https://technet.microsoft.com/en-us/library/69b047d0-da79-413e-b948-8e45d05d1f85)
+- [Esplorazione di Windows PowerShell ISE](../../getting-started/fundamental/Exploring-the-Windows-PowerShell-ISE.md)
+- [Accessibilità in Windows PowerShell ISE](../../setup/Accessibility-in-Windows-PowerShell-ISE.md)
+- [Modello a oggetti di scripting di Windows PowerShell ISE](https://technet.microsoft.com/en-us/library/69b047d0-da79-413e-b948-8e45d05d1f85)
 
 
 
 
-<!--HONumber=Oct16_HO2-->
+<!--HONumber=Oct16_HO3-->
 
 
