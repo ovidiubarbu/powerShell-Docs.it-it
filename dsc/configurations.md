@@ -8,12 +8,12 @@ author: eslesar
 manager: dongill
 ms.prod: powershell
 translationtype: Human Translation
-ms.sourcegitcommit: 6c5f3d3321b7e50215cf58267e1864b7da827764
-ms.openlocfilehash: d84bb35ada3588367436e6f5e3c6696b90c3661b
+ms.sourcegitcommit: 49ddf6faf98a51f7ad5252e9563b1543478ed113
+ms.openlocfilehash: 567ab9528402c7d39d80a997bc14b6c6992cf772
 
 ---
 
-# Configurazioni DSC
+# <a name="dsc-configurations"></a>Configurazioni DSC
 
 >Si applica a: Windows PowerShell 4.0, Windows PowerShell 5.0
 
@@ -37,7 +37,7 @@ Configuration MyDscConfiguration {
 
 Salvare lo script come file PS1.
 
-## Sintassi di configurazione
+## <a name="configuration-syntax"></a>Sintassi di configurazione
 
 Uno script di configurazione è costituito dalle parti seguenti:
 
@@ -68,7 +68,7 @@ Configuration MyDscConfiguration {
 
 In questo esempio è necessario specificare il nome del nodo passandolo come parametro $ComputerName quando si [compila la configurazione](# Compiling the configuration). Per impostazione predefinita, il nome è "localhost".
 
-## Compilazione della configurazione
+## <a name="compiling-the-configuration"></a>Compilazione della configurazione
 Prima di poter applicare una configurazione, è necessario compilarla in un documento MOF. A questo scopo, è necessario chiamare la configurazione allo stesso modo in cui si chiama una funzione di PowerShell.
 >__Nota:__ per chiamare una configurazione, la funzione deve essere nell'ambito globale (come per qualsiasi funzione di PowerShell). A questo scopo, è possibile effettuare il "dot-sourcing" dello script oppure eseguire lo script di configurazione premendo F5 o facendo clic sul pulsante __Esegui script__ in ISE. Per effettuare il dot-sourcing dello script, eseguire il comando `. .\myConfig.ps1`, dove `myConfig.ps1` è il nome del file di script che contiene la configurazione.
 
@@ -102,7 +102,7 @@ Mode                LastWriteTime         Length Name
 -a----       10/23/2015   4:32 PM           2842 MyTestNode.mof
 ```      
 
-## Uso di DependsOn
+## <a name="using-dependson"></a>Uso di DependsOn
 Un'utile parola chiave di DSC è __DependsOn__. In genere, anche se non necessariamente sempre, DSC applica le risorse nell'ordine in cui sono visualizzate all'interno della configurazione. Tuttavia, __DependsOn__ specifica le dipendenze tra le risorse e Gestione configurazione locale garantisce che le risorse vengano applicate nell'ordine corretto, indipendentemente da quello in cui sono definite le rispettive istanze. Ad esempio, una configurazione può specificare che un'istanza della risorsa __User__ dipende dalla presenza di un'istanza di __Group__:
 
 ```powershell
@@ -123,20 +123,20 @@ Configuration DependsOnExample {
 }
 ```
 
-## Uso di nuove risorse nella configurazione
+## <a name="using-new-resources-in-your-configuration"></a>Uso di nuove risorse nella configurazione
 Eseguendo gli esempi precedenti, si ricevere un avviso che informa che è stata usata una risorsa senza importarla in modo esplicito.
 Oggi DSC include 12 risorse come parte del modulo PSDesiredStateConfiguration. Le altre risorse nei moduli esterni devono essere inserite in `$env:PSModulePath` nell'ordine perché Gestione configurazione locale sia in grado di riconoscerle. È possibile usare un nuovo cmdlet, [Get-DscResource](https://technet.microsoft.com/en-us/library/dn521625.aspx), per determinare le risorse installate nel sistema e disponibili per l'uso da parte di Gestione configurazione locale. Dopo che i moduli vengono inseriti in `$env:PSModulePath` e sono riconosciuti correttamente da [Get-DscResource](https://technet.microsoft.com/en-us/library/dn521625.aspx), devono comunque essere caricati nella configurazione. __Import-DscResource__ è una parola chiave dinamica che può essere riconosciuta solo all'interno di un blocco __Configuration__, ovvero non è un cmdlet. __Import-DscResource__ supporta due parametri:
 * __ModuleName__ corrisponde al modo consigliato di usare __Import-DscResource__. Questo parametro accetta il nome del modulo che contiene le risorse da importare, nonché una matrice di stringhe di nomi di modulo. 
 * __Name__ è il nome della risorsa da importare. Non si tratta del nome descrittivo restituito come "Name" da [Get-DscResource](https://technet.microsoft.com/en-us/library/dn521625.aspx), ma del nome di classe usato per definire lo schema della risorsa (restituito come __ResourceType__ da [Get-DscResource](https://technet.microsoft.com/en-us/library/dn521625.aspx)). 
 
-## Vedere anche
-* [Panoramica di Windows PowerShell DSC (Desired State Configuration)](overview.md)
+## <a name="see-also"></a>Vedere anche
+* [Panoramica di Windows PowerShell DSC (Desired State Configuration)](overview.md).
 * [Risorse DSC](resources.md)
 * [Configurazione di Gestione configurazione locale](metaConfig.md)
 
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Nov16_HO1-->
 
 
