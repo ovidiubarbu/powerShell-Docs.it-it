@@ -7,9 +7,11 @@
 ## [Specifica delle dipendenze tra nodi](crossNodeDependencies.md)
 ## [Dati di configurazione](configData.md)
 ### [Opzioni delle credenziali nei dati di configurazione](configDataCredentials.md)
-## [Protezione del file MOF di configurazione](secureMOF.md)
+## [Sicurezza del file MOF di configurazione](secureMOF.md)
 ## [Configurazioni parziali](partialConfigs.md)
 ## [Guida alla scrittura per le configurazioni DSC](configHelp.md)
+## [Configurare una macchina virtuale all'avvio iniziale tramite DSC](bootstrapDsc.md)
+### [Chiave del Registro di sistema DSCAutomationHostEnabled](DSCAutomationHostEnabled.md)
 
 # [Risorse](resources.md)
 ## [Risorse predefinite](builtInResource.md)
@@ -27,8 +29,8 @@
 ### [Risorsa WindowsProcess](windowsProcessResource.md)
 ## [Creazione di risorse personalizzate](authoringResource.md) 
 ### [Risorse personalizzate basate su MOF](authoringResourceMOF.md)
-#### [Risorse basate su MOF in C#](authoringResourceMofCS.md)
-### [Risorse personalizzate basate su classe](authoringResourceClass.md)
+#### [Risorse basate su MOF in C](authoringResourceMofCS.md)
+### [Risorse personalizzate basate su classi](authoringResourceClass.md)
 ### [Risorse composte](authoringResourceComposite.md)
 ### [Scrittura di una risorsa DSC a istanza singola (procedura consigliata)](singleInstance.md)
 ### [Elenco di controllo per la creazione di risorse](resourceAuthoringChecklist.md)
@@ -76,7 +78,7 @@
 ### [Metodo PerformRequiredConfigurationChecks della classe MSFT_DSCLocalConfigurationManager](msft-dsclocalconfigurationmanager-performrequiredconfigurationchecks.md)
 ### [Metodo RemoveConfiguration della classe MSFT_DSCLocalConfigurationManager](msft-dsclocalconfigurationmanager-removeconfiguration.md)
 ### [Metodo ResourceGet della classe MSFT_DSCLocalConfigurationManager](msft-dsclocalconfigurationmanager-resourceget.md)
-### [Metodo ResourceSet della classe MSFT_DSCLocalConfigurationManager](msft-dsclocalconfigurationmanager-resourceset.md)
+### [Metodo ResourceGet della classe MSFT_DSCLocalConfigurationManager](msft-dsclocalconfigurationmanager-resourceset.md)
 ### [Metodo ResourceTest della classe MSFT_DSCLocalConfigurationManager](msft-dsclocalconfigurationmanager-resourcetest.md)
 ### [Metodo RollBack della classe MSFT_DSCLocalConfigurationManager](msft-dsclocalconfigurationmanager-rollback.md)
 ### [Metodo SendConfiguration della classe MSFT_DSCLocalConfigurationManager](msft-dsclocalconfigurationmanager-sendconfiguration.md)
@@ -86,11 +88,11 @@
 ### [Metodo StopConfiguration della classe MSFT_DSCLocalConfigurationManager](msft-dsclocalconfigurationmanager-stopconfiguration.md)
 ### [Metodo TestConfiguration della classe MSFT_DSCLocalConfigurationManager](msft-dsclocalconfigurationmanager-testconfiguration.md)
 
-# Ulteriori risorse
+# Altre risorse
 ## [White paper](whitepapers.md)
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Oct16_HO4-->
 
 
