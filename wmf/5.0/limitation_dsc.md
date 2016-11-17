@@ -45,7 +45,7 @@ Se Gestione configurazione locale è in DebugMode, la pressione di CTRL+C per ar
 ------------------------------------------------------------------------------------------------------------------------
 Se Gestione configurazione locale è in DebugMode, Stop-DscConfiguration potrebbe bloccarsi durante il tentativo di arrestare un'operazione avviata da Get-DscConfiguration
 
-**Soluzione:** terminare il debug dell'operazione avviata da Get-DscConfiguration, come illustrato nella sezione '[Debug di risorse DSC basate su classi](../../dsc/debugResource.md)'.
+**Soluzione:** terminare il debug dell'operazione avviata da Get-DscConfiguration, come illustrato nella sezione '[Debug di risorse DSC basate su classi](https://msdn.microsoft.com/powershell/dsc/debugresource)'.
 
 
 <a name="no-verbose-error-messages-are-shown-in-debugmode"></a>In DebugMode non vengono visualizzati messaggi di errore dettagliati
@@ -77,7 +77,7 @@ Il cmdlet Invoke-DscResource non restituisce i messaggi dettagliati, di avviso e
 
 <a name="dsc-resources-cannot-be-debugged-easily-when-used-with-invokedscresource"></a>Non è possibile eseguire facilmente il debug di risorse DSC usate con Invoke-DscResource
 -----------------------------------------------------------------------
-Quando Gestione configurazione locale è in esecuzione in modalità di debug (vedere [Debug di risorse DSC basate su classi](../../dsc/debugResource.md) per altri dettagli), il cmdlet Invoke-DscResource non fornisce informazioni sullo spazio di esecuzione a cui connettersi per il debug.
+Quando Gestione configurazione locale è in esecuzione in modalità di debug (vedere [Debug di risorse DSC basate su classi](https://msdn.microsoft.com/powershell/dsc/debugresource) per altri dettagli), il cmdlet Invoke-DscResource non fornisce informazioni sullo spazio di esecuzione a cui connettersi per il debug.
 **Soluzione:** individuare lo spazio di esecuzione e collegarlo tramite i cmdlet **Get-PSHostProcessInfo**, **Enter-PSHostProcess**, **Get-Runspace** e **Debug-Runspace** per eseguire il debug della risorsa DSC.
 
 ```powershell
@@ -228,6 +228,6 @@ Configuration $configName
 ```
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Nov16_HO2-->
 
 
