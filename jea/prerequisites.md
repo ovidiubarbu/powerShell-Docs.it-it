@@ -14,9 +14,9 @@ ms.openlocfilehash: ac9231a475ba84e9051bbd06a65f3f20c9e49846
 
 ---
 
-# Prerequisiti
+# <a name="prerequisites"></a>Prerequisiti
 
-## Stato iniziale
+## <a name="initial-state"></a>Stato iniziale
 Prima di iniziare questa sezione, verificare quanto segue:
 
 1. JEA è disponibile nel sistema. Verificare nel file [README](./README.md) quali sono i sistemi operativi attualmente supportati e i download necessari.
@@ -24,7 +24,7 @@ Prima di iniziare questa sezione, verificare quanto segue:
 3. Il computer fa parte di un dominio.
 Vedere la sezione [Creazione di un controller di dominio](#creating-a-domain-controller) per configurare rapidamente un nuovo dominio in un server se non ancora disponibile.
 
-## Comunicazione remota di PowerShell
+## <a name="enable-powershell-remoting"></a>Comunicazione remota di PowerShell
 La gestione con JEA avviene attraverso la comunicazione remota di PowerShell.
 Eseguire il comando seguente in una finestra di PowerShell come amministratore per verificare che la funzionalità sia abilitata e configurata correttamente:
 
@@ -34,7 +34,7 @@ Enable-PSRemoting
 
 Se non si ha familiarità con la comunicazione remota di PowerShell, è consigliabile eseguire `Get-Help about_Remote` per informazioni su questo concetto di fondamentale importanza.
 
-## Identificare utenti o gruppi
+## <a name="identify-your-users-or-groups"></a>Identificare utenti o gruppi
 Per visualizzare JEA in azione, è necessario identificare gli utenti e i gruppi non amministratori che si intende usare in questa guida.
 
 Se si usa un dominio già esistente, identificare o creare alcuni gruppi e utenti senza privilegi.
@@ -45,7 +45,7 @@ Se è stato creato un nuovo dominio da zero, è molto più semplice.
 Usare la sezione [Configurare utenti e gruppi](creating-a-domain-controller.md#set-up-users-and-groups) dell'appendice per creare utenti e gruppi non amministratori.
 I valori predefiniti di `$NonAdministrator` saranno i gruppi creati in tale sezione.
 
-## Configurare il file di capacità del ruolo per la manutenzione
+## <a name="set-up-maintenance-role-capability-file"></a>Configurare il file di capacità del ruolo per la manutenzione
 Eseguire i comandi seguenti in PowerShell per creare il file di capacità del ruolo dimostrativo che verrà usato nella sezione successiva.
 Le operazioni eseguite dal file sono illustrate più avanti in questa guida.
 
@@ -68,7 +68,7 @@ New-Item -Path "$env:ProgramFiles\WindowsPowerShell\Modules\Demo_Module\RoleCapa
 New-PSRoleCapabilityFile -Path "$env:ProgramFiles\WindowsPowerShell\Modules\Demo_Module\RoleCapabilities\Maintenance.psrc" @MaintenanceRoleCapabilityCreationParams
 ```
 
-## Creare e registrare un file di configurazione di sessione dimostrativo
+## <a name="create-and-register-demo-session-configuration-file"></a>Creare e registrare un file di configurazione di sessione dimostrativo
 Eseguire i comandi seguenti per creare e registrare un file dimostrativo della configurazione di sessione che verrà usato per la sezione successiva.
 Le operazioni eseguite dal file sono illustrate più avanti in questa guida.
 
@@ -110,7 +110,7 @@ New-PSSessionConfigurationFile -Path "$env:ProgramData\JEAConfiguration\JEADemo.
 Register-PSSessionConfiguration -Name $sessionName -Path "$env:ProgramData\JEAConfiguration\JEADemo.pssc"
 ```
 
-## Abilitare la registrazione per i moduli di PowerShell (facoltativo)
+## <a name="enable-powershell-module-logging-optional"></a>Abilitare la registrazione per i moduli di PowerShell (facoltativo)
 La procedura seguente consente di registrare tutte le azioni di PowerShell nel sistema.
 Questa opzione non è necessaria per il funzionamento di JEA, ma risulterà utile nella sezione [Reporting on JEA](reporting-on-jea.md) (Creazione di report per JEA).
 
@@ -129,6 +129,6 @@ Nota: è possibile abilitare la trascrizione PowerShell a livello di sistema anc
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 

@@ -13,7 +13,7 @@ ms.openlocfilehash: 67426f6ad72967293f8aee1b3f098afc73067c59
 
 ---
 
-#  Usare la console di Windows PowerShell basata sul Web
+#  <a name="use-the-webbased-windows-powershell-console"></a>Usare la console di Windows PowerShell basata sul Web
 
 Ultimo aggiornamento: 24 giugno 2013
 
@@ -91,7 +91,7 @@ Per usare la console di Accesso Web Windows PowerShell basata sul Web, i browser
 
 L'amministratore di Accesso Web Windows PowerShell deve fornire all'utente l'URL corrispondente all'indirizzo del sito Web del gateway di Accesso Web Windows PowerShell dell'organizzazione. Per impostazione predefinita, l'indirizzo di questo sito Web è https://&lt;nome_server&gt;/pswa. Prima di accedere ad Accesso Web Windows PowerShell, assicurarsi di avere il nome o l'indirizzo IP del computer remoto da gestire. È necessario essere un utente autorizzato nel computer remoto, che deve essere configurato per consentire la gestione remota. Per altre informazioni sulla configurazione del computer per consentire la gestione remota, vedere [Abilitare e usare i comandi remoti in Windows PowerShell](https://technet.microsoft.com/magazine/ff700227.aspx). Il metodo di configurazione del computer più semplice per consentire la gestione remota consiste nell'eseguire il cmdlet **Enable-PSRemoting -force** nel computer, in una sessione di Windows PowerShell aperta con diritti utente elevati, ovvero **Esegui come amministratore**.
 
-### Per connettersi ad Accesso Web Windows PowerShell
+### <a name="to-sign-in-to-windows-powershell-web-access"></a>Per connettersi ad Accesso Web Windows PowerShell
 
 1.  Aprire il sito Web Accesso Web Windows PowerShell in una finestra o una scheda del browser Internet.
 
@@ -111,7 +111,7 @@ L'amministratore di Accesso Web Windows PowerShell deve fornire all'utente l'URL
     <td><ul>
     <li><p>Se il computer di destinazione fa parte di un gruppo di lavoro, usare la sintassi seguente per fornire il nome utente e accedere al computer:&lt;<em>nome_gruppo di lavoro</em>&gt;\&lt;<em>nome_utente</em>&gt;.</p></li>
     <li><p>Se il computer di destinazione è il server gateway, è possibile specificare <strong>localhost</strong> nel campo <strong>Nome computer</strong>.</p></li>
-    <li><p>Se il computer di destinazione è il server gateway e questo fa parte di un gruppo di lavoro, è possibile usare <strong>localhost</strong> nel campo <strong>Nome computer</strong>, ma non localhost\&lt;<em>nome_utente</em>&gt; nel campo <strong>Nome utente</strong>. È necessario usare &lt;<em>nome_gruppo di lavoro</em>&gt;\&lt;<em>nome_utente</em>&gt;.</p></li>
+    <li><p>Se il computer di destinazione è il server gateway e questo fa parte di un gruppo di lavoro, è possibile usare <strong>localhost</strong> nel campo <strong>Nome computer</strong>, ma non localhost\&lt;<em>nome_utente</em>&gt; nel campo <strong>Nome utente</strong>. È necessario usare &lt;<em>nome gruppo di lavoro</em>&gt;\&lt;<em>nome_utente</em>&gt;.</p></li>
     </ul></td>
     </tr>
     </tbody>
@@ -354,7 +354,7 @@ Altri suggerimenti?
 
 <span class="stdr-count"><span class="stdr-charcnt">1500</span> caratteri rimanenti</span> Invia Ignora
 
-<span class="stdr-thankyou">Grazie.</span> <span class="stdr-appreciate">I suggerimenti degli utenti sono importanti.</span>
+<span class="stdr-thankyou">Grazie</span> <span class="stdr-appreciate">I suggerimenti degli utenti sono importanti.</span>
 
 [Gestisci il tuo profilo](https://social.technet.microsoft.com/profile)
 

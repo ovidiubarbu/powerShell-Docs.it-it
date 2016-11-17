@@ -13,7 +13,7 @@ ms.openlocfilehash: fe79ca70ff1f9a3960b79747221a70adc46b7c67
 
 ---
 
-#  Installare e usare Accesso Web Windows PowerShell
+#  <a name="install-and-use-windows-powershell-web-access"></a>Installare e usare Accesso Web Windows PowerShell
 
 Ultimo aggiornamento: 5 novembre 2013
 
@@ -115,7 +115,7 @@ Per usare la console di Accesso Web Windows PowerShell basata sul Web, i browser
 
 -   Sia in grado di aprire e leggere le pagine HTTPS.
 
--   Sia in grado di aprire ed eseguire siti Web che utilizzano JavaScript.
+-   Aprire ed eseguire siti Web che usano JavaScript.
 
 <a href="" id="BKMK_recm"></a>
 
@@ -139,7 +139,7 @@ Per usare la console di Accesso Web Windows PowerShell basata sul Web, i browser
 
 ------------------------------------------------------------------------
 
-#### Per installare Accesso Web Windows PowerShell tramite i cmdlet di Windows PowerShell
+#### <a name="to-install-windows-powershell-web-access-by-using-windows-powershell-cmdlets"></a>Per installare Accesso Web Windows PowerShell tramite i cmdlet di Windows PowerShell
 
 1.  Per aprire una sessione di Windows PowerShell con diritti utente elevati, eseguire una di queste operazioni.
 
@@ -226,7 +226,7 @@ Per completare la configurazione dell'applicazione Web Accesso Web Windows Power
 
 -   [Per configurare il gateway di Accesso Web Windows PowerShell con un certificato autentico tramite Install-PswaWebApplication e Gestione IIS](#BKMK_gencert)
 
-#### Per configurare il gateway di Accesso Web Windows PowerShell con un certificato di test tramite Install-PswaWebApplication
+#### <a name="to-configure-the-windows-powershell-web-access-gateway-with-a-test-certificate-by-using-installpswawebapplication"></a>Per configurare il gateway di Accesso Web Windows PowerShell con un certificato di test tramite Install-PswaWebApplication
 
 1.  Per aprire una sessione di Windows PowerShell, eseguire una di queste operazioni.
 
@@ -286,7 +286,7 @@ Per completare la configurazione dell'applicazione Web Accesso Web Windows Power
     </tbody>
     </table>
 
-#### Per configurare il gateway di Accesso Web Windows PowerShell con un certificato autentico tramite Install-PswaWebApplication e Gestione IIS
+#### <a name="to-configure-the-windows-powershell-web-access-gateway-with-a-genuine-certificate-by-using-installpswawebapplication-and-iis-manager"></a>Per configurare il gateway di Accesso Web Windows PowerShell con un certificato autentico tramite Install-PswaWebApplication e Gestione IIS
 
 1.  Per aprire una sessione di Windows PowerShell, eseguire una di queste operazioni.
 
@@ -353,7 +353,7 @@ Dopo che Accesso Web Windows PowerShell è stato installato e il gateway è stat
 
 Per altre informazioni sulla sicurezza e sulle regole di autorizzazione di Accesso Web Windows PowerShell, vedere [Regole di autorizzazione e funzionalità di sicurezza di Accesso Web Windows PowerShell](https://technet.microsoft.com/en-us/library/dn282394(v=ws.11).aspx).
 
-#### Per aggiungere una regola di autorizzazione restrittiva
+#### <a name="to-add-a-restrictive-authorization-rule"></a>Per aggiungere una regola di autorizzazione restrittiva
 
 1.  Per aprire una sessione di Windows PowerShell con diritti utente elevati, eseguire una di queste operazioni.
 
@@ -395,7 +395,7 @@ Dopo la configurazione di una regola di autorizzazione, gli utenti autorizzati p
 
 ------------------------------------------------------------------------
 
-#### Per installare Accesso Web Windows PowerShell tramite Aggiunta guidata ruoli e funzionalità
+#### <a name="to-install-windows-powershell-web-access-by-using-the-add-roles-and-features-wizard"></a>Per installare Accesso Web Windows PowerShell tramite Aggiunta guidata ruoli e funzionalità
 
 1.  Se Server Manager è già aperto, andare al passaggio successivo. Se Server Manager non è aperto, aprirlo in uno dei modi seguenti.
 
@@ -441,13 +441,13 @@ Dopo la configurazione di una regola di autorizzazione, gli utenti autorizzati p
 
 Le istruzioni in questa sezione mostrano come installare l'applicazione Web Accesso Web Windows PowerShell in una sottodirectory del sito Web, anziché nella directory radice. Viene usata una procedura con interfaccia grafica equivalente alle operazioni eseguite dal cmdlet <span class="code">Install-PswaWebApplication</span>. Questa sezione include anche le istruzioni su come usare Gestione IIS per configurare il gateway di Accesso Web Windows PowerShell come sito Web radice.
 
--   [Per utilizzare Gestione IIS per configurare il gateway in un sito Web esistente](#BKMK_configman)
+-   [Per usare Gestione IIS per configurare il gateway in un sito Web esistente](#BKMK_configman)
 
 -   [Per usare Gestione IIS per configurare il gateway come sito Web radice con un certificato di test](#BKMK_configroot)
 
 -   
 
-#### Per utilizzare Gestione IIS per configurare il gateway in un sito Web esistente
+#### <a name="to-use-iis-manager-to-configure-the-gateway-in-an-existing-website"></a>Per utilizzare Gestione IIS per configurare il gateway in un sito Web esistente
 
 1.  Aprire la console Gestione IIS eseguendo una delle operazioni seguenti.
 
@@ -469,7 +469,7 @@ Le istruzioni in questa sezione mostrano come installare l'applicazione Web Acce
 
 8.  Nel campo **Percorso fisico** cercare il percorso dell'applicazione. È possibile utilizzare il percorso predefinito, ovvero %windir%/Web/PowerShellWebAccess/wwwroot. Fare clic su **OK**.
 
-9.  Seguire i passaggi della procedura [Per configurare un certificato SSL in Gestione IIS](#BKMK_cert) di questo argomento.
+9.  Eseguire i passaggi illustrati nella procedura [Per configurare un certificato SSL in Gestione IIS](#BKMK_cert) in questo argomento.
 
 10. <span class="label">Passaggio di sicurezza facoltativo:</span> Con il sito Web selezionato nel riquadro dell'albero, fare doppio clic su **Impostazioni SSL** nel riquadro del contenuto. Selezionare **Richiedi SSL**, quindi fare clic su **Applica** nel riquadro **Azioni**. Facoltativamente, nel riquadro **Impostazioni SSL** è possibile richiedere l'uso di certificati client da parte degli utenti che si connettono al sito Web di Accesso Web Windows PowerShell. Un certificato client consente di verificare l'identità dell'utente di un dispositivo client. Per altre informazioni su come aumentare la sicurezza di Accesso Web Windows PowerShell richiedendo i certificati client, vedere [Regole di autorizzazione e funzionalità di sicurezza di Accesso Web Windows PowerShell](https://technet.microsoft.com/en-us/library/dn282394(v=ws.11).aspx) in questa guida.
 
@@ -509,7 +509,7 @@ Le istruzioni in questa sezione mostrano come installare l'applicazione Web Acce
 
         c:\windows\system32\icacls.exe $authorizationFile
 
-#### Per usare Gestione IIS per configurare il gateway come sito Web radice con un certificato di test
+#### <a name="to-use-iis-manager-to-configure-the-gateway-as-a-root-website-with-a-test-certificate"></a>Per usare Gestione IIS per configurare il gateway come sito Web radice con un certificato di test
 
 1.  Aprire la console Gestione IIS eseguendo una delle operazioni seguenti.
 
@@ -587,7 +587,7 @@ Dopo che Accesso Web Windows PowerShell è stato installato e il gateway è stat
 
 Per altre informazioni sulla sicurezza e sulle regole di autorizzazione di Accesso Web Windows PowerShell, vedere [Regole di autorizzazione e funzionalità di sicurezza di Accesso Web Windows PowerShell](https://technet.microsoft.com/en-us/library/dn282394(v=ws.11).aspx).
 
-#### Per aggiungere una regola di autorizzazione restrittiva
+#### <a name="to-add-a-restrictive-authorization-rule"></a>Per aggiungere una regola di autorizzazione restrittiva
 
 1.  Per aprire una sessione di Windows PowerShell con diritti utente elevati, eseguire una di queste operazioni.
 
@@ -622,7 +622,7 @@ Dopo la configurazione di una regola di autorizzazione, gli utenti autorizzati p
 
 Per un ambiente di produzione sicuro, usare sempre un certificato SSL valido firmato da un'Autorità di certificazione (CA). La procedura descritta in questa sezione illustra come ottenere e applicare un certificato SSL valido da un'Autorità di certificazione.
 
-### Per configurare un certificato SSL in Gestione IIS
+### <a name="to-configure-an-ssl-certificate-in-iis-manager"></a>Per configurare un certificato SSL in Gestione IIS
 
 1.  Nel riquadro dell'albero di Gestione IIS selezionare il server in cui è installato Accesso Web Windows PowerShell.
 
@@ -644,7 +644,7 @@ Per un ambiente di produzione sicuro, usare sempre un certificato SSL valido fir
 
 <a href="" id="BKMK_using"></a>
 
-<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Collapse"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Utilizzo della console di Windows PowerShell basata sul Web</span></a>
+<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Collapse"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Uso della console di Windows PowerShell basata sul Web</span></a>
 <a href="/en-us/library/hh831611(v=ws.11).aspx#Anchor_5" class="LW_CollapsibleArea_Anchor_Img" title="Right-click to copy and share the link for this section"></a>
 
 ------------------------------------------------------------------------
@@ -670,7 +670,7 @@ Altri suggerimenti?
 
 <span class="stdr-count"><span class="stdr-charcnt">1500</span> caratteri rimanenti</span> Invia Ignora
 
-<span class="stdr-thankyou">Grazie.</span> <span class="stdr-appreciate">I suggerimenti degli utenti sono importanti.</span>
+<span class="stdr-thankyou">Grazie</span> <span class="stdr-appreciate">I suggerimenti degli utenti sono importanti.</span>
 
 [Gestisci il tuo profilo](https://social.technet.microsoft.com/profile)
 

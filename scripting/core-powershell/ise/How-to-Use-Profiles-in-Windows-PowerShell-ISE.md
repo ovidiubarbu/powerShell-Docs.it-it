@@ -14,7 +14,7 @@ ms.openlocfilehash: 3543503655cc506c4c0f8a7f3d1056c05a66ecba
 
 ---
 
-# Modalità di utilizzo dei profili in Windows PowerShell ISE
+# <a name="how-to-use-profiles-in-windows-powershell-ise"></a>Modalità di utilizzo dei profili in Windows PowerShell ISE
 Questo argomento illustra come usare i profili in Windows PowerShell® Integrated Scripting Environment (ISE). Prima di eseguire le attività in questa sezione, è consigliabile consultare [about_Profiles [v4]](https://technet.microsoft.com/library/e1d9e30a-70cc-4f36-949f-fc7cd96b4054(v=wps.630)) oppure digitare `Get-Help about_Profiles` nel riquadro della console e premere **INVIO**.
 
 Un profilo è uno script di Windows PowerShell ISE che viene eseguito automaticamente quando si avvia una nuova sessione.  È possibile creare uno o più profili di Windows PowerShell per Windows PowerShell ISE e usarli per configurare l'ambiente Windows PowerShell o Windows PowerShell ISE, prepararlo per l'uso, con le variabili, gli alias, le funzioni e le preferenze di colore e tipo di carattere che si vuole avere a disposizione. Il profilo interessa ogni sessione di Windows PowerShell ISE avviata.
@@ -22,7 +22,7 @@ Un profilo è uno script di Windows PowerShell ISE che viene eseguito automatica
 > [!NOTE]
 > I criteri di esecuzione di Windows PowerShell determinano se è possibile eseguire gli script e caricare un profilo. I criteri di esecuzione predefiniti, "Restricted", impediscono l'esecuzione di tutti gli script, inclusi i profili. Se si usano i criteri "Restricted", il profilo non potrà essere caricato. Per altre informazioni sui criteri di esecuzione, vedere [about_Execution_Policies [v4]](https://technet.microsoft.com/library/347708dc-1515-4d74-978b-8334603472e6(v=wps.630)).
 
-## Selezione di un profilo da usare in Windows PowerShell ISE
+## <a name="selecting-a-profile-to-use-in-the-windows-powershell-ise"></a>Selezione di un profilo da usare in Windows PowerShell ISE
 Windows PowerShell ISE supporta i profili per l'utente corrente e per tutti gli utenti. Supporta anche i profili Windows PowerShell che si applicano a tutti gli host.
 
 Il profilo usato dipende da come si usano Windows PowerShell e Windows PowerShell ISE.
@@ -35,12 +35,12 @@ I seguenti profili possono essere creati e usati in Windows PowerShell ISE. Ogni
 
 | Tipo di profilo | Percorso del profilo |
 | --- | --- |
-| **Utente corrente, PowerShell ISE**| `$PROFILE.CurrentUserCurrentHost`o `$PROFILE` |
+| **Utente corrente, PowerShell ISE**| `$PROFILE.CurrentUserCurrentHost` o `$PROFILE` |
 | **Tutti gli utenti, PowerShell ISE**| `$PROFILE.AllUsersCurrentHost` |
 | **Utente corrente, tutti gli host**| `$PROFILE.CurrentUserAllHosts` |
 | **Tutti gli utenti, tutti gli host** | `$PROFILE.AllUsersAllHosts` |
 
-## Per creare un nuovo profilo
+## <a name="to-create-a-new-profile"></a>Per creare un nuovo profilo
 Per creare un nuovo profilo "Utente corrente, Windows PowerShell ISE", eseguire questo comando:
 
 ```PowerShell
@@ -69,7 +69,7 @@ if (!(Test-Path -Path $PROFILE.AllUsersAllHosts))
 { New-Item -Type File -Path $PROFILE.AllUsersAllHosts -Force }
 ```
 
-## Per modificare un profilo
+## <a name="to-edit-a-profile"></a>Per modificare un profilo
 
 1.  Per aprire il profilo, eseguire il comando psedit con la variabile che specifica il profilo da modificare. Ad esempio, per aprire il profilo "Utente corrente, Windows PowerShell ISE", digitare: `psEdit $PROFILE`
 
@@ -81,13 +81,13 @@ if (!(Test-Path -Path $PROFILE.AllUsersAllHosts))
 
 3.  Per salvare il file del profilo, nel menu **File** fare clic su **Salva**. Le personalizzazioni verranno applicate alla successiva apertura di Windows PowerShell ISE.
 
-## Vedere anche
+## <a name="see-also"></a>Vedere anche
 - [about_Profiles [v4]](https://technet.microsoft.com/library/e1d9e30a-70cc-4f36-949f-fc7cd96b4054(v=wps.630))
 - [Uso di Windows PowerShell ISE](Using-the-Windows-PowerShell-ISE.md)
 
 
 
 
-<!--HONumber=Sep16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 

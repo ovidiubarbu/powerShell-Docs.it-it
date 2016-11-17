@@ -13,7 +13,7 @@ ms.openlocfilehash: d84b13db1fa5f12a7b4f8fa7b9b8cd7fb8fbae9d
 
 ---
 
-#  Disinstallare Accesso Web Windows PowerShell
+#  <a name="uninstall-windows-powershell-web-access"></a>Disinstallare Accesso Web Windows PowerShell
 
 Ultimo aggiornamento: 24 giugno 2013
 
@@ -44,7 +44,7 @@ Le procedure in questa sezione consentono di disinstallare l'applicazione Web Ac
 
 Se è stato specificato il nome del sito Web personalizzato, aggiungere il parametro <span class="code">WebsiteName</span> al comando e specificare il nome del sito Web. Se è stata usata un'applicazione Web personalizzata (non l'applicazione predefinita, **pswa**), aggiungere il parametro <span class="code">WebApplicationName</span> al comando e specificare il nome dell'applicazione Web.
 
-#### Per eliminare il sito Web e le applicazioni Web tramite il cmdlet Uninstall-PswaWebApplication
+#### <a name="to-delete-the-website-and-web-applications-by-using-the-uninstallpswawebapplication-cmdlet"></a>Per eliminare il sito Web e le applicazioni Web tramite il cmdlet Uninstall-PswaWebApplication
 
 1.  Per aprire una sessione di Windows PowerShell, eseguire una di queste operazioni.
 
@@ -66,7 +66,7 @@ Se è stato specificato il nome del sito Web personalizzato, aggiungere il param
 
 ------------------------------------------------------------------------
 
-#### Per disinstallare Accesso Web Windows PowerShell tramite i cmdlet di Windows PowerShell
+#### <a name="to-uninstall-windows-powershell-web-access-by-using-windows-powershell-cmdlets"></a>Per disinstallare Accesso Web Windows PowerShell tramite i cmdlet di Windows PowerShell
 
 1.  Per aprire una sessione di Windows PowerShell con diritti utente elevati, eseguire una di queste operazioni. Se è presente una sessione aperta, continuare con il passaggio successivo.
 
@@ -101,7 +101,7 @@ Le procedure in questa sezione consentono di disinstallare l'applicazione Web Ac
 
 ------------------------------------------------------------------------
 
-#### Per eliminare le applicazioni Web e il sito Web di Accesso Web Windows PowerShell tramite Gestione IIS
+#### <a name="to-delete-the-windows-powershell-web-access-website-and-web-applications-by-using-iis-manager"></a>Per eliminare le applicazioni Web e il sito Web di Accesso Web Windows PowerShell tramite Gestione IIS
 
 1.  Aprire la console Gestione IIS eseguendo una delle operazioni seguenti. Se è già aperta, continuare con il passaggio successivo.
 
@@ -141,7 +141,7 @@ Le procedure in questa sezione consentono di disinstallare l'applicazione Web Ac
 
 ------------------------------------------------------------------------
 
-#### Per disinstallare Accesso Web Windows PowerShell tramite Rimozione guidata ruoli e funzionalità
+#### <a name="to-uninstall-windows-powershell-web-access-by-using-the-remove-roles-and-features-wizard"></a>Per disinstallare Accesso Web Windows PowerShell tramite Rimozione guidata ruoli e funzionalità
 
 1.  Se Server Manager è già aperto, andare al passaggio successivo. Se Server Manager non è aperto, aprirlo in uno dei modi seguenti.
 
@@ -176,7 +176,7 @@ Altri suggerimenti?
 
 <span class="stdr-count"><span class="stdr-charcnt">1500</span> caratteri rimanenti</span> Invia Ignora
 
-<span class="stdr-thankyou">Grazie.</span> <span class="stdr-appreciate">I suggerimenti degli utenti sono importanti.</span>
+<span class="stdr-thankyou">Grazie</span> <span class="stdr-appreciate">I suggerimenti degli utenti sono importanti.</span>
 
 [Gestisci il tuo profilo](https://social.technet.microsoft.com/profile)
 

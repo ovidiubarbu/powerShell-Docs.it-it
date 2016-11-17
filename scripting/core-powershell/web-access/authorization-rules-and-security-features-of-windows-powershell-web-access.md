@@ -13,7 +13,7 @@ ms.openlocfilehash: f62b1e0ec9f26e1b2bcb364c78a2ce39467655a5
 
 ---
 
-# Regole di autorizzazione e funzionalità di sicurezza di Accesso Web Windows PowerShell
+# <a name="authorization-rules-and-security-features-of-windows-powershell-web-access"></a>Regole di autorizzazione e funzionalità di sicurezza di Accesso Web Windows PowerShell
 
 Ultimo aggiornamento: 24 giugno 2013
 
@@ -198,7 +198,7 @@ L'unico carattere jolly supportato dai cmdlet di Accesso Web Windows PowerShell 
 </tbody>
 </table>
 
-#### Per aggiungere una regola di autorizzazione restrittiva
+#### <a name="to-add-a-restrictive-authorization-rule"></a>Per aggiungere una regola di autorizzazione restrittiva
 
 1.  Per aprire una sessione di Windows PowerShell con diritti utente elevati, eseguire una di queste operazioni.
 
@@ -222,7 +222,7 @@ L'unico carattere jolly supportato dai cmdlet di Accesso Web Windows PowerShell 
 
 4.  Per verificare che la regola sia stata creata, eseguire il cmdlet **Get-PswaAuthorizationRule** o **Test-PswaAuthorizationRule -UserName &lt;dominio\\utente | computer\\utente&gt; -ComputerName** &lt;nome_computer&gt;. Ad esempio, **Test-PswaAuthorizationRule -UserName Contoso\\JSmith -ComputerName Contoso_214**.
 
-#### Per rimuovere una regola di autorizzazione
+#### <a name="to-remove-an-authorization-rule"></a>Per rimuovere una regola di autorizzazione
 
 1.  Se non è ancora stata aperta una sessione di Windows PowerShell, vedere il passaggio 1 della procedura [Per aggiungere una regola di autorizzazione restrittiva](#BKMK_arar) in questa sezione.
 
@@ -253,7 +253,7 @@ L'unico carattere jolly supportato dai cmdlet di Accesso Web Windows PowerShell 
 <a href="" id="BKMK_others"></a>
 ####
 
-<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Collapse"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Altri scenari di esempio per le regole di autorizzazione</span></a>
+<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Collapse"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Altri esempi di scenari per le regole di autorizzazione</span></a>
 
 ------------------------------------------------------------------------
 
@@ -315,7 +315,7 @@ Per ogni sessione di Windows PowerShell viene usata una configurazione di sessio
 
 ###
 
-<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Collapse"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Utilizzo di un singolo set di regole di autorizzazione per più siti</span></a>
+<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Collapse"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Uso di un singolo set di regole di autorizzazione per più siti</span></a>
 
 ------------------------------------------------------------------------
 
@@ -385,7 +385,7 @@ Altri suggerimenti?
 
 <span class="stdr-count"><span class="stdr-charcnt">1500</span> caratteri rimanenti</span> Invia Ignora
 
-<span class="stdr-thankyou">Grazie.</span> <span class="stdr-appreciate">I suggerimenti degli utenti sono importanti.</span>
+<span class="stdr-thankyou">Grazie</span> <span class="stdr-appreciate">I suggerimenti degli utenti sono importanti.</span>
 
 [Gestisci il tuo profilo](https://social.technet.microsoft.com/profile)
 
