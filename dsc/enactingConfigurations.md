@@ -8,18 +8,18 @@ author: eslesar
 manager: dongill
 ms.prod: powershell
 translationtype: Human Translation
-ms.sourcegitcommit: 6477ae8575c83fc24150f9502515ff5b82bc8198
-ms.openlocfilehash: 4c802002c6a03a27d02221dd713677911a77c30b
+ms.sourcegitcommit: 49ddf6faf98a51f7ad5252e9563b1543478ed113
+ms.openlocfilehash: 9090f4be2987b8a56ba4d839f54e05082a8bcfa0
 
 ---
 
-# Applicazione delle configurazioni
+# <a name="enacting-configurations"></a>Applicazione delle configurazioni
 
 >Si applica a: Windows PowerShell 4.0, Windows PowerShell 5.0
 
 Ci sono due modi per applicare le configurazioni di PowerShell DSC (Desired State Configuration): la modalità push e la modalità pull.
 
-## Modalità push
+## <a name="push-mode"></a>Modalità push
 
 ![Modalità push](images/Push.png "How push mode works")
 
@@ -27,10 +27,10 @@ La modalità push fa riferimento a un utente che applica attivamente una configu
 
 Dopo la creazione e la compilazione di una configurazione, è possibile applicarla in modalità push chiamando il cmdlet [Start-DscConfiguration](https://technet.microsoft.com/en-us/library/dn521623.aspx), impostando il parametro -Path del cmdlet sul percorso in cui si trova il file MOF di configurazione. Se, ad esempio, il file MOF di configurazione si trova in `C:\DSC\Configurations\localhost.mof`, per applicarlo al computer locale usare il comando seguente: `Start-DscConfiguration -Path 'C:\DSC\Configurations'`
 
-> __Nota__: per impostazione predefinita, DSC esegue una configurazione come processo in background. Per eseguire la configurazione in modo interattivo, chiamare [Start-DscConfiguration](https://technet.microsoft.com/en-us/library/dn521623.aspx) con il parametro __-Wait__.
+> __Nota__: per impostazione predefinita, DSC esegue una configurazione come processo in background. Per eseguire la configurazione in modo interattivo, chiamare [Start-DscConfiguration](https://technet.microsoft.com/library/dn521623.aspx) con il parametro __-Wait__.
 
 
-## Modalità pull
+## <a name="pull-mode"></a>Modalità pull
 
 ![Modalità pull](images/Pull.png "How pull mode works")
 
@@ -49,6 +49,6 @@ Gli argomenti seguenti illustrano come configurare i client e i server di pull:
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 
