@@ -14,7 +14,7 @@ ms.openlocfilehash: b81bcbd37cdfebc04fbc7ef92d76f0769c135713
 
 ---
 
-# Accessibilità in Windows PowerShell ISE
+# <a name="accessibility-in-windows-powershell-ise"></a>Accessibilità in Windows PowerShell ISE
 Questo argomento descrive le funzionalità di accessibilità di Windows PowerShell® Integrated Scripting Environment (ISE) che potrebbero risultare utili.
 
 * [Come modificare le dimensioni e la posizione dei riquadri della console e di script](#bkmk_1)
@@ -35,16 +35,16 @@ Windows PowerShell ISE supporta la modalità a contrasto elevato. Per gli utenti
 
 -   Modifica delle dimensioni del testo
 
-## <a name="bkmk_1"></a>Come modificare le dimensioni e la posizione dei riquadri della console e di script
+## <a name="a-namebkmk1ahow-to-change-the-size-and-location-of-the-console-and-script-panes"></a><a name="bkmk_1"></a>Come modificare le dimensioni e la posizione dei riquadri della console e di script
 È possibile usare la procedura seguente per modificare le dimensioni e la posizione dei riquadri della console e di script Alla riapertura di Windows PowerShell ISE, le modifiche apportate a dimensioni e posizione verranno mantenute.
 
-### Per ridimensionare il riquadro di script e il riquadro della console
+### <a name="to-resize-the-script-pane-and-console-pane"></a>Per ridimensionare il riquadro di script e il riquadro della console
 
 1.  Posizionare il puntatore sulla linea di divisione tra il riquadro di script e il riquadro della console.
 
 2.  Quando il puntatore del mouse assume la forma di una freccia a due punte, trascinare il bordo per modificare le dimensioni del riquadro.
 
-### Per spostare il riquadro di script e il riquadro della console
+### <a name="to-move-the-script-pane-and-console-pane"></a>Per spostare il riquadro di script e il riquadro della console
 Eseguire una delle operazioni seguenti:
 
 -   Per spostare Riquadro di script sopra Riquadro console, premere **CTRL+1** o sulla barra degli strumenti fare clic sull'icona **Mostra riquadro di script in alto** oppure scegliere **Mostra riquadro di script in alto** dal menu **Visualizza**.
@@ -57,12 +57,12 @@ Eseguire una delle operazioni seguenti:
 
 -   Per visualizzare il riquadro di script quando il riquadro della console è ingrandito, all'estrema destra della riga di schede fare clic sull'icona **Mostra riquadro di script** oppure nel menu **Visualizza** fare clic per selezionare l'opzione di menu **Mostra riquadro di script**.
 
-## <a name="bkmk_2"></a>Tasti di scelta rapida per la modifica del testo
+## <a name="a-namebkmk2akeyboard-shortcuts-for-editing-text"></a><a name="bkmk_2"></a>Tasti di scelta rapida per la modifica del testo
 È possibile usare i tasti di scelta rapida seguenti durante la modifica del testo.
 
 |Azione|Tasti di scelta rapida|Posizione|
 |----------|----------------------|----------|
-|**Copiare**|CTRL+C|Riquadro di script, Riquadro Console|
+|**Copia**|CTRL+C|Riquadro di script, Riquadro Console|
 |**Taglia**|CTRL+X|Riquadro di script, Riquadro Console|
 |**Trova nello script**|CTRL+F|Riquadro di script|
 |**Trova successivo nello script**|F3|Riquadro di script|
@@ -74,7 +74,7 @@ Eseguire una delle operazioni seguenti:
 |**Seleziona tutto**|CTRL+A|Riquadro di script, Riquadro Console|
 |**Annulla**|CTRL+Z|Riquadro di script, Riquadro Console|
 
-## <a name="bkmk_3"></a>Tasti di scelta rapida per l'esecuzione di script
+## <a name="a-namebkmk3akeyboard-shortcuts-for-running-scripts"></a><a name="bkmk_3"></a>Tasti di scelta rapida per l'esecuzione di script
 È possibile usare i tasti di scelta rapida seguenti durante l'esecuzione di script nel riquadro di script.
 
 |Azione|Tasto di scelta rapida|
@@ -83,17 +83,17 @@ Eseguire una delle operazioni seguenti:
 |**Apri**|CTRL+O|
 |**Esegui**|F5|
 |**Esegui selezione**|F8|
-|**Arresta operazione**|CTRL+INTERR È possibile usare CTRL+C quando il contesto non è ambiguo (in assenza di testo selezionato).|
+|**Arresta esecuzione**|CTRL+INTERR È possibile usare CTRL+C quando il contesto non è ambiguo (in assenza di testo selezionato).|
 |**TAB** (passaggio allo script successivo)|CTRL+TAB **Nota:** la pressione di TAB per passare allo script successivo funziona solo quando è aperta una sola scheda di PowerShell o quando sono aperte più schede di PowerShell, ma lo stato attivo si trova nel riquadro di script.|
 |**TAB** (passaggio allo script precedente)|CTRL+MAIUSC+TAB **Nota:** la pressione di TAB per passare allo script precedente funziona solo quando è aperta una sola scheda di PowerShell o quando sono aperte più schede di PowerShell, ma lo stato attivo si trova nel riquadro di script.|
 
-## <a name="bkmk_4"></a>Tasti di scelta rapida per la personalizzazione della visualizzazione
+## <a name="a-namebkmk4akeyboard-shortcuts-for-customizing-the-view"></a><a name="bkmk_4"></a>Tasti di scelta rapida per la personalizzazione della visualizzazione
 È possibile usare i tasti di scelta rapida seguenti per personalizzare la visualizzazione in Windows PowerShell ISE. Sono accessibili da tutti i riquadri nell'applicazione.
 
 |Azione|Tasto di scelta rapida|
 |----------|---------------------|
-|**Vai a Riquadro console**|CTRL+D|
-|**Vai a riquadro di script**|CTRL+I|
+|**Vai a riquadro Console**|CTRL+D|
+|**Vai al riquadro di script**|CTRL+I|
 |**Mostra riquadro di script**|CTRL+R|
 |**Nascondi riquadro di script**|CTRL+R|
 ||
@@ -103,7 +103,7 @@ Eseguire una delle operazioni seguenti:
 |**Zoom avanti**|CTRL+SEGNO PIÙ|
 |**Zoom indietro**|CTRL+SEGNO MENO|
 
-## <a name="bkmk_5"></a>Tasti di scelta rapida per il debug di script
+## <a name="a-namebkmk5akeyboard-shortcuts-for-debugging-scripts"></a><a name="bkmk_5"></a>Tasti di scelta rapida per il debug di script
 È possibile usare i tasti di scelta rapida seguenti durante il debug di script.
 
 |Azione|Tasto di scelta rapida|Posizione|
@@ -133,7 +133,7 @@ Eseguire una delle operazioni seguenti:
 |**Elenca lo script**|L|Riquadro della console, durante il debug di uno script|
 |**Visualizza i comandi di debug della console**|H o ?|Riquadro della console, durante il debug di uno script|
 
-## <a name="bkmk_6"></a>Tasti di scelta rapida per le schede di Windows PowerShell
+## <a name="a-namebkmk6akeyboard-shortcuts-for-windows-powershell-tabs"></a><a name="bkmk_6"></a>Tasti di scelta rapida per le schede di Windows PowerShell
 È possibile usare i tasti di scelta rapida seguenti durante l'uso delle schede di PowerShell.
 
 |Azione|Tasto di scelta rapida|
@@ -143,7 +143,7 @@ Eseguire una delle operazioni seguenti:
 |**Scheda precedente di PowerShell**|CTRL+MAIUSC+TAB Questo tasto di scelta rapida funziona solo se non ci sono file aperti in alcuna scheda di PowerShell.|
 |**Scheda successiva di Windows PowerShell**|CTRL+TAB Questo tasto di scelta rapida funziona solo se non ci sono file aperti in alcuna scheda di PowerShell.|
 
-## <a name="bkmk_7"></a>Tasti di scelta rapida per avvio e uscita
+## <a name="a-namebkmk7akeyboard-shortcuts-for-starting-and-exiting"></a><a name="bkmk_7"></a>Tasti di scelta rapida per avvio e uscita
 È possibile usare i tasti di scelta rapida seguenti per avviare la console di Windows PowerShell (PowerShell.exe) o per uscire da Windows PowerShell ISE.
 
 |Azione|Tasto di scelta rapida|
@@ -151,12 +151,12 @@ Eseguire una delle operazioni seguenti:
 |**Esci**|ALT+F4|
 |**Avviare PowerShell.exe** (console di Windows PowerShell).|CTRL+MAIUSC+P|
 
-## Vedere anche
+## <a name="see-also"></a>Vedere anche
 - [Uso di Windows PowerShell ISE](../core-powershell/ise/Using-the-Windows-PowerShell-ISE.md)
 
 
 
 
-<!--HONumber=Oct16_HO3-->
+<!--HONumber=Nov16_HO3-->
 
 
