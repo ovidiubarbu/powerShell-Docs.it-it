@@ -5,9 +5,11 @@
 ### [Miglioramenti per Desired State Configuration (DSC)](5.1/DSC-improvements.md)
 ### [Miglioramenti apportati alla console di PowerShell](5.1/console-improvements.md)
 ### [Miglioramenti apportati al motore di PowerShell](5.1/engine-improvements.md)
-### [Miglioramenti appartati a Gestione pacchetti](5.1/package-management-improvements.md)
+### [Miglioramenti apportati a Gestione pacchetti](5.1/package-management-improvements.md)
+### [Miglioramenti apportati a JEA](5.1/jea-improvements.md)
+### [Cmdlet di catalogo](5.1/catalog-cmdlets.md)
 ### [Problemi risolti in WMF 5.1](5.1/bugfixes.md)
-## [Installazione e configurazione](5.1/install-configure.md)
+## [Installare e configurare](5.1/install-configure.md)
 ## [Problemi noti](5.1/known-issues.md)
 ## [Compatibilità](5.1/Compatibility.md)
 
@@ -34,7 +36,7 @@
 ##### [Supporto della Guida per le configurazioni DSC](5.0/dsc_confighelp.md)
 ##### [Miglioramenti per la creazione di configurazioni con PowerShell ISE](5.0/dsc_authoring.md)
 ##### [Consentire risorse duplicate identiche in una configurazione](5.0/dsc_identicalduplicate.md)
-##### [Supporto della parola chiave Import-DscResource per il parametro -ModuleVersion](5.0/dsc_importdscresource.md)
+##### [Supporto del parametro -ModuleVersion per la parola chiave Import-DscResource](5.0/dsc_importdscresource.md)
 ##### [Supporto di WOW64 per la parola chiave Configuration](5.0/dsc_wow64.md)
 #### [Risorse]()
 ##### [Risorse DSC basate su classi](5.0/dsc_classbasedresource.md)
@@ -47,16 +49,16 @@
 ###### [Supporto di modalità RefreshMode miste](5.0/dsc_partialconfig_mixedmode.md)
 ##### [Configurare il motore DSC con un nuovo attributo](5.0/dsc_metaconfiguration.md)
 ##### [Informazioni dettagliate sullo stato di Gestione configurazione locale](5.0/dsc_lcmstate.md)
-##### [Le frequenze per RefreshMode e ConfigurationMode non devono essere multiple l'una dell'altra](5.0/dsc_freqnomultiple.md)
+##### [Non è necessario che le frequenze per RefreshMode e ConfigurationMode siano multiple l'una dell'altra](5.0/dsc_freqnomultiple.md)
 ##### [Valore aggiunto per la proprietà RefreshMode](5.0/dsc_refreshmode.md)
 #### [Cmdlet]()
 ##### [Informazioni dettagliate sullo stato della configurazione](5.0/dsc_getconfigurationstatus.md)
-##### [Il cmdlet Test-DscConfiguration supporta le configurazioni di riferimento](5.0/dsc_testconfiguration.md)
+##### [Supporto delle configurazioni di riferimento per il cmdlet Test-DscConfiguration](5.0/dsc_testconfiguration.md)
 ##### [Accesso diretto ai metodi delle risorse DSC](5.0/dsc_directaccess.md)
 ##### [Recapitare un documento di configurazione senza applicarlo](5.0/dsc_publishconfig.md)
 ##### [Rimuovere i documenti DSC](5.0/dsc_removeconfigdoc.md)
 ##### [Rappresentazione degli stati unificata e coerente](5.0/dsc_statestatus.md)
-##### [Il cmdlet Set-DscLocalConfigurationManager supporta il parametro -Force](5.0/dsc_setdsclcm.md)
+##### [Supporto del parametro -Force per il cmdlet Set-DscLocalConfigurationManager](5.0/dsc_setdsclcm.md)
 #### [Modalità pull]()
 ##### [PULL su richiesta delle configurazioni DSC](5.0/dsc_updateconfig.md)
 ##### [Separazione degli ID per nodi e configurazioni](5.0/dsc_nodeid.md)
@@ -94,6 +96,6 @@
 ### [Registrazione inventario software (SIL)](5.0/sil_overview.md)
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Nov16_HO3-->
 
 

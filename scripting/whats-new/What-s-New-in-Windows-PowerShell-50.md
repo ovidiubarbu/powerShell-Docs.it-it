@@ -14,17 +14,17 @@ ms.openlocfilehash: 966cab74cb2519893d4744e8bd0ca12f93f73136
 
 ---
 
-# Novità di Windows PowerShell
+# <a name="what39s-new-in-windows-powershell"></a>Novità di Windows PowerShell
 Windows PowerShell® 5.0 include nuove funzionalità significative che ne estendono e migliorano l'usabilità, consentendo di controllare e gestire gli ambienti Windows in modo più semplice e completo.
 
 Windows PowerShell 5.0 è compatibile con le versioni precedenti. Cmdlet, provider, moduli, snap-in, script, funzioni e profili progettati per Windows PowerShell 4.0, Windows PowerShell 3.0 e Windows PowerShell 2.0 in genere funzionano in Windows PowerShell 5.0 senza modifiche.
 
-# Installazione di Windows PowerShell
+# <a name="installing-windows-powershell"></a>Installazione di Windows PowerShell
 Windows PowerShell 5.0 viene installato per impostazione predefinita in Windows Server® 2016 Technical Preview e Windows 10®. 
 
 Per installare Windows PowerShell 5.0 in Windows Server 2012 R2, Windows 8.1 Enterprise o Windows 8.1 Pro, scaricare e installare [Windows Management Framework 5.0](http://aka.ms/wmf5download). Prima di installare Windows Management Framework 5.0, leggere i dettagli sul download e soddisfare tutti i requisiti di sistema.
 
-## Contenuto dell'argomento
+## <a name="in-this-topic"></a>Contenuto dell'argomento
 
 -   [Aggiornamenti di Windows PowerShell 4.0 DSC in KB 3000850](#BKMK_3000850)
 
@@ -34,7 +34,7 @@ Per installare Windows PowerShell 5.0 in Windows Server 2012 R2, Windows 8.1 Ent
 
 -   [Nuove funzionalità di Windows PowerShell 3.0](#BKMK_wps3)
 
-## <a name="BKMK_3000850"></a>Aggiornamenti di Windows PowerShell 4.0 nell'aggiornamento cumulativo di novembre 2014 (KB 3000850)
+## <a name="a-namebkmk3000850awindows-powershell-40-updates-in-november-2014-update-rollup-kb-3000850"></a><a name="BKMK_3000850"></a>Aggiornamenti di Windows PowerShell 4.0 nell'aggiornamento cumulativo di novembre 2014 (KB 3000850)
 Molti aggiornamenti e miglioramenti per Windows PowerShell Desired State Configuration (DSC) in Windows PowerShell 4.0 sono disponibili nell'[aggiornamento cumulativo di novembre 2014 per Windows RT 8.1, Windows 8.1 e Windows Server 2012 R2](https://support.microsoft.com/kb/3000850/) (KB 3000850). È possibile determinare se l'aggiornamento KB 3000850 è installato nel sistema eseguendo `Get-Hotfix -Id KB3000850` in Windows PowerShell.
 
 -   Aggiornamenti per i cmdlet esistenti nel modulo [PSDesiredStateConfiguration](https://technet.microsoft.com/library/dn391651(v=wps.640).aspx)
@@ -131,7 +131,7 @@ Molti aggiornamenti e miglioramenti per Windows PowerShell Desired State Configu
 
     -   La [risorsa Archive](http://technet.microsoft.com/library/dn249917.aspx) ora supporta le credenziali.
 
-## <a name="BKMK_new50"></a>Nuove funzionalità di Windows PowerShell 5.0
+## <a name="a-namebkmknew50anew-features-in-windows-powershell-50"></a><a name="BKMK_new50"></a>Nuove funzionalità di Windows PowerShell 5.0
 
 -   [Nuove funzionalità di Windows PowerShell](#BKMK_newcore)
 
@@ -143,7 +143,7 @@ Molti aggiornamenti e miglioramenti per Windows PowerShell Desired State Configu
 
 -   [Correzioni di bug importanti in Windows PowerShell 5.0](#BKMK_5bugfix)
 
-### <a name="BKMK_newcore"></a>Nuove funzionalità di Windows PowerShell
+### <a name="a-namebkmknewcoreanew-features-in-windows-powershell"></a><a name="BKMK_newcore"></a>Nuove funzionalità di Windows PowerShell
 
 -   A partire da Windows PowerShell 5.0 è possibile sviluppare usando le classi, con sintassi e semantica formali simili ad altri linguaggi di programmazione orientati agli oggetti. Le parole chiave **Class**, **Enum** ed altre sono state aggiunte al linguaggio di Windows PowerShell per supportare la nuova funzionalità. Per altre informazioni sull'utilizzo delle classi, vedere about_Classes.
 
@@ -229,7 +229,7 @@ Molti aggiornamenti e miglioramenti per Windows PowerShell Desired State Configu
 
 -   Il valore di **$PSVersionTable.PSVersion** è stato aggiornato alla versione 5.0.
 
-### <a name="BKMK_newDSC"></a>Nuove funzionalità di Windows PowerShell Desired State Configuration
+### <a name="a-namebkmknewdscanew-features-in-windows-powershell-desired-state-configuration"></a><a name="BKMK_newDSC"></a>Nuove funzionalità di Windows PowerShell Desired State Configuration
 
 -   I miglioramenti del linguaggio di Windows PowerShell consentono di usare classi per definire risorse di Windows PowerShell Desired State Configuration (DSC). Import-DscResource è ora una parola chiave effettivamente dinamica. Windows PowerShell analizza il modulo radice del modulo specificato alla ricerca delle classi che contengono l'attributo DscResource. È ora possibile usare classi per definire le risorse DSC, senza che sia richiesto un file MOF o una sottocartella DSCResource nella cartella del modulo. Un file di modulo di Windows PowerShell può contenere più classi di risorse DSC.
 
@@ -293,7 +293,7 @@ Molti aggiornamenti e miglioramenti per Windows PowerShell Desired State Configu
 
     -   Il nuovo cmdlet Update-DscConfiguration forza l'elaborazione di una configurazione. Se Gestione configurazione locale è in modalità pull, il cmdlet recupera la configurazione dal server di pull prima di applicarla.
 
-### <a name="BKMK_newISE"></a>Nuove funzionalità di Windows PowerShell ISE
+### <a name="a-namebkmknewiseanew-features-in-windows-powershell-ise"></a><a name="BKMK_newISE"></a>Nuove funzionalità di Windows PowerShell ISE
 
 -   È ora possibile modificare script e file remoti di Windows PowerShell in una copia locale di Windows PowerShell ISE eseguendo Enter-PSSession per avviare una sessione remota nel computer in cui sono archiviati i file da modificare e quindi eseguendo **PSEdit <path and file name on the remote computer>**. Questa funzionalità semplifica la modifica dei file di Windows PowerShell archiviati nell'opzione di installazione Server Core di Windows Server, in cui non è possibile eseguire Windows PowerShell ISE.
 
@@ -303,17 +303,17 @@ Molti aggiornamenti e miglioramenti per Windows PowerShell Desired State Configu
 
 -   Il nuovo comando di menu **Interrompi tutto** (CTRL+B) consente di interrompere l'esecuzione nel debugger sia per script in esecuzione in locale che in remoto.
 
-### <a name="BKMK_newOData"></a>Nuove funzionalità dei servizi Web di Windows PowerShell (Estensione IIS OData di gestione)
+### <a name="a-namebkmknewodataanew-features-in-windows-powershell-web-services-management-odata-iis-extension"></a><a name="BKMK_newOData"></a>Nuove funzionalità dei servizi Web di Windows PowerShell (Estensione IIS OData gestione)
 
 -   A partire da Windows PowerShell 5.0, è possibile generare un set di cmdlet di Windows PowerShell basato sulle funzionalità esposte da un determinato endpoint OData eseguendo il cmdlet Export-ODataEndpointProxy, disponibile nel nuovo modulo [Microsoft.PowerShell.OdataUtils](http://technet.microsoft.com/library/dn818507(v=wps.640).aspx).
 
-### <a name="BKMK_5bugfix"></a>Correzioni di bug importanti in Windows PowerShell 5.0
+### <a name="a-namebkmk5bugfixanotable-bug-fixes-in-windows-powershell-50"></a><a name="BKMK_5bugfix"></a>Correzioni di bug importanti in Windows PowerShell 5.0
 
 -   Windows PowerShell 5.0 include una nuova implementazione di COM, che offre miglioramenti significativi delle prestazioni quando si lavora con gli oggetti COM. Per una dimostrazione video dell'effetto, vedere [Com_Perf_Improvements](http://1drv.ms/1qu3UPZ).
 
 -   Miglioramenti significativi delle prestazioni sono stati introdotti per il primo completamento tramite tasto TAB in una sessione di Windows PowerShell, con una riduzione del tempo di completamento di quasi 500 ms.
 
-## <a name="BKMK_wps4"></a>Nuove funzionalità di Windows PowerShell 4.0
+## <a name="a-namebkmkwps4anew-features-in-windows-powershell-40"></a><a name="BKMK_wps4"></a>Nuove funzionalità di Windows PowerShell 4.0
 Windows PowerShell 4.0 è compatibile con le versioni precedenti. Cmdlet, provider, moduli, snap-in, script, funzioni e profili progettati per Windows PowerShell 3.0 e Windows PowerShell 2.0 funzionano in Windows PowerShell 4.0 senza modifiche.
 
 Windows PowerShell 4.0 viene installato per impostazione predefinita in Windows® 8.1 e Windows Server 2012 R2. Per installare Windows PowerShell 4.0 in Windows 7 con SP1 o Windows Server 2008 R2, scaricare e installare [Windows Management Framework 4.0](http://www.microsoft.com/download/details.aspx?id=40855). Prima di installare Windows Management Framework 4.0, assicurarsi di leggere i dettagli sul download e di soddisfare tutti i requisiti di sistema.
@@ -332,7 +332,7 @@ Windows PowerShell 4.0 viene installato per impostazione predefinita in Windows�
 
 Windows PowerShell 4.0 include le nuove funzionalità seguenti.
 
-### <a name="BKMK_core"></a>Nuove funzionalità di Windows PowerShell
+### <a name="a-namebkmkcoreanew-features-in-windows-powershell"></a><a name="BKMK_core"></a>Nuove funzionalità di Windows PowerShell
 
 -   **Windows PowerShell Desired State Configuration** (DSC) è un nuovo sistema di gestione di Windows PowerShell 4.0 che consente di distribuire e gestire dati di configurazione per i servizi software e per l'ambiente in cui vengono eseguiti. Per altre informazioni, vedere [Introduzione a Windows PowerShell DSC (Desired State Configuration)](https://technet.microsoft.com/en-us/library/c134aa32-b085-4656-9a89-955d8ff768d0).
 
@@ -370,15 +370,15 @@ Windows PowerShell 4.0 include le nuove funzionalità seguenti.
 
 -   Il valore di **$PSVersionTable.PSVersion** è stato aggiornato alla versione 4.0.
 
--   Il comportamento dell'operatore **Where()** è cambiato. `Collection.Where('property -match name')` L'accettazione di un'espressione stringa nel formato `"Property -CompareOperator Value"` non è più supportata. Tuttavia, l'operatore **Where()** accetta espressioni stringa nel formato di un blocco di script. Questa funzionalità è ancora supportata.
+-   Il comportamento dell'operatore **Where()** è cambiato. L'accettazione di un'espressione stringa nel formato `"Property -CompareOperator Value"` in `Collection.Where('property -match name')` non è più supportata. Tuttavia, l'operatore **Where()** accetta espressioni stringa nel formato di un blocco di script. Questa funzionalità è ancora supportata.
 
-### <a name="BKMK_ise"></a>Nuove funzionalità di Windows PowerShell ISE (Integrated Scripting Environment)
+### <a name="a-namebkmkiseanew-features-in-windows-powershell-integrated-scripting-environment-ise"></a><a name="BKMK_ise"></a>Nuove funzionalità di Windows PowerShell ISE (Integrated Scripting Environment)
 
 -   Windows PowerShell ISE supporta il debug del flusso di lavoro di Windows PowerShell e il debug degli script remoti.
 
 -   Per i provider e le configurazioni del servizio Windows PowerShell Desired State Configuration è stato aggiunto il supporto di IntelliSense.
 
-### <a name="BKMK_workflow"></a>Nuove funzionalità del flusso di lavoro di Windows PowerShell
+### <a name="a-namebkmkworkflowanew-features-in-windows-powershell-workflow"></a><a name="BKMK_workflow"></a>Nuove funzionalità del flusso di lavoro di Windows PowerShell
 
 -   È stato aggiunto il supporto del nuovo parametro comune **PipelineVariable** nel contesto delle pipeline iterative, ad esempio quelle usate da System Center Orchestrator, ossia le pipeline che eseguono i comandi semplicemente da sinistra a destra, a differenza dell'esecuzione frammista tramite flusso.
 
@@ -394,7 +394,7 @@ Windows PowerShell 4.0 include le nuove funzionalità seguenti.
 
 -   Un endpoint del flusso di lavoro viene ora automaticamente chiuso se non ci sono sessioni attive, processi in corso e in sospeso. Questa funzionalità conserva le risorse nel computer che funge da server del flusso di lavoro, quando vengono soddisfatte le condizioni per la chiusura automatica.
 
-### <a name="BKMK_psws"></a>Nuove funzionalità dei servizi Web di Windows PowerShell
+### <a name="a-namebkmkpswsanew-features-in-windows-powershell-web-services"></a><a name="BKMK_psws"></a>Nuove funzionalità dei servizi Web di Windows PowerShell
 
 -   Quando si verifica un errore nei servizi Web di Windows PowerShell (PSWS, noto anche come Estensione IIS OData di gestione), mentre un cmdlet è in esecuzione, vengono restituiti messaggi di errore più dettagliati al chiamante. Inoltre, i codici di errore seguono le [linee guida dei codici di errore dell'API REST di Microsoft Azure](http://msdn.microsoft.com/library/windowsazure/dd179357.aspx).
 
@@ -412,7 +412,7 @@ Windows PowerShell 4.0 include le nuove funzionalità seguenti.
 
 -   Prima di questa versione dei servizi Web di PowerShell, l'unico modo per eseguire operazioni Create, Update o Delete consiste nel richiamare Post, Put o Delete su una risorsa di primo livello. Le operazioni su risorse contenute, una novità di questa versione dei servizi Web di PowerShell, consentono di ottenere gli stessi risultati raggiungendo la stessa risorsa in modo meno diretto, avvicinandosi come se queste risorse fossero contenute.
 
-### <a name="BKMK_powwa"></a>Nuove funzionalità di Accesso Web Windows PowerShell
+### <a name="a-namebkmkpowwaanew-features-in-windows-powershell-web-access"></a><a name="BKMK_powwa"></a>Nuove funzionalità di Accesso Web Windows PowerShell
 
 -   È possibile eseguire la disconnessione e la riconnessione a sessioni esistenti nella console di Accesso Web Windows PowerShell. Il pulsante **Salva** della console basata sul Web consente di disconnettersi da una sessione senza eliminarla e quindi di riconnettersi in un secondo momento.
 
@@ -422,7 +422,7 @@ Windows PowerShell 4.0 include le nuove funzionalità seguenti.
 
 -   Ora è possibile avere più sessioni di Accesso Web Windows PowerShell in un'unica sessione del browser usando una nuova scheda del browser per ogni sessione. Non è più necessario aprire una nuova sessione del browser per connettersi a una nuova sessione nella console di Windows PowerShell basata sul Web.
 
-### <a name="BKMK_bugs"></a>Correzioni di bug importanti in Windows PowerShell 4.0
+### <a name="a-namebkmkbugsanotable-bug-fixes-in-windows-powershell-40"></a><a name="BKMK_bugs"></a>Correzioni di bug importanti in Windows PowerShell 4.0
 
 -   **Get-Counter** può ora restituire contatori che contengono un carattere apostrofo nelle edizioni in francese di Windows.
 
@@ -458,7 +458,7 @@ Windows PowerShell 4.0 include le nuove funzionalità seguenti.
 
 -   Sono stati apportati miglioramenti alle prestazioni del processo di importazione dei flussi di lavoro che definiscono flussi di lavoro annidati. Questo processo è ora più veloce.
 
-## <a name="BKMK_wps3"></a>Nuove funzionalità di Windows PowerShell 3.0
+## <a name="a-namebkmkwps3anew-features-in-windows-powershell-30"></a><a name="BKMK_wps3"></a>Nuove funzionalità di Windows PowerShell 3.0
 Windows PowerShell 3.0 include le nuove funzionalità seguenti.
 
 -   [Flusso di lavoro di Windows PowerShell](#BKMK_Workflow)
@@ -515,7 +515,7 @@ Windows PowerShell 3.0 include le nuove funzionalità seguenti.
 
 -   [Miglioramenti nella gestione di caratteri speciali](#BKMK_CHAR)
 
-### <a name="BKMK_Workflow"></a>Flusso di lavoro di Windows PowerShell
+### <a name="a-namebkmkworkflowawindows-powershell-workflow"></a><a name="BKMK_Workflow"></a>Flusso di lavoro di Windows PowerShell
 Il flusso di lavoro di Windows PowerShell® estende le potenzialità di Windows Workflow Foundation a Windows PowerShell. È possibile scrivere flussi di lavoro in XAML o nel linguaggio di Windows PowerShell ed eseguirli allo stesso modo dei cmdlet. Il cmdlet [Get-Command](https://technet.microsoft.com/en-us/library/59c6d302-6e8c-48b7-a6f6-f0172df936ad) ottiene i comandi del flusso di lavoro e il cmdlet [Get-Help](https://technet.microsoft.com/en-us/library/1f46eeb4-49d7-4bec-bb29-395d9b42f54a) visualizza la Guida.
 
 I flussi di lavoro sono sequenze di attività di gestione di più computer ad esecuzione prolungata, ripetibili, frequenti, parallelizzabili, interrompibili, sospendibili e riavviabili. Possono essere ripresi dopo un'interruzione intenzionale o accidentale, come un'interruzione di rete, un riavvio di Windows o un'interruzione dell'alimentazione.
@@ -542,21 +542,21 @@ I vantaggi del flusso di lavoro di Windows PowerShell sono descritti di seguito.
 
 -   **Limitazione di connessioni e flussi di lavoro.** L'esecuzione dei flussi di lavoro e le connessioni ai nodi possono essere limitate, rendendo possibili scenari di scalabilità e disponibilità elevata.
 
-### <a name="BKMK_WebAccess"></a>Accesso Web di Windows PowerShell
+### <a name="a-namebkmkwebaccessawindows-powershell-web-access"></a><a name="BKMK_WebAccess"></a>Accesso Web di Windows PowerShell
 Accesso Web Windows PowerShell® è una funzionalità di Windows Server 2012 che consente agli utenti di eseguire comandi e script di Windows PowerShell in una console basata sul Web. I dispositivi che usano la console basata sul Web non richiedono Windows PowerShell, un software di gestione remota o l'installazione di plug-in del browser. È richiesto solo un gateway di Accesso Web Windows PowerShell configurato correttamente e un browser del dispositivo client che supporti JavaScript® e accetti cookie.
 
 Per altre informazioni, vedere [Distribuire Accesso Web Windows PowerShell](http://go.microsoft.com/fwlink/p/?LinkID=221050).
 
-### <a name="BKMK_ISE"></a>Nuove funzionalità di Windows PowerShell ISE
+### <a name="a-namebkmkiseanew-windows-powershell-ise-features"></a><a name="BKMK_ISE"></a>Nuove funzionalità di Windows PowerShell ISE
 Per Windows PowerShell 3.0, Windows PowerShell® Integrated Scripting Environment (ISE) include molte nuove funzionalità, tra cui IntelliSense, finestra Show-Command, riquadro della console unificato, frammenti di codice, controllo della corrispondenza delle parentesi graffe, sezioni espandibili e comprimibili, salvataggio automatico, elenco di elementi recenti, copia di testo formattato, copia in blocco e supporto completo per la scrittura di flussi di lavoro di script di Windows PowerShell. Per altre informazioni, vedere [about_Windows_PowerShell_ISE [v3]](https://technet.microsoft.com/en-us/library/dfa54d47-60c6-4fff-8197-c747e8d411bb).
 
-### <a name="BKMK_NET4"></a>Supporto per Microsoft .NET Framework 4
+### <a name="a-namebkmknet4asupport-for-microsoft-net-framework-4"></a><a name="BKMK_NET4"></a>Supporto per Microsoft .NET Framework 4
 Windows PowerShell è basato su Common Language Runtime 4.0. Gli autori di cmdlet, script e flussi di lavoro possono usare le nuove classi di Microsoft .NET Framework 4 in Windows PowerShell, con funzionalità come la compatibilità e la distribuzione di applicazioni, Managed Extensibility Framework, calcolo parallelo, rete, Windows Communication Foundation e Windows Workflow Foundation.
 
-### <a name="BKMK_WinPE"></a>Supporto per l'Ambiente preinstallazione di Windows
+### <a name="a-namebkmkwinpeasupport-for-windows-preinstallation-environment"></a><a name="BKMK_WinPE"></a>Supporto per Ambiente preinstallazione di Windows
 Windows PowerShell 3.0 è un componente facoltativo di Ambiente preinstallazione di Windows (Windows PE) 4.0 per Windows 8. Windows PE è un sistema operativo minimo che avvia un computer privo di sistema operativo e lo prepara per l'installazione di Windows. Può essere usato per partizionare e formattare unità disco rigido, copiare immagini del disco in un computer e avviare l'installazione di Windows da una condivisione di rete. Windows PowerShell 3.0 può essere usato in Windows PE per gestire scenari di distribuzione, diagnostica e ripristino.
 
-### <a name="BKMK_Disconnected"></a>Sessioni disconnesse
+### <a name="a-namebkmkdisconnectedadisconnected-sessions"></a><a name="BKMK_Disconnected"></a>Sessioni disconnesse
 A partire da Windows PowerShell 3.0, le sessioni permanenti gestite dall'utente ("PSSession") create con il cmdlet New-PSSession vengono salvate nel computer remoto. Non dipendono più dalla sessione in cui sono state create.
 
 È ora possibile disconnettersi da una sessione senza interrompere i comandi in esecuzione al suo interno. È possibile chiudere la sessione e arrestare il computer. In seguito, è possibile riconnettersi alla sessione da una sessione diversa nello stesso computer o in uno diverso.
@@ -567,14 +567,14 @@ Sono stati aggiunti nuovi cmdlet per supportare la funzionalità delle sessioni 
 
 La funzionalità delle sessioni disconnesse è supportata solo se sia il computer all'estremità di origine ("client") che quello all'estremità di destinazione ("server") della connessione eseguono Windows PowerShell 3.0.
 
-### <a name="BKMK_Robust"></a>Connettività stabile delle sessioni
+### <a name="a-namebkmkrobustarobust-session-connectivity"></a><a name="BKMK_Robust"></a>Connettività stabile delle sessioni
 Windows PowerShell 3.0 rileva interruzioni impreviste della connessione tra client e server e prova a ristabilirla e a riprendere automaticamente l'esecuzione. Se la connessione tra client e server non può essere ristabilita entro l'intervallo assegnato, l'utente riceve una notifica e la sessione viene disconnessa. Durante il tentativo di riconnessione, Windows PowerShell fornisce un feedback continuo all'utente.
 
 Se la sessione disconnessa è stata avviata con InvokeCommand, Windows PowerShell crea un apposito processo per semplificare la riconnessione e la ripresa dell'esecuzione.
 
 Queste funzionalità assicurano un'esperienza di comunicazione remota affidabile e ripristinabile e consentono agli utenti di eseguire attività a esecuzione prolungata che richiedono sessioni stabili, come i flussi di lavoro.
 
-### <a name="BKMK_UpHelp"></a>Sistema della Guida aggiornabile
+### <a name="a-namebkmkuphelpaupdatable-help-system"></a><a name="BKMK_UpHelp"></a>Sistema della Guida aggiornabile
 È ora possibile scaricare file della Guida aggiornati per i cmdlet dei moduli. Il cmdlet [Update-Help](https://technet.microsoft.com/en-us/library/93e1d870-ace6-432b-8778-8920291d7545) identifica i file della Guida più recenti, li scarica da Internet, li decomprime, li convalida e li installa nella directory specifica della lingua corretta per il modulo.
 
 Per usare i file della Guida aggiornati, basta digitare `Get-Help`. Non è necessario riavviare Windows o Windows PowerShell. Per aggiornare la Guida per i moduli nella directory $pshome, avviare Windows PowerShell con l'opzione "Esegui come amministratore".
@@ -589,7 +589,7 @@ Se i file della Guida per un cmdlet non sono installati nel computer, il cmdlet 
 
 Qualsiasi autore di moduli può ora supportare la Guida aggiornabile. È possibile includere i file della Guida nel modulo e usare la Guida aggiornabile per aggiornarli oppure omettere tali file e usare la Guida aggiornabile per installarli. Per altre informazioni, vedere [Supporto per la Guida aggiornabile](http://go.microsoft.com/FWLink/?LinkID=242129) in MSDN.
 
-### <a name="BKMK_Online"></a>Guida online ottimizzata
+### <a name="a-namebkmkonlineaenhanced-online-help"></a><a name="BKMK_Online"></a>Guida online ottimizzata
 La Guida online di Windows PowerShell è una risorsa preziosa per tutti gli utenti, ma è particolarmente importante per quelli che non hanno installato i file della Guida aggiornati o non possono farlo.
 
 Per ottenere la Guida online per qualsiasi cmdlet di Windows PowerShell, digitare:
@@ -613,10 +613,10 @@ A partire da Windows PowerShell 3.0, gli autori dei cmdlet scritti in C# possono
 
 Per altre informazioni, vedere [Supporto per la Guida online](http://go.microsoft.com/fwlink/?LinkId=242132) in MSDN.
 
-### <a name="BKMK_CIM"></a>Integrazione con CIM
+### <a name="a-namebkmkcimacim-integration"></a><a name="BKMK_CIM"></a>Integrazione con CIM
 Windows PowerShell 3.0 include il supporto per CIM (Common Information Model), che fornisce definizioni comuni delle informazioni di gestione per sistemi, reti, applicazioni e servizi, consentendo lo scambio di tali informazioni tra sistemi eterogenei. Supporto per CIM in Windows PowerShell 3.0, con la possibilità di creare cmdlet di Windows PowerShell basati su classi CIM nuove o esistenti e di comandi basati su file XML di definizione dei cmdlet, oltre al supporto per .NET Framework CIM. API, cmdlet di gestione CIM e provider WMI 2.0.
 
-### <a name="BKMK_ConfigFile"></a>File di configurazione di sessione
+### <a name="a-namebkmkconfigfileasession-configuration-files"></a><a name="BKMK_ConfigFile"></a>File di configurazione di sessione
 A partire da Windows PowerShell 3.0, è possibile progettare una configurazione di sessione personalizzata usando un file. Il nuovo file di configurazione consente di determinare l'ambiente delle sessioni che usano la configurazione di sessione, indicando quali moduli, script e file di formato sono caricati nelle sessioni, quali cmdlet ed elementi del linguaggio possono essere usati dagli utenti, quali moduli e script possono essere eseguiti e quali variabili possono essere visualizzate.
 
 È possibile progettare una sessione in cui gli utenti possono eseguire solo i cmdlet di un determinato modulo oppure una sessione in cui gli utenti hanno accesso a tutti i moduli, in tutti i linguaggi, e agli script che eseguono attività avanzate.
@@ -627,7 +627,7 @@ Per creare un file di configurazione di sessione, usare il cmdlet [New-PSSession
 
 Per altre informazioni, vedere [about_Session_Configuration_Files](https://technet.microsoft.com/en-us/library/c7217447-1ebf-477b-a8ef-4dbe9a1473b8) e [New-PSSessionConfigurationFile](https://technet.microsoft.com/en-us/library/5f3e3633-6e90-479c-aea9-ba45a1954866).
 
-### <a name="BKMK_ScheduledJob"></a>Processi pianificati e integrazione con l'Utilità di pianificazione
+### <a name="a-namebkmkscheduledjobascheduled-jobs-and-task-scheduler-integration"></a><a name="BKMK_ScheduledJob"></a>Processi pianificati e integrazione con l'Utilità di pianificazione
 È ora possibile pianificare i processi in background di Windows PowerShell e gestirli in Windows PowerShell e nell'Utilità di pianificazione.
 
 I processi pianificati di Windows PowerShell sono un utile ibrido di processi in background di Windows PowerShell e attività dell'Utilità di pianificazione.
@@ -640,10 +640,10 @@ Inoltre, i processi pianificati includono un set personalizzato di cmdlet per ge
 
 Per altre informazioni sui processi pianificati, vedere [about_Scheduled_Jobs](https://technet.microsoft.com/en-us/library/3b546629-703c-4939-b44f-52dd567bce92).
 
-### <a name="BKMK_Lang"></a>Miglioramenti del linguaggio di Windows PowerShell
+### <a name="a-namebkmklangawindows-powershell-language-enhancements"></a><a name="BKMK_Lang"></a>Miglioramenti del linguaggio di Windows PowerShell
 Windows PowerShell 3.0 include molte funzionalità progettate per rendere il linguaggio più semplice, più facile da usare e meno soggetto a errori comuni. I miglioramenti includono l'enumerazione di proprietà, le proprietà di conteggio e lunghezza su oggetti scalari, nuovi operatori di reindirizzamento, il modificatore di ambito $Using, la variabile automatica PSItem, una formattazione di script flessibile, attributi di variabili, argomenti degli attributi semplificati, nomi di comandi numerici, operatore Stop-Parsing, splatting delle matrici migliorato, nuovi operatori bit a bit, dizionari ordinati, casting di PSCustomObject e una Guida migliorata basata su commenti.
 
-### <a name="BKMK_Core"></a>Nuovi cmdlet di sistema
+### <a name="a-namebkmkcoreanew-core-cmdlets"></a><a name="BKMK_Core"></a>Nuovi cmdlet principali
 Nell'installazione di sistema di Windows PowerShell sono stati aggiunti nuovi cmdlet, tra cui cmdlet per gestire processi pianificati, sessioni disconnesse, integrazione con CIM e Guida aggiornabile.
 
 |||
@@ -677,20 +677,20 @@ Nell'installazione di sistema di Windows PowerShell sono stati aggiunti nuovi cm
 |New-CimSessionOption|Update-Help|
 |New-IseSnippet||
 
-### <a name="BKMK_Prov"></a>Miglioramenti dei cmdlet e provider principali esistenti
+### <a name="a-namebkmkprovaimprovements-to-existing-core-cmdlets-and-providers"></a><a name="BKMK_Prov"></a>Miglioramenti dei cmdlet e provider principali esistenti
 Windows PowerShell 3.0 include nuove funzionalità per i cmdlet esistenti inclusa la sintassi semplificata e nuovi parametri per i cmdlet seguenti: cmdlet Computer, cmdlet CSV, Get-ChildItem, Get-Command, Get-Content, Get-History, Measure-Object, cmdlet Security, Select-Object, Select-String, Split-Path, Start-Process, Tee-Object, Test-Connection, Add-Member e cmdlet WMI.
 
 Anche i provider di Windows PowerShell sono stati migliorati in modo significativo, con l'aggiunta del supporto del provider Certificate per la gestione di certificati SSL (Secure Socket Layer) per l'hosting Web, il supporto di unità di rete permanenti basate su credenziali e flussi di dati alternativi nelle unità di file system.
 
-### <a name="BKMK_REM"></a>Importazione e individuazione di moduli remoti
+### <a name="a-namebkmkremaremote-module-import-and-discovery"></a><a name="BKMK_REM"></a>Importazione e individuazione di moduli remoti
 Windows PowerShell 3.0 estende le funzionalità di individuazione dei moduli, importazione e comunicazione remota implicita nei computer remoti. I cmdlet Module ottengono i moduli nei computer remoti e li importano in computer remoti o locali tramite la comunicazione remota di Windows PowerShell. Il nuovo supporto per sessioni CIM consente di usare CIM e WMI per gestire computer non Windows importando nel computer locale comandi che vengono eseguiti in modo implicito nel computer remoto.
 
 Per altre informazioni, vedere gli argomenti della Guida per i cmdlet [Get-Module](https://technet.microsoft.com/en-us/library/2cccd4c4-9a21-4c77-b691-984ee57242e1) e [Import-Module](https://technet.microsoft.com/en-us/library/af616c24-e122-4098-930e-1e3ea2080ade).
 
-### <a name="BKMK_TAB"></a>Completamento tramite TAB migliorato
+### <a name="a-namebkmktabaenhanced-tab-completion"></a><a name="BKMK_TAB"></a>Completamento tramite TAB migliorato
 Il completamento tramite tasto TAB nella console di Windows PowerShell ora completa i nomi di cmdlet, parametri, valori dei parametri, enumerazioni, tipi .NET Framework, oggetti COM, directory nascoste e altro. Questa funzionalità è stata completamente riscritta in base a un nuovo albero sintattico astratto e di analisi per supportare più scenari, tra cui alberi di analisi in memoria e completamento tramite TAB sulla riga centrale.
 
-### <a name="BKMK_AutoLoad"></a>Caricamento automatico dei moduli
+### <a name="a-namebkmkautoloadamodule-autoloading"></a><a name="BKMK_AutoLoad"></a>Caricamento automatico dei moduli
 Il cmdlet [Get-Command](https://technet.microsoft.com/en-us/library/59c6d302-6e8c-48b7-a6f6-f0172df936ad) ottiene ora tutti i cmdlet e le funzioni da tutti i moduli installati nel computer, anche quelli non importati nella sessione corrente.
 
 Una volta ottenuto il cmdlet necessario, è possibile usarlo immediatamente senza importare nessun modulo. I moduli di Windows PowerShell vengono ora importati automaticamente quando si usa uno dei cmdlet al loro interno. Non è più necessario cercare il modulo e importarlo per usare i relativi cmdlet.
@@ -701,7 +701,7 @@ L'importazione automatica dei moduli viene avviata usando il cmdlet in un comand
 
 Per altre informazioni, vedere [about_Modules [v4]](https://technet.microsoft.com/en-us/library/94f57429-a539-4aee-bb0d-205cd7e801f9), [about_Preference_Variables [v4]](https://technet.microsoft.com/en-us/library/31344314-be29-4286-b039-afa5460cbe8b) e gli argomenti della Guida sui cmdlet [Get-Command](https://technet.microsoft.com/en-us/library/59c6d302-6e8c-48b7-a6f6-f0172df936ad) e [Import-Module](https://technet.microsoft.com/en-us/library/af616c24-e122-4098-930e-1e3ea2080ade).
 
-### <a name="BKMK_MOD"></a>Miglioramento dell'esperienza con i moduli
+### <a name="a-namebkmkmodamodule-experience-improvements"></a><a name="BKMK_MOD"></a>Miglioramento dell'esperienza con i moduli
 Windows PowerShell 3.0 offre il supporto di funzionalità avanzate per il modulo, tra cui le nuove funzionalità seguenti.
 
 1.  Registrazione per singoli moduli (LogPipelineExecutionDetails) e nuova impostazione di Criteri di gruppo "Turn on Module Logging"
@@ -722,39 +722,39 @@ Windows PowerShell 3.0 offre il supporto di funzionalità avanzate per il modulo
 
 9. Cmdlet [Import-Module](https://technet.microsoft.com/en-us/library/af616c24-e122-4098-930e-1e3ea2080ade) migliorato con entrambi i parametri **MinimumVersion** e **RequiredVersion**.
 
-### <a name="BKMK_SIMPLE"></a>Individuazione semplificata dei comandi
+### <a name="a-namebkmksimpleasimplified-command-discovery"></a><a name="BKMK_SIMPLE"></a>Individuazione semplificata dei comandi
 Non è più necessario importare tutti i moduli per individuare i comandi disponibili nella sessione. In Windows PowerShell 3.0 il cmdlet [Get-Command](https://technet.microsoft.com/en-us/library/59c6d302-6e8c-48b7-a6f6-f0172df936ad) ottiene tutti i comandi da tutti i moduli installati. Se inoltre si usa un comando, il modulo che lo esporta viene automaticamente importato nella sessione.
 
 Il nuovo cmdlet [Show-Command](https://technet.microsoft.com/en-us/library/65bba50b-91a8-49d5-80a2-a30fc684ba41) è progettato specificamente per utenti meno esperti. È possibile cercare i comandi in una finestra. È possibile visualizzare tutti i comandi o applicare un filtro per modulo, importare un modulo facendo clic su un pulsante, usare caselle di testo ed elenchi a discesa per creare un comando valido e quindi copiarlo o eseguirlo senza mai uscire dalla finestra.
 
-### <a name="BKMK_LOG"></a>Funzionalità migliorate di registrazione e diagnostica e supporto di Criteri di gruppo
+### <a name="a-namebkmklogaimproved-logging-diagnostics-and-group-policy-support"></a><a name="BKMK_LOG"></a>Funzionalità migliorate di registrazione e diagnostica e supporto di Criteri di gruppo
 In Windows PowerShell 3.0 è stato migliorato il supporto per la registrazione e la traccia per comandi e moduli grazie al supporto per i log di Event Tracing for Windows (ETW) e una proprietà **LogPipelineExecutionDetails** modificabile dei moduli, oltre all'impostazione di Criteri di gruppo "Attiva registrazione moduli". È ora possibile ottenere i valori dei parametri dai dettagli dei log visualizzando le proprietà dei log.
 
-### <a name="BKMK_OUT"></a>Miglioramenti di formattazione e output
+### <a name="a-namebkmkoutaformatting-and-output-improvements"></a><a name="BKMK_OUT"></a>Miglioramenti di formattazione e output
 I nuovi miglioramenti alla formattazione e all'output aumentano l'efficienza per tutti gli utenti di Windows PowerShell. I miglioramenti includono il reindirizzamento dell'output per tutti i flussi, un cmdlet Update-Type ottimizzato che aggiunge dinamicamente i tipi senza i file Format.ps1xml, il ritorno a capo automatico nell'output, le proprietà predefinite di formattazione di oggetti personalizzati, il tipo **PSCustomObject**, la formattazione migliorata di oggetti WMI e oggetti eterogenei e il supporto per l'individuazione degli overload dei metodi.
 
-### <a name="BKMK_HOST"></a>Esperienza ottimizzata con l'host della console
+### <a name="a-namebkmkhostaenhanced-console-host-experience"></a><a name="BKMK_HOST"></a>Esperienza ottimizzata con l'host della console
 Il programma host della console di Windows PowerShell include nuove funzionalità in Windows PowerShell 3.0, tra cui l'apartment a thread singolo per impostazione predefinita. La nuova opzione "Esegui con PowerShell" di Esplora file consente di eseguire gli script in una sessione senza restrizioni facendo semplicemente clic con il pulsante destro del mouse. La nuova logica di avvio dell'host della console avvia più velocemente Windows PowerShell e i nuovi tipi di carattere consentono di personalizzare l'esperienza con la consueta finestra della console.
 
 Per altre informazioni, vedere [about_Run_With_PowerShell](https://technet.microsoft.com/en-us/library/c9d9ca5f-eff9-4409-be9d-e43b5b4087eb).
 
-### <a name="BKMK_API"></a>Nuove API di cmdlet e hosting
+### <a name="a-namebkmkapianew-cmdlet-and-hosting-apis"></a><a name="BKMK_API"></a>Nuove API di cmdlet e hosting
 Le nuove API di cmdlet e hosting includono API AST (Advanced Syntax Tree) e API per il paging delle pipeline, le pipeline annidate, il completamento tramite TAB di pool di spazi di esecuzione, Windows RT, l'attributo Obsolete dei cmdlet e le proprietà Verb e Noun dell'oggetto FunctionInfo.
 
-### <a name="BKMK_PERF"></a>Miglioramenti delle prestazioni
+### <a name="a-namebkmkperfaperformance-improvements"></a><a name="BKMK_PERF"></a>Miglioramenti delle prestazioni
 I miglioramenti significativi delle prestazioni di Windows PowerShell sono attribuibili al nuovo parser del linguaggio, basato sul linguaggio DLR (Dynamic Runtime Language) di .NET Framework 4, oltre alla compilazione di script di runtime, alla maggiore affidabilità del motore e alle modifiche apportate all'algoritmo di [Get-ChildItem](https://technet.microsoft.com/en-us/library/75cf79bb-4db6-4a67-8c36-3d20754e2190), che ne migliorano le prestazioni in particolare per le ricerche nelle condivisioni di rete.
 
-### <a name="BKMK_RUNAS"></a>Supporto per RunAs e SharedHost
+### <a name="a-namebkmkrunasarunas-and-shared-host-support"></a><a name="BKMK_RUNAS"></a>Supporto di RunAs e SharedHost
 Windows PowerShell 3.0 include il supporto per le funzionalità RunAs e Shared Host.
 
 La funzionalità *RunAs*, progettata per il flusso di lavoro di Windows PowerShell, consente agli utenti di una configurazione di sessione di creare sessioni che vengono eseguite con l'autorizzazione di un account utente condiviso. In questo modo gli utenti con privilegi meno elevati possono eseguire specifici comandi e script con autorizzazioni di amministratore, riducendo la necessità di aggiungere utenti meno avanzati al gruppo Administrators.
 
 La funzionalità **SharedHost** consente a più utenti di più computer di connettersi a una sessione del flusso di lavoro contemporaneamente e di monitorare lo stato di un flusso di lavoro. Gli utenti possono avviare un flusso di lavoro in un computer e quindi connettersi alla sessione del flusso di lavoro di un altro computer senza disconnettersi da quella del computer originale. È necessario che gli utenti abbiano le stesse autorizzazioni e usino la stessa configurazione di sessione. Per altre informazioni, vedere la sezione sull'esecuzione di un flusso di lavoro di Windows PowerShell nella guida introduttiva di questa funzionalità.
 
-### <a name="BKMK_CHAR"></a>Miglioramenti nella gestione di caratteri speciali
+### <a name="a-namebkmkcharaspecial-character-handling-improvements"></a><a name="BKMK_CHAR"></a>Miglioramenti nella gestione di caratteri speciali
 Per migliorare le capacità di Windows PowerShell 3.0 di interpretare e gestire correttamente i caratteri speciali, il parametro **LiteralPath**, che gestisce i caratteri speciali nei percorsi, è valido in quasi tutti i cmdlet con un parametro **Path**, inclusi i nuovi cmdlet [Update-Help](https://technet.microsoft.com/en-us/library/93e1d870-ace6-432b-8778-8920291d7545) e [Save-Help](https://technet.microsoft.com/en-us/library/aed94f90-b73f-4e25-a25d-7c18d9f161fa). Il parser include anche una logica speciale per migliorare la gestione del carattere apice inverso (\`) e delle parentesi quadre nei nomi file e nei percorsi.
 
-## Vedere anche
+## <a name="see-also"></a>Vedere anche
 - [about_Windows_PowerShell_4.0](http://technet.microsoft.com/en-us/library/hh847833(v=wps.630).aspx)
 - [about_Windows_PowerShell_5.0](https://technet.microsoft.com/en-us/library/6d56fa88-371e-40c9-b2de-64a2a0cd49da)
 - [Windows PowerShell](http://go.microsoft.com/fwlink/?LinkID=107116)
@@ -762,6 +762,6 @@ Per migliorare le capacità di Windows PowerShell 3.0 di interpretare e gestire 
 
 
 
-<!--HONumber=Oct16_HO5-->
+<!--HONumber=Nov16_HO3-->
 
 

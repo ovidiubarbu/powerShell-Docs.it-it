@@ -14,12 +14,12 @@ ms.openlocfilehash: 6b5710be87f6362fb3274e333737e31ad477aaee
 
 ---
 
-# Modulo PSScriptAnalyzer
+# <a name="psscriptanalyzer-module"></a>Modulo PSScriptAnalyzer
 Questa sezione contiene gli argomenti della Guida per il modulo **PSScriptAnalyzer**, che è possibile usare per controllare i problemi negli script e nei moduli in Windows PowerShell®. Questo modulo viene installato con Windows PowerShell.
 
-## Argomenti della Guida
+## <a name="help-topics"></a>Argomenti della Guida
 
-## Vedere anche
+## <a name="see-also"></a>Vedere anche
 - [Windows PowerShell 5.0](Windows-PowerShell-5.0.md)
 - [Componenti di sistema di Windows PowerShell](https://technet.microsoft.com/en-us/library/4b75f1e4-f327-48f3-92ab-bf5435094d41)
 - [Scrittura di script con Windows PowerShell](../../getting-started/fundamental/Scripting-with-Windows-PowerShell.md)
@@ -27,6 +27,6 @@ Questa sezione contiene gli argomenti della Guida per il modulo **PSScriptAnalyz
 
 
 
-<!--HONumber=Oct16_HO3-->
+<!--HONumber=Nov16_HO3-->
 
 

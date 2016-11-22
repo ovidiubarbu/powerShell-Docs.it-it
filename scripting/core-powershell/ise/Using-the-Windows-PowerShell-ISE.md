@@ -14,7 +14,7 @@ ms.openlocfilehash: 6363aff01a6018f1fc3a850c6e40ad96e485f554
 
 ---
 
-# Uso di Windows PowerShell ISE
+# <a name="using-the-windows-powershell-ise"></a>Uso di Windows PowerShell ISE
 Gli argomenti in questo documento descrivono come usare le funzionalità di Windows PowerShell® Integrated Scripting Environment (ISE) per aumentare la produttività.
 
 [Come usare la funzionalità di completamento tramite TAB nel riquadro di script e nel riquadro della console](How-to-Use-Tab-Completion-in-the-Script-Pane-and-Console-Pane.md) Illustra la procedura per usare il completamento tramite TAB nel riquadro di script e nel riquadro della console.
@@ -29,7 +29,7 @@ Gli argomenti in questo documento descrivono come usare le funzionalità di Wind
 
 [Come usare i profili in Windows PowerShell ISE](How-to-Use-Profiles-in-Windows-PowerShell-ISE.md) Include informazioni e procedure per la creazione e l'uso di profili in Windows PowerShell ISE.
 
-## Vedere anche
+## <a name="see-also"></a>Vedere anche
 - [Esplorazione di Windows PowerShell ISE](../../getting-started/fundamental/Exploring-the-Windows-PowerShell-ISE.md)
 - [Accessibilità in Windows PowerShell ISE](../../setup/Accessibility-in-Windows-PowerShell-ISE.md)
 - [Modello a oggetti di scripting di Windows PowerShell ISE](https://technet.microsoft.com/en-us/library/69b047d0-da79-413e-b948-8e45d05d1f85)
@@ -37,6 +37,6 @@ Gli argomenti in questo documento descrivono come usare le funzionalità di Wind
 
 
 
-<!--HONumber=Oct16_HO3-->
+<!--HONumber=Nov16_HO3-->
 
 
