@@ -14,12 +14,12 @@ ms.openlocfilehash: e4d830fa49157366fb20851f01b34d433b296534
 
 ---
 
-# Oggetto ISEFile
+# <a name="the-isefile-object"></a>Oggetto ISEFile
   Un oggetto **ISEFile** rappresenta un file in Windows PowerShell® Integrated Scripting Environment (ISE). È un'istanza della classe Microsoft.PowerShell.Host.ISE.ISEFile. Questo argomento elenca i relativi metodi membro e le proprietà del membro. L'oggetto **$psISE.CurrentFile** e i file nella raccolta File in una scheda di PowerShell sono tutte istanze della classe Microsoft.PowerShell.Host.ISE.ISEFile.
 
-## Metodo
+## <a name="methods"></a>Metodo
 
-###  <a name="save-override"></a> Save\( \[saveEncoding\] \)
+###  <a name="a-namesaveoverridea-save-saveencoding-"></a><a name="save-override"></a>Save \( \[saveEncoding\] \)
   Supportato in Windows PowerShell ISE 2.0 e versioni successive. 
 
  Salva il file su disco.
@@ -43,7 +43,7 @@ $myfile.Encoding
 
 ```
 
-###  <a name="saveas"></a> SaveAs\(filename, \[saveEncoding\]\)
+###  <a name="a-namesaveasa-saveasfilename-saveencoding"></a><a name="saveas"></a>SaveAs \(filename, \[saveEncoding\]\)
   Supportato in Windows PowerShell ISE 2.0 e versioni successive. 
 
  Salva il file con il nome file e la codifica specificati.
@@ -69,12 +69,12 @@ $psIse.CurrentFile.SaveAs( $fullPath, [System.Text.Encoding]::UTF8 )
 
 ```
 
-## Proprietà
+## <a name="properties"></a>Proprietà
 
-###  <a name="Displayname"></a> DisplayName
+###  <a name="a-namedisplaynamea-displayname"></a><a name="Displayname"></a>DisplayName
   Supportato in Windows PowerShell ISE 2.0 e versioni successive. 
 
- Proprietà di sola lettura che ottiene la stringa contenente il nome visualizzato di questo file. Il nome viene visualizzato nella scheda **File** nella parte superiore dell'editor. La presenza di un asterisco (\(\*\)) alla fine del nome indica che il file contiene modifiche che non sono state salvate.
+ Proprietà di sola lettura che ottiene la stringa contenente il nome visualizzato di questo file. Il nome viene visualizzato nella scheda **File** nella parte superiore dell'editor. La presenza di un asterisco \(\*\) alla fine del nome indica che il file contiene modifiche che non sono state salvate.
 
 ```
 # Shows the display name of the file.
@@ -82,7 +82,7 @@ $psIse.CurrentFile.DisplayName
 
 ```
 
-###  <a name="Editor"></a> Editor
+###  <a name="a-nameeditora-editor"></a><a name="Editor"></a>Editor
   Supportato in Windows PowerShell ISE 2.0 e versioni successive. 
 
  Proprietà di sola lettura che ottiene l'[oggetto editor](The-ISEEditor-Object.md) usato per il file specificato.
@@ -93,7 +93,7 @@ $psIse.CurrentFile.Editor.Text
 
 ```
 
-###  <a name="Encoding"></a> Encoding
+###  <a name="a-nameencodinga-encoding"></a><a name="Encoding"></a>Encoding
   Supportato in Windows PowerShell ISE 2.0 e versioni successive. 
 
  Proprietà di sola lettura che ottiene la codifica del file originale. Si tratta di un oggetto **System.Text.Encoding**.
@@ -104,7 +104,7 @@ $psIse.CurrentFile.Encoding
 
 ```
 
-###  <a name="FullPath"></a> FullPath
+###  <a name="a-namefullpatha-fullpath"></a><a name="FullPath"></a>FullPath
   Supportato in Windows PowerShell ISE 2.0 e versioni successive. 
 
  Proprietà di sola lettura che ottiene la stringa che specifica il percorso completo del file aperto.
@@ -115,7 +115,7 @@ $psIse.CurrentFile.FullPath
 
 ```
 
-###  <a name="IsSaved"></a> IsSaved
+###  <a name="a-nameissaveda-issaved"></a><a name="IsSaved"></a>IsSaved
   Supportato in Windows PowerShell ISE 2.0 e versioni successive. 
 
  Proprietà booleana di sola lettura che restituisce **$true** se il file è stato salvato dopo l'ultima modifica.
@@ -127,7 +127,7 @@ $myfile.IsSaved
 
 ```
 
-###  <a name="IsUntitled"></a> IsUntitled
+###  <a name="a-nameisuntitleda-isuntitled"></a><a name="IsUntitled"></a>IsUntitled
   Supportato in Windows PowerShell ISE 2.0 e versioni successive. 
 
  Proprietà di sola lettura che restituisce **$true** se al file non è mai stato assegnato un titolo.
@@ -140,7 +140,7 @@ $psISE.CurrentFile.IsUntitled
 
 ```
 
-## Vedere anche
+## <a name="see-also"></a>Vedere anche
 - [Oggetto ISEFileCollectionObject](The-ISEFileCollection-Object.md) 
 - [Modello a oggetti di scripting di Windows PowerShell ISE](The-Windows-PowerShell-ISE-Scripting-Object-Model.md) 
 - [Riferimenti al modello a oggetti di Windows PowerShell ISE](Windows-PowerShell-ISE-Object-Model-Reference.md) 
@@ -150,6 +150,6 @@ $psISE.CurrentFile.IsUntitled
 
 
 
-<!--HONumber=Oct16_HO3-->
+<!--HONumber=Nov16_HO3-->
 
 
