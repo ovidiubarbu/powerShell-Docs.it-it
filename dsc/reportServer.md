@@ -8,12 +8,12 @@ author: eslesar
 manager: dongill
 ms.prod: powershell
 translationtype: Human Translation
-ms.sourcegitcommit: 59793e1701740dc783439cf1408c6efabd53cbcf
-ms.openlocfilehash: d541f37723d77cf0b52012bae143dc7d64efd65d
+ms.sourcegitcommit: 1e7bc38f03dd72fc29d004eb92bf130c416e490a
+ms.openlocfilehash: f7f2699287e76970d0b2565f7bbd45a5d75ac93a
 
 ---
 
-# Uso di un server di report DSC
+# <a name="using-a-dsc-report-server"></a>Uso di un server di report DSC
 
 > Si applica a: Windows PowerShell 5.0
 
@@ -21,7 +21,7 @@ ms.openlocfilehash: d541f37723d77cf0b52012bae143dc7d64efd65d
 
 È possibile configurare Gestione configurazione locale in un nodo per inviare report sullo stato della configurazione a un server di pull, su cui è quindi possibile eseguire query per recuperare i dati. Ogni volta che il nodo controlla e applica una configurazione, invia un report al server di report. Questi report vengono archiviati in un database nel server e possono essere recuperati chiamando il servizio Web di gestione dei report. Ogni report contiene informazioni come le configurazioni applicate e l'esito dell'applicazione, le risorse usate, eventuali errori generati e le ore di inizio e fine.
 
-## Configurazione di un nodo per l'invio di report
+## <a name="configuring-a-node-to-send-reports"></a>Configurazione di un nodo per l'invio di report
 
 Per chiedere a un nodo di inviare report a un server, è possibile usare un blocco **ReportServerWeb** nella configurazione di Gestione configurazione locale del nodo. Per informazioni sulla configurazione di Gestione configurazione locale, vedere [Configurazione di Gestione configurazione locale](metaConfig.md). Il server a cui il nodo invia i report deve essere configurato come server di pull Web. Non è possibile inviare report a una condivisione SMB. Per informazioni sulla configurazione di un server di pull, vedere [Configurazione di un server di pull Web DSC](pullServer.md). Il server di report può corrispondere al servizio da cui il nodo effettua il pull delle configurazioni e ottiene le risorse oppure può essere un servizio diverso.
  
@@ -94,7 +94,7 @@ PullClientConfig
 
 >**Nota:** è possibile assegnare il nome desiderato al servizio Web quando si configura un server di pull, ma la proprietà **ServerURL** deve corrispondere al nome del servizio.
 
-## Recupero dei dati dei report
+## <a name="getting-report-data"></a>Recupero dei dati dei report
 
 I report inviati al server di pull vengono immessi in un database nel server. I report sono disponibili tramite chiamate al servizio Web. Per recuperare i report per un nodo specifico, inviare una richiesta HTTP al servizio Web di report nel formato seguente: `http://CONTOSO-REPORT:8080/PSDSCReportServer.svc/Nodes(AgentID = MyNodeAgentId)/Reports` dove `MyNodeAgentId` è il valore di AgentId del nodo per cui ottenere i report. È possibile ottenere il valore di AgentID per un nodo chiamando [Get-DscLocalConfigurationManager](https://technet.microsoft.com/en-us/library/dn407378.aspx) in tale nodo.
 
@@ -105,8 +105,8 @@ Lo script seguente restituisce i report per il nodo in cui viene eseguito:
 ```powershell
 function GetReport
 {
-    param($AgentId = "$((glcm).AgentId)", $serviceURL = "http://CONTOSO-REPORT:8080/PSDSCReportServer.svc")
-    $requestUri = "$serviceURL/Nodes(AgentId= '$AgentId')/Reports"
+    param($AgentId = "$((glcm).AgentId)", $serviceURL = "http://CONTOSO-REPORT:8080/PSDSCPullServer.svc")
+    $requestUri = "$serviceURL/Node(ConfigurationId= '$AgentId')/StatusReports"
     $request = Invoke-WebRequest -Uri $requestUri  -ContentType "application/json;odata=minimalmetadata;streaming=true;charset=utf-8" `
                -UseBasicParsing -Headers @{Accept = "application/json";ProtocolVersion = "2.0"} `
                -ErrorAction SilentlyContinue -ErrorVariable ev
@@ -115,7 +115,7 @@ function GetReport
 }
 ```
     
-## Visualizzazione dei dati dei report
+## <a name="viewing-report-data"></a>Visualizzazione dei dati dei report
 
 Se si imposta una variabile sul risultato della funzione **GetReport**, è possibile visualizzare i singoli campi in un elemento della matrice restituita:
 
@@ -222,7 +222,7 @@ InDesiredState    : True
 
 Si noti che questi esempi servono solo per dare un'idea di cosa è possibile fare con i dati dei report. Per informazioni introduttive sull'uso di JSON in PowerShell, vedere il post di blog [Playing with JSON and PowerShell](https://blogs.technet.microsoft.com/heyscriptingguy/2015/10/08/playing-with-json-and-powershell/).
 
-## Vedere anche
+## <a name="see-also"></a>Vedere anche
 - [Configurazione di Gestione configurazione locale](metaConfig.md)
 - [Configurazione di un server di pull Web DSC](pullServer.md)
 - [Configurazione di un client di pull usando nomi di configurazione](pullClientConfigNames.md)
@@ -230,6 +230,6 @@ Si noti che questi esempi servono solo per dare un'idea di cosa è possibile far
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Nov16_HO3-->
 
 
