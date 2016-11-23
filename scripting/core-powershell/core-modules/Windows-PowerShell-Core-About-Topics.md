@@ -14,7 +14,7 @@ ms.openlocfilehash: c935d6f066aed1496069681723aa7bd72edbb8e3
 
 ---
 
-# Argomenti di informazioni sui componenti di sistema di Windows PowerShell
+# <a name="windows-powershell-core-about-topics"></a>Argomenti di informazioni sui componenti di sistema di Windows PowerShell
 Questa sezione contiene gli argomenti della Guida concettuale ("Informazioni su") applicabili a tutti i moduli di Windows PowerShell. Per gli altri moduli, vedere gli argomenti della Guida specifici.
 
 |Argomento|Descrizione|
@@ -133,7 +133,7 @@ Questa sezione contiene gli argomenti della Guida concettuale ("Informazioni su"
 |[about_WQL](https://technet.microsoft.com/en-us/library/820b2d23-3473-46f5-a188-5910704c7905)|Descrive il linguaggio WMI Query Language (WQL) che può essere usato per ottenere oggetti WMI in Windows PowerShell.|
 |[about_WS-Management_Cmdlets [v3]](https://technet.microsoft.com/en-us/library/22738d36-4d49-472c-ae51-9365b9bbd7c2)|Descrive i cmdlet del modulo Microsoft.WsMan.Management. Spiega come usarli insieme per gestire le funzionalità di WS-Management, tra cui l'unità del provider WSMan.|
 
-## Vedere anche
+## <a name="see-also"></a>Vedere anche
 - [Scrittura di script con Windows PowerShell](../../getting-started/fundamental/Scripting-with-Windows-PowerShell.md)
 - [Componenti di sistema di Windows PowerShell](https://technet.microsoft.com/en-us/library/4b75f1e4-f327-48f3-92ab-bf5435094d41)
 - [Windows PowerShell 5.0](Windows-PowerShell-5.0.md)
@@ -145,6 +145,6 @@ Questa sezione contiene gli argomenti della Guida concettuale ("Informazioni su"
 
 
 
-<!--HONumber=Oct16_HO3-->
+<!--HONumber=Nov16_HO3-->
 
 
