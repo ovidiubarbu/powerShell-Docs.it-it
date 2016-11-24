@@ -5,12 +5,12 @@
  -------- | ----- 
  Total Files | 2424
 [ Handoff Failed Files ](#handoff-failed-list)| 1
-[ Handoff Success Files ](#handoff-success-list)| 2198
+[ Handoff Success Files ](#handoff-success-list)| 2196
 [ Archive Failed Files ](#archive-failed-list)| 0
 [ Archive Success Files ](#archive-success-list)| 8
-[ Handback Failed Files ](#handback-failed-list)| 1
+[ Handback Failed Files ](#handback-failed-list)| 2
 [ Out Of Sync Handback Files ](#outofsync-handback-success-list)| 0
-[ In Sync Handback Files ](#insync-handback-success-list)| 180
+[ In Sync Handback Files ](#insync-handback-success-list)| 181
 [ Ignored Files ](#ignored-list)| 36
 
 ## <a name='handoff-failed-list'></a> Handoff Failed File List
@@ -46,7 +46,6 @@
  [gallery\psgallery\Deleting-Items.md](https://github.com/PowerShell/powerShell-Docs/blob/e6c526d1074f61154d03b92b6bf6f599976f5936/gallery/psgallery/Deleting-Items.md) | HandedOffSuccess | [Details](#4e0258ccf05ef5ab0dc799a5113b05becc3dbb05112)
  [gallery\psgallery\Item-Conventions.md](https://github.com/PowerShell/powerShell-Docs/blob/e6c526d1074f61154d03b92b6bf6f599976f5936/gallery/psgallery/Item-Conventions.md) | HandedOffSuccess | [Details](#5df8007fbcb49f80708fa892ac9d3e21656b476a118)
  [gallery\psgallery\Managing-Item-Owners.md](https://github.com/PowerShell/powerShell-Docs/blob/e6c526d1074f61154d03b92b6bf6f599976f5936/gallery/psgallery/Managing-Item-Owners.md) | HandedOffSuccess | [Details](#00fe57762c6b2bb690255ecaea642f97124f4328119)
- [gallery\psgallery\PackageManagement_Architecture .md](https://github.com/PowerShell/powerShell-Docs/blob/e6c526d1074f61154d03b92b6bf6f599976f5936/gallery/psgallery/PackageManagement_Architecture%20.md) | HandedOffSuccess | [Details](#c84ff58e4378feffa15c91485826b74f421c737e120)
  [gallery\psgallery\psgallery_contacting_administrators.md](https://github.com/PowerShell/powerShell-Docs/blob/e6c526d1074f61154d03b92b6bf6f599976f5936/gallery/psgallery/psgallery_contacting_administrators.md) | HandedOffSuccess | [Details](#0268fed62bc4c30f5e299af0cc29a0f2316ce731121)
  [gallery\psgallery\psgallery_contacting_item_owners.md](https://github.com/PowerShell/powerShell-Docs/blob/e6c526d1074f61154d03b92b6bf6f599976f5936/gallery/psgallery/psgallery_contacting_item_owners.md) | HandedOffSuccess | [Details](#1e86d285ba2d9fb7fb3d652a7c941c458f888a53122)
  [gallery\psgallery\psgallery_deploy_to_azure_automation.md](https://github.com/PowerShell/powerShell-Docs/blob/e6c526d1074f61154d03b92b6bf6f599976f5936/gallery/psgallery/psgallery_deploy_to_azure_automation.md) | HandedOffSuccess | [Details](#c028bf6145b41c13bccda9543a782b838bd730ff123)
@@ -2083,7 +2082,6 @@
  [reference\5.1\PSWorkflowUtility\Invoke-AsWorkflow.md](https://github.com/PowerShell/powerShell-Docs/blob/23ed713aedad70f85d007d93edfe652797b306c8/reference/5.1/PSWorkflowUtility/Invoke-AsWorkflow.md) | HandedOffSuccess | [Details](#5d884058d7d55f9851e4622882582ca0c7099fd82169)
  [reference\5.1\PSWorkflowUtility\PSWorkflowUtility.md](https://github.com/PowerShell/powerShell-Docs/blob/23ed713aedad70f85d007d93edfe652797b306c8/reference/5.1/PSWorkflowUtility/PSWorkflowUtility.md) | HandedOffSuccess | [Details](#22113250ce737dd6ae4f0625b1973ffe1529a9392170)
  [reference\5.1\ToC.md](https://github.com/PowerShell/powerShell-Docs/blob/245ca14b9e9e60e91f9bc2609cd94952ce17cddf/reference/5.1/ToC.md) | HandedOffSuccess | [Details](#dfa8f464a7a9b0ae0b518d764243bf609a6e99cd2172)
- [reference\README.md](https://github.com/PowerShell/powerShell-Docs/blob/6f2cc23f6fce9c267e793fa8653f292e6a6b98ec/reference/README.md) | HandedOffSuccess | [Details](#edafde9188cad3b21d0cd2b30cfaaf1bede9b1952174)
  [reference\TOC.md](https://github.com/PowerShell/powerShell-Docs/blob/85c946f7307ac72a43b9682d7d0f50ec637f0979/reference/TOC.md) | HandedOffSuccess | [Details](#aeea01e2db55c43d30a69a530a4e63f54e0156d82175)
  [scripting\core-powershell\console\PowerShell.exe-Command-Line-Help.md](https://github.com/PowerShell/powerShell-Docs/blob/763dc6bb0410ec09fc237d41b96842895b15d142/scripting/core-powershell/console/PowerShell.exe-Command-Line-Help.md) | HandedOffSuccess | [Details](#c3b263110a908c28569cf3048a94d48da83166842177)
  [scripting\core-powershell\console\Using-Tab-Expansion.md](https://github.com/PowerShell/powerShell-Docs/blob/27512f637dd44485eee38936fea4723cd17b6218/scripting/core-powershell/console/Using-Tab-Expansion.md) | HandedOffSuccess | [Details](#b67024fb27c08e1079caad891cfc3e621a354b272178)
@@ -2238,6 +2236,7 @@
  Source File | Status | Details 
  ----------- | ------ | ------- 
  [dsc\authoringResourceComposite.md](https://github.com/PowerShell/powerShell-Docs/blob/48cfed9e0c31e24c441eafb388a799bd7fc7415f/dsc/authoringResourceComposite.md) | HandedBackFailed | [Details](#6631d60d7d82e71c315c26a0196aa3e4c1b60b1510)
+ [gallery\psgallery\PackageManagement_Architecture .md](https://github.com/PowerShell/powerShell-Docs/blob/e6c526d1074f61154d03b92b6bf6f599976f5936/gallery/psgallery/PackageManagement_Architecture%20.md) | HandedBackFailed | [Details](#c84ff58e4378feffa15c91485826b74f421c737e120)
 
 ## <a name='outofsync-handback-success-list'></a> Out Of Sync Handback Success File List
 
@@ -2331,6 +2330,7 @@
  [jea\reporting-on-jea.md](https://github.com/PowerShell/powerShell-Docs/blob/7504fe496a8913718847e45115d126caf4049bef/jea/reporting-on-jea.md) | InSyncHandedBackSuccess | [Details](#d867a6462e9fa8b6e16c8c2103899c72b380116c191)
  [jea\role-capabilities.md](https://github.com/PowerShell/powerShell-Docs/blob/81fd386d58576a8930093b4f18ce36a4ff6cecd0/jea/role-capabilities.md) | InSyncHandedBackSuccess | [Details](#a3dd4a217f5b1fd80e97adf802c65073ca015bbc192)
  [jea\using-jea.md](https://github.com/PowerShell/powerShell-Docs/blob/88ce340c09efdbb3d81a72fe6113c1187a9152f2/jea/using-jea.md) | InSyncHandedBackSuccess | [Details](#9db7a5a91d25d459313117da34af63016f03c241194)
+ [reference\README.md](https://github.com/PowerShell/powerShell-Docs/blob/6f2cc23f6fce9c267e793fa8653f292e6a6b98ec/reference/README.md) | InSyncHandedBackSuccess | [Details](#edafde9188cad3b21d0cd2b30cfaaf1bede9b1952174)
  [scripting\core-powershell\console-guide.md](https://github.com/PowerShell/powerShell-Docs/blob/03ac4b90d299b316194f1fa932e7dbf62d4b1c8e/scripting/core-powershell/console-guide.md) | InSyncHandedBackSuccess | [Details](#074f3570e9354f2186be8690744640ea4739ef6e2176)
  [scripting\core-powershell\core-modules\Windows-PowerShell-5.0.md](https://github.com/PowerShell/powerShell-Docs/blob/03ac4b90d299b316194f1fa932e7dbf62d4b1c8e/scripting/core-powershell/core-modules/Windows-PowerShell-5.0.md) | InSyncHandedBackSuccess | [Details](#8adf724740b2f09bff6d5cafb822566f4747780c2193)
  [scripting\core-powershell\ise-guide.md](https://github.com/PowerShell/powerShell-Docs/blob/03ac4b90d299b316194f1fa932e7dbf62d4b1c8e/scripting/core-powershell/ise-guide.md) | InSyncHandedBackSuccess | [Details](#053a4fd734b1e86c5f8ca22c8197ce4e80b6fce62197)
@@ -4149,7 +4149,7 @@
 * [Back to Top](#report-top)
 
 ##### <a name='c84ff58e4378feffa15c91485826b74f421c737e120'></a> Source: [gallery\psgallery\PackageManagement_Architecture .md](https://github.com/PowerShell/powerShell-Docs/blob/e6c526d1074f61154d03b92b6bf6f599976f5936/gallery/psgallery/PackageManagement_Architecture%20.md)
-* Status: HandedOffSuccess
+* Status: HandedBackFailed
 * Target File: 
 * Handoff File: [PackageManagement_Architecture .342c41f221a468f60c1ece4ef6d32b4005ca3c94.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/800235d790e059d7981d922e4a881117578337c7/ol-handoff/PowerShell/powerShell-Docs.it-it/live/PackageManagement_Architecture%20.342c41f221a468f60c1ece4ef6d32b4005ca3c94.it-it.xlf)
 * Handoff Datetime: 2016-11-23 22:32:34
@@ -4157,7 +4157,8 @@
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
+* Handback Datetime: 2016-11-24 15:03:45
+* Handback Error: [handback_validate_file_name_invalide](#c84ff58e4378feffa15c91485826b74f421c737e120handback_validate_file_name_invalide)
 * [Back to Top](#report-top)
 
 ##### <a name='0268fed62bc4c30f5e299af0cc29a0f2316ce731121'></a> Source: [gallery\psgallery\psgallery_contacting_administrators.md](https://github.com/PowerShell/powerShell-Docs/blob/e6c526d1074f61154d03b92b6bf6f599976f5936/gallery/psgallery/psgallery_contacting_administrators.md)
@@ -28837,15 +28838,15 @@
 * [Back to Top](#report-top)
 
 ##### <a name='edafde9188cad3b21d0cd2b30cfaaf1bede9b1952174'></a> Source: [reference\README.md](https://github.com/PowerShell/powerShell-Docs/blob/6f2cc23f6fce9c267e793fa8653f292e6a6b98ec/reference/README.md)
-* Status: HandedOffSuccess
-* Target File: 
+* Status: InSyncHandedBackSuccess
+* Target File: [reference\README.md](https://github.com/PowerShell/powerShell-Docs.it-it/blob/237e4fa392faf9bbf51b2ccddda5807ddb577fd9/reference/README.md)
 * Handoff File: [README.cf2da502d5141d3c542b8221274cee500c801dc1.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/800235d790e059d7981d922e4a881117578337c7/ol-handoff/PowerShell/powerShell-Docs.it-it/live/README.cf2da502d5141d3c542b8221274cee500c801dc1.it-it.xlf)
 * Handoff Datetime: 2016-11-23 22:32:34
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
+* Handback File: [README.cf2da502d5141d3c542b8221274cee500c801dc1.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/597d6a34d5dbfced2b8ea806e8344814761764f3/ol-handback/PowerShell/powerShell-Docs.it-it/live/README.cf2da502d5141d3c542b8221274cee500c801dc1.it-it.xlf)
+* Handback Datetime: 2016-11-24 15:03:45
 * [Back to Top](#report-top)
 
 ##### <a name='aeea01e2db55c43d30a69a530a4e63f54e0156d82175'></a> Source: [reference\TOC.md](https://github.com/PowerShell/powerShell-Docs/blob/85c946f7307ac72a43b9682d7d0f50ec637f0979/reference/TOC.md)
@@ -32706,6 +32707,12 @@
 * Error Message: Handback file: C:\ol\master\PSD.handback\7f42c4\ol-handback\PowerShell\powerShell-Docs.it-it\live\authoringResourceComposite.6d5d1e53e83e25cfc63e26078da390a4fa6737f2.it-it.xlf failed.
 * Retriable: False
 * Error Details: {"internal_error_code":"handback_transform_failed","internal_error_message":"Handback file: C:\\ol\\master\\PSD.handback\\7f42c4\\ol-handback\\PowerShell\\powerShell-Docs.it-it\\live\\authoringResourceComposite.6d5d1e53e83e25cfc63e26078da390a4fa6737f2.it-it.xlf failed.","internal_error_retriable":false,"exception_message":"Fail to transform from xliff to markdown with invalid metadata: Invalid yaml header when parsing:\ntitolo: Risorse composite: uso di una configurazione DSC come risorsa ms.date: 16-05-2016 parole chiave: powershell, descrizione DSC:  \nms.topic: autore articolo: eslesar manager: dongill ms.prod: powershell\nError message: (Line: 1, Col: 26, Idx: 25) - (Line: 1, Col: 26, Idx: 25): Mapping values are not allowed in this context.","exception_type":"System.IO.InvalidDataException","stack_trace":"   at Microsoft.OpenLocalization.Transformer.TransformerClient.XliffToMarkdown(Stream xliffStream, Stream skeletonStream, Stream targetStream) in C:\\Jenkins\\workspace\\OpenLocalization-Prod\\src\\OpenLocalization.Transformer.Core\\TransformerClient.cs:line 119\r\n   at Microsoft.OpenLocalization.Helper.XliffTransformUtil.XliffToMarkdown(String skeletonFile, String xliffFile, String mdfile, Boolean useJavascriptTransformer) in C:\\Jenkins\\workspace\\OpenLocalization-Prod\\src\\OpenLocalization\\Helper\\XliffTransformUtil.cs:line 92\r\n   at Microsoft.OpenLocalization.Localization.LocalizationCore.<>c__DisplayClass7_0.<GetHandbackFiles>b__1(String file) in C:\\Jenkins\\workspace\\OpenLocalization-Prod\\src\\OpenLocalization\\Localization\\HandbackCore.cs:line 420","extended_information":null}
+
+##### <a name='c84ff58e4378feffa15c91485826b74f421c737e120handback_validate_file_name_invalide'></a> Source: [gallery\psgallery\PackageManagement_Architecture .md](#c84ff58e4378feffa15c91485826b74f421c737e120)
+* Error Code: handback_validate_file_name_invalide
+* Error Message: Handback file name: PackageManagement_Architecture%20.342c41f221a468f60c1ece4ef6d32b4005ca3c94.it-it is different with handoff file name: PackageManagement_Architecture .342c41f221a468f60c1ece4ef6d32b4005ca3c94.it-it.
+* Retriable: False
+* Error Details: {"internal_error_code":"handback_validate_file_name_invalide","internal_error_message":"Handback file name: PackageManagement_Architecture%20.342c41f221a468f60c1ece4ef6d32b4005ca3c94.it-it is different with handoff file name: PackageManagement_Architecture .342c41f221a468f60c1ece4ef6d32b4005ca3c94.it-it.","internal_error_retriable":false,"exception_message":"Handback file name: PackageManagement_Architecture%20.342c41f221a468f60c1ece4ef6d32b4005ca3c94.it-it is different with handoff file name: PackageManagement_Architecture .342c41f221a468f60c1ece4ef6d32b4005ca3c94.it-it.","exception_type":"Microsoft.OpenLocalization.Common.ErrorHandling.OpenLocalizationException","stack_trace":null,"extended_information":null}
 
 ##### <a name='f7f96e082f28e7cfb3a3f437bc759ec9a163875b2171handoff_transform_failed'></a> Source: [reference\5.1\README.md](#f7f96e082f28e7cfb3a3f437bc759ec9a163875b2171)
 * Error Code: handoff_transform_failed
