@@ -1,11 +1,43 @@
 # <a name='report-top'></a> Localization Bilingual Report
 
 ## Summary
- Total Files | 0
+ Total Files | 2
 
 ## File List
+ Source File | Status | Details 
+ ----------- | ------ | ------- 
+ [scripting\setup\Installing-the-Windows-PowerShell-2.0-Engine.md](https://github.com/PowerShell/powerShell-Docs/blob/2aa04e8094fee4b0da3d5e7025cca215d542355e/scripting/setup/Installing-the-Windows-PowerShell-2.0-Engine.md) | InSyncHandedBackSuccess | [Details](#68a3d823f6545e1fbf6399b4d566a7e62daeebc92294)
+ [scripting\setup\Starting-Windows-PowerShell.md](https://github.com/PowerShell/powerShell-Docs/blob/2aa04e8094fee4b0da3d5e7025cca215d542355e/scripting/setup/Starting-Windows-PowerShell.md) | InSyncHandedBackSuccess | [Details](#260805af4b64646922477f874c6679f58af8aea92302)
 
 ## Item Details
+##### <a name='68a3d823f6545e1fbf6399b4d566a7e62daeebc92294'></a> Source: [scripting\setup\Installing-the-Windows-PowerShell-2.0-Engine.md](https://github.com/PowerShell/powerShell-Docs/blob/2aa04e8094fee4b0da3d5e7025cca215d542355e/scripting/setup/Installing-the-Windows-PowerShell-2.0-Engine.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [scripting\setup\Installing-the-Windows-PowerShell-2.0-Engine.md](https://github.com/PowerShell/powerShell-Docs.it-it/blob/fd51d18e15c1b789f89374cc97804b11814911fd/scripting/setup/Installing-the-Windows-PowerShell-2.0-Engine.md)
+* Handoff File: [Installing-the-Windows-PowerShell-2.0-Engine.190b56ee17b5135bba49f697312b896e5c3755dd.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/800235d790e059d7981d922e4a881117578337c7/ol-handoff/PowerShell/powerShell-Docs.it-it/live/Installing-the-Windows-PowerShell-2.0-Engine.190b56ee17b5135bba49f697312b896e5c3755dd.it-it.xlf)
+* Handoff Datetime: 2016-11-23 22:32:34
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [Installing-the-Windows-PowerShell-2.0-Engine.190b56ee17b5135bba49f697312b896e5c3755dd.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/2e1fc1c2a953fe468c32e2e7cde4228318ef2919/ol-handback/PowerShell/powerShell-Docs.it-it/live/Installing-the-Windows-PowerShell-2.0-Engine.190b56ee17b5135bba49f697312b896e5c3755dd.it-it.xlf)
+* Handback Datetime: 2016-11-25 15:16:17
+* Bilingual File: [Installing-the-Windows-PowerShell-2.0-Engine.190b56ee17b5135bba49f697312b896e5c3755dd.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/2e1fc1c2a953fe468c32e2e7cde4228318ef2919/ol-handback/PowerShell/powerShell-Docs.it-it/live/Installing-the-Windows-PowerShell-2.0-Engine.190b56ee17b5135bba49f697312b896e5c3755dd.it-it.xlf)
+* Bilingual Datetime: 2016-11-25 15:20:40
+* [Back to Top](#report-top)
+
+##### <a name='260805af4b64646922477f874c6679f58af8aea92302'></a> Source: [scripting\setup\Starting-Windows-PowerShell.md](https://github.com/PowerShell/powerShell-Docs/blob/2aa04e8094fee4b0da3d5e7025cca215d542355e/scripting/setup/Starting-Windows-PowerShell.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [scripting\setup\Starting-Windows-PowerShell.md](https://github.com/PowerShell/powerShell-Docs.it-it/blob/fd51d18e15c1b789f89374cc97804b11814911fd/scripting/setup/Starting-Windows-PowerShell.md)
+* Handoff File: [Starting-Windows-PowerShell.a3dcf25852cd345b654f8612f2d32861f0ccad4f.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/800235d790e059d7981d922e4a881117578337c7/ol-handoff/PowerShell/powerShell-Docs.it-it/live/Starting-Windows-PowerShell.a3dcf25852cd345b654f8612f2d32861f0ccad4f.it-it.xlf)
+* Handoff Datetime: 2016-11-23 22:32:34
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: [Starting-Windows-PowerShell.a3dcf25852cd345b654f8612f2d32861f0ccad4f.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/2e1fc1c2a953fe468c32e2e7cde4228318ef2919/ol-handback/PowerShell/powerShell-Docs.it-it/live/Starting-Windows-PowerShell.a3dcf25852cd345b654f8612f2d32861f0ccad4f.it-it.xlf)
+* Handback Datetime: 2016-11-25 15:16:17
+* Bilingual File: [Starting-Windows-PowerShell.a3dcf25852cd345b654f8612f2d32861f0ccad4f.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/2e1fc1c2a953fe468c32e2e7cde4228318ef2919/ol-handback/PowerShell/powerShell-Docs.it-it/live/Starting-Windows-PowerShell.a3dcf25852cd345b654f8612f2d32861f0ccad4f.it-it.xlf)
+* Bilingual Datetime: 2016-11-25 15:20:40
+* [Back to Top](#report-top)
+
 
 ## Error Details
 

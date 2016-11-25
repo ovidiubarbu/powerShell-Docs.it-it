@@ -30840,8 +30840,8 @@
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: [Installing-the-Windows-PowerShell-2.0-Engine.190b56ee17b5135bba49f697312b896e5c3755dd.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/2e1fc1c2a953fe468c32e2e7cde4228318ef2919/ol-handback/PowerShell/powerShell-Docs.it-it/live/Installing-the-Windows-PowerShell-2.0-Engine.190b56ee17b5135bba49f697312b896e5c3755dd.it-it.xlf)
 * Handback Datetime: 2016-11-25 15:16:17
-* Bilingual File: [Installing-the-Windows-PowerShell-2.0-Engine.190b56ee17b5135bba49f697312b896e5c3755dd.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/b023d92cd444e6d107b50b4e91dca9b5dead6742/ol-handback/PowerShell/powerShell-Docs.it-it/live/Installing-the-Windows-PowerShell-2.0-Engine.190b56ee17b5135bba49f697312b896e5c3755dd.it-it.xlf)
-* Bilingual Datetime: 2016-07-06 11:37:25
+* Bilingual File: [Installing-the-Windows-PowerShell-2.0-Engine.190b56ee17b5135bba49f697312b896e5c3755dd.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/2e1fc1c2a953fe468c32e2e7cde4228318ef2919/ol-handback/PowerShell/powerShell-Docs.it-it/live/Installing-the-Windows-PowerShell-2.0-Engine.190b56ee17b5135bba49f697312b896e5c3755dd.it-it.xlf)
+* Bilingual Datetime: 2016-11-25 15:20:40
 * [Back to Top](#report-top)
 
 ##### <a name='7af27dc9bd8e93d1df5258b0d8df8af12726f5682295'></a> Source: [scripting\setup\Installing-the-Windows-PowerShell-SDK.md](https://github.com/PowerShell/powerShell-Docs/blob/7caac42751c580d588fcf19db7253c8b75d6c865/scripting/setup/Installing-the-Windows-PowerShell-SDK.md)
@@ -30953,8 +30953,8 @@
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: [Starting-Windows-PowerShell.a3dcf25852cd345b654f8612f2d32861f0ccad4f.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/2e1fc1c2a953fe468c32e2e7cde4228318ef2919/ol-handback/PowerShell/powerShell-Docs.it-it/live/Starting-Windows-PowerShell.a3dcf25852cd345b654f8612f2d32861f0ccad4f.it-it.xlf)
 * Handback Datetime: 2016-11-25 15:16:17
-* Bilingual File: [Starting-Windows-PowerShell.a3dcf25852cd345b654f8612f2d32861f0ccad4f.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/599f530073fea384887a24eb0bccd62e6ae1ccd5/ol-handback/PowerShell/powerShell-Docs.it-it/live/Starting-Windows-PowerShell.a3dcf25852cd345b654f8612f2d32861f0ccad4f.it-it.xlf)
-* Bilingual Datetime: 2016-07-05 13:13:02
+* Bilingual File: [Starting-Windows-PowerShell.a3dcf25852cd345b654f8612f2d32861f0ccad4f.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/2e1fc1c2a953fe468c32e2e7cde4228318ef2919/ol-handback/PowerShell/powerShell-Docs.it-it/live/Starting-Windows-PowerShell.a3dcf25852cd345b654f8612f2d32861f0ccad4f.it-it.xlf)
+* Bilingual Datetime: 2016-11-25 15:20:40
 * [Back to Top](#report-top)
 
 ##### <a name='333469a642a4b88442a7d3ca8fa65f5755c69bcc2301'></a> Source: [scripting\setup\Starting-Windows-PowerShell-on-Earlier-Versions-of-Windows.md](https://github.com/PowerShell/powerShell-Docs/blob/c40ab96196531d36001e4d94a3821d20612cbfce/scripting/setup/Starting-Windows-PowerShell-on-Earlier-Versions-of-Windows.md)
