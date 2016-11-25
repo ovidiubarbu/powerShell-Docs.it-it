@@ -5,12 +5,12 @@
  -------- | ----- 
  Total Files | 2424
 [ Handoff Failed Files ](#handoff-failed-list)| 1
-[ Handoff Success Files ](#handoff-success-list)| 2195
+[ Handoff Success Files ](#handoff-success-list)| 2193
 [ Archive Failed Files ](#archive-failed-list)| 0
 [ Archive Success Files ](#archive-success-list)| 8
 [ Handback Failed Files ](#handback-failed-list)| 3
 [ Out Of Sync Handback Files ](#outofsync-handback-success-list)| 0
-[ In Sync Handback Files ](#insync-handback-success-list)| 181
+[ In Sync Handback Files ](#insync-handback-success-list)| 183
 [ Ignored Files ](#ignored-list)| 36
 
 ## <a name='handoff-failed-list'></a> Handoff Failed File List
@@ -2188,12 +2188,10 @@
  [scripting\getting-started\understanding-concepts-reference.md](https://github.com/PowerShell/powerShell-Docs/blob/119b4d50423498e08383f02e56ae76653d06e555/scripting/getting-started/understanding-concepts-reference.md) | HandedOffSuccess | [Details](#e3cac149d549400b6a180b4a4fd6ff1a13a8130b2290)
  [scripting\PowerShell-Scripting.md](https://github.com/PowerShell/powerShell-Docs/blob/b38cfd053cc2356fa7ca99605dbd84190d342327/scripting/PowerShell-Scripting.md) | HandedOffSuccess | [Details](#fc6307be4dafb378350b6d9667b2b6aca0e2e6d42292)
  [scripting\setup\Accessibility-in-Windows-PowerShell-ISE.md](https://github.com/PowerShell/powerShell-Docs/blob/2aa04e8094fee4b0da3d5e7025cca215d542355e/scripting/setup/Accessibility-in-Windows-PowerShell-ISE.md) | HandedOffSuccess | [Details](#b81bcbd37cdfebc04fbc7ef92d76f0769c1357132293)
- [scripting\setup\Installing-the-Windows-PowerShell-2.0-Engine.md](https://github.com/PowerShell/powerShell-Docs/blob/2aa04e8094fee4b0da3d5e7025cca215d542355e/scripting/setup/Installing-the-Windows-PowerShell-2.0-Engine.md) | HandedOffSuccess | [Details](#68a3d823f6545e1fbf6399b4d566a7e62daeebc92294)
  [scripting\setup\Installing-Windows-PowerShell.md](https://github.com/PowerShell/powerShell-Docs/blob/2aa04e8094fee4b0da3d5e7025cca215d542355e/scripting/setup/Installing-Windows-PowerShell.md) | HandedOffSuccess | [Details](#5b79069bdd57bb62f2cde2c92c981de98e8984922296)
  [scripting\setup\security.md](https://github.com/PowerShell/powerShell-Docs/blob/2aa04e8094fee4b0da3d5e7025cca215d542355e/scripting/setup/security.md) | HandedOffSuccess | [Details](#eb1ac0640b61cd8daf1c5ed4800cabee64a6c2762297)
  [scripting\setup\Starting-the-32-Bit-Version-of-Windows-PowerShell.md](https://github.com/PowerShell/powerShell-Docs/blob/fa0a541965b4121b8e8ac677b3c38e6f316b4553/scripting/setup/Starting-the-32-Bit-Version-of-Windows-PowerShell.md) | HandedOffSuccess | [Details](#4e6a0e7f8935b905d1cb19576541d1b532fcba212299)
  [scripting\setup\Starting-the-Windows-PowerShell-2.0-Engine.md](https://github.com/PowerShell/powerShell-Docs/blob/3222a0ba54e87b214c5ebf64e587f920d531956a/scripting/setup/Starting-the-Windows-PowerShell-2.0-Engine.md) | HandedOffSuccess | [Details](#094c3c9f240457fc884031e7d82dcdc1e81e582d2300)
- [scripting\setup\Starting-Windows-PowerShell.md](https://github.com/PowerShell/powerShell-Docs/blob/2aa04e8094fee4b0da3d5e7025cca215d542355e/scripting/setup/Starting-Windows-PowerShell.md) | HandedOffSuccess | [Details](#260805af4b64646922477f874c6679f58af8aea92302)
  [scripting\setup\Starting-Windows-PowerShell-on-Earlier-Versions-of-Windows.md](https://github.com/PowerShell/powerShell-Docs/blob/c40ab96196531d36001e4d94a3821d20612cbfce/scripting/setup/Starting-Windows-PowerShell-on-Earlier-Versions-of-Windows.md) | HandedOffSuccess | [Details](#333469a642a4b88442a7d3ca8fa65f5755c69bcc2301)
  [scripting\setup\Windows-PowerShell-System-Requirements.md](https://github.com/PowerShell/powerShell-Docs/blob/c1e210afa664304fa38f7dead444ab4a206be64f/scripting/setup/Windows-PowerShell-System-Requirements.md) | HandedOffSuccess | [Details](#f560b955f8f817caf96dba40900844b98a0e92a92303)
  [scripting\setup\WinRMSecurity.md](https://github.com/PowerShell/powerShell-Docs/blob/4ddd5099ce33263d43dcbad0930e654b573a8937/scripting/setup/WinRMSecurity.md) | HandedOffSuccess | [Details](#fa7e5c84ac82fa72836536ece507f1751e0990772304)
@@ -2341,7 +2339,9 @@
  [scripting\getting-started\cookbooks\Collecting-Information-About-Computers.md](https://github.com/PowerShell/powerShell-Docs/blob/d698cdd29bfe165b87494696ca2dc3486be4ab0e/scripting/getting-started/cookbooks/Collecting-Information-About-Computers.md) | InSyncHandedBackSuccess | [Details](#96204a0ce674cacd5b830f9f8b820ce3e1cbbc202241)
  [scripting\getting-started\fundamental\Scripting-with-Windows-PowerShell.md](https://github.com/PowerShell/powerShell-Docs/blob/03ac4b90d299b316194f1fa932e7dbf62d4b1c8e/scripting/getting-started/fundamental/Scripting-with-Windows-PowerShell.md) | InSyncHandedBackSuccess | [Details](#0148f4631e34e65a4336c5d1d50e313fb66397482278)
  [scripting\getting-started\fundamental-concepts.md](https://github.com/PowerShell/powerShell-Docs/blob/03ac4b90d299b316194f1fa932e7dbf62d4b1c8e/scripting/getting-started/fundamental-concepts.md) | InSyncHandedBackSuccess | [Details](#b3b97b9dcf01094fe1fadbac355c92df35feaee22271)
+ [scripting\setup\Installing-the-Windows-PowerShell-2.0-Engine.md](https://github.com/PowerShell/powerShell-Docs/blob/2aa04e8094fee4b0da3d5e7025cca215d542355e/scripting/setup/Installing-the-Windows-PowerShell-2.0-Engine.md) | InSyncHandedBackSuccess | [Details](#68a3d823f6545e1fbf6399b4d566a7e62daeebc92294)
  [scripting\setup\setup-reference.md](https://github.com/PowerShell/powerShell-Docs/blob/03ac4b90d299b316194f1fa932e7dbf62d4b1c8e/scripting/setup/setup-reference.md) | InSyncHandedBackSuccess | [Details](#63f7597ba91fb839252de451c6c9380b5b19c0ec2298)
+ [scripting\setup\Starting-Windows-PowerShell.md](https://github.com/PowerShell/powerShell-Docs/blob/2aa04e8094fee4b0da3d5e7025cca215d542355e/scripting/setup/Starting-Windows-PowerShell.md) | InSyncHandedBackSuccess | [Details](#260805af4b64646922477f874c6679f58af8aea92302)
  [scripting\topic\WinRMSecurity.md](https://github.com/PowerShell/powerShell-Docs/blob/afa259b8611f995bbf5b824179a12e3d8f15df86/scripting/topic/WinRMSecurity.md) | InSyncHandedBackSuccess | [Details](#207792452c563ec6cca5c17fbcd122372442d8ac2306)
  [wmf\5.0\audit_cms.md](https://github.com/PowerShell/powerShell-Docs/blob/b32cb86b7a18fee929cc81360d81f479571a74c2/wmf/5.0/audit_cms.md) | InSyncHandedBackSuccess | [Details](#2160a4b932075c98df6806c61d263d30f650b9f42311)
  [wmf\5.0\audit_script.md](https://github.com/PowerShell/powerShell-Docs/blob/b32cb86b7a18fee929cc81360d81f479571a74c2/wmf/5.0/audit_script.md) | InSyncHandedBackSuccess | [Details](#654c0d5e83b9832524298b5c96eae094f371330f2313)
@@ -30831,18 +30831,15 @@
 * [Back to Top](#report-top)
 
 ##### <a name='68a3d823f6545e1fbf6399b4d566a7e62daeebc92294'></a> Source: [scripting\setup\Installing-the-Windows-PowerShell-2.0-Engine.md](https://github.com/PowerShell/powerShell-Docs/blob/2aa04e8094fee4b0da3d5e7025cca215d542355e/scripting/setup/Installing-the-Windows-PowerShell-2.0-Engine.md)
-* Status: HandedOffSuccess
-* Target File: 
+* Status: InSyncHandedBackSuccess
+* Target File: [scripting\setup\Installing-the-Windows-PowerShell-2.0-Engine.md](https://github.com/PowerShell/powerShell-Docs.it-it/blob/fd51d18e15c1b789f89374cc97804b11814911fd/scripting/setup/Installing-the-Windows-PowerShell-2.0-Engine.md)
 * Handoff File: [Installing-the-Windows-PowerShell-2.0-Engine.190b56ee17b5135bba49f697312b896e5c3755dd.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/800235d790e059d7981d922e4a881117578337c7/ol-handoff/PowerShell/powerShell-Docs.it-it/live/Installing-the-Windows-PowerShell-2.0-Engine.190b56ee17b5135bba49f697312b896e5c3755dd.it-it.xlf)
 * Handoff Datetime: 2016-11-23 22:32:34
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [scripting\setup\Installing-the-Windows-PowerShell-2.0-Engine.md](https://github.com/PowerShell/powerShell-Docs.it-it/blob/4f287b6b254a2866b5f6b9fc5473209f443bf252/scripting/setup/Installing-the-Windows-PowerShell-2.0-Engine.md)
-* Current Handback File: [Installing-the-Windows-PowerShell-2.0-Engine.190b56ee17b5135bba49f697312b896e5c3755dd.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/b023d92cd444e6d107b50b4e91dca9b5dead6742/ol-handback/PowerShell/powerShell-Docs.it-it/live/Installing-the-Windows-PowerShell-2.0-Engine.190b56ee17b5135bba49f697312b896e5c3755dd.it-it.xlf)
-* Current Handback Datetime: 2016-07-06 11:36:21
+* Handback File: [Installing-the-Windows-PowerShell-2.0-Engine.190b56ee17b5135bba49f697312b896e5c3755dd.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/2e1fc1c2a953fe468c32e2e7cde4228318ef2919/ol-handback/PowerShell/powerShell-Docs.it-it/live/Installing-the-Windows-PowerShell-2.0-Engine.190b56ee17b5135bba49f697312b896e5c3755dd.it-it.xlf)
+* Handback Datetime: 2016-11-25 15:16:17
 * Bilingual File: [Installing-the-Windows-PowerShell-2.0-Engine.190b56ee17b5135bba49f697312b896e5c3755dd.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/b023d92cd444e6d107b50b4e91dca9b5dead6742/ol-handback/PowerShell/powerShell-Docs.it-it/live/Installing-the-Windows-PowerShell-2.0-Engine.190b56ee17b5135bba49f697312b896e5c3755dd.it-it.xlf)
 * Bilingual Datetime: 2016-07-06 11:37:25
 * [Back to Top](#report-top)
@@ -30947,18 +30944,15 @@
 * [Back to Top](#report-top)
 
 ##### <a name='260805af4b64646922477f874c6679f58af8aea92302'></a> Source: [scripting\setup\Starting-Windows-PowerShell.md](https://github.com/PowerShell/powerShell-Docs/blob/2aa04e8094fee4b0da3d5e7025cca215d542355e/scripting/setup/Starting-Windows-PowerShell.md)
-* Status: HandedOffSuccess
-* Target File: 
+* Status: InSyncHandedBackSuccess
+* Target File: [scripting\setup\Starting-Windows-PowerShell.md](https://github.com/PowerShell/powerShell-Docs.it-it/blob/fd51d18e15c1b789f89374cc97804b11814911fd/scripting/setup/Starting-Windows-PowerShell.md)
 * Handoff File: [Starting-Windows-PowerShell.a3dcf25852cd345b654f8612f2d32861f0ccad4f.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handoff/blob/800235d790e059d7981d922e4a881117578337c7/ol-handoff/PowerShell/powerShell-Docs.it-it/live/Starting-Windows-PowerShell.a3dcf25852cd345b654f8612f2d32861f0ccad4f.it-it.xlf)
 * Handoff Datetime: 2016-11-23 22:32:34
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [scripting\setup\Starting-Windows-PowerShell.md](https://github.com/PowerShell/powerShell-Docs.it-it/blob/cfd8cb226f605eb34387d87760377acbc346cb94/scripting/setup/Starting-Windows-PowerShell.md)
-* Current Handback File: [Starting-Windows-PowerShell.a3dcf25852cd345b654f8612f2d32861f0ccad4f.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/599f530073fea384887a24eb0bccd62e6ae1ccd5/ol-handback/PowerShell/powerShell-Docs.it-it/live/Starting-Windows-PowerShell.a3dcf25852cd345b654f8612f2d32861f0ccad4f.it-it.xlf)
-* Current Handback Datetime: 2016-07-05 13:12:17
+* Handback File: [Starting-Windows-PowerShell.a3dcf25852cd345b654f8612f2d32861f0ccad4f.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/2e1fc1c2a953fe468c32e2e7cde4228318ef2919/ol-handback/PowerShell/powerShell-Docs.it-it/live/Starting-Windows-PowerShell.a3dcf25852cd345b654f8612f2d32861f0ccad4f.it-it.xlf)
+* Handback Datetime: 2016-11-25 15:16:17
 * Bilingual File: [Starting-Windows-PowerShell.a3dcf25852cd345b654f8612f2d32861f0ccad4f.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/599f530073fea384887a24eb0bccd62e6ae1ccd5/ol-handback/PowerShell/powerShell-Docs.it-it/live/Starting-Windows-PowerShell.a3dcf25852cd345b654f8612f2d32861f0ccad4f.it-it.xlf)
 * Bilingual Datetime: 2016-07-05 13:13:02
 * [Back to Top](#report-top)
