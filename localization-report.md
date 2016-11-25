@@ -28848,8 +28848,8 @@
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: [README.cf2da502d5141d3c542b8221274cee500c801dc1.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/dbe25d2bc0a18a9b81ff9e8ef3547f3c43f2dd32/ol-handback/PowerShell/powerShell-Docs.it-it/live/README.cf2da502d5141d3c542b8221274cee500c801dc1.it-it.xlf)
 * Handback Datetime: 2016-11-25 16:14:38
-* Bilingual File: [README.cf2da502d5141d3c542b8221274cee500c801dc1.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/597d6a34d5dbfced2b8ea806e8344814761764f3/ol-handback/PowerShell/powerShell-Docs.it-it/live/README.cf2da502d5141d3c542b8221274cee500c801dc1.it-it.xlf)
-* Bilingual Datetime: 2016-11-24 15:06:59
+* Bilingual File: [README.cf2da502d5141d3c542b8221274cee500c801dc1.it-it.xlf](https://github.com/PowerShell/powerShell-Docs.handback/blob/dbe25d2bc0a18a9b81ff9e8ef3547f3c43f2dd32/ol-handback/PowerShell/powerShell-Docs.it-it/live/README.cf2da502d5141d3c542b8221274cee500c801dc1.it-it.xlf)
+* Bilingual Datetime: 2016-11-25 16:15:39
 * [Back to Top](#report-top)
 
 ##### <a name='aeea01e2db55c43d30a69a530a4e63f54e0156d82175'></a> Source: [reference\TOC.md](https://github.com/PowerShell/powerShell-Docs/blob/85c946f7307ac72a43b9682d7d0f50ec637f0979/reference/TOC.md)
