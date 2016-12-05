@@ -1,5 +1,1 @@
-# File di test dell'indice per la pubblicazione
-
-<!--HONumber=Aug16_HO3-->
-
-
+# <a name="index-test-file-for-open-publishing"></a>File di test dell'indice per la pubblicazione
