@@ -7,19 +7,17 @@ ms.topic: article
 author: jpjofre
 manager: dongill
 ms.prod: powershell
-translationtype: Human Translation
-ms.sourcegitcommit: fe3d7885b7c031a24a737f58523c8018cfc36146
-ms.openlocfilehash: f62b1e0ec9f26e1b2bcb364c78a2ce39467655a5
-
+ms.openlocfilehash: 984323731b2cd0c4f3c26fe100e4b680082881f5
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
 # <a name="authorization-rules-and-security-features-of-windows-powershell-web-access"></a>Regole di autorizzazione e funzionalità di sicurezza di Accesso Web Windows PowerShell
 
 Ultimo aggiornamento: 24 giugno 2013
 
 Si applica a: Windows Server 2012 R2, Windows Server 2012
 
-Accesso Web di Windows PowerShell® in Windows Server® 2012 R2 e Windows Server® 2012 prevede un modello di sicurezza restrittivo. È necessario che agli utenti venga concesso l'accesso in modo esplicito prima che possano accedere al gateway Accesso Web Windows PowerShell e usare la console di Windows PowerShell basata sul Web.
+Accesso Web di Windows PowerShell® in Windows Server® 2012 R2 e Windows Server® 2012 prevede un modello di sicurezza restrittivo. È necessario che agli utenti venga concesso l'accesso in modo esplicito prima che possano accedere al gateway Accesso Web Windows PowerShell e usare la console di Windows PowerShell basata sul Web.
 
 -   [Configurazione delle regole di autorizzazione e della sicurezza del sito](#BKMK_auth)
 
@@ -424,10 +422,4 @@ Parla con noi
 
 Il codice e gli script di terze parti, collegati al presente sito o a cui il sito Web fa riferimento, vengono ceduti in licenza all'utente dalle terze parti proprietarie di tale codice, non da Microsoft. Vedere le condizioni d'uso di Ajax CDN di ASP.NET – http://www.asp.net/ajaxlibrary/CDN.ashx.
 <img src="https://m.webtrends.com/dcsjwb9vb00000c932fd0rjc7_5p3t/njs.gif?dcsuri=/nojavascript&amp;WT.js=No" alt="DCSIMG" id="Img1" width="1" height="1" />
-
-
-
-
-<!--HONumber=Nov16_HO1-->
-
 

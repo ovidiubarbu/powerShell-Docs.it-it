@@ -6,19 +6,17 @@ author: jpjofre
 ms.prod: powershell
 keywords: powershell,cmdlet,jea
 ms.date: 2016-06-22
-title: ricreare l'endpoint dimostrativo
+title: ricreare l&quot;endpoint dimostrativo
 ms.technology: powershell
-translationtype: Human Translation
-ms.sourcegitcommit: d20ea8418cb7389d756de94ea752cf604b8d07af
-ms.openlocfilehash: acd2cfbd038250a26236c875d0e8b03a32cd84f9
-
+ms.openlocfilehash: 4a56272b6f995500d443d441f5e03db85dac6f96
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
-# Ricreare l'endpoint dimostrativo
+# <a name="remake-the-demo-endpoint"></a>Ricreare l'endpoint dimostrativo
 Questa sezione spiega come generare una replica esatta dell'endpoint dimostrativo usato nella sezione precedente.
 Verranno introdotti i concetti essenziali per la comprensione di JEA, incluse le configurazioni di sessione di PowerShell e le capacità del ruolo.
 
-## Configurazioni di sessione di PowerShell
+## <a name="powershell-session-configurations"></a>Configurazioni di sessione di PowerShell
 Se è stato usato JEA nella sezione precedente, la procedura è iniziata con l'esecuzione di questo comando:
 
 ```PowerShell
@@ -41,14 +39,14 @@ Per visualizzare tutte le configurazioni di sessione registrate, eseguire il com
 Get-PSSessionConfiguration
 ```
 
-## File di configurazione di sessione di PowerShell
+## <a name="powershell-session-configuration-files"></a>File di configurazione di sessione di PowerShell
 È possibile creare nuove configurazioni di sessione registrando nuovi *file di configurazione di sessione di PowerShell*.
 I file di configurazione di sessione hanno estensione "pssc"
 e possono essere creati con il cmdlet New-PSSessionConfigurationFile.
 
 A questo punto è possibile creare e registrare una nuova configurazione di sessione per JEA.
 
-## Generare e modificare la configurazione di sessione di PowerShell
+## <a name="generate-and-modify-your-powershell-session-configuration"></a>Generare e modificare la configurazione di sessione di PowerShell
 Eseguire il comando seguente per generare un file "scheletro" per la configurazione di sessione di PowerShell.
 
 ```PowerShell
@@ -107,7 +105,7 @@ Le trascrizioni sono semplicemente un po' più leggibili.
 
 Infine, salvare le modifiche apportate a *JEADemo2.pssc*.
 
-## Applicare la configurazione di sessione di PowerShell
+## <a name="apply-the-powershell-session-configuration"></a>Applicare la configurazione di sessione di PowerShell
 
 Per creare un endpoint da un file di configurazione di sessione, è necessario registrare il file.
 Questa operazione richiede alcune informazioni:
@@ -123,7 +121,7 @@ Register-PSSessionConfiguration -Name 'JEADemo2' -Path "$env:ProgramData\JEAConf
 
 Congratulazioni, l'impostazione dell'endpoint JEA è stata completata.
 
-## Testare l'endpoint
+## <a name="test-out-your-endpoint"></a>Testare l'endpoint
 Eseguire di nuovo i passaggi riportati nella sezione [Uso di JEA](using-jea.md) per il nuovo endpoint per verificare se funziona come previsto.
 Assicurarsi di usare il nome del nuovo endpoint (JEADemo2) quando si specifica il nome della configurazione per `Enter-PSSession`.
 
@@ -131,7 +129,7 @@ Assicurarsi di usare il nome del nuovo endpoint (JEADemo2) quando si specifica i
 Enter-PSSession -ComputerName . -ConfigurationName JEADemo2 -Credential $NonAdminCred
 ```
 
-## Concetti chiave
+## <a name="key-concepts"></a>Concetti chiave
 **Configurazione di sessione di PowerShell**: detta anche *Endpoint di PowerShell*, è il "posto" in senso figurato dove gli utenti si connettono e accedono alle funzionalità di PowerShell.
 Per visualizzare le configurazioni di sessione registrate nel sistema eseguire `Get-PSSessionConfiguration`.
 Quando è configurata in modo specifico, una configurazione di sessione di PowerShell può essere definita *Endpoint JEA*.
@@ -149,10 +147,4 @@ Per gli endpoint JEA, deve essere impostato su RestrictedRemoteServer.
 **Trascrizione PowerShell**: file contenente una visualizzazione "over-the-shoulder" di una sessione di PowerShell.
 È possibile impostare PowerShell in modo che generi le trascrizioni per le sessioni JEA usando il campo TranscriptDirectory.
 Per altre informazioni sulle trascrizioni, vedere questo [post del blog](https://technet.microsoft.com/en-us/magazine/ff687007.aspx).
-
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

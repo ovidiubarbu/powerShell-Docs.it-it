@@ -7,13 +7,11 @@ ms.topic: article
 author: eslesar
 manager: dongill
 ms.prod: powershell
-translationtype: Human Translation
-ms.sourcegitcommit: 97714d3fa9a1c00fb3d2e79cc873280ca945a840
-ms.openlocfilehash: df6869cdf1d1f6c823704e4de2882e90cb672ad2
-
+ms.openlocfilehash: 1bb0e73a1aae6926040373e017494c2ef5e5fd3e
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
-# Risorsa WindowsFeatureSet DSC
+# <a name="dsc-windowsfeatureset-resource"></a>Risorsa WindowsFeatureSet DSC
 
 > Si applica a: Windows PowerShell 4.0, Windows PowerShell 5.0
 
@@ -22,7 +20,7 @@ Questa risorsa è una [risorsa composta](authoringResourceComposite.md) che chia
 
 Usare questa risorsa quando si vogliono configurare diverse istanze di WindowsFeature nello stesso stato.
 
-## Sintassi
+## <a name="syntax"></a>Sintassi
 
 ```
 WindowsFeatureSet [string] #ResourceName
@@ -38,7 +36,7 @@ WindowsFeatureSet [string] #ResourceName
 }
 ```
 
-## Proprietà
+## <a name="properties"></a>Proprietà
 
 |  Proprietà  |  Descrizione   | 
 |---|---| 
@@ -50,7 +48,7 @@ WindowsFeatureSet [string] #ResourceName
 | DependsOn| Indica che prima di configurare la risorsa è necessario eseguire la configurazione di un'altra risorsa. Ad esempio, se l'ID del blocco script di configurazione della risorsa che si vuole eseguire per primo è __ResourceName__ e il tipo è __ResourceType__, la sintassi per usare questa proprietà è `DependsOn = "[ResourceType]ResourceName"`.| 
 | Source| Indica il percorso del file di origine da usare per l'installazione, se necessario.| 
 
-## Esempio
+## <a name="example"></a>Esempio
 
 La configurazione seguente garantisce che siano installate tutte le funzionalità e le funzionalità secondarie del **server Web** (IIS) e del **server SMTP**.
 
@@ -70,10 +68,4 @@ configuration FeatureSetTest
     }
 }
 ```
-
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

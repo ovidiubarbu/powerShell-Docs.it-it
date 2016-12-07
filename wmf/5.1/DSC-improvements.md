@@ -8,15 +8,13 @@ author: keithb
 manager: dongill
 ms.prod: powershell
 ms.technology: WMF
-translationtype: Human Translation
-ms.sourcegitcommit: 270f2a458a40f005f462d3de5236defbb91a7362
-ms.openlocfilehash: c88c145c3585befcee194499f7e21aaeac67c0f3
-
+ms.openlocfilehash: 53c3bcb76f2bb9284339a4e506f28375a14285ae
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
+#<a name="improvements-in-desired-state-configuration-dsc-in-wmf-51"></a>Miglioramenti di Desired State Configuration (DSC) in WMF 5.1
 
-#Miglioramenti di Desired State Configuration (DSC) in WMF 5.1
-
-## Miglioramenti delle risorse di classe DSC
+## <a name="dsc-class-resource-improvements"></a>Miglioramenti delle risorse di classe DSC
 
 In WMF 5.1 sono stati corretti i problemi noti seguenti:
 * Get-DscConfiguration può restituire valori vuoti (null) o errori se la funzione Get() di una risorsa DSC basata su classe restituisce un tipo complesso/Hashtable.
@@ -26,20 +24,20 @@ In WMF 5.1 sono stati corretti i problemi noti seguenti:
 * La risorsa basata su classe non può essere usata come risorsa esclusiva.
 
 
-## Miglioramenti del debug delle risorse DSC
+## <a name="dsc-resource-debugging-improvements"></a>Miglioramenti del debug delle risorse DSC
 
 In WMF 5.0 il debugger di PowerShell non si arrestava in corrispondenza del metodo della risorsa basata su classe (Get/Set/Test).
 In WMF 5.1 il debugger si arresta in corrispondenza del metodo della risorsa basata su classe nello stesso modo in cui si arresta per i metodi delle risorse basate su MOF.
 
-## Il client di pull DSC supporta TLS 1.1 e TLS 1.2 
+## <a name="dsc-pull-client-supports-tls-11-and-tls-12"></a>Il client di pull DSC supporta TLS 1.1 e TLS 1.2 
 In precedenza, il client di pull DSC supportava solo SSL3.0 e TLS1.0 su connessioni HTTPS. Quando era necessario usare protocolli più sicuri, il client di pull smetteva di funzionare. In WMF 5.1 il client di pull DSC non supporta più SSL 3.0 e aggiunge il supporto dei protocolli TLS 1.1 e TLS 1.2 più sicuri.  
 
-## Miglioramento della registrazione del server di pull ##
+## <a name="improved-pull-server-registration"></a>Miglioramento della registrazione del server di pull ##
 
 Nelle versioni precedenti di WMF le richieste di registrazione o reporting simultanee al server di pull DSC, con uso del database ESENT, facevano sì che la gestione della configurazione locale non riuscisse a eseguire la registrazione o il reporting. In questi casi i registri eventi del server di pull visualizzavano il messaggio di errore "Nome istanza già in uso".
 Ciò era dovuto a un modello errato che veniva usato per accedere al database ESENT in uno scenario multithread. In WMF 5.1 questo problema è stato risolto. Le registrazioni o il reporting simultanei, che comprendono l'uso del database ESENT, funzionano correttamente in WMF 5.1. Tutto questo si applica solo al database ESENT, non al database OLE DB. 
 
-##Convenzione di denominazione della configurazione parziale pull
+##<a name="pull-partial-configuration-naming-convention"></a>Convenzione di denominazione della configurazione parziale pull
 Nella versione precedente la convenzione di denominazione di una configurazione parziale prevedeva che il nome del file MOF del servizio o del server pull corrispondesse al nome della configurazione parziale specificato nelle impostazioni di Gestione configurazione locale che doveva a sua volta corrispondere al nome di configurazione incorporato nel file MOF. 
 
 Vedere gli snapshot seguenti:
@@ -132,7 +130,7 @@ La metaconfigurazione seguente imposta un nodo che viene gestito sia localmente 
    slcm -Path .\RegistrationMetaConfig -Verbose
  ```
 
-# Usare PsDscRunAsCredential con le risorse composite DSC   
+# <a name="using-psdscrunascredential-with-dsc-composite-resources"></a>Usare PsDscRunAsCredential con le risorse composite DSC   
 
 È stato aggiunto il supporto per l'uso di [*PsDscRunAsCredential*](https://msdn.microsoft.com/cs-cz/powershell/dsc/runasuser) con le risorse [composite](https://msdn.microsoft.com/en-us/powershell/dsc/authoringresourcecomposite) DSC.    
 
@@ -177,14 +175,14 @@ InstallWindowsFeature -ConfigurationData $configData
 
 ```
 
-##Convalide delle firme delle configurazioni e dei moduli DSC
+##<a name="dsc-module-and-configuration-signing-validations"></a>Convalide delle firme delle configurazioni e dei moduli DSC
 In DSC le configurazioni e i moduli vengono distribuiti dal server di pull a computer gestiti. Se il server di pull è compromesso, un utente malintenzionato potrebbe modificare le configurazioni e i moduli nel server di pull e distribuirli a tutti i nodi gestiti danneggiandoli. 
 
  In WMF 5.1 DSC supporta la convalida delle firme digitali su file di catalogo e configurazione (file MOF). Questa funzionalità impedisce che i nodi eseguano configurazioni o file di modulo non firmati da un'entità attendibile o che sono stati manomessi dopo essere stati firmati da un'entità attendibile. 
 
 
 
-###Come firmare la configurazione e il modulo 
+###<a name="how-to-sign-configuration-and-module"></a>Come firmare la configurazione e il modulo 
 ***
 * File di configurazione (.MOFs): il cmdlet di PowerShell esistente [Set-AuthenticodeSignature](https://technet.microsoft.com/library/hh849819.aspx) supporta ora la firma dei file MOF.  
 * Moduli: la firma dei moduli viene effettuata firmando il catalogo del modulo corrispondente eseguendo i passaggi seguenti: 
@@ -195,9 +193,9 @@ In DSC le configurazioni e i moduli vengono distribuiti dal server di pull a com
     3. Posizionare il file di catalogo all'interno della cartella del modulo.
 Per convenzione, il file di catalogo del modulo deve trovarsi nella cartella del modulo con lo stesso nome di quest'ultimo.
 
-###Impostazioni LocalConfigurationManager per l'abilitazione delle convalide delle firme
+###<a name="localconfigurationmanager-settings-to-enable-signing-validations"></a>Impostazioni LocalConfigurationManager per l'abilitazione delle convalide delle firme
 
-####Pull
+####<a name="pull"></a>Pull
 La risorsa LocalConfigurationManager di un nodo esegue la convalida delle firme di moduli e configurazioni in base alle impostazioni correnti. Per impostazione predefinita, la convalida delle firme è disabilitata. La convalida delle firme può essere abilitata aggiungendo il blocco 'SignatureValidation' alla definizione della metaconfigurazione del nodo, come illustrato di seguito:
 
 ```PowerShell
@@ -248,7 +246,7 @@ Analogamente, il pull di un modulo il cui catalogo non è firmato causerà l'err
 
 ![Modulo di output degli errori di esempio](../images/PullUnisgnedCatalog.png)
 
-####Push
+####<a name="push"></a>Push
 Una configurazione inviata mediante push potrebbe essere alterata in origine prima che venga recapitata al nodo. La Gestione configurazione locale eseguirà passaggi di convalida della firma simili per le configurazioni di cui è stato effettuato il push o pubblicate.
 Di seguito è riportato un esempio completo di convalida della firma per il push.
 
@@ -301,10 +299,4 @@ Start-DscConfiguration -Path .\Test -Wait -Verbose -Force
 * Tentativo di push del file MOF firmato.
 
 ![SignMofFile](../images/PushSignedMof.png)
-
-
-
-
-<!--HONumber=Sep16_HO3-->
-
 

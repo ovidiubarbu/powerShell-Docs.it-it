@@ -7,12 +7,10 @@ ms.topic: article
 author: jpjofre
 manager: dongill
 ms.prod: powershell
-translationtype: Human Translation
-ms.sourcegitcommit: fe3d7885b7c031a24a737f58523c8018cfc36146
-ms.openlocfilehash: d84b13db1fa5f12a7b4f8fa7b9b8cd7fb8fbae9d
-
+ms.openlocfilehash: 9e03bca75eeb6acf3f1433a9baaed0c1674ab1be
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
 #  <a name="uninstall-windows-powershell-web-access"></a>Disinstallare Accesso Web Windows PowerShell
 
 Ultimo aggiornamento: 24 giugno 2013
@@ -44,7 +42,7 @@ Le procedure in questa sezione consentono di disinstallare l'applicazione Web Ac
 
 Se è stato specificato il nome del sito Web personalizzato, aggiungere il parametro <span class="code">WebsiteName</span> al comando e specificare il nome del sito Web. Se è stata usata un'applicazione Web personalizzata (non l'applicazione predefinita, **pswa**), aggiungere il parametro <span class="code">WebApplicationName</span> al comando e specificare il nome dell'applicazione Web.
 
-#### <a name="to-delete-the-website-and-web-applications-by-using-the-uninstallpswawebapplication-cmdlet"></a>Per eliminare il sito Web e le applicazioni Web tramite il cmdlet Uninstall-PswaWebApplication
+#### <a name="to-delete-the-website-and-web-applications-by-using-the-uninstall-pswawebapplication-cmdlet"></a>Per eliminare il sito Web e le applicazioni Web tramite il cmdlet Uninstall-PswaWebApplication
 
 1.  Per aprire una sessione di Windows PowerShell, eseguire una di queste operazioni.
 
@@ -215,10 +213,4 @@ Parla con noi
 
 Il codice e gli script di terze parti, collegati al presente sito o a cui il sito Web fa riferimento, vengono ceduti in licenza all'utente dalle terze parti proprietarie di tale codice, non da Microsoft. Vedere le condizioni d'uso di Ajax CDN di ASP.NET – http://www.asp.net/ajaxlibrary/CDN.ashx.
 <img src="https://m.webtrends.com/dcsjwb9vb00000c932fd0rjc7_5p3t/njs.gif?dcsuri=/nojavascript&amp;WT.js=No" alt="DCSIMG" id="Img1" width="1" height="1" />
-
-
-
-
-<!--HONumber=Nov16_HO1-->
-
 

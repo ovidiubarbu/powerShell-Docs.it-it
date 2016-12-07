@@ -9,32 +9,30 @@ ms.date: 2016-10-14
 contributor: manikb
 title: psget_update modulemanifest
 ms.technology: powershell
-translationtype: Human Translation
-ms.sourcegitcommit: e6c526d1074f61154d03b92b6bf6f599976f5936
-ms.openlocfilehash: 9ade4e89a28b777266f48556c910092bfab67227
-
+ms.openlocfilehash: 85153872326c5af8f869bc2254040eca1a152f8b
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
-# Update-ModuleManifest
+# <a name="update-modulemanifest"></a>Update-ModuleManifest
 Aggiorna un file manifesto del modulo.
 
-## Descrizione
+## <a name="description"></a>Descrizione
 
 Il cmdlet Update-ModuleManifest aggiorna un file manifesto del modulo (psd1).
 
-### Note
+### <a name="notes"></a>Note
     - DscResourcesToExport è supportato solo nella versione più recente di PowerShell, la versione 5.0. Non sarà possibile aggiornare il campo in una versione precedente di PowerShell.
 
-## Sintassi del cmdlet
+## <a name="cmdlet-syntax"></a>Sintassi del cmdlet
 ```powershell
 Get-Command -Name Update-ModuleManifest -Module PowerShellGet -Syntax
 ```
 
-## Riferimento per la Guida online sui cmdlet
+## <a name="cmdlet-online-help-reference"></a>Riferimento per la Guida online sui cmdlet
 
 [Update-ModuleManifest](http://go.microsoft.com/fwlink/?LinkId=619311)
 
-## Comandi di esempio
+## <a name="example-commands"></a>Comandi di esempio
 
 Questo nuovo cmdlet viene usato per facilitare l'aggiornamento del file manifesto con i valori delle proprietà di input. Accetta tutti i parametri supportati da New-ModuleManifest.
 
@@ -121,10 +119,4 @@ PrivateData = @{
     } # End of PSData hashtable
 } # End of PrivateData hashtable
 ```
-
-
-
-
-<!--HONumber=Oct16_HO2-->
-
 

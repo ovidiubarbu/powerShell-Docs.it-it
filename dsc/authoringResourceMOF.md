@@ -7,23 +7,21 @@ ms.topic: article
 author: eslesar
 manager: dongill
 ms.prod: powershell
-translationtype: Human Translation
-ms.sourcegitcommit: b414a01bcd111143791a5fac77e61ce309a0a5c5
-ms.openlocfilehash: 50b99917f15d290db30da1b1b752d668d886ec50
-
+ms.openlocfilehash: 1fc28589633d6279d0428179a70e7e561d753ea8
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
-# Scrittura di una risorsa DSC personalizzata con MOF
+# <a name="writing-a-custom-dsc-resource-with-mof"></a>Scrittura di una risorsa DSC personalizzata con MOF
 
 > Si applica a: Windows PowerShell 4.0, Windows PowerShell 5.0
 
 In questo argomento verrà definito lo schema per una risorsa personalizzata di Windows PowerShell DSC (Desired State Configuration) in un file MOF e la risorsa verrà implementata in un file di script di Windows PowerShell. Questa risorsa personalizzata consente di creare e gestire un sito Web.
 
-## Creazione dello schema MOF
+## <a name="creating-the-mof-schema"></a>Creazione dello schema MOF
 
 Lo schema definisce le proprietà della risorsa che possono essere configurate da uno script di configurazione DSC.
 
-### Struttura di cartelle per una risorsa MOF
+### <a name="folder-structure-for-a-mof-resource"></a>Struttura di cartelle per una risorsa MOF
 
 Per implementare una risorsa DSC personalizzata con uno schema MOF, creare la struttura di cartelle seguente. Lo schema MOF è definito nel file Demo_IISWebsite.schema.mof e lo script di risorsa è definito in Demo_IISWebsite.psm1. Facoltativamente, è possibile creare un file manifesto del modulo (con estensione psd1).
 
@@ -39,7 +37,7 @@ $env:ProgramFiles\WindowsPowerShell\Modules (folder)
 
 Si noti che è necessario creare una cartella denominata DSCResources nella cartella di primo livello e che la cartella per ogni risorsa deve avere lo stesso nome della risorsa.
 
-### Contenuto del file MOF
+### <a name="the-contents-of-the-mof-file"></a>Contenuto del file MOF
 
 Di seguito è illustrato un esempio di file MOF che è possibile usare per una risorsa di sito Web personalizzata. Per seguire questo esempio, salvare lo schema in un file e denominare il file *Demo_IISWebsite.schema.mof*.
 
@@ -65,11 +63,11 @@ Si noti quanto segue in relazione al codice precedente:
 * Il qualificatore di tipo, `[Key]`, in una proprietà indica che questa proprietà identificherà in modo univoco l'istanza di risorsa. È obbligatoria almeno una proprietà `[Key]`.
 * Il qualificatore `[Required]` indica che la proprietà è obbligatoria (è necessario specificare un valore in ogni script di configurazione che usa questa risorsa).
 * Il qualificatore `[write]` indica che questa proprietà è facoltativa quando si usa la risorsa personalizzata in uno script di configurazione. Il qualificatore `[read]` indica che una proprietà non può essere impostata da una configurazione e serve solo a scopo di creazione di report.
-* `Values` limita i valori che possono essere assegnati alla proprietà nell'elenco di valori definiti in `ValueMap`. Per altre informazioni, vedere l'articolo relativo ai [qualificatori ValueMap e Value](https://msdn.microsoft.com/library/windows/desktop/aa393965.aspx).
+* `Values` limita i valori che possono essere assegnati alla proprietà all'elenco di valori definiti in `ValueMap`. Per altre informazioni, vedere l'articolo relativo ai [qualificatori ValueMap e Value](https://msdn.microsoft.com/library/windows/desktop/aa393965.aspx).
 * È consigliabile includere una proprietà denominata `Ensure` con i valori `Present` e `Absent` nella risorsa per mantenere uno stile coerente con le risorse DSC predefinite.
 * Assegnare un nome al file di schema per la risorsa personalizzata in base al formato seguente: `classname.schema.mof`, dove `classname` è l'identificatore che segue la parola chiave `class` nella definizione di schema.
 
-### Scrittura dello script di risorsa
+### <a name="writing-the-resource-script"></a>Scrittura dello script di risorsa
 
 Lo script di risorsa implementa la logica della risorsa. In questo modulo è necessario includere tre funzioni denominate **Get-TargetResource**, **Set-TargetResource** e **Test-TargetResource**. Tutte e tre le funzioni devono accettare un set di parametri identico al set di proprietà definito nello schema MOF creato per la risorsa. In questo documento il set di proprietà è detto "proprietà della risorsa". Archiviare queste tre funzioni in un file denominato <ResourceName>.psm1. Nell'esempio seguente le funzioni vengono archiviate in un file denominato Demo_IISWebsite.psm1.
 
@@ -220,7 +218,7 @@ $result
 
 **Nota**: per semplificare il debug, usare il cmdlet **Write-Verbose** nell'implementazione delle tre funzioni precedenti. Questo cmdlet scrive il testo nel flusso di messaggi dettagliati. Per impostazione predefinita, il flusso di messaggi dettagliati non viene visualizzato, ma è possibile visualizzarlo modificando il valore della variabile **$VerbosePreference** o usando il parametro **Verbose** nei cmdlet DSC = new.
 
-### Creazione del manifesto del modulo
+### <a name="creating-the-module-manifest"></a>Creazione del manifesto del modulo
 
 Usare infine il cmdlet **New-ModuleManifest** per definire un file <ResourceName>.psd1 per il modulo della risorsa personalizzata. Quando si richiama questo cmdlet, fare riferimento al file di modulo di script (con estensione psm1) descritto nella sezione precedente. Includere **Get-TargetResource**, **Set-TargetResource** e **Test-TargetResource** nell'elenco delle funzioni da esportare. Di seguito è riportato un file manifesto di esempio.
 
@@ -275,10 +273,4 @@ FunctionsToExport = @("Get-TargetResource", "Set-TargetResource", "Test-TargetRe
 # HelpInfoURI = ''
 }
 ```
-
-
-
-
-<!--HONumber=Oct16_HO2-->
-
 

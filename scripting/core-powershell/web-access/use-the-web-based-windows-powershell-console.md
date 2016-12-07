@@ -7,13 +7,11 @@ ms.topic: article
 author: jpjofre
 manager: dongill
 ms.prod: powershell
-translationtype: Human Translation
-ms.sourcegitcommit: fe3d7885b7c031a24a737f58523c8018cfc36146
-ms.openlocfilehash: 67426f6ad72967293f8aee1b3f098afc73067c59
-
+ms.openlocfilehash: a62e258812960ce59f050e59d2ef3acc296663a2
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
-#  <a name="use-the-webbased-windows-powershell-console"></a>Usare la console di Windows PowerShell basata sul Web
+#  <a name="use-the-web-based-windows-powershell-console"></a>Usare la console di Windows PowerShell basata sul Web
 
 Ultimo aggiornamento: 24 giugno 2013
 
@@ -393,10 +391,4 @@ Parla con noi
 
 Il codice e gli script di terze parti, collegati al presente sito o a cui il sito Web fa riferimento, vengono ceduti in licenza all'utente dalle terze parti proprietarie di tale codice, non da Microsoft. Vedere le condizioni d'uso di Ajax CDN di ASP.NET – http://www.asp.net/ajaxlibrary/CDN.ashx.
 <img src="https://m.webtrends.com/dcsjwb9vb00000c932fd0rjc7_5p3t/njs.gif?dcsuri=/nojavascript&amp;WT.js=No" alt="DCSIMG" id="Img1" width="1" height="1" />
-
-
-
-
-<!--HONumber=Nov16_HO1-->
-
 

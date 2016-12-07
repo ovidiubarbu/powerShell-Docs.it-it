@@ -7,13 +7,11 @@ ms.topic: article
 author: eslesar
 manager: dongill
 ms.prod: powershell
-translationtype: Human Translation
-ms.sourcegitcommit: 6477ae8575c83fc24150f9502515ff5b82bc8198
 ms.openlocfilehash: f6569220fbafdba49bac9ac9dca3e6036a7aad08
-
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
-# Configurazione di un client di pull usando un ID configurazione
+# <a name="setting-up-a-pull-client-using-configuration-id"></a>Configurazione di un client di pull usando un ID configurazione
 
 > Si applica a: Windows PowerShell 5.0
 
@@ -52,11 +50,11 @@ Dopo essere stato eseguito, questo script crea una nuova cartella di output deno
 
 Per applicare la configurazione, chiamare il cmdlet **Set-DscLocalConfigurationManager**, con il valore di **Path** impostato sul percorso del file MOF di metaconfigurazione. Ad esempio: `Set-DSCLocalConfigurationManager localhost –Path .\PullClientConfigID –Verbose.`
 
-## ID configurazione
+## <a name="configuration-id"></a>ID configurazione
 
 Lo script imposta la proprietà **ConfigurationID** di Gestione configurazione locale su un GUID creato in precedenza per questo scopo (è possibile creare un GUID usando il cmdlet **New-Guid**). Il valore di **ConfigurationID** viene usato da Gestione configurazione locale per trovare la configurazione appropriata nel server di pull. Il file MOF di configurazione nel server di pull deve essere denominato _ConfigurationID.mof_, dove _ConfigurationID_ è il valore della proprietà **ConfigurationID** di Gestione configurazione locale del nodo di destinazione.
 
-## Server di pull SMB
+## <a name="smb-pull-server"></a>Server di pull SMB
 
 Per configurare un client per il pull delle configurazioni da un server SMB, usare un blocco **ConfigurationRepositoryShare**. In un blocco **ConfigurationRepositoryShare** specificare il percorso del server impostando la proprietà **SourcePath**. La metaconfigurazione seguente consente di configurare il nodo di destinazione per il pull da un server di pull SMB denominato **SMBPullServer**.
 
@@ -83,7 +81,7 @@ configuration PullClientConfigID
 PullClientConfigID
 ```
 
-## Server delle risorse e di report
+## <a name="resource-and-report-servers"></a>Server delle risorse e di report
 
 Se si specifica solo un blocco **ConfigurationRepositoryWeb** o **ConfigurationRepositoryShare** nella configurazione di Gestione configurazione locale, come nell'esempio precedente, il client di pull eseguirà il pull delle risorse dal server specificato, ma non invierà report al server. È possibile usare un singolo server di pull per le configurazioni, le risorse e i report, ma è necessario creare un blocco **ReportRepositoryWeb** per configurare la creazione di report. 
 
@@ -157,13 +155,7 @@ configuration PullClientConfigID
 PullClientConfigID
 ```
 
-## Vedere anche
+## <a name="see-also"></a>Vedere anche
 
 * [Configurazione di un client di pull con nomi di configurazione](pullClientConfigNames.md)
-
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

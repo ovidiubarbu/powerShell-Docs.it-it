@@ -7,19 +7,17 @@ ms.topic: article
 author: eslesar
 manager: dongill
 ms.prod: powershell
-translationtype: Human Translation
-ms.sourcegitcommit: 97714d3fa9a1c00fb3d2e79cc873280ca945a840
-ms.openlocfilehash: 012a0e5c4f2a1f60ecea869d588b9c54e0567ced
-
+ms.openlocfilehash: f9754be3f803d3232189985faa41fb209bfcfe46
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
-# Risorsa WindowsProcess DSC
+# <a name="dsc-windowsprocess-resource"></a>Risorsa WindowsProcess DSC
 
 > Si applica a: Windows PowerShell 5.0
 
 La risorsa **ProcessSet** in Windows PowerShell DSC (Desired State Configuration) fornisce un meccanismo per configurare i processi in un nodo di destinazione. Questa risorsa è una [risorsa composta](authoringResourceComposite.md) che chiama la [risorsa WindowsProcess](windowsProcessResource.md) per ogni gruppo specificato nel parametro `GroupName`.
 
-## Sintassi
+## <a name="syntax"></a>Sintassi
 
 ```
 WindowsProcess [string] #ResourceName
@@ -36,7 +34,7 @@ WindowsProcess [string] #ResourceName
 }
 ```
 
-## Proprietà
+## <a name="properties"></a>Proprietà
 |  Proprietà  |  Descrizione   | 
 |---|---| 
 | Arguments| Stringa che contiene argomenti da passare al processo così come è. Se è necessario passare più argomenti, inserirli tutti in questa stringa.| 
@@ -48,10 +46,4 @@ WindowsProcess [string] #ResourceName
 | StandardOutputPath| Percorso del file in cui i processi scrivono l'output standard. Qualsiasi file esistente verrà sovrascritto.| 
 | WorkingDirectory| Percorso usato come directory di lavoro corrente per i processi.| 
 | DependsOn | Indica che prima di configurare la risorsa è necessario eseguire la configurazione di un'altra risorsa. Ad esempio, se l'ID del blocco script di configurazione della risorsa che si vuole eseguire per primo è **ResourceName** e il tipo è **_ResourceType**, la sintassi per usare questa proprietà è 'DependsOn = "[ResourceType]ResourceName"''.| 
-
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

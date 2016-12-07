@@ -7,19 +7,17 @@ ms.topic: article
 author: eslesar
 manager: dongill
 ms.prod: powershell
-translationtype: Human Translation
-ms.sourcegitcommit: 99c1ea706ca5c3fb008065e98cc99fef463b1011
-ms.openlocfilehash: caf661fe58faf8cf24c789b408505051429df3f4
-
+ms.openlocfilehash: f933d5d821d71a497d20e8ff66ebe26af9661f50
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
 # <a name="troubleshooting-dsc"></a>Risoluzione dei problemi relativi a DSC
 
 >Si applica a: Windows PowerShell 4.0, Windows PowerShell 5.0
 
 Questo argomento illustra come risolvere eventuali problemi di DSC.
 
-## <a name="using-getdscconfigurationstatus"></a>Uso di Get-DscConfigurationStatus
+## <a name="using-get-dscconfigurationstatus"></a>Uso di Get-DscConfigurationStatus
 
 Il cmdlet [Get-DscConfigurationStatus](https://technet.microsoft.com/en-us/library/mt517868.aspx) ottiene informazioni di alto livello sullo stato di configurazione da un nodo di destinazione. Viene restituito un oggetto completo che include informazioni dettagliate sull'esito positivo o negativo dell'esecuzione della configurazione. È possibile esaminare l'oggetto per scoprire i dettagli sull'esecuzione della configurazione, ad esempio:
 
@@ -622,10 +620,4 @@ onlyProperty                            PSComputerName
 
 ### <a name="other-resources"></a>Risorse aggiuntive
 * [Cmdlet di Windows PowerShell DSC (Desired State Configuration)](https://technet.microsoft.com/en-us/library/dn521624(v=wps.630).aspx)
-
-
-
-
-<!--HONumber=Nov16_HO3-->
-
 

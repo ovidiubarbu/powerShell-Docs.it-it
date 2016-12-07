@@ -8,13 +8,11 @@ author: jpjofre
 manager: dongill
 ms.prod: powershell
 ms.assetid: 5d4fd421-5d43-4ec7-86fd-acfe887b066e
-translationtype: Human Translation
-ms.sourcegitcommit: 3222a0ba54e87b214c5ebf64e587f920d531956a
-ms.openlocfilehash: ceec1038516ddd4c29df770d14981c0a69437498
-
+ms.openlocfilehash: da02415aaaf0e308abb3a9c96bb19591701e3408
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
-# Appendice 2 - Creazione di un collegamento personalizzato per PowerShell
+# <a name="appendix-2---creating-a-custom-powershell-shortcut"></a>Appendice 2 - Creazione di un collegamento personalizzato per PowerShell
 La procedura seguente descrive come creare un collegamento a Windows PowerShell con diverse opzioni utili personalizzate.
 
 1.  Creare un collegamento che punta a Powershell.exe.
@@ -42,10 +40,4 @@ La procedura seguente descrive come creare un collegamento a Windows PowerShell 
 11. Se si vuole posizionare la console in un particolare punto sul desktop all'apertura, deselezionare la casella di controllo **Posizionamento automatico** nella sezione **Posizione finestra** e quindi modificare i valori nelle caselle **Sinistra** e **Alto** nella sezione **Posizione finestra**.
 
 12. Fare clic su **OK**.
-
-
-
-
-<!--HONumber=Aug16_HO4-->
-
 

@@ -7,17 +7,15 @@ ms.topic: article
 author: eslesar
 manager: dongill
 ms.prod: powershell
-translationtype: Human Translation
-ms.sourcegitcommit: 6477ae8575c83fc24150f9502515ff5b82bc8198
 ms.openlocfilehash: 3835495705297616a41329bcfdaad42b464115d8
-
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
-# Risorsa nxService DSC per Linux
+# <a name="dsc-for-linux-nxservice-resource"></a>Risorsa nxService DSC per Linux
 
 La risorsa **nxService** in PowerShell DSC (Desired State Configuration) fornisce un meccanismo per gestire i servizi in un nodo Linux.
 
-## Sintassi
+## <a name="syntax"></a>Sintassi
 
 ```
 nxService <string> #ResourceName
@@ -31,7 +29,7 @@ nxService <string> #ResourceName
 }
 ```
 
-## Proprietà
+## <a name="properties"></a>Proprietà
 |  Proprietà |  Descrizione | 
 |---|---|
 | Name| Nome del servizio/daemon da configurare.| 
@@ -41,11 +39,11 @@ nxService <string> #ResourceName
 | DependsOn | Indica che prima di configurare la risorsa è necessario eseguire la configurazione di un'altra risorsa. Ad esempio, se il valore di **ID** del blocco script di configurazione della risorsa che si vuole eseguire per primo è **ResourceName** e il tipo è **ResourceType**, la sintassi per usare questa proprietà è `DependsOn = "[ResourceType]ResourceName"`.| 
 
 
-## Informazioni aggiuntive
+## <a name="additional-information"></a>Informazioni aggiuntive
 
 La risorsa **nxService** non crea uno script o una definizione del servizio se il servizio non esiste. È possibile usare la risorsa **nxFile** di PowerShell DSC (Desired State Configuration) per gestire l'esistenza o il contenuto dello script o del file di definizione del servizio.
 
-## Esempio
+## <a name="example"></a>Esempio
 
 L'esempio seguente mostra la configurazione del servizio "httpd" (per Apache HTTP Server), registrato con il controller del servizio **SystemD**.
 
@@ -63,10 +61,4 @@ Controller = "systemd"
 }
 }
 ```
-
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

@@ -8,12 +8,10 @@ author: jpjofre
 manager: dongill
 ms.prod: powershell
 ms.assetid: c10c18c7-9ece-4fd0-83dc-a19c53d4fd83
-translationtype: Human Translation
-ms.sourcegitcommit: d015dfae1990c66ea75aa45004b366d1609fb36f
-ms.openlocfilehash: 460ab6d82b694266d31b09779866f746b56c9f51
-
+ms.openlocfilehash: fb568b1194a3d123913e635d26b5fbd2ad76c531
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
 # <a name="how-to-create-a-powershell-tab-in-windows-powershell-ise"></a>Come creare una scheda di PowerShell in Windows PowerShell ISE
 Le schede in Windows PowerShell® Integrated Scripting Environment (ISE) consentono di creare e usare simultaneamente diversi ambienti di esecuzione all'interno della stessa applicazione. Ogni scheda di PowerShell corrisponde a una sessione o a un ambiente di esecuzione separato.
 
@@ -44,10 +42,4 @@ Se sono presenti file non salvati aperti nella scheda di PowerShell che si vuole
 ## <a name="see-also"></a>Vedere anche
 - [Uso di Windows PowerShell ISE](Using-the-Windows-PowerShell-ISE.md)
 - [Come usare il riquadro della console in Windows PowerShell ISE](How-to-Use-the-Console-Pane-in-the-Windows-PowerShell-ISE.md)
-
-
-
-
-<!--HONumber=Nov16_HO1-->
-
 
