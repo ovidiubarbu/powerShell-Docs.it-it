@@ -7,12 +7,10 @@ ms.topic: article
 author: jpjofre
 manager: dongill
 ms.prod: powershell
-translationtype: Human Translation
-ms.sourcegitcommit: fe3d7885b7c031a24a737f58523c8018cfc36146
-ms.openlocfilehash: fe79ca70ff1f9a3960b79747221a70adc46b7c67
-
+ms.openlocfilehash: 0dd820a884f094e6aac520f504404139aebf13a0
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
 #  <a name="install-and-use-windows-powershell-web-access"></a>Installare e usare Accesso Web Windows PowerShell
 
 Ultimo aggiornamento: 5 novembre 2013
@@ -226,7 +224,7 @@ Per completare la configurazione dell'applicazione Web Accesso Web Windows Power
 
 -   [Per configurare il gateway di Accesso Web Windows PowerShell con un certificato autentico tramite Install-PswaWebApplication e Gestione IIS](#BKMK_gencert)
 
-#### <a name="to-configure-the-windows-powershell-web-access-gateway-with-a-test-certificate-by-using-installpswawebapplication"></a>Per configurare il gateway di Accesso Web Windows PowerShell con un certificato di test tramite Install-PswaWebApplication
+#### <a name="to-configure-the-windows-powershell-web-access-gateway-with-a-test-certificate-by-using-install-pswawebapplication"></a>Per configurare il gateway di Accesso Web Windows PowerShell con un certificato di test tramite Install-PswaWebApplication
 
 1.  Per aprire una sessione di Windows PowerShell, eseguire una di queste operazioni.
 
@@ -286,7 +284,7 @@ Per completare la configurazione dell'applicazione Web Accesso Web Windows Power
     </tbody>
     </table>
 
-#### <a name="to-configure-the-windows-powershell-web-access-gateway-with-a-genuine-certificate-by-using-installpswawebapplication-and-iis-manager"></a>Per configurare il gateway di Accesso Web Windows PowerShell con un certificato autentico tramite Install-PswaWebApplication e Gestione IIS
+#### <a name="to-configure-the-windows-powershell-web-access-gateway-with-a-genuine-certificate-by-using-install-pswawebapplication-and-iis-manager"></a>Per configurare il gateway di Accesso Web Windows PowerShell con un certificato autentico tramite Install-PswaWebApplication e Gestione IIS
 
 1.  Per aprire una sessione di Windows PowerShell, eseguire una di queste operazioni.
 
@@ -709,10 +707,4 @@ Parla con noi
 
 Il codice e gli script di terze parti, collegati al presente sito o a cui il sito Web fa riferimento, vengono ceduti in licenza all'utente dalle terze parti proprietarie di tale codice, non da Microsoft. Vedere le condizioni d'uso di Ajax CDN di ASP.NET – http://www.asp.net/ajaxlibrary/CDN.ashx.
 <img src="https://m.webtrends.com/dcsjwb9vb00000c932fd0rjc7_5p3t/njs.gif?dcsuri=/nojavascript&amp;WT.js=No" alt="DCSIMG" id="Img1" width="1" height="1" />
-
-
-
-
-<!--HONumber=Nov16_HO1-->
-
 

@@ -9,24 +9,22 @@ ms.date: 2016-10-14
 contributor: manikb
 title: Gestione dei proprietari di elementi
 ms.technology: powershell
-translationtype: Human Translation
-ms.sourcegitcommit: e6c526d1074f61154d03b92b6bf6f599976f5936
-ms.openlocfilehash: 00fe57762c6b2bb690255ecaea642f97124f4328
-
+ms.openlocfilehash: 36a3a3079bce642b16f0512ead2b0778b43e5d2d
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
-# Gestione dei proprietari di elementi
+# <a name="managing-item-owners"></a>Gestione dei proprietari di elementi
 
 La proprietà di un elemento in PowerShell Gallery è definita dalla persona che ha pubblicato l'elemento in questione in PowerShell Gallery.
 A volte questi metadati devono essere gestiti anche dopo la pubblicazione dell'elemento iniziale. Questo significa che i metadati del proprietario devono essere modificabili, mentre l'elemento stesso non lo è.
 
 Tutti i proprietari di elementi hanno pari diritti. Questo significa che qualsiasi proprietario di elemento può pubblicare una nuova versione dell'elemento stesso. Significa anche che qualsiasi proprietario di elemento può rimuovere un altro proprietario di elemento. Nessun proprietario ha un'autorità maggiore di altri proprietari.  
 
-## Impostazione del proprietario iniziale di un elemento 
+## <a name="setting-an-items-initial-owner"></a>Impostazione del proprietario iniziale di un elemento 
 
 Quando un elemento viene pubblicato in PowerShell Gallery, il proprietario iniziale viene definito dall'utente che ha pubblicato l'elemento in questione. Questo è determinato dal titolare della chiave API usata nel cmdlet Publish-Module.
 
-## Aggiunta di proprietari
+## <a name="adding-owners"></a>Aggiunta di proprietari
 
 Dopo che un elemento è stato pubblicato in PowerShell Gallery, la procedura per invitare altri utenti a diventare proprietari di tale elemento è semplice.
 
@@ -45,7 +43,7 @@ Questo meccanismo di inviti impedisce che gli utenti aggiungano falsamente altri
 Si tenga presente che i metadati di tipo "Autori" sono semplice testo in formato libero e che soltanto i metadati di tipo "Proprietari" sono controllati.
 
 
-## Rimozione di proprietari
+## <a name="removing-owners"></a>Rimozione di proprietari
 Se un elemento ha più proprietari ed è necessario rimuoverne uno, seguire questa semplice procedura:
 
 1. [Accedere](https://powershellgallery.com/users/account/LogOn) a PowerShell Gallery con l'account attualmente proprietario dell'elemento;
@@ -55,7 +53,7 @@ Se un elemento ha più proprietari ed è necessario rimuoverne uno, seguire ques
 
 
 
-## Trasferimento della proprietà degli elementi
+## <a name="transferring-item-ownership"></a>Trasferimento della proprietà degli elementi
 A volte Microsoft riceve richieste di supporto relative al trasferimento della proprietà di un elemento da un utente all'altro. Questa operazione, tuttavia, può essere quasi sempre eseguita dagli utenti in modo autonomo.
 Il trasferimento della proprietà da un utente a un altro è semplicemente una combinazione delle due procedure descritte in precedenza.
 
@@ -68,7 +66,7 @@ La richiesta di supporto può avere due motivi differenti, ma la procedura riman
 * L'elemento è stato pubblicato accidentalmente con un account non corretto
 
 
-## Elenchi orfani
+## <a name="orphaned-items"></a>Elenchi orfani
 Anche se raramente, si è presentato anche lo scenario descritto di seguito.
 Gli elementi sono diventati orfani e non è possibile usare soltanto l'account del proprietario degli elementi per aggiungere nuovi proprietari.
 Di seguito sono riportati alcuni esempi relativi a questo scenario:
@@ -83,10 +81,4 @@ Gli amministratori eseguiranno quindi un processo per verificare la proprietà d
 Se stabiliscono che l'utente deve essere un proprietario dell'elemento, gli amministratori useranno il collegamento 'Manage Owners' (Gestisci proprietari) e invieranno all'utente un invito a diventare proprietario.
 Gli amministratori agiranno in questo modo solo dopo aver verificato il diritto dell'utente a essere un proprietario. Questo tipo di processo varia a seconda delle circostanze.
 Spesso gli amministratori useranno l'URL di progetto dell'elemento per contattare il proprietario del progetto stesso. In alternativa, per contattare il proprietario del progetto potranno essere usati Twitter, la posta elettronica o altri sistemi.
-
-
-
-
-<!--HONumber=Oct16_HO2-->
-
 

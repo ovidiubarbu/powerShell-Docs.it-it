@@ -8,12 +8,10 @@ author: jpjofre
 manager: dongill
 ms.prod: powershell
 ms.assetid: 1476722e-947e-425d-a86c-50037488dc6e
-translationtype: Human Translation
-ms.sourcegitcommit: 1d4062490ba76a8cc62faa8fb96eff92b49169b7
-ms.openlocfilehash: 966cab74cb2519893d4744e8bd0ca12f93f73136
-
+ms.openlocfilehash: b3823319cef457c7d04ebdaf521857f1f3e096b9
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
 # <a name="what39s-new-in-windows-powershell"></a>Novità di Windows PowerShell
 Windows PowerShell® 5.0 include nuove funzionalità significative che ne estendono e migliorano l'usabilità, consentendo di controllare e gestire gli ambienti Windows in modo più semplice e completo.
 
@@ -690,7 +688,7 @@ Per altre informazioni, vedere gli argomenti della Guida per i cmdlet [Get-Modul
 ### <a name="a-namebkmktabaenhanced-tab-completion"></a><a name="BKMK_TAB"></a>Completamento tramite TAB migliorato
 Il completamento tramite tasto TAB nella console di Windows PowerShell ora completa i nomi di cmdlet, parametri, valori dei parametri, enumerazioni, tipi .NET Framework, oggetti COM, directory nascoste e altro. Questa funzionalità è stata completamente riscritta in base a un nuovo albero sintattico astratto e di analisi per supportare più scenari, tra cui alberi di analisi in memoria e completamento tramite TAB sulla riga centrale.
 
-### <a name="a-namebkmkautoloadamodule-autoloading"></a><a name="BKMK_AutoLoad"></a>Caricamento automatico dei moduli
+### <a name="a-namebkmkautoloadamodule-auto-loading"></a><a name="BKMK_AutoLoad"></a>Caricamento automatico dei moduli
 Il cmdlet [Get-Command](https://technet.microsoft.com/en-us/library/59c6d302-6e8c-48b7-a6f6-f0172df936ad) ottiene ora tutti i cmdlet e le funzioni da tutti i moduli installati nel computer, anche quelli non importati nella sessione corrente.
 
 Una volta ottenuto il cmdlet necessario, è possibile usarlo immediatamente senza importare nessun modulo. I moduli di Windows PowerShell vengono ora importati automaticamente quando si usa uno dei cmdlet al loro interno. Non è più necessario cercare il modulo e importarlo per usare i relativi cmdlet.
@@ -758,10 +756,4 @@ Per migliorare le capacità di Windows PowerShell 3.0 di interpretare e gestire 
 - [about_Windows_PowerShell_4.0](http://technet.microsoft.com/en-us/library/hh847833(v=wps.630).aspx)
 - [about_Windows_PowerShell_5.0](https://technet.microsoft.com/en-us/library/6d56fa88-371e-40c9-b2de-64a2a0cd49da)
 - [Windows PowerShell](http://go.microsoft.com/fwlink/?LinkID=107116)
-
-
-
-
-<!--HONumber=Nov16_HO3-->
-
 

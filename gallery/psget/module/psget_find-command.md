@@ -9,17 +9,15 @@ ms.date: 2016-10-14
 contributor: manikb
 title: psget_find command
 ms.technology: powershell
-translationtype: Human Translation
-ms.sourcegitcommit: e6c526d1074f61154d03b92b6bf6f599976f5936
-ms.openlocfilehash: 7d46f02106785b0f94f73e60231fb4623002cfb6
-
+ms.openlocfilehash: 99091130ea89023495e5e3aacafb292f67f2db30
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
-# Find-Command
+# <a name="find-command"></a>Find-Command
 
 Trova i comandi di PowerShell nei moduli.
 
-## Descrizione
+## <a name="description"></a>Descrizione
 Il cmdlet Find-Command trova i comandi di PowerShell, ad esempio cmdlet, alias, funzioni e flussi di lavoro. Find-Command cerca nei moduli dei repository registrati.
 Per ogni comando trovato da questo cmdlet, viene restituito un oggetto PSGetCommandInfo. È possibile passare un oggetto PSGetCommandInfo al cmdlet Install-Module per installare il modulo che contiene il comando.
 
@@ -32,16 +30,16 @@ Per ogni comando trovato da questo cmdlet, viene restituito un oggetto PSGetComm
 - Find-Command consente di filtrare in base al linguaggio di ricerca specifico del repository usando il parametro -Filter.
 - Find-Command consente di filtrare in base ai moduli di tutti o alcuni dei repository registrati.
 
-## Sintassi del cmdlet
+## <a name="cmdlet-syntax"></a>Sintassi del cmdlet
 ```powershell
 Get-Command -Name Find-Command -Module PowerShellGet -Syntax
 ```
 
-## Riferimento per la Guida online sui cmdlet
+## <a name="cmdlet-online-help-reference"></a>Riferimento per la Guida online sui cmdlet
 
 [Find-Command](http://go.microsoft.com/fwlink/?LinkId=733636)
 
-## Comandi di esempio
+## <a name="example-commands"></a>Comandi di esempio
 ```powershell
 
 # Find a specific command
@@ -83,10 +81,4 @@ Find-Command -Filter RBAC
 Find-Command -Tag Azure, DSC
 
 ```
-
-
-
-
-<!--HONumber=Oct16_HO2-->
-
 

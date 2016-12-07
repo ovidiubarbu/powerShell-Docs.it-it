@@ -9,39 +9,37 @@ ms.date: 2016-10-14
 contributor: manikb
 title: psget_save script
 ms.technology: powershell
-translationtype: Human Translation
-ms.sourcegitcommit: e6c526d1074f61154d03b92b6bf6f599976f5936
-ms.openlocfilehash: ceb3ee918e594d23b3ba2e097d197dd0ff6a0971
-
+ms.openlocfilehash: 58003350b991ca10b1d8bc65964bbfdd324334b5
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
-# Save-Script
+# <a name="save-script"></a>Save-Script
 
 Il cmdlet Save-Script consente di verificare il file di script salvandolo in una posizione specificata.
 
-## Descrizione
+## <a name="description"></a>Descrizione
 
 Il cmdlet Save-Script salva lo script specificato.
 
-## Sintassi del cmdlet
+## <a name="cmdlet-syntax"></a>Sintassi del cmdlet
 
 ```powershell
 Get-Command -Name Save-Script -Module PowerShellGet -Syntax
 ```
-## Riferimento per la Guida online sui cmdlet
+## <a name="cmdlet-online-help-reference"></a>Riferimento per la Guida online sui cmdlet
 
 [Save-Script](http://go.microsoft.com/fwlink/?LinkId=619786)
 
-## Comandi di esempio
+## <a name="example-commands"></a>Comandi di esempio
 
-### Esempio 1: salvare uno script da un repository
+### <a name="example-1-save-a-script-from-a-repository"></a>Esempio 1: salvare uno script da un repository
 Questo comando salva la versione più recente dello script Fabrikam-ClientScript dal repository GalleryINT alla cartella locale C:\ScriptSharingDemo
 
 ```powershell
 Save-Script -Name Fabrikam-ClientScript -Repository GalleryINT -Path C:\ScriptSharingDemo
 ```
 
-### Esempio 2: salvare una versione di uno script eseguendo il piping dal cmdlet Find-Script
+### <a name="example-2-save-a-version-of-a-script-by-piping-from-the-find-script-cmdlet"></a>Esempio 2: salvare una versione di uno script eseguendo il piping dal cmdlet Find-Script
 
 Il primo comando trova la versione 1.5 di Fabrikam-ClientScript dal repository GalleryINT e la salva nella cartella C:\ScriptSharingDemo
 
@@ -55,10 +53,4 @@ Version Name Author Description
 ------- ---- ------ -----------
 1.5 Fabrikam-ClientScript manikb Description for the Fabrikam-ClientScript script
 ```
-
-
-
-
-<!--HONumber=Oct16_HO2-->
-
 

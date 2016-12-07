@@ -7,19 +7,17 @@ ms.topic: article
 author: eslesar
 manager: dongill
 ms.prod: powershell
-translationtype: Human Translation
-ms.sourcegitcommit: 62f993e3d3e6ef744fb07920d332d476dfd24fc6
-ms.openlocfilehash: 48b68a99baa489dad38e7072b171db10ee0f7386
-
+ms.openlocfilehash: d94f178fb75d15b12268ad783f78183ceba9f2b3
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
-# Risorsa Registry DSC
+# <a name="dsc-registry-resource"></a>Risorsa Registry DSC
 
 > Si applica a: Windows PowerShell 4.0, Windows PowerShell 5.0
 
 La risorsa **Registry** in Windows PowerShell DSC (Desired State Configuration) fornisce un meccanismo per gestire i valori e le chiavi del Registro di sistema in un nodo di destinazione.
 
-## Sintassi
+## <a name="syntax"></a>Sintassi
 
 ```
 Registry [string] #ResourceName
@@ -35,7 +33,7 @@ Registry [string] #ResourceName
 }
 ```
 
-## Proprietà
+## <a name="properties"></a>Proprietà
 |  Proprietà  |  Descrizione   | 
 |---|---| 
 | Key| Indica il percorso della chiave del Registro di sistema per cui si vuole specificare un determinato stato. Questo percorso deve includere l'hive.| 
@@ -63,7 +61,7 @@ Registry [string] #ResourceName
 
 <li>Stringa espandibile (REG_EXPAND_SZ)</li></ul>
 
-## Esempio
+## <a name="example"></a>Esempio
 Questo esempio garantisce che sia presente una chiave denominata "ExampleKey" nell'hive **HKEY\_LOCAL\_MACHINE**.
 ```powershell
 Configuration RegistryTest
@@ -81,11 +79,5 @@ Configuration RegistryTest
 >**Nota:** la modifica di un'impostazione del Registro di sistema nell'hive **HKEY\_CURRENT\_USER** richiede l'esecuzione della configurazione con le credenziali dell'utente anziché come il sistema.
 >È possibile usare la proprietà **PsDscRunAsCredential** per specificare le credenziali utente per la configurazione. Per un esempio, vedere [Esecuzione di DSC con le credenziali dell'utente](runAsUser.md)
 
-
-
-
-
-
-<!--HONumber=Sep16_HO3-->
 
 

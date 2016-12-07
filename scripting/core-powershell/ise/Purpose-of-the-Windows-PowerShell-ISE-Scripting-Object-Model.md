@@ -8,16 +8,14 @@ author: jpjofre
 manager: dongill
 ms.prod: powershell
 ms.assetid: d176a131-ab0c-43ee-80c1-f824ab8e4a05
-translationtype: Human Translation
-ms.sourcegitcommit: 641b6b2169824296b459691e67cdb771f3a07294
-ms.openlocfilehash: 63ea621ed8eb31a3be8394d99fd05dc8f663769f
-
+ms.openlocfilehash: 3213279588df19a677940b67fa1752a29a678e36
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
-# Scopo del modello a oggetti di scripting di Windows PowerShell ISE
+# <a name="purpose-of-the-windows-powershell-ise-scripting-object-model"></a>Scopo del modello a oggetti di scripting di Windows PowerShell ISE
   Gli oggetti sono associati al formato e alla funzione di Windows PowerShell Integrated Scripting Environment (ISE). Il riferimento del modello a oggetti fornisce dettagli sulle proprietà dei membri e sui metodi esposti da tali oggetti. Vengono forniti esempi per mostrare come usare gli script per accedere direttamente a tali metodi e proprietà. Il modello a oggetti di scripting semplifica la gamma di attività seguenti.
 
-## Personalizzazione dell'aspetto di Windows PowerShell ISE
+## <a name="customizing-the-appearance-of-windows-powershell-ise"></a>Personalizzazione dell'aspetto di Windows PowerShell ISE
  È possibile usare il modello a oggetti per modificare le impostazioni e le opzioni dell'applicazione. Ad esempio, è possibile modificarle come segue:
 
 -   È possibile modificare il colore di errori, avvisi, output dettagliati e output di debug.
@@ -32,7 +30,7 @@ ms.openlocfilehash: 63ea621ed8eb31a3be8394d99fd05dc8f663769f
 
 -   È possibile passare da una vista in cui il riquadro di script e il riquadro di output sono affiancati a una vista in cui il riquadro di script si trova sopra il riquadro di output. È possibile ancorare il riquadro dei comandi nella parte inferiore o superiore del riquadro di output.
 
-## Miglioramento della funzionalità di Windows PowerShell ISE
+## <a name="enhancing-the-functionality-of-windows-powershell-ise"></a>Miglioramento della funzionalità di Windows PowerShell ISE
  È possibile usare il modello a oggetti per migliorare le funzionalità di Windows PowerShell ISE. Ad esempio, è possibile:
 
 -   Aggiungere e modificare l'istanza di Windows PowerShell ISE. Ad esempio, per modificare i menu è possibile aggiungere nuove voci di menu e associare nuove voci di menu agli script.
@@ -67,18 +65,12 @@ ms.openlocfilehash: 63ea621ed8eb31a3be8394d99fd05dc8f663769f
 
     -   Selezionare un file.
 
-## Automazione di attività
+## <a name="automating-tasks"></a>Automazione di attività
  È possibile usare il modello a oggetti di scripting per creare scelte rapide da tastiera per le operazioni frequenti.
 
-## Vedere anche
- - [Gerarchia del modello a oggetti ISE](The-ISE-Object-Model-Hierarchy.md) 
- - [Riferimenti al modello a oggetti di Windows PowerShell ISE](Windows-PowerShell-ISE-Object-Model-Reference.md) 
- - [Modello a oggetti di scripting di Windows PowerShell ISE](The-Windows-PowerShell-ISE-Scripting-Object-Model.md)
+## <a name="see-also"></a>Vedere anche
+- [Gerarchia del modello a oggetti ISE](The-ISE-Object-Model-Hierarchy.md) 
+- [Riferimenti al modello a oggetti di Windows PowerShell ISE](Windows-PowerShell-ISE-Object-Model-Reference.md) 
+- [Modello a oggetti di scripting di Windows PowerShell ISE](The-Windows-PowerShell-ISE-Scripting-Object-Model.md)
 
   
-
-
-
-<!--HONumber=Sep16_HO3-->
-
-

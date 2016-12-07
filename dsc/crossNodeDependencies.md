@@ -7,13 +7,11 @@ ms.topic: article
 author: eslesar
 manager: dongill
 ms.prod: powershell
-translationtype: Human Translation
-ms.sourcegitcommit: 04aa6292dee991060669e1ac770cf98cbba41bfc
-ms.openlocfilehash: f4c64d3603fd01f29a63f8b180057714bf3d1197
-
+ms.openlocfilehash: c99ef444027a82d3adeba6a060f60fba3a0fe530
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
-# Specifica delle dipendenze tra nodi
+# <a name="specifying-cross-node-dependencies"></a>Specifica delle dipendenze tra nodi
 
 > Si applica a: Windows PowerShell 5.0
 
@@ -23,7 +21,7 @@ DSC fornisce risorse speciali quali **WaitForAll**, **WaitForAny** e **WaitForSo
 * **WaitForAny**: ha esito positivo se la risorsa specificata è nello stato desiderato in almeno uno dei nodi di destinazione definiti nella proprietà **NodeName**.
 * **WaitForSome**: specifica una proprietà **NodeCount** oltre alla proprietà **NodeName**. La risorsa ha esito positivo se si trova nello stato desiderato in un numero minimo di nodi, specificato in **NodeCount**, definito dalla proprietà **NodeName**. 
 
-## Uso delle risorse WaitForXXXX
+## <a name="using-waitforxxxx-resources"></a>Uso delle risorse WaitForXXXX
 
 Per usare le risorse **WaitForXXXX**, creare un blocco di risorsa contenente il tipo di risorsa che specifica la risorsa DSC e i nodi da attendere. Quindi usare la proprietà **DependsOn** su eventuali altri blocchi di risorse nella configurazione per attendere che le condizioni specificate nel nodo **WaitForXXXX** abbiano esito positivo.
 
@@ -59,14 +57,8 @@ Configuration JoinDomain
 
 >**Nota**: per impostazione predefinita, le risorse WaitForXXX eseguono un solo tentativo prima dell'esito negativo. Sebbene non sia obbligatorio, è consigliabile specificare un intervallo per i tentativi e il loro numero.
 
-## Vedere anche
+## <a name="see-also"></a>Vedere anche
 * [Configurazioni DSC](configurations.md)
 * [Risorse DSC](resources.md)
 * [Configurazione di Gestione configurazione locale](metaConfig.md)
-
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

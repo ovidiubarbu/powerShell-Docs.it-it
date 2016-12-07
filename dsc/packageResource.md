@@ -7,19 +7,17 @@ ms.topic: article
 author: eslesar
 manager: dongill
 ms.prod: powershell
-translationtype: Human Translation
-ms.sourcegitcommit: 62f993e3d3e6ef744fb07920d332d476dfd24fc6
-ms.openlocfilehash: d07b11c148dfa747b3f9c0157191b83efb6c65df
-
+ms.openlocfilehash: 343bd3c625e2df9f34480ea8065e3039d6069d61
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
-# Risorsa Package DSC
+# <a name="dsc-package-resource"></a>Risorsa Package DSC
 
 > Si applica a: Windows PowerShell 4.0, Windows PowerShell 5.0
 
 La risorsa **Package** in Windows PowerShell DSC (Desired State Configuration) fornisce un meccanismo per installare o disinstallare pacchetti, ad esempio i pacchetti di Windows Installer e setup.exe, nei nodi di destinazione.
 
-## Sintassi
+## <a name="syntax"></a>Sintassi
 
 ```
 Package [string] #ResourceName
@@ -36,7 +34,7 @@ Package [string] #ResourceName
 }
 ```
 
-## Proprietà
+## <a name="properties"></a>Proprietà
 |  Proprietà  |  Descrizione   | 
 |---|---| 
 | Name| Indica il nome del pacchetto per cui si vuole specificare un determinato stato.| 
@@ -49,7 +47,7 @@ Package [string] #ResourceName
 | DependsOn | Indica che prima di configurare la risorsa è necessario eseguire la configurazione di un'altra risorsa. Ad esempio, se l'ID del blocco script di configurazione della risorsa che si vuole eseguire per primo è **ResourceName** e il tipo è **ResourceType**, la sintassi per usare questa proprietà è `DependsOn = "[ResourceType]ResourceName"``.| 
 | ReturnCode| Indica il codice restituito previsto. Se l'effettivo codice restituito non corrisponde al valore previsto specificato qui, la configurazione restituirà un errore.| 
 
-## Esempio
+## <a name="example"></a>Esempio
 
 Questo esempio esegue il programma di installazione MSI che si trova nel percorso specificato e che ha l'ID prodotto indicato.
 
@@ -65,10 +63,4 @@ Configuration PackageTest
     } 
 }
 ```
-
-
-
-
-<!--HONumber=Sep16_HO3-->
-
 
