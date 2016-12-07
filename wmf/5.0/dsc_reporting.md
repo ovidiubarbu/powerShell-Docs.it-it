@@ -1,9 +1,5 @@
-# Invio di report sullo stato della configurazione in una posizione centrale
+# <a name="report-configuration-status-to-central-location"></a>Invio di report sullo stato della configurazione in una posizione centrale
 
 È possibile inviare informazioni dettagliate sullo stato di configurazione di DSC a un server che esegue il servizio DSC. 
 
 Per altre informazioni, vedere [Uso di un server di report DSC](https://msdn.microsoft.com/powershell/dsc/reportserver).
-
-<!--HONumber=Aug16_HO3-->
-
-

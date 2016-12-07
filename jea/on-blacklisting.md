@@ -8,13 +8,11 @@ keywords: powershell,cmdlet,jea
 ms.date: 2016-06-22
 title: blacklist
 ms.technology: powershell
-translationtype: Human Translation
-ms.sourcegitcommit: 7504fe496a8913718847e45115d126caf4049bef
-ms.openlocfilehash: 8892e5e08a763fbc66d782bbc9252d1f3a7dcfcf
-
+ms.openlocfilehash: e823cc0b130500fb7ea60e65acf27f90ad3f3802
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
-### Blacklist
+### <a name="on-blacklisting"></a>Blacklist
 Dopo essersi esercitati con JEA, ci si potrebbe chiedere se è possibile disattivare i comandi.
 Si tratta di una domanda legittima, ma l'operazione non è attualmente prevista per JEA per i motivi seguenti:
 
@@ -32,10 +30,4 @@ JEA visualizza un avviso quando si espongono i comandi visti in precedenza, ma t
 Se non si comprendono tutti i comandi che si intende esporre, non è possibile garantire che una determinata operazione non venga eseguita.
 L'impegno consiste nel comprendere i comandi esposti e se tali comandi usano una whitelist o una blacklist.
 Il numero di comandi che possono essere esposti in base a una blacklist è da gestire, quindi JEA viene implementato usando invece delle whitelist.
-
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

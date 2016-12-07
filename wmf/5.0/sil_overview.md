@@ -1,4 +1,4 @@
-# Registrazione inventario software (SIL)
+# <a name="software-inventory-logging-sil"></a>Registrazione inventario software (SIL)
 
 **IMPORTANTE: ** * quando si installa WMF 5.0 in un computer Windows Server 2012 R2 Server che già esegue SIL, è necessario eseguire il cmdlet Start-SilLogging una volta dopo l'installazione di WMF, perché il processo di installazione arresta erroneamente la funzionalità Registrazione inventario software.*
 
@@ -9,8 +9,3 @@ Pur essendo possibile registrare i dati di inventario software anche eseguendo q
 Nessuno di questi dati viene inviato a Microsoft con questa funzionalità. I dati e la funzionalità della registrazione dell'inventario software sono destinati unicamente agli amministratori e al proprietario della licenza del software del server.
 
 Per altre informazioni e documentazione sui cmdlet di Registrazione inventario software, vedere le risorse online per Windows Server 2012 R2 all'indirizzo <http://technet.microsoft.com/library/dn383584.aspx>.
-
-
-<!--HONumber=Aug16_HO3-->
-
-

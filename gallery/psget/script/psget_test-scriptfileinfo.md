@@ -9,31 +9,29 @@ ms.date: 2016-10-14
 contributor: manikb
 title: psget_test scriptfileinfo
 ms.technology: powershell
-translationtype: Human Translation
-ms.sourcegitcommit: e6c526d1074f61154d03b92b6bf6f599976f5936
-ms.openlocfilehash: 52dca469e9a97c4d640821b5bd44af240f5bf643
-
+ms.openlocfilehash: 570ad7e878195f36e1d0831c504301bcee647a7d
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
-# Test-ScriptFileInfo
+# <a name="test-scriptfileinfo"></a>Test-ScriptFileInfo
 
 Convalida il blocco di commento dei metadati di un file di script.
 
-## Descrizione
+## <a name="description"></a>Descrizione
 
 Il cmdlet Test-ScriptFileInfo convalida il blocco di commento all'inizio di uno script che verrà pubblicato con il cmdlet Publish-Script.
 Se il blocco di commento dei metadati contiene un errore, questo cmdlet restituisce informazioni sulla posizione dell'errore e su come correggerlo.
 
-## Sintassi del cmdlet
+## <a name="cmdlet-syntax"></a>Sintassi del cmdlet
 
 ```powershell
 Get-Command -Name Test-ScriptFileInfo -Module PowerShellGet -Syntax
 ```
-## Riferimento per la Guida online sui cmdlet
+## <a name="cmdlet-online-help-reference"></a>Riferimento per la Guida online sui cmdlet
 
 [Test-ScriptFileInfo](http://go.microsoft.com/fwlink/?LinkId=619791)
 
-## Comandi di esempio
+## <a name="example-commands"></a>Comandi di esempio
 ```powershell
 # Create a new script file with minimum required metadata values
 New-ScriptFileInfo -Path C:\ScriptSharingDemo\Demo-Script.ps1 -Description "Script file description goes here"
@@ -79,10 +77,4 @@ At line:1 char:1
     + FullyQualifiedErrorId : MissingPSScriptInfo,Test-ScriptFileInfo
 
 ```
-
-
-
-
-<!--HONumber=Oct16_HO2-->
-
 

@@ -8,10 +8,9 @@ author: keithb
 manager: carolz
 ms.prod: powershell
 ms.technology: WMF
-translationtype: Human Translation
-ms.sourcegitcommit: ecf70f38bbf48f410eb59b75f86eea767637757a
-ms.openlocfilehash: 72df0311a1d187dc6c7c1d29b0a3d2fd243848f0
-
+ms.openlocfilehash: 6986e7b8543ce38c0330e6428ac908ca7f126e08
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
 # <a name="catalog-cmdlets"></a>Cmdlet di catalogo  
 
@@ -52,9 +51,3 @@ Test-FileCatalog [-CatalogFilePath] <string> [[-Path] <string[]>] [-Detailed] [-
 ![](../images/TestFileCatalog.jpg)
 
 Questo cmdlet consente di confrontare gli hash di tutti i file e i relativi percorsi trovati nel file di catalogo con quelli salvati su disco. Se rileva eventuali mancate corrispondenze tra i percorsi e gli hash di file restituisce lo stato `ValidationFailed`. L'utente può recuperare tutte queste informazioni usando il parametro `Detailed`. Lo stato di firma del catalogo viene visualizzato come campo `Signature` e ciò equivale a chiamare il cmdlet [Get-AuthenticodeSignature](https://technet.microsoft.com/en-us/library/hh849805.aspx) sul file di catalogo. Gli utenti possono anche ignorare alcuni file durante la convalida usando il parametro `FilesToSkip`. 
-
-
-
-<!--HONumber=Nov16_HO3-->
-
-

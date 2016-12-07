@@ -7,13 +7,11 @@ ms.topic: article
 author: eslesar
 manager: dongill
 ms.prod: powershell
-translationtype: Human Translation
-ms.sourcegitcommit: 6477ae8575c83fc24150f9502515ff5b82bc8198
-ms.openlocfilehash: 1fe624c2532e44ed675762f3c141934fb4f0b60d
-
+ms.openlocfilehash: 97d97a36830088d6ee1296cda5310e087fc41893
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
-# Chiamata diretta dei metodi delle risorse DSC
+# <a name="calling-dsc-resource-methods-directly"></a>Chiamata diretta dei metodi delle risorse DSC
 
 >Si applica a: Windows PowerShell 5.0
 
@@ -25,7 +23,7 @@ Quando si chiama il cmdlet **Invoke-DscResource**, specificare il metodo o la fu
 
 Di seguito vengono riportati alcuni esempi di chiamate dirette ai metodi della risorsa:
 
-## Verificare che sia presente un file
+## <a name="ensure-a-file-is-present"></a>Verificare che sia presente un file
 
 ```powershell
 $result = Invoke-DscResource -Name File -Method Set -Property @{
@@ -34,7 +32,7 @@ $result = Invoke-DscResource -Name File -Method Set -Property @{
 $result | fl
 ```
 
-## Eseguire un test per verificare la presenza di un file
+## <a name="test-that-a-file-is-present"></a>Eseguire un test per verificare la presenza di un file
 
 ```powershell
 $result = Invoke-DscResource -Name File -Method Test -Property @{
@@ -43,7 +41,7 @@ $result = Invoke-DscResource -Name File -Method Test -Property @{
 $result | fl
 ```
 
-## Ottenere il contenuto del file
+## <a name="get-the-contents-of-file"></a>Ottenere il contenuto del file
 
 ```powershell
 $result = Invoke-DscResource -Name File -Method Get -Property @{
@@ -54,14 +52,8 @@ $result.ItemValue | fl
 
 >**Nota:** la chiamata diretta di metodi di risorse composite non è supportata. Chiamare invece i metodi delle risorse sottostanti che costituiscono la risorsa composita.
 
-## Vedere anche
+## <a name="see-also"></a>Vedere anche
 - [Scrittura di una risorsa DSC personalizzata con MOF](authoringResourceMOF.md) 
 - [Scrittura di una risorsa DSC personalizzata con classi di PowerShell](authoringResourceClass.md)
 - [Debug di risorse DSC](debugResource.md)
-
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

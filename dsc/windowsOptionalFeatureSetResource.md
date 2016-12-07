@@ -7,13 +7,11 @@ ms.topic: article
 author: eslesar
 manager: dongill
 ms.prod: powershell
-translationtype: Human Translation
-ms.sourcegitcommit: 97714d3fa9a1c00fb3d2e79cc873280ca945a840
-ms.openlocfilehash: 52eb958e59ecb1d5ae3faf268933bbd544410d47
-
+ms.openlocfilehash: 1fab04dfcd4ce927bbe526b93c826cf3749a42a5
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
-# Risorsa WindowsOptionalFeatureSet DSC
+# <a name="dsc-windowsoptionalfeatureset-resource"></a>Risorsa WindowsOptionalFeatureSet DSC
 
 > Si applica a: Windows PowerShell 5.0
 
@@ -21,7 +19,7 @@ La risorsa **WindowsOptionalFeatureSet** in Windows PowerShell DSC (Desired Stat
 
 Usare questa risorsa quando si vogliono configurare diverse istanze di Windows facoltative nello stesso stato.
 
-## Sintassi
+## <a name="syntax"></a>Sintassi
 
 ```
 WindowsOptionalFeature [string] #ResourceName
@@ -38,7 +36,7 @@ WindowsOptionalFeature [string] #ResourceName
 }
 ```
 
-## Proprietà
+## <a name="properties"></a>Proprietà
 
 |  Proprietà  |  Descrizione   | 
 |---|---| 
@@ -52,11 +50,5 @@ WindowsOptionalFeature [string] #ResourceName
 | DependsOn| Specifica che prima di configurare la risorsa è necessario eseguire la configurazione di un'altra risorsa. Ad esempio, se l'ID del blocco script di configurazione della risorsa che si vuole eseguire per primo è __ResourceName__ e il tipo è __ResourceType__, la sintassi per usare questa proprietà è `DependsOn = "[ResourceType]ResourceName"`.| 
  
 
-
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

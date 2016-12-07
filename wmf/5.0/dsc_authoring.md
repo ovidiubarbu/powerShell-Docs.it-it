@@ -1,4 +1,4 @@
-# Miglioramenti per la creazione di configurazioni con PowerShell ISE
+# <a name="authoring-improvements-using-powershell-ise"></a>Miglioramenti per la creazione di configurazioni con PowerShell ISE
 
 La creazione di configurazioni DSC in Windows PowerShell ISE è molto più semplice, grazie ai miglioramenti seguenti:
 
@@ -8,8 +8,3 @@ La creazione di configurazioni DSC in Windows PowerShell ISE è molto più sempl
 - Completamento tramite TAB migliorato per i valori delle proprietà della risorsa.
 
 **Nota:** è necessario disporre di una stringa vuota per i valori della proprietà della risorsa prima di poter usare CTRL+BARRA SPAZIATRICE per visualizzare l'elenco di opzioni. Premendo **TAB** è possibile scorrere le opzioni.
-
-
-<!--HONumber=Aug16_HO3-->
-
-

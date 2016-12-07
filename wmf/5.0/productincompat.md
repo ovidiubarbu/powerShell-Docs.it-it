@@ -1,18 +1,18 @@
-# Stato di compatibilità del prodotto
+# <a name="product-compatibility-status"></a>Stato di compatibilità del prodotto
 
-## Compatibile:
+## <a name="compatible"></a>Compatibile:
 > I sistemi che eseguono le applicazioni server seguenti **possono eseguire** Windows Management Framework 5.0:
 
 - Microsoft SharePoint Server 2013
 - System Center 2012 Configuration Manager
 
-## Non testato:
+## <a name="not-tested"></a>Non testato:
 > I sistemi che eseguono le applicazioni server seguenti **non sono testatati ** per eseguire Windows Management Framework 5.0:
 
 - Microsoft SharePoint Server 2010
 - System Center 2012 Virtual Machine Manager
 
-## Incompatibile:
+## <a name="incompatible"></a>Incompatibile:
 > I sistemi che eseguono le applicazioni server seguenti **non eseguono** Windows Management Framework 5.0:
 
 - Microsoft Exchange Server 2013
@@ -21,9 +21,4 @@
 - Microsoft Lync Server 2013
 - Microsoft Lync Server 2010
 - System Center 2012 R2 Service Management Automation
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

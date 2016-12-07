@@ -8,25 +8,23 @@ keywords: powershell,cmdlet,jea
 ms.date: 2016-06-22
 title: "capacità del ruolo"
 ms.technology: powershell
-translationtype: Human Translation
-ms.sourcegitcommit: 81fd386d58576a8930093b4f18ce36a4ff6cecd0
-ms.openlocfilehash: a3dd4a217f5b1fd80e97adf802c65073ca015bbc
-
+ms.openlocfilehash: d5f6311d74e47f2fa1a93909c244cddf114b0229
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
+# <a name="role-capabilities"></a>Capacità del ruolo
 
-# Capacità del ruolo
-
-## Panoramica
+## <a name="overview"></a>Panoramica
 Nella sezione precedente si è appreso che il campo "RoleDefinitions" definisce quali gruppi hanno accesso a quali capacità del ruolo.
 Questa sezione spiega
 che cosa sono le capacità del ruolo.  
 
-## Introduzione alle capacità del ruolo di PowerShell
+## <a name="introducing-powershell-role-capabilities"></a>Introduzione alle capacità del ruolo di PowerShell
 Le capacità del ruolo di PowerShell definiscono le operazioni che un utente può eseguire in corrispondenza di un endpoint JEA.
 Indicano in dettaglio una serie di elementi, tra cui comandi visibili, applicazioni visibili e altro ancora.
 Le capacità del ruolo vengono definite da file con estensione "psrc".
 
-## Contenuto della capacità del ruolo
+## <a name="role-capability-contents"></a>Contenuto della capacità del ruolo
 Per prima cosa è necessario esaminare e modificare il file di capacità del ruolo dimostrativo usato in precedenza.
 Si supponga di aver distribuito la configurazione di sessione nel proprio ambiente, ma di aver ricevuto un feedback che indica che è necessario modificare le funzionalità esposte agli utenti.
 Gli operatori devono avere la possibilità di riavviare i computer e vogliono essere in grado di ottenere informazioni sulle impostazioni di rete.
@@ -102,7 +100,7 @@ Al termine, chiudere la sessione.
 Exit-PSSession
 ```
 
-## Creazione di capacità del ruolo
+## <a name="role-capability-creation"></a>Creazione di capacità del ruolo
 Nella sezione successiva verrà creato un endpoint JEA per gli utenti dell'help desk di Active Directory.
 Per prima cosa verrà creato un file di capacità del ruolo vuoto da compilare in tale sezione.
 Le capacità del ruolo devono essere create in una cartella "RoleCapabilities" all'interno di un modulo di PowerShell valido per poter essere risolte quando si avvia una sessione.
@@ -133,7 +131,7 @@ New-PSRoleCapabilityFile -Path 'C:\Program Files\WindowsPowerShell\Modules\Conto
 Il file di capacità del ruolo è stato creato
 e potrà essere usato nella sezione successiva.
 
-## Concetti chiave
+## <a name="key-concepts"></a>Concetti chiave
 **Capacità del ruolo (estensione psrc)**: file che definisce le operazioni che un utente può eseguire in corrispondenza di un endpoint JEA.
 Indica in dettaglio una serie di elementi, tra cui comandi visibili, applicazioni visibili della console e altro ancora.
 Per fare in modo che PowerShell rilevi le capacità del ruolo, è necessario inserirle in una cartella "RoleCapabilities" in un modulo di PowerShell valido.
@@ -141,10 +139,4 @@ Per fare in modo che PowerShell rilevi le capacità del ruolo, è necessario ins
 **Modulo di PowerShell**: pacchetto di funzionalità di PowerShell.
 Può contenere funzioni di PowerShell, cmdlet, risorse DSC, capacità del ruolo e altro ancora.
 Per essere caricati automaticamente, i moduli di PowerShell devono trovarsi in un percorso in `$env:PSModulePath`.
-
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

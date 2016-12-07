@@ -1,6 +1,6 @@
-# Cmdlet di PowerShellGet per la gestione degli script
+# <a name="powershellget-cmdlets-for-script-management"></a>Cmdlet di PowerShellGet per la gestione degli script
 
-## Cmdlet Find-Script
+## <a name="find-script-cmdlet"></a>Cmdlet Find-Script
 Il cmdlet Find-Script consente di individuare i file di script con criteri di ricerca diversi, quali nome, tag, filtro, nome del comando, intervallo di versioni, versione esatta, tutte le versioni, incluse le relative dipendenze e la provenienza da un repository specifico o da tutti i repository registrati.
 
 Sintassi di esempio:
@@ -139,7 +139,7 @@ Workflow {Test-WorkflowFromScript\_Fabrikam-ClientScript}
 Command {Test-FunctionFromScript\_Fabrikam-ClientScript, Test-WorkflowFromScript\_Fabrikam-ClientScript}
 ```
 
-## Cmdlet Save-Script
+## <a name="save-script-cmdlet"></a>Cmdlet Save-Script
 Il cmdlet Save-Script consente di verificare il file di script salvandolo in una posizione specificata.
 ```powershell
 \# Save a script file to the specified location for the script analysis
@@ -152,7 +152,7 @@ Version Name Author Description
 1.5 Fabrikam-ClientScript manikb Description for the Fabrikam-ClientScript script
 ```
 
-## Cmdlet Install-Script e Get-InstalledScript
+## <a name="install-script-and-get-installedscript-cmdlets"></a>Cmdlet Install-Script e Get-InstalledScript
 Il cmdlet Install-Script consente di installare un file di script specifico e le relative dipendenze nell'ambito specificato. Per impostazione predefinita, gli script vengono installati nell'ambito AllUsers. Il cmdlet Get-InstalledScript consente di ottenere l'elenco dei file di script che sono stati installati con il cmdlet Install-Script.
 
 Nota sull'uso: per consentire la gestione e l'individuazione degli script una volta installati, Install-Script crea una cartella predefinita per l'archiviazione degli script in $home\Documents\WindowsPowerShell\Scripts e aggiunge questa cartella alla variabile di ambiente PATH. Se la modifica del percorso è un problema, usare Save-Script invece di Install-Script. Get-InstalledScripts e Uninstall-Script funzionano solo con gli script inseriti nel sistema tramite Install-Script.
@@ -333,7 +333,7 @@ Function Test-FunctionFromScript\_Script-WithDependencies2 { Get-Date }
 Workflow Test-WorkflowFromScript\_Script-WithDependencies2 { Get-Date }
 ```
 
-## Cmdlet Update-Script
+## <a name="update-script-cmdlet"></a>Cmdlet Update-Script
 Il cmdlet Update-Script consente di aggiornare sul posto i file di script installati con il cmdlet Install-Script.
 ```powershell
 Install-Script -Name Fabrikam-Script -RequiredVersion 1.0 -Repository GalleryINT -Scope
@@ -375,7 +375,7 @@ Version Name Type Repository Description
 2.0 Script-WithDependencies2 Script GalleryINT Description for the Script-WithDependencies2 script
 ```
 
-## Cmdlet Uninstall-Script
+## <a name="uninstall-script-cmdlet"></a>Cmdlet Uninstall-Script
 ```powershell
 Uninstall-Script cmdlet lets you to uninstall the installed script files.
 Get-InstalledScript | Uninstall-Script -WhatIf
@@ -412,7 +412,7 @@ At C:\\Program Files\\WindowsPowerShell\\Modules\\PowerShellGet\\1.0.0.1\\PSModu
 + FullyQualifiedErrorId : NoMatchFound,Microsoft.PowerShell.PackageManagement.Cmdlets.GetPackage
 ```
 
-## Cmdlet New-ScriptFileInfo e Test-ScriptFileInfo
+## <a name="new-scriptfileinfo-and-test-scriptfileinfo-cmdlets"></a>Cmdlet New-ScriptFileInfo e Test-ScriptFileInfo
 Il cmdlet New-ScriptFileInfo consente di creare un nuovo file di script con i metadati come Version, Guid, Author, Description e così via. Il cmdlet Test-ScriptFileInfo consente di convalidare e ottenere i metadati del file di script.
 ```powershell
 \# Create a new script file with minimum required metadata values
@@ -564,7 +564,7 @@ DefinedFunctions : Demo-ScriptFunction
 DefinedWorkflows : Demo-ScriptWorkflow
 ```
 
-## Cmdlet Update-ScriptFileInfo
+## <a name="update-scriptfileinfo-cmdlet"></a>Cmdlet Update-ScriptFileInfo
 Il cmdlet Update-ScriptFileInfo consente di aggiornare i metadati del file di script esistente.
 ```powershell
 \# Use Update-ScriptFileInfo cmdlet to update the script metadata
@@ -575,7 +575,7 @@ Version Name Author Description
 2.0 Demo-ScriptWithComplet... manikb my new script file
 ```
 
-## Cmdlet Register-PSRepository e Set-PSRepository con supporto della condivisione di script
+## <a name="register-psrepository-and-set-psrepository-cmdlets-with-script-sharing-support"></a>Cmdlet Register-PSRepository e Set-PSRepository con supporto della condivisione di script
 Usare i cmdlet Register-PSRepository/Set-PSRepository per aggiungere **ScriptSourceLocation** e **ScriptPublishLocation** a PSRepository.
 ```powershell
 \# Register an GalleryINT repository with Scripts and Modules support
@@ -633,7 +633,7 @@ ScriptPublishLocation : https://MyGallery.com/api/v2/package/
 ProviderOptions : {}
 ```
 
-## Cmdlet Publish-Script
+## <a name="publish-script-cmdlet"></a>Cmdlet Publish-Script
 Il cmdlet Publish-Script consente di pubblicare il file di script con metadati validi come Version, Guid, Author, Description e così via.
 ```powershell
 \# Publish the really basic script file with required metadata
@@ -675,9 +675,4 @@ Repository : GalleryINT
 PackageManagementProvider : NuGet
 AdditionalMetadata : {description, developmentDependency, tags, PackageManagementProvider...}
 ```
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

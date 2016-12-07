@@ -1,4 +1,4 @@
-# Chiamare il metodo della classe di base
+# <a name="call-base-class-method"></a>Chiamare il metodo della classe di base
 
 È possibile eseguire l'override di metodi esistenti nelle sottoclassi. A tale scopo, dichiarare metodi con lo stesso nome e firma:
 
@@ -46,7 +46,3 @@ $list = [MyIntList]::new()
 $list.Add(100)
 $list[0] # return 200
 ```
-
-<!--HONumber=Aug16_HO3-->
-
-

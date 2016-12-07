@@ -8,13 +8,11 @@ author: jpjofre
 manager: dongill
 ms.prod: powershell
 ms.assetid: 2a4acd33-041d-43a5-a3e9-9608a4c52b0c
-translationtype: Human Translation
-ms.sourcegitcommit: 3222a0ba54e87b214c5ebf64e587f920d531956a
-ms.openlocfilehash: e62ae14e4d7334d0cd42681c7e2591692c089187
-
+ms.openlocfilehash: b48cc5fbd5c229d0339a24402e186fe9ef69e97b
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
-# Reindirizzamento dei dati con i cmdlet Out-*
+# <a name="redirecting-data-with-out--cmdlets"></a>Reindirizzamento dei dati con i cmdlet Out-*
 In Windows PowerShell sono disponibili diversi cmdlet che consentono di controllare direttamente l'output dei dati. Questi cmdlet hanno in comune due importanti caratteristiche.
 
 Per prima cosa, in genere trasformano i dati in una forma di testo, dal momento che convertono i dati in output per i componenti di sistema che richiedono input di testo. Ciò significa che devono rappresentare gli oggetti come testo. Il testo viene pertanto formattato così com'è visualizzato nella finestra della console di Windows PowerShell.
@@ -71,7 +69,7 @@ Ciò si applica a tutti i cmdlet **Out**. Un cmdlet **Out** deve essere sempre v
 > [!NOTE]
 > Tutti i cmdlet **Out** eseguono il rendering dell'output come testo, usando la formattazione esistente per la finestra della console, inclusi i limiti di lunghezza delle righe.
 
-#### Paging dell'output della console (Out-Host)
+#### <a name="paging-console-output-out-host"></a>Paging dell'output della console (Out-Host)
 Per impostazione predefinita, Windows PowerShell invia dati alla finestra host, che è esattamente quello che fa il cmdlet Out-Host. L'uso principale del cmdlet Out-Host è il paging dei dati come descritto in precedenza. Il comando seguente usa ad esempio Out-Host per il paging dell'output del cmdlet Get-Command:
 
 ```
@@ -95,7 +93,7 @@ default=multi(0)disk(0)rdisk(0)partition(1)\WINDOWS
 ...
 ```
 
-#### Eliminazione dell'output (Out-Null)
+#### <a name="discarding-output-out-null"></a>Eliminazione dell'output (Out-Null)
 Il cmdlet **Out-Null** è progettato per eliminare immediatamente qualsiasi input ricevuto. Questa funzionalità è utile per l'eliminazione dei dati non necessari ottenuti come effetto collaterale dell'esecuzione di un comando. Quando si digita il comando seguente, non verrà restituito niente dal comando:
 
 ```
@@ -112,14 +110,14 @@ At line:1 char:12
 + Get-Command  <<<< Is-NotACommand | Out-Null
 ```
 
-#### Stampa dei dati (Out-Printer)
+#### <a name="printing-data-out-printer"></a>Stampa dei dati (Out-Printer)
 È possibile stampare dati usando il cmdlet **Out-Printer**. Il cmdlet **Out-Printer** userà la stampante predefinita se non si specifica il nome della stampante. È possibile usare qualsiasi stampante basata su Windows specificandone il nome visualizzato. Non è necessario alcun tipo di mapping delle porte della stampante, né una stampante fisica reale. Se ad esempio sono installati gli strumenti di acquisizione immagini per i documenti di Microsoft Office, è possibile inviare i dati in un file di immagine digitando:
 
 ```
 PS> Get-Command Get-Command | Out-Printer -Name "Microsoft Office Document Image Writer"
 ```
 
-#### Salvataggio dei dati (Out-File)
+#### <a name="saving-data-out-file"></a>Salvataggio dei dati (Out-File)
 È possibile inviare l'output in un file anziché nella finestra della console usando il cmdlet **Out-File**. La seguente riga di comando invia un elenco di processi al file **C:\\temp\\processlist.txt**:
 
 ```
@@ -157,10 +155,4 @@ Get-Command | Out-File -FilePath c:\temp\output.txt -Width 2147483647
 ```
 
 Il cmdlet **Out-File** è particolarmente utile quando si vuole salvare l'output come sarebbe stato visualizzato nella console. Per un controllo più preciso del formato dell'output, sono necessari strumenti più avanzati, che saranno presi in esame nel capitolo successivo, insieme ad alcuni dettagli sulla manipolazione degli oggetti.
-
-
-
-
-<!--HONumber=Aug16_HO4-->
-
 

@@ -8,13 +8,11 @@ author: jpjofre
 manager: dongill
 ms.prod: powershell
 ms.assetid: 6b3cbbc8-060c-4877-b00b-7300dbbe4e28
-translationtype: Human Translation
-ms.sourcegitcommit: 3222a0ba54e87b214c5ebf64e587f920d531956a
-ms.openlocfilehash: 6b35f2dd3cf441daa1a92d52435ed0ae350c138a
-
+ms.openlocfilehash: 6644ad379def3853d618dad2c72e7aa97b8242da
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
-# Nozioni di base su Windows PowerShell
+# <a name="windows-powershell-basics"></a>Nozioni di base su Windows PowerShell
 Le interfacce utente grafiche usano alcuni concetti di base ben noti alla maggior parte degli utenti di computer. Gli utenti contano sulla familiarità di tali interfacce per eseguire le attività. I sistemi operativi offrono agli utenti una rappresentazione grafica degli elementi che possono essere visualizzati, in genere con menu a discesa per l'accesso a funzionalità specifiche e menu di scelta rapida per l'accesso a funzionalità specifiche di un determinato contesto.
 
 Un'interfaccia della riga di comando (CLI) come Windows PowerShell, deve usare un approccio diverso per esporre le informazioni, perché non sono disponibili menu o sistemi grafici di aiuto all'utente. È necessario conoscere i nomi dei comandi per poterli usare. Anche se è possibile digitare comandi complessi equivalenti alle funzionalità in un ambiente GUI, è necessario acquisire familiarità con i comandi e i parametri di comando usati comunemente.
@@ -32,10 +30,4 @@ Windows PowerShell è stato progettato per sfruttare le conoscenze storiche dell
 -   Uso di Tab-Completion
 
 -   Uso di Get-Help
-
-
-
-
-<!--HONumber=Aug16_HO4-->
-
 

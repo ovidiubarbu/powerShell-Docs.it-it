@@ -9,13 +9,11 @@ ms.date: 2016-10-14
 contributor: manikb
 title: psgallery_deploy_to_azure_automation
 ms.technology: powershell
-translationtype: Human Translation
-ms.sourcegitcommit: e6c526d1074f61154d03b92b6bf6f599976f5936
-ms.openlocfilehash: c028bf6145b41c13bccda9543a782b838bd730ff
-
+ms.openlocfilehash: 20b0dd53b5d10f36089a884a99209a575332a91a
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
-Distribuire in Automazione di Azure
+<a name="deploy-to-azure-automation"></a>Distribuire in Automazione di Azure
 ===========================
 
 Il pulsante Deploy to Azure Automation (Distribuisci in Automazione di Azure) nella pagina dei dettagli dell'elemento consente di distribuire l'elemento da PowerShell Gallery in Automazione di Azure.
@@ -32,10 +30,4 @@ Se si distribuisce un modulo, verrà visualizzato nella sezione Moduli di Automa
 Il pulsante Deploy to Azure Automation (Distribuisci in Automazione di Azure) può essere disabilitato aggiungendo il tag AzureAutomationNotSupported ai metadati dell'elemento.
 
 Per altre informazioni su Automazione di Azure, vedere il [sito Web di Automazione di Azure](http://azure.microsoft.com/en-us/services/automation/).
-
-
-
-
-<!--HONumber=Oct16_HO2-->
-
 

@@ -8,16 +8,14 @@ author: jpjofre
 manager: dongill
 ms.prod: powershell
 ms.assetid: 4f29ead3-f83b-4706-ac3e-f2154ff38dc5
-translationtype: Human Translation
-ms.sourcegitcommit: 3222a0ba54e87b214c5ebf64e587f920d531956a
-ms.openlocfilehash: c013124d12a551245152c1703e5f1d8a3f8f5f70
-
+ms.openlocfilehash: 2142d7ef1d1cc9b20ecc1ab35b9685817c838347
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
-# Utilizzo delle stampanti
+# <a name="working-with-printers"></a>Utilizzo delle stampanti
 È possibile usare Windows PowerShell per gestire le stampanti tramite WMI e l'oggetto COM WScript.Network da WSH. Verranno usati entrambi gli strumenti per illustrare le attività specifiche.
 
-### Elenco delle connessioni a stampanti
+### <a name="listing-printer-connections"></a>Elenco delle connessioni a stampanti
 Il modo più semplice per elencare le stampanti installate in un computer consiste nell'usare la classe WMI **Win32_Printer**:
 
 ```
@@ -32,14 +30,14 @@ Get-WmiObject -Class Win32_Printer -ComputerName
 
 Poiché questo comando restituisce una semplice raccolta di stringhe di nomi di porta e nomi di dispositivo stampante senza alcuna etichetta distintiva, non è facile da interpretare.
 
-### Aggiunta di una stampante di rete
+### <a name="adding-a-network-printer"></a>Aggiunta di una stampante di rete
 Per aggiungere una nuova stampante di rete, usare **WScript.Network**:
 
 ```
 (New-Object -ComObject WScript.Network).AddWindowsPrinterConnection("\\Printserver01\Xerox5")
 ```
 
-### Impostazione di una stampante predefinita
+### <a name="setting-a-default-printer"></a>Impostazione di una stampante predefinita
 Per usare WMI per impostare la stampante predefinita, individuare la stampante nella raccolta **Win32_Printer** e quindi richiamare il metodo **SetDefaultPrinter**:
 
 ```
@@ -52,16 +50,10 @@ Per usare WMI per impostare la stampante predefinita, individuare la stampante n
 (New-Object -ComObject WScript.Network).SetDefaultPrinter('HP LaserJet 5Si')
 ```
 
-### Rimozione di una connessione della stampante
+### <a name="removing-a-printer-connection"></a>Rimozione di una connessione della stampante
 Per rimuovere una connessione alla stampante, usare il metodo **WScript.Network RemovePrinterConnection**:
 
 ```
 (New-Object -ComObject WScript.Network).RemovePrinterConnection("\\Printserver01\Xerox5")
 ```
-
-
-
-
-<!--HONumber=Aug16_HO4-->
-
 

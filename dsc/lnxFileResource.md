@@ -7,17 +7,15 @@ ms.topic: article
 author: eslesar
 manager: dongill
 ms.prod: powershell
-translationtype: Human Translation
-ms.sourcegitcommit: 6477ae8575c83fc24150f9502515ff5b82bc8198
 ms.openlocfilehash: 2ba44df5dd6c91371cbbfe95d48184a4ff4a7738
-
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
-# Risorsa nxFile DSC per Linux
+# <a name="dsc-for-linux-nxfile-resource"></a>Risorsa nxFile DSC per Linux
 
 La risorsa **nxFile** in PowerShell DSC (Desired State Configuration) fornisce un meccanismo per gestire file e directory in un nodo Linux.
 
-## Sintassi
+## <a name="syntax"></a>Sintassi
 
 ```
 nxFile <string> #ResourceName
@@ -39,7 +37,7 @@ nxFile <string> #ResourceName
 }
 ```
 
-## Proprietà
+## <a name="properties"></a>Proprietà
 
 |  Proprietà |  Descrizione | 
 |---|---|
@@ -56,7 +54,7 @@ nxFile <string> #ResourceName
 | Mode| Specifica le autorizzazioni desiderate per la risorsa, in notazione ottale o simbolica (ad esempio, 777 o rwxrwxrwx). Se si usa la notazione simbolica, non fornire il primo carattere che indica una directory o un file.| 
 | DependsOn | Indica che prima di configurare la risorsa è necessario eseguire la configurazione di un'altra risorsa. Ad esempio, se il valore di **ID** del blocco script di configurazione della risorsa che si vuole eseguire per primo è **ResourceName** e il tipo è **ResourceType**, la sintassi per usare questa proprietà è `DependsOn = "[ResourceType]ResourceName"`.| 
 
-## Informazioni aggiuntive
+## <a name="additional-information"></a>Informazioni aggiuntive
 
 
 Linux e Windows usano per impostazione predefinita caratteri di interruzione di riga diversi nei file di testo e questo può causare risultati imprevisti quando si configurano alcuni file in un computer Linux con __nxFile__. Ci sono diversi modi per gestire il contenuto di un file di Linux evitando i problemi causati da caratteri di interruzione di riga imprevisti:
@@ -134,7 +132,7 @@ nxFile resolvConf
 }
 ```
 
-## Esempio
+## <a name="example"></a>Esempio
 
 L'esempio seguente specifica che la directory `/opt/mydir` esiste e che nella directory è presente un file con il contenuto specificato.
 
@@ -161,10 +159,4 @@ nxFile FileExample
 } 
 }
 ```
-
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

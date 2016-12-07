@@ -1,6 +1,6 @@
-# Separazione degli ID per nodi e configurazioni
+# <a name="separation-of-node-and-configuration-ids"></a>Separazione degli ID per nodi e configurazioni
 
-## Panoramica
+## <a name="overview"></a>Panoramica
 
 Per garantire un'esperienza più flessibile e semplificata durante l'uso di DSC in modalità Pull, in questa versione sono state aggiunte numerose funzionalità. Queste funzionalità sono progettate in modo da offrire la flessibilità necessaria per configurare e distribuire le configurazioni su più nodi, offrendo allo stesso tempo la possibilità di tenere traccia dello stato e di creare report di informazioni per ogni nodo singolarmente. Queste funzionalità sono le seguenti:
 
@@ -11,9 +11,4 @@ Per garantire un'esperienza più flessibile e semplificata durante l'uso di DSC 
 **Nota:** queste caratteristiche e funzionalità sono state aggiunte e non sostituiscono i concetti e le funzionalità esistenti relativi al pull. È possibile usare queste nuove funzionalità o quelle meno recenti con il nuovo server di pull incluso in questa versione.
 
 Per altre informazioni, vedere [Configurazione di un client di pull con nomi di configurazione](https://msdn.microsoft.com/powershell/dsc/pullclientconfignames).
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

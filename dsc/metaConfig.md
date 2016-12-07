@@ -7,13 +7,11 @@ ms.topic: article
 author: eslesar
 manager: dongill
 ms.prod: powershell
-translationtype: Human Translation
-ms.sourcegitcommit: 140f60bf7344eae57e2b5d364464bc0b7c1a2220
-ms.openlocfilehash: 5d37938869a71bea0d8a6349e680411b7d0200d9
-
+ms.openlocfilehash: e978ee828fe3c91be52077442c5781b7a20e50be
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
-# Configurazione di Gestione configurazione locale
+# <a name="configuring-the-local-configuration-manager"></a>Configurazione di Gestione configurazione locale
 
 > Si applica a: Windows PowerShell 5.0
 
@@ -28,7 +26,7 @@ Per configurare Gestione configurazione locale in modo da specificare ognuno di 
 
 > **Nota**: questo argomento si applica alla versione di Gestione configurazione locale introdotta in Windows PowerShell 5.0. Per informazioni sulla configurazione di Gestione configurazione locale in Windows PowerShell 4.0, vedere [Gestione configurazione locale di Windows PowerShell 4.0 DSC (Desired State Configuration)](metaconfig4.md).
 
-## Scrittura e applicazione di una configurazione di Gestione configurazione locale
+## <a name="writing-and-enacting-an-lcm-configuration"></a>Scrittura e applicazione di una configurazione di Gestione configurazione locale
 
 Per configurare Gestione configurazione locale, è necessario creare ed eseguire un tipo speciale di configurazione. Per specificare una configurazione di Gestione configurazione locale, usare l'attributo DscLocalConfigurationManager. Di seguito viene mostrata una semplice configurazione che imposta Gestione configurazione locale in modalità push.
 
@@ -57,7 +55,7 @@ Una configurazione di Gestione configurazione locale può contenere blocchi solo
 * **ReportServerWeb**: specifica un server di pull HTTP a cui inviare i report.
 * **PartialConfiguration**: specifica configurazioni parziali.
 
-## Impostazioni di base
+## <a name="basic-settings"></a>Impostazioni di base
 
 Oltre a specificare i server di pull e le configurazioni parziali, tutte le altre proprietà di Gestione configurazione locale vengono configurate in un blocco **Settings**. In un blocco **Settings** sono disponibili le proprietà seguenti.
 
@@ -79,7 +77,7 @@ Oltre a specificare i server di pull e le configurazioni parziali, tutte le altr
 | PartialConfigurations| CimInstance| Non implementata. Non utilizzare.| 
 | StatusRetentionTimeInDays | UInt32| Numero di giorni per i quali Gestione configurazione locale mantiene lo stato della configurazione corrente.| 
 
-## Server di pull
+## <a name="pull-servers"></a>Server di pull
 
 Un server di pull è una condivisione SMB o un servizio Web OData usato come posizione centrale per i file DSC. La configurazione di Gestione configurazione locale supporta la definizione dei tipi seguenti di server di pull:
 
@@ -89,7 +87,7 @@ Un server di pull è una condivisione SMB o un servizio Web OData usato come pos
 
 Per informazioni sulla configurazione e sull'uso di server di pull, vedere [Configurazione di un server di pull DSC](pullServer.md).
 
-## Blocchi per i server di configurazione
+## <a name="configuration-server-blocks"></a>Blocchi per i server di configurazione
 
 Per definire un server di configurazione basato sul Web, creare un blocco **ConfigurationRepositoryWeb**. Un blocco **ConfigurationRepositoryWeb** definisce le proprietà seguenti.
 
@@ -108,7 +106,7 @@ Per definire un server di configurazione basato su SMB, creare un blocco **Confi
 |Credential|MSFT_Credential|Credenziale usata per l'autenticazione nella condivisione SMB.|
 |SourcePath|string|Percorso della condivisione SMB.|
 
-## Blocchi per i server di risorse
+## <a name="resource-server-blocks"></a>Blocchi per i server di risorse
 
 Per definire un server di risorse basato sul Web, creare un blocco **ResourceRepositoryWeb**. Un blocco **ResourceRepositoryWeb** definisce le proprietà seguenti.
 
@@ -126,7 +124,7 @@ Per definire un server di risorse basato su SMB, creare un blocco **ResourceRepo
 |Credential|MSFT_Credential|Credenziale usata per l'autenticazione nella condivisione SMB.|
 |SourcePath|string|Percorso della condivisione SMB.|
 
-## Blocchi per i server di report
+## <a name="report-server-blocks"></a>Blocchi per i server di report
 
 Un server di report deve essere un servizio Web OData. Per definire un server di report, creare un blocco **ReportServerWeb**. Un blocco **ReportServerWeb** definisce le proprietà seguenti.
 
@@ -137,7 +135,7 @@ Un server di report deve essere un servizio Web OData. Per definire un server di
 |RegistrationKey|string|GUID che identifica il nodo nel server di pull. Per altre informazioni, vedere la pagina su come registrare un nodo con un server di pull DSC.|
 |ServerURL|string|URL del server di configurazione.|
 
-## Configurazioni parziali
+## <a name="partial-configurations"></a>Configurazioni parziali
 
 Per definire una configurazione parziale, creare un blocco **PartialConfiguration**. Per altre informazioni sulle configurazioni parziali, vedere [Configurazioni parziali DSC](partialConfigs.md). Un blocco **PartialConfiguration** definisce le proprietà seguenti.
 
@@ -150,23 +148,17 @@ Per definire una configurazione parziale, creare un blocco **PartialConfiguratio
 |RefreshMode|string|Specifica il modo in cui Gestione configurazione locale (LCM) ottiene la configurazione parziale. I valori possibili sono __"Disabled"__, __"Push (predefinito)"__ e __"Pull"__. <ul><li>__Disabled__: la configurazione parziale è disabilitata.</li><li> __Push__: viene effettuato il push della configurazione parziale nel nodo chiamando il cmdlet [Publish-DscConfiguration](https://technet.microsoft.com/en-us/library/mt517875.aspx). Dopo il push o il pull di tutte le configurazioni parziali per il nodo da un server, la configurazione può essere avviata chiamando `Start-DscConfiguration –UseExisting`. Questo è il valore predefinito.</li><li>__Pull__: il nodo è configurato in modo da controllare regolarmente la configurazione parziale da un server di pull. Se questa proprietà è impostata su __Pull__, è necessario specificare un server di pull in una proprietà __ConfigurationSource__. Per altre informazioni sui server di pull, vedere [Configurazione di un server di pull DSC](pullServer.md).</li></ul>|
 |ResourceModuleSource|string[]|Matrice di nomi dei server di risorse da cui scaricare le risorse necessarie per questa configurazione parziale. Questi nomi devono fare riferimento ai server di risorse definiti in precedenza in blocchi **ResourceRepositoryWeb** e **ResourceRepositoryShare**.|
 
-## Vedere anche 
+## <a name="see-also"></a>Vedere anche 
 
-### Concetti
-[Panoramica di Windows PowerShell DSC (Desired State Configuration)](overview.md)
+### <a name="concepts"></a>Concetti
+[Panoramica di Windows PowerShell DSC (Desired State Configuration)](overview.md).
  
 [Configurazione di un server di pull DSC](pullServer.md) 
 
 [Gestione configurazione locale di Windows PowerShell 4.0 DSC (Desired State Configuration)](metaConfig4.md) 
 
-### Risorse aggiuntive
+### <a name="other-resources"></a>Risorse aggiuntive
 [Set-DscLocalConfigurationManager](https://technet.microsoft.com/en-us/library/dn521621.aspx) 
 
 [Configurazione di un client di pull con nomi di configurazione](pullClientConfigNames.md) 
-
-
-
-
-<!--HONumber=Sep16_HO3-->
-
 

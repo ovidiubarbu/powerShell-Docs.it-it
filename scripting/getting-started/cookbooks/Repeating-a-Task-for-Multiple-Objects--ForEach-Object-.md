@@ -1,5 +1,5 @@
 ---
-title: "Ripetizione di un'attività per più oggetti (ForEach-Object)"
+title: "Ripetizione di un&quot;attività per più oggetti (ForEach-Object)"
 ms.date: 2016-05-11
 keywords: powershell,cmdlet
 description: 
@@ -8,13 +8,11 @@ author: jpjofre
 manager: dongill
 ms.prod: powershell
 ms.assetid: 6697a12d-2470-4ed6-b5bb-c35e5d525eb6
-translationtype: Human Translation
-ms.sourcegitcommit: 3222a0ba54e87b214c5ebf64e587f920d531956a
-ms.openlocfilehash: 8dd7904611fb697f9b398161e12765454b4f3441
-
+ms.openlocfilehash: 4b219e4499482eafa6eddf1461b74c62ba091d1a
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
-# Ripetizione di un'attività per più oggetti (ForEach-Object)
+# <a name="repeating-a-task-for-multiple-objects-foreach-object"></a>Ripetizione di un'attività per più oggetti (ForEach-Object)
 Il cmdlet **ForEach-Object** usa blocchi di script e il descrittore $_ per l'oggetto pipeline corrente per consentire l'esecuzione di un comando in ogni oggetto della pipeline. Può essere usato per eseguire alcune attività complesse.
 
 Un caso in cui può risultare utile è la manipolazione dei dati per renderli più utili. Ad esempio, la classe Win32_LogicalDisk di WMI può essere usata per restituire informazioni sullo spazio disponibile per ogni disco locale. Tuttavia, i dati vengono restituiti in termini di byte, cosa che rende difficile la lettura:
@@ -53,10 +51,4 @@ eeSpace = ($_.FreeSpace)/1024.0/1024.0}
 ```
 
 È possibile riorganizzare i dati usando alcune tecniche avanzate, ma un approccio più semplice consiste nel creare un nuovo oggetto, usando **Select-Object**.
-
-
-
-
-<!--HONumber=Aug16_HO4-->
-
 

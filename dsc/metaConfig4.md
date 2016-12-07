@@ -7,19 +7,17 @@ ms.topic: article
 author: eslesar
 manager: dongill
 ms.prod: powershell
-translationtype: Human Translation
-ms.sourcegitcommit: 6477ae8575c83fc24150f9502515ff5b82bc8198
-ms.openlocfilehash: 25195166f4d9dd668427d6bb5d748ef61273cdee
-
+ms.openlocfilehash: 64fc906cf0328d7be3aba7d5d6819640b4dcb4fa
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
-# Gestione configurazione locale di Windows PowerShell 4.0 DSC (Desired State Configuration)
+# <a name="windows-powershell-40-desired-state-configuration-local-configuration-manager-lcm"></a>Gestione configurazione locale di Windows PowerShell 4.0 DSC (Desired State Configuration)
 
 >Si applica a: Windows PowerShell 4.0, Windows PowerShell 5.0
 
 Gestione configurazione locale è il motore di Windows PowerShell DSC (Desired State Configuration). Viene eseguito in tutti i nodi di destinazione e ha la responsabilità di chiamare le risorse di configurazione incluse in uno script di configurazione DSC. Questo argomento contiene l'elenco delle proprietà di Gestione configurazione locale e descrive in che modo modificare le impostazioni di Gestione configurazione locale in un nodo di destinazione.
 
-## Proprietà di Gestione configurazione locale
+## <a name="local-configuration-manager-properties"></a>Proprietà di Gestione configurazione locale
 Di seguito sono elencate le proprietà di Gestione configurazione locale che è possibile impostare o recuperare.
  
 * **AllowModuleOverwrite**: controlla se le nuove configurazioni scaricate dal server di configurazione possono sovrascrivere quelle meno recenti nel nodo di destinazione. I possibili valori sono True e False.
@@ -37,7 +35,7 @@ Di seguito sono elencate le proprietà di Gestione configurazione locale che è 
 * **RefreshFrequencyMins**: proprietà usata quando è stato configurato un server di "pull". Rappresenta la frequenza (in minuti) in base alla quale Gestione configurazione locale contatta un server di "pull" per scaricare la configurazione corrente. Questo valore può essere impostato insieme a ConfigurationModeFrequencyMins. Quando la proprietà RefreshMode è impostata su PULL, il nodo di destinazione contatta il server di "pull" in base a un intervallo impostato tramite RefreshFrequencyMins e scarica la configurazione corrente. Il motore di coerenza applica la configurazione più recente scaricata al nodo di destinazione in base all'intervallo impostato tramite ConfigurationModeFrequencyMins. Se la proprietà RefreshFrequencyMins non è impostata su un numero intero multiplo di ConfigurationModeFrequencyMins, il sistema arrotonda questo valore. Il valore predefinito è 30.
 * **RefreshMode**: i possibili valori sono **Push** (predefinito) e **Pull**. Nella configurazione "push" è necessario inserire un file di configurazione in ogni nodo di destinazione, usando qualsiasi computer client. In modalità "pull" è necessario configurare un server di "pull" perché Gestione configurazione locale possa contattare i file di configurazione e accedervi.
 
-### Esempio di aggiornamento delle impostazioni di Gestione configurazione locale
+### <a name="example-of-updating-local-configuration-manager-settings"></a>Esempio di aggiornamento delle impostazioni di Gestione configurazione locale
 
 È possibile aggiornare le impostazioni di Gestione configurazione locale di un nodo di destinazione inserendo in uno script di configurazione un blocco **LocalConfigurationManager** all'interno del blocco del nodo, come mostrato nell'esempio seguente.
 
@@ -77,10 +75,4 @@ Set-DscLocalConfigurationManager -Path "c:\users\public\dsc"
 > **Nota**: per il parametro **Path**, è necessario specificare lo stesso percorso specificato per il parametro **OutputPath** quando è stata richiamata la configurazione nell'esempio precedente.
 
 Per visualizzare le impostazioni di Gestione configurazione locale correnti, è possibile usare il cmdlet **Get-DscLocalConfigurationManager**. Se richiamato senza parametri, per impostazione predefinita questo cmdlet ottiene le impostazioni di Gestione configurazione locale per il nodo in cui viene eseguito. Per specificare un altro nodo, usare il parametro **CimSession** con questo cmdlet.
-
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

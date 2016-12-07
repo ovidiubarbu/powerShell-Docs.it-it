@@ -8,12 +8,10 @@ keywords: powershell,cmdlet,jea
 ms.date: 2016-06-22
 title: prerequisiti
 ms.technology: powershell
-translationtype: Human Translation
-ms.sourcegitcommit: 7504fe496a8913718847e45115d126caf4049bef
-ms.openlocfilehash: ac9231a475ba84e9051bbd06a65f3f20c9e49846
-
+ms.openlocfilehash: 6cd57c2fab63d2184cb5c792b63df99dbd782235
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
 # <a name="prerequisites"></a>Prerequisiti
 
 ## <a name="initial-state"></a>Stato iniziale
@@ -125,10 +123,4 @@ Questa opzione non è necessaria per il funzionamento di JEA, ma risulterà util
 Nota: è possibile abilitare la trascrizione PowerShell a livello di sistema anche con i criteri di gruppo.
 
 **Complimenti, il computer ora è configurato con l'endpoint dimostrativo ed è possibile iniziare a usare JEA.**
-
-
-
-
-<!--HONumber=Nov16_HO1-->
-
 

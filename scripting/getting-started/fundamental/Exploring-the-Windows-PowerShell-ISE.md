@@ -8,12 +8,10 @@ author: jpjofre
 manager: dongill
 ms.prod: powershell
 ms.assetid: e0d2c6e8-5126-40e7-a1e1-d1cff29fe94a
-translationtype: Human Translation
-ms.sourcegitcommit: b59186234a513cf34d2615d90643ee749bd60d3f
-ms.openlocfilehash: d0f9c059f6f5286388af3cfc07995fe46e7321c3
-
+ms.openlocfilehash: 590996f2db730a7841eb7a85036e4f36e59e46ff
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
 # <a name="exploring-the-windows-powershell-ise"></a>Esplorazione di Windows PowerShell ISE
 È possibile usare Windows PowerShell® Integrated Scripting Environment (ISE) per creare ed eseguire il debug di script e comandi ed eseguire gli stessi script e comandi. Windows PowerShell ISE include la barra dei menu, le schede di Windows PowerShell, la barra degli strumenti, le schede degli script, un riquadro di script, un riquadro della console, una barra di stato, un dispositivo di scorrimento per le dimensioni del testo e una Guida sensibile al contesto.
 
@@ -69,7 +67,7 @@ Consente di scrivere comandi. È possibile eseguire un comando di una riga o su 
 ## <a name="status-bar"></a>Barra di stato
 Consente di vedere se i comandi e gli script in esecuzione sono completi. La barra di stato è nella parte inferiore dello schermo. Nella barra di stato vengono visualizzate parti selezionate di messaggi di errore.
 
-## <a name="textsize-slider"></a>Dispositivo di scorrimento per le dimensioni del testo
+## <a name="text-size-slider"></a>Dispositivo di scorrimento per le dimensioni del testo
 Aumenta o diminuisce le dimensioni del testo sullo schermo.
 
 ## <a name="help"></a>?
@@ -77,10 +75,4 @@ La Guida di Windows PowerShell ISE è disponibile sul Web nella libreria TechNet
 
 ## <a name="see-also"></a>Vedere anche
 - [Uso di Windows PowerShell ISE](../../core-powershell/ise/Using-the-Windows-PowerShell-ISE.md)
-
-
-
-
-<!--HONumber=Nov16_HO3-->
-
 

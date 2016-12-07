@@ -8,12 +8,10 @@ author: jpjofre
 manager: dongill
 ms.prod: powershell
 ms.assetid: 0101daf8-4e31-4e4c-ab89-01d95dcb8f46
-translationtype: Human Translation
-ms.sourcegitcommit: 6c666e2e23cb74818e37293410dafc9033057733
-ms.openlocfilehash: 9453e0ec5ce2c43a3f140e70db6f30e55c211d64
-
+ms.openlocfilehash: 88f3edf9f5e1cad0979626af6a435b9331bfb04d
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
 # <a name="the-iseeditor-object"></a>Oggetto ISEEditor
   Un oggetto **ISEEditor** è un'istanza della classe Microsoft.PowerShell.Host.ISE.ISEEditor. Il riquadro della console è un oggetto **ISEEditor**. Ogni oggetto [ISEFile](The-ISEFile-Object.md) ha un oggetto **ISEEditor** associato. Le sezioni seguenti elencano i metodi e proprietà di un oggetto **ISEEditor**.
 
@@ -169,7 +167,7 @@ $psISE.CurrentFile.Editor.CaretColumn
 $psISE.CurrentFile.Editor.CaretLine
 ```
 
-###  <a name="a-namecaretlinetexta-caretlinetext"></a><a name="caretlinetext"></a> CaretLineText
+###  <a name="a-namecaretlinetexta-caretlinetext"></a><a name="CaretLineText"></a> CaretLineText
   Supportato in Windows PowerShell ISE 2.0 e versioni successive. 
 
  Proprietà di sola lettura che ottiene la riga completa che contiene il cursore.
@@ -240,9 +238,3 @@ $myEditor.InsertText($selection.ToLower())
 - [Gerarchia del modello a oggetti ISE](The-ISE-Object-Model-Hierarchy.md)
 
   
-
-
-
-<!--HONumber=Nov16_HO3-->
-
-

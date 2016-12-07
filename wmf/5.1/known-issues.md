@@ -8,12 +8,10 @@ author: krishna
 manager: dongill
 ms.prod: powershell
 ms.technology: WMF
-translationtype: Human Translation
-ms.sourcegitcommit: 98a0e6d3c46a56cbed94de6a4bd68b88a79116ff
-ms.openlocfilehash: b831555354d14bca22e5137afffadc1ed3b14554
-
+ms.openlocfilehash: e2f19ed2fa2d2070860438b128513a463d95adae
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
 # <a name="known-issues-in-wmf-51-preview"></a>Problemi noti in WMF 5.1 (anteprima) #
 
 > Nota: queste informazioni sono provvisorie e soggette a modifiche.
@@ -43,8 +41,3 @@ In questa versione vi sono due problemi che è necessario tenere presenti quando
 
     $PreviousDSCStates | Remove-Item -ErrorAction SilentlyContinue -Verbose
  ```  
-
-
-<!--HONumber=Nov16_HO3-->
-
-

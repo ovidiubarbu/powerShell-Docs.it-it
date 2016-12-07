@@ -8,12 +8,10 @@ author: jpjofre
 manager: dongill
 ms.prod: powershell
 ms.assetid: fd254570-27ac-4cc9-81d4-011afd29b7dc
-translationtype: Human Translation
-ms.sourcegitcommit: 3222a0ba54e87b214c5ebf64e587f920d531956a
-ms.openlocfilehash: cdc7f45c9fa8a6bf748a52b460a1ac190d283971
-
+ms.openlocfilehash: 24517b4a31ab2c5b92c2485fb8c6bd0e56dd2ffd
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
 # <a name="working-with-registry-entries"></a>Gestione delle voci del Registro di sistema
 Poiché le voci del Registro di sistema sono proprietà di chiavi e, in quanto tali, non possono essere esplorate direttamente, è necessario adottare un approccio leggermente diverso per gestirle.
 
@@ -179,10 +177,4 @@ Per eliminare le voci del Registro di sistema PSHome e PowerShellPath, usare **R
 Remove-ItemProperty -Path HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion -Name PSHome
 Remove-ItemProperty -Path HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion -Name PowerShellPath
 ```
-
-
-
-
-<!--HONumber=Nov16_HO1-->
-
 

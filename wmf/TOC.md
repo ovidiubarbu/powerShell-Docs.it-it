@@ -94,8 +94,3 @@
 ### [Generare cmdlet di PowerShell in base a un endpoint OData](5.0/odata_overview.md)
 ### [Gestione del commutatore di rete con PowerShell](5.0/networkswitch_overview.md)
 ### [Registrazione inventario software (SIL)](5.0/sil_overview.md)
-
-
-<!--HONumber=Nov16_HO3-->
-
-

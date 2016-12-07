@@ -7,13 +7,11 @@ ms.topic: article
 author: eslesar
 manager: dongill
 ms.prod: powershell
-translationtype: Human Translation
-ms.sourcegitcommit: 6477ae8575c83fc24150f9502515ff5b82bc8198
-ms.openlocfilehash: 5c7878bdfc8a3f118b569a9e43be6c7e4333ad2c
-
+ms.openlocfilehash: 84ed3408cfef1dbc99f6f3147ae36be09bca67e4
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
-#Risorsa User DSC#
+#<a name="dsc-user-resource"></a>Risorsa User DSC#
 
  
 >Si applica a: Windows PowerShell 4.0, Windows PowerShell 5.0
@@ -22,7 +20,7 @@ ms.openlocfilehash: 5c7878bdfc8a3f118b569a9e43be6c7e4333ad2c
 La risorsa __User__ in Windows PowerShell DSC (Desired State Configuration) fornisce un meccanismo per gestire gli account utente locali nel nodo di destinazione.
 
 
-##Sintassi##
+##<a name="syntax"></a>Sintassi##
 
 ```
 User [string] #ResourceName
@@ -40,7 +38,7 @@ User [string] #ResourceName
 }
 ```
 
-## Proprietà
+## <a name="properties"></a>Proprietà
 |  Proprietà  |  Descrizione   | 
 |---|---| 
 | UserName| Indica il nome dell'account per cui si vuole specificare un determinato stato.| 
@@ -54,7 +52,7 @@ User [string] #ResourceName
 | PasswordNeverExpires| Indica se la password scadrà. Impostare questa proprietà su __$true__ per specificare che la password per questo utente non scade mai e su __$false__ se la password scade. Il valore predefinito è __$false__.| 
 | DependsOn | Indica che prima di configurare la risorsa è necessario eseguire la configurazione di un'altra risorsa. Ad esempio, se l'ID del blocco script di configurazione della risorsa che si vuole eseguire per primo è __ResourceName__ e il tipo è __ResourceType__, la sintassi per usare questa proprietà è `DependsOn = "[ResourceType]ResourceName"`.| 
 
-## Esempio
+## <a name="example"></a>Esempio
 
 ```powershell
 User UserExample
@@ -65,10 +63,4 @@ User UserExample
     DependsOn = “[Group]GroupExample" # Configures GroupExample first
 }
 ```
-
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

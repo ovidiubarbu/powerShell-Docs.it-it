@@ -9,35 +9,33 @@ ms.date: 2016-10-14
 contributor: manikb
 title: psget_register psrepository
 ms.technology: powershell
-translationtype: Human Translation
-ms.sourcegitcommit: e6c526d1074f61154d03b92b6bf6f599976f5936
-ms.openlocfilehash: c4ca4af826785fb0009afc1b06166e1888045e72
-
+ms.openlocfilehash: aceee6fc411dafb915643996d57c23b5c8b25f53
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
-# Register-PSRepository
+# <a name="register-psrepository"></a>Register-PSRepository
 
 Ottiene i repository registrati in un computer.
 
-## Descrizione
+## <a name="description"></a>Descrizione
 
 Il cmdlet Register-PSRepository consente di registrare il repository online per i moduli di PowerShell. Dopo aver registrato un repository, è possibile farvi riferimento dai cmdlet Find-Module, Install-Module e Publish-Module. Quello registrato diventa il repository predefinito in Find-Module e Install-Module. 
 
 I repository registrati sono specifici dell'utente. Non vengono registrati in un contesto a livello di sistema.
 
 
-## Sintassi del cmdlet
+## <a name="cmdlet-syntax"></a>Sintassi del cmdlet
 
 ```powershell
 Get-Command -Name Register-PSRepository -Module PowerShellGet -Syntax
 ```
-## Riferimento per la Guida online sui cmdlet
+## <a name="cmdlet-online-help-reference"></a>Riferimento per la Guida online sui cmdlet
 
 [Register-PSRepository](http://go.microsoft.com/fwlink/?LinkID=517129)
 
-## Comandi di esempio
+## <a name="example-commands"></a>Comandi di esempio
 
-### Registrare un repository di PowerShell
+### <a name="register-a-powershell-repository"></a>Registrare un repository di PowerShell
 È possibile configurare PowerShellGet per l'uso su repository interni. Dopo aver registrato un repository, è possibile usare Find-Module e Install-Module per usarlo.
 
 ```powershell
@@ -67,7 +65,7 @@ Unregister-PSRepository DemoRepo
 ```
 
 
-### Cmdlet Register-PSRepository e Set-PSRepository con supporto della condivisione di script
+### <a name="register-psrepository-and-set-psrepository-cmdlets-with-script-sharing-support"></a>Cmdlet Register-PSRepository e Set-PSRepository con supporto della condivisione di script
 
 Usare il cmdlet Register-PSRepository per aggiungere **ScriptSourceLocation** e **ScriptPublishLocation** a PSRepository.
 
@@ -119,10 +117,4 @@ ScriptPublishLocation : https://customgallery.cloudapp.net/api/v2/package/
 ProviderOptions : {}
 
 ```
-
-
-
-
-<!--HONumber=Oct16_HO2-->
-
 

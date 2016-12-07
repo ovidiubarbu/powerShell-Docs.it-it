@@ -8,13 +8,11 @@ author: jpjofre
 manager: dongill
 ms.prod: powershell
 ms.assetid: 72e64b1a-d351-4500-9da3-24d8a71d7a92
-translationtype: Human Translation
-ms.sourcegitcommit: 3222a0ba54e87b214c5ebf64e587f920d531956a
-ms.openlocfilehash: 463eaa5d27eeb03f232239bc6810ab00d4a1eaf4
-
+ms.openlocfilehash: 66f2927652b33371aa11db1662d3e9d28b4f5fbd
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
-# Selezione di parti di oggetti (Select-Object)
+# <a name="selecting-parts-of-objects-select-object"></a>Selezione di parti di oggetti (Select-Object)
 È possibile usare il cmdlet **Select-Object** per creare nuovi oggetti personalizzati di Windows PowerShell contenenti le proprietà selezionate dagli oggetti usati per crearli. Digitare il comando seguente per creare un nuovo oggetto che includa solo le proprietà Name e FreeSpace della classe Win32_LogicalDisk WMI:
 
 ```
@@ -50,10 +48,4 @@ Name                                                                  FreeSpace
 ----                                                                  ---------
 C:                                                                48317.7265625
 ```
-
-
-
-
-<!--HONumber=Aug16_HO4-->
-
 

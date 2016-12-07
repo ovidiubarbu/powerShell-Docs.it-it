@@ -8,16 +8,14 @@ author: jpjofre
 manager: dongill
 ms.prod: powershell
 ms.assetid: 8093268b-27f8-4a49-8871-142c5cc33f01
-translationtype: Human Translation
-ms.sourcegitcommit: 3222a0ba54e87b214c5ebf64e587f920d531956a
-ms.openlocfilehash: 1779b9de13a30a43236e24793e5196261a7db77f
-
+ms.openlocfilehash: 60652b67a98179f0dab137e3360766d2e6936d81
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
-# Modifica dello stato del computer
+# <a name="changing-computer-state"></a>Modifica dello stato del computer
 Per reimpostare un computer in Windows PowerShell, usare uno strumento da riga di comando standard o una classe WMI. Anche se si usa Windows PowerShell solo per eseguire lo strumento, imparare a modificare lo stato di alimentazione del computer in Windows PowerShell illustra alcuni dettagli importanti dell'uso degli strumenti esterni in Windows PowerShell.
 
-### Blocco di un computer
+### <a name="locking-a-computer"></a>Blocco di un computer
 L'unico modo per bloccare un computer direttamente con gli strumenti disponibili standard consiste nel chiamare la funzione **LockWorkstation ()** in **user32. dll**:
 
 ```
@@ -30,7 +28,7 @@ Quando si blocca una workstation mentre è abilitata la funzionalità Cambio rap
 
 Per arrestare una sessione specifica in Terminal Server, usare lo strumento da riga di comando **tsshutdn.exe**.
 
-### Disconnessione dalla sessione corrente
+### <a name="logging-off-the-current-session"></a>Disconnessione dalla sessione corrente
 È possibile usare alcune tecniche diverse per disconnettersi da una sessione nel sistema locale. Il modo più semplice consiste nell'usare lo strumento da riga di comando di Desktop remoto/Servizi terminal, **logoff.exe**. Per altri dettagli, al prompt di Windows PowerShell digitare **logoff /?**. Per disconnettere la sessione attiva corrente, digitare **logoff** senza argomenti.
 
 È anche possibile usare lo strumento **shutdown.exe** con la relativa opzione di disconnessione:
@@ -47,7 +45,7 @@ Una terza opzione prevede l'uso di WMI. La classe Win32_OperatingSystem include 
 
 Per altre informazioni e per individuare altre funzionalità del metodo Win32Shutdown, vedere "Metodo Win32Shutdown della classe Win32_OperatingSystem" in MSDN.
 
-### Arresto o riavvio di un computer
+### <a name="shutting-down-or-restarting-a-computer"></a>Arresto o riavvio di un computer
 L'arresto e il riavvio dei computer sono in genere gli stessi tipi di attività. Gli strumenti per l'arresto di un computer di solito consentono anche di riavviarlo e viceversa. Sono disponibili due opzioni semplici per riavviare un computer da Windows PowerShell. Usare Tsshutdn.exe o Shutdown.exe con gli argomenti appropriati. È possibile ottenere informazioni dettagliate sull'utilizzo con **tsshutdn.exe /?** o **shutdown.exe /?**.
 
 È possibile eseguire le operazioni di arresto e riavvio anche usando **Win32_OperatingSystem** direttamente da Windows PowerShell.
@@ -63,10 +61,4 @@ Per riavviare il sistema operativo, usare il metodo Win32Shutdown con il contras
 ```
 (Get-WmiObject -Class Win32_OperatingSystem -ComputerName .).Win32Shutdown(2)
 ```
-
-
-
-
-<!--HONumber=Aug16_HO4-->
-
 

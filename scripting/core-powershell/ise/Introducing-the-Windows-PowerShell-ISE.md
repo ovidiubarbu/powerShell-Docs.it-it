@@ -8,13 +8,11 @@ author: jpjofre
 manager: dongill
 ms.prod: powershell
 ms.assetid: a0de70ca-909a-4807-94d1-6da86e5b52a0
-translationtype: Human Translation
-ms.sourcegitcommit: 3222a0ba54e87b214c5ebf64e587f920d531956a
-ms.openlocfilehash: 07ec87200c8cc2db2c4d5695a2ca32a63bc470c8
-
+ms.openlocfilehash: e12348d8230549766a04d9995acaaee7213d8808
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
-# Introduzione a Windows PowerShell ISE
+# <a name="introducing-the-windows-powershell-ise"></a>Introduzione a Windows PowerShell ISE
 Windows PowerShell Integrated Scripting Environment (ISE) è un'applicazione host per Windows PowerShell. In Windows PowerShell ISE è possibile eseguire comandi, nonché scrivere script, testarli e sottoporli a debug in una singola interfaccia utente grafica basata su Windows con funzionalità di modifica su più righe, completamento tramite tasto TAB, colorazione della sintassi, esecuzione selettiva, Guida sensibile al contesto e supporto per lingue da destra a sinistra.
 È possibile usare voci di menu e tasti di scelta rapida per completare molte delle stesse attività eseguibili nella console di Windows PowerShell.  Ad esempio, durante il debug di uno script in Windows PowerShell ISE, per impostare un punto di interruzione riga in uno script, fare clic con il pulsante destro del mouse sulla riga di codice e quindi fare clic su **Attiva/disattiva punto di interruzione**.
 
@@ -28,7 +26,7 @@ Provare queste funzionalità in Windows PowerShell ISE.
 
 Windows PowerShell ISE consente di personalizzarne l'aspetto in vari modi. Include anche uno specifico profilo di Windows PowerShell in cui è possibile archiviare funzioni, alias, variabili e comandi da usare in Windows PowerShell ISE.
 
-### Per avviare Windows PowerShell ISE
+### <a name="to-start-the-windows-powershell-ise"></a>Per avviare Windows PowerShell ISE
 
 1.  Eseguire una delle operazioni seguenti:
 
@@ -36,13 +34,7 @@ Windows PowerShell ISE consente di personalizzarne l'aspetto in vari modi. Inclu
 
     -   In Cmd.exe della console di Windows PowerShell oppure nella casella Esegui digitare **powershell_ise.exe**.
 
-### Per visualizzare la Guida in Windows PowerShell ISE
+### <a name="to-get-help-in-the-windows-powershell-ise"></a>Per visualizzare la Guida in Windows PowerShell ISE
 
 -   Nel menu **?** fare clic su **Guida di Windows PowerShell**. Oppure premere F1. Si apre un file che descrive Windows PowerShell ISE e Windows PowerShell, con tutti gli argomenti disponibili tramite il cmdlet Get-Help.
-
-
-
-
-<!--HONumber=Aug16_HO4-->
-
 

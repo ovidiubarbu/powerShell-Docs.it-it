@@ -7,15 +7,13 @@ ms.topic: article
 author: eslesar
 manager: dongill
 ms.prod: powershell
-translationtype: Human Translation
-ms.sourcegitcommit: 4a7c9bfa0f22930732776b510d5cc4b0275424ff
-ms.openlocfilehash: b2900987b1102cf41880e5af0a0cc44bc6499ef5
-
+ms.openlocfilehash: 59a0e45e3d0ded6cde31418984c3a0cc04c39478
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
-# Elenco di controllo per la creazione di risorse
+# <a name="resource-authoring-checklist"></a>Elenco di controllo per la creazione di risorse
 Questo elenco di controllo è un elenco di procedure consigliate durante la creazione di una nuova risorsa DSC.
-## Il modulo della risorsa contiene i file psd1 e schema.mof per ogni risorsa. 
+## <a name="resource-module-contains-psd1-file-and-schemamof-for-every-resource"></a>Il modulo della risorsa contiene i file psd1 e schema.mof per ogni risorsa. 
 Verificare che la risorsa abbia una struttura corretta e contenga tutti i file necessari. Ogni modulo di risorsa deve contenere un file con estensione psd1 e per tutte le risorse non composite deve essere disponibile un file schema.mof. Le risorse senza schema non verranno elencate da **Get-DscResource** e gli utenti non saranno in grado di usare IntelliSense durante la scrittura di codice in base a tali moduli in ISE. La struttura di directory per la risorsa xRemoteFile, che fa parte del [modulo della risorsa xPSDesiredStateConfiguration](https://github.com/PowerShell/xPSDesiredStateConfiguration), potrebbe avere questo aspetto:
 
 
@@ -34,7 +32,7 @@ xPSDesiredStateConfiguration
     xPSDesiredStateConfiguration.psd1
 ```
 
-## La risorsa e lo schema sono corretti##
+## <a name="resource-and-schema-are-correct"></a>La risorsa e lo schema sono corretti##
 Verificare il file dello schema della risorsa (*. schema.mof). È possibile usare [Progettazione risorse DSC](https://www.powershellgallery.com/packages/xDSCResourceDesigner/) per sviluppare e testare lo schema. Verificare che:
 - I tipi di proprietà siano corretti (ad esempio, non usare il tipo String per proprietà che accettano valori numerici, ma usare invece UInt32 o altri tipi numerici)
 - Gli attributi delle proprietà siano specificati correttamente, ad esempio [key], [required], [write], [read]
@@ -51,8 +49,7 @@ Esempio:
 
 - Il nome descrittivo è specificato ed è conforme alle convenzioni di denominazione DSC
 
-Esempio:
-```[ClassVersion("1.0.0.0"), FriendlyName("xRemoteFile")]```
+Esempio: ```[ClassVersion("1.0.0.0"), FriendlyName("xRemoteFile")]```
 
 - Ogni campo ha una descrizione significativa. L'archivio GitHub di PowerShell include esempi utili, ad esempio [.schema.mof per xRemoteFile](https://github.com/PowerShell/xPSDesiredStateConfiguration/blob/dev/DSCResources/MSFT_xRemoteFile/MSFT_xRemoteFile.schema.mof)
 
@@ -67,7 +64,7 @@ Test-xDscResource ..\DSCResources\MSFT_xRemoteFile
 Test-xDscSchema ..\DSCResources\MSFT_xRemoteFile\MSFT_xRemoteFile.schema.mof
 ```
 
-## La risorsa viene caricata senza errori ##
+## <a name="resource-loads-without-errors"></a>La risorsa viene caricata senza errori ##
 Controllare se il modulo della risorse può essere caricato correttamente.
 È possibile farlo manualmente, eseguendo `Import-Module <resource_module> -force ` e verificando che non si siano verificati errori oppure creando un'automazione dei test. In quest'ultimo caso, è possibile usare questa struttura nel test case:
 ```powershell
@@ -77,7 +74,7 @@ If ($error.count –ne 0) {
     Throw “Module was not imported correctly. Errors returned: $error”
 }
 ```
-## La risorsa è idempotente in caso positivo 
+## <a name="resource-is-idempotent-in-the-positive-case"></a>La risorsa è idempotente in caso positivo 
 Una delle caratteristiche fondamentali delle risorse DSC è l'idempotenza. Ciò significa che l'applicazione di una configurazione DSC che include più volte la risorsa specifica darà sempre lo stesso risultato. Ad esempio, se si crea una configurazione che contiene la risorsa File seguente:
 ```powershell
 File file {
@@ -89,7 +86,7 @@ Dopo la prima applicazione, il file test.txt dovrebbe comparire nella cartella C
 Per assicurarsi che una risorsa sia idempotente, è possibile chiamare ripetutamente **Set-TargetResource** quando si esegue un test diretto della risorsa oppure chiamare più volte **Start-DscConfiguration** quando si esegue un test end-to-end. Il risultato sarà lo stesso dopo ogni esecuzione. 
 
 
-## Scenario di modifica dell'utente test ##
+## <a name="test-user-modification-scenario"></a>Scenario di modifica dell'utente test ##
 È possibile verificare se **Set TargetResource** e **TargetResource Test** funzionano correttamente modificando lo stato del computer e quindi eseguendo nuovamente DSC. Ecco i passaggi necessari per eseguire questo test:
 1.  Iniziare con la risorsa che non si trova nello stato desiderato
 2.  Eseguire la configurazione della risorsa
@@ -105,24 +102,24 @@ Per assicurarsi che una risorsa sia idempotente, è possibile chiamare ripetutam
 
 Get-TargetResource dovrebbe restituire i dettagli dello stato corrente della risorsa. Assicurarsi di testarla chiamando Get-DscConfiguration dopo aver applicato la configurazione e verificando che l'output rispecchi correttamente lo stato corrente del computer. È importante eseguire il test separatamente, poiché eventuali problemi in questa area non verranno visualizzati durante la chiamata di Start-DscConfiguration.
 
-## Chiamare direttamente le funzioni **Get/Set/Test-TargetResource** ##
+## <a name="call-getsettest-targetresource-functions-directly"></a>Chiamare direttamente le funzioni **Get/Set/Test-TargetResource** ##
 
 Assicurarsi di testare le funzioni **Get/Set/Test-TargetResource** implementate nella risorsa chiamandole direttamente e verificando che funzionino come previsto.
 
-## Eseguire un test end-to-end tramite **Start-DscConfiguration** ##
+## <a name="verify-end-to-end-using-start-dscconfiguration"></a>Eseguire un test end-to-end tramite **Start-DscConfiguration** ##
 
 Testare le funzioni **Get/Set/Test-TargetResource** tramite chiamata diretta è importante, ma in questo modo non verranno individuati tutti i problemi. È consigliabile concentrare una parte significativa delle attività di test sull'uso di **Start-DscConfiguration** o del server di pull. Questo è in effetti il modo in cui gli utenti useranno la risorsa, quindi non sottovalutare l'importanza di questo tipo di test. Possibili tipi di problemi:
 - Possibili comportamenti diversi delle credenziali e/o della sessione perché l'agente DSC viene eseguito come servizio.  Assicurarsi di sottoporre qualsiasi funzionalità a test end-to-end.
 - Gli errori restituiti da **Start-DscConfiguration** potrebbero essere diversi da quelli visualizzati dopo una chiamata diretta alla funzione **Set-TargetResource**.
 
-## Testare la compatibilità su tutte le piattaforme supportate da DSC ##
+## <a name="test-compatability-on-all-dsc-supported-platforms"></a>Testare la compatibilità su tutte le piattaforme supportate da DSC ##
 La risorsa dovrebbero funzionare in tutte le piattaforme supportate da DSC (Windows Server 2008 R2 e versioni successive). Installare la versione più recente di WMF (Windows Management Framework) nel sistema operativo per ottenere la versione più recente di DSC. Se la risorsa non funziona in alcune di queste piattaforme in base alla sua struttura di progettazione, verrà restituito un messaggio di errore specifico. Assicurarsi anche che la risorsa controlli che i cmdlet chiamati siano presenti nel computer specifico. In Windows Server 2012 sono stati aggiunti numerosi cmdlet nuovi, non disponibili in Windows Server 2008 R2 anche con WMF installato. 
 
-## Verifiche nel client Windows (se applicabile) ##
+## <a name="verify-on-windows-client-if-applicable"></a>Verifiche nel client Windows (se applicabile) ##
 Una mancanza molto comune dei test è verificare la risorsa solo nelle versioni server di Windows. Molte risorse sono progettate anche per il funzionamento su SKU client, quindi se questo è il caso, è importante non dimenticare di eseguire i test anche su queste piattaforme. 
-## Get-DSCResource elenca la risorsa ##
+## <a name="get-dscresource-lists-the-resource"></a>Get-DSCResource elenca la risorsa ##
 Dopo aver distribuito il modulo, la chiamata di Get-DscResource dovrebbe elencare nei risultati anche la risorsa in questione. Se non è possibile trovare la risorsa nell'elenco, verificare che esista il file schema.mof per la risorsa. 
-## Il modulo della risorsa contiene esempi ##
+## <a name="resource-module-contains-examples"></a>Il modulo della risorsa contiene esempi ##
 Creazione di esempi di qualità che consentono ad altri utenti di capirne l'uso. Ciò è fondamentale, soprattutto perché molti utenti usano il codice di esempio come documentazione. 
 - In primo luogo, è necessario determinare gli esempi da includere nel modulo. È opportuno offrire come minimo esempi per i casi d'uso più importanti per la risorsa:
 - Se il modulo contiene varie risorse che devono essere usate insieme per uno scenario end-to-end, l'esempio end-to-end di base dovrebbe essere idealmente il primo.
@@ -180,7 +177,7 @@ Sample_xRemoteFile_DownloadFile -destinationPath "$env:SystemDrive\fileName.jpg"
 - Per ogni esempio, scrivere una breve descrizione per illustrarne le funzioni e indicare il significato dei parametri. 
 - Assicurarsi che siano disponibili esempi per la maggior parte degli scenari importanti per la risorsa e se non manca nulla, verificare che funzionino tutti e mettano il computer nello stato desiderato.  
 
-## I messaggi di errore sono facili da comprendere e aiutano gli utenti a risolvere i problemi ##
+## <a name="error-messages-are-easy-to-understand-and-help-users-solve-problems"></a>I messaggi di errore sono facili da comprendere e aiutano gli utenti a risolvere i problemi ##
 Per essere utili, i messaggi di errore devono essere:
 - Presenti: il problema principale con i messaggi di errore è che spesso non esistono, quindi assicurarsi che ci siano. 
 - Facili da capire: messaggi leggibili evitando oscuri codici di errore
@@ -188,7 +185,7 @@ Per essere utili, i messaggi di errore devono essere:
 - Costruttivi: suggerire come risolvere il problema
 - Cortesi: non incolpare l'utente o farlo sentire incapace. Assicurarsi di verificare gli errori negli scenari end-to-end con **Start-DscConfiguration** in quanto potrebbero essere diversi da quelli restituiti quando si eseguono direttamente le funzioni della risorsa. 
 
-## I messaggi dei log sono facili da capire e informativi (inclusi i log -verbose, -debug ed ETW) ##
+## <a name="log-messages-are-easy-to-understand-and-informative-including-verbose-debug-and-etw-logs"></a>I messaggi dei log sono facili da capire e informativi (inclusi i log -verbose, -debug ed ETW) ##
 Assicurarsi che i log generati dalla risorsa siano facili da comprendere e offrano informazioni utili all'utente. Le risorse dovrebbero offrire come output tutte le informazioni che potrebbero essere utili all'utente, ma non sempre la disponibilità di più log è un vantaggio. È consigliabile evitare la ridondanza e output di dati senza valore aggiunto, in modo da non costringere gli utenti a scorrere centinaia di voci di log per trovare quello che cercano. Naturalmente, anche l'assenza di log non è una soluzione accettabile per questo problema. 
 
 Durante il test, è necessario analizzare anche i log dettagliati e di debug (eseguendo **Start-DscConfiguration** con le opzioni -verbose e -debug in modo appropriato), oltre ai log ETW. Per visualizzare i log ETW di DSC, nel Visualizzatore eventi aprire la cartella seguente: Registri applicazioni e servizi - Microsoft - Windows - Desired State Configuration.  Per impostazione predefinita è abilitato il canale operativo, ma assicurarsi di abilitare i canali analitico e debug prima di eseguire la configurazione. Per abilitare i canali Analitico/Debug, è possibile eseguire lo script riportato di seguito:
@@ -205,7 +202,7 @@ if($statusEnabled -eq $log.IsEnabled)
 }     
 Invoke-Expression $commandToExecute 
 ```
-## L'implementazione della risorsa non contiene percorsi hardcoded ##
+## <a name="resource-implementation-does-not-contain-hardcoded-paths"></a>L'implementazione della risorsa non contiene percorsi hardcoded ##
 Assicurarsi che non siano presenti percorsi hardcoded nell'implementazione della risorsa, in particolare se presuppongono una lingua specifica (en-us) o quando possono essere usate variabili di sistema.
 Se la risorsa deve accedere a percorsi specifici, usare le variabili di ambiente invece di percorsi hardcoded, perché potrebbero variare in altri computer.
 
@@ -221,9 +218,9 @@ $programFilesPath = "C:\Program Files (x86)"
 $tempPath = Join-Path $env:temp "MyResource"
 $programFilesPath = ${env:ProgramFiles(x86)} 
 ```
-## L'implementazione della risorsa non contiene informazioni sull'utente ##
+## <a name="resource-implementation-does-not-contain-user-information"></a>L'implementazione della risorsa non contiene informazioni sull'utente ##
 Assicurarsi che nel codice non siano presenti nomi di posta elettronica, informazioni su account o nomi di persone.
-## La risorsa è stata testata con credenziali valide e non valide ##
+## <a name="resource-was-tested-with-validinvalid-credentials"></a>La risorsa è stata testata con credenziali valide e non valide ##
 Se la risorsa accetta credenziali come parametro:
 - Verificare che la risorsa funzioni quando l'account di sistema locale (o l'account computer per risorse remote) non ha accesso.
 - Verificare che la risorsa funzioni quando vengono specificate credenziali per Get, Set e Test 
@@ -232,18 +229,18 @@ Se la risorsa accetta credenziali come parametro:
   - Condivisioni DFS.
   - Condivisioni SAMBA (se si vuole supportare Linux).
 
-## La risorsa non richiede input interattivo ##
+## <a name="resource-does-not-require-interactive-input"></a>La risorsa non richiede input interattivo ##
 Le funzioni **Get/Set/Test-TargetResource** dovrebbero essere eseguite automaticamente e non devono attendere l'input dell'utente in alcuna fase dell'esecuzione. Ad esempio, è consigliabile non usare **Get-Credential** all'interno di queste funzioni. Se è necessario fornire l'input dell'utente, è consigliabile passarlo alla configurazione come parametro durante la fase di compilazione. 
-## La funzionalità della risorsa è stata accuratamente testata ##
+## <a name="resource-functionality-was-thoroughly-tested"></a>La funzionalità della risorsa è stata accuratamente testata ##
 Questo elenco di controllo contiene gli elementi che è importante testare e/o che vengono spesso dimenticati. Ci sono molti test, principalmente funzionali, specifici della risorsa da testare e che non sono menzionati in questo articolo. Non dimenticarsi dei test case negativi. 
-## Procedura consigliata: il modulo della risorsa contiene una cartella Test con lo script ResourceDesignerTests.ps1 ##
+## <a name="best-practice-resource-module-contains-tests-folder-with-resourcedesignertestsps1-script"></a>Procedura consigliata: il modulo della risorsa contiene una cartella Test con lo script ResourceDesignerTests.ps1 ##
 È buona norma creare una cartella "Test" all'interno del modulo della risorsa, creare il file ResourceDesignerTests.ps1 e aggiungere i test con **Test-xDscResource** e **Test-xDscSchema** per tutte le risorse nel modulo specificato. In questo modo è possibile convalidare rapidamente gli schemi di tutte le risorse da moduli specifici ed eseguire test di integrità prima della pubblicazione.
 Per xRemoteFile, il file ResourceTests.ps1 potrebbe essere semplice come questo:
 ```powershell
 Test-xDscResource ..\DSCResources\MSFT_xRemoteFile
 Test-xDscSchema ..\DSCResources\MSFT_xRemoteFile\MSFT_xRemoteFile.schema.mof 
 ```
-##Procedura consigliata: la cartella della risorsa contiene uno script di progettazione della risorsa per la generazione dello schema##
+##<a name="best-practice-resource-folder-contains-resource-designer-script-for-generating-schema"></a>Procedura consigliata: la cartella della risorsa contiene uno script di progettazione della risorsa per la generazione dello schema##
 Ogni risorsa dovrebbe contenere uno script di progettazione della risorsa che genera uno schema MOF della risorsa. Questo file deve essere inserito in <ResourceName>\ResourceDesignerScripts e denominato Generate<ResourceName>Schema.ps1 Per la risorsa xRemoteFile il file è denominato GenerateXRemoteFileSchema.ps1 e contiene:
 ```powershell 
 $DestinationPath = New-xDscResourceProperty -Name DestinationPath -Type String -Attribute Key -Description 'Path under which downloaded or copied file should be accessible after operation.'
@@ -256,7 +253,7 @@ $CertificateThumbprint = New-xDscResourceProperty -Name CertificateThumbprint -T
 
 New-xDscResource -Name MSFT_xRemoteFile -Property @($DestinationPath, $Uri, $Headers, $UserAgent, $Ensure, $Credential, $CertificateThumbprint) -ModuleName xPSDesiredStateConfiguration2 -FriendlyName xRemoteFile 
 ```
-## Procedura consigliata: la risorsa supporta -whatif ##
+## <a name="best-practice-resource-supports--whatif"></a>Procedura consigliata: la risorsa supporta -whatif ##
 Se la risorsa esegue operazioni "pericolose", è consigliabile implementare la funzionalità -whatif. Verificare poi che l'output di whatif descriva correttamente le operazioni che verrebbero eseguite se il comando venisse eseguito senza l'opzione whatif.
 Verificare anche che le operazioni non vengono eseguite, ovvero non vengano apportate modifiche allo stato del nodo, quando è presente l'opzione -whatif. Si supponga, ad esempio, di dover eseguire il test della risorsa File. Quella che segue è una configurazione semplice che crea il file "test.txt" con il contenuto "test":
 ```powershell
@@ -299,9 +296,3 @@ VERBOSE: Operation 'Invoke CimMethod' complete.
 ```
 
 Questo elenco non è esaustivo, ma tiene conto di molti importanti problemi riscontrati durante la progettazione, lo sviluppo e il test di risorse DSC.
-
-
-
-<!--HONumber=Aug16_HO3-->
-
-

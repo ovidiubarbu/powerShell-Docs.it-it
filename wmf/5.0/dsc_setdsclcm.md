@@ -1,4 +1,4 @@
-# Il cmdlet Set-DscLocalConfigurationManager supporta il parametro -Force
+# <a name="set-dsclocalconfigurationmanager-cmdlet-supports--force-parameter"></a>Il cmdlet Set-DscLocalConfigurationManager supporta il parametro -Force
 
 È stato aggiunto il supporto per il nuovo parametro al cmdlet Set-DscLocalConfigurationManager. Ciò consente all'utente di reimpostare la metaconfigurazione nel computer in modo deterministico quando sono in esecuzione in background altre operazioni come il controllo della coerenza, perché ciò causerà l'arresto di tutte le operazioni in esecuzione.
 
@@ -36,7 +36,3 @@ VERBOSE: \[DEV-10586-465\]: LCM: \[ End Set \] in 0.1410 seconds.
 VERBOSE: Operation 'Invoke CimMethod' complete.
 VERBOSE: Set-DscLocalConfigurationManager finished in 0.421 seconds.
 ```
-
-<!--HONumber=Aug16_HO3-->
-
-

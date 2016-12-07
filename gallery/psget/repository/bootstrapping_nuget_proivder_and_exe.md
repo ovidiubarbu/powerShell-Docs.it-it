@@ -9,18 +9,16 @@ ms.date: 2016-10-14
 contributor: manikb
 title: bootstrapping_nuget_proivder_and_exe
 ms.technology: powershell
-translationtype: Human Translation
-ms.sourcegitcommit: e6c526d1074f61154d03b92b6bf6f599976f5936
-ms.openlocfilehash: 0e0e1287dbe0912e90dfeabee8e22cdf78d9e82a
-
+ms.openlocfilehash: 3ba2289f83f2de5f7be7e4e0cced1988ee17b466
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
-# Avviare sia il provider NuGet che il file NuGet.exe per operazioni di pubblicazione con messaggio di richiesta singolo e avviare solo il provider NuGet per operazioni non di pubblicazione
+# <a name="bootstrap-both-nuget-provider-and-nugetexe-for-publish-operations-with-single-prompt-message-and-bootstrap-only-nuget-provider-for-non-publish-operations"></a>Avviare sia il provider NuGet che il file NuGet.exe per operazioni di pubblicazione con messaggio di richiesta singolo e avviare solo il provider NuGet per operazioni non di pubblicazione
 
 Il file NuGet.exe è stato rimosso dalla versione più recente del provider NuGet. Per la pubblicazione di un modulo o uno script con PowerShellGet, è necessario il file NuGet.exe per creare un file con estensione nupkg ed effettuarne il push nel repository. Il provider NuGet è necessario per eseguire operazioni non di pubblicazione come ricerca, installazione, aggiornamento e salvataggio.
 È stata aggiunta la logica per avviare sia il provider NuGet che il file NuGet.exe per operazioni di pubblicazione con messaggio di richiesta singolo e avviare solo il provider NuGet per operazioni non di pubblicazione.
 
-## Se il provider NuGet non è disponibile
+## <a name="when-nuget-provider-is-not-available"></a>Se il provider NuGet non è disponibile
 
 ```powershell                                
 PS C:\windows\system32> find-module -Repository dtlgalleryint -verbose -name contoso
@@ -51,7 +49,7 @@ Version    Name                                Type       Repository           D
 2.5        Contoso                             Module     dtlgalleryint        Contoso module
 ```
 
-## Se il provider NuGet è disponibile e il file NuGet.exe non è disponibile durante l'operazione di pubblicazione
+## <a name="when-nuget-provider-is-available-and-nugetexe-is-not-available-during-the-publish-operation"></a>Se il provider NuGet è disponibile e il file NuGet.exe non è disponibile durante l'operazione di pubblicazione
 
 ```powershell
 PS C:\windows\system32> Publish-Module -Name Contoso -Repository LocalRepo -Verbose
@@ -75,7 +73,7 @@ VERBOSE: Installing NuGet.exe.
 VERBOSE: Successfully published module 'Contoso' to the module publish location 'C:\LocalGallery'. Please allow few minutes for 'Contoso' to show up in the search results.
 ```
                    
-## Se il provider NuGet e il file NuGet.exe non sono disponibili durante l'operazione di pubblicazione
+## <a name="when-both-nuget-provider-and-nugetexe-are-not-available-during-the-publish-operation"></a>Se il provider NuGet e il file NuGet.exe non sono disponibili durante l'operazione di pubblicazione
 
 ```powershell
 PS C:\windows\system32> Publish-Module -Name Contoso -Repository LocalRepo -Verbose
@@ -100,10 +98,4 @@ VERBOSE: Installing NuGet provider.
 VERBOSE: Installing NuGet.exe.
 VERBOSE: Successfully published module 'Contoso' to the module publish location 'C:\LocalGallery'. Please allow few minutes for 'Contoso' to show up in the search results.
 ```
-
-
-
-
-<!--HONumber=Oct16_HO2-->
-
 

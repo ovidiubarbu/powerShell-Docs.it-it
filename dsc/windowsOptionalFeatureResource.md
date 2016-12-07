@@ -7,19 +7,17 @@ ms.topic: article
 author: eslesar
 manager: dongill
 ms.prod: powershell
-translationtype: Human Translation
-ms.sourcegitcommit: 97714d3fa9a1c00fb3d2e79cc873280ca945a840
-ms.openlocfilehash: 1254037b655a3160c90e69971c9faf061f205917
-
+ms.openlocfilehash: 26d140d68760ec92b3b6cbc31d0735eaaf671d9c
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
-# Risorsa WindowsOptionalFeature DSC
+# <a name="dsc-windowsoptionalfeature-resource"></a>Risorsa WindowsOptionalFeature DSC
 
 > Si applica a: Windows PowerShell 5.0
 
 La risorsa **WindowsOptionalFeature** in Windows PowerShell DSC (Desired State Configuration) fornisce un meccanismo per specificare le funzionalità facoltative abilitate in un nodo di destinazione.
 
-## Sintassi
+## <a name="syntax"></a>Sintassi
 
 ```
 WindowsOptionalFeature [string] #ResourceName
@@ -36,7 +34,7 @@ WindowsOptionalFeature [string] #ResourceName
 }
 ```
 
-## Proprietà
+## <a name="properties"></a>Proprietà
 
 |  Proprietà  |  Descrizione   | 
 |---|---| 
@@ -50,11 +48,5 @@ WindowsOptionalFeature [string] #ResourceName
 | DependsOn| Specifica che prima di configurare la risorsa è necessario eseguire la configurazione di un'altra risorsa. Ad esempio, se l'ID del blocco script di configurazione della risorsa che si vuole eseguire per primo è __ResourceName__ e il tipo è __ResourceType__, la sintassi per usare questa proprietà è `DependsOn = "[ResourceType]ResourceName"`.| 
  
 
-
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

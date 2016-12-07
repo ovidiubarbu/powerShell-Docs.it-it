@@ -7,17 +7,15 @@ ms.topic: article
 author: eslesar
 manager: dongill
 ms.prod: powershell
-translationtype: Human Translation
-ms.sourcegitcommit: 6477ae8575c83fc24150f9502515ff5b82bc8198
 ms.openlocfilehash: 6b001c12885022006003ef3ffe91b7aede07bd17
-
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
-# Risorse DSC (Desired State Configuration) predefinite per Linux
+# <a name="built-in-desired-state-configuration-resources-for-linux"></a>Risorse DSC (Desired State Configuration) predefinite per Linux
 
 Le risorse sono blocchi predefiniti che è possibile usare per scrivere uno script di PowerShell DSC (Desired State Configuration). DSC per Linux include un set di funzionalità predefinite per la configurazione di risorse come file e cartelle, pacchetti, variabili di ambiente e servizi e processi.
 
-## Risorse predefinite 
+## <a name="built-in-resources"></a>Risorse predefinite 
 
 La tabella seguente contiene un elenco di queste risorse, insieme ai collegamenti agli argomenti che le descrivono dettagliatamente.
 
@@ -32,9 +30,3 @@ La tabella seguente contiene un elenco di queste risorse, insieme ai collegament
 * [Risorsa nxSshAuthorizedKeys](lnxSshAuthorizedKeysResource.md): gestisce le chiavi ssh pubbliche per un utente di Linux. 
 * [Risorsa nxUser](lnxUserResource.md): gestisce gli utenti locali di Linux. 
   
-
-
-
-<!--HONumber=Aug16_HO3-->
-
-

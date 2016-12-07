@@ -8,16 +8,14 @@ author: jpjofre
 manager: dongill
 ms.prod: powershell
 ms.assetid: 91bfaecd-8684-48b4-ad86-065dfe6dc90a
-translationtype: Human Translation
-ms.sourcegitcommit: 3222a0ba54e87b214c5ebf64e587f920d531956a
-ms.openlocfilehash: 4809eb60ba1a5529343c2ab3c88493bf2c32389b
-
+ms.openlocfilehash: 6af4884948c44f7f256d62d0c61f1c71b47994f3
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
-# Utilizzo delle chiavi del Registro di sistema
+# <a name="working-with-registry-keys"></a>Utilizzo delle chiavi del Registro di sistema
 Dato che le chiavi del Registro di sistema sono elementi nelle unità di Windows PowerShell, il loro utilizzo è molto simile a quello di file e cartelle. Una differenza fondamentale è che ogni elemento in un'unità di Windows PowerShell basata sul Registro di sistema è un contenitore, come una cartella in un'unità del file system. Tuttavia, le voci del Registro di sistema e i relativi valori associati sono proprietà degli elementi e non elementi distinti.
 
-### Elenco di tutte le sottochiavi di una chiave del Registro di sistema
+### <a name="listing-all-subkeys-of-a-registry-key"></a>Elenco di tutte le sottochiavi di una chiave del Registro di sistema
 È possibile usare **Get-ChildItem** per visualizzare tutti gli elementi direttamente all'interno di una chiave del Registro di sistema. Aggiungere il parametro facoltativo **Force** per visualizzare elementi nascosti o di sistema. Questo comando, ad esempio, visualizza gli elementi direttamente all'interno dell'unità di Windows PowerShell HKCU:, che corrisponde all'hive del Registro di sistema HKEY_CURRENT_USER:
 
 ```
@@ -60,7 +58,7 @@ Get-ChildItem -Path hkcu:\ -Recurse
 Get-ChildItem -Path HKCU:\Software -Recurse | Where-Object -FilterScript {($_.SubKeyCount -le 1) -and ($_.ValueCount -eq 4) }
 ```
 
-### Copia di chiavi
+### <a name="copying-keys"></a>Copia di chiavi
 La copia viene eseguita con **Copy-Item**. Il comando seguente copia HKLM:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion e tutte le relative proprietà in HKCU:\\, creando una nuova chiave denominata "CurrentVersion":
 
 ```
@@ -75,7 +73,7 @@ Copy-Item -Path 'HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion' -Destination h
 
 Per eseguire copie nel file system, è comunque possibile continuare a usare altri strumenti già disponibili. È possibile usare dall'interno di Windows PowerShell qualsiasi strumento di modifica del Registro di sistema (tra cui reg.exe, regini.exe e regedit.exe) e gli oggetti COM che supportano la modifica del Registro di sistema (come WScript.Shell e la classe WMI StdRegProv).
 
-### Creazione di chiavi
+### <a name="creating-keys"></a>Creazione di chiavi
 La creazione di nuove chiavi nel Registro di sistema è più semplice rispetto alla creazione di un nuovo elemento in un file system. Dato che tutte le chiavi del Registro di sistema sono contenitori, non è necessario specificare il tipo di elemento, ma è sufficiente indicare un percorso esplicito, ad esempio:
 
 ```
@@ -88,7 +86,7 @@ Per specificare una chiave, è anche possibile usare un percorso basato su provi
 New-Item -Path Registry::HKCU_DeleteMe
 ```
 
-### Eliminazione di chiavi
+### <a name="deleting-keys"></a>Eliminazione di chiavi
 L'eliminazione di elementi è un'attività fondamentalmente identica per tutti i provider. I comandi seguenti consentono di rimuovere elementi in modo invisibile all'utente:
 
 ```
@@ -96,7 +94,7 @@ Remove-Item -Path hkcu:\Software_DeleteMe
 Remove-Item -Path 'hkcu:\key with spaces in the name'
 ```
 
-### Rimozione di tutte le chiavi in una chiave specifica
+### <a name="removing-all-keys-under-a-specific-key"></a>Rimozione di tutte le chiavi in una chiave specifica
 È possibile rimuovere gli elementi contenuti tramite **Remove-Item**, ma verrà richiesto di confermare la rimozione, se l'elemento contiene altri elementi. Ad esempio, se si tenta di eliminare la sottochiave HKCU:\\CurrentVersion creata, verrà visualizzato il messaggio seguente:
 
 ```
@@ -121,10 +119,4 @@ Per rimuovere tutti gli elementi all'interno di HKCU:\\CurrentVersion ma non la 
 ```
 Remove-Item -Path HKCU:\CurrentVersion\* -Recurse
 ```
-
-
-
-
-<!--HONumber=Aug16_HO4-->
-
 

@@ -8,18 +8,16 @@ author: jpjofre
 manager: dongill
 ms.prod: powershell
 ms.assetid: a9f9e7a7-3ea8-47d3-bbb4-6e437f6d4a4a
-translationtype: Human Translation
-ms.sourcegitcommit: 3222a0ba54e87b214c5ebf64e587f920d531956a
-ms.openlocfilehash: 97bdd8ed6278fc5d45b34adf50ef8a194966ef0c
-
+ms.openlocfilehash: 77960d8876a7b0bc928158a04b26735aa6be517b
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
-# Gestione del percorso corrente
+# <a name="managing-current-location"></a>Gestione del percorso corrente
 Nei sistemi di cartelle in Esplora file è in genere presente un percorso di lavoro specifico, ossia la cartella attualmente aperta. Per manipolare gli elementi della cartella, è sufficiente fare clic su di essi. Per le interfacce della riga di comando come Cmd.exe, quando ci si trova nella stessa cartella di un determinato file è possibile accedervi specificando un nome relativamente breve, invece dell'intero percorso del file. La directory corrente si chiama directory di lavoro.
 
 Windows PowerShell usa il sostantivo **Location** per fare riferimento alla directory di lavoro e implementa una famiglia di cmdlet per esaminare e manipolare questo percorso.
 
-### Recupero del percorso corrente (Get-Location)
+### <a name="getting-your-current-location-get-location"></a>Recupero del percorso corrente (Get-Location)
 Per determinare il percorso della directory corrente, immettere il comando **Get-Location**:
 
 ```
@@ -32,7 +30,7 @@ C:\Documents and Settings\PowerUser
 > [!NOTE]
 > Il cmdlet Get-Location è simile al comando **pwd** della shell BASH. Il cmdlet Set-Location è simile al comando **cd** di Cmd.exe.
 
-### Impostazione del percorso corrente (Set-Location)
+### <a name="setting-your-current-location-set-location"></a>Impostazione del percorso corrente (Set-Location)
 Il comando **Get-Location** viene usato con il comando **Set-Location**. Il comando **Set-Location** consente di specificare il percorso della directory corrente.
 
 ```
@@ -90,7 +88,7 @@ chdir -Path .. -PassThru
 sl -Path HKLM:\SOFTWARE -PassThru
 ```
 
-### Salvataggio e richiamo dei percorsi recenti (Push-Location e Pop-Location)
+### <a name="saving-and-recalling-recent-locations-push-location-and-pop-location"></a>Salvataggio e richiamo dei percorsi recenti (Push-Location e Pop-Location)
 Quando si cambia percorso, risulta utile tenere traccia del percorso precedente e avere la possibilità di tornarci. Il cmdlet **Push-Location** di Windows PowerShell crea una cronologia ordinata ("stack") dei percorsi di directory visitati ed è possibile risalire in questa cronologia usando il cmdlet complementare **Pop-Location**.
 
 Ad esempio, Windows PowerShell viene in genere avviato nella home directory dell'utente.
@@ -171,10 +169,4 @@ Set-Location : Cannot find path 'D:\' because it does not exist.
 ```
 
 Se si usa un'interfaccia della riga di comando, non è consigliabile usare Esplora file per esaminare le unità fisiche disponibili. Inoltre, Esplora file non visualizza tutte le unità di Windows PowerShell. Windows PowerShell prevede un set di comandi per manipolare le unità di Windows PowerShell, che verranno descritti in seguito.
-
-
-
-
-<!--HONumber=Aug16_HO4-->
-
 

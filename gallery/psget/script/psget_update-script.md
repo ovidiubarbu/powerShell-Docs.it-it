@@ -9,30 +9,28 @@ ms.date: 2016-10-14
 contributor: manikb
 title: psget_update script
 ms.technology: powershell
-translationtype: Human Translation
-ms.sourcegitcommit: e6c526d1074f61154d03b92b6bf6f599976f5936
-ms.openlocfilehash: 8c5211a51a9ff8bce641fde8deacd2d288916602
-
+ms.openlocfilehash: b95ab77ba04d70d470a9740b452f415c872f8fa7
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
-# Update-Script
+# <a name="update-script"></a>Update-Script
 
 Il cmdlet Update-Script consente di aggiornare sul posto i file di script installati con il cmdlet Install-Script.
 
-## Descrizione
+## <a name="description"></a>Descrizione
 
 Il cmdlet Update-Script aggiorna lo script specificato nel repository da cui è stato installato in precedenza.
 
-## Sintassi del cmdlet
+## <a name="cmdlet-syntax"></a>Sintassi del cmdlet
 
 ```powershell
 Get-Command -Name Update-Script -Module PowerShellGet -Syntax
 ```
-## Riferimento per la Guida online sui cmdlet
+## <a name="cmdlet-online-help-reference"></a>Riferimento per la Guida online sui cmdlet
 
 [Update-Script](http://go.microsoft.com/fwlink/?LinkId=619787)
 
-## Comandi di esempio
+## <a name="example-commands"></a>Comandi di esempio
 ```powershell
 Install-Script -Name Fabrikam-Script -RequiredVersion 1.0 -Repository GalleryINT -Scope
 Get-InstalledScript -Name Fabrikam-Script
@@ -72,10 +70,4 @@ Version Name Type Repository Description
 2.5 Required-Script2 Script GalleryINT Description for the Required-Script2 script
 2.0 Script-WithDependencies2 Script GalleryINT Description for the Script-WithDependencies2 script
 ```
-
-
-
-
-<!--HONumber=Oct16_HO2-->
-
 

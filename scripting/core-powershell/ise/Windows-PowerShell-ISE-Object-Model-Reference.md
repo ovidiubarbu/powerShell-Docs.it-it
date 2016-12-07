@@ -8,15 +8,13 @@ author: jpjofre
 manager: dongill
 ms.prod: powershell
 ms.assetid: e1a9e7d1-0fd5-47de-8d9b-f1be1ed13b0c
-translationtype: Human Translation
-ms.sourcegitcommit: 16608d8b97ec816d77ec7b8ac2438a4d64b55fba
-ms.openlocfilehash: c60a7adb5cce55392d5dc09c7ca357bfc4c73e15
-
+ms.openlocfilehash: 44d5f142c6d2c68c1a70b3a1017a8e6e57a58abe
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
-# Riferimenti al modello a oggetti di Windows PowerShell ISE
+# <a name="windows-powershell-ise-object-model-reference"></a>Riferimenti al modello a oggetti di Windows PowerShell ISE
   
-## Riferimento del modello a oggetti
+## <a name="object-model-reference"></a>Riferimento del modello a oggetti
  Questa sezione offre un riferimento per le classi sottostanti che definiscono i vari oggetti in Windows PowerShell® Integrated Scripting Environment (ISE). Per visualizzare gli oggetti organizzati nella relativa gerarchia, vedere [Gerarchia del modello a oggetti ISE](The-ISE-Object-Model-Hierarchy.md).
 
  [Oggetto ISEAddOnTool](The-ISEAddOnTool-Object.md)
@@ -50,13 +48,7 @@ ms.openlocfilehash: c60a7adb5cce55392d5dc09c7ca357bfc4c73e15
  [Oggetto PowerShellTabCollection](The-PowerShellTabCollection-Object.md)
  Esempio: $psISE.PowerShellTabs.
 
-## Vedere anche
+## <a name="see-also"></a>Vedere anche
 - [Modello a oggetti di scripting di Windows PowerShell ISE](The-Windows-PowerShell-ISE-Scripting-Object-Model.md)
 
   
-
-
-
-<!--HONumber=Oct16_HO2-->
-
-

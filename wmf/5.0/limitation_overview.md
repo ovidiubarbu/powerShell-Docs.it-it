@@ -36,7 +36,7 @@ Quando si installa WMF 5.0 in un computer Windows Server 2012 R2 in cui è già 
 
 **Soluzione:** eseguire il cmdlet Start-SilLogging una volta dopo l'installazione di WMF, perché il processo di installazione arresta erroneamente la funzionalità Registrazione inventario software.
 
-<a name="getchilditem-does-not-work-if-literalpath-and-recurse-are-used-together"></a>Get-ChildItem non funziona se si usano insieme -LiteralPath e -Recurse
+<a name="get-childitem-does-not-work-if--literalpath-and--recurse-are-used-together"></a>Get-ChildItem non funziona se si usano insieme -LiteralPath e -Recurse
 --------------------------------------------------------------------------
 
 Se un nome di directory contiene un carattere jolly non valido, Get-ChildItem non produrrà i risultati previsti quando si usano insieme entrambe le opzioni -LiteralPath e -Recurse.
@@ -105,8 +105,3 @@ Esistono due possibili soluzioni al problema in base alla versione di Windows Se
       * Si presuppone che la versione modificata del file Generalize.xml sia stata copiata in C:\.
 
   10.   Il file Generalize.xml è ora aggiornato con la soluzione alternativa. Eseguire Sysprep con l'opzione generalize abilitata.
-
-
-<!--HONumber=Oct16_HO5-->
-
-

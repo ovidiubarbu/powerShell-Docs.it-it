@@ -1,5 +1,5 @@
 ---
-title: Uso di variabili per l'archiviazione di oggetti
+title: Uso di variabili per l&quot;archiviazione di oggetti
 ms.date: 2016-05-11
 keywords: powershell,cmdlet
 description: 
@@ -8,18 +8,16 @@ author: jpjofre
 manager: dongill
 ms.prod: powershell
 ms.assetid: b1688d73-c173-491e-9ba6-6d0c1cc852de
-translationtype: Human Translation
-ms.sourcegitcommit: 3222a0ba54e87b214c5ebf64e587f920d531956a
-ms.openlocfilehash: 6216f3e1a766c57a7549a3e3b4fbe76d043a8a41
-
+ms.openlocfilehash: 5f37f66a34a98a4da28f4e36f115272d44ae5fc4
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
-# Uso di variabili per l'archiviazione di oggetti
+# <a name="using-variables-to-store-objects"></a>Uso di variabili per l'archiviazione di oggetti
 Windows PowerShell opera sugli oggetti. Windows PowerShell consente di creare variabili, fondamentalmente oggetti denominati, per salvare l'output in modo da portelo usare in seguito. Se si è abituati a usare le variabili in altre shell, tenere presente che le variabili di Windows PowerShell sono oggetti e non testo.
 
 Le variabili vengono sempre specificate con il carattere iniziale $ e possono includere qualsiasi carattere alfanumerico o carattere di sottolineatura nei nomi.
 
-### Creazione di una variabile
+### <a name="creating-a-variable"></a>Creazione di una variabile
 È possibile creare una variabile digitando un nome di variabile valido:
 
 ```
@@ -58,7 +56,7 @@ Provider     Property   System.Management.Automation.ProviderInfo Provider {...
 ProviderPath Property   System.String ProviderPath {get;}
 ```
 
-### Manipolazione delle variabili
+### <a name="manipulating-variables"></a>Manipolazione delle variabili
 Windows PowerShell include diversi comandi per la manipolazione delle variabili. È possibile visualizzare un elenco completo in un formato leggibile digitando:
 
 ```
@@ -87,7 +85,7 @@ Se si esegue poi il cmdlet **Get-Variable**, verranno visualizzate le variabili 
 Get-ChildItem variable:
 ```
 
-### Uso delle variabili di Cmd.exe
+### <a name="using-cmdexe-variables"></a>Uso delle variabili di Cmd.exe
 Anche se Windows PowerShell non è Cmd.exe, viene eseguito in un ambiente della shell di comando e può usare le stesse variabili disponibili in qualsiasi ambiente in Windows. Queste variabili vengono esposte tramite un'unità denominata **env:**. È possibile visualizzare queste variabili digitando:
 
 ```
@@ -102,10 +100,4 @@ C:\WINDOWS
 ```
 
 È anche possibile creare e modificare le variabili di ambiente da Windows PowerShell. Le variabili di ambiente a cui si accede da Windows PowerShell rispettano le normali regole per le variabili di ambiente valide in altre posizioni in Windows.
-
-
-
-
-<!--HONumber=Aug16_HO4-->
-
 

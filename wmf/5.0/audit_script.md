@@ -1,4 +1,4 @@
-# Traccia e registrazione degli script
+# <a name="script-tracing-and-logging"></a>Traccia e registrazione degli script
 
 Mentre Windows PowerShell ha già l'impostazione di Criteri di gruppo **LogPipelineExecutionDetails** per la registrazione della chiamata dei cmdlet, sono molte le funzionalità del linguaggio di scripting PowerShell che potrebbe essere utile registrare e/o controllare. La nuova funzionalità di traccia dettagliata degli script consente di monitorare e analizzare nel dettaglio l'uso degli script di Windows PowerShell in un sistema. Dopo aver abilitato la traccia dettagliata degli script, Windows PowerShell registra tutti i blocchi di script nel registro eventi ETW, **Microsoft-Windows-PowerShell/Operational**. Se un blocco di script crea un altro blocco di script (ad esempio, uno script che chiama il cmdlet Invoke-Expression su una stringa), viene registrato anche il blocco di script risultante.
 
@@ -96,8 +96,3 @@ $mergedScript = -join ($sortedScripts | % { $_.Properties[2].Value })
 ```
 
 Come per tutti i sistemi di registrazione con un buffer limitato per la conservazione (ad esempio, i log ETW), un attacco contro questa infrastruttura si basa sull'inondare (flood) il log di eventi spuri per nascondere prove precedenti. Per proteggersi da questo tipo di attacco, assicurarsi di aver configurato una qualche forma di raccolta del registro eventi (ad esempio, l'inoltro degli eventi di Windows o il [monitoraggio del registro eventi di Windows per individuare i nemici](http://www.nsa.gov/ia/_files/app/Spotting_the_Adversary_with_Windows_Event_Log_Monitoring.pdf)) per spostare i registri eventi in una posizione al di fuori del computer non appena possibile.
-
-
-<!--HONumber=Aug16_HO3-->
-
-

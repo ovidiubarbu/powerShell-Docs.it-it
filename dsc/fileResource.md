@@ -7,13 +7,11 @@ ms.topic: article
 author: eslesar
 manager: dongill
 ms.prod: powershell
-translationtype: Human Translation
-ms.sourcegitcommit: df9bb0362e82757ed1580cc4ace27735414a3e6d
-ms.openlocfilehash: 8c8fb7a40c066b048e1a54a741f4953e6b5a47b6
-
+ms.openlocfilehash: ba625f5130e806b3b8e14a0f6ed91fd5a1aabc54
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
-# Risorsa File DSC
+# <a name="dsc-file-resource"></a>Risorsa File DSC
 
 > Si applica a: Windows PowerShell 4.0, Windows PowerShell 5.0
 
@@ -22,7 +20,7 @@ La risorsa File in Windows PowerShell DSC (Desired State Configuration) fornisce
 >**Nota:** se la proprietà **MatchSource** è impostata su **$false**, che è il valore predefinito, i contenuti che devono essere copiati vengono memorizzati nella cache la prima volta in cui viene applicata la configurazione. 
 >Alle applicazioni successive della configurazione non verrà eseguito il controllo dei file o delle cartelle aggiornati nel percorso specificato in **SourcePath**. Se si vuole cercare gli aggiornamenti per il file o le cartelle in **SourcePath** ogni volta che viene applicata la configurazione, impostare **MatchSource** su **$true**. 
 
-## Sintassi
+## <a name="syntax"></a>Sintassi
 ```
 File [string] #ResourceName
 {
@@ -41,7 +39,7 @@ File [string] #ResourceName
 }
 ```
 
-## Proprietà
+## <a name="properties"></a>Proprietà
 
 |  Proprietà  |  Descrizione   | 
 |---|---| 
@@ -58,7 +56,7 @@ File [string] #ResourceName
 | Tipo| Indica se la risorsa configurata è una directory o un file. Impostare questa proprietà su "Directory" per indicare che la risorsa è una directory. Impostarla su "File" per indicare che la risorsa è un file. Il valore predefinito è "File".| 
 | MatchSource| Se questa proprietà è impostata sul valore predefinito __$false__, tutti i file nell'origine (ad esempio i file A, B e C) verranno aggiunti nella destinazione la prima volta che viene applicata la configurazione. Se viene aggiunto un nuovo file (D) nell'origine, non verrà aggiunto nella destinazione, anche quando la configurazione viene applicata di nuovo in un secondo momento. Se il valore è __$true__, ogni volta che la configurazione viene applicata, i nuovi file trovati successivamente nell'origine (ad esempio il file D in questo esempio) vengono aggiunti nella destinazione. Il valore predefinito è **$false**.| 
 
-## Esempio
+## <a name="example"></a>Esempio
 
 L'esempio seguente mostra come usare la risorsa File per specificare che una cartella con il percorso `C:\Users\Public\Documents\DSCDemo\DemoSource` in un computer di origine (ad esempio, il server di pull) deve essere presente anche (insieme a tutte le sottodirectory) nel nodo di destinazione. Viene anche scritto nel registro un messaggio di conferma al termine dell'operazione e viene inclusa un'istruzione per specificare che l'operazione di controllo dei file venga eseguita prima dell'operazione di registrazione.
 
@@ -85,10 +83,4 @@ Configuration FileResourceDemo
     }
 }
 ```
-
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

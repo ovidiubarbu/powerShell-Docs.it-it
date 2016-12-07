@@ -7,19 +7,17 @@ ms.topic: article
 author: eslesar
 manager: dongill
 ms.prod: powershell
-translationtype: Human Translation
-ms.sourcegitcommit: 83ca45d507e39b77751ac7feb6a7b65ae2834280
 ms.openlocfilehash: e1922008a92f00c9ddab28598735839c25219d24
-
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
-# Debug di risorse DSC
+# <a name="debugging-dsc-resources"></a>Debug di risorse DSC
 
 > Si applica a: Windows PowerShell 5.0
 
 In PowerShell 5.0 è stata introdotta una nuova funzionalità in DSC (Desired State Configuration) che permette di eseguire il debug di una risorsa DSC durante l'applicazione di una configurazione.
 
-## Abilitazione del debug di DSC
+## <a name="enabling-dsc-debugging"></a>Abilitazione del debug di DSC
 Prima di poter eseguire il debug di una risorsa, è necessario abilitare il debug chiamando il cmdlet [Enable-DscDebug](https://technet.microsoft.com/en-us/library/mt517870.aspx). Questo cmdlet accetta il parametro obbligatorio **BreakAll**. 
 
 È possibile verificare che il debug sia stato abilitato osservando il risultato di una chiamata a [Get-DscLocalConfigurationManager](https://technet.microsoft.com/en-us/library/dn407378.aspx). L'output di PowerShell seguente mostra il risultato dell'abilitazione del debug:
@@ -43,7 +41,7 @@ PS C:\DebugTest>
 ```
 
 
-## Avvio di una configurazione con il debug abilitato
+## <a name="starting-a-configuration-with-debug-enabled"></a>Avvio di una configurazione con il debug abilitato
 Per eseguire il debug di una risorsa DSC, è necessario avviare una configurazione che chiami la risorsa. In questo esempio una semplice configurazione chiama la risorsa [WindowsFeature](windowsfeatureResource.md) per verificare che la funzionalità "WindowsPowerShellWebAccess" sia installata:
 
 ```powershell
@@ -85,7 +83,7 @@ Debug-Runspace -Id 9
 ```
 A questo punto, Gestione configurazione locale ha chiamato la risorsa e ha raggiunto il primo punto di interruzione. Le ultime tre righe dell'output mostrano come collegarsi al processo e avviare il debug dello script della risorsa.
 
-## Debug dello script della risorsa
+## <a name="debugging-the-resource-script"></a>Debug dello script della risorsa
 
 Avviare una nuova istanza di PowerShell ISE. Nel riquadro della console immettere le ultime tre righe di output dall'output di `Start-DscConfiguration` come comandi, sostituendo `<credentials>` con credenziali utente valide. Dovrebbe essere visualizzato un messaggio simile a:
 
@@ -96,20 +94,14 @@ Avviare una nuova istanza di PowerShell ISE. Nel riquadro della console immetter
 Lo script della risorsa verrà aperto nel riquadro di script e il debugger viene interrotto alla prima riga della funzione **Test-TargetResource** (metodo **Test()** di una risorsa basata su classi).
 A questo punto è possibile usare i comandi di debug in ISE per eseguire lo script della risorsa un'istruzione alla volta, esaminare i valori delle variabili, visualizzare lo stack di chiamate e così via. Per informazioni sul debug in PowerShell ISE, vedere [How to Debug Scripts in Windows PowerShell ISE](https://technet.microsoft.com/en-us/library/dd819480.aspx) (Come eseguire il debug degli script in Windows PowerShell ISE). Tenere presente che ogni riga nello script della risorsa (o classe) è impostata come punto di interruzione.
 
-## Disabilitare il debug di DSC
+## <a name="disabling-dsc-debugging"></a>Disabilitare il debug di DSC
 
 Dopo la chiamata di [Enable-DscDebug](https://technet.microsoft.com/en-us/library/mt517870.aspx), tutte le chiamate a [Start-DscConfiguration](https://technet.microsoft.com/en-us/library/dn521623.aspx) comporteranno l'interruzione della configurazione nel debugger. Per consentire la normale esecuzione delle configurazioni, è necessario disabilitare il debug chiamando il cmdlet [Disable-DscDebug](https://technet.microsoft.com/en-us/library/mt517872.aspx).
 
 >**Nota:** il riavvio non modifica lo stato di debug della Gestione configurazione locale. Se il debug è abilitato, quando si avvia una configurazione questa verrà interrotta nel debugger dopo il riavvio.
 
 
-## Vedere anche
+## <a name="see-also"></a>Vedere anche
 - [Scrittura di una risorsa DSC personalizzata con MOF](authoringResourceMOF.md) 
 - [Scrittura di una risorsa DSC personalizzata con classi di PowerShell](authoringResourceClass.md)
-
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

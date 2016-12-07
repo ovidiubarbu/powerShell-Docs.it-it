@@ -8,13 +8,11 @@ author: jpjofre
 manager: dongill
 ms.prod: powershell
 ms.assetid: 6be50926-7943-4ef7-9499-4490d72a63fb
-translationtype: Human Translation
-ms.sourcegitcommit: 3222a0ba54e87b214c5ebf64e587f920d531956a
-ms.openlocfilehash: d90bf940a1047b629f7b59d239aab50a78748251
-
+ms.openlocfilehash: 34e641329388436074f2d0f05647ec4fa7efdf83
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
-# Informazioni sulla pipeline di Windows PowerShell
+# <a name="understanding-the-windows-powershell-pipeline"></a>Informazioni sulla pipeline di Windows PowerShell
 Il piping è usato praticamente ovunque in Windows PowerShell. Anche se sullo schermo viene visualizzato del testo, Windows PowerShell non invia tramite pipe testo tra i comandi, bensì oggetti.
 
 La notazione usata per le pipeline è simile a quella usata in altre shell, pertanto, a prima vista, potrebbe non essere evidente che Windows PowerShell stia introducendo qualcosa di nuovo. Se ad esempio si usa il cmdlet **Out-Host** per forzare una visualizzazione pagina per pagina dell'output di un altro comando, l'output avrà lo stesso aspetto del normale testo visualizzato sullo schermo, suddiviso in pagine:
@@ -66,10 +64,4 @@ In realtà, l'output delle informazioni dell'intestazione del cmdlet **Get-Locat
 Dato che possono esistere più output di informazioni da un comando di Windows PowerShell rispetto a quelli visualizzati nella finestra della console, in che modo è possibile recuperare gli elementi non visibili? Come si visualizzano i dati aggiuntivi? E cosa accade se si vogliono visualizzare i dati in un formato diverso da quello che Windows PowerShell usa normalmente?
 
 Nel resto di questa sezione viene spiegato come individuare la struttura di oggetti specifici di Windows PowerShell, selezionando elementi specifici e formattandoli per una visualizzazione più semplice, e come inviare queste informazioni a percorsi di output alternativi, ad esempio file e stampanti.
-
-
-
-
-<!--HONumber=Aug16_HO4-->
-
 

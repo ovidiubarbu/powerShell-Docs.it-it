@@ -7,17 +7,15 @@ ms.topic: article
 author: eslesar
 manager: dongill
 ms.prod: powershell
-translationtype: Human Translation
-ms.sourcegitcommit: 6477ae8575c83fc24150f9502515ff5b82bc8198
 ms.openlocfilehash: 7813185313845b74e2a37dfa4ec6bb109f32f0eb
-
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
-# Risorsa nxUser DSC per Linux
+# <a name="dsc-for-linux-nxuser-resource"></a>Risorsa nxUser DSC per Linux
 
 La risorsa **nxUser** in PowerShell DSC (Desired State Configuration) fornisce un meccanismo per gestire gli utenti locali in un nodo Linux.
 
-## Sintassi
+## <a name="syntax"></a>Sintassi
 
 ```
 nxUser <string> #ResourceName
@@ -37,7 +35,7 @@ nxUser <string> #ResourceName
 }
 ```
 
-## Proprietà
+## <a name="properties"></a>Proprietà
 
 |  Proprietà |  Indica il nome dell'account per cui si vuole specificare un determinato stato. | 
 |---|---|
@@ -52,7 +50,7 @@ nxUser <string> #ResourceName
 | GroupID| ID gruppo primario per l'utente.| 
 | DependsOn | Indica che prima di configurare la risorsa è necessario eseguire la configurazione di un'altra risorsa. Ad esempio, se l'ID del blocco script di configurazione della risorsa che si vuole eseguire per primo è "ResourceName" e il tipo è "ResourceType", la sintassi per usare questa proprietà è `DependsOn = "[ResourceType]ResourceName"`.| 
 
-## Esempio
+## <a name="example"></a>Esempio
 
 L'esempio seguente specifica che l'utente "monuser" esiste ed è un membro del gruppo "DBusers".
 
@@ -76,10 +74,4 @@ nxGroup GroupExample{
 }
 }
 ```
-
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

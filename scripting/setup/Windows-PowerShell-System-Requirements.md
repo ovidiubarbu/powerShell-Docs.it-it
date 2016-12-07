@@ -8,12 +8,10 @@ author: jpjofre
 manager: dongill
 ms.prod: powershell
 ms.assetid: 6d1d3c75-3be4-4fc9-8805-ca9b2c454d42
-translationtype: Human Translation
-ms.sourcegitcommit: c1e210afa664304fa38f7dead444ab4a206be64f
-ms.openlocfilehash: f560b955f8f817caf96dba40900844b98a0e92a9
-
+ms.openlocfilehash: 9510e13156b0dd0da8e5c4f94cfaf7b3152f3ad0
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
 # <a name="windows-powershell-system-requirements"></a>Requisiti di sistema di Windows PowerShell
 Questo argomento elenca i requisiti di sistema per Windows PowerShell 3.0, Windows PowerShell 4.0 e Windows PowerShell 5.0 e per le funzionalità speciali, ad esempio Windows PowerShell Integrated Scripting Environment (ISE), i comandi CIM e i flussi di lavoro.
 
@@ -38,7 +36,7 @@ Windows PowerShell 4.0 può essere eseguito nelle versioni seguenti di Windows.
 
 -   Windows 8.1, installato per impostazione predefinita
 
--   Windows Server 2012 R2, installato per impostazione predefinita
+-   Windows Server 2012 R2, installato per impostazione predefinita
 
 -   Windows® 7 con Service Pack 1, installare [Windows Management Framework 4.0](http://go.microsoft.com/fwlink/?LinkId=293881) per eseguire Windows PowerShell 4.0
 
@@ -70,7 +68,7 @@ Per installare la versione completa di Microsoft .NET Framework 4 (dotNetFx40_Fu
 ## <a name="windows-management-framework-40"></a>Windows Management Framework 4.0
 Windows PowerShell 5.0 richiede la preinstallazione di Windows Management Framework 4.0 in Windows Server 2008 R2 SP1 e Windows 7 SP1.
 
-## <a name="wsmanagement-30"></a>WS-Management 3.0
+## <a name="ws-management-30"></a>WS-Management 3.0
 Windows PowerShell 3.0 e Windows PowerShell 4.0 richiedono WS-Management 3.0, che supporta il servizio WinRM e il protocollo WS-Management. Questo programma è incluso in Windows 8.1, Windows Server 2012 R2, Windows 8, Windows Server 2012, Windows Management Framework 4.0 e Windows Management Framework 3.0.
 
 ## <a name="windows-management-instrumentation-30"></a>Strumentazione gestione Windows 3.0
@@ -109,7 +107,7 @@ Tuttavia, a causa di una modifica nei criteri di attivazione di runtime in Micro
 
 Il motore di Windows PowerShell 2.0 richiede almeno Microsoft .NET Framework 2.0.50727. È possibile soddisfare questo requisito con Microsoft .NET Framework 3.5 Service Pack 1. Questo requisito non viene soddisfatto da Microsoft .NET Framework 4 e versioni successive di Microsoft .NET Framework.
 
-Per informazioni sull'aggiunta o l'installazione del motore di Windows PowerShell 2.0 e l'aggiunta o l'installazione delle versioni richieste di Microsoft .NET Framework, vedere [Installazione del motore di Windows PowerShell 2.0](Installing-the-Windows-PowerShell-2.0-Engine.md). Per informazioni sull'avvio del motore di Windows PowerShell 2.0, vedere [Avvio del motore di Windows PowerShell 2.0](Starting-the-Windows-PowerShell-2.0-Engine.md).
+Per informazioni sull'aggiunta o l'installazione del motore di Windows PowerShell 2.0 e l'aggiunta o l'installazione delle versioni richieste di Microsoft .NET Framework, vedere [Installazione del motore di Windows PowerShell 2.0](Installing-the-Windows-PowerShell-2.0-Engine.md). Per informazioni sull'avvio del motore di Windows PowerShell 2.0, vedere [Avvio del motore di Windows PowerShell 2.0](Starting-the-Windows-PowerShell-2.0-Engine.md).
 
 ## <a name="windows-preinstallation-environment"></a>Ambiente preinstallazione di Windows
 Windows PowerShell 2.0, Windows PowerShell 3.0 e Windows PowerShell 4.0 eseguiti in Ambiente preinstallazione di Windows (Windows PE). I cmdlet seguenti non sono tuttavia supportati:
@@ -130,10 +128,4 @@ Il servizio **WinRm** non è presente in Windows PE.
 - [Guida introduttiva a Windows PowerShell](../getting-started/Getting-Started-with-Windows-PowerShell.md)
 - [Installazione di Windows PowerShell](Installing-Windows-PowerShell.md)
 - [Avvio di Windows PowerShell](https://technet.microsoft.com/en-us/library/8ec8c2d7-8e7c-4722-a3d2-498fe5739a8e)
-
-
-
-
-<!--HONumber=Oct16_HO4-->
-
 

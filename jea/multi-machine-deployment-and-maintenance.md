@@ -8,24 +8,22 @@ keywords: powershell,cmdlet,jea
 ms.date: 2016-06-22
 title: "distribuzione e manutenzione con più computer"
 ms.technology: powershell
-translationtype: Human Translation
-ms.sourcegitcommit: 7504fe496a8913718847e45115d126caf4049bef
-ms.openlocfilehash: 784806197a64eb30af1ecea4af55575434ce7b87
-
+ms.openlocfilehash: 8117d0d12c062b460cb7117b54c138c8db5a1d0c
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
-# Distribuzione e manutenzione con più computer
+# <a name="multi-machine-deployment-and-maintenance"></a>Distribuzione e manutenzione con più computer
 A questo punto, JEA è stato distribuito più volte ai sistemi locali.
 Poiché l'ambiente di produzione probabilmente è costituito da più di un computer, è importante esaminare i passaggi essenziali del processo di distribuzione che dovranno essere ripetuti in ogni computer.
 
-## Passaggi di alto livello:
+## <a name="high-level-steps"></a>Passaggi di alto livello:
 1.  Copiare i moduli (con capacità del ruolo) in ogni nodo.
 2.  Copiare i file di configurazione di sessione in ogni nodo.
 3.  Eseguire `Register-PSSessionConfiguration` con la configurazione di sessione.
 4.  Conservare una copia della configurazione di sessione e dei toolkit in un luogo sicuro.
 Quando si apportano modifiche, è opportuno usare un'unica "origine di dati reali".
 
-## Script di esempio
+## <a name="example-script"></a>Script di esempio
 Di seguito è riportato un esempio di script per la distribuzione.
 Per usarlo nel proprio ambiente, è necessario usare i nomi o i percorsi dei moduli e delle condivisioni di file reali.
 ```PowerShell
@@ -55,20 +53,14 @@ Invoke-Command –ComputerName 'Node1', 'Node2', 'Node3', 'NodeN' -FilePath 'C:\
 Remove-Item -Path '\\FileShare\JEA\Demo.pssc'
 Remove-Item -Path '\\FileShare\JEA\SomeModule' -Recurse
 ```
-## Modifica delle capacità
+## <a name="modifying-capabilities"></a>Modifica delle capacità
 Quando si gestiscono molti computer, è importante che le modifiche vengano implementate in modo coerente.
 Se per JEA è già disponibile una risorsa DSC, l'ambiente è sincronizzato.
 In caso contrario, è consigliabile conservare una copia master delle configurazioni di sessione e distribuirla di nuovo ogni volta che si apporta una modifica.
 
-## Rimozione delle capacità
+## <a name="removing-capabilities"></a>Rimozione delle capacità
 Per rimuovere la configurazione JEA dai sistemi, usare il comando seguente in ogni computer:
 ```PowerShell
 Unregister-PSSessionConfiguration -Name JEADemo
 ```
-
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

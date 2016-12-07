@@ -8,15 +8,13 @@ author: jpjofre
 manager: dongill
 ms.prod: powershell
 ms.assetid: f0ddfc7d-6b5e-4832-82de-2283597ea70d
-translationtype: Human Translation
-ms.sourcegitcommit: 3222a0ba54e87b214c5ebf64e587f920d531956a
-ms.openlocfilehash: de9e8af7908ac6a72a100fd2c86b52c30c390c39
-
+ms.openlocfilehash: 517b07a9ebca91029381684beaec95d37934f3ce
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
+# <a name="getting-wmi-objects-get-wmiobject"></a>Recupero di oggetti WMI (Get-WmiObject)
 
-# <a name="getting-wmi-objects-getwmiobject"></a>Recupero di oggetti WMI (Get-WmiObject)
-
-## <a name="getting-wmi-objects-getwmiobject"></a>Recupero di oggetti WMI (Get-WmiObject)
+## <a name="getting-wmi-objects-get-wmiobject"></a>Recupero di oggetti WMI (Get-WmiObject)
 Strumentazione gestione Windows (WMI) è una tecnologia fondamentale per l'amministrazione del sistema Windows poiché espone un'ampia gamma di informazioni in modo uniforme. Considerando le potenzialità d'uso di WMI, il cmdlet di Windows PowerShell per l'accesso agli oggetti WMI, **Get-WmiObject**, è uno dei più utili per eseguire il lavoro effettivo. Verrà illustrato come usare Get-WmiObject per accedere agli oggetti WMI e quindi in che modo usare tali oggetti per eseguire operazioni specifiche.
 
 ### <a name="listing-wmi-classes"></a>Elenco delle classi WMI
@@ -109,7 +107,7 @@ BuildNumber                               Property   System.String BuildNumb...
 ...
 ```
 
-#### <a name="displaying-nondefault-properties-with-format-cmdlets"></a>Visualizzazione di proprietà non predefinite con i cmdlet Format
+#### <a name="displaying-non-default-properties-with-format-cmdlets"></a>Visualizzazione di proprietà non predefinite con i cmdlet Format
 Se si necessita di informazioni contenute nella classe **Win32_OperatingSystem** che non sono visualizzate per impostazione predefinita, è possibile visualizzarle usando i cmdlet **Format**. Se ad esempio si vogliono visualizzare i dati disponibili relativi alla memoria, digitare:
 
 ```
@@ -135,10 +133,4 @@ FreePhysicalMemory     : 301876
 FreeVirtualMemory      : 2056724
 FreeSpaceInPagingFiles : 1556644
 ```
-
-
-
-
-<!--HONumber=Nov16_HO1-->
-
 

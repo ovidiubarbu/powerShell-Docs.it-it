@@ -8,31 +8,23 @@ keywords: powershell,cmdlet,jea
 ms.date: 2016-06-22
 title: "problemi comuni delle capacità del ruolo"
 ms.technology: powershell
-translationtype: Human Translation
-ms.sourcegitcommit: 2c42f8d6eaadee43a3baff1811aafb6b5c1a9be3
-ms.openlocfilehash: 2b2dfd9c39fe5d7bf4a52032653108729715e6bf
-
+ms.openlocfilehash: 8e928ec07ef98b2ec8186a27d3aefa1450a3a424
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
-### Problemi comuni delle capacità del ruolo
+### <a name="common-role-capability-pitfalls"></a>Problemi comuni delle capacità del ruolo
 È possibile incorrere in alcuni inconvenienti durante il processo.
 Questa guida rapida illustra come identificare e risolvere tali inconvenienti quando si modifica o si crea un nuovo endpoint:
 
-#### Funzioni e Cmdlet
+#### <a name="functions-vs-cmdlets"></a>Funzioni e Cmdlet
 I comandi di PowerShell scritti in PowerShell sono funzioni di PowerShell.
 I comandi di PowerShell scritti come classi .NET specializzate sono cmdlet di PowerShell.
 È possibile verificare il tipo di comando eseguendo `Get-Command`.
 
-#### VisibleProviders
+#### <a name="visibleproviders"></a>VisibleProviders
 È necessario esporre qualsiasi provider richiesto dai comandi.
 Il più comune è il provider FileSystem, ma potrebbe essere necessario esporne altri, ad esempio il provider Registry.
 Per un'introduzione ai provider, vedere il [post del blog Hey, Scripting Guy](http://blogs.technet.com/b/heyscriptingguy/archive/2015/04/20/find-and-use-windows-powershell-providers.aspx).
 Prestare attenzione quando si espongono i provider: spesso è preferibile definire una propria funzione da usare con i provider sottostanti anziché esporre direttamente il provider in una sessione di JEA.
 In questo modo è comunque possibile consentire agli utenti di lavorare con file, chiavi del Registro di sistema e così via, mantenendo tuttavia il controllo su **quali** file e chiavi del Registro di sistema possono essere usati con la logica di convalida personalizzata.
-
-
-
-
-<!--HONumber=Sep16_HO3-->
-
 

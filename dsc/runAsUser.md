@@ -1,5 +1,5 @@
 ---
-title: Esecuzione di DSC con le credenziali dell'utente
+title: Esecuzione di DSC con le credenziali dell&quot;utente
 ms.date: 2016-05-16
 keywords: powershell,DSC
 description: 
@@ -7,13 +7,11 @@ ms.topic: article
 author: eslesar
 manager: dongill
 ms.prod: powershell
-translationtype: Human Translation
-ms.sourcegitcommit: 6477ae8575c83fc24150f9502515ff5b82bc8198
-ms.openlocfilehash: dbe2c1ca2fb7dd65b49876f3bee6752ec9a24d6b
-
+ms.openlocfilehash: 8a8af7f4b82b856460427a68ec536e98f7cd981b
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
-# Esecuzione di DSC con le credenziali dell'utente 
+# <a name="running-dsc-with-user-credentials"></a>Esecuzione di DSC con le credenziali dell'utente 
 
 > Si applica a: Windows PowerShell 5.0
 
@@ -62,10 +60,4 @@ ChangeCmdBackGroundColor -ConfigurationData $configData
 ```
 >**Nota**: in questo esempio si presuppone che sia disponibile un certificato valido in `C:\publicKeys\targetNode.cer` e che l'identificazione personale del certificato sia il valore visualizzato.
 >Per informazioni sulla crittografia delle credenziali nei file MOF della configurazione DSC, vedere [Protezione del file MOF](secureMOF.md).
-
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

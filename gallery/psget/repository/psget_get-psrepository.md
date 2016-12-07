@@ -9,32 +9,30 @@ ms.date: 2016-10-14
 contributor: manikb
 title: psget_get psrepository
 ms.technology: powershell
-translationtype: Human Translation
-ms.sourcegitcommit: e6c526d1074f61154d03b92b6bf6f599976f5936
-ms.openlocfilehash: 3d0b67d012528a1ef59d8f5a1b16903d931426a3
-
+ms.openlocfilehash: b1d5172232f0c2916382b6c35093a238f6b2cb4d
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
-# Get-PSRepository
+# <a name="get-psrepository"></a>Get-PSRepository
 
 Ottiene i repository registrati in un computer.
 
-## Descrizione
+## <a name="description"></a>Descrizione
 
 Il cmdlet Get-PSRepository ottiene i repository del modulo di PowerShell registrati per l'utente corrente in un computer.
 
 Per ogni repository registrato, Get-PSRepository restituisce un oggetto PSRepository che facoltativamente può essere inviato tramite pipe a Unregister-PSRepository per l'annullamento della registrazione di un repository registrato.
 
-## Sintassi del cmdlet
+## <a name="cmdlet-syntax"></a>Sintassi del cmdlet
 ```powershell
 Get-Command -Name Get-PSRepository -Module PowerShellGet -Syntax
 ```
 
-## Riferimento per la Guida online sui cmdlet
+## <a name="cmdlet-online-help-reference"></a>Riferimento per la Guida online sui cmdlet
 
 [Get-PSRepository](http://go.microsoft.com/fwlink/?LinkID=517127)
 
-## Comandi di esempio
+## <a name="example-commands"></a>Comandi di esempio
 
 ```powershell
 
@@ -66,10 +64,4 @@ PSGallery                 Untrusted            https://www.powershellgallery.com
 Get-PSRepository *Gallery*
 
 ```
-
-
-
-
-<!--HONumber=Oct16_HO2-->
-
 

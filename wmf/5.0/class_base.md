@@ -1,4 +1,4 @@
-# Dichiarare una classe di base
+# <a name="declare-base-class"></a>Dichiarare una classe di base
 È possibile dichiarare una classe di Windows PowerShell come tipo di base per un'altra classe di Windows PowerShell.
 
 ```PowerShell
@@ -29,7 +29,3 @@ $list.Add(100)
 
 $list[0] # return 100
 ```
-
-<!--HONumber=Aug16_HO3-->
-
-
