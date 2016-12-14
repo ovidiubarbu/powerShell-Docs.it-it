@@ -8,13 +8,11 @@ author: jpjofre
 manager: dongill
 ms.prod: powershell
 ms.assetid: b4d0fd22-8298-4ee6-82ae-9b6f2907c986
-translationtype: Human Translation
-ms.sourcegitcommit: 3222a0ba54e87b214c5ebf64e587f920d531956a
-ms.openlocfilehash: 1dd7dade688b56e3ac544c0562ad6bad4a4284a7
-
+ms.openlocfilehash: 6bd3c3d9b9f05f8ea633ee23fdce7608e985abd7
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
-# Imparare i nomi usati in Windows PowerShell
+# <a name="learning-windows-powershell-names"></a>Imparare i nomi usati in Windows PowerShell
 Nella maggior parte delle interfacce della riga di comando, imparare nomi e parametri dei comandi richiede molto tempo. Il problema è che esistono pochissimi schemi, quindi l'unica possibilità è memorizzare ogni comando e parametro che è necessario usare regolarmente.
 
 Quando si lavora con un nuovo comando o parametro, in genere non è possibile sfruttare le competenze già acquisite, ma è necessario trovare e imparare un nuovo nome. Se si pensa al modo in cui crescono le interfacce, partendo da un piccolo set di strumenti a cui vengono man mano aggiunte funzionalità, è facile capire perché la struttura non sia standard. Con i nomi dei comandi, in particolare, questo può sembrare logico visto che ogni comando è uno strumento a sé stante, ma esiste un modo migliore per gestire i nomi dei comandi.
@@ -27,7 +25,7 @@ Anche se esistono notevoli differenze tecniche tra un servizio e un processo, en
 
 Windows PowerShell sfrutta queste analogie per ridurre il numero di nomi diversi che è necessario conoscere per comprendere e usare i cmdlet.
 
-### I cmdlet usano nomi nel formato verbo-sostantivo per semplificare la memorizzazione
+### <a name="cmdlets-use-verb-noun-names-to-reduce-command-memorization"></a>I cmdlet usano nomi nel formato verbo-sostantivo per semplificare la memorizzazione
 Windows PowerShell usa un sistema di denominazione di tipo "verbo-sostantivo", in cui ogni cmdlet è composto da un verbo standard e un sostantivo specifico separati da un trattino. I verbi di Windows PowerShell non sono necessariamente verbi della lingua inglese, ma esprimono azioni specifiche in Windows PowerShell. I sostantivi descrivono tipi specifici di oggetti importanti nell'amministrazione del sistema. È facile dimostrare che questi nomi composti sono più semplici da memorizzare, esaminando alcuni esempi.
 
 Per i sostantivi esistono meno restrizioni, ma dovrebbero sempre descrivere ciò su cui agisce un comando. Windows PowerShell ha comandi come **Get-Process**, **Stop-Process**, **Get-Service** e **Stop-Service**.
@@ -76,7 +74,7 @@ CommandType     Name                            Definition
 Function        Clear-Host                      $spaceType = [System.Managem...
 ```
 
-### I cmdlet usano parametri standard
+### <a name="cmdlets-use-standard-parameters"></a>I cmdlet usano parametri standard
 Come illustrato in precedenza, i comandi usati nelle interfacce della riga di comando tradizionali in genere non hanno nomi di parametro coerenti. In alcuni casi i parametri non hanno affatto un nome. In questo caso, spesso si tratta di singoli caratteri o parole abbreviate, rapide da digitare ma non facilmente comprensibili per i nuovi utenti.
 
 A differenza di molte altre interfacce della riga di comando tradizionali, Windows PowerShell elabora i parametri direttamente e usa questo accesso diretto ai parametri insieme a indicazioni per la standardizzazione dei nomi rivolte agli sviluppatori. Anche se questo non garantisce che ogni cmdlet sarà sempre conforme agli standard, favorisce comunque la standardizzazione.
@@ -86,20 +84,14 @@ A differenza di molte altre interfacce della riga di comando tradizionali, Windo
 
 Ecco alcune delle caratteristiche generali relativi all'uso e ai nomi di parametro standard.
 
-#### Il parametro della Guida (?)
+#### <a name="the-help-parameter-"></a>Il parametro della Guida (?)
 Se si specifica il parametro **-?** per qualsiasi cmdlet, il cmdlet non viene eseguito. Windows PowerShell visualizza invece la Guida del cmdlet.
 
-#### Parametri comuni
+#### <a name="common-parameters"></a>Parametri comuni
 Windows PowerShell ha svariati parametri noti come *parametri comuni*. Poiché questi parametri sono controllati dal motore di Windows PowerShell, ogni volta che vengono implementati da un cmdlet si comportano allo stesso modo. I parametri comuni sono **WhatIf**, **Confirm**, **Verbose**, **Debug**, **Warn**, **ErrorAction**, **ErrorVariable**, **OutVariable** e **OutBuffer**.
 
-#### Parametri consigliati
+#### <a name="suggested-parameters"></a>Parametri consigliati
 I cmdlet fondamentali di Windows PowerShell usano nomi standard per i parametri simili. Anche se l'uso di particolari nomi di parametro non è obbligatorio, esistono linee guida esplicite mirate a favorire la standardizzazione.
 
 Ad esempio, le linee guida consigliano di chiamare un parametro che fa riferimento a un computer in base al nome **ComputerName**, invece di usare Server, Host, System, Node o altre parole alternative comuni. Tra i principali nomi di parametro suggeriti vi sono **Force**, **Exclude**, **Include**, **PassThru**, **Path** e **CaseSensitive**.
-
-
-
-
-<!--HONumber=Aug16_HO4-->
-
 

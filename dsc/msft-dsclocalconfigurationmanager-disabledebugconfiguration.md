@@ -7,45 +7,43 @@ ms.topic: article
 author: eslesar
 manager: dongill
 ms.prod: powershell
-translationtype: Human Translation
-ms.sourcegitcommit: 919438862ca9786447b690d2db10e905da0a7c42
 ms.openlocfilehash: 97ad8a5711d469a80a7a61056d71b7e2b69cfd27
-
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
-# Metodo DisableDebugConfiguration della classe MSFT_DSCLocalConfigurationManager
+# <a name="disabledebugconfiguration-method-of-the-msftdsclocalconfigurationmanager-class"></a>Metodo DisableDebugConfiguration della classe MSFT_DSCLocalConfigurationManager
 
 Disabilita il debug delle risorse DSC.
 
-Sintassi
+<a name="syntax"></a>Sintassi
 ------
 
 ```mof
 uint32 DisableDebugConfiguration();
 ```
 
-Parametri
+<a name="parameters"></a>Parametri
 ----------
 
 Questo metodo non presenta parametri.
 
-## Valore restituito
+## <a name="return-value"></a>Valore restituito
 ------------
 
 In caso di esito positivo, il valore restituisce zero, altrimenti, restituisce un codice di errore.
 
-## Osservazioni
+## <a name="remarks"></a>Osservazioni
 
 Si tratta di un metodo statico.
 
-## Requisiti
+## <a name="requirements"></a>Requisiti
 ------------
 >**MOF:** DscCore.mof
 
 >**Spazio dei nomi**: Root\Microsoft\Windows\DesiredStateConfiguration
 
 
-## Vedere anche
+## <a name="see-also"></a>Vedere anche
 
 
 [**MSFT_DSCLocalConfigurationManager**](msft-dsclocalconfigurationmanager.md)
@@ -54,11 +52,5 @@ Si tratta di un metodo statico.
 
  
 
-
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

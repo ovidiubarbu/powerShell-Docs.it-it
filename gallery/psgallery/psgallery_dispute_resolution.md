@@ -9,17 +9,15 @@ ms.date: 2016-10-14
 contributor: manikb
 title: psgallery_dispute_resolution
 ms.technology: powershell
-translationtype: Human Translation
-ms.sourcegitcommit: e6c526d1074f61154d03b92b6bf6f599976f5936
-ms.openlocfilehash: 6d7015a14f0d0a75bc28e201dceefe6c9c682b31
-
+ms.openlocfilehash: b7a76a6d8746b4a22154f8a8c7dde89d61046116
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
-# Risoluzione delle controversie
+# <a name="dispute-resolution"></a>Risoluzione delle controversie
 
 In questo documento viene illustrato un processo consigliato per la risoluzione delle controversie. Tale processo è indirizzato ai membri della community, per supportarli nella risoluzione di controversie con altri autori in PowerShell Gallery.
 
-## Processo
+## <a name="process"></a>Processo
 
 1. Contattare i proprietari dell'elemento oggetto della disputa usando il collegamento **Contact Owners** (Contatta proprietari) disponibile nella pagina dei dettagli dell'elemento.
 Spiegare il problema in un modo cortese e diretto.
@@ -28,7 +26,7 @@ Spiegare il problema in un modo cortese e diretto.
 Il team di supporto PowerShellGallery.com si attiverà per risolvere il problema.
 
 
-## Uso non consentito
+## <a name="prohibited-use"></a>Uso non consentito
 
 Le azioni e gli elementi riportati di seguito non sono consentiti in PowerShell Gallery. Le azioni verranno interrotte e gli elementi verranno immediatamente rimossi senza discussioni.  Ai proprietari di tali elementi verrà inviata notifica della rimozione.
 
@@ -44,10 +42,4 @@ In questi casi, è necessario pubblicare il codice e procedere oppure concedere 
 Se si rileva un elemento o un'azione dei tipi sopra elencati, fare clic sul collegamento 'Report Abuse' (Segnala abusi) e inviare un report.
 
 **Questo criterio è soggetto a modifiche a discrezione di PowerShell Gallery.**
-
-
-
-
-<!--HONumber=Oct16_HO2-->
-
 

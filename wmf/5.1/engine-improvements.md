@@ -8,18 +8,16 @@ author: keithb
 manager: dongill
 ms.prod: powershell
 ms.technology: WMF
-translationtype: Human Translation
-ms.sourcegitcommit: 45182af45b2d1510b7ad8e9f2ac35fa5346ddb66
-ms.openlocfilehash: bb7efc55b1c948c349aa778b700e5cb1277b9762
-
+ms.openlocfilehash: 118cb91528824b75e28a1eadaa377a696c67f2dd
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
-#Miglioramenti apportati al motore di PowerShell
+#<a name="powershell-engine-improvements"></a>Miglioramenti apportati al motore di PowerShell
 
 I miglioramenti seguenti apportati al motore di PowerShell principale sono stati implementati in WMF 5.1:
 
 
-## Prestazioni ##
+## <a name="performance"></a>Prestazioni ##
 
 Le prestazioni sono migliorate in alcune aree importanti:
 
@@ -42,9 +40,3 @@ Si noti che la modifica dei contenuti di questi file non ha mai costituito uno s
 
 Un'altra modifica evidente riguarda la modalità di memorizzazione nella cache dei comandi esportati e di altre informazioni relative ai moduli installati in un sistema da parte di PowerShell. In precedenza, la cache veniva archiviata nella directory `$env:LOCALAPPDATA\Microsoft\Windows\PowerShell\CommandAnalysis`. In WMF 5.1, la cache è un singolo file `$env:LOCALAPPDATA\Microsoft\Windows\PowerShell\ModuleAnalysisCache`.
 Per altre informazioni dettagliate, vedere [Modulo Analysis Cache](scenarios-features.md#module-analysis-cache).
-
-
-
-<!--HONumber=Aug16_HO3-->
-
-

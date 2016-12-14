@@ -1,4 +1,4 @@
-# Supporto delle versioni side-by-side in PowerShell 5.0 o versione successiva
+# <a name="side-by-side-version-support-on-powershell-50-or-newer"></a>Supporto delle versioni side-by-side in PowerShell 5.0 o versione successiva
 
 I cmdlet Install-Module, Update-Module e Publish-Module eseguiti in Windows PowerShell 5.0 o versione successiva supportano ora versioni del modulo side-by-side (SxS).
 È stato inoltre aggiunto il parametro -RequiredVersion al cmdlet Publish-Module per specificare la versione da pubblicare. Il parametro Path supporta ora il percorso di base del modulo con la cartella della versione.
@@ -26,8 +26,3 @@ Version    Name                                Type       Repository           D
 1.1.0      PSScriptAnalyzer                    Module     PSGallery            PSScriptAnalyzer provides script analysis... 
 1.1.1      PSScriptAnalyzer                    Module     PSGallery            PSScriptAnalyzer provides script analysis...
 ```
-
-
-<!--HONumber=Aug16_HO3-->
-
-

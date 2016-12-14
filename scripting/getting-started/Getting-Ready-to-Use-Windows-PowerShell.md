@@ -8,13 +8,11 @@ author: jpjofre
 manager: dongill
 ms.prod: powershell
 ms.assetid: 6dc7052d-cc5a-4220-950f-98f963a2b587
-translationtype: Human Translation
-ms.sourcegitcommit: 416d21d2a2fa3d837eba19b1023e4045a124e23c
-ms.openlocfilehash: 9229df48b00c125e04d0f97536697495d0ca01ed
-
+ms.openlocfilehash: 2564ab148fb1de1cb58ee775d2000d321a1d36c1
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
-# Preparativi per l'uso di Windows PowerShell
+# <a name="getting-ready-to-use-windows-powershell"></a>Preparativi per l'uso di Windows PowerShell
 Dopo l'installazione e l'avvio di Windows PowerShell, prendere in considerazione le opzioni di installazione seguenti. È possibile eseguire queste attività in qualsiasi momento.
 
 -   **Installare i file della Guida.** I cmdlet inclusi in Windows PowerShell 3.0 non vengono forniti con i file della Guida. Tuttavia, è possibile usare il cmdlet [Update-Help](https://technet.microsoft.com/en-us/library/93e1d870-ace6-432b-8778-8920291d7545) per scaricare e installare i file della Guida più recenti nel computer in uso. Quando i file vengono installati, è possibile usare il cmdlet [Get-Help](https://technet.microsoft.com/en-us/library/1f46eeb4-49d7-4bec-bb29-395d9b42f54a) per visualizzarli direttamente nella riga di comando. Per altre informazioni, vedere [about_Updatable_Help](https://technet.microsoft.com/en-us/library/10bba75c-f4ac-4ca1-bbf3-8f34dd521ffe).
@@ -27,13 +25,7 @@ Dopo l'installazione e l'avvio di Windows PowerShell, prendere in considerazione
 
     NOTA: se la comunicazione remota è abilitata in un computer che esegue Windows PowerShell 2.0, resta abilitata dopo l'installazione di Windows Management Framework 3.0. Tuttavia, in Windows Server 2008, ma non in Windows Server 2008 R2, è necessario riabilitare la comunicazione remota dopo l'installazione di Windows Management Framework 3.0.
 
-## Vedere anche
+## <a name="see-also"></a>Vedere anche
 - [Installazione di Windows PowerShell](../setup/Installing-Windows-PowerShell.md)
 - [Avvio di Windows PowerShell [ps]](https://technet.microsoft.com/en-us/library/8ec8c2d7-8e7c-4722-a3d2-498fe5739a8e)
-
-
-
-
-<!--HONumber=Oct16_HO3-->
-
 

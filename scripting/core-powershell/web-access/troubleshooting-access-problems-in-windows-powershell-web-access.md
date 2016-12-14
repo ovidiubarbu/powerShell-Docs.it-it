@@ -7,13 +7,11 @@ ms.topic: article
 author: jpjofre
 manager: dongill
 ms.prod: powershell
-translationtype: Human Translation
-ms.sourcegitcommit: fe3d7885b7c031a24a737f58523c8018cfc36146
-ms.openlocfilehash: 3d2eb84bf706c935e978e78b84e221f9f68042f8
-
+ms.openlocfilehash: e22fa0d8712321e8b0f61b849d46c0c610049c86
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
-#  Risoluzione dei problemi di accesso in Accesso Web Windows PowerShell
+#  <a name="troubleshooting-access-problems-in-windows-powershell-web-access"></a>Risoluzione dei problemi di accesso in Accesso Web Windows PowerShell
 
 Ultimo aggiornamento: 24 giugno 2013
 
@@ -106,14 +104,14 @@ La tabella seguente illustra alcuni problemi comuni che possono verificarsi quan
 <td><p><em>Nome_server</em>\<em>nome_utente</em>, Localhost\<em>nome_utente</em> o .\<em>nome_utente</em></p></td>
 <td><p><em>Nome_server</em>\<em>gruppo_utenti</em>, Localhost\<em>gruppo_utenti</em> o .\<em>gruppo_utenti</em></p></td>
 <td><p>Nome completo del server gateway o Localhost</p></td>
-<td><p><em>Nome_server</em>\<em>gruppo_computer</em>, Localhost<em>\gruppo_computer</em> o .\<em>gruppo_computer</em></p></td>
+<td><p><em>Nome_server</em>\<em>gruppo_computer</em>, Localhost\<em>gruppo_computer</em> o .\<em>gruppo_computer</em></p></td>
 </tr>
 <tr class="even">
 <td><p>Il server gateway è in un gruppo di lavoro</p></td>
 <td><p><em>Nome_server</em>\<em>nome_utente</em>, Localhost\<em>nome_utente</em> o .\<em>nome_utente</em></p></td>
 <td><p><em>Nome_server</em>\<em>gruppo_utenti</em>, Localhost\<em>gruppo_utenti</em> o .\<em>gruppo_utenti</em></p></td>
 <td><p>Nome server</p></td>
-<td><p><em>Nome_server</em>\<em>gruppo_computer</em>, Localhost<em>\gruppo_computer</em> o .\<em>gruppo_computer</em></p></td>
+<td><p><em>Nome_server</em>\<em>gruppo_computer</em>, Localhost\<em>gruppo_computer</em> o .\<em>gruppo_computer</em></p></td>
 </tr>
 </tbody>
 </table>
@@ -126,7 +124,7 @@ La tabella seguente illustra alcuni problemi comuni che possono verificarsi quan
 </ul></td>
 </tr>
 <tr class="odd">
-<td><p>In una regola di autorizzazione, al posto della sintassi <em>nome_utente</em>/<em>nome_computer viene visualizzato un ID di sicurezza (SID)</em> </p></td>
+<td><p>In una regola di autorizzazione, al posto della sintassi <em>nome_utente</em>/<em>nome_computer</em>  viene visualizzato un ID di sicurezza (SID)</p></td>
 <td><p>La regola non è più valida o la query in Servizi di dominio Active Directory non è riuscita. In genere, una regola di autorizzazione non risulta valida nel caso in cui un server gateway che in precedenza apparteneva a un gruppo di lavoro venga aggiunto a un dominio.</p></td>
 </tr>
 <tr class="even">
@@ -154,7 +152,7 @@ Altri suggerimenti?
 
 <span class="stdr-count"><span class="stdr-charcnt">1500</span> caratteri rimanenti</span> Invia Ignora
 
-<span class="stdr-thankyou">Grazie.</span> <span class="stdr-appreciate">I suggerimenti degli utenti sono importanti.</span>
+<span class="stdr-thankyou">Grazie</span> <span class="stdr-appreciate">I suggerimenti degli utenti sono importanti.</span>
 
 [Gestisci il tuo profilo](https://social.technet.microsoft.com/profile)
 
@@ -193,10 +191,4 @@ Parla con noi
 
 Il codice e gli script di terze parti, collegati al presente sito o a cui il sito Web fa riferimento, vengono ceduti in licenza all'utente dalle terze parti proprietarie di tale codice, non da Microsoft. Vedere le condizioni d'uso di Ajax CDN di ASP.NET – http://www.asp.net/ajaxlibrary/CDN.ashx.
 <img src="https://m.webtrends.com/dcsjwb9vb00000c932fd0rjc7_5p3t/njs.gif?dcsuri=/nojavascript&amp;WT.js=No" alt="DCSIMG" id="Img1" width="1" height="1" />
-
-
-
-
-<!--HONumber=Oct16_HO2-->
-
 

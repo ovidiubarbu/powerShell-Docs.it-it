@@ -8,25 +8,23 @@ author: jpjofre
 manager: dongill
 ms.prod: powershell
 ms.assetid: ce84d8bc-07ba-41f6-bdde-d6f3fddcd1e3
-translationtype: Human Translation
-ms.sourcegitcommit: 26d8bc85b78248e15558dbfef72d32cca7de9627
-ms.openlocfilehash: e63809763808836af9f468c2ac55ede42836d6b2
-
+ms.openlocfilehash: 450fca8e190a175995ff91f9b32ee0695af14045
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
-# Oggetto ISEAddOnTool
+# <a name="the-iseaddontool-object"></a>Oggetto ISEAddOnTool
   Un oggetto **ISEAddonTool** rappresenta uno strumento aggiuntivo installato che offre funzionalità aggiuntive per Windows PowerShell ISE. Un esempio è lo strumento **Comandi** che è possibile visualizzare facendo clic su **Visualizza** quindi su **Mostra componente aggiuntivo comandi**. Questo strumento è quindi accessibile all'utente modificando i vari oggetti **ISEAddOnTool** disponibili.
 
  Ogni strumento aggiuntivo può essere associato al riquadro verticale oppure orizzontale. Il riquadro verticale è ancorato al bordo destro di Windows PowerShell ISE. Il riquadro orizzontale è ancorato al bordo inferiore.
 
  Ogni scheda di PowerShell in Windows PowerShell ISE può avere un proprio set di strumenti aggiuntivi installati. Vedere [$psISE.CurrentPowerShellTab.HorizontalAddOnTools](The-ISEAddOnToolCollection-Object.md) e [$psISE.CurrentPowerShellTab.VerticalAddOnTools](The-ISEAddOnToolCollection-Object.md) per accedere alla raccolta di strumenti disponibili nella scheda attualmente selezionate oppure le stesse proprietà in uno qualsiasi degli oggetti **PowerShellTab** nella raccolta di oggetti [$psISE.PowerShellTabs](The-PowerShellTabCollection-Object.md).
 
-## Metodo
+## <a name="methods"></a>Metodo
  Non sono disponibili metodi specifici di Windows PowerShell ISE per gli oggetti di questa classe.
 
-## Proprietà
+## <a name="properties"></a>Proprietà
 
-###  <a name="Control"></a> Control
+###  <a name="a-namecontrola-control"></a><a name="Control"></a> Control
   Supportato in Windows PowerShell ISE 3.0 e versioni successive e non presente nelle versioni precedenti.
 
  La proprietà **Control** offre l'accesso in lettura a molte informazioni dettagliate sullo strumento aggiuntivo Comandi.
@@ -142,7 +140,7 @@ Dispatcher                  : System.Windows.Threading.Dispatcher
 
 ```
 
-###  <a name="IsVisible"></a> IsVisible
+###  <a name="a-nameisvisiblea-isvisible"></a><a name="IsVisible"></a> IsVisible
   Supportato in Windows PowerShell ISE 3.0 e versioni successive e non presente nelle versioni precedenti.
 
  Proprietà booleana che indica se lo strumento aggiuntivo è attualmente visibile nel relativo riquadro assegnato. Se è visibile, è possibile impostare la proprietà **IsVisible** su **$false** per nascondere lo strumento oppure impostare la proprietà **IsVisible** su **$true** per rendere uno strumento aggiuntivo visibile nella relativa scheda di PowerShell. Quando uno strumento aggiuntivo è nascosto, non è più accessibile attraverso gli oggetti **CurrentVisibleHorizontalTool** o **CurrentVisibleVerticalTool** e quindi non può essere reso visibile usando questa proprietà su tale oggetto.
@@ -155,7 +153,7 @@ $psISE.CurrentPowerShellTab.VerticalAddOnTools[0].IsVisible=$true
 
 ```
 
-###  <a name="name"></a> Name
+###  <a name="a-namenamea-name"></a><a name="name"></a> Name
   Supportato in Windows PowerShell ISE 3.0 e versioni successive e non presente nelle versioni precedenti.
 
  Proprietà di sola lettura che ottiene il nome dello strumento aggiuntivo.
@@ -167,15 +165,9 @@ Commands
 
 ```
 
-## Vedere anche
+## <a name="see-also"></a>Vedere anche
 - [Oggetto ISEAddOnToolCollection](The-ISEAddOnToolCollection-Object.md)
 - [Modello a oggetti di scripting di Windows PowerShell ISE](The-Windows-PowerShell-ISE-Scripting-Object-Model.md)
 - [Riferimenti al modello a oggetti di Windows PowerShell ISE](Windows-PowerShell-ISE-Object-Model-Reference.md)
 - [Gerarchia del modello a oggetti ISE](The-ISE-Object-Model-Hierarchy.md)
-
-
-
-
-<!--HONumber=Sep16_HO4-->
-
 

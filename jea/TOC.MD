@@ -13,8 +13,3 @@
 ###  [Blacklist](on-blacklisting.md)  
 ###  [Considerazioni per la limitazione dei comandi](considerations-when-limiting-commands.md)  
 ###  [Problemi comuni delle capacità del ruolo](common-role-capability-pitfalls.md)
-
-
-<!--HONumber=Aug16_HO3-->
-
-

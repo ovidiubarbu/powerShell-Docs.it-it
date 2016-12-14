@@ -8,13 +8,11 @@ keywords: powershell,cmdlet,jea
 ms.date: 2016-06-22
 title: FILE LEGGIMI
 ms.technology: powershell
-translationtype: Human Translation
-ms.sourcegitcommit: 8149f656f0aacbb23cacc8a1a9b45ed59866b92f
-ms.openlocfilehash: 7bb5635832e912b39ec387e8ac93ada24a434ff8
-
+ms.openlocfilehash: b0ef4ff685b82e1a4e9ab83a45736720df7b39a2
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
-# Just Enough Administration
+# <a name="just-enough-administration"></a>Just Enough Administration
 Just Enough Administration (JEA) è una tecnologia di protezione che consente l'amministrazione delegata per qualsiasi elemento che possa essere gestito con PowerShell.
 Con JEA, è possibile:
 - **Ridurre il numero di amministratori dei computer** sfruttando gli account virtuali che eseguono azioni con privilegi per conto degli utenti normali.
@@ -30,7 +28,7 @@ Se JEA è installato, è possibile configurare un ruolo per gli amministratori D
 Ciò significa che è possibile specificare l'accesso appropriato per ripristinare una cache DNS danneggiata senza concedere inavvertitamente diritti per usare Active Directory, sfogliare il file system o eseguire script potenzialmente pericolosi.
 In più, quando la sessione JEA è configurata per l'uso di account virtuali monouso con privilegi, gli amministratori DNS possono connettersi al server usando credenziali *non privilegiate* ed eseguire comunque comandi con privilegi.
 
-## Disponibilità
+## <a name="availability"></a>Disponibilità
 La soluzione JEA è stata sviluppata in parallelo a Windows Server 2016 ed è disponibile nelle versioni precedenti di Windows con gli aggiornamenti di Windows Management Framework.
 La versione corrente di JEA è disponibile nelle piattaforme seguenti:
 
@@ -45,7 +43,7 @@ La versione corrente di JEA è disponibile nelle piattaforme seguenti:
 \* Il supporto per gli account virtuali nelle sessioni JEA attualmente non è disponibile in Windows Server 2008 R2 o Windows 7.
 
 
-## Esplorare la guida all'esperienza
+## <a name="explore-the-experience-guide"></a>Esplorare la guida all'esperienza
 A questo punto si può iniziare a imparare come creare, distribuire e usare il proprio endpoint JEA.
 
 Questa guida consente di iniziare rapidamente con un endpoint JEA predefinito per avere un'idea di come sarà l'esperienza per l'utente finale, quindi spiega come ricreare l'endpoint da zero illustrando concetti come le configurazioni di sessione e le capacità del ruolo.
@@ -81,17 +79,11 @@ Informazioni su come controllare tutte le azioni e l'infrastruttura di JEA e cre
   -  [Considerazioni per la limitazione dei comandi](considerations-when-limiting-commands.md)  
   -  [Problemi comuni delle capacità del ruolo](common-role-capability-pitfalls.md)
 
-## Iniziare a creare i propri endpoint JEA
+## <a name="start-authoring-your-own-jea-endpoints"></a>Iniziare a creare i propri endpoint JEA
 È facile creare un endpoint JEA: è sufficiente un sistema abilitato per JEA e un editor di testo, ad esempio PowerShell ISE.
 Un suggerimento utile per iniziare è creare i file scheletro usando [`New-PSRoleCapabilityFile -Path <path>`](https://technet.microsoft.com/library/mt631422.aspx) e [`New-PSSessionConfigurationFile -Path <Path>`](https://technet.microsoft.com/library/mt631422.aspx) senza altri argomenti.
 I file scheletro contengono tutti i campi di configurazione applicabili oltre a commenti utili che spiegano per cosa può essere usato ogni campo.
 
 Per semplificare ulteriormente la creazione degli endpoint JEA, vedere il [JEA Toolkit Helper](http://blogs.technet.com/b/privatecloud/archive/2015/12/20/introducing-the-updated-jea-helper-tool.aspx) che offre un'interfaccia utente grafica con cui è possibile creare file di configurazione di sessione e file di capacità del ruolo.
 È supportata anche la generazione di capacità del ruolo in base ai registri di PowerShell per iniziare a gestire i comandi eseguiti regolarmente dagli utenti per svolgere le proprie attività.
-
-
-
-
-<!--HONumber=Aug16_HO5-->
-
 

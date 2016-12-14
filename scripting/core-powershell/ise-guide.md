@@ -7,13 +7,11 @@ ms.topic: article
 author: jpjofre
 manager: dongill
 ms.prod: powershell
-translationtype: Human Translation
-ms.sourcegitcommit: 03ac4b90d299b316194f1fa932e7dbf62d4b1c8e
-ms.openlocfilehash: 053a4fd734b1e86c5f8ca22c8197ce4e80b6fce6
-
+ms.openlocfilehash: 52103ee815f97068efc2c4cf666589e9d240bf92
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
-# Guida di ISE
+# <a name="ise-guide"></a>Guida di ISE
 
 -  [Come creare una scheda di PowerShell in Windows PowerShell ISE](ise/How-to-Create-a-PowerShell-Tab-in-Windows-PowerShell-ISE.md)
 -  [Modalità di esecuzione del debug degli script in Windows PowerShell ISE](ise/How-to-Debug-Scripts-in-Windows-PowerShell-ISE.md)
@@ -42,10 +40,4 @@ ms.openlocfilehash: 053a4fd734b1e86c5f8ca22c8197ce4e80b6fce6
 -  [Modello a oggetti di scripting di Windows PowerShell ISE](ise/The-Windows-PowerShell-ISE-Scripting-Object-Model.md)
 -  [Uso di Windows PowerShell ISE](ise/Using-the-Windows-PowerShell-ISE.md)
 -  [Riferimenti al modello a oggetti di Windows PowerShell ISE](ise/Windows-PowerShell-ISE-Object-Model-Reference.md)
-
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

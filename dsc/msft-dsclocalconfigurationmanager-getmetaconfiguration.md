@@ -7,18 +7,15 @@ ms.topic: article
 author: eslesar
 manager: dongill
 ms.prod: powershell
-translationtype: Human Translation
-ms.sourcegitcommit: 919438862ca9786447b690d2db10e905da0a7c42
 ms.openlocfilehash: 4662bfed62fce47be7d42a083ad5a7be801e6ff1
-
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
-
-# Metodo GetMetaConfiguration della classe MSFT_DSCLocalConfigurationManager
+# <a name="getmetaconfiguration-method-of-the-msftdsclocalconfigurationmanager-class"></a>Metodo GetMetaConfiguration della classe MSFT_DSCLocalConfigurationManager
 
 Consente di ottenere le impostazioni di Gestione configurazione locale usate per controllare l'agente di configurazione.
 
-Sintassi
+<a name="syntax"></a>Sintassi
 ------
 
 ```mof
@@ -27,29 +24,29 @@ uint32 GetMetaConfiguration(
 );
 ```
 
-Parametri
+<a name="parameters"></a>Parametri
 ----------
 
 *MetaConfiguration* \[out\]  
 In fase di restituzione, contiene un'istanza incorporata della classe **MSFT_DSCMetaConfiguration** che definisce le impostazioni.
 
-## Valore restituito
+## <a name="return-value"></a>Valore restituito
 ------------
 
 In caso di esito positivo, il valore restituisce zero, altrimenti, restituisce un codice di errore.
 
-## Osservazioni
+## <a name="remarks"></a>Osservazioni
 
 Si tratta di un metodo statico.
 
-## Requisiti
+## <a name="requirements"></a>Requisiti
 ------------
 >**MOF:** DscCore.mof
 
 >**Spazio dei nomi**: Root\Microsoft\Windows\DesiredStateConfiguration
 
 
-## Vedere anche
+## <a name="see-also"></a>Vedere anche
 
 
 [**MSFT_DSCLocalConfigurationManager**](msft-dsclocalconfigurationmanager.md)
@@ -59,11 +56,5 @@ Si tratta di un metodo statico.
 
  
 
-
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

@@ -7,17 +7,15 @@ ms.topic: article
 author: eslesar
 manager: dongill
 ms.prod: powershell
-translationtype: Human Translation
-ms.sourcegitcommit: c915ebd021ed20209bc491505d45cff2ac89f21d
 ms.openlocfilehash: 1666b85402f17230090f7290c8cb400dd9fbf0a6
-
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
-# Metodo ResourceGet della classe MSFT_DSCLocalConfigurationManager
+# <a name="resourceget-method-of-the-msftdsclocalconfigurationmanager-class"></a>Metodo ResourceGet della classe MSFT_DSCLocalConfigurationManager
 
 Chiama direttamente il metodo di **Get** di una risorsa DSC.
 
-Sintassi
+<a name="syntax"></a>Sintassi
 ------
 
 ```mof
@@ -29,7 +27,7 @@ uint32 ResourceGet(
 );
 ```
 
-Parametri
+<a name="parameters"></a>Parametri
 ----------
 
 *ResourceType* \[in\]  
@@ -44,23 +42,23 @@ Specifica il nome della proprietà delle risorse e il relativo valore in una tab
 *configurations* \[out\]  
 In fase di restituzione, contiene un'istanza incorporata delle configurazioni.
 
-## Valore restituito
+## <a name="return-value"></a>Valore restituito
 ------------
 
 In caso di esito positivo, il valore restituisce zero, altrimenti, restituisce un codice di errore.
 
-## Osservazioni
+## <a name="remarks"></a>Osservazioni
 
 Si tratta di un metodo statico.
 
-## Requisiti
+## <a name="requirements"></a>Requisiti
 ------------
 >**MOF:** DscCore.mof
 
 >**Spazio dei nomi**: Root\Microsoft\Windows\DesiredStateConfiguration
 
 
-## Vedere anche
+## <a name="see-also"></a>Vedere anche
 
 
 [**MSFT_DSCLocalConfigurationManager**](msft-dsclocalconfigurationmanager.md)
@@ -70,11 +68,5 @@ Si tratta di un metodo statico.
 
  
 
-
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

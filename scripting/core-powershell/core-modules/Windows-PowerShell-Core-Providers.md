@@ -8,13 +8,11 @@ author: jpjofre
 manager: dongill
 ms.prod: powershell
 ms.assetid: 6e24bf6d-4c70-4edf-956a-1e8e4779ba10
-translationtype: Human Translation
-ms.sourcegitcommit: 6c666e2e23cb74818e37293410dafc9033057733
-ms.openlocfilehash: 39692bf9deda498e05742f0b746af0bd54cb07c3
-
+ms.openlocfilehash: 59b4554c31a95a2d2537a431fccb2d7b67da7e95
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
-# Provider di sistema di Windows PowerShell
+# <a name="windows-powershell-core-providers"></a>Provider di sistema di Windows PowerShell
 Questa sezione contiene gli argomenti della Guida che descrivono i provider di Windows PowerShell disponibili nel modulo **Microsoft.PowerShell.Core**.
 
 I provider di Windows PowerShell sono programmi .NET che rendono disponibili in Windows PowerShell i dati presenti in archivi dati speciali, consentendo di visualizzarli e gestirli agevolmente. I dati esposti da un provider vengono visualizzati in un'unità, molto simile a un'unità di file system. Per altre informazioni, vedere [about_Providers [v4]](https://technet.microsoft.com/en-us/library/2d9b3f32-be78-49ad-a547-21231c803242).
@@ -28,15 +26,9 @@ I provider di Windows PowerShell sono programmi .NET che rendono disponibili in 
 |[Provider Registry [v3]](https://technet.microsoft.com/en-us/library/d3c8013c-8caa-48d7-9feb-bfef0d95926e)|Fornisce l'accesso alle chiavi e ai valori del Registro di sistema.|
 |[Provider Variable [v3]](https://technet.microsoft.com/en-us/library/78dbcbbd-7946-4b9b-b75b-146f247f821c)|Fornisce l'accesso alle variabili di Windows PowerShell e ai relativi valori.|
 
-## Vedere anche
+## <a name="see-also"></a>Vedere anche
 - [Provider Certificate [v3]](https://technet.microsoft.com/en-us/library/3f743541-d0c6-4670-809a-b16fb01f7c4d)
 - [Provider WSMan [v3]](https://technet.microsoft.com/en-us/library/4c3d8d36-4f7a-4211-996f-64110e4b2eb7)
 - [about_Providers [v4]](https://technet.microsoft.com/en-us/library/2d9b3f32-be78-49ad-a547-21231c803242)
 - [Modulo Microsoft.PowerShell.Core](Microsoft.PowerShell.Core-Module.md)
-
-
-
-
-<!--HONumber=Oct16_HO3-->
-
 

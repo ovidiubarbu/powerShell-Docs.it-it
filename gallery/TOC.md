@@ -16,7 +16,7 @@
 ### [Come contattare i proprietari di elementi](psgallery/psgallery_contacting_item_owners.md)
 ### [Come contattare gli amministratori](psgallery/psgallery_contacting_administrators.md)
 
-# [PowerShellGet](psget/overview.md)
+# [PowershellGet](psget/overview.md)
 ## Modulo
 ### [Trovare moduli](psget/module/psget_find-module.md)
 ### [Trovare risorse DSC](psget/module/psget_find-dscresource.md)
@@ -24,8 +24,8 @@
 ### [Trovare comandi](psget/module/psget_find-command.md)
 ### [Salva](psget/module/psget_save-module.md)
 ### [Installare](psget/module/psget_install-module.md)
-### [Aggiornamenti](psget/module/psget_update-module.md)
-### [Disinstallazione](psget/module/psget_uninstall-module.md)
+### [Aggiornare](psget/module/psget_update-module.md)
+### [Disinstallare](psget/module/psget_uninstall-module.md)
 ### [Ottenere i moduli installati](psget/module/psget_get-installedmodule.md)
 ### [Aggiornare il manifesto del modulo](psget/module/psget_update-modulemanifest.md)
 ### [Pubblicare](psget/module/psget_publish-module.md)
@@ -36,8 +36,8 @@
 ### [Trovare](psget/script/psget_find-script.md)
 ### [Salva](psget/script/psget_save-script.md)
 ### [Installare](psget/script/psget_install-script.md)
-### [Aggiornamenti](psget/script/psget_update-script.md)
-### [Disinstallazione](psget/script/psget_uninstall-script.md)
+### [Aggiornare](psget/script/psget_update-script.md)
+### [Disinstallare](psget/script/psget_uninstall-script.md)
 ### [Ottenere script installati](psget/script/psget_get-installedscript.md)
 ### [Creare i file di script con i metadati](psget/script/psget_new-scriptfileinfo.md)
 ### [Testare i file di script con i metadati](psget/script/psget_test-scriptfileinfo.md)
@@ -53,8 +53,3 @@
 ### [Annullamento della registrazione del repository](psget/repository/psget_unregister-psrepository.md)
 
 ## [Cmdlet PackageManagement](psget/oneget/PackageManagement_cmdlets.md)
-
-
-<!--HONumber=Sep16_HO2-->
-
-

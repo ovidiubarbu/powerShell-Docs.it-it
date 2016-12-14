@@ -7,17 +7,15 @@ ms.topic: article
 author: eslesar
 manager: dongill
 ms.prod: powershell
-translationtype: Human Translation
-ms.sourcegitcommit: c915ebd021ed20209bc491505d45cff2ac89f21d
 ms.openlocfilehash: 4f3d74949d98e3ab3f5136303e229c23ed903c5d
-
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
-# Metodo RemoveConfiguration della classe MSFT_DSCLocalConfigurationManager
+# <a name="removeconfiguration-method-of-the-msftdsclocalconfigurationmanager-class"></a>Metodo RemoveConfiguration della classe MSFT_DSCLocalConfigurationManager
 
 Rimuove i file di configurazione.
 
-Sintassi
+<a name="syntax"></a>Sintassi
 ------
 
 ```mof
@@ -27,7 +25,7 @@ uint32 RemoveConfiguration(
 );
 ```
 
-Parametri
+<a name="parameters"></a>Parametri
 ----------
 
 *Stage* \[in\]  
@@ -42,23 +40,23 @@ Specifica il documento di configurazione da rimuovere. I valori validi sono i se
 *Force* \[in\]  
 **true** per forzare la rimozione della configurazione.
 
-## Valore restituito
+## <a name="return-value"></a>Valore restituito
 ------------
 
 In caso di esito positivo, il valore restituisce zero, altrimenti, restituisce un codice di errore.
 
-## Osservazioni
+## <a name="remarks"></a>Osservazioni
 
 Si tratta di un metodo statico.
 
-## Requisiti
+## <a name="requirements"></a>Requisiti
 ------------
 >**MOF:** DscCore.mof
 
 >**Spazio dei nomi**: Root\Microsoft\Windows\DesiredStateConfiguration
 
 
-## Vedere anche
+## <a name="see-also"></a>Vedere anche
 
 
 [**MSFT_DSCLocalConfigurationManager**](msft-dsclocalconfigurationmanager.md)
@@ -68,11 +66,5 @@ Si tratta di un metodo statico.
 
  
 
-
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

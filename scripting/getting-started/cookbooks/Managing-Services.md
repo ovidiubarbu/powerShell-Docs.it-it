@@ -8,16 +8,14 @@ author: jpjofre
 manager: dongill
 ms.prod: powershell
 ms.assetid: 7a410e4d-514b-4813-ba0c-0d8cef88df31
-translationtype: Human Translation
-ms.sourcegitcommit: f891988cce205b5729d0da6c4ce23da5fbd53b7f
-ms.openlocfilehash: 61c98c54ca1b555f6b2e827fb31228bf6a2cc71d
-
+ms.openlocfilehash: 9d9566328cac84ae6b450d9dedeb75a37d6dcba5
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
-# Gestione dei servizi
+# <a name="managing-services"></a>Gestione dei servizi
 Sono disponibili otto cmdlet Service principali, progettati per una vasta gamma di attività dei servizi. Verranno esaminati solo l'elenco e la modifica dello stato di esecuzione dei servizi, ma è possibile ottenere un elenco di cmdlet Service usando **Get-Help \&#42;-Service**, oltre a trovare informazioni sui diversi cmdlet Service con **Get-Help<Cmdlet-Name>**, ad esempio **Get-Help New-Service**.
 
-## Ottenere servizi
+## <a name="getting-services"></a>Ottenere servizi
 È possibile ottenere servizi in un computer locale o remoto usando il cmdlet **Get-Service**. Come con **Get-Process**, l'uso del comando **Get-Service** senza parametri restituisce tutti i servizi. È possibile filtrare per nome, usando anche un asterisco come carattere jolly:
 
 ```
@@ -53,7 +51,7 @@ Il parametro ComputerName del cmdlet Get-Service può essere usato per ottenere 
 Get-Service -ComputerName Server01
 ```
 
-## Ottenere i servizi richiesti e dipendenti
+## <a name="getting-required-and-dependent-services"></a>Ottenere i servizi richiesti e dipendenti
 Il cmdlet Get-Service include due parametri molto utili per l'amministrazione dei servizi. Il parametro DependentServices ottiene i servizi che dipendono dal servizio. Il parametro RequiredServices ottiene i servizi da cui dipende questo servizio.
 
 Questi parametri visualizzano solo i valori delle proprietà DependentServices e ServicesDependedOn (alias=RequiredServices) dell'oggetto System.ServiceProcess.ServiceController restituito da Get-Service, ma semplificano i comandi e rendono più semplice ottenere queste informazioni.
@@ -88,7 +86,7 @@ Running  BITS               Background Intelligent Transfer Ser...
 Get-Service -Name * | where {$_.RequiredServices -or $_.DependentServices} | Format-Table -Property Status, Name, RequiredServices, DependentServices -auto
 ```
 
-## Arresto, avvio, sospensione e riavvio di servizi
+## <a name="stopping-starting-suspending-and-restarting-services"></a>Arresto, avvio, sospensione e riavvio di servizi
 I cmdlet Service hanno tutti lo stesso formato generale. I servizi possono essere specificati in base al nome comune o al nome visualizzato e accettano elenchi e caratteri jolly come valori. Per arrestare lo spooler di stampa, usare:
 
 ```
@@ -138,22 +136,16 @@ Questi cmdlet Service non hanno un parametro ComputerName, ma è possibile esegu
 Invoke-Command -ComputerName Server01 {Restart-Service Spooler}
 ```
 
-## Impostazione delle proprietà dei servizi
+## <a name="setting-service-properties"></a>Impostazione delle proprietà dei servizi
 Il cmdlet Set-Service consente di modificare le proprietà di un servizio in un computer locale o remoto. Poiché lo stato del servizio è una proprietà, è possibile usare questo cmdlet per avviare, arrestare e sospendere un servizio. Il cmdlet Set-Service ha anche un parametro StartupType che consente di modificare il tipo di avvio del servizio.
 
 Per usare Set-Service in Windows Vista e versioni successive di Windows, aprire Windows PowerShell con l'opzione "Esegui come amministratore".
 
 Per altre informazioni, vedere [Set-Service [m2]](https://technet.microsoft.com/en-us/library/b71e29ed-372b-4e32-a4b7-5eb6216e56c3).
 
-## Vedere anche
+## <a name="see-also"></a>Vedere anche
 - [Get-Service [m2]](https://technet.microsoft.com/en-us/library/0a09cb22-0a1c-4a79-9851-4e53075f9cf6)
 - [Set-Service [m2]](https://technet.microsoft.com/en-us/library/b71e29ed-372b-4e32-a4b7-5eb6216e56c3)
 - [Restart-Service [m2]](https://technet.microsoft.com/en-us/library/45acf50d-2277-4523-baf7-ce7ced977d0f)
 - [Suspend-Service [m2]](https://technet.microsoft.com/en-us/library/c8492b87-0e21-4faf-8054-3c83c2ec2826)
-
-
-
-
-<!--HONumber=Oct16_HO3-->
-
 

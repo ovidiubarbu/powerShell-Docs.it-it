@@ -7,13 +7,11 @@ ms.topic: article
 author: eslesar
 manager: dongill
 ms.prod: powershell
-translationtype: Human Translation
-ms.sourcegitcommit: 6477ae8575c83fc24150f9502515ff5b82bc8198
-ms.openlocfilehash: be2141330dda803a22fdce6d65a1e379adf14fed
-
+ms.openlocfilehash: 4478806e46c9c6cdc314b1ecadd8554d6558e8f5
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
-# Uso dello strumento di progettazione risorse
+# <a name="using-the-resource-designer-tool"></a>Uso dello strumento di progettazione risorse
 
 > Si applica a: Windows PowerShell 4.0, Windows PowerShell 5.0
 
@@ -23,7 +21,7 @@ Usare il cmdlet [Install-Module](https://technet.microsoft.com/en-us/library/dn8
 
 >**Nota**: il cmdlet **Install-Module** è incluso nel modulo **PowerShellGet**, disponibile in PowerShell 5.0. È possibile scaricare il modulo **PowerShellGet** per PowerShell 3.0 e 4.0 dalla pagina dell'[anteprima dei moduli PackageManagement di PowerShell](https://www.microsoft.com/en-us/download/details.aspx?id=49186).
 
-## Creazione delle proprietà della risorsa
+## <a name="creating-resource-properties"></a>Creazione delle proprietà della risorsa
 La prima cosa da fare è stabilire le proprietà che la risorsa dovrà esporre. In questo esempio verrà definito un utente di Active Directory con le proprietà seguenti.
  
 Nome parametro e descrizione
@@ -41,7 +39,7 @@ PS C:\> $DomainCredential = New-xDscResourceProperty –Name DomainCredential-Ty
 PS C:\> $Password = New-xDscResourceProperty –Name Password -Type PSCredential -Attribute Write
 ```
 
-## Creazione della risorsa
+## <a name="create-the-resource"></a>Creazione della risorsa
 
 Dopo aver creato le proprietà della risorsa, è possibile chiamare il cmdlet **New-xDscResource** per creare la risorsa. Il cmdlet **New-xDscResource** accetta l'elenco di proprietà come parametri. Accetta anche il percorso in cui deve essere creato il modulo, il nome della nuova risorsa e il nome del modulo in cui è contenuta. Il comando di PowerShell seguente consente di creare la risorsa.
 
@@ -164,7 +162,7 @@ $result
 Export-ModuleMember -Function *-TargetResource
 ```
 
-## Aggiornamento della risorsa
+## <a name="updating-the-resource"></a>Aggiornamento della risorsa
 
 Se è necessario aggiungere o modificare l'elenco di parametri della risorsa, è possibile chiamare il cmdlet **Update-xDscResource**. Il cmdlet aggiorna la risorsa con un nuovo elenco di parametri. Se la logica è già stata aggiunta allo script di risorsa, non viene apportata alcuna modifica.
 
@@ -175,21 +173,15 @@ PS C:\> $lastLogon = New-xDscResourceProperty –Name LastLogon –Type Hashtabl
 PS C:\> Update-xDscResource –Name ‘Demo_ADUser’ –Property $UserName, $Ensure, $DomainCredential, $Password, $lastLogon -Force
 ```
 
-## Test di uno schema di risorse
+## <a name="testing-a-resource-schema"></a>Test di uno schema di risorse
 
 Lo strumento di progettazione risorse espone un altro cmdlet che è possibile usare per testare la validità di uno schema MOF scritto manualmente. Chiamare il cmdlet **Test-xDscSchema**, passando il percorso di uno schema di risorsa MOF come parametro. L'output del cmdlet conterrà eventuali errori presenti nello schema.
 
-### Vedere anche
+### <a name="see-also"></a>Vedere anche
 
-#### Concetti
+#### <a name="concepts"></a>Concetti
 [Creare risorse Windows PowerShell DSC (Desired State Configuration) personalizzate](authoringResource.md)
 
-#### Risorse aggiuntive
+#### <a name="other-resources"></a>Risorse aggiuntive
 [Modulo xDscResourceDesigner](https://powershellgallery.com/packages/xDscResourceDesigner)
-
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

@@ -8,13 +8,11 @@ author: jpjofre
 manager: dongill
 ms.prod: powershell
 ms.assetid: 2ae52a0d-2eb5-4c71-971f-fb3f612d281b
-translationtype: Human Translation
-ms.sourcegitcommit: 03ac4b90d299b316194f1fa932e7dbf62d4b1c8e
-ms.openlocfilehash: 8adf724740b2f09bff6d5cafb822566f4747780c
-
+ms.openlocfilehash: 841c3ce80a625b1f52a1ce50e989ca348c65f93b
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
-# Windows PowerShell 5.0
+# <a name="windows-powershell-50"></a>Windows PowerShell 5.0
 Questo argomento elenca i moduli di funzioni e cmdlet inclusi in Windows PowerShell. I moduli di Windows PowerShell inclusi nell'elenco forniscono le funzionalità di base di Windows PowerShell.
 
 La tabella seguente illustra anche la versione pubblicata più recente della Guida su ogni modulo. La Guida è disponibile nella Libreria TechNet tramite i collegamenti seguenti o come file della Guida aggiornabile. La Guida aggiornabile, introdotta con Windows PowerShell 3.0, consente di avere a disposizione gli argomenti della Guida più recenti in locale nel computer. Per altre informazioni, vedere [about_Updatable_Help](http://technet.microsoft.com/library/hh847735.aspx).
@@ -22,7 +20,7 @@ La tabella seguente illustra anche la versione pubblicata più recente della Gui
 > [!NOTE]
 > Per informazioni sulle versioni precedenti di Windows PowerShell, vedere [http://technet.microsoft.com/library/hh847741(v=wps.620).aspx](http://technet.microsoft.com/library/hh847741(v=wps.620).aspx) nella libreria TechNet.
 
-## Moduli di sistema di Windows PowerShell
+## <a name="windows-powershell-core-modules"></a>Moduli di sistema di Windows PowerShell
 
 |Nome del modulo|Titolo e collegamento alla versione Web|Versione più recente|
 |---------------|---------------------------------|------------------|
@@ -45,10 +43,4 @@ La tabella seguente illustra anche la versione pubblicata più recente della Gui
 |PSScriptAnalyzer|[Cmdlet PSScriptAnalyzer di Windows PowerShell](http://technet.microsoft.com/library/dn927161.aspx)|5.0.1.0|
 |PSWorkflow|[Cmdlet del flusso di lavoro di Windows PowerShell](http://technet.microsoft.com/library/A6B6D03A-6FDF-478A-B08A-0C145AB690BD)|5.0.1.0|
 |PSWorkflowUtility|[Cmdlet per le utilità del flusso di lavoro di Windows PowerShell](http://technet.microsoft.com/library/D33B1B65-7140-431C-9A70-F768D025074A)|5.0.1.0|
-
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

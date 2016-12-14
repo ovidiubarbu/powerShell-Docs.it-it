@@ -8,13 +8,11 @@ keywords: powershell,cmdlet,jea
 ms.date: 2016-06-22
 title: concetti principali usati in questa guida
 ms.technology: powershell
-translationtype: Human Translation
-ms.sourcegitcommit: 7504fe496a8913718847e45115d126caf4049bef
-ms.openlocfilehash: 178fea44987b0c457b8e5d23fbe851ee12f03b31
-
+ms.openlocfilehash: 873ab19fdf43ec4ac41cc546aa94b64fbc607984
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
-# Concetti principali usati in questa guida
+# <a name="key-concepts-used-throughout-this-guide"></a>Concetti principali usati in questa guida
 **Che cos'è esattamente JEA?**
 
 JEA è un'estensione degli [endpoint vincolati](http://blogs.technet.com/b/heyscriptingguy/archive/2014/03/31/introduction-to-powershell-endpoints.aspx) di PowerShell che aggiunge definizioni di ruoli, account virtuali e diversi altri miglioramenti per semplificare ulteriormente il blocco degli endpoint di gestione.
@@ -53,10 +51,4 @@ Inoltre, se un comando o script consentito tenta di accedere alle risorse estern
 
 **Utente "connesso"**: l'utente non amministratore che si connette all'endpoint JEA e a cui vengono assegnati i ruoli.
 I comandi eseguiti da questo utente vengono eseguiti nel contesto dell'utente RunAs o dell'account virtuale.
-
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

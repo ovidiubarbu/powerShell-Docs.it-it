@@ -7,16 +7,14 @@ ms.topic: article
 author: eslesar
 manager: dongill
 ms.prod: powershell
-translationtype: Human Translation
-ms.sourcegitcommit: 6477ae8575c83fc24150f9502515ff5b82bc8198
-ms.openlocfilehash: a750fb208e73ce2ebffb2fa86a55c825169d8ad8
-
+ms.openlocfilehash: 58ba849bbf0789a66bc752385c7954edf95c9d03
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
-# Opzioni delle credenziali nei dati di configurazione
+# <a name="credentials-options-in-configuration-data"></a>Opzioni delle credenziali nei dati di configurazione
 >Si applica a: Windows PowerShell 5.0
 
-## Password di testo normale e utenti di dominio
+## <a name="plain-text-passwords-and-domain-users"></a>Password di testo normale e utenti di dominio
 
 Le configurazioni DSC che contengono una credenziale senza crittografia generano un messaggio di errore relativo alle password di testo normale.
 Inoltre, DSC genera un avviso quando si usano credenziali di dominio.
@@ -24,7 +22,7 @@ Per eliminare questi messaggi di errore e di avviso, usare le parole chiave dei 
 * **PsDscAllowPlainTextPassword**
 * **PsDscAllowDomainUser**
 
-## Gestione delle credenziali in DSC
+## <a name="handling-credentials-in-dsc"></a>Gestione delle credenziali in DSC
 
 Le risorse di configurazione DSC vengono eseguite come `Local System` per impostazione predefinita.
 Tuttavia, per alcune risorse è necessaria una credenziale, ad esempio quando la risorsa `Package` deve installare software nell'ambito di un account utente specifico.
@@ -59,7 +57,7 @@ Accetta sia la proprietà `Credential` sia la proprietà `PsDscRunAsCredential` 
 Tuttavia, la risorsa usa solo la proprietà `Credential`.
 Per altre informazioni su `PsDscRunAsCredential`, vedere [Note sulla versione di WMF](https://msdn.microsoft.com/en-us/powershell/wmf/dsc_runas).
 
-## Esempio: proprietà Credential della risorsa Group
+## <a name="example-the-group-resource-credential-property"></a>Esempio: proprietà Credential della risorsa Group
 
 Poiché DSC viene eseguito in `Local System`, ha già le autorizzazioni necessarie per modificare gruppi e utenti locali.
 Se il membro aggiunto è un account locale, non è necessaria alcuna credenziale.
@@ -69,7 +67,7 @@ Le query anonime in Active Directory non sono consentite.
 La proprietà `Credential` della risorsa `Group` corrisponde all'account di dominio usato per eseguire query in Active Directory.
 Per quasi tutti gli scopi può trattarsi di un account utente generico, perché per impostazione predefinita gli utenti possono *leggere* la maggior parte degli oggetti in Active Directory.
 
-## Configurazione di esempio
+## <a name="example-configuration"></a>Configurazione di esempio
 
 Il codice di esempio seguente usa DSC per immettere un utente di dominio in un gruppo locale:
 
@@ -124,7 +122,7 @@ Questo esempio include due problemi:
 1.  Un errore indica che le password di testo semplice non sono consigliate
 2.  Un avviso sconsiglia l'uso di una credenziale di dominio
 
-## PsDscAllowPlainTextPassword
+## <a name="psdscallowplaintextpassword"></a>PsDscAllowPlainTextPassword
 
 Il primo messaggio di errore contiene un URL con la documentazione.
 Il collegamento descrive come crittografare le password usando una struttura [ConfigurationData](https://msdn.microsoft.com/en-us/powershell/dsc/configdata) e un certificato.
@@ -169,17 +167,17 @@ DomainCredentialExample -DomainCredential $cred -ConfigurationData $cd
 
 **Microsoft consiglia di evitare password di testo semplice, che possono provocare rischi significativi per la sicurezza.**
 
-## Credenziali di dominio
+## <a name="domain-credentials"></a>Credenziali di dominio
 
 Una nuova esecuzione dello script di configurazione di esempio (con o senza crittografia) genera comunque l'avviso che sconsiglia l'uso di un account di dominio per una credenziale.
 L'uso di un account locale elimina la potenziale esposizione delle credenziali di dominio, che potrebbero essere usate in altri server.
 
 **Quando si usano credenziali con risorse DSC, se possibile preferire un account locale a un account di dominio.**
 
-Se la proprietà `Username` della credenziale contiene un carattere "\'" o "@", DSC la considera un account di dominio.
+Se la proprietà `Username` della credenziale contiene un carattere '\' o '@', DSC la considera un account di dominio.
 Un'eccezione riguarda "localhost", "127.0.0.1" e "::1" nella parte del dominio del nome utente.
 
-## PSDscAllowDomainUser
+## <a name="psdscallowdomainuser"></a>PSDscAllowDomainUser
 
 Nell'esempio di risorsa `Group` DSC precedente per l'esecuzione di query su un dominio Active Directory *è necessario* un account di dominio.
 In questo caso, aggiungere la proprietà `PSDscAllowDomainUser` al blocco `ConfigurationData` nel modo seguente:
@@ -198,10 +196,4 @@ $cd = @{
 ```
 
 Lo script di configurazione genera ora il file MOF senza errori o avvisi.
-
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

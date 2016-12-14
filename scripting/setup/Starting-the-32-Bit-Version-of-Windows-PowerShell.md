@@ -8,20 +8,18 @@ author: jpjofre
 manager: dongill
 ms.prod: powershell
 ms.assetid: 12b31890-2609-4a76-8c24-0ebe78084f50
-translationtype: Human Translation
-ms.sourcegitcommit: fa0a541965b4121b8e8ac677b3c38e6f316b4553
-ms.openlocfilehash: 4e6a0e7f8935b905d1cb19576541d1b532fcba21
-
+ms.openlocfilehash: e6e9d951b2dd10637bbf2c6afda774cd9ba32a8d
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
-# Avvio della versione a 32 bit di Windows PowerShell
+# <a name="starting-the-32-bit-version-of-windows-powershell"></a>Avvio della versione a 32 bit di Windows PowerShell
 Quando si installa Windows PowerShell in un computer a 64 bit, oltre alla versione a 64 bit viene installato **Windows PowerShell (x86)**, una versione a 32 bit di Windows PowerShell. Quando si esegue Windows PowerShell, viene eseguita la versione a 64 bit per impostazione predefinita.
 
 Tuttavia, in alcuni casi potrebbe essere necessario eseguire **Windows PowerShell (x86)**, ad esempio quando si usa un modulo che richiede la versione a 32 bit o quando ci si connette in remoto a un computer a 32 bit.
 
 Per avviare una versione a 32 bit di Windows PowerShell, usare una delle procedure seguenti.
 
-#### In Windows Server® 2012 R2
+#### <a name="in-windows-server-2012-r2"></a>In Windows Server® 2012 R2
 
 -   Nella schermata **Start** digitare **Windows PowerShell (x86)**. Fare clic sul riquadro **Windows PowerShell x86**.
 
@@ -31,7 +29,7 @@ Per avviare una versione a 32 bit di Windows PowerShell, usare una delle procedu
 
 -   Dalla riga di comando, immettere: `%SystemRoot%\SysWOW64\WindowsPowerShell\v1.0\powershell.exe`
 
-#### In Windows Server® 2012
+#### <a name="in-windows-server-2012"></a>In Windows Server® 2012
 
 -   Nella schermata **Start** digitare **PowerShell** e quindi fare clic su **Windows PowerShell (x86)**.
 
@@ -41,7 +39,7 @@ Per avviare una versione a 32 bit di Windows PowerShell, usare una delle procedu
 
 -   Dalla riga di comando, immettere: `%SystemRoot%\SysWOW64\WindowsPowerShell\v1.0\powershell.exe`
 
-#### In Windows® 8.1
+#### <a name="in-windows-81"></a>In Windows® 8.1
 
 -   Nella schermata **Start** digitare **Windows PowerShell (x86)**. Fare clic sul riquadro **Windows PowerShell x86**.
 
@@ -51,7 +49,7 @@ Per avviare una versione a 32 bit di Windows PowerShell, usare una delle procedu
    
 -   Dalla riga di comando, immettere: `%SystemRoot%\SysWOW64\WindowsPowerShell\v1.0\powershell.exe`
 
-#### In Windows® 8
+#### <a name="in-windows-8"></a>In Windows® 8
 
 -   Nella schermata **Start** spostare il cursore nell'angolo in alto a destra, fare clic su **Impostazioni**, fare clic su **Riquadri** e quindi spostare il dispositivo di scorrimento **Mostra strumenti di amministrazione** su Sì. A questo punto digitare **PowerShell** e quindi fare clic su **Windows PowerShell (x86)**.
 
@@ -60,9 +58,3 @@ Per avviare una versione a 32 bit di Windows PowerShell, usare una delle procedu
 -   Nella schermata **Start** o sul desktop digitare **PowerShell(x86)** e quindi fare clic su **Windows PowerShell (x86)**.
 
 -   Dalla riga di comando, immettere: `%SystemRoot%\SysWOW64\WindowsPowerShell\v1.0\powershell.exe`
-
-
-
-<!--HONumber=Oct16_HO2-->
-
-

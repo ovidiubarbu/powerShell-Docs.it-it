@@ -35,7 +35,7 @@
 ####  [Uso di nomi di comandi familiari](getting-started/fundamental/Using-Familiar-Command-Names.md)
 ####  [Pipeline degli oggetti](getting-started/fundamental/Object-Pipeline.md)
 ####  [Scrittura di script con Windows PowerShell](getting-started/fundamental/Scripting-with-Windows-PowerShell.md)
-####  [Tramite Windows PowerShell](getting-started/fundamental/Using-Windows-PowerShell.md)
+####  [Uso di Windows PowerShell](getting-started/fundamental/Using-Windows-PowerShell.md)
 
 ### [Guide di riferimento dettagliate di base](getting-started/basic-cookbooks.md)
 ####  [Modifica dello stato del computer](getting-started/cookbooks/Changing-Computer-State.md)
@@ -64,7 +64,7 @@
 ####  [Uso dei comandi Format per modificare la visualizzazione dell'output](getting-started/cookbooks/Using-Format-Commands-to-Change-Output-View.md)
 ####  [Uso di classi e metodi statici](getting-started/cookbooks/Using-Static-Classes-and-Methods.md)
 ####  [Visualizzazione della struttura degli oggetti (Get-Member)](getting-started/cookbooks/Viewing-Object-Structure--Get-Member-.md)
-####  [Uso di file, cartelle e chiavi del Registro di sistema](getting-started/cookbooks/Working-With-Files-Folders-and-Registry-Keys.md)
+####  [Gestione di file, cartelle e chiavi del Registro di sistema](getting-started/cookbooks/Working-With-Files-Folders-and-Registry-Keys.md)
 ####  [Utilizzo di file e cartelle](getting-started/cookbooks/Working-with-Files-and-Folders.md)
 ####  [Utilizzo degli oggetti](getting-started/cookbooks/Working-with-Objects.md)
 ####  [Utilizzo delle stampanti](getting-started/cookbooks/Working-with-Printers.md)
@@ -85,7 +85,7 @@
 ####  [Modulo Management](core-powershell/core-modules/Microsoft.PowerShell.Management-Module.md)
 ####  [Modulo ODataUtils](core-powershell/core-modules/Microsoft.PowerShell.ODataUtils-Module.md)
 ####  [Modulo PackageManagement](core-powershell/core-modules/PackageManagement-Module.md)
-####  [Argomenti About di PowerShell Core](core-powershell/core-modules/Windows-PowerShell-Core-About-Topics.md)
+####  [Argomenti di informazioni sui componenti di sistema di PowerShell](core-powershell/core-modules/Windows-PowerShell-Core-About-Topics.md)
 ####  [Modulo Readline](core-powershell/core-modules/PSReadline-Module.md)
 ####  [Modulo ScheduledJob](core-powershell/core-modules/PSScheduledJob-Module.md)
 ####  [Modulo ScriptAnalyzer](core-powershell/core-modules/PSScriptAnalyzer-Module.md)
@@ -95,7 +95,7 @@
 
 ### [Integrated Scripting Environment (ISE)](core-powershell/ise-guide.md)
 ####  [Riferimento del modello a oggetti ISE](core-powershell/ise/Windows-PowerShell-ISE-Object-Model-Reference.md)
-####  [Oggetto File Scripting ISE](core-powershell/ise/The-Windows-PowerShell-ISE-Scripting-Object-Model.md)
+####  [Modello a oggetti di scripting di Windows PowerShell ISE](core-powershell/ise/The-Windows-PowerShell-ISE-Scripting-Object-Model.md)
 ####  [Uso di Windows PowerShell ISE](core-powershell/ise/Using-the-Windows-PowerShell-ISE.md)
 ####  [Oggetto ISEFile](core-powershell/ise/The-ISEFile-Object.md)
 ####  [Oggetto ISEOptions](core-powershell/ise/The-ISEOptions-Object.md)
@@ -124,7 +124,7 @@
 
 ### [Console](core-powershell/console-guide.md)
 ####  [Riferimento della riga di comando della console](core-powershell/console/PowerShell.exe-Command-Line-Help.md)
-####  [Uso dell'espansione dei nomi tramite TAB](core-powershell/console/Using-Tab-Expansion.md)
+####  [Uso dell'espansione tramite TAB](core-powershell/console/Using-Tab-Expansion.md)
 
 ### [Esecuzione di comandi remoti](core-powershell/Running-Remote-Commands.md)
 
@@ -140,8 +140,3 @@
 ####  [Usare la console di Windows PowerShell basata sul Web](core-powershell/web-access/use-the-web-based-windows-powershell-console.md)
 
 ## [Glossario di PowerShell](Windows-PowerShell-Glossary.md)
-
-
-<!--HONumber=Oct16_HO2-->
-
-

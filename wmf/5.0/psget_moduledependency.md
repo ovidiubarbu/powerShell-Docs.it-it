@@ -1,4 +1,4 @@
-# Installazione delle dipendenze del modulo
+# <a name="installation-of-module-dependencies"></a>Installazione delle dipendenze del modulo
 
 I cmdlet Install-Module, Update-Module e Publish-Module eseguiti in Windows PowerShell 5.0 o versione successiva supportano ora versioni del modulo side-by-side (SxS).
 È stato inoltre aggiunto il parametro -RequiredVersion al cmdlet Publish-Module per specificare la versione da pubblicare. Il parametro Path supporta ora il percorso di base del modulo con la cartella della versione.
@@ -192,7 +192,3 @@ _------ ---- ---------- -----------
 1.5 ContosoServer LocalRepo ContosoServer module
 2.0 ContosoServer LocalRepo ContosoServer module
 ```
-
-<!--HONumber=Aug16_HO3-->
-
-

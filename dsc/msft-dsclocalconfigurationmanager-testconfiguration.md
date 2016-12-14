@@ -7,18 +7,15 @@ ms.topic: article
 author: eslesar
 manager: dongill
 ms.prod: powershell
-translationtype: Human Translation
-ms.sourcegitcommit: c915ebd021ed20209bc491505d45cff2ac89f21d
 ms.openlocfilehash: 0777467d37e2f5588f9c0ef368148e3bea963a5b
-
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
-
-# Metodo TestConfiguration della classe MSFT_DSCLocalConfigurationManager
+# <a name="testconfiguration-method-of-the-msftdsclocalconfigurationmanager-class"></a>Metodo TestConfiguration della classe MSFT_DSCLocalConfigurationManager
 
 Consente di inviare il documento di configurazione al nodo gestito e verificare la configurazione corrente sulla base del documento.
 
-Sintassi
+<a name="syntax"></a>Sintassi
 ------
 
 ```mof
@@ -30,7 +27,7 @@ uint32 TestConfiguration(
 );
 ```
 
-Parametri
+<a name="parameters"></a>Parametri
 ----------
 
 *configurationData* \[in\]  
@@ -45,23 +42,23 @@ In fase di restituzione, contiene un'istanza incorporata della classe **MSFT_Res
 *ResourcesNotInDesiredState* \[out\]  
 In fase di restituzione, contiene un'istanza incorporata della classe **MSFT_ResourceNotInDesiredState** che specifica le risorse che non si trovano nello stato desiderato.
 
-## Valore restituito
+## <a name="return-value"></a>Valore restituito
 ------------
 
 In caso di esito positivo, il valore restituisce zero, altrimenti, restituisce un codice di errore.
 
-## Osservazioni
+## <a name="remarks"></a>Osservazioni
 
 Si tratta di un metodo statico.
 
-## Requisiti
+## <a name="requirements"></a>Requisiti
 ------------
 >**MOF:** DscCore.mof
 
 >**Spazio dei nomi**: Root\Microsoft\Windows\DesiredStateConfiguration
 
 
-## Vedere anche
+## <a name="see-also"></a>Vedere anche
 
 
 [**MSFT_DSCLocalConfigurationManager**](msft-dsclocalconfigurationmanager.md)
@@ -71,11 +68,5 @@ Si tratta di un metodo statico.
 
  
 
-
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

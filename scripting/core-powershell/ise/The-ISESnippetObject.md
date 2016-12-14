@@ -8,18 +8,16 @@ author: jpjofre
 manager: dongill
 ms.prod: powershell
 ms.assetid: 98bc8113-c3cd-4201-bdb9-9d9bdb7e266c
-translationtype: Human Translation
-ms.sourcegitcommit: 6c666e2e23cb74818e37293410dafc9033057733
-ms.openlocfilehash: 04d650aca06977883c029684b37838da01b456aa
-
+ms.openlocfilehash: 5af4891107394981679e38cd0a7fd4c86346dc01
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
-# ISESnippetObject
+# <a name="the-isesnippetobject"></a>ISESnippetObject
   Un oggetto **ISESnippet** è un'istanza della classe Microsoft.PowerShell.Host.ISE.ISESnippet. I membri della raccolta **$psISE.CurrentPowerShellTab.Snippets** sono tutti esempi di oggetti **ISESnippet**. Il modo più semplice per creare un frammento di codice consiste nell'usare il cmdlet [New-IseSnippet&#91;PSITPro5_ISE&#93;](https://technet.microsoft.com/en-us/library/0a6339a3-2683-4a8e-8929-90ad9a95c3e0).
 
-## Proprietà
+## <a name="properties"></a>Proprietà
 
-###  <a name="DisplayName"></a> Autore
+###  <a name="a-namedisplaynamea-author"></a><a name="DisplayName"></a> Author
   Supportato in Windows PowerShell ISE 3.0 e versioni successive e non presente nelle versioni precedenti. 
 
  Proprietà di sola lettura che ottiene il nome dell'autore del frammento di codice.
@@ -30,7 +28,7 @@ $psISE.CurrentPowerShellTab.Snippets.Item(0).Author
 
 ```
 
-###  <a name="Action"></a> CodeFragment
+###  <a name="a-nameactiona-codefragment"></a><a name="Action"></a> CodeFragment
   Supportato in Windows PowerShell ISE 3.0 e versioni successive e non presente nelle versioni precedenti. 
 
  Proprietà di sola lettura che ottiene il frammento di codice da inserire nell'editor.
@@ -41,7 +39,7 @@ $psISE.CurrentPowerShellTab.Snippets.Item(0).CodeFragment
 
 ```
 
-###  <a name="Shortcut"></a> Collegamento
+###  <a name="a-nameshortcuta-shortcut"></a><a name="Shortcut"></a> Shortcut
   Supportato in Windows PowerShell ISE 3.0 e versioni successive e non presente nelle versioni precedenti. 
 
  Proprietà di sola lettura che ottiene il tasto di scelta rapida Windows per la voce di menu.
@@ -53,16 +51,10 @@ $psISE.CurrentPowerShellTab.AddOnsMenu.SubMenus.Add("_Process",{get-process},"Al
 $psISE.CurrentPowerShellTab.AddOnsMenu.Submenus[0].Shortcut
 ```
 
-## Vedere anche
+## <a name="see-also"></a>Vedere anche
 - [Oggetto ISESnippetCollection](The-ISESnippetCollection-Object.md) 
 - [Modello a oggetti di scripting di Windows PowerShell ISE](The-Windows-PowerShell-ISE-Scripting-Object-Model.md) 
 - [Riferimenti al modello a oggetti di Windows PowerShell ISE](Windows-PowerShell-ISE-Object-Model-Reference.md) 
 - [Gerarchia del modello a oggetti ISE](The-ISE-Object-Model-Hierarchy.md)
 
   
-
-
-
-<!--HONumber=Oct16_HO3-->
-
-

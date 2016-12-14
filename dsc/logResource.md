@@ -7,13 +7,11 @@ ms.topic: article
 author: eslesar
 manager: dongill
 ms.prod: powershell
-translationtype: Human Translation
-ms.sourcegitcommit: 62f993e3d3e6ef744fb07920d332d476dfd24fc6
-ms.openlocfilehash: 60085295fa7df6179a81cd98859cd33e6923150f
-
+ms.openlocfilehash: fe905237f5f0672f6e5e0cd399e1b71058417d9c
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
-# Risorsa Log DSC 
+# <a name="dsc-log-resource"></a>Risorsa Log DSC 
 
 > Si applica a: Windows PowerShell 4.0, Windows PowerShell 5.0
 
@@ -33,15 +31,15 @@ NOTA: per impostazione predefinita sono abilitati solo i log operativi per DSC.
 Per rendere disponibile o visibile il log analitico, è necessario abilitarlo.
 Vedere l'articolo seguente.
 
-[Dove sono i log eventi DSC?](https://msdn.microsoft.com/en-us/powershell/dsc/troubleshooting#where-are-dsc-event-logs)
+[Dove sono i registri eventi DSC?](https://msdn.microsoft.com/en-us/powershell/dsc/troubleshooting#where-are-dsc-event-logs)
 
-## Proprietà
+## <a name="properties"></a>Proprietà
 |  Proprietà  |  Descrizione   | 
 |---|---| 
 | Message| Indica il messaggio che si vuole scrivere nel registro eventi Microsoft-Windows-Desired State Configuration/Analytic.| 
 | DependsOn | Indica che prima di poter scrivere questo messaggio del registro è necessario eseguire la configurazione di un'altra risorsa. Ad esempio, se l'ID del blocco script di configurazione della risorsa che si vuole eseguire per primo è __ResourceName__ e il tipo è __ResourceType__, la sintassi per usare questa proprietà è `DependsOn = "[ResourceType]ResourceName"`.| 
 
-## Esempio
+## <a name="example"></a>Esempio
 
 L'esempio seguente mostra come includere un messaggio nel registro eventi Microsoft-Windows-Desired State Configuration/Analytic.
 
@@ -62,10 +60,4 @@ Configuration logResourceTest
     }
 }
 ```
-
-
-
-
-<!--HONumber=Sep16_HO3-->
-
 

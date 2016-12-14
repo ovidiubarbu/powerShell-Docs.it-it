@@ -7,18 +7,15 @@ ms.topic: article
 author: eslesar
 manager: dongill
 ms.prod: powershell
-translationtype: Human Translation
-ms.sourcegitcommit: c915ebd021ed20209bc491505d45cff2ac89f21d
 ms.openlocfilehash: f9eb975845f6ccabcac80e2591fd987f80f81331
-
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
-
-# Metodo PerformRequiredConfigurationChecks della classe MSFT_DSCLocalConfigurationManager
+# <a name="performrequiredconfigurationchecks-method-of-the-msftdsclocalconfigurationmanager-class"></a>Metodo PerformRequiredConfigurationChecks della classe MSFT_DSCLocalConfigurationManager
 
 Avvia una verifica di coerenza usando l'Utilità di pianificazione.
 
-Sintassi
+<a name="syntax"></a>Sintassi
 ------
 
 ```mof
@@ -27,7 +24,7 @@ uint32 PerformRequiredConfigurationChecks(
 );
 ```
 
-Parametri
+<a name="parameters"></a>Parametri
 ----------
 
 *Flags* \[in\]  
@@ -40,23 +37,23 @@ Una maschera di bit che specifica il tipo di verifica di coerenza da eseguire. I
 |**4** | La configurazione deve essere recuperata dal server di pull specificato nella metaconfigurazione per il nodo. Questo valore deve essere sempre combinato con **1** per un valore di **5**. |
 |**8** | Inviare lo stato al server di report. |
 
-## Valore restituito
+## <a name="return-value"></a>Valore restituito
 ------------
 
 In caso di esito positivo, il valore restituisce zero, altrimenti, restituisce un codice di errore.
 
-## Osservazioni
+## <a name="remarks"></a>Osservazioni
 
 Si tratta di un metodo statico.
 
-## Requisiti
+## <a name="requirements"></a>Requisiti
 ------------
 >**MOF:** DscCore.mof
 
 >**Spazio dei nomi**: Root\Microsoft\Windows\DesiredStateConfiguration
 
 
-## Vedere anche
+## <a name="see-also"></a>Vedere anche
 
 
 [**MSFT_DSCLocalConfigurationManager**](msft-dsclocalconfigurationmanager.md)
@@ -66,11 +63,5 @@ Si tratta di un metodo statico.
 
  
 
-
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

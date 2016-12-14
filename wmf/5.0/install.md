@@ -1,4 +1,4 @@
-# Istruzioni di installazione
+# <a name="installation-instructions"></a>Istruzioni di installazione
 
 Scaricare il pacchetto corretto per il sistema operativo e l'architettura in uso:
 
@@ -39,10 +39,5 @@ Verificare che siano stati soddisfatti i prerequisiti seguenti:
 - [WMF 4.0](http://www.microsoft.com/en-us/download/details.aspx?id=40855) è installato
 
 *Dipendenza da WnRM:* il servizio di configurazione dello stato desiderato tramite Windows PowerShell dipende da WinRM. WinRM non è abilitato per impostazione predefinita in Windows Server 2008 R2 e Windows 7. Per abilitare WinRM, in una sessione di Windows PowerShell con privilegi elevati eseguire **Set-WSManQuickConfig**.
-
-
-
-
-<!--HONumber=Aug16_HO3-->
 
 

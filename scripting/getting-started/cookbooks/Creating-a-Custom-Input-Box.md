@@ -8,16 +8,14 @@ author: jpjofre
 manager: dongill
 ms.prod: powershell
 ms.assetid: 0b12e56c-299f-40ee-afbf-d30d23ed2565
-translationtype: Human Translation
-ms.sourcegitcommit: f891988cce205b5729d0da6c4ce23da5fbd53b7f
-ms.openlocfilehash: 6fffd6406a7570e06fc4403cd238804ef0f51360
-
+ms.openlocfilehash: f7e27957db90430b4f550e56df18c227b2971a0d
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
-# Creazione di una casella di input personalizzata
+# <a name="creating-a-custom-input-box"></a>Creazione di una casella di input personalizzata
 Scrivere lo script di una casella di input grafica personalizzata usando le funzionalità di creazione moduli di Microsoft .NET Framework in Windows PowerShell 3.0 e versioni successive.
 
-## Creare una casella di input grafica personalizzata
+## <a name="create-a-custom-graphical-input-box"></a>Creare una casella di input grafica personalizzata
 Copiare e incollare il codice seguente in Windows PowerShell ISE, quindi salvarlo come script di Windows PowerShell (ps1).
 
 ```
@@ -76,7 +74,7 @@ $form = New-Object System.Windows.Forms.Form
 
 Dopo aver creato un'istanza della classe Form, assegnare valori alle tre proprietà della classe.
 
--   **Text.** Questo valore diventa il titolo della finestra.
+-   **Testo** Questo valore diventa il titolo della finestra.
 
 -   **Size.** Le dimensioni del modulo, in pixel. Lo script precedente crea un modulo di 300 pixel in larghezza per 200 pixel in altezza.
 
@@ -159,14 +157,8 @@ if ($result -eq [System.Windows.Forms.DialogResult]::OK)
 }
 ```
 
-## Vedere anche
+## <a name="see-also"></a>Vedere anche
 - [Blog Hey Scripting Guy: perché questi esempi di GUI di PowerShell non funzionano?](http://go.microsoft.com/fwlink/?LinkId=506644)
 - [GitHub: WinFormsExampleUpdates di Dave Wyatt](https://github.com/dlwyatt/WinFormsExampleUpdates)
 - [Suggerimento della settimana su Windows PowerShell: Creazione di una casella di input personalizzata](http://technet.microsoft.com/library/ff730941.aspx)
-
-
-
-
-<!--HONumber=Oct16_HO3-->
-
 
