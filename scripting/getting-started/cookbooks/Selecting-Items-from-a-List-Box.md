@@ -8,16 +8,14 @@ author: jpjofre
 manager: dongill
 ms.prod: powershell
 ms.assetid: 327c7cc5-21d0-4ace-b151-aa1491d1d3c2
-translationtype: Human Translation
-ms.sourcegitcommit: f891988cce205b5729d0da6c4ce23da5fbd53b7f
-ms.openlocfilehash: ce74f3c7cb26632269e42dfddb941fee11dcdc87
-
+ms.openlocfilehash: 08df13411c1998b0db6a4af9b8bd2bacca1dc643
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
-# Selezione di elementi di una casella di riepilogo
+# <a name="selecting-items-from-a-list-box"></a>Selezione di elementi di una casella di riepilogo
 Usare Windows PowerShell 3.0 e versioni successive per creare una finestra di dialogo che consente agli utenti di selezionare gli elementi da un controllo casella di riepilogo.
 
-## Creare un controllo casella di riepilogo e selezionare i relativi elementi
+## <a name="create-a-list-box-control-and-select-items-from-it"></a>Creare un controllo casella di riepilogo e selezionare i relativi elementi
 Copiare e incollare il codice seguente in Windows PowerShell ISE, quindi salvarlo come script di Windows PowerShell (ps1).
 
 ```
@@ -86,7 +84,7 @@ Add-Type -AssemblyName System.Drawing
 
 Dopo aver creato un'istanza della classe Form, assegnare valori alle tre proprietà della classe.
 
--   **Text.** Questo valore diventa il titolo della finestra.
+-   **Testo** Questo valore diventa il titolo della finestra.
 
 -   **Size.** Le dimensioni del modulo, in pixel. Lo script precedente crea un modulo di 300 pixel in larghezza per 200 pixel in altezza.
 
@@ -179,14 +177,8 @@ if ($result -eq [System.Windows.Forms.DialogResult]::OK)
 }
 ```
 
-## Vedere anche
+## <a name="see-also"></a>Vedere anche
 - [Blog Hey Scripting Guy: perché questi esempi di GUI di PowerShell non funzionano?](http://go.microsoft.com/fwlink/?LinkId=506644)
 - [GitHub: WinFormsExampleUpdates di Dave Wyatt](https://github.com/dlwyatt/WinFormsExampleUpdates)
 - [Suggerimento della settimana su Windows PowerShell: Selezione di elementi di una casella di riepilogo](http://technet.microsoft.com/library/ff730949.aspx)
-
-
-
-
-<!--HONumber=Oct16_HO3-->
-
 

@@ -7,13 +7,11 @@ ms.topic: article
 author: jpjofre
 manager: dongill
 ms.prod: powershell
-translationtype: Human Translation
-ms.sourcegitcommit: 03ac4b90d299b316194f1fa932e7dbf62d4b1c8e
-ms.openlocfilehash: b3b97b9dcf01094fe1fadbac355c92df35feaee2
-
+ms.openlocfilehash: edd8614879c1781a065eb76025799893f10cc1ab
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
-#  Concetti fondamentali
+#  <a name="fundamental-concepts"></a>Concetti fondamentali
 
 -  [Informazioni su Windows PowerShell](fundamental/About-Windows-PowerShell.md)
 -  [Esplorazione di Windows PowerShell ISE](fundamental/Exploring-the-Windows-PowerShell-ISE.md)
@@ -27,13 +25,7 @@ ms.openlocfilehash: b3b97b9dcf01094fe1fadbac355c92df35feaee2
 -  [Uso di nomi di comandi familiari](fundamental/Using-Familiar-Command-Names.md)
 -  [Uso di variabili per l'archiviazione di oggetti](fundamental/Using-Variables-to-Store-Objects.md)
 -  [Uso di Windows PowerShell per l'amministrazione](fundamental/Using-Windows-PowerShell-for-Administration.md)
--  [Tramite Windows PowerShell](fundamental/Using-Windows-PowerShell.md)
+-  [Uso di Windows PowerShell](fundamental/Using-Windows-PowerShell.md)
 -  [Nozioni di base su Windows PowerShell](fundamental/Windows-PowerShell-Basics.md)
--  [Windows PowerShell Integrated Scripting Environment (ISE) ](fundamental/Windows-PowerShell-Integrated-Scripting-Environment--ISE-.md)
-
-
-
-
-<!--HONumber=Aug16_HO3-->
-
+-  [Windows PowerShell Integrated Scripting Environment (ISE)](fundamental/Windows-PowerShell-Integrated-Scripting-Environment--ISE-.md)
 

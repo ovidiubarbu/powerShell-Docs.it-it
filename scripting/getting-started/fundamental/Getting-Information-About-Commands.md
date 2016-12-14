@@ -8,13 +8,11 @@ author: jpjofre
 manager: dongill
 ms.prod: powershell
 ms.assetid: 56f8e5b4-d97c-4e59-abbe-bf13e464eb0d
-translationtype: Human Translation
-ms.sourcegitcommit: fe3d7885b7c031a24a737f58523c8018cfc36146
-ms.openlocfilehash: 57ccd656e0b869da8aadece97e9bb871764c3f70
-
+ms.openlocfilehash: b91b68f6d7bfee668edc4731f23b21233d9367d5
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
-# Recupero di informazioni sui comandi
+# <a name="getting-information-about-commands"></a>Recupero di informazioni sui comandi
 Il cmdlet **Get-Command** di Windows PowerShell ottiene tutti i comandi disponibili nella sessione corrente. Quando si digita **Get-Command** al prompt di Windows PowerShell, verrà visualizzato un output simile al seguente:
 
 ```
@@ -49,7 +47,7 @@ Get-Help [[-Name] <String>] [-Path <String>] [-Category <String[]>] [-Component 
  [-Role <String[]>] [-Parameter <String>] [-Online] [-Verbose] [-Debug] [-ErrorAction <ActionPreference>] [-WarningAction <ActionPreference>] [-ErrorVariable <String>] [-WarningVariable <String>] [-OutVariable <String>] [-OutBuffer <Int32>]
 ```
 
-### Visualizzazione dei tipi di comando disponibili
+### <a name="displaying-available-command-types"></a>Visualizzazione dei tipi di comando disponibili
 Il comando **Get-Command** non elenca tutti i comandi disponibili in Windows PowerShell. Al contrario, il comando **Get-Command** elenca solo i cmdlet della sessione corrente. Windows PowerShell supporta in realtà diversi altri tipi di comandi. Anche alias, funzioni e script sono comandi di Windows PowerShell, sebbene non vengano descritti in dettaglio nel Manuale dell'utente. Anche i file esterni eseguibili o che hanno un gestore dei tipi di file registrati vengono classificati come comandi.
 
 Per ottenere tutti i comandi della sessione, digitare:
@@ -82,10 +80,4 @@ Per visualizzare gli script nel percorso di ricerca di Windows PowerShell, digit
 ```
 Get-Command -CommandType Script
 ```
-
-
-
-
-<!--HONumber=Oct16_HO2-->
-
 

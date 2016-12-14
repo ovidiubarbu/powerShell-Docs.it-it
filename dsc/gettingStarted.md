@@ -7,18 +7,16 @@ ms.topic: article
 author: eslesar
 manager: dongill
 ms.prod: powershell
-translationtype: Human Translation
-ms.sourcegitcommit: 6477ae8575c83fc24150f9502515ff5b82bc8198
-ms.openlocfilehash: c5ee7f7e7678b60700edb1ab1b66139791ea67c6
-
+ms.openlocfilehash: 3a59f76919c0a63f269ca587d358020825412be4
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
-# Introduzione a PowerShell DSC (Desired State Configuration) #
+# <a name="getting-started-with-powershell-desired-state-configuration"></a>Introduzione a PowerShell DSC (Desired State Configuration) #
 
 Questa guida descrive come iniziare a creare documenti di PowerShell DSC (Desired State Configuration) e applicarli ai computer. Si presuppone una familiarità di base con i cmdlet, i moduli e le funzioni di PowerShell. 
 
 
-## Creare una configurazione ##
+## <a name="create-a-configuration"></a>Creare una configurazione ##
 
 Le [**configurazioni**](https://msdn.microsoft.com/en-us/powershell/dsc/configurations) sono documenti che descrivono un ambiente. Gli ambienti sono costituiti da "**nodi**", che sono in genere macchine virtuali o computer fisici. 
 
@@ -41,7 +39,7 @@ configuration MyFirstConfiguration
 
 }
 ```
-## Parti di una configurazione ##
+## <a name="parts-of-a-configuration"></a>Parti di una configurazione ##
 **Configuration** è una parola chiave che è stata aggiunta in PowerShell 4.0. Significa un tipo speciale di funzione di PowerShell usata da DSC (Desired State Configuration). In questo esempio la funzione si chiama myFirstConfiguration. 
 
 La riga successiva è un'istruzione di importazione, simile all'importazione di un modulo. Questa riga verrà descritta più avanti.
@@ -71,10 +69,4 @@ Viene creato un processo di PowerShell che raggiunge i nodi nella configurazione
 ```powershell
 Start-DscConfiguration -Path ./myFirstConfiguration -Wait
 ```
-
-
-
-
-<!--HONumber=Aug16_HO3-->
-
 

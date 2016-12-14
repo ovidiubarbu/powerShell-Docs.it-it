@@ -8,13 +8,11 @@ author: keithb
 manager: dongill
 ms.prod: powershell
 ms.technology: WMF
-translationtype: Human Translation
-ms.sourcegitcommit: b32cb86b7a18fee929cc81360d81f479571a74c2
-ms.openlocfilehash: a7ef0ddf4d093a89f32f3484dfbef78fb159f0c2
-
+ms.openlocfilehash: eacd33d2a0a92977a3990132e23eef9871a7f0dc
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
-# Windows Management Framework
+# <a name="windows-management-framework"></a>Windows Management Framework
 
 Windows Management Framework (WMF) è un meccanismo di distribuzione che offre un'interfaccia di gestione coerente delle varie caratteristiche di Windows e Windows Server.
 Con l'installazione di WMF, i clienti ottengono un modo semplice per l'interazione tra diversi sistemi operativi nel proprio ambiente.
@@ -31,7 +29,7 @@ L'installazione di WMF aggiunge e/o aggiorna le funzionalità seguenti:
 - Registrazione inventario software (SIL)
 - Provider CIM di gestione del server
 
-## Note sulla versione di WMF
+## <a name="wmf-release-notes"></a>Note sulla versione di WMF
 Per informazioni sui vari miglioramenti in PowerShell e altri componenti di una determinata versione di WMF, consultare i collegamenti seguenti per rivedere le note sulla versione:
 
 
@@ -39,7 +37,7 @@ Per informazioni sui vari miglioramenti in PowerShell e altri componenti di una 
 - [WMF 5.0](5.0/releasenotes.md)
 
 
-## Disponibilità di WMF tra i sistemi operativi Windows
+## <a name="wmf-availability-across-windows-operating-systems"></a>Disponibilità di WMF tra i sistemi operativi Windows
 
 >TODO: Aggiungere collegamenti a WMF DLC nell'intestazione di colonna
 
@@ -59,9 +57,3 @@ Per informazioni sui vari miglioramenti in PowerShell e altri componenti di una 
 | Windows XP | | | |  | Sì |
 
 >TODO: Spiegare * nella tabella precedente
-
-
-
-<!--HONumber=Aug16_HO3-->
-
-

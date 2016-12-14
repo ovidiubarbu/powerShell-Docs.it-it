@@ -8,16 +8,14 @@ author: jpjofre
 manager: dongill
 ms.prod: powershell
 ms.assetid: c1cb722c-41e9-4baa-be83-59b4653222e9
-translationtype: Human Translation
-ms.sourcegitcommit: f891988cce205b5729d0da6c4ce23da5fbd53b7f
-ms.openlocfilehash: e3899a183cb1c8652adff7d01ffc09efde7f49b4
-
+ms.openlocfilehash: 25c6dcbc2c79cb62d26aad60c7e3277ef039564f
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
-# Creazione di un controllo grafico di selezione data
+# <a name="creating-a-graphical-date-picker"></a>Creazione di un controllo grafico di selezione data
 Usare Windows PowerShell 3.0 e versioni successive per creare un modulo con un controllo grafico di tipo calendario che consente agli utenti di selezionare un giorno del mese.
 
-## Creare un controllo grafico di selezione data
+## <a name="create-a-graphical-date-picker-control"></a>Creare un controllo grafico di selezione data
 Copiare e incollare il codice seguente in Windows PowerShell ISE, quindi salvarlo come script di Windows PowerShell (ps1).
 
 ```
@@ -70,7 +68,7 @@ $form = New-Object Windows.Forms.Form
 
 Dopo aver creato un'istanza della classe Form, assegnare valori alle tre proprietà della classe.
 
--   **Text.** Questo valore diventa il titolo della finestra.
+-   **Testo** Questo valore diventa il titolo della finestra.
 
 -   **Size.** Le dimensioni del modulo, in pixel. Lo script precedente crea un modulo di 243 pixel in larghezza per 230 pixel in altezza.
 
@@ -137,14 +135,8 @@ if ($result -eq [System.Windows.Forms.DialogResult]::OK)
 }
 ```
 
-## Vedere anche
+## <a name="see-also"></a>Vedere anche
 - [Blog Hey Scripting Guy: perché questi esempi di GUI di PowerShell non funzionano?](http://go.microsoft.com/fwlink/?LinkId=506644)
 - [GitHub: WinFormsExampleUpdates di Dave Wyatt](https://github.com/dlwyatt/WinFormsExampleUpdates)
 - [Suggerimento della settimana su Windows PowerShell: Creazione di un controllo grafico di selezione data](http://technet.microsoft.com/library/ff730942.aspx)
-
-
-
-
-<!--HONumber=Oct16_HO3-->
-
 

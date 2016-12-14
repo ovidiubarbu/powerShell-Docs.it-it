@@ -8,13 +8,11 @@ author: keithb
 manager: dongill
 ms.prod: powershell
 ms.technology: WMF
-translationtype: Human Translation
-ms.sourcegitcommit: 1f6f18e46537d4b9f5e64c9e808e46e82b2d3050
-ms.openlocfilehash: 8e7dd69fc5ba29e719aec353afcac2471ecb2352
-
+ms.openlocfilehash: 96795dcf591375c2b087bc59331db39dbc972f5b
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
-# Compatibilità del sistema operativo WMF 5.1 (anteprima)#
+# <a name="wmf-51-operating-system-compatibility-preview"></a>Compatibilità del sistema operativo WMF 5.1 (anteprima)#
 
 > Nota: queste informazioni sono provvisorie e soggette a modifiche.
 
@@ -36,9 +34,3 @@ ms.openlocfilehash: 8e7dd69fc5ba29e719aec353afcac2471ecb2352
 | Windows XP | | | |  | Sì |
 
 >TODO: Spiegare * nella tabella precedente
-
-
-
-<!--HONumber=Aug16_HO3-->
-
-

@@ -8,16 +8,14 @@ author: jpjofre
 manager: dongill
 ms.prod: powershell
 ms.assetid: c62a363a-caa2-4b6e-a079-d6e8543bc4c6
-translationtype: Human Translation
-ms.sourcegitcommit: 6c666e2e23cb74818e37293410dafc9033057733
-ms.openlocfilehash: c49b8f4f5969faa017a858f8b66fe9bfc5515c36
-
+ms.openlocfilehash: ae1be5a6204c93b3c8600c4fe7ea6e958904a6b2
+ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+translationtype: HT
 ---
-
-# Modulo PSWorkflowUtility
+# <a name="psworkflowutility-module"></a>Modulo PSWorkflowUtility
 Questa sezione contiene gli argomenti della Guida per il modulo **PSWorkflowUtility**, che include i comandi che gestiscono la funzionalità del flusso di lavoro di Windows PowerShell. Il modulo **PSWorkflowUtility** viene installato con Windows PowerShell.
 
-## Argomenti della Guida
+## <a name="help-topics"></a>Argomenti della Guida
 [Cmdlet dell'utilità del flusso di lavoro](http://go.microsoft.com/fwlink/?LinkId=254141)
 
 [Modulo PSWorkflow](PSWorkflow-Module.md)
@@ -26,16 +24,10 @@ Questa sezione contiene gli argomenti della Guida per il modulo **PSWorkflowUtil
 
 [about_WorkflowCommonParameters](https://technet.microsoft.com/en-us/library/119f968e-618e-439c-b76c-cdd17e6df27c)
 
-## Vedere anche
+## <a name="see-also"></a>Vedere anche
 - [Informazioni sul flusso di lavoro di Windows PowerShell](https://technet.microsoft.com/en-us/library/jj134242.aspx)
 - [Come scrivere un flusso di lavoro di Windows PowerShell](https://technet.microsoft.com/en-us/library/jj574157.aspx)
 - [Windows PowerShell 5.0](../core-modules/Windows-PowerShell-5.0.md)
 - [Argomenti di informazioni sui componenti di sistema di Windows PowerShell](../core-modules/Windows-PowerShell-Core-About-Topics.md)
 - [Scrittura di script con Windows PowerShell](../../getting-started/fundamental/Scripting-with-Windows-PowerShell.md)
-
-
-
-
-<!--HONumber=Oct16_HO3-->
-
 
