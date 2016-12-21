@@ -1,14 +1,15 @@
 ---
-title: usare la console di windows powershell basata sul web
-ms.date: 2016-05-11
-keywords: powershell,cmdlet
 description: 
+manager: carmonm
 ms.topic: article
 author: jpjofre
-manager: dongill
 ms.prod: powershell
-ms.openlocfilehash: a62e258812960ce59f050e59d2ef3acc296663a2
-ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+keywords: powershell,cmdlet
+ms.date: 2016-12-12
+title: usare la console di windows powershell basata sul web
+ms.technology: powershell
+ms.openlocfilehash: ea530d346ec36000da331b287f51d8f732947629
+ms.sourcegitcommit: 8acbf9827ad8f4ef9753f826ecaff58495ca51b0
 translationtype: HT
 ---
 #  <a name="use-the-web-based-windows-powershell-console"></a>Usare la console di Windows PowerShell basata sul Web

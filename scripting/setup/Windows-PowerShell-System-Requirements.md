@@ -1,15 +1,16 @@
 ---
-title: Requisiti di sistema di Windows PowerShell
-ms.date: 2016-05-11
-keywords: powershell,cmdlet
 description: 
+manager: carmonm
 ms.topic: article
 author: jpjofre
-manager: dongill
 ms.prod: powershell
+keywords: powershell,cmdlet
+ms.date: 2016-12-12
+title: Requisiti di sistema di Windows PowerShell
+ms.technology: powershell
 ms.assetid: 6d1d3c75-3be4-4fc9-8805-ca9b2c454d42
-ms.openlocfilehash: 9510e13156b0dd0da8e5c4f94cfaf7b3152f3ad0
-ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+ms.openlocfilehash: a3cb7f421fdb3c3023a783434f257d92609e1127
+ms.sourcegitcommit: 8acbf9827ad8f4ef9753f826ecaff58495ca51b0
 translationtype: HT
 ---
 # <a name="windows-powershell-system-requirements"></a>Requisiti di sistema di Windows PowerShell
@@ -36,7 +37,7 @@ Windows PowerShell 4.0 può essere eseguito nelle versioni seguenti di Windows.
 
 -   Windows 8.1, installato per impostazione predefinita
 
--   Windows Server 2012 R2, installato per impostazione predefinita
+-   Windows Server 2012 R2, installato per impostazione predefinita
 
 -   Windows® 7 con Service Pack 1, installare [Windows Management Framework 4.0](http://go.microsoft.com/fwlink/?LinkId=293881) per eseguire Windows PowerShell 4.0
 
@@ -107,7 +108,7 @@ Tuttavia, a causa di una modifica nei criteri di attivazione di runtime in Micro
 
 Il motore di Windows PowerShell 2.0 richiede almeno Microsoft .NET Framework 2.0.50727. È possibile soddisfare questo requisito con Microsoft .NET Framework 3.5 Service Pack 1. Questo requisito non viene soddisfatto da Microsoft .NET Framework 4 e versioni successive di Microsoft .NET Framework.
 
-Per informazioni sull'aggiunta o l'installazione del motore di Windows PowerShell 2.0 e l'aggiunta o l'installazione delle versioni richieste di Microsoft .NET Framework, vedere [Installazione del motore di Windows PowerShell 2.0](Installing-the-Windows-PowerShell-2.0-Engine.md). Per informazioni sull'avvio del motore di Windows PowerShell 2.0, vedere [Avvio del motore di Windows PowerShell 2.0](Starting-the-Windows-PowerShell-2.0-Engine.md).
+Per informazioni sull'aggiunta o l'installazione del motore di Windows PowerShell 2.0 e l'aggiunta o l'installazione delle versioni richieste di Microsoft .NET Framework, vedere [Installazione del motore di Windows PowerShell 2.0](Installing-the-Windows-PowerShell-2.0-Engine.md). Per informazioni sull'avvio del motore di Windows PowerShell 2.0, vedere [Avvio del motore di Windows PowerShell 2.0](Starting-the-Windows-PowerShell-2.0-Engine.md).
 
 ## <a name="windows-preinstallation-environment"></a>Ambiente preinstallazione di Windows
 Windows PowerShell 2.0, Windows PowerShell 3.0 e Windows PowerShell 4.0 eseguiti in Ambiente preinstallazione di Windows (Windows PE). I cmdlet seguenti non sono tuttavia supportati:

@@ -1,14 +1,15 @@
 ---
-title: "regole di autorizzazione e funzionalità di sicurezza di accesso web windows powershell"
-ms.date: 2016-05-11
-keywords: powershell,cmdlet
 description: 
+manager: carmonm
 ms.topic: article
 author: jpjofre
-manager: dongill
 ms.prod: powershell
-ms.openlocfilehash: 984323731b2cd0c4f3c26fe100e4b680082881f5
-ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+keywords: powershell,cmdlet
+ms.date: 2016-12-12
+title: "regole di autorizzazione e funzionalità di sicurezza di accesso web windows powershell"
+ms.technology: powershell
+ms.openlocfilehash: f2ed4355536ed92048dde66617d36d36958fd75f
+ms.sourcegitcommit: 8acbf9827ad8f4ef9753f826ecaff58495ca51b0
 translationtype: HT
 ---
 # <a name="authorization-rules-and-security-features-of-windows-powershell-web-access"></a>Regole di autorizzazione e funzionalità di sicurezza di Accesso Web Windows PowerShell
@@ -17,7 +18,7 @@ Ultimo aggiornamento: 24 giugno 2013
 
 Si applica a: Windows Server 2012 R2, Windows Server 2012
 
-Accesso Web di Windows PowerShell® in Windows Server® 2012 R2 e Windows Server® 2012 prevede un modello di sicurezza restrittivo. È necessario che agli utenti venga concesso l'accesso in modo esplicito prima che possano accedere al gateway Accesso Web Windows PowerShell e usare la console di Windows PowerShell basata sul Web.
+Accesso Web di Windows PowerShell® in Windows Server® 2012 R2 e Windows Server® 2012 prevede un modello di sicurezza restrittivo. È necessario che agli utenti venga concesso l'accesso in modo esplicito prima che possano accedere al gateway Accesso Web Windows PowerShell e usare la console di Windows PowerShell basata sul Web.
 
 -   [Configurazione delle regole di autorizzazione e della sicurezza del sito](#BKMK_auth)
 

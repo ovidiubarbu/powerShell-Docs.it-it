@@ -1,14 +1,15 @@
 ---
-title: powershell core
-ms.date: 2016-05-11
-keywords: powershell,cmdlet
 description: 
+manager: carmonm
 ms.topic: article
 author: jpjofre
-manager: dongill
 ms.prod: powershell
-ms.openlocfilehash: ad92b1b58049c3d5890c81300af0894fb0ae78ec
-ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+keywords: powershell,cmdlet
+ms.date: 2016-12-12
+title: powershell core
+ms.technology: powershell
+ms.openlocfilehash: 42031324907ebc49d17faaa192e9631b355fa6b2
+ms.sourcegitcommit: 8acbf9827ad8f4ef9753f826ecaff58495ca51b0
 translationtype: HT
 ---
 #  <a name="common-powershell"></a>PowerShell comune
@@ -21,3 +22,4 @@ In questa sezione:
 -  [Flussi di lavoro di PowerShell](workflows-guide.md)
 -  [Accesso Web di PowerShell](web-access.md)
 -  [Glossario di PowerShell](../Windows-PowerShell-Glossary.md)
+

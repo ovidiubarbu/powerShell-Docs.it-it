@@ -1,66 +1,15 @@
 ---
-description: 
-manager: dongill
+manager: carmonm
 ms.topic: article
-author: jpjofre
+author: rpsqrd
+ms.author: ryanpu
 ms.prod: powershell
 keywords: powershell,cmdlet,jea
-ms.date: 2016-06-22
-title: "distribuzione e manutenzione con più computer"
+ms.date: 2016-12-05
+title: Just Enough Administration
 ms.technology: powershell
-ms.openlocfilehash: 8117d0d12c062b460cb7117b54c138c8db5a1d0c
-ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+redirect_url: https://msdn.microsoft.com/powershell/jea/register-jea
+ms.openlocfilehash: fafd0317bd7bc208b962b3fbfb9b5054a6e15618
+ms.sourcegitcommit: f75fc25411ce6a768596d3438e385c43c4f0bf71
 translationtype: HT
 ---
-# <a name="multi-machine-deployment-and-maintenance"></a>Distribuzione e manutenzione con più computer
-A questo punto, JEA è stato distribuito più volte ai sistemi locali.
-Poiché l'ambiente di produzione probabilmente è costituito da più di un computer, è importante esaminare i passaggi essenziali del processo di distribuzione che dovranno essere ripetuti in ogni computer.
-
-## <a name="high-level-steps"></a>Passaggi di alto livello:
-1.  Copiare i moduli (con capacità del ruolo) in ogni nodo.
-2.  Copiare i file di configurazione di sessione in ogni nodo.
-3.  Eseguire `Register-PSSessionConfiguration` con la configurazione di sessione.
-4.  Conservare una copia della configurazione di sessione e dei toolkit in un luogo sicuro.
-Quando si apportano modifiche, è opportuno usare un'unica "origine di dati reali".
-
-## <a name="example-script"></a>Script di esempio
-Di seguito è riportato un esempio di script per la distribuzione.
-Per usarlo nel proprio ambiente, è necessario usare i nomi o i percorsi dei moduli e delle condivisioni di file reali.
-```PowerShell
-# First, copy the session configuration and modules (containing role capability files) onto a file share you have access to.
-Copy-Item -Path 'C:\Demo\Demo.pssc' -Destination '\\FileShare\JEA\Demo.pssc'
-Copy-Item -Path 'C:\Program Files\WindowsPowerShell\Modules\SomeModule\' -Recurse -Destination '\\FileShare\JEA\SomeModule'
-
-# Next, author a setup script (C:\JEA\Deploy.ps1) to run on each individual node
-    # Contents of C:\JEA\Deploy.ps1
-    New-Item -ItemType Directory -Path C:\JEADeploy
-    Copy-Item -Path '\\FileShare\JEA\Demo.pssc' -Destination 'C:\JEADeploy\'
-    Copy-Item -Path '\\FileShare\JEA\SomeModule' -Recurse -Destination 'C:\Program Files\WindowsPowerShell\Modules' # Remember, Role Capability Files are found in modules
-    if (Get-PSSessionConfiguration -Name JEADemo -ErrorAction SilentlyContinue)
-    {
-        Unregister-PSSessionConfiguration -Name JEADemo -ErrorAction Stop
-    }
-
-    Register-PSSessionConfiguration -Name JEADemo -Path 'C:\JEADeploy\Demo.pssc'
-    Remove-Item -Path 'C:\JEADeploy' # Don't forget to clean up!
-
-# Now, invoke the script on all of the target machines.
-# Note: this requires PowerShell Remoting be enabled on each machine. Enabling PowerShell remoting is a requirement to use JEA as well.
-# You may need to provide the "-Credential" parameter if your current user account does not have admin permissions on these machines.
-Invoke-Command –ComputerName 'Node1', 'Node2', 'Node3', 'NodeN' -FilePath 'C:\JEA\Deploy.ps1'
-
-# Finally, delete the session configuration and role capability files from the file share.
-Remove-Item -Path '\\FileShare\JEA\Demo.pssc'
-Remove-Item -Path '\\FileShare\JEA\SomeModule' -Recurse
-```
-## <a name="modifying-capabilities"></a>Modifica delle capacità
-Quando si gestiscono molti computer, è importante che le modifiche vengano implementate in modo coerente.
-Se per JEA è già disponibile una risorsa DSC, l'ambiente è sincronizzato.
-In caso contrario, è consigliabile conservare una copia master delle configurazioni di sessione e distribuirla di nuovo ogni volta che si apporta una modifica.
-
-## <a name="removing-capabilities"></a>Rimozione delle capacità
-Per rimuovere la configurazione JEA dai sistemi, usare il comando seguente in ogni computer:
-```PowerShell
-Unregister-PSSessionConfiguration -Name JEADemo
-```
-
