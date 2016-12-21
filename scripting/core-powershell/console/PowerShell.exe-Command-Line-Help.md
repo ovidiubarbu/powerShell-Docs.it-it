@@ -1,15 +1,16 @@
 ---
-title: Guida alla riga di comando PowerShell.exe
-ms.date: 2016-05-11
-keywords: powershell,cmdlet
 description: 
+manager: carmonm
 ms.topic: article
 author: jpjofre
-manager: dongill
 ms.prod: powershell
+keywords: powershell,cmdlet
+ms.date: 2016-12-12
+title: Guida alla riga di comando PowerShell.exe
+ms.technology: powershell
 ms.assetid: 1ab7b93b-6785-42c6-a1c9-35ff686a958f
-ms.openlocfilehash: f2a682671bb39de943fac47488e2a1c651423b53
-ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+ms.openlocfilehash: 609682294c344129f96afd0241116bb19154d19e
+ms.sourcegitcommit: 8acbf9827ad8f4ef9753f826ecaff58495ca51b0
 translationtype: HT
 ---
 # <a name="powershellexe-command-line-help"></a>Guida della riga di comando PowerShell.exe
@@ -55,7 +56,7 @@ In genere, i parametri opzionali di uno script sono inclusi o omessi. Il comando
 
 In rari casi potrebbe essere necessario fornire un valore booleano per un parametro opzionale. Per fornire un valore booleano per un parametro opzionale nel valore del parametro **File**, racchiudere il nome e il valore del parametro tra parentesi graffe, come nell'esempio seguente: `-File .\Get-Script.ps1 {-All:$False}`
 
-### <a name="-inputformat-text-xml"></a>-InputFormat {Text | XML}
+### <a name="-inputformat-text--xml"></a>-InputFormat {Text | XML}
 Descrive il formato dei dati inviati a Windows PowerShell. I valori validi sono "Text" (stringhe di testo) o "XML" (formato CLIXML serializzato).
 
 ### <a name="-mta"></a>-Mta
@@ -73,7 +74,7 @@ Non presenta un prompt interattivo all'utente.
 ### <a name="-noprofile"></a>-NoProfile
 Non carica il profilo di Windows PowerShell.
 
-### <a name="-outputformat-text-xml"></a>-OutputFormat {Text | XML}
+### <a name="-outputformat-text--xml"></a>-OutputFormat {Text | XML}
 Determina la formattazione dell'output di Windows PowerShell. I valori validi sono "Text" (stringhe di testo) o "XML" (formato CLIXML serializzato).
 
 ### <a name="-psconsolefile-filepath"></a>-PSConsoleFile <FilePath>
