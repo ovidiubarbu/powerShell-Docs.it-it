@@ -1,14 +1,15 @@
 ---
-title: WinRMSecurity
-ms.date: 2016-05-11
-keywords: powershell,cmdlet
 description: 
+manager: carmonm
 ms.topic: article
-author: eslesar
-manager: dongill
+author: jpjofre
 ms.prod: powershell
-ms.openlocfilehash: d1a75f4167a2f0af60801f33b79fb07cf7fe9398
-ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+keywords: powershell,cmdlet
+ms.date: 2016-12-12
+title: WinRMSecurity
+ms.technology: powershell
+ms.openlocfilehash: 31b5ec784d394568c462a1e133b501f0a8884f2e
+ms.sourcegitcommit: 8acbf9827ad8f4ef9753f826ecaff58495ca51b0
 translationtype: HT
 ---
 # <a name="powershell-remoting-security-considerations"></a>Considerazioni sulla sicurezza della comunicazione remota di PowerShell
@@ -80,30 +81,11 @@ Dopo aver completato l'autenticazione iniziale, il [Protocollo di comunicazione 
 ## <a name="making-the-second-hop"></a>Esecuzione del secondo hop
 
 Per impostazione predefinita, la comunicazione remota di PowerShell usa Kerberos (se disponibile) o NTLM per l'autenticazione. Entrambi questi protocolli eseguono l'autenticazione al computer remoto senza inviare le credenziali.
-Si tratta del modo più sicuro per eseguire l'autenticazione. Tuttavia, dal momento che il computer remoto non dispone delle credenziali dell'utente, non può accedere ad altri computer e servizi per conto dell'utente. Questo problema è conosciuto come "Doppio Hop".
+Si tratta del modo più sicuro per eseguire l'autenticazione. Tuttavia, dal momento che il computer remoto non dispone delle credenziali dell'utente, non può accedere ad altri computer e servizi per conto dell'utente. Ciò è noto come "problema del secondo hop".
 
-Esistono diversi modi per evitare questo problema:
+Ci sono diversi modi per evitare questo problema. Per le descrizioni di questi metodi e dei vantaggi e svantaggi di ogni metodo, vedere [Creazione del secondo hop nella comunicazione remota di PowerShell](PS-remoting-second-hop.md).
 
-### <a name="trust-between-remote-computers"></a>Attendibilità tra computer remoti
 
-Se si considerano attendibili gli utenti connessi in remoto a *Server1* alle risorse di *Server2*, è possibile concedere esplicitamente l'accesso a *Server1* per queste risorse.
-
-### <a name="use-explicit-credentials-when-accessing-remote-resources"></a>Usare credenziali esplicite per l'accesso alle risorse remote
-
-È possibile passare le credenziali in modo esplicito a una risorsa remota tramite il parametro **Credential** di un cmdlet. Ad esempio:
-
-```powershell
-$myCredential = Get-Credential
-New-PSDrive -Name Tools \\Server2\Shared\Tools -Credential $myCredential 
-```
-
-### <a name="credssp"></a>CredSSP
-
-È possibile usare il protocollo [CredSSP (Credential Security Support Provider)](https://msdn.microsoft.com/en-us/library/windows/desktop/bb931352.aspx) per l'autenticazione, specificando "CredSSP" come valore del parametro `Authentication` di una chiamata al cmdlet [New-PSSession](https://technet.microsoft.com/en-us/library/hh849717.aspx). CredSSP passa al server le credenziali in testo normale, esponendo l'utente ad attacchi con furto di credenziali. Se il computer remoto viene compromesso, l'utente malintenzionato ha accesso alle credenziali dell'utente. Per impostazione predefinita, CredSSP è disabilitato sia nei computer client che nei computer server. È opportuno abilitare CredSSP solo negli ambienti più attendibili. Ad esempio, quando un amministratore di dominio si connette a un controller di dominio perché il controller di dominio è estremamente attendibile.
-
-Per altre informazioni sui problemi di sicurezza relativi all'uso di CredSSP per la comunicazione remota di PowerShell, vedere [Accidental Sabotage: Beware of CredSSP](http://www.powershellmagazine.com/2014/03/06/accidental-sabotage-beware-of-credssp) (Sabotaggio accidentale: attenzione a CredSSP).
-
-Per altre informazioni sugli attacchi con furto di credenziali, vedere [Mitigating Pass-the-Hash (PtH) Attacks and Other Credential Theft](https://www.microsoft.com/en-us/download/details.aspx?id=36036) (Mitigazione degli attacchi Pass-the-Hash (PtH) e di altre tecniche per il furto delle credenziali).
 
 
 

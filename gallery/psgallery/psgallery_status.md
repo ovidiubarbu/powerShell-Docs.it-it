@@ -9,12 +9,21 @@ ms.date: 2016-10-14
 contributor: manikb
 title: psgallery_status
 ms.technology: powershell
-ms.openlocfilehash: 2e9eed63e0cc6fbf66543ea528581c2728e999c7
-ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+ms.openlocfilehash: 40ebfa510abe647d80a85fa15f0b777d697ffdfb
+ms.sourcegitcommit: 26c3acb3dae9f7c3868a5f0d6144e9e1a0d02557
 translationtype: HT
 ---
 <a name="powershell-gallery-status"></a>Stato di PowerShell Gallery
 =========================
+
+
+## <a name="12152016---unable-to-send-emails-via-powershellgallery-website"></a>15/12/2016 - Impossibile inviare messaggi di posta elettronica tramite il sito Web PowerShell Gallery
+
+__Riepilogo del problema__: tra il 13/12/2016 e il 15/12/2016, tutti i messaggi inviati tramite Contact Owners, Manage Owners, Contact Support o Report Abuse non sono stati ricevuti dagli amministratori di PowerShell Gallery.  
+__Causa radice__: i tecnici hanno identificato la causa in un problema di autenticazione con il server SMTP.  
+__Risoluzione__: i tecnici sono stati in grado di risolvere il problema di autenticazione e ripristinare la connessione al server SMTP.  
+__Passaggi successivi__: se il messaggio di posta elettronica è stato inviato a cgadmin@microsoft.com tramite i collegamenti Contact Owners, Manage Owners, Contact Support o Report Abuse durante questo periodo e non è stata ricevuta alcuna risposta, si prega di rinviare il messaggio. Il team si scusa per l'inconveniente.  
+
 
 
 ## <a name="8102016---resolved-unable-to-send-emails-to-cgadminmicrosoftcom"></a>10/08/2016 - risolto: Impossibile inviare messaggi di posta elettronica a cgadmin@microsoft.com

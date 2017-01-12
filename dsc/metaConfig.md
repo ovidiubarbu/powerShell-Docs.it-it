@@ -7,8 +7,8 @@ ms.topic: article
 author: eslesar
 manager: dongill
 ms.prod: powershell
-ms.openlocfilehash: e978ee828fe3c91be52077442c5781b7a20e50be
-ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+ms.openlocfilehash: 13ff9acefa048e3b01c64150d67a2f14ec501284
+ms.sourcegitcommit: b88151841dd44c8ee9296d0855d8b322cbf16076
 translationtype: HT
 ---
 # <a name="configuring-the-local-configuration-manager"></a>Configurazione di Gestione configurazione locale
@@ -66,7 +66,7 @@ Oltre a specificare i server di pull e le configurazioni parziali, tutte le altr
 | ConfigurationMode| string | Specifica il modo in cui Gestione configurazione locale applica effettivamente la configurazione ai nodi di destinazione. I valori possibili sono __"ApplyOnly"__, __"ApplyandMonitior"(predefinito)__ e __"ApplyandAutoCorrect"__. <ul><li>__ApplyOnly__: DSC applica la configurazione e non esegue altre operazioni, tranne nei casi in cui viene effettuato il push di una nuova configurazione nel nodo di destinazione o viene effettuato il pull di una nuova configurazione da un server. Dopo l'applicazione iniziale di una nuova configurazione, DSC non verifica l'eventuale desincronizzazione da uno stato configurato in precedenza. Si noti che DSC tenterà di applicare la configurazione fino al suo esito positivo prima che __ApplyOnly__ abbia effetto. </li><li> __ApplyAndMonitor__: questo è il valore predefinito. Gestione configurazione locale applica tutte le nuove configurazioni. Se dopo l'applicazione iniziale di una nuova configurazione il nodo di destinazione non è sincronizzato con lo stato desiderato, DSC segnala la discrepanza nei log. Si noti che DSC tenterà di applicare la configurazione fino al suo esito positivo prima che __ApplyAndMonitor__ abbia effetto.</li><li>__ApplyAndAutoCorrect__: DSC applica le nuove configurazioni. Se dopo l'applicazione iniziale di una nuova configurazione il nodo di destinazione non è sincronizzato con lo stato desiderato, DSC segnala la discrepanza nei log e quindi riapplica la configurazione corrente.</li></ul>| 
 | ActionAfterReboot| string| Specifica che cosa avviene dopo un riavvio durante l'applicazione di una configurazione. I valori possibili sono __"ContinueConfiguration (predefinito)"__ e __"StopConfiguration"__. <ul><li> __ContinueConfiguration__: continua ad applicare la configurazione corrente dopo il riavvio del computer.</li><li>__StopConfiguration__: arresta la configurazione corrente dopo il riavvio del computer.</li></ul>| 
 | RefreshMode| string| Specifica il modo in cui Gestione configurazione locale ottiene le configurazioni. I valori possibili sono __"Disabled"__, __"Push (predefinito)"__ e __"Pull"__. <ul><li>__Disabled__: le configurazioni DSC sono disabilitate per questo nodo.</li><li> __Push__: le configurazioni vengono avviate chiamando il cmdlet [Start-DscConfiguration](https://technet.microsoft.com/en-us/library/dn521623.aspx). La configurazione viene applicata immediatamente al nodo. Questo è il valore predefinito.</li><li>__Pull__: il nodo è configurato per controllare regolarmente le configurazioni da un server di pull. Se questa proprietà è impostata su __Pull__, è necessario specificare un server di pull in un blocco __ConfigurationRepositoryWeb__ o __ConfigurationRepositoryShare__. Per altre informazioni sui server di pull, vedere [Configurazione di un server di pull DSC](pullServer.md).</li></ul>| 
-| CertificateID| string| GUID che specifica un certificato usato per proteggere le credenziali per l'accesso alla configurazione. Per altre informazioni, vedere [Protezione delle credenziali in Windows PowerShell DSC (Desired State Configuration)](http://blogs.msdn.com/b/powershell/archive/2014/01/31/want-to-secure-credentials-in-windows-powershell-desired-state-configuration.aspx).| 
+| CertificateID| string| Identificazione personale di un certificato usato per credenziali protette passate in una configurazione. Per altre informazioni, vedere [Protezione delle credenziali in Windows PowerShell DSC (Desired State Configuration)](http://blogs.msdn.com/b/powershell/archive/2014/01/31/want-to-secure-credentials-in-windows-powershell-desired-state-configuration.aspx).| 
 | ConfigurationID| string| GUID che identifica il file di configurazione da ottenere da un server di pull in modalità pull. Nodo con configurazioni pull nel server di pull se il nome del file MOF di configurazione è ConfigurationID.mof.<br> __Nota__: se si imposta questa proprietà, la registrazione del nodo in un server di pull con __RegistrationKey__ non funziona. Per altre informazioni, vedere [Configurazione di un client di pull con nomi di configurazione](pullClientConfigNames.md).| 
 | RefreshFrequencyMins| UInt32| Intervallo di tempo, in minuti, durante il quale Gestione configurazione locale controlla un server di pull per ottenere configurazioni aggiornate. Questo valore viene ignorato se Gestione configurazione locale non è configurato in modalità pull. Il valore predefinito è 30.<br> __Nota__: il valore di questa proprietà deve essere un multiplo del valore della proprietà __ConfigurationModeFrequencyMins__ oppure il valore della proprietà __ConfigurationModeFrequencyMins__ deve essere un multiplo di questa proprietà.| 
 | AllowModuleOverwrite| bool| __$TRUE__ se le nuove configurazioni scaricate dal server di configurazione possono sovrascrivere quelle meno recenti nel nodo di destinazione. In caso contrario, $FALSE.| 
@@ -94,7 +94,7 @@ Per definire un server di configurazione basato sul Web, creare un blocco **Conf
 |Proprietà|Tipo|Descrizione|
 |---|---|---| 
 |AllowUnsecureConnection|bool|Impostare questa proprietà su **$TRUE** per consentire le connessioni dal nodo al server senza autenticazione. Impostarla su **$FALSE** per richiedere l'autenticazione.|
-|CertificateID|string|GUID che rappresenta il certificato usato per l'autenticazione nel server.|
+|CertificateID|string|Identificazione personale usata per eseguire l'autenticazione al server.|
 |ConfigurationNames|String[]|Matrice di nomi di configurazioni di cui il nodo di destinazione deve effettuare il pull. Vengono usati solo se il nodo è registrato con il server di pull con **RegistrationKey**. Per altre informazioni, vedere [Configurazione di un client di pull con nomi di configurazione](pullClientConfigNames.md).|
 |RegistrationKey|string|GUID che registra il nodo con il server di pull. Per altre informazioni, vedere [Configurazione di un client di pull con nomi di configurazione](pullClientConfigNames.md).|
 |ServerURL|string|URL del server di configurazione.|
@@ -113,7 +113,7 @@ Per definire un server di risorse basato sul Web, creare un blocco **ResourceRep
 |Proprietà|Tipo|Descrizione|
 |---|---|---|
 |AllowUnsecureConnection|bool|Impostare questa proprietà su **$TRUE** per consentire le connessioni dal nodo al server senza autenticazione. Impostarla su **$FALSE** per richiedere l'autenticazione.|
-|CertificateID|string|GUID che rappresenta il certificato usato per l'autenticazione nel server.|
+|CertificateID|string|Identificazione personale usata per eseguire l'autenticazione al server.|
 |RegistrationKey|string|GUID che identifica il nodo nel server di pull. Per altre informazioni, vedere la pagina su come registrare un nodo con un server di pull DSC.|
 |ServerURL|string|URL del server di configurazione.|
  
@@ -121,7 +121,7 @@ Per definire un server di risorse basato su SMB, creare un blocco **ResourceRepo
 
 |Proprietà|Tipo|Descrizione|
 |---|---|---|
-|Credential|MSFT_Credential|Credenziale usata per l'autenticazione nella condivisione SMB.|
+|Credential|MSFT_Credential|Credenziale usata per l'autenticazione nella condivisione SMB. Per un esempio di passaggio di credenziali, vedere [Configurazione di un server di pull SMB DSC](pullServerSMB.md)|
 |SourcePath|string|Percorso della condivisione SMB.|
 
 ## <a name="report-server-blocks"></a>Blocchi per i server di report
@@ -131,7 +131,7 @@ Un server di report deve essere un servizio Web OData. Per definire un server di
 |Proprietà|Tipo|Descrizione|
 |---|---|---| 
 |AllowUnsecureConnection|bool|Impostare questa proprietà su **$TRUE** per consentire le connessioni dal nodo al server senza autenticazione. Impostarla su **$FALSE** per richiedere l'autenticazione.|
-|CertificateID|string|GUID che rappresenta il certificato usato per l'autenticazione nel server.|
+|CertificateID|string|Identificazione personale usata per eseguire l'autenticazione al server.|
 |RegistrationKey|string|GUID che identifica il nodo nel server di pull. Per altre informazioni, vedere la pagina su come registrare un nodo con un server di pull DSC.|
 |ServerURL|string|URL del server di configurazione.|
 

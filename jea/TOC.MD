@@ -1,15 +1,11 @@
-# [JEA (Just Enough Administration)](README.md)
-##  [Introduzione](introduction.md)
-##  [Prerequisiti](prerequisites.md)
-##  [Uso di JEA](using-jea.md)
-##  [Ricreare la demo](remake-the-demo-endpoint.md)
-##  [Capacità del ruolo](role-capabilities.md)
-##  [End-to-end - Active Directory](end-to-end---active-directory.md)
-##  [Distribuzione e manutenzione con più computer](multi-machine-deployment-and-maintenance.md)
-##  [Creazione di report per JEA](reporting-on-jea.md)
-##  Appendici
-###  [Concetti principali usati in questa guida](key-concepts-used-throughout-this-guide.md)  
-###  [Creazione di un controller di dominio](creating-a-domain-controller.md)  
-###  [Blacklist](on-blacklisting.md)  
-###  [Considerazioni per la limitazione dei comandi](considerations-when-limiting-commands.md)  
-###  [Problemi comuni delle capacità del ruolo](common-role-capability-pitfalls.md)
+
+# [Panoramica](overview.md)
+
+# Distribuire JEA
+## [Prerequisiti](prerequisites.md)
+## [Capacità del ruolo](role-capabilities.md)
+## [Configurazioni della sessione](session-configurations.md)
+## [Registrazione di JEA](register-jea.md)
+## [Uso di JEA](using-jea.md)
+## [Considerazioni sulla sicurezza](security-considerations.md)
+## [Controllare e creare report in JEA](audit-and-report.md)
