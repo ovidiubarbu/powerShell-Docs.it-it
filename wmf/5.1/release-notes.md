@@ -8,8 +8,8 @@ author: jkeithb
 manager: dongill
 ms.prod: powershell
 ms.technology: WMF
-ms.openlocfilehash: 15de6aca52624134998b2d08fcfff9e1bcc1af7b
-ms.sourcegitcommit: f75fc25411ce6a768596d3438e385c43c4f0bf71
+ms.openlocfilehash: 0a499bbfd2517c1f44e41f1096cda0c23b1c3df8
+ms.sourcegitcommit: f06ef671c0a646bdd277634da89cc11bc2a78a41
 translationtype: HT
 ---
 # <a name="windows-management-framework-wmf-51-release-notes"></a>Note sulla versione di Windows Management Framework (WMF) 5.1 #
@@ -25,7 +25,7 @@ WMF 5.1 include i componenti PowerShell, WMI, WinRM, Inventario software e Gesti
 
 **Note importanti:**
 
-- **WMF 5.1 richiede .NET Framework 4.5**. Se .NET 4.5 non è installato, WMF verrà installato correttamente, ma le funzioni principali non verranno eseguite. Le istruzioni sono disponibili nell'argomento [Installare e configurare WMF 5.1](https://msdn.microsoft.com/en-us/powershell/wmf/5.1/install-configure). 
+- **WMF 5.1 richiede .NET Framework 4.6**. Se .NET 4.6 non è installato, WMF verrà installato correttamente, ma le funzioni principali non verranno eseguite. Le istruzioni sono disponibili nell'argomento [Installare e configurare WMF 5.1](https://msdn.microsoft.com/en-us/powershell/wmf/5.1/install-configure). 
 - WMF 5.1 deve essere disinstallato prima dell'installazione WMF 5.1 RTM.
 - È possibile installare WMF 5.1 direttamente su WMF 5.0 o WMF 4.0.
 - __Non è necessario__ installare WMF 4.0 prima di installare WMF 5.1 in Windows 7 e Windows Server 2008 R2. Questo problema presente nella versione di WMF 5.1 (anteprima) è stato risolto.  

@@ -8,8 +8,8 @@ author: krishna
 manager: dongill
 ms.prod: powershell
 ms.technology: WMF
-ms.openlocfilehash: 8f1b550e92c3c280b84664e0b1f9695172370522
-ms.sourcegitcommit: f75fc25411ce6a768596d3438e385c43c4f0bf71
+ms.openlocfilehash: b341f57592feb183eb0e7228cdc08460e370369f
+ms.sourcegitcommit: f06ef671c0a646bdd277634da89cc11bc2a78a41
 translationtype: HT
 ---
 # <a name="known-issues-in-wmf-51"></a>Problemi noti in WMF 5.1 #
@@ -18,7 +18,7 @@ translationtype: HT
 
 ## <a name="starting-powershell-shortcut-as-administrator"></a>Avvio del collegamento di PowerShell come amministratore
 Dopo l'installazione di WMF, se si tenta di avviare PowerShell come amministratore dal collegamento, è possibile che venga visualizzato il messaggio "Errore non specificato".
-Riaprire il collegamento non usando l'accesso come amministratore e il collegamento funzionerà ora anche con l'accesso come amministratore.
+Riaprire il collegamento senza usare l'accesso come amministratore e il collegamento ora funziona anche come amministratore.
 
 ## <a name="pester"></a>Pester
 In questa versione vi sono due problemi che è necessario tenere presenti quando si usa Pester o Nano Server:

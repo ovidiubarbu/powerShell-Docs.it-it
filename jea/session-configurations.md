@@ -8,8 +8,8 @@ keywords: powershell,cmdlet,jea
 ms.date: 2016-12-05
 title: Configurazioni della sessione JEA
 ms.technology: powershell
-ms.openlocfilehash: 1d410e345ff31a5f8149810fb9c3b07e92b27e05
-ms.sourcegitcommit: b88151841dd44c8ee9296d0855d8b322cbf16076
+ms.openlocfilehash: 32602293afd3a94767682d32a053281ec021cc33
+ms.sourcegitcommit: f06ef671c0a646bdd277634da89cc11bc2a78a41
 translationtype: HT
 ---
 # <a name="jea-session-configurations"></a>Configurazioni della sessione JEA
@@ -49,7 +49,9 @@ Le sessioni configurate in questo modo funzioneranno in [modalità senza linguag
 - Get-Help
 - Measure-Object (measure)
 - Out-Default
-- Select-Object (select) Non sono disponibili provider di PowerShell e nemmeno programmi esterni (file eseguibili, script, e così via).
+- Select-Object (select)
+
+Non sono disponibili provider PowerShell e nemmeno programmi esterni (file eseguibili, script e così via).
 
 Molti altri campi possono essere configurati per la sessione JEA.
 Questi verranno illustrati nelle sezioni seguenti.
