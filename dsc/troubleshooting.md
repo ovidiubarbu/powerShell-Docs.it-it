@@ -7,8 +7,8 @@ ms.topic: article
 author: eslesar
 manager: dongill
 ms.prod: powershell
-ms.openlocfilehash: f933d5d821d71a497d20e8ff66ebe26af9661f50
-ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+ms.openlocfilehash: 6b506abf2508a8ba182af9c3362fcc408785d058
+ms.sourcegitcommit: a3966253a165d193a42b43b9430a4dc76988f82f
 translationtype: HT
 ---
 # <a name="troubleshooting-dsc"></a>Risoluzione dei problemi relativi a DSC
@@ -16,6 +16,10 @@ translationtype: HT
 >Si applica a: Windows PowerShell 4.0, Windows PowerShell 5.0
 
 Questo argomento illustra come risolvere eventuali problemi di DSC.
+
+## <a name="winrm-dependency"></a>Dipendenza da WinRM
+
+Desired State Configuration (DSC) in Windows PowerShell dipende da WinRM. WinRM non è abilitato per impostazione predefinita in Windows Server 2008 R2 e Windows 7. Per abilitare WinRM, eseguire ```Set-WSManQuickConfig``` in una sessione di Windows PowerShell con privilegi elevati.
 
 ## <a name="using-get-dscconfigurationstatus"></a>Uso di Get-DscConfigurationStatus
 
@@ -29,7 +33,7 @@ Il cmdlet [Get-DscConfigurationStatus](https://technet.microsoft.com/en-us/libra
 Il set di parametri seguente restituisce informazioni sullo stato per l'ultima esecuzione della configurazione:
 
 ```powershell
-Get-DscConfigurationStatus  [-CimSession <CimSession[]>] 
+Get-DscConfigurationStatus     [-CimSession <CimSession[]>] 
                             [-ThrottleLimit <int>] 
                             [-AsJob] 
                             [<CommonParameters>]
@@ -37,7 +41,7 @@ Get-DscConfigurationStatus  [-CimSession <CimSession[]>]
 Il set di parametri seguente restituisce informazioni sullo stato per tutte le esecuzioni della configurazione precedenti:
 
 ```powershell
-Get-DscConfigurationStatus  -All 
+Get-DscConfigurationStatus     -All 
                             [-CimSession <CimSession[]>] 
                             [-ThrottleLimit <int>] 
                             [-AsJob] 
@@ -51,30 +55,30 @@ PS C:\> $Status = Get-DscConfigurationStatus
 
 PS C:\> $Status
 
-Status      StartDate               Type            Mode    RebootRequested     NumberOfResources
-------      ---------               ----            ----    ---------------     -----------------
-Failure     11/24/2015  3:44:56     Consistency     Push    True                36
+Status         StartDate                Type            Mode    RebootRequested        NumberOfResources
+------        ---------                ----            ----    ---------------        -----------------
+Failure        11/24/2015  3:44:56     Consistency        Push    True                36
 
 PS C:\> $Status.ResourcesNotInDesiredState
 
-ConfigurationName       :   MyService
-DependsOn               :   
-ModuleName              :   PSDesiredStateConfiguration
-ModuleVersion           :   1.1
-PsDscRunAsCredential    :   
-ResourceID              :   [File]ServiceDll
-SourceInfo              :   c:\git\CustomerService\Configs\MyCustomService.ps1::5::34::File
-DurationInSeconds       :   0.19
-Error                   :   SourcePath must be accessible for current configuration. The related file/directory is:
+ConfigurationName        :    MyService
+DependsOn                :    
+ModuleName                :    PSDesiredStateConfiguration
+ModuleVersion            :    1.1
+PsDscRunAsCredential    :    
+ResourceID                 :    [File]ServiceDll
+SourceInfo                :    c:\git\CustomerService\Configs\MyCustomService.ps1::5::34::File
+DurationInSeconds        :    0.19
+Error                    :    SourcePath must be accessible for current configuration. The related file/directory is:
                             \\Server93\Shared\contosoApp.dll. The related ResourceID is [File]ServiceDll
-FinalState              :   
-InDesiredState          :   False
-InitialState            :   
-InstanceName            :   ServiceDll
-RebootRequested         :   False
-ReosurceName            :   File
-StartDate               :   11/24/2015  3:44:56
-PSComputerName          :
+FinalState                :    
+InDesiredState             :    False
+InitialState             :    
+InstanceName            :    ServiceDll
+RebootRequested            :    False
+ReosurceName            :    File
+StartDate                :    11/24/2015  3:44:56
+PSComputerName            :
 ```
 
 ## <a name="my-script-wont-run-using-dsc-logs-to-diagnose-script-errors"></a>Lo script non viene eseguito: Uso di registri DSC per diagnosticare gli errori di script
