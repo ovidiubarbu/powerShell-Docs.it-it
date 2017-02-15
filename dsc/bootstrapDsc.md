@@ -7,8 +7,8 @@ ms.topic: article
 author: eslesar
 manager: dongill
 ms.prod: powershell
-ms.openlocfilehash: bf5b3da641facfdfa395aacf0eadcf773b8c4b02
-ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+ms.openlocfilehash: 38751d62a56dc90ff69fe3ab6e92829fb33edb2b
+ms.sourcegitcommit: a81ffb39f370b95ae802cd054dc4480c9e68cf77
 translationtype: HT
 ---
 >Si applica a: Windows PowerShell 5.0
@@ -32,9 +32,9 @@ Per impostazione predefinita, il valore di questa chiave è 2, che consente l'es
 
 Se si preferisce che DSC non venga eseguito all'avvio, impostare il valore della [chiave del Registro di sistema DSCAutomationHostEnabled](DSCAutomationHostEnabled.md) su 0.
 
-- [Inserire un documento MOF in un disco rigido virtuale](##Inject-a-configuration-MOF-document-into-a-VHD)
-- [Inserire una metaconfigurazione DSC in un disco rigido virtuale](##Inject-a-DSC-metaconfiguration-into-a-VHD)
-- [Disabilitare DSC in fase di avvio](##Disable-DSC-at-boot-time)
+- Inserire un documento MOF in un disco rigido virtuale
+- Inserire una metaconfigurazione DSC in un disco rigido virtuale
+- Disabilitare DSC in fase di avvio
 
 >**Nota:** è possibile inserire `Pending.mof` e `MetaConfig.mof` in un computer contemporaneamente.
 Se entrambi i file sono presenti, le impostazioni specificate in `MetaConfig.mof` hanno la precedenza.
