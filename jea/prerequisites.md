@@ -8,8 +8,8 @@ keywords: powershell,cmdlet,jea
 ms.date: 2016-12-05
 title: Prerequisiti di JEA
 ms.technology: powershell
-ms.openlocfilehash: c709b3692705db327245e4e1b3fde800ac7d57a9
-ms.sourcegitcommit: f75fc25411ce6a768596d3438e385c43c4f0bf71
+ms.openlocfilehash: d463e6cdfeb78a32eab9055b035747928d38e783
+ms.sourcegitcommit: cfe32f213819ae76de05da564c3e2c4b7ecfda2f
 translationtype: HT
 ---
 # <a name="prerequisites"></a>Prerequisiti
@@ -21,14 +21,19 @@ Questo argomento illustra i prerequisiti che devono essere soddisfatti per poter
 
 ## <a name="install-jea"></a>Installare JEA
 JEA è disponibile in Windows PowerShell 5.0 e versione successiva, ma per una funzionalità completa, è consigliabile installare la versione più recente di PowerShell disponibile per il sistema.
-La tabella seguente illustra la disponibilità di JEA per ogni sistema operativo supportato.
+La tabella seguente illustra la disponibilità di JEA in Windows Server:
 
-Sistema operativo          | Disponibilità di JEA
---------------------------|------------------------------------------------------
+Sistema operativo server   | Disponibilità di JEA
+--------------------------|--------------------------------
 Windows Server 2016       | Preinstallato
 Windows Server 2012 R2    | Funzionalità completa con WMF 5.1
 Windows Server 2012       | Funzionalità completa con WMF 5.1
 Windows Server 2008 R2    | Funzionalità completa con WMF 5.1
+
+È anche possibile usare JEA nel computer di casa o di lavoro:
+
+Sistema operativo client   | Disponibilità di JEA
+--------------------------|-----------------------------------------------------
 Windows 10 1607           | Preinstallato
 Windows 10 1603, 1511     | Preinstallato, con funzionalità ridotta<sup>1</sup>
 Windows 10 1507           | Non disponibile

@@ -8,11 +8,11 @@ author: keithb
 manager: dongill
 ms.prod: powershell
 ms.technology: WMF
-ms.openlocfilehash: 581d80d476e918a78775291521abfd254703a7b7
-ms.sourcegitcommit: f75fc25411ce6a768596d3438e385c43c4f0bf71
+ms.openlocfilehash: 1bf1bf914982e0d52e592e6ef421d36b1915b338
+ms.sourcegitcommit: 267688f61dcc76fd685c1c34a6c7bfd9be582046
 translationtype: HT
 ---
-#<a name="improvements-in-desired-state-configuration-dsc-in-wmf-51"></a>Miglioramenti di Desired State Configuration (DSC) in WMF 5.1
+# <a name="improvements-in-desired-state-configuration-dsc-in-wmf-51"></a>Miglioramenti di Desired State Configuration (DSC) in WMF 5.1
 
 ## <a name="dsc-class-resource-improvements"></a>Miglioramenti delle risorse di classe DSC
 
@@ -25,7 +25,6 @@ In WMF 5.1 sono stati corretti i problemi noti seguenti:
 
 
 ## <a name="dsc-resource-debugging-improvements"></a>Miglioramenti del debug delle risorse DSC
-
 In WMF 5.0 il debugger di PowerShell non si arrestava in corrispondenza del metodo della risorsa basata su classe (Get/Set/Test).
 In WMF 5.1 il debugger si arresta in corrispondenza del metodo della risorsa basata su classe nello stesso modo in cui si arresta per i metodi delle risorse basate su MOF.
 
@@ -37,16 +36,26 @@ In precedenza, il client di pull DSC supportava solo SSL3.0 e TLS1.0 su connessi
 Nelle versioni precedenti di WMF le richieste di registrazione o reporting simultanee al server di pull DSC, con uso del database ESENT, facevano sì che la gestione della configurazione locale non riuscisse a eseguire la registrazione o il reporting. In questi casi i registri eventi del server di pull visualizzavano il messaggio di errore "Nome istanza già in uso".
 Ciò era dovuto a un modello errato che veniva usato per accedere al database ESENT in uno scenario multithread. In WMF 5.1 questo problema è stato risolto. Le registrazioni o il reporting simultanei, che comprendono l'uso del database ESENT, funzionano correttamente in WMF 5.1. Tutto questo si applica solo al database ESENT, non al database OLE DB. 
 
-##<a name="pull-partial-configuration-naming-convention"></a>Convenzione di denominazione della configurazione parziale pull
+## <a name="enable-circular-log-on-esent-database-instance"></a>Abilitare il log circolare nell'istanza di database ESENT
+Nella versione precedente di DSC-PullServer, i file di log del database ESENT riempiono lo spazio su disco del server di pull perché l'istanza del database viene creata senza registrazione circolare. In questa versione, il cliente avrà la possibilità di controllare il comportamento di registrazione circolare dell'istanza usando il file web.config del server di pull. Per impostazione predefinita, CircularLogging verrà impostato su TRUE.
+```
+<appSettings>
+     <add key="dbprovider" value="ESENT" />
+    <add key="dbconnectionstr" value="C:\Program Files\WindowsPowerShell\DscService\Devices.edb" />
+    <add key="CheckpointDepthMaxKB" value="512" />
+    <add key="UseCircularESENTLogs" value="TRUE" />
+  </appSettings>
+```
+## <a name="pull-partial-configuration-naming-convention"></a>Convenzione di denominazione della configurazione parziale pull
 Nella versione precedente la convenzione di denominazione di una configurazione parziale prevedeva che il nome del file MOF del servizio o del server pull corrispondesse al nome della configurazione parziale specificato nelle impostazioni di Gestione configurazione locale che doveva a sua volta corrispondere al nome di configurazione incorporato nel file MOF. 
 
 Vedere gli snapshot seguenti:
 
-•   Impostazioni della configurazione locale che definisce una configurazione parziale che un nodo è autorizzato a ricevere.
+•    Impostazioni della configurazione locale che definisce una configurazione parziale che un nodo è autorizzato a ricevere.
 
 ![Metaconfigurazione di esempio](../images/MetaConfigPartialOne.png)
 
-•   Definizione di configurazione parziale di esempio 
+•    Definizione di configurazione parziale di esempio 
 
 ```PowerShell
 Configuration PartialOne
@@ -63,11 +72,11 @@ Configuration PartialOne
 PartialOne
 ```
 
-•   'ConfigurationName' incorporato nel file MOF generato.
+•    'ConfigurationName' incorporato nel file MOF generato.
 
 ![Esempio di file MOF generato](../images/PartialGeneratedMof.png)
 
-•   FileName nel repository di configurazione pull 
+•    FileName nel repository di configurazione pull 
 
 ![FileName nel repository di configurazione](../images/PartialInConfigRepository.png)
 

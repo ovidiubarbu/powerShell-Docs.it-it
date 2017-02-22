@@ -7,8 +7,8 @@ ms.topic: article
 author: eslesar
 manager: dongill
 ms.prod: powershell
-ms.openlocfilehash: 69248223a67c8dbbea421f80b57cb245489fbc4f
-ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+ms.openlocfilehash: 7059d0a0ac3ad81353d1e758bc24fc236656c199
+ms.sourcegitcommit: 89e7ae30faff5f96641fc72764bdc76e0e257bc2
 translationtype: HT
 ---
 # <a name="enacting-configurations"></a>Applicazione delle configurazioni
@@ -19,7 +19,7 @@ Ci sono due modi per applicare le configurazioni di PowerShell DSC (Desired Stat
 
 ## <a name="push-mode"></a>Modalità push
 
-![Modalità push](images/Push.png "How push mode works")
+![Modalità push](images/Push.png "Come funziona la modalità push")
 
 La modalità push fa riferimento a un utente che applica attivamente una configurazione in un nodo di destinazione chiamando il cmdlet [Start-DscConfiguration](https://technet.microsoft.com/en-us/library/dn521623.aspx).
 
@@ -30,11 +30,13 @@ Dopo la creazione e la compilazione di una configurazione, è possibile applicar
 
 ## <a name="pull-mode"></a>Modalità pull
 
-![Modalità pull](images/Pull.png "How pull mode works")
+![Modalità pull](images/Pull.png "Come funziona la modalità pull")
 
-In modalità pull, i client di pull sono configurati per ottenere le relative configurazioni DSC da un server di pull remoto. Analogamente, il server di pull è stato configurato per ospitare il servizio DSC e ne è stato effettuato il provisioning con le configurazioni e le risorse necessarie per i client di pull. Ogni client di pull ha un'attività pianificata che esegue un controllo di conformità periodico sulla configurazione del nodo. Quando l'evento viene generato per la prima volta, Gestione configurazione locale nel client di pull convalida la configurazione. Se il client di pull è configurato come desiderato, non accade nulla. In caso contrario, Gestione configurazione locale invia una richiesta al server di pull per ottenere una determinata configurazione. Se tale configurazione è disponibile nel server di pull e supera i controlli di convalida iniziali, viene trasmessa al client di pull, dove viene quindi eseguita da Gestione configurazione locale.
+In modalità pull, i client di pull sono configurati per ottenere le relative configurazioni DSC da un server di pull remoto. Analogamente, il server di pull è stato configurato per ospitare il servizio DSC e ne è stato effettuato il provisioning con le configurazioni e le risorse necessarie per i client di pull. Ogni client di pull ha un'attività pianificata che esegue un controllo di conformità periodico sulla configurazione del nodo. Quando l'evento viene generato per la prima volta, Gestione configurazione locale nel client di pull effettua una richiesta al server di pull per ottenere la configurazione specificata in Gestione configurazione locale. Se tale configurazione è disponibile nel server di pull e supera i controlli di convalida iniziali, viene trasmessa al client di pull, dove viene quindi eseguita da Gestione configurazione locale.
 
-Per altre informazioni sulla distribuzione di un server di pull DSC in locale, vedere la guida alla pianificazione e configurazione di server di pull DSC.
+Gestione configurazione locale verifica che il client sia conforme alla configurazione a intervalli regolari, come specificato dalla proprietà **ConfigurationModeFrequencyMins** di Gestione configurazione locale. Gestione configurazione locale verifica se sono disponibili configurazioni aggiornate nel server di pull a intervalli regolari, come specificato dalla proprietà **RefreshModeFrequency** di Gestione configurazione locale. Per informazioni sulla configurazione di Gestione configurazione locale, vedere [Configurazione di Gestione configurazione locale](metaConfig.md).
+
+Per altre informazioni sulla configurazione di un server di pull DSC, vedere [Configurazione di un server di pull Web DSC](pullServer.md).
 
 Se si preferisce usare un servizio online per ospitare la funzionalità del server di pull, vedere il servizio [Automation DSC per Azure](https://azure.microsoft.com/en-us/documentation/articles/automation-dsc-overview/).
 

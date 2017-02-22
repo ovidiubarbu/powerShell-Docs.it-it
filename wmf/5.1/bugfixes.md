@@ -8,8 +8,8 @@ author: keithb
 manager: dongill
 ms.prod: powershell
 ms.technology: WMF
-ms.openlocfilehash: 09316fef0594697a60a1bd4acabf39588f75edc2
-ms.sourcegitcommit: f75fc25411ce6a768596d3438e385c43c4f0bf71
+ms.openlocfilehash: 8957f4709c95ccb5b72c4fa9b42c9fe9ef93dffe
+ms.sourcegitcommit: 58e5e77050ba32717ce3e31e314f0f25cb7b2979
 translationtype: HT
 ---
 # <a name="bug-fixes-in-wmf-51"></a>Correzioni di bug in WMF 5.1#
@@ -98,3 +98,16 @@ Prima di WMF 5.1, se erano installate più versioni di un modulo e tutte condivi
 In WMF 5.1 il problema è stato risolto restituendo la Guida per la versione più recente dell'argomento.
 
 `Get-Help` non fornisce un modo per specificare la versione per la quale si vuole visualizzare la Guida. Per risolvere il problema, passare alla directory dei moduli e visualizzare la Guida direttamente con uno strumento come il proprio editor preferito. 
+
+### <a name="powershellexe-reading-from-stdin-stopped-working"></a>La lettura di PowerShell.exe da STDIN non funziona più
+
+I clienti usano `powershell -command -` da app native per eseguire PowerShell passandolo nello script tramite STDIN. Purtroppo questa funzionalità non è più disponibile a causa di altri modifiche nell'host della console.
+
+https://windowsserver.uservoice.com/forums/301869-powershell/suggestions/15854689-powershell-exe-command-is-broken-on-windows-10
+
+### <a name="powershellexe-creates-spike-in-cpu-usage-on-startup"></a>PowerShell.exe crea picchi di utilizzo della CPU all'avvio
+
+PowerShell usa una query WMI per controllare se è stato avviato tramite Criteri di gruppo per evitare di causare ritardi nella fase di accesso.
+Ne risulta che la query WMI inserisce tzres.mui.dll in ogni processo nel sistema, perché la classe WMI Win32_Process tenta di recuperare informazioni sul fuso orario locale.
+Ciò comporta un notevole picco di utilizzo della CPU in wmiprvse (host del provider WMI).
+La soluzione consiste nell'usare chiamate all'API Win32 per ottenere le stesse informazioni invece di usare WMI.

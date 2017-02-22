@@ -7,8 +7,8 @@ ms.topic: article
 author: eslesar
 manager: dongill
 ms.prod: powershell
-ms.openlocfilehash: f419394b7699544567bf17945a55773ed3024f24
-ms.sourcegitcommit: b88151841dd44c8ee9296d0855d8b322cbf16076
+ms.openlocfilehash: 802f9b0cde5d56ed3da327593753aedcf89e00f6
+ms.sourcegitcommit: a81ffb39f370b95ae802cd054dc4480c9e68cf77
 translationtype: HT
 ---
 # <a name="setting-up-a-dsc-web-pull-server"></a>Configurazione di un server di pull Web DSC
@@ -32,7 +32,7 @@ Il metodo più semplice per configurare un server di pull Web consiste nell'usar
 
 1. Chiamare il cmdlet [Install-Module](https://technet.microsoft.com/en-us/library/dn807162.aspx) per installare il modulo **xPSDesiredStateConfiguration**. **Nota**: il cmdlet **Install-Module** è incluso nel modulo **PowerShellGet**, disponibile in PowerShell 5.0. È possibile scaricare il modulo **PowerShellGet** per PowerShell 3.0 e 4.0 dalla pagina dell'[anteprima dei moduli PackageManagement di PowerShell](https://www.microsoft.com/en-us/download/details.aspx?id=49186). 
 1. Ottenere un certificato SSL per il server di pull DSC da un'Autorità di certificazione disponibile nell'elenco locale, all'interno dell'organizzazione o pubblica. Il certificato ricevuto dall'autorità è in genere in formato PFX. Installare il certificato nel nodo che diventerà il server di pull DSC nel percorso predefinito, ossia CERT: \LocalMachine\My. Prendere nota dell'identificazione personale del certificato.
-1. Selezionare un GUID da usare come chiave di registrazione. Per generarne uno tramite PowerShell, immettere quanto segue al prompt di PowerShell e premere Invio: ``` [guid]::newGuid()``` oppure ```New-Guid```. Questa chiave verrà usata dai nodi client come chiave condivisa per l'autenticazione durante la registrazione. Per altre informazioni, vedere la sezione [Chiave di registrazione](#RegKey) di seguito.
+1. Selezionare un GUID da usare come chiave di registrazione. Per generarne uno tramite PowerShell, immettere quanto segue al prompt di PowerShell e premere Invio: ``` [guid]::newGuid()``` oppure ```New-Guid```. Questa chiave verrà usata dai nodi client come chiave condivisa per l'autenticazione durante la registrazione. Per altre informazioni, vedere la sezione Chiave di registrazione di seguito.
 1. In PowerShell ISE avviare (F5) lo script di configurazione seguente (incluso nella cartella Example del modulo **xPSDesiredStateConfiguration** come Sample_xDscWebService.ps1). Questo script configura il server di pull.
   
 ```powershell
