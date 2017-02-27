@@ -7,8 +7,8 @@ ms.topic: article
 author: eslesar
 manager: dongill
 ms.prod: powershell
-ms.openlocfilehash: f8f8ef06cd79af294bad7bb8cf3d6676ab9a69bc
-ms.sourcegitcommit: f06ef671c0a646bdd277634da89cc11bc2a78a41
+ms.openlocfilehash: 27d9a259d119099c45d7ecd3a15cd26654071d42
+ms.sourcegitcommit: 26f4e52f3dd008b51b7eae7b634f0216eec6200e
 translationtype: HT
 ---
 # <a name="separating-configuration-and-environment-data"></a>Separazione dei dati di configurazione e dell'ambiente
@@ -46,7 +46,7 @@ $MyData =
         @{
             NodeName    = 'VM-1'
             Role = 'WebServer'
-        }
+        },
 
         @{
             NodeName    = 'VM-2'
@@ -183,7 +183,7 @@ Ad esempio, è possibile creare un file denominato `MyData.psd1` con il seguente
         @{
             NodeName    = 'VM-1'
             FeatureName = 'Web-Server'
-        }
+        },
 
         @{
             NodeName    = 'VM-2'
@@ -211,7 +211,7 @@ DSC offre tre variabili speciali che possono essere usate in uno script di confi
 
 Di seguito è riportato un esempio completo che usa una singola configurazione per impostare sia l'ambiente di sviluppo che quello di produzione di un sito Web. Nell'ambiente di sviluppo IIS e SQL Server vengono installati in un singolo nodo. Nell'ambiente di produzione IIS e SQL Server vengono installati in nodi separati. Nell'esempio verrà usato un file di dati di configurazione con estensione psd1 per specificare i dati per i due diversi ambienti.
 
-### <a name="configuration-data-file"></a>File di dati di configurazione
+ ### <a name="configuration-data-file"></a>File di dati di configurazione
 
 I dati degli ambienti di sviluppo e produzione verranno definiti in un file denominato `DevProdEnvData.psd1` come indicato di seguito:
 
@@ -237,7 +237,7 @@ I dati degli ambienti di sviluppo e produzione verranno definiti in un file deno
             Role            = "Web"
             SiteContents    = "C:\Website\Prod\SiteContents\"
             SitePath        = "\\Prod-IIS\Website\"
-        }
+        },
 
         @{
             NodeName         = "Dev"
@@ -250,23 +250,22 @@ I dati degli ambienti di sviluppo e produzione verranno definiti in un file deno
     )
 
 }
-
-    )
-
-}
 ```
 
-### <a name="configuration-file"></a>File di configurazione
+### <a name="configuration-script-file"></a>File di script di configurazione
 
-Ora, nella configurazione i nodi definiti in `DevProdEnvData.psd1` vengono filtrati in base al ruolo (`MSSQL`, `Dev` o entrambi) e configurati di conseguenza. L'ambiente di sviluppo ha sia SQL Server sia IIS in un nodo, mentre per l'ambiente di produzione si trovano in nodi diversi. Anche il contenuto del sito è diverso, come specificato dalle proprietà `SiteContents`.
+Nella configurazione, definita in un file PS1, i nodi definiti in `DevProdEnvData.psd1` vengono ora filtrati in base al ruolo (`MSSQL`, `Dev` o entrambi) e configurati di conseguenza. L'ambiente di sviluppo ha sia SQL Server sia IIS in un nodo, mentre per l'ambiente di produzione si trovano in nodi diversi. Anche il contenuto del sito è diverso, come specificato dalle proprietà `SiteContents`.
 
 Alla fine dello script di configurazione viene chiamata la configurazione (compilata in un documento MOF), passando `DevProdEnvData.psd1` come parametro `$ConfigurationData`.
+
+>**Nota:** per questa configurazione è necessario installare i moduli `xSqlPs` e `xWebAdministration` nel nodo di destinazione.
 
 ```powershell
 Configuration MyWebApp
 {
     Import-DscResource -Module PSDesiredStateConfiguration
     Import-DscResource -Module xSqlPs
+    Import-DscResource -Module xWebAdministration
 
     Node $AllNodes.Where{$_.Role -contains "MSSQL"}.Nodename
    {
@@ -289,7 +288,7 @@ Configuration MyWebApp
         }
    }
 
-   Node $AllNodes.Where($_.Role -contains "Web")
+   Node $AllNodes.Where($_.Role -contains "Web").NodeName
    {
         # Install the IIS role
         WindowsFeature IIS
