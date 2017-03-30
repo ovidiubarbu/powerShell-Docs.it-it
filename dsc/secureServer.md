@@ -5,10 +5,10 @@ keywords: powershell,DSC
 description: 
 ms.topic: article
 author: eslesar
-manager: dongill
+manager: carmonm
 ms.prod: powershell
-ms.openlocfilehash: b84b70edeafca3112356224c9ae14c6497170ac5
-ms.sourcegitcommit: f06ef671c0a646bdd277634da89cc11bc2a78a41
+ms.openlocfilehash: af86f1f93a1035ec52a8b029acdd826e8463e2c2
+ms.sourcegitcommit: ba8ed836799ef465e507fa1b8d341ba38459d863
 translationtype: HT
 ---
 # <a name="pull-server-best-practices"></a>Procedure consigliate per i server di pull
@@ -117,13 +117,12 @@ Non sono previsti requisiti di account di servizio per distribuire un'istanza de
 
 Un CNAME DNS consente di creare un alias come riferimento al record dell'host (A). Lo scopo del record del nome aggiuntivo è incrementare la flessibilità, se dovesse essere necessaria una modifica in futuro. Un CNAME consente di isolare la configurazione del client in modo che le modifiche all'ambiente di server, ad esempio la sostituzione di un server di pull o l'aggiunta di altri server di pull, non richiedano una modifica corrispondente alla configurazione del client.
 
-Quando si sceglie un nome per il record DNS, tenere presente l'architettura della soluzione. Se si usa il bilanciamento del carico, il certificato usato per proteggere il traffico su HTTPS deve condividere lo stesso nome del record DNS. Analogamente, se si usa una condivisione file a disponibilità elevata, verrà usato il nome virtuale del cluster.
+Quando si sceglie un nome per il record DNS, tenere presente l'architettura della soluzione. Se si usa il bilanciamento del carico, il certificato usato per proteggere il traffico su HTTPS deve condividere lo stesso nome del record DNS. 
 
 Scenario |Procedura consigliata
 :---|:---
 Ambiente di test |Riprodurre l'ambiente di produzione pianificato, se possibile. Un nome host del server è adatto per configurazioni semplici. Se DNS non è disponibile, può essere usato un indirizzo IP anziché un nome host.|
 Distribuzione di un nodo singolo |Creare un record CNAME DNS che punta al nome host del server.|
-Distribuzione a disponibilità elevata |Se i client si connettono tramite una soluzione di bilanciamento del carico, creare un nome host per l'indirizzo IP virtuale e un record CNAME con riferimento a tale nome host. Se viene usato un round robin DNS per distribuire le richieste client attraverso i server di pull, è necessario configurare i record dei nomi per includere i nomi host di tutte le istanze di server di pull distribuite.|
 
 Per altre informazioni, vedere [Configuring DNS Round Robin in Windows Server](https://technet.microsoft.com/en-us/library/cc787484(v=ws.10).aspx) (Configurazione del round robin DNS in Windows Server).
 
@@ -154,13 +153,6 @@ Qual è il periodo di tempo predefinito prima della scadenza?|
 
 Un server di pull può essere distribuito tramite un servizio Web ospitato in IIS o tramite una condivisione file SMB. Nella maggior parte dei casi, l'uso del servizio Web offre maggiore flessibilità. Non è insolito che il traffico HTTPS oltrepassi i limiti di rete, mentre il traffico SMB è spesso filtrato o bloccato tra le reti. Il servizio Web offre anche l'opzione di includere un server di conformità o Gestione rapporti Web (entrambi gli argomenti verranno trattati in una versione futura di questo documento) che offrono ai client un meccanismo di restituire lo stato a un server per una visibilità centralizzata. SMB offre un'opzione per alcuni ambienti in cui i criteri indicano che un server Web non debba essere usato e per altri ambienti che rendono il ruolo del server Web indesiderato. In entrambi i casi, è necessario valutare i requisiti per la firma e la crittografia del traffico. HTTPS, firma SMB e criteri IPSEC sono tutte opzioni da considerare.
 
-#### <a name="designing-for-high-availability"></a>Progettazione per la disponibilità elevata  
-Il ruolo del server di pull può essere distribuito in un'architettura a disponibilità elevata. Il ruolo del servizio Web può essere con carico bilanciato e i file e le cartelle che includono moduli e configurazioni DSC possono trovarsi in un'archiviazione a disponibilità elevata.
-
-Tenere presente che, dopo aver consegnato le configurazioni e i moduli a un nodo di destinazione, tutti i dati necessari per eseguire test e impostare le configurazioni vengono archiviati localmente in ogni nodo. Solo le modifiche vengono consegnate dal server di pull. Un'interruzione del servizio per un server di pull non è un'interruzione reale, se le distribuzioni non sono attive.  In genere, la disponibilità elevata è garantita solo per gli ambienti di più grandi dimensioni.
-
-La configurazione di un ambiente del server di pull a disponibilità elevata richiede decisioni su come distribuire le richieste client tra più nodi di server e su come condividere i file server necessari tra i nodi.
-
 #### <a name="load-balancing"></a>Bilanciamento del carico  
 I client che interagiscono con il servizio Web eseguono una richiesta di informazioni restituita in una risposta singola. Nessuna richiesta sequenziale è obbligatoria, pertanto non è necessario assicurarsi che per la piattaforma del bilanciamento del carico siano sempre mantenute le sessioni in un server singolo.
 
@@ -173,17 +165,6 @@ Quali informazioni sono necessarie per la richiesta?|
 Sarà necessario richiedere un indirizzo IP aggiuntivo o il team responsabile del bilanciamento del carico gestirà l'operazione?|
 Si hanno i record DNS necessari? Questa disponibilità verrà richiesta dal team responsabile della configurazione della soluzione di bilanciamento del carico?|
 La soluzione di bilanciamento del carico richiede che PKI sia gestito dal dispositivo o può bilanciare il carico del traffico HTTPS se non ci sono requisiti di sessione?|
-
-### <a name="shared-storage"></a>Archiviazione condivisa
-
-In uno scenario a disponibilità elevata in cui più server sono configurati come server di pull e le connessioni sono con carico bilanciato tra di esse, è fondamentale che le risorse e le configurazioni disponibili da tali server siano identiche. Il modo migliore per raggiungere questo risultato è archiviare il contenuto in un percorso a disponibilità elevata, ad esempio una condivisione di file in cluster. Il percorso della condivisione può essere specificato nella configurazione di ogni server. Per altre informazioni sulle opzioni di archiviazione condivisa, vedere Panoramica di File server di scalabilità orizzontale per dati applicazioni.
-
-Pianificazione dell'attività|
----|
-Quale soluzione verrà usata per ospitare la condivisione a disponibilità elevata?|
-Chi gestirà la richiesta per una nuova condivisione a disponibilità elevata?|
-Qual è il tempo medio per rendere disponibile una condivisione a elevata disponibilità?|
-Quali informazioni sono necessarie al team responsabile dell'archiviazione e/o del clustering?|
 
 ### <a name="staging-configurations-and-modules-on-the-pull-server"></a>Gestione temporanea di configurazioni e moduli nel server di pull
 
