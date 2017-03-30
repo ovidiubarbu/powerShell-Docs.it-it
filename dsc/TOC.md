@@ -1,4 +1,7 @@
 # [Panoramica](overview.md)
+## [Panoramica di DSC (Desired State Configuration) per decision maker](decisionMaker.md)
+## [Panoramica di DSC (Desired State Configuration) per tecnici](DscForEngineers.md)
+## [Introduzione a DSC](quickStart.md)
 
 # [Configurazioni](configurations.md)
 ## [Applicazione delle configurazioni](enactingConfigurations.md)

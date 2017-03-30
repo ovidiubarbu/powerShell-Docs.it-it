@@ -5,11 +5,11 @@ author: rpsqrd
 ms.author: ryanpu
 ms.prod: powershell
 keywords: powershell,cmdlet,jea
-ms.date: 2016-12-05
+ms.date: 2017-03-07
 title: "Funzionalità del ruolo JEA"
 ms.technology: powershell
-ms.openlocfilehash: e67b38344e2d1d0d347c7850f2097e31c0945e15
-ms.sourcegitcommit: b88151841dd44c8ee9296d0855d8b322cbf16076
+ms.openlocfilehash: 49623e69b186fd09679bf7e0186dec3961e719ba
+ms.sourcegitcommit: 910f090edd401870fe137553c3db00d562024a4c
 translationtype: HT
 ---
 # <a name="jea-role-capabilities"></a>Funzionalità del ruolo JEA
@@ -113,7 +113,7 @@ Non è possibile applicare un ValidatePattern e ValidateSet allo stesso cmdlet o
 
 In caso contrario, il ValidatePattern sostituirà il ValidateSet.
 
-Per altre informazioni su ValidatePattern, vedere [questo* post* Hey, Scripting Guy!](https://blogs.technet.microsoft.com/heyscriptingguy/2011/01/11/validate-powershell-parameters-before-running-the-script/) e il contenuto dei riferimenti [Espressioni regolari di PowerShell](https://technet.microsoft.com/en-us/library/hh847880.aspx).
+Per altre informazioni su ValidatePattern, vedere [questo*post* Hey, Scripting Guy!](https://blogs.technet.microsoft.com/heyscriptingguy/2011/01/11/validate-powershell-parameters-before-running-the-script/) e il contenuto dei riferimenti [Espressioni regolari di PowerShell](https://technet.microsoft.com/en-us/library/hh847880.aspx).
 
 ### <a name="allowing-external-commands-and-powershell-scripts"></a>Consentire l'uso di comandi esterni e degli script di PowerShell
 
@@ -236,7 +236,6 @@ La logica di unione più complessa influisce su cmdlet e funzioni, che possono a
 
 Di seguito vengono definite le regole:
 
-
 1. Se un cmdlet viene reso visibile solo in un ruolo, sarà visibile all'utente con i vincoli del parametro applicabile.
 2. Se un cmdlet viene reso visibile in più di un ruolo e ogni ruolo ha gli stessi vincoli sul cmdlet, il cmdlet sarà visibile all'utente con tali vincoli.
 3. Se un cmdlet viene reso visibile in più di un ruolo e ogni ruolo consente un set diverso di parametri, il cmdlet e tutti i parametri definiti in ogni ruolo saranno visibili all'utente. Se un ruolo non ha vincoli sui parametri, tutti i parametri saranno consentiti.
@@ -245,19 +244,29 @@ Di seguito vengono definite le regole:
 6. Se viene definito un modello di convalida per lo stesso parametro del cmdlet in più di un ruolo, saranno consentiti tutti i valori che corrispondono ai modelli.
 7. Se viene definito un set di convalida in uno o più ruoli e un modello di convalida è definito in un altro ruolo per lo stesso parametro del cmdlet, il set di convalida viene ignorato e si applica la regola (6) ai modelli di convalida rimanenti.
 
-La tabella seguente illustra alcuni esempi di questa logica in pratica usando due ruoli, A e B, entrambi assegnati a un utente in una sessione JEA.
+Di seguito è riportato un esempio di come i ruoli vengono uniti in base a queste regole:
 
-Regola | VisibleCmdlets del ruolo A                                                                          | VisibleCmdlets del ruolo B                                                                             | Autorizzazioni utente effettive
------|------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|----------------------------
-1    | `Get-Service`                                                                                  | N/D                                                                                               | `Get-Service`
-1    | N/D                                                                                            | `Get-Service`                                                                                     | `Get-Service`
-2    | `Get-Service`                                                                                  | `Get-Service`                                                                                     | `Get-Service`
-3    | `@{ Name = 'Get-Service'; Parameters = @{ Name = 'DisplayName' }}`                             | `Get-Service`                                                                                     | `Get-Service`
-3    | `@{ Name = 'Get-Service'; Parameters = @{ Name = 'DisplayName' }}`                             | `@{ Name = 'Get-Service'; Parameters = @{ Name = 'Name' }}`                                       | `@{ Name = 'Get-Service'; Parameters = @{ Name = 'DisplayName' }, @{ Name = 'Name' }}`
-4    | `@{ Name = 'Get-Service'; Parameters = @{ Name = 'DisplayName'; ValidateSet = 'DNS Client' }}` | `@{ Name = 'Get-Service'; Parameters = @{ Name = 'DisplayName' }}`                                | `@{ Name = 'Get-Service'; Parameters = @{ Name = 'DisplayName' }}`
-5    | `@{ Name = 'Get-Service'; Parameters = @{ Name = 'DisplayName'; ValidateSet = 'DNS Client' }}` | `@{ Name = 'Get-Service'; Parameters = @{ Name = 'DisplayName'; ValidateSet = 'DHCP Client' }}`   | `@{ Name = 'Get-Service'; Parameters = @{ Name = 'DisplayName'; ValidateSet = 'DNS Client', 'DHCP Client' }}`
-6    | `@{ Name = 'Get-Service'; Parameters = @{ Name = 'DisplayName'; ValidatePattern = 'DNS.*' }}`  | `@{ Name = 'Get-Service'; Parameters = @{ Name = 'DisplayName'; ValidatePattern = 'contoso.*' }}` | `@{ Name = 'Get-Service'; Parameters = @{ Name = 'DisplayName'; ValidatePattern = '(DNS.*)\|(contoso.*)' }}`
-7    | `@{ Name = 'Get-Service'; Parameters = @{ Name = 'DisplayName'; ValidateSet = 'DNS Client' }}` | `@{ Name = 'Get-Service'; Parameters = @{ Name = 'DisplayName'; ValidatePattern = 'contoso.*' }}` | `@{ Name = 'Get-Service'; Parameters = @{ Name = 'DisplayName'; ValidatePattern = '(DNS.*)\|(contoso.*)' }}`
+```powershell
+# Role A Visible Cmdlets
+$roleA = @{
+    VisibleCmdlets = 'Get-Service',
+                     @{ Name = 'Restart-Service'; Parameters = @{ Name = 'DisplayName'; ValidateSet = 'DNS Client' } }
+}
+
+# Role B Visible Cmdlets
+$roleB = @{
+    VisibleCmdlets = @{ Name = 'Get-Service'; Parameters = @{ Name = 'DisplayName'; ValidatePattern = 'DNS.*' } },
+                     @{ Name = 'Restart-Service'; Parameters = @{ Name = 'DisplayName'; ValidateSet = 'DNS Server' } }
+}
+
+# Resulting permisisons for a user who belongs to both role A and B
+# - The constraint in role B for the DisplayName parameter on Get-Service is ignored becuase of rule #4
+# - The ValidateSets for Restart-Service are merged because both roles use ValidateSet on the same parameter per rule #5
+$mergedAandB = @{
+    VisibleCmdlets = 'Get-Service',
+                     @{ Name = 'Restart-Service'; Parameters = @{ Name = 'DisplayName'; ValidateSet = 'DNS Client', 'DNS Server' } }
+}
+```
 
 
 

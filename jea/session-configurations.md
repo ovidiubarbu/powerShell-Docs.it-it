@@ -5,11 +5,11 @@ author: rpsqrd
 ms.author: ryanpu
 ms.prod: powershell
 keywords: powershell,cmdlet,jea
-ms.date: 2016-12-05
+ms.date: 2017-03-08
 title: Configurazioni della sessione JEA
 ms.technology: powershell
-ms.openlocfilehash: 32602293afd3a94767682d32a053281ec021cc33
-ms.sourcegitcommit: f06ef671c0a646bdd277634da89cc11bc2a78a41
+ms.openlocfilehash: e98214d1777a1530b5a18ac9df1a6185d6d73979
+ms.sourcegitcommit: 910f090edd401870fe137553c3db00d562024a4c
 translationtype: HT
 ---
 # <a name="jea-session-configurations"></a>Configurazioni della sessione JEA
@@ -175,55 +175,13 @@ Come illustrato nell'esempio precedente, le funzionalità del ruolo vengono indi
 Se più funzionalità del ruolo sono disponibili nel sistema con lo stesso nome flat, PowerShell userà l'ordine di ricerca implicito per selezionare il file delle funzionalità del ruolo effettivo.
 **Non** concederà accesso a tutti i file delle funzionalità del ruolo con lo stesso nome.
 
-L'ordine di ricerca per le funzionalità del ruolo JEA è determinato dall'ordine dei percorsi in `$env:PSModulePath` e dal nome del modulo padre.
-Il percorso del modulo predefinito in PowerShell è il seguente:
+JEA usa la variabile di ambiente `$env:PSModulePath` per determinare i percorsi in cui cercare i file delle funzionalità di ruolo.
+All'interno di ognuno di questi percorsi, JEA cercherà moduli di PowerShell validi che contengono una sottocartella "RoleCapabilities".
+Come per l'importazione dei moduli, JEA preferisce le funzionalità di ruolo fornite con Windows rispetto alle funzionalità di ruolo personalizzate con lo stesso nome.
+Per tutti gli altri conflitti di nome, la precedenza è determinata dall'ordine in cui Windows enumera i file nella directory (non necessariamente alfabetico).
+Il primo file di funzionalità di ruolo trovato che corrisponde al nome desiderato verrà usato per l'utente che si connette.
 
-```powershell
-PS C:\> $env:PSModulePath
-
-
-C:\Users\Alice\Documents\WindowsPowerShell\Modules;C:\Program Files\WindowsPowerShell\Modules;C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules\
-```
-
-I percorsi visualizzati per prima (a sinistra) nell'elenco PSModulePath hanno precedenza sui percorsi visualizzati a destra.
-
-All'interno di ogni percorso ci possono essere 0 o più moduli di PowerShell.
-Le funzionalità del ruolo vengono selezionate dal primo modulo, in ordine alfabetico, che contiene un file delle funzionalità del ruolo che corrisponde al nome specificato.
-
-Per capire meglio questa precedenza, si consideri l'esempio seguente in cui il segno di addizione (+) indica una cartella e il segno di sottrazione (-) indica un file.
-
-```
-+ C:\Program Files\WindowsPowerShell\Modules
-    + ContosoMaintenance
-        - ContosoMaintenance.psd1
-        + RoleCapabilities
-            - DnsAdmin.psrc
-            - DnsOperator.psrc
-            - DnsAuditor.psrc
-    + FabrikamModule
-        - FabrikamModule.psd1
-        + RoleCapabilities
-            - DnsAdmin.psrc
-            - FileServerAdmin.psrc
-
-+ C:\Windows\System32\WindowsPowerShell\v1.0\Modules
-    + BuiltInModule
-        - BuiltInModule.psd1
-        + RoleCapabilities
-            - DnsAdmin.psrc
-            - OtherBuiltinRole.psrc
-```
-
-Ci sono diversi file delle funzionalità del ruolo installati in questo sistema.
-Cosa accade se un file di configurazione sessione concede un accesso utente al ruolo "DnsAdmin"?
-
-
-Il file delle funzionalità del ruolo effettivo sarà quello che si trova in "C:\\Programmi\\WindowsPowerShell\\Moduli\\ContosoMaintenance\\RoleCapabilities\\DnsAdmin.psrc".
-
-Per capire meglio questo processo, tenere presente i 2 ordini di precedenza:
-
-1. La variabile `$env:PSModulePath` ha la cartella Programmi elencata prima della cartella System32, per cui seleziona i file dalla cartella Programmi.
-2. In base all'ordine alfabetico, il modulo ContosoMaintenance precede FabrikamModule, per cui verrà selezionato il ruolo DnsAdmin dal modulo ContosoMaintenance.
+Dato che l'ordine di ricerca delle funzionalità di ruolo non è deterministico quando due o più funzionalità di ruolo hanno lo stesso nome, è **consigliabile** assicurarsi che le funzionalità di ruolo abbiano nomi univoci nel computer in uso.
 
 ### <a name="conditional-access-rules"></a>Regole di accesso condizionale
 

@@ -5,11 +5,11 @@ author: rpsqrd
 ms.author: ryanpu
 ms.prod: powershell
 keywords: powershell,cmdlet,jea
-ms.date: 2016-12-05
+ms.date: 2017-03-07
 title: Considerazioni sulla sicurezza in JEA
 ms.technology: powershell
-ms.openlocfilehash: 03d34a7c8241aee1578a1cf2e794046578669dce
-ms.sourcegitcommit: f75fc25411ce6a768596d3438e385c43c4f0bf71
+ms.openlocfilehash: 02384465e3c1b6d9633cc346ba88a2566fea1af1
+ms.sourcegitcommit: 910f090edd401870fe137553c3db00d562024a4c
 translationtype: HT
 ---
 # <a name="jea-security-considerations"></a>Considerazioni sulla sicurezza in JEA
@@ -37,10 +37,9 @@ Per impostazione predefinita, gli account virtuali appartengono al gruppo Admini
 Per questo motivo, hanno diritti completi per gestire qualsiasi elemento nel sistema, ma non possono gestire le risorse della rete.
 Durante l'autenticazione con altri computer, il contesto utente sarà l'account del computer locale, non l'account virtuale.
 
-In un controller di dominio Active Directory, gli account virtuali hanno privilegi di *amministratore di dominio* per impostazione predefinita.
-Ciò è dovuto al fatto che non esiste alcun gruppo Administrator locale in un controller di dominio.
-Di conseguenza, gli account virtuali nei controller di dominio sono account di dominio e possono essere usati in altri computer.
-Quando si configurano le sessioni JEA in un controller di dominio, è necessario evitare di definire i comandi che possono essere usati per gestire altri computer nella rete.
+I controller di dominio rappresentano un caso speciale, perché non esiste il concetto di gruppo di amministratori locali.
+Gli account virtuali appartengono invece al gruppo Domain Admins e possono gestire i servizi directory nel controller di dominio.
+L'identità di dominio è ancora limitata all'uso nel controller di dominio in cui è stata creata la sessione di JEA e qualsiasi accesso alla rete risulterà invece proveniente dall'oggetto computer del controller di dominio.
 
 In entrambi i casi, è anche possibile definire in modo esplicito a quale gruppo di sicurezza deve appartenere l'account virtuale.
 Questa è una procedura efficace se l'attività può essere eseguita senza privilegi di amministratore locale o di dominio.
@@ -52,8 +51,8 @@ La tabella seguente illustra le opzioni di configurazione possibili e le autoriz
 
 Tipo di computer                | Configurazione del gruppo di account virtuali | Contesto dell'utente locale                                      | Contesto dell'utente di rete
 -----------------------------|-------------------------------------|---------------------------------------------------------|--------------------------------------------------
-Controller di dominio            | Default                             | Utente di dominio, membro di "*DOMAIN*\Domain Admins"         | Utente di dominio, membro di "*DOMAIN*\Domain Admins"
-Controller di dominio            | Gruppi di dominio A e B               | Utente di dominio, membro di "*DOMAIN*\A", "*DOMAIN*\B"       | Utente di dominio, membro di "*DOMAIN*\A", "*DOMAIN*\B"
+Controller di dominio            | Default                             | Utente di dominio, membro di "*DOMAIN*\Domain Admins"         | Account del computer
+Controller di dominio            | Gruppi di dominio A e B               | Utente di dominio, membro di "*DOMAIN*\A", "*DOMAIN*\B"       | Account del computer
 Workstation o server membro | Default                             | Utente locale, membro di "*BUILTIN*\Administrators"        | Account del computer
 Workstation o server membro | Gruppi locali C e D                | Utente locale, membro di "*COMPUTER*\C" e "*COMPUTER*\D" | Account del computer
 
@@ -71,8 +70,8 @@ Le autorizzazioni valide dei gMSA sono definite dai gruppi di sicurezza (locale 
 Quando un endpoint JEA è configurato per usare un account gMSA, le azioni di tutti gli utenti JEA verranno registrate come se provenissero dallo stesso account del servizio gestito del gruppo.
 L'unico modo possibile per tracciare le azioni per un utente specifico consiste nell'identificare il set di comandi eseguiti in una trascrizione della sessione di PowerShell.
 
-**Credenziali pass-through** Se non si specifica un account RunAs, PowerShell userà le credenziali dell'utente che si connette per eseguire i comandi nel server remoto.
-Questa configurazione non è consigliata per JEA perché sarebbe necessario concedere all'utente che si connette l'accesso diretto ai gruppi di gestione con privilegi.
+Le **credenziali pass-through** vengono usate quando non si specifica un account RunAs e si vuole che PowerShell usi le credenziali dell'utente che si connette per eseguire i comandi nel server remoto.
+Questa configurazione *non* è consigliata per JEA perché sarebbe necessario concedere all'utente che si connette l'accesso diretto ai gruppi di gestione con privilegi.
 Se l'utente che si connette ha già privilegi di amministratore, è possibile evitare del tutto JEA e gestire il sistema con altri mezzi non vincolati.
 Per altre informazioni, vedere la sezione seguente su come [JEA non protegge contro gli amministratori](#jea-does-not-protect-against-admins).
 

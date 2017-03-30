@@ -1,16 +1,15 @@
 ---
-description: 
-manager: dongill
+manager: carmonm
 ms.topic: article
 author: rpsqrd
 ms.author: ryanpu
 ms.prod: powershell
 keywords: powershell,cmdlet,jea
-ms.date: 2016-12-05
+ms.date: 2017-03-07
 title: Panoramica di Just Enough Administration (JEA)
 ms.technology: powershell
-ms.openlocfilehash: 742f88bd130a9bcb577914c842735e8c47ca53e6
-ms.sourcegitcommit: cfe32f213819ae76de05da564c3e2c4b7ecfda2f
+ms.openlocfilehash: 2206ccbbcf5996b1bf8db9a46acab2f18f8020dd
+ms.sourcegitcommit: 910f090edd401870fe137553c3db00d562024a4c
 translationtype: HT
 ---
 # <a name="just-enough-administration"></a>Just Enough Administration
@@ -18,7 +17,7 @@ translationtype: HT
 Just Enough Administration (JEA) è una tecnologia di protezione che consente l'amministrazione delegata per qualsiasi elemento che possa essere gestito con PowerShell.
 Con JEA, è possibile:
 
-- **Ridurre il numero di amministratori dei computer** sfruttando gli account virtuali che eseguono azioni con privilegi per conto degli utenti normali.
+- **Ridurre il numero di amministratori dei computer** sfruttando gli account virtuali o gli account dei servizi gestiti del gruppo che eseguono azioni con privilegi per conto degli utenti normali.
 - **Limitare le operazioni consentite agli utenti** specificando quali cmdlet, funzioni e comandi esterni possono eseguire.
 - **Capire meglio le azioni degli utenti** con trascrizioni e log che indicano esattamente i comandi eseguiti da un utente durante la sessione.
 
@@ -52,3 +51,7 @@ Per altre informazioni sui requisiti per usare JEA e su come creare, usare e con
 - [Uso di JEA](using-jea.md): informazioni sui diversi modi in cui è possibile usare JEA.
 - [Considerazioni sulla sicurezza](security-considerations.md): rivedere le procedure consigliate sulla sicurezza e le implicazioni delle opzioni di configurazione JEA.
 - [Controllare e creare report in JEA](audit-and-report.md): informazioni su come controllare e creare report negli endpoint JEA.
+
+## <a name="samples-and-dsc-resource"></a>Esempi e risorsa DSC
+
+Nel [repository GitHub JEA](https://github.com/PowerShell/JEA) sono disponibili configurazioni JEA di esempio e la risorsa DSC JEA.
