@@ -9,20 +9,22 @@ ms.date: 2016-10-14
 contributor: manikb
 title: psgalleryint_status
 ms.technology: powershell
-ms.openlocfilehash: a889620aff415146d1808df052ffc43732640ae7
-ms.sourcegitcommit: 910f090edd401870fe137553c3db00d562024a4c
+ms.openlocfilehash: 58f06ca061a4f171288e75b30698910c701f1da1
+ms.sourcegitcommit: ba8ed836799ef465e507fa1b8d341ba38459d863
 translationtype: HT
 ---
 <a name="powershell-gallery-status"></a>Stato di PowerShell Gallery
 =========================
 
-## <a name="03272017---unable-to-see-individual-module-and-script-pages"></a>27/03/2017 - Impossibile visualizzare singole pagine di moduli e script
+## <a name="03272017---resolved-unable-to-see-individual-module-and-script-pages"></a>27/03/2017 - RISOLTO: impossibile visualizzare singole pagine di moduli e script
 
-__Riepilogo del problema__: i collegamenti diretti alle singole pagine di moduli e script in https://www.powershellgallery.com attualmente non funzionano. Il problema è attualmente segnalato in tutte le aree. Il problema influisce su qualsiasi cmdlet di PowerShellGet, ovvero Install-Module, Install-Script, Update-Module, Update-Script e Publish-Module. Publish-Scirpt dovrebbe funzionare ancora.
+__Riepilogo del problema__: i collegamenti diretti alle singole pagine di moduli e script in https://www.powershellgallery.com erano interrotti. Il problema era segnalato in tutte le aree. Il problema non influiva sui cmdlet di PowerShellGet, ovvero Install-Module, Install-Script, Update-Module, Update-Script e Publish-Module. Publish-Script continuava a funzionare.
 
 __Causa radice__: i tecnici hanno identificato la causa in un problema di visualizzazione dei pulsanti per i social media come Facebook nella pagina.  
 
-__Risoluzione__: i tecnici stanno lavorando a una correzione per risolvere il problema. 
+__Risoluzione__: tecnici hanno risolto il problema disabilitando le informazioni sul conteggio di Facebook.
+
+__Passaggi successivi__: è stato aperto un problema di rilevamento interno per correggere l'uso dell'API di Facebook.
 
 ## <a name="12152016---unable-to-send-emails-via-powershellgallery-website"></a>15/12/2016 - Impossibile inviare messaggi di posta elettronica tramite il sito Web PowerShell Gallery
 
