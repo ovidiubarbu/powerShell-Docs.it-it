@@ -25,5 +25,5 @@ Ogni cartella in questo repository viene pubblicata in [MSDN](https://msdn.micro
 
 I contributi vengono aggiunti attivamente a questo repository tramite [richiesta pull](https://help.github.com/articles/using-pull-requests/) nel ramo di *staging*. Si noti che prima di inviare una richiesta pull è necessario [firmare un contratto di licenza per i contributi](https://cla.microsoft.com/) in modo che la community possa liberamente usare i contributi inviati.
 Per altre informazioni sui contributi, leggere la [guida ai contributi](CONTRIBUTING.md).
-Esiste una bozza della [guida di stile](./style.md) da esaminare prima di inviare contributi.
+Esiste una bozza della [guida di stile](./STYLE.md) da esaminare prima di inviare contributi.
 Usare i modelli per i problemi e le richieste di pull per garantire la coerenza della documentazione tra le varie versioni. 
