@@ -9,12 +9,20 @@ ms.date: 2016-10-14
 contributor: manikb
 title: psgallery_status
 ms.technology: powershell
-ms.openlocfilehash: 48f554793d25c2d5ea10bc202489845f4225b2b9
-ms.sourcegitcommit: ba8ed836799ef465e507fa1b8d341ba38459d863
+ms.openlocfilehash: 1886715c4b948e4bc59a51fb96d54b56b5b5afed
+ms.sourcegitcommit: 809e4f1bdf218b283e84438151030bfa94ca956d
 translationtype: HT
 ---
 <a name="powershell-gallery-status"></a>Stato di PowerShell Gallery
 =========================
+
+## <a name="04112017---users-unable-to-log-in"></a>11/04/2017 - Impossibile accedere per gli utenti
+
+__Riepilogo del problema__: alcuni utenti non sono in grado di accedere a PowerShell Gallery usando gli account Azure AD. Il team operativo di PowerShell Gallery sta esaminando questo problema. Sembra che il problema non riguardi gli utenti con account Microsoft, ovvero quelli con domini come Outlook.com, Live.com e così via. 
+ 
+__Causa radice__: da definire  
+
+__Passaggi successivi__: stiamo lavorando con il team di Azure AD per analizzare il problema. 
 
 ## <a name="03272017---resolved-unable-to-see-individual-module-and-script-pages"></a>27/03/2017 - RISOLTO: impossibile visualizzare singole pagine di moduli e script
 

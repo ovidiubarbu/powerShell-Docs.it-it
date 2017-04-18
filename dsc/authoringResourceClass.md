@@ -7,8 +7,8 @@ ms.topic: article
 author: eslesar
 manager: dongill
 ms.prod: powershell
-ms.openlocfilehash: a8c2094cbef1bb14c4a9082ff78fae78ec0c2e65
-ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
+ms.openlocfilehash: feec9b9e242ef6f43c272bfeb179d11944d1cb06
+ms.sourcegitcommit: 1002c473b88abb209e4188bb626d93675c3614e2
 translationtype: HT
 ---
 # <a name="writing-a-custom-dsc-resource-with-powershell-classes"></a>Scrittura di una risorsa DSC personalizzata con classi di PowerShell
@@ -22,6 +22,8 @@ In una risorsa DSC basata su classi, lo schema viene definito come proprietà de
 In questo argomento verrà creata una risorsa semplice denominata **FileResource** che gestisce un file in un percorso specificato.
 
 Per altre informazioni sulle risorse DSC, vedere [Creare risorse Windows PowerShell DSC (Desired State Configuration) personalizzate](authoringResource.md).
+
+>**Nota:** le raccolte generiche non sono supportate nelle risorse basate su classi.
 
 ## <a name="folder-structure-for-a-class-resource"></a>Struttura di cartelle per una risorsa basata su classi
 
