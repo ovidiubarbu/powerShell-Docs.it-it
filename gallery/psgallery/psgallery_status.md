@@ -9,20 +9,22 @@ ms.date: 2016-10-14
 contributor: manikb
 title: psgallery_status
 ms.technology: powershell
-ms.openlocfilehash: 1886715c4b948e4bc59a51fb96d54b56b5b5afed
-ms.sourcegitcommit: 809e4f1bdf218b283e84438151030bfa94ca956d
+ms.openlocfilehash: a260b9b696b41947fbbb789fd165dfe4bdac1dc3
+ms.sourcegitcommit: 214b8442f05618d078837889cbb6a30b42c01edb
 translationtype: HT
 ---
 <a name="powershell-gallery-status"></a>Stato di PowerShell Gallery
 =========================
 
-## <a name="04112017---users-unable-to-log-in"></a>11/04/2017 - Impossibile accedere per gli utenti
+## <a name="04112017---users-unable-to-log-in-with-azure-active-directory-aad-accounts"></a>11/04/2017 - Gli utenti non possono accedere con account Azure Active Directory (AAD)
 
-__Riepilogo del problema__: alcuni utenti non sono in grado di accedere a PowerShell Gallery usando gli account Azure AD. Il team operativo di PowerShell Gallery sta esaminando questo problema. Sembra che il problema non riguardi gli utenti con account Microsoft, ovvero quelli con domini come Outlook.com, Live.com e così via. 
+__Riepilogo del problema__: alcuni utenti non sono in grado di accedere a PowerShell Gallery usando gli account Azure AD. 
  
-__Causa radice__: da definire  
+__Causa radice__: durante un aggiornamento per un'iterazione più sicura con AAD, non è stata eseguita una modifica delle impostazioni. Poiché i test eseguiti per convalidare la modifica non includevano determinati tipi di account AAD, la distribuzione è stata eseguita.
 
-__Passaggi successivi__: stiamo lavorando con il team di Azure AD per analizzare il problema. 
+__Risoluzione__: I tecnici hanno identificato l'impostazione mancante e corretto il problema. 
+
+__Passaggi successivi__: verranno modificati i test per includere un set più ampio di tipi di account AAD.
 
 ## <a name="03272017---resolved-unable-to-see-individual-module-and-script-pages"></a>27/03/2017 - RISOLTO: impossibile visualizzare singole pagine di moduli e script
 
