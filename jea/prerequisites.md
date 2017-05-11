@@ -8,9 +8,11 @@ keywords: powershell,cmdlet,jea
 ms.date: 2017-03-07
 title: Prerequisiti di JEA
 ms.technology: powershell
-ms.openlocfilehash: e4ae3ebd0b2c330a76d3183e6c9c1106f769feb3
-ms.sourcegitcommit: 910f090edd401870fe137553c3db00d562024a4c
-translationtype: HT
+ms.openlocfilehash: a38c9e948190b9384c62eec3e40758a782c9f72b
+ms.sourcegitcommit: 6057e6d22ef8a2095af610e0d681e751366a9773
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 05/08/2017
 ---
 # <a name="prerequisites"></a>Prerequisiti
 
@@ -29,22 +31,23 @@ Sistema operativo server   | Disponibilità di JEA
 Windows Server 2016       | Preinstallato
 Windows Server 2012 R2    | Funzionalità completa con WMF 5.1
 Windows Server 2012       | Funzionalità completa con WMF 5.1
-Windows Server 2008 R2    | Funzionalità completa con WMF 5.1
+Windows Server 2008 R2    | Funzionalità limitata<sup>1</sup> con WMF 5.1
 
 È anche possibile usare JEA nel computer di casa o di lavoro:
 
 Sistema operativo client   | Disponibilità di JEA
 --------------------------|-----------------------------------------------------
-Windows 10 1607           | Preinstallato
-Windows 10 1603, 1511     | Preinstallato, con funzionalità ridotta<sup>1</sup>
+Windows 10 1607+          | Preinstallato
+Windows 10 1603, 1511     | Preinstallato, con funzionalità limitata<sup>2</sup>
 Windows 10 1507           | Non disponibile
 Windows 8, 8.1            | Funzionalità completa con WMF 5.1
-Windows 7                 | Funzionalità limitata<sup>2</sup> con WMF 5.1
+Windows 7                 | Funzionalità limitata<sup>1</sup> con WMF 5.1
 
-<sup>1</sup> le versioni 1511 e 1603 di Windows 10 non supportano le funzionalità JEA seguenti: esecuzione di un account del servizio gestito del gruppo, regole di accesso condizionale in configurazioni sessione, l'unità utente e la concessione di accesso agli account utente locali.
+<sup>1</sup> JEA non può essere configurato per l'uso dell'account del servizio gestito del gruppo in Windows Server 2008 R2 o Windows 7.
+*Sono* supportati gli account virtuali e le altre funzionalità JEA.
+
+<sup>2</sup> Le versioni 1511 e 1603 di Windows 10 non supportano le funzionalità JEA seguenti: esecuzione come account del servizio gestito del gruppo, regole di accesso condizionale in configurazioni di sessione, unità utente e concessione dell'accesso agli account utente locali.
 Per ottenere supporto per queste funzionalità, aggiornare Windows alla versione 1607 (Aggiornamento dell'anniversario) o versione successiva.
-
-<sup>2</sup> JEA non può essere configurato per usare gli account virtuali in Windows 7.
 
 ### <a name="check-which-version-of-powershell-is-installed"></a>Controllare quale versione di PowerShell è installata
 
@@ -98,7 +101,7 @@ Non è necessaria la registrazione del modulo di PowerShell per JEA, tuttavia è
 7. Fare clic su **OK** per impostare i criteri
 8. Fare doppio clic su **Attiva registrazione blocco script di PowerShell**
 9. Fare clic su **Abilitato**
-10. Fare clic su **OK per impostare i criteri
+10. Fare clic su **OK** per impostare i criteri
 11. (Solo in computer uniti in dominio) Eseguire **gpupdate** o attendere che i criteri di gruppo elaborino i criteri aggiornati e applichino le impostazioni
 
 È anche possibile abilitare la trascrizione di PowerShell a livello di sistema con i criteri di gruppo.

@@ -8,9 +8,11 @@ keywords: powershell,cmdlet,jea
 ms.date: 2016-12-05
 title: Uso di JEA
 ms.technology: powershell
-ms.openlocfilehash: 4f1fad1d28b9ced462c392210449d73af325b132
-ms.sourcegitcommit: b88151841dd44c8ee9296d0855d8b322cbf16076
-translationtype: HT
+ms.openlocfilehash: 62e5f74d60b2fd09e302ecc12996f97e90b73f2f
+ms.sourcegitcommit: 6057e6d22ef8a2095af610e0d681e751366a9773
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 05/08/2017
 ---
 # <a name="using-jea"></a>Uso di JEA
 
@@ -65,7 +67,7 @@ Per chiamate di comandi più complesse che rendono difficile questo approccio, �
 ## <a name="using-jea-with-implicit-remoting"></a>Uso di JEA con comunicazione remota implicita
 
 PowerShell supporta un modello di comunicazione remota alternativa in cui è possibile importare i cmdlet del proxy da un computer remoto nel computer locale e usarli come se fossero comandi locali.
-Questo modello viene chiamato comunicazione remota implicita ed è illustrato in maniera dettagliata in [questo *post di blog *Hey, Scripting Guy!](https://blogs.technet.microsoft.com/heyscriptingguy/2013/09/08/remoting-the-implicit-way/)
+Questo modello viene chiamato comunicazione remota implicita ed è illustrato in maniera dettagliata in [questo *post di blog* Hey, Scripting Guy!](https://blogs.technet.microsoft.com/heyscriptingguy/2013/09/08/remoting-the-implicit-way/)
 La comunicazione remota implicita è particolarmente utile quando si usa JEA perché consente di usare i cmdlet JEA in una modalità linguaggio completa.
 Ciò significa che è possibile usare il completamento tramite TAB, variabili, modificare oggetti e usare anche script locali per automatizzare facilmente le operazioni in un endpoint JEA.
 Ogni volta che si chiama un comando proxy, i dati vengono inviati all'endpoint JEA nel computer remoto ed eseguiti su questo computer.
@@ -134,7 +136,6 @@ Se si compila un'applicazione C#, è possibile creare uno spazio di esecuzione d
 ```csharp
 
 // using System.Management.Automation;
-
 var computerName = "SERVER01";
 var configName   = "JEAMaintenance";
 var creds        = // create a PSCredential object here (https://msdn.microsoft.com/en-us/library/system.management.automation.pscredential(v=vs.85).aspx)
@@ -146,7 +147,6 @@ WSManConnectionInfo connectionInfo = new WSManConnectionInfo(
                     "/wsman",              // WSMan Path
                     string.Format(CultureInfo.InvariantCulture, "http://schemas.microsoft.com/powershell/{0}", configName),  // Connection URI with config name
                     creds);                // Credentials
-
 // Now, use the connection info to create a runspace where you can run the commands
 using (Runspace runspace = RunspaceFactory.CreateRunspace(connectionInfo))
 {
@@ -173,7 +173,7 @@ using (Runspace runspace = RunspaceFactory.CreateRunspace(connectionInfo))
 
 ## <a name="using-jea-with-powershell-direct"></a>Uso di JEA con PowerShell Direct
 
-Hyper-V in Windows 10 e in Windows Server 2016 offre [PowerShell Direct](https://msdn.microsoft.com/en-us/virtualization/hyperv_on_windows/user_guide/vmsession), una funzionalità che consente agli amministratori di Hyper-V di gestire le macchine virtuali con PowerShell anche se la macchina virtuale si trova in un'altra rete.
+Hyper-V in Windows 10 e in Windows Server 2016 offre [PowerShell Direct](https://msdn.microsoft.com/en-us/virtualization/hyperv_on_windows/user_guide/vmsession), una funzionalità che consente agli amministratori di Hyper-V di gestire le macchine virtuali con PowerShell, indipendentemente dalla configurazione di rete o dalle impostazioni di gestione remota della macchina virtuale.
 
 È possibile usare PowerShell Direct con JEA per concedere a un amministratore Hyper-V accesso limitato alla macchina virtuale. Ciò è utile quando si perde la connettività di rete nella macchina virtuale ed è necessario l'intervento di un amministratore del datacenter per modificare le impostazioni di rete.
 
@@ -190,6 +190,6 @@ Enter-PSSession -VMId $vm.VMId -ConfigurationName 'NICMaintenance' -Credential '
 ```
 
 È consigliabile creare un utente locale dedicato senza diritti per gestire il sistema usato dagli amministratori di Hyper-V.
-Si noti che anche un utente senza privilegi può comunque accedere a un computer Windows per impostazione predefinita e può usare PowerShell non vincolato.
+Si noti che anche un utente senza privilegi può accedere per impostazione predefinita a un computer Windows e può usare PowerShell non vincolato.
 Ciò gli consente di vedere parte del contenuto del file system e altre informazioni sull'ambiente del sistema operativo.
-Per limitare un amministratore di Hyper-V ad accedere solo a una macchina virtuale tramite PowerShell Direct con JEA, è necessario rimuovere i diritti di accesso locale all'account JEA dell'amministratore di Hyper-V.
+Per limitare l'accesso di un amministratore di Hyper-V soltanto a una macchina virtuale tramite PowerShell Direct con JEA, è necessario rimuovere i diritti di accesso locale all'account JEA dell'amministratore di Hyper-V.

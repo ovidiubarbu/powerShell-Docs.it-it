@@ -8,9 +8,11 @@ author: keithb
 manager: dongill
 ms.prod: powershell
 ms.technology: WMF
-ms.openlocfilehash: 1bf1bf914982e0d52e592e6ef421d36b1915b338
-ms.sourcegitcommit: 267688f61dcc76fd685c1c34a6c7bfd9be582046
-translationtype: HT
+ms.openlocfilehash: 4c5dfaaf368097c18a2788a9df15632ce116dbbb
+ms.sourcegitcommit: ee407927101c3b166cc200a39a6ea786a1c21f95
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 05/08/2017
 ---
 # <a name="improvements-in-desired-state-configuration-dsc-in-wmf-51"></a>Miglioramenti di Desired State Configuration (DSC) in WMF 5.1
 
@@ -33,14 +35,14 @@ In precedenza, il client di pull DSC supportava solo SSL3.0 e TLS1.0 su connessi
 
 ## <a name="improved-pull-server-registration"></a>Miglioramento della registrazione del server di pull ##
 
-Nelle versioni precedenti di WMF le richieste di registrazione o reporting simultanee al server di pull DSC, con uso del database ESENT, facevano sì che la gestione della configurazione locale non riuscisse a eseguire la registrazione o il reporting. In questi casi i registri eventi del server di pull visualizzavano il messaggio di errore "Nome istanza già in uso".
-Ciò era dovuto a un modello errato che veniva usato per accedere al database ESENT in uno scenario multithread. In WMF 5.1 questo problema è stato risolto. Le registrazioni o il reporting simultanei, che comprendono l'uso del database ESENT, funzionano correttamente in WMF 5.1. Tutto questo si applica solo al database ESENT, non al database OLE DB. 
+Nelle versioni precedenti di WMF le richieste di registrazione o reporting simultanee al server di pull DSC, con uso del database ESENT, facevano sì che la gestione della configurazione locale non riuscisse a eseguire la registrazione o il reporting. In questi casi, nei log eventi del server di pull viene visualizzato il messaggio di errore "Nome istanza già in uso".
+Ciò era dovuto a un modello errato che veniva usato per accedere al database ESENT in uno scenario multithread. In WMF 5.1 questo problema è stato risolto. Il reporting o le registrazioni simultanee, che comprendono l'uso del database ESENT, funzionano correttamente in WMF 5.1. Tutto questo si applica solo al database ESENT, non al database OLE DB. 
 
 ## <a name="enable-circular-log-on-esent-database-instance"></a>Abilitare il log circolare nell'istanza di database ESENT
-Nella versione precedente di DSC-PullServer, i file di log del database ESENT riempiono lo spazio su disco del server di pull perché l'istanza del database viene creata senza registrazione circolare. In questa versione, il cliente avrà la possibilità di controllare il comportamento di registrazione circolare dell'istanza usando il file web.config del server di pull. Per impostazione predefinita, CircularLogging verrà impostato su TRUE.
+Nella versione precedente di DSC-PullServer, i file di log del database ESENT riempiono lo spazio su disco del server di pull perché l'istanza del database viene creata senza registrazione circolare. In questa versione è possibile controllare il comportamento di registrazione circolare dell'istanza usando il file web.config del server di pull. Per impostazione predefinita, CircularLogging è impostato su TRUE.
 ```
 <appSettings>
-     <add key="dbprovider" value="ESENT" />
+    <add key="dbprovider" value="ESENT" />
     <add key="dbconnectionstr" value="C:\Program Files\WindowsPowerShell\DscService\Devices.edb" />
     <add key="CheckpointDepthMaxKB" value="512" />
     <add key="UseCircularESENTLogs" value="TRUE" />
@@ -80,7 +82,7 @@ PartialOne
 
 ![FileName nel repository di configurazione](../images/PartialInConfigRepository.png)
 
-File MOF del nome del servizio di automazione di Azure generati come `<ConfigurationName>.<NodeName>.mof`. La configurazione seguente verrà compilata in PartialOne.localhost.mof.
+File MOF del nome del servizio di automazione di Azure generati come `<ConfigurationName>.<NodeName>.mof`. La configurazione seguente viene compilata in PartialOne.localhost.mof.
 
 Questo rendeva impossibile l'esecuzione del pull di una configurazione parziale dal servizio di automazione di Azure.
 
@@ -99,9 +101,9 @@ Configuration PartialOne
 PartialOne
 ```
 
-In WMF 5.1 la configurazione parziale nel server di pull/servizio può essere denominata `<ConfigurationName>.<NodeName>.mof`. Inoltre, se un computer effettua il pull di una configurazione singola da un server di pull/servizio, il file di configurazione nel repository di configurazione del server pull potrà avere qualsiasi nome file. Questa flessibilità di denominazione consente la gestione parziale dei nodi da parte del servizio di automazione di Azure, dove parte della configurazione deriva da Automation DSC per Azure e una configurazione parziale viene gestita localmente.
+In WMF 5.1 una configurazione parziale nel server di pull/servizio può essere denominata `<ConfigurationName>.<NodeName>.mof`. Inoltre, se un computer effettua il pull di una configurazione singola da un server di pull/servizio, il file di configurazione nel repository di configurazione del server pull potrà avere qualsiasi nome file. Questa flessibilità di denominazione consente la gestione parziale dei nodi da parte del servizio di Automazione di Azure, dove parte della configurazione deriva da Automation DSC di Azure e una configurazione parziale viene gestita localmente.
 
-La metaconfigurazione seguente imposta un nodo che viene gestito sia localmente che dal servizio di automazione di Azure.
+La metaconfigurazione seguente imposta un nodo che viene gestito sia localmente che dal servizio di Automazione di Azure.
 
 ```PowerShell
   [DscLocalConfigurationManager()]
@@ -136,14 +138,14 @@ La metaconfigurazione seguente imposta un nodo che viene gestito sia localmente 
    }
 
    RegistrationMetaConfig
-   slcm -Path .\RegistrationMetaConfig -Verbose
+   Set-DscLocalConfigurationManager -Path .\RegistrationMetaConfig -Verbose
  ```
 
 # <a name="using-psdscrunascredential-with-dsc-composite-resources"></a>Usare PsDscRunAsCredential con le risorse composite DSC   
 
 È stato aggiunto il supporto per l'uso di [*PsDscRunAsCredential*](https://msdn.microsoft.com/cs-cz/powershell/dsc/runasuser) con le risorse [composite](https://msdn.microsoft.com/en-us/powershell/dsc/authoringresourcecomposite) DSC.    
 
-Gli utenti possono ora specificare un valore per PsDscRunAsCredential quando vengono usate risorse composite all'interno delle configurazioni. Quando specificato, tutte le risorse vengono eseguite all'interno di una risorsa composita come utente RunAs. Se una risorsa composita chiama un'altra risorsa composita, tutte le relative risorse vengono eseguite come utente RunAs. Le credenziali RunAs vengono propagate a tutti i livelli della gerarchia di risorse composite. Se una risorsa all'interno di una risorsa composita specifica un valore per PsDscRunAsCredential, si verifica un errore di merge durante la compilazione della configurazione.
+È ora possibile specificare un valore per PsDscRunAsCredential quando si usano risorse composite all'interno delle configurazioni. Quando specificato, tutte le risorse vengono eseguite all'interno di una risorsa composita come utente RunAs. Se una risorsa composita chiama un'altra risorsa composita, tutte le relative risorse vengono eseguite come utente RunAs. Le credenziali RunAs vengono propagate a tutti i livelli della gerarchia di risorse composite. Se una risorsa all'interno di una risorsa composita specifica un valore per PsDscRunAsCredential, durante la compilazione della configurazione si verifica un errore di merge.
 
 Questo esempio mostra l'uso con la risorsa composita [WindowsFeatureSet](https://msdn.microsoft.com/en-us/powershell/wmf/dsc_newresources) inclusa nel modulo PSDesiredStateConfiguration. 
 
@@ -187,7 +189,7 @@ InstallWindowsFeature -ConfigurationData $configData
 ##<a name="dsc-module-and-configuration-signing-validations"></a>Convalide delle firme delle configurazioni e dei moduli DSC
 In DSC le configurazioni e i moduli vengono distribuiti dal server di pull a computer gestiti. Se il server di pull è compromesso, un utente malintenzionato potrebbe modificare le configurazioni e i moduli nel server di pull e distribuirli a tutti i nodi gestiti danneggiandoli. 
 
- In WMF 5.1 DSC supporta la convalida delle firme digitali su file di catalogo e configurazione (file MOF). Questa funzionalità impedisce che i nodi eseguano configurazioni o file di modulo non firmati da un'entità attendibile o che sono stati manomessi dopo essere stati firmati da un'entità attendibile. 
+ In WMF 5.1 DSC supporta la convalida delle firme digitali su file di catalogo e configurazione (file MOF). Questa funzionalità impedisce che i nodi eseguano configurazioni o file di modulo non firmati da un'entità attendibile o manomessi dopo essere stati firmati da un'entità attendibile. 
 
 
 
@@ -223,7 +225,7 @@ Configuration EnableSignatureValidation
       RegistrationKey = 'd6750ff1-d8dd-49f7-8caf-7471ea9793fc' # Replace this with correct registration key.
     }
     SignatureValidation validations{
-        # By default, LCM will use default Windows trusted publisher store to validate the certificate chain. If TrustedStorePath property is specified, LCM will use this custom store for retrieving the trusted publishers to validate the content.
+        # By default, LCM uses the default Windows trusted publisher store to validate the certificate chain. If TrustedStorePath property is specified, LCM uses this custom store for retrieving the trusted publishers to validate the content.
         TrustedStorePath = 'Cert:\LocalMachine\DSCStore'            
         SignedItemType = 'Configuration','Module'         # This is a list of DSC artifacts, for which LCM need to verify their digital signature before executing them on the node.       
     }
@@ -233,7 +235,7 @@ EnableSignatureValidation
 Set-DscLocalConfigurationManager -Path .\EnableSignatureValidation -Verbose 
  ```
 
-L'impostazione della metaconfigurazione precedente in un nodo abilita la convalida delle firme nelle configurazioni e nei moduli scaricati. La Gestione configurazione locale eseguirà i passaggi seguenti per verificare le firme digitali.
+L'impostazione della metaconfigurazione precedente in un nodo abilita la convalida delle firme nelle configurazioni e nei moduli scaricati. Gestione configurazione locale esegue i passaggi seguenti per verificare le firme digitali.
 
 1. Verifica che la firma in un file di configurazione (file MOF) sia valida. 
    Usa il cmdlet di PowerShell [Get-AuthenticodeSignature](https://technet.microsoft.com/library/hh849805.aspx) che è stato esteso nella versione 5.1 per il supporto della convalida delle firme dei file MOF.
@@ -247,16 +249,16 @@ L'impostazione della metaconfigurazione precedente in un nodo abilita la convali
 6. Configurazione del processo
 
 > Nota: la convalida della firma nel catalogo del modulo e nella configurazione viene eseguita solo quando la configurazione viene applicata al sistema per la prima volta o quando il modulo viene scaricato e installato. I controlli di coerenza non convalidano la firma di Current.mof o le dipendenze del modulo.
-Se la verifica ha esito negativo in una fase, ad esempio se la configurazione di cui viene effettuato il pull dal server di pull non è firmata, l'elaborazione della configurazione verrà terminata con l'errore riportato di seguito e verranno eliminati tutti i file temporanei.
+Se la verifica ha esito negativo in una fase, ad esempio se la configurazione di cui viene eseguito il pull dal server di pull non è firmata, l'elaborazione della configurazione viene terminata con l'errore riportato di seguito e vengono eliminati tutti i file temporanei.
 
 ![Configurazione di output degli errori di esempio](../images/PullUnsignedConfigFail.png)
 
-Analogamente, il pull di un modulo il cui catalogo non è firmato causerà l'errore seguente:
+Analogamente, il pull di un modulo il cui catalogo non è firmato causa l'errore seguente:
 
 ![Modulo di output degli errori di esempio](../images/PullUnisgnedCatalog.png)
 
 ####<a name="push"></a>Push
-Una configurazione inviata mediante push potrebbe essere alterata in origine prima che venga recapitata al nodo. La Gestione configurazione locale eseguirà passaggi di convalida della firma simili per le configurazioni di cui è stato effettuato il push o pubblicate.
+Una configurazione inviata mediante push potrebbe essere alterata in origine prima che venga recapitata al nodo. Gestione configurazione locale esegue passaggi di convalida della firma simili per le configurazioni pubblicate o di cui è stato eseguito il push.
 Di seguito è riportato un esempio completo di convalida della firma per il push.
 
 * Abilitazione della convalida delle firme nel nodo.

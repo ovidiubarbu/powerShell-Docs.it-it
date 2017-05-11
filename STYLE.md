@@ -40,7 +40,7 @@ Header 2
 * Non iniziare i comandi di PowerShell con "C:\PS> "
 * L'output generato dai comandi di PowerShell deve essere impostato come commento per evitare l'applicazione dell'evidenziazione della sintassi
 * I nomi di proprietà e parametri devono essere in **grassetto**
-
+* I cmdlet di PowerShell sono "[scritti in base alla convenzione Pascal](https://en.wikipedia.org/wiki/PascalCase)". I verbi sono separati dai sostantivi mediante un trattino.
 
 ## <a name="lists"></a>Elenchi
 

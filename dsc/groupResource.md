@@ -7,9 +7,11 @@ ms.topic: article
 author: eslesar
 manager: dongill
 ms.prod: powershell
-ms.openlocfilehash: 12c6ad6f30b4e1b67296289c927e59fd64079675
-ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
-translationtype: HT
+ms.openlocfilehash: db2a12141ab1eaca73bf958b5a27ef2a356d5b8f
+ms.sourcegitcommit: 6057e6d22ef8a2095af610e0d681e751366a9773
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 05/08/2017
 ---
 # <a name="dsc-group-resource"></a>Risorsa Group DSC
 
@@ -17,18 +19,18 @@ translationtype: HT
 
 La risorsa Group in Windows PowerShell DSC (Desired State Configuration) fornisce un meccanismo per gestire i gruppi locali nel nodo di destinazione.
 
-##<a name="syntax"></a>Sintassi##
+## <a name="syntax"></a>Sintassi
 ```
 Group [string] #ResourceName
 {
-    GroupName = [string]
-    [ Credential = [PSCredential] ]
-    [ Description = [string[]] ]
-    [ Ensure = [string] { Absent | Present }  ]
-    [ Members = [string[]] ]
+    GroupName          = [string]
+    [ Credential       = [PSCredential] ]
+    [ Description      = [string[]] ]
+    [ Ensure           = [string] { Absent | Present }  ]
+    [ Members          = [string[]] ]
     [ MembersToExclude = [string[]] ]
     [ MembersToInclude = [string[]] ]
-    [ DependsOn = [string[]] ]
+    [ DependsOn        = [string[]] ]
 }
 ```
 
@@ -37,11 +39,11 @@ Group [string] #ResourceName
 |  Proprietà  |  Descrizione   | 
 |---|---| 
 | GroupName| Il nome del gruppo per cui si vuole specificare un determinato stato.| 
-| Credential| Le credenziali necessarie per accedere a risorse remote. **Nota**: questo account deve avere le autorizzazioni di Active Directory appropriate per aggiungere tutti gli account non locali al gruppo. In caso contrario, si verifica un errore.
+| Credential| Le credenziali necessarie per accedere a risorse remote. **Nota**: per aggiungere tutti gli account non locali al gruppo, questo account deve avere le autorizzazioni di Active Directory appropriate. In caso contrario, quando la configurazione viene eseguita nel nodo di destinazione, si verifica un errore.  
 | Descrizione| La descrizione dell'attività.| 
 | Ensure| Indica se il gruppo esiste. Impostare questa proprietà su "Absent" per specificare che il gruppo non esiste. Se la proprietà è impostata su "Present" (valore predefinito), specifica che il gruppo esiste.| 
-| Membri| Usare questa proprietà per sostituire l'appartenenza al gruppo corrente con i membri specificati. Il valore di questa proprietà è una matrice di stringhe del formato *Dominio*\\*Nome utente*. Se si imposta questa proprietà in una configurazione, non usare la proprietà **MembersToExclude** o **MembersToInclude**. In caso contrario, verrà generato un errore.| 
-| MembersToExclude| Usare questa proprietà per rimuovere membri dall'appartenenza al gruppo esistente. Il valore di questa proprietà è una matrice di stringhe del formato *Dominio*\\*Nome utente*. Se si imposta questa proprietà in una configurazione, non usare la proprietà **Members**. In caso contrario, verrà generato un errore.| 
+| Membri| Usare questa proprietà per sostituire l'appartenenza al gruppo corrente con i membri specificati. Il valore di questa proprietà è una matrice di stringhe del formato *Dominio*\\*Nome utente*. Se si imposta questa proprietà in una configurazione, non usare la proprietà **MembersToExclude** o **MembersToInclude**. Questa operazione genera un errore.| 
+| MembersToExclude| Usare questa proprietà per rimuovere membri dall'appartenenza al gruppo esistente. Il valore di questa proprietà è una matrice di stringhe del formato *Dominio*\\*Nome utente*. Se si imposta questa proprietà in una configurazione, non usare la proprietà **Members**. Questa operazione genera un errore.| 
 | MembersToInclude| Usare questa proprietà per aggiungere membri all'appartenenza al gruppo esistente. Il valore di questa proprietà è una matrice di stringhe del formato *Dominio*\\*Nome utente*. Se si imposta questa proprietà in una configurazione, non usare la proprietà **Members**. In caso contrario, verrà generato un errore.| 
 | DependsOn | Indica che prima di configurare la risorsa è necessario eseguire la configurazione di un'altra risorsa. Ad esempio, se l'ID del blocco script di configurazione della risorsa che si vuole eseguire per primo è __ResourceName__ e il tipo è __ResourceType__, la sintassi per usare questa proprietà è `DependsOn = "[ResourceType]ResourceName"``.| 
 
@@ -52,7 +54,7 @@ L'esempio seguente illustra come specificare che un gruppo denominato "TestGroup
 ```powershell
 Group GroupExample
 {
-    # This will remove TestGroup, if present
+    # This removes TestGroup, if present
     # To create a new group, set Ensure to "Present“
     Ensure = "Absent"
     GroupName = "TestGroup"
@@ -88,3 +90,22 @@ Group AddADUserToLocalAdminGroup
         }
 ```
 
+## <a name="example-3"></a>Esempio 3
+L'esempio seguente illustra come garantire che un gruppo locale, TigerTeamAdmins, nel server TigerTeamSource.Contoso.Com non contenga un account di dominio specifico, Contoso\JerryG.  
+
+```powershell
+
+Configuration SecureTigerTeamSrouce 
+{
+  Import-DscResource -ModuleName 'PSDesiredStateConfiguration'
+  
+  Node TigerTeamSource.Contoso.Com {
+  Group TigerTeamAdmins
+    {
+       GroupName        = 'TigerTeamAdmins'   
+       Ensure           = 'Absent'             
+       MembersToInclude = "Contoso\JerryG"
+    }
+  }
+}
+```
