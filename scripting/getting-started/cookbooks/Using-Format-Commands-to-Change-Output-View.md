@@ -1,17 +1,13 @@
 ---
-description: 
-manager: carmonm
-ms.topic: article
-author: jpjofre
-ms.prod: powershell
+ms.date: 2017-06-05
 keywords: powershell,cmdlet
-ms.date: 2016-12-12
 title: Uso dei comandi Format per modificare la visualizzazione dell&quot;output
-ms.technology: powershell
 ms.assetid: 63515a06-a6f7-4175-a45e-a0537f4f6d05
-ms.openlocfilehash: 0ab2e2b669e07b8b1bff16586bc7243d4cecaa1d
-ms.sourcegitcommit: 8acbf9827ad8f4ef9753f826ecaff58495ca51b0
-translationtype: HT
+ms.openlocfilehash: 0163fcb21d586fc98902d9bdcfab6fe4eb97c225
+ms.sourcegitcommit: 598b7835046577841aea2211d613bb8513271a8b
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/08/2017
 ---
 # <a name="using-format-commands-to-change-output-view"></a>Uso dei comandi Format per modificare la visualizzazione dell'output
 Windows PowerShell include un set di cmdlet che consentono di controllare le proprietà visualizzate per oggetti specifici. I nomi di tutti i cmdlet iniziano con il verbo **Format**. Consentono di selezionare una o più proprietà da visualizzare.

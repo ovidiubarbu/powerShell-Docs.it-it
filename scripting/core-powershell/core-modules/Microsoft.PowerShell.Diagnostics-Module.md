@@ -1,17 +1,13 @@
 ---
-description: 
-manager: carmonm
-ms.topic: article
-author: jpjofre
-ms.prod: powershell
+ms.date: 2017-06-05
 keywords: powershell,cmdlet
-ms.date: 2016-12-12
 title: Modulo Microsoft.PowerShell.Diagnostics
-ms.technology: powershell
 ms.assetid: f5aab004-d759-4f8b-9064-a30095ad4257
-ms.openlocfilehash: 7e3c4a3ac549f874e060441f1ec12f65c3f69496
-ms.sourcegitcommit: 8acbf9827ad8f4ef9753f826ecaff58495ca51b0
-translationtype: HT
+ms.openlocfilehash: 38f8e4100539fcac738f4f54d56b0fa74b0aca22
+ms.sourcegitcommit: 598b7835046577841aea2211d613bb8513271a8b
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/08/2017
 ---
 # <a name="microsoftpowershelldiagnostics-module"></a>Modulo Microsoft.PowerShell.Diagnostics
 Questa sezione contiene gli argomenti della Guida per il modulo **Microsoft.PowerShell.Diagnostics**. Il modulo **Microsoft.PowerShell.Diagnostics** contiene i cmdlet che gestiscono i registri eventi, i contatori delle prestazioni ed Event Tracing for Windows (ETW). Viene installato con Windows PowerShell.

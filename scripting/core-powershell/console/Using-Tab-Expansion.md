@@ -1,17 +1,13 @@
 ---
-description: 
-manager: carmonm
-ms.topic: article
-author: jpjofre
-ms.prod: powershell
+ms.date: 2017-06-05
 keywords: powershell,cmdlet
-ms.date: 2016-12-12
 title: Uso dell&quot;espansione dei nomi tramite TAB
-ms.technology: powershell
 ms.assetid: c8730471-bf6a-43b8-ab1d-f9ef5a74f04e
-ms.openlocfilehash: 156792ee4ed5b3c2c0011f7ab593433e90d280b4
-ms.sourcegitcommit: 8acbf9827ad8f4ef9753f826ecaff58495ca51b0
-translationtype: HT
+ms.openlocfilehash: c158e544d79bf6010690160eea71630a1981e8a5
+ms.sourcegitcommit: 598b7835046577841aea2211d613bb8513271a8b
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/08/2017
 ---
 # <a name="using-tab-expansion"></a>Uso dell'espansione dei nomi tramite TAB
 Le shell da riga di comando offrono spesso un modo per completare automaticamente i nomi di file o comandi lunghi, velocizzando l'immissione dei comandi e visualizzando suggerimenti. Windows PowerShell consente di usare il tasto **TAB** per immettere nomi di file e di cmdlet.

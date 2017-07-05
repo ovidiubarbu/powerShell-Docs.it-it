@@ -1,17 +1,13 @@
 ---
-description: 
-manager: carmonm
-ms.topic: article
-author: jpjofre
-ms.prod: powershell
+ms.date: 2017-06-05
 keywords: powershell,cmdlet
-ms.date: 2016-12-12
 title: Esplorazione di Windows PowerShell ISE
-ms.technology: powershell
 ms.assetid: e0d2c6e8-5126-40e7-a1e1-d1cff29fe94a
-ms.openlocfilehash: 8d2c803386233390440972b66a6d616b58439a6b
-ms.sourcegitcommit: 8acbf9827ad8f4ef9753f826ecaff58495ca51b0
-translationtype: HT
+ms.openlocfilehash: 979209d4b200728b7e78e341bb9595741d2b8e68
+ms.sourcegitcommit: 598b7835046577841aea2211d613bb8513271a8b
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/08/2017
 ---
 # <a name="exploring-the-windows-powershell-ise"></a>Esplorazione di Windows PowerShell ISE
 È possibile usare Windows PowerShell® Integrated Scripting Environment (ISE) per creare ed eseguire il debug di script e comandi ed eseguire gli stessi script e comandi. Windows PowerShell ISE include la barra dei menu, le schede di Windows PowerShell, la barra degli strumenti, le schede degli script, un riquadro di script, un riquadro della console, una barra di stato, un dispositivo di scorrimento per le dimensioni del testo e una Guida sensibile al contesto.

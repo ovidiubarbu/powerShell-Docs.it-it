@@ -1,19 +1,13 @@
 ---
-description: 
-manager: carmonm
-ms.topic: article
-author: jpjofre
-ms.prod: powershell
+ms.date: 2017-06-05
 keywords: powershell,cmdlet
-ms.date: 2016-12-12
 title: Gestione delle installazioni di software
-ms.technology: powershell
 ms.assetid: 51a12fe9-95f6-4ffc-81a5-4fa72a5bada9
-ms.openlocfilehash: 3ab302d585b69df69faa59c0561216899dd7ee9a
-ms.sourcegitcommit: 6057e6d22ef8a2095af610e0d681e751366a9773
+ms.openlocfilehash: 2078376a8be19c9ff8ecc44183eb89f14bc388ed
+ms.sourcegitcommit: 598b7835046577841aea2211d613bb8513271a8b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2017
+ms.lasthandoff: 06/08/2017
 ---
 # <a name="working-with-software-installations"></a>Gestione delle installazioni di software
 Le applicazioni progettate per l'uso di Windows Installer sono accessibili tramite la classe **Win32_Product** di WMI, ma non tutte le applicazioni oggi disponibili prevedono l'uso di Windows Installer. Poiché Windows Installer offre la gamma più ampia di tecniche standard per la gestione di applicazioni installabili, questo articolo è incentrato principalmente su tali applicazioni. Le applicazioni che prevedono l'uso di procedure di installazione alternative non vengono in genere gestite da Windows Installer. Le tecniche specifiche per la gestione di queste applicazioni variano in base al software del programma di installazione e alle decisioni prese dallo sviluppatore.

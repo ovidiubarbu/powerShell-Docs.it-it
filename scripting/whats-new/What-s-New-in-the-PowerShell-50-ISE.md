@@ -1,27 +1,23 @@
 ---
-description: 
-manager: carmonm
-ms.topic: article
-author: jpjofre
-ms.prod: powershell
+ms.date: 2017-06-05
 keywords: powershell,cmdlet
-ms.date: 2016-12-12
 title: "Novità di PowerShell 5.0 ISE"
-ms.technology: powershell
 ms.assetid: 38648d47-7c27-4b37-a40e-ad29948519c2
-ms.openlocfilehash: 8b1ebcbf3c4aff811356c48f965b3473247b055a
-ms.sourcegitcommit: 8acbf9827ad8f4ef9753f826ecaff58495ca51b0
-translationtype: HT
+ms.openlocfilehash: e772c31ae407e73a96364ffedf98057760037836
+ms.sourcegitcommit: 598b7835046577841aea2211d613bb8513271a8b
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/08/2017
 ---
 # <a name="what39s-new-in-the-windows-powershell-ise"></a>Novità di Windows PowerShell ISE
 Questo argomento illustra le funzionalità nuove e aggiornate introdotte nelle versioni di Windows PowerShell ® Integrated Scripting Environment (ISE).
 
-## <a name="a-nameoverviewafeature-description"></a><a name="overview"></a>Descrizione delle funzionalità
+## <a name="overview"></a>Descrizione delle funzionalità
 Windows PowerShell ISE è un'applicazione host che consente di scrivere, eseguire e testare script e moduli in un ambiente grafico e intuitivo. Le principali funzionalità, come la sintassi contraddistinta dal colore, la funzionalità di completamento tramite tasto TAB, il debug visivo, la conformità a Unicode e la Guida sensibile al contesto garantiscono un'esperienza di scripting più dettagliata.
 
 Per un'introduzione a Windows PowerShell ISE, vedere [Panoramica di Windows PowerShell Integrated Scripting Environment](https://technet.microsoft.com/en-us/library/3c1892c2-bf84-4cb6-af26-1f453be9e671).
 
-## <a name="a-nameversionsanew-and-changed-functionality-in-windows-powershell-ise"></a><a name="versions"></a>Funzionalità nuove e modificate in Windows PowerShell ISE
+## <a name="versions"></a>Funzionalità nuove e modificate in Windows PowerShell ISE
 Nella tabella seguente sono elencate alcune delle funzionalità nuove e modificate per questa versione di Windows PowerShell ISE in Windows PowerShell.
 
 |Caratteristica/funzionalità|Windows PowerShell ISE 4.0|Windows PowerShell ISE 3.0|Windows PowerShell ISE 2.0|
@@ -37,7 +33,7 @@ Nella tabella seguente sono elencate alcune delle funzionalità nuove e modifica
 |**[Nuova finestra di visualizzazione della Guida](#BKMK_NewHelpViewer)**|X|X||
 |**[Cmdlet Show-Command](#BKMK_ShowCommand)**|X|X||
 
-### <a name="a-namebkmkintellisenseaintellisense"></a><a name="BKMK_Intellisense"></a>IntelliSense
+### <a name="BKMK_Intellisense"></a>IntelliSense
 **Funzionalità aggiunta in ISE 3.0**
 
 IntelliSense è una funzionalità di assistenza per il completamento automatico che fa parte di Windows PowerShell ISE. IntelliSense consente di visualizzare menu selezionabili di cmdlet, parametri, valori di parametri, file o cartelle potenzialmente corrispondenti durante la digitazione.
@@ -50,7 +46,7 @@ Con l'aggiunta di IntelliSense, risulta più semplice individuare i cmdlet e la 
 
 Quando si digitano cmdlet in Windows PowerShell ISE 3.0 o versione successiva viene visualizzato un menu scorrevole e selezionabile, che consente di cercare e selezionare i comandi appropriati.
 
-### <a name="a-namebkmksnippetsasnippets"></a><a name="BKMK_Snippets"></a>Frammenti di codice
+### <a name="BKMK_Snippets"></a>Frammenti di codice
 **Funzionalità aggiunta in ISE 3.0**
 
 I *frammenti di codice* sono brevi sezioni di codice di Windows PowerShell che è possibile inserire negli script creati in Windows PowerShell ISE. Windows PowerShell ISE include un set predefinito di frammenti di codice. È possibile aggiungere frammenti di codice con il cmdlet **New-Snippet** mentre si lavora in Windows PowerShell ISE.
@@ -63,7 +59,7 @@ Con i frammenti di codice è possibile assemblare e creare script rapidamente pe
 
 Per usare frammenti di codice in Windows PowerShell 3.0 o versioni successive, scegliere **Avvia frammenti** dal menu **Modifica** o premere **CTRL+J**.
 
-### <a name="a-namebkmkaddontoolsaadd-on-tools"></a><a name="BKMK_AddOnTools"></a>Strumenti aggiuntivi
+### <a name="BKMK_AddOnTools"></a>Strumenti aggiuntivi
 **Funzionalità aggiunta in PowerShell 3.0**
 
 Windows PowerShell ISE supporta ora strumenti aggiuntivi, ovvero controlli Windows Presentation Foundation (WPF) aggiunti tramite il modello a oggetti. Gli strumenti aggiuntivi possono essere visualizzati nella console in un riquadro verticale o orizzontale. Più strumenti aggiuntivi di un riquadro vengono visualizzati come controllo a schede. È inoltre possibile aggiungere o rimuovere strumenti aggiuntivi prodotti da fornitori non Microsoft. Per altre informazioni su come importare o rimuovere strumenti aggiuntivi, vedere [Operazioni di Windows PowerShell ISE](http://technet.microsoft.com/library/cc732148.aspx).
@@ -78,7 +74,7 @@ Windows PowerShell ISE 3.0 e le versioni successive includono il componente aggi
 
 È possibile trovare altri componenti aggiuntivi tramite il comando **Apri sito Web strumenti aggiuntivi** nel menu **Componenti aggiuntivi**.
 
-### <a name="a-namebkmkrestartmgrarestart-manager-and-auto-save"></a><a name="BKMK_RestartMgr"></a>Gestione riavvio e salvataggio automatico
+### <a name="BKMK_RestartMgr"></a>Gestione riavvio e salvataggio automatico
 **Funzionalità aggiunta in PowerShell 3.0**
 
 Windows PowerShell ISE ora salva gli script aperti automaticamente ogni due minuti, in una posizione separata.  Se Windows PowerShell ISE si interrompe o il sistema operativo viene riavviato, dopo il riavvio di Windows PowerShell ISE vengono ripristinati gli script aperti nell'ultima sessione, anche se non erano stati salvati.
@@ -93,7 +89,7 @@ Per modificare l'intervallo di salvataggio automatico eseguire il comando seguen
 
 Windows PowerShell ISE 2.0 non salva gli script automaticamente in caso di riavvio.
 
-### <a name="a-namebkmkmruamost-recently-used-list"></a><a name="BKMK_MRU"></a>Elenco degli elementi usati di recente
+### <a name="BKMK_MRU"></a>Elenco degli elementi usati di recente
 **Funzionalità aggiunta in PowerShell 3.0**
 
 Windows PowerShell ISE ora include un elenco dei file usati di recente. Quando si apre un file in Windows PowerShell ISE, il file viene aggiunto all'elenco degli elementi usati di recente nel menu **File**.
@@ -108,7 +104,7 @@ Con l'elenco degli elementi usati di recente è possibile adesso accedere facilm
 
 Windows PowerShell ISE 2.0 non include un elenco degli elementi usati di recente.
 
-### <a name="a-namebkmkconsolepaneaconsole-pane"></a><a name="BKMK_ConsolePane"></a>Riquadro della console
+### <a name="BKMK_ConsolePane"></a>Riquadro della console
 **Funzionalità aggiunta in PowerShell 3.0**
 
 I riquadri distinti di comandi e output disponibili nella prima versione di Windows PowerShell ISE sono stati riuniti in un singolo riquadro della console. Il funzionamento e l'aspetto del riquadro della console sono simili a quelli di una tipica console di Windows PowerShell, ma con i miglioramenti seguenti (la maggior parte è descritta in questo argomento).
@@ -145,7 +141,7 @@ L'aggiunta di queste modifiche del riquadro della console offre un'esperienza di
 
 Windows PowerShell ISE 2.0 ha riquadri separati per comandi e output.
 
-### <a name="a-namebkmkcommandlineacommand-line-switches"></a><a name="BKMK_CommandLine"></a>Opzioni della riga di comando
+### <a name="BKMK_CommandLine"></a>Opzioni della riga di comando
 **Funzionalità aggiunta in PowerShell 3.0**
 
 Se si avvia Windows PowerShell ISE dalla riga di comando digitando **Powershell_ise.exe**, è possibile aggiungere le nuove opzioni da riga di comando seguenti.
@@ -164,7 +160,7 @@ L'aggiunta di queste opzioni da riga di comando consente di controllare l'ambien
 
 Windows PowerShell ISE 2.0 non riconosce queste opzioni da riga di comando.
 
-### <a name="a-namebkmkneweditorfeaturesanew-editor-features"></a><a name="BKMK_NewEditorFeatures"></a>Nuove funzionalità dell'editor
+### <a name="BKMK_NewEditorFeatures"></a>Nuove funzionalità dell'editor
 **Funzionalità aggiunta in PowerShell 3.0**
 
 Altre funzionalità di modifica di Windows PowerShell ISE includono:
@@ -193,7 +189,7 @@ Le funzionalità di modifica aggiuntive rendono disponibile un ambiente di modif
 
 Questi miglioramenti non erano presenti in Windows PowerShell ISE 2.0.
 
-### <a name="a-namebkmknewhelpvieweranew-help-viewer-window"></a><a name="BKMK_NewHelpViewer"></a>Nuova finestra di visualizzazione della Guida
+### <a name="BKMK_NewHelpViewer"></a>Nuova finestra di visualizzazione della Guida
 **Funzionalità aggiunta in PowerShell 3.0**
 
 Se si preme **F1** mentre il cursore si trova in un cmdlet oppure si evidenzia parte di un cmdlet, nel nuovo visualizzatore della Guida verrà visualizzata la Guida sensibile al contesto del cmdlet evidenziato. Per visualizzare la Guida Informazioni su Windows PowerShell, digitare **operators** nel riquadro della console e quindi premere **F1**.
@@ -210,7 +206,7 @@ La possibilità di accedere alla Guida sensibile al contesto senza uscire dal cm
 
 Premendo F1 nelle versioni precedenti di Windows PowerShell ISE viene aperto il file della Guida nel computer locale. In Windows PowerShell ISE 3.0 e versioni successive viene visualizzata una finestra che contiene la Guida per il cmdlet, configurabile e nella quale è possibile eseguire ricerche. Questa esperienza della Guida è una novità di Windows PowerShell ISE 3.0 e la Guida aggiornabile è una novità di Windows PowerShell ISE 3.0.
 
-### <a name="a-namebkmkshowcommandashow-command-cmdlet"></a><a name="BKMK_ShowCommand"></a>Cmdlet Show-Command
+### <a name="BKMK_ShowCommand"></a>Cmdlet Show-Command
 **Funzionalità aggiunta in PowerShell 3.0**
 
 Il cmdlet **Show-Command** consente di comporre o eseguire un cmdlet o una funzione compilando un modulo grafico. Questo modulo consente agli utenti di usare Windows PowerShell in un ambiente grafico. **Show-Command** consente inoltre agli utenti esperti di script di creare un'interfaccia utente grafica rapida basata su Windows PowerShell.
@@ -223,7 +219,7 @@ L'uso di **Show-Command** negli script di Windows PowerShell consente di offrire
 
 Show-Command è una novità di Windows PowerShell ISE 3.0.
 
-## <a name="a-namebkmklinksasee-also"></a><a name="BKMK_LINKS"></a>Vedere anche
+## <a name="BKMK_LINKS"></a>Vedere anche
 Per altre informazioni sull'uso di Windows PowerShell ISE in Windows PowerShell, vedere i collegamenti seguenti.
 
 - [Uso di Windows PowerShell ISE (Integrated Scripting Environment)](../core-powershell/ise/Using-the-Windows-PowerShell-ISE.md)

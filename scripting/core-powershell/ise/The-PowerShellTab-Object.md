@@ -1,24 +1,20 @@
 ---
-description: 
-manager: carmonm
-ms.topic: article
-author: jpjofre
-ms.prod: powershell
+ms.date: 2017-06-05
 keywords: powershell,cmdlet
-ms.date: 2016-12-12
 title: Oggetto PowerShellTab
-ms.technology: powershell
 ms.assetid: a9b58556-951b-4f48-b3ae-b351b7564360
-ms.openlocfilehash: 89258180377c6649c213e442b1f2d64872aaa1b4
-ms.sourcegitcommit: 8acbf9827ad8f4ef9753f826ecaff58495ca51b0
-translationtype: HT
+ms.openlocfilehash: d4e9374202d352a30b3eb46bcf1e4e40dea49822
+ms.sourcegitcommit: 598b7835046577841aea2211d613bb8513271a8b
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/08/2017
 ---
 # <a name="the-powershelltab-object"></a>Oggetto PowerShellTab
   L'oggetto **PowerShellTab** rappresenta un ambiente di runtime di Windows PowerShell.
 
 ## <a name="methods"></a>Metodo
 
-###  <a name="a-nameinvokea-invoke-script-"></a><a name="invoke"></a> Invoke\( Script \)
+###  <a name="invoke"></a> Invoke\( Script \)
   Supportato in Windows PowerShell ISE 2.0 e versioni successive. 
 
  Esegue lo script specificato nella scheda di PowerShell.
@@ -72,7 +68,7 @@ measure-command {$psISE.PowerShellTabs[1].InvokeSynchronous("sleep 10",$false,50
 
 ## <a name="properties"></a>Proprietà
 
-###  <a name="a-nameaddonsmenua-addonsmenu"></a><a name="AddOnsMenu"></a> AddOnsMenu
+###  <a name="AddOnsMenu"></a> AddOnsMenu
   Supportato in Windows PowerShell ISE 2.0 e versioni successive. 
 
  Proprietà di sola lettura che ottiene il menu Componenti aggiuntivi per la scheda di PowerShell.
@@ -90,7 +86,7 @@ $parentAdded.SubMenus.Add("_Dir",{dir},"Alt+D")
 $psISE.CurrentPowerShellTab.AddOnsMenu
 ```
 
-###  <a name="a-namecanexecutea-caninvoke"></a><a name="CanExecute"></a> CanInvoke
+###  <a name="CanExecute"></a> CanInvoke
   Supportato in Windows PowerShell ISE 2.0 e versioni successive. 
 
  Proprietà di sola lettura booleana che restituisce un valore **$true** se uno script può essere richiamato con il metodo [Invoke( Script )](#invoke).
@@ -109,7 +105,7 @@ $secondTab.CanInvoke
 
 ```
 
-###  <a name="a-namecommandpanea-consolepane"></a><a name="Commandpane"></a> Consolepane
+###  <a name="Commandpane"></a> Consolepane
   Supportato in Windows PowerShell ISE 3.0 e versioni successive e non presente nelle versioni precedenti.  In Windows PowerShell ISE 2.0 era denominato **CommandPane**.
 
  Proprietà di sola lettura che ottiene l'oggetto [editor](../ise/The-ISEEditor-Object.md) del riquadro della console.
@@ -120,7 +116,7 @@ $psISE.CurrentPowerShellTab.ConsolePane
 
 ```
 
-###  <a name="a-namedisplaynamea-displayname"></a><a name="Displayname"></a>DisplayName
+###  <a name="Displayname"></a>DisplayName
   Supportato in Windows PowerShell ISE 2.0 e versioni successive. 
 
  Proprietà di lettura/scrittura che ottiene o imposta il testo visualizzato nella scheda di PowerShell. Per impostazione predefinita, le schede sono denominate "PowerShell #", dove # rappresenta un numero.
@@ -131,7 +127,7 @@ $newTab = $psise.PowerShellTabs.Add()
 $newTab.DisplayName="Brand New Tab"
 ```
 
-###  <a name="a-nameexpandedscripta-expandedscript"></a><a name="ExpandedScript"></a> ExpandedScript
+###  <a name="ExpandedScript"></a> ExpandedScript
   Supportato in Windows PowerShell ISE 2.0 e versioni successive. 
 
  Proprietà di lettura/scrittura booleana che determina se il riquadro di script è espanso o nascosto.
@@ -142,7 +138,7 @@ $PSise.CurrentPowerShellTab.ExpandedScript=!$PSise.CurrentPowerShellTab.Expanded
 
 ```
 
-###  <a name="a-namefilesa-files"></a><a name="Files"></a> Files
+###  <a name="Files"></a> Files
   Supportato in Windows PowerShell ISE 2.0 e versioni successive. 
 
  Proprietà di sola lettura che ottiene la [raccolta di file di script](../ise/The-ISEFileCollection-Object.md) aperti nella scheda di PowerShell.
@@ -154,7 +150,7 @@ $newFile.Editor.Text = "a`r`nb"
 $newFile.Editor.LineCount
 ```
 
-###  <a name="a-nameoutputa-output"></a><a name="Output"></a> Output
+###  <a name="Output"></a> Output
   Questa funzionalità è presente in Windows PowerShell ISE 2.0, ma è stata rimossa o rinominata nelle versioni successive di ISE.  Nelle versioni successive di Windows PowerShell ISE, è possibile usare l'oggetto **ConsolePane** per gli stessi scopi.
 
  Proprietà di sola lettura che ottiene il riquadro di output dell'[editor](../ise/The-ISEEditor-Object.md) corrente.
@@ -164,7 +160,7 @@ $newFile.Editor.LineCount
 $psise.CurrentPowerShellTab.output.clear()
 ```
 
-###  <a name="a-nameprompta-prompt"></a><a name="Prompt"></a> Prompt
+###  <a name="Prompt"></a> Prompt
   Supportato in Windows PowerShell ISE 2.0 e versioni successive. 
 
  Proprietà di sola lettura che ottiene il testo della richiesta corrente. Nota: la funzione **Prompt** può essere sostituita dal profilo dell'utente. Se il risultato è diverso da una stringa semplice, questa proprietà restituisce nothing.
@@ -174,7 +170,7 @@ $psise.CurrentPowerShellTab.output.clear()
 $psISE.CurrentPowerShellTab.Prompt
 ```
 
-###  <a name="a-nameshowcommandsa-showcommands"></a><a name="ShowCommands"></a> ShowCommands
+###  <a name="ShowCommands"></a> ShowCommands
   Supportato in Windows PowerShell ISE 3.0 e versioni successive e non presente nelle versioni precedenti. 
 
  Proprietà di lettura/scrittura che indica se il riquadro dei comandi è attualmente visualizzato.
@@ -186,7 +182,7 @@ $a = $psISE.CurrentPowerShellTab.ShowCommands
 if (!$a) {$psISE.CurrentPowerShellTab.ShowCommands=$True}
 ```
 
-###  <a name="a-namestatustexta-statustext"></a><a name="StatusText"></a> StatusText
+###  <a name="StatusText"></a> StatusText
   Supportato in Windows PowerShell ISE 2.0 e versioni successive. 
 
  Proprietà di sola lettura che ottiene il testo dello stato di **PowerShellTab**.
@@ -196,7 +192,7 @@ if (!$a) {$psISE.CurrentPowerShellTab.ShowCommands=$True}
 $psISE.CurrentPowerShellTab.StatusText
 ```
 
-###  <a name="a-namehorizontaladdontoolspaneopeneda-horizontaladdontoolspaneopened"></a><a name="HorizontalAddOnToolsPaneOpened"></a> HorizontalAddOnToolsPaneOpened
+###  <a name="HorizontalAddOnToolsPaneOpened"></a> HorizontalAddOnToolsPaneOpened
   Supportato in Windows PowerShell ISE 3.0 e versioni successive e non presente nelle versioni precedenti. 
 
  Proprietà di sola lettura che indica se il riquadro dello strumento Componenti aggiuntivi orizzontale è attualmente aperto.
@@ -206,7 +202,7 @@ $psISE.CurrentPowerShellTab.StatusText
 $psISE.CurrentPowerShellTab.HorizontalAddOnToolsPaneOpened
 ```
 
-###  <a name="a-nameverticaladdontoolspaneopeneda-verticaladdontoolspaneopened"></a><a name="VerticalAddOnToolsPaneOpened"></a> **VerticalAddOnToolsPaneOpened**
+###  <a name="VerticalAddOnToolsPaneOpened"></a> **VerticalAddOnToolsPaneOpened**
   Supportato in Windows PowerShell ISE 3.0 e versioni successive e non presente nelle versioni precedenti. 
 
  Proprietà di sola lettura che indica se il riquadro dello strumento Componenti aggiuntivi verticale è attualmente aperto.

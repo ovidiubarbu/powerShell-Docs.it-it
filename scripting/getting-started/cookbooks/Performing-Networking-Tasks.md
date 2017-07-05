@@ -1,17 +1,13 @@
 ---
-description: 
-manager: carmonm
-ms.topic: article
-author: jpjofre
-ms.prod: powershell
+ms.date: 2017-06-05
 keywords: powershell,cmdlet
-ms.date: 2016-12-12
 title: "Esecuzione di attività di rete"
-ms.technology: powershell
 ms.assetid: a43cc55f-70c1-45c8-9467-eaad0d57e3b5
-ms.openlocfilehash: 1c938500da191c2791b3178971cdcea28f57aacd
-ms.sourcegitcommit: 8acbf9827ad8f4ef9753f826ecaff58495ca51b0
-translationtype: HT
+ms.openlocfilehash: 4d7a91595b9d9d637ce915be2c2be9c20879dd8b
+ms.sourcegitcommit: 598b7835046577841aea2211d613bb8513271a8b
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/08/2017
 ---
 # <a name="performing-networking-tasks"></a>Esecuzione di attività di rete
 Poiché TCP/IP è il protocollo di rete usato più di frequente, è coinvolto nella maggior parte delle attività di basso livello per l'amministrazione dei protocolli di rete. In questa sezione si useranno Windows PowerShell e WMI per eseguire queste attività.
@@ -31,7 +27,12 @@ L'output di questo comando è diverso rispetto alla maggior parte degli elenchi 
 
 Per capire il motivo della presenza delle parentesi graffe, usare il cmdlet Get-Member per esaminare la proprietà **IPAddress**:
 
-<pre>PS> Get-WmiObject -Class Win32_NetworkAdapterConfiguration -Filter IPEnabled=TRUE -ComputerName. | Get-Member -Name IPAddress TypeName: System.Management.ManagementObject#root\cimv2\Win32_NetworkAdapter Configuration Name      MemberType Definition ----      ---------- ---------- IPAddress Property   System.String[] IPAddress {get;}</pre>
+<pre>PS> Get-WmiObject -Class Win32_NetworkAdapterConfiguration -Filter IPEnabled=TRUE -ComputerName . | Get-Member -Name IPAddress
+TypeName: System.Management.ManagementObject#root\cimv2\Win32_NetworkAdapter
+Configuration
+Name      MemberType Definition
+----      ---------- ----------
+IPAddress Property   System.String[] IPAddress {get;}</pre>
 
 La proprietà IPAddress per ogni scheda di rete è in effetti una matrice. Le parentesi graffe nella definizione indicano che **IPAddress** non è un valore **System.String**, bensì una matrice di valori **System.String**.
 

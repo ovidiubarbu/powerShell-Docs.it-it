@@ -1,17 +1,13 @@
 ---
-description: 
-manager: carmonm
-ms.topic: article
-author: jpjofre
-ms.prod: powershell
+ms.date: 2017-06-05
 keywords: powershell,cmdlet
-ms.date: 2016-12-12
 title: "Modalità di esecuzione del debug degli script in Windows PowerShell ISE"
-ms.technology: powershell
 ms.assetid: 6dc6d8f9-8978-46e9-a92f-169af37e2817
-ms.openlocfilehash: 8574754ccdf4717d29c4076f88d41691501da471
-ms.sourcegitcommit: 8acbf9827ad8f4ef9753f826ecaff58495ca51b0
-translationtype: HT
+ms.openlocfilehash: db8847e2cc9abeec729ed8d939fc170529a93846
+ms.sourcegitcommit: 598b7835046577841aea2211d613bb8513271a8b
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/08/2017
 ---
 # <a name="how-to-debug-scripts-in-windows-powershell-ise"></a>Modalità di esecuzione del debug degli script in Windows PowerShell ISE
 Questo argomento descrive come eseguire il debug degli script in un computer locale usando le funzionalità di debug visivo di Windows PowerShell® Integrated Scripting Environment (ISE).
@@ -21,7 +17,7 @@ Questo argomento descrive come eseguire il debug degli script in un computer loc
 [Come eseguire un'istruzione/routine, eseguire un'istruzione e uscire da un'istruzione/routine durante il debug](#bkmk_3)
 [Come visualizzare i valori delle variabili durante il debug](#bkmk_4)
 
-## <a name="a-namebkmk1ahow-to-manage-breakpoints"></a><a name="bkmk_1"></a>Come gestire i punti di interruzione
+## <a name="bkmk_1"></a>Come gestire i punti di interruzione
 Un punto di interruzione è un punto specificato all'interno di uno script in cui si vuole sospendere l'esecuzione delle operazioni per poter esaminare lo stato corrente delle variabili e l'ambiente di esecuzione dello script. Quando lo script viene sospeso da un punto di interruzione, è possibile eseguire comandi nel riquadro della console per esaminare lo stato dello script.  È anche possibile eseguire l'output di variabili o eseguire altri comandi. Si può persino modificare il valore di tutte le variabili visibili nel contesto dello script attualmente in esecuzione. Dopo aver esaminato gli elementi desiderati, è possibile riavviare l'esecuzione dello script.
 
 Nell'ambiente di debug di Windows PowerShell si possono impostare tre tipi di punti di interruzione:
@@ -72,7 +68,7 @@ Lo script seguente è un esempio di come si possono rimuovere tutti i punti di i
 Get-PSBreakpoint | Remove-PSBreakpoint
 ```
 
-### <a name="a-namebkmkdisableadisable-a-breakpoint"></a><a name="bkmk_disable"></a>Disabilitare un punto di interruzione
+### <a name="bkmk_disable"></a>Disabilitare un punto di interruzione
 La disabilitazione di un punto di interruzione non ne comporta la rimozione, ma la disattivazione fino a quando non viene abilitato di nuovo.  Per disabilitare uno specifico punto di interruzione riga, fare clic con il pulsante destro del mouse sulla riga in cui si trova e quindi scegliere **Disattiva punto di interruzione**. In alternativa, fare clic sulla riga in cui si vuole disabilitare un punto di interruzione e premere **F9** oppure scegliere **Disattiva punto di interruzione** dal menu **Debug**. Lo script seguente è un esempio di come si può rimuovere un punto di interruzione con un ID specificato dal riquadro della console usando il cmdlet [Disable-PSBreakpoint](https://technet.microsoft.com/library/d4974e9b-0aaa-4e20-b87f-f599a413e4e8).
 
 ``` PowerShell
@@ -106,7 +102,7 @@ Per abilitare tutti i punti di interruzione definiti nella sessione corrente, sc
 Get-PSBreakpoint | Enable-PSBreakpoint
 ```
 
-## <a name="a-namebkmk2ahow-to-manage-a-debugging-session"></a><a name="bkmk_2"></a>Come gestire una sessione di debug
+## <a name="bkmk_2"></a>Come gestire una sessione di debug
 Prima di avviare il debug è necessario impostare uno o più punti di interruzione. Non si può impostare un punto di interruzione finché lo script di cui si vuole eseguire il debug non è stato salvato. Per istruzioni su come impostare un punto di interruzione, vedere [Come gestire i punti di interruzione](#bkmk_1) o [Set-PSBreakpoint](https://technet.microsoft.com/library/6afd5d2c-a285-4796-8607-3cbf49471420). Dopo avere avviato il debug, non è possibile modificare uno script se non si arresta il debug. Uno script in cui sono impostati uno o più punti di interruzione viene salvato automaticamente prima dell'esecuzione.
 
 ### <a name="to-start-debugging"></a>Per avviare il debug
@@ -123,7 +119,7 @@ Per vedere lo stack di chiamate corrente mentre l'esecuzione è sospesa, premere
 ### <a name="to-stop-debugging"></a>Per arrestare il debug
 Premere **MAIUSC+F5**, scegliere **Arresta debugger** dal menu **Debug** oppure digitare **Q** nel riquadro della console e premere **INVIO**.
 
-## <a name="a-namebkmk3ahow-to-step-over-step-into-and-step-out-while-debugging"></a><a name="bkmk_3"></a>Come eseguire un'istruzione/routine, eseguire un'istruzione e uscire da un'istruzione/routine durante il debug
+## <a name="bkmk_3"></a>Come eseguire un'istruzione/routine, eseguire un'istruzione e uscire da un'istruzione/routine durante il debug
 Per il debug è fondamentale eseguire le istruzioni una alla volta in varie modalità. È possibile arrestare il debug in corrispondenza di una riga di codice ed esaminare i valori delle variabili e lo stato del sistema. La tabella seguente descrive le attività di debug comuni, ad esempio eseguire un'istruzione/routine, eseguire un'istruzione e uscire da un'istruzione/routine.
 
 | Attività di debug | Descrizione | Modalità di esecuzione in PowerShell ISE |
@@ -133,7 +129,7 @@ Per il debug è fondamentale eseguire le istruzioni una alla volta in varie moda
 | **Esci da istruzione/routine** | Esce dall'istruzione/routine della funzione corrente e risale di un livello se la funzione è nidificata. Se si trova nel corpo principale, lo script viene eseguito fino al termine o fino al punto di interruzione successivo. Le istruzioni ignorate vengono eseguite, ma non una alla volta. | Premere **MAIUSC+F11**, scegliere **Esci da istruzione/routine** dal menu **Debug** oppure digitare **O** nel riquadro della console e premere **INVIO**. |
 | **Continua** | Continua l'esecuzione fino al termine o fino al punto di interruzione successivo. Le funzioni e le chiamate ignorate vengono eseguite, ma non una alla volta. | Premere **F5**, scegliere **Esegui/Continua** dal menu **Debug** oppure digitare **C** nel riquadro della console e premere **INVIO**. |
 
-## <a name="a-namebkmk4ahow-to-display-the-values-of-variables-while-debugging"></a><a name="bkmk_4"></a>Come visualizzare i valori delle variabili durante il debug
+## <a name="bkmk_4"></a>Come visualizzare i valori delle variabili durante il debug
 È possibile visualizzare i valori correnti delle variabili mentre si esamina il codice.
 
 ### <a name="to-display-the-values-of-standard-variables"></a>Per visualizzare i valori delle variabili standard

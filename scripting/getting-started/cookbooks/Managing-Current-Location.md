@@ -1,17 +1,13 @@
 ---
-description: 
-manager: carmonm
-ms.topic: article
-author: jpjofre
-ms.prod: powershell
+ms.date: 2017-06-05
 keywords: powershell,cmdlet
-ms.date: 2016-12-12
 title: Gestione del percorso corrente
-ms.technology: powershell
 ms.assetid: a9f9e7a7-3ea8-47d3-bbb4-6e437f6d4a4a
-ms.openlocfilehash: aa051d80e9f154212393c0fdb4258495635565b9
-ms.sourcegitcommit: 8acbf9827ad8f4ef9753f826ecaff58495ca51b0
-translationtype: HT
+ms.openlocfilehash: 20b3828d12587e675ed51863e5d96c37839b62d6
+ms.sourcegitcommit: 598b7835046577841aea2211d613bb8513271a8b
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/08/2017
 ---
 # <a name="managing-current-location"></a>Gestione del percorso corrente
 Nei sistemi di cartelle in Esplora file è in genere presente un percorso di lavoro specifico, ossia la cartella attualmente aperta. Per manipolare gli elementi della cartella, è sufficiente fare clic su di essi. Per le interfacce della riga di comando come Cmd.exe, quando ci si trova nella stessa cartella di un determinato file è possibile accedervi specificando un nome relativamente breve, invece dell'intero percorso del file. La directory corrente si chiama directory di lavoro.
@@ -53,7 +49,10 @@ Il parametro **-PassThru** può essere usato con molti comandi Set in Windows Po
 
 Ad esempio, nel percorso della cartella **C:\\Windows** un punto (**.**) rappresenta **C:\\Windows** e un doppio punto (**..**) rappresenta **C:**. Per passare dal percorso corrente alla radice dell'unità C:, digitare:
 
-<pre>PS> Set-Location -Path .. -PassThru Path ---- C:\</pre>
+<pre>PS> Set-Location -Path .. -PassThru
+Path
+----
+C:\</pre>
 
 La stessa tecnica funziona nelle unità di Windows PowerShell diverse dalle unità di file system, ad esempio **HKLM:**. Per impostare il percorso sulla chiave \\Software nel Registro di sistema, digitare:
 

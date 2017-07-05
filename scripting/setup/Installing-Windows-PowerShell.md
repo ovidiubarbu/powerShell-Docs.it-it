@@ -1,17 +1,13 @@
 ---
-description: 
-manager: carmonm
-ms.topic: article
-author: jpjofre
-ms.prod: powershell
+ms.date: 2017-06-05
 keywords: powershell,cmdlet
-ms.date: 2016-12-12
 title: Installazione di Windows PowerShell
-ms.technology: powershell
 ms.assetid: 6fbb0409-5a54-48ec-95e6-7f8b7d8c4969
-ms.openlocfilehash: fd0336b66312293c434ae2c5ad5a7899c20777ff
-ms.sourcegitcommit: 8acbf9827ad8f4ef9753f826ecaff58495ca51b0
-translationtype: HT
+ms.openlocfilehash: 2b4cdec52dfc98649a81ab2265a204fcdb0bd8d7
+ms.sourcegitcommit: 598b7835046577841aea2211d613bb8513271a8b
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/08/2017
 ---
 # <a name="installing-windows-powershell"></a>Installazione di Windows PowerShell
 Windows® 8 e Windows Server® 2012 includono Windows PowerShell 3.0 e tutti i relativi prerequisiti. Il sistema include anche il motore di Windows PowerShell 2.0 per la compatibilità con le versioni precedenti dei programmi host che non possono usare Windows PowerShell 3.0.
@@ -32,10 +28,10 @@ Questo argomento include le sezioni seguenti:
 
 -   [Installazione del motore di Windows PowerShell 2.0](Installing-the-Windows-PowerShell-2.0-Engine.md)
 
-## <a name="a-namebkmkinstallingonwindows8andwindowsserver2012ainstalling-windows-powershell-on-windows-8-and-windows-server-2012"></a><a name="BKMK_InstallingOnWindows8andWindowsServer2012"></a>Installazione di Windows PowerShell in Windows 8 e Windows Server 2012
+## <a name="BKMK_InstallingOnWindows8andWindowsServer2012"></a>Installazione di Windows PowerShell in Windows 8 e Windows Server 2012
 Windows PowerShell 3.0 viene fornito già installato, configurato e pronto per l'uso. Windows PowerShell Integrated Scripting Environment (ISE) viene installato e abilitato. Per informazioni sull'avvio di Windows PowerShell, vedere [Avvio di Windows PowerShell in Windows 8](https://technet.microsoft.com/en-us/library/d7be1668-8617-4890-ad90-dd9765fbd2c3) e [Avvio di Windows PowerShell in Windows Server 2012](https://technet.microsoft.com/library/hh831491.aspx#BKMK_powershell).
 
-## <a name="a-namebkmkinstallingonwindows7andwindowsserver2008r2ainstalling-windows-powershell-on-windows-7-and-windows-server-2008-r2"></a><a name="BKMK_InstallingOnWindows7andWindowsServer2008R2"></a>Installazione di Windows PowerShell in Windows 7 e Windows Server 2008 R2
+## <a name="BKMK_InstallingOnWindows7andWindowsServer2008R2"></a>Installazione di Windows PowerShell in Windows 7 e Windows Server 2008 R2
 Queste istruzioni spiegano come installare Windows PowerShell 3.0 nei computer che eseguono Windows 7 con Service Pack 1 e Windows Server 2008 R2 con Service Pack 1. Di seguito sono disponibili istruzioni di installazione separate per i computer con l'opzione di installazione Server Core di Windows Server 2008 R2.
 
 #### <a name="getting-ready-to-install"></a>Preparativi per l'installazione
@@ -52,7 +48,7 @@ Queste istruzioni spiegano come installare Windows PowerShell 3.0 nei computer c
 
 Per informazioni sull'avvio di Windows PowerShell 3.0, vedere [Avvio di Windows PowerShell in versioni precedenti di Windows](Starting-Windows-PowerShell-on-Earlier-Versions-of-Windows.md).
 
-## <a name="a-namebkmkinstallingonservercoreainstalling-windows-powershell-on-server-core"></a><a name="BKMK_InstallingOnServerCore"></a>Installazione di Windows PowerShell in Server Core
+## <a name="BKMK_InstallingOnServerCore"></a>Installazione di Windows PowerShell in Server Core
 Queste istruzioni spiegano come installare Windows PowerShell 3.0 nei computer che eseguono l'opzione di installazione Server Core di Windows Server 2008 R2 con Service Pack 1.
 
 I primi passaggi della procedura usano i comandi Gestione e manutenzione immagini distribuzione per installare Microsoft NET Framework 2.0 per Server Core e Windows PowerShell 2.0. Questi programmi sono prerequisiti di Windows Management Framework 3.0, che viene installato in un passaggio successivo.
@@ -77,7 +73,7 @@ I primi passaggi della procedura usano i comandi Gestione e manutenzione immagin
 
 4.  Installare Windows Management Framework 3.0 dall'Area download Microsoft all'indirizzo [http://go.microsoft.com/fwlink/?LinkID=240290](http://go.microsoft.com/fwlink/?LinkID=240290).
 
-## <a name="a-namebkmkinstallingonwindowsserver2008lhainstalling-windows-powershell-on-windows-server-2008"></a><a name="BKMK_InstallingOnWindowsServer2008LH"></a>Installazione di Windows PowerShell in Windows Server 2008
+## <a name="BKMK_InstallingOnWindowsServer2008LH"></a>Installazione di Windows PowerShell in Windows Server 2008
 Queste istruzioni spiegano come installare Windows PowerShell 3.0 nei computer che eseguono Windows Server 2008 con Service Pack 2.
 
 Nei sistemi Windows Server 2008, Windows Management Framework (Windows PowerShell 2.0, KB 968930) è un prerequisito per Windows Management Framework 3.0. La funzionalità di "protezione estesa per l'autenticazione" protegge il computer da attacchi di inoltro dell'autenticazione e consente di usare il parametro **UseSSL** durante la creazione delle sessioni remote. Per installare Windows PowerShell 3.0 e il motore di Windows PowerShell 2.0, usare la procedura seguente.

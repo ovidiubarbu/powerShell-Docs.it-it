@@ -1,17 +1,13 @@
 ---
-description: 
-manager: carmonm
-ms.topic: article
-author: jpjofre
-ms.prod: powershell
+ms.date: 2017-06-05
 keywords: powershell,cmdlet
-ms.date: 2016-12-12
 title: Oggetto ISEEditor
-ms.technology: powershell
 ms.assetid: 0101daf8-4e31-4e4c-ab89-01d95dcb8f46
-ms.openlocfilehash: f4bc79e88dfe528b27817670232a445c4e0c610e
-ms.sourcegitcommit: 8acbf9827ad8f4ef9753f826ecaff58495ca51b0
-translationtype: HT
+ms.openlocfilehash: 41f2a6f7684275ad9d6d967ea67b64ca02c1c100
+ms.sourcegitcommit: 598b7835046577841aea2211d613bb8513271a8b
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/08/2017
 ---
 # <a name="the-iseeditor-object"></a>Oggetto ISEEditor
   Un oggetto **ISEEditor** è un'istanza della classe Microsoft.PowerShell.Host.ISE.ISEEditor. Il riquadro della console è un oggetto **ISEEditor**. Ogni oggetto [ISEFile](The-ISEFile-Object.md) ha un oggetto **ISEEditor** associato. Le sezioni seguenti elencano i metodi e proprietà di un oggetto **ISEEditor**.
@@ -138,7 +134,7 @@ $psISE.CurrentFile.Editor.ToggleOutliningExpansion()
 
 ## <a name="properties"></a>Proprietà
 
-###  <a name="a-namecangotomatcha-cangotomatch"></a><a name="CanGoToMatch"></a> CanGoToMatch
+###  <a name="CanGoToMatch"></a> CanGoToMatch
   Supportato in Windows PowerShell ISE 3.0 e versioni successive e non presente nelle versioni precedenti. 
 
  Proprietà di sola lettura booleana che indica se il cursore si trova accanto a una parentesi, a una parentesi quadra o a una parentesi graffa - \(\), \[\], {}. Se il cursore si trova immediatamente prima del carattere di apertura o immediatamente dopo il carattere di chiusura di una coppia, il valore di questa proprietà è **$true**. In caso contrario, è **$false**.
@@ -148,7 +144,7 @@ $psISE.CurrentFile.Editor.ToggleOutliningExpansion()
 $psISE.CurrentFile.Editor.CanGoToMatch
 ```
 
-###  <a name="a-namecaretcolumna-caretcolumn"></a><a name="CaretColumn"></a> CaretColumn
+###  <a name="CaretColumn"></a> CaretColumn
   Supportato in Windows PowerShell ISE 2.0 e versioni successive. 
 
  Proprietà di sola lettura che ottiene il numero di colonna che corrisponde alla posizione del cursore.
@@ -158,7 +154,7 @@ $psISE.CurrentFile.Editor.CanGoToMatch
 $psISE.CurrentFile.Editor.CaretColumn
 ```
 
-###  <a name="a-namecaretlinea-caretline"></a><a name="CaretLine"></a> CaretLine
+###  <a name="CaretLine"></a> CaretLine
   Supportato in Windows PowerShell ISE 2.0 e versioni successive. 
 
  Proprietà di sola lettura che ottiene il numero di riga che contiene il cursore.
@@ -168,7 +164,7 @@ $psISE.CurrentFile.Editor.CaretColumn
 $psISE.CurrentFile.Editor.CaretLine
 ```
 
-###  <a name="a-namecaretlinetexta-caretlinetext"></a><a name="CaretLineText"></a> CaretLineText
+###  <a name="CaretLineText"></a> CaretLineText
   Supportato in Windows PowerShell ISE 2.0 e versioni successive. 
 
  Proprietà di sola lettura che ottiene la riga completa che contiene il cursore.
@@ -178,7 +174,7 @@ $psISE.CurrentFile.Editor.CaretLine
 $psISE.CurrentFile.Editor.CaretLineText
 ```
 
-###  <a name="a-namelinecounta-linecount"></a><a name="LineCount"></a> LineCount
+###  <a name="LineCount"></a> LineCount
   Supportato in Windows PowerShell ISE 2.0 e versioni successive. 
 
  Proprietà di sola lettura che ottiene il conteggio delle righe dall'editor.
@@ -188,21 +184,21 @@ $psISE.CurrentFile.Editor.CaretLineText
 $psISE.CurrentFile.Editor.LineCount
 ```
 
-###  <a name="a-nameselectedtexta-selectedtext"></a><a name="SelectedText"></a> SelectedText
+###  <a name="SelectedText"></a> SelectedText
   Supportato in Windows PowerShell ISE 2.0 e versioni successive. 
 
  Proprietà di sola lettura che ottiene il testo selezionato dall'editor.
 
  Vedere [Esempio di script](#example) più avanti in questo argomento.
 
-###  <a name="a-nametexta-text"></a><a name="Text"></a> Text
+###  <a name="Text"></a> Text
   Supportato in Windows PowerShell ISE 2.0 e versioni successive. 
 
  Proprietà di lettura/scrittura che ottiene o imposta il testo nell'editor.
 
  Vedere [Esempio di script](#example) più avanti in questo argomento.
 
-##  <a name="a-nameexamplea-scripting-example"></a><a name="example"></a> Esempio di script
+##  <a name="example"></a> Esempio di script
 
 ```PowerShell
 # This illustrates how you can use the length of a line to

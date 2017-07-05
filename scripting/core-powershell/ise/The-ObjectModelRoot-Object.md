@@ -1,17 +1,13 @@
 ---
-description: 
-manager: carmonm
-ms.topic: article
-author: jpjofre
-ms.prod: powershell
+ms.date: 2017-06-05
 keywords: powershell,cmdlet
-ms.date: 2016-12-12
 title: Oggetto ObjectModelRoot
-ms.technology: powershell
 ms.assetid: 13fcf7ee-b18f-4499-a2b4-ccfc4484cd88
-ms.openlocfilehash: f25dfea23ba865d98f09ae9b1604ade8b1c4f72a
-ms.sourcegitcommit: 8acbf9827ad8f4ef9753f826ecaff58495ca51b0
-translationtype: HT
+ms.openlocfilehash: 7684ccb2ca785fae539aa919e36823c1e5b86cec
+ms.sourcegitcommit: 598b7835046577841aea2211d613bb8513271a8b
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/08/2017
 ---
 # <a name="the-objectmodelroot-object"></a>Oggetto ObjectModelRoot
   L'oggetto **$psISE**, ovvero l'oggetto radice principale in Windows PowerShell® Integrated Scripting Environment (ISE), è un'istanza della classe Microsoft.PowerShell.Host.ISE.ObjectModelRoot. Questo argomento descrive le proprietà dell'oggetto **ObjectModelRoot**.

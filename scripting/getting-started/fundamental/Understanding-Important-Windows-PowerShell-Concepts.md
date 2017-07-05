@@ -1,17 +1,13 @@
 ---
-description: 
-manager: carmonm
-ms.topic: article
-author: jpjofre
-ms.prod: powershell
+ms.date: 2017-06-05
 keywords: powershell,cmdlet
-ms.date: 2016-12-12
 title: Informazioni sui concetti importanti di Windows PowerShell
-ms.technology: powershell
 ms.assetid: 3e601e38-4520-4578-a48d-b6779f1d35ee
-ms.openlocfilehash: 00a04da3f463b50c64b18d3bbaf17fc22f1e9e3b
-ms.sourcegitcommit: 8acbf9827ad8f4ef9753f826ecaff58495ca51b0
-translationtype: HT
+ms.openlocfilehash: 1ffcfefcc7ffc7c98ba4d1e3ccc9a59cd9b0baac
+ms.sourcegitcommit: 598b7835046577841aea2211d613bb8513271a8b
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/08/2017
 ---
 # <a name="understanding-important-windows-powershell-concepts"></a>Informazioni sui concetti importanti di Windows PowerShell
 La progettazione di Windows PowerShell integra concetti relativi a molti ambienti diversi. Alcuni di essi sono già noti agli utenti con esperienza di shell o ambienti di programmazione specifici, ma in pochi li conosceranno tutti. La comprensione di alcuni di questi concetti assicura un'utile conoscenza generale della shell.

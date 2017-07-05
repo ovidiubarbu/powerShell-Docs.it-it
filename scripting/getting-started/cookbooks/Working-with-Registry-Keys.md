@@ -1,17 +1,13 @@
 ---
-description: 
-manager: carmonm
-ms.topic: article
-author: jpjofre
-ms.prod: powershell
+ms.date: 2017-06-05
 keywords: powershell,cmdlet
-ms.date: 2016-12-12
 title: Utilizzo delle chiavi del Registro di sistema
-ms.technology: powershell
 ms.assetid: 91bfaecd-8684-48b4-ad86-065dfe6dc90a
-ms.openlocfilehash: 8554bd1752ecddd87d70c2f31de357ce5da26ba5
-ms.sourcegitcommit: 8acbf9827ad8f4ef9753f826ecaff58495ca51b0
-translationtype: HT
+ms.openlocfilehash: efb2c016afa2212c2907c0740ad26c4e4cddd3af
+ms.sourcegitcommit: 598b7835046577841aea2211d613bb8513271a8b
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/08/2017
 ---
 # <a name="working-with-registry-keys"></a>Utilizzo delle chiavi del Registro di sistema
 Dato che le chiavi del Registro di sistema sono elementi nelle unità di Windows PowerShell, il loro utilizzo è molto simile a quello di file e cartelle. Una differenza fondamentale è che ogni elemento in un'unità di Windows PowerShell basata sul Registro di sistema è un contenitore, come una cartella in un'unità del file system. Tuttavia, le voci del Registro di sistema e i relativi valori associati sono proprietà degli elementi e non elementi distinti.

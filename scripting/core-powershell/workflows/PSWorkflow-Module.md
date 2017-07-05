@@ -1,17 +1,13 @@
 ---
-description: 
-manager: carmonm
-ms.topic: article
-author: jpjofre
-ms.prod: powershell
+ms.date: 2017-06-05
 keywords: powershell,cmdlet
-ms.date: 2016-12-12
 title: Modulo PSWorkflow
-ms.technology: powershell
 ms.assetid: 117316fe-2f82-4fc9-b5dc-794ae9e3f258
-ms.openlocfilehash: 28a74da26826e60122c6fd0bb2787ee60b1ec699
-ms.sourcegitcommit: 8acbf9827ad8f4ef9753f826ecaff58495ca51b0
-translationtype: HT
+ms.openlocfilehash: 2a3325e03eb9409a58012e6c754157e86fd24378
+ms.sourcegitcommit: 598b7835046577841aea2211d613bb8513271a8b
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/08/2017
 ---
 # <a name="psworkflow-module"></a>Modulo PSWorkflow
 Questa sezione contiene gli argomenti della Guida per il modulo **PSWorkflow**, che include i cmdlet che supportano la funzionalità del flusso di lavoro di Windows PowerShell. Il modulo **PSWorkflow** viene installato con Windows PowerShell.

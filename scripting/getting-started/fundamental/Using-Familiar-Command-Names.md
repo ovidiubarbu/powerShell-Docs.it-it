@@ -1,17 +1,13 @@
 ---
-description: 
-manager: carmonm
-ms.topic: article
-author: jpjofre
-ms.prod: powershell
+ms.date: 2017-06-05
 keywords: powershell,cmdlet
-ms.date: 2016-12-12
 title: Uso di nomi di comandi familiari
-ms.technology: powershell
 ms.assetid: 021e2424-c64e-4fa5-aa98-aa6405758d5d
-ms.openlocfilehash: c71df3c8e973f58bab76a5b99142f6c61ca652b2
-ms.sourcegitcommit: 8acbf9827ad8f4ef9753f826ecaff58495ca51b0
-translationtype: HT
+ms.openlocfilehash: 5e72e721bdb9d48684092344a0169907e7e25d40
+ms.sourcegitcommit: 598b7835046577841aea2211d613bb8513271a8b
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/08/2017
 ---
 # <a name="using-familiar-command-names"></a>Uso di nomi di comandi familiari
 Usando un meccanismo chiamato *aliasing*, Windows PowerShell consente agli utenti di fare riferimento ai comandi con nomi alternativi. L'aliasing consente agli utenti che hanno esperienza con altre shell di riusare i nomi dei comandi comuni che già conoscono per eseguire operazioni simili in Windows PowerShell. Anche se non si parlerà in dettaglio degli alias di Windows PowerShell, è possibile usarli per acquisire familiarità con Windows PowerShell.

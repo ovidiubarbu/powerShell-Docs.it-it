@@ -1,17 +1,13 @@
 ---
-description: 
-manager: carmonm
-ms.topic: article
-author: jpjofre
-ms.prod: powershell
+ms.date: 2017-06-05
 keywords: powershell,cmdlet
-ms.date: 2016-12-12
 title: Raccolta di informazioni sui computer
-ms.technology: powershell
 ms.assetid: 9e7b6a2d-34f7-4731-a92c-8b3382eb51bb
-ms.openlocfilehash: ba81489749ba51ec19febb9de81de1b2a5150aa4
-ms.sourcegitcommit: 8acbf9827ad8f4ef9753f826ecaff58495ca51b0
-translationtype: HT
+ms.openlocfilehash: c0b7ec9ed7d2b07c66d2b1cf3342f971d71da481
+ms.sourcegitcommit: 598b7835046577841aea2211d613bb8513271a8b
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/08/2017
 ---
 # <a name="collecting-information-about-computers"></a>Raccolta di informazioni sui computer
 **Get-WmiObject** è il cmdlet più importante per le attività generali di gestione del sistema. Tutte le impostazioni del sottosistema cruciali sono esposte tramite WMI. WMI gestisce inoltre i dati come oggetti inclusi in raccolte di uno o più elementi. Dato che anche Windows PowerShell funziona con oggetti e usa una pipeline che consente di gestire uno o più oggetti nello stesso modo, l'accesso WMI generico consente di eseguire alcune attività avanzate con un impegno minimo.

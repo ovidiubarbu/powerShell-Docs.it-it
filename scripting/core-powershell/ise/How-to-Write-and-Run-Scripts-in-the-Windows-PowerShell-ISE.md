@@ -1,17 +1,13 @@
 ---
-description: 
-manager: carmonm
-ms.topic: article
-author: jpjofre
-ms.prod: powershell
+ms.date: 2017-06-05
 keywords: powershell,cmdlet
-ms.date: 2016-12-12
 title: Come scrivere ed eseguire script in Windows PowerShell ISE
-ms.technology: powershell
 ms.assetid: 62f916d9-b3a1-484a-bdfb-41f57112c22b
-ms.openlocfilehash: 2478db382639ef315574bb7c79faec7cf2ae1c96
-ms.sourcegitcommit: 8acbf9827ad8f4ef9753f826ecaff58495ca51b0
-translationtype: HT
+ms.openlocfilehash: 871a4b6f4575af4f823a6957dc971335497320a4
+ms.sourcegitcommit: 598b7835046577841aea2211d613bb8513271a8b
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/08/2017
 ---
 # <a name="how-to-write-and-run-scripts-in-the-windows-powershell-ise"></a>Come scrivere ed eseguire script in Windows PowerShell ISE
 Questo argomento descrive come creare, modificare, eseguire e salvare gli script nel riquadro di script.
@@ -22,7 +18,7 @@ Questo argomento descrive come creare, modificare, eseguire e salvare gli script
 
 -   [Come salvare uno script](#bkmk_3)
 
-## <a name="a-namebkmk1ahow-to-create-and-run-scripts"></a><a name="bkmk_1"></a>Come creare ed eseguire script
+## <a name="bkmk_1"></a>Come creare ed eseguire script
 È possibile aprire e modificare i file di Windows PowerShell® nel riquadro di script. Tipi di file di particolare interesse in Windows PowerShell® sono i file di script (con estensione PS1), i file di dati degli script (con estensione PSD1) e i file di modulo di script (con estensione PSM1). In questi file per la visualizzazione della sintassi nell'editor del riquadro di script vengono utilizzati i colori. Altri tipi di file comuni che è possibile aprire nel riquadro di script sono file di configurazione (con estensione ps1xml), file XML e file di testo.
 
 > [!NOTE]
@@ -58,7 +54,7 @@ Sulla barra degli strumenti fare clic su **Esegui script** o scegliere **Esegui*
 ### <a name="to-stop-a-running-script"></a>Per arrestare l'esecuzione di uno script
 Sulla barra degli strumenti fare clic su **Arresta operazione**, premere CTRL+INTERR o scegliere **Arresta operazione** dal menu **File**. È anche possibile premere **CTRL+C**, a meno che non sia attualmente selezionato del testo. In quel caso, **CTRL+C** corrisponderà alla funzione di copia del testo selezionato.
 
-## <a name="a-namebkmk2ahow-to-write-and-edit-text-in-the-script-pane"></a><a name="bkmk_2"></a>Come scrivere e modificare testo nel riquadro di script
+## <a name="bkmk_2"></a>Come scrivere e modificare testo nel riquadro di script
 Per modificare il testo nel riquadro di script, usare la procedura seguente. È possibile copiare, tagliare, incollare, trovare e sostituire testo. È anche possibile annullare e ripetere l'ultima operazione eseguita. I tasti di scelta rapida per eseguire queste operazioni sono identici a quelli usati in tutte le applicazioni di Windows.
 
 ### <a name="to-enter-text-in-the-script-pane"></a>Per immettere testo nel riquadro di script
@@ -107,7 +103,7 @@ Premere **CTRL+Z**, fare clic sull'icona **Annulla** sulla barra degli strumenti
 ### <a name="to-redo-an-action-in-the-script-pane"></a>Per ripetere un'azione nel riquadro di script
 Premere **CTRL+Y**, fare clic sull'icona **Ripeti** sulla barra degli strumenti o scegliere **Ripeti** dal menu **Modifica**.
 
-## <a name="a-namebkmk3ahow-to-save-a-script"></a><a name="bkmk_3"></a>Come salvare uno script
+## <a name="bkmk_3"></a>Come salvare uno script
 Per salvare uno script e assegnargli un nome, usare la procedura seguente. Accanto al nome di uno script che non è stato ancora salvato dopo una modifica, compare un asterisco. L'asterisco sparirà dopo il salvataggio del file.
 
 ### <a name="to-save-a-script"></a>Per salvare uno script

@@ -1,24 +1,20 @@
 ---
-description: 
-manager: carmonm
-ms.topic: article
-author: jpjofre
-ms.prod: powershell
+ms.date: 2017-06-05
 keywords: powershell,cmdlet
-ms.date: 2016-12-12
 title: Oggetto ISEFile
-ms.technology: powershell
 ms.assetid: 1c6d91f3-c556-42a2-a017-79b6b7b4b7db
-ms.openlocfilehash: fe0b2396de747bf88e780df505f5f7991e3e0b6f
-ms.sourcegitcommit: 8acbf9827ad8f4ef9753f826ecaff58495ca51b0
-translationtype: HT
+ms.openlocfilehash: 0e1c09c4a92868448d76cc7b4954d250773ce2f2
+ms.sourcegitcommit: 598b7835046577841aea2211d613bb8513271a8b
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/08/2017
 ---
 # <a name="the-isefile-object"></a>Oggetto ISEFile
   Un oggetto **ISEFile** rappresenta un file in Windows PowerShell® Integrated Scripting Environment (ISE). È un'istanza della classe Microsoft.PowerShell.Host.ISE.ISEFile. Questo argomento elenca i relativi metodi membro e le proprietà del membro. L'oggetto **$psISE.CurrentFile** e i file nella raccolta File in una scheda di PowerShell sono tutte istanze della classe Microsoft.PowerShell.Host.ISE.ISEFile.
 
 ## <a name="methods"></a>Metodo
 
-###  <a name="a-namesave-overridea-save-saveencoding-"></a><a name="save-override"></a>Save \( \[saveEncoding\] \)
+###  <a name="save-override"></a>Save \( \[saveEncoding\] \)
   Supportato in Windows PowerShell ISE 2.0 e versioni successive. 
 
  Salva il file su disco.
@@ -42,7 +38,7 @@ $myfile.Encoding
 
 ```
 
-###  <a name="a-namesaveasa-saveasfilename-saveencoding"></a><a name="saveas"></a>SaveAs \(filename, \[saveEncoding\]\)
+###  <a name="saveas"></a>SaveAs \(filename, \[saveEncoding\]\)
   Supportato in Windows PowerShell ISE 2.0 e versioni successive. 
 
  Salva il file con il nome file e la codifica specificati.
@@ -70,7 +66,7 @@ $psIse.CurrentFile.SaveAs( $fullPath, [System.Text.Encoding]::UTF8 )
 
 ## <a name="properties"></a>Proprietà
 
-###  <a name="a-namedisplaynamea-displayname"></a><a name="Displayname"></a>DisplayName
+###  <a name="Displayname"></a>DisplayName
   Supportato in Windows PowerShell ISE 2.0 e versioni successive. 
 
  Proprietà di sola lettura che ottiene la stringa contenente il nome visualizzato di questo file. Il nome viene visualizzato nella scheda **File** nella parte superiore dell'editor. La presenza di un asterisco \(\*\) alla fine del nome indica che il file contiene modifiche che non sono state salvate.
@@ -81,7 +77,7 @@ $psIse.CurrentFile.DisplayName
 
 ```
 
-###  <a name="a-nameeditora-editor"></a><a name="Editor"></a>Editor
+###  <a name="Editor"></a>Editor
   Supportato in Windows PowerShell ISE 2.0 e versioni successive. 
 
  Proprietà di sola lettura che ottiene l'[oggetto editor](The-ISEEditor-Object.md) usato per il file specificato.
@@ -92,7 +88,7 @@ $psIse.CurrentFile.Editor.Text
 
 ```
 
-###  <a name="a-nameencodinga-encoding"></a><a name="Encoding"></a>Encoding
+###  <a name="Encoding"></a>Encoding
   Supportato in Windows PowerShell ISE 2.0 e versioni successive. 
 
  Proprietà di sola lettura che ottiene la codifica del file originale. Si tratta di un oggetto **System.Text.Encoding**.
@@ -103,7 +99,7 @@ $psIse.CurrentFile.Encoding
 
 ```
 
-###  <a name="a-namefullpatha-fullpath"></a><a name="FullPath"></a>FullPath
+###  <a name="FullPath"></a>FullPath
   Supportato in Windows PowerShell ISE 2.0 e versioni successive. 
 
  Proprietà di sola lettura che ottiene la stringa che specifica il percorso completo del file aperto.
@@ -114,7 +110,7 @@ $psIse.CurrentFile.FullPath
 
 ```
 
-###  <a name="a-nameissaveda-issaved"></a><a name="IsSaved"></a>IsSaved
+###  <a name="IsSaved"></a>IsSaved
   Supportato in Windows PowerShell ISE 2.0 e versioni successive. 
 
  Proprietà booleana di sola lettura che restituisce **$true** se il file è stato salvato dopo l'ultima modifica.
@@ -126,7 +122,7 @@ $myfile.IsSaved
 
 ```
 
-###  <a name="a-nameisuntitleda-isuntitled"></a><a name="IsUntitled"></a>IsUntitled
+###  <a name="IsUntitled"></a>IsUntitled
   Supportato in Windows PowerShell ISE 2.0 e versioni successive. 
 
  Proprietà di sola lettura che restituisce **$true** se al file non è mai stato assegnato un titolo.
