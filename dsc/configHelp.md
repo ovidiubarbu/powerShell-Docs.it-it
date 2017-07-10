@@ -1,17 +1,17 @@
 ---
-title: Guida alla scrittura per le configurazioni DSC
-ms.date: 2016-05-16
-keywords: powershell,DSC
-description: 
-ms.topic: article
+ms.date: 2017-06-12
 author: eslesar
-manager: dongill
-ms.prod: powershell
-ms.openlocfilehash: 099755bf8dc41adfedf77de451dbcdf390c298e9
-ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
-translationtype: HT
+ms.topic: conceptual
+keywords: dsc,powershell,configurazione,impostazione
+title: Guida alla scrittura per le configurazioni DSC
+ms.openlocfilehash: bcf5c4b1af3cfd8d2e6376c1b7344c7babcaba9a
+ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/12/2017
 ---
-# <a name="writing-help-for-dsc-configurations"></a>Guida alla scrittura per le configurazioni DSC
+<a id="writing-help-for-dsc-configurations" class="xliff"></a>
+# Guida alla scrittura per le configurazioni DSC
 
 >Si applica a: Windows PowerShell 5.0
 
@@ -61,7 +61,8 @@ configuration HelpSample1
 }
 ```
 
-## <a name="viewing-configuration-help"></a>Visualizzazione della Guida di configurazione
+<a id="viewing-configuration-help" class="xliff"></a>
+## Visualizzazione della Guida di configurazione
 
 Per visualizzare la Guida per una configurazione, usare il cmdlet **Get-Help** con il nome della funzione oppure digitare il nome della funzione seguito da `-?`. Di seguito viene riportato l'output della funzione precedente quando viene passato a **Get-Help**:
 
@@ -92,6 +93,7 @@ REMARKS
     For technical information, type: "get-help HelpSample1 -full".
 ```
 
-## <a name="see-also"></a>Vedere anche
+<a id="see-also" class="xliff"></a>
+## Vedere anche
 * [Configurazioni DSC](configurations.md)
 

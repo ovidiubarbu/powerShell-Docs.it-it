@@ -1,24 +1,25 @@
 ---
-title: Risorsa Service DSC
-ms.date: 2016-05-16
-keywords: powershell,DSC
-description: 
-ms.topic: article
+ms.date: 2017-06-12
 author: eslesar
-manager: dongill
-ms.prod: powershell
-ms.openlocfilehash: 6c1dce6a3f1b801f7bdf5bf778df8033e3d76280
-ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
-translationtype: HT
+ms.topic: conceptual
+keywords: dsc,powershell,configurazione,impostazione
+title: Risorsa Service DSC
+ms.openlocfilehash: 611729e5d971ebaf15ac947454cffadc6797927b
+ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/12/2017
 ---
-# <a name="dsc-service-resource"></a>Risorsa Service DSC
+<a id="dsc-service-resource" class="xliff"></a>
+# Risorsa Service DSC
 
 > Si applica a: Windows PowerShell 4.0, Windows PowerShell 5.0
 
 
 La risorsa **Service** in Windows PowerShell DSC (Desired State Configuration) fornisce un meccanismo per gestire i servizi nel nodo di destinazione.
 
-## <a name="syntax"></a>Sintassi
+<a id="syntax" class="xliff"></a>
+## Sintassi
 
 ```
 Service [string] #ResourceName
@@ -36,7 +37,8 @@ Service [string] #ResourceName
 }
 ```
 
-## <a name="properties"></a>Proprietà
+<a id="properties" class="xliff"></a>
+## Proprietà
 
 |  Proprietà  |  Descrizione   | 
 |---|---| 
@@ -51,7 +53,8 @@ Service [string] #ResourceName
 | Ensure | Indica se il servizio di destinazione è presente nel sistema. Impostare questa proprietà su **Absent** per specificare che il servizio di destinazione non esiste. Se la proprietà è impostata su **Present** (valore predefinito), specifica che il servizio di destinazione esiste.|
 | Path | Indica il percorso del file binario per un nuovo servizio.| 
 
-## <a name="example"></a>Esempio
+<a id="example" class="xliff"></a>
+## Esempio
 
 ```powershell
 configuration ServiceTest

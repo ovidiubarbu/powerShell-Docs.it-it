@@ -1,21 +1,22 @@
 ---
-title: Metodo StopConfiguration della classe MSFT_DSCLocalConfigurationManager
-ms.date: 2016-05-16
-keywords: powershell,DSC
-description: 
-ms.topic: article
+ms.date: 2017-06-12
 author: eslesar
-manager: dongill
-ms.prod: powershell
-ms.openlocfilehash: 9721486cca6f94d6b156c6ee1992eced6652c123
-ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
-translationtype: HT
+ms.topic: conceptual
+keywords: dsc,powershell,configurazione,impostazione
+title: Metodo StopConfiguration della classe MSFT_DSCLocalConfigurationManager
+ms.openlocfilehash: f0b550615b20f07f99c8ed7009805c45794bfe22
+ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/12/2017
 ---
-# <a name="stopconfiguration-method-of-the-msftdsclocalconfigurationmanager-class"></a>Metodo StopConfiguration della classe MSFT_DSCLocalConfigurationManager
+<a id="stopconfiguration-method-of-the-msftdsclocalconfigurationmanager-class" class="xliff"></a>
+# Metodo StopConfiguration della classe MSFT_DSCLocalConfigurationManager
 
 Arresta la modifica della configurazione in corso.
 
-<a name="syntax"></a>Sintassi
+<a id="syntax" class="xliff"></a>
+Sintassi
 ------
 
 ```mof
@@ -24,29 +25,34 @@ uint32 StopConfiguration(
 );
 ```
 
-<a name="parameters"></a>Parametri
+<a id="parameters" class="xliff"></a>
+Parametri
 ----------
 
 *force* \[in\]  
 **true** per forzare l'arresto della configurazione.
 
-## <a name="return-value"></a>Valore restituito
+<a id="return-value" class="xliff"></a>
+## Valore restituito
 ------------
 
 In caso di esito positivo, il valore restituisce zero, altrimenti, restituisce un codice di errore.
 
-## <a name="remarks"></a>Osservazioni
+<a id="remarks" class="xliff"></a>
+## Osservazioni
 
 Si tratta di un metodo statico.
 
-## <a name="requirements"></a>Requisiti
+<a id="requirements" class="xliff"></a>
+## Requisiti
 ------------
 >**MOF:** DscCore.mof
 
 >**Spazio dei nomi**: Root\Microsoft\Windows\DesiredStateConfiguration
 
 
-## <a name="see-also"></a>Vedere anche
+<a id="see-also" class="xliff"></a>
+## Vedere anche
 
 
 [**MSFT_DSCLocalConfigurationManager**](msft-dsclocalconfigurationmanager.md)

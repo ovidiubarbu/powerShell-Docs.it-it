@@ -1,21 +1,22 @@
 ---
-title: Risorsa nxFileLine DSC per Linux
-ms.date: 2016-05-16
-keywords: powershell,DSC
-description: 
-ms.topic: article
+ms.date: 2017-06-12
 author: eslesar
-manager: dongill
-ms.prod: powershell
-ms.openlocfilehash: 9196129e79272d8bee717ef8a5d42fb590760a0f
-ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
-translationtype: HT
+ms.topic: conceptual
+keywords: dsc,powershell,configurazione,impostazione
+title: Risorsa nxFileLine DSC per Linux
+ms.openlocfilehash: bde42bbe217fc9acf5a3f2ee0136d30e2b5f2415
+ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/12/2017
 ---
-# <a name="dsc-for-linux-nxfileline-resource"></a>Risorsa nxFileLine DSC per Linux
+<a id="dsc-for-linux-nxfileline-resource" class="xliff"></a>
+# Risorsa nxFileLine DSC per Linux
 
 La risorsa **nxFileLine** in PowerShell DSC (Desired State Configuration) fornisce un meccanismo per gestire le righe in un file di configurazione in un nodo Linux.
 
-## <a name="syntax"></a>Sintassi
+<a id="syntax" class="xliff"></a>
+## Sintassi
 
 ```
 nxFileLine <string> #ResourceName
@@ -28,7 +29,8 @@ nxFileLine <string> #ResourceName
 }
 ```
 
-## <a name="properties"></a>Proprietà
+<a id="properties" class="xliff"></a>
+## Proprietà
 
 |  Proprietà |  Descrizione | 
 |---|---|
@@ -37,7 +39,8 @@ nxFileLine <string> #ResourceName
 | DoesNotContainPattern| Modello di espressione regolare per le righe che non devono essere presenti nel file. Tutte le righe presenti nel file che corrispondono a questa espressione regolare verranno rimosse.| 
 | DependsOn | Indica che prima di configurare la risorsa è necessario eseguire la configurazione di un'altra risorsa. Ad esempio, se il valore di **ID** del blocco script di configurazione della risorsa che si vuole eseguire per primo è **ResourceName** e il tipo è **ResourceType**, la sintassi per usare questa proprietà è `DependsOn = "[ResourceType]ResourceName"`.| 
 
-## <a name="example"></a>Esempio
+<a id="example" class="xliff"></a>
+## Esempio
 
 Questo esempio illustra l'uso della risorsa **nxFileLine** per configurare il file `/etc/sudoers`, specificando che l'utente: monuser è configurato per non richiedere TTY.
 

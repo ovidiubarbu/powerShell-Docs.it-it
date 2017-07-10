@@ -1,22 +1,23 @@
 ---
-title: Introduzione a PowerShell DSC (Desired State Configuration)
-ms.date: 2016-05-16
-keywords: powershell,DSC
-description: 
-ms.topic: article
+ms.date: 2017-06-12
 author: eslesar
-manager: dongill
-ms.prod: powershell
-ms.openlocfilehash: 3a59f76919c0a63f269ca587d358020825412be4
-ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
-translationtype: HT
+ms.topic: conceptual
+keywords: dsc,powershell,configurazione,impostazione
+title: Introduzione a PowerShell DSC (Desired State Configuration)
+ms.openlocfilehash: 403badd11749cfa5c6a5d07e1b537fa3a5f954da
+ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/12/2017
 ---
-# <a name="getting-started-with-powershell-desired-state-configuration"></a>Introduzione a PowerShell DSC (Desired State Configuration) #
+<a id="getting-started-with-powershell-desired-state-configuration" class="xliff"></a>
+# Introduzione a PowerShell DSC (Desired State Configuration) #
 
 Questa guida descrive come iniziare a creare documenti di PowerShell DSC (Desired State Configuration) e applicarli ai computer. Si presuppone una familiarità di base con i cmdlet, i moduli e le funzioni di PowerShell. 
 
 
-## <a name="create-a-configuration"></a>Creare una configurazione ##
+<a id="create-a-configuration" class="xliff"></a>
+## Creare una configurazione ##
 
 Le [**configurazioni**](https://msdn.microsoft.com/en-us/powershell/dsc/configurations) sono documenti che descrivono un ambiente. Gli ambienti sono costituiti da "**nodi**", che sono in genere macchine virtuali o computer fisici. 
 
@@ -39,7 +40,8 @@ configuration MyFirstConfiguration
 
 }
 ```
-## <a name="parts-of-a-configuration"></a>Parti di una configurazione ##
+<a id="parts-of-a-configuration" class="xliff"></a>
+## Parti di una configurazione ##
 **Configuration** è una parola chiave che è stata aggiunta in PowerShell 4.0. Significa un tipo speciale di funzione di PowerShell usata da DSC (Desired State Configuration). In questo esempio la funzione si chiama myFirstConfiguration. 
 
 La riga successiva è un'istruzione di importazione, simile all'importazione di un modulo. Questa riga verrà descritta più avanti.

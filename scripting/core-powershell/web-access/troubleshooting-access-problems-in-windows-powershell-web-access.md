@@ -1,18 +1,15 @@
 ---
-description: 
-manager: carmonm
-ms.topic: article
-author: jpjofre
-ms.prod: powershell
+ms.date: 2017-06-05
 keywords: powershell,cmdlet
-ms.date: 2016-12-12
 title: risoluzione dei problemi di accesso in accesso web windows powershell
-ms.technology: powershell
-ms.openlocfilehash: 26de977d2c85e26f445eecb1278e6a7278e7dfd6
-ms.sourcegitcommit: 8acbf9827ad8f4ef9753f826ecaff58495ca51b0
-translationtype: HT
+ms.openlocfilehash: c10e19b177110ff62d44f28b6a523380b55b79e0
+ms.sourcegitcommit: 598b7835046577841aea2211d613bb8513271a8b
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/08/2017
 ---
-#  <a name="troubleshooting-access-problems-in-windows-powershell-web-access"></a>Risoluzione dei problemi di accesso in Accesso Web Windows PowerShell
+<a id="troubleshooting-access-problems-in-windows-powershell-web-access" class="xliff"></a>
+#  Risoluzione dei problemi di accesso in Accesso Web Windows PowerShell
 
 Ultimo aggiornamento: 24 giugno 2013
 

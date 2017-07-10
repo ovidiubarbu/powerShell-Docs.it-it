@@ -1,17 +1,18 @@
 ---
-title: Risorsa GroupSet DSC
-ms.date: 2016-05-16
-keywords: powershell, DSC, predefinito, risorsa
-description: Fornisce un meccanismo per gestire i gruppi locali nel nodo di destinazione.
-ms.topic: article
+ms.date: 2017-06-12
 author: eslesar
-manager: dongill
-ms.prod: powershell
-ms.openlocfilehash: 6e5ea98febfe7541f35a84c37df73df580654340
-ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
-translationtype: HT
+ms.topic: conceptual
+keywords: dsc,powershell,configurazione,impostazione
+description: Fornisce un meccanismo per gestire i gruppi locali nel nodo di destinazione.
+title: Risorsa GroupSet DSC
+ms.openlocfilehash: 0907a968bfc660adc873c28e8be6572d1d5cb993
+ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/12/2017
 ---
-# <a name="dsc-groupset-resource"></a>Risorsa GroupSet DSC
+<a id="dsc-groupset-resource" class="xliff"></a>
+# Risorsa GroupSet DSC
 
 > Si applica a: Windows PowerShell 5.0
 
@@ -19,7 +20,8 @@ La risorsa **GroupSet** in Windows PowerShell DSC (Desired State Configuration) 
 
 Usare questa risorsa quando si vuole aggiungere e/o rimuovere lo stesso elenco di membri per più di un gruppo, rimuovere più di un gruppo o aggiungere più di un gruppo con lo stesso elenco di membri.
 
-##<a name="syntax"></a>Sintassi##
+<a id="syntax" class="xliff"></a>
+##Sintassi##
 ```
 Group [string] #ResourceName
 {
@@ -32,7 +34,8 @@ Group [string] #ResourceName
 }
 ```
 
-## <a name="properties"></a>Proprietà
+<a id="properties" class="xliff"></a>
+## Proprietà
 
 |  Proprietà  |  Descrizione   | 
 |---|---| 
@@ -44,7 +47,8 @@ Group [string] #ResourceName
 | MembersToInclude| Usare questa proprietà per aggiungere membri all'appartenenza al gruppo esistente. Il valore di questa proprietà è una matrice di stringhe del formato *Dominio*\\*Nome utente*. Se si imposta questa proprietà in una configurazione, non usare la proprietà **Members**. In caso contrario, verrà generato un errore.| 
 | DependsOn | Indica che prima di configurare la risorsa è necessario eseguire la configurazione di un'altra risorsa. Ad esempio, se l'ID del blocco script di configurazione della risorsa che si vuole eseguire per primo è __ResourceName__ e il tipo è __ResourceType__, la sintassi per usare questa proprietà è `DependsOn = "[ResourceType]ResourceName"``.| 
 
-## <a name="example-1"></a>Esempio 1
+<a id="example-1" class="xliff"></a>
+## Esempio 1
 
 L'esempio seguente illustra come assicurarsi che siano presenti due gruppi denominati "myGroup" e "myOtherGroup". 
 

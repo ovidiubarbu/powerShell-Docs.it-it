@@ -1,21 +1,22 @@
 ---
-title: Risorsa nxArchive DSC per Linux
-ms.date: 2016-05-16
-keywords: powershell,DSC
-description: 
-ms.topic: article
+ms.date: 2017-06-12
 author: eslesar
-manager: dongill
-ms.prod: powershell
-ms.openlocfilehash: 2edbc1d11dfc7c84369430688a8b0d773277e864
-ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
-translationtype: HT
+ms.topic: conceptual
+keywords: dsc,powershell,configurazione,impostazione
+title: Risorsa nxArchive DSC per Linux
+ms.openlocfilehash: da647432e14d2a4a3ceb2a36c7dee2dbfd350116
+ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/12/2017
 ---
-# <a name="dsc-for-linux-nxarchive-resource"></a>Risorsa nxArchive DSC per Linux
+<a id="dsc-for-linux-nxarchive-resource" class="xliff"></a>
+# Risorsa nxArchive DSC per Linux
 
 La risorsa **nxArchive** in PowerShell DSC (Desired State Configuration) fornisce un meccanismo per decomprimere file di archivio (TAR) in un percorso specifico in un nodo Linux.
 
-## <a name="syntax"></a>Sintassi
+<a id="syntax" class="xliff"></a>
+## Sintassi
 
 ```
 nxArchive <string> #ResourceName
@@ -29,7 +30,8 @@ nxArchive <string> #ResourceName
 }
 ```
 
-## <a name="properties"></a>Proprietà
+<a id="properties" class="xliff"></a>
+## Proprietà
 
 |  Proprietà |  Descrizione | 
 |---|---|
@@ -40,7 +42,8 @@ nxArchive <string> #ResourceName
 | DependsOn | Indica che prima di configurare la risorsa è necessario eseguire la configurazione di un'altra risorsa. Ad esempio, se il valore di **ID** del blocco script di configurazione della risorsa che si vuole eseguire per primo è **ResourceName** e il tipo è **ResourceType**, la sintassi per usare questa proprietà è `DependsOn = "[ResourceType]ResourceName"`.| 
 | Ensure| Determina se verificare l'esistenza del contenuto dell'archivio in **Destination**. Impostare questa proprietà su "Present" per specificare che il contenuto esiste. Impostarla su "Absent" per specificare che il contenuto non esiste. Il valore predefinito è "Present".| 
 
-## <a name="example"></a>Esempio
+<a id="example" class="xliff"></a>
+## Esempio
 
 L'esempio seguente mostra come usare la risorsa **nxArchive** per specificare che il contenuto di un file di archivio denominato `website.tar` esiste e viene estratto in una determinata destinazione.
 
