@@ -1,23 +1,24 @@
 ---
-title: Risorse composite--Uso di una configurazione DSC come risorsa
-ms.date: 2016-05-16
-keywords: powershell,DSC
-description: 
-ms.topic: article
+ms.date: 2017-06-12
 author: eslesar
-manager: dongill
-ms.prod: powershell
-ms.openlocfilehash: 36851c9616cfb9a2fc79925e4187effa913341ad
-ms.sourcegitcommit: c7577f7a1e902a41df6d337e5d85361d1814f90a
-translationtype: HT
+ms.topic: conceptual
+keywords: dsc,powershell,configurazione,impostazione
+title: Risorse composite--Uso di una configurazione DSC come risorsa
+ms.openlocfilehash: 6c9a878c45a3e999e20dec5766ee8bda409905d3
+ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/12/2017
 ---
-# <a name="composite-resources-using-a-dsc-configuration-as-a-resource"></a>Risorse composite: uso di una configurazione DSC come risorsa
+<a id="composite-resources-using-a-dsc-configuration-as-a-resource" class="xliff"></a>
+# Risorse composite: uso di una configurazione DSC come risorsa
 
 > Si applica a: Windows PowerShell 4.0, Windows PowerShell 5.0
 
 In situazioni reali, le configurazioni possono diventare lunghe e complesse, includere chiamate a molte risorse diverse e richiedere l'impostazione di un elevato numero di proprietà. Per risolvere questa complessità, è possibile usare una configurazione di Windows PowerShell DSC (Desired State Configuration) come risorsa per altre configurazioni. In questo caso si parla di risorsa composita. Una risorsa composita è una configurazione DSC che accetta parametri. I parametri della configurazione fungono da proprietà della risorsa. La configurazione viene salvata come file con un'estensione **.schema.psm1** e sostituisce sia lo schema MOF sia lo script di risorsa in una risorsa DSC tipica. Per altre informazioni sulle risorse DSC, vedere [Risorse Windows PowerShell DSC (Desired State Configuration)](resources.md).
 
-## <a name="creating-the-composite-resource"></a>Creazione della risorsa composita
+<a id="creating-the-composite-resource" class="xliff"></a>
+## Creazione della risorsa composita
 
 In questo esempio viene creata una configurazione che richiama diverse risorse esistenti per configurare le macchine virtuali. Invece di specificare i valori da impostare in blocchi di configurazione, la configurazione accetta diversi parametri che vengono quindi usati nei blocchi di configurazione.
 
@@ -133,7 +134,8 @@ Configuration xVirtualMachine
 }
 ```
 
-### <a name="saving-the-configuration-as-a-composite-resource"></a>Salvataggio della configurazione come risorsa composita
+<a id="saving-the-configuration-as-a-composite-resource" class="xliff"></a>
+### Salvataggio della configurazione come risorsa composita
 
 Per usare la configurazione con parametri come risorsa DSC, salvarla in una struttura di directory come quella di qualsiasi altra risorsa basata su MOF e denominarla usando un'estensione **.schema.psm1**. Per questo esempio, il file sarà denominato **xVirtualMachine.schema.psm1**. È anche necessario creare un manifesto denominato **xVirtualMachine.psd1** che contiene la riga seguente. Si noti che questo si aggiunge a **MyDscResources.psd1**, il manifesto del modulo per tutte le risorse nella cartella **MyDscResources**.
 
@@ -155,7 +157,8 @@ $env: psmodulepath
 
 La risorsa è ora individuabile usando il cmdlet Get-DscResource e le sue proprietà sono individuabili usando tale cmdlet oppure il completamento automatico con **CTRL+BARRA SPAZIATRICE** in Windows PowerShell ISE.
 
-## <a name="using-the-composite-resource"></a>Uso della risorsa composita
+<a id="using-the-composite-resource" class="xliff"></a>
+## Uso della risorsa composita
 
 Verrà quindi creata una configurazione che chiama la risorsa composita. Questa configurazione chiama la risorsa composita xVirtualMachine per creare una macchina virtuale e quindi chiama la risorsa **xComputer** per rinominarla.
 
@@ -190,8 +193,28 @@ configuration RenameVM
 }
 ```
 
-## <a name="see-also"></a>Vedere anche
-### <a name="concepts"></a>Concetti
+<a id="supporting-psdscrunascredential" class="xliff"></a>
+## Supporto di PsDscRunAsCredential
+
+>**Nota:** **PsDscRunAsCredential** è supportato in PowerShell 5.0 e versioni successive.
+
+La proprietà **PsDscRunAsCredential** può essere usata nel blocco di risorsa delle [configurazioni DSC](configurations.md) per specificare che la risorsa deve essere eseguita in un insieme di credenziali specificato.
+Per altre informazioni, vedere [Esecuzione di DSC con le credenziali dell'utente](runAsUser.md).
+
+Per accedere al contesto utente dall'interno di una risorsa personalizzata è possibile usare la variabile automatica `$PsDscContext`.
+
+Ad esempio il codice seguente scrive il contesto utente in cui viene eseguita la risorsa nel flusso di output dettagliato:
+
+```powershell
+if (PsDscContext.RunAsUser) {
+    Write-Verbose "User: $PsDscContext.RunAsUser";
+}
+```
+
+<a id="see-also" class="xliff"></a>
+## Vedere anche
+<a id="concepts" class="xliff"></a>
+### Concetti
 * [Scrittura di una risorsa DSC personalizzata con MOF](authoringResourceMOF.md)
 * [Introduzione a Windows PowerShell DSC (Desired State Configuration)](overview.md)
 

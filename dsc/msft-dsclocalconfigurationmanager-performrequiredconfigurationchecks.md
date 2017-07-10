@@ -1,21 +1,22 @@
 ---
-title: Metodo PerformRequiredConfigurationChecks della classe MSFT_DSCLocalConfigurationManager
-ms.date: 2016-05-16
-keywords: powershell,DSC
-description: 
-ms.topic: article
+ms.date: 2017-06-12
 author: eslesar
-manager: dongill
-ms.prod: powershell
-ms.openlocfilehash: f9eb975845f6ccabcac80e2591fd987f80f81331
-ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
-translationtype: HT
+ms.topic: conceptual
+keywords: dsc,powershell,configurazione,impostazione
+title: Metodo PerformRequiredConfigurationChecks della classe MSFT_DSCLocalConfigurationManager
+ms.openlocfilehash: 26110b3920104da7343b8d55cf63440c12accbbc
+ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/12/2017
 ---
-# <a name="performrequiredconfigurationchecks-method-of-the-msftdsclocalconfigurationmanager-class"></a>Metodo PerformRequiredConfigurationChecks della classe MSFT_DSCLocalConfigurationManager
+<a id="performrequiredconfigurationchecks-method-of-the-msftdsclocalconfigurationmanager-class" class="xliff"></a>
+# Metodo PerformRequiredConfigurationChecks della classe MSFT_DSCLocalConfigurationManager
 
 Avvia una verifica di coerenza usando l'Utilità di pianificazione.
 
-<a name="syntax"></a>Sintassi
+<a id="syntax" class="xliff"></a>
+Sintassi
 ------
 
 ```mof
@@ -24,7 +25,8 @@ uint32 PerformRequiredConfigurationChecks(
 );
 ```
 
-<a name="parameters"></a>Parametri
+<a id="parameters" class="xliff"></a>
+Parametri
 ----------
 
 *Flags* \[in\]  
@@ -37,23 +39,27 @@ Una maschera di bit che specifica il tipo di verifica di coerenza da eseguire. I
 |**4** | La configurazione deve essere recuperata dal server di pull specificato nella metaconfigurazione per il nodo. Questo valore deve essere sempre combinato con **1** per un valore di **5**. |
 |**8** | Inviare lo stato al server di report. |
 
-## <a name="return-value"></a>Valore restituito
+<a id="return-value" class="xliff"></a>
+## Valore restituito
 ------------
 
 In caso di esito positivo, il valore restituisce zero, altrimenti, restituisce un codice di errore.
 
-## <a name="remarks"></a>Osservazioni
+<a id="remarks" class="xliff"></a>
+## Osservazioni
 
 Si tratta di un metodo statico.
 
-## <a name="requirements"></a>Requisiti
+<a id="requirements" class="xliff"></a>
+## Requisiti
 ------------
 >**MOF:** DscCore.mof
 
 >**Spazio dei nomi**: Root\Microsoft\Windows\DesiredStateConfiguration
 
 
-## <a name="see-also"></a>Vedere anche
+<a id="see-also" class="xliff"></a>
+## Vedere anche
 
 
 [**MSFT_DSCLocalConfigurationManager**](msft-dsclocalconfigurationmanager.md)

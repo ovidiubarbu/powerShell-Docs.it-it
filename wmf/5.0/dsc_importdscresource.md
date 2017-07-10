@@ -1,4 +1,16 @@
-# <a name="import-dscresource-keyword-supports--moduleversion-parameter"></a>La parola chiave Import-DscResource supporta il parametro -ModuleVersion
+---
+ms.date: 2017-06-12
+author: JKeithB
+ms.topic: reference
+keywords: wmf,powershell,installazione
+ms.openlocfilehash: b839b476bb4ef7f8d73b158d61f0e8cbc1265e60
+ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/12/2017
+---
+<a id="import-dscresource-keyword-supports--moduleversion-parameter" class="xliff"></a>
+# La parola chiave Import-DscResource supporta il parametro -ModuleVersion
 
 È stato aggiunto un nuovo parametro alla parola chiave dinamica `Import-DscResource`, disponibile durante la creazione di configurazioni DSC. Gli autori di configurazioni possono ora specificare la versione del modulo esatta da cui caricare le risorse DSC. La nuova sintassi della parola chiave è:
 

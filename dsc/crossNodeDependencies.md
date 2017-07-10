@@ -1,17 +1,17 @@
 ---
-title: Specifica delle dipendenze tra nodi
-ms.date: 2016-05-16
-keywords: powershell,DSC
-description: 
-ms.topic: article
+ms.date: 2017-06-12
 author: eslesar
-manager: dongill
-ms.prod: powershell
-ms.openlocfilehash: c99ef444027a82d3adeba6a060f60fba3a0fe530
-ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
-translationtype: HT
+ms.topic: conceptual
+keywords: dsc,powershell,configurazione,impostazione
+title: Specifica delle dipendenze tra nodi
+ms.openlocfilehash: dcdf9f8ef4b74d23bd083767db2cc4aafc0ee83b
+ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/12/2017
 ---
-# <a name="specifying-cross-node-dependencies"></a>Specifica delle dipendenze tra nodi
+<a id="specifying-cross-node-dependencies" class="xliff"></a>
+# Specifica delle dipendenze tra nodi
 
 > Si applica a: Windows PowerShell 5.0
 
@@ -21,17 +21,38 @@ DSC fornisce risorse speciali quali **WaitForAll**, **WaitForAny** e **WaitForSo
 * **WaitForAny**: ha esito positivo se la risorsa specificata è nello stato desiderato in almeno uno dei nodi di destinazione definiti nella proprietà **NodeName**.
 * **WaitForSome**: specifica una proprietà **NodeCount** oltre alla proprietà **NodeName**. La risorsa ha esito positivo se si trova nello stato desiderato in un numero minimo di nodi, specificato in **NodeCount**, definito dalla proprietà **NodeName**. 
 
-## <a name="using-waitforxxxx-resources"></a>Uso delle risorse WaitForXXXX
+<a id="using-waitforxxxx-resources" class="xliff"></a>
+## Uso delle risorse WaitForXXXX
 
 Per usare le risorse **WaitForXXXX**, creare un blocco di risorsa contenente il tipo di risorsa che specifica la risorsa DSC e i nodi da attendere. Quindi usare la proprietà **DependsOn** su eventuali altri blocchi di risorse nella configurazione per attendere che le condizioni specificate nel nodo **WaitForXXXX** abbiano esito positivo.
 
 Nella configurazione seguente, ad esempio, il nodo di destinazione è in attesa del completamento della risorsa **xADDomain** nel nodo **MyDC** con un numero massimo di 30 tentativi, a intervalli di 15 secondi, prima che il nodo di destinazione possa essere aggiunto al dominio.
 
-```PowerShell
+```powershell
 Configuration JoinDomain
 
 {
-    Import-DscResource -Module xComputerManagement
+    Import-DscResource -Module xComputerManagement, xActiveDirectory
+
+    Node myPC
+    {
+        WindowsFeature InstallAD
+        {
+            Ensure = 'Present' 
+            Name = 'AD-Domain-Services' 
+        }
+
+        xADDomain NewDomain 
+        { 
+            DomainName = 'Contoso.com'            
+            DomainAdministratorCredential = (Get-Credential)
+            SafemodeAdministratorPassword = (Get-Credential)
+            DatabasePath = "C:\Windows\NTDS"
+            LogPath = "C:\Windows\NTDS"
+            SysvolPath = "C:\Windows\Sysvol"
+        }
+
+    }
 
     Node myDomainJoinedServer
     {
@@ -46,7 +67,7 @@ Configuration JoinDomain
 
         xComputer JoinDomain
         {
-            Name             = 'MyPC'
+            Name             = 'myPC'
             DomainName       = 'Contoso.com'
             Credential       = (Get-Credential)
             DependsOn        ='[WaitForAll]DC'
@@ -57,7 +78,8 @@ Configuration JoinDomain
 
 >**Nota**: per impostazione predefinita, le risorse WaitForXXX eseguono un solo tentativo prima dell'esito negativo. Sebbene non sia obbligatorio, è consigliabile specificare un intervallo per i tentativi e il loro numero.
 
-## <a name="see-also"></a>Vedere anche
+<a id="see-also" class="xliff"></a>
+## Vedere anche
 * [Configurazioni DSC](configurations.md)
 * [Risorse DSC](resources.md)
 * [Configurazione di Gestione configurazione locale](metaConfig.md)

@@ -1,38 +1,41 @@
 ---
-description: 
-manager: carolz
-ms.topic: article
-author: jpjofre
-ms.prod: powershell
-keywords: powershell,cmdlet,gallery
-ms.date: 2016-10-14
+ms.date: 2017-06-12
 contributor: manikb
-title: psget_update modulemanifest
-ms.technology: powershell
-ms.openlocfilehash: 85153872326c5af8f869bc2254040eca1a152f8b
-ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
-translationtype: HT
+ms.topic: reference
+keywords: raccolta,powershell,cmdlet,psget
+title: Update-ModuleManifest
+ms.openlocfilehash: ce3f6f173535d98648eb51adb1dbf84764e4f434
+ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/12/2017
 ---
-# <a name="update-modulemanifest"></a>Update-ModuleManifest
+<a id="update-modulemanifest" class="xliff"></a>
+# Update-ModuleManifest
 Aggiorna un file manifesto del modulo.
 
-## <a name="description"></a>Descrizione
+<a id="description" class="xliff"></a>
+## Descrizione
 
 Il cmdlet Update-ModuleManifest aggiorna un file manifesto del modulo (psd1).
 
-### <a name="notes"></a>Note
+<a id="notes" class="xliff"></a>
+### Note
     - DscResourcesToExport è supportato solo nella versione più recente di PowerShell, la versione 5.0. Non sarà possibile aggiornare il campo in una versione precedente di PowerShell.
 
-## <a name="cmdlet-syntax"></a>Sintassi del cmdlet
+<a id="cmdlet-syntax" class="xliff"></a>
+## Sintassi del cmdlet
 ```powershell
 Get-Command -Name Update-ModuleManifest -Module PowerShellGet -Syntax
 ```
 
-## <a name="cmdlet-online-help-reference"></a>Riferimento per la Guida online sui cmdlet
+<a id="cmdlet-online-help-reference" class="xliff"></a>
+## Riferimento per la Guida online sui cmdlet
 
 [Update-ModuleManifest](http://go.microsoft.com/fwlink/?LinkId=619311)
 
-## <a name="example-commands"></a>Comandi di esempio
+<a id="example-commands" class="xliff"></a>
+## Comandi di esempio
 
 Questo nuovo cmdlet viene usato per facilitare l'aggiornamento del file manifesto con i valori delle proprietà di input. Accetta tutti i parametri supportati da New-ModuleManifest.
 

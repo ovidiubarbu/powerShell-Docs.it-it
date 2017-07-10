@@ -1,23 +1,22 @@
 ---
-description: 
-manager: carolz
-ms.topic: article
-author: jpjofre
-ms.prod: powershell
-keywords: powershell,cmdlet,gallery
-ms.date: 2016-10-14
+ms.date: 2017-06-12
 contributor: manikb
-title: psget_get installedscript
-ms.technology: powershell
-ms.openlocfilehash: d755ed5dbcee279f943d56832ffd7689e4cc6f04
-ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
-translationtype: HT
+ms.topic: reference
+keywords: gallery,powershell,cmdlet,psget
+title: Get-InstalledScript
+ms.openlocfilehash: f35e57cdadd1448bd9032ab007d692003c4cf4a2
+ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/12/2017
 ---
-# <a name="get-installedscript"></a>Get-InstalledScript
+<a id="get-installedscript" class="xliff"></a>
+# Get-InstalledScript
 
 Ottiene gli script installati in un computer.
 
-## <a name="description"></a>Descrizione
+<a id="description" class="xliff"></a>
+## Descrizione
 
 Il cmdlet Get-InstalledScript ottiene gli script di PowerShell installati in un computer.
 
@@ -30,17 +29,20 @@ Per ogni script installato, Get-InstalledScript restituisce un oggetto PSReposit
   - Se il parametro RequiredVersion non è specificato, Get-InstalledScript restituisce la versione più recente dello script installato maggiore o uguale alla versione minima specificata. Se la versione minima non è specificata, restituisce la versione più recente dello script. 
   - Se il parametro RequiredVersion è specificato, Get-InstalledScript restituisce unicamente la versione dello script installato che corrisponde esattamente alla versione specificata.
 
-## <a name="cmdlet-syntax"></a>Sintassi del cmdlet
+<a id="cmdlet-syntax" class="xliff"></a>
+## Sintassi del cmdlet
 
 ```powershell
 Get-Command -Name Get-InstalledScript -Module PowerShellGet -Syntax
 ```
 
-## <a name="cmdlet-online-help-reference"></a>Riferimento per la Guida online sui cmdlet
+<a id="cmdlet-online-help-reference" class="xliff"></a>
+## Riferimento per la Guida online sui cmdlet
 
 [Get-InstalledScript](http://go.microsoft.com/fwlink/?LinkId=619790)
 
-## <a name="example-commands"></a>Comandi di esempio
+<a id="example-commands" class="xliff"></a>
+## Comandi di esempio
 
 ```powershell
 

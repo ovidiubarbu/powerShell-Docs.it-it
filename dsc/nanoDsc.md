@@ -1,17 +1,17 @@
 ---
-title: Uso di DSC in Nano Server
-ms.date: 2016-05-16
-keywords: powershell,DSC
-description: 
-ms.topic: article
+ms.date: 2017-06-12
 author: eslesar
-manager: dongill
-ms.prod: powershell
-ms.openlocfilehash: a8faf242fcc8c72461d6cb7609a562fbb92dfdb9
-ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
-translationtype: HT
+ms.topic: conceptual
+keywords: dsc,powershell,configurazione,impostazione
+title: Uso di DSC in Nano Server
+ms.openlocfilehash: 2233106bfd07144132f95ea7957ebfa3248ca219
+ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/12/2017
 ---
-# <a name="using-dsc-on-nano-server"></a>Uso di DSC in Nano Server
+<a id="using-dsc-on-nano-server" class="xliff"></a>
+# Uso di DSC in Nano Server
 
 > Si applica a: Windows PowerShell 5.0
 
@@ -24,7 +24,8 @@ New-NanoServerImage -Edition Standard -DeploymentType Guest -MediaPath f:\ -Base
 Per informazioni sull'installazione e l'uso di Nano Server e su come gestire Nano Server con la comunicazione remota di PowerShell, vedere [Getting Started with Nano Server](https://technet.microsoft.com/en-us/library/mt126167.aspx) (Guida introduttiva a Nano Server).
 
 
-## <a name="dsc-features-available-on-nano-server"></a>Funzionalità DSC disponibili su Nano Server
+<a id="dsc-features-available-on-nano-server" class="xliff"></a>
+## Funzionalità DSC disponibili su Nano Server
 
  Poiché Nano Server supporta solo un set limitato di API rispetto a una versione completa di Windows Server, al momento DSC on Nano Server (DSC su Nano Server) non offre parità funzionale completa con DSC in esecuzione su SKU completi. DSC on Nano Server (DSC su Nano Server) è in fase di sviluppo attivo e non è ancora completo di tutte le funzionalità.
  
@@ -113,7 +114,8 @@ Per informazioni sull'installazione e l'uso di Nano Server e su come gestire Nan
   * [User](userResource.md)
   
 
-## <a name="dsc-features-not-available-on-nano-server"></a>Funzionalità DSC non disponibili su Nano Server
+<a id="dsc-features-not-available-on-nano-server" class="xliff"></a>
+## Funzionalità DSC non disponibili su Nano Server
 
 Le funzionalità DSC seguenti sono attualmente non disponibili in Nano Server:
 
@@ -121,10 +123,12 @@ Le funzionalità DSC seguenti sono attualmente non disponibili in Nano Server:
 * Server di pull: attualmente non è possibile impostare un server di pull su Nano Server
 * Tutte le funzioni non presenti nel relativo elenco sono disponibili
 
-## <a name="using-custom-dsc-resources-on-nano-server"></a>Uso di risorse DSC personalizzate su Nano Server
+<a id="using-custom-dsc-resources-on-nano-server" class="xliff"></a>
+## Uso di risorse DSC personalizzate su Nano Server
  
 A causa di un set limitato di API Windows e alle librerie CLR disponibili in Nano Server, le risorse DSC che funzionano sulla versione CLR completa di Windows non funzionano necessariamente anche su Nano server. Eseguire un test completo prima di distribuire le risorse DSC personalizzate in un ambiente di produzione.
 
-## <a name="see-also"></a>Vedere anche
+<a id="see-also" class="xliff"></a>
+## Vedere anche
 - [Guida introduttiva a Nano Server](https://technet.microsoft.com/en-us/library/mt126167.aspx)
 

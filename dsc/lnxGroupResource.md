@@ -1,21 +1,22 @@
 ---
-title: Risorsa nxGroup DSC per Linux
-ms.date: 2016-05-16
-keywords: powershell,DSC
-description: 
-ms.topic: article
+ms.date: 2017-06-12
 author: eslesar
-manager: dongill
-ms.prod: powershell
-ms.openlocfilehash: 2139e4462c0568c30b118ef6cb3ceef1717b52e6
-ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
-translationtype: HT
+ms.topic: conceptual
+keywords: dsc,powershell,configurazione,impostazione
+title: Risorsa nxGroup DSC per Linux
+ms.openlocfilehash: fcd1dfd3110b1358ed7ef9ca8d57154186b271f6
+ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/12/2017
 ---
-# <a name="dsc-for-linux-nxgroup-resource"></a>Risorsa nxGroup DSC per Linux
+<a id="dsc-for-linux-nxgroup-resource" class="xliff"></a>
+# Risorsa nxGroup DSC per Linux
 
 La risorsa **nxGroup** in PowerShell DSC (Desired State Configuration) fornisce un meccanismo per gestire i gruppi locali in un nodo Linux.
 
-## <a name="syntax"></a>Sintassi
+<a id="syntax" class="xliff"></a>
+## Sintassi
 
 ```powershell
 nxGroup <string> #ResourceName
@@ -30,7 +31,8 @@ nxGroup <string> #ResourceName
 
 ```
 
-## <a name="properties"></a>Proprietà
+<a id="properties" class="xliff"></a>
+## Proprietà
 
 |  Proprietà |  Descrizione | 
 |---|---|
@@ -42,7 +44,8 @@ nxGroup <string> #ResourceName
 | PreferredGroupID| Imposta l'ID gruppo sul valore specificato, se possibile. Se l'ID gruppo è attualmente in uso, viene usato il successivo ID gruppo disponibile.| 
 | DependsOn | Indica che prima di configurare la risorsa è necessario eseguire la configurazione di un'altra risorsa. Ad esempio, se il valore di **ID** del blocco script di configurazione della risorsa che si vuole eseguire per primo è **ResourceName** e il tipo è **ResourceType**, la sintassi per usare questa proprietà è `DependsOn = "[ResourceType]ResourceName"`.| 
 
-## <a name="example"></a>Esempio
+<a id="example" class="xliff"></a>
+## Esempio
 
 L'esempio seguente specifica che l'utente "monuser" esiste ed è un membro del gruppo "DBusers".
 

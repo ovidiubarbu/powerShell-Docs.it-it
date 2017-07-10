@@ -1,39 +1,41 @@
 ---
-description: 
-manager: carolz
-ms.topic: article
-author: jpjofre
-ms.prod: powershell
-keywords: powershell,cmdlet,gallery
-ms.date: 2016-10-14
+ms.date: 2017-06-12
 contributor: manikb
-title: psget_unregister psrepository
-ms.technology: powershell
-ms.openlocfilehash: c90710db47dbfdc58e1ca7f84c6d6fd8f04b5109
-ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
-translationtype: HT
+ms.topic: reference
+keywords: gallery,powershell,cmdlet,psget
+title: Unregister-PSRepository
+ms.openlocfilehash: 91380210f262208fce39d596bd6c2ad05a819fbf
+ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/12/2017
 ---
-# <a name="unregister-psrepository"></a>Unregister-PSRepository
+<a id="unregister-psrepository" class="xliff"></a>
+# Unregister-PSRepository
 
 Consente di annullare la registrazione di un repository.
 
-## <a name="description"></a>Descrizione
+<a id="description" class="xliff"></a>
+## Descrizione
 
 Il cmdlet Unregister-PSRepository consente di annullare la registrazione di un repository per l'utente corrente.
 - L'annullamento della registrazione e la ri-registrazione del repository PSGallery sono consentiti per scenari disconnessi e aziendali.
 - Per ri-registrare PSGallery è sufficiente eseguire `Register-PSRepository -Default`
 - Dato che PSGallery è il repository di pubblicazione predefinito nei cmdlet Publish-Module e Publish-Script, se PSGallery non è disponibile nell'elenco dei repository registrati viene generato un errore.
 
-## <a name="cmdlet-syntax"></a>Sintassi del cmdlet
+<a id="cmdlet-syntax" class="xliff"></a>
+## Sintassi del cmdlet
 
 ```powershell
 Get-Command -Name Unregister-PSRepository -Module PowerShellGet -Syntax
 ```
-## <a name="cmdlet-online-help-reference"></a>Riferimento per la Guida online sui cmdlet
+<a id="cmdlet-online-help-reference" class="xliff"></a>
+## Riferimento per la Guida online sui cmdlet
 
 [Unregister-PSRepository](http://go.microsoft.com/fwlink/?LinkID=517130)
 
-## <a name="example-commands"></a>Comandi di esempio
+<a id="example-commands" class="xliff"></a>
+## Comandi di esempio
 
 ```powershell
 Unregister-PSRepository -Name "MyPrivateGallery"
@@ -41,7 +43,8 @@ Unregister-PSRepository -Name "MyPrivateGallery"
 Get-PSRepository exp | Unregister-PSRepository
 ```
 
-### <a name="unregistration-and-re-registration-of-the-psgallery-repository-is-allowed-for-an-enterprise-and-disconnected-scenarios"></a>L'annullamento della registrazione e la ri-registrazione del repository PSGallery sono consentiti per scenari disconnessi e aziendali.
+<a id="unregistration-and-re-registration-of-the-psgallery-repository-is-allowed-for-an-enterprise-and-disconnected-scenarios" class="xliff"></a>
+### L'annullamento della registrazione e la ri-registrazione del repository PSGallery sono consentiti per scenari disconnessi e aziendali.
 ```powershell
 
 # Unregister PSGallery repository

@@ -1,23 +1,22 @@
 ---
-description: 
-manager: carolz
-ms.topic: article
-author: jpjofre
-ms.prod: powershell
-keywords: powershell,cmdlet,gallery
-ms.date: 2016-10-14
+ms.date: 2017-06-12
 contributor: manikb
-title: psget_find command
-ms.technology: powershell
-ms.openlocfilehash: 99091130ea89023495e5e3aacafb292f67f2db30
-ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
-translationtype: HT
+ms.topic: reference
+keywords: gallery,powershell,cmdlet,psget
+title: Find-Command
+ms.openlocfilehash: f867f12b1c6efad30a04581c6f36c5a77a2fb2ae
+ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/12/2017
 ---
-# <a name="find-command"></a>Find-Command
+<a id="find-command" class="xliff"></a>
+# Find-Command
 
 Trova i comandi di PowerShell nei moduli.
 
-## <a name="description"></a>Descrizione
+<a id="description" class="xliff"></a>
+## Descrizione
 Il cmdlet Find-Command trova i comandi di PowerShell, ad esempio cmdlet, alias, funzioni e flussi di lavoro. Find-Command cerca nei moduli dei repository registrati.
 Per ogni comando trovato da questo cmdlet, viene restituito un oggetto PSGetCommandInfo. È possibile passare un oggetto PSGetCommandInfo al cmdlet Install-Module per installare il modulo che contiene il comando.
 
@@ -30,16 +29,19 @@ Per ogni comando trovato da questo cmdlet, viene restituito un oggetto PSGetComm
 - Find-Command consente di filtrare in base al linguaggio di ricerca specifico del repository usando il parametro -Filter.
 - Find-Command consente di filtrare in base ai moduli di tutti o alcuni dei repository registrati.
 
-## <a name="cmdlet-syntax"></a>Sintassi del cmdlet
+<a id="cmdlet-syntax" class="xliff"></a>
+## Sintassi del cmdlet
 ```powershell
 Get-Command -Name Find-Command -Module PowerShellGet -Syntax
 ```
 
-## <a name="cmdlet-online-help-reference"></a>Riferimento per la Guida online sui cmdlet
+<a id="cmdlet-online-help-reference" class="xliff"></a>
+## Riferimento per la Guida online sui cmdlet
 
 [Find-Command](http://go.microsoft.com/fwlink/?LinkId=733636)
 
-## <a name="example-commands"></a>Comandi di esempio
+<a id="example-commands" class="xliff"></a>
+## Comandi di esempio
 ```powershell
 
 # Find a specific command

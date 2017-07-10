@@ -1,17 +1,17 @@
 ---
-title: Uso di un server di report DSC
-ms.date: 2016-05-16
-keywords: powershell,DSC
-description: 
-ms.topic: article
+ms.date: 2017-06-12
 author: eslesar
-manager: dongill
-ms.prod: powershell
-ms.openlocfilehash: 17b56a0ce25d3154e21f18269926a0c41aae833b
-ms.sourcegitcommit: d7b28f28a09caa7fa48b0f66c5c437f128ce316f
-translationtype: HT
+ms.topic: conceptual
+keywords: dsc,powershell,configurazione,installazione
+title: Uso di un server di report DSC
+ms.openlocfilehash: dd61d6ffff43ac2d1ec663b566e39dfc7d6c6565
+ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/12/2017
 ---
-# <a name="using-a-dsc-report-server"></a>Uso di un server di report DSC
+<a id="using-a-dsc-report-server" class="xliff"></a>
+# Uso di un server di report DSC
 
 > Si applica a: Windows PowerShell 5.0
 
@@ -19,7 +19,8 @@ translationtype: HT
 
 È possibile configurare Gestione configurazione locale in un nodo per inviare report sullo stato della configurazione a un server di pull, su cui è quindi possibile eseguire query per recuperare i dati. Ogni volta che il nodo controlla e applica una configurazione, invia un report al server di report. Questi report vengono archiviati in un database nel server e possono essere recuperati chiamando il servizio Web di gestione dei report. Ogni report contiene informazioni come le configurazioni applicate e l'esito dell'applicazione, le risorse usate, eventuali errori generati e le ore di inizio e fine.
 
-## <a name="configuring-a-node-to-send-reports"></a>Configurazione di un nodo per l'invio di report
+<a id="configuring-a-node-to-send-reports" class="xliff"></a>
+## Configurazione di un nodo per l'invio di report
 
 Per chiedere a un nodo di inviare report a un server, è possibile usare un blocco **ReportServerWeb** nella configurazione di Gestione configurazione locale del nodo. Per informazioni sulla configurazione di Gestione configurazione locale, vedere [Configurazione di Gestione configurazione locale](metaConfig.md). Il server a cui il nodo invia i report deve essere configurato come server di pull Web. Non è possibile inviare report a una condivisione SMB. Per informazioni sulla configurazione di un server di pull, vedere [Configurazione di un server di pull Web DSC](pullServer.md). Il server di report può corrispondere al servizio da cui il nodo effettua il pull delle configurazioni e ottiene le risorse oppure può essere un servizio diverso.
  
@@ -92,7 +93,8 @@ PullClientConfig
 
 >**Nota:** è possibile assegnare il nome desiderato al servizio Web quando si configura un server di pull, ma la proprietà **ServerURL** deve corrispondere al nome del servizio.
 
-## <a name="getting-report-data"></a>Recupero dei dati dei report
+<a id="getting-report-data" class="xliff"></a>
+## Recupero dei dati dei report
 
 I report inviati al server di pull vengono immessi in un database nel server. I report sono disponibili tramite chiamate al servizio Web. Per recuperare i report per un nodo specifico, inviare una richiesta HTTP al servizio Web di report nel formato seguente: `http://CONTOSO-REPORT:8080/PSDSCReportServer.svc/Nodes(AgentId= 'MyNodeAgentId')/Reports` dove `MyNodeAgentId` è il valore di AgentId del nodo per cui ottenere i report. È possibile ottenere il valore di AgentID per un nodo chiamando [Get-DscLocalConfigurationManager](https://technet.microsoft.com/en-us/library/dn407378.aspx) in tale nodo.
 
@@ -113,7 +115,8 @@ function GetReport
 }
 ```
     
-## <a name="viewing-report-data"></a>Visualizzazione dei dati dei report
+<a id="viewing-report-data" class="xliff"></a>
+## Visualizzazione dei dati dei report
 
 Se si imposta una variabile sul risultato della funzione **GetReport**, è possibile visualizzare i singoli campi in un elemento della matrice restituita:
 
@@ -220,7 +223,8 @@ InDesiredState    : True
 
 Si noti che questi esempi servono solo per dare un'idea di cosa è possibile fare con i dati dei report. Per informazioni introduttive sull'uso di JSON in PowerShell, vedere il post di blog [Playing with JSON and PowerShell](https://blogs.technet.microsoft.com/heyscriptingguy/2015/10/08/playing-with-json-and-powershell/).
 
-## <a name="see-also"></a>Vedere anche
+<a id="see-also" class="xliff"></a>
+## Vedere anche
 - [Configurazione di Gestione configurazione locale](metaConfig.md)
 - [Configurazione di un server di pull Web DSC](pullServer.md)
 - [Configurazione di un client di pull usando nomi di configurazione](pullClientConfigNames.md)

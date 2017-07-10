@@ -1,6 +1,19 @@
-# <a name="separation-of-node-and-configuration-ids"></a>Separazione degli ID per nodi e configurazioni
+---
+ms.date: 2017-06-12
+author: JKeithB
+ms.topic: reference
+keywords: wmf,powershell,installazione
+ms.openlocfilehash: 5b9eea1c90bfd5a8cee3897d832bf7775a750308
+ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/12/2017
+---
+<a id="separation-of-node-and-configuration-ids" class="xliff"></a>
+# Separazione degli ID per nodi e configurazioni
 
-## <a name="overview"></a>Panoramica
+<a id="overview" class="xliff"></a>
+## Panoramica
 
 Per garantire un'esperienza più flessibile e semplificata durante l'uso di DSC in modalità Pull, in questa versione sono state aggiunte numerose funzionalità. Queste funzionalità sono progettate in modo da offrire la flessibilità necessaria per configurare e distribuire le configurazioni su più nodi, offrendo allo stesso tempo la possibilità di tenere traccia dello stato e di creare report di informazioni per ogni nodo singolarmente. Queste funzionalità sono le seguenti:
 

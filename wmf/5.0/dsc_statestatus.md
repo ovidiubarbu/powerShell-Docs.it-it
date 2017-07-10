@@ -1,4 +1,16 @@
-# <a name="unified-and-consistent-state-and-status-representation"></a>Rappresentazione degli stati unificata e coerente
+---
+ms.date: 2017-06-12
+author: JKeithB
+ms.topic: reference
+keywords: wmf,powershell,installazione
+ms.openlocfilehash: 32f8e20889ddc526def4b925e8d0761a2e851e19
+ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/12/2017
+---
+<a id="unified-and-consistent-state-and-status-representation" class="xliff"></a>
+# Rappresentazione degli stati unificata e coerente
 
 In questa versione è stata introdotta una serie di miglioramenti per lo stato di Gestione configurazione locale e lo stato di DSC generati dall'automazione. I miglioramenti includono rappresentazioni dello stato unificate e coerenti, una proprietà datetime gestibile per gli oggetti di stato restituiti dal cmdlet Get-DscConfigurationStatus e una proprietà con dettagli avanzati sullo stato di Gestione configurazione locale restituita dal cmdlet Get-DscLocalConfigurationManager.
 
@@ -25,8 +37,7 @@ Nella tabella seguente sono illustrate le proprietà correlate allo stato risult
 | r, S                            | PendingReboot        | Operazione completata    | $true         | $null                        | r                              |
 | r, F                            | PendingReboot        | Operazione completata    | $true         | $null                        | r                              |
 
-^
-S<sub>i</sub>: una serie di risorse applicata correttamente F<sub>i</sub>: una serie di risorse applicata non correttamente r: una risorsa che richiede il riavvio\*
+^ S<sub>i</sub>: una serie di risorse applicata correttamente F<sub>i</sub>: una serie di risorse applicata non correttamente r: una risorsa che richiede il riavvio\*
 
 ```powershell
 $LCMState = (Get-DscLocalConfigurationManager).LCMState
@@ -38,7 +49,8 @@ $ResourcesInDesiredState = (Get-DscConfigurationStatus).ResourcesInDesiredState
 
 $ResourcesNotInDesiredState = (Get-DscConfigurationStatus).ResourcesNotInDesiredState
 ```
-## <a name="enhancement-in-get-dscconfigurationstatus-cmdlet"></a>Miglioramenti per il cmdlet Get-DscConfigurationStatus
+<a id="enhancement-in-get-dscconfigurationstatus-cmdlet" class="xliff"></a>
+## Miglioramenti per il cmdlet Get-DscConfigurationStatus
 
 In questa versione sono stati introdotti alcuni miglioramenti per il cmdlet Get-DscConfigurationStatus. In precedenza, la proprietà StartDate degli oggetti restituiti dal cmdlet è di tipo String. Ora è di tipo Datetime e questo facilita operazioni complesse di selezione e filtro basate sulle proprietà intrinseche di un oggetto Datetime.
 ```powershell
@@ -80,7 +92,8 @@ Success 11/13/2015 11:20:44 AM Initial True
 Success 11/13/2015 11:20:44 AM LocalConfigurationManager False
 ```
 
-## <a name="enhancement-in-get-dsclocalconfigurationmanager-cmdlet"></a>Miglioramenti per il cmdlet Get-DscLocalConfigurationManager
+<a id="enhancement-in-get-dsclocalconfigurationmanager-cmdlet" class="xliff"></a>
+## Miglioramenti per il cmdlet Get-DscLocalConfigurationManager
 È stato aggiunto un nuovo campo LCMStateDetail all'oggetto restituito dal cmdlet Get-DscLocalConfigurationManager. Questo campo viene popolato quando LCMState è "Busy". Può essere recuperato dal cmdlet seguente:
 ```powershell
 (Get-DscLocalConfigurationManager).LCMStateDetail
@@ -102,3 +115,4 @@ LCM State: Idle,
 LCM State: Busy, LCM is performing a consistency check.
 LCM State: Idle,
 ```
+

@@ -1,17 +1,17 @@
 ---
-title: Risorsa WindowsFeatureSet DSC
-ms.date: 2016-05-24
-keywords: powershell,DSC
-description: 
-ms.topic: article
+ms.date: 2017-06-12
 author: eslesar
-manager: dongill
-ms.prod: powershell
-ms.openlocfilehash: a920e02d891492c170e672db2f0771950dcb758c
-ms.sourcegitcommit: 1002c473b88abb209e4188bb626d93675c3614e2
-translationtype: HT
+ms.topic: conceptual
+keywords: dsc,powershell,configurazione,installazione
+title: Risorsa WindowsFeatureSet DSC
+ms.openlocfilehash: 3cdabc36ef35c2bf912ac54393fe40024a8e8bc0
+ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/12/2017
 ---
-# <a name="dsc-windowsfeatureset-resource"></a>Risorsa WindowsFeatureSet DSC
+<a id="dsc-windowsfeatureset-resource" class="xliff"></a>
+# Risorsa WindowsFeatureSet DSC
 
 > Si applica a: Windows PowerShell 5.0
 
@@ -20,7 +20,8 @@ Questa risorsa è una [risorsa composta](authoringResourceComposite.md) che chia
 
 Usare questa risorsa quando si vogliono configurare diverse istanze di WindowsFeature nello stesso stato.
 
-## <a name="syntax"></a>Sintassi
+<a id="syntax" class="xliff"></a>
+## Sintassi
 
 ```
 WindowsFeatureSet [string] #ResourceName
@@ -36,7 +37,8 @@ WindowsFeatureSet [string] #ResourceName
 }
 ```
 
-## <a name="properties"></a>Proprietà
+<a id="properties" class="xliff"></a>
+## Proprietà
 
 |  Proprietà  |  Descrizione   | 
 |---|---| 
@@ -48,7 +50,8 @@ WindowsFeatureSet [string] #ResourceName
 | DependsOn| Indica che prima di configurare la risorsa è necessario eseguire la configurazione di un'altra risorsa. Ad esempio, se l'ID del blocco script di configurazione della risorsa che si vuole eseguire per primo è __ResourceName__ e il tipo è __ResourceType__, la sintassi per usare questa proprietà è `DependsOn = "[ResourceType]ResourceName"`.| 
 | Source| Indica il percorso del file di origine da usare per l'installazione, se necessario.| 
 
-## <a name="example"></a>Esempio
+<a id="example" class="xliff"></a>
+## Esempio
 
 La configurazione seguente garantisce che siano installate tutte le funzionalità e le funzionalità secondarie del **server Web** (IIS) e del **server SMTP**.
 

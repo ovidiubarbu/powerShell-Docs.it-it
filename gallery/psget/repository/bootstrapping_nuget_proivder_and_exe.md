@@ -1,41 +1,46 @@
 ---
-description: 
-manager: carolz
-ms.topic: article
-author: jpjofre
-ms.prod: powershell
-keywords: powershell,cmdlet,gallery
-ms.date: 2016-10-14
+ms.date: 2017-06-12
 contributor: manikb
-title: bootstrapping_nuget_proivder_and_exe
-ms.technology: powershell
-ms.openlocfilehash: 3ba2289f83f2de5f7be7e4e0cced1988ee17b466
-ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
-translationtype: HT
+ms.topic: reference
+keywords: gallery,powershell,cmdlet,psget
+title: Bootstrap del provider NuGet e del file con estensione exe
+ms.openlocfilehash: e1a24c99910467b00b1c22d50125c81c63b077ed
+ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/12/2017
 ---
-# <a name="bootstrap-both-nuget-provider-and-nugetexe-for-publish-operations-with-single-prompt-message-and-bootstrap-only-nuget-provider-for-non-publish-operations"></a>Avviare sia il provider NuGet che il file NuGet.exe per operazioni di pubblicazione con messaggio di richiesta singolo e avviare solo il provider NuGet per operazioni non di pubblicazione
+<a id="bootstrap-both-nuget-provider-and-nugetexe-or-bootstrap-only-nuget-provider" class="xliff"></a>
+# Bootstrap del provider NuGet e di NuGet.exe oppure bootstrap del provider NuGet
 
-Il file NuGet.exe è stato rimosso dalla versione più recente del provider NuGet. Per la pubblicazione di un modulo o uno script con PowerShellGet, è necessario il file NuGet.exe per creare un file con estensione nupkg ed effettuarne il push nel repository. Il provider NuGet è necessario per eseguire operazioni non di pubblicazione come ricerca, installazione, aggiornamento e salvataggio.
-È stata aggiunta la logica per avviare sia il provider NuGet che il file NuGet.exe per operazioni di pubblicazione con messaggio di richiesta singolo e avviare solo il provider NuGet per operazioni non di pubblicazione.
+Il file NuGet.exe non è incluso nella versione più recente del provider NuGet.
+Per le operazioni di pubblicazione di un modulo o uno script, PowerShellGet richiede il file NuGet.exe eseguibile binario.
+Per tutte le altre operazioni, che includono la *ricerca*,l' *installazione*, il *salvataggio* e la *disinstallazione*, è necessario soltanto il provider NuGet.
+PowerShellGet include la logica per gestire un bootstrap combinato del provider NuGet e di NuGet.exe o un bootstrap del solo provider NuGet.
+In entrambi i casi deve essere visualizzato un solo messaggio di richiesta.
+Se il computer non è connesso a Internet, è necessario che l'utente o un amministratore copi un'istanza attendibile del provider NuGet e/o del file NuGet.exe nel computer disconnesso.
 
-## <a name="when-nuget-provider-is-not-available"></a>Se il provider NuGet non è disponibile
+>**Nota**: a partire dalla versione 6, il provider NuGet è incluso nell'installazione di PowerShell. [http://github.com/powershell/powershell](http://github.com/powershell/powershell)
 
-```powershell                                
-PS C:\windows\system32> find-module -Repository dtlgalleryint -verbose -name contoso
+<a id="resolving-error-when-the-nuget-provider-has-not-been-installed-on-a-machine-that-is-internet-connected" class="xliff"></a>
+## Risoluzione dell'errore se il provider NuGet non è stato installato in un computer connesso a Internet
+
+```PowerShell
+PS C:\> Find-Module -Repository PSGallery -Verbose -Name Contoso
 
 NuGet provider is required to continue
 PowerShellGet requires NuGet provider version '2.8.5.201' or newer to interact with NuGet-based repositories. The NuGet provider must be available in 'C:\Program Files\PackageManagement\ProviderAssemblies' or
 'C:\Users\manikb\AppData\Local\PackageManagement\ProviderAssemblies'. You can also install the NuGet provider by running 'Install-PackageProvider -Name NuGet -MinimumVersion 2.8.5.201 -Force'. Do you want PowerShellGet to install and import the NuGet provider
 now?
 [Y] Yes  [N] No  [S] Suspend  [?] Help (default is "Y"): n
-find-module : NuGet provider is required to interact with NuGet-based repositories. Please ensure that '2.8.5.201' or newer version of NuGet provider is installed.
+Find-Module : NuGet provider is required to interact with NuGet-based repositories. Please ensure that '2.8.5.201' or newer version of NuGet provider is installed.
 At line:1 char:1
-+ find-module -Repository dtlgalleryint -verbose -name contoso
++ Find-Module -Repository PSGallery -Verbose -Name Contoso
 + ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     + CategoryInfo          : InvalidOperation: (:) [Find-Module], InvalidOperationException
    + FullyQualifiedErrorId : CouldNotInstallNuGetProvider,Find-Module
 
-PS C:\windows\system32> find-module -Repository dtlgalleryint -verbose -name contoso
+PS C:\> Find-Module -Repository PSGallery -Verbose -Name Contoso
 
 NuGet provider is required to continue
 PowerShellGet requires NuGet provider version '2.8.5.201' or newer to interact with NuGet-based repositories. The NuGet provider must be available in 'C:\Program Files\PackageManagement\ProviderAssemblies' or
@@ -46,37 +51,38 @@ VERBOSE: Installing NuGet provider.
 
 Version    Name                                Type       Repository           Description
 -------    ----                                ----       ----------           -----------
-2.5        Contoso                             Module     dtlgalleryint        Contoso module
+2.5        Contoso                             Module     PSGallery        Contoso module
 ```
+<a id="resolving-error-when-the-nuget-provider-is-available-and-nugetexe-is-not-available-during-the-publish-operation-on-a-machine-that-is-internet-connected" class="xliff"></a>
+## Risoluzione dell'errore se il provider NuGet è disponibile e NuGet.exe non è disponibile durante l'operazione di pubblicazione in un computer connesso a Internet
 
-## <a name="when-nuget-provider-is-available-and-nugetexe-is-not-available-during-the-publish-operation"></a>Se il provider NuGet è disponibile e il file NuGet.exe non è disponibile durante l'operazione di pubblicazione
-
-```powershell
-PS C:\windows\system32> Publish-Module -Name Contoso -Repository LocalRepo -Verbose
+```PowerShell
+PS C:\> Publish-Module -Name Contoso -Repository PSGallery -Verbose
 
 NuGet.exe is required to continue
 PowerShellGet requires NuGet.exe to publish an item to the NuGet-based repositories. NuGet.exe must be available under one of the paths specified in PATH environment variable value. Do you want PowerShellGet to install NuGet.exe now?
 [Y] Yes  [N] No  [S] Suspend  [?] Help (default is "Y"): N
 Publish-Module : NuGet.exe is required to interact with NuGet-based repositories. Please ensure that NuGet.exe is available under one of the paths specified in PATH environment variable value.
 At line:1 char:1
-+ Publish-Module -Name Contoso -Repository LocalRepo -Verbose
++ Publish-Module -Name Contoso -Repository PSGallery -Verbose
 + ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     + CategoryInfo          : InvalidOperation: (:) [Publish-Module], InvalidOperationException
     + FullyQualifiedErrorId : CouldNotInstallNuGetExe,Publish-Module
 
-PS C:\windows\system32> Publish-Module -Name Contoso -Repository LocalRepo -Verbose
+PS C:\> Publish-Module -Name Contoso -Repository PSGallery -Verbose
 
 NuGet.exe is required to continue
 PowerShellGet requires NuGet.exe to publish an item to the NuGet-based repositories. NuGet.exe must be available under one of the paths specified in PATH environment variable value. Do you want PowerShellGet to install NuGet.exe now?
 [Y] Yes  [N] No  [S] Suspend  [?] Help (default is "Y"): Y
 VERBOSE: Installing NuGet.exe.
-VERBOSE: Successfully published module 'Contoso' to the module publish location 'C:\LocalGallery'. Please allow few minutes for 'Contoso' to show up in the search results.
+VERBOSE: Successfully published module 'Contoso' to the module publish location 'https://www.powershellgallery.com/api/v2/'. Please allow few minutes for 'Contoso' to show up in the search results.
 ```
-                   
-## <a name="when-both-nuget-provider-and-nugetexe-are-not-available-during-the-publish-operation"></a>Se il provider NuGet e il file NuGet.exe non sono disponibili durante l'operazione di pubblicazione
 
-```powershell
-PS C:\windows\system32> Publish-Module -Name Contoso -Repository LocalRepo -Verbose
+<a id="resolving-error-when-both-nuget-provider-and-nugetexe-are-not-available-during-the-publish-operation-on-a-machine-that-is-internet-connected" class="xliff"></a>
+## Risoluzione dell'errore se il provider NuGet e NuGet.exe non sono disponibili durante l'operazione di pubblicazione in un computer connesso a Internet
+
+```PowerShell
+PS C:\> Publish-Module -Name Contoso -Repository PSGallery -Verbose
 
 NuGet.exe and NuGet provider are required to continue
 PowerShellGet requires NuGet.exe and NuGet provider version '2.8.5.201' or newer to interact with the NuGet-based repositories. Do you want PowerShellGet to install both NuGet.exe and NuGet provider now?
@@ -84,18 +90,75 @@ PowerShellGet requires NuGet.exe and NuGet provider version '2.8.5.201' or newer
 Publish-Module : PowerShellGet requires NuGet.exe and NuGet provider version '2.8.5.201' or newer to interact with the NuGet-based repositories. Please ensure that '2.8.5.201' or newer version of NuGet provider is installed and NuGet.exe is available under 
 one of the paths specified in PATH environment variable value.
 At line:1 char:1
-+ Publish-Module -Name Contoso -Repository LocalRepo -Verbose
++ Publish-Module -Name Contoso -Repository PSGallery -Verbose
 + ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     + CategoryInfo          : InvalidOperation: (:) [Publish-Module], InvalidOperationException
     + FullyQualifiedErrorId : CouldNotInstallNuGetBinaries,Publish-Module
 
-PS C:\windows\system32> Publish-Module -Name Contoso -Repository LocalRepo -Verbose
+PS C:\> Publish-Module -Name Contoso -Repository PSGallery -Verbose
 
 NuGet.exe and NuGet provider are required to continue
 PowerShellGet requires NuGet.exe and NuGet provider version '2.8.5.201' or newer to interact with the NuGet-based repositories. Do you want PowerShellGet to install both NuGet.exe and NuGet provider now?
 [Y] Yes  [N] No  [S] Suspend  [?] Help (default is "Y"): Y
 VERBOSE: Installing NuGet provider.
 VERBOSE: Installing NuGet.exe.
-VERBOSE: Successfully published module 'Contoso' to the module publish location 'C:\LocalGallery'. Please allow few minutes for 'Contoso' to show up in the search results.
+VERBOSE: Successfully published module 'Contoso' to the module publish location 'https://www.powershellgallery.com/api/v2/'. Please allow few minutes for 'Contoso' to show up in the search results.
+```
+
+<a id="manually-bootstrapping-the-nuget-provider-on-a-machine-that-is-not-connected-to-the-internet" class="xliff"></a>
+## Bootstrap manuale del provider NuGet in un computer non connesso a Internet
+
+I processi illustrati in precedenza presuppongono che il computer sia connesso a Internet e in grado di scaricare file da un percorso pubblico.
+Se il download non è possibile, l'unica opzione consiste nell'eseguire il bootstrap di un computer usando i processi descritti in precedenza e nel copiare manualmente il provider nel nodo isolato tramite un processo attendibile offline.
+Il caso d'uso più comune per questo scenario è rappresentato da una raccolta privata disponibile per il supporto di un ambiente isolato.
+
+Dopo aver completato il processo precedente per eseguire il bootstrap di un computer connesso a Internet, i file del provider saranno disponibili nel percorso seguente:
+```
+C:\Program Files\PackageManagement\ProviderAssemblies\
+```
+
+La struttura di cartelle e file del provider NuGet sarà la seguente (eventualmente con un numero di versione diverso):
+
+NuGet<br>
+--2.8.5.208<br>
+----Microsoft.PackageManagement.NuGetProvider.dll
+
+Copiare le cartelle e il file usando un processo attendibile nei computer offline.
+
+<a id="manually-bootstrapping-nugetexe-to-support-publish-operations-on-a-machine-that-is-not-connected-to-the-internet" class="xliff"></a>
+## Bootstrap manuale di NuGet.exe per il supporto delle operazioni di pubblicazione in un computer non connesso a Internet
+
+In aggiunta al processo per il bootstrap manuale del provider NuGet, se il computer verrà usato per pubblicare moduli o script in una raccolta privata usando il cmdlet *Publish-Module* o *Publish-Script*, sarà necessario il file eseguibile binario NuGet.exe.
+Il caso d'uso più comune per questo scenario è rappresentato da una raccolta privata disponibile per il supporto di un ambiente isolato.
+Sono disponibili due opzioni per ottenere il file NuGet.exe.
+
+La prima opzione consiste nell'eseguire il bootstrap di un computer connesso a Internet e nel copiare i file nei computer offline usando un processo attendibile.
+Dopo aver eseguito il bootstrap del computer connesso a Internet, il file binario NuGet.exe si troverà in una delle due cartelle seguenti:
+
+Se i cmdlet *Publish-Module* o *Publish-Script* sono stati eseguiti con autorizzazioni elevate (come amministratore):
+```
+$env:ProgramData\Microsoft\Windows\PowerShell\PowerShellGet
+```
+
+Se i cmdlet sono stati eseguiti come utente senza autorizzazioni elevate:
+```
+$env:userprofile\AppData\Local\Microsoft\Windows\PowerShell\PowerShellGet\
+```
+
+La seconda opzione consiste nello scaricare NuGet.exe dal sito Web NuGet.Org: [https://dist.nuget.org/index.html](https://dist.nuget.org/index.html)<br>
+Quando si seleziona una versione NugGet per i computer di produzione, assicurarsi che sia successiva alla versione 2.8.5.208 e identificare la versione con etichetta "consigliata".
+Ricordarsi di sbloccare il file se è stato scaricato tramite un browser.
+Questa operazione può essere eseguita usando il cmdlet *Unblock-File*.
+
+In entrambi i casi, è possibile copiare il file di NuGet.exe in qualsiasi percorso in *$env: percorso*, ma i percorsi standard sono:
+
+Per rendere disponibile il file eseguibile in modo che tutti gli utenti possano usare i cmdlet *Publish-Module* e *Publish-Script*:
+```
+$env:ProgramData\Microsoft\Windows\PowerShell\PowerShellGet
+```
+
+Per rendere disponibile il file eseguibile solo per un utente specifico, copiare il percorso all'interno del profilo dell'utente:
+```
+$env:userprofile\AppData\Local\Microsoft\Windows\PowerShell\PowerShellGet\
 ```
 

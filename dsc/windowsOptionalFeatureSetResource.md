@@ -1,17 +1,17 @@
 ---
-title: Risorsa WindowsOptionalFeatureSet DSC
-ms.date: 2016-05-24
-keywords: powershell,DSC
-description: 
-ms.topic: article
+ms.date: 2017-06-12
 author: eslesar
-manager: dongill
-ms.prod: powershell
-ms.openlocfilehash: 1fab04dfcd4ce927bbe526b93c826cf3749a42a5
-ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
-translationtype: HT
+ms.topic: conceptual
+keywords: dsc,powershell,configurazione,installazione
+title: Risorsa WindowsOptionalFeatureSet DSC
+ms.openlocfilehash: 3bf6a993d0ec9ce71c1e9222ddaa3bb429accb15
+ms.sourcegitcommit: 79e8f03afb8d0b0bb0a167e56464929b27f51990
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/26/2017
 ---
-# <a name="dsc-windowsoptionalfeatureset-resource"></a>Risorsa WindowsOptionalFeatureSet DSC
+<a id="dsc-windowsoptionalfeatureset-resource" class="xliff"></a>
+# Risorsa WindowsOptionalFeatureSet DSC
 
 > Si applica a: Windows PowerShell 5.0
 
@@ -19,13 +19,14 @@ La risorsa **WindowsOptionalFeatureSet** in Windows PowerShell DSC (Desired Stat
 
 Usare questa risorsa quando si vogliono configurare diverse istanze di Windows facoltative nello stesso stato.
 
-## <a name="syntax"></a>Sintassi
+<a id="syntax" class="xliff"></a>
+## Sintassi
 
 ```
 WindowsOptionalFeature [string] #ResourceName
 {
     Name = [string[]]
-    [ Ensure = [string] { Absent | Present }  ]
+    [ Ensure = [string] { Enable | Disable }  ]
     [ Source = [string] ] 
     [ RemoveFilesOnDisable = [bool] ]  
     [ LogPath = [string] ]
@@ -36,12 +37,13 @@ WindowsOptionalFeature [string] #ResourceName
 }
 ```
 
-## <a name="properties"></a>Proprietà
+<a id="properties" class="xliff"></a>
+## Proprietà
 
 |  Proprietà  |  Descrizione   | 
 |---|---| 
 | Name| Indica il nome delle funzionalità che si vogliono abilitare o disabilitare.| 
-| Ensure| Specifica se le funzionalità sono abilitate. Per specificare che le funzionalità siano abilitate, impostare questa proprietà su "Present". Per specificare che le funzionalità siano disabilitate, impostare la proprietà su "Absent".|
+| Ensure| Specifica se le funzionalità sono abilitate. Per specificare che le funzionalità sono abilitate impostare la proprietà su "Enable". Per specificare che le funzionalità sono disabilitate impostare la proprietà su "Disable".|
 | Source| Non implementata.|
 | NoWindowsUpdateCheck| Specifica se DISM contatta Windows Update (WU) durante la ricerca dei file di origine per abilitare le funzionalità. Se $true, DISM non contatta WU.|
 | RemoveFilesOnDisable| Se è impostata su **$true** consente di rimuovere tutti i file associati alle funzionalità quando sono disabilitate (ossia, quando **Ensure** è impostata su "Absent").|

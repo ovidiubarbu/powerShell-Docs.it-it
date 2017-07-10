@@ -1,24 +1,25 @@
 ---
-title: Metodo ApplyConfiguration della classe MSFT_DSCLocalConfigurationManager
-ms.date: 2016-05-16
-keywords: powershell,DSC
-description: 
-ms.topic: article
+ms.date: 2017-06-12
 author: eslesar
-manager: dongill
-ms.prod: powershell
-ms.openlocfilehash: 6f9c6a8851732574ac72bc4f3a3db1a73fbbecf2
-ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
-translationtype: HT
+ms.topic: conceptual
+keywords: dsc,powershell,configurazione,impostazione
+title: Metodo ApplyConfiguration della classe MSFT_DSCLocalConfigurationManager
+ms.openlocfilehash: febaf972a2a452eb9aaf3ec7fbc5e41f3f463a58
+ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/12/2017
 ---
-# <a name="applyconfiguration-method-of-the-msftdsclocalconfigurationmanager-class"></a>Metodo ApplyConfiguration della classe MSFT_DSCLocalConfigurationManager
+<a id="applyconfiguration-method-of-the-msftdsclocalconfigurationmanager-class" class="xliff"></a>
+# Metodo ApplyConfiguration della classe MSFT_DSCLocalConfigurationManager
 
 Usa l'agente di configurazione per applicare la configurazione in sospeso. 
 
 Se non sono presenti configurazioni in sospeso, questo metodo applica nuovamente la configurazione corrente.
 
 
-## <a name="syntax"></a>Sintassi
+<a id="syntax" class="xliff"></a>
+## Sintassi
 ------
 
 ```mof
@@ -27,29 +28,34 @@ uint32 ApplyConfiguration(
 );
 ```
 
-## <a name="parameters"></a>Parametri
+<a id="parameters" class="xliff"></a>
+## Parametri
 ----------
 
 *force* \[in\]  
 Se il valore è **true**, la configurazione corrente viene applicata nuovamente, anche se è presente una configurazione in sospeso.
 
-## <a name="return-value"></a>Valore restituito
+<a id="return-value" class="xliff"></a>
+## Valore restituito
 ------------
 
 In caso di esito positivo, il valore restituisce zero, altrimenti, restituisce un codice di errore.
 
-## <a name="remarks"></a>Osservazioni
+<a id="remarks" class="xliff"></a>
+## Osservazioni
 
 Si tratta di un metodo statico.
 
-## <a name="requirements"></a>Requisiti
+<a id="requirements" class="xliff"></a>
+## Requisiti
 ------------
 >**MOF:** DscCore.mof
 
 >**Spazio dei nomi**: Root\Microsoft\Windows\DesiredStateConfiguration
 
 
-## <a name="see-also"></a>Vedere anche
+<a id="see-also" class="xliff"></a>
+## Vedere anche
 
 
 [**MSFT_DSCLocalConfigurationManager**](msft-dsclocalconfigurationmanager.md)

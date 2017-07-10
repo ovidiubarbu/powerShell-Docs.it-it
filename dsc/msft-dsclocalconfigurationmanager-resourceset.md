@@ -1,21 +1,22 @@
 ---
-title: Metodo ResourceSet della classe MSFT_DSCLocalConfigurationManager
-ms.date: 2016-05-16
-keywords: powershell,DSC
-description: 
-ms.topic: article
+ms.date: 2017-06-12
 author: eslesar
-manager: dongill
-ms.prod: powershell
-ms.openlocfilehash: cbc499f293aad941d40fcb720ef53e832c3b1ea8
-ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
-translationtype: HT
+ms.topic: conceptual
+keywords: dsc,powershell,configurazione,impostazione
+title: Metodo ResourceSet della classe MSFT_DSCLocalConfigurationManager
+ms.openlocfilehash: 9cd9c1b3f58a5862db6c4eea0488423b8dfe7310
+ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/12/2017
 ---
-# <a name="resourceset-method-of-the-msftdsclocalconfigurationmanager-class"></a>Metodo ResourceSet della classe MSFT_DSCLocalConfigurationManager
+<a id="resourceset-method-of-the-msftdsclocalconfigurationmanager-class" class="xliff"></a>
+# Metodo ResourceSet della classe MSFT_DSCLocalConfigurationManager
 
 Chiama direttamente il metodo di **Set** di una risorsa DSC.
 
-<a name="syntax"></a>Sintassi
+<a id="syntax" class="xliff"></a>
+Sintassi
 ------
 
 ```mof
@@ -27,7 +28,8 @@ uint32 ResourceSet(
 );
 ```
 
-<a name="parameters"></a>Parametri
+<a id="parameters" class="xliff"></a>
+Parametri
 ----------
 
 *ResourceType* \[in\]  
@@ -42,23 +44,27 @@ Specifica il nome della proprietà delle risorse e il relativo valore in una tab
 *RebootRequired* \[out\]  
 In fase di restituzione, questa proprietà è impostata su **true** se il nodo deve essere riavviato.
 
-## <a name="return-value"></a>Valore restituito
+<a id="return-value" class="xliff"></a>
+## Valore restituito
 ------------
 
 In caso di esito positivo, il valore restituisce zero, altrimenti, restituisce un codice di errore.
 
-## <a name="remarks"></a>Osservazioni
+<a id="remarks" class="xliff"></a>
+## Osservazioni
 
 Si tratta di un metodo statico.
 
-## <a name="requirements"></a>Requisiti
+<a id="requirements" class="xliff"></a>
+## Requisiti
 ------------
 >**MOF:** DscCore.mof
 
 >**Spazio dei nomi**: Root\Microsoft\Windows\DesiredStateConfiguration
 
 
-## <a name="see-also"></a>Vedere anche
+<a id="see-also" class="xliff"></a>
+## Vedere anche
 
 
 [**MSFT_DSCLocalConfigurationManager**](msft-dsclocalconfigurationmanager.md)

@@ -1,23 +1,22 @@
 ---
-description: 
-manager: carolz
-ms.topic: article
-author: jpjofre
-ms.prod: powershell
-keywords: powershell,cmdlet,gallery
-ms.date: 2016-10-14
+ms.date: 2017-06-12
 contributor: manikb
-title: psget_update module
-ms.technology: powershell
-ms.openlocfilehash: 3f843bcf667bdb40f45613911647acf464cbbf29
-ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
-translationtype: HT
+ms.topic: reference
+keywords: raccolta,powershell,cmdlet,psget
+title: Update-Module
+ms.openlocfilehash: 343c296dad2a3df35f13393b3796a1d484f5f535
+ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/12/2017
 ---
-# <a name="update-module"></a>Update-Module
+<a id="update-module" class="xliff"></a>
+# Update-Module
 
 Scarica e installa la versione più recente dei moduli specificati da una raccolta online nel computer locale.
 
-## <a name="description"></a>Descrizione
+<a id="description" class="xliff"></a>
+## Descrizione
 
 Il cmdlet Update-Module consente di installare una versione più recente di un modulo di Windows PowerShell installato dalla raccolta online eseguendo Install-Module nel computer locale.
 
@@ -25,7 +24,8 @@ Per impostazione predefinita, viene installata la versione più recente del modu
 
 L'esecuzione di Update-Module senza il parametro Name aggiorna tutti i moduli che possono essere aggiornati nel computer locale.
 
-### <a name="notes"></a>Note
+<a id="notes" class="xliff"></a>
+### Note
 
 - Questo cmdlet viene eseguito in Windows PowerShell 3.0 o versioni successive di Windows PowerShell, in Windows 7 o Windows 2008 R2 e nelle versioni successive di Windows.
 - Se il modulo specificato con il parametro Name non è stato installato con Install-Module, si verifica un errore. È possibile eseguire Update-Module solo nei moduli installati dalla raccolta online eseguendo Install-Module.
@@ -33,17 +33,20 @@ L'esecuzione di Update-Module senza il parametro Name aggiorna tutti i moduli ch
 - In PowerShell 5.0 o versioni successive, quando Update-Module aggiorna un modulo, aggiunge la versione più recente o quella specificata del modulo, in modo che le versioni precedenti e più recenti siano visualizzate side-by-side nella stessa directory. Sarebbe utile avere un esempio dell'output di questi comandi.
 
 
-## <a name="cmdlet-syntax"></a>Sintassi del cmdlet
+<a id="cmdlet-syntax" class="xliff"></a>
+## Sintassi del cmdlet
 ```powershell
 Get-Command -Name Update-Module -Module PowerShellGet -Syntax
 ```
 
-## <a name="cmdlet-online-help-reference"></a>Riferimento per la Guida online sui cmdlet
+<a id="cmdlet-online-help-reference" class="xliff"></a>
+## Riferimento per la Guida online sui cmdlet
 
 [Update-Module](http://go.microsoft.com/fwlink/?LinkID=398576)
 
 
-## <a name="example-commands"></a>Comandi di esempio
+<a id="example-commands" class="xliff"></a>
+## Comandi di esempio
 
 ```powershell
 PS C:\\windows\\system32> Update-Module -Name ContosoServer -RequiredVersion 1.5
@@ -87,7 +90,8 @@ Version Name Repository Description
 ```
 
 
-###  <a name="update-the-testdepwithnestedrequiredmodules1-module-with-dependencies"></a>Aggiornare il modulo TestDepWithNestedRequiredModules1 con le dipendenze.
+<a id="update-the-testdepwithnestedrequiredmodules1-module-with-dependencies" class="xliff"></a>
+###  Aggiornare il modulo TestDepWithNestedRequiredModules1 con le dipendenze.
 ```powershell
 Find-Module -Name TestDepWithNestedRequiredModules1 -Repository LocalRepo -AllVersions
 

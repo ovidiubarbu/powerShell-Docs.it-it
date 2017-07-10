@@ -1,23 +1,24 @@
 ---
-title: Gestione configurazione locale di Windows PowerShell 4.0 DSC (Desired State Configuration)
-ms.date: 2016-05-16
-keywords: powershell,DSC
-description: 
-ms.topic: article
+ms.date: 2017-06-12
 author: eslesar
-manager: dongill
-ms.prod: powershell
-ms.openlocfilehash: cec3aaf4e57d1efc3e29880e4a7f078bd1840901
-ms.sourcegitcommit: b88151841dd44c8ee9296d0855d8b322cbf16076
-translationtype: HT
+ms.topic: conceptual
+keywords: dsc,powershell,configurazione,impostazione
+title: Gestione configurazione locale di Windows PowerShell 4.0 DSC (Desired State Configuration)
+ms.openlocfilehash: 2e6e4731bdf6d7de6d13fc7f9b81698a192247e4
+ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/12/2017
 ---
-# <a name="windows-powershell-40-desired-state-configuration-local-configuration-manager-lcm"></a>Gestione configurazione locale di Windows PowerShell 4.0 DSC (Desired State Configuration)
+<a id="windows-powershell-40-desired-state-configuration-local-configuration-manager-lcm" class="xliff"></a>
+# Gestione configurazione locale di Windows PowerShell 4.0 DSC (Desired State Configuration)
 
 >Si applica a: Windows PowerShell 4.0, Windows PowerShell 5.0
 
 Gestione configurazione locale è il motore di Windows PowerShell DSC (Desired State Configuration). Viene eseguito in tutti i nodi di destinazione e ha la responsabilità di chiamare le risorse di configurazione incluse in uno script di configurazione DSC. Questo argomento contiene l'elenco delle proprietà di Gestione configurazione locale e descrive in che modo modificare le impostazioni di Gestione configurazione locale in un nodo di destinazione.
 
-## <a name="local-configuration-manager-properties"></a>Proprietà di Gestione configurazione locale
+<a id="local-configuration-manager-properties" class="xliff"></a>
+## Proprietà di Gestione configurazione locale
 Di seguito sono elencate le proprietà di Gestione configurazione locale che è possibile impostare o recuperare.
  
 * **AllowModuleOverwrite**: controlla se le nuove configurazioni scaricate dal server di configurazione possono sovrascrivere quelle meno recenti nel nodo di destinazione. I possibili valori sono True e False.
@@ -35,7 +36,8 @@ Di seguito sono elencate le proprietà di Gestione configurazione locale che è 
 * **RefreshFrequencyMins**: proprietà usata quando è stato configurato un server di "pull". Rappresenta la frequenza (in minuti) in base alla quale Gestione configurazione locale contatta un server di "pull" per scaricare la configurazione corrente. Questo valore può essere impostato insieme a ConfigurationModeFrequencyMins. Quando la proprietà RefreshMode è impostata su PULL, il nodo di destinazione contatta il server di "pull" in base a un intervallo impostato tramite RefreshFrequencyMins e scarica la configurazione corrente. Il motore di coerenza applica la configurazione più recente scaricata al nodo di destinazione in base all'intervallo impostato tramite ConfigurationModeFrequencyMins. Se la proprietà RefreshFrequencyMins non è impostata su un numero intero multiplo di ConfigurationModeFrequencyMins, il sistema arrotonda questo valore. Il valore predefinito è 30.
 * **RefreshMode**: i possibili valori sono **Push** (predefinito) e **Pull**. Nella configurazione "push" è necessario inserire un file di configurazione in ogni nodo di destinazione, usando qualsiasi computer client. In modalità "pull" è necessario configurare un server di "pull" perché Gestione configurazione locale possa contattare i file di configurazione e accedervi.
 
-### <a name="example-of-updating-local-configuration-manager-settings"></a>Esempio di aggiornamento delle impostazioni di Gestione configurazione locale
+<a id="example-of-updating-local-configuration-manager-settings" class="xliff"></a>
+### Esempio di aggiornamento delle impostazioni di Gestione configurazione locale
 
 È possibile aggiornare le impostazioni di Gestione configurazione locale di un nodo di destinazione inserendo in uno script di configurazione un blocco **LocalConfigurationManager** all'interno del blocco del nodo, come mostrato nell'esempio seguente.
 

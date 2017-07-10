@@ -8,6 +8,9 @@
 ### [Elementi con edizioni di PS compatibili](psgallery/psgallery_pseditions.md)
 ### [Visualizzazione FileList](psgallery/psgallery_filelist_feature.md)
 ### [Distribuire in Automazione di Azure](psgallery/psgallery_deploy_to_azure_automation.md)
+### [Creazione di un account PowerShell Gallery](psgallery/psgallery_creating_an_account.md)
+### [Creazione e pubblicazione di elementi](psgallery/Creating-and-Publishing-an-item.md)
+### [Linee guida e procedure consigliate per la pubblicazione](psgallery/psgallery-PublishingGuidelines.md)
 ### [Esclusione di elementi dall'elenco](psgallery/psgallery_unlist_items.md)
 ### [Eliminazione di elementi](psgallery/Deleting-Items.md)
 ### [Gestione dei proprietari di elementi](psgallery/Managing-Item-Owners.md)
@@ -15,8 +18,11 @@
 ### [Risoluzione delle controversie](psgallery/psgallery_dispute_resolution.md)
 ### [Come contattare i proprietari di elementi](psgallery/psgallery_contacting_item_owners.md)
 ### [Come contattare gli amministratori](psgallery/psgallery_contacting_administrators.md)
+### [Pubblicazione di feedback sui social media o nei commenti](psgallery/psgallery-SocialMediaFeedback.md)
 
 # [PowershellGet](psget/overview.md)
+## [Ottenere il modulo PowerShellGet](psget/get_psget_module.md)
+
 ## Modulo
 ### [Trovare moduli](psget/module/psget_find-module.md)
 ### [Trovare risorse DSC](psget/module/psget_find-dscresource.md)

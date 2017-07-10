@@ -1,27 +1,29 @@
 ---
-title: Scrittura di una risorsa DSC personalizzata con MOF
-ms.date: 2016-05-16
-keywords: powershell,DSC
-description: 
-ms.topic: article
+ms.date: 2017-06-12
 author: eslesar
-manager: dongill
-ms.prod: powershell
-ms.openlocfilehash: 1fc28589633d6279d0428179a70e7e561d753ea8
-ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
-translationtype: HT
+ms.topic: conceptual
+keywords: dsc,powershell,configurazione,impostazione
+title: Scrittura di una risorsa DSC personalizzata con MOF
+ms.openlocfilehash: 58d6ba3995d3d6dea2787cfa347e0b1386bc40af
+ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/12/2017
 ---
-# <a name="writing-a-custom-dsc-resource-with-mof"></a>Scrittura di una risorsa DSC personalizzata con MOF
+<a id="writing-a-custom-dsc-resource-with-mof" class="xliff"></a>
+# Scrittura di una risorsa DSC personalizzata con MOF
 
 > Si applica a: Windows PowerShell 4.0, Windows PowerShell 5.0
 
 In questo argomento verrà definito lo schema per una risorsa personalizzata di Windows PowerShell DSC (Desired State Configuration) in un file MOF e la risorsa verrà implementata in un file di script di Windows PowerShell. Questa risorsa personalizzata consente di creare e gestire un sito Web.
 
-## <a name="creating-the-mof-schema"></a>Creazione dello schema MOF
+<a id="creating-the-mof-schema" class="xliff"></a>
+## Creazione dello schema MOF
 
 Lo schema definisce le proprietà della risorsa che possono essere configurate da uno script di configurazione DSC.
 
-### <a name="folder-structure-for-a-mof-resource"></a>Struttura di cartelle per una risorsa MOF
+<a id="folder-structure-for-a-mof-resource" class="xliff"></a>
+### Struttura di cartelle per una risorsa MOF
 
 Per implementare una risorsa DSC personalizzata con uno schema MOF, creare la struttura di cartelle seguente. Lo schema MOF è definito nel file Demo_IISWebsite.schema.mof e lo script di risorsa è definito in Demo_IISWebsite.psm1. Facoltativamente, è possibile creare un file manifesto del modulo (con estensione psd1).
 
@@ -37,12 +39,13 @@ $env:ProgramFiles\WindowsPowerShell\Modules (folder)
 
 Si noti che è necessario creare una cartella denominata DSCResources nella cartella di primo livello e che la cartella per ogni risorsa deve avere lo stesso nome della risorsa.
 
-### <a name="the-contents-of-the-mof-file"></a>Contenuto del file MOF
+<a id="the-contents-of-the-mof-file" class="xliff"></a>
+### Contenuto del file MOF
 
 Di seguito è illustrato un esempio di file MOF che è possibile usare per una risorsa di sito Web personalizzata. Per seguire questo esempio, salvare lo schema in un file e denominare il file *Demo_IISWebsite.schema.mof*.
 
 ```
-[ClassVersion("1.0.0"), FriendlyName("Website")] 
+[ClassVersion("1.0.0"), FriendlyName("Website")]
 class Demo_IISWebsite : OMI_BaseResource
 {
   [Key] string Name;
@@ -67,7 +70,8 @@ Si noti quanto segue in relazione al codice precedente:
 * È consigliabile includere una proprietà denominata `Ensure` con i valori `Present` e `Absent` nella risorsa per mantenere uno stile coerente con le risorse DSC predefinite.
 * Assegnare un nome al file di schema per la risorsa personalizzata in base al formato seguente: `classname.schema.mof`, dove `classname` è l'identificatore che segue la parola chiave `class` nella definizione di schema.
 
-### <a name="writing-the-resource-script"></a>Scrittura dello script di risorsa
+<a id="writing-the-resource-script" class="xliff"></a>
+### Scrittura dello script di risorsa
 
 Lo script di risorsa implementa la logica della risorsa. In questo modulo è necessario includere tre funzioni denominate **Get-TargetResource**, **Set-TargetResource** e **Test-TargetResource**. Tutte e tre le funzioni devono accettare un set di parametri identico al set di proprietà definito nello schema MOF creato per la risorsa. In questo documento il set di proprietà è detto "proprietà della risorsa". Archiviare queste tre funzioni in un file denominato <ResourceName>.psm1. Nell'esempio seguente le funzioni vengono archiviate in un file denominato Demo_IISWebsite.psm1.
 
@@ -77,10 +81,10 @@ Nell'implementazione della funzione **Get-TargetResource** usare i valori delle 
 
 ```powershell
 # DSC uses the Get-TargetResource function to fetch the status of the resource instance specified in the parameters for the target machine
-function Get-TargetResource 
+function Get-TargetResource
 {
-    param 
-    (       
+    param
+    (
         [ValidateSet("Present", "Absent")]
         [string]$Ensure = "Present",
 
@@ -110,7 +114,7 @@ function Get-TargetResource
         # Add all Website properties to the hash table
         # This simple example assumes that $Website is not null
         $getTargetResourceResult = @{
-                                      Name = $Website.Name; 
+                                      Name = $Website.Name;
                                         Ensure = $ensureResult;
                                         PhysicalPath = $Website.physicalPath;
                                         State = $Website.state;
@@ -134,11 +138,11 @@ Ciò è illustrato nell'esempio seguente.
 
 ```powershell
 # The Set-TargetResource function is used to create, delete or configure a website on the target machine. 
-function Set-TargetResource 
+function Set-TargetResource
 {
     [CmdletBinding(SupportsShouldProcess=$true)]
-    param 
-    (       
+    param
+    (
         [ValidateSet("Present", "Absent")]
         [string]$Ensure = "Present",
 
@@ -212,13 +216,16 @@ $ApplicationPool
 #Include logic to 
 $result = [System.Boolean]
 #Add logic to test whether the website is present and its status mathes the supplied parameter values. If it does, return true. If it does not, return false.
-$result 
+$result
 }
 ```
 
-**Nota**: per semplificare il debug, usare il cmdlet **Write-Verbose** nell'implementazione delle tre funzioni precedenti. Questo cmdlet scrive il testo nel flusso di messaggi dettagliati. Per impostazione predefinita, il flusso di messaggi dettagliati non viene visualizzato, ma è possibile visualizzarlo modificando il valore della variabile **$VerbosePreference** o usando il parametro **Verbose** nei cmdlet DSC = new.
+**Nota**: per semplificare il debug, usare il cmdlet **Write-Verbose** nell'implementazione delle tre funzioni precedenti. 
+>Questo cmdlet scrive il testo nel flusso di messaggi dettagliati. 
+>Per impostazione predefinita, il flusso di messaggi dettagliati non viene visualizzato, ma è possibile visualizzarlo modificando il valore della variabile **$VerbosePreference** o usando il parametro **Verbose** nei cmdlet DSC = new.
 
-### <a name="creating-the-module-manifest"></a>Creazione del manifesto del modulo
+<a id="creating-the-module-manifest" class="xliff"></a>
+### Creazione del manifesto del modulo
 
 Usare infine il cmdlet **New-ModuleManifest** per definire un file <ResourceName>.psd1 per il modulo della risorsa personalizzata. Quando si richiama questo cmdlet, fare riferimento al file di modulo di script (con estensione psm1) descritto nella sezione precedente. Includere **Get-TargetResource**, **Set-TargetResource** e **Test-TargetResource** nell'elenco delle funzioni da esportare. Di seguito è riportato un file manifesto di esempio.
 
@@ -273,4 +280,25 @@ FunctionsToExport = @("Get-TargetResource", "Set-TargetResource", "Test-TargetRe
 # HelpInfoURI = ''
 }
 ```
+
+<a id="supporting-psdscrunascredential" class="xliff"></a>
+## Supporto di PsDscRunAsCredential
+
+>**Nota:** **PsDscRunAsCredential** è supportato in PowerShell 5.0 e versioni successive.
+
+La proprietà **PsDscRunAsCredential** può essere usata nel blocco di risorsa delle [configurazioni DSC](configurations.md) per specificare che la risorsa deve essere eseguita in un insieme di credenziali specificato.
+Per altre informazioni, vedere [Esecuzione di DSC con le credenziali dell'utente](runAsUser.md).
+
+Per accedere al contesto utente dall'interno di una risorsa personalizzata è possibile usare la variabile automatica `$PsDscContext`.
+
+Ad esempio il codice seguente scrive il contesto utente in cui viene eseguita la risorsa nel flusso di output dettagliato:
+
+```powershell
+if (PsDscContext.RunAsUser) {
+    Write-Verbose "User: $PsDscContext.RunAsUser";
+}
+```
+
+
+
 

@@ -1,22 +1,21 @@
 ---
-description: 
-manager: carolz
-ms.topic: article
-author: jpjofre
-ms.prod: powershell
-keywords: powershell,cmdlet,gallery
-ms.date: 2016-10-14
+ms.date: 2017-06-12
 contributor: manikb
-title: psget_find module
-ms.technology: powershell
-ms.openlocfilehash: b6fe3ffcbb366ee237acf0304ec4804b93e2b8ad
-ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
-translationtype: HT
+ms.topic: reference
+keywords: gallery,powershell,cmdlet,psget
+title: Find-Module
+ms.openlocfilehash: 5c878a04d186f7f5970fba9e7f3cdb480cef21f6
+ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/12/2017
 ---
-# <a name="find-module"></a>Find-Module
+<a id="find-module" class="xliff"></a>
+# Find-Module
 Consente di trovare moduli da una raccolta online che soddisfano i criteri specificati.
 
-## <a name="description"></a>Descrizione
+<a id="description" class="xliff"></a>
+## Descrizione
 Find-Module consente di trovare moduli da repository registrati che corrispondono a criteri specificati.
 Per ogni modulo trovato, Find-Module restituisce un oggetto PSRepositoryItemInfo che facoltativamente può essere inviato tramite pipe al cmdlet Install-Module per l'installazione di moduli.
 
@@ -30,16 +29,19 @@ Per ogni modulo trovato, Find-Module restituisce un oggetto PSRepositoryItemInfo
 - Find-Module consente di filtrare in base al linguaggio di ricerca specifico del repository usando il parametro -Filter.
 - Find-Module consente di filtrare in base ai moduli di tutti o alcuni dei repository registrati.
 
-## <a name="cmdlet-syntax"></a>Sintassi del cmdlet
+<a id="cmdlet-syntax" class="xliff"></a>
+## Sintassi del cmdlet
 ```powershell
 Get-Command -Name Find-Module -Module PowerShellGet -Syntax
 ```
 
-## <a name="cmdlet-online-help-reference"></a>Riferimento per la Guida online sui cmdlet
+<a id="cmdlet-online-help-reference" class="xliff"></a>
+## Riferimento per la Guida online sui cmdlet
 
 [Find-Module](http://go.microsoft.com/fwlink/?LinkID=398574)
 
-## <a name="example-commands"></a>Comandi di esempio
+<a id="example-commands" class="xliff"></a>
+## Comandi di esempio
 ```powershell
 # Find a specific module
 Find-Module Azure

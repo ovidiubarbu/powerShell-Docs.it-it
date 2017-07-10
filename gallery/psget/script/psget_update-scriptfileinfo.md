@@ -1,23 +1,22 @@
 ---
-description: 
-manager: carolz
-ms.topic: article
-author: jpjofre
-ms.prod: powershell
-keywords: powershell,cmdlet,gallery
-ms.date: 2016-10-14
+ms.date: 2017-06-12
 contributor: manikb
-title: psget_update scriptfileinfo
-ms.technology: powershell
-ms.openlocfilehash: 7e71e2cbd5ce5bad5899e40f077bf16050dcd763
-ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
-translationtype: HT
+ms.topic: reference
+keywords: raccolta,powershell,cmdlet,psget
+title: Update-ScriptFileInfo
+ms.openlocfilehash: 3af12d2754b7b3c94ac63db8ca6a564c924a2bde
+ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/12/2017
 ---
-# <a name="update-scriptfileinfo"></a>Update-ScriptFileInfo
+<a id="update-scriptfileinfo" class="xliff"></a>
+# Update-ScriptFileInfo
 
 Il cmdlet Update-ScriptFileInfo consente di aggiornare i metadati del file di script esistente.
 
-## <a name="description"></a>Descrizione
+<a id="description" class="xliff"></a>
+## Descrizione
 
 Il cmdlet Update-ScriptFileInfo consente di aggiornare le informazioni relative a uno script.
 - Il cmdlet Update-ScriptFileInfo consente di aggiornare i metadati dei soli file di script creati usando il cmdlet New-ScriptFileInfo o con un commento PSScriptInfo valido.
@@ -25,16 +24,19 @@ Il cmdlet Update-ScriptFileInfo consente di aggiornare le informazioni relative 
 - Se il parametro -Force è specificato, provare ad aggiungere i metadati al file di script esistente creato senza il cmdlet New-ScriptFileInfo.
 - Se Test-ScriptFileInfo non riesce con errori di analisi, dopo aver anteposto i metadati di script al file esistente viene generato un messaggio di errore che informa che non è possibile aggiungere i metadati al file esistente, ma è possibile usare il cmdlet New-ScriptFileInfo per aggiungere i metadati al file di script esistente creato senza il cmdlet New-ScriptFileInfo.
 
-## <a name="cmdlet-syntax"></a>Sintassi del cmdlet
+<a id="cmdlet-syntax" class="xliff"></a>
+## Sintassi del cmdlet
 
 ```powershell
 Get-Command -Name Update-ScriptFileInfo -Module PowerShellGet -Syntax
 ```
-## <a name="cmdlet-online-help-reference"></a>Riferimento per la Guida online sui cmdlet
+<a id="cmdlet-online-help-reference" class="xliff"></a>
+## Riferimento per la Guida online sui cmdlet
 
 [Update-Script](http://go.microsoft.com/fwlink/?LinkId=619793)
 
-## <a name="example-commands"></a>Comandi di esempio
+<a id="example-commands" class="xliff"></a>
+## Comandi di esempio
 
 ```powershell
 # Use Update-ScriptFileInfo cmdlet to update the script metadata
@@ -48,7 +50,8 @@ Version Name Author Description
 ```
 
 
-### <a name="adding-the-script-metadata-to-the-existing-script-file"></a>Aggiunta di metadati di script a un file di script esistente
+<a id="adding-the-script-metadata-to-the-existing-script-file" class="xliff"></a>
+### Aggiunta di metadati di script a un file di script esistente
 
 ```powershell
 PS C:\WINDOWS\system32> New-ScriptFileInfo -Description "Script file description." -PassThru

@@ -1,18 +1,15 @@
 ---
-description: 
-manager: carmonm
-ms.topic: article
-author: jpjofre
-ms.prod: powershell
+ms.date: 2017-06-05
 keywords: powershell,cmdlet
-ms.date: 2016-12-12
 title: "regole di autorizzazione e funzionalità di sicurezza di accesso web windows powershell"
-ms.technology: powershell
-ms.openlocfilehash: f2ed4355536ed92048dde66617d36d36958fd75f
-ms.sourcegitcommit: 8acbf9827ad8f4ef9753f826ecaff58495ca51b0
-translationtype: HT
+ms.openlocfilehash: 706830f618173879185f5b84570fdc7782434d59
+ms.sourcegitcommit: 598b7835046577841aea2211d613bb8513271a8b
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/08/2017
 ---
-# <a name="authorization-rules-and-security-features-of-windows-powershell-web-access"></a>Regole di autorizzazione e funzionalità di sicurezza di Accesso Web Windows PowerShell
+<a id="authorization-rules-and-security-features-of-windows-powershell-web-access" class="xliff"></a>
+# Regole di autorizzazione e funzionalità di sicurezza di Accesso Web Windows PowerShell
 
 Ultimo aggiornamento: 24 giugno 2013
 
@@ -197,7 +194,8 @@ L'unico carattere jolly supportato dai cmdlet di Accesso Web Windows PowerShell 
 </tbody>
 </table>
 
-#### <a name="to-add-a-restrictive-authorization-rule"></a>Per aggiungere una regola di autorizzazione restrittiva
+<a id="to-add-a-restrictive-authorization-rule" class="xliff"></a>
+#### Per aggiungere una regola di autorizzazione restrittiva
 
 1.  Per aprire una sessione di Windows PowerShell con diritti utente elevati, eseguire una di queste operazioni.
 
@@ -221,7 +219,8 @@ L'unico carattere jolly supportato dai cmdlet di Accesso Web Windows PowerShell 
 
 4.  Per verificare che la regola sia stata creata, eseguire il cmdlet **Get-PswaAuthorizationRule** o **Test-PswaAuthorizationRule -UserName &lt;dominio\\utente | computer\\utente&gt; -ComputerName** &lt;nome_computer&gt;. Ad esempio, **Test-PswaAuthorizationRule -UserName Contoso\\JSmith -ComputerName Contoso_214**.
 
-#### <a name="to-remove-an-authorization-rule"></a>Per rimuovere una regola di autorizzazione
+<a id="to-remove-an-authorization-rule" class="xliff"></a>
+#### Per rimuovere una regola di autorizzazione
 
 1.  Se non è ancora stata aperta una sessione di Windows PowerShell, vedere il passaggio 1 della procedura [Per aggiungere una regola di autorizzazione restrittiva](#BKMK_arar) in questa sezione.
 

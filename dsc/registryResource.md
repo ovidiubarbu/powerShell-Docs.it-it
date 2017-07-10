@@ -1,30 +1,31 @@
 ---
-title: Risorsa Registry DSC
-ms.date: 2016-05-16
-keywords: powershell,DSC
-description: 
-ms.topic: article
+ms.date: 2017-06-12
 author: eslesar
-manager: dongill
-ms.prod: powershell
-ms.openlocfilehash: d94f178fb75d15b12268ad783f78183ceba9f2b3
-ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
-translationtype: HT
+ms.topic: conceptual
+keywords: dsc,powershell,configurazione,installazione
+title: Risorsa Registry DSC
+ms.openlocfilehash: 649cb60578c053c04a7fcc7446881fb76daee26a
+ms.sourcegitcommit: 79e8f03afb8d0b0bb0a167e56464929b27f51990
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/26/2017
 ---
-# <a name="dsc-registry-resource"></a>Risorsa Registry DSC
+<a id="dsc-registry-resource" class="xliff"></a>
+# Risorsa Registry DSC
 
 > Si applica a: Windows PowerShell 4.0, Windows PowerShell 5.0
 
 La risorsa **Registry** in Windows PowerShell DSC (Desired State Configuration) fornisce un meccanismo per gestire i valori e le chiavi del Registro di sistema in un nodo di destinazione.
 
-## <a name="syntax"></a>Sintassi
+<a id="syntax" class="xliff"></a>
+## Sintassi
 
 ```
 Registry [string] #ResourceName
 {
     Key = [string]
     ValueName = [string]
-    [ Ensure = [string] { Absent | Present }  ]
+    [ Ensure = [string] { Enable | Disable }  ]
     [ Force =  [bool]   ]
     [ Hex = [bool] ]
     [ DependsOn = [string[]] ]
@@ -33,13 +34,14 @@ Registry [string] #ResourceName
 }
 ```
 
-## <a name="properties"></a>Proprietà
+<a id="properties" class="xliff"></a>
+## Proprietà
 |  Proprietà  |  Descrizione   | 
 |---|---| 
 | Key| Indica il percorso della chiave del Registro di sistema per cui si vuole specificare un determinato stato. Questo percorso deve includere l'hive.| 
-| ValueName| Indica il nome del valore del Registro di sistema.| 
+| ValueName| Indica il nome del valore del Registro di sistema. Per aggiungere o rimuovere una chiave del Registro di sistema specificare questa proprietà come stringa vuota, senza specificare ValueType o ValueData. Per modificare o rimuovere il valore predefinito di una chiave del Registro di sistema specificare questa proprietà come stringa vuota e specificare ValueType o ValueData.| 
 | Ensure| Indica se la chiave e il valore esistono. Impostare questa proprietà su "Present" per specificare che la chiave e il valore esistono. Impostare questa proprietà su "Absent" per specificare che la chiave e il valore non esistono. Il valore predefinito è "Present".| 
-| Force| Se la chiave del Registro di sistema è presente, __Force__ la sovrascrive con il nuovo valore.| 
+| Force| Se la chiave del Registro di sistema è presente, __Force__ la sovrascrive con il nuovo valore. Se si elimina una chiave del Registro di sistema con sottochiavi il valore deve essere __$true__.| 
 | Hex| Indica se i dati verranno espressi in formato esadecimale. Se questa proprietà è specificata, i dati con valori DWORD o QWORD vengono presentati in formato esadecimale. La proprietà non è valida per altri tipi. Il valore predefinito è __$false__.| 
 | DependsOn| Indica che prima di configurare la risorsa è necessario eseguire la configurazione di un'altra risorsa. Ad esempio, se l'ID del blocco script di configurazione della risorsa che si vuole eseguire per primo è __ResourceName__ e il tipo è __ResourceType__, la sintassi per usare questa proprietà è `DependsOn = "[ResourceType]ResourceName"`.| 
 | ValueData| Dati per il valore del Registro di sistema.| 
@@ -61,7 +63,8 @@ Registry [string] #ResourceName
 
 <li>Stringa espandibile (REG_EXPAND_SZ)</li></ul>
 
-## <a name="example"></a>Esempio
+<a id="example" class="xliff"></a>
+## Esempio
 Questo esempio garantisce che sia presente una chiave denominata "ExampleKey" nell'hive **HKEY\_LOCAL\_MACHINE**.
 ```powershell
 Configuration RegistryTest

@@ -1,4 +1,16 @@
-# <a name="installation-instructions"></a>Istruzioni di installazione
+---
+ms.date: 2017-06-12
+author: JKeithB
+ms.topic: reference
+keywords: wmf,powershell,installazione
+ms.openlocfilehash: 668a5b20add58ff5e23f35d6cebddc39c64ce926
+ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/12/2017
+---
+<a id="installation-instructions" class="xliff"></a>
+# Istruzioni di installazione
 
 Scaricare il pacchetto corretto per il sistema operativo e l'architettura in uso:
 

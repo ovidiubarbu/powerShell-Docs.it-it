@@ -1,22 +1,22 @@
 ---
+ms.date: 2017-06-12
+author: JKeithB
+ms.topic: reference
+keywords: wmf,powershell,installazione
 title: Cmdlet di catalogo
-ms.date: 2016-07-13
-keywords: PowerShell, DSC, WMF
-description: 
-ms.topic: article
-author: keithb
-manager: carolz
-ms.prod: powershell
-ms.technology: WMF
-ms.openlocfilehash: 6986e7b8543ce38c0330e6428ac908ca7f126e08
-ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
-translationtype: HT
+ms.openlocfilehash: 88ca8a3366f7b1d83ba2596d7ae1230427797cf4
+ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/12/2017
 ---
-# <a name="catalog-cmdlets"></a>Cmdlet di catalogo  
+<a id="catalog-cmdlets" class="xliff"></a>
+# Cmdlet di catalogo  
 
 Sono stati aggiunti due nuovi cmdlet nel modulo [Microsoft.Powershell.Secuity](https://technet.microsoft.com/en-us/library/hh847877.aspx) per generare e convalidare i file di catalogo di Windows.  
 
-## <a name="new-filecatalog"></a>New-FileCatalog 
+<a id="new-filecatalog" class="xliff"></a>
+## New-FileCatalog 
 --------------------------------
 
 `New-FileCatalog` crea un file di catalogo Windows per set di cartelle e file. Un file di catalogo contiene gli hash per tutti i file nei percorsi specificati. Gli utenti possono distribuire il set di cartelle con il corrispondente file di catalogo che rappresenta le cartelle. Un file di catalogo può essere usato dal destinatario del contenuto per convalidare le modifiche apportate alle cartelle dopo la creazione del catalogo.    
@@ -39,7 +39,8 @@ Questa operazione crea il file di catalogo.
 Per verificare l'integrità di un file di catalogo (Pester.cat nell'esempio precedente), è necessario che sia firmato con il cmdlet [Set-AuthenticodeSignature](https://technet.microsoft.com/library/hh849819.aspx).   
 
 
-## <a name="test-filecatalog"></a>Test-FileCatalog 
+<a id="test-filecatalog" class="xliff"></a>
+## Test-FileCatalog 
 --------------------------------
 
 `Test-FileCatalog` convalida il catalogo che rappresenta un set di cartelle. 
@@ -51,3 +52,4 @@ Test-FileCatalog [-CatalogFilePath] <string> [[-Path] <string[]>] [-Detailed] [-
 ![](../images/TestFileCatalog.jpg)
 
 Questo cmdlet consente di confrontare gli hash di tutti i file e i relativi percorsi trovati nel file di catalogo con quelli salvati su disco. Se rileva eventuali mancate corrispondenze tra i percorsi e gli hash di file restituisce lo stato `ValidationFailed`. L'utente può recuperare tutte queste informazioni usando il parametro `Detailed`. Lo stato di firma del catalogo viene visualizzato come campo `Signature` e ciò equivale a chiamare il cmdlet [Get-AuthenticodeSignature](https://technet.microsoft.com/en-us/library/hh849805.aspx) sul file di catalogo. Gli utenti possono anche ignorare alcuni file durante la convalida usando il parametro `FilesToSkip`. 
+

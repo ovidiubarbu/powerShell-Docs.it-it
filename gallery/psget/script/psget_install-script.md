@@ -1,24 +1,23 @@
 ---
-description: 
-manager: carolz
-ms.topic: article
-author: jpjofre
-ms.prod: powershell
-keywords: powershell,cmdlet,gallery
-ms.date: 2016-10-14
+ms.date: 2017-06-12
 contributor: manikb
-title: psget_install script
-ms.technology: powershell
-ms.openlocfilehash: ac2473283a80e76d4823d85d4c4481d349a95a12
-ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
-translationtype: HT
+ms.topic: reference
+keywords: raccolta,powershell,cmdlet,psget
+title: Install-Script
+ms.openlocfilehash: 4c3fd9393ccb7ee5c3b010f1114b6596a74fdee2
+ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/12/2017
 ---
-# <a name="install-script"></a>Install-Script
+<a id="install-script" class="xliff"></a>
+# Install-Script
 
 Installa i file di script di PowerShell dai repository online nel computer locale.
 
 
-## <a name="description"></a>Descrizione
+<a id="description" class="xliff"></a>
+## Descrizione
 
 Il cmdlet Install-Script acquisisce un payload di script da un repository, verifica che il payload sia uno script di PowerShell valido e copia il file di script in un percorso di installazione specificato.
 
@@ -41,7 +40,8 @@ Quando non viene definito alcun ambito o quando il valore del parametro Scope è
 
 I caratteri jolly non sono supportati in -Name nei cmdlet Install-Module, Save-Module, Uninstall-Module, Install-Script, Save-Script e Uninstall-Script.
 
-### <a name="scope"></a>Ambito
+<a id="scope" class="xliff"></a>
+### Ambito
 Specifica l'ambito di installazione del modulo. I valori accettabili per questo parametro sono AllUsers e CurrentUser.
 
 L'ambito di installazione predefinito è AllUsers.
@@ -56,7 +56,8 @@ Specifica l'ambito di installazione dello script. I valori validi sono AllUsers 
 L'ambito AllUsers specifica di installare uno script in %systemdrive%:\ProgramFiles\WindowsPowerShell\Scripts in modo che lo script sia disponibile per tutti gli utenti. L'ambito CurrentUser specifica di installare lo script in $home\Documents\WindowsPowerShell\Scripts in modo che lo script sia disponibile solo per l'utente corrente.
 
 
-## <a name="nopathupdate"></a>NoPathUpdate
+<a id="nopathupdate" class="xliff"></a>
+## NoPathUpdate
 
 - Il parametro opzionale NoPathUpdate nel cmdlet Install-Script ignora la richiesta di aggiunta del percorso di installazione dello script nella variabile di ambiente PATH.
 - Se viene usato il comando WITH - NoPathUpdate, non verrà generata alcuna richiesta e PATH NOT non verrà aggiornato. In questo caso, è possibile ignorare Force.
@@ -65,7 +66,8 @@ L'ambito AllUsers specifica di installare uno script in %systemdrive%:\ProgramFi
 - Tutte queste operazioni si applicano solo al primo utilizzo di Install-Script in un determinato ambito.
 
 
-## <a name="notes"></a>Note
+<a id="notes" class="xliff"></a>
+## Note
 
 Questo cmdlet viene eseguito in Windows PowerShell 3.0 o versioni successive di Windows PowerShell, in Windows 7 o Windows 2008 R2 e nelle versioni successive di Windows.
 
@@ -82,17 +84,20 @@ Per impostazione predefinita i moduli vengono installati nella cartella Programm
 Per prevenire l'esecuzione di moduli che contengono malware, i moduli installati non vengono importati automaticamente dall'installazione. Per una sicurezza ottimale, valutare il codice del modulo prima di eseguire qualsiasi cmdlet o funzione in un modulo per la prima volta.
 
 
-## <a name="cmdlet-syntax"></a>Sintassi del cmdlet
+<a id="cmdlet-syntax" class="xliff"></a>
+## Sintassi del cmdlet
 
 ```powershell
 Get-Command -Name Install-Script -Module PowerShellGet -Syntax
 ```
 
-## <a name="cmdlet-online-help-reference"></a>Riferimento per la Guida online sui cmdlet
+<a id="cmdlet-online-help-reference" class="xliff"></a>
+## Riferimento per la Guida online sui cmdlet
 
 [Install-Script](http://go.microsoft.com/fwlink/?LinkId=619784)
 
-## <a name="example-commands"></a>Comandi di esempio
+<a id="example-commands" class="xliff"></a>
+## Comandi di esempio
 
 ```powershell
 
@@ -474,7 +479,8 @@ The scripts install location 'C:\Program Files\WindowsPowerShell\Scripts' is req
 
 ```
 
-## <a name="install-script-cmdlet-in-pipeline-operations"></a>Cmdlet Install-Script in operazioni di pipeline
+<a id="install-script-cmdlet-in-pipeline-operations" class="xliff"></a>
+## Cmdlet Install-Script in operazioni di pipeline
 
 ```powershell
 
@@ -501,11 +507,13 @@ Get-InstalledModule
 
 ```
 
-## <a name="side-by-side-version-support-on-powershell-50-or-newer"></a>Supporto delle versioni side-by-side in PowerShell 5.0 o versione successiva
+<a id="side-by-side-version-support-on-powershell-50-or-newer" class="xliff"></a>
+## Supporto delle versioni side-by-side in PowerShell 5.0 o versione successiva
 
 PowerShellGet supporta versioni side-by-side dei moduli nei cmdlet Install-Script, Update-Script e Publish-Script eseguiti in Windows PowerShell 5.0 o versioni successive.
 
-### <a name="install-script-examples"></a>Esempi di Install-Script
+<a id="install-script-examples" class="xliff"></a>
+### Esempi di Install-Script
 
 ```powershell
 # Install a version of the module
@@ -537,7 +545,8 @@ Version    Name                                Repository           Description
 
 ```
 
-## <a name="install-module-with-its-dependencies"></a>Installare un modulo con le relative dipendenze
+<a id="install-module-with-its-dependencies" class="xliff"></a>
+## Installare un modulo con le relative dipendenze
 
 ```powershell
 
@@ -631,7 +640,8 @@ Version    Name                                Repository           Description
 
 ```
 
-## <a name="error-scenarios"></a>Scenari di errore
+<a id="error-scenarios" class="xliff"></a>
+## Scenari di errore
 
 ```powershell
 
@@ -649,7 +659,8 @@ Install-Script ContosoClient,ContosoServer -MinimumVersion 2.0
 
 ```
 
-## <a name="installing-a-script-with-dependent-scripts-and-modules"></a>Installazione di uno script con moduli e script dipendenti
+<a id="installing-a-script-with-dependent-scripts-and-modules" class="xliff"></a>
+## Installazione di uno script con moduli e script dipendenti
 
 ```powershell
 # Installing a script with dependent scripts and modules
@@ -722,7 +733,8 @@ Function Test-FunctionFromScript\_Script-WithDependencies2 { Get-Date }
 Workflow Test-WorkflowFromScript\_Script-WithDependencies2 { Get-Date }
 ```
 
-## <a name="install-script-and-get-installedscript-cmdlets"></a>Cmdlet Install-Script e Get-InstalledScript
+<a id="install-script-and-get-installedscript-cmdlets" class="xliff"></a>
+## Cmdlet Install-Script e Get-InstalledScript
 Il cmdlet Install-Script consente di installare un file di script specifico e le relative dipendenze nell'ambito specificato. Per impostazione predefinita, gli script vengono installati nell'ambito AllUsers. Il cmdlet Get-InstalledScript consente di ottenere l'elenco dei file di script che sono stati installati con il cmdlet Install-Script.
 
 Nota sull'uso: per consentire la gestione e l'individuazione degli script una volta installati, Install-Script crea una cartella predefinita per l'archiviazione degli script in $home\Documents\WindowsPowerShell\Scripts e aggiunge questa cartella alla variabile di ambiente PATH. Se la modifica del percorso è un problema, usare Save-Script invece di Install-Script. Get-InstalledScripts e Uninstall-Script funzionano solo con gli script inseriti nel sistema tramite Install-Script.

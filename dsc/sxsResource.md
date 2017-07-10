@@ -1,23 +1,24 @@
 ---
-title: "Uso di risorse con più versioni"
-ms.date: 2016-05-16
-keywords: powershell,DSC
-description: 
-ms.topic: article
+ms.date: 2017-06-12
 author: eslesar
-manager: dongill
-ms.prod: powershell
-ms.openlocfilehash: a3f2cf37eb185124d73443bbe42b5fcc82034f15
-ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
-translationtype: HT
+ms.topic: conceptual
+keywords: dsc,powershell,configurazione,installazione
+title: "Uso di risorse con più versioni"
+ms.openlocfilehash: c3397775a6767d74c182e15d07371e830f98e9a9
+ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/12/2017
 ---
-# <a name="using-resources-with-multiple-versions"></a>Uso di risorse con più versioni
+<a id="using-resources-with-multiple-versions" class="xliff"></a>
+# Uso di risorse con più versioni
 
 > Si applica a: Windows PowerShell 5.0
 
 In PowerShell 5.0, le risorse DSC possono avere più versioni e possono essere installate in un computer side-by-side. Questo significa che più versioni di un modulo risorse sono disponibili nella stessa cartella di moduli.
 
-## <a name="installing-multiple-resource-versions-side-by-side"></a>Installazione di più versioni delle risorse side-by-side
+<a id="installing-multiple-resource-versions-side-by-side" class="xliff"></a>
+## Installazione di più versioni delle risorse side-by-side
 
 È possibile usare i parametri **MinimumVersion**, **MaximumVersion** e **RequiredVersion** del cmdlet [Install-Module](https://technet.microsoft.com/en-us/library/dn807162.aspx) per specificare la versione di un modulo da installare. La chiamata di **Install-Module** senza specificare una versione installa la versione più recente.
 
@@ -44,7 +45,8 @@ PowerShell      xCluster                  xFailOverCluster               1.1    
 PowerShell      xCluster                  xFailOverCluster               1.2.0.0    {DomainAdministratorCredential, Name, ...
 ```
 
-## <a name="specifying-a-resource-version-in-a-configuration"></a>Specifica di una versione delle risorse in una configurazione
+<a id="specifying-a-resource-version-in-a-configuration" class="xliff"></a>
+## Specifica di una versione delle risorse in una configurazione
 
 Se si dispone di più risorse installate su un computer, è necessario specificare la versione di tale risorsa quando viene usata in una configurazione. Eseguire questa operazione specificando il parametro **ModuleVersion** della parola chiave **Import-DscResource**. Se non viene specificata la versione di un modulo risorse di una risorsa di cui è installata più di una versione, la configurazione genera un errore.
 
@@ -88,7 +90,8 @@ configuration VersionTest
 
 l'oggetto funziona anche in PowerShell 5.0, ma è consigliabile usare il parametro **ModuleVersion**.
 
-## <a name="see-also"></a>Vedere anche
+<a id="see-also" class="xliff"></a>
+## Vedere anche
 * [Configurazioni DSC](configurations.md)
 * [Risorse DSC](resources.md)
 

@@ -1,26 +1,24 @@
 ---
-manager: carmonm
-ms.topic: article
+ms.date: 2017-06-12
 author: rpsqrd
-ms.author: ryanpu
-ms.prod: powershell
-keywords: powershell,cmdlet,jea
-ms.date: 2016-12-05
+ms.topic: conceptual
+keywords: jea,powershell,sicurezza
 title: Uso di JEA
-ms.technology: powershell
-ms.openlocfilehash: 62e5f74d60b2fd09e302ecc12996f97e90b73f2f
-ms.sourcegitcommit: 6057e6d22ef8a2095af610e0d681e751366a9773
+ms.openlocfilehash: 9996a432bca27240e0f08adf932126ced116985d
+ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2017
+ms.lasthandoff: 06/12/2017
 ---
-# <a name="using-jea"></a>Uso di JEA
+<a id="using-jea" class="xliff"></a>
+# Uso di JEA
 
 > Si applica a: Windows PowerShell 5.0
 
 Questo argomento illustra i vari modi in cui è possibile connettersi e usare un endpoint JEA.
 
-## <a name="using-jea-interactively"></a>Uso interattivo di JEA
+<a id="using-jea-interactively" class="xliff"></a>
+## Uso interattivo di JEA
 
 Se si esegue il test della configurazione JEA oppure se gli utenti devono eseguire attività semplici, è possibile usare JEA allo stesso modo di una sessione di comunicazione remota di PowerShell regolare.
 Per attività di comunicazione remota complesse, è consigliabile invece usare la [comunicazione implicita](#using-jea-with-implicit-remoting) per renderla più semplice agli utenti consentendo di operare localmente con gli oggetti di dati.
@@ -64,7 +62,8 @@ Start-VM -VMName 'SQL01'
 
 Per chiamate di comandi più complesse che rendono difficile questo approccio, è consigliabile usare la [comunicazione remota implicita](#using-jea-with-implicit-remoting) o la [creazione di funzioni personalizzate](role-capabilities.md#creating-custom-functions) che eseguono il wrapping della funzionalità voluta.
 
-## <a name="using-jea-with-implicit-remoting"></a>Uso di JEA con comunicazione remota implicita
+<a id="using-jea-with-implicit-remoting" class="xliff"></a>
+## Uso di JEA con comunicazione remota implicita
 
 PowerShell supporta un modello di comunicazione remota alternativa in cui è possibile importare i cmdlet del proxy da un computer remoto nel computer locale e usarli come se fossero comandi locali.
 Questo modello viene chiamato comunicazione remota implicita ed è illustrato in maniera dettagliata in [questo *post di blog* Hey, Scripting Guy!](https://blogs.technet.microsoft.com/heyscriptingguy/2013/09/08/remoting-the-implicit-way/)
@@ -113,7 +112,8 @@ Import-PSSession -Session $jeasession -Prefix 'JEA' -CommandName $filteredComman
 È anche possibile salvare i cmdlet proxy da una comunicazione remota implicita tramite [Export-PSSession](https://msdn.microsoft.com/powershell/reference/5.1/microsoft.powershell.utility/Export-PSSession).
 Per altre informazioni sulla comunicazione remota implicita, vedere la documentazione della Guida per [Import-PSSession](https://msdn.microsoft.com/en-us/powershell/reference/5.1/microsoft.powershell.utility/import-pssession) e [Import-Module](https://msdn.microsoft.com/en-us/powershell/reference/5.1/microsoft.powershell.core/import-module).
 
-## <a name="using-jea-programatically"></a>Uso di JEA in modo programmato
+<a id="using-jea-programatically" class="xliff"></a>
+## Uso di JEA in modo programmato
 
 JEA può anche essere usato in sistemi di automazione e applicazioni utente, ad esempio app di supporto tecnico interno e siti Web.
 L'approccio è simile alla compilazione di applicazioni che comunicano con gli endpoint di PowerShell non vincolati, tenendo presente che JEA limita i comandi che possono essere eseguiti nella sessione remota.
@@ -171,7 +171,8 @@ using (Runspace runspace = RunspaceFactory.CreateRunspace(connectionInfo))
 }
 ```
 
-## <a name="using-jea-with-powershell-direct"></a>Uso di JEA con PowerShell Direct
+<a id="using-jea-with-powershell-direct" class="xliff"></a>
+## Uso di JEA con PowerShell Direct
 
 Hyper-V in Windows 10 e in Windows Server 2016 offre [PowerShell Direct](https://msdn.microsoft.com/en-us/virtualization/hyperv_on_windows/user_guide/vmsession), una funzionalità che consente agli amministratori di Hyper-V di gestire le macchine virtuali con PowerShell, indipendentemente dalla configurazione di rete o dalle impostazioni di gestione remota della macchina virtuale.
 
@@ -193,3 +194,4 @@ Enter-PSSession -VMId $vm.VMId -ConfigurationName 'NICMaintenance' -Credential '
 Si noti che anche un utente senza privilegi può accedere per impostazione predefinita a un computer Windows e può usare PowerShell non vincolato.
 Ciò gli consente di vedere parte del contenuto del file system e altre informazioni sull'ambiente del sistema operativo.
 Per limitare l'accesso di un amministratore di Hyper-V soltanto a una macchina virtuale tramite PowerShell Direct con JEA, è necessario rimuovere i diritti di accesso locale all'account JEA dell'amministratore di Hyper-V.
+

@@ -1,23 +1,24 @@
 ---
+ms.date: 2017-06-12
+author: eslesar
+ms.topic: conceptual
+keywords: dsc,powershell,configurazione,impostazione
 title: Risorsa PackageManagementSource DSC
-ms.date: 
-keywords: powershell,DSC
-description: 
-ms.topic: article
-author: brywang-msft
-manager: kriscv
-ms.prod: powershell
-ms.openlocfilehash: 22e61490e7b3f98335334a2703ec9639cbdaa87e
-ms.sourcegitcommit: 89e7ae30faff5f96641fc72764bdc76e0e257bc2
-translationtype: HT
+ms.openlocfilehash: 80d157aff5bf7685a797baaf6a26215f02473096
+ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/12/2017
 ---
-# <a name="dsc-packagemanagementsource-resource"></a>Risorsa PackageManagementSource DSC
+<a id="dsc-packagemanagementsource-resource" class="xliff"></a>
+# Risorsa PackageManagementSource DSC
 
 > Si applica a: Windows PowerShell 4.0, Windows PowerShell 5.0
 
 La risorsa **PackageManagementSource** in Windows PowerShell DSC (Desired State Configuration) fornisce un meccanismo per registrare o annullare la registrazione di origini di Gestione pacchetti in un nodo di destinazione. **Le origini di Gestione pacchetti registrate in questo modo vengono registrate nel contesto del sistema, utilizzabile dall'account di sistema o dal motore di DSC.** Questa risorsa richiede il modulo **PackageManagement**, disponibile da http://PowerShellGallery.com.
 
-## <a name="syntax"></a>Sintassi
+<a id="syntax" class="xliff"></a>
+## Sintassi
 
 ```
 PSModule [string] #ResourceName
@@ -31,7 +32,8 @@ PSModule [string] #ResourceName
 }
 ```
 
-## <a name="properties"></a>Proprietà
+<a id="properties" class="xliff"></a>
+## Proprietà
 |  Proprietà  |  Descrizione   | 
 |---|---| 
 | Nome| Specifica il nome dell'origine del pacchetto da registrare o di cui annullare la registrazione nel sistema.| 
@@ -41,7 +43,8 @@ PSModule [string] #ResourceName
 | SourceUri| Specifica l'URI dell'origine del pacchetto.| 
 | SourceCredential| Fornisce l'accesso al pacchetto in un'origine remota.| 
 
-## <a name="example"></a>Esempio
+<a id="example" class="xliff"></a>
+## Esempio
 
 Questo esempio registra l'origine del pacchetto http://nuget.org usando la risorsa DSC **PackageManagementSource**.
 
@@ -58,3 +61,4 @@ Configuration PackageManagementSourceTest
     }
 }
 ```
+

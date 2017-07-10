@@ -1,30 +1,30 @@
 ---
-description: 
-manager: carolz
-ms.topic: article
-author: jpjofre
-ms.prod: powershell
-keywords: powershell,cmdlet,gallery
-ms.date: 2016-10-14
-contributor: manikb
+ms.date: 2017-06-12
+contributor: JKeithB
+ms.topic: conceptual
+keywords: raccolta,powershell,cmdlet,psgallery
 title: Gestione dei proprietari di elementi
-ms.technology: powershell
-ms.openlocfilehash: 36a3a3079bce642b16f0512ead2b0778b43e5d2d
-ms.sourcegitcommit: c732e3ee6d2e0e9cd8c40105d6fbfd4d207b730d
-translationtype: HT
+ms.openlocfilehash: fcd538148f9ff1ac96324b567d54d643f1756c93
+ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/12/2017
 ---
-# <a name="managing-item-owners"></a>Gestione dei proprietari di elementi
+<a id="managing-item-owners" class="xliff"></a>
+# Gestione dei proprietari di elementi
 
 La proprietà di un elemento in PowerShell Gallery è definita dalla persona che ha pubblicato l'elemento in questione in PowerShell Gallery.
 A volte questi metadati devono essere gestiti anche dopo la pubblicazione dell'elemento iniziale. Questo significa che i metadati del proprietario devono essere modificabili, mentre l'elemento stesso non lo è.
 
 Tutti i proprietari di elementi hanno pari diritti. Questo significa che qualsiasi proprietario di elemento può pubblicare una nuova versione dell'elemento stesso. Significa anche che qualsiasi proprietario di elemento può rimuovere un altro proprietario di elemento. Nessun proprietario ha un'autorità maggiore di altri proprietari.  
 
-## <a name="setting-an-items-initial-owner"></a>Impostazione del proprietario iniziale di un elemento 
+<a id="setting-an-items-initial-owner" class="xliff"></a>
+## Impostazione del proprietario iniziale di un elemento 
 
 Quando un elemento viene pubblicato in PowerShell Gallery, il proprietario iniziale viene definito dall'utente che ha pubblicato l'elemento in questione. Questo è determinato dal titolare della chiave API usata nel cmdlet Publish-Module.
 
-## <a name="adding-owners"></a>Aggiunta di proprietari
+<a id="adding-owners" class="xliff"></a>
+## Aggiunta di proprietari
 
 Dopo che un elemento è stato pubblicato in PowerShell Gallery, la procedura per invitare altri utenti a diventare proprietari di tale elemento è semplice.
 
@@ -43,7 +43,8 @@ Questo meccanismo di inviti impedisce che gli utenti aggiungano falsamente altri
 Si tenga presente che i metadati di tipo "Autori" sono semplice testo in formato libero e che soltanto i metadati di tipo "Proprietari" sono controllati.
 
 
-## <a name="removing-owners"></a>Rimozione di proprietari
+<a id="removing-owners" class="xliff"></a>
+## Rimozione di proprietari
 Se un elemento ha più proprietari ed è necessario rimuoverne uno, seguire questa semplice procedura:
 
 1. [Accedere](https://powershellgallery.com/users/account/LogOn) a PowerShell Gallery con l'account attualmente proprietario dell'elemento;
@@ -53,7 +54,8 @@ Se un elemento ha più proprietari ed è necessario rimuoverne uno, seguire ques
 
 
 
-## <a name="transferring-item-ownership"></a>Trasferimento della proprietà degli elementi
+<a id="transferring-item-ownership" class="xliff"></a>
+## Trasferimento della proprietà degli elementi
 A volte Microsoft riceve richieste di supporto relative al trasferimento della proprietà di un elemento da un utente all'altro. Questa operazione, tuttavia, può essere quasi sempre eseguita dagli utenti in modo autonomo.
 Il trasferimento della proprietà da un utente a un altro è semplicemente una combinazione delle due procedure descritte in precedenza.
 
@@ -66,7 +68,8 @@ La richiesta di supporto può avere due motivi differenti, ma la procedura riman
 * L'elemento è stato pubblicato accidentalmente con un account non corretto
 
 
-## <a name="orphaned-items"></a>Elenchi orfani
+<a id="orphaned-items" class="xliff"></a>
+## Elenchi orfani
 Anche se raramente, si è presentato anche lo scenario descritto di seguito.
 Gli elementi sono diventati orfani e non è possibile usare soltanto l'account del proprietario degli elementi per aggiungere nuovi proprietari.
 Di seguito sono riportati alcuni esempi relativi a questo scenario:
