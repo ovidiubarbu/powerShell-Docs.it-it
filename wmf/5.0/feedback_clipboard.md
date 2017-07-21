@@ -9,9 +9,8 @@ ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 06/12/2017
 ---
-<a id="clipboard-cmdlets" class="xliff"></a>
-# Cmdlet Clipboard
-**Get-Clipboard** e **Set-Clipboard** rendono più semplice il trasferimento del contenuto in e da una sessione di Windows PowerShell. Se ad esempio si usa Esplora risorse per copiare tre file negli Appunti (selezionandoli e premendo `ctrl-c` ad esempio), è possibile accedere facilmente al contenuto degli Appunti come elenco di file:
+# <a name="clipboard-cmdlets"></a><span data-ttu-id="e913b-102">Cmdlet Clipboard</span><span class="sxs-lookup"><span data-stu-id="e913b-102">Clipboard cmdlets</span></span>
+<span data-ttu-id="e913b-103">**Get-Clipboard** e **Set-Clipboard** rendono più semplice il trasferimento del contenuto in e da una sessione di Windows PowerShell.</span><span class="sxs-lookup"><span data-stu-id="e913b-103">**Get-Clipboard** and **Set-Clipboard** make it easier for you to transfer content to and from a Windows PowerShell session.</span></span> <span data-ttu-id="e913b-104">Se ad esempio si usa Esplora risorse per copiare tre file negli Appunti (selezionandoli e premendo `ctrl-c` ad esempio), è possibile accedere facilmente al contenuto degli Appunti come elenco di file:</span><span class="sxs-lookup"><span data-stu-id="e913b-104">For example, if you use Windows Explorer to copy three files to the clipboard (by selecting them and pressing `ctrl-c`, for example), you can then easily access the contents of the clipboard as a list of files:</span></span>
 
 ```powershell 
 PS C:\\&gt; Get-Clipboard -Format FileDropList
@@ -30,5 +29,5 @@ Mode LastWriteTime Length Name
 ```
 
 
-I cmdlet Clipboard supportano immagini, file audio, elenchi di file e testo.
+<span data-ttu-id="e913b-105">I cmdlet Clipboard supportano immagini, file audio, elenchi di file e testo.</span><span class="sxs-lookup"><span data-stu-id="e913b-105">The Clipboard cmdlets support images, audio files, file lists, and text.</span></span>
 

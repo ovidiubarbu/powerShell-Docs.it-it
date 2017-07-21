@@ -9,8 +9,7 @@ ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 06/12/2017
 ---
-<a id="additional-value-for-refreshmode-property" class="xliff"></a>
-# Valore aggiunto per la proprietà RefreshMode
+# <a name="additional-value-for-refreshmode-property"></a><span data-ttu-id="d9a79-102">Valore aggiunto per la proprietà RefreshMode</span><span class="sxs-lookup"><span data-stu-id="d9a79-102">Additional value for RefreshMode property</span></span>
 
-Questa versione introduce un nuovo valore per `RefreshMode`: **Disabled**. Quando viene impostata questa modalità, Gestione configurazione locale non esegue la gestione dei documenti. Per altre informazioni, vedere [Configurazione di Gestione configurazione locale](https://msdn.microsoft.com/powershell/dsc/metaconfig).
+<span data-ttu-id="d9a79-103">Questa versione introduce un nuovo valore per `RefreshMode`: **Disabled**.</span><span class="sxs-lookup"><span data-stu-id="d9a79-103">This release introduces a new `RefreshMode` value, **Disabled**.</span></span> <span data-ttu-id="d9a79-104">Quando viene impostata questa modalità, Gestione configurazione locale non esegue la gestione dei documenti.</span><span class="sxs-lookup"><span data-stu-id="d9a79-104">When this mode is set, LCM does not do document management.</span></span> <span data-ttu-id="d9a79-105">Per altre informazioni, vedere [Configurazione di Gestione configurazione locale](https://msdn.microsoft.com/powershell/dsc/metaconfig).</span><span class="sxs-lookup"><span data-stu-id="d9a79-105">For more information, see [Configuring the Local Configuration Manager](https://msdn.microsoft.com/powershell/dsc/metaconfig).</span></span>
 

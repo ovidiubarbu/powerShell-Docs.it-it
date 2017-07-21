@@ -9,10 +9,9 @@ ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 06/12/2017
 ---
-<a id="specifying-cross-node-dependencies" class="xliff"></a>
-# Specifica delle dipendenze tra nodi
+# <a name="specifying-cross-node-dependencies"></a><span data-ttu-id="871ab-102">Specifica delle dipendenze tra nodi</span><span class="sxs-lookup"><span data-stu-id="871ab-102">Specifying Cross Node Dependencies</span></span>
 
-Grazie alle risorse predefinite WaitFor\* (`WaitForAll`, `WaitForAny` e `WaitForSome`), è ora possibile specificare le dipendenze tra i computer durante le esecuzioni della configurazione, senza orchestrazione esterna. 
+<span data-ttu-id="871ab-103">Grazie alle risorse predefinite WaitFor\* (`WaitForAll`, `WaitForAny` e `WaitForSome`), è ora possibile specificare le dipendenze tra i computer durante le esecuzioni della configurazione, senza orchestrazione esterna.</span><span class="sxs-lookup"><span data-stu-id="871ab-103">By using the built-in WaitFor\* resources (`WaitForAll`, `WaitForAny`, and `WaitForSome`), you can now specify dependencies across computers during configuration runs without external orchestration.</span></span> 
 
-Per altre informazioni, vedere [Specifica delle dipendenze tra nodi](https://msdn.microsoft.com/powershell/dsc/crossnodedependencies).
+<span data-ttu-id="871ab-104">Per altre informazioni, vedere [Specifica delle dipendenze tra nodi](https://msdn.microsoft.com/powershell/dsc/crossnodedependencies).</span><span class="sxs-lookup"><span data-stu-id="871ab-104">For more information, see [Specifying cross-node dependencies](https://msdn.microsoft.com/powershell/dsc/crossnodedependencies)</span></span>
 

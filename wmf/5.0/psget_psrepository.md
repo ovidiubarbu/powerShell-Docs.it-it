@@ -9,15 +9,14 @@ ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 06/12/2017
 ---
-<a id="register-a-powershell-repository" class="xliff"></a>
-# Registrare un repository di PowerShell
-È possibile configurare PowerShellGet per agire su repository interni. Ciò avviene tramite le seguenti aggiunte:
-- Register-PSRepository: registra un repository per l'utente corrente.
-- Unregister-PSRepository: rimuove un repository registrato per l'utente corrente.
-- Set-PSRepository: imposta i valori per un repository registrato.
-- Get-PSRepository: ottiene tutti i repository registrati per l'utente corrente.
+# <a name="register-a-powershell-repository"></a><span data-ttu-id="bb56a-102">Registrare un repository di PowerShell</span><span class="sxs-lookup"><span data-stu-id="bb56a-102">Register a PowerShell Repository</span></span>
+<span data-ttu-id="bb56a-103">È possibile configurare PowerShellGet per agire su repository interni.</span><span class="sxs-lookup"><span data-stu-id="bb56a-103">You can configure PowerShellGet to operate against internal repositories.</span></span> <span data-ttu-id="bb56a-104">Ciò avviene tramite le seguenti aggiunte:</span><span class="sxs-lookup"><span data-stu-id="bb56a-104">This is done by using the following additions:</span></span>
+- <span data-ttu-id="bb56a-105">Register-PSRepository: registra un repository per l'utente corrente.</span><span class="sxs-lookup"><span data-stu-id="bb56a-105">Register-PSRepository: Registers a repository for the current user.</span></span>
+- <span data-ttu-id="bb56a-106">Unregister-PSRepository: rimuove un repository registrato per l'utente corrente.</span><span class="sxs-lookup"><span data-stu-id="bb56a-106">Unregister-PSRepository: Removes a registered repository for the current user.</span></span>
+- <span data-ttu-id="bb56a-107">Set-PSRepository: imposta i valori per un repository registrato.</span><span class="sxs-lookup"><span data-stu-id="bb56a-107">Set-PSRepository: Set values for a registered repository.</span></span>
+- <span data-ttu-id="bb56a-108">Get-PSRepository: ottiene tutti i repository registrati per l'utente corrente.</span><span class="sxs-lookup"><span data-stu-id="bb56a-108">Get-PSRepository: Get all registered repositories for the current user.</span></span>
 
-Dopo aver registrato un repository, è possibile usare Find-Module e Install-Module per usarlo.
+<span data-ttu-id="bb56a-109">Dopo aver registrato un repository, è possibile usare Find-Module e Install-Module per usarlo.</span><span class="sxs-lookup"><span data-stu-id="bb56a-109">After a repository is registered, you can use Find-Module and Install-Module to work with it.</span></span>
 
 ```powershell
 \#Register a default repository

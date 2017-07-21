@@ -9,47 +9,46 @@ ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 06/12/2017
 ---
-<a id="get-childitem-has--depth-parameter" class="xliff"></a>
-# Parametro -Depth per Get-ChildItem
-**Get-ChildItem** include ora un parametro **-Depth** utilizzabile con **-Recurse** per limitare la ricorsione:
+# <a name="get-childitem-has--depth-parameter"></a><span data-ttu-id="4ccde-102">Parametro -Depth per Get-ChildItem</span><span class="sxs-lookup"><span data-stu-id="4ccde-102">Get-ChildItem has -Depth parameter</span></span>
+<span data-ttu-id="4ccde-103">**Get-ChildItem** include ora un parametro **-Depth** utilizzabile con **-Recurse** per limitare la ricorsione:</span><span class="sxs-lookup"><span data-stu-id="4ccde-103">**Get-ChildItem** now has a **–Depth** parameter you use with **–Recurse** to limit the recursion:</span></span>
 
-PS C:\\Users\\slee\\Downloads\\Example&gt; Get-ChildItem -Recurse -Depth 0
+<span data-ttu-id="4ccde-104">PS C:\\Users\\slee\\Downloads\\Example&gt; Get-ChildItem -Recurse -Depth 0</span><span class="sxs-lookup"><span data-stu-id="4ccde-104">PS C:\\Users\\slee\\Downloads\\Example&gt; Get-ChildItem -Recurse -Depth 0</span></span>
 
-Directory: C:\\Users\\slee\\Downloads\\Example
+<span data-ttu-id="4ccde-105">Directory: C:\\Users\\slee\\Downloads\\Example</span><span class="sxs-lookup"><span data-stu-id="4ccde-105">Directory: C:\\Users\\slee\\Downloads\\Example</span></span>
 
-Mode LastWriteTime Length Name
-
----- ------------- ------ ----
-
-d----- 14/04/2015 17.36 Depth0
-
--a---- 14/04/2015 1.19 0 File1.txt
-
--a---- 14/04/2015 1.19 0 File2.txt
-
--a---- 14/04/2015 1.19 0 File3.txt
-
-PS C:\\Users\\slee\\Downloads\\Example&gt; Get-ChildItem -Recurse -Depth 1
-
-Directory: C:\\Users\\slee\\Downloads\\Example
-
-Mode LastWriteTime Length Name
+<span data-ttu-id="4ccde-106">Mode LastWriteTime Length Name</span><span class="sxs-lookup"><span data-stu-id="4ccde-106">Mode LastWriteTime Length Name</span></span>
 
 ---- ------------- ------ ----
 
-d----- 14/04/2015 17.36 Depth0
+<span data-ttu-id="4ccde-107">d----- 14/04/2015 17.36 Depth0</span><span class="sxs-lookup"><span data-stu-id="4ccde-107">d----- 4/14/2015 5:36 PM Depth0</span></span>
 
--a---- 14/04/2015 1.19 0 File1.txt
+<span data-ttu-id="4ccde-108">-a---- 14/04/2015 1.19 0 File1.txt</span><span class="sxs-lookup"><span data-stu-id="4ccde-108">-a---- 4/14/2015 1:19 PM 0 File1.txt</span></span>
 
--a---- 14/04/2015 1.19 0 File2.txt
+<span data-ttu-id="4ccde-109">-a---- 14/04/2015 1.19 0 File2.txt</span><span class="sxs-lookup"><span data-stu-id="4ccde-109">-a---- 4/14/2015 1:19 PM 0 File2.txt</span></span>
 
--a---- 14/04/2015 1.19 0 File3.txt
+<span data-ttu-id="4ccde-110">-a---- 14/04/2015 1.19 0 File3.txt</span><span class="sxs-lookup"><span data-stu-id="4ccde-110">-a---- 4/14/2015 1:19 PM 0 File3.txt</span></span>
 
-Directory: C:\\Users\\slee\\Downloads\\Example\\Depth0
+<span data-ttu-id="4ccde-111">PS C:\\Users\\slee\\Downloads\\Example&gt; Get-ChildItem -Recurse -Depth 1</span><span class="sxs-lookup"><span data-stu-id="4ccde-111">PS C:\\Users\\slee\\Downloads\\Example&gt; Get-ChildItem -Recurse -Depth 1</span></span>
 
-Mode LastWriteTime Length Name
+<span data-ttu-id="4ccde-112">Directory: C:\\Users\\slee\\Downloads\\Example</span><span class="sxs-lookup"><span data-stu-id="4ccde-112">Directory: C:\\Users\\slee\\Downloads\\Example</span></span>
+
+<span data-ttu-id="4ccde-113">Mode LastWriteTime Length Name</span><span class="sxs-lookup"><span data-stu-id="4ccde-113">Mode LastWriteTime Length Name</span></span>
 
 ---- ------------- ------ ----
 
-d----- 14/04/2015 17.33 Depth1
+<span data-ttu-id="4ccde-114">d----- 14/04/2015 17.36 Depth0</span><span class="sxs-lookup"><span data-stu-id="4ccde-114">d----- 4/14/2015 5:36 PM Depth0</span></span>
+
+<span data-ttu-id="4ccde-115">-a---- 14/04/2015 1.19 0 File1.txt</span><span class="sxs-lookup"><span data-stu-id="4ccde-115">-a---- 4/14/2015 1:19 PM 0 File1.txt</span></span>
+
+<span data-ttu-id="4ccde-116">-a---- 14/04/2015 1.19 0 File2.txt</span><span class="sxs-lookup"><span data-stu-id="4ccde-116">-a---- 4/14/2015 1:19 PM 0 File2.txt</span></span>
+
+<span data-ttu-id="4ccde-117">-a---- 14/04/2015 1.19 0 File3.txt</span><span class="sxs-lookup"><span data-stu-id="4ccde-117">-a---- 4/14/2015 1:19 PM 0 File3.txt</span></span>
+
+<span data-ttu-id="4ccde-118">Directory: C:\\Users\\slee\\Downloads\\Example\\Depth0</span><span class="sxs-lookup"><span data-stu-id="4ccde-118">Directory: C:\\Users\\slee\\Downloads\\Example\\Depth0</span></span>
+
+<span data-ttu-id="4ccde-119">Mode LastWriteTime Length Name</span><span class="sxs-lookup"><span data-stu-id="4ccde-119">Mode LastWriteTime Length Name</span></span>
+
+---- ------------- ------ ----
+
+<span data-ttu-id="4ccde-120">d----- 14/04/2015 17.33 Depth1</span><span class="sxs-lookup"><span data-stu-id="4ccde-120">d----- 4/14/2015 5:33 PM Depth1</span></span>
 

@@ -8,25 +8,25 @@ ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 06/08/2017
 ---
-#  <a name="the-powershell-common-modules"></a>Moduli comuni di PowerShell
+#  <a name="the-powershell-common-modules"></a><span data-ttu-id="3315f-103">Moduli comuni di PowerShell</span><span class="sxs-lookup"><span data-stu-id="3315f-103">The PowerShell Common Modules</span></span>
 
-I moduli comuni di PowerShell offrono le funzionalità di base di PowerShell.
-Le aree principali coperte da questi moduli sono:
+<span data-ttu-id="3315f-104">I moduli comuni di PowerShell offrono le funzionalità di base di PowerShell.</span><span class="sxs-lookup"><span data-stu-id="3315f-104">The PowerShell common modules provide the basic functionality of PowerShell.</span></span>
+<span data-ttu-id="3315f-105">Le aree principali coperte da questi moduli sono:</span><span class="sxs-lookup"><span data-stu-id="3315f-105">The main areas these modules cover are:</span></span>
 
--  [Modulo Archive](core-modules/Microsoft.PowerShell.Archive-Module.md)
--  [Argomenti di informazioni sui componenti di sistema](core-modules/Windows-PowerShell-Core-About-Topics.md)
--  [Modulo Core](core-modules/Microsoft.PowerShell.Core-Module.md)
--  [PowerShell Core 5.0](core-modules/Windows-PowerShell-5.0.md)
--  [Provider di sistema](core-modules/Windows-PowerShell-Core-Providers.md)
--  [Modulo Diagnostics](core-modules/Microsoft.PowerShell.Diagnostics-Module.md)
--  [Modulo Host](core-modules/Microsoft.PowerShell.Host-Module.md)
--  [Modulo LocalAccount](core-modules/PSLocalAccount5-Module.md)
--  [Modulo Management](core-modules/Microsoft.PowerShell.Management-Module.md)
--  [Modulo Management di Microsoft WS-Management](core-modules/Microsoft.WSMan.Management-Module.md)
--  [Modulo ODataUtils](core-modules/Microsoft.PowerShell.ODataUtils-Module.md)
--  [Modulo PackageManagement](core-modules/PackageManagement-Module.md)
--  [Modulo Readline](core-modules/PSReadline-Module.md)
--  [Modulo ScheduledJob](core-modules/PSScheduledJob-Module.md)
--  [Modulo ScriptAnalyzer](core-modules/PSScriptAnalyzer-Module.md)
--  [Modulo Utility](core-modules/Microsoft.PowerShell.Utility-Module.md)
+-  [<span data-ttu-id="3315f-106">Modulo Archive</span><span class="sxs-lookup"><span data-stu-id="3315f-106">Archive Module</span></span>](core-modules/Microsoft.PowerShell.Archive-Module.md)
+-  [<span data-ttu-id="3315f-107">Argomenti di informazioni sui componenti di sistema</span><span class="sxs-lookup"><span data-stu-id="3315f-107">Core About Topics</span></span>](core-modules/Windows-PowerShell-Core-About-Topics.md)
+-  [<span data-ttu-id="3315f-108">Modulo Core</span><span class="sxs-lookup"><span data-stu-id="3315f-108">Core Module</span></span>](core-modules/Microsoft.PowerShell.Core-Module.md)
+-  [<span data-ttu-id="3315f-109">PowerShell Core 5.0</span><span class="sxs-lookup"><span data-stu-id="3315f-109">Core PowerShell 5.0</span></span>](core-modules/Windows-PowerShell-5.0.md)
+-  [<span data-ttu-id="3315f-110">Provider di sistema</span><span class="sxs-lookup"><span data-stu-id="3315f-110">Core Providers</span></span>](core-modules/Windows-PowerShell-Core-Providers.md)
+-  [<span data-ttu-id="3315f-111">Modulo Diagnostics</span><span class="sxs-lookup"><span data-stu-id="3315f-111">Diagnostics Module</span></span>](core-modules/Microsoft.PowerShell.Diagnostics-Module.md)
+-  [<span data-ttu-id="3315f-112">Modulo Host</span><span class="sxs-lookup"><span data-stu-id="3315f-112">Host Module</span></span>](core-modules/Microsoft.PowerShell.Host-Module.md)
+-  [<span data-ttu-id="3315f-113">Modulo LocalAccount</span><span class="sxs-lookup"><span data-stu-id="3315f-113">Local Account Module</span></span>](core-modules/PSLocalAccount5-Module.md)
+-  [<span data-ttu-id="3315f-114">Modulo Management</span><span class="sxs-lookup"><span data-stu-id="3315f-114">Management Module</span></span>](core-modules/Microsoft.PowerShell.Management-Module.md)
+-  [<span data-ttu-id="3315f-115">Modulo Management di Microsoft WS-Management</span><span class="sxs-lookup"><span data-stu-id="3315f-115">Microsoft WSMan Management Module</span></span>](core-modules/Microsoft.WSMan.Management-Module.md)
+-  [<span data-ttu-id="3315f-116">Modulo ODataUtils</span><span class="sxs-lookup"><span data-stu-id="3315f-116">OData Utils Module</span></span>](core-modules/Microsoft.PowerShell.ODataUtils-Module.md)
+-  [<span data-ttu-id="3315f-117">Modulo PackageManagement</span><span class="sxs-lookup"><span data-stu-id="3315f-117">Package Management Module</span></span>](core-modules/PackageManagement-Module.md)
+-  [<span data-ttu-id="3315f-118">Modulo Readline</span><span class="sxs-lookup"><span data-stu-id="3315f-118">Readline Module</span></span>](core-modules/PSReadline-Module.md)
+-  [<span data-ttu-id="3315f-119">Modulo ScheduledJob</span><span class="sxs-lookup"><span data-stu-id="3315f-119">Scheduled Job Module</span></span>](core-modules/PSScheduledJob-Module.md)
+-  [<span data-ttu-id="3315f-120">Modulo ScriptAnalyzer</span><span class="sxs-lookup"><span data-stu-id="3315f-120">ScriptAnalyzer Module</span></span>](core-modules/PSScriptAnalyzer-Module.md)
+-  [<span data-ttu-id="3315f-121">Modulo Utility</span><span class="sxs-lookup"><span data-stu-id="3315f-121">Utility Module</span></span>](core-modules/Microsoft.PowerShell.Utility-Module.md)
 

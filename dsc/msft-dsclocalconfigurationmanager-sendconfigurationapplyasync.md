@@ -10,13 +10,11 @@ ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 06/12/2017
 ---
-<a id="sendconfigurationapplyasync-method-of-the-msftdsclocalconfigurationmanager-class" class="xliff"></a>
-# Metodo SendConfigurationApplyAsync della classe MSFT_DSCLocalConfigurationManager
+# <a name="sendconfigurationapplyasync-method-of-the-msftdsclocalconfigurationmanager-class"></a><span data-ttu-id="568ef-103">Metodo SendConfigurationApplyAsync della classe MSFT_DSCLocalConfigurationManager</span><span class="sxs-lookup"><span data-stu-id="568ef-103">SendConfigurationApplyAsync method of the MSFT_DSCLocalConfigurationManager class</span></span>
 
-Invia il documento di configurazione in modo asicrono al nodo gestito e usa l'agente di configurazione per applicare la configurazione.
+<span data-ttu-id="568ef-104">Invia il documento di configurazione in modo asicrono al nodo gestito e usa l'agente di configurazione per applicare la configurazione.</span><span class="sxs-lookup"><span data-stu-id="568ef-104">Sends the configuration document asynchronously to the managed node and uses the Configuration Agent to apply the configuration.</span></span>
 
-<a id="syntax" class="xliff"></a>
-Sintassi
+<a name="syntax"></a><span data-ttu-id="568ef-105">Sintassi</span><span class="sxs-lookup"><span data-stu-id="568ef-105">Syntax</span></span>
 ------
 
 ```mof
@@ -27,43 +25,38 @@ uint32 SendConfigurationApplyAsync(
 );
 ```
 
-<a id="parameters" class="xliff"></a>
-Parametri
+<a name="parameters"></a><span data-ttu-id="568ef-106">Parametri</span><span class="sxs-lookup"><span data-stu-id="568ef-106">Parameters</span></span>
 ----------
 
-*ConfigurationData* \[in\]  
-I dati dell'ambiente per la configurazione.
+<span data-ttu-id="568ef-107">*ConfigurationData* \[in\]</span><span class="sxs-lookup"><span data-stu-id="568ef-107">*ConfigurationData* \[in\]</span></span>  
+<span data-ttu-id="568ef-108">I dati dell'ambiente per la configurazione.</span><span class="sxs-lookup"><span data-stu-id="568ef-108">The environment data for the configuration.</span></span>
 
-*force* \[in\]  
-**true** per forzare l'arresto della configurazione.
+<span data-ttu-id="568ef-109">*force* \[in\]</span><span class="sxs-lookup"><span data-stu-id="568ef-109">*force* \[in\]</span></span>  
+<span data-ttu-id="568ef-110">**true** per forzare l'arresto della configurazione.</span><span class="sxs-lookup"><span data-stu-id="568ef-110">**true** to force the configuration to stop.</span></span>
 
-*jobId* \[in\]  
-L'ID del processo per cui inviare la configurazione.
+<span data-ttu-id="568ef-111">*jobId* \[in\]</span><span class="sxs-lookup"><span data-stu-id="568ef-111">*jobId* \[in\]</span></span>  
+<span data-ttu-id="568ef-112">L'ID del processo per cui inviare la configurazione.</span><span class="sxs-lookup"><span data-stu-id="568ef-112">The ID of the job for which to send the configuration.</span></span>
 
-<a id="return-value" class="xliff"></a>
-## Valore restituito
+## <a name="return-value"></a><span data-ttu-id="568ef-113">Valore restituito</span><span class="sxs-lookup"><span data-stu-id="568ef-113">Return value</span></span>
 ------------
 
-In caso di esito positivo, il valore restituisce zero, altrimenti, restituisce un codice di errore.
+<span data-ttu-id="568ef-114">In caso di esito positivo, il valore restituisce zero, altrimenti, restituisce un codice di errore.</span><span class="sxs-lookup"><span data-stu-id="568ef-114">Returns zero on success; otherwise returns an error code.</span></span>
 
-<a id="remarks" class="xliff"></a>
-## Osservazioni
+## <a name="remarks"></a><span data-ttu-id="568ef-115">Osservazioni</span><span class="sxs-lookup"><span data-stu-id="568ef-115">Remarks</span></span>
 
-Si tratta di un metodo statico.
+<span data-ttu-id="568ef-116">Si tratta di un metodo statico.</span><span class="sxs-lookup"><span data-stu-id="568ef-116">This is a static method.</span></span>
 
-<a id="requirements" class="xliff"></a>
-## Requisiti
+## <a name="requirements"></a><span data-ttu-id="568ef-117">Requisiti</span><span class="sxs-lookup"><span data-stu-id="568ef-117">Requirements</span></span>
 ------------
->**MOF:** DscCore.mof
+><span data-ttu-id="568ef-118">**MOF:** DscCore.mof</span><span class="sxs-lookup"><span data-stu-id="568ef-118">**MOF:** DscCore.mof</span></span>
 
->**Spazio dei nomi**: Root\Microsoft\Windows\DesiredStateConfiguration
-
-
-<a id="see-also" class="xliff"></a>
-## Vedere anche
+><span data-ttu-id="568ef-119">**Spazio dei nomi**: Root\Microsoft\Windows\DesiredStateConfiguration</span><span class="sxs-lookup"><span data-stu-id="568ef-119">**Namespace**: Root\Microsoft\Windows\DesiredStateConfiguration</span></span>
 
 
-[**MSFT_DSCLocalConfigurationManager**](msft-dsclocalconfigurationmanager.md)
+## <a name="see-also"></a><span data-ttu-id="568ef-120">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="568ef-120">See also</span></span>
+
+
+[<span data-ttu-id="568ef-121">**MSFT_DSCLocalConfigurationManager**</span><span class="sxs-lookup"><span data-stu-id="568ef-121">**MSFT_DSCLocalConfigurationManager**</span></span>](msft-dsclocalconfigurationmanager.md)
 
 
  

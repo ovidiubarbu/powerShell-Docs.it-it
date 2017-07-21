@@ -10,13 +10,11 @@ ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 06/12/2017
 ---
-<a id="rollback-method-of-the-msftdsclocalconfigurationmanager-class" class="xliff"></a>
-# Metodo RollBack della classe MSFT_DSCLocalConfigurationManager
+# <a name="rollback-method-of-the-msftdsclocalconfigurationmanager-class"></a><span data-ttu-id="e5a2b-103">Metodo RollBack della classe MSFT_DSCLocalConfigurationManager</span><span class="sxs-lookup"><span data-stu-id="e5a2b-103">RollBack method of the MSFT_DSCLocalConfigurationManager class</span></span>
 
-Esegue il rollback della configurazione a una versione precedente.
+<span data-ttu-id="e5a2b-104">Esegue il rollback della configurazione a una versione precedente.</span><span class="sxs-lookup"><span data-stu-id="e5a2b-104">Rolls back the configuration to a previous version.</span></span>
 
-<a id="syntax" class="xliff"></a>
-Sintassi
+<a name="syntax"></a><span data-ttu-id="e5a2b-105">Sintassi</span><span class="sxs-lookup"><span data-stu-id="e5a2b-105">Syntax</span></span>
 ------
 
 ```mof
@@ -25,37 +23,32 @@ uint32 RollBack(
 );
 ```
 
-<a id="parameters" class="xliff"></a>
-Parametri
+<a name="parameters"></a><span data-ttu-id="e5a2b-106">Parametri</span><span class="sxs-lookup"><span data-stu-id="e5a2b-106">Parameters</span></span>
 ----------
 
-*configurationNumber* \[in\]  
-Specifica la configurazione richiesta. 
+<span data-ttu-id="e5a2b-107">*configurationNumber* \[in\]</span><span class="sxs-lookup"><span data-stu-id="e5a2b-107">*configurationNumber* \[in\]</span></span>  
+<span data-ttu-id="e5a2b-108">Specifica la configurazione richiesta.</span><span class="sxs-lookup"><span data-stu-id="e5a2b-108">Specifies the requested configuration.</span></span> 
 
-<a id="return-value" class="xliff"></a>
-## Valore restituito
+## <a name="return-value"></a><span data-ttu-id="e5a2b-109">Valore restituito</span><span class="sxs-lookup"><span data-stu-id="e5a2b-109">Return value</span></span>
 ------------
 
-In caso di esito positivo, il valore restituisce zero, altrimenti, restituisce un codice di errore.
+<span data-ttu-id="e5a2b-110">In caso di esito positivo, il valore restituisce zero, altrimenti, restituisce un codice di errore.</span><span class="sxs-lookup"><span data-stu-id="e5a2b-110">Returns zero on success; otherwise returns an error code.</span></span>
 
-<a id="remarks" class="xliff"></a>
-## Osservazioni
+## <a name="remarks"></a><span data-ttu-id="e5a2b-111">Osservazioni</span><span class="sxs-lookup"><span data-stu-id="e5a2b-111">Remarks</span></span>
 
-Si tratta di un metodo statico.
+<span data-ttu-id="e5a2b-112">Si tratta di un metodo statico.</span><span class="sxs-lookup"><span data-stu-id="e5a2b-112">This is a static method.</span></span>
 
-<a id="requirements" class="xliff"></a>
-## Requisiti
+## <a name="requirements"></a><span data-ttu-id="e5a2b-113">Requisiti</span><span class="sxs-lookup"><span data-stu-id="e5a2b-113">Requirements</span></span>
 ------------
->**MOF:** DscCore.mof
+><span data-ttu-id="e5a2b-114">**MOF:** DscCore.mof</span><span class="sxs-lookup"><span data-stu-id="e5a2b-114">**MOF:** DscCore.mof</span></span>
 
->**Spazio dei nomi**: Root\Microsoft\Windows\DesiredStateConfiguration
-
-
-<a id="see-also" class="xliff"></a>
-## Vedere anche
+><span data-ttu-id="e5a2b-115">**Spazio dei nomi**: Root\Microsoft\Windows\DesiredStateConfiguration</span><span class="sxs-lookup"><span data-stu-id="e5a2b-115">**Namespace**: Root\Microsoft\Windows\DesiredStateConfiguration</span></span>
 
 
-[**MSFT_DSCLocalConfigurationManager**](msft-dsclocalconfigurationmanager.md)
+## <a name="see-also"></a><span data-ttu-id="e5a2b-116">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="e5a2b-116">See also</span></span>
+
+
+[<span data-ttu-id="e5a2b-117">**MSFT_DSCLocalConfigurationManager**</span><span class="sxs-lookup"><span data-stu-id="e5a2b-117">**MSFT_DSCLocalConfigurationManager**</span></span>](msft-dsclocalconfigurationmanager.md)
 
 
  

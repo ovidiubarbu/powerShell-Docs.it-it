@@ -9,13 +9,12 @@ ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 06/12/2017
 ---
-<a id="reporting-on-jea" class="xliff"></a>
-# Creazione di report per JEA
-Per creare report sullo stato della configurazione JEA, è possibile usare:
-1.  **Get-PSSessionConfiguration** per restituire un elenco di tutti gli endpoint registrati in un determinato computer.
-2.  **Get-PSSessionCapability** per ottenere un report delle capacità a disposizione di ogni utente su un endpoint specifico.
+# <a name="reporting-on-jea"></a><span data-ttu-id="de289-102">Creazione di report per JEA</span><span class="sxs-lookup"><span data-stu-id="de289-102">Reporting on JEA</span></span>
+<span data-ttu-id="de289-103">Per creare report sullo stato della configurazione JEA, è possibile usare:</span><span class="sxs-lookup"><span data-stu-id="de289-103">In order to report on the state of your JEA configuration, you can use:</span></span>
+1.  <span data-ttu-id="de289-104">**Get-PSSessionConfiguration** per restituire un elenco di tutti gli endpoint registrati in un determinato computer.</span><span class="sxs-lookup"><span data-stu-id="de289-104">**Get-PSSessionConfiguration** to return a list of all registered endpoints on a given machine.</span></span>
+2.  <span data-ttu-id="de289-105">**Get-PSSessionCapability** per ottenere un report delle capacità a disposizione di ogni utente su un endpoint specifico.</span><span class="sxs-lookup"><span data-stu-id="de289-105">**Get-PSSessionCapability** to report on the capabilities any given user has on a specific endpoint.</span></span>
 
-Ecco un esempio di **Get-PSSessionCapability**:
+<span data-ttu-id="de289-106">Ecco un esempio di **Get-PSSessionCapability**:</span><span class="sxs-lookup"><span data-stu-id="de289-106">Here’s an example of **Get-PSSessionCapability**:</span></span>
 ```powershell
 Get-PSSessionCapability -ConfigurationName Maintenance -Username "CONTOSO\JohnDoe"
 
@@ -41,7 +40,7 @@ Cmdlet          Restart-Service                                    3.0.0.0 Micro
 
 ```
 
-Per creare un report delle _azioni_ eseguite dagli utenti durante una sessione JEA, è possibile:
-1. Abilitare le trascrizioni "Over The Shoulder" per l'endpoint JEA e vedere la directory delle trascrizioni per un log completo delle azioni di ogni utente
-2. Attivare la registrazione per i moduli di PowerShell ed esaminare i registri eventi di PowerShell.
+<span data-ttu-id="de289-107">Per creare un report delle _azioni_ eseguite dagli utenti durante una sessione JEA, è possibile:</span><span class="sxs-lookup"><span data-stu-id="de289-107">To report on the _actions_ users took during a JEA session, you can:</span></span>
+1. <span data-ttu-id="de289-108">Abilitare le trascrizioni "Over The Shoulder" per l'endpoint JEA e vedere la directory delle trascrizioni per un log completo delle azioni di ogni utente</span><span class="sxs-lookup"><span data-stu-id="de289-108">Enable the "over-the-shoulder" transcripts for that JEA endpoint and consult the transcript directory for a full log of each user's actions</span></span>
+2. <span data-ttu-id="de289-109">Attivare la registrazione per i moduli di PowerShell ed esaminare i registri eventi di PowerShell.</span><span class="sxs-lookup"><span data-stu-id="de289-109">Turn on PowerShell module logging and inspect the PowerShell event logs.</span></span>
 

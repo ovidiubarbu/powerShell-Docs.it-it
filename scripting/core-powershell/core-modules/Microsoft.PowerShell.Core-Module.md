@@ -9,18 +9,18 @@ ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 06/08/2017
 ---
-# <a name="microsoftpowershellcore-module"></a>Modulo Microsoft.PowerShell.Core
-Questa sezione contiene gli argomenti della Guida per il modulo **Microsoft.PowerShell.Core**. Il modulo **Microsoft.PowerShell.Core** viene installato con Windows PowerShell.
+# <a name="microsoftpowershellcore-module"></a><span data-ttu-id="c5c2b-103">Modulo Microsoft.PowerShell.Core</span><span class="sxs-lookup"><span data-stu-id="c5c2b-103">Microsoft.PowerShell.Core Module</span></span>
+<span data-ttu-id="c5c2b-104">Questa sezione contiene gli argomenti della Guida per il modulo **Microsoft.PowerShell.Core**.</span><span class="sxs-lookup"><span data-stu-id="c5c2b-104">This section contains the help topics for the **Microsoft.PowerShell.Core** module.</span></span> <span data-ttu-id="c5c2b-105">Il modulo **Microsoft.PowerShell.Core** viene installato con Windows PowerShell.</span><span class="sxs-lookup"><span data-stu-id="c5c2b-105">The **Microsoft.PowerShell.Core** module is installed with Windows PowerShell.</span></span>
 
-## <a name="help-topics"></a>Argomenti della Guida
-[Cmdlet di sistema di Windows PowerShell](http://go.microsoft.com/fwlink/?LinkID=245857)
+## <a name="help-topics"></a><span data-ttu-id="c5c2b-106">Argomenti della Guida</span><span class="sxs-lookup"><span data-stu-id="c5c2b-106">Help topics</span></span>
+[<span data-ttu-id="c5c2b-107">Cmdlet di sistema di Windows PowerShell</span><span class="sxs-lookup"><span data-stu-id="c5c2b-107">Windows PowerShell Core Cmdlets</span></span>](http://go.microsoft.com/fwlink/?LinkID=245857)
 
-[Provider di sistema di Windows PowerShell](Windows-PowerShell-Core-Providers.md)
+[<span data-ttu-id="c5c2b-108">Provider di sistema di Windows PowerShell</span><span class="sxs-lookup"><span data-stu-id="c5c2b-108">Windows PowerShell Core Providers</span></span>](Windows-PowerShell-Core-Providers.md)
 
-[Argomenti di informazioni sui componenti di sistema di Windows PowerShell](Windows-PowerShell-Core-About-Topics.md)
+[<span data-ttu-id="c5c2b-109">Argomenti di informazioni sui componenti di sistema di Windows PowerShell</span><span class="sxs-lookup"><span data-stu-id="c5c2b-109">Windows PowerShell Core About Topics</span></span>](Windows-PowerShell-Core-About-Topics.md)
 
-## <a name="see-also"></a>Vedere anche
-- [Windows PowerShell 5.0](Windows-PowerShell-5.0.md)
-- [Componenti di sistema di Windows PowerShell](https://technet.microsoft.com/en-us/library/4b75f1e4-f327-48f3-92ab-bf5435094d41)
-- [Scrittura di script con Windows PowerShell](../../getting-started/fundamental/Scripting-with-Windows-PowerShell.md)
+## <a name="see-also"></a><span data-ttu-id="c5c2b-110">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="c5c2b-110">See Also</span></span>
+- [<span data-ttu-id="c5c2b-111">Windows PowerShell 5.0</span><span class="sxs-lookup"><span data-stu-id="c5c2b-111">Windows PowerShell 5.0</span></span>](Windows-PowerShell-5.0.md)
+- [<span data-ttu-id="c5c2b-112">Componenti di sistema di Windows PowerShell</span><span class="sxs-lookup"><span data-stu-id="c5c2b-112">Windows PowerShell Core</span></span>](https://technet.microsoft.com/en-us/library/4b75f1e4-f327-48f3-92ab-bf5435094d41)
+- [<span data-ttu-id="c5c2b-113">Scrittura di script con Windows PowerShell</span><span class="sxs-lookup"><span data-stu-id="c5c2b-113">Scripting with Windows PowerShell</span></span>](../../getting-started/fundamental/Scripting-with-Windows-PowerShell.md)
 

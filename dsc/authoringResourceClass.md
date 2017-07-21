@@ -10,25 +10,23 @@ ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 06/12/2017
 ---
-<a id="writing-a-custom-dsc-resource-with-powershell-classes" class="xliff"></a>
-# Scrittura di una risorsa DSC personalizzata con classi di PowerShell
+# <a name="writing-a-custom-dsc-resource-with-powershell-classes"></a><span data-ttu-id="aee3a-103">Scrittura di una risorsa DSC personalizzata con classi di PowerShell</span><span class="sxs-lookup"><span data-stu-id="aee3a-103">Writing a custom DSC resource with PowerShell classes</span></span>
 
-> Si applica a: Windows PowerShell 5.0
+> <span data-ttu-id="aee3a-104">Si applica a: Windows PowerShell 5.0</span><span class="sxs-lookup"><span data-stu-id="aee3a-104">Applies To: Windows Windows PowerShell 5.0</span></span>
 
-Con l'introduzione delle classi di PowerShell in Windows PowerShell 5.0, è ora possibile definire una risorsa DSC creando una classe. La classe definisce sia lo schema sia l'implementazione della risorsa, quindi non è necessario creare un file MOF distinto. La struttura di cartelle per una risorsa basata su classi è inoltre più semplice, perché non è necessaria una cartella **DSCResources**.
+<span data-ttu-id="aee3a-105">Con l'introduzione delle classi di PowerShell in Windows PowerShell 5.0, è ora possibile definire una risorsa DSC creando una classe.</span><span class="sxs-lookup"><span data-stu-id="aee3a-105">With the introduction of PowerShell classes in Windows PowerShell 5.0, you can now define a DSC resource by creating a class.</span></span> <span data-ttu-id="aee3a-106">La classe definisce sia lo schema sia l'implementazione della risorsa, quindi non è necessario creare un file MOF distinto.</span><span class="sxs-lookup"><span data-stu-id="aee3a-106">The class defines both the schema and the implementation of the resource, so there is no need to create a separate MOF file.</span></span> <span data-ttu-id="aee3a-107">La struttura di cartelle per una risorsa basata su classi è inoltre più semplice, perché non è necessaria una cartella **DSCResources**.</span><span class="sxs-lookup"><span data-stu-id="aee3a-107">The folder structure for a class-based resource is also simpler, because a **DSCResources** folder is not necessary.</span></span>
 
-In una risorsa DSC basata su classi, lo schema viene definito come proprietà della classe che è possibile modificare con attributi per specificare il tipo di proprietà. La risorsa è implementata dai metodi **Get()**, **Set()** e **Test()** (equivalenti alle funzioni **Get-TargetResource**, **Set-TargetResource** e **Test-TargetResource** in una risorsa script.
+<span data-ttu-id="aee3a-108">In una risorsa DSC basata su classi, lo schema viene definito come proprietà della classe che è possibile modificare con attributi per specificare il tipo di proprietà.</span><span class="sxs-lookup"><span data-stu-id="aee3a-108">In a class-based DSC resource, the schema is defined as properties of the class which can be modified with attributes to specify the property type..</span></span> <span data-ttu-id="aee3a-109">La risorsa è implementata dai metodi **Get()**, **Set()** e **Test()** (equivalenti alle funzioni **Get-TargetResource**, **Set-TargetResource** e **Test-TargetResource** in una risorsa script.</span><span class="sxs-lookup"><span data-stu-id="aee3a-109">The resource is implemented by **Get()**, **Set()**, and **Test()** methods (equivalent to the **Get-TargetResource**, **Set-TargetResource**, and **Test-TargetResource** functions in a script resource.</span></span>
 
-In questo argomento verrà creata una risorsa semplice denominata **FileResource** che gestisce un file in un percorso specificato.
+<span data-ttu-id="aee3a-110">In questo argomento verrà creata una risorsa semplice denominata **FileResource** che gestisce un file in un percorso specificato.</span><span class="sxs-lookup"><span data-stu-id="aee3a-110">In this topic, we will create a simple resource named **FileResource** that manages a file in a specified path.</span></span>
 
-Per altre informazioni sulle risorse DSC, vedere [Creare risorse Windows PowerShell DSC (Desired State Configuration) personalizzate](authoringResource.md).
+<span data-ttu-id="aee3a-111">Per altre informazioni sulle risorse DSC, vedere [Creare risorse Windows PowerShell DSC (Desired State Configuration) personalizzate](authoringResource.md).</span><span class="sxs-lookup"><span data-stu-id="aee3a-111">For more information about DSC resources, see [Build Custom Windows PowerShell Desired State Configuration Resources](authoringResource.md)</span></span>
 
->**Nota:** le raccolte generiche non sono supportate nelle risorse basate su classi.
+><span data-ttu-id="aee3a-112">**Nota:** le raccolte generiche non sono supportate nelle risorse basate su classi.</span><span class="sxs-lookup"><span data-stu-id="aee3a-112">**Note:** Generic collections are not supported in class-based resources.</span></span>
 
-<a id="folder-structure-for-a-class-resource" class="xliff"></a>
-## Struttura di cartelle per una risorsa basata su classi
+## <a name="folder-structure-for-a-class-resource"></a><span data-ttu-id="aee3a-113">Struttura di cartelle per una risorsa basata su classi</span><span class="sxs-lookup"><span data-stu-id="aee3a-113">Folder structure for a class resource</span></span>
 
-Per implementare una risorsa DSC personalizzata con una classe di PowerShell, creare la struttura di cartelle seguente. La classe è definita in **MyDscResource.psm1** e il manifesto del modulo è definito in **MyDscResource.psd1**.
+<span data-ttu-id="aee3a-114">Per implementare una risorsa DSC personalizzata con una classe di PowerShell, creare la struttura di cartelle seguente.</span><span class="sxs-lookup"><span data-stu-id="aee3a-114">To implement a DSC custom resource with a PowerShell class, create the following folder structure.</span></span> <span data-ttu-id="aee3a-115">La classe è definita in **MyDscResource.psm1** e il manifesto del modulo è definito in **MyDscResource.psd1**.</span><span class="sxs-lookup"><span data-stu-id="aee3a-115">The class is defined in **MyDscResource.psm1** and the module manifest is defined in **MyDscResource.psd1**.</span></span>
 
 ```
 $env:ProgramFiles\WindowsPowerShell\Modules (folder)
@@ -37,10 +35,9 @@ $env:ProgramFiles\WindowsPowerShell\Modules (folder)
            MyDscResource.psd1 
 ```
 
-<a id="create-the-class" class="xliff"></a>
-## Creare la classe
+## <a name="create-the-class"></a><span data-ttu-id="aee3a-116">Creare la classe</span><span class="sxs-lookup"><span data-stu-id="aee3a-116">Create the class</span></span>
 
-Per creare una classe di PowerShell, usare la parola chiave class. Per specificare che una classe è una risorsa DSC, usare l'attributo **DscResource()**. Il nome della classe è il nome della risorsa DSC.
+<span data-ttu-id="aee3a-117">Per creare una classe di PowerShell, usare la parola chiave class.</span><span class="sxs-lookup"><span data-stu-id="aee3a-117">You use the class keyword to create a PowerShell class.</span></span> <span data-ttu-id="aee3a-118">Per specificare che una classe è una risorsa DSC, usare l'attributo **DscResource()**.</span><span class="sxs-lookup"><span data-stu-id="aee3a-118">To specify that a class is a DSC resource, use the **DscResource()** attribute.</span></span> <span data-ttu-id="aee3a-119">Il nome della classe è il nome della risorsa DSC.</span><span class="sxs-lookup"><span data-stu-id="aee3a-119">The name of the class is the name of the DSC resource.</span></span>
 
 ```powershell
 [DscResource()]
@@ -48,10 +45,9 @@ class FileResource {
 }
 ```
 
-<a id="declare-properties" class="xliff"></a>
-### Dichiarare le proprietà
+### <a name="declare-properties"></a><span data-ttu-id="aee3a-120">Dichiarare le proprietà</span><span class="sxs-lookup"><span data-stu-id="aee3a-120">Declare properties</span></span>
 
-Lo schema della risorsa DSC viene definito come proprietà della classe. Vengono dichiarate tre proprietà, come indicato di seguito.
+<span data-ttu-id="aee3a-121">Lo schema della risorsa DSC viene definito come proprietà della classe.</span><span class="sxs-lookup"><span data-stu-id="aee3a-121">The DSC resource schema is defined as properties of the class.</span></span> <span data-ttu-id="aee3a-122">Vengono dichiarate tre proprietà, come indicato di seguito.</span><span class="sxs-lookup"><span data-stu-id="aee3a-122">We declare three properties as follows.</span></span>
 
 ```powershell
 [DscProperty(Key)]
@@ -67,14 +63,14 @@ Lo schema della risorsa DSC viene definito come proprietà della classe. Vengono
 [Nullable[datetime]] $CreationTime
 ```
 
-Si noti che le proprietà sono modificate dagli attributi. Il significato degli attributi è il seguente:
+<span data-ttu-id="aee3a-123">Si noti che le proprietà sono modificate dagli attributi.</span><span class="sxs-lookup"><span data-stu-id="aee3a-123">Notice that the properties are modified by attributes.</span></span> <span data-ttu-id="aee3a-124">Il significato degli attributi è il seguente:</span><span class="sxs-lookup"><span data-stu-id="aee3a-124">The meaning of the attributes is as follows:</span></span>
 
-- **DscProperty(Key)**: la proprietà è obbligatoria. La proprietà è una chiave. I valori di tutte le proprietà contrassegnate come chiavi devono essere combinati per identificare in modo univoco un'istanza di risorsa all'interno di una configurazione.
-- **DscProperty(Mandatory)**: la proprietà è obbligatoria.
-- **DscProperty(NotConfigurable)**: la proprietà è di sola lettura. Le proprietà contrassegnate con questo attributo non possono essere impostate da una configurazione, ma vengono popolate dal metodo **Get()**, quando presente.
-- **DscProperty()**: la proprietà è configurabile, ma non è obbligatoria.
+- <span data-ttu-id="aee3a-125">**DscProperty(Key)**: la proprietà è obbligatoria.</span><span class="sxs-lookup"><span data-stu-id="aee3a-125">**DscProperty(Key)**: The property is required.</span></span> <span data-ttu-id="aee3a-126">La proprietà è una chiave.</span><span class="sxs-lookup"><span data-stu-id="aee3a-126">The property is a key.</span></span> <span data-ttu-id="aee3a-127">I valori di tutte le proprietà contrassegnate come chiavi devono essere combinati per identificare in modo univoco un'istanza di risorsa all'interno di una configurazione.</span><span class="sxs-lookup"><span data-stu-id="aee3a-127">The values of all properties marked as keys must combine to uniquely identify a resource instance within a configuration.</span></span>
+- <span data-ttu-id="aee3a-128">**DscProperty(Mandatory)**: la proprietà è obbligatoria.</span><span class="sxs-lookup"><span data-stu-id="aee3a-128">**DscProperty(Mandatory)**: The property is required.</span></span>
+- <span data-ttu-id="aee3a-129">**DscProperty(NotConfigurable)**: la proprietà è di sola lettura.</span><span class="sxs-lookup"><span data-stu-id="aee3a-129">**DscProperty(NotConfigurable)**: The property is read-only.</span></span> <span data-ttu-id="aee3a-130">Le proprietà contrassegnate con questo attributo non possono essere impostate da una configurazione, ma vengono popolate dal metodo **Get()**, quando presente.</span><span class="sxs-lookup"><span data-stu-id="aee3a-130">Properties marked with this attribute cannot be set by a configuration, but are populated by the **Get()** method when present.</span></span>
+- <span data-ttu-id="aee3a-131">**DscProperty()**: la proprietà è configurabile, ma non è obbligatoria.</span><span class="sxs-lookup"><span data-stu-id="aee3a-131">**DscProperty()**: The property is configurable, but it is not required.</span></span>
 
-Le proprietà **$Path** e **$SourcePath** sono entrambe stringhe. **$CreationTime** è una proprietà [DateTime](https://technet.microsoft.com/en-us/library/system.datetime.aspx). La proprietà **$Ensure** è un tipo di enumerazione, definito come segue.
+<span data-ttu-id="aee3a-132">Le proprietà **$Path** e **$SourcePath** sono entrambe stringhe.</span><span class="sxs-lookup"><span data-stu-id="aee3a-132">The **$Path** and **$SourcePath** properties are both strings.</span></span> <span data-ttu-id="aee3a-133">**$CreationTime** è una proprietà [DateTime](https://technet.microsoft.com/en-us/library/system.datetime.aspx).</span><span class="sxs-lookup"><span data-stu-id="aee3a-133">The **$CreationTime** is a [DateTime](https://technet.microsoft.com/en-us/library/system.datetime.aspx) property.</span></span> <span data-ttu-id="aee3a-134">La proprietà **$Ensure** è un tipo di enumerazione, definito come segue.</span><span class="sxs-lookup"><span data-stu-id="aee3a-134">The **$Ensure** property is an enumeration type, defined as follows.</span></span>
 
 ```powershell
 enum Ensure 
@@ -84,12 +80,11 @@ enum Ensure
 }
 ```
 
-<a id="implementing-the-methods" class="xliff"></a>
-### Implementare i metodi
+### <a name="implementing-the-methods"></a><span data-ttu-id="aee3a-135">Implementare i metodi</span><span class="sxs-lookup"><span data-stu-id="aee3a-135">Implementing the methods</span></span>
 
-I metodi **Get()**, **Set()** e **Test()** sono analoghi alle funzioni **Get-TargetResource**, **Set-TargetResource** e **Test-TargetResource** in una risorsa script.
+<span data-ttu-id="aee3a-136">I metodi **Get()**, **Set()** e **Test()** sono analoghi alle funzioni **Get-TargetResource**, **Set-TargetResource** e **Test-TargetResource** in una risorsa script.</span><span class="sxs-lookup"><span data-stu-id="aee3a-136">The **Get()**, **Set()**, and **Test()** methods are analogous to the **Get-TargetResource**, **Set-TargetResource**, and **Test-TargetResource** functions in a script resource.</span></span>
 
-Questo codice include anche la funzione CopyFile(), una funzione helper che copia il file da **$SourcePath** a **$Path**. 
+<span data-ttu-id="aee3a-137">Questo codice include anche la funzione CopyFile(), una funzione helper che copia il file da **$SourcePath** a **$Path**.</span><span class="sxs-lookup"><span data-stu-id="aee3a-137">This code also includes the CopyFile() function, a helper function that copies the file from **$SourcePath** to **$Path**.</span></span> 
 
 ```powershell
 
@@ -222,9 +217,8 @@ Questo codice include anche la funzione CopyFile(), una funzione helper che copi
     }
 ```
 
-<a id="the-complete-file" class="xliff"></a>
-### File completo
-Il file di classe completo è illustrato di seguito.
+### <a name="the-complete-file"></a><span data-ttu-id="aee3a-138">File completo</span><span class="sxs-lookup"><span data-stu-id="aee3a-138">The complete file</span></span>
+<span data-ttu-id="aee3a-139">Il file di classe completo è illustrato di seguito.</span><span class="sxs-lookup"><span data-stu-id="aee3a-139">The complete class file follows.</span></span>
 
 ```powershell
 enum Ensure
@@ -422,10 +416,9 @@ class FileResource
 ```
 
 
-<a id="create-a-manifest" class="xliff"></a>
-## Creare un manifesto
+## <a name="create-a-manifest"></a><span data-ttu-id="aee3a-140">Creare un manifesto</span><span class="sxs-lookup"><span data-stu-id="aee3a-140">Create a manifest</span></span>
 
-Per rendere disponibile una risorsa basata su classi per il motore DSC, è necessario includere un'istruzione **DscResourcesToExport** nel file manifesto per indicare al modulo di esportare la risorsa. Il manifesto è simile al seguente:
+<span data-ttu-id="aee3a-141">Per rendere disponibile una risorsa basata su classi per il motore DSC, è necessario includere un'istruzione **DscResourcesToExport** nel file manifesto per indicare al modulo di esportare la risorsa.</span><span class="sxs-lookup"><span data-stu-id="aee3a-141">To make a class-based resource available to the DSC engine, you must include a **DscResourcesToExport** statement in the manifest file that instructs the module to export the resource.</span></span> <span data-ttu-id="aee3a-142">Il manifesto è simile al seguente:</span><span class="sxs-lookup"><span data-stu-id="aee3a-142">Our manifest looks like this:</span></span>
 
 ```powershell
 @{
@@ -461,10 +454,9 @@ PowerShellVersion = '5.0'
 } 
 ```
 
-<a id="test-the-resource" class="xliff"></a>
-## Testare la risorsa
+## <a name="test-the-resource"></a><span data-ttu-id="aee3a-143">Testare la risorsa</span><span class="sxs-lookup"><span data-stu-id="aee3a-143">Test the resource</span></span>
 
-Dopo aver salvato i file di classe e manifesto nella struttura di cartelle come descritto in precedenza, è possibile creare una configurazione che usa la nuova risorsa. Per informazioni su come eseguire una configurazione DSC, vedere [Applicazione delle configurazioni](enactingConfigurations.md). La configurazione seguente controlla se il file in `c:\test\test.txt` esiste e, in caso contrario, copia il file da `c:\test.txt` (è necessario creare `c:\test.txt` prima di eseguire la configurazione).
+<span data-ttu-id="aee3a-144">Dopo aver salvato i file di classe e manifesto nella struttura di cartelle come descritto in precedenza, è possibile creare una configurazione che usa la nuova risorsa.</span><span class="sxs-lookup"><span data-stu-id="aee3a-144">After saving the class and manifest files in the folder structure as described earlier, you can create a configuration that uses the new resource.</span></span> <span data-ttu-id="aee3a-145">Per informazioni su come eseguire una configurazione DSC, vedere [Applicazione delle configurazioni](enactingConfigurations.md).</span><span class="sxs-lookup"><span data-stu-id="aee3a-145">For information about how to run a DSC configuration, see [Enacting configurations](enactingConfigurations.md).</span></span> <span data-ttu-id="aee3a-146">La configurazione seguente controlla se il file in `c:\test\test.txt` esiste e, in caso contrario, copia il file da `c:\test.txt` (è necessario creare `c:\test.txt` prima di eseguire la configurazione).</span><span class="sxs-lookup"><span data-stu-id="aee3a-146">The following configuration will check to see whether the file at `c:\test\test.txt` exists, and, if not, copies the file from `c:\test.txt` (you should create `c:\test.txt` before you run the configuration).</span></span>
 
 ```powershell
 Configuration Test
@@ -481,26 +473,24 @@ Test
 Start-DscConfiguration -Wait -Force Test
 ```
 
-<a id="supporting-psdscrunascredential" class="xliff"></a>
-## Supporto di PsDscRunAsCredential
+## <a name="supporting-psdscrunascredential"></a><span data-ttu-id="aee3a-147">Supporto di PsDscRunAsCredential</span><span class="sxs-lookup"><span data-stu-id="aee3a-147">Supporting PsDscRunAsCredential</span></span>
 
->**Nota:** **PsDscRunAsCredential** è supportato in PowerShell 5.0 e versioni successive.
+><span data-ttu-id="aee3a-148">**Nota:** **PsDscRunAsCredential** è supportato in PowerShell 5.0 e versioni successive.</span><span class="sxs-lookup"><span data-stu-id="aee3a-148">**Note:** **PsDscRunAsCredential** is supported in PowerShell 5.0 and later.</span></span>
 
-La proprietà **PsDscRunAsCredential** può essere usata nel blocco di risorsa delle [configurazioni DSC](configurations.md) per specificare che la risorsa deve essere eseguita in un insieme di credenziali specificato.
-Per altre informazioni, vedere [Esecuzione di DSC con le credenziali dell'utente](runAsUser.md).
+<span data-ttu-id="aee3a-149">La proprietà **PsDscRunAsCredential** può essere usata nel blocco di risorsa delle [configurazioni DSC](configurations.md) per specificare che la risorsa deve essere eseguita in un insieme di credenziali specificato.</span><span class="sxs-lookup"><span data-stu-id="aee3a-149">The **PsDscRunAsCredential** property can be used in [DSC configurations](configurations.md) resource block to specify that the resource should be run under a specified set of credentials.</span></span>
+<span data-ttu-id="aee3a-150">Per altre informazioni, vedere [Esecuzione di DSC con le credenziali dell'utente](runAsUser.md).</span><span class="sxs-lookup"><span data-stu-id="aee3a-150">For more information, see [Running DSC with user credentials](runAsUser.md).</span></span>
 
-<a id="require-or-disallow-psdscrunascredential-for-your-resource" class="xliff"></a>
-### Richiedere o non consentire PsDscRunAsCredential per la risorsa
+### <a name="require-or-disallow-psdscrunascredential-for-your-resource"></a><span data-ttu-id="aee3a-151">Richiedere o non consentire PsDscRunAsCredential per la risorsa</span><span class="sxs-lookup"><span data-stu-id="aee3a-151">Require or disallow PsDscRunAsCredential for your resource</span></span>
 
-L'attributo **DscResource()** accetta un parametro facoltativo **RunAsCredential**.
-Questo parametro accetta uno dei tre valori seguenti:
+<span data-ttu-id="aee3a-152">L'attributo **DscResource()** accetta un parametro facoltativo **RunAsCredential**.</span><span class="sxs-lookup"><span data-stu-id="aee3a-152">The **DscResource()** attribute takes an optional parameter **RunAsCredential**.</span></span>
+<span data-ttu-id="aee3a-153">Questo parametro accetta uno dei tre valori seguenti:</span><span class="sxs-lookup"><span data-stu-id="aee3a-153">This parameter takes one of three values:</span></span>
 
-- `Optional` **PsDscRunAsCredential** è facoltativo per le configurazioni che chiamano la risorsa. Questo è il valore predefinito.
-- `Mandatory` **PsDscRunAsCredential** deve essere usato per le configurazioni che chiamano la risorsa.
-- `NotSupported` Le configurazioni che chiamano la risorsa non possono usare **PsDscRunAsCredential**.
-- `Default` è uguale a `Optional`.
+- <span data-ttu-id="aee3a-154">`Optional` **PsDscRunAsCredential** è facoltativo per le configurazioni che chiamano la risorsa.</span><span class="sxs-lookup"><span data-stu-id="aee3a-154">`Optional` **PsDscRunAsCredential** is optional for configurations that call this resource.</span></span> <span data-ttu-id="aee3a-155">Questo è il valore predefinito.</span><span class="sxs-lookup"><span data-stu-id="aee3a-155">This is the default value.</span></span>
+- <span data-ttu-id="aee3a-156">`Mandatory` **PsDscRunAsCredential** deve essere usato per le configurazioni che chiamano la risorsa.</span><span class="sxs-lookup"><span data-stu-id="aee3a-156">`Mandatory` **PsDscRunAsCredential** must be used for any configuration that calls this resource.</span></span>
+- <span data-ttu-id="aee3a-157">`NotSupported` Le configurazioni che chiamano la risorsa non possono usare **PsDscRunAsCredential**.</span><span class="sxs-lookup"><span data-stu-id="aee3a-157">`NotSupported` Configurations that call this resource cannot use **PsDscRunAsCredential**.</span></span>
+- <span data-ttu-id="aee3a-158">`Default` è uguale a `Optional`.</span><span class="sxs-lookup"><span data-stu-id="aee3a-158">`Default` Same as `Optional`.</span></span>
 
-Ad esempio, usare l'attributo seguente per specificare che la risorsa personalizzata non supporti l'uso di **PsDscRunAsCredential**:
+<span data-ttu-id="aee3a-159">Ad esempio, usare l'attributo seguente per specificare che la risorsa personalizzata non supporti l'uso di **PsDscRunAsCredential**:</span><span class="sxs-lookup"><span data-stu-id="aee3a-159">For example, use the following attribute to specify that your custom resource does not support using **PsDscRunAsCredential**:</span></span>
 
 ```powershell
 [DscResource(RunAsCredential=NotSupported)]
@@ -508,12 +498,11 @@ class FileResource {
 }
 ```
 
-<a id="access-the-user-context" class="xliff"></a>
-### Accedere al contesto utente
+### <a name="access-the-user-context"></a><span data-ttu-id="aee3a-160">Accedere al contesto utente</span><span class="sxs-lookup"><span data-stu-id="aee3a-160">Access the user context</span></span>
 
-Per accedere al contesto utente dall'interno di una risorsa personalizzata è possibile usare la variabile automatica `$global:PsDscContext`.
+<span data-ttu-id="aee3a-161">Per accedere al contesto utente dall'interno di una risorsa personalizzata è possibile usare la variabile automatica `$global:PsDscContext`.</span><span class="sxs-lookup"><span data-stu-id="aee3a-161">To access the user context from within a custom resource, you can use the automatic variable `$global:PsDscContext`.</span></span>
 
-Ad esempio il codice seguente scrive il contesto utente in cui viene eseguita la risorsa nel flusso di output dettagliato:
+<span data-ttu-id="aee3a-162">Ad esempio il codice seguente scrive il contesto utente in cui viene eseguita la risorsa nel flusso di output dettagliato:</span><span class="sxs-lookup"><span data-stu-id="aee3a-162">For example the following code would write the user context under which the resource is running to the verbose output stream:</span></span>
 
 ```powershell
 if (PsDscContext.RunAsUser) {
@@ -521,9 +510,7 @@ if (PsDscContext.RunAsUser) {
 }
 ```
 
-<a id="see-also" class="xliff"></a>
-## Vedere anche
-<a id="concepts" class="xliff"></a>
-### Concetti
-[Creare risorse Windows PowerShell DSC (Desired State Configuration) personalizzate](authoringResource.md)
+## <a name="see-also"></a><span data-ttu-id="aee3a-163">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="aee3a-163">See Also</span></span>
+### <a name="concepts"></a><span data-ttu-id="aee3a-164">Concetti</span><span class="sxs-lookup"><span data-stu-id="aee3a-164">Concepts</span></span>
+[<span data-ttu-id="aee3a-165">Creare risorse Windows PowerShell DSC (Desired State Configuration) personalizzate</span><span class="sxs-lookup"><span data-stu-id="aee3a-165">Build Custom Windows PowerShell Desired State Configuration Resources</span></span>](authoringResource.md)
 

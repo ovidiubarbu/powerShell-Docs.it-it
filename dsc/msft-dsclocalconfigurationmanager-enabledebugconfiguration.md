@@ -10,13 +10,11 @@ ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 06/12/2017
 ---
-<a id="enabledebugconfiguration-method-of-the-msftdsclocalconfigurationmanager-class" class="xliff"></a>
-# Metodo EnableDebugConfiguration della classe MSFT_DSCLocalConfigurationManager
+# <a name="enabledebugconfiguration-method-of-the-msftdsclocalconfigurationmanager-class"></a><span data-ttu-id="68cfd-103">Metodo EnableDebugConfiguration della classe MSFT_DSCLocalConfigurationManager</span><span class="sxs-lookup"><span data-stu-id="68cfd-103">EnableDebugConfiguration method of the MSFT_DSCLocalConfigurationManager class</span></span>
 
-Abilita il debug delle risorse DSC.
+<span data-ttu-id="68cfd-104">Abilita il debug delle risorse DSC.</span><span class="sxs-lookup"><span data-stu-id="68cfd-104">Enables DSC resource debugging.</span></span>
 
-<a id="syntax" class="xliff"></a>
-Sintassi
+<a name="syntax"></a><span data-ttu-id="68cfd-105">Sintassi</span><span class="sxs-lookup"><span data-stu-id="68cfd-105">Syntax</span></span>
 ------
 
 ```mof
@@ -25,37 +23,32 @@ uint32 EnableDebugConfiguration(
 );
 ```
 
-<a id="parameters" class="xliff"></a>
-Parametri
+<a name="parameters"></a><span data-ttu-id="68cfd-106">Parametri</span><span class="sxs-lookup"><span data-stu-id="68cfd-106">Parameters</span></span>
 ----------
 
-*BreakAll* \[in\]  
-Imposta un punto di interruzione su ogni riga nello script della risorsa.
+<span data-ttu-id="68cfd-107">*BreakAll* \[in\]</span><span class="sxs-lookup"><span data-stu-id="68cfd-107">*BreakAll* \[in\]</span></span>  
+<span data-ttu-id="68cfd-108">Imposta un punto di interruzione su ogni riga nello script della risorsa.</span><span class="sxs-lookup"><span data-stu-id="68cfd-108">Sets a breakpoint at every line in the resource script.</span></span>
 
-<a id="return-value" class="xliff"></a>
-## Valore restituito
+## <a name="return-value"></a><span data-ttu-id="68cfd-109">Valore restituito</span><span class="sxs-lookup"><span data-stu-id="68cfd-109">Return value</span></span>
 ------------
 
-In caso di esito positivo, il valore restituisce zero, altrimenti, restituisce un codice di errore.
+<span data-ttu-id="68cfd-110">In caso di esito positivo, il valore restituisce zero, altrimenti, restituisce un codice di errore.</span><span class="sxs-lookup"><span data-stu-id="68cfd-110">Returns zero on success; otherwise returns an error code.</span></span>
 
-<a id="remarks" class="xliff"></a>
-## Osservazioni
+## <a name="remarks"></a><span data-ttu-id="68cfd-111">Osservazioni</span><span class="sxs-lookup"><span data-stu-id="68cfd-111">Remarks</span></span>
 
-Si tratta di un metodo statico.
+<span data-ttu-id="68cfd-112">Si tratta di un metodo statico.</span><span class="sxs-lookup"><span data-stu-id="68cfd-112">This is a static method.</span></span>
 
-<a id="requirements" class="xliff"></a>
-## Requisiti
+## <a name="requirements"></a><span data-ttu-id="68cfd-113">Requisiti</span><span class="sxs-lookup"><span data-stu-id="68cfd-113">Requirements</span></span>
 ------------
->**MOF:** DscCore.mof
+><span data-ttu-id="68cfd-114">**MOF:** DscCore.mof</span><span class="sxs-lookup"><span data-stu-id="68cfd-114">**MOF:** DscCore.mof</span></span>
 
->**Spazio dei nomi**: Root\Microsoft\Windows\DesiredStateConfiguration
-
-
-<a id="see-also" class="xliff"></a>
-## Vedere anche
+><span data-ttu-id="68cfd-115">**Spazio dei nomi**: Root\Microsoft\Windows\DesiredStateConfiguration</span><span class="sxs-lookup"><span data-stu-id="68cfd-115">**Namespace**: Root\Microsoft\Windows\DesiredStateConfiguration</span></span>
 
 
-[**MSFT_DSCLocalConfigurationManager**](msft-dsclocalconfigurationmanager.md)
+## <a name="see-also"></a><span data-ttu-id="68cfd-116">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="68cfd-116">See also</span></span>
+
+
+[<span data-ttu-id="68cfd-117">**MSFT_DSCLocalConfigurationManager**</span><span class="sxs-lookup"><span data-stu-id="68cfd-117">**MSFT_DSCLocalConfigurationManager**</span></span>](msft-dsclocalconfigurationmanager.md)
  
 
  

@@ -10,30 +10,25 @@ ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 06/12/2017
 ---
-<a id="test-scriptfileinfo" class="xliff"></a>
-# Test-ScriptFileInfo
+# <a name="test-scriptfileinfo"></a><span data-ttu-id="39824-103">Test-ScriptFileInfo</span><span class="sxs-lookup"><span data-stu-id="39824-103">Test-ScriptFileInfo</span></span>
 
-Convalida il blocco di commento dei metadati di un file di script.
+<span data-ttu-id="39824-104">Convalida il blocco di commento dei metadati di un file di script.</span><span class="sxs-lookup"><span data-stu-id="39824-104">Validates the metadata comment block of a script file.</span></span>
 
-<a id="description" class="xliff"></a>
-## Descrizione
+## <a name="description"></a><span data-ttu-id="39824-105">Descrizione</span><span class="sxs-lookup"><span data-stu-id="39824-105">Description</span></span>
 
-Il cmdlet Test-ScriptFileInfo convalida il blocco di commento all'inizio di uno script che verrà pubblicato con il cmdlet Publish-Script.
-Se il blocco di commento dei metadati contiene un errore, questo cmdlet restituisce informazioni sulla posizione dell'errore e su come correggerlo.
+<span data-ttu-id="39824-106">Il cmdlet Test-ScriptFileInfo convalida il blocco di commento all'inizio di uno script che verrà pubblicato con il cmdlet Publish-Script.</span><span class="sxs-lookup"><span data-stu-id="39824-106">The Test-ScriptFileInfo cmdlet validates the comment block at the beginning of a script that will be published with the Publish-Script cmdlet.</span></span>
+<span data-ttu-id="39824-107">Se il blocco di commento dei metadati contiene un errore, questo cmdlet restituisce informazioni sulla posizione dell'errore e su come correggerlo.</span><span class="sxs-lookup"><span data-stu-id="39824-107">If the metadata comment block has an error, this cmdlet returns information about where the error is located or how to correct it.</span></span>
 
-<a id="cmdlet-syntax" class="xliff"></a>
-## Sintassi del cmdlet
+## <a name="cmdlet-syntax"></a><span data-ttu-id="39824-108">Sintassi del cmdlet</span><span class="sxs-lookup"><span data-stu-id="39824-108">Cmdlet syntax</span></span>
 
 ```powershell
 Get-Command -Name Test-ScriptFileInfo -Module PowerShellGet -Syntax
 ```
-<a id="cmdlet-online-help-reference" class="xliff"></a>
-## Riferimento per la Guida online sui cmdlet
+## <a name="cmdlet-online-help-reference"></a><span data-ttu-id="39824-109">Riferimento per la Guida online sui cmdlet</span><span class="sxs-lookup"><span data-stu-id="39824-109">Cmdlet online help reference</span></span>
 
-[Test-ScriptFileInfo](http://go.microsoft.com/fwlink/?LinkId=619791)
+[<span data-ttu-id="39824-110">Test-ScriptFileInfo</span><span class="sxs-lookup"><span data-stu-id="39824-110">Test-ScriptFileInfo</span></span>](http://go.microsoft.com/fwlink/?LinkId=619791)
 
-<a id="example-commands" class="xliff"></a>
-## Comandi di esempio
+## <a name="example-commands"></a><span data-ttu-id="39824-111">Comandi di esempio</span><span class="sxs-lookup"><span data-stu-id="39824-111">Example commands</span></span>
 ```powershell
 # Create a new script file with minimum required metadata values
 New-ScriptFileInfo -Path C:\ScriptSharingDemo\Demo-Script.ps1 -Description "Script file description goes here"

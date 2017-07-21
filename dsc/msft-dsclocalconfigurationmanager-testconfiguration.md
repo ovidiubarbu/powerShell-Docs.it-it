@@ -10,13 +10,11 @@ ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 06/12/2017
 ---
-<a id="testconfiguration-method-of-the-msftdsclocalconfigurationmanager-class" class="xliff"></a>
-# Metodo TestConfiguration della classe MSFT_DSCLocalConfigurationManager
+# <a name="testconfiguration-method-of-the-msftdsclocalconfigurationmanager-class"></a><span data-ttu-id="8278b-103">Metodo TestConfiguration della classe MSFT_DSCLocalConfigurationManager</span><span class="sxs-lookup"><span data-stu-id="8278b-103">TestConfiguration method of the MSFT_DSCLocalConfigurationManager class</span></span>
 
-Consente di inviare il documento di configurazione al nodo gestito e verificare la configurazione corrente sulla base del documento.
+<span data-ttu-id="8278b-104">Consente di inviare il documento di configurazione al nodo gestito e verificare la configurazione corrente sulla base del documento.</span><span class="sxs-lookup"><span data-stu-id="8278b-104">Sends the configuration document to the managed node and verifies the current configuration against the document.</span></span>
 
-<a id="syntax" class="xliff"></a>
-Sintassi
+<a name="syntax"></a><span data-ttu-id="8278b-105">Sintassi</span><span class="sxs-lookup"><span data-stu-id="8278b-105">Syntax</span></span>
 ------
 
 ```mof
@@ -28,46 +26,41 @@ uint32 TestConfiguration(
 );
 ```
 
-<a id="parameters" class="xliff"></a>
-Parametri
+<a name="parameters"></a><span data-ttu-id="8278b-106">Parametri</span><span class="sxs-lookup"><span data-stu-id="8278b-106">Parameters</span></span>
 ----------
 
-*configurationData* \[in\]  
-Dati dell'ambiente per la configurazione.
+<span data-ttu-id="8278b-107">*configurationData* \[in\]</span><span class="sxs-lookup"><span data-stu-id="8278b-107">*configurationData* \[in\]</span></span>  
+<span data-ttu-id="8278b-108">Dati dell'ambiente per la configurazione.</span><span class="sxs-lookup"><span data-stu-id="8278b-108">Environment data for the confuguration.</span></span>
 
-*InDesiredState* \[out\]  
-In fase di restituzione, specifica se il nodo gestito è nello stato specificato dal documento di configurazione.
+<span data-ttu-id="8278b-109">*InDesiredState* \[out\]</span><span class="sxs-lookup"><span data-stu-id="8278b-109">*InDesiredState* \[out\]</span></span>  
+<span data-ttu-id="8278b-110">In fase di restituzione, specifica se il nodo gestito è nello stato specificato dal documento di configurazione.</span><span class="sxs-lookup"><span data-stu-id="8278b-110">On return, specifies whether the managed node is in the state specified by the configuration document.</span></span>
 
-*ResourcesInDesiredState* \[out\]  
-In fase di restituzione, contiene un'istanza incorporata della classe **MSFT_ResourceInDesiredState** che specifica le risorse che si trovano nello stato desiderato.
+<span data-ttu-id="8278b-111">*ResourcesInDesiredState* \[out\]</span><span class="sxs-lookup"><span data-stu-id="8278b-111">*ResourcesInDesiredState* \[out\]</span></span>  
+<span data-ttu-id="8278b-112">In fase di restituzione, contiene un'istanza incorporata della classe **MSFT_ResourceInDesiredState** che specifica le risorse che si trovano nello stato desiderato.</span><span class="sxs-lookup"><span data-stu-id="8278b-112">On return, contains an embedded instance of the **MSFT_ResourceInDesiredState** class that specifies resources that are in the desired state.</span></span>
 
-*ResourcesNotInDesiredState* \[out\]  
-In fase di restituzione, contiene un'istanza incorporata della classe **MSFT_ResourceNotInDesiredState** che specifica le risorse che non si trovano nello stato desiderato.
+<span data-ttu-id="8278b-113">*ResourcesNotInDesiredState* \[out\]</span><span class="sxs-lookup"><span data-stu-id="8278b-113">*ResourcesNotInDesiredState* \[out\]</span></span>  
+<span data-ttu-id="8278b-114">In fase di restituzione, contiene un'istanza incorporata della classe **MSFT_ResourceNotInDesiredState** che specifica le risorse che non si trovano nello stato desiderato.</span><span class="sxs-lookup"><span data-stu-id="8278b-114">On return, contains an embedded instance of the **MSFT_ResourceNotInDesiredState** class that specifies resources that are not in the desired state.</span></span>
 
-<a id="return-value" class="xliff"></a>
-## Valore restituito
+## <a name="return-value"></a><span data-ttu-id="8278b-115">Valore restituito</span><span class="sxs-lookup"><span data-stu-id="8278b-115">Return value</span></span>
 ------------
 
-In caso di esito positivo, il valore restituisce zero, altrimenti, restituisce un codice di errore.
+<span data-ttu-id="8278b-116">In caso di esito positivo, il valore restituisce zero, altrimenti, restituisce un codice di errore.</span><span class="sxs-lookup"><span data-stu-id="8278b-116">Returns zero on success; otherwise returns an error code.</span></span>
 
-<a id="remarks" class="xliff"></a>
-## Osservazioni
+## <a name="remarks"></a><span data-ttu-id="8278b-117">Osservazioni</span><span class="sxs-lookup"><span data-stu-id="8278b-117">Remarks</span></span>
 
-Si tratta di un metodo statico.
+<span data-ttu-id="8278b-118">Si tratta di un metodo statico.</span><span class="sxs-lookup"><span data-stu-id="8278b-118">This is a static method.</span></span>
 
-<a id="requirements" class="xliff"></a>
-## Requisiti
+## <a name="requirements"></a><span data-ttu-id="8278b-119">Requisiti</span><span class="sxs-lookup"><span data-stu-id="8278b-119">Requirements</span></span>
 ------------
->**MOF:** DscCore.mof
+><span data-ttu-id="8278b-120">**MOF:** DscCore.mof</span><span class="sxs-lookup"><span data-stu-id="8278b-120">**MOF:** DscCore.mof</span></span>
 
->**Spazio dei nomi**: Root\Microsoft\Windows\DesiredStateConfiguration
-
-
-<a id="see-also" class="xliff"></a>
-## Vedere anche
+><span data-ttu-id="8278b-121">**Spazio dei nomi**: Root\Microsoft\Windows\DesiredStateConfiguration</span><span class="sxs-lookup"><span data-stu-id="8278b-121">**Namespace**: Root\Microsoft\Windows\DesiredStateConfiguration</span></span>
 
 
-[**MSFT_DSCLocalConfigurationManager**](msft-dsclocalconfigurationmanager.md)
+## <a name="see-also"></a><span data-ttu-id="8278b-122">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="8278b-122">See also</span></span>
+
+
+[<span data-ttu-id="8278b-123">**MSFT_DSCLocalConfigurationManager**</span><span class="sxs-lookup"><span data-stu-id="8278b-123">**MSFT_DSCLocalConfigurationManager**</span></span>](msft-dsclocalconfigurationmanager.md)
 
 
  

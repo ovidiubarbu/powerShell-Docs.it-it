@@ -10,13 +10,11 @@ ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 06/12/2017
 ---
-<a id="sendconfiguration-method-of-the-msftdsclocalconfigurationmanager-class" class="xliff"></a>
-# Metodo SendConfiguration della classe MSFT_DSCLocalConfigurationManager
+# <a name="sendconfiguration-method-of-the-msftdsclocalconfigurationmanager-class"></a><span data-ttu-id="f5c75-103">Metodo SendConfiguration della classe MSFT_DSCLocalConfigurationManager</span><span class="sxs-lookup"><span data-stu-id="f5c75-103">SendConfiguration method of the MSFT_DSCLocalConfigurationManager class</span></span>
 
-Invia il documento di configurazione al nodo gestito e lo salva come modifica in sospeso.
+<span data-ttu-id="f5c75-104">Invia il documento di configurazione al nodo gestito e lo salva come modifica in sospeso.</span><span class="sxs-lookup"><span data-stu-id="f5c75-104">Sends the configuration document to the managed node and saves it as a pending change.</span></span>
 
-<a id="syntax" class="xliff"></a>
-Sintassi
+<a name="syntax"></a><span data-ttu-id="f5c75-105">Sintassi</span><span class="sxs-lookup"><span data-stu-id="f5c75-105">Syntax</span></span>
 ------
 
 ```mof
@@ -26,40 +24,35 @@ uint32 SendConfiguration(
 );
 ```
 
-<a id="parameters" class="xliff"></a>
-Parametri
+<a name="parameters"></a><span data-ttu-id="f5c75-106">Parametri</span><span class="sxs-lookup"><span data-stu-id="f5c75-106">Parameters</span></span>
 ----------
 
-*ConfigurationData* \[in\]  
-I dati dell'ambiente per la configurazione.
+<span data-ttu-id="f5c75-107">*ConfigurationData* \[in\]</span><span class="sxs-lookup"><span data-stu-id="f5c75-107">*ConfigurationData* \[in\]</span></span>  
+<span data-ttu-id="f5c75-108">I dati dell'ambiente per la configurazione.</span><span class="sxs-lookup"><span data-stu-id="f5c75-108">The environment data for the configuration.</span></span>
 
-*force* \[in\]  
-**true** per forzare l'arresto della configurazione.
+<span data-ttu-id="f5c75-109">*force* \[in\]</span><span class="sxs-lookup"><span data-stu-id="f5c75-109">*force* \[in\]</span></span>  
+<span data-ttu-id="f5c75-110">**true** per forzare l'arresto della configurazione.</span><span class="sxs-lookup"><span data-stu-id="f5c75-110">**true** to force the configuration to stop.</span></span>
 
-<a id="return-value" class="xliff"></a>
-## Valore restituito
+## <a name="return-value"></a><span data-ttu-id="f5c75-111">Valore restituito</span><span class="sxs-lookup"><span data-stu-id="f5c75-111">Return value</span></span>
 ------------
 
-In caso di esito positivo, il valore restituisce zero, altrimenti, restituisce un codice di errore.
+<span data-ttu-id="f5c75-112">In caso di esito positivo, il valore restituisce zero, altrimenti, restituisce un codice di errore.</span><span class="sxs-lookup"><span data-stu-id="f5c75-112">Returns zero on success; otherwise returns an error code.</span></span>
 
-<a id="remarks" class="xliff"></a>
-## Osservazioni
+## <a name="remarks"></a><span data-ttu-id="f5c75-113">Osservazioni</span><span class="sxs-lookup"><span data-stu-id="f5c75-113">Remarks</span></span>
 
-Si tratta di un metodo statico.
+<span data-ttu-id="f5c75-114">Si tratta di un metodo statico.</span><span class="sxs-lookup"><span data-stu-id="f5c75-114">This is a static method.</span></span>
 
-<a id="requirements" class="xliff"></a>
-## Requisiti
+## <a name="requirements"></a><span data-ttu-id="f5c75-115">Requisiti</span><span class="sxs-lookup"><span data-stu-id="f5c75-115">Requirements</span></span>
 ------------
->**MOF:** DscCore.mof
+><span data-ttu-id="f5c75-116">**MOF:** DscCore.mof</span><span class="sxs-lookup"><span data-stu-id="f5c75-116">**MOF:** DscCore.mof</span></span>
 
->**Spazio dei nomi**: Root\Microsoft\Windows\DesiredStateConfiguration
-
-
-<a id="see-also" class="xliff"></a>
-## Vedere anche
+><span data-ttu-id="f5c75-117">**Spazio dei nomi**: Root\Microsoft\Windows\DesiredStateConfiguration</span><span class="sxs-lookup"><span data-stu-id="f5c75-117">**Namespace**: Root\Microsoft\Windows\DesiredStateConfiguration</span></span>
 
 
-[**MSFT_DSCLocalConfigurationManager**](msft-dsclocalconfigurationmanager.md)
+## <a name="see-also"></a><span data-ttu-id="f5c75-118">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="f5c75-118">See also</span></span>
+
+
+[<span data-ttu-id="f5c75-119">**MSFT_DSCLocalConfigurationManager**</span><span class="sxs-lookup"><span data-stu-id="f5c75-119">**MSFT_DSCLocalConfigurationManager**</span></span>](msft-dsclocalconfigurationmanager.md)
 
 
  

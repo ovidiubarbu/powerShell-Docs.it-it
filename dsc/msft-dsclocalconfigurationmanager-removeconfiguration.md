@@ -10,13 +10,11 @@ ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 06/12/2017
 ---
-<a id="removeconfiguration-method-of-the-msftdsclocalconfigurationmanager-class" class="xliff"></a>
-# Metodo RemoveConfiguration della classe MSFT_DSCLocalConfigurationManager
+# <a name="removeconfiguration-method-of-the-msftdsclocalconfigurationmanager-class"></a><span data-ttu-id="3ab30-103">Metodo RemoveConfiguration della classe MSFT_DSCLocalConfigurationManager</span><span class="sxs-lookup"><span data-stu-id="3ab30-103">RemoveConfiguration method of the MSFT_DSCLocalConfigurationManager class</span></span>
 
-Rimuove i file di configurazione.
+<span data-ttu-id="3ab30-104">Rimuove i file di configurazione.</span><span class="sxs-lookup"><span data-stu-id="3ab30-104">Removes the configuration files.</span></span>
 
-<a id="syntax" class="xliff"></a>
-Sintassi
+<a name="syntax"></a><span data-ttu-id="3ab30-105">Sintassi</span><span class="sxs-lookup"><span data-stu-id="3ab30-105">Syntax</span></span>
 ------
 
 ```mof
@@ -26,46 +24,41 @@ uint32 RemoveConfiguration(
 );
 ```
 
-<a id="parameters" class="xliff"></a>
-Parametri
+<a name="parameters"></a><span data-ttu-id="3ab30-106">Parametri</span><span class="sxs-lookup"><span data-stu-id="3ab30-106">Parameters</span></span>
 ----------
 
-*Stage* \[in\]  
-Specifica il documento di configurazione da rimuovere. I valori validi sono i seguenti:
+<span data-ttu-id="3ab30-107">*Stage* \[in\]</span><span class="sxs-lookup"><span data-stu-id="3ab30-107">*Stage* \[in\]</span></span>  
+<span data-ttu-id="3ab30-108">Specifica il documento di configurazione da rimuovere.</span><span class="sxs-lookup"><span data-stu-id="3ab30-108">Specifies which configuration document to remove.</span></span> <span data-ttu-id="3ab30-109">I valori validi sono i seguenti:</span><span class="sxs-lookup"><span data-stu-id="3ab30-109">The following values are valid:</span></span>
 
-|Value |Descrizione |
+|<span data-ttu-id="3ab30-110">Value</span><span class="sxs-lookup"><span data-stu-id="3ab30-110">Value</span></span> |<span data-ttu-id="3ab30-111">Descrizione</span><span class="sxs-lookup"><span data-stu-id="3ab30-111">Description</span></span> |
 |:--- |:---|
-|**1** | Il documento di configurazione **corrente** (current.mof). |
-|**2** | Il documento di configurazione **in sospeso** (pending.mof).  |
-|**4** | Il documento di configurazione **precedente** (previous.mof). |
+|<span data-ttu-id="3ab30-112">**1**</span><span class="sxs-lookup"><span data-stu-id="3ab30-112">**1**</span></span> | <span data-ttu-id="3ab30-113">Il documento di configurazione **corrente** (current.mof).</span><span class="sxs-lookup"><span data-stu-id="3ab30-113">The **Current** configuration document (current.mof).</span></span> |
+|<span data-ttu-id="3ab30-114">**2**</span><span class="sxs-lookup"><span data-stu-id="3ab30-114">**2**</span></span> | <span data-ttu-id="3ab30-115">Il documento di configurazione **in sospeso** (pending.mof).</span><span class="sxs-lookup"><span data-stu-id="3ab30-115">The **Pending** configuration document (pending.mof).</span></span>  |
+|<span data-ttu-id="3ab30-116">**4**</span><span class="sxs-lookup"><span data-stu-id="3ab30-116">**4**</span></span> | <span data-ttu-id="3ab30-117">Il documento di configurazione **precedente** (previous.mof).</span><span class="sxs-lookup"><span data-stu-id="3ab30-117">The **Previous** configuration document (previous.mof).</span></span> |
 
-*Force* \[in\]  
-**true** per forzare la rimozione della configurazione.
+<span data-ttu-id="3ab30-118">*Force* \[in\]</span><span class="sxs-lookup"><span data-stu-id="3ab30-118">*Force* \[in\]</span></span>  
+<span data-ttu-id="3ab30-119">**true** per forzare la rimozione della configurazione.</span><span class="sxs-lookup"><span data-stu-id="3ab30-119">**true** to force the removal of the configuration.</span></span>
 
-<a id="return-value" class="xliff"></a>
-## Valore restituito
+## <a name="return-value"></a><span data-ttu-id="3ab30-120">Valore restituito</span><span class="sxs-lookup"><span data-stu-id="3ab30-120">Return value</span></span>
 ------------
 
-In caso di esito positivo, il valore restituisce zero, altrimenti, restituisce un codice di errore.
+<span data-ttu-id="3ab30-121">In caso di esito positivo, il valore restituisce zero, altrimenti, restituisce un codice di errore.</span><span class="sxs-lookup"><span data-stu-id="3ab30-121">Returns zero on success; otherwise returns an error code.</span></span>
 
-<a id="remarks" class="xliff"></a>
-## Osservazioni
+## <a name="remarks"></a><span data-ttu-id="3ab30-122">Osservazioni</span><span class="sxs-lookup"><span data-stu-id="3ab30-122">Remarks</span></span>
 
-Si tratta di un metodo statico.
+<span data-ttu-id="3ab30-123">Si tratta di un metodo statico.</span><span class="sxs-lookup"><span data-stu-id="3ab30-123">This is a static method.</span></span>
 
-<a id="requirements" class="xliff"></a>
-## Requisiti
+## <a name="requirements"></a><span data-ttu-id="3ab30-124">Requisiti</span><span class="sxs-lookup"><span data-stu-id="3ab30-124">Requirements</span></span>
 ------------
->**MOF:** DscCore.mof
+><span data-ttu-id="3ab30-125">**MOF:** DscCore.mof</span><span class="sxs-lookup"><span data-stu-id="3ab30-125">**MOF:** DscCore.mof</span></span>
 
->**Spazio dei nomi**: Root\Microsoft\Windows\DesiredStateConfiguration
-
-
-<a id="see-also" class="xliff"></a>
-## Vedere anche
+><span data-ttu-id="3ab30-126">**Spazio dei nomi**: Root\Microsoft\Windows\DesiredStateConfiguration</span><span class="sxs-lookup"><span data-stu-id="3ab30-126">**Namespace**: Root\Microsoft\Windows\DesiredStateConfiguration</span></span>
 
 
-[**MSFT_DSCLocalConfigurationManager**](msft-dsclocalconfigurationmanager.md)
+## <a name="see-also"></a><span data-ttu-id="3ab30-127">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="3ab30-127">See also</span></span>
+
+
+[<span data-ttu-id="3ab30-128">**MSFT_DSCLocalConfigurationManager**</span><span class="sxs-lookup"><span data-stu-id="3ab30-128">**MSFT_DSCLocalConfigurationManager**</span></span>](msft-dsclocalconfigurationmanager.md)
 
 
  

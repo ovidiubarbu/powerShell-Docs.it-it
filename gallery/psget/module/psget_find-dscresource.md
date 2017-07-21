@@ -10,45 +10,40 @@ ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 06/12/2017
 ---
-<a id="find-dscresource" class="xliff"></a>
-# Find-DscResource
+# <a name="find-dscresource"></a><span data-ttu-id="e6fed-103">Find-DscResource</span><span class="sxs-lookup"><span data-stu-id="e6fed-103">Find-DscResource</span></span>
 
-Trova le risorse DSC nei moduli.
+<span data-ttu-id="e6fed-104">Trova le risorse DSC nei moduli.</span><span class="sxs-lookup"><span data-stu-id="e6fed-104">Finds DSC Resources in modules.</span></span>
 
-<a id="description" class="xliff"></a>
-## Descrizione
+## <a name="description"></a><span data-ttu-id="e6fed-105">Descrizione</span><span class="sxs-lookup"><span data-stu-id="e6fed-105">Description</span></span>
 
-Il cmdlet Find--DscResource trova le risorse [DSC (Desired State Configuration)](https://msdn.microsoft.com/en-us/PowerShell/dsc/overview) contenute nei moduli che corrispondono ai criteri specificati nei repository registrati.
-Per ogni modulo trovato da questo cmdlet, Find-DscResource restituisce un oggetto PSGetDscResourceInfo che è possibile inviare tramite pipe a Install-Module per installare i moduli contenenti le risorse restituite da questo cmdlet.
+<span data-ttu-id="e6fed-106">Il cmdlet Find--DscResource trova le risorse [DSC (Desired State Configuration)](https://msdn.microsoft.com/en-us/PowerShell/dsc/overview) contenute nei moduli che corrispondono ai criteri specificati nei repository registrati.</span><span class="sxs-lookup"><span data-stu-id="e6fed-106">The Find-DscResource cmdlet finds [Desired State Configuration (DSC)](https://msdn.microsoft.com/en-us/PowerShell/dsc/overview) resources contained in modules that match the specified criteria from registered repositories.</span></span>
+<span data-ttu-id="e6fed-107">Per ogni modulo trovato da questo cmdlet, Find-DscResource restituisce un oggetto PSGetDscResourceInfo che è possibile inviare tramite pipe a Install-Module per installare i moduli contenenti le risorse restituite da questo cmdlet.</span><span class="sxs-lookup"><span data-stu-id="e6fed-107">For each module that this cmdlet finds, Find-DscResource returns a PSGetDscResourceInfo object that you can pipe to Install-Module to install the modules containing the resources that this cmdlet returns.</span></span>
 
-DSC è una nuova piattaforma di gestione di Windows PowerShell che consente di distribuire e gestire dati di configurazione per i servizi software, nonché di gestire l'ambiente in cui vengono eseguiti questi servizi.
+<span data-ttu-id="e6fed-108">DSC è una nuova piattaforma di gestione di Windows PowerShell che consente di distribuire e gestire dati di configurazione per i servizi software, nonché di gestire l'ambiente in cui vengono eseguiti questi servizi.</span><span class="sxs-lookup"><span data-stu-id="e6fed-108">DSC is a new management platform in Windows PowerShell that enables deploying and managing configuration data for software services and managing the environment in which these services run.</span></span>
 
-Le risorse DSC (Desired State Configuration) forniscono i blocchi predefiniti per una configurazione DSC. Una risorsa espone le proprietà che possono essere configurate (schema) e contiene le funzioni di script di PowerShell chiamate da Gestione configurazione locale per assicurare il risultato desiderato.
+<span data-ttu-id="e6fed-109">Le risorse DSC (Desired State Configuration) forniscono i blocchi predefiniti per una configurazione DSC.</span><span class="sxs-lookup"><span data-stu-id="e6fed-109">Desired State Configuration (DSC) Resources provide the building blocks for a DSC configuration.</span></span> <span data-ttu-id="e6fed-110">Una risorsa espone le proprietà che possono essere configurate (schema) e contiene le funzioni di script di PowerShell chiamate da Gestione configurazione locale per assicurare il risultato desiderato.</span><span class="sxs-lookup"><span data-stu-id="e6fed-110">A resource exposes properties that can be configured (schema) and contains the PowerShell script functions that the Local Configuration Manager (LCM) calls to "make it so".</span></span>
 
-Una risorsa può modellare un elemento generico come un file o uno specifico come un'impostazione del server IIS. I gruppi di tali risorse sono combinati in un modulo DSC, che organizza tutti i file necessari in una struttura portatile che include i metadati che permettono di identificare il modo in cui si intende usare le risorse.
+<span data-ttu-id="e6fed-111">Una risorsa può modellare un elemento generico come un file o uno specifico come un'impostazione del server IIS.</span><span class="sxs-lookup"><span data-stu-id="e6fed-111">A resource can model something as generic as a file or as specific as an IIS server setting.</span></span> <span data-ttu-id="e6fed-112">I gruppi di tali risorse sono combinati in un modulo DSC, che organizza tutti i file necessari in una struttura portatile che include i metadati che permettono di identificare il modo in cui si intende usare le risorse.</span><span class="sxs-lookup"><span data-stu-id="e6fed-112">Groups of like resources are combined in to a DSC Module, which organizes all the required files in to a structure that is portable and includes metadata to identify how the resources are intended to be used.</span></span>
 
-- Find-DscResource consente di filtrare usando i parametri di versione MinimumVersion, RequiredVersion e AllVersions.
-  - Questi parametri si escludono a vicenda.
-  - Questi parametri di versione sono consentiti solo con il nome del modulo singolo senza caratteri jolly.
-  - Se il parametro RequiredVersion non è specificato, Find-DscResource restituisce la versione più recente del modulo maggiore o uguale alla versione minima specificata. Se la versione minima non è specificata, restituisce la versione più recente del modulo.
-  - Se il parametro RequiredVersion è specificato, Find-DscResource restituisce unicamente la versione del modulo che corrisponde esattamente alla versione specificata.
-- Find-DscResource consente di filtrare in base ai metadati del modulo usando il parametro -Tag
-- Find-DscResource consente di filtrare in base al linguaggio di ricerca specifico del repository usando il parametro -Filter.
-- Find-DscResource consente di filtrare in base ai moduli di tutti o alcuni dei repository registrati.
+- <span data-ttu-id="e6fed-113">Find-DscResource consente di filtrare usando i parametri di versione MinimumVersion, RequiredVersion e AllVersions.</span><span class="sxs-lookup"><span data-stu-id="e6fed-113">Find-DscResource can filter with version parameters: MinimumVersion, RequiredVersion, AllVersions.</span></span>
+  - <span data-ttu-id="e6fed-114">Questi parametri si escludono a vicenda.</span><span class="sxs-lookup"><span data-stu-id="e6fed-114">These parameters are mutually exclusive.</span></span>
+  - <span data-ttu-id="e6fed-115">Questi parametri di versione sono consentiti solo con il nome del modulo singolo senza caratteri jolly.</span><span class="sxs-lookup"><span data-stu-id="e6fed-115">These version parameters are allowed only with the single module name without any wildcards.</span></span>
+  - <span data-ttu-id="e6fed-116">Se il parametro RequiredVersion non è specificato, Find-DscResource restituisce la versione più recente del modulo maggiore o uguale alla versione minima specificata. Se la versione minima non è specificata, restituisce la versione più recente del modulo.</span><span class="sxs-lookup"><span data-stu-id="e6fed-116">If the RequiredVersion parameter is not specified, Find-DscResource returns the latest version of the module that is equal to or greater than the minimum version specified or the latest version of the module if no minimum version is specified.</span></span>
+  - <span data-ttu-id="e6fed-117">Se il parametro RequiredVersion è specificato, Find-DscResource restituisce unicamente la versione del modulo che corrisponde esattamente alla versione specificata.</span><span class="sxs-lookup"><span data-stu-id="e6fed-117">If the RequiredVersion parameter is specified, Find-DscResource only returns the version of the module that exactly matches the specified version.</span></span>
+- <span data-ttu-id="e6fed-118">Find-DscResource consente di filtrare in base ai metadati del modulo usando il parametro -Tag</span><span class="sxs-lookup"><span data-stu-id="e6fed-118">Find-DscResource can filter on module metadata with the -Tag parameter</span></span>
+- <span data-ttu-id="e6fed-119">Find-DscResource consente di filtrare in base al linguaggio di ricerca specifico del repository usando il parametro -Filter.</span><span class="sxs-lookup"><span data-stu-id="e6fed-119">Find-DscResource can filter on repository-specific search language with the -Filter parameter.</span></span>
+- <span data-ttu-id="e6fed-120">Find-DscResource consente di filtrare in base ai moduli di tutti o alcuni dei repository registrati.</span><span class="sxs-lookup"><span data-stu-id="e6fed-120">Find-DscResource can filter on modules from all or few of the registered repositories.</span></span>
 
-<a id="cmdlet-syntax" class="xliff"></a>
-## Sintassi del cmdlet
+## <a name="cmdlet-syntax"></a><span data-ttu-id="e6fed-121">Sintassi del cmdlet</span><span class="sxs-lookup"><span data-stu-id="e6fed-121">Cmdlet syntax</span></span>
 ```powershell
 Get-Command -Name Find-DscResource -Module PowerShellGet -Syntax
 ```
 
-<a id="cmdlet-online-help-reference" class="xliff"></a>
-## Riferimento per la Guida online sui cmdlet
+## <a name="cmdlet-online-help-reference"></a><span data-ttu-id="e6fed-122">Riferimento per la Guida online sui cmdlet</span><span class="sxs-lookup"><span data-stu-id="e6fed-122">Cmdlet online help reference</span></span>
 
-[Find-DscResource](http://go.microsoft.com/fwlink/?LinkId=517196)
+[<span data-ttu-id="e6fed-123">Find-DscResource</span><span class="sxs-lookup"><span data-stu-id="e6fed-123">Find-DscResource</span></span>](http://go.microsoft.com/fwlink/?LinkId=517196)
 
-<a id="example-commands" class="xliff"></a>
-## Comandi di esempio
+## <a name="example-commands"></a><span data-ttu-id="e6fed-124">Comandi di esempio</span><span class="sxs-lookup"><span data-stu-id="e6fed-124">Example commands</span></span>
 ```powershell
 
 # Find a specific DSC Resource

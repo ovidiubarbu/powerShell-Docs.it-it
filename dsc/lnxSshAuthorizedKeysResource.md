@@ -10,13 +10,11 @@ ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 06/12/2017
 ---
-<a id="dsc-for-linux-nxsshauthorizedkeys-resource" class="xliff"></a>
-# Risorsa nxSshAuthorizedKeys DSC per Linux
+# <a name="dsc-for-linux-nxsshauthorizedkeys-resource"></a><span data-ttu-id="26c21-103">Risorsa nxSshAuthorizedKeys DSC per Linux</span><span class="sxs-lookup"><span data-stu-id="26c21-103">DSC for Linux nxSshAuthorizedKeys Resource</span></span>
 
-La risorsa **nxSshAuthorizedKeys** in PowerShell DSC (Desired State Configuration) fornisce un meccanismo per gestire le chiavi ssh autorizzate per un utente specificato.
+<span data-ttu-id="26c21-104">La risorsa **nxSshAuthorizedKeys** in PowerShell DSC (Desired State Configuration) fornisce un meccanismo per gestire le chiavi ssh autorizzate per un utente specificato.</span><span class="sxs-lookup"><span data-stu-id="26c21-104">The **nxAuthorizedKeys** resource in PowerShell Desired State Configuration (DSC) provides a mechanism to manage authorized ssh keys for a specified user.</span></span>
 
-<a id="syntax" class="xliff"></a>
-## Sintassi
+## <a name="syntax"></a><span data-ttu-id="26c21-105">Sintassi</span><span class="sxs-lookup"><span data-stu-id="26c21-105">Syntax</span></span>
 
 ```
 nxAuthorizedKeys <string> #ResourceName
@@ -30,21 +28,19 @@ nxAuthorizedKeys <string> #ResourceName
 }
 ```
 
-<a id="properties" class="xliff"></a>
-## Proprietà
+## <a name="properties"></a><span data-ttu-id="26c21-106">Proprietà</span><span class="sxs-lookup"><span data-stu-id="26c21-106">Properties</span></span>
 
-|  Proprietà |  Descrizione | 
+|  <span data-ttu-id="26c21-107">Proprietà</span><span class="sxs-lookup"><span data-stu-id="26c21-107">Property</span></span> |  <span data-ttu-id="26c21-108">Descrizione</span><span class="sxs-lookup"><span data-stu-id="26c21-108">Description</span></span> | 
 |---|---|
-| KeyComment| Commento univoco per la chiave. Questa proprietà viene usata per identificare in modo univoco la chiave.| 
-| Ensure| Specifica se la chiave è definita. Impostare questa proprietà su "Absent" per specificare che la chiave non esiste nel file delle chiavi autorizzate dell'utente. Impostarla su "Absent" per specificare che la chiave è definita nel file delle chiavi autorizzate dell'utente.| 
-| Username| Nome utente per cui gestire le chiavi ssh autorizzate. Se questa proprietà non è definita, l'utente predefinito è "root".| 
-| Key| Contenuto della chiave. Questa proprietà è obbligatoria se la proprietà **Ensure** è impostata su "Present".| 
-| DependsOn | Indica che prima di configurare la risorsa è necessario eseguire la configurazione di un'altra risorsa. Ad esempio, se il valore di **ID** del blocco script di configurazione della risorsa che si vuole eseguire per primo è **ResourceName** e il tipo è **ResourceType**, la sintassi per usare questa proprietà è `DependsOn = "[ResourceType]ResourceName"`.| 
+| <span data-ttu-id="26c21-109">KeyComment</span><span class="sxs-lookup"><span data-stu-id="26c21-109">KeyComment</span></span>| <span data-ttu-id="26c21-110">Commento univoco per la chiave.</span><span class="sxs-lookup"><span data-stu-id="26c21-110">A unique comment for the key.</span></span> <span data-ttu-id="26c21-111">Questa proprietà viene usata per identificare in modo univoco la chiave.</span><span class="sxs-lookup"><span data-stu-id="26c21-111">This is used to uniquely identify keys.</span></span>| 
+| <span data-ttu-id="26c21-112">Ensure</span><span class="sxs-lookup"><span data-stu-id="26c21-112">Ensure</span></span>| <span data-ttu-id="26c21-113">Specifica se la chiave è definita.</span><span class="sxs-lookup"><span data-stu-id="26c21-113">Specifies whether the key is defined.</span></span> <span data-ttu-id="26c21-114">Impostare questa proprietà su "Absent" per specificare che la chiave non esiste nel file delle chiavi autorizzate dell'utente.</span><span class="sxs-lookup"><span data-stu-id="26c21-114">Set this property to "Absent" to ensure the key does not exist in the user’s authorized keys file.</span></span> <span data-ttu-id="26c21-115">Impostarla su "Absent" per specificare che la chiave è definita nel file delle chiavi autorizzate dell'utente.</span><span class="sxs-lookup"><span data-stu-id="26c21-115">Set it to "Present" to ensure the key is defined in the user’s authorized key file.</span></span>| 
+| <span data-ttu-id="26c21-116">Username</span><span class="sxs-lookup"><span data-stu-id="26c21-116">Username</span></span>| <span data-ttu-id="26c21-117">Nome utente per cui gestire le chiavi ssh autorizzate.</span><span class="sxs-lookup"><span data-stu-id="26c21-117">The username to manage ssh authorized keys for.</span></span> <span data-ttu-id="26c21-118">Se questa proprietà non è definita, l'utente predefinito è "root".</span><span class="sxs-lookup"><span data-stu-id="26c21-118">If not defined, the default user is "root".</span></span>| 
+| <span data-ttu-id="26c21-119">Key</span><span class="sxs-lookup"><span data-stu-id="26c21-119">Key</span></span>| <span data-ttu-id="26c21-120">Contenuto della chiave.</span><span class="sxs-lookup"><span data-stu-id="26c21-120">The contents of the key.</span></span> <span data-ttu-id="26c21-121">Questa proprietà è obbligatoria se la proprietà **Ensure** è impostata su "Present".</span><span class="sxs-lookup"><span data-stu-id="26c21-121">This is required if **Ensure** is set to "Present".</span></span>| 
+| <span data-ttu-id="26c21-122">DependsOn</span><span class="sxs-lookup"><span data-stu-id="26c21-122">DependsOn</span></span> | <span data-ttu-id="26c21-123">Indica che prima di configurare la risorsa è necessario eseguire la configurazione di un'altra risorsa.</span><span class="sxs-lookup"><span data-stu-id="26c21-123">Indicates that the configuration of another resource must run before this resource is configured.</span></span> <span data-ttu-id="26c21-124">Ad esempio, se il valore di **ID** del blocco script di configurazione della risorsa che si vuole eseguire per primo è **ResourceName** e il tipo è **ResourceType**, la sintassi per usare questa proprietà è `DependsOn = "[ResourceType]ResourceName"`.</span><span class="sxs-lookup"><span data-stu-id="26c21-124">For example, if the **ID** of the resource configuration script block that you want to run first is **ResourceName** and its type is **ResourceType**, the syntax for using this property is `DependsOn = "[ResourceType]ResourceName"`.</span></span>| 
 
-<a id="example" class="xliff"></a>
-## Esempio
+## <a name="example"></a><span data-ttu-id="26c21-125">Esempio</span><span class="sxs-lookup"><span data-stu-id="26c21-125">Example</span></span>
 
-L'esempio seguente definisce una chiave ssh autorizzata pubblica per l'utente "monuser".
+<span data-ttu-id="26c21-126">L'esempio seguente definisce una chiave ssh autorizzata pubblica per l'utente "monuser".</span><span class="sxs-lookup"><span data-stu-id="26c21-126">The following example defines a public ssh authorized key for the user "monuser".</span></span>
 
 ```
 Import-DSCResource -Module nx 

@@ -11,67 +11,59 @@ ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 06/12/2017
 ---
-<a id="improvements-to-package-management-in-wmf-51" class="xliff"></a>
-# Miglioramenti della gestione pacchetti in WMF 5.1#
+# <a name="improvements-to-package-management-in-wmf-51"></a><span data-ttu-id="28b25-103">Miglioramenti della gestione pacchetti in WMF 5.1#</span><span class="sxs-lookup"><span data-stu-id="28b25-103">Improvements to Package Management in WMF 5.1#</span></span>
 
-<a id="improvements-in-packagemanagement" class="xliff"></a>
-## Miglioramenti appartati a Gestione pacchetti ##
-Di seguito vengono descritte le correzioni apportate in WMF 5.1: 
+## <a name="improvements-in-packagemanagement"></a><span data-ttu-id="28b25-104">Miglioramenti appartati a Gestione pacchetti</span><span class="sxs-lookup"><span data-stu-id="28b25-104">Improvements in PackageManagement</span></span> ##
+<span data-ttu-id="28b25-105">Di seguito vengono descritte le correzioni apportate in WMF 5.1:</span><span class="sxs-lookup"><span data-stu-id="28b25-105">The following are the fixes made in the WMF 5.1:</span></span> 
 
-<a id="version-alias" class="xliff"></a>
-### Alias della versione
+### <a name="version-alias"></a><span data-ttu-id="28b25-106">Alias della versione</span><span class="sxs-lookup"><span data-stu-id="28b25-106">Version Alias</span></span>
 
-**Scenario**: se si dispone delle versioni 1.0 e 2.0 di un pacchetto, P1, installate nel sistema e si vuole disinstallare la versione 1.0, è necessario eseguire `Uninstall-Package -Name P1 -Version 1.0` e attendere che la versione 1.0 venga disinstallata dopo l'esecuzione del cmdlet. Tuttavia, il risultato è che viene disinstallata la versione 2.0.  
+<span data-ttu-id="28b25-107">**Scenario**: se si dispone delle versioni 1.0 e 2.0 di un pacchetto, P1, installate nel sistema e si vuole disinstallare la versione 1.0, è necessario eseguire `Uninstall-Package -Name P1 -Version 1.0` e attendere che la versione 1.0 venga disinstallata dopo l'esecuzione del cmdlet.</span><span class="sxs-lookup"><span data-stu-id="28b25-107">**Scenario**: If you have version 1.0 and 2.0 of a package, P1, installed on your system, and you want to uninstall version 1.0, you would run `Uninstall-Package -Name P1 -Version 1.0` and expect version 1.0 to be uninstalled after running the cmdlet.</span></span> <span data-ttu-id="28b25-108">Tuttavia, il risultato è che viene disinstallata la versione 2.0.</span><span class="sxs-lookup"><span data-stu-id="28b25-108">However the result is that version 2.0 gets uninstalled.</span></span>  
     
-Ciò si verifica perché il parametro `-Version` è un alias del parametro `-MinimumVersion`. Quando PackageManagement esegue la ricerca di un pacchetto qualificato con la versione minima 1.0, restituisce la versione più recente. Questo comportamento è previsto nei casi normali, perché trovare la versione più recente è in genere il risultato desiderato. Tuttavia, non dovrebbe applicarsi al caso di `Uninstall-Package`.
+<span data-ttu-id="28b25-109">Ciò si verifica perché il parametro `-Version` è un alias del parametro `-MinimumVersion`.</span><span class="sxs-lookup"><span data-stu-id="28b25-109">This occurs because the `-Version` parameter is an alias of the `-MinimumVersion` parameter.</span></span> <span data-ttu-id="28b25-110">Quando PackageManagement esegue la ricerca di un pacchetto qualificato con la versione minima 1.0, restituisce la versione più recente.</span><span class="sxs-lookup"><span data-stu-id="28b25-110">When PackageManagement is looking for a qualified package with the minimum version of 1.0, it returns the latest version.</span></span> <span data-ttu-id="28b25-111">Questo comportamento è previsto nei casi normali, perché trovare la versione più recente è in genere il risultato desiderato.</span><span class="sxs-lookup"><span data-stu-id="28b25-111">This behavior is expected in normal cases because finding the latest version is usually the desired result.</span></span> <span data-ttu-id="28b25-112">Tuttavia, non dovrebbe applicarsi al caso di `Uninstall-Package`.</span><span class="sxs-lookup"><span data-stu-id="28b25-112">However, it should not apply to the `Uninstall-Package` case.</span></span>
     
-**Soluzione**: rimozione completa dell'alias `-Version` in PackageManagement (noto anche come OneGet) e PowerShellGet. 
+<span data-ttu-id="28b25-113">**Soluzione**: rimozione completa dell'alias `-Version` in PackageManagement (noto anche come</span><span class="sxs-lookup"><span data-stu-id="28b25-113">**Solution**:removed `-Version` alias entirely in PackageManagement (a.k.a.</span></span> <span data-ttu-id="28b25-114">OneGet) e PowerShellGet.</span><span class="sxs-lookup"><span data-stu-id="28b25-114">OneGet) and PowerShellGet.</span></span> 
 
-<a id="multiple-prompts-for-bootstrapping-the-nuget-provider" class="xliff"></a>
-### Più richieste per l'avvio del provider NuGet
+### <a name="multiple-prompts-for-bootstrapping-the-nuget-provider"></a><span data-ttu-id="28b25-115">Più richieste per l'avvio del provider NuGet</span><span class="sxs-lookup"><span data-stu-id="28b25-115">Multiple prompts for bootstrapping the NuGet provider</span></span>
 
-**Scenario**: quando si esegue `Find-Module` o `Install-Module` o altri cmdlet PackageManagement nel computer in uso per la prima volta, PackageManagement tenta di avviare il provider NuGet. Ciò avviene perché il provider PowerShellGet usa anche il provider NuGet per scaricare i moduli di PowerShell. PackageManagement quindi chiede all'utente l'autorizzazione per installare il provider NuGet. Dopo che l'utente seleziona "Sì" per l'avvio, verrà installata la versione più recente del provider NuGet. 
+<span data-ttu-id="28b25-116">**Scenario**: quando si esegue `Find-Module` o `Install-Module` o altri cmdlet PackageManagement nel computer in uso per la prima volta, PackageManagement tenta di avviare il provider NuGet.</span><span class="sxs-lookup"><span data-stu-id="28b25-116">**Scenario**: When you run `Find-Module` or `Install-Module` or other PackageManagement cmdlets on your computer for the first time, PackageManagement tries to bootstrap the NuGet provider.</span></span> <span data-ttu-id="28b25-117">Ciò avviene perché il provider PowerShellGet usa anche il provider NuGet per scaricare i moduli di PowerShell.</span><span class="sxs-lookup"><span data-stu-id="28b25-117">It does this because the PowerShellGet provider also uses the NuGet provider to download PowerShell modules.</span></span> <span data-ttu-id="28b25-118">PackageManagement quindi chiede all'utente l'autorizzazione per installare il provider NuGet.</span><span class="sxs-lookup"><span data-stu-id="28b25-118">PackageManagement then prompts the user for permission to install the NuGet provider.</span></span> <span data-ttu-id="28b25-119">Dopo che l'utente seleziona "Sì" per l'avvio, verrà installata la versione più recente del provider NuGet.</span><span class="sxs-lookup"><span data-stu-id="28b25-119">After the user selects "yes" for the bootstrapping, the latest version of the NuGet provider will be installed.</span></span> 
     
-Se tuttavia si dispone di una versione precedente del provider NuGet installata nel computer in uso, in alcuni casi viene caricata per prima la versione precedente di NuGet nella sessione di PowerShell. Si tratta della race condition di PackageManagement. PowerShellGet richiede tuttavia la versione più recente del provider NuGet, pertanto PowerShellGet chiede a PackageManagement di avviare nuovamente il provider NuGet. Ciò comporta l'esecuzione di più richieste di avvio del provider NuGet.
+<span data-ttu-id="28b25-120">Se tuttavia si dispone di una versione precedente del provider NuGet installata nel computer in uso, in alcuni casi viene caricata per prima la versione precedente di NuGet nella sessione di PowerShell. Si tratta della race condition di PackageManagement.</span><span class="sxs-lookup"><span data-stu-id="28b25-120">However, in some cases, when you have an old version of NuGet provider installed on your computer, the older version of NuGet sometimes gets loaded first into the PowerShell session (that's the race condition in PackageManagement).</span></span> <span data-ttu-id="28b25-121">PowerShellGet richiede tuttavia la versione più recente del provider NuGet, pertanto PowerShellGet chiede a PackageManagement di avviare nuovamente il provider NuGet.</span><span class="sxs-lookup"><span data-stu-id="28b25-121">However PowerShellGet requires the later version of the NuGet provider to work, so PowerShellGet asks PackageManagement to bootstrap the NuGet provider again.</span></span> <span data-ttu-id="28b25-122">Ciò comporta l'esecuzione di più richieste di avvio del provider NuGet.</span><span class="sxs-lookup"><span data-stu-id="28b25-122">This results in multiple prompts for bootstrapping the NuGet provider.</span></span>
 
-**Soluzione**: in WMF 5.1, PackageManagement carica la versione più recente del provider NuGet per evitare l'esecuzione di più richieste di avvio del provider NuGet.
+<span data-ttu-id="28b25-123">**Soluzione**: in WMF 5.1, PackageManagement carica la versione più recente del provider NuGet per evitare l'esecuzione di più richieste di avvio del provider NuGet.</span><span class="sxs-lookup"><span data-stu-id="28b25-123">**Solution**: In WMF5.1, PackageManagement loads the latest version of the NuGet provider to avoid multiple prompts for bootstrapping the NuGet provider.</span></span>
 
-È possibile aggirare il problema anche eliminando manualmente la versione precedente del provider NuGet (NuGet-Anycpu.exe), se presente, da $env:Programmi\PackageManagement\ProviderAssemblies $env:LOCALAPPDATA\PackageManagement\ProviderAssemblies
-
-
-<a id="support-for-packagemanagement-on-computers-with-intranet-access-only" class="xliff"></a>
-### Supporto per PackageManagement nei computer solo con accesso Intranet
-
-**Scenario**: in uno scenario aziendale gli utenti operano in un ambiente in cui non è presente alcun accesso Internet, ma solo Intranet. In WMF 5.0, PackageManagement non supporta questo caso.
-
-**Scenario**: in WMF 5.0, PackageManagement non supporta i computer che dispongono solo dell'accesso Intranet, ma non Internet.
-
-**Soluzione**: in WMF 5.1, è possibile seguire questa procedura per consentire ai computer Intranet di usare PackageManagement:
-
-1. Scaricare il provider NuGet usando un altro computer che dispone di una connessione Internet tramite `Install-PackageProvider -Name NuGet`.
-
-2. Trovare il provider NuGet sotto `$env:ProgramFiles\PackageManagement\ProviderAssemblies\nuget`  o  `$env:LOCALAPPDATA\PackageManagement\ProviderAssemblies\nuget`.
-
-3. Copiare i file binari in una cartella o in una condivisione di rete a cui il computer Intranet può accedere e quindi installare il provider NuGet con `Install-PackageProvider -Name NuGet -Source <Path to folder>`.
+<span data-ttu-id="28b25-124">È possibile aggirare il problema anche eliminando manualmente la versione precedente del provider NuGet (NuGet-Anycpu.exe), se presente, da $env:Programmi\PackageManagement\ProviderAssemblies $env:LOCALAPPDATA\PackageManagement\ProviderAssemblies</span><span class="sxs-lookup"><span data-stu-id="28b25-124">You could also work around this issue by manually deleting the old version of the NuGet provider (NuGet-Anycpu.exe) if exists from $env:ProgramFiles\PackageManagement\ProviderAssemblies $env:LOCALAPPDATA\PackageManagement\ProviderAssemblies</span></span>
 
 
-<a id="event-logging-improvements" class="xliff"></a>
-### Miglioramenti apportati alla registrazione di eventi
+### <a name="support-for-packagemanagement-on-computers-with-intranet-access-only"></a><span data-ttu-id="28b25-125">Supporto per PackageManagement nei computer solo con accesso Intranet</span><span class="sxs-lookup"><span data-stu-id="28b25-125">Support for PackageManagement on computers with Intranet access only</span></span>
 
-Quando si installano i pacchetti, si modifica lo stato del computer. In WMF 5.1, PackageManagement ora registra gli eventi nel registro eventi di Windows per le attività `Install-Package`, `Uninstall-Package` e `Save-Package`. Il registro eventi è identico a quello di PowerShell, vale a dire `Microsoft-Windows-PowerShell, Operational`.
+<span data-ttu-id="28b25-126">**Scenario**: in uno scenario aziendale gli utenti operano in un ambiente in cui non è presente alcun accesso Internet, ma solo Intranet.</span><span class="sxs-lookup"><span data-stu-id="28b25-126">**Scenario**: For the enterprise scenario, people are working under an environment where there is no Internet access but Intranet only.</span></span> <span data-ttu-id="28b25-127">In WMF 5.0, PackageManagement non supporta questo caso.</span><span class="sxs-lookup"><span data-stu-id="28b25-127">PackageManagement did not support this case in WMF 5.0.</span></span>
 
-<a id="support-for-basic-authentication" class="xliff"></a>
-### Supporto per l'autenticazione di base
+<span data-ttu-id="28b25-128">**Scenario**: in WMF 5.0, PackageManagement non supporta i computer che dispongono solo dell'accesso Intranet, ma non Internet.</span><span class="sxs-lookup"><span data-stu-id="28b25-128">**Scenario**: In WMF 5.0, PackageManagement did not support computers that have only Intranet (but not Internet) access.</span></span>
 
-In WMF 5.1, PackageManagement supporta la ricerca e l'installazione dei pacchetti da un repository che richiede l'autenticazione di base. È possibile fornire le credenziali per i cmdlet `Find-Package` e `Install-Package`. Ad esempio:
+<span data-ttu-id="28b25-129">**Soluzione**: in WMF 5.1, è possibile seguire questa procedura per consentire ai computer Intranet di usare PackageManagement:</span><span class="sxs-lookup"><span data-stu-id="28b25-129">**Solution**: In WMF 5.1, you can follow these steps to allow Intranet computers to use PackageManagement:</span></span>
+
+1. <span data-ttu-id="28b25-130">Scaricare il provider NuGet usando un altro computer che dispone di una connessione Internet tramite `Install-PackageProvider -Name NuGet`.</span><span class="sxs-lookup"><span data-stu-id="28b25-130">Download the NuGet provider using another computer that has an Internet connection by using `Install-PackageProvider -Name NuGet`.</span></span>
+
+2. <span data-ttu-id="28b25-131">Trovare il provider NuGet sotto `$env:ProgramFiles\PackageManagement\ProviderAssemblies\nuget`  o  `$env:LOCALAPPDATA\PackageManagement\ProviderAssemblies\nuget`.</span><span class="sxs-lookup"><span data-stu-id="28b25-131">Find the NuGet provider under either `$env:ProgramFiles\PackageManagement\ProviderAssemblies\nuget`  or  `$env:LOCALAPPDATA\PackageManagement\ProviderAssemblies\nuget`.</span></span>
+
+3. <span data-ttu-id="28b25-132">Copiare i file binari in una cartella o in una condivisione di rete a cui il computer Intranet può accedere e quindi installare il provider NuGet con `Install-PackageProvider -Name NuGet -Source <Path to folder>`.</span><span class="sxs-lookup"><span data-stu-id="28b25-132">Copy the binaries to a folder or network share location that the Intranet computer can access, and then install the NuGet provider with `Install-PackageProvider -Name NuGet -Source <Path to folder>`.</span></span>
+
+
+### <a name="event-logging-improvements"></a><span data-ttu-id="28b25-133">Miglioramenti apportati alla registrazione di eventi</span><span class="sxs-lookup"><span data-stu-id="28b25-133">Event logging improvements</span></span>
+
+<span data-ttu-id="28b25-134">Quando si installano i pacchetti, si modifica lo stato del computer.</span><span class="sxs-lookup"><span data-stu-id="28b25-134">When you install packages, you are changing the state of the computer.</span></span> <span data-ttu-id="28b25-135">In WMF 5.1, PackageManagement ora registra gli eventi nel registro eventi di Windows per le attività `Install-Package`, `Uninstall-Package` e `Save-Package`.</span><span class="sxs-lookup"><span data-stu-id="28b25-135">In WMF 5.1, PackageManagement now logs events to the Windows event log for `Install-Package`, `Uninstall-Package`, and `Save-Package` activities.</span></span> <span data-ttu-id="28b25-136">Il registro eventi è identico a quello di PowerShell, vale a dire `Microsoft-Windows-PowerShell, Operational`.</span><span class="sxs-lookup"><span data-stu-id="28b25-136">The Event log  is the same as for PowerShell, that is, `Microsoft-Windows-PowerShell, Operational`.</span></span>
+
+### <a name="support-for-basic-authentication"></a><span data-ttu-id="28b25-137">Supporto per l'autenticazione di base</span><span class="sxs-lookup"><span data-stu-id="28b25-137">Support for basic authentication</span></span>
+
+<span data-ttu-id="28b25-138">In WMF 5.1, PackageManagement supporta la ricerca e l'installazione dei pacchetti da un repository che richiede l'autenticazione di base.</span><span class="sxs-lookup"><span data-stu-id="28b25-138">In WMF 5.1, PackageManagement supports finding and installing packages from a repository that requires basic authentication.</span></span> <span data-ttu-id="28b25-139">È possibile fornire le credenziali per i cmdlet `Find-Package` e `Install-Package`.</span><span class="sxs-lookup"><span data-stu-id="28b25-139">You can supply your credentials to the `Find-Package` and `Install-Package` cmdlets.</span></span> <span data-ttu-id="28b25-140">Ad esempio:</span><span class="sxs-lookup"><span data-stu-id="28b25-140">For example:</span></span>
 
 ``` PowerShell
 Find-Package -Source <SourceWithCredential> -Credential (Get-Credential)
 ```
-<a id="support-for-using-packagemanagement-behind-a-proxy" class="xliff"></a>
-### Supporto per l'utilizzo di PackageManagement dietro un proxy
+### <a name="support-for-using-packagemanagement-behind-a-proxy"></a><span data-ttu-id="28b25-141">Supporto per l'utilizzo di PackageManagement dietro un proxy</span><span class="sxs-lookup"><span data-stu-id="28b25-141">Support for using PackageManagement behind a proxy</span></span>
 
-In WMF 5.1, PackageManagement accetta ora i nuovi parametri proxy `-ProxyCredential` e `-Proxy`. Grazie a questi parametri è possibile specificare le credenziali e l'URL del proxy nei cmdlet di PackageManagement. Per impostazione predefinita, vengono usate le impostazioni proxy del sistema. Ad esempio:
+<span data-ttu-id="28b25-142">In WMF 5.1, PackageManagement accetta ora i nuovi parametri proxy `-ProxyCredential` e `-Proxy`.</span><span class="sxs-lookup"><span data-stu-id="28b25-142">In WMF 5.1, PackageManagement now takes new proxy parameters `-ProxyCredential` and `-Proxy`.</span></span> <span data-ttu-id="28b25-143">Grazie a questi parametri è possibile specificare le credenziali e l'URL del proxy nei cmdlet di PackageManagement.</span><span class="sxs-lookup"><span data-stu-id="28b25-143">Using these parameters, you can specify the proxy URL and credentials to PackageManagement cmdlets.</span></span> <span data-ttu-id="28b25-144">Per impostazione predefinita, vengono usate le impostazioni proxy del sistema.</span><span class="sxs-lookup"><span data-stu-id="28b25-144">By default, system proxy settings are used.</span></span> <span data-ttu-id="28b25-145">Ad esempio:</span><span class="sxs-lookup"><span data-stu-id="28b25-145">For example:</span></span>
 
 ``` PowerShell
 Find-Package -Source http://www.nuget.org/api/v2/ -Proxy http://www.myproxyserver.com -ProxyCredential (Get-Credential)

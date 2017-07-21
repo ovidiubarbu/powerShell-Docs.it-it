@@ -9,7 +9,6 @@ ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 06/12/2017
 ---
-<a id="feedback" class="xliff"></a>
-# Commenti e suggerimenti
-Per segnalare eventuali problemi o inviare commenti e suggerimenti, usare il [sito UserVoice per PowerShell](http://windowsserver.uservoice.com/forums/301869-powershell).
+# <a name="feedback"></a><span data-ttu-id="320b7-102">Commenti e suggerimenti</span><span class="sxs-lookup"><span data-stu-id="320b7-102">Feedback</span></span>
+<span data-ttu-id="320b7-103">Per segnalare eventuali problemi o inviare commenti e suggerimenti, usare il [sito UserVoice per PowerShell](http://windowsserver.uservoice.com/forums/301869-powershell).</span><span class="sxs-lookup"><span data-stu-id="320b7-103">For reporting issues or providing feedback, use the [PowerShell UserVoice site](http://windowsserver.uservoice.com/forums/301869-powershell).</span></span>
 

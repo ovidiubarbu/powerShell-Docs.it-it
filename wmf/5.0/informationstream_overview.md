@@ -9,10 +9,9 @@ ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 06/12/2017
 ---
-<a id="information-stream" class="xliff"></a>
-# Flusso di informazioni
+# <a name="information-stream"></a><span data-ttu-id="18b38-102">Flusso di informazioni</span><span class="sxs-lookup"><span data-stu-id="18b38-102">Information Stream</span></span>
 
-È ora possibile usare un nuovo flusso di informazioni strutturate per trasmettere dati strutturati tra uno script e il relativo host. **Write-Host** è stato inoltre aggiornato per generare l'output nel flusso di informazioni in cui è ora possibile acquisirlo o disattivarlo. Il nuovo cmdlet **Write-Information** (insieme a un'API WriteInformation corrispondente) usato con i parametri comuni **-InformationVariable** e **-InformationAction** consente miglioramenti a livello di flessibilità e funzionalità.
+<span data-ttu-id="18b38-103">È ora possibile usare un nuovo flusso di informazioni strutturate per trasmettere dati strutturati tra uno script e il relativo host.</span><span class="sxs-lookup"><span data-stu-id="18b38-103">A new structured Information stream can now be used to transmit structured data between a script and its host.</span></span> <span data-ttu-id="18b38-104">**Write-Host** è stato inoltre aggiornato per generare l'output nel flusso di informazioni in cui è ora possibile acquisirlo o disattivarlo.</span><span class="sxs-lookup"><span data-stu-id="18b38-104">**Write-Host** has also been updated to emit its output to the Information stream where you can now capture or silence it.</span></span> <span data-ttu-id="18b38-105">Il nuovo cmdlet **Write-Information** (insieme a un'API WriteInformation corrispondente) usato con i parametri comuni **-InformationVariable** e **-InformationAction** consente miglioramenti a livello di flessibilità e funzionalità.</span><span class="sxs-lookup"><span data-stu-id="18b38-105">The new **Write-Information** cmdlet (along with a corresponding WriteInformation API) used with **-InformationVariable** and **-InformationAction** common parameters enables more flexibility and capability.</span></span>
 
 ```powershell
 PS C:\Users\demo> ## Here's a typical PowerShell script
