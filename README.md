@@ -1,29 +1,12 @@
-## <a name="microsoft-open-source-code-of-conduct"></a>Codice di condotta Microsoft Open Source
+<span data-ttu-id="13bc8-101">[![Stato della compilazione](https://ci.appveyor.com/api/projects/status/onshefxnc4g4pv87/branch/staging?svg=true)](https://ci.appveyor.com/project/PowerShell/powershell-docs/branch/staging)</span><span class="sxs-lookup"><span data-stu-id="13bc8-101">[![Build status](https://ci.appveyor.com/api/projects/status/onshefxnc4g4pv87/branch/staging?svg=true)](https://ci.appveyor.com/project/PowerShell/powershell-docs/branch/staging)</span></span>
 
-Per questo progetto è stato adottato [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/) (Codice di condotta Microsoft Open Source).
-Per altre informazioni, vedere [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) (Domande frequenti sul codice di condotta) oppure contattare [opencode@microsoft.com](mailto:opencode@microsoft.com) per eventuali domande o commenti.
+# <a name="powershell-documentation"></a><span data-ttu-id="13bc8-102">Documentazione di PowerShell</span><span class="sxs-lookup"><span data-stu-id="13bc8-102">PowerShell Documentation</span></span>
 
-[![Stato della compilazione](https://ci.appveyor.com/api/projects/status/onshefxnc4g4pv87/branch/staging?svg=true)](https://ci.appveyor.com/project/PowerShell/powershell-docs/branch/staging)
+<span data-ttu-id="13bc8-103">Repository PowerShell-Docs, che contiene la documentazione ufficiale di Windows PowerShell [disponibile in MSDN](https://msdn.microsoft.com/powershell/dsc/overview).</span><span class="sxs-lookup"><span data-stu-id="13bc8-103">Welcome to the PowerShell-Docs repository, housing the official Windows PowerShell documentation [available on MSDN](https://msdn.microsoft.com/powershell/dsc/overview).</span></span> 
 
-# <a name="powershell-documentation"></a>Documentazione di PowerShell
+> <span data-ttu-id="13bc8-104">**Nota**: attualmente questo repository è disponibile solo per il contenuto di PowerShell [Desired State Configuration (DSC)](https://msdn.microsoft.com/en-us/powershell/dsc/overview) e per le [note sulla versione di Windows Management Framework (WMF)](https://msdn.microsoft.com/en-us/powershell/wmf/releasenotes).</span><span class="sxs-lookup"><span data-stu-id="13bc8-104">**Note**: Currently, this repository is intended only for PowerShell [Desired State Configuration (DSC)](https://msdn.microsoft.com/en-us/powershell/dsc/overview) content and [Windows Management Framework (WMF) release notes](https://msdn.microsoft.com/en-us/powershell/wmf/releasenotes).</span></span> <span data-ttu-id="13bc8-105">In futuro, il repository verrà esteso per includere una gamma più ampia di documentazione di PowerShell.</span><span class="sxs-lookup"><span data-stu-id="13bc8-105">In the future, the repo will be expanded to include a wider range of PowerShell documentation.</span></span> 
 
-Questo è il repository PowerShell-Docs, che contiene la documentazione ufficiale di Windows PowerShell. 
+## <a name="contributing"></a><span data-ttu-id="13bc8-106">Contributi</span><span class="sxs-lookup"><span data-stu-id="13bc8-106">Contributing</span></span>
 
-## <a name="repository-structure"></a>Struttura del repository
-Ogni cartella in questo repository viene pubblicata in [MSDN](https://msdn.microsoft.com/en-us/powershell). Le cartelle corrispondono alle risorse di PowerShell seguenti:
-* [/dsc/](https://msdn.microsoft.com/en-us/powershell/dsc/) per la funzionalità DSC (Desired State Configuration)
-* [/gallery/](https://msdn.microsoft.com/powershell/gallery) per [PowerShell Gallery](https://www.powershellgallery.com/)
-* [/jea/](https://msdn.microsoft.com/powershell/jea/) per la funzionalità JEA (Just Enough Administration)
-* [/reference/](https://msdn.microsoft.com/powershell/reference/) per le informazioni di riferimento sui moduli di PowerShell per le versioni 2.0, 3.0, 4.0, 5.0, 5.1 e 6.0
-  * Questo contenuto verrà recuperato dal cmdlet `Get-Help` in futuro
-* [/scripting/](https://msdn.microsoft.com/en-us/powershell/scripting/) per il contenuto di riferimento generale su PowerShell
-* [/wmf](https://msdn.microsoft.com/en-us/powershell/wmf/readme) contiene le note sulla versione per Windows Management Framework, il pacchetto usato per distribuire le nuove versioni di PowerShell nelle versioni precedenti di Windows. 
-
-
-
-## <a name="contributing"></a>Contributi
-
-I contributi vengono aggiunti attivamente a questo repository tramite [richiesta pull](https://help.github.com/articles/using-pull-requests/) nel ramo di *staging*. Si noti che prima di inviare una richiesta pull è necessario [firmare un contratto di licenza per i contributi](https://cla.microsoft.com/) in modo che la community possa liberamente usare i contributi inviati.
-Per altre informazioni sui contributi, leggere la [guida ai contributi](CONTRIBUTING.md).
-Esiste una bozza della [guida di stile](./STYLE.md) da esaminare prima di inviare contributi.
-Usare i modelli per i problemi e le richieste di pull per garantire la coerenza della documentazione tra le varie versioni. 
+<span data-ttu-id="13bc8-107">I contributi vengono aggiunti attivamente a questo repository tramite [richiesta pull](https://help.github.com/articles/using-pull-requests/) nel ramo di *staging*.</span><span class="sxs-lookup"><span data-stu-id="13bc8-107">We actively merge contributions into this repository via [pull request](https://help.github.com/articles/using-pull-requests/) into the *staging* branch.</span></span> <span data-ttu-id="13bc8-108">Si noti che prima di inviare una richiesta pull è necessario [firmare un contratto di licenza per i contributi](https://cla.microsoft.com/) in modo che la community possa liberamente usare i contributi inviati.</span><span class="sxs-lookup"><span data-stu-id="13bc8-108">Please note that before you submit a pull request you must [sign a Contribution License Agreement](https://cla.microsoft.com/) to ensure that the community is free to use your submissions.</span></span>
+<span data-ttu-id="13bc8-109">Per altre informazioni sui contributi, leggere la [guida ai contributi](CONTRIBUTING.md).</span><span class="sxs-lookup"><span data-stu-id="13bc8-109">For more information on contributing, read our [contributions guide](CONTRIBUTING.md).</span></span>
