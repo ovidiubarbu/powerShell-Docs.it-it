@@ -1,17 +1,16 @@
 ---
-ms.date: 2017-06-12
+ms.date: 2017-06-12T00:00:00.000Z
 author: eslesar
 ms.topic: conceptual
 keywords: dsc,powershell,configurazione,impostazione
 title: Specifica delle dipendenze tra nodi
-ms.openlocfilehash: dcdf9f8ef4b74d23bd083767db2cc4aafc0ee83b
-ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.openlocfilehash: 885c130fb050629aac4c072e18a147d77b9deb8f
+ms.sourcegitcommit: a5c0795ca6ec9332967bff9c151a8572feb1a53a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/12/2017
+ms.lasthandoff: 07/27/2017
 ---
-<a id="specifying-cross-node-dependencies" class="xliff"></a>
-# Specifica delle dipendenze tra nodi
+# <a name="specifying-cross-node-dependencies"></a>Specifica delle dipendenze tra nodi
 
 > Si applica a: Windows PowerShell 5.0
 
@@ -21,8 +20,7 @@ DSC fornisce risorse speciali quali **WaitForAll**, **WaitForAny** e **WaitForSo
 * **WaitForAny**: ha esito positivo se la risorsa specificata è nello stato desiderato in almeno uno dei nodi di destinazione definiti nella proprietà **NodeName**.
 * **WaitForSome**: specifica una proprietà **NodeCount** oltre alla proprietà **NodeName**. La risorsa ha esito positivo se si trova nello stato desiderato in un numero minimo di nodi, specificato in **NodeCount**, definito dalla proprietà **NodeName**. 
 
-<a id="using-waitforxxxx-resources" class="xliff"></a>
-## Uso delle risorse WaitForXXXX
+## <a name="using-waitforxxxx-resources"></a>Uso delle risorse WaitForXXXX
 
 Per usare le risorse **WaitForXXXX**, creare un blocco di risorsa contenente il tipo di risorsa che specifica la risorsa DSC e i nodi da attendere. Quindi usare la proprietà **DependsOn** su eventuali altri blocchi di risorse nella configurazione per attendere che le condizioni specificate nel nodo **WaitForXXXX** abbiano esito positivo.
 
@@ -34,7 +32,7 @@ Configuration JoinDomain
 {
     Import-DscResource -Module xComputerManagement, xActiveDirectory
 
-    Node myPC
+    Node myDC
     {
         WindowsFeature InstallAD
         {
@@ -78,8 +76,7 @@ Configuration JoinDomain
 
 >**Nota**: per impostazione predefinita, le risorse WaitForXXX eseguono un solo tentativo prima dell'esito negativo. Sebbene non sia obbligatorio, è consigliabile specificare un intervallo per i tentativi e il loro numero.
 
-<a id="see-also" class="xliff"></a>
-## Vedere anche
+## <a name="see-also"></a>Vedere anche
 * [Configurazioni DSC](configurations.md)
 * [Risorse DSC](resources.md)
 * [Configurazione di Gestione configurazione locale](metaConfig.md)

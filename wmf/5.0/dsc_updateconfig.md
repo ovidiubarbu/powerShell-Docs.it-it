@@ -1,16 +1,15 @@
 ---
-ms.date: 2017-06-12
+ms.date: 2017-06-12T00:00:00.000Z
 author: JKeithB
 ms.topic: reference
 keywords: wmf,powershell,installazione
-ms.openlocfilehash: 410fa4b6c6d3e2708da78414cbb9b80dd3ca1387
-ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.openlocfilehash: f2ddde78f436e6f03f521a9a8246dbda93e7a57a
+ms.sourcegitcommit: a5c0795ca6ec9332967bff9c151a8572feb1a53a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/12/2017
+ms.lasthandoff: 07/27/2017
 ---
-<a id="on-demand-pull-of-dsc-configurations" class="xliff"></a>
-# PULL su richiesta delle configurazioni DSC
+# <a name="on-demand-pull-of-dsc-configurations"></a>PULL su richiesta delle configurazioni DSC
 
 Il nuovo cmdlet Update-DscConfiguration attiva un'operazione di pull dai server di pull definiti nella metaconfigurazione. Questo comportamento è spesso indicato anche come 'pull immediato'. 
 
@@ -23,7 +22,7 @@ Una volta attivato, il pull funziona esattamente come nell'ambito della normale 
 
 **Nota:** se RefreshMode = 'Push' per la metaconfigurazione, il cmdlet restituisce un errore in modo che questo cmdlet non esegua mai alcuna operazione quando un nodo di destinazione è in modalità 'Push'.
 
-```PowerShell
+```powershell
 Update-DscConfiguration     [[-ComputerName] <string[]>] 
                             [-Wait]
                             [-Force] 

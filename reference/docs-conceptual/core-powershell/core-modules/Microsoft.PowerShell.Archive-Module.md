@@ -1,13 +1,13 @@
 ---
-ms.date: 2017-06-05
+ms.date: 2017-06-05T00:00:00.000Z
 keywords: powershell,cmdlet
 title: Modulo Microsoft.PowerShell.Archive
 ms.assetid: 71a727b5-49a5-47a9-8034-161c86cf042b
 ms.openlocfilehash: 2fd418ae92c2190aa1aa2c4353e49bf6cb5f5d89
-ms.sourcegitcommit: 598b7835046577841aea2211d613bb8513271a8b
+ms.sourcegitcommit: 74255f0b5f386a072458af058a15240140acb294
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/08/2017
+ms.lasthandoff: 08/03/2017
 ---
 # <a name="microsoftpowershellarchive-module"></a>Modulo Microsoft.PowerShell.Archive
 Questa sezione contiene gli argomenti della Guida per i cmdlet installati con il modulo **Microsoft.PowerShell.Archive** di Windows PowerShell. Il modulo Archive contiene cmdlet che consentono di creare ed estrarre file di archivio o ZIP.

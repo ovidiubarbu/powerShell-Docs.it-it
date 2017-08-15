@@ -1,13 +1,13 @@
 ---
-ms.date: 2017-06-05
+ms.date: 2017-06-05T00:00:00.000Z
 keywords: powershell,cmdlet
-title: Preparativi per l&quot;uso di Windows PowerShell
+title: Preparativi per l'uso di Windows PowerShell
 ms.assetid: 6dc7052d-cc5a-4220-950f-98f963a2b587
 ms.openlocfilehash: 32bae871574775165d12382deeca27ab24893544
-ms.sourcegitcommit: 598b7835046577841aea2211d613bb8513271a8b
+ms.sourcegitcommit: 74255f0b5f386a072458af058a15240140acb294
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/08/2017
+ms.lasthandoff: 08/03/2017
 ---
 # <a name="getting-ready-to-use-windows-powershell"></a>Preparativi per l'uso di Windows PowerShell
 Dopo l'installazione e l'avvio di Windows PowerShell, prendere in considerazione le opzioni di installazione seguenti. È possibile eseguire queste attività in qualsiasi momento.

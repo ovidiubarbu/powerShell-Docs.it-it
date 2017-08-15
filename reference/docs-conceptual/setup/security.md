@@ -1,12 +1,12 @@
 ---
-ms.date: 2017-06-05
+ms.date: 2017-06-05T00:00:00.000Z
 keywords: powershell,cmdlet
 title: sicurezza
 ms.openlocfilehash: 9ed7971d36e14b3db9046da0e899f9758d21ea5c
-ms.sourcegitcommit: 598b7835046577841aea2211d613bb8513271a8b
+ms.sourcegitcommit: 74255f0b5f386a072458af058a15240140acb294
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/08/2017
+ms.lasthandoff: 08/03/2017
 ---
 # <a name="security-module"></a>Modulo Security
 Questa sezione contiene gli argomenti della Guida per il modulo **Microsoft.PowerShell.Security**. Il modulo **Microsoft.PowerShell.Security** contiene il [provider Certificate [v3]](https://technet.microsoft.com/en-us/library/3f743541-d0c6-4670-809a-b16fb01f7c4d) e i cmdlet che gestiscono le funzionalità di sicurezza di Windows PowerShell, inclusi i criteri di esecuzione. Il modulo **Microsoft.PowerShell.Security** viene installato con Windows PowerShell.

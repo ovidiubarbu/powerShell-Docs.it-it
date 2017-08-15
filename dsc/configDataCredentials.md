@@ -1,21 +1,19 @@
 ---
-ms.date: 2017-06-12
+ms.date: 2017-06-12T00:00:00.000Z
 author: eslesar
 ms.topic: conceptual
 keywords: dsc,powershell,configurazione,impostazione
 title: Opzioni delle credenziali nei dati di configurazione
-ms.openlocfilehash: 7fadce447c418b229a534e92d12bc2131365a37a
-ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.openlocfilehash: ec4eeb8e519158b2bf929b949e381cdba54f8928
+ms.sourcegitcommit: a5c0795ca6ec9332967bff9c151a8572feb1a53a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/12/2017
+ms.lasthandoff: 07/27/2017
 ---
-<a id="credentials-options-in-configuration-data" class="xliff"></a>
-# Opzioni delle credenziali nei dati di configurazione
+# <a name="credentials-options-in-configuration-data"></a>Opzioni delle credenziali nei dati di configurazione
 >Si applica a: Windows PowerShell 5.0
 
-<a id="plain-text-passwords-and-domain-users" class="xliff"></a>
-## Password di testo normale e utenti di dominio
+## <a name="plain-text-passwords-and-domain-users"></a>Password di testo normale e utenti di dominio
 
 Le configurazioni DSC che contengono una credenziale senza crittografia generano un messaggio di errore relativo alle password di testo normale.
 Inoltre, DSC genera un avviso quando si usano credenziali di dominio.
@@ -125,8 +123,7 @@ unencryptedPasswordDemo -ConfigurationData $ConfigurationData
 Start-DscConfiguration ./unencryptedPasswordDemo -verbose -wait -force
 ```
 
-<a id="handling-credentials-in-dsc" class="xliff"></a>
-## Gestione delle credenziali in DSC
+## <a name="handling-credentials-in-dsc"></a>Gestione delle credenziali in DSC
 
 Le risorse di configurazione DSC vengono eseguite come `Local System` per impostazione predefinita.
 Tuttavia, per alcune risorse è necessaria una credenziale, ad esempio quando la risorsa `Package` deve installare software nell'ambito di un account utente specifico.
@@ -139,7 +136,7 @@ Le risorse più recenti e quelle personalizzate possono usare questa proprietà 
 
 Per trovare le proprietà delle credenziali disponibili in una risorsa, usare `Get-DscResource -Name ResourceName -Syntax` o Intellisense in ISE (`CTRL+SPACE`).
 
-```PowerShell
+```powershell
 PS C:\> Get-DscResource -Name Group -Syntax
 Group [String] #ResourceName
 {
@@ -162,8 +159,7 @@ Tuttavia, la risorsa usa solo la proprietà `Credential`.
 
 Per altre informazioni sulla proprietà `PsDscRunAsCredential`, vedere [Esecuzione di DSC con le credenziali dell'utente](runAsUser.md).
 
-<a id="example-the-group-resource-credential-property" class="xliff"></a>
-## Esempio: proprietà Credential della risorsa Group
+## <a name="example-the-group-resource-credential-property"></a>Esempio: proprietà Credential della risorsa Group
 
 Poiché DSC viene eseguito in `Local System`, ha già le autorizzazioni necessarie per modificare gruppi e utenti locali.
 Se il membro aggiunto è un account locale, non è necessaria alcuna credenziale.
@@ -173,12 +169,11 @@ Le query anonime in Active Directory non sono consentite.
 La proprietà `Credential` della risorsa `Group` corrisponde all'account di dominio usato per eseguire query in Active Directory.
 Per quasi tutti gli scopi può trattarsi di un account utente generico, perché per impostazione predefinita gli utenti possono *leggere* la maggior parte degli oggetti in Active Directory.
 
-<a id="example-configuration" class="xliff"></a>
-## Configurazione di esempio
+## <a name="example-configuration"></a>Configurazione di esempio
 
 Il codice di esempio seguente usa DSC per immettere un utente di dominio in un gruppo locale:
 
-```PowerShell
+```powershell
 Configuration DomainCredentialExample
 {
     param
@@ -229,8 +224,7 @@ Questo esempio include due problemi:
 1.  Un errore indica che le password di testo semplice non sono consigliate
 2.  Un avviso sconsiglia l'uso di una credenziale di dominio
 
-<a id="psdscallowplaintextpassword" class="xliff"></a>
-## PsDscAllowPlainTextPassword
+## <a name="psdscallowplaintextpassword"></a>PsDscAllowPlainTextPassword
 
 Il primo messaggio di errore contiene un URL con la documentazione.
 Il collegamento descrive come crittografare le password usando una struttura [ConfigurationData](https://msdn.microsoft.com/en-us/powershell/dsc/configdata) e un certificato.
@@ -238,7 +232,7 @@ Per altre informazioni sui certificati e su DSC, [leggere questo post](http://ak
 
 Per forzare una password di testo semplice, la risorsa richiede la presenza della parola chiave `PsDscAllowPlainTextPassword` nella sezione dei dati di configurazione, nel modo seguente:
 
-```PowerShell
+```powershell
 Configuration DomainCredentialExample
 {
     param
@@ -275,8 +269,7 @@ DomainCredentialExample -DomainCredential $cred -ConfigurationData $cd
 
 **Microsoft consiglia di evitare password di testo semplice, che possono provocare rischi significativi per la sicurezza.**
 
-<a id="domain-credentials" class="xliff"></a>
-## Credenziali di dominio
+## <a name="domain-credentials"></a>Credenziali di dominio
 
 Una nuova esecuzione dello script di configurazione di esempio (con o senza crittografia) genera comunque l'avviso che sconsiglia l'uso di un account di dominio per una credenziale.
 L'uso di un account locale elimina la potenziale esposizione delle credenziali di dominio, che potrebbero essere usate in altri server.
@@ -286,13 +279,12 @@ L'uso di un account locale elimina la potenziale esposizione delle credenziali d
 Se la proprietà `Username` della credenziale contiene un carattere "\'" o "@", DSC la considera un account di dominio.
 Un'eccezione riguarda "localhost", "127.0.0.1" e "::1" nella parte del dominio del nome utente.
 
-<a id="psdscallowdomainuser" class="xliff"></a>
-## PSDscAllowDomainUser
+## <a name="psdscallowdomainuser"></a>PSDscAllowDomainUser
 
 Nell'esempio di risorsa `Group` DSC precedente per l'esecuzione di query su un dominio Active Directory *è necessario* un account di dominio.
 In questo caso, aggiungere la proprietà `PSDscAllowDomainUser` al blocco `ConfigurationData` nel modo seguente:
 
-```PowerShell
+```powershell
 $cd = @{
     AllNodes = @(
         @{

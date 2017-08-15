@@ -1,27 +1,25 @@
 ---
-ms.date: 2017-06-12
+ms.date: 2017-06-12T00:00:00.000Z
 author: JKeithB
 ms.topic: reference
 keywords: wmf,powershell,installazione
 title: Cmdlet di catalogo
-ms.openlocfilehash: 88ca8a3366f7b1d83ba2596d7ae1230427797cf4
-ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.openlocfilehash: f0869e8c174ab127996866775ad20d056f877345
+ms.sourcegitcommit: a5c0795ca6ec9332967bff9c151a8572feb1a53a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/12/2017
+ms.lasthandoff: 07/27/2017
 ---
-<a id="catalog-cmdlets" class="xliff"></a>
-# Cmdlet di catalogo  
+# <a name="catalog-cmdlets"></a>Cmdlet di catalogo  
 
 Sono stati aggiunti due nuovi cmdlet nel modulo [Microsoft.Powershell.Secuity](https://technet.microsoft.com/en-us/library/hh847877.aspx) per generare e convalidare i file di catalogo di Windows.  
 
-<a id="new-filecatalog" class="xliff"></a>
-## New-FileCatalog 
+## <a name="new-filecatalog"></a>New-FileCatalog 
 --------------------------------
 
 `New-FileCatalog` crea un file di catalogo Windows per set di cartelle e file. Un file di catalogo contiene gli hash per tutti i file nei percorsi specificati. Gli utenti possono distribuire il set di cartelle con il corrispondente file di catalogo che rappresenta le cartelle. Un file di catalogo può essere usato dal destinatario del contenuto per convalidare le modifiche apportate alle cartelle dopo la creazione del catalogo.    
 
-```PowerShell
+```powershell
 New-FileCatalog [-CatalogFilePath] <string> [[-Path] <string[]>] [-CatalogVersion <int>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 Il catalogo della creazione dei file viene supportato nella versione 1 e 2. La versione 1 usa l'algoritmo di hash SHA1 per creare hash di file; la versione 2 usa SHA256. La versione 2 del catalogo non è supportata in *Windows Server 2008 R2* e in *Windows 7*. È consigliabile usare la versione 2 del catalogo se si usano le piattaforme *Windows 8*, *Windows Server 2012* e versioni successive.  
@@ -39,13 +37,12 @@ Questa operazione crea il file di catalogo.
 Per verificare l'integrità di un file di catalogo (Pester.cat nell'esempio precedente), è necessario che sia firmato con il cmdlet [Set-AuthenticodeSignature](https://technet.microsoft.com/library/hh849819.aspx).   
 
 
-<a id="test-filecatalog" class="xliff"></a>
-## Test-FileCatalog 
+## <a name="test-filecatalog"></a>Test-FileCatalog 
 --------------------------------
 
 `Test-FileCatalog` convalida il catalogo che rappresenta un set di cartelle. 
 
-```PowerShell
+```powershell
 Test-FileCatalog [-CatalogFilePath] <string> [[-Path] <string[]>] [-Detailed] [-FilesToSkip <string[]>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
