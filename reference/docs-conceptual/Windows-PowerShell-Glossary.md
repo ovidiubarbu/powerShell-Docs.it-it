@@ -1,13 +1,13 @@
 ---
-ms.date: 2017-06-05
+ms.date: 2017-06-05T00:00:00.000Z
 keywords: powershell,cmdlet
 title: Glossario di Windows PowerShell
 ms.assetid: b0f88cbe-cb83-4912-a301-184534cb35c7
-ms.openlocfilehash: 9b8ff47a568b8a71cc51f50b3f3ba5ad3dab1ad1
-ms.sourcegitcommit: 598b7835046577841aea2211d613bb8513271a8b
+ms.openlocfilehash: 48e5d832ead720c8bc7753c94f757ddb21846fc9
+ms.sourcegitcommit: ced46469e064736eeb1f5608abbc792ec69bdc92
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/08/2017
+ms.lasthandoff: 08/08/2017
 ---
 # <a name="windows-powershell-glossary"></a>Glossario di Windows PowerShell
 
@@ -15,7 +15,7 @@ ms.lasthandoff: 06/08/2017
 |Termine|Definizione|
 |--------|--------------|
 |modulo binario|Modulo di Windows PowerShell il cui modulo radice è un file di modulo binario (con estensione dll). Un modulo binario può includere o meno un manifesto del modulo.|
-|parametro comune|Parametro aggiunto a tutti i cmdlet e tutte le funzioni avanzate dal motore di Windows PowerShell.|
+|parametro comune|Parametro aggiunto a tutti i cmdlet, le funzioni avanzate e i flussi di lavoro dal motore di Windows PowerShell.|
 |dot sourcing|In Windows PowerShell, avviare un comando digitando un punto e uno spazio prima del comando. I comandi con dot sourcing vengono eseguiti nell'ambito corrente anziché in un nuovo ambito. Qualsiasi variabile, alias, funzione o unità creata dal comando viene creato nell'ambito corrente ed è disponibile per gli utenti dopo il completamento del comando.|
 |modulo dinamico|Modulo che esiste solo in memoria. I cmdlet New-Module e Import-PSSession creano moduli dinamici.|
 |parametro dinamico|Parametro aggiunto a un cmdlet, una funzione o uno script di Windows PowerShell in determinate condizioni. I cmdlet, le funzioni, i provider e gli script possono aggiungere parametri dinamici.|

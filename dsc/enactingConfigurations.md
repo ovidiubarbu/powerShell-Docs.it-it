@@ -1,24 +1,22 @@
 ---
-ms.date: 2017-06-12
+ms.date: 2017-06-12T00:00:00.000Z
 author: eslesar
 ms.topic: conceptual
 keywords: dsc,powershell,configurazione,impostazione
 title: Applicazione delle configurazioni
-ms.openlocfilehash: db82788650186eb82f67b30b24cd45b719bbe314
-ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.openlocfilehash: db3a999f3e413ebb88e79f5ec04a7449db543030
+ms.sourcegitcommit: 46feddbc753523f464f139b5d272794620072fc8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/12/2017
+ms.lasthandoff: 08/02/2017
 ---
-<a id="enacting-configurations" class="xliff"></a>
-# Applicazione delle configurazioni
+# <a name="enacting-configurations"></a>Applicazione delle configurazioni
 
 >Si applica a: Windows PowerShell 4.0, Windows PowerShell 5.0
 
 Ci sono due modi per applicare le configurazioni di PowerShell DSC (Desired State Configuration): la modalità push e la modalità pull.
 
-<a id="push-mode" class="xliff"></a>
-## Modalità push
+## <a name="push-mode"></a>Modalità push
 
 ![Modalità push](images/Push.png "Come funziona la modalità push")
 
@@ -29,8 +27,7 @@ Dopo la creazione e la compilazione di una configurazione, è possibile applicar
 > __Nota__: per impostazione predefinita, DSC esegue una configurazione come processo in background. Per eseguire la configurazione in modo interattivo, chiamare [Start-DscConfiguration](https://technet.microsoft.com/library/dn521623.aspx) con il parametro __-Wait__.
 
 
-<a id="pull-mode" class="xliff"></a>
-## Modalità pull
+## <a name="pull-mode"></a>Modalità pull
 
 ![Modalità pull](images/Pull.png "Come funziona la modalità pull")
 

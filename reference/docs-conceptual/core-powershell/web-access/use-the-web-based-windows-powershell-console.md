@@ -1,16 +1,12 @@
 ---
-description: 
-manager: carmonm
-ms.topic: article
-author: jpjofre
-ms.prod: powershell
+ms.date: 2017-06-05T00:00:00.000Z
 keywords: powershell,cmdlet
-ms.date: 2016-12-12
 title: usare la console di windows powershell basata sul web
-ms.technology: powershell
-ms.openlocfilehash: ea530d346ec36000da331b287f51d8f732947629
-ms.sourcegitcommit: 8acbf9827ad8f4ef9753f826ecaff58495ca51b0
-translationtype: HT
+ms.openlocfilehash: 48ed1646c00f909c4e950f197f51a30205060ef0
+ms.sourcegitcommit: 74255f0b5f386a072458af058a15240140acb294
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 08/03/2017
 ---
 #  <a name="use-the-web-based-windows-powershell-console"></a>Usare la console di Windows PowerShell basata sul Web
 
@@ -39,7 +35,7 @@ Accesso Web Windows PowerShell supporta i browser Internet seguenti. Anche se i 
 
 ###
 
-<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Collapse"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Browser per computer desktop supportati</span></a>
+<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Comprimi"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Browser per computer desktop supportati</span></a>
 
 ------------------------------------------------------------------------
 
@@ -55,7 +51,7 @@ Accesso Web Windows PowerShell supporta i browser Internet seguenti. Anche se i 
 
 ###
 
-<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Collapse"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Dispositivi mobili e browser sottoposti ai test minimi</span></a>
+<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Comprimi"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Dispositivi mobili e browser sottoposti ai test minimi</span></a>
 
 ------------------------------------------------------------------------
 
@@ -69,7 +65,7 @@ Accesso Web Windows PowerShell supporta i browser Internet seguenti. Anche se i 
 
 ###
 
-<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Collapse"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Requisiti del browser</span></a>
+<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Comprimi"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Requisiti del browser</span></a>
 
 ------------------------------------------------------------------------
 
@@ -83,8 +79,8 @@ Per usare la console di Accesso Web Windows PowerShell basata sul Web, i browser
 
 <a href="" id="BKMK_sign"></a>
 
-<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Collapse"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Connessione ad Accesso Web Windows PowerShell</span></a>
-<a href="/en-us/library/hh831417(v=ws.11).aspx#Anchor_1" class="LW_CollapsibleArea_Anchor_Img" title="Right-click to copy and share the link for this section"></a>
+<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Comprimi"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Accesso ad Accesso Web Windows PowerShell</span></a>
+<a href="/en-us/library/hh831417(v=ws.11).aspx#Anchor_1" class="LW_CollapsibleArea_Anchor_Img" title="Fare clic con il pulsante destro del mouse per copiare e condividere il collegamento per questa sezione"></a>
 
 ------------------------------------------------------------------------
 
@@ -128,8 +124,8 @@ L'amministratore di Accesso Web Windows PowerShell deve fornire all'utente l'URL
 
 <a href="" id="BKMK_timeout"></a>
 
-<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Collapse"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Disconnessione e timeout</span></a>
-<a href="/en-us/library/hh831417(v=ws.11).aspx#Anchor_2" class="LW_CollapsibleArea_Anchor_Img" title="Right-click to copy and share the link for this section"></a>
+<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Comprimi"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Disconnessione e timeout</span></a>
+<a href="/en-us/library/hh831417(v=ws.11).aspx#Anchor_2" class="LW_CollapsibleArea_Anchor_Img" title="Fare clic con il pulsante destro del mouse per copiare e condividere il collegamento per questa sezione"></a>
 
 ------------------------------------------------------------------------
 
@@ -159,8 +155,8 @@ Per accedere di nuovo, riaprire la pagina Web di Accesso Web Windows PowerShell 
 
 <a href="" id="BKMK_web"></a>
 
-<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Collapse"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Differenze nella console di Windows PowerShell basata sul Web</span></a>
-<a href="/en-us/library/hh831417(v=ws.11).aspx#Anchor_3" class="LW_CollapsibleArea_Anchor_Img" title="Right-click to copy and share the link for this section"></a>
+<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Comprimi"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Differenze nella console di Windows PowerShell basata sul Web</span></a>
+<a href="/en-us/library/hh831417(v=ws.11).aspx#Anchor_3" class="LW_CollapsibleArea_Anchor_Img" title="Fare clic con il pulsante destro del mouse per copiare e condividere il collegamento per questa sezione"></a>
 
 ------------------------------------------------------------------------
 
@@ -168,7 +164,7 @@ Dopo l'accesso a Accesso Web Windows PowerShell, viene aperta una console di Win
 
 ###
 
-<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Collapse"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Disparità funzionale con PowerShell.exe</span></a>
+<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Comprimi"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Disparità funzionale con PowerShell.exe</span></a>
 
 ------------------------------------------------------------------------
 
@@ -280,7 +276,7 @@ Quasi tutte le funzionalità host di Windows PowerShell sono disponibili nella c
 <a href="" id="BKMK_limits"></a>
 ###
 
-<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Collapse"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Limitazioni della console basata sul Web</span></a>
+<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Comprimi"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Limitazioni della console basata sul Web</span></a>
 
 ------------------------------------------------------------------------
 
@@ -333,8 +329,8 @@ Quasi tutte le funzionalità host di Windows PowerShell sono disponibili nella c
 
         Altri esempi per personalizzare la visualizzazione della console sono disponibili nel [Blog del Team di Windows PowerShell](http://blogs.msdn.com/b/powershell/).
 
-<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Collapse"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Vedere anche</span></a>
-<a href="/en-us/library/hh831417(v=ws.11).aspx#Anchor_4" class="LW_CollapsibleArea_Anchor_Img" title="Right-click to copy and share the link for this section"></a>
+<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Comprimi"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Vedere anche</span></a>
+<a href="/en-us/library/hh831417(v=ws.11).aspx#Anchor_4" class="LW_CollapsibleArea_Anchor_Img" title="Fare clic con il pulsante destro del mouse per copiare e condividere il collegamento per questa sezione"></a>
 
 ------------------------------------------------------------------------
 

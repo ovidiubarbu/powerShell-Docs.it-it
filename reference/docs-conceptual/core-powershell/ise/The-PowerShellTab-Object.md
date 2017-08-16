@@ -1,13 +1,13 @@
 ---
-ms.date: 2017-06-05
+ms.date: 2017-06-05T00:00:00.000Z
 keywords: powershell,cmdlet
 title: Oggetto PowerShellTab
 ms.assetid: a9b58556-951b-4f48-b3ae-b351b7564360
 ms.openlocfilehash: d4e9374202d352a30b3eb46bcf1e4e40dea49822
-ms.sourcegitcommit: 598b7835046577841aea2211d613bb8513271a8b
+ms.sourcegitcommit: 74255f0b5f386a072458af058a15240140acb294
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/08/2017
+ms.lasthandoff: 08/03/2017
 ---
 # <a name="the-powershelltab-object"></a>Oggetto PowerShellTab
   L'oggetto **PowerShellTab** rappresenta un ambiente di runtime di Windows PowerShell.
@@ -40,8 +40,7 @@ $psise.PowerShellTabs[1].Invoke({dir})
 
  **Script** - System.Management.Automation.ScriptBlock or String Il blocco di script da eseguire.
 
- **\[useNewScope\]** - Valore booleano facoltativo impostato su **$true**
- Se impostato su **$true**, viene creato un nuovo ambito in cui eseguire il comando. Non modifica l'ambiente di runtime della scheda di PowerShell specificato dal comando.
+ **\[useNewScope\]** - Valore booleano facoltativo impostato su **$true** per impostazione predefinita. Se impostato su **$true**, viene creato un nuovo ambito in cui eseguire il comando. Non modifica l'ambiente di runtime della scheda di PowerShell specificato dal comando.
 
  **\[millisecondsTimeout\]** - Numero intero facoltativo impostato su **500** per impostazione predefinita.
 Se il comando non viene completato entro il tempo specificato, genera **TimeoutException** con il messaggio "Timeout dell'operazione".

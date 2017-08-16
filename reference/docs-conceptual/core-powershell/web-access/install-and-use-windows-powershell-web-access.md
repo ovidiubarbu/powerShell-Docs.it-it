@@ -1,16 +1,12 @@
 ---
-description: 
-manager: carmonm
-ms.topic: article
-author: jpjofre
-ms.prod: powershell
+ms.date: 2017-06-05T00:00:00.000Z
 keywords: powershell,cmdlet
-ms.date: 2016-12-12
 title: installare e usare accesso web windows powershell
-ms.technology: powershell
-ms.openlocfilehash: f2a908b670d1a0aba3ca0912aed0ff7e3c5bba1f
-ms.sourcegitcommit: 8acbf9827ad8f4ef9753f826ecaff58495ca51b0
-translationtype: HT
+ms.openlocfilehash: a860f7c22829da46f0458ea729fa0afd1fe4fb6f
+ms.sourcegitcommit: 74255f0b5f386a072458af058a15240140acb294
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 08/03/2017
 ---
 #  <a name="install-and-use-windows-powershell-web-access"></a>Installare e usare Accesso Web Windows PowerShell
 
@@ -38,7 +34,7 @@ Questo articolo non fornisce indicazioni dettagliate sulle operazioni nel server
 
 Il diagramma seguente mostra come funziona Accesso Web Windows PowerShell.
 
-<span><img src="https://i-technet.sec.s-msft.com/dynimg/IC564303.jpeg" title="Windows PowerShell Web Access diagram" alt="Windows PowerShell Web Access diagram" id="ee15fa8f-ce13-49e5-933d-514f6d60a2b1" /></span>
+<span><img src="https://i-technet.sec.s-msft.com/dynimg/IC564303.jpeg" title="Diagramma di Accesso Web Windows PowerShell" alt="Windows PowerShell Web Access diagram" id="ee15fa8f-ce13-49e5-933d-514f6d60a2b1" /></span>
 
 In questo argomento
 
@@ -54,8 +50,8 @@ In questo argomento
 
 <a href="" id="BKMK_reqs"></a>
 
-<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Collapse"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Requisiti per l'esecuzione di Accesso Web Windows PowerShell</span></a>
-<a href="/en-us/library/hh831611(v=ws.11).aspx#Anchor_0" class="LW_CollapsibleArea_Anchor_Img" title="Right-click to copy and share the link for this section"></a>
+<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Comprimi"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Requisiti per l'esecuzione di Accesso Web Windows PowerShell</span></a>
+<a href="/en-us/library/hh831611(v=ws.11).aspx#Anchor_0" class="LW_CollapsibleArea_Anchor_Img" title="Fare clic con il pulsante destro del mouse per copiare e condividere il collegamento per questa sezione"></a>
 
 ------------------------------------------------------------------------
 
@@ -65,8 +61,8 @@ Accesso Web Windows PowerShell consente agli utenti remoti di accedere ai comput
 
 <a href="" id="BKMK_browser"></a>
 
-<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Collapse"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Browser e dispositivi client supportati</span></a>
-<a href="/en-us/library/hh831611(v=ws.11).aspx#Anchor_1" class="LW_CollapsibleArea_Anchor_Img" title="Right-click to copy and share the link for this section"></a>
+<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Comprimi"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Browser e dispositivi client supportati</span></a>
+<a href="/en-us/library/hh831611(v=ws.11).aspx#Anchor_1" class="LW_CollapsibleArea_Anchor_Img" title="Fare clic con il pulsante destro del mouse per copiare e condividere il collegamento per questa sezione"></a>
 
 ------------------------------------------------------------------------
 
@@ -74,7 +70,7 @@ Accesso Web Windows PowerShell supporta i browser Internet seguenti. Anche se i 
 
 ###
 
-<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Collapse"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Browser per computer desktop supportati</span></a>
+<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Comprimi"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Browser per computer desktop supportati</span></a>
 
 ------------------------------------------------------------------------
 
@@ -90,7 +86,7 @@ Accesso Web Windows PowerShell supporta i browser Internet seguenti. Anche se i 
 
 ###
 
-<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Collapse"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Dispositivi mobili e browser sottoposti ai test minimi</span></a>
+<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Comprimi"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Dispositivi mobili e browser sottoposti ai test minimi</span></a>
 
 ------------------------------------------------------------------------
 
@@ -104,7 +100,7 @@ Accesso Web Windows PowerShell supporta i browser Internet seguenti. Anche se i 
 
 ###
 
-<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Collapse"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Requisiti del browser</span></a>
+<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Comprimi"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Requisiti del browser</span></a>
 
 ------------------------------------------------------------------------
 
@@ -118,8 +114,8 @@ Per usare la console di Accesso Web Windows PowerShell basata sul Web, i browser
 
 <a href="" id="BKMK_recm"></a>
 
-<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Collapse"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Distribuzione consigliata (rapida)</span></a>
-<a href="/en-us/library/hh831611(v=ws.11).aspx#Anchor_2" class="LW_CollapsibleArea_Anchor_Img" title="Right-click to copy and share the link for this section"></a>
+<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Comprimi"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Distribuzione (rapida) consigliata</span></a>
+<a href="/en-us/library/hh831611(v=ws.11).aspx#Anchor_2" class="LW_CollapsibleArea_Anchor_Img" title="Fare clic con il pulsante destro del mouse per copiare e condividere il collegamento per questa sezione"></a>
 
 ------------------------------------------------------------------------
 
@@ -134,7 +130,7 @@ Per usare la console di Accesso Web Windows PowerShell basata sul Web, i browser
 <a href="" id="BKMK_step1"></a>
 ###
 
-<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Collapse"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Passaggio 1: Installare Accesso Web Windows PowerShell</span></a>
+<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Comprimi"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Passaggio 1: Installare Accesso Web Windows PowerShell</span></a>
 
 ------------------------------------------------------------------------
 
@@ -197,7 +193,7 @@ Per usare la console di Accesso Web Windows PowerShell basata sul Web, i browser
 <a href="" id="BKMK_step2"></a>
 ###
 
-<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Collapse"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Passaggio 2: Configurare il gateway</span></a>
+<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Comprimi"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Passaggio 2: Configurare il gateway</span></a>
 
 ------------------------------------------------------------------------
 
@@ -344,7 +340,7 @@ Per completare la configurazione dell'applicazione Web Accesso Web Windows Power
 <a href="" id="BKMK_step3"></a>
 ###
 
-<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Collapse"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Passaggio 3: Configurare una regola di autorizzazione restrittiva</span></a>
+<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Comprimi"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Passaggio 3: Configurare una regola di autorizzazione restrittiva</span></a>
 
 ------------------------------------------------------------------------
 
@@ -380,8 +376,8 @@ Dopo la configurazione di una regola di autorizzazione, gli utenti autorizzati p
 
 <a href="" id="BKMK_custom"></a>
 
-<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Collapse"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Distribuzione personalizzata</span></a>
-<a href="/en-us/library/hh831611(v=ws.11).aspx#Anchor_3" class="LW_CollapsibleArea_Anchor_Img" title="Right-click to copy and share the link for this section"></a>
+<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Comprimi"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Distribuzione personalizzata</span></a>
+<a href="/en-us/library/hh831611(v=ws.11).aspx#Anchor_3" class="LW_CollapsibleArea_Anchor_Img" title="Fare clic con il pulsante destro del mouse per copiare e condividere il collegamento per questa sezione"></a>
 
 ------------------------------------------------------------------------
 
@@ -390,7 +386,7 @@ Dopo la configurazione di una regola di autorizzazione, gli utenti autorizzati p
 <a href="" id="BKMK_custom1"></a>
 ###
 
-<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Collapse"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Passaggio 1: Installare Accesso Web Windows PowerShell</span></a>
+<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Comprimi"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Passaggio 1: Installare Accesso Web Windows PowerShell</span></a>
 
 ------------------------------------------------------------------------
 
@@ -434,7 +430,7 @@ Dopo la configurazione di una regola di autorizzazione, gli utenti autorizzati p
 
 ###
 
-<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Collapse"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Passaggio 2: Configurare il gateway</span></a>
+<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Comprimi"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Passaggio 2: Configurare il gateway</span></a>
 
 ------------------------------------------------------------------------
 
@@ -578,7 +574,7 @@ Le istruzioni in questa sezione mostrano come installare l'applicazione Web Acce
 
 ###
 
-<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Collapse"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Passaggio 3: Configurare una regola di autorizzazione restrittiva</span></a>
+<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Comprimi"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Passaggio 3: Configurare una regola di autorizzazione restrittiva</span></a>
 
 ------------------------------------------------------------------------
 
@@ -614,8 +610,8 @@ Dopo la configurazione di una regola di autorizzazione, gli utenti autorizzati p
 
 <a href="" id="BKMK_configcert"></a>
 
-<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Collapse"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Configurare un certificato autentico</span></a>
-<a href="/en-us/library/hh831611(v=ws.11).aspx#Anchor_4" class="LW_CollapsibleArea_Anchor_Img" title="Right-click to copy and share the link for this section"></a>
+<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Comprimi"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Configurare un certificato autentico</span></a>
+<a href="/en-us/library/hh831611(v=ws.11).aspx#Anchor_4" class="LW_CollapsibleArea_Anchor_Img" title="Fare clic con il pulsante destro del mouse per copiare e condividere il collegamento per questa sezione"></a>
 
 ------------------------------------------------------------------------
 
@@ -643,15 +639,15 @@ Per un ambiente di produzione sicuro, usare sempre un certificato SSL valido fir
 
 <a href="" id="BKMK_using"></a>
 
-<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Collapse"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Uso della console di Windows PowerShell basata sul Web</span></a>
-<a href="/en-us/library/hh831611(v=ws.11).aspx#Anchor_5" class="LW_CollapsibleArea_Anchor_Img" title="Right-click to copy and share the link for this section"></a>
+<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Comprimi"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Uso della console di Windows PowerShell basata sul Web</span></a>
+<a href="/en-us/library/hh831611(v=ws.11).aspx#Anchor_5" class="LW_CollapsibleArea_Anchor_Img" title="Fare clic con il pulsante destro del mouse per copiare e condividere il collegamento per questa sezione"></a>
 
 ------------------------------------------------------------------------
 
 Dopo avere installato Accesso Web Windows PowerShell e completato la configurazione del gateway come illustrato in questo argomento, la console di Windows PowerShell basata sul Web è pronta all'uso. Per altre informazioni su come iniziare a usare la console basata sul Web, vedere [Usare la console di Windows PowerShell basata sul Web](https://technet.microsoft.com/en-us/library/hh831417(v=ws.11).aspx).
 
-<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Collapse"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Vedere anche</span></a>
-<a href="/en-us/library/hh831611(v=ws.11).aspx#Anchor_6" class="LW_CollapsibleArea_Anchor_Img" title="Right-click to copy and share the link for this section"></a>
+<a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Comprimi"><span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span><span class="LW_CollapsibleArea_Title">Vedere anche</span></a>
+<a href="/en-us/library/hh831611(v=ws.11).aspx#Anchor_6" class="LW_CollapsibleArea_Anchor_Img" title="Fare clic con il pulsante destro del mouse per copiare e condividere il collegamento per questa sezione"></a>
 
 ------------------------------------------------------------------------
 

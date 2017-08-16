@@ -1,16 +1,16 @@
 ---
-ms.date: 2017-06-05
+ms.date: 2017-06-05T00:00:00.000Z
 keywords: powershell,cmdlet
 title: Scripting di PowerShell
-ms.openlocfilehash: 4e27f81bd06f0994a86ffa3bd23e8fa6f4fe344d
-ms.sourcegitcommit: 598b7835046577841aea2211d613bb8513271a8b
+ms.openlocfilehash: 98b95339fb30ee95a006d10d68e266ed8243cd68
+ms.sourcegitcommit: 289fe8fbf8ff48ca8999aca10aebd3af44bf9b23
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/08/2017
+ms.lasthandoff: 08/07/2017
 ---
 #  <a name="powershell"></a>PowerShell
 
-Windows PowerShell, basato su .NET Framework, è una shell da riga di comando basata su attività nonché un linguaggio di scripting progettato espressamente per consentire agli amministratori di sistema e agli utenti avanzati di automatizzare rapidamente l'amministrazione di più sistemi operativi (Linux, OSX, Unix e Windows) e i processi correlati alle applicazioni che vengono eseguite su tali sistemi operativi.
+Windows PowerShell, basato su .NET Framework, è una shell da riga di comando basata su attività nonché un linguaggio di scripting progettato espressamente per consentire agli amministratori di sistema e agli utenti avanzati di automatizzare rapidamente l'amministrazione di più sistemi operativi (Linux, macOS, Unix e Windows) e i processi correlati alle applicazioni eseguite su tali sistemi operativi.
 
 ###  <a name="powershell-is-now-open-source"></a>PowerShell è ora open source
 
@@ -40,7 +40,7 @@ In questa sezione:
 -   [Preparazione all'uso di Windows PowerShell](getting-started/Getting-Ready-to-Use-Windows-PowerShell.md), che descrive i passaggi necessari per configurare PowerShell in modo da eseguire e provare tutti i frammenti di codice e comandi presentati nella sezione "Introduzione a PowerShell".
 -  Guida ai [concetti fondamentali](getting-started/fundamental-concepts.md), che spiega che cos'è PowerShell e contiene le informazioni di base necessarie per iniziare a usarlo.
 -  Una serie di [concetti &lt;informativi&gt;](getting-started/understanding-concepts-reference.md), che descrivono gli elementi di base PowerShell.
--  Una serie di [informazioni di riferimento dettagliate di base per l'&lt;utilizzo&gt;](getting-started/cookbooks/basic-cookbooks-reference.md), che forniscono le istruzioni per eseguire attività standard riguardo a file, file system, Registro di sistema, processi, servizi e altri argomenti simili per l'uso quotidiano.
+-  Una serie di [informazioni di riferimento dettagliate di base per l'&lt;utilizzo&gt;](getting-started/cookbooks/basic-cookbooks-reference.md), che forniscono le istruzioni per eseguire attività standard riguardo a file, file system, Registro di sistema, processi, servizi e altre operazioni simili quotidiane.
 -  Guida accurata ad altre fonti per l'[apprendimento di PowerShell](getting-started/more-powershell-learning.md).
 
 ##  <a name="common-powershellcore-powershellcore-powershellmd"></a>[PowerShell comune](core-powershell/core-powershell.md)

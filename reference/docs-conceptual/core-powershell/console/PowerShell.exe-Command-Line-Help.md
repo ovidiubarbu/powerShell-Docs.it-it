@@ -1,13 +1,13 @@
 ---
-ms.date: 2017-06-05
+ms.date: 2017-06-05T00:00:00.000Z
 keywords: powershell,cmdlet
 title: Guida alla riga di comando PowerShell.exe
 ms.assetid: 1ab7b93b-6785-42c6-a1c9-35ff686a958f
-ms.openlocfilehash: 9c56f09ac186b0c3a64cce6700740ca1ba6abd06
-ms.sourcegitcommit: 598b7835046577841aea2211d613bb8513271a8b
+ms.openlocfilehash: 4a14223dd024d967810a90dec10e416e4e35d6a2
+ms.sourcegitcommit: 74255f0b5f386a072458af058a15240140acb294
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/08/2017
+ms.lasthandoff: 08/03/2017
 ---
 # <a name="powershellexe-command-line-help"></a>Guida della riga di comando PowerShell.exe
 Avvia una sessione di Windows PowerShell. È possibile usare PowerShell.exe per avviare una sessione di Windows PowerShell dalla riga di comando di un altro strumento, come Cmd.exe, o usarlo nella riga di comando di Windows PowerShell per avviare una nuova sessione. Usare i parametri per personalizzare la sessione.
@@ -46,13 +46,12 @@ Imposta i criteri di esecuzione predefiniti per la sessione corrente e li salva 
 ### <a name="-file-filepath-parameters"></a>-File <FilePath> \[<Parameters>]
 Esegue lo script specificato nell'ambito locale ("dot sourcing" ), in modo che le funzioni e le variabili create dallo script siano disponibili nella sessione corrente. Immettere il percorso del file di script ed eventuali parametri. **File** deve essere l'ultimo parametro del comando, perché tutti i caratteri digitati dopo il nome del parametro **File** vengono interpretati come il percorso del file di script seguito dai parametri di script e dai relativi valori.
 
-È possibile includere i parametri di uno script e i relativi valori nel valore del parametro **File**. Ad esempio: `-File .\Get-Script.ps1 -Domain Central`
+È possibile includere i parametri di uno script e i relativi valori nel valore del parametro **File**. Ad esempio: `-File .\Get-Script.ps1 -Domain Central` Si noti che i parametri passati allo script vengono passati come stringhe letterali (dopo l'interpretazione dalla shell corrente).
+Ad esempio, se si usa cmd.exe e si vuole passare un valore di variabile di ambiente, è necessario usare la sintassi di cmd.exe: `powershell -File .\test.ps1 -Sample %windir%` Se si usasse la sintassi di PowerShell, in questo esempio lo script riceverebbe il valore letterale "$env: windir" e non il valore della variabile di ambiente: `powershell -File .\test.ps1 -Sample $env:windir`
 
 In genere, i parametri opzionali di uno script sono inclusi o omessi. Il comando seguente usa ad esempio il parametro **All** del file di script Get-Script.ps1: `-File .\Get-Script.ps1 -All`
 
-In rari casi potrebbe essere necessario fornire un valore booleano per un parametro opzionale. Per fornire un valore booleano per un parametro opzionale nel valore del parametro **File**, racchiudere il nome e il valore del parametro tra parentesi graffe, come nell'esempio seguente: `-File .\Get-Script.ps1 {-All:$False}`
-
-### <a name="-inputformat-text--xml"></a>-InputFormat {Text | XML}
+### <a name="-inputformat-text--xml"></a>\-InputFormat {Text | XML}
 Descrive il formato dei dati inviati a Windows PowerShell. I valori validi sono "Text" (stringhe di testo) o "XML" (formato CLIXML serializzato).
 
 ### <a name="-mta"></a>-Mta
@@ -91,6 +90,7 @@ Imposta lo stile della finestra per la sessione. I valori validi sono Normal, Mi
 
 ### <a name="-command"></a>-Command
 Esegue i comandi specificati (e gli eventuali parametri) come se fossero stati digitati al prompt dei comandi di Windows PowerShell, quindi viene chiuso, a meno che non sia stato specificato il parametro NoExit.
+In pratica, qualsiasi testo che segue `-Command` viene inviato come una singola riga di comando di PowerShell (diverso da come `-File` gestisce i parametri inviati a uno script).
 
 Il valore di Command può essere "-", una stringa o un blocco di script. Se il valore di Command è "-", il testo del comando viene letto dall'input standard.
 
