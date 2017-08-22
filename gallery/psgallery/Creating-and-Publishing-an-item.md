@@ -4,14 +4,13 @@ contributor: JKeithB
 ms.topic: conceptual
 keywords: raccolta,powershell,cmdlet,psgallery
 title: Creazione e pubblicazione di un elemento
-ms.openlocfilehash: e71381d1a3efda73832fab6189bda26cee411d9e
-ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.openlocfilehash: b6bcd3e923b77ad7d19a1d92aeb78222bff7ea7e
+ms.sourcegitcommit: e08f036021e9f115dbb52c697941706cc4ee51dd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/12/2017
+ms.lasthandoff: 08/15/2017
 ---
-<a id="creating-and-publishing-an-item" class="xliff"></a>
-# Creazione e pubblicazione di un elemento 
+# <a name="creating-and-publishing-an-item"></a>Creazione e pubblicazione di un elemento 
 In PowerShell Gallery è possibile pubblicare e condividere moduli e script PowerShell stabili e risorse DSC con la più ampia community di utenti di PowerShell.    
 
 In questo articolo vengono illustrati i meccanismi e i passaggi importanti per preparare uno script o un modulo e pubblicarlo in PowerShell Gallery.
@@ -27,8 +26,7 @@ I requisiti minimi per la pubblicazione di un elemento in PowerShell Gallery son
  
 PowerShell Gallery accetta moduli e script PowerShell. Con script si intende uno script PowerShell che sia un singolo file e non faccia parte di un modulo più grande. 
 
-<a id="powershell-gallery-account-and-api-key" class="xliff"></a>
-## Account e chiave API di PowerShell Gallery
+## <a name="powershell-gallery-account-and-api-key"></a>Account e chiave API di PowerShell Gallery
 Vedere [Creating a PowerShell Gallery Account](https://msdn.microsoft.com/en-us/powershell/gallery/psgallery/psgallery_creating_an_account) (Creazione di un account PowerShell Gallery) per informazioni su come configurare un account PowerShell Gallery. 
 
 Dopo aver creato un account, è possibile ottenere la chiave API necessaria per pubblicare un elemento.
@@ -36,8 +34,7 @@ Dopo aver eseguito l'accesso con l'account, il nome utente sarà visualizzato ne
 
 Nota: usare la chiave API in modo sicuro come per account di accesso e password. Con questa chiave chiunque può infatti aggiornare qualsiasi elemento in PowerShell Gallery. È consigliabile aggiornare la chiave regolarmente, usando il comando Reset Key (Ripristina chiave) nella pagina My Account (Account personale).
 
-<a id="required-metadata-for-items-published-to-the-powershell-gallery" class="xliff"></a>
-## Metadati necessari per gli elementi pubblicati in PowerShell Gallery
+## <a name="required-metadata-for-items-published-to-the-powershell-gallery"></a>Metadati necessari per gli elementi pubblicati in PowerShell Gallery
 
 PowerShell Gallery offre informazioni agli utenti della raccolta ottenendole dai campi dei metadati inclusi nel manifesto dello script o del modulo.
 Per creare o modificare gli elementi che saranno pubblicati in PowerShell Gallery esistono alcuni semplici requisiti relativi alle informazioni definite nel manifesto dell'elemento. È consigliabile rivedere la sezione relativa ai metadati dell'elemento nelle [linee guida per la pubblicazione](https://msdn.microsoft.com/en-us/powershell/gallery/psgallery/psgallery-PublishingGuidelines) per sapere come offrire agli utenti le informazioni più appropriate insieme agli elementi. 
@@ -62,8 +59,7 @@ I proprietari di un elemento sono gli utenti che hanno un account PowerShell Gal
 * L'autore deve essere il nome di un team noto (ad esempio il team di Azure SDK) o Microsoft Corporation.
 
 
-<a id="pre-validate-your-item" class="xliff"></a>
-## Pre-convalidare l'elemento
+## <a name="pre-validate-your-item"></a>Pre-convalidare l'elemento
 
 Prima di pubblicare l'elemento in PowerShell Gallery, è necessario eseguire alcuni strumenti per analizzare il codice:
 
@@ -80,8 +76,7 @@ Se le informazioni sul manifesto contenute nell'elemento non possono essere lett
 Analogamente [Test-ScriptFileInfo](https://msdn.microsoft.com/en-us/powershell/gallery/psget/script/psget_test-scriptfileinfo) convalida i metadati in uno script. Eseguire questo strumento su ogni script (pubblicato separatamente da un modulo) prima che sia pubblicato in Powershell Gallery. 
 
 
-<a id="publishing-items" class="xliff"></a>
-## Pubblicazione degli elementi
+## <a name="publishing-items"></a>Pubblicazione degli elementi
 
 Per pubblicare gli elementi in PowerShell Gallery, è necessario usare i cmdlet [Publish-Script](https://msdn.microsoft.com/en-us/powershell/gallery/psget/script/psget_publish-script) o [Publish-Module](https://msdn.microsoft.com/en-us/powershell/gallery/psget/module/psget_publish-module).
 Entrambi i comandi richiedono 
