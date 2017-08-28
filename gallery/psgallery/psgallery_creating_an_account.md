@@ -10,8 +10,7 @@ ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 06/12/2017
 ---
-<a id="creating-a-powershell-gallery-account" class="xliff"></a>
-## Creazione di un account PowerShell Gallery
+## <a name="creating-a-powershell-gallery-account"></a>Creazione di un account PowerShell Gallery
 
 Prima di pubblicare qualsiasi elemento in PowerShell Gallery, è necessario creare un account di PowerShell Gallery. Gli account di PowerShell Gallery devono essere collegati a un account di posta elettronica Azure Active Directory o a un account di posta elettronica Microsoft, con un dominio di outlook.com, hotmail.com e così via.
 
@@ -26,8 +25,7 @@ Una volta eseguito l'accesso, verrà richiesto di creare un nome utente per Powe
 Nota: una volta creato l'account, non è possibile modificarne il nome.  
 Per altre informazioni in merito, vedere [Gestione dei proprietari di elementi](https://msdn.microsoft.com/en-us/powershell/gallery/psgallery/managing-item-owners).
 
-<a id="recommended-practices-for-powershell-gallery-accounts" class="xliff"></a>
-## Procedure consigliate per gli account di PowerShell Gallery
+## <a name="recommended-practices-for-powershell-gallery-accounts"></a>Procedure consigliate per gli account di PowerShell Gallery
 
 È importante che l'account di posta elettronica usato con l'account di PowerShell Gallery venga controllato attivamente.
 Tutte le eventuali comunicazioni con i proprietari di elementi di PowerShell Gallery avvengono tramite l'indirizzo di posta elettronica associato all'account di PowerShell Gallery.
