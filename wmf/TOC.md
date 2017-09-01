@@ -12,6 +12,7 @@
 ## [Installare e configurare](5.1/install-configure.md)
 ## [Problemi noti](5.1/known-issues.md)
 ## [Compatibilità](5.1/Compatibility.md)
+## [Compatibilità del prodotto](5.1/productincompat.md)
 
 # [WMF 5.0](5.0/releasenotes.md)
 ## [Dettagli dell'installazione](5.0/requirements.md)
