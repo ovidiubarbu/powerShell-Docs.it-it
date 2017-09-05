@@ -1,12 +1,12 @@
 ---
-ms.date: 2017-06-05T00:00:00.000Z
+ms.date: 2017-06-05
 keywords: powershell,cmdlet
 title: Creazione del secondo hop nella comunicazione remota di PowerShell
-ms.openlocfilehash: 620d78987fea86ac38d2b376926d0a5cefe59721
-ms.sourcegitcommit: 74255f0b5f386a072458af058a15240140acb294
+ms.openlocfilehash: f3b8280819e43bd67bd608ffd0ba9484c2bbc26c
+ms.sourcegitcommit: 4102ecc35d473211f50a453f6ae3fbea31cb3428
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/31/2017
 ---
 # <a name="making-the-second-hop-in-powershell-remoting"></a>Creazione del secondo hop nella comunicazione remota di PowerShell
 
@@ -236,7 +236,7 @@ Per informazioni sull'uso di PSSessionConfiguration e RunAs per risolvere il pro
 
 JEA consente di limitare i comandi che un amministratore può eseguire durante una sessione di PowerShell. Può essere usato per risolvere il problema del secondo hop.
 
-Per informazioni su JEA, vedere [Just Enough Administration](https://msdn.microsoft.com/powershell/jea/readme).
+Per informazioni su JEA, vedere [Just Enough Administration](https://docs.microsoft.com/en-us/powershell/jea/overview).
 
 ### <a name="pros"></a>Vantaggi
 

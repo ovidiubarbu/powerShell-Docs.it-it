@@ -1,21 +1,21 @@
 ---
-ms.date: 2017-06-05T00:00:00.000Z
+ms.date: 2017-06-05
 keywords: powershell,cmdlet
 title: "Modalità di esecuzione del debug degli script in Windows PowerShell ISE"
 ms.assetid: 6dc6d8f9-8978-46e9-a92f-169af37e2817
-ms.openlocfilehash: db8847e2cc9abeec729ed8d939fc170529a93846
-ms.sourcegitcommit: 74255f0b5f386a072458af058a15240140acb294
+ms.openlocfilehash: 2b8313c3f2ae1a8fb670099baa8950db49722330
+ms.sourcegitcommit: 4102ecc35d473211f50a453f6ae3fbea31cb3428
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/31/2017
 ---
 # <a name="how-to-debug-scripts-in-windows-powershell-ise"></a>Modalità di esecuzione del debug degli script in Windows PowerShell ISE
 Questo argomento descrive come eseguire il debug degli script in un computer locale usando le funzionalità di debug visivo di Windows PowerShell® Integrated Scripting Environment (ISE).
 
-[Come gestire i punti di interruzione](#bkmk_1)
-[Come gestire una sessione di debug](#bkmk_2)
-[Come eseguire un'istruzione/routine, eseguire un'istruzione e uscire da un'istruzione/routine durante il debug](#bkmk_3)
-[Come visualizzare i valori delle variabili durante il debug](#bkmk_4)
+[Come gestire i punti di interruzione]()
+[Come gestire una sessione di debug]()
+[Come eseguire un'istruzione/routine, eseguire un'istruzione e uscire da un'istruzione/routine durante il debug]()
+[Come visualizzare i valori delle variabili durante il debug]()
 
 ## <a name="bkmk_1"></a>Come gestire i punti di interruzione
 Un punto di interruzione è un punto specificato all'interno di uno script in cui si vuole sospendere l'esecuzione delle operazioni per poter esaminare lo stato corrente delle variabili e l'ambiente di esecuzione dello script. Quando lo script viene sospeso da un punto di interruzione, è possibile eseguire comandi nel riquadro della console per esaminare lo stato dello script.  È anche possibile eseguire l'output di variabili o eseguire altri comandi. Si può persino modificare il valore di tutte le variabili visibili nel contesto dello script attualmente in esecuzione. Dopo aver esaminato gli elementi desiderati, è possibile riavviare l'esecuzione dello script.
@@ -51,7 +51,7 @@ Get-PSBreakpoint
 ```
 
 ### <a name="remove-a-breakpoint"></a>Rimuovere un punto di interruzione
-Rimuovere un punto di interruzione equivale a eliminarlo.  Se si pensa di riutilizzarlo in un momento successivo, si può anche pensare di [disabilitarlo](#bkmk_disable).  Fare clic con il pulsante destro del mouse sulla riga in cui si vuole rimuovere un punto di interruzione e scegliere **Attiva/disattiva punto di interruzione**. In alternativa, fare clic sulla riga in cui si vuole rimuovere un punto di interruzione e scegliere **Attiva/disattiva punto di interruzione** dal menu **Debug**. Lo script seguente è un esempio di come si può rimuovere un punto di interruzione con un ID specificato dal riquadro della console usando il cmdlet [Remove-PSBreakpoint](https://technet.microsoft.com/library/4c877a80-0ea0-4790-9281-88c08ef0ddd6).
+Rimuovere un punto di interruzione equivale a eliminarlo.  Se si pensa di riutilizzarlo in un momento successivo, si può anche pensare di [disabilitarlo]().  Fare clic con il pulsante destro del mouse sulla riga in cui si vuole rimuovere un punto di interruzione e scegliere **Attiva/disattiva punto di interruzione**. In alternativa, fare clic sulla riga in cui si vuole rimuovere un punto di interruzione e scegliere **Attiva/disattiva punto di interruzione** dal menu **Debug**. Lo script seguente è un esempio di come si può rimuovere un punto di interruzione con un ID specificato dal riquadro della console usando il cmdlet [Remove-PSBreakpoint](https://technet.microsoft.com/library/4c877a80-0ea0-4790-9281-88c08ef0ddd6).
 
 ``` PowerShell
 # This command deletes the breakpoint with breakpoint ID 2.
@@ -103,7 +103,7 @@ Get-PSBreakpoint | Enable-PSBreakpoint
 ```
 
 ## <a name="bkmk_2"></a>Come gestire una sessione di debug
-Prima di avviare il debug è necessario impostare uno o più punti di interruzione. Non si può impostare un punto di interruzione finché lo script di cui si vuole eseguire il debug non è stato salvato. Per istruzioni su come impostare un punto di interruzione, vedere [Come gestire i punti di interruzione](#bkmk_1) o [Set-PSBreakpoint](https://technet.microsoft.com/library/6afd5d2c-a285-4796-8607-3cbf49471420). Dopo avere avviato il debug, non è possibile modificare uno script se non si arresta il debug. Uno script in cui sono impostati uno o più punti di interruzione viene salvato automaticamente prima dell'esecuzione.
+Prima di avviare il debug è necessario impostare uno o più punti di interruzione. Non si può impostare un punto di interruzione finché lo script di cui si vuole eseguire il debug non è stato salvato. Per istruzioni su come impostare un punto di interruzione, vedere [Come gestire i punti di interruzione]() o [Set-PSBreakpoint](https://technet.microsoft.com/library/6afd5d2c-a285-4796-8607-3cbf49471420). Dopo avere avviato il debug, non è possibile modificare uno script se non si arresta il debug. Uno script in cui sono impostati uno o più punti di interruzione viene salvato automaticamente prima dell'esecuzione.
 
 ### <a name="to-start-debugging"></a>Per avviare il debug
 Premere **F5** o fare clic sull'icona **Esegui script** sulla barra degli strumenti oppure in alternativa scegliere **Esegui/Continua** dal menu **Debug**. Lo script viene eseguito finché non incontra il primo punto di interruzione. L'esecuzione viene sospesa e la riga in cui è stata sospesa viene evidenziata.

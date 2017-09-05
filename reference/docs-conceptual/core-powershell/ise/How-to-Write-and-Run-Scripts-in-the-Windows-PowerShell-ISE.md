@@ -1,22 +1,22 @@
 ---
-ms.date: 2017-06-05T00:00:00.000Z
+ms.date: 2017-06-05
 keywords: powershell,cmdlet
 title: Come scrivere ed eseguire script in Windows PowerShell ISE
 ms.assetid: 62f916d9-b3a1-484a-bdfb-41f57112c22b
-ms.openlocfilehash: 871a4b6f4575af4f823a6957dc971335497320a4
-ms.sourcegitcommit: 74255f0b5f386a072458af058a15240140acb294
+ms.openlocfilehash: 577ecf96027618a0a8f98d5bcefe7ec949f337cc
+ms.sourcegitcommit: 4102ecc35d473211f50a453f6ae3fbea31cb3428
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/31/2017
 ---
 # <a name="how-to-write-and-run-scripts-in-the-windows-powershell-ise"></a>Come scrivere ed eseguire script in Windows PowerShell ISE
 Questo argomento descrive come creare, modificare, eseguire e salvare gli script nel riquadro di script.
 
--   [Come creare ed eseguire script](#bkmk_1)
+-   [Come creare ed eseguire script]()
 
--   [Come scrivere e modificare testo nel riquadro di script](#bkmk_2)
+-   [Come scrivere e modificare testo nel riquadro di script]()
 
--   [Come salvare uno script](#bkmk_3)
+-   [Come salvare uno script]()
 
 ## <a name="bkmk_1"></a>Come creare ed eseguire script
 È possibile aprire e modificare i file di Windows PowerShell® nel riquadro di script. Tipi di file di particolare interesse in Windows PowerShell® sono i file di script (con estensione PS1), i file di dati degli script (con estensione PSD1) e i file di modulo di script (con estensione PSM1). In questi file per la visualizzazione della sintassi nell'editor del riquadro di script vengono utilizzati i colori. Altri tipi di file comuni che è possibile aprire nel riquadro di script sono file di configurazione (con estensione ps1xml), file XML e file di testo.

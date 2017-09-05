@@ -1,13 +1,13 @@
 ---
-ms.date: 2017-06-05T00:00:00.000Z
+ms.date: 2017-06-05
 keywords: powershell,cmdlet
 title: "Modalità di utilizzo dei profili in Windows PowerShell ISE"
 ms.assetid: 0219626a-6da5-4acc-b630-d058e8b29cc6
-ms.openlocfilehash: 97fe9d241fa8a33e0c9b798a7408f06e3381530d
-ms.sourcegitcommit: 74255f0b5f386a072458af058a15240140acb294
+ms.openlocfilehash: 6b16291b7025928a307380cbae75fcdbdb51a73d
+ms.sourcegitcommit: 4102ecc35d473211f50a453f6ae3fbea31cb3428
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/31/2017
 ---
 # <a name="how-to-use-profiles-in-windows-powershell-ise"></a>Modalità di utilizzo dei profili in Windows PowerShell ISE
 Questo argomento illustra come usare i profili in Windows PowerShell® Integrated Scripting Environment (ISE). Prima di eseguire le attività in questa sezione, è consigliabile consultare [about_Profiles [v4]](https://technet.microsoft.com/library/e1d9e30a-70cc-4f36-949f-fc7cd96b4054(v=wps.630)) oppure digitare `Get-Help about_Profiles` nel riquadro della console e premere **INVIO**.
@@ -70,7 +70,7 @@ if (!(Test-Path -Path $PROFILE.AllUsersAllHosts))
 
 2.  Aggiungere alcuni elementi al profilo. Di seguito sono riportati alcuni esempi per iniziare:
 
-    -   Per modificare il colore di sfondo predefinito del riquadro della console impostandolo sul blu, nel file del profilo digitare: `$psISE.Options.OutputPaneBackground = 'blue'` . Per altre informazioni sulla variabile $psISE, vedere [Riferimenti al modello a oggetti di Windows PowerShell ISE](#windows-powershell-ise-object-model-reference).
+    -   Per modificare il colore di sfondo predefinito del riquadro della console impostandolo sul blu, nel file del profilo digitare: `$psISE.Options.OutputPaneBackground = 'blue'` . Per altre informazioni sulla variabile $psISE, vedere [Riferimenti al modello a oggetti di Windows PowerShell ISE]().
 
     -   Per modificare le dimensioni del carattere impostandole su 20, nel file del profilo digitare: `$psISE.Options.FontSize =20`
 

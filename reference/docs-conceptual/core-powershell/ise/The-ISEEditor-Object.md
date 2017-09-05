@@ -1,13 +1,13 @@
 ---
-ms.date: 2017-06-05T00:00:00.000Z
+ms.date: 2017-06-05
 keywords: powershell,cmdlet
 title: Oggetto ISEEditor
 ms.assetid: 0101daf8-4e31-4e4c-ab89-01d95dcb8f46
-ms.openlocfilehash: c4effde470a7a76a21f983b172f0af651dfc5d11
-ms.sourcegitcommit: 74255f0b5f386a072458af058a15240140acb294
+ms.openlocfilehash: e2ddb0de1089c832f130e1f5c7c8dcb199aca2fa
+ms.sourcegitcommit: 4102ecc35d473211f50a453f6ae3fbea31cb3428
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/31/2017
 ---
 # <a name="the-iseeditor-object"></a>Oggetto ISEEditor
   Un oggetto **ISEEditor** è un'istanza della classe Microsoft.PowerShell.Host.ISE.ISEEditor. Il riquadro della console è un oggetto **ISEEditor**. Ogni oggetto [ISEFile](The-ISEFile-Object.md) ha un oggetto **ISEEditor** associato. Le sezioni seguenti elencano i metodi e proprietà di un oggetto **ISEEditor**.
@@ -63,7 +63,7 @@ $psISE.CurrentPowerShellTab.ConsolePane.GetLineLength(1)
 ### <a name="gotomatch"></a>GoToMatch\(\)
   Supportato in Windows PowerShell ISE 3.0 e versioni successive e non presente nelle versioni precedenti. 
 
- Sposta il cursore sul carattere corrispondente se la proprietà **CanGoToMatch** dell'oggetto editor è **$true**, il che si verifica quando il cursore si trova immediatamente prima di una parentesi, di una parentesi quadra o di una parentesi graffa di apertura, \(, \[, { o immediatamente dopo una parentesi, una parentesi quadra o una parentesi graffa di chiusura, \), \], }.  Il cursore viene posizionato prima di un carattere di apertura o dopo un carattere di chiusura. Se la proprietà **CanGoToMatch** è **$false**, questo metodo non esegue alcuna operazione. Vedere [CanGoToMatch](#cangotomatch).
+ Sposta il cursore sul carattere corrispondente se la proprietà **CanGoToMatch** dell'oggetto editor è **$true**, il che si verifica quando il cursore si trova immediatamente prima di una parentesi, di una parentesi quadra o di una parentesi graffa di apertura, \(, \[, { o immediatamente dopo una parentesi, una parentesi quadra o una parentesi graffa di chiusura, \), \], }.  Il cursore viene posizionato prima di un carattere di apertura o dopo un carattere di chiusura. Se la proprietà **CanGoToMatch** è **$false**, questo metodo non esegue alcuna operazione. Vedere [CanGoToMatch]().
 
 ```powershell
 # Test to see if the caret is next to a parenthesis, bracket, or brace.
@@ -76,7 +76,7 @@ $psISE.CurrentPowerShellTab.ConsolePane.GetLineLength(1)
 
  **text** - Stringa Il testo da inserire.
 
- Vedere [Esempio di script](#example) più avanti in questo argomento.
+ Vedere [Esempio di script]() più avanti in questo argomento.
 
 ### <a name="select-startline-startcolumn-endline-endcolumn-"></a>Select\( startLine, startColumn, endLine, endColumn \)
   Supportato in Windows PowerShell ISE 2.0 e versioni successive. 
@@ -91,7 +91,7 @@ $psISE.CurrentPowerShellTab.ConsolePane.GetLineLength(1)
 
  **endColumn** - Intero La colonna all'interno della riga di fine in cui termina la selezione.
 
- Vedere [Esempio di script](#example) più avanti in questo argomento.
+ Vedere [Esempio di script]() più avanti in questo argomento.
 
 ### <a name="selectcaretline"></a>SelectCaretLine\(\)
   Supportato in Windows PowerShell ISE 2.0 e versioni successive. 
@@ -186,14 +186,14 @@ $psISE.CurrentFile.Editor.LineCount
 
  Proprietà di sola lettura che ottiene il testo selezionato dall'editor.
 
- Vedere [Esempio di script](#example) più avanti in questo argomento.
+ Vedere [Esempio di script]() più avanti in questo argomento.
 
 ###  <a name="Text"></a> Text
   Supportato in Windows PowerShell ISE 2.0 e versioni successive. 
 
  Proprietà di lettura/scrittura che ottiene o imposta il testo nell'editor.
 
- Vedere [Esempio di script](#example) più avanti in questo argomento.
+ Vedere [Esempio di script]() più avanti in questo argomento.
 
 ##  <a name="example"></a> Esempio di script
 

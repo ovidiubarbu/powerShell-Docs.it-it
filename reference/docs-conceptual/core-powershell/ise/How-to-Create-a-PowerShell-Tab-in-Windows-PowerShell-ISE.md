@@ -1,13 +1,13 @@
 ---
-ms.date: 2017-06-05T00:00:00.000Z
+ms.date: 2017-06-05
 keywords: powershell,cmdlet
 title: Come creare una scheda di PowerShell in Windows PowerShell ISE
 ms.assetid: c10c18c7-9ece-4fd0-83dc-a19c53d4fd83
-ms.openlocfilehash: 7dc92275c30ad783ad71b2a4825e9cc0d26d1691
-ms.sourcegitcommit: 74255f0b5f386a072458af058a15240140acb294
+ms.openlocfilehash: b8648b3c23e5a7edaa195f2aa4bfad2757e39e75
+ms.sourcegitcommit: 4102ecc35d473211f50a453f6ae3fbea31cb3428
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/31/2017
 ---
 # <a name="how-to-create-a-powershell-tab-in-windows-powershell-ise"></a>Come creare una scheda di PowerShell in Windows PowerShell ISE
 Le schede in Windows PowerShell® Integrated Scripting Environment (ISE) consentono di creare e usare simultaneamente diversi ambienti di esecuzione all'interno della stessa applicazione. Ogni scheda di PowerShell corrisponde a una sessione o a un ambiente di esecuzione separato.
@@ -15,7 +15,7 @@ Le schede in Windows PowerShell® Integrated Scripting Environment (ISE) consent
 > [!NOTE]
 > Variabili, funzioni e alias creati in una scheda non vengono riportati in un'altra scheda. Si tratta di diverse sessioni di Windows PowerShell.
 
-Usare la procedura seguente per aprire o chiudere una scheda in Windows PowerShell. Per rinominare una scheda, impostare la proprietà [DisplayName](The-PowerShellTab-Object.md#Displayname) nell'oggetto di scripting della scheda di Windows PowerShell.
+Usare la procedura seguente per aprire o chiudere una scheda in Windows PowerShell. Per rinominare una scheda, impostare la proprietà [DisplayName]() nell'oggetto di scripting della scheda di Windows PowerShell.
 
 ## <a name="to-create-and-use-a-new-powershell-tab"></a>Per creare e usare una nuova scheda di PowerShell
 Nel menu **File** fare clic su **Nuova scheda di PowerShell**. La nuova scheda di PowerShell viene visualizzata sempre come finestra attiva. Le schede di PowerShell sono numerate in modo incrementale nell'ordine di apertura. Ogni scheda è associata alla propria finestra della console di Windows PowerShell. È possibile tenere aperte fino a 32 schede di PowerShell con le rispettive sessioni per volta. In Windows PowerShell ISE 2.0 questa opzione è limitata a 8 schede.

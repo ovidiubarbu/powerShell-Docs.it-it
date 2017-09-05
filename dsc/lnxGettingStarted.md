@@ -4,19 +4,17 @@ author: eslesar
 ms.topic: conceptual
 keywords: dsc,powershell,configurazione,impostazione
 title: Introduzione a DSC (Desired State Configuration) per Linux
-ms.openlocfilehash: 2d4276a0ffcb4fd7b872cbc4771f86cb850c0b83
-ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.openlocfilehash: 9dbc4c22cff9df4028c5655cdfba3bb1aac1bb90
+ms.sourcegitcommit: 4102ecc35d473211f50a453f6ae3fbea31cb3428
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/12/2017
+ms.lasthandoff: 08/31/2017
 ---
-<a id="get-started-with-desired-state-configuration-dsc-for-linux" class="xliff"></a>
-# Introduzione a DSC (Desired State Configuration) per Linux
+# <a name="get-started-with-desired-state-configuration-dsc-for-linux"></a>Introduzione a DSC (Desired State Configuration) per Linux
 
 Questo argomento illustra come iniziare a usare PowerShell DSC (Desired State Configuration) per Linux. Per informazioni generali su DSC, vedere [Introduzione a Windows PowerShell DSC (Desired State Configuration)](overview.md).
 
-<a id="supported-linux-operation-system-versions" class="xliff"></a>
-## Versioni del sistema operativo Linux supportate
+## <a name="supported-linux-operation-system-versions"></a>Versioni del sistema operativo Linux supportate
 
 DSC per Linux supporta le versioni seguenti del sistema operativo Linux.
 - CentOS 5, 6 e 7 (x86/x64)
@@ -37,13 +35,11 @@ La tabella seguente descrive le dipendenze dei pacchetti necessarie per DSC per 
 | ctypes| Libreria Python CTypes| La versione deve corrispondere a quella di Python| 
 | libcurl| Libreria client HTTP cURL| 7.15.1| 
 
-<a id="installing-dsc-for-linux" class="xliff"></a>
-## Installazione di DSC per Linux
+## <a name="installing-dsc-for-linux"></a>Installazione di DSC per Linux
 
 Prima di installare DSC per Linux, è necessario installare [OMI (Open Management Infrastructure)](https://collaboration.opengroup.org/omi/).
 
-<a id="installing-omi" class="xliff"></a>
-### Installazione di OMI
+### <a name="installing-omi"></a>Installazione di OMI
 
 DSC (Desired State Configuration) per Linux richiede il server CIM OMI (Open Management Infrastructure), versione 1.0.8.1. È possibile scaricare OMI dal sito The Open Group: [Open Management Infrastructure (OMI)](https://collaboration.opengroup.org/omi/).
 
@@ -55,8 +51,7 @@ Eseguire il comando seguente per installare OMI in un sistema CentOS 7 x64.
 
 `# sudo rpm -Uvh omiserver-1.0.8.ssl_100.rpm`
 
-<a id="installing-dsc" class="xliff"></a>
-### Installazione di DSC
+### <a name="installing-dsc"></a>Installazione di DSC
 
 DSC per Linux è disponibile per il download [qui](https://github.com/Microsoft/PowerShell-DSC-for-Linux/releases/latest). 
 
@@ -69,13 +64,11 @@ Eseguire il comando seguente per installare DSC in un sistema CentOS 7 x64.
 `# sudo rpm -Uvh dsc-1.0.0-254.ssl_100.x64.rpm`
 
 
-<a id="using-dsc-for-linux" class="xliff"></a>
-## Uso di DSC per Linux
+## <a name="using-dsc-for-linux"></a>Uso di DSC per Linux
 
 Le sezioni seguenti illustrano come creare ed eseguire configurazioni DSC nei computer Linux.
 
-<a id="creating-a-configuration-mof-document" class="xliff"></a>
-### Creazione di un documento MOF di configurazione
+### <a name="creating-a-configuration-mof-document"></a>Creazione di un documento MOF di configurazione
 
 La parola chiave Configuration di Windows PowerShell viene usata per creare una configurazione per i computer Linux, esattamente come per i computer Windows. I passaggi seguenti descrivono la creazione di un documento di configurazione per un computer Linux con Windows PowerShell.
 
@@ -111,10 +104,9 @@ Configuration ExampleConfiguration{
 ExampleConfiguration -OutputPath:"C:\temp" 
 ```
 
-<a id="push-the-configuration-to-the-linux-computer" class="xliff"></a>
-### Effettuare il push della configurazione nel computer Linux
+### <a name="push-the-configuration-to-the-linux-computer"></a>Effettuare il push della configurazione nel computer Linux
 
-È possibile effettuare il push dei documenti di configurazione (file MOF) nel computer Linux usando il cmdlet [Start-DscConfiguration](https://technet.microsoft.com/en-us/library/dn521623.aspx). Per usare questo cmdlet, insieme ai cmdlet [Get-DscConfiguration](https://technet.microsoft.com/en-us/library/dn407379).aspx o [Test-DscConfiguration](https://technet.microsoft.com/en-us/library/dn407382.aspx), in remoto in un computer Linux, è necessario usare una sessione CIMSession. Il cmdlet [New-CimSession](https://technet.microsoft.com/en-us/library/jj590760.aspx) viene usato per creare una sessione CIMSession nel computer Linux.
+È possibile effettuare il push dei documenti di configurazione (file MOF) nel computer Linux usando il cmdlet [Start-DscConfiguration](https://technet.microsoft.com/en-us/library/dn521623.aspx). Per usare questo cmdlet, insieme ai cmdlet [Get-DscConfiguration](https://technet.microsoft.com/en-us/library/dn407379).aspx o [Test-DscConfiguration](https://technet.microsoft.com/en-us/library/dn407382.aspx), in remoto in un computer Linux, è necessario usare una sessione CIMSession. Il cmdlet [New-CimSession](http://go.microsoft.com/fwlink/?LinkId=227967) viene usato per creare una sessione CIMSession nel computer Linux.
 
 Il codice seguente illustra come creare una sessione CIMSession per DSC per Linux.
 
@@ -134,19 +126,17 @@ $Sess=New-CimSession -Credential:$credential -ComputerName:$Node -Port:5986 -Aut
 * Per la modalità "Push", le credenziali dell'utente devono corrispondere all'utente ROOT nel computer Linux.
 * DSC per Linux supporta solo le connessioni SSL/TLS. Il cmdlet New-CimSession deve essere usato con il parametro –UseSSL impostato su $true.
 * Il certificato SSL usato da OMI (per DSC) è specificato nel file: `/opt/omi/etc/omiserver.conf` con le proprietà: pemfile e keyfile.
-Se il certificato non è considerato attendibile dal computer Windows in cui si esegue il cmdlet [New-CimSession](https://technet.microsoft.com/en-us/library/jj590760.aspx), è possibile scegliere di ignorare la convalida del certificato con le opzioni di CIMSession: `-SkipCACheck:$true -SkipCNCheck:$true -SkipRevocationCheck:$true`
+Se il certificato non è considerato attendibile dal computer Windows in cui si esegue il cmdlet [New-CimSession](http://go.microsoft.com/fwlink/?LinkId=227967), è possibile scegliere di ignorare la convalida del certificato con le opzioni di CIMSession: `-SkipCACheck:$true -SkipCNCheck:$true -SkipRevocationCheck:$true`
 
 Eseguire il comando seguente per effettuare il push della configurazione DSC nel nodo Linux.
 
 `Start-DscConfiguration -Path:"C:\temp" -CimSession:$Sess -Wait -Verbose`
 
-<a id="distribute-the-configuration-with-a-pull-server" class="xliff"></a>
-### Distribuire la configurazione con un server di pull
+### <a name="distribute-the-configuration-with-a-pull-server"></a>Distribuire la configurazione con un server di pull
 
 Le configurazioni possono essere distribuite in un computer Linux con un server di pull, esattamente come per i computer Windows. Per informazioni sull'uso di un server di pull, vedere [Server di pull Windows PowerShell DSC (Desired Configuration Pull)](pullServer.md). Per altre informazioni e per conoscere le limitazioni relative all'uso di computer Linux con un server di pull, vedere le note sulla versione per DSC per Linux.
 
-<a id="working-with-configurations-locally" class="xliff"></a>
-### Uso di configurazioni in locale
+### <a name="working-with-configurations-locally"></a>Uso di configurazioni in locale
 
 DSC per Linux include gli script per usare la configurazione dal computer Linux locale. Questi script si trovano in `/opt/microsoft/dsc/Scripts` e includono quanto segue:
 * GetDscConfiguration.py
@@ -185,8 +175,7 @@ DSC per Linux include gli script per usare la configurazione dal computer Linux 
 
 `# sudo ./SetDscLocalConfigurationManager.py –configurationmof /tmp/localhost.meta.mof`
 
-<a id="powershell-desired-state-configuration-for-linux-log-files" class="xliff"></a>
-## File di registro di PowerShell DSC (Desired State Configuration) per Linux
+## <a name="powershell-desired-state-configuration-for-linux-log-files"></a>File di registro di PowerShell DSC (Desired State Configuration) per Linux
 
 I file di registro seguenti vengono generati per i messaggi di DSC per Linux.
 
