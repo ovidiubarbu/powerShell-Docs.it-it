@@ -1,13 +1,13 @@
 ---
-ms.date: 2017-06-05T00:00:00.000Z
+ms.date: 2017-06-05
 keywords: powershell,cmdlet
 title: Ottenere informazioni dettagliate della Guida
 ms.assetid: 6fb4daf7-8607-4a3e-b692-f77631adc1b9
-ms.openlocfilehash: 3260b5ec0a91749d3b7b126412137aa9d603ef0e
-ms.sourcegitcommit: 74255f0b5f386a072458af058a15240140acb294
+ms.openlocfilehash: c786ce089073abccdf186dc1d9e8ee383f83655d
+ms.sourcegitcommit: 4102ecc35d473211f50a453f6ae3fbea31cb3428
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/31/2017
 ---
 # <a name="getting-detailed-help-information"></a>Ottenere informazioni dettagliate della Guida
 Windows PowerShell include argomenti dettagliati della Guida che illustrano i concetti e il linguaggio di Windows PowerShell. Sono inoltre disponibili argomenti della Guida per tutti i cmdlet e i provider, nonché per molti script e funzioni.
@@ -75,7 +75,7 @@ Per visualizzare solo gli esempi di un argomento della Guida, usare il parametro
 get-help get-childitem -examples
 ```
 
-Per informazioni su come scrivere argomenti della Guida per cmdlet personalizzati, leggere l'articolo su come scrivere la Guida dei cmdlet in MSDN.
+Per informazioni su come scrivere argomenti della Guida per cmdlet personalizzati, vedere [How to Write Cmdlet Help](https://go.microsoft.com/fwlink/?LinkID=123415) (Come scrivere la Guida dei cmdlet) in MSDN Library.
 
 ## <a name="getting-conceptual-help"></a>Ottenere informazioni della Guida concettuale
 Il cmdlet Get-Help visualizza anche informazioni sugli argomenti concettuali in Windows PowerShell, inclusi gli argomenti sul linguaggio di Windows PowerShell. Gli argomenti della Guida concettuale iniziano con il prefisso "about_", ad esempio about_line_editing (il nome dell'argomento concettuale deve essere immesso in inglese anche nelle versioni di Windows PowerShell in altre lingue).
@@ -165,7 +165,7 @@ Di seguito è riportata la prima riga nella sezione Collegamenti correlati dell'
 Online version: http://go.microsoft.com/fwlink/?LinkID=135194
 ```
 
-Per informazioni su come fornire supporto online per argomenti della Guida personalizzati, vedere [about_Comment_Based_Help](https://technet.microsoft.com/en-us/library/99a81ccc-21a0-49ec-a1b3-9efe2b4c0bbf) e leggere l'articolo su come scrivere la Guida dei cmdlet ([http://go.microsoft.com/fwlink/?LinkID=123415](http://go.microsoft.com/fwlink/?LinkID=123415)) in MSDN (Microsoft Developer Network) Library.
+Per informazioni su come offrire supporto online per argomenti della Guida personalizzati, vedere [about_Comment_Based_Help](https://technet.microsoft.com/en-us/library/99a81ccc-21a0-49ec-a1b3-9efe2b4c0bbf) e [How to Write Cmdlet Help](https://go.microsoft.com/fwlink/?LinkID=123415) (Come scrivere la Guida dei cmdlet) in MSDN Library.
 
 ## <a name="see-also"></a>Vedere anche
 - [about_Functions [m2]](https://technet.microsoft.com/en-us/library/61d40692-5300-4de9-a9b5-bae31815e105)

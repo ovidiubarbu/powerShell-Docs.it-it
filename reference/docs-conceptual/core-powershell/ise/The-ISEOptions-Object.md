@@ -1,114 +1,22 @@
 ---
-ms.date: 2017-06-05T00:00:00.000Z
+ms.date: 2017-06-05
 keywords: powershell,cmdlet
 title: Oggetto ISEOptions
 ms.assetid: 75e2a76f-f3d1-490b-ad5d-e3829946aabb
-ms.openlocfilehash: 56bdd5999b46b6e29e762c2d9a2060cebe3a1299
-ms.sourcegitcommit: 74255f0b5f386a072458af058a15240140acb294
+ms.openlocfilehash: a43628a216b0757e1bf7738439975ed1b081b9ec
+ms.sourcegitcommit: 4102ecc35d473211f50a453f6ae3fbea31cb3428
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/31/2017
 ---
 # <a name="the-iseoptions-object"></a>Oggetto ISEOptions
   L'oggetto **ISEOptions** rappresenta varie impostazioni per Windows PowerShell ISE. È un'istanza della classe **Microsoft.PowerShell.Host.ISE.ISEOptions**.
 
  L'oggetto **ISEOptions** fornisce i metodi e le proprietà seguenti.
 
- **Metodi**
-
--   [RestoreDefaultConsoleTokenColors()](#rdctc)
-
--   [RestoreDefaults()](#rd)
-
--   [RestoreDefaultTokenColors()](#rdtc)
-
--   [RestoreDefaultXmlTokenColors()](#rdxtc)
-
- **Proprietà**
-
--   [AutoSaveMinuteInterval](#asmi)
-
--   [CommandPaneBackgroundColor](#cpbc)
-
--   [CommandPaneUp](#cpu)
-
--   [ConsolePaneBackgroundColor](#conpbc)
-
--   [ConsolePaneForegroundColor](#conpfc)
-
--   [ConsolePaneTextBackgroundColor](#conptbc)
-
--   [ConsoleTokenColors](#contc)
-
--   [DebugBackgroundColor](#dbc)
-
--   [DebugForegroundColor](#dfc)
-
--   [DefaultOptions](#do)
-
--   [ErrorBackgroundColor](#ebc)
-
--   [ErrorForegroundColor](#efc)
-
--   [FontName](#fn)
-
--   [FontSize](#fs)
-
--   [IntellisenseTimeoutInSeconds](#itis)
-
--   [MruCount](#mc)
-
--   [OutputPaneBackgroundColor](#opbc)
-
--   [OutputPaneTextForegroundColor](#optfc)
-
--   [OutputPaneTextBackgroundColor](#optbc)
-
--   [ScriptPaneBackgroundColor](#spbc)
-
--   [ScriptPaneForegroundColor](#spfc)
-
--   [SelectedScriptPaneState](#ssps)
-
--   [ShowDefaultSnippets](#sds)
-
--   [ShowIntellisenseInConsolePane](#siicp)
-
--   [ShowIntellisenseInScriptPane](#siisp)
-
--   [ShowLineNumbers](#sln)
-
--   [ShowOutlining](#so)
-
--   [ShowToolBar](#stb)
-
--   [ShowWarningBeforeSavingOnRun](#swbsor)
-
--   [ShowWarningForDuplicateFiles](#swfdf)
-
--   [TokenColors](#tc)
-
--   [UseEnterToSelectInConsolePaneIntellisense](#uetsicpi)
-
--   [UseEnterToSelectInScriptPaneIntellisense](#uetsispi)
-
--   [UseLocalHelp](#ulh)
-
--   [VerboseBackgroundColor](#vbc)
-
--   [VerboseForegroundColor](#vfc)
-
--   [WarningBackgroundColor](#wbc)
-
--   [WarningForegroundColor](#wfc)
-
--   [XmlTokenColors](#xtc)
-
--   [Zoom](#z)
-
 ## <a name="methods"></a>Metodo
 
-###  <a name="rdctc"></a> RestoreDefaultConsoleTokenColors\(\)
+###  <a name="restoredefaultconsoletokencolors"></a>RestoreDefaultConsoleTokenColors\(\)
   Supportato in Windows PowerShell ISE 3.0 e versioni successive e non presente nelle versioni precedenti.
 
  Ripristina i valori predefiniti dei colori dei token nel riquadro della console.
@@ -119,7 +27,7 @@ $psISE.Options.ConsoleTokenColors["Command"] = "red"
 $psISE.Options.RestoreDefaultConsoleTokenColors()
 ```
 
-###  <a name="rd"></a> RestoreDefaults\(\)
+###  <a name="restoredefaults"></a>RestoreDefaults\(\)
   Supportato in Windows PowerShell ISE 2.0 e versioni successive.
 
  Ripristina i valori predefiniti di tutte le impostazioni delle opzioni nel riquadro della console. Reimposta anche il comportamento di vari messaggi di avviso che forniscono la casella di controllo standard per impedire che il messaggio venga visualizzato nuovamente.
@@ -130,7 +38,7 @@ $psISE.Options.ConsolePaneBackgroundColor = "orange"
 $psISE.Options.RestoreDefaults()
 ```
 
-###  <a name="rdtc"></a> RestoreDefaultTokenColors\(\)
+### <a name="restoredefaulttokencolors"></a>RestoreDefaultTokenColors\(\)
   Supportato in Windows PowerShell ISE 2.0 e versioni successive.
 
  Ripristina i valori predefiniti dei colori dei token nel riquadro di script.
@@ -141,10 +49,10 @@ $psISE.Options.TokenColors["Comment"]="red"
 $psISE.Options.RestoreDefaultTokenColors()
 ```
 
-###  <a name="rdxtc"></a> RestoreDefaultXmlTokenColors\(\)
+### <a name="restoredefaultxmltokencolors"></a>RestoreDefaultXmlTokenColors\(\)
   Supportato in Windows PowerShell ISE 3.0 e versioni successive e non presente nelle versioni precedenti.
 
- Ripristina i valori predefiniti dei colori dei token per gli elementi XML che vengono visualizzati in Windows PowerShell ISE. Vedere anche [XmlTokenColors](#xtc).
+ Ripristina i valori predefiniti dei colori dei token per gli elementi XML che vengono visualizzati in Windows PowerShell ISE. Vedere anche [XmlTokenColors]().
 
 ```
 # Changes the color of the comments in XML data to red and then restores it to its default value.
@@ -154,7 +62,7 @@ $psISE.Options.RestoreDefaultXmlTokenColors()
 
 ## <a name="properties"></a>Proprietà
 
-###  <a name="asmi"></a> AutoSaveMinuteInterval
+### <a name="autosaveminuteinterval"></a>AutoSaveMinuteInterval
   Supportato in Windows PowerShell ISE 3.0 e versioni successive e non presente nelle versioni precedenti.
 
  Specifica il numero di minuti tra le operazioni di salvataggio automatico dei file con Windows PowerShell ISE. Il valore predefinito è 2 minuti. Il valore è un numero intero.
@@ -164,8 +72,8 @@ $psISE.Options.RestoreDefaultXmlTokenColors()
 $psISE.Options.AutoSaveMinuteInterval = 3
 ```
 
-###  <a name="cpbc"></a> CommandPaneBackgroundColor
-  Questa funzionalità è presente in Windows PowerShell ISE 2.0, ma è stata rimossa o rinominata nelle versioni successive di ISE.  Per le versioni successive, vedere [ConsolePaneBackgroundColor](#conpbc).
+### <a name="commandpanebackgroundcolor"></a>CommandPaneBackgroundColor
+  Questa funzionalità è presente in Windows PowerShell ISE 2.0, ma è stata rimossa o rinominata nelle versioni successive di ISE.  Per le versioni successive, vedere [ConsolePaneBackgroundColor]().
 
  Specifica il colore di sfondo per il riquadro dei comandi. È un'istanza della classe **System.Windows.Media.Color**.
 
@@ -174,7 +82,7 @@ $psISE.Options.AutoSaveMinuteInterval = 3
 $psISE.Options.CommandPaneBackgroundColor = "orange"
 ```
 
-###  <a name="cpu"></a> CommandPaneUp
+### <a name="commandpaneup"></a>CommandPaneUp
   Questa funzionalità è presente in Windows PowerShell ISE 2.0, ma è stata rimossa o rinominata nelle versioni successive di ISE.
 
  Specifica se il riquadro dei comandi si trova sopra il riquadro di output.
@@ -185,7 +93,7 @@ $psISE.Options.CommandPaneUp  = $true
 
 ```
 
-###  <a name="conpbc"></a> ConsolePaneBackgroundColor
+### <a name="consolepanebackgroundcolor"></a>ConsolePaneBackgroundColor
   Supportato in Windows PowerShell ISE 3.0 e versioni successive e non presente nelle versioni precedenti.
 
  Specifica il colore di sfondo per il riquadro della console. È un'istanza della classe **System.Windows.Media.Color**.
@@ -195,7 +103,7 @@ $psISE.Options.CommandPaneUp  = $true
 $psISE.Options.ConsolePaneBackgroundColor = "red"
 ```
 
-###  <a name="conpfc"></a> ConsolePaneForegroundColor
+### <a name="consolepaneforegroundcolor"></a>ConsolePaneForegroundColor
   Supportato in Windows PowerShell ISE 3.0 e versioni successive e non presente nelle versioni precedenti.
 
  Specifica il colore primo piano del testo nel riquadro della console.
@@ -206,7 +114,7 @@ $psISE.Options.ConsolePaneForegroundColor  = "yellow"
 
 ```
 
-###  <a name="conptbc"></a> ConsolePaneTextBackgroundColor
+### <a name="consolepanetextbackgroundcolor"></a>ConsolePaneTextBackgroundColor
   Supportato in Windows PowerShell ISE 3.0 e versioni successive e non presente nelle versioni precedenti.
 
  Specifica il colore di sfondo del testo nel riquadro della console.
@@ -216,10 +124,10 @@ $psISE.Options.ConsolePaneForegroundColor  = "yellow"
 $psISE.Options.ConsolePaneTextBackgroundColor = "pink"
 ```
 
-###  <a name="contc"></a> ConsoleTokenColors
+### <a name="consoletokencolors"></a>ConsoleTokenColors
   Supportato in Windows PowerShell ISE 3.0 e versioni successive e non presente nelle versioni precedenti.
 
- Specifica i colori dei token di IntelliSense nel riquadro della console di Windows PowerShell ISE. Questa proprietà è un oggetto dizionario che contiene le coppie nome/valore dei tipi e dei colori dei token per il riquadro della console. Per modificare i colori dei token di IntelliSense nel riquadro di script, vedere [TokenColors](#tc). Per reimpostare i colori ai valori predefiniti, vedere [RestoreDefaultConsoleTokenColors()](#rdctc). I colori dei token possono essere impostati per gli elementi seguenti: Attribute, Command, CommandArgument, CommandParameter, Comment, GroupEnd, GroupStart, Keyword, LineContinuation, LoopLabel, Member, NewLine, Number, Operator, Position, StatementSeparator, String, Type, Unknown, Variable.
+ Specifica i colori dei token di IntelliSense nel riquadro della console di Windows PowerShell ISE. Questa proprietà è un oggetto dizionario che contiene le coppie nome/valore dei tipi e dei colori dei token per il riquadro della console. Per modificare i colori dei token di IntelliSense nel riquadro di script, vedere [TokenColors](. Per reimpostare i colori ai valori predefiniti, vedere [RestoreDefaultConsoleTokenColors()](). I colori dei token possono essere impostati per gli elementi seguenti: Attribute, Command, CommandArgument, CommandParameter, Comment, GroupEnd, GroupStart, Keyword, LineContinuation, LoopLabel, Member, NewLine, Number, Operator, Position, StatementSeparator, String, Type, Unknown, Variable.
 
 ```
 # Sets the color of commands to green.
@@ -229,7 +137,7 @@ $psISE.Options.ConsoleTokenColors["Keyword"] = "magenta"
 
 ```
 
-###  <a name="dbc"></a> DebugBackgroundColor
+### <a name="debugbackgroundcolor"></a>DebugBackgroundColor
   Supportato in Windows PowerShell ISE 2.0 e versioni successive.
 
  Specifica il colore di sfondo del testo di debug visualizzato nel riquadro della console. È un'istanza della classe **System.Windows.Media.Color**.
@@ -239,7 +147,7 @@ $psISE.Options.ConsoleTokenColors["Keyword"] = "magenta"
 $psISE.Options.DebugBackgroundColor ='#0000FF'
 ```
 
-###  <a name="dfc"></a> DebugForegroundColor
+### <a name="debugforegroundcolor"></a>DebugForegroundColor
   Supportato in Windows PowerShell ISE 2.0 e versioni successive.
 
  Specifica il colore primo piano del testo di debug visualizzato nel riquadro della console. È un'istanza della classe **System.Windows.Media.Color**.
@@ -249,7 +157,7 @@ $psISE.Options.DebugBackgroundColor ='#0000FF'
 $psISE.Options.DebugForegroundColor ="yellow"
 ```
 
-###  <a name="do"></a> DefaultOptions
+### <a name="defaultoptions"></a>DefaultOptions
   Supportato in Windows PowerShell ISE 2.0 e versioni successive.
 
  Raccolta di proprietà che specificano i valori predefiniti da usare quando vengono usati i metodi di reimpostazione.
@@ -296,7 +204,7 @@ IntellisenseTimeoutInSeconds              : 3
 
 ```
 
-###  <a name="ebc"></a> ErrorBackgroundColor
+### <a name="errorbackgroundcolor"></a>ErrorBackgroundColor
   Supportato in Windows PowerShell ISE 2.0 e versioni successive.
 
  Specifica il colore di sfondo del testo di errore visualizzato nel riquadro della console. È un'istanza della classe **System.Windows.Media.Color**.
@@ -306,7 +214,7 @@ IntellisenseTimeoutInSeconds              : 3
 $psISE.Options.ErrorBackgroundColor="black"
 ```
 
-###  <a name="efc"></a> ErrorForegroundColor
+### <a name="errorforegroundcolor"></a>ErrorForegroundColor
   Supportato in Windows PowerShell ISE 2.0 e versioni successive.
 
  Specifica il colore primo piano del testo di errore visualizzato nel riquadro della console. È un'istanza della classe **System.Windows.Media.Color**.
@@ -316,7 +224,7 @@ $psISE.Options.ErrorBackgroundColor="black"
 $psISE.Options.ErrorForegroundColor ="green"
 ```
 
-###  <a name="fn"></a> FontName
+### <a name="fontname"></a>FontName
   Supportato in Windows PowerShell ISE 2.0 e versioni successive.
 
  Specifica il nome del tipo di carattere attualmente in uso nel riquadro di script e nel riquadro della console.
@@ -326,7 +234,7 @@ $psISE.Options.ErrorForegroundColor ="green"
 $psISE.Options.FontName = "courier new"
 ```
 
-###  <a name="fs"></a> FontSize
+### <a name="fontsize"></a>FontSize
   Supportato in Windows PowerShell ISE 2.0 e versioni successive.
 
  Specifica le dimensioni del carattere come numero intero. Viene usato nel riquadro di script, nel riquadro dei comandi e nel riquadro di output. L'intervallo di valori valido è da 8 a 32.
@@ -337,7 +245,7 @@ $psISE.Options.FontSize = 20
 
 ```
 
-###  <a name="itis"></a> IntellisenseTimeoutInSeconds
+### <a name="intellisensetimeoutinseconds"></a>IntellisenseTimeoutInSeconds
   Supportato in Windows PowerShell ISE 3.0 e versioni successive e non presente nelle versioni precedenti.
 
  Specifica il numero di secondi durante cui IntelliSense prova a risolvere il testo attualmente digitato. Dopo questo intervallo, IntelliSense raggiunge il timeout e consente di continuare la digitazione. Il valore predefinito è 3 secondi. Il valore è un numero intero.
@@ -347,7 +255,7 @@ $psISE.Options.FontSize = 20
 $psISE.Options.IntellisenseTimeoutInSeconds = 5
 ```
 
-###  <a name="mc"></a> MruCount
+### <a name="mrucount"></a>MruCount
   Supportato in Windows PowerShell ISE 3.0 e versioni successive e non presente nelle versioni precedenti.
 
  Specifica il numero di file aperti di recente che Windows PowerShell ISE registra e visualizza alla fine del menu **Apri**. Il valore predefinito è 10. Il valore è un numero intero.
@@ -357,8 +265,8 @@ $psISE.Options.IntellisenseTimeoutInSeconds = 5
 $psISE.Options.MruCount = 5
 ```
 
-###  <a name="opbc"></a> OutputPaneBackgroundColor
-  Questa funzionalità è presente in Windows PowerShell ISE 2.0, ma è stata rimossa o rinominata nelle versioni successive di ISE.  Per le versioni successive, vedere [ConsolePaneBackgroundColor](#conpbc).
+### <a name="outputpanebackgroundcolor"></a>OutputPaneBackgroundColor
+  Questa funzionalità è presente in Windows PowerShell ISE 2.0, ma è stata rimossa o rinominata nelle versioni successive di ISE.  Per le versioni successive, vedere [ConsolePaneBackgroundColor]().
 
  Proprietà di lettura/scrittura che ottiene o imposta il colore di sfondo per il riquadro di output. È un'istanza della classe **System.Windows.Media.Color**.
 
@@ -368,8 +276,8 @@ $psISE.Options.OutputPaneForegroundColor = "gold"
 
 ```
 
-###  <a name="optfc"></a> OutputPaneTextForegroundColor
-  Questa funzionalità è presente in Windows PowerShell ISE 2.0, ma è stata rimossa o rinominata nelle versioni successive di ISE.  Per le versioni successive, vedere [ConsolePaneForegroundColor](#conpfc).
+### <a name="outputpanetextforegroundcolor"></a>OutputPaneTextForegroundColor
+  Questa funzionalità è presente in Windows PowerShell ISE 2.0, ma è stata rimossa o rinominata nelle versioni successive di ISE.  Per le versioni successive, vedere [ConsolePaneForegroundColor]().
 
  Proprietà di lettura/scrittura che modifica il colore di primo piano del testo nel riquadro di output in Windows PowerShell ISE 2.0.
 
@@ -379,8 +287,8 @@ $psISE.Options.OutputPaneTextForegroundColor  = "blue"
 
 ```
 
-###  <a name="optbc"></a> OutputPaneTextBackgroundColor
-  Questa funzionalità è presente in Windows PowerShell ISE 2.0, ma è stata rimossa o rinominata nelle versioni successive di ISE.  Per le versioni successive, vedere [ConsolePaneTextBackgroundColor](#conptbc).
+### <a name="outputpanetextbackgroundcolor"></a>OutputPaneTextBackgroundColor
+  Questa funzionalità è presente in Windows PowerShell ISE 2.0, ma è stata rimossa o rinominata nelle versioni successive di ISE.  Per le versioni successive, vedere [ConsolePaneTextBackgroundColor]().
 
  Proprietà di lettura/scrittura che modifica il colore di sfondo del testo nel riquadro di output.
 
@@ -389,7 +297,7 @@ $psISE.Options.OutputPaneTextForegroundColor  = "blue"
 $psISE.Options.OutputPaneTextBackgroundColor = "pink"
 ```
 
-###  <a name="spbc"></a> ScriptPaneBackgroundColor
+### <a name="scriptpanebackgroundcolor"></a>ScriptPaneBackgroundColor
   Supportato in Windows PowerShell ISE 2.0 e versioni successive.
 
  Proprietà di lettura/scrittura che ottiene o imposta il colore di sfondo per i file. È un'istanza della classe **System.Windows.Media.Color**.
@@ -397,15 +305,15 @@ $psISE.Options.OutputPaneTextBackgroundColor = "pink"
 ```
 
 # Sets the color of the script pane background to yellow.
-$psISE.Options.ScriptPaneBackgroundColor = ”yellow”
+$psISE.Options.ScriptPaneBackgroundColor = â€yellowâ€
 
 ```
 
-###  <a name="spfc"></a> ScriptPaneForegroundColor
+### <a name="scriptpaneforegroundcolor"></a>ScriptPaneForegroundColor
   Supportato in Windows PowerShell ISE 2.0 e versioni successive.
 
  Proprietà di lettura/scrittura che ottiene o imposta il colore primo piano per i file non di script nel riquadro di script.
-Per impostare il colore primo piano per i file di script, usare la proprietà [TokenColors](The-ISEOptions-Object.md#tc).
+Per impostare il colore primo piano per i file di script, usare la proprietà [TokenColors]()The-ISEOptions-Object.md.
 
 ```
 # Sets the foreground to color of non-script files in the script pane to green.
@@ -413,7 +321,7 @@ $psISE.Options.ScriptPaneBackgroundColor = "green"
 
 ```
 
-###  <a name="ssps"></a> SelectedScriptPaneState
+### <a name="selectedscriptpanestate"></a>SelectedScriptPaneState
   Supportato in Windows PowerShell ISE 2.0 e versioni successive.
 
  Proprietà di lettura/scrittura che ottiene o imposta la posizione del riquadro di script nella visualizzazione. La stringa può essere "Maximized", "Top" o "Right".
@@ -428,7 +336,7 @@ $psISE.Options.SelectedScriptPaneState = "Maximized"
 
 ```
 
-###  <a name="sds"></a> ShowDefaultSnippets
+### <a name="showdefaultsnippets"></a>ShowDefaultSnippets
   Supportato in Windows PowerShell ISE 3.0 e versioni successive e non presente nelle versioni precedenti.
 
  Specifica se l'elenco di frammenti di codice di **CTRL+J** comprende il set iniziale incluso in Windows PowerShell. Se è impostato su **$false**, vengono visualizzati solo i frammenti di codice definiti dall'utente nell'elenco **CTRL+J**. Il valore predefinito è **$true**.
@@ -438,7 +346,7 @@ $psISE.Options.SelectedScriptPaneState = "Maximized"
 $psISe.Options.ShowDefaultSnippets = $false
 ```
 
-###  <a name="siicp"></a> ShowIntellisenseInConsolePane
+### <a name="showintellisenseinconsolepane"></a>ShowIntellisenseInConsolePane
   Supportato in Windows PowerShell ISE 3.0 e versioni successive e non presente nelle versioni precedenti.
 
  Specifica se IntelliSense offre suggerimenti relativi a sintassi, parametri e valori nel riquadro della console. Il valore predefinito è **$true**.
@@ -448,7 +356,7 @@ $psISe.Options.ShowDefaultSnippets = $false
 $psISe.Options.ShowIntellisenseInConsolePane = $false
 ```
 
-###  <a name="siisp"></a> ShowIntellisenseInScriptPane
+### <a name="showintellisenseinscriptpane"></a>ShowIntellisenseInScriptPane
   Supportato in Windows PowerShell ISE 3.0 e versioni successive e non presente nelle versioni precedenti.
 
  Specifica se IntelliSense offre suggerimenti relativi a sintassi, parametri e valori nel riquadro di script. Il valore predefinito è **$true**.
@@ -458,7 +366,7 @@ $psISe.Options.ShowIntellisenseInConsolePane = $false
 $psISe.Options.ShowIntellisenseInScriptPane = $false
 ```
 
-###  <a name="sln"></a> ShowLineNumbers
+### <a name="showlinenumbers"></a>ShowLineNumbers
   Supportato in Windows PowerShell ISE 3.0 e versioni successive e non presente nelle versioni precedenti.
 
  Specifica se il riquadro di script visualizza i numeri di riga nel margine sinistro. Il valore predefinito è **$true**.
@@ -468,7 +376,7 @@ $psISe.Options.ShowIntellisenseInScriptPane = $false
 $psISe.Options.ShowLineNumbers = $false
 ```
 
-###  <a name="so"></a> ShowOutlining
+### <a name="showoutlining"></a>ShowOutlining
   Supportato in Windows PowerShell ISE 3.0 e versioni successive e non presente nelle versioni precedenti.
 
  Specifica se il riquadro di script visualizza le parentesi espandibili e comprimibili accanto alle sezioni di codice nel margine sinistro. Quando sono visualizzate, è possibile fare clic sull'icona del segno meno \(-\) accanto a un blocco di testo per comprimerlo o sull'icona del segno più \(+\) per espanderlo. Il valore predefinito è **$true**.
@@ -478,7 +386,7 @@ $psISe.Options.ShowLineNumbers = $false
 $psISe.Options.ShowOutlining = $false
 ```
 
-###  <a name="stb"></a> ShowToolBar
+### <a name="showtoolbar"></a>ShowToolBar
   Supportato in Windows PowerShell ISE 2.0 e versioni successive.
 
  Specifica se la barra degli strumenti ISE viene visualizzata nella parte superiore della finestra di Windows PowerShell ISE. Il valore predefinito è **$true**.
@@ -488,7 +396,7 @@ $psISe.Options.ShowOutlining = $false
 $psISe.Options.ShowToolBar = $true
 ```
 
-###  <a name="swbsor"></a> ShowWarningBeforeSavingOnRun
+### <a name="showwarningbeforesavingonrun"></a>ShowWarningBeforeSavingOnRun
   Supportato in Windows PowerShell ISE 2.0 e versioni successive.
 
  Specifica se viene visualizzato un messaggio di avviso quando uno script viene salvato automaticamente prima di essere eseguito. Il valore predefinito è **$true**.
@@ -500,7 +408,7 @@ $psISE.Options.ShowWarningBeforeSavingOnRun=$true
 
 ```
 
-###  <a name="swfdf"></a> ShowWarningForDuplicateFiles
+### <a name="showwarningforduplicatefiles"></a>ShowWarningForDuplicateFiles
   Supportato in Windows PowerShell ISE 2.0 e versioni successive.
 
  Specifica se viene visualizzato un messaggio di avviso quando lo stesso file viene aperto in diverse schede di PowerShell. Se è impostato su **$true**, quando si apre lo stesso file in più schede, viene visualizzato il messaggio: "Una copia del file è aperta in un'altra scheda di PowerShell. Le modifiche apportate al file interesseranno tutte le copie aperte". Il valore predefinito è **$true**.
@@ -512,10 +420,10 @@ $psISE.Options.ShowWarningForDuplicateFiles = $true
 
 ```
 
-###  <a name="tc"></a> TokenColors
+### <a name="tokencolors"></a>TokenColors
   Supportato in Windows PowerShell ISE 2.0 e versioni successive.
 
- Specifica i colori dei token di IntelliSense nel riquadro di script di Windows PowerShell ISE. Questa proprietà è un oggetto dizionario che contiene le coppie nome/valore dei tipi e dei colori dei token per il riquadro di script. Per modificare i colori dei token di IntelliSense nel riquadro della console, vedere [ConsoleTokenColors](#contc). Per reimpostare i colori ai valori predefiniti, vedere [RestoreDefaultTokenColors()](#rdtc). I colori dei token possono essere impostati per gli elementi seguenti: Attribute, Command, CommandArgument, CommandParameter, Comment, GroupEnd, GroupStart, Keyword, LineContinuation, LoopLabel, Member, NewLine, Number, Operator, Position, StatementSeparator, String, Type, Unknown, Variable.
+ Specifica i colori dei token di IntelliSense nel riquadro di script di Windows PowerShell ISE. Questa proprietà è un oggetto dizionario che contiene le coppie nome/valore dei tipi e dei colori dei token per il riquadro di script. Per modificare i colori dei token di IntelliSense nel riquadro della console, vedere [ConsoleTokenColors](. Per reimpostare i colori ai valori predefiniti, vedere [RestoreDefaultTokenColors()](). I colori dei token possono essere impostati per gli elementi seguenti: Attribute, Command, CommandArgument, CommandParameter, Comment, GroupEnd, GroupStart, Keyword, LineContinuation, LoopLabel, Member, NewLine, Number, Operator, Position, StatementSeparator, String, Type, Unknown, Variable.
 
 ```
 # Sets the color of commands to green.
@@ -525,7 +433,7 @@ $psISE.Options.TokenColors["Keyword"] = "magenta"
 
 ```
 
-###  <a name="uetsicpi"></a> UseEnterToSelectInConsolePaneIntellisense
+### <a name="useentertoselectinconsolepaneintellisense"></a>UseEnterToSelectInConsolePaneIntellisense
   Supportato in Windows PowerShell ISE 3.0 e versioni successive e non presente nelle versioni precedenti.
 
  Specifica se è possibile usare INVIO per selezionare un'opzione fornita da IntelliSense nel riquadro della console. Il valore predefinito è **$true**.
@@ -536,7 +444,7 @@ $psISE.Options.UseEnterToSelectInConsolePaneIntellisense=$false
 
 ```
 
-###  <a name="uetsispi"></a> UseEnterToSelectInScriptPaneIntellisense
+### <a name="useentertoselectinscriptpaneintellisense"></a>UseEnterToSelectInScriptPaneIntellisense
   Supportato in Windows PowerShell ISE 3.0 e versioni successive e non presente nelle versioni precedenti.
 
  Specifica se è possibile usare INVIO per selezionare un'opzione fornita da IntelliSense nel riquadro di script. Il valore predefinito è **$true**.
@@ -547,7 +455,7 @@ $psISE.Options.UseEnterToSelectInConsolePaneIntellisense=$true
 
 ```
 
-###  <a name="ulh"></a> UseLocalHelp
+### <a name="uselocalhelp"></a>UseLocalHelp
   Supportato in Windows PowerShell ISE 3.0 e versioni successive e non presente nelle versioni precedenti.
 
  Specifica se la Guida installata in locale o la Guida della libreria TechNet online viene visualizzata quando si preme F1 con il cursore posizionato su una parola chiave. Se è impostato su **$true**, una finestra popup visualizza il contenuto della Guida installata in locale. È possibile installare i file della Guida con il comando `Update-Help`. Se è impostato su **$false**, il browser apre una pagina della libreria TechNet.
@@ -560,7 +468,7 @@ $psISE.Options.UseLocalHelp=$true
 
 ```
 
-###  <a name="vbc"></a> VerboseBackgroundColor
+### <a name="verbosebackgroundcolor"></a>VerboseBackgroundColor
   Supportato in Windows PowerShell ISE 2.0 e versioni successive.
 
  Specifica il colore di sfondo del testo dettagliato visualizzato nel riquadro della console. È un oggetto **System.Windows.Media.Color**.
@@ -570,17 +478,17 @@ $psISE.Options.UseLocalHelp=$true
 $psISE.Options.VerboseBackgroundColor ='#0000FF'
 ```
 
-###  <a name="vfc"></a> VerboseForegroundColor
+### <a name="verboseforegroundcolor"></a>VerboseForegroundColor
   Supportato in Windows PowerShell ISE 2.0 e versioni successive.
 
  Specifica il colore primo piano del testo dettagliato visualizzato nel riquadro della console. È un oggetto **System.Windows.Media.Color**.
 
 ```
 # Changes the foreground color for verbose text to yellow.
-$psISE.Options.VerboseForegroundColor =”yellow”
+$psISE.Options.VerboseForegroundColor =â€yellowâ€
 ```
 
-###  <a name="wbc"></a> WarningBackgroundColor
+### <a name="warningbackgroundcolor"></a>WarningBackgroundColor
   Supportato in Windows PowerShell ISE 2.0 e versioni successive.
 
  Specifica il colore di sfondo del testo di avviso visualizzato nel riquadro della console. È un oggetto **System.Windows.Media.Color**.
@@ -590,20 +498,20 @@ $psISE.Options.VerboseForegroundColor =”yellow”
 $psISE.Options.WarningBackgroundColor ='#0000FF'
 ```
 
-###  <a name="wfc"></a> WarningForegroundColor
+### <a name="warningforegroundcolor"></a>WarningForegroundColor
   Supportato in Windows PowerShell ISE 2.0 e versioni successive.
 
  Specifica il colore primo piano del testo di avviso visualizzato nel riquadro di output. È un oggetto **System.Windows.Media.Color**.
 
 ```
 # Changes the foreground color for warning text to yellow.
-$psISE.Options.WarningForegroundColor =”yellow”
+$psISE.Options.WarningForegroundColor =â€yellowâ€
 ```
 
-###  <a name="xtc"></a> XmlTokenColors
+### <a name="xmltokencolors"></a>XmlTokenColors
   Supportato in Windows PowerShell ISE 3.0 e versioni successive e non presente nelle versioni precedenti.
 
- Specifica un oggetto dizionario che contiene le coppie nome/valore dei tipi e dei colori dei token per il contenuto XML visualizzato in Windows PowerShell ISE. I colori dei token possono essere impostati per gli elementi seguenti: Attribute, Command, CommandArgument, CommandParameter, Comment, GroupEnd, GroupStart, Keyword, LineContinuation, LoopLabel, Member, NewLine, Number, Operator, Position, StatementSeparator, String, Type, Unknown, Variable. Vedere anche [RestoreDefaultXmlTokenColors()](#rdxtc).
+ Specifica un oggetto dizionario che contiene le coppie nome/valore dei tipi e dei colori dei token per il contenuto XML visualizzato in Windows PowerShell ISE. I colori dei token possono essere impostati per gli elementi seguenti: Attribute, Command, CommandArgument, CommandParameter, Comment, GroupEnd, GroupStart, Keyword, LineContinuation, LoopLabel, Member, NewLine, Number, Operator, Position, StatementSeparator, String, Type, Unknown, Variable. Vedere anche [RestoreDefaultXmlTokenColors()]().
 
 ```
 # Sets the color of XML element names to green.
@@ -613,7 +521,7 @@ $psISE.Options.XmlTokenColors["Comment"] = "magenta"
 
 ```
 
-###  <a name="z"></a> Zoom
+### <a name="zoom"></a>Zoom
   Supportato in Windows PowerShell ISE 3.0 e versioni successive e non presente nelle versioni precedenti.
 
  Specifica le dimensioni relative del testo nei riquadri della console e di script. Il valore predefinito è 100. Se si specificano valori inferiori o superiori, il testo in Windows PowerShell ISE risulta rimpicciolito o ingrandito. Il valore è un numero intero compreso tra 20 e 400.

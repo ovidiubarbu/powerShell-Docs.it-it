@@ -1,13 +1,13 @@
 ---
-ms.date: 2017-06-05T00:00:00.000Z
+ms.date: 2017-06-05
 keywords: powershell,cmdlet
 title: "Novità di Windows PowerShell 50"
 ms.assetid: 1476722e-947e-425d-a86c-50037488dc6e
-ms.openlocfilehash: c172ac076d2cd69e8f1876ad47a51c233d8a4afb
-ms.sourcegitcommit: 74255f0b5f386a072458af058a15240140acb294
+ms.openlocfilehash: 24860f34f6e2ef655befd9916a651dd0274b2620
+ms.sourcegitcommit: 4102ecc35d473211f50a453f6ae3fbea31cb3428
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/31/2017
 ---
 # <a name="what39s-new-in-windows-powershell"></a>Novità di Windows PowerShell
 Windows PowerShell® 5.0 include nuove funzionalità significative che ne estendono e migliorano l'usabilità, consentendo di controllare e gestire gli ambienti Windows in modo più semplice e completo.
@@ -21,13 +21,13 @@ Per installare Windows PowerShell 5.0 in Windows Server 2012 R2, Windows 8.1 Ent
 
 ## <a name="in-this-topic"></a>Contenuto dell'argomento
 
--   [Aggiornamenti di Windows PowerShell 4.0 DSC in KB 3000850](#BKMK_3000850)
+-   [Aggiornamenti di Windows PowerShell 4.0 DSC in KB 3000850]()
 
--   [Nuove funzionalità di Windows PowerShell 5.0](#BKMK_new50)
+-   [Nuove funzionalità di Windows PowerShell 5.0]()
 
--   [Nuove funzionalità di Windows PowerShell 4.0](#BKMK_wps4)
+-   [Nuove funzionalità di Windows PowerShell 4.0]()
 
--   [Nuove funzionalità di Windows PowerShell 3.0](#BKMK_wps3)
+-   [Nuove funzionalità di Windows PowerShell 3.0]()
 
 ## <a name="BKMK_3000850"></a>Aggiornamenti di Windows PowerShell 4.0 nell'aggiornamento cumulativo di novembre 2014 (KB 3000850)
 Molti aggiornamenti e miglioramenti per Windows PowerShell Desired State Configuration (DSC) in Windows PowerShell 4.0 sono disponibili nell'[aggiornamento cumulativo di novembre 2014 per Windows RT 8.1, Windows 8.1 e Windows Server 2012 R2](https://support.microsoft.com/kb/3000850/) (KB 3000850). È possibile determinare se l'aggiornamento KB 3000850 è installato nel sistema eseguendo `Get-Hotfix -Id KB3000850` in Windows PowerShell.
@@ -128,15 +128,15 @@ Molti aggiornamenti e miglioramenti per Windows PowerShell Desired State Configu
 
 ## <a name="BKMK_new50"></a>Nuove funzionalità di Windows PowerShell 5.0
 
--   [Nuove funzionalità di Windows PowerShell](#BKMK_newcore)
+-   [Nuove funzionalità di Windows PowerShell]()
 
--   [Nuove funzionalità di Windows PowerShell Desired State Configuration](#BKMK_newDSC)
+-   [Nuove funzionalità di Windows PowerShell Desired State Configuration]()
 
--   [Nuove funzionalità di Windows PowerShell ISE](#BKMK_newISE)
+-   [Nuove funzionalità di Windows PowerShell ISE]()
 
--   [Nuove funzionalità dei servizi Web di Windows PowerShell](#BKMK_newOData)
+-   [Nuove funzionalità dei servizi Web di Windows PowerShell]()
 
--   [Correzioni di bug importanti in Windows PowerShell 5.0](#BKMK_5bugfix)
+-   [Correzioni di bug importanti in Windows PowerShell 5.0]()
 
 ### <a name="BKMK_newcore"></a>Nuove funzionalità di Windows PowerShell
 
@@ -178,7 +178,7 @@ Molti aggiornamenti e miglioramenti per Windows PowerShell Desired State Configu
 
 -   A partire da Windows PowerShell 5.0, i nuovi cmdlet CMS (Cryptographic Message Syntax) supportano la crittografia e la decrittografia del contenuto con il formato standard IETF per la protezione crittografica dei messaggi, come documentato in [RFC5652](http://tools.ietf.org/html/rfc5652). I cmdlet Get-CmsMessage, Protect-CmsMessage e Unprotect-CmsMessage sono stati aggiunti al modulo [Microsoft.PowerShell.Security](http://technet.microsoft.com/library/hh849807.aspx).
 
--   I nuovi cmdlet nel modulo [Microsoft.PowerShell.Utility](http://technet.microsoft.com/library/hh849958.aspx), Get-Runspace, Debug-Runspace, Get-RunspaceDebug, Enable-RunspaceDebug e Disable-RunspaceDebug, consentono di impostare le opzioni di debug in uno spazio di esecuzione e di avviare e arrestare il debug in uno spazio di esecuzione. Per eseguire il debug di spazi di esecuzione arbitrari, ovvero gli spazi di esecuzione che non corrispondono allo spazio di esecuzione predefinito per una console di Windows PowerShell o una sessione di Windows PowerShell ISE, Windows PowerShell consente di impostare punti di interruzione in uno script e fare in modo che i punti di interruzione aggiunti interrompano l'esecuzione dello script fino a quando non si collega un debugger per eseguire il debug dello script dello spazio di esecuzione. È stato aggiunto il supporto del debug annidato per gli spazi di esecuzione arbitrari al debugger di script di Windows PowerShell per gli spazi di esecuzione.
+-   I nuovi cmdlet nel modulo [Microsoft.PowerShell.Utility](http://technet.microsoft.com/library/hh849958.aspx), Get-Runspace, Debug-Runspace, Get-RunspaceDebug, Enable-RunspaceDebug e Disable-RunspaceDebug, consentono di impostare le opzioni di debug in uno spazio di esecuzione e di avviare e arrestare il debug in uno spazio di esecuzione. Per eseguire il debug di spazi di esecuzione arbitrari, ovvero spazi di esecuzione che non corrispondono allo spazio di esecuzione predefinito per una console di Windows PowerShell o una sessione di Windows PowerShell ISE, Windows PowerShell consente di impostare punti di interruzione in uno script e fare in modo che i punti di interruzione aggiunti arrestino l'esecuzione dello script fino a quando non si collega un debugger per eseguire il debug dello script dello spazio di esecuzione. È stato aggiunto il supporto del debug annidato per gli spazi di esecuzione arbitrari al debugger di script di Windows PowerShell per gli spazi di esecuzione.
 
 -   È stato aggiunto il nuovo cmdlet Format-Hex al modulo [Microsoft.PowerShell.Utility](http://technet.microsoft.com/library/hh849958.aspx). Format-Hex consente di visualizzare dati di testo o binari in formato esadecimale.
 
@@ -270,9 +270,9 @@ Molti aggiornamenti e miglioramenti per Windows PowerShell Desired State Configu
 
 -   Il nuovo attributo **DscLocalConfigurationManager** definisce un blocco di configurazione come metaconfigurazione, usata per configurare Gestione configurazione locale DSC. Questo attributo limita una configurazione ai soli elementi per configurare Gestione configurazione locale DSC. Durante l'elaborazione, questa configurazione genera un file \*.meta.mof che viene poi inviato ai nodi di destinazione appropriati tramite il cmdlet Set-DscLocalConfigurationManager.
 
--   Le configurazioni parziali sono ora consentite in Windows PowerShell 5.0. È possibile recapitare i documenti di configurazione a un nodo in frammenti. Affinché un nodo possa ricevere più frammenti di un documento di configurazione, l'istanza di Gestione configurazione locale nel nodo deve essere prima impostata in modo da specificare i frammenti previsti
+-   Le configurazioni parziali sono ora consentite in Windows PowerShell 5.0. È possibile recapitare i documenti di configurazione a un nodo in frammenti. Affinché un nodo possa ricevere più frammenti di un documento di configurazione, è necessario prima impostare l'istanza locale di Configuration Manager nel nodo in modo da specificare i frammenti previsti
 
--   La sincronizzazione tra computer è una novità di DSC in Windows PowerShell 5.0. Grazie alle risorse predefinite WaitFor\* (**WaitForAll**, **WaitForAny** e **WaitForSome**), è ora possibile specificare le dipendenze tra i computer durante le esecuzioni della configurazione, senza orchestrazione esterna. Queste risorse consentono la sincronizzazione tra nodi tramite connessioni CIM sul protocollo WS-Man. Una configurazione può aspettare la modifica dello stato di una risorsa specifica di un altro computer.
+-   La sincronizzazione tra computer è una novità di DSC in Windows PowerShell 5.0. Grazie alle risorse predefinite WaitFor\* (**WaitForAll**, **WaitForAny** e **WaitForSome**), è ora possibile specificare le dipendenze tra i computer durante le esecuzioni della configurazione, senza orchestrazione esterna. Queste risorse consentono la sincronizzazione tra nodi tramite connessioni CIM sul protocollo WS-Man. Una configurazione può attendere la modifica dello stato di una risorsa specifica di un altro computer.
 
 -   La nuova funzionalità di sicurezza con delega JEA (Just Enough Administration) si basa su DSC e gli spazi di esecuzione limitati di Windows PowerShell per proteggere le aziende da perdite di dati o compromissioni causate dai dipendenti, sia intenzionalmente che non. Per altre informazioni su JEA, inclusa la posizione da cui è possibile scaricare la risorsa xJEA DSC, vedere il post di blog di [presentazione dei dettagli di JEA (Just Enough Administration)](http://blogs.technet.com/b/privatecloud/archive/2014/05/14/just-enough-administration-step-by-step.aspx).
 
@@ -313,17 +313,17 @@ Windows PowerShell 4.0 è compatibile con le versioni precedenti. Cmdlet, provid
 
 Windows PowerShell 4.0 viene installato per impostazione predefinita in Windows® 8.1 e Windows Server 2012 R2. Per installare Windows PowerShell 4.0 in Windows 7 con SP1 o Windows Server 2008 R2, scaricare e installare [Windows Management Framework 4.0](http://www.microsoft.com/download/details.aspx?id=40855). Prima di installare Windows Management Framework 4.0, assicurarsi di leggere i dettagli sul download e di soddisfare tutti i requisiti di sistema.
 
--   [Nuove funzionalità di Windows PowerShell](#BKMK_core)
+-   [Nuove funzionalità di Windows PowerShell]()
 
--   [Nuove funzionalità di Windows PowerShell ISE (Integrated Scripting Environment)](#BKMK_ise)
+-   [Nuove funzionalità di Windows PowerShell ISE (Integrated Scripting Environment)]()
 
--   [Nuove funzionalità del flusso di lavoro di Windows PowerShell](#BKMK_workflow)
+-   [Nuove funzionalità del flusso di lavoro di Windows PowerShell]()
 
--   [Nuove funzionalità dei servizi Web di Windows PowerShell](#BKMK_psws)
+-   [Nuove funzionalità dei servizi Web di Windows PowerShell]()
 
--   [Nuove funzionalità di Accesso Web Windows PowerShell](#BKMK_powwa)
+-   [Nuove funzionalità di Accesso Web Windows PowerShell]()
 
--   [Correzioni di bug importanti in Windows PowerShell 4.0](#BKMK_bugs)
+-   [Correzioni di bug importanti in Windows PowerShell 4.0]()
 
 Windows PowerShell 4.0 include le nuove funzionalità seguenti.
 
@@ -456,59 +456,59 @@ Windows PowerShell 4.0 include le nuove funzionalità seguenti.
 ## <a name="BKMK_wps3"></a>Nuove funzionalità di Windows PowerShell 3.0
 Windows PowerShell 3.0 include le nuove funzionalità seguenti.
 
--   [Flusso di lavoro di Windows PowerShell](#BKMK_Workflow)
+-   [Flusso di lavoro di Windows PowerShell]()
 
--   [Accesso Web di Windows PowerShell](#BKMK_WebAccess)
+-   [Accesso Web di Windows PowerShell]()
 
--   [Nuove funzionalità di Windows PowerShell ISE](#BKMK_ISE)
+-   [Nuove funzionalità di Windows PowerShell ISE]()
 
--   [Supporto per Microsoft .NET Framework 4.0](#BKMK_NET4)
+-   [Supporto per Microsoft .NET Framework 4.0]()
 
--   [Supporto per l'Ambiente preinstallazione di Windows](#BKMK_WinPE)
+-   [Supporto per l'Ambiente preinstallazione di Windows]()
 
--   [Sessioni disconnesse](#BKMK_Disconnected)
+-   [Sessioni disconnesse]()
 
--   [Connettività stabile delle sessioni](#BKMK_Robust)
+-   [Connettività stabile delle sessioni]()
 
--   [Sistema della Guida aggiornabile](#BKMK_UpHelp)
+-   [Sistema della Guida aggiornabile]()
 
--   [Guida online ottimizzata](#BKMK_Online)
+-   [Guida online ottimizzata]()
 
--   [Integrazione con CIM](#BKMK_CIM)
+-   [Integrazione con CIM]()
 
--   [File di configurazione di sessione](#BKMK_ConfigFile)
+-   [File di configurazione di sessione]()
 
--   [Processi pianificati e integrazione con l'Utilità di pianificazione](#BKMK_ScheduledJob)
+-   [Processi pianificati e integrazione con l'Utilità di pianificazione]()
 
--   [Miglioramenti del linguaggio di Windows PowerShell](#BKMK_Lang)
+-   [Miglioramenti del linguaggio di Windows PowerShell]()
 
--   [Nuovi cmdlet di sistema](#BKMK_Core)
+-   [Nuovi cmdlet di sistema]()
 
--   [Miglioramenti dei cmdlet e provider principali esistenti](#BKMK_Prov)
+-   [Miglioramenti dei cmdlet e provider principali esistenti]()
 
--   [Importazione e individuazione di moduli remoti](#BKMK_REM)
+-   [Importazione e individuazione di moduli remoti]()
 
--   [Completamento tramite TAB migliorato](#BKMK_TAB)
+-   [Completamento tramite TAB migliorato]()
 
--   [Caricamento automatico dei moduli](#BKMK_AutoLoad)
+-   [Caricamento automatico dei moduli]()
 
--   [Miglioramento dell'esperienza con i moduli](#BKMK_MOD)
+-   [Miglioramento dell'esperienza con i moduli]()
 
--   [Individuazione semplificata dei comandi](#BKMK_SIMPLE)
+-   [Individuazione semplificata dei comandi]()
 
--   [Funzionalità migliorate di registrazione e diagnostica e supporto di Criteri di gruppo](#BKMK_LOG)
+-   [Funzionalità migliorate di registrazione e diagnostica e supporto di Criteri di gruppo]()
 
--   [Miglioramenti di formattazione e output](#BKMK_OUT)
+-   [Miglioramenti di formattazione e output]()
 
--   [Esperienza ottimizzata con l'host della console](#BKMK_HOST)
+-   [Esperienza ottimizzata con l'host della console]()
 
--   [Nuove API di cmdlet e hosting](#BKMK_API)
+-   [Nuove API di cmdlet e hosting]()
 
--   [Miglioramenti delle prestazioni](#BKMK_PERF)
+-   [Miglioramenti delle prestazioni]()
 
--   [Supporto per RunAs e SharedHost](#BKMK_RUNAS)
+-   [Supporto per RunAs e SharedHost]()
 
--   [Miglioramenti nella gestione di caratteri speciali](#BKMK_CHAR)
+-   [Miglioramenti nella gestione di caratteri speciali]()
 
 ### <a name="BKMK_Workflow"></a>Flusso di lavoro di Windows PowerShell
 Il flusso di lavoro di Windows PowerShell® estende le potenzialità di Windows Workflow Foundation a Windows PowerShell. È possibile scrivere flussi di lavoro in XAML o nel linguaggio di Windows PowerShell ed eseguirli allo stesso modo dei cmdlet. Il cmdlet [Get-Command](https://technet.microsoft.com/en-us/library/59c6d302-6e8c-48b7-a6f6-f0172df936ad) ottiene i comandi del flusso di lavoro e il cmdlet [Get-Help](https://technet.microsoft.com/en-us/library/1f46eeb4-49d7-4bec-bb29-395d9b42f54a) visualizza la Guida.
@@ -538,12 +538,12 @@ I vantaggi del flusso di lavoro di Windows PowerShell sono descritti di seguito.
 -   **Limitazione di connessioni e flussi di lavoro.** L'esecuzione dei flussi di lavoro e le connessioni ai nodi possono essere limitate, rendendo possibili scenari di scalabilità e disponibilità elevata.
 
 ### <a name="BKMK_WebAccess"></a>Accesso Web di Windows PowerShell
-Accesso Web Windows PowerShell® è una funzionalità di Windows Server 2012 che consente agli utenti di eseguire comandi e script di Windows PowerShell in una console basata sul Web. I dispositivi che usano la console basata sul Web non richiedono Windows PowerShell, un software di gestione remota o l'installazione di plug-in del browser. È richiesto solo un gateway di Accesso Web Windows PowerShell configurato correttamente e un browser del dispositivo client che supporti JavaScript® e accetti cookie.
+Accesso Web Windows PowerShell è una funzionalità di Windows Server 2012 che consente agli utenti di eseguire comandi e script di Windows PowerShell in una console basata sul Web. I dispositivi che usano la console basata sul Web non richiedono Windows PowerShell, un software di gestione remota o l'installazione di plug-in del browser. Si richiede solo un gateway di Accesso Web Windows PowerShell configurato correttamente e un browser del dispositivo client che supporti JavaScript® e accetti cookie.
 
 Per altre informazioni, vedere [Distribuire Accesso Web Windows PowerShell](http://go.microsoft.com/fwlink/p/?LinkID=221050).
 
 ### <a name="BKMK_ISE"></a>Nuove funzionalità di Windows PowerShell ISE
-Per Windows PowerShell 3.0, Windows PowerShell® Integrated Scripting Environment (ISE) include molte nuove funzionalità, tra cui IntelliSense, finestra Show-Command, riquadro della console unificato, frammenti di codice, controllo della corrispondenza delle parentesi graffe, sezioni espandibili e comprimibili, salvataggio automatico, elenco di elementi recenti, copia di testo formattato, copia in blocco e supporto completo per la scrittura di flussi di lavoro di script di Windows PowerShell. Per altre informazioni, vedere [about_Windows_PowerShell_ISE [v3]](https://technet.microsoft.com/en-us/library/dfa54d47-60c6-4fff-8197-c747e8d411bb).
+Per Windows PowerShell 3.0, Windows PowerShell® Integrated Scripting Environment (ISE) include molte nuove funzionalità, tra cui: IntelliSense, finestra Show-Command, riquadro della console unificato, frammenti di codice, controllo della corrispondenza delle parentesi graffe, sezioni espandibili e comprimibili, salvataggio automatico, elenco di elementi recenti, copia di testo formattato, copia in blocco e supporto completo per la scrittura di flussi di lavoro di script di Windows PowerShell. Per altre informazioni, vedere [about_Windows_PowerShell_ISE [v3]](https://technet.microsoft.com/en-us/library/dfa54d47-60c6-4fff-8197-c747e8d411bb).
 
 ### <a name="BKMK_NET4"></a>Supporto per Microsoft .NET Framework 4
 Windows PowerShell è basato su Common Language Runtime 4.0. Gli autori di cmdlet, script e flussi di lavoro possono usare le nuove classi di Microsoft .NET Framework 4 in Windows PowerShell, con funzionalità come la compatibilità e la distribuzione di applicazioni, Managed Extensibility Framework, calcolo parallelo, rete, Windows Communication Foundation e Windows Workflow Foundation.
