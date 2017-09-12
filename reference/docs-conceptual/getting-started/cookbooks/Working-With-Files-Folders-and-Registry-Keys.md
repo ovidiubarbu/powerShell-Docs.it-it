@@ -1,13 +1,13 @@
 ---
-ms.date: 2017-06-05T00:00:00.000Z
+ms.date: 2017-06-05
 keywords: powershell,cmdlet
 title: Uso di file, cartelle e chiavi del Registro di sistema
 ms.assetid: e6cf87aa-b5f8-48d5-a75a-7cb7ecb482dc
-ms.openlocfilehash: 2bae8d6931c84bee4aa30a43742acd052b82d079
-ms.sourcegitcommit: 74255f0b5f386a072458af058a15240140acb294
+ms.openlocfilehash: 22a2390686659033bfd8b02a151b3397cfd46a22
+ms.sourcegitcommit: d6ab9ab5909ed59cce4ce30e29457e0e75c7ac12
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/08/2017
 ---
 # <a name="working-with-files-folders-and-registry-keys"></a>Gestione di file, cartelle e chiavi del Registro di sistema
 Windows PowerShell usa il sostantivo **Item** per fare riferimento agli elementi presenti in un'unità di Windows PowerShell. Nel caso del provider FileSystem di Windows PowerShell, il sostantivo **Item** può fare riferimento a un file, a una cartella o all'unità di Windows PowerShell. La visualizzazione e l'uso di questi elementi rappresentano attività di base fondamentali nella maggior parte delle impostazioni amministrative, quindi verranno descritte in dettaglio.
@@ -77,11 +77,11 @@ Il comando **Get-ChildItem** accetta i caratteri jolly nel percorso degli elemen
 
 Poiché la corrispondenza tramite caratteri jolly viene gestita dal motore di Windows PowerShell, tutti i cmdlet che accettano caratteri jolly usano la stessa notazione e hanno lo stesso comportamento. La notazione dei caratteri jolly di Windows PowerShell include:
 
--   L'asterisco (\*) trova la corrispondenza con zero o più occorrenze di qualsiasi carattere.
+- L'asterisco (\*) trova la corrispondenza con zero o più occorrenze di qualsiasi carattere.
 
--   Il punto interrogativo (?) trova la corrispondenza con un unico carattere.
+- Il punto interrogativo (?) trova la corrispondenza con un unico carattere.
 
--   La parentesi quadra sinistra (\[) e quella destra (]) racchiudono un set di caratteri con cui trovare la corrispondenza.
+- La parentesi quadra sinistra (\[) e quella destra (]) racchiudono un set di caratteri con cui trovare la corrispondenza.
 
 Ecco alcuni esempi del funzionamento dei caratteri jolly.
 

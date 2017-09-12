@@ -1,34 +1,34 @@
 ---
-ms.date: 2017-06-05T00:00:00.000Z
+ms.date: 2017-06-05
 keywords: powershell,cmdlet
 title: Appendice 2 Creazione di un collegamento personalizzato per PowerShell
 ms.assetid: 5d4fd421-5d43-4ec7-86fd-acfe887b066e
-ms.openlocfilehash: 31fdc388ae8859191f75c3c4120667cdbeff1669
-ms.sourcegitcommit: 74255f0b5f386a072458af058a15240140acb294
+ms.openlocfilehash: d5e554f6f062fc5bf1beddd2aca1acf0b93d2133
+ms.sourcegitcommit: d6ab9ab5909ed59cce4ce30e29457e0e75c7ac12
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/08/2017
 ---
 # <a name="appendix-2---creating-a-custom-powershell-shortcut"></a>Appendice 2 - Creazione di un collegamento personalizzato per PowerShell
 La procedura seguente descrive come creare un collegamento a Windows PowerShell con diverse opzioni utili personalizzate.
 
-1.  Creare un collegamento che punta a Powershell.exe.
+1. Creare un collegamento che punta a Powershell.exe.
 
-2.  Fare clic con il pulsante destro del mouse sul collegamento e quindi scegliere **Proprietà**.
+2. Fare clic con il pulsante destro del mouse sul collegamento e quindi scegliere **Proprietà**.
 
-3.  Fare clic sulla scheda **Opzioni**.
+3. Fare clic sulla scheda **Opzioni**.
 
-4.  Nella sezione **Opzioni di modifica** selezionare la casella di controllo **Modifica rapida**.
+4. Nella sezione **Opzioni di modifica** selezionare la casella di controllo **Modifica rapida**.
 
     Questa impostazione consente di selezionare testo nella finestra della console di Windows PowerShell trascinando il pulsante sinistro del mouse e consente di copiare il testo negli Appunti premendo INVIO oppure facendo clic con il pulsante destro del mouse.
 
-5.  Nella sezione **Opzioni di modifica** selezionare la casella di controllo **Modalità inserimento**. Questa impostazione consente di fare clic con il pulsante destro del mouse nella finestra della console per incollare automaticamente il testo dagli Appunti.
+5. Nella sezione **Opzioni di modifica** selezionare la casella di controllo **Modalità inserimento**. Questa impostazione consente di fare clic con il pulsante destro del mouse nella finestra della console per incollare automaticamente il testo dagli Appunti.
 
-6.  Nella sezione **Cronologia comandi** digitare o selezionare un numero compreso tra 1 e 999 nella casella **Dimensioni buffer**. Questa opzione consente di impostare il numero di comandi digitati che verranno conservati nel buffer della console.
+6. Nella sezione **Cronologia comandi** digitare o selezionare un numero compreso tra 1 e 999 nella casella **Dimensioni buffer**. Questa opzione consente di impostare il numero di comandi digitati che verranno conservati nel buffer della console.
 
-7.  Nella sezione **Cronologia comandi** selezionare la casella di controllo **Elimina vecchi duplicati** per eliminare i comandi ripetuti dal buffer della console.
+7. Nella sezione **Cronologia comandi** selezionare la casella di controllo **Elimina vecchi duplicati** per eliminare i comandi ripetuti dal buffer della console.
 
-8.  Fare clic sulla scheda **Layout**.
+8. Fare clic sulla scheda **Layout**.
 
 9. Nella sezione **Dimensioni buffer dello schermo** digitare un numero compreso trai 1 e 9999 nella casella **Altezza**. L'altezza rappresenta il numero di righe di output inserite nel buffer. Questo è il numero massimo di righe mantenute per la visualizzazione quando si scorre la finestra della console. Se il numero è inferiore rispetto all'altezza indicata nella sezione **Dimensioni finestra**, l'altezza della finestra verrà ridotta automaticamente allo stesso valore.
 

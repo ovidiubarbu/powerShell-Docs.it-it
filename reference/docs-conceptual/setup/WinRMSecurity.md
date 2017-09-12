@@ -1,12 +1,12 @@
 ---
-ms.date: 2017-06-05T00:00:00.000Z
+ms.date: 2017-06-05
 keywords: powershell,cmdlet
 title: WinRMSecurity
-ms.openlocfilehash: a6adf61517708661e31a7387df5141f3c4f2c020
-ms.sourcegitcommit: 74255f0b5f386a072458af058a15240140acb294
+ms.openlocfilehash: 65cf12466c9dc8fc8b77d79b0d63a6ae61e64d60
+ms.sourcegitcommit: d6ab9ab5909ed59cce4ce30e29457e0e75c7ac12
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/08/2017
 ---
 # <a name="powershell-remoting-security-considerations"></a>Considerazioni sulla sicurezza della comunicazione remota di PowerShell
 
@@ -18,7 +18,7 @@ La comunicazione remota di PowerShell usa la [Gestione remota Windows (WinRM)](h
 
 La comunicazione remota di PowerShell non corrisponde all'uso del parametro **ComputerName** di un cmdlet per l'esecuzione in un computer remoto che usa RPC (Remote Procedure Call) come protocollo sottostante.
 
-##  <a name="powershell-remoting-default-settings"></a>Impostazioni predefinite della comunicazione remota di PowerShell
+## <a name="powershell-remoting-default-settings"></a>Impostazioni predefinite della comunicazione remota di PowerShell
 
 La comunicazione remota di PowerShell (e WinRM) esegue l'ascolto delle porte seguenti:
 

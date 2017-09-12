@@ -8,26 +8,26 @@ keywords: powershell,cmdlet
 ms.date: 2016-12-12
 title: test pswaauthorizationrule
 ms.technology: powershell
-ms.openlocfilehash: 1b480b68c7ce2064f42281d8c5d76156a39e0222
-ms.sourcegitcommit: 4102ecc35d473211f50a453f6ae3fbea31cb3428
+ms.openlocfilehash: 900547301c815ba6fe3a9507f975503fec864e4e
+ms.sourcegitcommit: d6ab9ab5909ed59cce4ce30e29457e0e75c7ac12
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/31/2017
+ms.lasthandoff: 09/08/2017
 ---
-#  <a name="test-pswaauthorizationrule"></a>Test-PswaAuthorizationRule
+# <a name="test-pswaauthorizationrule"></a>Test-PswaAuthorizationRule
 
-##  <a name="synopsis"></a>RIEPILOGO
+## <a name="synopsis"></a>RIEPILOGO
 
 Verifica se esiste una regola per un utente, un computer o un endpoint specificato.
 
 ## <a name="syntax"></a>SINTASSI
 
-###  <a name="computername"></a>ComputerName
+### <a name="computername"></a>ComputerName
 ```
 Test-PswaAuthorizationRule [-UserName] <String> [-ComputerName] <String> [[-ConfigurationName] <String> ] [-Credential <PSCredential> ] [-Rule <PswaAuthorizationRule[]> ] [ <CommonParameters>]
 ```
 
-###  <a name="connectionuri"></a>ConnectionUri
+### <a name="connectionuri"></a>ConnectionUri
 ```
 Test-PswaAuthorizationRule [-UserName] <String> [-ConnectionUri] <Uri> [[-ConfigurationName] <String> ] [-Credential <PSCredential> ] [-Rule <PswaAuthorizationRule[]> ] [ <CommonParameters>]
 ```
@@ -130,13 +130,13 @@ Per altre informazioni, vedere [about_CommonParameters](http://go.microsoft.com/
 
 ## <a name="inputs"></a>INPUT
 
-###  <a name="microsoftmanagementpowershellwebaccesspswaauthorizationrule"></a>Microsoft.Management.PowerShellWebAccess.PswaAuthorizationRule\[\]
+### <a name="microsoftmanagementpowershellwebaccesspswaauthorizationrule"></a>Microsoft.Management.PowerShellWebAccess.PswaAuthorizationRule\[\]
 
 Questo cmdlet accetta una matrice di oggetti PswaAuthorizationRule come input.
 
-##  <a name="outputs"></a>OUTPUT
+## <a name="outputs"></a>OUTPUT
 
-###  <a name="microsoftmanagementpowershellwebaccesspswaauthorizationrule"></a>Microsoft.Management.PowerShellWebAccess.PswaAuthorizationRule\[\]
+### <a name="microsoftmanagementpowershellwebaccesspswaauthorizationrule"></a>Microsoft.Management.PowerShellWebAccess.PswaAuthorizationRule\[\]
 
 Questo cmdlet genera una matrice di oggetti PswaAuthorizationRule come output.
 
@@ -158,9 +158,9 @@ In questo esempio viene eseguito un test di tutte le regole di autorizzazione pe
 Test-PswaAuthorizationRule -UserName contoso\mhanson -ComputerName *
 ```
 
-##  <a name="related-topics"></a>Argomenti correlati
+## <a name="related-topics"></a>Argomenti correlati
 
--  [Add-PswaAuthorizationRule](add-pswaauthorizationrule.md)
--  [Get-PswaAuthorizationRule](get-pswaauthorizationrule.md)
--  [Install-PswaWebApplication](install-pswawebapplication.md)
--  [Remove-PswaAuthorizationRule](remove-pswaauthorizationrule.md)
+- [Add-PswaAuthorizationRule](add-pswaauthorizationrule.md)
+- [Get-PswaAuthorizationRule](get-pswaauthorizationrule.md)
+- [Install-PswaWebApplication](install-pswawebapplication.md)
+- [Remove-PswaAuthorizationRule](remove-pswaauthorizationrule.md)

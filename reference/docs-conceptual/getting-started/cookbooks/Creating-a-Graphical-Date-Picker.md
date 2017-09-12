@@ -1,13 +1,13 @@
 ---
-ms.date: 2017-06-05T00:00:00.000Z
+ms.date: 2017-06-05
 keywords: powershell,cmdlet
 title: Creazione di un controllo grafico di selezione data
 ms.assetid: c1cb722c-41e9-4baa-be83-59b4653222e9
-ms.openlocfilehash: 5cb952264092d345945318968cf0b3028b11f3e9
-ms.sourcegitcommit: 74255f0b5f386a072458af058a15240140acb294
+ms.openlocfilehash: 7be72be7e9732737f00b15b6b2b83adcca4393ae
+ms.sourcegitcommit: d6ab9ab5909ed59cce4ce30e29457e0e75c7ac12
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/08/2017
 ---
 # <a name="creating-a-graphical-date-picker"></a>Creazione di un controllo grafico di selezione data
 Usare Windows PowerShell 3.0 e versioni successive per creare un modulo con un controllo grafico di tipo calendario che consente agli utenti di selezionare un giorno del mese.
@@ -65,11 +65,11 @@ $form = New-Object Windows.Forms.Form
 
 Dopo aver creato un'istanza della classe Form, assegnare valori alle tre proprietà della classe.
 
--   **Testo** Questo valore diventa il titolo della finestra.
+- **Testo** Questo valore diventa il titolo della finestra.
 
--   **Size.** Le dimensioni del modulo, in pixel. Lo script precedente crea un modulo di 243 pixel in larghezza per 230 pixel in altezza.
+- **Size.** Le dimensioni del modulo, in pixel. Lo script precedente crea un modulo di 243 pixel in larghezza per 230 pixel in altezza.
 
--   **StartingPosition.** Questa proprietà facoltativa è impostata su **CenterScreen** nello script precedente. Se non viene aggiunta, Windows seleziona una posizione quando il modulo viene aperto. Impostando **StartingPosition** su **CenterScreen**, il modulo viene automaticamente visualizzato al centro dello schermo ogni volta che viene caricato.
+- **StartingPosition.** Questa proprietà facoltativa è impostata su **CenterScreen** nello script precedente. Se non viene aggiunta, Windows seleziona una posizione quando il modulo viene aperto. Impostando **StartingPosition** su **CenterScreen**, il modulo viene automaticamente visualizzato al centro dello schermo ogni volta che viene caricato.
 
 ```
 $form.Text = "Select a Date" 

@@ -1,13 +1,13 @@
 ---
-ms.date: 2017-06-05T00:00:00.000Z
+ms.date: 2017-06-05
 keywords: powershell,cmdlet
 title: Windows PowerShell Integrated Scripting Environment ISE
 ms.assetid: f156b92d-0203-46d2-89c7-b4989d32e3d2
-ms.openlocfilehash: 93b3322ae5634d3611f3c2743e7460e266dc7ab8
-ms.sourcegitcommit: 74255f0b5f386a072458af058a15240140acb294
+ms.openlocfilehash: e5c4e6ef002d6d6ede014a3147d1fed15f6d76d8
+ms.sourcegitcommit: d6ab9ab5909ed59cce4ce30e29457e0e75c7ac12
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/08/2017
 ---
 # <a name="windows-powershell-integrated-scripting-environment-ise"></a>Windows PowerShell Integrated Scripting Environment (ISE)
 Windows PowerShell Integrated Scripting Environment (ISE) è uno dei due host per il motore e il linguaggio di Windows PowerShell. È possibile usarlo per scrivere, eseguire e testare script in modi non disponibili nella console di Windows PowerShell. ISE aggiunge la colorazione della sintassi, il completamento tramite TAB, IntelliSense, il debug visivo e la Guida sensibile al contesto.
@@ -34,21 +34,21 @@ L'**elenco degli elementi usati di recente** fa ora parte del menu Apri File in 
 
 **Nuove funzionalità dell'editor** rendono più semplice creare e leggere il codice:
 
--   **Colorazione della sintassi XML**. L'editor ISE ora applica colori alla sintassi XML nello stesso modo usato per la sintassi del codice di Windows PowerShell.
+- **Colorazione della sintassi XML**. L'editor ISE ora applica colori alla sintassi XML nello stesso modo usato per la sintassi del codice di Windows PowerShell.
 
--   **Corrispondenza delle parentesi graffe**. ISEWindows PowerShell ISE evidenzia le parentesi graffe corrispondenti per facilitare il controllo del numero corretto di parentesi graffe di chiusura corrispondenti a quelle di apertura. È possibile usare CTRL-\[ per individuare la parentesi graffa di chiusura corrispondente a quella di apertura su cui si trova il cursore.
+- **Corrispondenza delle parentesi graffe**. ISEWindows PowerShell ISE evidenzia le parentesi graffe corrispondenti per facilitare il controllo del numero corretto di parentesi graffe di chiusura corrispondenti a quelle di apertura. È possibile usare CTRL-\[ per individuare la parentesi graffa di chiusura corrispondente a quella di apertura su cui si trova il cursore.
 
--   **Visualizzazione struttura**. È possibile comprimere o espandere sezioni del codice facendo clic sul segno più e meno nel margine sinistro. In questo modo è più semplice trovare il codice che si sta cercando in uno script lungo.
+- **Visualizzazione struttura**. È possibile comprimere o espandere sezioni del codice facendo clic sul segno più e meno nel margine sinistro. In questo modo è più semplice trovare il codice che si sta cercando in uno script lungo.
 
--   **Modifica del testo con trascinamento della selezione**. È possibile selezionare un blocco di testo e trascinarlo in un'altra posizione per spostarlo. Se si tiene premuto il tasto CTRL mentre si trascina il testo selezionato, si esegue una copia anziché uno spostamento.
+- **Modifica del testo con trascinamento della selezione**. È possibile selezionare un blocco di testo e trascinarlo in un'altra posizione per spostarlo. Se si tiene premuto il tasto CTRL mentre si trascina il testo selezionato, si esegue una copia anziché uno spostamento.
 
--   **Visualizzazione degli errori di analisi**. Windows PowerShell esamina lo script durante la digitazione. Se viene rilevato un errore, verrà visualizzata una sottolineatura ondulata rossa sotto il codice che causa l'errore. Quando si passa il mouse sull'errore indicato, il problema rilevato viene indicato in una descrizione comando.
+- **Visualizzazione degli errori di analisi**. Windows PowerShell esamina lo script durante la digitazione. Se viene rilevato un errore, verrà visualizzata una sottolineatura ondulata rossa sotto il codice che causa l'errore. Quando si passa il mouse sull'errore indicato, il problema rilevato viene indicato in una descrizione comando.
 
--   **Zoom**. È possibile ingrandire il testo per facilitarne la lettura o ridurlo per ottenere un quadro d'insieme usando il dispositivo di scorrimento nell'angolo in basso a destra della finestra di ISE.
+- **Zoom**. È possibile ingrandire il testo per facilitarne la lettura o ridurlo per ottenere un quadro d'insieme usando il dispositivo di scorrimento nell'angolo in basso a destra della finestra di ISE.
 
--   **Operazioni di copia e incolla di testo formattato**. Quando si esegue una copia negli Appunti da ISE vengono incluse le informazioni relative a tipo di carattere, dimensioni e colore del testo selezionato.
+- **Operazioni di copia e incolla di testo formattato**. Quando si esegue una copia negli Appunti da ISE vengono incluse le informazioni relative a tipo di carattere, dimensioni e colore del testo selezionato.
 
--   **Selezione di blocchi**. È possibile selezionare una parte di testo a forma di blocco tenendo premuto ALT mentre si seleziona il testo nel riquadro di script con il mouse oppure premendo **ALT+MAIUSC+FRECCIA**.
+- **Selezione di blocchi**. È possibile selezionare una parte di testo a forma di blocco tenendo premuto ALT mentre si seleziona il testo nel riquadro di script con il mouse oppure premendo **ALT+MAIUSC+FRECCIA**.
 
 ### <a name="added-in-powershell-20-windows-server-2008-r2-windows-7"></a>Aggiunta in PowerShell 2.0 (Windows Server 2008 R2, Windows 7)
 L'ambiente ISE è stato introdotto in PowerShell 2.0.

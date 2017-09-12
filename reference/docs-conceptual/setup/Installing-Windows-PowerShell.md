@@ -2,11 +2,11 @@
 ms.date: 2017-08-09
 keywords: PowerShell, cmdlet, download, installazione, configurazione, Windows 10, Windows 8.1, Windows 8.0, Windows 7
 title: Installazione di Windows PowerShell
-ms.openlocfilehash: 7a1a4bff461e3012a06a82faf4015a05b8560895
-ms.sourcegitcommit: a6ee6e64d369ecf82c730411bed9750278fdb5c1
+ms.openlocfilehash: 7ccbee66d01dd8e0e6e6ab09c6c8a399bee59ce8
+ms.sourcegitcommit: d6ab9ab5909ed59cce4ce30e29457e0e75c7ac12
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/18/2017
+ms.lasthandoff: 09/08/2017
 ---
 # <a name="installing-windows-powershell"></a>Installazione di Windows PowerShell
 
@@ -14,8 +14,8 @@ PowerShell viene installato per impostazione predefinita in tutte le versioni di
 
 Per installare **PowerShell 6** (beta) in computer Linux, macOS e Windows, seguire questa procedura:
 
-1.  Scaricare da [GitHub](https://github.com/powershell/powershell#get-powershell) la versione di PowerShell idonea al sistema operativo specifico e alla versione
-1.  Seguire le istruzioni di installazione
+1. Scaricare da [GitHub](https://github.com/powershell/powershell#get-powershell) la versione di PowerShell idonea al sistema operativo specifico e alla versione
+1. Seguire le istruzioni di installazione
   - [Linux](https://github.com/PowerShell/PowerShell/blob/master/docs/installation/linux.md)
   - [macOS](https://github.com/PowerShell/PowerShell/blob/master/docs/installation/linux.md#macos-1012)
   - [Windows](https://github.com/PowerShell/PowerShell/blob/master/docs/installation/windows.md#msi)

@@ -8,15 +8,15 @@ keywords: powershell,cmdlet
 ms.date: 2016-12-12
 title: install pswawebapplication
 ms.technology: powershell
-ms.openlocfilehash: c15215935eb70f082d13b93a0bf040aaf00a04de
-ms.sourcegitcommit: 4102ecc35d473211f50a453f6ae3fbea31cb3428
+ms.openlocfilehash: a608a6272d3eae56ccf808b9d94525ca39df50cb
+ms.sourcegitcommit: d6ab9ab5909ed59cce4ce30e29457e0e75c7ac12
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/31/2017
+ms.lasthandoff: 09/08/2017
 ---
-#  <a name="install-pswawebapplication"></a>Install-PswaWebApplication
+# <a name="install-pswawebapplication"></a>Install-PswaWebApplication
 
-##  <a name="synopsis"></a>RIEPILOGO
+## <a name="synopsis"></a>RIEPILOGO
 
 Configura l'applicazione Web Accesso Web Windows PowerShell® in IIS.
 
@@ -106,7 +106,7 @@ Per altre informazioni, vedere [about_CommonParameters](http://go.microsoft.com/
 
 Questo cmdlet non accetta input.
 
-##  <a name="outputs"></a>OUTPUT
+## <a name="outputs"></a>OUTPUT
 
 Questo cmdlet non genera alcun output.
 
@@ -128,9 +128,9 @@ In questo esempio viene installata l'applicazione Web PSWA con un certificato di
 Install-PswaWebApplication -UseTestCertificate
 ```
 
-##  <a name="related-topics"></a>Argomenti correlati
+## <a name="related-topics"></a>Argomenti correlati
 
--  [Add-PswaAuthorizationRule](add-pswaauthorizationrule.md)
--  [Get-PswaAuthorizationRule](get-pswaauthorizationrule.md)
--  [Remove-PswaAuthorizationRule](remove-pswaauthorizationrule.md)
--  [Test-PswaAuthorizationRule](test-pswaauthorizationrule.md)
+- [Add-PswaAuthorizationRule](add-pswaauthorizationrule.md)
+- [Get-PswaAuthorizationRule](get-pswaauthorizationrule.md)
+- [Remove-PswaAuthorizationRule](remove-pswaauthorizationrule.md)
+- [Test-PswaAuthorizationRule](test-pswaauthorizationrule.md)

@@ -1,13 +1,13 @@
 ---
-ms.date: 2017-06-05T00:00:00.000Z
+ms.date: 2017-06-05
 keywords: powershell,cmdlet
 title: "Gestione delle unità di Windows PowerShell"
 ms.assetid: bd809e38-8de9-437a-a250-f30a667d11b4
-ms.openlocfilehash: 92fa70785bcaeac2bd75a5ada91f3adff4fa10eb
-ms.sourcegitcommit: 74255f0b5f386a072458af058a15240140acb294
+ms.openlocfilehash: e2908246bb584291f04b67dc8635caec93d3b72e
+ms.sourcegitcommit: d6ab9ab5909ed59cce4ce30e29457e0e75c7ac12
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/08/2017
 ---
 # <a name="managing-windows-powershell-drives"></a>Gestione delle unità di Windows PowerShell
 Un'*unità di Windows PowerShell* è un percorso di archivio dati a cui è possibile accedere come un'unità di file system in Windows PowerShell. I provider di Windows PowerShell creano automaticamente alcune unità, ad esempio le unità di file system (incluse C: e D:), le unità del Registro di sistema (HKCU: e HKLM:) e l'unità dei certificati (Cert:). È inoltre possibile creare unità di Windows PowerShell personalizzate. Queste unità sono molto utili, ma sono disponibili solo all'interno di Windows PowerShell. Non è possibile accedervi con altri strumenti di Windows, ad esempio Esplora file o Cmd.exe.
@@ -86,11 +86,11 @@ ring>] [-OutBuffer <Int32>] [-WhatIf] [-Confirm]
 
 Per creare una nuova unità di Windows PowerShell, è necessario specificare tre parametri:
 
--   Il nome dell'unità (è possibile usare qualsiasi nome valido di Windows PowerShell)
+- Il nome dell'unità (è possibile usare qualsiasi nome valido di Windows PowerShell)
 
--   Il PSProvider (usare "FileSystem" per i percorsi del file system e "Registry" per i percorsi del Registro di sistema)
+- Il PSProvider (usare "FileSystem" per i percorsi del file system e "Registry" per i percorsi del Registro di sistema)
 
--   La radice, ossia il percorso della radice della nuova unità
+- La radice, ossia il percorso della radice della nuova unità
 
 Ad esempio, è possibile creare un'unità denominata "Office" mappata alla cartella contenente le applicazioni Microsoft Office nel computer, ad esempio **C:\\Program Files\\Microsoft Office\\OFFICE11**. Per creare l'unità, digitare il comando seguente:
 

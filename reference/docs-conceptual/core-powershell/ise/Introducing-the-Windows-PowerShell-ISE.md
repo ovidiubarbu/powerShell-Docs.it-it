@@ -1,13 +1,12 @@
 ---
-ms.date: 2017-06-05T00:00:00.000Z
+ms.date: 2017-06-05
 keywords: powershell,cmdlet
 title: Introduzione a Windows PowerShell ISE
-ms.assetid: a0de70ca-909a-4807-94d1-6da86e5b52a0
-ms.openlocfilehash: 61d31fc2555d91bc7872d7b90cfb1f2a9832ff9c
-ms.sourcegitcommit: 74255f0b5f386a072458af058a15240140acb294
+ms.openlocfilehash: 75242c20548e2e83397867214417a48806c897ec
+ms.sourcegitcommit: d6ab9ab5909ed59cce4ce30e29457e0e75c7ac12
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/08/2017
 ---
 # <a name="introducing-the-windows-powershell-ise"></a>Introduzione a Windows PowerShell ISE
 Windows PowerShell Integrated Scripting Environment (ISE) è un'applicazione host per Windows PowerShell. In Windows PowerShell ISE è possibile eseguire comandi, nonché scrivere script, testarli e sottoporli a debug in una singola interfaccia utente grafica basata su Windows con funzionalità di modifica su più righe, completamento tramite tasto TAB, colorazione della sintassi, esecuzione selettiva, Guida sensibile al contesto e supporto per lingue da destra a sinistra.
@@ -15,17 +14,17 @@ Windows PowerShell Integrated Scripting Environment (ISE) è un'applicazione hos
 
 Provare queste funzionalità in Windows PowerShell ISE.
 
--   Modifica su più righe: per inserire una riga vuota sotto la riga corrente nel riquadro dei comandi, premere MAIUSC+INVIO.
+- Modifica su più righe: per inserire una riga vuota sotto la riga corrente nel riquadro dei comandi, premere MAIUSC+INVIO.
 
--   Esecuzione selettiva: per eseguire parte di uno script, selezionare il testo da eseguire e quindi fare clic sul pulsante **Esegui script**. Oppure premere F5.
+- Esecuzione selettiva: per eseguire parte di uno script, selezionare il testo da eseguire e quindi fare clic sul pulsante **Esegui script**. Oppure premere F5.
 
--   Guida sensibile al contesto: digitare **Invoke-Item** e quindi premere F1. Il file della Guida si apre in corrispondenza dell'argomento relativo al cmdlet **Invoke-Item**.
+- Guida sensibile al contesto: digitare **Invoke-Item** e quindi premere F1. Il file della Guida si apre in corrispondenza dell'argomento relativo al cmdlet **Invoke-Item**.
 
 Windows PowerShell ISE consente di personalizzarne l'aspetto in vari modi. Include anche uno specifico profilo di Windows PowerShell in cui è possibile archiviare funzioni, alias, variabili e comandi da usare in Windows PowerShell ISE.
 
 ### <a name="to-start-the-windows-powershell-ise"></a>Per avviare Windows PowerShell ISE
 
-1.  Eseguire una delle operazioni seguenti:
+1. Eseguire una delle operazioni seguenti:
 
     -   Fare clic sul pulsante **Start**, selezionare **Tutti i programmi**, selezionare **Windows PowerShell V2** e quindi fare clic su **Windows PowerShell ISE**.
 
@@ -33,5 +32,5 @@ Windows PowerShell ISE consente di personalizzarne l'aspetto in vari modi. Inclu
 
 ### <a name="to-get-help-in-the-windows-powershell-ise"></a>Per visualizzare la Guida in Windows PowerShell ISE
 
--   Nel menu **?** fare clic su **Guida di Windows PowerShell**. Oppure premere F1. Si apre un file che descrive Windows PowerShell ISE e Windows PowerShell, con tutti gli argomenti disponibili tramite il cmdlet Get-Help.
+- Nel menu **?** fare clic su **Guida di Windows PowerShell**. Oppure premere F1. Si apre un file che descrive Windows PowerShell ISE e Windows PowerShell, con tutti gli argomenti disponibili tramite il cmdlet Get-Help.
 

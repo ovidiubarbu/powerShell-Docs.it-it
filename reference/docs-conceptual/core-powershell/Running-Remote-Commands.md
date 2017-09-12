@@ -1,13 +1,13 @@
 ---
-ms.date: 2017-06-05T00:00:00.000Z
+ms.date: 2017-06-05
 keywords: powershell,cmdlet
 title: Esecuzione di comandi remoti
 ms.assetid: d6938b56-7dc8-44ba-b4d4-cd7b169fd74d
-ms.openlocfilehash: 755c3c4ac93219c1d0f75394d1c900e8b5fea4be
-ms.sourcegitcommit: ced46469e064736eeb1f5608abbc792ec69bdc92
+ms.openlocfilehash: c3bf002e7a3daa5afc8219dd846145808eef3c9b
+ms.sourcegitcommit: d6ab9ab5909ed59cce4ce30e29457e0e75c7ac12
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/08/2017
+ms.lasthandoff: 09/08/2017
 ---
 # <a name="running-remote-commands"></a>Esecuzione di comandi remoti
 È possibile eseguire comandi in uno o in centinaia di computer con un singolo comando di Windows PowerShell. Windows PowerShell supporta l'elaborazione remota tramite varie tecnologie, tra cui WMI, RPC e WS-Management.
@@ -17,25 +17,25 @@ Molti cmdlet di Windows PowerShell hanno un parametro ComputerName che consente 
 
 Questi cmdlet sono i seguenti:
 
--   [Restart-Computer](https://technet.microsoft.com/en-us/library/dd315301.aspx)
+- [Restart-Computer](https://technet.microsoft.com/en-us/library/dd315301.aspx)
 
--   [Test-Connection](https://technet.microsoft.com/en-us/library/dd315259.aspx)
+- [Test-Connection](https://technet.microsoft.com/en-us/library/dd315259.aspx)
 
--   [Clear-EventLog](https://technet.microsoft.com/en-us/library/dd347552.aspx)
+- [Clear-EventLog](https://technet.microsoft.com/en-us/library/dd347552.aspx)
 
--   [Get-EventLog](https://technet.microsoft.com/en-us/library/dd315250.aspx)
+- [Get-EventLog](https://technet.microsoft.com/en-us/library/dd315250.aspx)
 
--   [Get-HotFix](https://technet.microsoft.com/en-us/library/e1ef636f-5170-4675-b564-199d9ef6f101)
+- [Get-HotFix](https://technet.microsoft.com/en-us/library/e1ef636f-5170-4675-b564-199d9ef6f101)
 
  -   [Get-Process](https://technet.microsoft.com/en-us/library/dd347630.aspx)
 
--   [Get-Service](https://technet.microsoft.com/en-us/library/dd347591.aspx)
+- [Get-Service](https://technet.microsoft.com/en-us/library/dd347591.aspx)
 
--   [Set-Service](https://technet.microsoft.com/en-us/library/dd315324.aspx)
+- [Set-Service](https://technet.microsoft.com/en-us/library/dd315324.aspx)
 
--   [Get-WinEvent](https://technet.microsoft.com/en-us/library/dd315358.aspx)
+- [Get-WinEvent](https://technet.microsoft.com/en-us/library/dd315358.aspx)
 
--   [Get-WmiObject](https://technet.microsoft.com/en-us/library/dd315295.aspx)
+- [Get-WmiObject](https://technet.microsoft.com/en-us/library/dd315295.aspx)
 
 In genere, i cmdlet che supportano la comunicazione remota senza configurazione speciale hanno il parametro ComputerName, mentre non hanno il parametro Session. Per trovare questi cmdlet nella sessione, digitare:
 
