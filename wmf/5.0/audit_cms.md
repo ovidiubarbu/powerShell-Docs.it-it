@@ -3,16 +3,15 @@ ms.date: 2017-06-12
 author: JKeithB
 ms.topic: reference
 keywords: wmf,powershell,installazione
-ms.openlocfilehash: 9556f0d9a12807cbfe38aaade6798088f051596d
-ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.openlocfilehash: 60055b6755a31397c49686ea9ee1a69ada3516de
+ms.sourcegitcommit: d6ab9ab5909ed59cce4ce30e29457e0e75c7ac12
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/12/2017
+ms.lasthandoff: 09/08/2017
 ---
-<a id="cryptographic-message-syntax-cms-cmdlets" class="xliff"></a>
-# Cmdlet CMS (Cryptographic Message Syntax)
+# <a name="cryptographic-message-syntax-cms-cmdlets"></a>Cmdlet CMS (Cryptographic Message Syntax)
 
-I cmdlet CMS (Cryptographic Message Syntax) supportano la crittografia e la decrittografia del contenuto con il formato standard IETF per la protezione crittografica dei messaggi, come documentato in [RFC5652](http://tools.ietf.org/html/rfc5652).
+I cmdlet CMS (Cryptographic Message Syntax) supportano la crittografia e la decrittografia del contenuto con il formato standard IETF per la protezione crittografica dei messaggi, come documentato in [RFC5652](https://tools.ietf.org/html/rfc5652).
 
 ```powershell
 Get-CmsMessage [-Content] <string>
@@ -29,7 +28,7 @@ Unprotect-CmsMessage [-LiteralPath] <string> [[-To] <CmsMessageRecipient[]>] [-I
 
 Lo standard di crittografia CMS implementa la crittografia a chiave pubblica, in cui le chiavi usate per crittografare il contenuto (*chiave pubblica*) e le chiavi usate per decrittografare il contenuto (*chiave privata*) sono separate.
 
-La chiave pubblica può essere condivisa liberamente e non contiene dati sensibili. Eventuale contenuto crittografato con la chiave pubblica potrà essere decrittografato solo con la chiave privata. Per altre informazioni sulla crittografia a chiave pubblica, vedere: <http://en.wikipedia.org/wiki/Public-key_cryptography>.
+La chiave pubblica può essere condivisa liberamente e non contiene dati sensibili. Eventuale contenuto crittografato con la chiave pubblica potrà essere decrittografato solo con la chiave privata. Per altre informazioni, vedere: [Crittografia a chiave pubblica](https://en.wikipedia.org/wiki/Public-key_cryptography).
 
 Per essere riconosciuti in PowerShell, i certificati di crittografia richiedono un identificatore univoco di utilizzo delle chiavi (EKU) per identificarli come certificati di crittografia dei dati, ad esempio identificatori per la firma del codice o per la posta crittografata.
 

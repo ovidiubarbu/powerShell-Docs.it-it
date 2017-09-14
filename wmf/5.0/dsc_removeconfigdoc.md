@@ -3,14 +3,12 @@ ms.date: 2017-06-12
 author: JKeithB
 ms.topic: reference
 keywords: wmf,powershell,installazione
-ms.openlocfilehash: e2060d480de646e9070b9fbcbeb35556d04541d2
-ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.openlocfilehash: 048745d5a61e8c4acd38c3e4e0fe3ad00409ba4f
+ms.sourcegitcommit: d6ab9ab5909ed59cce4ce30e29457e0e75c7ac12
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/12/2017
+ms.lasthandoff: 09/08/2017
 ---
-<a id="remove-dsc-documents" class="xliff"></a>
-# Rimuovere i documenti DSC
+# <a name="remove-dsc-documents"></a>Rimuovere i documenti DSC
 
-Quando un documento di configurazione viene recapitato a DSC, il documento passa attraverso diverse fasi (in sospeso, corrente e precedente). In Windows PowerShell 4.0 è stato aggiunto un nuovo cmdlet a DSC, Remove-DscConfigurationDocument, come parte di [KB3000850](https://support.microsoft.com/en-us/kb/3000850). 
-
+Quando un documento di configurazione viene recapitato a DSC, il documento passa attraverso diverse fasi (in sospeso, corrente e precedente). È stato aggiunto un nuovo cmdlet a DSC in Windows PowerShell 4.0, `Remove-DscConfigurationDocument`, come parte del [rollup di aggiornamento di novembre 2014 per Windows RT 8.1, Windows 8.1 e Windows Server 2012 R2](https://support.microsoft.com/kb/3000850).
