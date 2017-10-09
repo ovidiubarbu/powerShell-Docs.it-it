@@ -4,14 +4,13 @@ author: eslesar
 ms.topic: conceptual
 keywords: dsc,powershell,configurazione,impostazione
 title: Protezione del file MOF
-ms.openlocfilehash: 70dec03f3b883eb88661e27c411248b8e1bb2177
-ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.openlocfilehash: dc900f53c954637a407fbd026d24d20c2fdabf6e
+ms.sourcegitcommit: 3720ce4efb6735694cfb53a1b793d949af5d1bc5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/12/2017
+ms.lasthandoff: 09/29/2017
 ---
-<a id="securing-the-mof-file" class="xliff"></a>
-# Protezione del file MOF
+# <a name="securing-the-mof-file"></a>Protezione del file MOF
 
 >Si applica a: Windows PowerShell 4.0, Windows PowerShell 5.0
 
@@ -19,8 +18,7 @@ DSC indica ai nodi di destinazione quale configurazione devono avere inviando un
 
 >**Nota:** questo argomento illustra i certificati usati per la crittografia. Per la crittografia è sufficiente un certificato autofirmato, dal momento che la chiave privata viene sempre mantenuta segreta e la crittografia non implica l'attendibilità del documento. I certificati autofirmati *non* vanno usati a scopo di autenticazione. È consigliabile usare un certificato proveniente da un'Autorità di certificazione attendibile a scopo di autenticazione.
 
-<a id="prerequisites" class="xliff"></a>
-## Prerequisiti
+## <a name="prerequisites"></a>Prerequisiti
 
 Per crittografare correttamente le credenziali usate per proteggere una configurazione DSC, assicurarsi di avere a disposizione quanto segue:
 
@@ -29,8 +27,7 @@ Per crittografare correttamente le credenziali usate per proteggere una configur
 * **Ogni nodo di destinazione ha un certificato che supporta la crittografia, salvato nel proprio archivio personale**. In Windows PowerShell il percorso di questo archivio è Cert:\LocalMachine\My. Gli esempi in questo argomento usano il modello "Autenticazione workstation", disponibile (insieme ad altri modelli di certificato) in [Modelli di certificato predefiniti](https://technet.microsoft.com/library/cc740061(v=WS.10).aspx).
 * Se si intende eseguire questa configurazione in un computer diverso dal nodo di destinazione, **esportare la chiave pubblica del certificato** e quindi importarla nel computer da cui verrà eseguita la configurazione. Assicurarsi di esportare solo la chiave **pubblica**, mantenendo protetta quella privata.
 
-<a id="overall-process" class="xliff"></a>
-## Processo completo
+## <a name="overall-process"></a>Processo completo
 
  1. Configurare i certificati, le chiavi e le identificazioni personali, verificando che ogni nodo di destinazione abbia copie del certificato e che il computer di configurazione abbia la chiave pubblica e l'identificazione personale.
  2. Creare un blocco di dati di configurazione che contenga il percorso e l'identificazione personale della chiave pubblica.
@@ -39,8 +36,7 @@ Per crittografare correttamente le credenziali usate per proteggere una configur
 
 ![Diagram1](images/CredentialEncryptionDiagram1.png)
 
-<a id="certificate-requirements" class="xliff"></a>
-## Requisiti dei certificati
+## <a name="certificate-requirements"></a>Requisiti dei certificati
 
 Per applicare la crittografia delle credenziali, è necessario che un certificato di chiave pubblica sia disponibile nel _nodo di destinazione_ considerato **attendibile** dal computer usato per creare la configurazione DSC.
 Questo certificato di chiave pubblica presenta requisiti specifici ai fini dell'uso per la crittografia delle credenziali DSC:
@@ -57,8 +53,7 @@ Questo certificato di chiave pubblica presenta requisiti specifici ai fini dell'
   
 Qualsiasi certificato esistente nel _nodo di destinazione_ che soddisfa questi criteri può essere usato per proteggere le credenziali DSC.
 
-<a id="certificate-creation" class="xliff"></a>
-## Creazione di certificati
+## <a name="certificate-creation"></a>Creazione di certificati
 
 Esistono due approcci per creare e usare il certificato di crittografia richiesto (coppia di chiavi pubblica/privata).
 
@@ -68,8 +63,7 @@ Esistono due approcci per creare e usare il certificato di crittografia richiest
 È consigliabile usare il metodo 1 poiché la chiave privata usata per decrittografare le credenziali nel MOF rimane sempre nel nodo di destinazione.
 
 
-<a id="creating-the-certificate-on-the-target-node" class="xliff"></a>
-### Creazione del certificato sul nodo di destinazione
+### <a name="creating-the-certificate-on-the-target-node"></a>Creazione del certificato sul nodo di destinazione
 
 La chiave privata deve essere mantenuta segreta poiché viene usata per decrittare il MOF nel **nodo di destinazione**. Il modo più facile per fare ciò è creare il certificato della chiave privata nel **nodo di destinazione** e copiare il **certificato di chiave pubblica** sul computer usato per compilare la configurazione DSC in un file MOF.
 L'esempio seguente consente di:
@@ -77,8 +71,7 @@ L'esempio seguente consente di:
  2. esportare il certificato di chiave pubblica nel **nodo di destinazione**.
  3. importare il certificato di chiave pubblica nell'archivio certificati **my** del **nodo di creazione**.
 
-<a id="on-the-target-node-create-and-export-the-certificate" class="xliff"></a>
-#### Sul nodo di destinazione: creare ed esportare il certificato
+#### <a name="on-the-target-node-create-and-export-the-certificate"></a>Sul nodo di destinazione: creare ed esportare il certificato
 >Nodo di creazione: Windows Server 2016 e Windows 10
 
 ```powershell
@@ -123,15 +116,13 @@ $cert | Export-Certificate -FilePath "$env:temp\DscPublicKey.cer" -Force
 ```
 Dopo l'esportazione, ```DscPublicKey.cer``` deve essere copiato nel **nodo di creazione**.
 
-<a id="on-the-authoring-node-import-the-certs-public-key" class="xliff"></a>
-#### Sul nodo di creazione: importare la chiave pubblica del certificato
+#### <a name="on-the-authoring-node-import-the-certs-public-key"></a>Sul nodo di creazione: importare la chiave pubblica del certificato
 ```powershell
 # Import to the my store
 Import-Certificate -FilePath "$env:temp\DscPublicKey.cer" -CertStoreLocation Cert:\LocalMachine\My
 ```
 
-<a id="creating-the-certificate-on-the-authoring-node" class="xliff"></a>
-### Creazione del certificato sul nodo di creazione
+### <a name="creating-the-certificate-on-the-authoring-node"></a>Creazione del certificato sul nodo di creazione
 In alternativa, è possibile creare il certificato di crittografia nel **nodo di creazione**, esportarlo con la **chiave privata** come file PFX e quindi importarlo nel **nodo di destinazione**.
 Questo è il metodo corrente per l'implementazione della crittografia delle credenziali DSC in _Nano Server_.
 Anche se il file PFX è protetto da password, è opportuno mantenere il file in sicurezza durante il trasferimento.
@@ -142,8 +133,7 @@ L'esempio seguente consente di:
  4. importare il certificato di chiave privata nell'archivio certificati radice nel **nodo di destinazione**.
    - È necessario aggiungerlo all'archivio radice in modo che risulti attendibile per il **nodo di destinazione**.
 
-<a id="on-the-authoring-node-create-and-export-the-certificate" class="xliff"></a>
-#### Sul nodo di creazione: creare ed esportare il certificato
+#### <a name="on-the-authoring-node-create-and-export-the-certificate"></a>Sul nodo di creazione: creare ed esportare il certificato
 >Nodo di destinazione: Windows Server 2016 e Windows 10
 
 ```powershell
@@ -157,7 +147,7 @@ $cert | Export-Certificate -FilePath "$env:temp\DscPublicKey.cer" -Force
 $cert | Remove-Item -Force
 Import-Certificate -FilePath "$env:temp\DscPublicKey.cer" -CertStoreLocation Cert:\LocalMachine\My
 ```
-Dopo l'esportazione, ```DscPrivateKey.cer``` deve essere copiato nel **nodo di destinazione**.
+Dopo l'esportazione, ```DscPrivateKey.pfx``` deve essere copiato nel **nodo di destinazione**.
 
 >Nodo di destinazione: Windows Server 2012 R2/Windows 8.1 e versioni precedenti
 
@@ -196,16 +186,14 @@ $cert | Remove-Item -Force
 Import-Certificate -FilePath "$env:temp\DscPublicKey.cer" -CertStoreLocation Cert:\LocalMachine\My
 ```
 
-<a id="on-the-target-node-import-the-certs-private-key-as-a-trusted-root" class="xliff"></a>
-#### Sul nodo di destinazione: importare la chiave privata del certificato come attendibile
+#### <a name="on-the-target-node-import-the-certs-private-key-as-a-trusted-root"></a>Sul nodo di destinazione: importare la chiave privata del certificato come attendibile
 ```powershell
 # Import to the root store so that it is trusted
 $mypwd = ConvertTo-SecureString -String "YOUR_PFX_PASSWD" -Force -AsPlainText
 Import-PfxCertificate -FilePath "$env:temp\DscPrivateKey.pfx" -CertStoreLocation Cert:\LocalMachine\Root -Password $mypwd > $null
 ```
 
-<a id="configuration-data" class="xliff"></a>
-## Dati di configurazione
+## <a name="configuration-data"></a>Dati di configurazione
 
 Il blocco di dati di configurazione definisce i nodi di destinazione su cui operare, se crittografare o meno le credenziali, gli strumenti di crittografia e altre informazioni. Per altre informazioni sul blocco di dati di configurazione, vedere [Separazione dei dati di configurazione e dell'ambiente](configData.md).
 
@@ -239,8 +227,7 @@ $ConfigData= @{
 ```
 
 
-<a id="configuration-script" class="xliff"></a>
-## Script di configurazione
+## <a name="configuration-script"></a>Script di configurazione
 
 Nello script di configurazione stesso usare il parametro `PsCredential` per specificare che le credenziali devono essere archiviate per il periodo di tempo più breve possibile. Quando si esegue l'esempio fornito, DSC chiede le credenziali e quindi crittografa il file MOF usando la risorsa CertificateFile associata al nodo di destinazione nel blocco di dati di configurazione. Questo esempio di codice copia un file da una condivisione protetta a un utente.
 
@@ -266,8 +253,7 @@ configuration CredentialEncryptionExample
 }
 ```
 
-<a id="setting-up-decryption" class="xliff"></a>
-## Configurazione della decrittografia
+## <a name="setting-up-decryption"></a>Configurazione della decrittografia
 
 Prima che [`Start-DscConfiguration`](https://technet.microsoft.com/en-us/library/dn521623.aspx) funzioni correttamente, è necessario indicare a Gestione configurazione locale in ogni nodo di destinazione il certificato da usare per decrittografare le credenziali, usando la risorsa CertificateID per verificare l'identificazione personale del certificato. Questa funzione di esempio trova il certificato locale appropriato e potrebbe dover essere personalizzata perché trovi l'esatto certificato che si vuole usare:
 
@@ -314,8 +300,7 @@ configuration CredentialEncryptionExample
 }
 ```
 
-<a id="running-the-configuration" class="xliff"></a>
-## Esecuzione della configurazione
+## <a name="running-the-configuration"></a>Esecuzione della configurazione
 
 A questo punto, è possibile eseguire la configurazione, che genera due file:
 
@@ -340,8 +325,7 @@ La configurazione DSC può essere applicata anche tramite un server di pull DSC,
 
 Vedere [Configurazione di un client di pull DSC](pullClient.md) per altre informazioni sull'applicazione delle configurazioni DSC tramite un server di pull DSC.
 
-<a id="credential-encryption-module-example" class="xliff"></a>
-## Esempio di modulo di crittografia delle credenziali
+## <a name="credential-encryption-module-example"></a>Esempio di modulo di crittografia delle credenziali
 
 Ecco un esempio completo che contiene tutti i passaggi, insieme a un cmdlet helper che esporta e copia le chiavi pubbliche:
 

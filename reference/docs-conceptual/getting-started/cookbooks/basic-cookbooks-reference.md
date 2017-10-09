@@ -2,11 +2,11 @@
 ms.date: 2017-06-05
 keywords: powershell,cmdlet
 title: riferimento di base alle guide di riferimento dettagliate
-ms.openlocfilehash: a745048eb47a983fa90616ccbd58184080706096
-ms.sourcegitcommit: d6ab9ab5909ed59cce4ce30e29457e0e75c7ac12
+ms.openlocfilehash: d6f0bf97c9491f1a4c9ba13aae837c17860aa6c7
+ms.sourcegitcommit: 3720ce4efb6735694cfb53a1b793d949af5d1bc5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2017
+ms.lasthandoff: 09/29/2017
 ---
 # <a name="basic-cookbooks-reference"></a>Riferimento di base alle guide di riferimento dettagliate
 
@@ -26,7 +26,6 @@ ms.lasthandoff: 09/08/2017
 - [Caselle di riepilogo a selezione multipla](Multiple-selection-List-Boxes.md)
 - [Altri oggetti di scripting utili](Other-Useful-Scripting-Objects.md)
 - [Esecuzione di attività di rete](Performing-Networking-Tasks.md)
-- [Modulo PowerShellGet](PowerShellGet-Module.md)
 - [Reindirizzamento dei dati con i cmdlet Out   ](Redirecting-Data-with-Out---Cmdlets.md)
 - [Rimozione di oggetti dalla pipeline (Where-Object)](Removing-Objects-from-the-Pipeline--Where-Object-.md)
 - [Ripetizione di un'attività per più oggetti (ForEach-Object)](Repeating-a-Task-for-Multiple-Objects--ForEach-Object-.md)

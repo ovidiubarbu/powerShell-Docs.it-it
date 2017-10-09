@@ -3,11 +3,11 @@ ms.date: 2017-06-05
 keywords: powershell,cmdlet
 title: Tramite Windows PowerShell
 ms.assetid: cf06f1e5-3945-47e4-98be-412f5a1f43fe
-ms.openlocfilehash: c942caa6cea3b24fe5e6442e28600363466380bd
-ms.sourcegitcommit: d6ab9ab5909ed59cce4ce30e29457e0e75c7ac12
+ms.openlocfilehash: 874c6fc6f0b09b0f586725ed7df7bc68c31e1733
+ms.sourcegitcommit: 3720ce4efb6735694cfb53a1b793d949af5d1bc5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2017
+ms.lasthandoff: 09/29/2017
 ---
 # <a name="using-windows-powershell"></a>Tramite Windows PowerShell
 Windows PowerShell® è un linguaggio di script e una shell da riga di comando basata su attività per gli amministratori di sistema. Basato su .NET Framework, Windows PowerShell consente ai professionisti IT e agli utenti esperti di controllare e automatizzare l'amministrazione del sistema operativo Windows e delle applicazioni eseguite al suo interno.
@@ -67,6 +67,3 @@ Gli argomenti seguenti descrivono come ottenere la versione più recente della G
     Per altre informazioni sul sistema di Guida aggiornabile in Windows PowerShell e su come installarla in computer con isolamento di rete, vedere [about_Updatable_Help](http://technet.microsoft.com/library/hh847735.aspx), [Save-Help](http://technet.microsoft.com/library/hh849724.aspx) e [Supporto per la Guida aggiornabile](http://msdn.microsoft.com/library/hh852754.aspx).
 
 - Cmdlet [Get-Help](http://technet.microsoft.com/library/hh849696(v=wps.630).aspx). Cmdlet di Windows PowerShell che consente di acquisire informazioni sui cmdlet e i provider installati nel sistema.
-
-- È possibile ricevere notifiche su tutti gli aggiornamenti applicati ai file della Guida pubblicati sottoscrivendo il feed RSS seguente: [http://sxp.microsoft.com/feeds/msdntn/PowerShellHelpVersions](http://sxp.microsoft.com/feeds/msdntn/PowerShellHelpVersions).
-

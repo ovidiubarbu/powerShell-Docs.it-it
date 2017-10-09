@@ -3,11 +3,11 @@ ms.date: 2017-06-05
 keywords: powershell,cmdlet
 title: "Novità di PowerShell 5.0 ISE"
 ms.assetid: 38648d47-7c27-4b37-a40e-ad29948519c2
-ms.openlocfilehash: 1e315351d0e5dde146881b0e6527c38e59777a1e
-ms.sourcegitcommit: d6ab9ab5909ed59cce4ce30e29457e0e75c7ac12
+ms.openlocfilehash: 89dcc905ce200d06029e148c9675269e6f518fa3
+ms.sourcegitcommit: 3720ce4efb6735694cfb53a1b793d949af5d1bc5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2017
+ms.lasthandoff: 09/29/2017
 ---
 # <a name="what39s-new-in-the-windows-powershell-ise"></a>Novità di Windows PowerShell ISE
 Questo argomento illustra le funzionalità nuove e aggiornate introdotte nelle versioni di Windows PowerShell Integrated Scripting Environment (ISE).
@@ -22,16 +22,16 @@ Nella tabella seguente sono elencate alcune delle funzionalità nuove e modifica
 
 |Caratteristica/funzionalità|Windows PowerShell ISE 4.0|Windows PowerShell ISE 3.0|Windows PowerShell ISE 2.0|
 |--------------------------|-----------------------------------------------|-----------------------------------------------|-----------------------------------------------|
-|**[IntelliSense]()**|X|X||
-|**[Frammenti di codice]()**|X|X||
-|**[Strumenti aggiuntivi]()**|X|X||
-|**[Gestione riavvio e salvataggio automatico]()**|X|X||
-|**[Riquadro della console]()**|X|X||
-|**[Elenco degli elementi usati di recente]()**|X|X||
-|**[Opzioni della riga di comando]()**|X|X||
-|**[Nuove funzionalità dell'editor]()**|X|X||
-|**[Nuova finestra di visualizzazione della Guida]()**|X|X||
-|**[Cmdlet Show-Command]()**|X|X||
+|**[IntelliSense](#intellisense)**|X|X||
+|**[Frammenti di codice](#snippets)**|X|X||
+|**[Strumenti aggiuntivi](#add-on-tools)**|X|X||
+|**[Gestione riavvio e salvataggio automatico](#restart-manager-and-auto-save)**|X|X||
+|**[Elenco degli elementi usati di recente](#most-recently-used-list)**|X|X||
+|**[Riquadro della console](#console-pane)**|X|X||
+|**[Opzioni della riga di comando](#command-line-switches)**|X|X||
+|**[Nuove funzionalità dell'editor](#new-editor-features)**|X|X||
+|**[Nuova finestra di visualizzazione della Guida](#new-help-viewer-window)**|X|X||
+|**[Cmdlet Show-Command](#show-command-cmdlet)**|X|X||
 
 ### <a name="intellisense"></a>IntelliSense
 **Funzionalità aggiunta in ISE 3.0**

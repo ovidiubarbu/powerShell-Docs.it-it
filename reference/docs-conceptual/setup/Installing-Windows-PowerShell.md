@@ -2,11 +2,11 @@
 ms.date: 2017-08-09
 keywords: PowerShell, cmdlet, download, installazione, configurazione, Windows 10, Windows 8.1, Windows 8.0, Windows 7
 title: Installazione di Windows PowerShell
-ms.openlocfilehash: 7ccbee66d01dd8e0e6e6ab09c6c8a399bee59ce8
-ms.sourcegitcommit: d6ab9ab5909ed59cce4ce30e29457e0e75c7ac12
+ms.openlocfilehash: 781bf50b6ac649e72bcdbb708555275fb7422d94
+ms.sourcegitcommit: 3720ce4efb6735694cfb53a1b793d949af5d1bc5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2017
+ms.lasthandoff: 09/29/2017
 ---
 # <a name="installing-windows-powershell"></a>Installazione di Windows PowerShell
 
@@ -54,7 +54,7 @@ Le edizioni di Windows Server senza interfaccia utente grafica sono dette **Core
 
 In tutte le edizioni Core quando si accede al server viene visualizzata una finestra del prompt dei comandi di Windows.
 
-Digitare `powerhell` e premere **INVIO** per avviare PowerShell all'interno della sessione del prompt dei comandi. Digitare `exit` per terminare la sessione di PowerShell e tornare al prompt dei comandi.
+Digitare `powershell` e premere **INVIO** per avviare PowerShell all'interno della sessione del prompt dei comandi. Digitare `exit` per terminare la sessione di PowerShell e tornare al prompt dei comandi.
 
 ### <a name="windows-server-desktop-editions"></a>Windows Server Desktop Edition
 

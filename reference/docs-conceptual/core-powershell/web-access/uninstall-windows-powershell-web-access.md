@@ -2,11 +2,11 @@
 ms.date: 2017-08-23
 keywords: powershell,cmdlet
 title: disinstallare accesso web windows powershell
-ms.openlocfilehash: 7c71a245be244c1883598cdcddbf35e43c0fc7b0
-ms.sourcegitcommit: d6ab9ab5909ed59cce4ce30e29457e0e75c7ac12
+ms.openlocfilehash: b6e6a2374e6b4b2be8742019c5f1e4d5b5d1abe3
+ms.sourcegitcommit: 3720ce4efb6735694cfb53a1b793d949af5d1bc5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2017
+ms.lasthandoff: 09/29/2017
 ---
 # <a name="uninstall-windows-powershell-web-access"></a>Disinstallare Accesso Web Windows PowerShell
 
@@ -20,10 +20,8 @@ I passaggi descritti in questo argomento consentono di rimuovere il sito Web di 
 
 Prima di iniziare, informare gli utenti della console basata sul Web di cui si intende rimuovere il sito Web.
 
-
-Prima di disinstallare Accesso Web Windows PowerShell dal server gateway, eseguire il cmdlet `Uninstall-PswaWebApplication` per rimuovere il sito Web e le applicazioni Web di Accesso Web Windows PowerShell oppure usare la procedura [Per eliminare le applicazioni Web e il sito Web di Accesso Web Windows PowerShell]() in Gestione IIS.
-
-La procedura di disinstallazione di Accesso Web Windows PowerShell non disinstalla IIS o le altre funzionalità installate automaticamente, perché sono necessarie per l'esecuzione di Accesso Web Windows PowerShell. La procedura di disinstallazione mantiene installate le funzionalità da cui dipende Accesso Web Windows PowerShell. Se necessario, è possibile disinstallare tali funzionalità separatamente.
+La procedura di disinstallazione di Accesso Web Windows PowerShell non disinstalla IIS o le altre funzionalità installate automaticamente, perché sono necessarie per l'esecuzione di Accesso Web Windows PowerShell.
+La procedura di disinstallazione mantiene installate le funzionalità da cui dipende Accesso Web Windows PowerShell. Se necessario, è possibile disinstallare tali funzionalità separatamente.
 
 ## <a name="recommended-quick-uninstallation"></a>Disinstallazione consigliata (rapida)
 
