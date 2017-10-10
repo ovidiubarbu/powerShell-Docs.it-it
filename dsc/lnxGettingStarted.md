@@ -4,11 +4,11 @@ author: eslesar
 ms.topic: conceptual
 keywords: dsc,powershell,configurazione,impostazione
 title: Introduzione a DSC (Desired State Configuration) per Linux
-ms.openlocfilehash: 9dbc4c22cff9df4028c5655cdfba3bb1aac1bb90
-ms.sourcegitcommit: 4102ecc35d473211f50a453f6ae3fbea31cb3428
+ms.openlocfilehash: bf87125309a3f6b556fd7546057cb9491fb34229
+ms.sourcegitcommit: 4ab9a86e47b6effe8fe22ebeb81e8fadff41d31c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/31/2017
+ms.lasthandoff: 10/04/2017
 ---
 # <a name="get-started-with-desired-state-configuration-dsc-for-linux"></a>Introduzione a DSC (Desired State Configuration) per Linux
 
@@ -37,11 +37,11 @@ La tabella seguente descrive le dipendenze dei pacchetti necessarie per DSC per 
 
 ## <a name="installing-dsc-for-linux"></a>Installazione di DSC per Linux
 
-Prima di installare DSC per Linux, è necessario installare [OMI (Open Management Infrastructure)](https://collaboration.opengroup.org/omi/).
+Prima di installare DSC per Linux, è necessario installare [OMI (Open Management Infrastructure)](https://github.com/Microsoft/omi).
 
 ### <a name="installing-omi"></a>Installazione di OMI
 
-DSC (Desired State Configuration) per Linux richiede il server CIM OMI (Open Management Infrastructure), versione 1.0.8.1. È possibile scaricare OMI dal sito The Open Group: [Open Management Infrastructure (OMI)](https://collaboration.opengroup.org/omi/).
+DSC (Desired State Configuration) per Linux richiede il server CIM OMI (Open Management Infrastructure), versione 1.0.8.1 o successive. È possibile scaricare OMI dal sito The Open Group: [Open Management Infrastructure (OMI)](https://github.com/Microsoft/omi).
 
 Per installare OMI, installare il pacchetto appropriato per il sistema Linux (RPM o DEB), la versione OpenSSL (ssl_098 o ssl_100) e l'architettura (x64/x86). I pacchetti RPM sono appropriati per CentOS, Red Hat Enterprise Linux, SUSE Linux Enterprise Server e Oracle Linux. I pacchetti DEB sono appropriati per Debian GNU/Linux e Ubuntu Server. I pacchetti ssl_098 sono appropriati per i computer in cui è installato OpenSSL 0.9.8, mentre i pacchetti ssl_100 sono appropriati per i computer in cui è installato OpenSSL 1.0.
 

@@ -3,11 +3,11 @@ ms.date: 2017-06-05
 keywords: powershell,cmdlet
 title: Windows PowerShell Integrated Scripting Environment ISE
 ms.assetid: f156b92d-0203-46d2-89c7-b4989d32e3d2
-ms.openlocfilehash: e5c4e6ef002d6d6ede014a3147d1fed15f6d76d8
-ms.sourcegitcommit: d6ab9ab5909ed59cce4ce30e29457e0e75c7ac12
+ms.openlocfilehash: 6bddb953a7f17e220f92d357eb59dfedc5496272
+ms.sourcegitcommit: 3720ce4efb6735694cfb53a1b793d949af5d1bc5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2017
+ms.lasthandoff: 09/29/2017
 ---
 # <a name="windows-powershell-integrated-scripting-environment-ise"></a>Windows PowerShell Integrated Scripting Environment (ISE)
 Windows PowerShell Integrated Scripting Environment (ISE) è uno dei due host per il motore e il linguaggio di Windows PowerShell. È possibile usarlo per scrivere, eseguire e testare script in modi non disponibili nella console di Windows PowerShell. ISE aggiunge la colorazione della sintassi, il completamento tramite TAB, IntelliSense, il debug visivo e la Guida sensibile al contesto.
@@ -22,7 +22,7 @@ Ecco alcune delle funzionalità che sono state aggiunte in ISE nelle versioni pi
 
 **Frammenti di codice**, ovvero brevi sezioni di codice che è possibile inserire facilmente negli script durante la scrittura. È disponibile una raccolta predefinita di utili frammenti di codice ed è possibile aggiungerne altri tramite il cmdlet **New-Snippet**.
 
-È possibile creare **strumenti aggiuntivi** per aggiungere funzionalità a ISE scrivendo codice che interagisce con il [Modello a oggetti di scripting di Windows PowerShell ISE](https://technet.microsoft.com/en-us/library/dd819478.aspx). Questi strumenti possono visualizzare i controlli in un riquadro a schede o funzionare in modo invisibile in background. Il componente aggiuntivo **Comandi** è un buon esempio incluso nella versione 3.0 e successive, che consente di visualizzare un elenco di comandi disponibili e la rispettiva Guida.
+È possibile creare **strumenti aggiuntivi** per aggiungere funzionalità a ISE scrivendo codice che interagisce con il [Modello a oggetti di scripting di Windows PowerShell ISE](../../core-powershell/ise/The-Windows-PowerShell-ISE-Scripting-Object-Model.md). Questi strumenti possono visualizzare i controlli in un riquadro a schede o funzionare in modo invisibile in background. Il componente aggiuntivo **Comandi** è un buon esempio incluso nella versione 3.0 e successive, che consente di visualizzare un elenco di comandi disponibili e la rispettiva Guida.
 
 Le funzionalità **Gestione riavvio e Salvataggio automatico** salvano automaticamente gli script ogni due minuti per evitare di perdere il lavoro in caso di arresto anomalo o di un riavvio imprevisto.
 
@@ -54,11 +54,14 @@ L'**elenco degli elementi usati di recente** fa ora parte del menu Apri File in 
 L'ambiente ISE è stato introdotto in PowerShell 2.0.
 
 ## <a name="requirements-for-running-the-windows-powershell-ise"></a>Requisiti per l'esecuzione di Windows PowerShell ISE
-ISE è disponibile in qualsiasi computer che supporta l'esecuzione di Windows PowerShell 2.0 o versione successiva. Ogni versione di Windows e Windows Server include una versione di Windows PowerShell e ISE, ma è possibile eseguire l'aggiornamento alla versione più recente disponibile tramite l'installazione di Windows Management Framework. Eseguire questa ricerca per trovare l'ultima versione disponibile: [Download](http://www.microsoft.com/en-us/search/DownloadResults.aspx?q=%22windows%20management%20framework%22%20PowerShell&sortby=Relevancy~Descending). Si noti che tutte le voci con etichetta "Preview" rappresentano codice preliminare e non includono funzionalità complete.
+ISE è disponibile in qualsiasi computer Windows che supporta l'esecuzione di Windows PowerShell 2.0 o versione successiva.
+Ogni versione di Windows e Windows Server include una versione di Windows PowerShell e ISE, ma è possibile eseguire l'aggiornamento alla versione più recente disponibile tramite l'installazione di Windows Management Framework.
+Eseguire questa ricerca per trovare l'ultima versione disponibile: [Download](http://www.microsoft.com/en-us/search/DownloadResults.aspx?q=%22windows%20management%20framework%22%20PowerShell&sortby=Relevancy~Descending).
+Si noti che tutte le voci con etichetta "Preview" rappresentano codice preliminare e non includono funzionalità complete.
 
 > [!NOTE]
 > Windows PowerShell ISE richiede un'interfaccia utente grafica, quindi non è possibile eseguirlo nell'opzione Server Core di Windows Server.
 
 ## <a name="see-also"></a>Vedere anche
-- [Uso di Windows PowerShell ISE (Integrated Scripting Environment)](http://technet.microsoft.com/library/cc732148.aspx)
+- [Uso di Windows PowerShell ISE (Integrated Scripting Environment)](Using-the-Windows-PowerShell-ISE.md)
 

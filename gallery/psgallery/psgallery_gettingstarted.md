@@ -4,24 +4,21 @@ contributor: JKeithB
 ms.topic: conceptual
 keywords: gallery,powershell,cmdlet,psgallery
 title: psgallery_gettingstarted
-ms.openlocfilehash: 6b2119a736cc428598c245526e5af970d86af998
-ms.sourcegitcommit: 79e8f03afb8d0b0bb0a167e56464929b27f51990
+ms.openlocfilehash: d13c23cd6f9cce433cd3fe1ad5f2d00e3ef0527c
+ms.sourcegitcommit: 3720ce4efb6735694cfb53a1b793d949af5d1bc5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/26/2017
+ms.lasthandoff: 09/29/2017
 ---
-<a id="get-started-with-the-powershell-gallery" class="xliff"></a>
-# Introduzione a PowerShell Gallery
+# <a name="get-started-with-the-powershell-gallery"></a>Introduzione a PowerShell Gallery
 
-<a id="what-is-the-powershell-gallery" class="xliff"></a>
-## Che cos'è PowerShell Gallery?
+## <a name="what-is-the-powershell-gallery"></a>Che cos'è PowerShell Gallery?
 
 PowerShell Gallery è il repository centrale per i contenuti PowerShell.
 Al suo interno è possibile trovare utili moduli di PowerShell che contengono comandi di PowerShell o risorse DSC (Desired State Configuration). Sono anche disponibili script di PowerShell, alcuni dei quali possono contenere flussi di lavoro di PowerShell e descrivono e stabiliscono la sequenza di un set di attività.
 Alcuni di questi elementi vengono creati da Microsoft, altri dalla community di PowerShell.
 
-<a id="requirements" class="xliff"></a>
-## Requisiti
+## <a name="requirements"></a>Requisiti
 
 Per eseguire il download di elementi da PowerShell Gallery nel sistema, è necessario il modulo [PowerShellGet](http://go.microsoft.com/fwlink/?LinkID=760387&clcid=0x409). Il modulo PowerShellGet è disponibile nei prodotti indicati di seguito. Non è necessario eseguire l'accesso per scaricare elementi da PowerShell Gallery.
 
@@ -49,12 +46,11 @@ Per altre informazioni, vedere <http://oneget.org/>.
 Nota: a causa delle variazioni di formato dei pacchetti, è consigliabile eseguire l'aggiornamento alla versione più recente di PowerShellGet e PackageManagement per installare gli elementi aggiornati di recente. PowerShellGet è incluso in Windows 10. Per altre informazioni, vedere [qui](http://go.microsoft.com/fwlink/?LinkID=624830&clcid=0x409).
 PowerShellGet fa anche parte di Windows Management Framework (WMF) 5.0, che è possibile scaricare [qui](http://go.microsoft.com/fwlink/?LinkId=398175).
 
-<a id="discovering-items-from-the-powershell-gallery" class="xliff"></a>
-## Individuazione di elementi da PowerShell Gallery
+## <a name="discovering-items-from-the-powershell-gallery"></a>Individuazione di elementi da PowerShell Gallery
 
-È possibile trovare elementi in PowerShell Gallery usando il controllo **Ricerca** in questo sito Web o sfogliando le pagine Moduli e Script. Per trovare elementi in PowerShell Gallery è anche possibile eseguire i cmdlet [**Find-Module**](http://go.microsoft.com/fwlink/?LinkID=760387&clcid=0x409) e [**Find-Script**](http://go.microsoft.com/fwlink/?LinkID=760387&clcid=0x409) (a seconda dal tipo di elemento) con `-Repository PSGallery`.
+È possibile trovare elementi in PowerShell Gallery usando il controllo **Ricerca** in questo sito Web o sfogliando le pagine Moduli e Script. Per trovare elementi in PowerShell Gallery, è anche possibile eseguire i cmdlet [Find-Module](https://go.microsoft.com/fwlink/?LinkId=821658) e [Find-Script](https://go.microsoft.com/fwlink/?LinkId=822322) (a seconda dal tipo di elemento) con `-Repository PSGallery`.
 
-Per filtrare i risultati dalla raccolta è possibile usare i parametri seguenti di [**Find-Module**](http://go.microsoft.com/fwlink/?LinkID=760387&clcid=0x409) e [**Find-Script**](http://go.microsoft.com/fwlink/?LinkID=760387&clcid=0x409)
+Per filtrare i risultati dalla raccolta, è possibile usare i parametri seguenti di [Find-Module](https://go.microsoft.com/fwlink/?LinkId=821658) e [Find-Script](https://go.microsoft.com/fwlink/?LinkId=822322):
 
 - Name
 - AllVersions
@@ -67,65 +63,59 @@ Per filtrare i risultati dalla raccolta è possibile usare i parametri seguenti 
 - Command
 - Filter
 
-Se si vogliono solo trovare risorse DSC specifiche nella raccolta, è possibile eseguire il cmdlet [**Find-DscResource**](http://go.microsoft.com/fwlink/?LinkID=760387&clcid=0x409).
-[**Find-DscResource**](http://go.microsoft.com/fwlink/?LinkID=760387&clcid=0x409) restituisce dati sulle risorse DSC contenute nella raccolta. Dato che le risorse DSC vengono sempre incluse come parte di un modulo è comunque necessario eseguire [**Install-Module**](http://go.microsoft.com/fwlink/?LinkID=760387&clcid=0x409) per installare tali risorse DSC.
+Se si vogliono solo trovare risorse DSC specifiche nella raccolta, è possibile eseguire il cmdlet [Find-DscResource](https://go.microsoft.com/fwlink/?LinkId=517196).
+[Find-DscResource](https://go.microsoft.com/fwlink/?LinkId=517196) restituisce dati sulle risorse DSC contenute nella raccolta. Dato che le risorse DSC vengono sempre fornite come parte di un modulo, è comunque necessario eseguire [Install-Module](https://go.microsoft.com/fwlink/?LinkId=821663) per installare tali risorse DSC.
 
-<a id="learning-about-items-in-the-powershell-gallery" class="xliff"></a>
-## Informazioni sugli elementi in PowerShell Gallery
+## <a name="learning-about-items-in-the-powershell-gallery"></a>Informazioni sugli elementi in PowerShell Gallery
 
 Dopo avere identificato un elemento di interesse, può essere utile ottenere altre informazioni che lo riguardano. A questo scopo, è possibile esaminare la pagina specifica dell'elemento nella raccolta. In quella pagina verranno indicati tutti i metadati caricati con l'elemento. I metadati per un elemento vengono forniti dall'autore dell'elemento e non sono verificati da Microsoft. Il proprietario dell'elemento è fortemente legato all'account della raccolta usato per pubblicare l'elemento ed è più affidabile rispetto al campo relativo all'autore.
 
 Se si individua un elemento che si ritiene non essere stato pubblicato in buona fede, fare clic su **Report Abuse** (Segnala abusi) nella pagina dell'elemento.
 
-Se si esegue [**Find-Module**](http://go.microsoft.com/fwlink/?LinkID=760387&clcid=0x409) o [**Find-Script**](http://go.microsoft.com/fwlink/?LinkID=760387&clcid=0x409) è possibile visualizzare questi dati nell'oggetto PSGetModuleInfo restituito. Ad esempio, l'esecuzione di [**Find-Module -Name PSReadLine -Repository PSGallery | Get-Member**](http://go.microsoft.com/fwlink/?LinkID=760387&clcid=0x409) restituisce dati sul modulo PSReadLine nella raccolta.
+Se si esegue [Find-Module](https://go.microsoft.com/fwlink/?LinkId=821658) o [Find-Script](https://go.microsoft.com/fwlink/?LinkId=822322), è possibile visualizzare questi dati nell'oggetto PSGetModuleInfo restituito.
+Ad esempio, l'esecuzione di `Find-Module -Name PSReadLine -Repository PSGallery | Get-Member` restituisce i dati nel modulo PSReadLine nella raccolta.
 
-<a id="downloading-items-from-the-powershell-gallery" class="xliff"></a>
-## Download di elementi da PowerShell Gallery
+## <a name="downloading-items-from-the-powershell-gallery"></a>Download di elementi da PowerShell Gallery
 
 Per il download di elementi da PowerShell Gallery è consigliabile seguire il processo seguente:
 
-<a id="inspect" class="xliff"></a>
-### Controllare
+### <a name="inspect"></a>Controllare
 
-Per scaricare un elemento dalla raccolta per ispezionarlo, eseguire il cmdlet [**Save-Module**](http://go.microsoft.com/fwlink/?LinkID=760387&clcid=0x409) o [**Save-Script**](http://go.microsoft.com/fwlink/?LinkID=760387&clcid=0x409), a seconda del tipo di elemento. In questo modo è possibile salvare l'elemento in locale senza installarlo, quindi ispezionarne il contenuto. L'elemento salvato dovrà poi essere eliminato manualmente.
+Per scaricare un elemento dalla raccolta per ispezionarlo, eseguire il cmdlet [Save-Module](https://go.microsoft.com/fwlink/?LinkId=821669) o [Save-Script](https://go.microsoft.com/fwlink/?LinkId=822334), a seconda del tipo di elemento. In questo modo è possibile salvare l'elemento in locale senza installarlo, quindi ispezionarne il contenuto. L'elemento salvato dovrà poi essere eliminato manualmente.
 
 Alcuni di questi elementi vengono creati da Microsoft, altri dalla community di PowerShell. Microsoft consiglia di esaminare il contenuto e il codice degli elementi in questa raccolta prima dell'installazione.
 
 Se si individua un elemento che si ritiene non essere stato pubblicato in buona fede, fare clic su **Report Abuse** (Segnala abusi) nella pagina dell'elemento.
 
-<a id="install" class="xliff"></a>
-### Installare
+### <a name="install"></a>Installare
 
-Per installare un elemento dalla raccolta per usarlo, eseguire il cmdlet [**Install-Module**](http://go.microsoft.com/fwlink/?LinkID=760387&clcid=0x409) o [**Install-Script**](http://go.microsoft.com/fwlink/?LinkID=760387&clcid=0x409), a seconda del tipo di elemento.
+Per installare un elemento dalla raccolta per usarlo, eseguire il cmdlet [Install-Module](https://go.microsoft.com/fwlink/?LinkId=821663) o [Install-Script](https://go.microsoft.com/fwlink/?LinkId=822327), a seconda del tipo di elemento.
 
-[**Install-Module**](http://go.microsoft.com/fwlink/?LinkID=760387&clcid=0x409) installa il modulo in `$env:ProgramFiles\WindowsPowerShell\Modules` per impostazione predefinita. È necessario un account Administrator. Se si aggiunge il parametro `-Scope
+[Install-Module](https://go.microsoft.com/fwlink/?LinkId=821663) installa il modulo in `$env:ProgramFiles\WindowsPowerShell\Modules` per impostazione predefinita. È necessario un account Administrator. Se si aggiunge il parametro `-Scope
 CurrentUser` il modulo viene installato in `$env:USERPROFILE\Documents\WindowsPowerShell\Modules`.
 
-[**Install-Script**](http://go.microsoft.com/fwlink/?LinkID=760387&clcid=0x409) installa lo script in `$env:ProgramFiles\WindowsPowerShell\Scripts` per impostazione predefinita. È necessario un account Administrator. Se si aggiunge il parametro `-Scope
+[Install-Script](https://go.microsoft.com/fwlink/?LinkId=822327) installa lo script in `$env:ProgramFiles\WindowsPowerShell\Scripts` per impostazione predefinita. È necessario un account Administrator. Se si aggiunge il parametro `-Scope
 CurrentUser` lo script viene installato in `$env:USERPROFILE\Documents\WindowsPowerShell\Scripts`.
 
-Per impostazione predefinita [**Install-Module**](http://go.microsoft.com/fwlink/?LinkID=760387&clcid=0x409) e [**Install-Script**](http://go.microsoft.com/fwlink/?LinkID=760387&clcid=0x409) installano la versione più recente di un elemento. Per installare una versione precedente dell'elemento aggiungere il parametro `-RequiredVersion`.
+Per impostazione predefinita, [Install-Module](https://go.microsoft.com/fwlink/?LinkId=821663) e [Install-Script](https://go.microsoft.com/fwlink/?LinkId=822327) installano la versione più recente di un elemento. Per installare una versione precedente dell'elemento aggiungere il parametro `-RequiredVersion`.
 
-<a id="deploy" class="xliff"></a>
-### Distribuire
+### <a name="deploy"></a>Distribuire
 
 Per distribuire un elemento da PowerShell Gallery in Automazione di Azure, fare clic su **Deploy to Azure Automation** (Distribuisci in Automazione di Azure) nella pagina dei dettagli dell'elemento. Si verrà reindirizzati al portale di gestione di Azure, in cui si accede usando le credenziali del proprio account di Azure. Se si distribuiscono elementi con dipendenze, verranno distribuite tutte le dipendenze in Automazione di Azure. Il pulsante Deploy to Azure Automation (Distribuisci in Automazione di Azure) può essere disabilitato aggiungendo il tag **AzureAutomationNotSupported** ai metadati dell'elemento.
 
 Per altre informazioni su Automazione di Azure, vedere il [sito Web di Automazione di Azure](http://azure.microsoft.com/en-us/services/automation/).
 
-<a id="updating-items-from-the-powershell-gallery" class="xliff"></a>
-## Aggiornamento di elementi da PowerShell Gallery
+## <a name="updating-items-from-the-powershell-gallery"></a>Aggiornamento di elementi da PowerShell Gallery
 
-Per aggiornare gli elementi installati da PowerShell Gallery eseguire il cmdlet [**Update-Module**](http://go.microsoft.com/fwlink/?LinkID=760387&clcid=0x409) o [**Update-Script**](http://go.microsoft.com/fwlink/?LinkID=760387&clcid=0x409). Quando viene eseguito senza parametri aggiuntivi [**Update-Module**](http://go.microsoft.com/fwlink/?LinkID=760387&clcid=0x409) prova ad aggiornare ogni modulo installato eseguendo [**Install-Module**](http://go.microsoft.com/fwlink/?LinkID=760387&clcid=0x409).
+Per aggiornare gli elementi installati da PowerShell Gallery, eseguire il cmdlet [Update-Module](https://go.microsoft.com/fwlink/?LinkID=398576) o [Update-Script](http://go.microsoft.com/fwlink/?LinkId=619787). Quando viene eseguito senza parametri aggiuntivi, [Update-Module](https://go.microsoft.com/fwlink/?LinkID=398576) prova ad aggiornare ogni modulo installato eseguendo [Install-Module](https://go.microsoft.com/fwlink/?LinkId=821663).
 Per aggiornare i moduli in modo selettivo aggiungere il parametro `-Name`.
 
-In modo analogo anche [**Update-Script**](http://go.microsoft.com/fwlink/?LinkID=760387&clcid=0x409) eseguito senza parametri aggiuntivi prova ad aggiornare ogni script installato eseguendo [**Install-Script**](http://go.microsoft.com/fwlink/?LinkID=760387&clcid=0x409).
+Analogamente, anche [Update-Script](http://go.microsoft.com/fwlink/?LinkId=619787), quando viene eseguito senza parametri aggiuntivi, prova ad aggiornare ogni script installato eseguendo [Install-Script](https://go.microsoft.com/fwlink/?LinkId=822327).
 Per aggiornare gli script in modo selettivo aggiungere il parametro `-Name`.
 
-<a id="list-items-that-you-have-installed-from-the-powershell-gallery" class="xliff"></a>
-## Ottenere l'elenco degli elementi installati da PowerShell Gallery
+## <a name="list-items-that-you-have-installed-from-the-powershell-gallery"></a>Ottenere l'elenco degli elementi installati da PowerShell Gallery
 
-Per scoprire quali moduli sono stati installati da PowerShell Gallery, eseguire il cmdlet [**Get-InstalledModule**](http://go.microsoft.com/fwlink/?LinkID=760387&clcid=0x409). Questo comando elenca tutti i moduli presenti nel sistema che sono stati installati direttamente da PowerShell Gallery.
+Per scoprire quali moduli sono stati installati da PowerShell Gallery, eseguire il cmdlet [Get-InstalledModule](https://go.microsoft.com/fwlink/?LinkId=526863). Questo comando elenca tutti i moduli presenti nel sistema che sono stati installati direttamente da PowerShell Gallery.
 
-Analogamente, per scoprire quali script sono stati installati da PowerShell Gallery, eseguire il cmdlet [**Get-InstalledScript**](http://go.microsoft.com/fwlink/?LinkID=760387&clcid=0x409). Questo comando elenca tutti gli script presenti nel sistema che sono stati installati direttamente da PowerShell Gallery.
+Analogamente, per scoprire quali script sono stati installati da PowerShell Gallery, eseguire il cmdlet [Get-InstalledScript](https://go.microsoft.com/fwlink/?LinkId=619790). Questo comando elenca tutti gli script presenti nel sistema che sono stati installati direttamente da PowerShell Gallery.
 

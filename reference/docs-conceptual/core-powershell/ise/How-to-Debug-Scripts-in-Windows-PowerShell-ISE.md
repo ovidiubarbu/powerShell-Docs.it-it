@@ -2,13 +2,14 @@
 ms.date: 2017-06-05
 keywords: powershell,cmdlet
 title: "Modalità di esecuzione del debug degli script in Windows PowerShell ISE"
-ms.openlocfilehash: d1019801833e840f3a231f371da1b8d0e5a387b0
-ms.sourcegitcommit: d6ab9ab5909ed59cce4ce30e29457e0e75c7ac12
+ms.openlocfilehash: 0ec520dfcba5e4562258256570f140e618e77cdb
+ms.sourcegitcommit: 3720ce4efb6735694cfb53a1b793d949af5d1bc5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2017
+ms.lasthandoff: 09/29/2017
 ---
 # <a name="how-to-debug-scripts-in-windows-powershell-ise"></a>Modalità di esecuzione del debug degli script in Windows PowerShell ISE
+
 Questo argomento descrive come eseguire il debug degli script in un computer locale usando le funzionalità di debug visivo di Windows PowerShell Integrated Scripting Environment (ISE).
 
 ## <a name="how-to-manage-breakpoints"></a>Come gestire i punti di interruzione
@@ -18,7 +19,7 @@ Nell'ambiente di debug di Windows PowerShell si possono impostare tre tipi di pu
 
 1. **Punto di interruzione riga** Lo script viene sospeso quando durante l'esecuzione viene raggiunta la riga specificata
 
-2. **Punto di interruzione variabile.** Lo script viene sospeso ogni volta che il valore della variabile specificata cambia.
+2. **Punto di interruzione variabile.** Lo script viene sospeso ogni volta che cambia il valore della variabile specificata.
 
 3. **Punto di interruzione comando.** Lo script viene sospeso ogni volta che durante il funzionamento dello script sta per essere eseguito il comando specificato. Può includere parametri per filtrare ulteriormente il punto di interruzione alla sola operazione desiderata. Il comando può essere anche una funzione creata dall'utente.
 
@@ -35,6 +36,7 @@ Set-PSBreakpoint -Script sample.ps1 -Variable Server
 ```
 
 ### <a name="list-all-breakpoints"></a>Elencare tutti i punti di interruzione
+
 Visualizza tutti i punti di interruzione nella sessione di Windows PowerShell corrente.
 
 Scegliere **Elenca punti di interruzione** dal menu **Debug**. Lo script seguente è un esempio di come si può ottenere un elenco di tutti i punti di interruzione dal riquadro della console usando il cmdlet [Get-PSBreakpoint](https://technet.microsoft.com/library/0bf48936-00ab-411c-b5e0-9b10a812a3c6).
