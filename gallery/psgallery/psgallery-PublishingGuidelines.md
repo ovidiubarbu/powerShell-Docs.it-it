@@ -5,11 +5,11 @@ ms.topic: conceptual
 keywords: gallery,powershell,cmdlet,psgallery
 description: Linee guida per gli autori
 title: Linee guida e procedure consigliate per la pubblicazione in PowerShell Gallery
-ms.openlocfilehash: 72b6ca4cb4815900a3fa48f965e581a6f6130123
-ms.sourcegitcommit: 3720ce4efb6735694cfb53a1b793d949af5d1bc5
+ms.openlocfilehash: 882a33c00cc024ad2bbb05a3283e058a61035e3a
+ms.sourcegitcommit: f069ff0689006fece768f178c10e3e3eeaee09f0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/29/2017
+ms.lasthandoff: 10/13/2017
 ---
 # <a name="powershellgallery-publishing-guidelines-and-best-practices"></a>Linee guida e procedure consigliate per la pubblicazione in PowerShell Gallery
 
@@ -32,12 +32,11 @@ Gli elementi creati usando queste linee guida hanno molte più probabilità di e
 * Includere documentazione ed esempi
 * Rispondere a commenti e suggerimenti
 * Includere moduli anziché script
-* Osservare le linee guida [SemVer](http://semver.org/) per il controllo delle versioni
 * Includere un collegamento a un sito di progetto
 * Includere test con i moduli
 * Includere e/o collegare condizioni di licenza
 * Firmare il codice
-* Osservare le linee guida SemVer per il controllo delle versioni
+* Osservare le linee guida [SemVer](http://semver.org/) per il controllo delle versioni
 * Usare tag comuni, documentati nei tag comuni di PowerShell Gallery
 * Pubblicazione di test usando un repository locale
 

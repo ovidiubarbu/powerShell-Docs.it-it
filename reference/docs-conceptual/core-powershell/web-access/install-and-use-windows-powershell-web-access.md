@@ -2,11 +2,11 @@
 ms.date: 2017-08-23
 keywords: powershell,cmdlet
 title: installare e usare accesso web windows powershell
-ms.openlocfilehash: a4b812e2aa32450bc68f761e7b85e8f2ee2b34ee
-ms.sourcegitcommit: d6ab9ab5909ed59cce4ce30e29457e0e75c7ac12
+ms.openlocfilehash: 63e25fa2b1fc7c0a2b57763e337c25ece17a3296
+ms.sourcegitcommit: f069ff0689006fece768f178c10e3e3eeaee09f0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2017
+ms.lasthandoff: 10/13/2017
 ---
 # <a name="install-and-use-windows-powershell-web-access"></a>Installare e usare Accesso Web Windows PowerShell
 
@@ -51,7 +51,7 @@ Anche se i browser per dispositivi mobili non sono ufficialmente supportati, mol
 ### <a name="supported-desktop-computer-browsers"></a>Browser per computer desktop supportati
 
 - Windows Internet Explorer per Microsoft Windows 8.0, 9.0, 10.0 e 11.0
-- Mozilla Firefox 10.0.2
+- Mozilla Firefox 10.0.2
 - Google Chrome 17.0.963.56m per Windows
 - Apple Safari 5.1.2 per Windows
 - Apple Safari 5.1.2 per Mac OS
@@ -61,7 +61,7 @@ Anche se i browser per dispositivi mobili non sono ufficialmente supportati, mol
 - Windows Phone 7 e 7.5
 - Google Android WebKit 3.1 Browser Android 2.2.1 (Kernel 2.6)
 - Apple Safari 5.0.1 per sistema operativo iPhone
-- Apple Safari 5.0.1 per sistema operativo iPad 2
+- Sistema operativo Apple Safari per iPad 2 5.0.1
 
 ### <a name="browser-requirements"></a>Requisiti del browser
 
