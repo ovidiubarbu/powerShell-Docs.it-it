@@ -19,6 +19,8 @@
 ### [Come contattare i proprietari di elementi](psgallery/psgallery_contacting_item_owners.md)
 ### [Come contattare gli amministratori](psgallery/psgallery_contacting_administrators.md)
 ### [Pubblicazione di feedback sui social media o nei commenti](psgallery/psgallery-SocialMediaFeedback.md)
+### [Richiedere l'accettazione della licenza per i dettagli degli elementi](psgallery/psgallery_requires_license_acceptance.md)
+### [Richiedere l'accettazione della licenza per la distribuzione in Automazione di Azure](psgallery/psgallery_deploy_to_azure_automation_requireLicenseAcceptance.md)
 
 # [PowershellGet](psget/overview.md)
 ## [Ottenere il modulo PowerShellGet](psget/get_psget_module.md)
@@ -36,6 +38,7 @@
 ### [Aggiornare il manifesto del modulo](psget/module/psget_update-modulemanifest.md)
 ### [Pubblicare](psget/module/psget_publish-module.md)
 ### [Moduli con edizioni di PS](psget/module/modulewithpseditionsupport.md)
+### [Moduli per cui è richiesta l'accettazione della licenza](psget/module/RequireLicenseAcceptance.md)
 ### [Risoluzione dei problemi](psget/psget_cmdlets_troubleshooting.md)
 
 ## Script
@@ -50,6 +53,7 @@
 ### [Aggiornare i file di script con i metadati](psget/script/psget_update-scriptfileinfo.md)
 ### [Pubblicare](psget/script/psget_publish-script.md)
 ### [Script con PSEditions](psget/script/scriptwithpseditionsupport.md)
+### [Richiedere l'accettazione della licenza per gli script](psget/script/script_RequireLicenseAcceptance.md)
 
 ## Gestione del repository
 ### [Provider NuGet di bootstrap e NuGet.exe](psget/repository/bootstrapping_nuget_proivder_and_exe.md)
