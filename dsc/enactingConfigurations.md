@@ -1,14 +1,14 @@
 ---
-ms.date: 2017-06-12T00:00:00.000Z
-author: eslesar
+ms.date: 2017-10-16
+author: eslesar;mgreenegit
 ms.topic: conceptual
 keywords: dsc,powershell,configurazione,impostazione
 title: Applicazione delle configurazioni
-ms.openlocfilehash: db3a999f3e413ebb88e79f5ec04a7449db543030
-ms.sourcegitcommit: 46feddbc753523f464f139b5d272794620072fc8
+ms.openlocfilehash: f9f8889439e43d540b50b68ef13e8e088b8cadd3
+ms.sourcegitcommit: 9a5da3f739b1eebb81ede58bd4fc8037bad87224
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 10/16/2017
 ---
 # <a name="enacting-configurations"></a>Applicazione delle configurazioni
 
@@ -18,30 +18,37 @@ Ci sono due modi per applicare le configurazioni di PowerShell DSC (Desired Stat
 
 ## <a name="push-mode"></a>Modalità push
 
-![Modalità push](images/Push.png "Come funziona la modalità push")
+![Modalità push](images/pushModel.png "Come funziona la modalità push")
 
 La modalità push fa riferimento a un utente che applica attivamente una configurazione in un nodo di destinazione chiamando il cmdlet [Start-DscConfiguration](https://technet.microsoft.com/en-us/library/dn521623.aspx).
 
-Dopo la creazione e la compilazione di una configurazione, è possibile applicarla in modalità push chiamando il cmdlet [Start-DscConfiguration](https://technet.microsoft.com/en-us/library/dn521623.aspx), impostando il parametro -Path del cmdlet sul percorso in cui si trova il file MOF di configurazione. Se, ad esempio, il file MOF di configurazione si trova in `C:\DSC\Configurations\localhost.mof`, per applicarlo al computer locale usare il comando seguente: `Start-DscConfiguration -Path 'C:\DSC\Configurations'`
+Dopo la creazione e la compilazione di una configurazione, è possibile applicarla in modalità push chiamando il cmdlet [Start-DscConfiguration](https://technet.microsoft.com/en-us/library/dn521623.aspx), impostando il parametro -Path del cmdlet sul percorso in cui si trova il file MOF di configurazione.
+Se, ad esempio, il file MOF di configurazione si trova in `C:\DSC\Configurations\localhost.mof`, per applicarlo al computer locale usare il comando seguente: `Start-DscConfiguration -Path 'C:\DSC\Configurations'`
 
 > __Nota__: per impostazione predefinita, DSC esegue una configurazione come processo in background. Per eseguire la configurazione in modo interattivo, chiamare [Start-DscConfiguration](https://technet.microsoft.com/library/dn521623.aspx) con il parametro __-Wait__.
 
-
 ## <a name="pull-mode"></a>Modalità pull
 
-![Modalità pull](images/Pull.png "Come funziona la modalità pull")
+![Modalità pull](images/pullModel.png "Come funziona la modalità pull")
 
-In modalità pull, i client di pull sono configurati per ottenere le relative configurazioni DSC da un server di pull remoto. Analogamente, il server di pull è stato configurato per ospitare il servizio DSC e ne è stato effettuato il provisioning con le configurazioni e le risorse necessarie per i client di pull. Ogni client di pull ha un'attività pianificata che esegue un controllo di conformità periodico sulla configurazione del nodo. Quando l'evento viene generato per la prima volta, Gestione configurazione locale nel client di pull effettua una richiesta al server di pull per ottenere la configurazione specificata in Gestione configurazione locale. Se tale configurazione è disponibile nel server di pull e supera i controlli di convalida iniziali, viene trasmessa al client di pull, dove viene quindi eseguita da Gestione configurazione locale.
+In modalità pull, i client di pull sono configurati per ottenere le relative configurazioni DSC da un servizio di pull remoto.
+Analogamente, il servizio di pull è stato configurato per ospitare il servizio DSC e ne è stato effettuato il provisioning con le configurazioni e le risorse richieste dai client di pull.
+Ogni client di pull ha un evento pianificato che esegue un controllo di conformità periodico sulla configurazione del nodo.
+Quando l'evento viene generato per la prima volta, Gestione configurazione locale nel client di pull effettua una richiesta al servizio di pull per ottenere la configurazione specificata in Gestione configurazione locale.
+Se tale configurazione è disponibile nel servizio di pull e supera i controlli di convalida iniziali, viene scaricata nel client di pull, dove viene quindi eseguita da Gestione configurazione locale.
 
-Gestione configurazione locale verifica che il client sia conforme alla configurazione a intervalli regolari, come specificato dalla proprietà **ConfigurationModeFrequencyMins** di Gestione configurazione locale. Gestione configurazione locale verifica se sono disponibili configurazioni aggiornate nel server di pull a intervalli regolari, come specificato dalla proprietà **RefreshModeFrequency** di Gestione configurazione locale. Per informazioni sulla configurazione di Gestione configurazione locale, vedere [Configurazione di Gestione configurazione locale](metaConfig.md).
+Gestione configurazione locale verifica che il client sia conforme alla configurazione a intervalli regolari, come specificato dalla proprietà **ConfigurationModeFrequencyMins** di Gestione configurazione locale.
+Gestione configurazione locale verifica se sono disponibili configurazioni aggiornate nel servizio di pull a intervalli regolari, come specificato dalla proprietà **RefreshModeFrequency** di Gestione configurazione locale.
+Per informazioni sulla configurazione di Gestione configurazione locale, vedere [Configurazione di Gestione configurazione locale](metaConfig.md).
 
-Per altre informazioni sulla configurazione di un server di pull DSC, vedere [Configurazione di un server di pull Web DSC](pullServer.md).
+La soluzione consigliata per l'hosting di un servizio di pull è il servizio cloud DSC, ovvero [Automazione di Azure](https://azure.microsoft.com/en-us/services/automation/).
+Questa soluzione ospitata offre funzionalità di gestione con interfaccia grafica, creazione di report e amministrazione centralizzata.
 
-Se si preferisce usare un servizio online per ospitare la funzionalità del server di pull, vedere il servizio [Automation DSC per Azure](https://azure.microsoft.com/en-us/documentation/articles/automation-dsc-overview/).
+Per altre informazioni sulla configurazione di un servizio di pull in Windows Server, vedere [Configurazione di un server di pull Web DSC](pullServer.md).
+Tenere presente, tuttavia, che questa implementazione offre funzionalità limitate e richiede alcuni interventi di integrazione manuali.
 
-Gli argomenti seguenti illustrano come configurare i client e i server di pull:
+Gli argomenti seguenti illustrano il servizio e i client di pull:
 
-- [Configurazione di un server di pull Web](pullServer.md)
+- [Panoramica della piattaforma DSC di Automazione di Azure](https://docs.microsoft.com/en-us/azure/automation/automation-dsc-overview)
 - [Configurazione di un server di pull SMB](pullServerSMB.md)
 - [Configurazione di un client di pull](pullClientConfigID.md)
-

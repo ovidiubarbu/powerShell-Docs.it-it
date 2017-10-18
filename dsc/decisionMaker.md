@@ -4,19 +4,17 @@ author: eslesar
 ms.topic: conceptual
 keywords: dsc,powershell,configurazione,impostazione
 title: Panoramica di DSC (Desired State Configuration) per decision maker
-ms.openlocfilehash: e8cb26c659dbacde814b1ceaedc0b1fb8dae9d63
-ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.openlocfilehash: e39ab5138b20653e46ac35fa32b99d268f96b2df
+ms.sourcegitcommit: f069ff0689006fece768f178c10e3e3eeaee09f0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/12/2017
+ms.lasthandoff: 10/13/2017
 ---
-<a id="desired-state-configuration-overview-for-decision-makers" class="xliff"></a>
-# Panoramica di DSC (Desired State Configuration) per decision maker
+# <a name="desired-state-configuration-overview-for-decision-makers"></a>Panoramica di DSC (Desired State Configuration) per decision maker
 
 Questo documento descrive i vantaggi dell'uso di PowerShell DSC (Desired State Configuration) per le aziende. Non si tratta di una guida tecnica.
 
-<a id="what-is-desired-state-configuration" class="xliff"></a>
-## Che cos'è DSC (Desired State Configuration)?
+## <a name="what-is-desired-state-configuration"></a>Che cos'è DSC (Desired State Configuration)?
 
 Windows PowerShell DSC (Desired State Configuration) è una piattaforma di gestione delle configurazioni integrata in Windows e basata su standard aperti. DSC è sufficientemente flessibile per funzionare in modo affidabile e coerente in ogni fase del ciclo di distribuzione (sviluppo, test, pre-produzione, produzione), nonché quando viene applicata scalabilità orizzontale. 
 
@@ -25,30 +23,26 @@ Una configurazione è un documento facile da leggere che descrive un ambiente co
 
 In DSC sono anche integrate funzionalità di monitoraggio e creazione di report. Se un sistema non è più conforme, DSC può generare un avviso ed eseguire operazioni per correggere il sistema. 
 
-<a id="benefits-of-using-desired-state-configuration" class="xliff"></a>
-## Vantaggi dell'uso di DSC (Desired State Configuration)
+## <a name="benefits-of-using-desired-state-configuration"></a>Vantaggi dell'uso di DSC (Desired State Configuration)
 
 Le configurazioni sono progettate per essere facili da leggere, archiviare e aggiornare. Le configurazioni dichiarano lo stato desiderato per i dispositivi di destinazione, senza che sia necessario scrivere istruzioni su come impostare tale stato. In questo modo, DSC semplifica notevolmente l'apprendimento, l'adozione, l'implementazione e la gestione della configurazione. 
 
-La creazione di configurazioni comporta l'acquisizione di passaggi di distribuzione complessi come "unica origine di dati reali" in un'unica posizione. In questo modo, le distribuzioni ripetute di un set specifico di computer sono molto meno soggette a errori. Ciò rende le distribuzioni più veloci e affidabili. È quindi possibile eseguire distribuzioni complesse in tempi brevi.
+La creazione di configurazioni comporta l'acquisizione di passaggi di distribuzione complessi come "unica origine di dati reali" in un'unica posizione. In questo modo, le distribuzioni ripetute di un set specifico di computer sono molto meno soggette a errori. Migliorare la velocità e l'affidabilità delle distribuzioni consente inoltre di gestire con efficacia distribuzioni complesse.
 
-Le configurazioni possono anche essere condivise tramite [PowerShell Gallery](https://powershellgallery.com). Ciò significa che potrebbero essere già disponibili scenari comuni e procedure consigliate per il lavoro da svolgere.
+Le configurazioni possono anche essere condivise tramite [PowerShell Gallery](https://powershellgallery.com) e questo significa che potrebbero essere già disponibili scenari comuni e procedure consigliate per specifiche esigenze.
 
 
-<a id="desired-state-configuration-and-devops" class="xliff"></a>
-## DSC (Desired State Configuration) e DevOps
+## <a name="desired-state-configuration-and-devops"></a>DSC (Desired State Configuration) e DevOps
 
 [DevOps](http://blogs.technet.com/b/ashleymcglone/archive/2015/11/20/devops-for-n00bs-ie-windows-people.aspx) è una combinazione di persone, tecnologie e cultura che consente rapidità di distribuzione e iterazione. La soluzione DSC è stata progettata tenendo in considerazione DevOps. La disponibilità di una singola configurazione che definisce un ambiente significa che gli sviluppatori possono codificare i requisiti in una configurazione e verificare la configurazione nel controllo del codice sorgente, mentre i team operativi possono distribuire facilmente il codice senza dover eseguire processi manuali soggetti a errori. 
 
 Le configurazioni sono anche [guidate dai dati](https://msdn.microsoft.com/en-us/powershell/dsc/configdata) e quindi i team operativi possono identificare e modificare gli ambienti in modo più semplice, senza l'intervento di uno sviluppatore. 
 
-<a id="desired-state-configuration-on--and-off-premises" class="xliff"></a>
-## DSC (Desired State Configuration) in ambienti locali e non locali
+## <a name="desired-state-configuration-on--and-off-premises"></a>DSC (Desired State Configuration) in ambienti locali e non locali
 
 È possibile usare DSC per gestire le distribuzioni sia locali che non locali. Per le soluzioni locali, DSC ha un [server di pull](https://msdn.microsoft.com/en-us/powershell/dsc/pullserver) che è possibile usare per centralizzare la gestione dei computer e creare report sul loro stato. Per le soluzioni cloud, è possibile usare DSC ovunque sia possibile usare Windows. Ci sono anche offerte specifiche di Azure basate su DSC (Desired State Configuration), ad esempio [Automazione di Azure](https://azure.microsoft.com/en-us/documentation/services/automation/), che consente di centralizzare la creazione di report di DSC. 
 
-<a id="dsc-and-compatibility" class="xliff"></a>
-## DSC e compatibilità
+## <a name="dsc-and-compatibility"></a>DSC e compatibilità
 
 Anche se la soluzione DSC è stata introdotta in Windows Server 2012 R2, è disponibile per sistemi operativi di livello inferiore attraverso il pacchetto Windows Management Framework (WMF). Altre informazioni su WMF sono disponibili nella [home page di PowerShell](https://msdn.microsoft.com/en-us/powershell/). 
 

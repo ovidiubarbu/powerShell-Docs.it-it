@@ -4,14 +4,13 @@ author: eslesar
 ms.topic: conceptual
 keywords: dsc,powershell,configurazione,installazione
 title: Risorsa WaitForSome DSC
-ms.openlocfilehash: 5d67a9111f6358240590b651e627ffb96abc0896
-ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.openlocfilehash: 3ea9dc51cbb00cf6158abf114fdb31fd91307df9
+ms.sourcegitcommit: f069ff0689006fece768f178c10e3e3eeaee09f0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/12/2017
+ms.lasthandoff: 10/13/2017
 ---
-<a id="dsc-waitforsome-resource" class="xliff"></a>
-# Risorsa WaitForSome DSC
+# <a name="dsc-waitforsome-resource"></a>Risorsa WaitForSome DSC
 
 > Si applica a: Windows PowerShell 5.0 e versioni successive
 
@@ -20,38 +19,37 @@ La risorsa DSC **WaitForAny** può essere usata all'interno di un blocco del nod
 La risorsa ha esito positivo se la risorsa specificata dalla proprietà **ResourceName** si trova nello stato desiderato in un numero minimo di nodi, specificato in **NodeCount**, definito dalla proprietà **NodeName**. 
 
 
-<a id="syntax" class="xliff"></a>
-## Sintassi
+## <a name="syntax"></a>Sintassi
 
 ```
-WaitForAll [string] #ResourceName
+WaitForSome [String] #ResourceName
 {
+    NodeCount = [UInt32]
+    NodeName = [string[]]
     ResourceName = [string]
-    NodeName = [string]
-    NodeCount = [Uint32]
-    [ RetryIntervalSec = [Uint64] ]
-    [ RetryCount = [Uint32] ] 
-    [ ThrottleLimit = [Uint32]]
-    [ DependsOn = [string[]] ]
+    [DependsOn = [string[]]]
+    [PsDscRunAsCredential = [PSCredential]]
+    [RetryCount = [UInt32]]
+    [RetryIntervalSec = [UInt64]]
+    [ThrottleLimit = [UInt32]]
 }
 ```
 
-<a id="properties" class="xliff"></a>
-## Proprietà
+## <a name="properties"></a>Proprietà
 
 |  Proprietà  |  Descrizione   | 
 |---|---| 
-| NomeRisorsa| Il nome della risorsa da cui dipendere.| 
-| NodeName| I nodi di destinazione della risorsa da cui dipendere.| 
 | NodeCount| Il numero minimo di nodi che devono essere nello stato desiderato perché la risorsa abbia esito positivo.|
+| NodeName| I nodi di destinazione della risorsa da cui dipendere.| 
+| NomeRisorsa| Il nome della risorsa da cui dipendere.| 
 | RetryIntervalSec| Il numero di secondi prima di riprovare. Il valore minimo è 1.| 
 | RetryCount| Il numero massimo di tentativi.| 
 | ThrottleLimit| Numero di computer da connettere contemporaneamente. Il valore predefinito è new-cimsession.| 
 | DependsOn | Indica che prima di configurare la risorsa è necessario eseguire la configurazione di un'altra risorsa. Ad esempio, se l'ID del blocco script di configurazione della risorsa che si vuole eseguire per primo è __ResourceName__ e il tipo è __ResourceType__, la sintassi per usare questa proprietà è `DependsOn = "[ResourceType]ResourceName"`.|
+| PsDscRunAsCredential | Vedere [Esecuzione di DSC con le credenziali dell'utente](https://docs.microsoft.com/en-us/powershell/dsc/runasuser) |
 
 
-<a id="example" class="xliff"></a>
-## Esempio
+## <a name="example"></a>Esempio
 
 Per un esempio di come usare questa risorsa, vedere [Specifica delle dipendenze tra nodi](crossNodeDependencies.md)
 

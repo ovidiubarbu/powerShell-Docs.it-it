@@ -4,14 +4,13 @@ author: rpsqrd
 ms.topic: conceptual
 keywords: jea,powershell,sicurezza
 title: Considerazioni sulla sicurezza in JEA
-ms.openlocfilehash: f85b342625d4dba0890619ef9680eaccbbde5224
-ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.openlocfilehash: 2dcce34113998a1c31709b6afe6d0a21c991e79d
+ms.sourcegitcommit: f069ff0689006fece768f178c10e3e3eeaee09f0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/12/2017
+ms.lasthandoff: 10/13/2017
 ---
-<a id="jea-security-considerations" class="xliff"></a>
-# Considerazioni sulla sicurezza in JEA
+# <a name="jea-security-considerations"></a>Considerazioni sulla sicurezza in JEA
 
 > Si applica a: Windows PowerShell 5.0
 
@@ -22,8 +21,7 @@ Poiché JEA consente di eseguire i comandi di amministratore senza avere accesso
 
 Questo argomento illustra in modo più dettagliato il modello di sicurezza in JEA e le procedure consigliate.
 
-<a id="run-as-account" class="xliff"></a>
-## account RunAs
+## <a name="run-as-account"></a>account RunAs
 
 Ogni endpoint JEA ha un account designato "RunAs", ovvero l'account con cui vengono eseguite le azioni dall'utente che si connette.
 Questo account è configurabile nel [file di configurazione sessione](session-configurations.md), e l'account scelto ha un impatto significativo sulla sicurezza dell'endpoint.
@@ -81,8 +79,7 @@ Ciò significa che le definizioni di ruolo non funzionano più come previsto e a
 
 È consigliabile non usare RunAsCredential su un endpoint JEA a causa della difficoltà di tracciare le azioni degli utenti specifici e della mancanza di supporto per eseguire il mapping degli utenti ai ruoli.
 
-<a id="winrm-endpoint-acl" class="xliff"></a>
-## ACL endpoint di WinRM
+## <a name="winrm-endpoint-acl"></a>ACL endpoint di WinRM
 
 Allo stesso modo degli endpoint regolari di comunicazione remota di PowerShell, ogni endpoint JEA ha un elenco di controllo di accesso (ACL) separato impostato nella configurazione WinRM, che controlla gli utenti che possono eseguire l'autenticazione con l'endpoint JEA.
 Se la configurazione non è corretta, gli utenti attendibili potrebbero non essere in grado di accedere all'endpoint JEA e/o gli utenti non attendibili potrebbero ottenere accesso.
@@ -116,8 +113,7 @@ Gli altri utenti che hanno accesso all'endpoint JEA ma non rientrano in nessuno 
 È possibile controllare le autorizzazioni degli utenti in un endpoint JEA eseguendo `Get-PSSessionCapability`.
 Vedere l'articolo [Controllo e creazione di report in JEA](audit-and-report.md) per altre informazioni sul controllo dei comandi ai quali ha accesso un utente in un endpoint JEA.
 
-<a id="least-privilege-roles" class="xliff"></a>
-## Ruoli con privilegi minimi
+## <a name="least-privilege-roles"></a>Ruoli con privilegi minimi
 
 Quando si progettano ruoli JEA, è importante ricordare che l'account virtuale o del servizio gestito del gruppo eseguito alla base ha spesso accesso illimitato per gestire il computer locale.
 Le funzionalità del ruolo JEA limitano l'uso dell'account riducendo i comandi e le applicazioni che possono essere eseguite usando il contesto autorizzato.
@@ -146,8 +142,7 @@ Di seguito viene illustrata una versione più sicura della stessa funzionalità 
 
 Evitare l'uso di caratteri jolly nelle funzionalità di ruolo e assicurarsi di [controllare le autorizzazioni utente effettive](audit-and-report.md#check-effective-rights-for-a-specific-user) regolarmente per sapere a quali comandi ha accesso un utente.
 
-<a id="jea-does-not-protect-against-admins" class="xliff"></a>
-## JEA non offre protezione contro gli amministratori
+## <a name="jea-does-not-protect-against-admins"></a>JEA non offre protezione contro gli amministratori
 
 Uno dei principi fondamentali di JEA è che consente a utenti non amministratori di eseguire *alcune* attività di amministrazione.
 JEA non offre protezione contro gli utenti che hanno già privilegi di amministratore.

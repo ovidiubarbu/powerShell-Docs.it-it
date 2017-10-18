@@ -1,4 +1,16 @@
-# <a name="desired-state-configuration-overview-for-engineers"></a>Panoramica di DSC (Desired State Configuration) per tecnici #
+---
+ms.date: 2017-10-13
+author: eslesar;mgreenegit
+ms.topic: conceptual
+keywords: dsc,powershell,configurazione,impostazione
+title: Panoramica di DSC (Desired State Configuration) per decision maker
+ms.openlocfilehash: 66822d9a60f98aab3d4f27d14b27ebc6ec90b2c9
+ms.sourcegitcommit: 9a5da3f739b1eebb81ede58bd4fc8037bad87224
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/16/2017
+---
+# <a name="desired-state-configuration-overview-for-engineers"></a>Panoramica di DSC (Desired State Configuration) per tecnici
 
 In questo documento è destinato ai team di sviluppatori e tecnici operativi per illustrare i vantaggi di PowerShell DSC (Desired State Configuration).
 Per una panoramica di più alto livello del valore offerto da DSC, vedere [Panoramica di DSC (Desired State Configuration) per decision maker](decisionMaker.md).
@@ -6,23 +18,23 @@ Per una panoramica di più alto livello del valore offerto da DSC, vedere [Panor
 ## <a name="benefits-of-desired-state-configuration"></a>Vantaggi dell'uso di DSC
 
 DSC offre i vantaggi seguenti:
+
 - Ridurre la complessità dello scripting in Windows
 - Aumentare la velocità di iterazione
 
-Il concetto di "distribuzione continua" è sempre più importante. La distribuzione continua implica la possibilità di distribuire in modo frequente, potenzialmente più volte al giorno.
+Il concetto di "distribuzione continua" è sempre più importante.
+La distribuzione continua implica la possibilità di distribuire in modo frequente, potenzialmente più volte al giorno.
 Lo scopo di queste distribuzioni non è quello di correggere un problema, ma di pubblicare funzionalità in tempi brevi.
 Permettendo alle nuove funzionalità di passare dalla fase di sviluppo a quella operativa nel modo più rapido e affidabile possibile, si accelera il time-to-value della nuova logica di business.
 
-Questa necessità di aggiornamento rapido è esasperata da due tendenze. Il passaggio al cloud computing implica cambiamenti rapidi su larga scala, con un rischio costante di errore.
-In questa ottica, per restare al passo è indispensabile adottare soluzioni di automazione.
-Lo sviluppo della mentalità "DevOps" fornisce una valida risposta a questi cambiamenti. 
+La transizione verso il cloud computing implica una soluzione di distribuzione che utilizza un tipo di modello "dichiarativo", dove un ambiente di stato finale viene dichiarato come testo e pubblicato in un motore di distribuzione.
+Questa tecnica di distribuzione consente cambiamenti rapidi su larga scala, con resilienza da rischi di errore perché in qualsiasi momento la distribuzione può essere ripetuta in modo coerente per garantire uno stato finale.
+La creazione di strumenti e servizi che supportano questo tipo di operazioni tramite l'automazione è una risposta a queste modifiche.
 
-
-DSC è una piattaforma che offre funzionalità di distribuzione, configurazione e conformità dichiarative, autonome e idempotenti (ripetibili).
+DSC è una piattaforma che offre funzionalità di distribuzione, configurazione e conformità dichiarative e idempotenti (ripetibili).
 La piattaforma DSC consente di verificare che i componenti del data center siano configurati correttamente, in modo da evitare errori e impedire costosi problemi di distribuzione.
 Trattando le configurazioni DSC come parte del codice dell'applicazione, DSC consente la distribuzione continua.
 La configurazione DSC deve essere aggiornata come parte dell'applicazione, assicurando così che le informazioni necessarie per distribuire l'applicazione siano sempre aggiornate e pronte per l'uso.
-
 
 ## <a name="i-have-powershell-why-do-i-need-desired-state-configuration"></a>"Se si ha PowerShell, perché è necessario usare anche Desired State Configuration?"
 
@@ -36,9 +48,10 @@ Ad esempio, gli script di PowerShell dovrebbero avere un aspetto simile al segue
 # Create a share in Windows Server 8
 New-SmbShare -Name MyShare -Path C:\Demo\Temp -FullAccess Alice -ReadAccess Bob
 ```
-Questo script è semplice e immediatamente comprensibile. Se tuttavia si prova a trasferirlo nell'ambiente di produzione, possono verificarsi diversi problemi.
+Questo script è semplice e immediatamente comprensibile.
+Se tuttavia si prova a trasferirlo nell'ambiente di produzione, possono verificarsi diversi problemi.
 Cosa accade se lo script viene eseguito due volte di seguito?
-E se un utente aveva l'accesso completo alla condivisione? 
+E se un utente aveva l'accesso completo alla condivisione?
 
 Per ovviare a questi problemi, una versione "reale" dello script avrà un aspetto più vicino al seguente:
 ```powershell
@@ -102,21 +115,21 @@ Start-DscConfiguration Sample_Share
 ```
 
 Questo script è formattato correttamente ed è facilmente leggibile.
-I percorsi di logica e i criteri di gestione degli errori sono ancora presenti nell'implementazione della [risorsa](resources.md), ma non sono visibili all'autore dello script. 
-
-
+I percorsi di logica e i criteri di gestione degli errori sono ancora presenti nell'implementazione della [risorsa](resources.md), ma non sono visibili all'autore dello script.
 
 ## <a name="separating-environment-from-structure"></a>Separazione dell'ambiente dalla struttura
 
-Un modello comune in DevOps consiste nella presenza di più ambienti per la distribuzione. Ad esempio, può essere presente un ambiente di sviluppo che consente di creare rapidamente prototipi di nuovo codice.
+Un modello comune in DevOps consiste nella presenza di più ambienti per la distribuzione.
+Ad esempio, può essere presente un ambiente di sviluppo che consente di creare rapidamente prototipi di nuovo codice.
 Il codice dell'ambiente di sviluppo viene trasferito in un ambiente di test, in cui altri utenti verificano la nuova funzionalità.
 Infine, il codice passa all'ambiente di produzione, ossia all'ambiente del sito attivo.
 
-Le configurazioni DSC consentono questa pipeline sviluppo-test-produzione tramite l'uso di [dati di configurazione](configData.md).
+Le configurazioni DSC supportano questa pipeline sviluppo-test-produzione tramite l'uso di [dati di configurazione](configData.md).
 Questa caratteristica ha l'effetto di astrarre maggiormente la differenza tra la struttura della configurazione e i nodi gestiti.
-È ad esempio possibile definire una configurazione che richiede un server SQL, un server IIS e un server di livello intermedio. Indipendentemente dai nodi che ricevono le diverse parti della configurazione, questi tre elementi saranno sempre presenti.
+È ad esempio possibile definire una configurazione che richiede un server SQL, un server IIS e un server di livello intermedio.
+Indipendentemente dai nodi che ricevono le diverse parti della configurazione, questi tre elementi saranno sempre presenti.
 È possibile usare i dati di configurazione per far puntare tutti e tre gli elementi allo stesso computer per un ambiente di sviluppo, separare i tre elementi su tre computer diversi per un ambiente di test e infine farli puntare a tutti i server di produzione per l'ambiente di produzione.
-Per la distribuzione nei diversi ambienti, è possibile richiamare `Start-DscConfiguration` con i dati di configurazione corretti per l'ambiente di destinazione. 
+Per la distribuzione nei diversi ambienti, è possibile richiamare **Start-DscConfiguration** con i dati di configurazione corretti per l'ambiente di destinazione.
 
 ## <a name="see-also"></a>Vedere anche
 

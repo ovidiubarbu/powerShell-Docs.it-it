@@ -4,11 +4,11 @@ contributor: JKeithB
 ms.topic: conceptual
 keywords: raccolta,powershell,cmdlet,psgallery, psget
 title: PowerShell Gallery
-ms.openlocfilehash: 83a1f4e20b985a502637aee9d50ecc1d3f9a4616
-ms.sourcegitcommit: 3720ce4efb6735694cfb53a1b793d949af5d1bc5
+ms.openlocfilehash: 9fe341e4b297764321f3b3f07caca8ef4b8b40e0
+ms.sourcegitcommit: f069ff0689006fece768f178c10e3e3eeaee09f0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/29/2017
+ms.lasthandoff: 10/13/2017
 ---
 # <a name="the-powershell-gallery"></a>PowerShell Gallery
 
@@ -16,7 +16,7 @@ PowerShell Gallery è il repository centrale per i contenuti PowerShell. In Powe
 
 ## <a name="powershellget-overview"></a>Panoramica di PowerShellGet
 
-Il modulo PowerShellGet contiene i cmdlet per l'individuazione, l'installazione, l'aggiornamento e la pubblicazione di elementi PowerShell quali moduli, risorse DSC, capacità del ruolo e script di https://www.PowerShellGallery.com e altri repository privati.
+Il modulo PowerShellGet contiene i cmdlet per l'individuazione, l'installazione, l'aggiornamento e la pubblicazione di elementi PowerShell quali moduli, risorse DSC, capacità del ruolo e script da [PowerShell Gallery](https://www.PowerShellGallery.com) e altri repository privati.
 
 ## <a name="getting-started-with-the-gallery"></a>Introduzione a PowerShell Gallery
 
