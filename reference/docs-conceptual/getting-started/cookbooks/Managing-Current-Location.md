@@ -1,13 +1,13 @@
 ---
-ms.date: 2017-06-05T00:00:00.000Z
+ms.date: 2017-06-05
 keywords: powershell,cmdlet
 title: Gestione del percorso corrente
 ms.assetid: a9f9e7a7-3ea8-47d3-bbb4-6e437f6d4a4a
-ms.openlocfilehash: 20b3828d12587e675ed51863e5d96c37839b62d6
-ms.sourcegitcommit: 74255f0b5f386a072458af058a15240140acb294
+ms.openlocfilehash: cbdebb84b3191e3bd549a1cf344cbeefaa91a23c
+ms.sourcegitcommit: c5251755c4442487f99ff74fadf7e37bbf039089
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="managing-current-location"></a>Gestione del percorso corrente
 Nei sistemi di cartelle in Esplora file è in genere presente un percorso di lavoro specifico, ossia la cartella attualmente aperta. Per manipolare gli elementi della cartella, è sufficiente fare clic su di essi. Per le interfacce della riga di comando come Cmd.exe, quando ci si trova nella stessa cartella di un determinato file è possibile accedervi specificando un nome relativamente breve, invece dell'intero percorso del file. La directory corrente si chiama directory di lavoro.
@@ -49,10 +49,13 @@ Il parametro **-PassThru** può essere usato con molti comandi Set in Windows Po
 
 Ad esempio, nel percorso della cartella **C:\\Windows** un punto (**.**) rappresenta **C:\\Windows** e un doppio punto (**..**) rappresenta **C:**. Per passare dal percorso corrente alla radice dell'unità C:, digitare:
 
-<pre>PS> Set-Location -Path .. -PassThru
+```powershell
+PS> Set-Location -Path .. -PassThru
+
 Path
 ----
-C:\</pre>
+C:\
+```
 
 La stessa tecnica funziona nelle unità di Windows PowerShell diverse dalle unità di file system, ad esempio **HKLM:**. Per impostare il percorso sulla chiave \\Software nel Registro di sistema, digitare:
 
