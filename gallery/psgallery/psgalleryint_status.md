@@ -1,24 +1,21 @@
 ---
-description: 
-manager: carolz
-ms.topic: article
-author: jpjofre
-ms.prod: powershell
-keywords: powershell,cmdlet,gallery
-ms.date: 2016-10-14
-contributor: manikb
+ms.date: 2017-06-12
+contributor: JKeithB
+ms.topic: conceptual
+keywords: raccolta,powershell,cmdlet,psgallery
 title: psgalleryint_status
-ms.technology: powershell
-ms.openlocfilehash: 58f06ca061a4f171288e75b30698910c701f1da1
-ms.sourcegitcommit: ba8ed836799ef465e507fa1b8d341ba38459d863
-translationtype: HT
+ms.openlocfilehash: 0b2f1ebcb365fcd24438a028a9c8181449266a8b
+ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/12/2017
 ---
 <a name="powershell-gallery-status"></a>Stato di PowerShell Gallery
 =========================
 
 ## <a name="03272017---resolved-unable-to-see-individual-module-and-script-pages"></a>27/03/2017 - RISOLTO: impossibile visualizzare singole pagine di moduli e script
 
-__Riepilogo del problema__: i collegamenti diretti alle singole pagine di moduli e script in https://www.powershellgallery.com erano interrotti. Il problema era segnalato in tutte le aree. Il problema non influiva sui cmdlet di PowerShellGet, ovvero Install-Module, Install-Script, Update-Module, Update-Script e Publish-Module. Publish-Script continuava a funzionare.
+__Riepilogo del problema__: i collegamenti diretti alle singole pagine di moduli e script in https://www.powershellgallery.com erano interrotti. Il problema era segnalato in tutte le aree. Il problema non influiva sui cmdlet di PowerShellGet, in altre parole Install-Module, Install-Script, Update-Module, Update-Script, Publish-Module e Publish-Script continuavano a funzionare.
 
 __Causa radice__: i tecnici hanno identificato la causa in un problema di visualizzazione dei pulsanti per i social media come Facebook nella pagina.  
 

@@ -1,15 +1,14 @@
 ---
-title: Configurazione di un client di pull usando un ID configurazione
-ms.date: 2016-05-16
-keywords: powershell,DSC
-description: 
-ms.topic: article
+ms.date: 2017-06-12
 author: eslesar
-manager: dongill
-ms.prod: powershell
-ms.openlocfilehash: 66702defb6f16740d93e020ebd22374b161efc5f
-ms.sourcegitcommit: 267688f61dcc76fd685c1c34a6c7bfd9be582046
-translationtype: HT
+ms.topic: conceptual
+keywords: dsc,powershell,configurazione,installazione
+title: Configurazione di un client di pull usando un ID configurazione
+ms.openlocfilehash: bb14bff95c626b65e2d0d0072c39e4c571cea4b0
+ms.sourcegitcommit: a5c0795ca6ec9332967bff9c151a8572feb1a53a
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 07/27/2017
 ---
 # <a name="setting-up-a-pull-client-using-configuration-id"></a>Configurazione di un client di pull usando un ID configurazione
 

@@ -1,15 +1,14 @@
 ---
-title: Risoluzione dei problemi relativi a DSC
-ms.date: 2016-05-16
-keywords: powershell,DSC
-description: 
-ms.topic: article
+ms.date: 2017-06-12
 author: eslesar
-manager: dongill
-ms.prod: powershell
-ms.openlocfilehash: 6b506abf2508a8ba182af9c3362fcc408785d058
-ms.sourcegitcommit: a3966253a165d193a42b43b9430a4dc76988f82f
-translationtype: HT
+ms.topic: conceptual
+keywords: dsc,powershell,configurazione,installazione
+title: Risoluzione dei problemi relativi a DSC
+ms.openlocfilehash: 9b1266b9c8923474005760ef78b05d570efdde37
+ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/12/2017
 ---
 # <a name="troubleshooting-dsc"></a>Risoluzione dei problemi relativi a DSC
 
@@ -33,7 +32,7 @@ Il cmdlet [Get-DscConfigurationStatus](https://technet.microsoft.com/en-us/libra
 Il set di parametri seguente restituisce informazioni sullo stato per l'ultima esecuzione della configurazione:
 
 ```powershell
-Get-DscConfigurationStatus     [-CimSession <CimSession[]>] 
+Get-DscConfigurationStatus  [-CimSession <CimSession[]>] 
                             [-ThrottleLimit <int>] 
                             [-AsJob] 
                             [<CommonParameters>]
@@ -41,7 +40,7 @@ Get-DscConfigurationStatus     [-CimSession <CimSession[]>]
 Il set di parametri seguente restituisce informazioni sullo stato per tutte le esecuzioni della configurazione precedenti:
 
 ```powershell
-Get-DscConfigurationStatus     -All 
+Get-DscConfigurationStatus  -All 
                             [-CimSession <CimSession[]>] 
                             [-ThrottleLimit <int>] 
                             [-AsJob] 
@@ -55,30 +54,30 @@ PS C:\> $Status = Get-DscConfigurationStatus
 
 PS C:\> $Status
 
-Status         StartDate                Type            Mode    RebootRequested        NumberOfResources
-------        ---------                ----            ----    ---------------        -----------------
-Failure        11/24/2015  3:44:56     Consistency        Push    True                36
+Status      StartDate               Type            Mode    RebootRequested     NumberOfResources
+------      ---------               ----            ----    ---------------     -----------------
+Failure     11/24/2015  3:44:56     Consistency     Push    True                36
 
 PS C:\> $Status.ResourcesNotInDesiredState
 
-ConfigurationName        :    MyService
-DependsOn                :    
-ModuleName                :    PSDesiredStateConfiguration
-ModuleVersion            :    1.1
-PsDscRunAsCredential    :    
-ResourceID                 :    [File]ServiceDll
-SourceInfo                :    c:\git\CustomerService\Configs\MyCustomService.ps1::5::34::File
-DurationInSeconds        :    0.19
-Error                    :    SourcePath must be accessible for current configuration. The related file/directory is:
+ConfigurationName       :   MyService
+DependsOn               :   
+ModuleName              :   PSDesiredStateConfiguration
+ModuleVersion           :   1.1
+PsDscRunAsCredential    :   
+ResourceID              :   [File]ServiceDll
+SourceInfo              :   c:\git\CustomerService\Configs\MyCustomService.ps1::5::34::File
+DurationInSeconds       :   0.19
+Error                   :   SourcePath must be accessible for current configuration. The related file/directory is:
                             \\Server93\Shared\contosoApp.dll. The related ResourceID is [File]ServiceDll
-FinalState                :    
-InDesiredState             :    False
-InitialState             :    
-InstanceName            :    ServiceDll
-RebootRequested            :    False
-ReosurceName            :    File
-StartDate                :    11/24/2015  3:44:56
-PSComputerName            :
+FinalState              :   
+InDesiredState          :   False
+InitialState            :   
+InstanceName            :   ServiceDll
+RebootRequested         :   False
+ReosurceName            :   File
+StartDate               :   11/24/2015  3:44:56
+PSComputerName          :
 ```
 
 ## <a name="my-script-wont-run-using-dsc-logs-to-diagnose-script-errors"></a>Lo script non viene eseguito: Uso di registri DSC per diagnosticare gli errori di script

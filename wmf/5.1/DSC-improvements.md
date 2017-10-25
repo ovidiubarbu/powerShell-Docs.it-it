@@ -1,18 +1,14 @@
 ---
+ms.date: 2017-06-12
+author: JKeithB
+ms.topic: reference
+keywords: wmf,powershell,installazione
 title: Miglioramenti di DSC in WMF 5.1
-ms.date: 2016-07-13
-keywords: PowerShell, DSC, WMF
-description: 
-ms.topic: article
-author: keithb
-manager: dongill
-ms.prod: powershell
-ms.technology: WMF
-ms.openlocfilehash: 4c5dfaaf368097c18a2788a9df15632ce116dbbb
-ms.sourcegitcommit: ee407927101c3b166cc200a39a6ea786a1c21f95
+ms.openlocfilehash: ce897dab2344455453e9bf2d0b5a897f9abb4392
+ms.sourcegitcommit: a5c0795ca6ec9332967bff9c151a8572feb1a53a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2017
+ms.lasthandoff: 07/27/2017
 ---
 # <a name="improvements-in-desired-state-configuration-dsc-in-wmf-51"></a>Miglioramenti di Desired State Configuration (DSC) in WMF 5.1
 
@@ -53,13 +49,13 @@ Nella versione precedente la convenzione di denominazione di una configurazione 
 
 Vedere gli snapshot seguenti:
 
-•    Impostazioni della configurazione locale che definisce una configurazione parziale che un nodo è autorizzato a ricevere.
+•   Impostazioni della configurazione locale che definisce una configurazione parziale che un nodo è autorizzato a ricevere.
 
 ![Metaconfigurazione di esempio](../images/MetaConfigPartialOne.png)
 
-•    Definizione di configurazione parziale di esempio 
+•   Definizione di configurazione parziale di esempio 
 
-```PowerShell
+```powershell
 Configuration PartialOne
 {
     Node('localhost')
@@ -74,11 +70,11 @@ Configuration PartialOne
 PartialOne
 ```
 
-•    'ConfigurationName' incorporato nel file MOF generato.
+•   'ConfigurationName' incorporato nel file MOF generato.
 
 ![Esempio di file MOF generato](../images/PartialGeneratedMof.png)
 
-•    FileName nel repository di configurazione pull 
+•   FileName nel repository di configurazione pull 
 
 ![FileName nel repository di configurazione](../images/PartialInConfigRepository.png)
 
@@ -86,7 +82,7 @@ File MOF del nome del servizio di automazione di Azure generati come `<Configura
 
 Questo rendeva impossibile l'esecuzione del pull di una configurazione parziale dal servizio di automazione di Azure.
 
-```PowerShell
+```powershell
 Configuration PartialOne
 {
     Node('localhost')
@@ -105,7 +101,7 @@ In WMF 5.1 una configurazione parziale nel server di pull/servizio può essere d
 
 La metaconfigurazione seguente imposta un nodo che viene gestito sia localmente che dal servizio di Automazione di Azure.
 
-```PowerShell
+```powershell
   [DscLocalConfigurationManager()]
    Configuration RegistrationMetaConfig
    {
@@ -209,7 +205,7 @@ Per convenzione, il file di catalogo del modulo deve trovarsi nella cartella del
 ####<a name="pull"></a>Pull
 La risorsa LocalConfigurationManager di un nodo esegue la convalida delle firme di moduli e configurazioni in base alle impostazioni correnti. Per impostazione predefinita, la convalida delle firme è disabilitata. La convalida delle firme può essere abilitata aggiungendo il blocco 'SignatureValidation' alla definizione della metaconfigurazione del nodo, come illustrato di seguito:
 
-```PowerShell
+```powershell
 [DSCLocalConfigurationManager()]
 Configuration EnableSignatureValidation
 {
@@ -263,7 +259,7 @@ Di seguito è riportato un esempio completo di convalida della firma per il push
 
 * Abilitazione della convalida delle firme nel nodo.
 
-```PowerShell
+```powershell
 [DSCLocalConfigurationManager()]
 Configuration EnableSignatureValidation
 {
@@ -282,7 +278,7 @@ Set-DscLocalConfigurationManager -Path .\EnableSignatureValidation -Verbose
 ``` 
 * Creazione di un file di configurazione di esempio.
 
-```PowerShell
+```powershell
 # Sample configuration
 Configuration Test
 {
@@ -298,7 +294,7 @@ Test
 
 * Tentativo di push del file di configurazione non firmato nel nodo. 
 
-```PowerShell
+```powershell
 Start-DscConfiguration -Path .\Test -Wait -Verbose -Force
 ``` 
 ![ErrorUnsignedMofPushed](../images/PushUnsignedMof.png)

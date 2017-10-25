@@ -27,3 +27,8 @@ I contributi vengono aggiunti attivamente a questo repository tramite [richiesta
 Per altre informazioni sui contributi, leggere la [guida ai contributi](CONTRIBUTING.md).
 Esiste una bozza della [guida di stile](./STYLE.md) da esaminare prima di inviare contributi.
 Usare i modelli per i problemi e le richieste di pull per garantire la coerenza della documentazione tra le varie versioni. 
+
+## <a name="licenses"></a>Licenze
+
+Sono disponibili due file di licenza per questo progetto. La licenza MIT si applica al codice contenuto in questo repository.
+La licenza Creative Commons si applica alla documentazione. 
