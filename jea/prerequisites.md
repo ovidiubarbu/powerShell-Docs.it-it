@@ -109,6 +109,6 @@ Enable-PSRemoting
 
 ## <a name="see-also"></a><span data-ttu-id="9472d-171">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="9472d-171">See also</span></span>
 
-- [<span data-ttu-id="9472d-172">Additional information about PowerShell Remoting and WinRM security</span><span class="sxs-lookup"><span data-stu-id="9472d-172">Additional information about PowerShell Remoting and WinRM security</span></span>](https://msdn.microsoft.com/en-us/powershell/scripting/setup/winrmsecurity) (Altre informazioni sulla comunicazione remota di PowerShell e sulla sicurezza di WinRM)
+- <span data-ttu-id="9472d-172">[Additional information about PowerShell Remoting and WinRM security](https://msdn.microsoft.com/en-us/powershell/scripting/setup/winrmsecurity) (Altre informazioni sulla comunicazione remota di PowerShell e sulla sicurezza di WinRM)</span><span class="sxs-lookup"><span data-stu-id="9472d-172">[Additional information about PowerShell Remoting and WinRM security](https://msdn.microsoft.com/en-us/powershell/scripting/setup/winrmsecurity)</span></span>
 - [<span data-ttu-id="9472d-173">Post di blog sulla sicurezza di *PowerShell ♥ the Blue Team*</span><span class="sxs-lookup"><span data-stu-id="9472d-173">*PowerShell ♥ the Blue Team* blog post on security</span></span>](https://blogs.msdn.microsoft.com/powershell/2015/06/09/powershell-the-blue-team/)
 
