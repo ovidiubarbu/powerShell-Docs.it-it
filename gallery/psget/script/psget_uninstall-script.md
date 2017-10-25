@@ -10,29 +10,24 @@ ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 06/12/2017
 ---
-<a id="uninstall-script" class="xliff"></a>
-# Uninstall-Script
+# <a name="uninstall-script"></a>Uninstall-Script
 
 Consente di disinstallare un file di script installato con PowerShellGet.
 
-<a id="description" class="xliff"></a>
-## Descrizione
+## <a name="description"></a>Descrizione
 
 Il cmdlet Uninstall-Script consente di disinstallare i file di script specificati installati dal repository online.
 
-<a id="cmdlet-syntax" class="xliff"></a>
-## Sintassi del cmdlet
+## <a name="cmdlet-syntax"></a>Sintassi del cmdlet
 
 ```powershell
 Get-Command -Name Uninstall-Script -Module PowerShellGet -Syntax
 ```
-<a id="cmdlet-online-help-reference" class="xliff"></a>
-## Riferimento per la Guida online sui cmdlet
+## <a name="cmdlet-online-help-reference"></a>Riferimento per la Guida online sui cmdlet
 
 [Uninstall-Script](http://go.microsoft.com/fwlink/?LinkId=619789)
 
-<a id="example-commands" class="xliff"></a>
-## Comandi di esempio
+## <a name="example-commands"></a>Comandi di esempio
 
 ```powershell
 Get-InstalledScript | Uninstall-Script -WhatIf

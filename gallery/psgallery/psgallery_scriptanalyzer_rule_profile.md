@@ -10,8 +10,7 @@ ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 06/12/2017
 ---
-<a id="scriptanazlyer-rule-profile-for-gallery" class="xliff"></a>
-# Profilo regole ScriptAnalyzer per raccolta
+# <a name="scriptanazlyer-rule-profile-for-gallery"></a>Profilo regole ScriptAnalyzer per raccolta
 Per garantire la qualità degli elementi pubblicati nella raccolta di PowerShell, eseguire le regole [PSScriptAnalyzer](https://github.com/PowerShell/PSScriptAnalyzer) per determinare se sono presenti eventuali violazioni negli script inviati.
 
 L'elenco di regole è disponibile dalla [pagina di GitHub](https://github.com/PowerShell/PSScriptAnalyzer/blob/development/Engine/Settings/PSGallery.psd1) relativa a ScriptAnalyzer.

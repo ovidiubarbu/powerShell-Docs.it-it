@@ -9,11 +9,9 @@ ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 06/12/2017
 ---
-<a id="uninstallation-instructions" class="xliff"></a>
-# Istruzioni di disinstallazione
+# <a name="uninstallation-instructions"></a>Istruzioni di disinstallazione
 
-<a id="using-command-prompt" class="xliff"></a>
-## Dal prompt dei comandi
+## <a name="using-command-prompt"></a>Dal prompt dei comandi
 1.  Aprire **Prompt dei comandi**.
 2.  Eseguire il [programma di avvio di Windows Update autonomo](https://support.microsoft.com/en-us/kb/934307) come indicato di seguito:
 
@@ -30,8 +28,7 @@ In Windows Server 2008 R2 SP1 e Windows 7 SP1:
 wusa /uninstall /kb:3134760
 ```
 
-<a id="using-control-panel" class="xliff"></a>
-## Dal Pannello di controllo
+## <a name="using-control-panel"></a>Dal Pannello di controllo
 1.  Aprire il **Pannello di controllo**.
 2.  Aprire **Programmi** e quindi **Disinstalla un programma**.
 3.  Fare clic su **Visualizza aggiornamenti installati**.

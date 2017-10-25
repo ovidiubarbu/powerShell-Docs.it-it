@@ -10,8 +10,7 @@ ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 06/12/2017
 ---
-<a id="dsc-windowspackagecab-resource" class="xliff"></a>
-# Risorsa WindowsPackageCab DSC
+# <a name="dsc-windowspackagecab-resource"></a>Risorsa WindowsPackageCab DSC
 
 > Si applica a: Windows PowerShell 5.1 e versioni successive
 
@@ -20,8 +19,7 @@ La risorsa **WindowsPackageCab** in Windows PowerShell DSC (Desired State Config
 È necessario che nel nodo di destinazione sia installato il modulo PowerShell Gestione e manutenzione immagini distribuzione. Per informazioni, vedere [Usare Gestione e manutenzione immagini distribuzione in Windows PowerShell](https://msdn.microsoft.com/en-us/windows/hardware/commercialize/manufacture/desktop/use-dism-in-windows-powershell-s14). 
 
 
-<a id="syntax" class="xliff"></a>
-## Sintassi
+## <a name="syntax"></a>Sintassi
 
 ```
 {
@@ -33,8 +31,7 @@ La risorsa **WindowsPackageCab** in Windows PowerShell DSC (Desired State Config
 }
 ```
 
-<a id="properties" class="xliff"></a>
-## Proprietà
+## <a name="properties"></a>Proprietà
 
 |  Proprietà  |  Descrizione   | 
 |---|---| 
@@ -44,8 +41,7 @@ La risorsa **WindowsPackageCab** in Windows PowerShell DSC (Desired State Config
 | LogPath| Indica il percorso completo in cui il provider deve salvare un file di log per installare o disinstallare il pacchetto.| 
 | DependsOn | Indica che prima di configurare la risorsa è necessario eseguire la configurazione di un'altra risorsa. Ad esempio, se l'ID del blocco script di configurazione della risorsa che si vuole eseguire per primo è **ResourceName** e il tipo è **ResourceType**, la sintassi per usare questa proprietà è `DependsOn = "[ResourceType]ResourceName"``.| 
 
-<a id="example" class="xliff"></a>
-## Esempio
+## <a name="example"></a>Esempio
 
 La configurazione di esempio seguente accetta parametri di input e assicura che venga installato il file con estensione cab specificato dal parametro `$Name`.
 

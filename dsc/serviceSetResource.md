@@ -10,8 +10,7 @@ ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 06/12/2017
 ---
-<a id="dsc-serviceset-resource" class="xliff"></a>
-# Risorsa ServiceSet DSC
+# <a name="dsc-serviceset-resource"></a>Risorsa ServiceSet DSC
 
 > Si applica a: Windows PowerShell 4.0, Windows PowerShell 5.0
 
@@ -20,8 +19,7 @@ La risorsa **ServiceSet** in Windows PowerShell DSC (Desired State Configuration
 
 Usare questa risorsa quando si vogliono configurare diversi servizi nello stesso stato.
 
-<a id="syntax" class="xliff"></a>
-## Sintassi
+## <a name="syntax"></a>Sintassi
 
 ```
 Service [string] #ResourceName
@@ -37,8 +35,7 @@ Service [string] #ResourceName
 }
 ```
 
-<a id="properties" class="xliff"></a>
-## Proprietà
+## <a name="properties"></a>Proprietà
 
 |  Proprietà  |  Descrizione   | 
 |---|---| 
@@ -52,8 +49,7 @@ Service [string] #ResourceName
 
 
 
-<a id="example" class="xliff"></a>
-## Esempio
+## <a name="example"></a>Esempio
 
 La configurazione seguente avvia i servizi "Servizi Desktop remoto" e "Audio di Windows".
 

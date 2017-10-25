@@ -10,15 +10,13 @@ ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 06/12/2017
 ---
-<a id="dsc-environment-resource" class="xliff"></a>
-# Risorsa Environment DSC
+# <a name="dsc-environment-resource"></a>Risorsa Environment DSC
 
 > Si applica a: Windows PowerShell 4.0, Windows PowerShell 5.0
 
 La risorsa __Environment__ in Windows PowerShell DSC (Desired State Configuration) fornisce un meccanismo per gestire le variabili di ambiente di sistema.
 
-<a id="syntax" class="xliff"></a>
-## Sintassi
+## <a name="syntax"></a>Sintassi
 ``` mof
 Environment [string] #ResourceName
 {
@@ -30,8 +28,7 @@ Environment [string] #ResourceName
 }
 ```
 
-<a id="properties" class="xliff"></a>
-## Proprietà
+## <a name="properties"></a>Proprietà
 
 |  Proprietà  |  Descrizione   | 
 |---|---| 
@@ -41,8 +38,7 @@ Environment [string] #ResourceName
 | DependsOn | Indica che prima di configurare la risorsa è necessario eseguire la configurazione di un'altra risorsa. Ad esempio, se l'ID del blocco script di configurazione della risorsa che si vuole eseguire per primo è __ResourceName__ e il tipo è __ResourceType__, la sintassi per usare questa proprietà è `DependsOn = "[ResourceType]ResourceName"`.| 
 | Value| Valore da assegnare alla variabile di ambiente.| 
 
-<a id="example" class="xliff"></a>
-## Esempio
+## <a name="example"></a>Esempio
 
 L'esempio seguente specifica che __TestEnvironmentVariable__ è presente e ha il valore __TestValue__. Se la variabile non è presente, viene creata.
 

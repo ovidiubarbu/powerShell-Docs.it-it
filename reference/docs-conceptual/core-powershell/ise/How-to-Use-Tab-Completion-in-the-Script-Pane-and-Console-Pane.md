@@ -1,5 +1,5 @@
 ---
-ms.date: 2017-06-05T00:00:00.000Z
+ms.date: 2017-06-05
 keywords: powershell,cmdlet
 title: "Come usare la funzionalità di completamento tramite TAB nel riquadro di script e nel riquadro della console"
 ms.assetid: 3b752c3c-0bd0-4eca-a2d3-2d5a37fd9d84

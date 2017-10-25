@@ -9,8 +9,7 @@ ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 06/12/2017
 ---
-<a id="creating-and-connecting-to-a-jea-endpoint" class="xliff"></a>
-# Creazione e connessione a un endpoint JEA
+# <a name="creating-and-connecting-to-a-jea-endpoint"></a>Creazione e connessione a un endpoint JEA
 Per creare un endpoint JEA, è necessario creare e registrare un file di configurazione di sessione di PowerShell appositamente configurato, che può essere generato con il cmdlet **New-PSSessionConfigurationFile**.
 
 ```powershell
@@ -142,8 +141,7 @@ Infine, dopo aver completato la personalizzazione della configurazione di sessio
 Register-PSSessionConfiguration -Name Maintenance -Path "C:\ProgramData\JEAConfiguration\Demo.pssc" 
 ```
 
-<a id="connect-to-a-jea-endpoint" class="xliff"></a>
-## Connettersi a un Endpoint JEA
+## <a name="connect-to-a-jea-endpoint"></a>Connettersi a un Endpoint JEA
 La connessione a un Endpoint JEA funziona nello stesso modo della connessione a qualsiasi altro endpoint di PowerShell.  È sufficiente specificare il nome dell'endpoint JEA come parametro "ConfigurationName" per **New-PSSession**, **Invoke-Command** o **Enter-PSSession**.
 
 ```powershell

@@ -10,15 +10,13 @@ ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 06/12/2017
 ---
-<a id="dsc-packagemanagement-resource" class="xliff"></a>
-# Risorsa PackageManagement DSC
+# <a name="dsc-packagemanagement-resource"></a>Risorsa PackageManagement DSC
 
 > Si applica a: Windows PowerShell 4.0, Windows PowerShell 5.0
 
 La risorsa **PackageManagement** in Windows PowerShell DSC (Desired State Configuration) fornisce un meccanismo per installare o disinstallare pacchetti di Gestione pacchetti in un nodo di destinazione. Questa risorsa richiede il modulo **PackageManagement**, disponibile da http://PowerShellGallery.com.
 
-<a id="syntax" class="xliff"></a>
-## Sintassi
+## <a name="syntax"></a>Sintassi
 
 ```
 PackageManagement [string] #ResourceName
@@ -35,8 +33,7 @@ PackageManagement [string] #ResourceName
 }
 ```
 
-<a id="properties" class="xliff"></a>
-## Proprietà
+## <a name="properties"></a>Proprietà
 |  Proprietà  |  Descrizione   | 
 |---|---| 
 | Nome| Specifica il nome del pacchetto da installare o disinstallare.| 
@@ -49,16 +46,14 @@ PackageManagement [string] #ResourceName
 | ProviderName| Specifica il nome di un provider di pacchetti entro il cui ambito limitare la ricerca di pacchetti. Per ottenere i nomi di provider di pacchetti, è possibile eseguire il cmdlet Get-PackageProvider.| 
 | AdditionalParameters| Parametri specifici del provider che vengono passati come una tabella hash. Ad esempio, per il provider NuGet è possibile passare parametri aggiuntivi come DestinationPath.| 
 
-<a id="additional-parameters" class="xliff"></a>
-## Parametri aggiuntivi
+## <a name="additional-parameters"></a>Parametri aggiuntivi
 Nella tabella seguente sono elencate le opzioni per la proprietà AdditionalParameters.
 |  Parametro  | Description   | 
 |---|---|
 | DestinationPath| Usato dai provider, ad esempio il provider NuGet predefinito. Specifica un percorso di file in cui si vuole installare il pacchetto.|
 | InstallationPolicy| Usato dai provider, ad esempio il provider NuGet predefinito. Determina se considerare attendibile l'origine del pacchetto. Uno dei valori possibili: "Untrusted", "Trusted".|
 
-<a id="example" class="xliff"></a>
-## Esempio
+## <a name="example"></a>Esempio
 
 Questo esempio installa il pacchetto NuGet **JQuery** e il modulo di PowerShell **GistProvider** usando la risorsa DSC **PackageManagement**. Questo esempio verifica innanzitutto che siano disponibili le origini di pacchetti richieste e quindi definisce lo stato previsto dei pacchetti **JQuery** e **GistProvider** (rispettivamente, NuGet e PowerShell).
 

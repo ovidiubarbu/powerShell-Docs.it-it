@@ -10,8 +10,7 @@ ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 06/12/2017
 ---
-<a id="setting-up-a-pull-client-using-configuration-names" class="xliff"></a>
-# Configurazione di un client di pull usando nomi di configurazione
+# <a name="setting-up-a-pull-client-using-configuration-names"></a>Configurazione di un client di pull usando nomi di configurazione
 
 > Si applica a: Windows PowerShell 5.0
 
@@ -73,8 +72,7 @@ Set-DSCLocalConfigurationManager localhost –Path .\PullClientConfigNames –Ve
 Con un server di pull SMB è necessario usare **ConfigurationID**.
 Per informazioni sulla configurazione di un server di pull usando **ConfigurationID**, vedere [Configurazione di un client di pull usando un ID configurazione](PullClientConfigNames.md).
 
-<a id="resource-and-report-servers" class="xliff"></a>
-## Server delle risorse e di report
+## <a name="resource-and-report-servers"></a>Server delle risorse e di report
 
 Se si specifica solo un blocco **ConfigurationRepositoryWeb** o **ConfigurationRepositoryShare** nella configurazione di Gestione configurazione locale, come nell'esempio precedente, il client di pull eseguirà il pull delle risorse dal server specificato, ma non invierà report al server.
 È possibile usare un singolo server di pull per le configurazioni, le risorse e i report, ma è necessario creare un blocco **ReportRepositoryWeb** per configurare la creazione di report.
@@ -149,8 +147,7 @@ configuration PullClientConfigNames
 PullClientConfigNames
 ```
 
-<a id="see-also" class="xliff"></a>
-## Vedere anche
+## <a name="see-also"></a>Vedere anche
 
 * [Configurazione di un client di pull usando un ID configurazione](PullClientConfigNames.md)
 * [Configurazione di un server di pull Web DSC](pullServer.md)

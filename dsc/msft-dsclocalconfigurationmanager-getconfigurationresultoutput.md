@@ -10,13 +10,11 @@ ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 06/12/2017
 ---
-<a id="getconfigurationresultoutput-method-of-the-msftdsclocalconfigurationmanager-class" class="xliff"></a>
-# Metodo GetConfigurationResultOutput della classe MSFT_DSCLocalConfigurationManager
+# <a name="getconfigurationresultoutput-method-of-the-msftdsclocalconfigurationmanager-class"></a>Metodo GetConfigurationResultOutput della classe MSFT_DSCLocalConfigurationManager
 
 Recupera l'output dell'agente di configurazione associato a un processo specifico.
 
-<a id="syntax" class="xliff"></a>
-Sintassi
+<a name="syntax"></a>Sintassi
 ------
 
 ```mof
@@ -27,8 +25,7 @@ uint32 GetConfigurationResultOutput(
 );
 ```
 
-<a id="parameters" class="xliff"></a>
-Parametri
+<a name="parameters"></a>Parametri
 ----------
 
 *jobId* \[in\]  
@@ -40,27 +37,23 @@ Specifica che l'output deve essere la continuazione di un segnalibro precedente.
 *output* \[out\]  
 L'output per il processo specificato.
 
-<a id="return-value" class="xliff"></a>
-## Valore restituito
+## <a name="return-value"></a>Valore restituito
 ------------
 
 In caso di esito positivo, il valore restituisce zero, altrimenti, restituisce un codice di errore.
 
-<a id="remarks" class="xliff"></a>
-## Osservazioni
+## <a name="remarks"></a>Osservazioni
 
 Si tratta di un metodo statico.
 
-<a id="requirements" class="xliff"></a>
-## Requisiti
+## <a name="requirements"></a>Requisiti
 ------------
 >**MOF:** DscCore.mof
 
 >**Spazio dei nomi**: Root\Microsoft\Windows\DesiredStateConfiguration
 
 
-<a id="see-also" class="xliff"></a>
-## Vedere anche
+## <a name="see-also"></a>Vedere anche
 
 
 [**MSFT_DSCLocalConfigurationManager**](msft-dsclocalconfigurationmanager.md)

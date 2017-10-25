@@ -11,11 +11,9 @@ ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 06/12/2017
 ---
-<a id="improvements-to-just-enough-administration-jea" class="xliff"></a>
-# Miglioramenti apportati a JEA (Just Enough Administration)
+# <a name="improvements-to-just-enough-administration-jea"></a>Miglioramenti apportati a JEA (Just Enough Administration)
 
-<a id="constrained-file-copy-tofrom-jea-endpoints" class="xliff"></a>
-## Copia di file vincolata in/da endpoint JEA
+## <a name="constrained-file-copy-tofrom-jea-endpoints"></a>Copia di file vincolata in/da endpoint JEA
 
 È ora possibile copiare in remoto file in/da un endpoint JEA e avere la certezza che l'utente che si connette non potrà copiare *nessun* file nel sistema.
 A questo scopo, è necessario configurare il file PSSC in modo da consentire il montaggio di un'unità utente per la connessione degli utenti.
@@ -48,8 +46,7 @@ Copy-Item -Path User:\SampleFile.txt -Destination . -FromSession $jeasession
 
 È quindi possibile scrivere funzioni personalizzate per elaborare i dati archiviati nell'unità utente e rendere disponibili tali dati agli utenti nel file di capacità del ruolo.
 
-<a id="support-for-group-managed-service-accounts" class="xliff"></a>
-## Supporto per gli account del servizio gestiti del gruppo
+## <a name="support-for-group-managed-service-accounts"></a>Supporto per gli account del servizio gestiti del gruppo
 
 In alcuni casi, per un'attività che un utente deve eseguire in una sessione JEA potrebbe essere necessario accedere a risorse che non si trovano nel computer locale.
 Quando una sessione JEA è configurata per l'uso di un account virtuale, qualsiasi tentativo di accedere a tali risorse risulterà proveniente dall'identità del computer locale, non dall'account virtuale o dall'utente connesso.
@@ -71,8 +68,7 @@ RunAsVirtualAccount = $false
 > Ogni utente che si connette condividerà la stessa identità degli account del servizio gestiti del gruppo, che può avere le autorizzazioni necessarie per accedere all'intera azienda.
 > Prestare molta attenzione quando si sceglie di usare un account del servizio gestito del gruppo e, quando possibile, dare sempre la preferenza agli account virtuali limitati al computer locale.
 
-<a id="conditional-access-policies" class="xliff"></a>
-## Criteri di accesso condizionale
+## <a name="conditional-access-policies"></a>Criteri di accesso condizionale
 
 JEA è ideale per limitare le operazioni che un utente può eseguire quando si connette a un sistema per gestirlo. Il problema si pone, tuttavia, quando si vuole limitare il *periodo di tempo* in cui un utente può utilizzare JEA.
 Sono state aggiunte opzioni di configurazione nei file di configurazione della sessione (con estensione pssc) per consentire di specificare gruppi di sicurezza a cui un utente deve appartenere per stabilire una sessione JEA.
@@ -94,8 +90,7 @@ RequiredGroups = @{ Or = '2FA-logon', 'smartcard-logon' }
 RequiredGroups = @{ And = 'elevated-jea', @{ Or = '2FA-logon', 'smartcard-logon' }}
 ```
 
-<a id="fixed-virtual-accounts-are-now-supported-on-windows-server-2008-r2" class="xliff"></a>
-## Correzione: gli account virtuali sono ora supportati in Windows Server 2008 R2
+## <a name="fixed-virtual-accounts-are-now-supported-on-windows-server-2008-r2"></a>Correzione: gli account virtuali sono ora supportati in Windows Server 2008 R2
 In WMF 5.1 è ora possibile usare account virtuali in Windows Server 2008 R2, abilitando configurazioni coerenti e parità di funzionalità in Windows Server 2008 R2 - 2016.
 Gli account virtuali continuano a non essere supportati quando si usa JEA in Windows 7.
 

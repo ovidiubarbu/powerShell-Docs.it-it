@@ -9,8 +9,7 @@ ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 06/12/2017
 ---
-<a id="report-configuration-status-to-central-location" class="xliff"></a>
-# Invio di report sullo stato della configurazione in una posizione centrale
+# <a name="report-configuration-status-to-central-location"></a>Invio di report sullo stato della configurazione in una posizione centrale
 
 È possibile inviare informazioni dettagliate sullo stato di configurazione di DSC a un server che esegue il servizio DSC. 
 

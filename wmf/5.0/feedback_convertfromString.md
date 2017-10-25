@@ -9,8 +9,7 @@ ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 06/12/2017
 ---
-<a id="extract-and-parse-structured-objects-out-of-string" class="xliff"></a>
-# Estrarre e analizzare oggetti strutturati da contenuto String
+# <a name="extract-and-parse-structured-objects-out-of-string"></a>Estrarre e analizzare oggetti strutturati da contenuto String
 Sono state anche introdotte alcune funzionalità aggiuntive per il cmdlet ConvertFrom-String:
 
 -   Rimozione della proprietà extent per il testo per impostazione predefinita. È possibile includerla con il parametro -IncludeExtent.
@@ -20,8 +19,7 @@ Sono state anche introdotte alcune funzionalità aggiuntive per il cmdlet Conver
 -   Un nuovo parametro -UpdateTemplate per salvare i risultati dell'algoritmo di apprendimento in un commento nel file di modello. In questo modo il processo di apprendimento (la fase più lenta) diventa un costo una tantum. L'esecuzione di Convert-String con un modello che contiene l'algoritmo di apprendimento codificato è ora quasi istantanea.
 
 
-<a id="extract-and-parse-structured-objects-out-of-string-content" class="xliff"></a>
-Estrarre e analizzare oggetti strutturati da contenuto String
+<a name="extract-and-parse-structured-objects-out-of-string-content"></a>Estrarre e analizzare oggetti strutturati da contenuto String
 ----------------------------------------------------------
 
 In collaborazione con [Microsoft Research](http://research.microsoft.com/) è stato aggiunto il nuovo cmdlet **ConvertFrom-String**.

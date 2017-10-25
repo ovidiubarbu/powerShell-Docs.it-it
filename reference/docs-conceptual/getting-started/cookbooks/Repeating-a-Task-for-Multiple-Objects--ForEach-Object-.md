@@ -1,5 +1,5 @@
 ---
-ms.date: 2017-06-05T00:00:00.000Z
+ms.date: 2017-06-05
 keywords: powershell,cmdlet
 title: "Ripetizione di un'attività per più oggetti ForEach-Object"
 ms.assetid: 6697a12d-2470-4ed6-b5bb-c35e5d525eb6

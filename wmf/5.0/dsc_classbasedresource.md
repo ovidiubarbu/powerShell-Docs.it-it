@@ -9,11 +9,9 @@ ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 06/12/2017
 ---
-<a id="class-based-dsc-resources" class="xliff"></a>
-# Risorse DSC basate su classi
+# <a name="class-based-dsc-resources"></a>Risorse DSC basate su classi
 
-<a id="defining-dsc-resources-with-classes" class="xliff"></a>
-## Definizione delle risorse DSC con le classi
+## <a name="defining-dsc-resources-with-classes"></a>Definizione delle risorse DSC con le classi
 
 In base ai commenti e ai suggerimenti ricevuti, la creazione di risorse DSC basate su classi è stata semplificata ed è di più facile comprensione. Le principali differenze tra una risorsa DSC basata su classe e un provider di risorse DSC basato su cmdlet sono:
 

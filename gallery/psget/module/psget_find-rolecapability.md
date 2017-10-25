@@ -10,13 +10,11 @@ ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 06/12/2017
 ---
-<a id="find-rolecapability" class="xliff"></a>
-# Find-RoleCapability
+# <a name="find-rolecapability"></a>Find-RoleCapability
 
 Consente di trovare funzionalità di ruolo nei moduli.
 
-<a id="description" class="xliff"></a>
-## Descrizione
+## <a name="description"></a>Descrizione
 Il cmdlet Find-RoleCapability consente di trovare funzionalità di ruolo PowerShell nei moduli. Find-RoleCapability cerca nei moduli dei repository registrati. Per ogni funzionalità di ruolo trovata, questo cmdlet restituisce un oggetto PSGetRoleCapabilityInfo. È possibile passare un oggetto PSGetRoleCapabilityInfo al cmdlet Install-Module per installare il modulo che contiene la funzionalità di ruolo.
 Le funzionalità di ruolo PowerShell definiscono i comandi, le applicazioni e così via a disposizione dell'utente in un endpoint JEA (Just Enough Administration). Le funzionalità di ruolo vengono definite da file con estensione psrc.
 
@@ -29,19 +27,16 @@ Le funzionalità di ruolo PowerShell definiscono i comandi, le applicazioni e co
 - Find-RoleCapability consente di filtrare in base al linguaggio di ricerca specifico del repository usando il parametro -Filter.
 - Find-RoleCapability consente di filtrare in base ai moduli di tutti o alcuni dei repository registrati.
 
-<a id="cmdlet-syntax" class="xliff"></a>
-## Sintassi del cmdlet
+## <a name="cmdlet-syntax"></a>Sintassi del cmdlet
 ```powershell
 Get-Command -Name Find-RoleCapability -Module PowerShellGet -Syntax
 ```
 
-<a id="cmdlet-online-help-reference" class="xliff"></a>
-## Riferimento per la Guida online sui cmdlet
+## <a name="cmdlet-online-help-reference"></a>Riferimento per la Guida online sui cmdlet
 
 [Find-RoleCapability](http://go.microsoft.com/fwlink/?LinkId=718029)
 
-<a id="example-commands" class="xliff"></a>
-## Comandi di esempio
+## <a name="example-commands"></a>Comandi di esempio
 ```powershell
 
 # Find a specific role capability

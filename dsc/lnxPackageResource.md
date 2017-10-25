@@ -10,13 +10,11 @@ ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 06/12/2017
 ---
-<a id="dsc-for-linux-nxpackage-resource" class="xliff"></a>
-# Risorsa nxPackage DSC per Linux
+# <a name="dsc-for-linux-nxpackage-resource"></a>Risorsa nxPackage DSC per Linux
 
 La risorsa **nxPackage** in PowerShell DSC (Desired State Configuration) fornisce un meccanismo per gestire i pacchetti in un nodo Linux.
 
-<a id="syntax" class="xliff"></a>
-## Sintassi
+## <a name="syntax"></a>Sintassi
 
 ```
 nxPackage <string> #ResourceName
@@ -33,8 +31,7 @@ nxPackage <string> #ResourceName
 }
 ```
 
-<a id="properties" class="xliff"></a>
-## Proprietà
+## <a name="properties"></a>Proprietà
 
 |  Proprietà |  Descrizione | 
 |---|---|
@@ -47,8 +44,7 @@ nxPackage <string> #ResourceName
 | ReturnCode| Codice restituito previsto. Se l'effettivo codice restituito non corrisponde al valore previsto specificato qui, la configurazione restituirà un errore.| 
 | DependsOn | Indica che prima di configurare la risorsa è necessario eseguire la configurazione di un'altra risorsa. Ad esempio, se il valore di **ID** del blocco script di configurazione della risorsa che si vuole eseguire per primo è **ResourceName** e il tipo è **ResourceType**, la sintassi per usare questa proprietà è `DependsOn = "[ResourceType]ResourceName"`.| 
 
-<a id="example" class="xliff"></a>
-## Esempio
+## <a name="example"></a>Esempio
 
 L'esempio seguente specifica che il pacchetto denominato "httpd" è installato in un computer Linux, usando lo strumento di gestione dei pacchetti "Yum".
 

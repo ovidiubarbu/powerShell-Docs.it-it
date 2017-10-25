@@ -9,8 +9,7 @@ ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 06/12/2017
 ---
-<a id="information-stream" class="xliff"></a>
-# Flusso di informazioni
+# <a name="information-stream"></a>Flusso di informazioni
 
 È ora possibile usare un nuovo flusso di informazioni strutturate per trasmettere dati strutturati tra uno script e il relativo host. **Write-Host** è stato inoltre aggiornato per generare l'output nel flusso di informazioni in cui è ora possibile acquisirlo o disattivarlo. Il nuovo cmdlet **Write-Information** (insieme a un'API WriteInformation corrispondente) usato con i parametri comuni **-InformationVariable** e **-InformationAction** consente miglioramenti a livello di flessibilità e funzionalità.
 

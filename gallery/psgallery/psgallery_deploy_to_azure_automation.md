@@ -10,8 +10,7 @@ ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 06/12/2017
 ---
-<a id="deploy-to-azure-automation" class="xliff"></a>
-Distribuire in Automazione di Azure
+<a name="deploy-to-azure-automation"></a>Distribuire in Automazione di Azure
 ===========================
 
 Il pulsante Deploy to Azure Automation (Distribuisci in Automazione di Azure) nella pagina dei dettagli dell'elemento consente di distribuire l'elemento da PowerShell Gallery in Automazione di Azure.

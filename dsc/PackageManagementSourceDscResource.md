@@ -10,15 +10,13 @@ ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 06/12/2017
 ---
-<a id="dsc-packagemanagementsource-resource" class="xliff"></a>
-# Risorsa PackageManagementSource DSC
+# <a name="dsc-packagemanagementsource-resource"></a>Risorsa PackageManagementSource DSC
 
 > Si applica a: Windows PowerShell 4.0, Windows PowerShell 5.0
 
 La risorsa **PackageManagementSource** in Windows PowerShell DSC (Desired State Configuration) fornisce un meccanismo per registrare o annullare la registrazione di origini di Gestione pacchetti in un nodo di destinazione. **Le origini di Gestione pacchetti registrate in questo modo vengono registrate nel contesto del sistema, utilizzabile dall'account di sistema o dal motore di DSC.** Questa risorsa richiede il modulo **PackageManagement**, disponibile da http://PowerShellGallery.com.
 
-<a id="syntax" class="xliff"></a>
-## Sintassi
+## <a name="syntax"></a>Sintassi
 
 ```
 PSModule [string] #ResourceName
@@ -32,8 +30,7 @@ PSModule [string] #ResourceName
 }
 ```
 
-<a id="properties" class="xliff"></a>
-## Proprietà
+## <a name="properties"></a>Proprietà
 |  Proprietà  |  Descrizione   | 
 |---|---| 
 | Nome| Specifica il nome dell'origine del pacchetto da registrare o di cui annullare la registrazione nel sistema.| 
@@ -43,8 +40,7 @@ PSModule [string] #ResourceName
 | SourceUri| Specifica l'URI dell'origine del pacchetto.| 
 | SourceCredential| Fornisce l'accesso al pacchetto in un'origine remota.| 
 
-<a id="example" class="xliff"></a>
-## Esempio
+## <a name="example"></a>Esempio
 
 Questo esempio registra l'origine del pacchetto http://nuget.org usando la risorsa DSC **PackageManagementSource**.
 

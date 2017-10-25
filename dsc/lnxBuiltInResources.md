@@ -10,13 +10,11 @@ ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 06/12/2017
 ---
-<a id="built-in-desired-state-configuration-resources-for-linux" class="xliff"></a>
-# Risorse DSC (Desired State Configuration) predefinite per Linux
+# <a name="built-in-desired-state-configuration-resources-for-linux"></a>Risorse DSC (Desired State Configuration) predefinite per Linux
 
 Le risorse sono blocchi predefiniti che è possibile usare per scrivere uno script di PowerShell DSC (Desired State Configuration). DSC per Linux include un set di funzionalità predefinite per la configurazione di risorse come file e cartelle, pacchetti, variabili di ambiente e servizi e processi.
 
-<a id="built-in-resources" class="xliff"></a>
-## Risorse predefinite 
+## <a name="built-in-resources"></a>Risorse predefinite 
 
 La tabella seguente contiene un elenco di queste risorse, insieme ai collegamenti agli argomenti che le descrivono dettagliatamente.
 

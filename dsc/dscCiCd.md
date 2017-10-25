@@ -10,8 +10,7 @@ ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 06/12/2017
 ---
-<a id="building-a-continuous-integration-and-continuous-deplyoment-pipeline-with-dsc" class="xliff"></a>
-# Creazione di una pipeline di integrazione continua e distribuzione continua con DSC
+# <a name="building-a-continuous-integration-and-continuous-deplyoment-pipeline-with-dsc"></a>Creazione di una pipeline di integrazione continua e distribuzione continua con DSC
 
 In questo esempio viene illustrato come creare una pipeline di integrazione continua e distribuzione continua (CI/CD) tramite PowerShell, DSC, Pester e Visual Studio Team Foundation Server (TFS).
 
@@ -19,8 +18,7 @@ Dopo averla creata e configurata, è possibile usare la pipeline per eseguire un
 
 Una pipeline CI/CD automatizzata consente di aggiornare il software in modo più rapido e affidabile, assicurandosi che tutto il codice venga testato e che una compilazione corrente del codice sia sempre disponibile.
 
-<a id="prerequisites" class="xliff"></a>
-## Prerequisiti
+## <a name="prerequisites"></a>Prerequisiti
 
 Per usare questo esempio, è necessario avere familiarità con quanto segue:
 
@@ -29,13 +27,11 @@ Per usare questo esempio, è necessario avere familiarità con quanto segue:
 - Framework di test [Pester](https://github.com/pester/Pester)
 - [Team Foundation Server](https://www.visualstudio.com/tfs/)
 
-<a id="what-you-will-need" class="xliff"></a>
-## Materiale necessario
+## <a name="what-you-will-need"></a>Materiale necessario
 
 Per compilare ed eseguire questo esempio, è necessario un ambiente con più computer e/o macchine virtuali.
 
-<a id="client" class="xliff"></a>
-### Client
+### <a name="client"></a>Client
 
 Si tratta del computer in cui verranno eseguite tutte le operazioni di impostazione ed esecuzione dell'esempio.
 
@@ -44,14 +40,12 @@ Il computer client deve essere un computer Windows dotato dei componenti seguent
 - un repository git locale clonato da https://github.com/PowerShell/Demo_CI
 - un editor di testo, ad esempio [Visual Studio Code](https://code.visualstudio.com/)
 
-<a id="tfssrv1" class="xliff"></a>
-### TFSSrv1
+### <a name="tfssrv1"></a>TFSSrv1
 
 Computer che ospita il server TFS in cui verranno definite la compilazione e la versione.
 In questo computer deve essere installato [Team Foundation Server 2017](https://www.visualstudio.com/tfs/).
 
-<a id="buildagent" class="xliff"></a>
-### BuildAgent
+### <a name="buildagent"></a>BuildAgent
 
 Computer che esegue l'agente di compilazione Windows che compila il progetto.
 In questo computer deve essere installato e in esecuzione un agente di compilazione Windows.
@@ -59,20 +53,17 @@ Per istruzioni su come installare ed eseguire un agente di compilazione Windows,
 
 In questo computer è anche necessario installare i moduli DSC `xDnsServer` e `xNetworking`.
 
-<a id="testagent1" class="xliff"></a>
-### TestAgent1
+### <a name="testagent1"></a>TestAgent1
 
 In questo esempio si tratta del computer configurato come server DNS dalla configurazione DSC.
 Nel computer deve essere in esecuzione [Windows Server 2016](https://www.microsoft.com/en-us/evalcenter/evaluate-windows-server-2016).
 
-<a id="testagent2" class="xliff"></a>
-### TestAgent2
+### <a name="testagent2"></a>TestAgent2
 
 Si tratta del computer che ospita il sito Web configurato in questo esempio.
 Nel computer deve essere in esecuzione [Windows Server 2016](https://www.microsoft.com/en-us/evalcenter/evaluate-windows-server-2016). 
 
-<a id="add-the-code-to-tfs" class="xliff"></a>
-## Aggiungere il codice a TFS
+## <a name="add-the-code-to-tfs"></a>Aggiungere il codice a TFS
 
 Come prima cosa si creerà un repository Git in TFS e si importerà il codice dal repository locale nel computer client.
 Se il repository Demo_CI non è stato ancora clonato nel computer client, eseguire questa operazione ora tramite il comando Git seguente:
@@ -98,14 +89,12 @@ Se il repository Demo_CI non è stato ancora clonato nel computer client, esegui
 >**Nota:** questo esempio usa il codice nel ramo `ci-cd-example` del repository Git.
 >Assicurarsi di specificare questo ramo come ramo predefinito nel progetto TFS e per i trigger CI/CD creati.
 
-<a id="understanding-the-code" class="xliff"></a>
-## Informazioni sul codice
+## <a name="understanding-the-code"></a>Informazioni sul codice
 
 Prima di creare le pipeline di compilazione e distribuzione, verrà ora esaminata una parte del codice per comprendere le operazioni eseguite da quest'ultimo.
 Nel computer client aprire l'editor di testo preferito e passare alla radice del repository Git Demo_CI.
 
-<a id="the-dsc-configuration" class="xliff"></a>
-### Configurazione DSC
+### <a name="the-dsc-configuration"></a>Configurazione DSC
 
 Aprire il file `DNSServer.ps1` dalla radice del repository locale Demo_CI, `./InfraDNS/Configs/DNSServer.ps1`.
 
@@ -173,8 +162,7 @@ Nel primo blocco di risorse la configurazione chiama [WindowsFeature](windowsFea
 Si noti che i due blocchi `xDnsRecord` sono racchiusi all'interno di cicli `foreach` che eseguono un'iterazione attraverso matrici nei dati di configurazione.
 Anche in questo caso i dati di configurazione vengono creati dallo script `DevEnv.ps1`, che verrà esaminato subito dopo.
 
-<a id="configuration-data" class="xliff"></a>
-### Dati di configurazione
+### <a name="configuration-data"></a>Dati di configurazione
 
 Il file `DevEnv.ps1`, nella radice del repository Demo_CI locale, `./InfraDNS/DevEnv.ps1`, specifica i dati di configurazione specifici dell'ambiente in una tabella hash e quindi passa la tabella hash alla funzione `New-DscConfigurationDataDocument`, definita in `DscPipelineTools.psm` (`./Assets/DscPipelineTools/DscPipelineTools.psm1`).
 
@@ -209,8 +197,7 @@ La funzione `New-DscConfigurationDataDocument`, definita in `\Assets\DscPipeline
 
 In questo caso viene usato solo il parametro `RawEnvData`.
 
-<a id="the-psake-build-script" class="xliff"></a>
-### Script di compilazione psake
+### <a name="the-psake-build-script"></a>Script di compilazione psake
 
 Lo script di compilazione [psake](https://github.com/psake/psake) definito in `Build.ps1` (nella radice del repository Demo_CI, `./InfraDNS/Build.ps1`) definisce le attività che fanno parte della compilazione
 e indica da quali altre attività ogni attività dipende. Quando viene richiamato, lo script psake assicura che l'attività specificata (o l'attività denominata `Default`, se non è specificata alcuna attività) venga eseguita,così come tutte le dipendenze. Questa esecuzione è ricorsiva, perché vengano eseguite anche le dipendenze delle dipendenze e così via.
@@ -249,97 +236,80 @@ Quando si crea la definizione di compilazione per questo esempio in TFS, il file
 
 Lo script di compilazione definisce le attività seguenti:
 
-<a id="generateenvironmentfiles" class="xliff"></a>
-#### GenerateEnvironmentFiles
+#### <a name="generateenvironmentfiles"></a>GenerateEnvironmentFiles
 
 Esegue `DevEnv.ps1`, che genera il file di dati di configurazione.
 
-<a id="installmodules" class="xliff"></a>
-#### InstallModules
+#### <a name="installmodules"></a>InstallModules
 
 Installa i moduli necessari per il file `DNSServer.ps1` di configurazione.
 
-<a id="scriptanalysis" class="xliff"></a>
-#### ScriptAnalysis
+#### <a name="scriptanalysis"></a>ScriptAnalysis
 
 Chiama [PSScriptAnalyzer](https://github.com/PowerShell/PSScriptAnalyzer).
 
-<a id="unittests" class="xliff"></a>
-#### UnitTests
+#### <a name="unittests"></a>UnitTests
 
 Esegue gli unit test [Pester](https://github.com/pester/Pester/wiki).
 
-<a id="compileconfigs" class="xliff"></a>
-#### CompileConfigs
+#### <a name="compileconfigs"></a>CompileConfigs
 
 Compila la configurazione (`DNSServer.ps1`) in un file MOF, usando i dati di configurazione generati dall'attività `GenerateEnvironmentFiles`.
 
-<a id="clean" class="xliff"></a>
-#### Clean
+#### <a name="clean"></a>Clean
 
 Crea le cartelle usate per l'esempio e rimuove tutti i risultati dei test, i file di dati di configurazione e i moduli delle esecuzioni precedenti.
 
-<a id="the-psake-deploy-script" class="xliff"></a>
-### Script di distribuzione psake
+### <a name="the-psake-deploy-script"></a>Script di distribuzione psake
 
 Lo script di distribuzione [psake](https://github.com/psake/psake) definito in `Deploy.ps1` (nella radice del repository Demo_CI, `./InfraDNS/Deploy.ps1`) definisce le attività che distribuiscono ed eseguono la configurazione.
 
 `Deploy.ps1` definisce le attività seguenti:
 
-<a id="deploymodules" class="xliff"></a>
-#### DeployModules
+#### <a name="deploymodules"></a>DeployModules
 
 Avvia una sessione di PowerShell in `TestAgent1` e installa i moduli contenenti le risorse DSC necessarie per la configurazione.
 
-<a id="deployconfigs" class="xliff"></a>
-#### DeployConfigs
+#### <a name="deployconfigs"></a>DeployConfigs
 
 Chiama il cmdlet [Start-DscConfiguration](/reference/5.1/PSDesiredStateConfiguration/Start-DscConfiguration.md) per eseguire la configurazione in `TestAgent1`.
 
-<a id="integrationtests" class="xliff"></a>
-#### IntegrationTests
+#### <a name="integrationtests"></a>IntegrationTests
 
 Esegue i test di integrazione di [Pester](https://github.com/pester/Pester/wiki).
 
-<a id="acceptancetests" class="xliff"></a>
-#### AcceptanceTests
+#### <a name="acceptancetests"></a>AcceptanceTests
 
 Esegue i test di accettazione di [Pester](https://github.com/pester/Pester/wiki).
 
-<a id="clean" class="xliff"></a>
-#### Clean
+#### <a name="clean"></a>Clean
 
 Rimuove tutti i moduli installati durante le esecuzioni precedenti e verifica l'esistenza della cartella dei risultati dei test.
 
-<a id="test-scripts" class="xliff"></a>
-### Script di test
+### <a name="test-scripts"></a>Script di test
 
 I test di accettazione e di integrazione e gli unit test sono definiti all'interno di script nella cartella `Tests` (nella radice del repository Demo_CI, `./InfraDNS/Tests`), ognuno all'interno di un file `DNSServer.tests.ps1` nella rispettiva cartella.
 
 I test di script usano la sintassi di [Pester](https://github.com/pester/Pester/wiki) e [PoshSpec](https://github.com/Ticketmaster/poshspec/wiki/Introduction).
 
-<a id="unit-tests" class="xliff"></a>
-#### Unit test
+#### <a name="unit-tests"></a>Unit test
 
 Gli unit test eseguono il test delle configurazioni DSC per garantire che durante l'esecuzione le configurazioni funzionino come previsto.
 Gli script di unit test script usano [Pester](https://github.com/pester/Pester/wiki).
 
-<a id="integration-tests" class="xliff"></a>
-#### Test di integrazione
+#### <a name="integration-tests"></a>Test di integrazione
 
 I test di integrazione eseguono il test della configurazione del sistema per garantire che, quando integrato con altri componenti, il sistema sia configurato come previsto. Questi test vengono eseguiti nel nodo di destinazione dopo la configurazione di quest'ultimo con DSC.
 Gli script dei test di integrazione usano una combinazione della sintassi di [Pester](https://github.com/pester/Pester/wiki) e di [PoshSpec](https://github.com/Ticketmaster/poshspec/wiki/Introduction).
 
-<a id="acceptance-tests" class="xliff"></a>
-#### Test di accettazione
+#### <a name="acceptance-tests"></a>Test di accettazione
 
 I test di accettazione eseguono il test del sistema per assicurarsi che funzioni come previsto.
 I test verificano, ad esempio, che una query a una pagina Web restituisca le informazioni corrette.
 Questi test vengono eseguiti in remoto dal nodo di destinazione per testare scenari reali.
 Gli script dei test di integrazione usano una combinazione della sintassi di [Pester](https://github.com/pester/Pester/wiki) e di [PoshSpec](https://github.com/Ticketmaster/poshspec/wiki/Introduction).
 
-<a id="define-the-build" class="xliff"></a>
-## Definire la compilazione
+## <a name="define-the-build"></a>Definire la compilazione
 
 Dopo aver caricato il codice in TFS e averne osservato il funzionamento, è possibile definire la compilazione.
 
@@ -355,8 +325,7 @@ Aggiungere alla definizione di compilazione i passaggi seguenti:
 
 Dopo l'aggiunta di queste istruzioni di compilazione, modificare le proprietà di ogni istruzione nel modo seguente:
 
-<a id="powershell-script" class="xliff"></a>
-### Script PowerShell
+### <a name="powershell-script"></a>Script PowerShell
 
 1. Impostare la proprietà **Tipo** su `File Path`.
 1. Impostare la proprietà **Percorso script** su `initiate.ps1`.
@@ -364,8 +333,7 @@ Dopo l'aggiunta di queste istruzioni di compilazione, modificare le proprietà d
 
 Questa istruzione di compilazione esegue il file `initiate.ps1`, che chiama lo script di compilazione psake.
 
-<a id="publish-test-results" class="xliff"></a>
-### Pubblicazione dei risultati dei test
+### <a name="publish-test-results"></a>Pubblicazione dei risultati dei test
 
 1. Impostare **Formato dei risultati test** su `NUnit`
 1. Impostare **File dei risultati del test** su `InfraDNS/Tests/Results/*.xml`
@@ -374,8 +342,7 @@ Questa istruzione di compilazione esegue il file `initiate.ps1`, che chiama lo s
 
 Questa istruzione di compilazione esegue gli unit test dello script Pester esaminato in precedenza e archivia i risultati nella cartella `InfraDNS/Tests/Results/*.xml`.
 
-<a id="copy-files" class="xliff"></a>
-### Copia dei file
+### <a name="copy-files"></a>Copia dei file
 
 1. Aggiungere ognuna delle righe seguenti a **Contenuto**:
 
@@ -390,16 +357,14 @@ Questa istruzione di compilazione esegue gli unit test dello script Pester esami
 
 Questa istruzione copia gli script di compilazione e di test nella directory di gestione temporanea, in modo che i risultati possano essere pubblicati come elementi di compilazione nel passaggio successivo.
 
-<a id="publish-artifact" class="xliff"></a>
-### Pubblicazione dell'elemento
+### <a name="publish-artifact"></a>Pubblicazione dell'elemento
 
 1. Impostare **Percorso per la pubblicazione** su `$(Build.ArtifactStagingDirectory)\`
 1. Impostare **Nome elemento** su `Deploy`
 1. Impostare **Tipo elemento** su `Server`
 1. Selezionare `Enabled` in **Opzioni di controllo**
 
-<a id="enable-continuous-integration" class="xliff"></a>
-## Abilitare l'integrazione continua
+## <a name="enable-continuous-integration"></a>Abilitare l'integrazione continua
 
 Ora verrà configurato un trigger che attiva la compilazione del progetto ogni volta che una modifica viene archiviata nel ramo `ci-cd-example` del repository Git.
 
@@ -411,8 +376,7 @@ Ora verrà configurato un trigger che attiva la compilazione del progetto ogni v
 
 Ora qualsiasi modifica al repository Git in TFS attiva una compilazione automatizzata.
 
-<a id="create-the-release-definition" class="xliff"></a>
-## Creare la definizione di versione
+## <a name="create-the-release-definition"></a>Creare la definizione di versione
 
 Verrà ora creata una definizione di versione, in modo che il progetto venga distribuito nell'ambiente di sviluppo a ogni archiviazione di codice.
 
@@ -428,38 +392,33 @@ Aggiungere alla definizione di versione i passaggi seguenti:
 
 Modificare i passaggi come segue:
 
-<a id="powershell-script" class="xliff"></a>
-### Script PowerShell
+### <a name="powershell-script"></a>Script PowerShell
 
 1. Impostare il campo **Percorso script** su `$(Build.DefinitionName)\Deploy\initiate.ps1"`
 1. Impostare il campo **Argomenti** su `-fileName Deploy`
 
-<a id="first-publish-test-results" class="xliff"></a>
-### Prima pubblicazione dei risultati dei test
+### <a name="first-publish-test-results"></a>Prima pubblicazione dei risultati dei test
 
 1. Selezionare `NUnit` per il campo **Formato dei risultati test**
 1. Impostare il campo **File dei risultati del test** su `$(Build.DefinitionName)\Deploy\InfraDNS\Tests\Results\Integration*.xml`
 1. Impostare il campo **Titolo esecuzione dei test** su `Integration`
 1. In **Opzioni di controllo** selezionare **Esegui sempre**
 
-<a id="second-publish-test-results" class="xliff"></a>
-### Seconda pubblicazione dei risultati dei test
+### <a name="second-publish-test-results"></a>Seconda pubblicazione dei risultati dei test
 
 1. Selezionare `NUnit` per il campo **Formato dei risultati test**
 1. Impostare il campo **File dei risultati del test** su `$(Build.DefinitionName)\Deploy\InfraDNS\Tests\Results\Acceptance*.xml`
 1. Impostare il campo **Titolo esecuzione dei test** su `Acceptance`
 1. In **Opzioni di controllo** selezionare **Esegui sempre**
 
-<a id="verify-your-results" class="xliff"></a>
-## Verificare i risultati
+## <a name="verify-your-results"></a>Verificare i risultati
 
 A questo punto, ogni volta che si esegue il push delle modifiche apportate al ramo `ci-cd-example` in TFS viene avviata una nuova compilazione.
 Se la compilazione viene completata correttamente, viene attivata una nuova distribuzione.
 
 Per controllare il risultato della distribuzione, aprire un browser nel computer client e passare a `www.contoso.com`.
 
-<a id="next-steps" class="xliff"></a>
-## Passaggi successivi
+## <a name="next-steps"></a>Passaggi successivi
 
 Questo esempio configura il server DNS `TestAgent1` in modo che l'URL `www.contoso.com` venga risolto in `TestAgent2` ma non distribuisca un sito Web.
 Lo scheletro per questa operazione è disponibile nel repository nella cartella `WebApp`.

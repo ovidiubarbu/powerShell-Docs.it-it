@@ -10,13 +10,11 @@ ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 06/12/2017
 ---
-<a id="get-installedscript" class="xliff"></a>
-# Get-InstalledScript
+# <a name="get-installedscript"></a>Get-InstalledScript
 
 Ottiene gli script installati in un computer.
 
-<a id="description" class="xliff"></a>
-## Descrizione
+## <a name="description"></a>Descrizione
 
 Il cmdlet Get-InstalledScript ottiene gli script di PowerShell installati in un computer.
 
@@ -29,20 +27,17 @@ Per ogni script installato, Get-InstalledScript restituisce un oggetto PSReposit
   - Se il parametro RequiredVersion non è specificato, Get-InstalledScript restituisce la versione più recente dello script installato maggiore o uguale alla versione minima specificata. Se la versione minima non è specificata, restituisce la versione più recente dello script. 
   - Se il parametro RequiredVersion è specificato, Get-InstalledScript restituisce unicamente la versione dello script installato che corrisponde esattamente alla versione specificata.
 
-<a id="cmdlet-syntax" class="xliff"></a>
-## Sintassi del cmdlet
+## <a name="cmdlet-syntax"></a>Sintassi del cmdlet
 
 ```powershell
 Get-Command -Name Get-InstalledScript -Module PowerShellGet -Syntax
 ```
 
-<a id="cmdlet-online-help-reference" class="xliff"></a>
-## Riferimento per la Guida online sui cmdlet
+## <a name="cmdlet-online-help-reference"></a>Riferimento per la Guida online sui cmdlet
 
 [Get-InstalledScript](http://go.microsoft.com/fwlink/?LinkId=619790)
 
-<a id="example-commands" class="xliff"></a>
-## Comandi di esempio
+## <a name="example-commands"></a>Comandi di esempio
 
 ```powershell
 

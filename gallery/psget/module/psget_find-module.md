@@ -10,12 +10,10 @@ ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 06/12/2017
 ---
-<a id="find-module" class="xliff"></a>
-# Find-Module
+# <a name="find-module"></a>Find-Module
 Consente di trovare moduli da una raccolta online che soddisfano i criteri specificati.
 
-<a id="description" class="xliff"></a>
-## Descrizione
+## <a name="description"></a>Descrizione
 Find-Module consente di trovare moduli da repository registrati che corrispondono a criteri specificati.
 Per ogni modulo trovato, Find-Module restituisce un oggetto PSRepositoryItemInfo che facoltativamente può essere inviato tramite pipe al cmdlet Install-Module per l'installazione di moduli.
 
@@ -29,19 +27,16 @@ Per ogni modulo trovato, Find-Module restituisce un oggetto PSRepositoryItemInfo
 - Find-Module consente di filtrare in base al linguaggio di ricerca specifico del repository usando il parametro -Filter.
 - Find-Module consente di filtrare in base ai moduli di tutti o alcuni dei repository registrati.
 
-<a id="cmdlet-syntax" class="xliff"></a>
-## Sintassi del cmdlet
+## <a name="cmdlet-syntax"></a>Sintassi del cmdlet
 ```powershell
 Get-Command -Name Find-Module -Module PowerShellGet -Syntax
 ```
 
-<a id="cmdlet-online-help-reference" class="xliff"></a>
-## Riferimento per la Guida online sui cmdlet
+## <a name="cmdlet-online-help-reference"></a>Riferimento per la Guida online sui cmdlet
 
 [Find-Module](http://go.microsoft.com/fwlink/?LinkID=398574)
 
-<a id="example-commands" class="xliff"></a>
-## Comandi di esempio
+## <a name="example-commands"></a>Comandi di esempio
 ```powershell
 # Find a specific module
 Find-Module Azure

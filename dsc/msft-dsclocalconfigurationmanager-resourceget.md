@@ -10,13 +10,11 @@ ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 06/12/2017
 ---
-<a id="resourceget-method-of-the-msftdsclocalconfigurationmanager-class" class="xliff"></a>
-# Metodo ResourceGet della classe MSFT_DSCLocalConfigurationManager
+# <a name="resourceget-method-of-the-msftdsclocalconfigurationmanager-class"></a>Metodo ResourceGet della classe MSFT_DSCLocalConfigurationManager
 
 Chiama direttamente il metodo di **Get** di una risorsa DSC.
 
-<a id="syntax" class="xliff"></a>
-Sintassi
+<a name="syntax"></a>Sintassi
 ------
 
 ```mof
@@ -28,8 +26,7 @@ uint32 ResourceGet(
 );
 ```
 
-<a id="parameters" class="xliff"></a>
-Parametri
+<a name="parameters"></a>Parametri
 ----------
 
 *ResourceType* \[in\]  
@@ -44,27 +41,23 @@ Specifica il nome della proprietà delle risorse e il relativo valore in una tab
 *configurations* \[out\]  
 In fase di restituzione, contiene un'istanza incorporata delle configurazioni.
 
-<a id="return-value" class="xliff"></a>
-## Valore restituito
+## <a name="return-value"></a>Valore restituito
 ------------
 
 In caso di esito positivo, il valore restituisce zero, altrimenti, restituisce un codice di errore.
 
-<a id="remarks" class="xliff"></a>
-## Osservazioni
+## <a name="remarks"></a>Osservazioni
 
 Si tratta di un metodo statico.
 
-<a id="requirements" class="xliff"></a>
-## Requisiti
+## <a name="requirements"></a>Requisiti
 ------------
 >**MOF:** DscCore.mof
 
 >**Spazio dei nomi**: Root\Microsoft\Windows\DesiredStateConfiguration
 
 
-<a id="see-also" class="xliff"></a>
-## Vedere anche
+## <a name="see-also"></a>Vedere anche
 
 
 [**MSFT_DSCLocalConfigurationManager**](msft-dsclocalconfigurationmanager.md)

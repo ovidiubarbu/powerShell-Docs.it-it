@@ -10,13 +10,11 @@ ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 06/12/2017
 ---
-<a id="install-module" class="xliff"></a>
-# Install-Module
+# <a name="install-module"></a>Install-Module
 
 Installa i moduli di PowerShell dal repository online nel computer locale.
 
-<a id="description" class="xliff"></a>
-## Descrizione
+## <a name="description"></a>Descrizione
 
 Il cmdlet Install-Module scarica uno o più moduli da una raccolta online, li convalida e li installa nell'ambito di installazione specificato nel computer locale.
 
@@ -32,8 +30,7 @@ Quando non viene definito alcun ambito o quando il valore del parametro Scope è
 - Il parametro Force reinstalla il modulo installato
 - RequiredVersion installa la versione specificata side-by-side con le versioni esistenti in PowerShell 5.0 o versioni successive.
 
-<a id="scope" class="xliff"></a>
-### Ambito
+### <a name="scope"></a>Ambito
 Specifica l'ambito di installazione del modulo. I valori accettabili per questo parametro sono AllUsers e CurrentUser.
 
 L'ambito di installazione predefinito è AllUsers.
@@ -42,8 +39,7 @@ L'ambito AllUsers permette di installare i moduli in un percorso accessibile a t
 
 L'ambito CurrentUser permette di installare i moduli solo in "$home\Documents\WindowsPowerShell\Modules", in modo che il modulo sia disponibile solo per l'utente corrente.
 
-<a id="notes" class="xliff"></a>
-## Note
+## <a name="notes"></a>Note
 
 Questo cmdlet viene eseguito in Windows PowerShell 3.0 o versioni successive di Windows PowerShell, in Windows 7 o Windows 2008 R2 e nelle versioni successive di Windows.
 
@@ -60,19 +56,16 @@ Per impostazione predefinita i moduli vengono installati nella cartella Programm
 Per prevenire l'esecuzione di moduli che contengono malware, i moduli installati non vengono importati automaticamente dall'installazione. Per una sicurezza ottimale, valutare il codice del modulo prima di eseguire qualsiasi cmdlet o funzione in un modulo per la prima volta.
 
 
-<a id="cmdlet-syntax" class="xliff"></a>
-## Sintassi del cmdlet
+## <a name="cmdlet-syntax"></a>Sintassi del cmdlet
 ```powershell
 Get-Command -Name Install-Module -Module PowerShellGet -Syntax
 ```
 
-<a id="cmdlet-online-help-reference" class="xliff"></a>
-## Riferimento per la Guida online sui cmdlet
+## <a name="cmdlet-online-help-reference"></a>Riferimento per la Guida online sui cmdlet
 
 [Install-Module](http://go.microsoft.com/fwlink/?LinkID=398573)
 
-<a id="example-commands" class="xliff"></a>
-## Comandi di esempio
+## <a name="example-commands"></a>Comandi di esempio
 
 ```powershell
 
@@ -113,8 +106,7 @@ Install-Module ContosoClient -Force
 Install-Module -Name 
 ```
 
-<a id="install-module-cmdlet-in-pipeline-operations" class="xliff"></a>
-## Cmdlet Install-Module in operazioni di pipeline
+## <a name="install-module-cmdlet-in-pipeline-operations"></a>Cmdlet Install-Module in operazioni di pipeline
 
 ```powershell
 
@@ -141,13 +133,11 @@ Get-InstalledModule
 
 ```
 
-<a id="side-by-side-version-support-on-powershell-50-or-newer" class="xliff"></a>
-## Supporto delle versioni side-by-side in PowerShell 5.0 o versione successiva
+## <a name="side-by-side-version-support-on-powershell-50-or-newer"></a>Supporto delle versioni side-by-side in PowerShell 5.0 o versione successiva
 
 PowerShellGet supporta versioni side-by-side dei moduli nei cmdlet Install-Module, Update-Module e Publish-Module eseguiti in Windows PowerShell 5.0 o versioni successive.
 
-<a id="install-module-examples" class="xliff"></a>
-### Esempi di Install-Module
+### <a name="install-module-examples"></a>Esempi di Install-Module
 
 ```powershell
 # Install a version of the module
@@ -179,8 +169,7 @@ Version    Name                                Repository           Description
 
 ```
 
-<a id="install-module-with-its-dependencies" class="xliff"></a>
-## Installare un modulo con le relative dipendenze
+## <a name="install-module-with-its-dependencies"></a>Installare un modulo con le relative dipendenze
 
 ```powershell
 
@@ -274,8 +263,7 @@ Version    Name                                Repository           Description
 
 ```
 
-<a id="error-scenarios" class="xliff"></a>
-## Scenari di errore
+## <a name="error-scenarios"></a>Scenari di errore
 
 ```powershell
 

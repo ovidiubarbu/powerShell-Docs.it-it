@@ -10,8 +10,7 @@ ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 06/12/2017
 ---
-<a id="writing-a-single-instance-dsc-resource-best-practice" class="xliff"></a>
-# Scrittura di una risorsa DSC a istanza singola (procedura consigliata)
+# <a name="writing-a-single-instance-dsc-resource-best-practice"></a>Scrittura di una risorsa DSC a istanza singola (procedura consigliata)
 
 >**Nota:** questo argomento illustra una procedura consigliata per la definizione di una risorsa DSC che consenta solo una singola istanza in una configurazione. Attualmente, non esiste una funzionalità DSC predefinita per eseguire questa operazione. La situazione potrebbe cambiare in futuro.
 

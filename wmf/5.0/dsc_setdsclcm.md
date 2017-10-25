@@ -9,8 +9,7 @@ ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 06/12/2017
 ---
-<a id="set-dsclocalconfigurationmanager-cmdlet-supports--force-parameter" class="xliff"></a>
-# Il cmdlet Set-DscLocalConfigurationManager supporta il parametro -Force
+# <a name="set-dsclocalconfigurationmanager-cmdlet-supports--force-parameter"></a>Il cmdlet Set-DscLocalConfigurationManager supporta il parametro -Force
 
 È stato aggiunto il supporto per il nuovo parametro al cmdlet Set-DscLocalConfigurationManager. Ciò consente all'utente di reimpostare la metaconfigurazione nel computer in modo deterministico quando sono in esecuzione in background altre operazioni come il controllo della coerenza, perché ciò causerà l'arresto di tutte le operazioni in esecuzione.
 

@@ -10,8 +10,7 @@ ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 06/12/2017
 ---
-<a id="contacting-item-owners" class="xliff"></a>
-# Come contattare i proprietari di elementi
+# <a name="contacting-item-owners"></a>Come contattare i proprietari di elementi
 
 Per contattare il proprietario di un particolare elemento, passare alla pagina dei dettagli dell'elemento stesso.
 Nella barra dei menu a sinistra è disponibile il collegamento di contatto Proprietari.

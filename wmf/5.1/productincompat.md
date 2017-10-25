@@ -9,25 +9,21 @@ ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 06/12/2017
 ---
-<a id="product-compatibility-status" class="xliff"></a>
-# Stato di compatibilità del prodotto
+# <a name="product-compatibility-status"></a>Stato di compatibilità del prodotto
 
-<a id="compatible" class="xliff"></a>
-## Compatibile:
+## <a name="compatible"></a>Compatibile:
 > I sistemi che eseguono le applicazioni server seguenti **possono eseguire** Windows Management Framework 5.1:
 
 - Microsoft SharePoint Server 2013
 - System Center 2012 Configuration Manager
 
-<a id="not-tested" class="xliff"></a>
-## Non testato:
+## <a name="not-tested"></a>Non testato:
 > I sistemi che eseguono le applicazioni server seguenti **non sono testati**  per eseguire Windows Management Framework 5.1:
 
 - Microsoft SharePoint Server 2010
 - System Center 2012 Virtual Machine Manager
 
-<a id="incompatible" class="xliff"></a>
-## Incompatibile:
+## <a name="incompatible"></a>Incompatibile:
 > I sistemi che eseguono le applicazioni server seguenti **non eseguono** Windows Management Framework 5.1:
 
 - Microsoft Exchange Server 2013

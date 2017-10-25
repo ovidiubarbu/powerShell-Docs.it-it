@@ -9,8 +9,7 @@ ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 06/12/2017
 ---
-<a id="specifying-cross-node-dependencies" class="xliff"></a>
-# Specifica delle dipendenze tra nodi
+# <a name="specifying-cross-node-dependencies"></a>Specifica delle dipendenze tra nodi
 
 Grazie alle risorse predefinite WaitFor\* (`WaitForAll`, `WaitForAny` e `WaitForSome`), è ora possibile specificare le dipendenze tra i computer durante le esecuzioni della configurazione, senza orchestrazione esterna. 
 

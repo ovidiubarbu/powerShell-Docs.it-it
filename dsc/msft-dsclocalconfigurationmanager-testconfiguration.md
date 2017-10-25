@@ -10,13 +10,11 @@ ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 06/12/2017
 ---
-<a id="testconfiguration-method-of-the-msftdsclocalconfigurationmanager-class" class="xliff"></a>
-# Metodo TestConfiguration della classe MSFT_DSCLocalConfigurationManager
+# <a name="testconfiguration-method-of-the-msftdsclocalconfigurationmanager-class"></a>Metodo TestConfiguration della classe MSFT_DSCLocalConfigurationManager
 
 Consente di inviare il documento di configurazione al nodo gestito e verificare la configurazione corrente sulla base del documento.
 
-<a id="syntax" class="xliff"></a>
-Sintassi
+<a name="syntax"></a>Sintassi
 ------
 
 ```mof
@@ -28,8 +26,7 @@ uint32 TestConfiguration(
 );
 ```
 
-<a id="parameters" class="xliff"></a>
-Parametri
+<a name="parameters"></a>Parametri
 ----------
 
 *configurationData* \[in\]  
@@ -44,27 +41,23 @@ In fase di restituzione, contiene un'istanza incorporata della classe **MSFT_Res
 *ResourcesNotInDesiredState* \[out\]  
 In fase di restituzione, contiene un'istanza incorporata della classe **MSFT_ResourceNotInDesiredState** che specifica le risorse che non si trovano nello stato desiderato.
 
-<a id="return-value" class="xliff"></a>
-## Valore restituito
+## <a name="return-value"></a>Valore restituito
 ------------
 
 In caso di esito positivo, il valore restituisce zero, altrimenti, restituisce un codice di errore.
 
-<a id="remarks" class="xliff"></a>
-## Osservazioni
+## <a name="remarks"></a>Osservazioni
 
 Si tratta di un metodo statico.
 
-<a id="requirements" class="xliff"></a>
-## Requisiti
+## <a name="requirements"></a>Requisiti
 ------------
 >**MOF:** DscCore.mof
 
 >**Spazio dei nomi**: Root\Microsoft\Windows\DesiredStateConfiguration
 
 
-<a id="see-also" class="xliff"></a>
-## Vedere anche
+## <a name="see-also"></a>Vedere anche
 
 
 [**MSFT_DSCLocalConfigurationManager**](msft-dsclocalconfigurationmanager.md)

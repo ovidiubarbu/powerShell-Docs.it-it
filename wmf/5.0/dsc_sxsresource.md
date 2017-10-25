@@ -9,15 +9,13 @@ ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 06/12/2017
 ---
-<a id="side-by-side-module-versioning-support-for-dsc-resources" class="xliff"></a>
-# Supporto delle versioni di moduli side-by-side per le risorse DSC
+# <a name="side-by-side-module-versioning-support-for-dsc-resources"></a>Supporto delle versioni di moduli side-by-side per le risorse DSC
 
 I moduli contenenti risorse DSC possono essere installati side-by-side e le configurazioni DSC possono usare una versione specifica della risorsa installata nel sistema.
 
 Per altre informazioni, vedere [Uso di risorse con più versioni](https://msdn.microsoft.com/powershell/dsc/sxsresource).
 
-<a id="known-issues" class="xliff"></a>
-## Problemi noti
+## <a name="known-issues"></a>Problemi noti
 
 In questa versione sono presenti i seguenti problemi noti per l'installazione side-by-side:
 

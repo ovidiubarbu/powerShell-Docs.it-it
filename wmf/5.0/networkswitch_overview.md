@@ -9,8 +9,7 @@ ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 06/12/2017
 ---
-<a id="network-switch-management-with-powershell" class="xliff"></a>
-# Gestione del commutatore di rete con PowerShell
+# <a name="network-switch-management-with-powershell"></a>Gestione del commutatore di rete con PowerShell
 
 Il cmdlet **Get-NetworkSwitchEthernetPort** restituisce ora le informazioni aggiuntive seguenti con le istanze:
 
@@ -19,8 +18,7 @@ Il cmdlet **Get-NetworkSwitchEthernetPort** restituisce ora le informazioni aggi
 - AccessVLAN - ID della VLAN associata a questa porta in modalità di accesso
 - TrunkedVLANList - elenco di ID delle VLAN associate a questa porta in modalità trunk
 
-<a id="fundamental-network-switch-management-with-windows-powershell" class="xliff"></a>
-## Operazioni fondamentali per la gestione del commutatore di rete con Windows PowerShell
+## <a name="fundamental-network-switch-management-with-windows-powershell"></a>Operazioni fondamentali per la gestione del commutatore di rete con Windows PowerShell
 
 I cmdlet per il commutatore di rete, introdotti in WMF 5.0, consentono di applicare la configurazione di commutatore, LAN virtuale (VLAN) e porte del commutatore di rete di livello 2 di base ai commutatori di rete con certificazione per il logo di Windows Server 2012 R2. Microsoft rinnova il suo impegno per il supporto della visione [DAL (Datacenter Abstraction Layer)](http://technet.microsoft.com/en-us/cloud/dal.aspx) e per dimostrare il valore per i clienti e partner in questo spazio. Usando questi cmdlet è possibile eseguire:
 

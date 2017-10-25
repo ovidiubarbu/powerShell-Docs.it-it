@@ -9,8 +9,7 @@ ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 06/12/2017
 ---
-<a id="help-support-for-dsc-configurations" class="xliff"></a>
-# Supporto della Guida per le configurazioni DSC
+# <a name="help-support-for-dsc-configurations"></a>Supporto della Guida per le configurazioni DSC
 
 È ora possibile usare la Guida basata su commenti all'interno delle configurazioni DSC e ottenere informazioni sull'utilizzo della configurazione quando si chiama la funzione di configurazione con `-?`:  
 

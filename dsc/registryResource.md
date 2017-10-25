@@ -10,15 +10,13 @@ ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 06/26/2017
 ---
-<a id="dsc-registry-resource" class="xliff"></a>
-# Risorsa Registry DSC
+# <a name="dsc-registry-resource"></a>Risorsa Registry DSC
 
 > Si applica a: Windows PowerShell 4.0, Windows PowerShell 5.0
 
 La risorsa **Registry** in Windows PowerShell DSC (Desired State Configuration) fornisce un meccanismo per gestire i valori e le chiavi del Registro di sistema in un nodo di destinazione.
 
-<a id="syntax" class="xliff"></a>
-## Sintassi
+## <a name="syntax"></a>Sintassi
 
 ```
 Registry [string] #ResourceName
@@ -34,8 +32,7 @@ Registry [string] #ResourceName
 }
 ```
 
-<a id="properties" class="xliff"></a>
-## Proprietà
+## <a name="properties"></a>Proprietà
 |  Proprietà  |  Descrizione   | 
 |---|---| 
 | Key| Indica il percorso della chiave del Registro di sistema per cui si vuole specificare un determinato stato. Questo percorso deve includere l'hive.| 
@@ -63,8 +60,7 @@ Registry [string] #ResourceName
 
 <li>Stringa espandibile (REG_EXPAND_SZ)</li></ul>
 
-<a id="example" class="xliff"></a>
-## Esempio
+## <a name="example"></a>Esempio
 Questo esempio garantisce che sia presente una chiave denominata "ExampleKey" nell'hive **HKEY\_LOCAL\_MACHINE**.
 ```powershell
 Configuration RegistryTest

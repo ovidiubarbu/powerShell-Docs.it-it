@@ -9,8 +9,7 @@ ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 06/12/2017
 ---
-<a id="new-temporaryfile" class="xliff"></a>
-# New-TemporaryFile
+# <a name="new-temporaryfile"></a>New-TemporaryFile
 A volte, negli script è necessario creare un file temporaneo. È possibile farlo facilmente con il cmdlet **New-TemporaryFile**:
 
 PS C:\\&gt; $tempFile = New-TemporaryFile

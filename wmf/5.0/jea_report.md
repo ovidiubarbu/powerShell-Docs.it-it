@@ -9,8 +9,7 @@ ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 06/12/2017
 ---
-<a id="reporting-on-jea" class="xliff"></a>
-# Creazione di report per JEA
+# <a name="reporting-on-jea"></a>Creazione di report per JEA
 Per creare report sullo stato della configurazione JEA, è possibile usare:
 1.  **Get-PSSessionConfiguration** per restituire un elenco di tutti gli endpoint registrati in un determinato computer.
 2.  **Get-PSSessionCapability** per ottenere un report delle capacità a disposizione di ogni utente su un endpoint specifico.

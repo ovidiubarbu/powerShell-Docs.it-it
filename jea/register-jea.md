@@ -10,16 +10,14 @@ ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 06/12/2017
 ---
-<a id="registering-jea-configurations" class="xliff"></a>
-# Registrazione delle configurazioni JEA
+# <a name="registering-jea-configurations"></a>Registrazione delle configurazioni JEA
 
 > Si applica a: Windows PowerShell 5.0
 
 L'ultimo passaggio prima di poter usare JEA dopo aver creato le [funzionalità del ruolo](role-capabilities.md) e i [file di configurazione sessione](session-configurations.md) consiste nel registrare l'endpoint JEA.
 Questo processo si applica alle informazioni sulla configurazione sessione per il sistema e rende gli endpoint disponibili per gli utenti e i motori di automazione.
 
-<a id="single-machine-configuration" class="xliff"></a>
-## Configurazione di un computer singolo
+## <a name="single-machine-configuration"></a>Configurazione di un computer singolo
 
 Per gli ambienti di piccole dimensioni, è possibile distribuire JEA registrando il file di configurazione sessione tramite il cmdlet [Register-PSSessionConfiguration](https://msdn.microsoft.com/en-us/powershell/reference/5.1/microsoft.powershell.core/register-pssessionconfiguration).
 
@@ -58,8 +56,7 @@ Register-PSSessionConfiguration -Path .\MyJEAConfig.pssc -Name 'JEAMaintenance' 
 Se la registrazione ha esito positivo, è possibile [usare JEA](using-jea.md).
 È possibile eliminare il file di configurazione sessione in qualsiasi momento perché non viene più usato dopo la registrazione.
 
-<a id="multi-machine-configuration-with-dsc" class="xliff"></a>
-## Configurazione di più computer con DSC
+## <a name="multi-machine-configuration-with-dsc"></a>Configurazione di più computer con DSC
 
 Se si distribuisce JEA su più computer, il modello di distribuzione più semplice consiste nell'usare la risorsa [Desired State Configuration (DSC)](https://msdn.microsoft.com/en-us/powershell/dsc/overview) di JEA per distribuire rapidamente e in modo coerente JEA in ogni computer.
 
@@ -119,8 +116,7 @@ Questa configurazione può quindi essere applicata in un sistema [chiamando dire
 La risorsa DSC consente anche di sostituire l'endpoint di comunicazione remota Microsoft.PowerShell predefinito.
 In questo caso, la risorsa registrerà automaticamente un endpoint di backup non vincolato denominato "Microsoft.PowerShell.Restricted" con il valore predefinito WinRM ACL (consentendo ai membri del gruppo Utenti gestione remota e Administrators locale di accedere all'endpoint).
 
-<a id="unregistering-jea-configurations" class="xliff"></a>
-## Annullamento delle configurazioni JEA
+## <a name="unregistering-jea-configurations"></a>Annullamento delle configurazioni JEA
 
 Per rimuovere un endpoint JEA da un sistema, usare il cmdlet [Unregister-PSSessionConfiguration](https://msdn.microsoft.com/powershell/reference/5.1/microsoft.powershell.core/Unregister-PSSessionConfiguration).
 L'annullamento della registrazione di un endpoint JEA impedirà agli utenti nuovi di creare sessioni JEA nuove nel sistema.
@@ -136,8 +132,7 @@ Unregister-PSSessionConfiguration -Name 'ContosoMaintenance' -Force
 > Questa operazione interromperà la maggior parte delle operazioni di gestione remota in corso, incluse altre sessioni di PowerShell, le chiamate WMI e alcuni strumenti di gestione.
 > Annullare solo la registrazione degli endpoint di PowerShell nelle finestre di manutenzione pianificata.
 
-<a id="next-steps" class="xliff"></a>
-## Passaggi successivi
+## <a name="next-steps"></a>Passaggi successivi
 
 - [Testare l'endpoint JEA](using-jea.md)
 

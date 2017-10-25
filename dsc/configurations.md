@@ -10,8 +10,7 @@ ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 06/12/2017
 ---
-<a id="dsc-configurations" class="xliff"></a>
-# Configurazioni DSC
+# <a name="dsc-configurations"></a>Configurazioni DSC
 
 >Si applica a: Windows PowerShell 4.0, Windows PowerShell 5.0
 
@@ -37,8 +36,7 @@ MyDscConfiguration
 
 Salvare lo script come file PS1.
 
-<a id="configuration-syntax" class="xliff"></a>
-## Sintassi di configurazione
+## <a name="configuration-syntax"></a>Sintassi di configurazione
 
 Uno script di configurazione è costituito dalle parti seguenti:
 
@@ -71,8 +69,7 @@ MyDscConfiguration
 
 In questo esempio è necessario specificare il nome del nodo passandolo come parametro **ComputerName** quando si compila la configurazione. Per impostazione predefinita, il nome è "localhost".
 
-<a id="compiling-the-configuration" class="xliff"></a>
-## Compilazione della configurazione
+## <a name="compiling-the-configuration"></a>Compilazione della configurazione
 
 Prima di poter applicare una configurazione, è necessario compilarla in un documento MOF. A questo scopo, è necessario chiamare la configurazione allo stesso modo in cui si chiama una funzione di PowerShell.  
 L'ultima riga dell'esempio contenente solo il nome della configurazione, chiama la configurazione.
@@ -119,8 +116,7 @@ Mode                LastWriteTime         Length Name
 -a----       10/23/2015   4:32 PM           2842 MyTestNode.mof
 ```      
 
-<a id="using-dependson" class="xliff"></a>
-## Uso di DependsOn
+## <a name="using-dependson"></a>Uso di DependsOn
 
 Un'utile parola chiave di DSC è **DependsOn**. In genere, anche se non necessariamente sempre, DSC applica le risorse nell'ordine in cui sono visualizzate all'interno della configurazione. Tuttavia, **DependsOn** specifica le dipendenze tra le risorse e Gestione configurazione locale garantisce che le risorse vengano applicate nell'ordine corretto, indipendentemente da quello in cui sono definite le rispettive istanze. Ad esempio, una configurazione può specificare che un'istanza della risorsa **User** dipende dalla presenza di un'istanza di **Group**:
 
@@ -144,8 +140,7 @@ Configuration DependsOnExample {
 DependsOnExample
 ```
 
-<a id="using-new-resources-in-your-configuration" class="xliff"></a>
-## Uso di nuove risorse nella configurazione
+## <a name="using-new-resources-in-your-configuration"></a>Uso di nuove risorse nella configurazione
 
 Eseguendo gli esempi precedenti, si ricevere un avviso che informa che è stata usata una risorsa senza importarla in modo esplicito.
 Oggi DSC include 12 risorse come parte del modulo PSDesiredStateConfiguration. Le altre risorse nei moduli esterni devono essere inserite in `$env:PSModulePath` nell'ordine perché Gestione configurazione locale sia in grado di riconoscerle. È possibile usare un nuovo cmdlet, [Get-DscResource](https://technet.microsoft.com/en-us/library/dn521625.aspx), per determinare le risorse installate nel sistema e disponibili per l'uso da parte di Gestione configurazione locale. Dopo che i moduli vengono inseriti in `$env:PSModulePath` e sono riconosciuti correttamente da [Get-DscResource](https://technet.microsoft.com/en-us/library/dn521625.aspx), devono comunque essere caricati nella configurazione. 
@@ -154,8 +149,7 @@ Oggi DSC include 12 risorse come parte del modulo PSDesiredStateConfiguration. L
 - **ModuleName** corrisponde al modo consigliato di usare **Import-DscResource**. Questo parametro accetta il nome del modulo che contiene le risorse da importare, nonché una matrice di stringhe di nomi di modulo. 
 - **Name** è il nome della risorsa da importare. Non si tratta del nome descrittivo restituito come "Name" da [Get-DscResource](https://technet.microsoft.com/en-us/library/dn521625.aspx), ma del nome di classe usato per definire lo schema della risorsa (restituito come **ResourceType** da [Get-DscResource](https://technet.microsoft.com/en-us/library/dn521625.aspx)). 
 
-<a id="see-also" class="xliff"></a>
-## Vedere anche
+## <a name="see-also"></a>Vedere anche
 * [Panoramica di Windows PowerShell DSC (Desired State Configuration)](overview.md).
 * [Risorse DSC](resources.md)
 * [Configurazione di Gestione configurazione locale](metaConfig.md)

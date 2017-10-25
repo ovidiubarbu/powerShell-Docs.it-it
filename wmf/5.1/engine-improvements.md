@@ -10,14 +10,12 @@ ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 06/12/2017
 ---
-<a id="powershell-engine-improvements" class="xliff"></a>
-#Miglioramenti apportati al motore di PowerShell
+#<a name="powershell-engine-improvements"></a>Miglioramenti apportati al motore di PowerShell
 
 I miglioramenti seguenti apportati al motore di PowerShell principale sono stati implementati in WMF 5.1:
 
 
-<a id="performance" class="xliff"></a>
-## Prestazioni ##
+## <a name="performance"></a>Prestazioni ##
 
 Le prestazioni sono migliorate in alcune aree importanti:
 

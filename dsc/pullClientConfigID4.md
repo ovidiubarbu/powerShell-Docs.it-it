@@ -10,8 +10,7 @@ ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 06/12/2017
 ---
-<a id="setting-up-a-pull-client-using-configuration-id-in-powershell-40" class="xliff"></a>
-# Configurazione di un client di pull usando un ID configurazione in PowerShell 4.0
+# <a name="setting-up-a-pull-client-using-configuration-id-in-powershell-40"></a>Configurazione di un client di pull usando un ID configurazione in PowerShell 4.0
 
 >Si applica a: Windows PowerShell 4.0, Windows PowerShell 5.0
 
@@ -46,12 +45,10 @@ Per applicare la configurazione, usare **Set-DscLocalConfigurationManager** con 
 Set-DSCLocalConfigurationManager –ComputerName localhost –Path . –Verbose.
 ```
 
-<a id="configuration-id" class="xliff"></a>
-## ID configurazione
+## <a name="configuration-id"></a>ID configurazione
 Lo script imposta la proprietà **ConfigurationID** di Gestione configurazione locale su un GUID creato in precedenza per questo scopo (è possibile creare un GUID usando il cmdlet **New-Guid**). Il valore di **ConfigurationID** viene usato da Gestione configurazione locale per trovare la configurazione appropriata nel server di pull. Il file MOF di configurazione nel server di pull deve essere denominato `ConfigurationID.mof`, dove *ConfigurationID* è il valore della proprietà **ConfigurationID** di Gestione configurazione locale del nodo di destinazione.
 
-<a id="pulling-from-an-smb-server" class="xliff"></a>
-## Pull da un server SMB
+## <a name="pulling-from-an-smb-server"></a>Pull da un server SMB
 
 Se il server di pull viene configurato come condivisione file SMB, piuttosto che come servizio Web, specificare **DscFileDownloadManager** invece di **WebDownLoadManager**.
 **DscFileDownloadManager** accetta una proprietà **SourcePath** invece di **ServerUrl**. Lo script seguente configura Gestione configurazione locale per il pull da una condivisione SMB denominata "SmbDscShare" su un server chiamato "CONTOSO-SERVER":
@@ -74,8 +71,7 @@ Configuration SimpleMetaConfigurationForPull
 SimpleMetaConfigurationForPull -Output "."
 ```
 
-<a id="see-also" class="xliff"></a>
-## Vedere anche
+## <a name="see-also"></a>Vedere anche
 
 - [Configurazione di un server di pull Web DSC](pullServer.md)
 - [Configurazione di un server di pull SMB DSC](pullServerSMB.md)

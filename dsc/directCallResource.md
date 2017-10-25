@@ -10,8 +10,7 @@ ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 06/12/2017
 ---
-<a id="calling-dsc-resource-methods-directly" class="xliff"></a>
-# Chiamata diretta dei metodi delle risorse DSC
+# <a name="calling-dsc-resource-methods-directly"></a>Chiamata diretta dei metodi delle risorse DSC
 
 >Si applica a: Windows PowerShell 5.0
 
@@ -23,8 +22,7 @@ Quando si chiama il cmdlet **Invoke-DscResource**, specificare il metodo o la fu
 
 Di seguito vengono riportati alcuni esempi di chiamate dirette ai metodi della risorsa:
 
-<a id="ensure-a-file-is-present" class="xliff"></a>
-## Verificare che sia presente un file
+## <a name="ensure-a-file-is-present"></a>Verificare che sia presente un file
 
 ```powershell
 $result = Invoke-DscResource -Name File -Method Set -Property @{
@@ -33,8 +31,7 @@ $result = Invoke-DscResource -Name File -Method Set -Property @{
 $result | fl
 ```
 
-<a id="test-that-a-file-is-present" class="xliff"></a>
-## Eseguire un test per verificare la presenza di un file
+## <a name="test-that-a-file-is-present"></a>Eseguire un test per verificare la presenza di un file
 
 ```powershell
 $result = Invoke-DscResource -Name File -Method Test -Property @{
@@ -43,8 +40,7 @@ $result = Invoke-DscResource -Name File -Method Test -Property @{
 $result | fl
 ```
 
-<a id="get-the-contents-of-file" class="xliff"></a>
-## Ottenere il contenuto del file
+## <a name="get-the-contents-of-file"></a>Ottenere il contenuto del file
 
 ```powershell
 $result = Invoke-DscResource -Name File -Method Get -Property @{
@@ -55,8 +51,7 @@ $result.ItemValue | fl
 
 >**Nota:** la chiamata diretta di metodi di risorse composite non è supportata. Chiamare invece i metodi delle risorse sottostanti che costituiscono la risorsa composita.
 
-<a id="see-also" class="xliff"></a>
-## Vedere anche
+## <a name="see-also"></a>Vedere anche
 - [Scrittura di una risorsa DSC personalizzata con MOF](authoringResourceMOF.md) 
 - [Scrittura di una risorsa DSC personalizzata con classi di PowerShell](authoringResourceClass.md)
 - [Debug di risorse DSC](debugResource.md)

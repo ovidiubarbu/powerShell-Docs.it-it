@@ -10,8 +10,7 @@ ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 06/12/2017
 ---
-<a id="deleting-items" class="xliff"></a>
-# Eliminazione di elementi
+# <a name="deleting-items"></a>Eliminazione di elementi
 
 PowerShell Gallery non supporta l'eliminazione permanente di elementi perché questo impedirebbe la disponibilità di altri elementi dipendenti da quelli eliminati.
 

@@ -10,15 +10,13 @@ ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 06/12/2017
 ---
-<a id="using-jea" class="xliff"></a>
-# Uso di JEA
+# <a name="using-jea"></a>Uso di JEA
 
 > Si applica a: Windows PowerShell 5.0
 
 Questo argomento illustra i vari modi in cui è possibile connettersi e usare un endpoint JEA.
 
-<a id="using-jea-interactively" class="xliff"></a>
-## Uso interattivo di JEA
+## <a name="using-jea-interactively"></a>Uso interattivo di JEA
 
 Se si esegue il test della configurazione JEA oppure se gli utenti devono eseguire attività semplici, è possibile usare JEA allo stesso modo di una sessione di comunicazione remota di PowerShell regolare.
 Per attività di comunicazione remota complesse, è consigliabile invece usare la [comunicazione implicita](#using-jea-with-implicit-remoting) per renderla più semplice agli utenti consentendo di operare localmente con gli oggetti di dati.
@@ -62,8 +60,7 @@ Start-VM -VMName 'SQL01'
 
 Per chiamate di comandi più complesse che rendono difficile questo approccio, è consigliabile usare la [comunicazione remota implicita](#using-jea-with-implicit-remoting) o la [creazione di funzioni personalizzate](role-capabilities.md#creating-custom-functions) che eseguono il wrapping della funzionalità voluta.
 
-<a id="using-jea-with-implicit-remoting" class="xliff"></a>
-## Uso di JEA con comunicazione remota implicita
+## <a name="using-jea-with-implicit-remoting"></a>Uso di JEA con comunicazione remota implicita
 
 PowerShell supporta un modello di comunicazione remota alternativa in cui è possibile importare i cmdlet del proxy da un computer remoto nel computer locale e usarli come se fossero comandi locali.
 Questo modello viene chiamato comunicazione remota implicita ed è illustrato in maniera dettagliata in [questo *post di blog* Hey, Scripting Guy!](https://blogs.technet.microsoft.com/heyscriptingguy/2013/09/08/remoting-the-implicit-way/)
@@ -112,8 +109,7 @@ Import-PSSession -Session $jeasession -Prefix 'JEA' -CommandName $filteredComman
 È anche possibile salvare i cmdlet proxy da una comunicazione remota implicita tramite [Export-PSSession](https://msdn.microsoft.com/powershell/reference/5.1/microsoft.powershell.utility/Export-PSSession).
 Per altre informazioni sulla comunicazione remota implicita, vedere la documentazione della Guida per [Import-PSSession](https://msdn.microsoft.com/en-us/powershell/reference/5.1/microsoft.powershell.utility/import-pssession) e [Import-Module](https://msdn.microsoft.com/en-us/powershell/reference/5.1/microsoft.powershell.core/import-module).
 
-<a id="using-jea-programatically" class="xliff"></a>
-## Uso di JEA in modo programmato
+## <a name="using-jea-programatically"></a>Uso di JEA in modo programmato
 
 JEA può anche essere usato in sistemi di automazione e applicazioni utente, ad esempio app di supporto tecnico interno e siti Web.
 L'approccio è simile alla compilazione di applicazioni che comunicano con gli endpoint di PowerShell non vincolati, tenendo presente che JEA limita i comandi che possono essere eseguiti nella sessione remota.
@@ -171,8 +167,7 @@ using (Runspace runspace = RunspaceFactory.CreateRunspace(connectionInfo))
 }
 ```
 
-<a id="using-jea-with-powershell-direct" class="xliff"></a>
-## Uso di JEA con PowerShell Direct
+## <a name="using-jea-with-powershell-direct"></a>Uso di JEA con PowerShell Direct
 
 Hyper-V in Windows 10 e in Windows Server 2016 offre [PowerShell Direct](https://msdn.microsoft.com/en-us/virtualization/hyperv_on_windows/user_guide/vmsession), una funzionalità che consente agli amministratori di Hyper-V di gestire le macchine virtuali con PowerShell, indipendentemente dalla configurazione di rete o dalle impostazioni di gestione remota della macchina virtuale.
 

@@ -9,11 +9,9 @@ ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 06/12/2017
 ---
-<a id="known-issues-and-limitations" class="xliff"></a>
-# Limitazioni e problemi noti
+# <a name="known-issues-and-limitations"></a>Limitazioni e problemi noti
 
-<a id="powershell-shortcuts-are-broken-when-used-for-the-first-time" class="xliff"></a>
-I collegamenti per PowerShell non funzionano la prima volta
+<a name="powershell-shortcuts-are-broken-when-used-for-the-first-time"></a>I collegamenti per PowerShell non funzionano la prima volta
 ------------------------------------------------------------
 
 **Soluzione:** eseguire una delle operazioni seguenti:
@@ -24,8 +22,7 @@ I collegamenti per PowerShell non funzionano la prima volta
 Dopo aver eseguito una delle azioni precedenti, i collegamenti per PowerShell funzioneranno. Queste azioni devono essere eseguite una sola volta.
 
 
-<a id="powershell-modules-and-dsc-resources-report-errors-about-executionpolicy-on-windows-7" class="xliff"></a>
-I moduli di PowerShell e le risorse DSC segnalano errori per ExecutionPolicy in Windows 7
+<a name="powershell-modules-and-dsc-resources-report-errors-about-executionpolicy-on-windows-7"></a>I moduli di PowerShell e le risorse DSC segnalano errori per ExecutionPolicy in Windows 7
 -------------------------------------------------------------------------------------
 In Windows 7 l'uso dei moduli di PowerShell e delle risorse DSC potrebbe causare la segnalazione di errori per ExecutionPolicy.
 
@@ -35,8 +32,7 @@ In Windows 7 l'uso dei moduli di PowerShell e delle risorse DSC potrebbe causare
 Set-ExecutionPolicy RemoteSigned
 ```
 
-<a id="connecting-to-an-old-remote-exchange-endpoint-causes-a-crash" class="xliff"></a>
-La connessione a un endpoint di Exchange remoto precedente causa un arresto anomalo
+<a name="connecting-to-an-old-remote-exchange-endpoint-causes-a-crash"></a>La connessione a un endpoint di Exchange remoto precedente causa un arresto anomalo
 ------------------------------------------------------------
 
 L'endpoint di Exchange precedente reindirizza a un nuovo endpoint. È presente un bug nella logica di reindirizzamento che causa un arresto anomalo.
@@ -44,16 +40,14 @@ L'endpoint di Exchange precedente reindirizza a un nuovo endpoint. È presente u
 **Soluzione:** connettersi direttamente al nuovo endpoint.
 
 
-<a id="software-inventory-logging-feature-is-erroneously-stopped-after-wmf-50-installation-on-windows-server-2012-r2" class="xliff"></a>
-La funzionalità Registrazione inventario software viene arrestata erroneamente dopo l'installazione di WMF 5.0 in Windows Server 2012 R2
+<a name="software-inventory-logging-feature-is-erroneously-stopped-after-wmf-50-installation-on-windows-server-2012-r2"></a>La funzionalità Registrazione inventario software viene arrestata erroneamente dopo l'installazione di WMF 5.0 in Windows Server 2012 R2
 -------------------------------------------------------------------------------------------------------------
 
 Quando si installa WMF 5.0 in un computer Windows Server 2012 R2 in cui è già in esecuzione Registrazione inventario software, questa funzionalità viene arrestata erroneamente dopo l'installazione.
 
 **Soluzione:** eseguire il cmdlet Start-SilLogging una volta dopo l'installazione di WMF, perché il processo di installazione arresta erroneamente la funzionalità Registrazione inventario software.
 
-<a id="get-childitem-does-not-work-if--literalpath-and--recurse-are-used-together" class="xliff"></a>
-Get-ChildItem non funziona se si usano insieme -LiteralPath e -Recurse
+<a name="get-childitem-does-not-work-if--literalpath-and--recurse-are-used-together"></a>Get-ChildItem non funziona se si usano insieme -LiteralPath e -Recurse
 --------------------------------------------------------------------------
 
 Se un nome di directory contiene un carattere jolly non valido, Get-ChildItem non produrrà i risultati previsti quando si usano insieme entrambe le opzioni -LiteralPath e -Recurse.
@@ -61,8 +55,7 @@ Se un nome di directory contiene un carattere jolly non valido, Get-ChildItem no
 **Soluzione:** non è ideale, ma la soluzione attuale consiste nell'implementare la ricorsione nello script anziché affidarsi al cmdlet.
 
 
-<a id="sysprep-fails-after-wmf-50-installation" class="xliff"></a>
-Sysprep smette di funzionare dopo l'installazione di WMF 5.0
+<a name="sysprep-fails-after-wmf-50-installation"></a>Sysprep smette di funzionare dopo l'installazione di WMF 5.0
 ----------------------------------------
 
 Esistono due possibili soluzioni al problema in base alla versione di Windows Server in esecuzione.

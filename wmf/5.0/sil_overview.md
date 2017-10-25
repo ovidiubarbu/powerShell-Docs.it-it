@@ -9,8 +9,7 @@ ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 06/12/2017
 ---
-<a id="software-inventory-logging-sil" class="xliff"></a>
-# Registrazione inventario software (SIL)
+# <a name="software-inventory-logging-sil"></a>Registrazione inventario software (SIL)
 
 **IMPORTANTE: ** *quando si installa WMF 5.0 in un computer Windows Server 2012 R2 Server che già esegue SIL, è necessario eseguire il cmdlet Start-SilLogging una volta dopo l'installazione di WMF, perché il processo di installazione arresta erroneamente la funzionalità Registrazione inventario software.*
 

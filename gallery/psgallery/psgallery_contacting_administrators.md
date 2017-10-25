@@ -10,11 +10,9 @@ ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 06/12/2017
 ---
-<a id="contact-gallery-administrators" class="xliff"></a>
-# Contattare gli amministratori di PowerShell Gallery
+# <a name="contact-gallery-administrators"></a>Contattare gli amministratori di PowerShell Gallery
 
-<a id="when-to-contact-gallery-administrators" class="xliff"></a>
-## Quando contattare gli amministratori di PowerShell Gallery
+## <a name="when-to-contact-gallery-administrators"></a>Quando contattare gli amministratori di PowerShell Gallery
 
 Contattare gli amministratori di PowerShell Gallery nelle situazioni seguenti:
 
@@ -24,8 +22,7 @@ Contattare gli amministratori di PowerShell Gallery nelle situazioni seguenti:
 4. È in corso una controversia con altri utenti riguardo uno o più nomi e non si è in grado di giungere a una soluzione contattando tali utenti.
 5. Si è stati contattati dagli amministratori di PowerShell Gallery in relazione agli elementi pubblicati e si desidera rispondere.
 
-<a id="how-to-contact-gallery-administrators" class="xliff"></a>
-## Come contattare gli amministratori di PowerShell Gallery
+## <a name="how-to-contact-gallery-administrators"></a>Come contattare gli amministratori di PowerShell Gallery
 
 1. Inviare un messaggio di posta elettronica: cgadmin@microsoft.com.
 2. Per segnalare un abuso, utilizzare il collegamento Report Abuse (Segnala abusi) disponibile sotto le informazioni sull'elemento nel riquadro di sinistra.

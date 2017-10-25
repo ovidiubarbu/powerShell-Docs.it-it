@@ -10,8 +10,7 @@ ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 06/26/2017
 ---
-<a id="dsc-windowsoptionalfeatureset-resource" class="xliff"></a>
-# Risorsa WindowsOptionalFeatureSet DSC
+# <a name="dsc-windowsoptionalfeatureset-resource"></a>Risorsa WindowsOptionalFeatureSet DSC
 
 > Si applica a: Windows PowerShell 5.0
 
@@ -19,8 +18,7 @@ La risorsa **WindowsOptionalFeatureSet** in Windows PowerShell DSC (Desired Stat
 
 Usare questa risorsa quando si vogliono configurare diverse istanze di Windows facoltative nello stesso stato.
 
-<a id="syntax" class="xliff"></a>
-## Sintassi
+## <a name="syntax"></a>Sintassi
 
 ```
 WindowsOptionalFeature [string] #ResourceName
@@ -37,8 +35,7 @@ WindowsOptionalFeature [string] #ResourceName
 }
 ```
 
-<a id="properties" class="xliff"></a>
-## Proprietà
+## <a name="properties"></a>Proprietà
 
 |  Proprietà  |  Descrizione   | 
 |---|---| 

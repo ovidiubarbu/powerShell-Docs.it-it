@@ -11,15 +11,12 @@ ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 06/12/2017
 ---
-<a id="improvements-to-package-management-in-wmf-51" class="xliff"></a>
-# Miglioramenti della gestione pacchetti in WMF 5.1#
+# <a name="improvements-to-package-management-in-wmf-51"></a>Miglioramenti della gestione pacchetti in WMF 5.1#
 
-<a id="improvements-in-packagemanagement" class="xliff"></a>
-## Miglioramenti appartati a Gestione pacchetti ##
+## <a name="improvements-in-packagemanagement"></a>Miglioramenti appartati a Gestione pacchetti ##
 Di seguito vengono descritte le correzioni apportate in WMF 5.1: 
 
-<a id="version-alias" class="xliff"></a>
-### Alias della versione
+### <a name="version-alias"></a>Alias della versione
 
 **Scenario**: se si dispone delle versioni 1.0 e 2.0 di un pacchetto, P1, installate nel sistema e si vuole disinstallare la versione 1.0, è necessario eseguire `Uninstall-Package -Name P1 -Version 1.0` e attendere che la versione 1.0 venga disinstallata dopo l'esecuzione del cmdlet. Tuttavia, il risultato è che viene disinstallata la versione 2.0.  
     
@@ -27,8 +24,7 @@ Ciò si verifica perché il parametro `-Version` è un alias del parametro `-Min
     
 **Soluzione**: rimozione completa dell'alias `-Version` in PackageManagement (noto anche come OneGet) e PowerShellGet. 
 
-<a id="multiple-prompts-for-bootstrapping-the-nuget-provider" class="xliff"></a>
-### Più richieste per l'avvio del provider NuGet
+### <a name="multiple-prompts-for-bootstrapping-the-nuget-provider"></a>Più richieste per l'avvio del provider NuGet
 
 **Scenario**: quando si esegue `Find-Module` o `Install-Module` o altri cmdlet PackageManagement nel computer in uso per la prima volta, PackageManagement tenta di avviare il provider NuGet. Ciò avviene perché il provider PowerShellGet usa anche il provider NuGet per scaricare i moduli di PowerShell. PackageManagement quindi chiede all'utente l'autorizzazione per installare il provider NuGet. Dopo che l'utente seleziona "Sì" per l'avvio, verrà installata la versione più recente del provider NuGet. 
     
@@ -39,8 +35,7 @@ Se tuttavia si dispone di una versione precedente del provider NuGet installata 
 È possibile aggirare il problema anche eliminando manualmente la versione precedente del provider NuGet (NuGet-Anycpu.exe), se presente, da $env:Programmi\PackageManagement\ProviderAssemblies $env:LOCALAPPDATA\PackageManagement\ProviderAssemblies
 
 
-<a id="support-for-packagemanagement-on-computers-with-intranet-access-only" class="xliff"></a>
-### Supporto per PackageManagement nei computer solo con accesso Intranet
+### <a name="support-for-packagemanagement-on-computers-with-intranet-access-only"></a>Supporto per PackageManagement nei computer solo con accesso Intranet
 
 **Scenario**: in uno scenario aziendale gli utenti operano in un ambiente in cui non è presente alcun accesso Internet, ma solo Intranet. In WMF 5.0, PackageManagement non supporta questo caso.
 
@@ -55,21 +50,18 @@ Se tuttavia si dispone di una versione precedente del provider NuGet installata 
 3. Copiare i file binari in una cartella o in una condivisione di rete a cui il computer Intranet può accedere e quindi installare il provider NuGet con `Install-PackageProvider -Name NuGet -Source <Path to folder>`.
 
 
-<a id="event-logging-improvements" class="xliff"></a>
-### Miglioramenti apportati alla registrazione di eventi
+### <a name="event-logging-improvements"></a>Miglioramenti apportati alla registrazione di eventi
 
 Quando si installano i pacchetti, si modifica lo stato del computer. In WMF 5.1, PackageManagement ora registra gli eventi nel registro eventi di Windows per le attività `Install-Package`, `Uninstall-Package` e `Save-Package`. Il registro eventi è identico a quello di PowerShell, vale a dire `Microsoft-Windows-PowerShell, Operational`.
 
-<a id="support-for-basic-authentication" class="xliff"></a>
-### Supporto per l'autenticazione di base
+### <a name="support-for-basic-authentication"></a>Supporto per l'autenticazione di base
 
 In WMF 5.1, PackageManagement supporta la ricerca e l'installazione dei pacchetti da un repository che richiede l'autenticazione di base. È possibile fornire le credenziali per i cmdlet `Find-Package` e `Install-Package`. Ad esempio:
 
 ``` PowerShell
 Find-Package -Source <SourceWithCredential> -Credential (Get-Credential)
 ```
-<a id="support-for-using-packagemanagement-behind-a-proxy" class="xliff"></a>
-### Supporto per l'utilizzo di PackageManagement dietro un proxy
+### <a name="support-for-using-packagemanagement-behind-a-proxy"></a>Supporto per l'utilizzo di PackageManagement dietro un proxy
 
 In WMF 5.1, PackageManagement accetta ora i nuovi parametri proxy `-ProxyCredential` e `-Proxy`. Grazie a questi parametri è possibile specificare le credenziali e l'URL del proxy nei cmdlet di PackageManagement. Per impostazione predefinita, vengono usate le impostazioni proxy del sistema. Ad esempio:
 

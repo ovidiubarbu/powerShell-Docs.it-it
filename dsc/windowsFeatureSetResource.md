@@ -10,8 +10,7 @@ ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 06/12/2017
 ---
-<a id="dsc-windowsfeatureset-resource" class="xliff"></a>
-# Risorsa WindowsFeatureSet DSC
+# <a name="dsc-windowsfeatureset-resource"></a>Risorsa WindowsFeatureSet DSC
 
 > Si applica a: Windows PowerShell 5.0
 
@@ -20,8 +19,7 @@ Questa risorsa è una [risorsa composta](authoringResourceComposite.md) che chia
 
 Usare questa risorsa quando si vogliono configurare diverse istanze di WindowsFeature nello stesso stato.
 
-<a id="syntax" class="xliff"></a>
-## Sintassi
+## <a name="syntax"></a>Sintassi
 
 ```
 WindowsFeatureSet [string] #ResourceName
@@ -37,8 +35,7 @@ WindowsFeatureSet [string] #ResourceName
 }
 ```
 
-<a id="properties" class="xliff"></a>
-## Proprietà
+## <a name="properties"></a>Proprietà
 
 |  Proprietà  |  Descrizione   | 
 |---|---| 
@@ -50,8 +47,7 @@ WindowsFeatureSet [string] #ResourceName
 | DependsOn| Indica che prima di configurare la risorsa è necessario eseguire la configurazione di un'altra risorsa. Ad esempio, se l'ID del blocco script di configurazione della risorsa che si vuole eseguire per primo è __ResourceName__ e il tipo è __ResourceType__, la sintassi per usare questa proprietà è `DependsOn = "[ResourceType]ResourceName"`.| 
 | Source| Indica il percorso del file di origine da usare per l'installazione, se necessario.| 
 
-<a id="example" class="xliff"></a>
-## Esempio
+## <a name="example"></a>Esempio
 
 La configurazione seguente garantisce che siano installate tutte le funzionalità e le funzionalità secondarie del **server Web** (IIS) e del **server SMTP**.
 

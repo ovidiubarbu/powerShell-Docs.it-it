@@ -10,8 +10,7 @@ ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 06/12/2017
 ---
-<a id="unlisting-items" class="xliff"></a>
-# Esclusione di elementi dall'elenco
+# <a name="unlisting-items"></a>Esclusione di elementi dall'elenco
 
 **Perché la rimozione di un elemento da PowerShell Gallery non è disponibile come opzione?**
 

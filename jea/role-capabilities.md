@@ -10,8 +10,7 @@ ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 06/12/2017
 ---
-<a id="jea-role-capabilities" class="xliff"></a>
-# Funzionalità del ruolo JEA
+# <a name="jea-role-capabilities"></a>Funzionalità del ruolo JEA
 
 > Si applica a: Windows PowerShell 5.0
 
@@ -20,8 +19,7 @@ Una funzionalità del ruolo è un file di dati di PowerShell con l'estensione ps
 
 Questo argomento illustra come creare un file delle funzionalità del ruolo di PowerShell per gli utenti JEA.
 
-<a id="determine-which-commands-to-allow" class="xliff"></a>
-## Determinare i comandi da consentire
+## <a name="determine-which-commands-to-allow"></a>Determinare i comandi da consentire
 
 Il primo passaggio durante la creazione di un file delle funzionalità del ruolo è considerare gli elementi a cui gli utenti assegnati al ruolo devono accedere.
 Questo processo di raccolta dei requisiti potrebbe impiegare del tempo, ma è un processo molto importante.
@@ -41,16 +39,14 @@ Un'attenta selezione dei comandi disponibili è importante per garantire che l'e
 Di seguito sono riportati alcuni esempi di comandi che possono essere usati maliziosamente in uno stato non vincolato.
 Si noti che questo non è un elenco completo e deve essere usato solo come punto di partenza per l'analisi.
 
-<a id="examples-of-potentially-dangerous-commands" class="xliff"></a>
-### Esempi di comandi potenzialmente pericolosi
+### <a name="examples-of-potentially-dangerous-commands"></a>Esempi di comandi potenzialmente pericolosi
 
 Rischio | Esempio | Comandi correlati
 -----|---------|-----------------
 Concessione dei privilegi di amministratore all'utente che si connette per ignorare JEA | `Add-LocalGroupMember -Member 'CONTOSO\jdoe' -Group 'Administrators'` | `Add-ADGroupMember`, `Add-LocalGroupMember`, `net.exe`, `dsadd.exe`
 Esecuzione di codice arbitrario, ad esempio malware, attacchi o script personalizzati per ignorare le protezioni | `Start-Process -FilePath '\\san\share\malware.exe'` | `Start-Process`, `New-Service`, `Invoke-Item`, `Invoke-WmiMethod`, `Invoke-CimMethod`, `Invoke-Expression`, `Invoke-Command`, `New-ScheduledTask`, `Register-ScheduledJob`
 
-<a id="create-a-role-capability-file" class="xliff"></a>
-## Creare un file delle funzionalità del ruolo
+## <a name="create-a-role-capability-file"></a>Creare un file delle funzionalità del ruolo
 
 È possibile creare un nuovo file delle funzionalità del ruolo di PowerShell con il cmdlet [New-PSRoleCapabilityFile](https://msdn.microsoft.com/powershell/reference/5.1/microsoft.powershell.core/New-PSRoleCapabilityFile).
 
@@ -61,8 +57,7 @@ New-PSRoleCapabilityFile -Path .\MyFirstJEARole.psrc
 Il file delle funzionalità del ruolo creato può essere aperto in un editor di testo e modificato per consentire i comandi appropriati per il ruolo.
 La documentazione della Guida di PowerShell contiene molti esempi su come configurare il file.
 
-<a id="allowing-powershell-cmdlets-and-functions" class="xliff"></a>
-### Consentire l'uso di funzioni e i cmdlet di PowerShell
+### <a name="allowing-powershell-cmdlets-and-functions"></a>Consentire l'uso di funzioni e i cmdlet di PowerShell
 
 Per autorizzare gli utenti a eseguire i cmdlet o le funzioni di PowerShell, aggiungere il nome del cmdlet o della funzione nei campi VisibleCmdlets o VisibleFunctions.
 Nel caso in cui non si è certi se un comando è una funzione o un cmdlet, è possibile eseguire `Get-Command <name>` e verificare la proprietà "CommandType" nell'output.
@@ -118,8 +113,7 @@ In caso contrario, il ValidatePattern sostituirà il ValidateSet.
 
 Per altre informazioni su ValidatePattern, vedere [questo *post* Hey, Scripting Guy!](https://blogs.technet.microsoft.com/heyscriptingguy/2011/01/11/validate-powershell-parameters-before-running-the-script/) e il contenuto dei riferimenti [Espressioni regolari di PowerShell](https://technet.microsoft.com/en-us/library/hh847880.aspx).
 
-<a id="allowing-external-commands-and-powershell-scripts" class="xliff"></a>
-### Consentire l'uso di comandi esterni e degli script di PowerShell
+### <a name="allowing-external-commands-and-powershell-scripts"></a>Consentire l'uso di comandi esterni e degli script di PowerShell
 
 Per consentire agli utenti di usare file eseguibili e script di PowerShell (ps1) in una sessione JEA, è necessario aggiungere il percorso completo per ogni programma nel campo VisibleExternalCommands.
 
@@ -138,8 +132,7 @@ Un approccio migliore consiste nell'usare [Get-SmbShare](https://technet.microso
 
 Quando si rendono disponibili comandi esterni per gli utenti di una sessione JEA, specificare sempre il percorso completo del file eseguibile per assicurarsi che non venga eseguito un programma denominato in modo analogo (e potenzialmente pericoloso) che si trova in un'altra posizione nel sistema.
 
-<a id="allowing-access-to-powershell-providers" class="xliff"></a>
-### Consentire accesso ai provider di PowerShell
+### <a name="allowing-access-to-powershell-providers"></a>Consentire accesso ai provider di PowerShell
 
 Per impostazione predefinita, non sono disponibili provider di PowerShell nelle sessioni JEA.
 
@@ -156,8 +149,7 @@ Per eseguire semplici operazioni che richiedono l'accesso al file system, al Reg
 Le funzioni, i cmdlet e i programmi esterni disponibili in una sessione JEA non sono soggetti agli stessi vincoli di JEA e possono accedere a qualsiasi provider per impostazione predefinita.
 Si consideri anche l'uso dell'[unità utente](session-configurations.md#user-drive) quando è necessario copiare file da o in un endpoint JEA.
 
-<a id="creating-custom-functions" class="xliff"></a>
-### Creazione di funzioni personalizzate
+### <a name="creating-custom-functions"></a>Creazione di funzioni personalizzate
 
 È possibile creare funzioni personalizzate in un file delle funzionalità del ruolo per semplificare attività complesse per gli utenti finali.
 Le funzioni personalizzate sono utili anche quando è necessaria una logica di convalida avanzata per i valori dei parametri dei cmdlet.
@@ -195,8 +187,7 @@ Tutti i cmdlet vincolati in una sessione JEA hanno lo stesso comportamento se ch
 Se si creano molte funzioni personalizzate, potrebbe risultare più facile inserirle in un [modulo di script di PowerShell](https://msdn.microsoft.com/en-us/library/dd878340(v=vs.85).aspx).
 È possibile quindi rendere tali funzioni visibili nella sessione JEA tramite il campo VisibleFunctions, così come si farebbe con i moduli incorporati e di terze parti.
 
-<a id="place-role-capabilities-in-a-module" class="xliff"></a>
-## Inserire le funzionalità del ruolo in un modulo
+## <a name="place-role-capabilities-in-a-module"></a>Inserire le funzionalità del ruolo in un modulo
 
 Per fare in modo che PowerShell trovi il file delle funzionalità del ruolo, è necessario inserire il file in una cartella "RoleCapabilities" in un modulo di PowerShell.
 Il modulo può essere archiviato in qualsiasi cartella inclusa nella variabile di ambiente `$env:PSModulePath`, tuttavia non deve essere collocato in System32 (riservato per i moduli predefiniti) o in una cartella in cui gli utenti non attendibili che si connettono possano modificare i file.
@@ -219,8 +210,7 @@ Copy-Item -Path .\MyFirstJEARole.psrc -Destination $rcFolder
 
 Per altre informazioni sui moduli di PowerShell, sui manifesti dei moduli e sulla variabile di ambiente PSModulePath, vedere [Understanding a PowerShell Module](https://msdn.microsoft.com/en-us/library/dd878324.aspx) (Informazioni sui moduli di PowerShell).
 
-<a id="updating-role-capabilities" class="xliff"></a>
-## Aggiornamento delle funzionalità del ruolo
+## <a name="updating-role-capabilities"></a>Aggiornamento delle funzionalità del ruolo
 
 
 È possibile aggiornare un file delle funzionalità del ruolo in qualsiasi momento semplicemente salvando le modifiche.
@@ -233,8 +223,7 @@ Se un utente non attendibile può modificare i file delle funzionalità del ruol
 
 Gli amministratori che vogliono bloccare l'accesso alle funzionalità del ruolo devono assicurarsi che il sistema locale abbia accesso di lettura ai file delle funzionalità del ruolo e ai moduli inclusi.
 
-<a id="how-role-capabilities-are-merged" class="xliff"></a>
-## Come vengono uniti le funzionalità del ruolo
+## <a name="how-role-capabilities-are-merged"></a>Come vengono uniti le funzionalità del ruolo
 
 È possibile concedere agli utenti accesso a più funzionalità del ruolo quando accedono a una sessione JEA a seconda dei mapping del ruolo nel [file di configurazione sessione](session-configurations.md).
 In questo caso, JEA prova ad assegnare all'utente il set di comandi *più permissivo* consentito da uno dei ruoli.
@@ -288,8 +277,7 @@ Accertarsi che il set combinato di provider da una sola funzionalità del ruoli 
 Ad esempio, se un ruolo consente l'uso del cmdlet `Remove-Item` e un altro il provider `FileSystem`, c'è il rischio che un utente JEA possa eliminare file arbitrari nel computer.
 Altre informazioni sull'identificazione delle autorizzazioni effettive degli utenti sono disponibili nell'[argomento Controllo di JEA](audit-and-report.md).
 
-<a id="next-steps" class="xliff"></a>
-## Passaggi successivi
+## <a name="next-steps"></a>Passaggi successivi
 
 - [Creare un file di configurazione sessione](session-configurations.md)
 

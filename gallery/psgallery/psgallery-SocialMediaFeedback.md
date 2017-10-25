@@ -10,16 +10,14 @@ ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 06/12/2017
 ---
-<a id="providing-feedback-via-social-media-or-comments" class="xliff"></a>
-# Pubblicazione di feedback sui social media o nei commenti
+# <a name="providing-feedback-via-social-media-or-comments"></a>Pubblicazione di feedback sui social media o nei commenti
 
 Powershell Gallery supporta due approcci per gli utenti che vogliono offrire commenti e suggerimenti pubblici su un elemento:
 
 * Usare i collegamenti sul lato sinistro per condividere un elemento su siti di social media quali Twitter, LinkedIn o Facebook;
 * Usare la funzionalità dei commenti per inviare commenti su un elemento e consentire agli autori di monitorare i commenti sugli elementi che pubblicano.
 
-<a id="social-media-feedback" class="xliff"></a>
-## Commenti e suggerimenti sui social media
+## <a name="social-media-feedback"></a>Commenti e suggerimenti sui social media
 Per ogni elemento di PowerShell Gallery, sul lato sinistro della pagina sono disponibili collegamenti a Facebook, LinkedIn e Twitter.   
 Se si fa clic su tali collegamenti viene aperto il sito di uno dei social media, ed è possibile condividere rapidamente un collegamento all'elemento.
 
@@ -29,8 +27,7 @@ Gli utenti sono invitati a eseguire questa operazione se pensano di consigliare 
 Poiché tale indicazione visualizza solo il numero di volte in cui un elemento è stato condiviso, verrà interpretata dagli altri utenti come il numero di "like" dell'elemento.
 
 
-<a id="comments" class="xliff"></a>
-## Commenti
+## <a name="comments"></a>Commenti
 PowerShell Gallery usa il servizio LiveFyre per consentire agli utenti di inviare commenti sugli elementi.
 Gli utenti che vogliono inviare consigli o commenti possono usare questa funzionalità per offrire commenti e suggerimenti visibili a chiunque visiti la pagina dell'elemento.
 I proprietari dell'elemento possono seguire questi commenti e suggerimenti e riceveranno una notifica quando un utente inserisce un commento. 

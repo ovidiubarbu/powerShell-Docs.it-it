@@ -9,8 +9,7 @@ ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 06/12/2017
 ---
-<a id="installation-instructions" class="xliff"></a>
-# Istruzioni di installazione
+# <a name="installation-instructions"></a>Istruzioni di installazione
 
 Scaricare il pacchetto corretto per il sistema operativo e l'architettura in uso:
 

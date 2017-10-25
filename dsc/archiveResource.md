@@ -10,15 +10,13 @@ ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 06/12/2017
 ---
-<a id="dsc-archive-resource" class="xliff"></a>
-# Risorsa Archive DSC
+# <a name="dsc-archive-resource"></a>Risorsa Archive DSC
 
 > Si applica a: Windows PowerShell 4.0, Windows PowerShell 5.0
 
 La risorsa Archive in Windows PowerShell DSC (Desired State Configuration) fornisce un meccanismo per decomprimere file di archivio (ZIP) in un percorso specifico.
 
-<a id="syntax" class="xliff"></a>
-## Sintassi 
+## <a name="syntax"></a>Sintassi 
 ```MOF
 Archive [string] #ResourceName
 {
@@ -32,8 +30,7 @@ Archive [string] #ResourceName
 }
 ```
 
-<a id="properties" class="xliff"></a>
-## Proprietà
+## <a name="properties"></a>Proprietà
 
 |  Proprietà  |  Descrizione   | 
 |---|---| 
@@ -45,8 +42,7 @@ Archive [string] #ResourceName
 | Validate| Usa la proprietà Checksum per determinare se l'archivio corrisponde alla firma. Se si specifica Checksum senza Validate, la configurazione non riesce. Se si specifica Validate senza Checksum, per impostazione predefinita viene usato un checksum SHA-256.| 
 | Force| Determinate operazioni sui file, ad esempio quando si sovrascrive un file o si elimina una directory non vuota, generano un errore. Usando la proprietà Force, tali errori vengono ignorati. Il valore predefinito è False.| 
 
-<a id="example" class="xliff"></a>
-## Esempio
+## <a name="example"></a>Esempio
 
 L'esempio seguente mostra come usare la risorsa Archive per specificare che il contenuto di un file di archivio denominato Test.zip esiste e viene estratto in una determinata destinazione.
 

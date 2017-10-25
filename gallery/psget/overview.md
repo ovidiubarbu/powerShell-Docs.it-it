@@ -10,11 +10,9 @@ ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 06/12/2017
 ---
-<a id="powershellget-overview" class="xliff"></a>
-# Panoramica di PowerShellGet
+# <a name="powershellget-overview"></a>Panoramica di PowerShellGet
 
 Il modulo PowerShellGet contiene i cmdlet per l'individuazione, l'installazione, l'aggiornamento e la pubblicazione di elementi PowerShell quali moduli, risorse DSC, capacità del ruolo e script di https://www.PowerShellGallery.com e altri repository privati.
 
-<a id="powershellget-cmdlet-referencepsgetcmdletsreferencemd" class="xliff"></a>
-## [Informazioni di riferimento per il cmdlet PowerShellGet](./psget_cmdlets_reference.md)
+## <a name="powershellget-cmdlet-referencepsgetcmdletsreferencemd"></a>[Informazioni di riferimento per il cmdlet PowerShellGet](./psget_cmdlets_reference.md)
 

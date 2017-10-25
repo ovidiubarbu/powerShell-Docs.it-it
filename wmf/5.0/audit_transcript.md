@@ -9,8 +9,7 @@ ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 06/12/2017
 ---
-<a id="enhanced-transcription-options" class="xliff"></a>
-# Opzioni avanzate di trascrizione
+# <a name="enhanced-transcription-options"></a>Opzioni avanzate di trascrizione
 
 La funzionalità di trascrizione di Windows PowerShell è stata migliorata per consentirne l'applicazione a tutte le applicazioni di hosting (ad esempio, Windows PowerShell ISE) anziché solo all'host della console (powershell.exe).
 

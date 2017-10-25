@@ -9,8 +9,7 @@ ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 06/12/2017
 ---
-<a id="automatic-runas-support-for-dsc-resources" class="xliff"></a>
-# Supporto di RunAs automatico per le risorse DSC
+# <a name="automatic-runas-support-for-dsc-resources"></a>Supporto di RunAs automatico per le risorse DSC
 
 WMF 5.0 include il supporto per l'esecuzione di **qualsiasi** risorsa DSC con un set specificato di credenziali tramite la proprietà `PsDscRunAsCredential`. 
 

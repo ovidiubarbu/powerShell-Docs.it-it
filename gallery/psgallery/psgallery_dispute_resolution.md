@@ -10,13 +10,11 @@ ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 06/12/2017
 ---
-<a id="dispute-resolution" class="xliff"></a>
-# Risoluzione delle controversie
+# <a name="dispute-resolution"></a>Risoluzione delle controversie
 
 In questo documento viene illustrato un processo consigliato per la risoluzione delle controversie. Tale processo è indirizzato ai membri della community, per supportarli nella risoluzione di controversie con altri autori in PowerShell Gallery.
 
-<a id="process" class="xliff"></a>
-## Processo
+## <a name="process"></a>Processo
 
 1. Contattare i proprietari dell'elemento oggetto della disputa usando il collegamento **Contact Owners** (Contatta proprietari) disponibile nella pagina dei dettagli dell'elemento.
 Spiegare il problema in un modo cortese e diretto.
@@ -25,8 +23,7 @@ Spiegare il problema in un modo cortese e diretto.
 Il team di supporto PowerShellGallery.com si attiverà per risolvere il problema.
 
 
-<a id="prohibited-use" class="xliff"></a>
-## Uso non consentito
+## <a name="prohibited-use"></a>Uso non consentito
 
 Le azioni e gli elementi riportati di seguito non sono consentiti in PowerShell Gallery. Le azioni verranno interrotte e gli elementi verranno immediatamente rimossi senza discussioni.  Ai proprietari di tali elementi verrà inviata notifica della rimozione.
 

@@ -1,9 +1,7 @@
-<a id="style-guide-for-powershell-docs" class="xliff"></a>
-# Guida di stile per la documentazione di PowerShell
+# <a name="style-guide-for-powershell-docs"></a>Guida di stile per la documentazione di PowerShell
 
 
-<a id="titlesheadings" class="xliff"></a>
-## Titoli/intestazioni
+## <a name="titlesheadings"></a>Titoli/intestazioni
 
 * I titoli e le intestazioni (qualsiasi elemento preceduto da \#) devono essere seguiti da una nuova riga
 * Solo la prima lettera di un titolo e gli eventuali nomi propri nel titolo devono essere in maiuscolo
@@ -11,8 +9,7 @@
 * In caso di modifica di contenuto di riferimento, i titoli H2 sono richiesti da platyPS e non devono essere aggiunti o rimossi perché ciò causerà un errore di compilazione
 * Usare solo intestazioni con lo stile \#, invece di intestazioni con = o \-
 
-<a id="correct" class="xliff"></a>
-### Corretto
+### <a name="correct"></a>Corretto
 
 ```
 # Header 1
@@ -23,8 +20,7 @@
 
 ```
 
-<a id="incorrect" class="xliff"></a>
-### Non corretto
+### <a name="incorrect"></a>Non corretto
 
 ```
 Header 1
@@ -36,8 +32,7 @@ Header 2
 ### Header 3
 ```
 
-<a id="syntax" class="xliff"></a>
-## Sintassi
+## <a name="syntax"></a>Sintassi
 
 * Nelle citazioni di un cmdlet in un paragrafo usare \` per evidenziare i nomi dei cmdlet
   * Esempio corretto: questo cmdlet `Write-Host` consente di...
@@ -57,22 +52,19 @@ Header 2
 * I nomi di proprietà e parametri devono essere in **grassetto**
 * I cmdlet di PowerShell sono "[scritti in base alla convenzione Pascal](https://en.wikipedia.org/wiki/PascalCase)". I verbi sono separati dai sostantivi mediante un trattino.
 
-<a id="lists" class="xliff"></a>
-## Elenchi
+## <a name="lists"></a>Elenchi
 
 * Non terminare gli elementi di elenco con un punto (a meno che non contengano più frasi)
 * Se l'elenco contiene più frasi, valutare la possibilità di usare un'intestazione 3/4/5 (se applicabile) dopo il concetto principale
 
-<a id="links" class="xliff"></a>
-## Collegamenti
+## <a name="links"></a>Collegamenti
 
 * I collegamenti devono essere sempre contrassegnati con la sintassi di Markdown `[friendlyname](url)`
 * I collegamenti devono avere un nome descrittivo quando possibile, molto probabilmente il titolo della pagina collegata
   * **Eccezione**: i collegamenti che indirizzano a siti non Microsoft devono contenere solo un URL
 * Tutti gli elementi nella sezione "Collegamenti correlati" in fondo all'articolo devono essere impostati come collegamenti ipertestuali. 
 
-<a id="line-breaks" class="xliff"></a>
-## Interruzioni di riga
+## <a name="line-breaks"></a>Interruzioni di riga
 
 * È necessario includere interruzioni di riga semantiche
 * Le righe devono essere limitate a 100 caratteri (elemento aperto: strumento per verificare questo aspetto)

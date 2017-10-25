@@ -10,8 +10,7 @@ ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 06/12/2017
 ---
-<a id="dsc-function-to-query-node-information-from-pull-server" class="xliff"></a>
-# Funzione DSC per eseguire query delle informazioni sui nodi dal server di pull
+# <a name="dsc-function-to-query-node-information-from-pull-server"></a>Funzione DSC per eseguire query delle informazioni sui nodi dal server di pull
 
 ```powershell
 function QueryNodeInformation

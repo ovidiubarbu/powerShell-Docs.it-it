@@ -10,8 +10,7 @@ ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 06/12/2017
 ---
-<a id="report-abuse" class="xliff"></a>
-# Segnalare abusi
+# <a name="report-abuse"></a>Segnalare abusi
 
 Se si rileva un elemento che viola gli elementi sopra elencati, fare clic sul collegamento **Report Abuse** (Segnala abusi) nella pagina dei dettagli dell'elemento e inviare un report.
 

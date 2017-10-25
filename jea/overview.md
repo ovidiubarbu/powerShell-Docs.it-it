@@ -10,8 +10,7 @@ ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 06/12/2017
 ---
-<a id="just-enough-administration" class="xliff"></a>
-# Just Enough Administration
+# <a name="just-enough-administration"></a>Just Enough Administration
 
 Just Enough Administration (JEA) è una tecnologia di protezione che consente l'amministrazione delegata per qualsiasi elemento che possa essere gestito con PowerShell.
 Con JEA, è possibile:
@@ -37,8 +36,7 @@ Ciò significa che è possibile definire accesso specifico per riparare una cach
 In aggiunta, quando la sessione JEA è configurata per l'uso di account virtuali con privilegi temporanei, gli amministratori DNS possono connettersi al server usando credenziali *senza privilegi di amministratore* ed eseguire comandi che in genere richiedono tali privilegi.
 Questa funzionalità consente di rimuovere utenti dai ruoli di amministratore locale o di dominio con privilegi elevati e controllare attentamente le azioni che possono eseguire in ogni computer.
 
-<a id="get-started-with-jea" class="xliff"></a>
-## Introduzione a JEA
+## <a name="get-started-with-jea"></a>Introduzione a JEA
 
 Oggi è possibile usare JEA in tutti i computer che eseguono Windows Server 2016 o Windows 10.
 È anche possibile eseguire JEA su sistemi operativi precedenti con un aggiornamento di Windows Management Framework.
@@ -52,8 +50,7 @@ Per altre informazioni sui requisiti per usare JEA e su come creare, usare e con
 - [Considerazioni sulla sicurezza](security-considerations.md): rivedere le procedure consigliate sulla sicurezza e le implicazioni delle opzioni di configurazione JEA.
 - [Controllare e creare report in JEA](audit-and-report.md): informazioni su come controllare e creare report negli endpoint JEA.
 
-<a id="samples-and-dsc-resource" class="xliff"></a>
-## Esempi e risorsa DSC
+## <a name="samples-and-dsc-resource"></a>Esempi e risorsa DSC
 
 Nel [repository GitHub JEA](https://github.com/PowerShell/JEA) sono disponibili configurazioni JEA di esempio e la risorsa DSC JEA.
 

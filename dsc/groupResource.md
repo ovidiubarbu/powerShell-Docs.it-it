@@ -10,15 +10,13 @@ ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 06/12/2017
 ---
-<a id="dsc-group-resource" class="xliff"></a>
-# Risorsa Group DSC
+# <a name="dsc-group-resource"></a>Risorsa Group DSC
 
 > Si applica a: Windows PowerShell 4.0, Windows PowerShell 5.0
 
 La risorsa Group in Windows PowerShell DSC (Desired State Configuration) fornisce un meccanismo per gestire i gruppi locali nel nodo di destinazione.
 
-<a id="syntax" class="xliff"></a>
-## Sintassi
+## <a name="syntax"></a>Sintassi
 ```
 Group [string] #ResourceName
 {
@@ -33,8 +31,7 @@ Group [string] #ResourceName
 }
 ```
 
-<a id="properties" class="xliff"></a>
-## Proprietà
+## <a name="properties"></a>Proprietà
 
 |  Proprietà  |  Descrizione   | 
 |---|---| 
@@ -47,8 +44,7 @@ Group [string] #ResourceName
 | MembersToInclude| Usare questa proprietà per aggiungere membri all'appartenenza al gruppo esistente. Il valore di questa proprietà è una matrice di stringhe del formato *Dominio*\\*Nome utente*. Se si imposta questa proprietà in una configurazione, non usare la proprietà **Members**. In caso contrario, verrà generato un errore.| 
 | DependsOn | Indica che prima di configurare la risorsa è necessario eseguire la configurazione di un'altra risorsa. Ad esempio, se l'ID del blocco script di configurazione della risorsa che si vuole eseguire per primo è __ResourceName__ e il tipo è __ResourceType__, la sintassi per usare questa proprietà è `DependsOn = "[ResourceType]ResourceName"``.| 
 
-<a id="example-1" class="xliff"></a>
-## Esempio 1
+## <a name="example-1"></a>Esempio 1
 
 L'esempio seguente illustra come specificare che un gruppo denominato "TestGroup" sia assente. 
 
@@ -61,8 +57,7 @@ Group GroupExample
     GroupName = "TestGroup"
 }
 ```
-<a id="example-2" class="xliff"></a>
-## Esempio 2
+## <a name="example-2"></a>Esempio 2
 L'esempio seguente illustra come aggiungere un utente Active Directory al gruppo Administrators locale come parte della compilazione di un ambiente con più computer in cui è già in uso un PSCredential per l'account amministratore locale. Questo utente viene anche usato per l'account amministratore di dominio (dopo l'innalzamento di livello di un dominio). A questo punto è necessario convertire il PSCredential esistente in credenziali descrittive del dominio per consentire l'aggiunta di un utente di dominio al gruppo Administrators locale del server membro.
 
 ```powershell
@@ -92,8 +87,7 @@ Group AddADUserToLocalAdminGroup
         }
 ```
 
-<a id="example-3" class="xliff"></a>
-## Esempio 3
+## <a name="example-3"></a>Esempio 3
 L'esempio seguente illustra come garantire che un gruppo locale, TigerTeamAdmins, nel server TigerTeamSource.Contoso.Com non contenga un account di dominio specifico, Contoso\JerryG.  
 
 ```powershell

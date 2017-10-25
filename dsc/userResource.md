@@ -10,8 +10,7 @@ ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 06/12/2017
 ---
-<a id="dsc-user-resource" class="xliff"></a>
-#Risorsa User DSC#
+#<a name="dsc-user-resource"></a>Risorsa User DSC#
 
  
 >Si applica a: Windows PowerShell 4.0, Windows PowerShell 5.0
@@ -20,8 +19,7 @@ ms.lasthandoff: 06/12/2017
 La risorsa __User__ in Windows PowerShell DSC (Desired State Configuration) fornisce un meccanismo per gestire gli account utente locali nel nodo di destinazione.
 
 
-<a id="syntax" class="xliff"></a>
-##Sintassi##
+##<a name="syntax"></a>Sintassi##
 
 ```
 User [string] #ResourceName
@@ -39,8 +37,7 @@ User [string] #ResourceName
 }
 ```
 
-<a id="properties" class="xliff"></a>
-## Proprietà
+## <a name="properties"></a>Proprietà
 |  Proprietà  |  Descrizione   | 
 |---|---| 
 | UserName| Indica il nome dell'account per cui si vuole specificare un determinato stato.| 
@@ -54,8 +51,7 @@ User [string] #ResourceName
 | PasswordNeverExpires| Indica se la password scadrà. Impostare questa proprietà su __$true__ per specificare che la password per questo utente non scade mai e su __$false__ se la password scade. Il valore predefinito è __$false__.| 
 | DependsOn | Indica che prima di configurare la risorsa è necessario eseguire la configurazione di un'altra risorsa. Ad esempio, se l'ID del blocco script di configurazione della risorsa che si vuole eseguire per primo è __ResourceName__ e il tipo è __ResourceType__, la sintassi per usare questa proprietà è `DependsOn = "[ResourceType]ResourceName"`.| 
 
-<a id="example" class="xliff"></a>
-## Esempio
+## <a name="example"></a>Esempio
 
 ```powershell
 User UserExample

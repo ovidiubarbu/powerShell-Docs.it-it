@@ -10,8 +10,7 @@ ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 06/12/2017
 ---
-<a id="built-in-windows-powershell-desired-state-configuration-resources" class="xliff"></a>
-# Risorse Windows PowerShell DSC (Desired State Configuration) predefinite
+# <a name="built-in-windows-powershell-desired-state-configuration-resources"></a>Risorse Windows PowerShell DSC (Desired State Configuration) predefinite
 
 > Si applica a: Windows PowerShell 4.0, Windows PowerShell 5.0
 

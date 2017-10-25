@@ -9,8 +9,7 @@ ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 06/12/2017
 ---
-<a id="import-dscresource-keyword-supports--moduleversion-parameter" class="xliff"></a>
-# La parola chiave Import-DscResource supporta il parametro -ModuleVersion
+# <a name="import-dscresource-keyword-supports--moduleversion-parameter"></a>La parola chiave Import-DscResource supporta il parametro -ModuleVersion
 
 È stato aggiunto un nuovo parametro alla parola chiave dinamica `Import-DscResource`, disponibile durante la creazione di configurazioni DSC. Gli autori di configurazioni possono ora specificare la versione del modulo esatta da cui caricare le risorse DSC. La nuova sintassi della parola chiave è:
 

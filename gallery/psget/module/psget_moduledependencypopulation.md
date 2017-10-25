@@ -10,8 +10,7 @@ ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 06/12/2017
 ---
-<a id="logic-for-preparing-the-module-dependencies-during-publish-operation" class="xliff"></a>
-# Logica per la preparazione di dipendenze dei moduli durante l'operazione di pubblicazione
+# <a name="logic-for-preparing-the-module-dependencies-during-publish-operation"></a>Logica per la preparazione di dipendenze dei moduli durante l'operazione di pubblicazione
 1.  I moduli elencati in RequiredModules vengono considerati dipendenze.
 2.  I moduli elencati in NestedModules e la cui base del modulo non è inclusa nella base del modulo specificata vengono considerati dipendenze.
 

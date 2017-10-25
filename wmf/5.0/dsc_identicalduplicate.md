@@ -9,8 +9,7 @@ ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 06/12/2017
 ---
-<a id="allowing-for-identical-duplicate-resources-in-a-configuration" class="xliff"></a>
-# Consentire risorse duplicate identiche in una configurazione
+# <a name="allowing-for-identical-duplicate-resources-in-a-configuration"></a>Consentire risorse duplicate identiche in una configurazione
 
 DSC non consente o non gestisce definizioni di risorse in conflitto all'interno di una configurazione. Anziché tentare di risolvere il conflitto, l'esito è semplicemente negativo. Dato che il riutilizzo delle configurazioni diventa sempre più comune tramite risorse composite, i conflitti si verificheranno sempre più spesso. Quando le definizioni delle risorse in conflitto sono identiche, DSC dovrebbe essere intelligente e consentire questa situazione. In questa versione è supportata la presenza di più istanze di risorse con definizioni identiche:
 

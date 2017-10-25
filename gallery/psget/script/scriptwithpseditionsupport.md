@@ -10,8 +10,7 @@ ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 06/12/2017
 ---
-<a id="script-with-compatible-powershell-editions" class="xliff"></a>
-# Script con versioni di PowerShell compatibili
+# <a name="script-with-compatible-powershell-editions"></a>Script con versioni di PowerShell compatibili
 A partire dalla versione 5.1, PowerShell è disponibile in diverse edizioni che indicano vari set di funzionalità e compatibilità della piattaforma.
 
 - **Desktop Edition:** è basata su .NET Framework e fornisce compatibilità con script e moduli destinati a versioni di PowerShell che eseguono edizioni footprint complete di Windows, ad esempio Server Core e Windows Desktop.
@@ -63,10 +62,7 @@ Find-Script -Tag PSEditon_Core
 
 ```
 
-<a id="more-details" class="xliff"></a>
-## Altri dettagli
-<a id="modules-with-pseditionsmodulemodulewithpseditionsupportmd" class="xliff"></a>
-### [Moduli con edizioni di PS](../module/modulewithpseditionsupport.md)
-<a id="pseditions-support-on-powershellgallerypsgallerypsgallerypseditionsmd" class="xliff"></a>
-### [Supporto di PSEditions nella raccolta di PowerShell](../../psgallery/psgallery_pseditions.md)
+## <a name="more-details"></a>Altri dettagli
+### <a name="modules-with-pseditionsmodulemodulewithpseditionsupportmd"></a>[Moduli con edizioni di PS](../module/modulewithpseditionsupport.md)
+### <a name="pseditions-support-on-powershellgallerypsgallerypsgallerypseditionsmd"></a>[Supporto di PSEditions nella raccolta di PowerShell](../../psgallery/psgallery_pseditions.md)
 

@@ -9,8 +9,7 @@ ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 06/12/2017
 ---
-<a id="register-a-powershell-repository" class="xliff"></a>
-# Registrare un repository di PowerShell
+# <a name="register-a-powershell-repository"></a>Registrare un repository di PowerShell
 È possibile configurare PowerShellGet per agire su repository interni. Ciò avviene tramite le seguenti aggiunte:
 - Register-PSRepository: registra un repository per l'utente corrente.
 - Unregister-PSRepository: rimuove un repository registrato per l'utente corrente.

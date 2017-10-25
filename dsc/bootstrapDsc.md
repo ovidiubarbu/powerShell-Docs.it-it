@@ -15,11 +15,9 @@ ms.lasthandoff: 06/12/2017
 >**Nota:** la chiave del Registro di sistema **DSCAutomationHostEnabled** descritta in questo argomento non è disponibile in PowerShell 4.0.
 Per informazioni su come configurare nuove macchine virtuali all'avvio iniziale di PowerShell 4.0, vedere [Want to Automatically Configure Your Machines Using DSC at Initial Boot-up?](https://blogs.msdn.microsoft.com/powershell/2014/02/28/want-to-automatically-configure-your-machines-using-dsc-at-initial-boot-up/) (Configurare automaticamente le macchine virtuali usando DSC all'avvio iniziale)
 
-<a id="configure-a-virtual-machines-at-initial-boot-up-by-using-dsc" class="xliff"></a>
-# Configurare una macchina virtuale all'avvio iniziale tramite DSC
+# <a name="configure-a-virtual-machines-at-initial-boot-up-by-using-dsc"></a>Configurare una macchina virtuale all'avvio iniziale tramite DSC
 
-<a id="requirements" class="xliff"></a>
-## Requisiti
+## <a name="requirements"></a>Requisiti
 
 Per eseguire questi esempi, è necessario:
 
@@ -40,8 +38,7 @@ Se si preferisce che DSC non venga eseguito all'avvio, impostare il valore della
 >**Nota:** è possibile inserire `Pending.mof` e `MetaConfig.mof` in un computer contemporaneamente.
 Se entrambi i file sono presenti, le impostazioni specificate in `MetaConfig.mof` hanno la precedenza.
 
-<a id="inject-a-configuration-mof-document-into-a-vhd" class="xliff"></a>
-## Inserire un documento MOF in un disco rigido virtuale
+## <a name="inject-a-configuration-mof-document-into-a-vhd"></a>Inserire un documento MOF in un disco rigido virtuale
 
 Per applicare una configurazione all'avvio iniziale, è possibile inserire un documento di configurazione MOF compilato nel disco rigido virtuale come file `Pending.mof`.
 Se la chiave del Registro di sistema **DSCAutomationHostEnabled** è impostata su 2 (valore predefinito), DSC applicherà la configurazione definita da `Pending.mof` quando il computer viene avviato per la prima volta.
@@ -64,8 +61,7 @@ Configuration SampleIISInstall
 }
 ```
 
-<a id="to-inject-the-configuration-mof-document-on-the-vhd" class="xliff"></a>
-### Per inserire il documento di configurazione MOF nel disco rigido virtuale
+### <a name="to-inject-the-configuration-mof-document-on-the-vhd"></a>Per inserire il documento di configurazione MOF nel disco rigido virtuale
 
 1. Montare il disco rigido virtuale in cui si vuole inserire la configurazione mediante la chiamata al cmdlet [Mount-VHD](https://technet.microsoft.com/library/hh848551.aspx). Ad esempio:
 
@@ -98,8 +94,7 @@ Spostare il file nella posizione corretta del disco rigido virtuale e rinominarl
 7. Creare una macchina virtuale usando il disco rigido virtuale in cui è installato il documento MOF di DSC. Dopo l'avvio iniziale e l'installazione del sistema operativo, verrà installato IIS.
 È possibile verificare questo aspetto chiamando il cmdlet [Get-WindowsFeature](https://technet.microsoft.com/library/jj205469.aspx).
 
-<a id="inject-a-dsc-metaconfiguration-into-a-vhd" class="xliff"></a>
-## Inserire una metaconfigurazione DSC in un disco rigido virtuale
+## <a name="inject-a-dsc-metaconfiguration-into-a-vhd"></a>Inserire una metaconfigurazione DSC in un disco rigido virtuale
 
 È inoltre possibile configurare un computer per eseguire il pull di una configurazione all'avvio iniziale inserendo una metaconfigurazione (vedere [Configurazione di Gestione configurazione locale](metaConfig.md)) nel disco rigido virtuale come file `MetaConfig.mof`.
 Se la chiave del Registro di sistema **DSCAutomationHostEnabled** è impostata su 2 (valore predefinito), DSC applicherà la metaconfigurazione definita da `MetaConfig.mof` a Gestione configurazione locale quando il computer viene avviato per la prima volta.
@@ -130,8 +125,7 @@ configuration PullClientBootstrap
 }
 ```
 
-<a id="to-inject-the-metaconfiguration-mof-document-on-the-vhd" class="xliff"></a>
-### Per inserire il documento di metaconfigurazione MOF nel disco rigido virtuale
+### <a name="to-inject-the-metaconfiguration-mof-document-on-the-vhd"></a>Per inserire il documento di metaconfigurazione MOF nel disco rigido virtuale
 
 1. Montare il disco rigido virtuale in cui si vuole inserire la metaconfigurazione mediante la chiamata al cmdlet [Mount-VHD](https://technet.microsoft.com/library/hh848551.aspx). Ad esempio:
 
@@ -169,8 +163,7 @@ Spostare il file nella posizione corretta del disco rigido virtuale e rinominarl
 Dopo l'avvio iniziale e l'installazione del sistema operativo, DSC effettuerà il pull della configurazione dal server di pull e verrà installato IIS.
 È possibile verificare questo aspetto chiamando il cmdlet [Get-WindowsFeature](https://technet.microsoft.com/library/jj205469.aspx).
 
-<a id="disable-dsc-at-boot-time" class="xliff"></a>
-## Disabilitare DSC in fase di avvio
+## <a name="disable-dsc-at-boot-time"></a>Disabilitare DSC in fase di avvio
 
 Per impostazione predefinita, il valore della chiave **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\DSCAutomationHostEnabled** è impostato su 2, che consente l'esecuzione di una configurazione DSC se il computer è in stato in sospeso o corrente. Se non si vuole far eseguire una configurazione all'avvio iniziale, è necessario impostare il valore di questa chiave su 0:
 
@@ -205,8 +198,7 @@ Per impostazione predefinita, il valore della chiave **HKEY_LOCAL_MACHINE\SOFTWA
     reg unload HKLM\Vhd
     ```
 
-<a id="see-also" class="xliff"></a>
-## Vedere anche
+## <a name="see-also"></a>Vedere anche
 
 - [Configurazioni DSC](configurations.md)
 - [Chiave del Registro di sistema DSCAutomationHostEnabled](DSCAutomationHostEnabled.md)
