@@ -27,7 +27,7 @@ In Windows 8.1 e Windows 8, la funzionalità del motore di Windows PowerShell 2.
 
 1. Nella schermata **Start** digitare **funzionalità di Windows**.
 
-2. Nella barra delle app****  fare clic su **Impostazioni** e quindi su **Attivazione o disattivazione delle funzionalità Windows**.
+2. Nella barra delle **app** fare clic su **Impostazioni** e quindi su **Attivazione o disattivazione delle funzionalità Windows**.
 
 3. Nella casella **Funzionalità Windows** fare clic su **.NET Framework 3.5 (include .NET 2.0 e 3.0** per selezionarlo.
 
@@ -37,7 +37,7 @@ In Windows 8.1 e Windows 8, la funzionalità del motore di Windows PowerShell 2.
 
 1. Nella schermata **Start** digitare **funzionalità di Windows**.
 
-2. Nella barra delle app****  fare clic su **Impostazioni** e quindi su **Attivazione o disattivazione delle funzionalità Windows**.
+2. Nella barra delle **app** fare clic su **Impostazioni** e quindi su **Attivazione o disattivazione delle funzionalità Windows**.
 
 3. Nella finestra **Funzionalità Windows** espandere il nodo **Windows PowerShell 2.0** e fare clic sulla casella **Motore di Windows PowerShell 2.0** per selezionarla o deselezionarla.
 
