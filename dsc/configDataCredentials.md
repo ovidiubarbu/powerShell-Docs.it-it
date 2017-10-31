@@ -4,11 +4,11 @@ author: eslesar
 ms.topic: conceptual
 keywords: dsc,powershell,configurazione,impostazione
 title: Opzioni delle credenziali nei dati di configurazione
-ms.openlocfilehash: ec4eeb8e519158b2bf929b949e381cdba54f8928
-ms.sourcegitcommit: a5c0795ca6ec9332967bff9c151a8572feb1a53a
+ms.openlocfilehash: 94ff541fc517254ef2876c424307513eaf1d362a
+ms.sourcegitcommit: 28e71b0ae868014523631fec3f5417de751944f3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2017
+ms.lasthandoff: 10/25/2017
 ---
 # <a name="credentials-options-in-configuration-data"></a>Opzioni delle credenziali nei dati di configurazione
 >Si applica a: Windows PowerShell 5.0
@@ -21,7 +21,7 @@ Per eliminare questi messaggi di errore e di avviso, usare le parole chiave dei 
 * **PsDscAllowPlainTextPassword**
 * **PsDscAllowDomainUser**
 
->**Nota:** l'uso di password non crittografate non è un metodo sicuro. È consigliabile proteggere le credenziali tramite le tecniche illustrate più avanti in questo argomento.
+>**Note:** <p>L'archiviazione o la trasmissione di password di testo normale non crittografata in genere non è protetta. È consigliabile proteggere le credenziali tramite le tecniche illustrate più avanti in questo argomento.</p> <p>Il servizio Automation DSC di Azure consente di gestire centralmente le credenziali da compilare nelle configurazioni e archiviare in modo sicuro.  Per informazioni, vedere [Compilazione di configurazioni in Azure Automation DSC/Asset credenziali](https://docs.microsoft.com/en-in/azure/automation/automation-dsc-compile#credential-assets)</p>
 
 Di seguito è riportato un esempio del passaggio di credenziali non crittografate:
 
@@ -129,10 +129,11 @@ Le risorse di configurazione DSC vengono eseguite come `Local System` per impost
 Tuttavia, per alcune risorse è necessaria una credenziale, ad esempio quando la risorsa `Package` deve installare software nell'ambito di un account utente specifico.
 
 Le risorse delle versioni precedenti usano un nome di proprietà `Credential` hardcoded per gestire questo caso.
-In WMF 5.0 è stata aggiunta una proprietà `PsDscRunAsCredential` automatica per tutte le risorse. Per informazioni sull'uso di `PsDscRunAsCredential`, vedere [Esecuzione di DSC con le credenziali dell'utente](runAsUser.md).
+In WMF 5.0 è stata aggiunta una proprietà `PsDscRunAsCredential` automatica per tutte le risorse.
+Per informazioni sull'uso di `PsDscRunAsCredential`, vedere [Esecuzione di DSC con le credenziali dell'utente](runAsUser.md).
 Le risorse più recenti e quelle personalizzate possono usare questa proprietà automatica invece di creare una proprietà personalizzata per le credenziali.
 
-*Si noti che la progettazione di alcune risorse prevede l'uso di più credenziali per un motivo specifico e tali risorse hanno proprietà delle credenziali proprie.*
+>**Nota:** la progettazione di alcune risorse prevede l'uso di più credenziali per un motivo specifico e tali risorse hanno proprietà delle credenziali proprie.
 
 Per trovare le proprietà delle credenziali disponibili in una risorsa, usare `Get-DscResource -Name ResourceName -Syntax` o Intellisense in ISE (`CTRL+SPACE`).
 
@@ -265,9 +266,10 @@ $cred = Get-Credential -UserName contoso\genericuser -Message "Password please"
 DomainCredentialExample -DomainCredential $cred -ConfigurationData $cd
 ```
 
-*Si noti che `NodeName` non può essere un asterisco, ma è obbligatorio un nome di nodo specifico.*
+>**Nota:** `NodeName` non può essere un asterisco, ma è obbligatorio un nome di nodo specifico.
 
 **Microsoft consiglia di evitare password di testo semplice, che possono provocare rischi significativi per la sicurezza.**
+Un'eccezione potrebbe essere quando si usa il servizio Automation DSC di Azure poiché i dati vengono sempre archiviati crittografati, che siano in transito, inattivi nel servizio o inattivi nel nodo.
 
 ## <a name="domain-credentials"></a>Credenziali di dominio
 
@@ -298,4 +300,3 @@ $cd = @{
 ```
 
 Lo script di configurazione genera ora il file MOF senza errori o avvisi.
-

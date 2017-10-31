@@ -4,11 +4,11 @@ author: eslesar
 ms.topic: conceptual
 keywords: dsc,powershell,configurazione,impostazione
 title: Introduzione a DSC (Desired State Configuration) per Linux
-ms.openlocfilehash: f88167cd039077574c3a84aa07ba78186adfa181
-ms.sourcegitcommit: 9a5da3f739b1eebb81ede58bd4fc8037bad87224
+ms.openlocfilehash: fd4820d27de5958a325032ca3fc202a521c131b4
+ms.sourcegitcommit: 28e71b0ae868014523631fec3f5417de751944f3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/16/2017
+ms.lasthandoff: 10/25/2017
 ---
 # <a name="get-started-with-desired-state-configuration-dsc-for-linux"></a>Introduzione a DSC (Desired State Configuration) per Linux
 
@@ -18,11 +18,11 @@ Questo argomento illustra come iniziare a usare PowerShell DSC (Desired State Co
 
 DSC per Linux supporta le versioni seguenti del sistema operativo Linux.
 - CentOS 5, 6 e 7 (x86/x64)
-- Debian GNU/Linux 6 e 7 (x86/x64)
+- Debian GNU/Linux 6, 7 e 8 (x86/x64)
 - Oracle Linux 5, 6 e 7 (x86/x64)
 - Red Hat Enterprise Linux Server 5, 6 e 7 (x86/x64)
 - SUSE Linux Enterprise Server 10, 11 e 12 (x86/x64)
-- Ubuntu Server 12.04 LTS e 14.04 LTS (x86/x64)
+- Ubuntu Server 12.04 LTS, 14.04 LTS e 16.04 LTS (x86/x64)
 
 La tabella seguente descrive le dipendenze dei pacchetti necessarie per DSC per Linux.
 
