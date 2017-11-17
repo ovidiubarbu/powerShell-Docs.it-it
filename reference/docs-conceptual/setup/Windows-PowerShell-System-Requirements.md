@@ -1,0 +1,128 @@
+---
+ms.date: 2017-06-05
+keywords: powershell,cmdlet
+title: Requisiti di sistema di Windows PowerShell
+ms.assetid: 6d1d3c75-3be4-4fc9-8805-ca9b2c454d42
+ms.openlocfilehash: 33824eac4de28de97990ffa1ea2500e61e03e847
+ms.sourcegitcommit: 3720ce4efb6735694cfb53a1b793d949af5d1bc5
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 09/29/2017
+---
+# <a name="windows-powershell-system-requirements"></a><span data-ttu-id="de488-103">Requisiti di sistema di Windows PowerShell</span><span class="sxs-lookup"><span data-stu-id="de488-103">Windows PowerShell System Requirements</span></span>
+<span data-ttu-id="de488-104">Questo argomento elenca i requisiti di sistema per Windows PowerShell 3.0, Windows PowerShell 4.0 e Windows PowerShell 5.0 e per le funzionalità speciali, ad esempio Windows PowerShell Integrated Scripting Environment (ISE), i comandi CIM e i flussi di lavoro.</span><span class="sxs-lookup"><span data-stu-id="de488-104">This topic lists the system requirements for Windows PowerShell 3.0, Windows PowerShell 4.0 and Windows PowerShell 5.0, and for special features, such as Windows PowerShell Integrated Scripting Environment (ISE), CIM commands, and workflows.</span></span>
+
+<span data-ttu-id="de488-105">Windows® 8.1 e Windows Server® 2012 R2 includono tutti i programmi necessari.</span><span class="sxs-lookup"><span data-stu-id="de488-105">Windows® 8.1 and Windows Server® 2012 R2 include all required programs.</span></span> <span data-ttu-id="de488-106">Questo argomento è progettato per gli utenti delle versioni precedenti di Windows.</span><span class="sxs-lookup"><span data-stu-id="de488-106">This topic is designed for users of earlier releases of Windows.</span></span>
+
+## <a name="operating-system-requirements"></a><span data-ttu-id="de488-107">Requisiti del sistema operativo</span><span class="sxs-lookup"><span data-stu-id="de488-107">Operating System Requirements</span></span>
+<span data-ttu-id="de488-108">Windows PowerShell 5.0 può essere eseguito nelle versioni seguenti di Windows.</span><span class="sxs-lookup"><span data-stu-id="de488-108">Windows PowerShell 5.0 runs on the following versions of Windows.</span></span>
+
+- <span data-ttu-id="de488-109">Windows Server 2016, installato per impostazione predefinita</span><span class="sxs-lookup"><span data-stu-id="de488-109">Windows Server 2016, installed by default</span></span>
+
+- <span data-ttu-id="de488-110">Windows Server 2012 R2, installare [Windows Management Framework 5.0](https://www.microsoft.com/en-us/download/details.aspx?id=50395) per eseguire Windows PowerShell 5.0</span><span class="sxs-lookup"><span data-stu-id="de488-110">Windows Server 2012 R2, install [Windows Management Framework 5.0](https://www.microsoft.com/en-us/download/details.aspx?id=50395) to run Windows PowerShell 5.0</span></span>
+
+- <span data-ttu-id="de488-111">Windows Server 2012, installare [Windows Management Framework 5.0](https://www.microsoft.com/en-us/download/details.aspx?id=50395) per eseguire Windows PowerShell 5.0</span><span class="sxs-lookup"><span data-stu-id="de488-111">Windows Server 2012, install [Windows Management Framework 5.0](https://www.microsoft.com/en-us/download/details.aspx?id=50395) to run Windows PowerShell 5.0</span></span>
+
+- <span data-ttu-id="de488-112">Windows Server 2008 R2 con Service Pack 1, installare [Windows Management Framework 5.0](https://www.microsoft.com/en-us/download/details.aspx?id=50395) per eseguire Windows PowerShell 5.0</span><span class="sxs-lookup"><span data-stu-id="de488-112">Windows Server 2008 R2 with Service Pack 1, install [Windows Management Framework 5.0](https://www.microsoft.com/en-us/download/details.aspx?id=50395) to run Windows PowerShell 5.0</span></span>
+
+- <span data-ttu-id="de488-113">Windows 8.1</span><span class="sxs-lookup"><span data-stu-id="de488-113">Windows 8.1</span></span>
+
+- <span data-ttu-id="de488-114">Windows 7 con Service Pack 1, installare [Windows Management Framework 5.0](https://www.microsoft.com/en-us/download/details.aspx?id=50395) per eseguire Windows PowerShell 5.0</span><span class="sxs-lookup"><span data-stu-id="de488-114">Windows 7 with Service Pack 1, install [Windows Management Framework 5.0](https://www.microsoft.com/en-us/download/details.aspx?id=50395) to run Windows PowerShell 5.0</span></span>
+
+<span data-ttu-id="de488-115">Windows PowerShell 4.0 può essere eseguito nelle versioni seguenti di Windows.</span><span class="sxs-lookup"><span data-stu-id="de488-115">Windows PowerShell 4.0 runs on the following versions of Windows.</span></span>
+
+- <span data-ttu-id="de488-116">Windows 8.1, installato per impostazione predefinita</span><span class="sxs-lookup"><span data-stu-id="de488-116">Windows 8.1, installed by default</span></span>
+
+- <span data-ttu-id="de488-117">Windows Server 2012 R2, installato per impostazione predefinita</span><span class="sxs-lookup"><span data-stu-id="de488-117">Windows Server 2012 R2, installed by default</span></span>
+
+- <span data-ttu-id="de488-118">Windows® 7 con Service Pack 1, installare [Windows Management Framework 4.0](https://www.microsoft.com/en-us/download/details.aspx?id=40855) per eseguire Windows PowerShell 4.0</span><span class="sxs-lookup"><span data-stu-id="de488-118">Windows® 7 with Service Pack 1, install [Windows Management Framework 4.0](https://www.microsoft.com/en-us/download/details.aspx?id=40855) to run Windows PowerShell 4.0</span></span>
+
+- <span data-ttu-id="de488-119">Windows Server® 2008 R2 con Service Pack 1, installare [Windows Management Framework 4.0](https://www.microsoft.com/en-us/download/details.aspx?id=40855) per eseguire Windows PowerShell 4.0</span><span class="sxs-lookup"><span data-stu-id="de488-119">Windows Server® 2008 R2 with Service Pack 1, install [Windows Management Framework 4.0](https://www.microsoft.com/en-us/download/details.aspx?id=40855) to run Windows PowerShell 4.0</span></span>
+
+<span data-ttu-id="de488-120">Windows PowerShell 3.0 può essere eseguito nelle versioni seguenti di Windows.</span><span class="sxs-lookup"><span data-stu-id="de488-120">Windows PowerShell 3.0 runs on the following versions of Windows.</span></span>
+
+- <span data-ttu-id="de488-121">Windows 8, installato per impostazione predefinita</span><span class="sxs-lookup"><span data-stu-id="de488-121">Windows 8, installed by default</span></span>
+
+- <span data-ttu-id="de488-122">Windows Server 2012, installato per impostazione predefinita</span><span class="sxs-lookup"><span data-stu-id="de488-122">Windows Server 2012, installed by default</span></span>
+
+- <span data-ttu-id="de488-123">Windows® 7 con Service Pack 1, installare [Windows Management Framework 3.0](https://www.microsoft.com/en-us/download/details.aspx?id=34595) per eseguire Windows PowerShell 3.0</span><span class="sxs-lookup"><span data-stu-id="de488-123">Windows® 7 with Service Pack 1, install [Windows Management Framework 3.0](https://www.microsoft.com/en-us/download/details.aspx?id=34595) to run Windows PowerShell 3.0</span></span>
+
+- <span data-ttu-id="de488-124">Windows Server® 2008 R2 con Service Pack 1, installare [Windows Management Framework 3.0](https://www.microsoft.com/en-us/download/details.aspx?id=34595) per eseguire Windows PowerShell 3.0</span><span class="sxs-lookup"><span data-stu-id="de488-124">Windows Server® 2008 R2 with Service Pack 1, install [Windows Management Framework 3.0](https://www.microsoft.com/en-us/download/details.aspx?id=34595) to run Windows PowerShell 3.0</span></span>
+
+- <span data-ttu-id="de488-125">Windows Server 2008 con Service Pack 2, installare [Windows Management Framework 3.0](https://www.microsoft.com/en-us/download/details.aspx?id=34595) per eseguire Windows PowerShell 3.0</span><span class="sxs-lookup"><span data-stu-id="de488-125">Windows Server 2008 with Service Pack 2, install [Windows Management Framework 3.0](https://www.microsoft.com/en-us/download/details.aspx?id=34595) to run Windows PowerShell 3.0</span></span>
+
+## <a name="microsoft-net-framework-requirements"></a><span data-ttu-id="de488-126">Requisiti di Microsoft .NET Framework</span><span class="sxs-lookup"><span data-stu-id="de488-126">Microsoft .NET Framework Requirements</span></span>
+<span data-ttu-id="de488-127">Windows PowerShell 5.0 richiede l'installazione completa di Microsoft .NET Framework 4.5.</span><span class="sxs-lookup"><span data-stu-id="de488-127">Windows PowerShell 5.0 requires the full installation of Microsoft .NET Framework 4.5.</span></span> <span data-ttu-id="de488-128">Windows Server 8.1 e Windows Server 2012 R2 includono Microsoft .NET Framework 4.5 per impostazione predefinita.</span><span class="sxs-lookup"><span data-stu-id="de488-128">Windows 8.1 and Windows Server 2012 R2 include Microsoft .NET Framework 4.5 by default.</span></span>
+
+<span data-ttu-id="de488-129">Windows PowerShell 4.0 richiede l'installazione completa di Microsoft .NET Framework 4.5.</span><span class="sxs-lookup"><span data-stu-id="de488-129">Windows PowerShell 4.0 requires the full installation of Microsoft .NET Framework 4.5.</span></span> <span data-ttu-id="de488-130">Windows Server 8.1 e Windows Server 2012 R2 includono Microsoft .NET Framework 4.5 per impostazione predefinita.</span><span class="sxs-lookup"><span data-stu-id="de488-130">Windows 8.1 and Windows Server 2012 R2 include Microsoft .NET Framework 4.5 by default.</span></span>
+
+<span data-ttu-id="de488-131">Windows PowerShell 3.0 richiede l'installazione completa di Microsoft .NET Framework 4.</span><span class="sxs-lookup"><span data-stu-id="de488-131">Windows PowerShell 3.0 requires the full installation of Microsoft .NET Framework 4.</span></span> <span data-ttu-id="de488-132">Windows 8 e Windows Server 2012 includono Microsoft .NET Framework 4.5 per impostazione predefinita, che soddisfa questo requisito.</span><span class="sxs-lookup"><span data-stu-id="de488-132">Windows 8 and Windows Server 2012 include Microsoft .NET Framework 4.5 by default, which fulfills this requirement.</span></span>
+
+<span data-ttu-id="de488-133">Per installare Microsoft .NET Framework 4.5 (dotNetFx45_Full_setup.exe), vedere [Microsoft .NET Framework 4.5](http://go.microsoft.com/fwlink/?LinkID=242919) nel Download Center di Microsoft.</span><span class="sxs-lookup"><span data-stu-id="de488-133">To install Microsoft .NET Framework 4.5 (dotNetFx45_Full_setup.exe), see [Microsoft .NET Framework 4.5](http://go.microsoft.com/fwlink/?LinkID=242919) on the Microsoft Download Center.</span></span>
+
+<span data-ttu-id="de488-134">Per installare la versione completa di Microsoft .NET Framework 4 (dotNetFx40_Full_setup.exe), vedere [Microsoft .NET Framework 4 (Web Installer)](http://go.microsoft.com/fwlink/?LinkID=212931) nel Download Center di Microsoft.</span><span class="sxs-lookup"><span data-stu-id="de488-134">To install the full installation of Microsoft .NET Framework 4 (dotNetFx40_Full_setup.exe), see [Microsoft .NET Framework 4 (Web Installer)](http://go.microsoft.com/fwlink/?LinkID=212931) on the Microsoft Download Center.</span></span>
+
+## <a name="windows-management-framework-40"></a><span data-ttu-id="de488-135">Windows Management Framework 4.0</span><span class="sxs-lookup"><span data-stu-id="de488-135">Windows Management Framework 4.0</span></span>
+<span data-ttu-id="de488-136">Windows PowerShell 5.0 richiede la preinstallazione di Windows Management Framework 4.0 in Windows Server 2008 R2 SP1 e Windows 7 SP1.</span><span class="sxs-lookup"><span data-stu-id="de488-136">Windows PowerShell 5.0 requires Windows Management Framework 4.0 to be preinstalled on Windows Server 2008 R2 SP1 and Windows 7 SP1.</span></span>
+
+## <a name="ws-management-30"></a><span data-ttu-id="de488-137">WS-Management 3.0</span><span class="sxs-lookup"><span data-stu-id="de488-137">WS-Management 3.0</span></span>
+<span data-ttu-id="de488-138">Windows PowerShell 3.0 e Windows PowerShell 4.0 richiedono WS-Management 3.0, che supporta il servizio WinRM e il protocollo WS-Management.</span><span class="sxs-lookup"><span data-stu-id="de488-138">Windows PowerShell 3.0 and Windows PowerShell 4.0 require WS-Management 3.0, which supports the WinRM service and WSMan protocol.</span></span> <span data-ttu-id="de488-139">Questo programma è incluso in Windows 8.1, Windows Server 2012 R2, Windows 8, Windows Server 2012, Windows Management Framework 4.0 e Windows Management Framework 3.0.</span><span class="sxs-lookup"><span data-stu-id="de488-139">This program is included in Windows 8.1, Windows Server 2012 R2, Windows 8, Windows Server 2012, Windows Management Framework 4.0, and Windows Management Framework 3.0.</span></span>
+
+## <a name="windows-management-instrumentation-30"></a><span data-ttu-id="de488-140">Strumentazione gestione Windows 3.0</span><span class="sxs-lookup"><span data-stu-id="de488-140">Windows Management Instrumentation 3.0</span></span>
+<span data-ttu-id="de488-141">Windows PowerShell 3.0 e Windows PowerShell 4.0 richiedono Strumentazione gestione Windows 3.0 (WMI).</span><span class="sxs-lookup"><span data-stu-id="de488-141">Windows PowerShell 3.0 and Windows PowerShell 4.0 require Windows Management Instrumentation 3.0 (WMI).</span></span> <span data-ttu-id="de488-142">Questo programma è incluso in Windows 8.1, Windows Server 2012 R2, Windows 8, Windows Server 2012, Windows Management Framework 4.0 e Windows Management Framework 3.0.</span><span class="sxs-lookup"><span data-stu-id="de488-142">This program is included in Windows 8.1, Windows Server 2012 R2, Windows 8, Windows Server 2012, Windows Management Framework 4.0, and Windows Management Framework 3.0.</span></span> <span data-ttu-id="de488-143">Se il programma non è installato nel computer, le funzionalità che richiedono WMI, ad esempio i comandi CIM, non vengono eseguite.</span><span class="sxs-lookup"><span data-stu-id="de488-143">If this program is not installed on the computer, features that require WMI, such as CIM commands, do not run.</span></span>
+
+## <a name="common-language-runtime-40"></a><span data-ttu-id="de488-144">Common Language Runtime 4.0</span><span class="sxs-lookup"><span data-stu-id="de488-144">Common Language Runtime 4.0</span></span>
+<span data-ttu-id="de488-145">Windows PowerShell 3.0, Windows PowerShell 4.0 e Windows PowerShell 5.0 vengono compilati in base a Common Language Runtime (CLR) 4.0.</span><span class="sxs-lookup"><span data-stu-id="de488-145">Windows PowerShell 3.0, Windows PowerShell 4.0, and Windows PowerShell 5.0 are compiled against Common Language Runtime (CLR) 4.0.</span></span>
+
+## <a name="graphical-user-interface-requirements"></a><span data-ttu-id="de488-146">Requisiti dell'interfaccia utente grafica</span><span class="sxs-lookup"><span data-stu-id="de488-146">Graphical User Interface Requirements</span></span>
+<span data-ttu-id="de488-147">Windows PowerShell è un'applicazione basata su console per cui non è necessaria un'interfaccia utente grafica.</span><span class="sxs-lookup"><span data-stu-id="de488-147">Windows PowerShell is a console-based application that does not require a graphical user interface.</span></span> <span data-ttu-id="de488-148">Di conseguenza, è particolarmente utile per i computer senza schermo o monitor oppure senza interfaccia utente, come le opzioni di installazione dei componenti di base del server di Windows Server 2012 R2 o Windows Server 2012.</span><span class="sxs-lookup"><span data-stu-id="de488-148">As such, is it well suited to computers that do not have screens or monitors, or a user interface, such as the Server Core installation options of Windows Server 2012 R2 or Windows Server 2012.</span></span>
+
+<span data-ttu-id="de488-149">Per alcuni elementi come i seguenti, tuttavia, è necessaria un'interfaccia utente grafica.</span><span class="sxs-lookup"><span data-stu-id="de488-149">However, some items, such as the following, require a graphical user interface.</span></span> <span data-ttu-id="de488-150">Per informazioni dettagliate, vedere l'argomento della Guida per ogni elemento.</span><span class="sxs-lookup"><span data-stu-id="de488-150">For details, see the help topic for each item.</span></span>
+
+- <span data-ttu-id="de488-151">Windows PowerShell Integrated Scripting Environment (ISE)</span><span class="sxs-lookup"><span data-stu-id="de488-151">Windows PowerShell Integrated Scripting Environment (ISE)</span></span>
+
+- <span data-ttu-id="de488-152">Cmdlet</span><span class="sxs-lookup"><span data-stu-id="de488-152">Cmdlets</span></span>
+
+    1.  [<span data-ttu-id="de488-153">Out-GridView</span><span class="sxs-lookup"><span data-stu-id="de488-153">Out-GridView</span></span>](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/out-gridview)
+
+    2.  [<span data-ttu-id="de488-154">Show-Command</span><span class="sxs-lookup"><span data-stu-id="de488-154">Show-Command</span></span>](https://docs.microsoft.com/en-us/powershell/module/Microsoft.PowerShell.Utility/Show-Command)
+
+    3.  [<span data-ttu-id="de488-155">Show-ControlPanelItem</span><span class="sxs-lookup"><span data-stu-id="de488-155">Show-ControlPanelItem</span></span>](https://docs.microsoft.com/en-us/powershell/module/Microsoft.PowerShell.Management/Show-ControlPanelItem)
+
+    4.  [<span data-ttu-id="de488-156">Show-EventLog</span><span class="sxs-lookup"><span data-stu-id="de488-156">Show-EventLog</span></span>](https://docs.microsoft.com/en-us/powershell/module/Microsoft.PowerShell.Management/Show-EventLog)
+
+- <span data-ttu-id="de488-157">Parametri</span><span class="sxs-lookup"><span data-stu-id="de488-157">Parameters</span></span>
+
+    1.  <span data-ttu-id="de488-158">Parametro **ShowWindow** del cmdlet [Get-Help](https://docs.microsoft.com/en-us/powershell/module/Microsoft.PowerShell.Core/Get-Help).</span><span class="sxs-lookup"><span data-stu-id="de488-158">**ShowWindow** parameter of the [Get-Help](https://docs.microsoft.com/en-us/powershell/module/Microsoft.PowerShell.Core/Get-Help) cmdlet.</span></span>
+
+    2.  <span data-ttu-id="de488-159">Parametro **ShowSecurityDescriptorUi** dei cmdlet [Register-PSSessionConfiguration](https://docs.microsoft.com/en-us/powershell/module/Microsoft.PowerShell.Core/Register-PSSessionConfiguration) e [Set-PSSessionConfiguration](https://docs.microsoft.com/en-us/powershell/module/Microsoft.PowerShell.Core/Set-PSSessionConfiguration).</span><span class="sxs-lookup"><span data-stu-id="de488-159">**ShowSecurityDescriptorUI** parameter of the [Register-PSSessionConfiguration](https://docs.microsoft.com/en-us/powershell/module/Microsoft.PowerShell.Core/Register-PSSessionConfiguration) and [Set-PSSessionConfiguration](https://docs.microsoft.com/en-us/powershell/module/Microsoft.PowerShell.Core/Set-PSSessionConfiguration) cmdlets.</span></span>
+
+## <a name="windows-powershell-engine-requirements"></a><span data-ttu-id="de488-160">Requisiti del motore di Windows PowerShell</span><span class="sxs-lookup"><span data-stu-id="de488-160">Windows PowerShell Engine Requirements</span></span>
+<span data-ttu-id="de488-161">Windows PowerShell 4.0 è progettato per essere compatibile con Windows PowerShell 3.0 e Windows PowerShell 2.0.</span><span class="sxs-lookup"><span data-stu-id="de488-161">Windows PowerShell 4.0 is designed to be backwards compatible with Windows PowerShell 3.0 and Windows PowerShell 2.0.</span></span> <span data-ttu-id="de488-162">I cmdlet, i provider, gli snap-in, i moduli e gli script scritti per Windows PowerShell 2.0 e Windows PowerShell 3.0 possono essere eseguiti senza modifiche in Windows PowerShell 4.0.</span><span class="sxs-lookup"><span data-stu-id="de488-162">Cmdlets, providers, snap-ins, modules, and scripts written for Windows PowerShell 2.0 and Windows PowerShell 3.0 run unchanged in Windows PowerShell 4.0.</span></span>
+
+<span data-ttu-id="de488-163">Tuttavia, a causa di una modifica nei criteri di attivazione di runtime in Microsoft .NET Framework 4, i programmi host di Windows PowerShell scritti per Windows PowerShell 2.0 e compilati con Common Language Runtime (CLR) 2.0 non possono essere eseguiti senza modifiche in Windows PowerShell 3.0, compilato con CLR 4.0.</span><span class="sxs-lookup"><span data-stu-id="de488-163">However, due to a change in the runtime activation policy in Microsoft .NET Framework 4, Windows PowerShell host programs that were written for Windows PowerShell 2.0 and compiled with Common Language Runtime (CLR) 2.0 cannot run without modification in Windows PowerShell 3.0, which is compiled with CLR 4.0.</span></span>
+
+<span data-ttu-id="de488-164">Il motore di Windows PowerShell 2.0 richiede almeno Microsoft .NET Framework 2.0.50727.</span><span class="sxs-lookup"><span data-stu-id="de488-164">The Windows PowerShell 2.0 engine requires Microsoft .NET Framework 2.0.50727 at a minimum.</span></span> <span data-ttu-id="de488-165">È possibile soddisfare questo requisito con Microsoft .NET Framework 3.5 Service Pack 1.</span><span class="sxs-lookup"><span data-stu-id="de488-165">This requirement is fulfilled by Microsoft .NET Framework 3.5 Service Pack 1.</span></span> <span data-ttu-id="de488-166">Questo requisito non viene soddisfatto da Microsoft .NET Framework 4 e versioni successive di Microsoft .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="de488-166">This requirement is not fulfilled by Microsoft .NET Framework 4 and later releases of Microsoft .NET Framework.</span></span>
+
+<span data-ttu-id="de488-167">Per informazioni sull'aggiunta o l'installazione del motore di Windows PowerShell 2.0 e l'aggiunta o l'installazione delle versioni richieste di Microsoft .NET Framework, vedere [Installazione del motore di Windows PowerShell 2.0](Installing-the-Windows-PowerShell-2.0-Engine.md).</span><span class="sxs-lookup"><span data-stu-id="de488-167">For information about adding or installing the Windows PowerShell 2.0 engine, and adding or installing the required versions of the Microsoft .NET Framework, see [Installing the Windows PowerShell 2.0 Engine](Installing-the-Windows-PowerShell-2.0-Engine.md).</span></span> <span data-ttu-id="de488-168">Per informazioni sull'avvio del motore di Windows PowerShell 2.0, vedere [Avvio del motore di Windows PowerShell 2.0](Starting-the-Windows-PowerShell-2.0-Engine.md).</span><span class="sxs-lookup"><span data-stu-id="de488-168">For information about starting the Windows PowerShell 2.0 engine, see [Starting the Windows PowerShell 2.0 Engine](Starting-the-Windows-PowerShell-2.0-Engine.md).</span></span>
+
+## <a name="windows-preinstallation-environment"></a><span data-ttu-id="de488-169">Ambiente preinstallazione di Windows</span><span class="sxs-lookup"><span data-stu-id="de488-169">Windows Preinstallation Environment</span></span>
+<span data-ttu-id="de488-170">Windows PowerShell 2.0, Windows PowerShell 3.0 e Windows PowerShell 4.0 eseguiti in Ambiente preinstallazione di Windows (Windows PE).</span><span class="sxs-lookup"><span data-stu-id="de488-170">Windows PowerShell 2.0, Windows PowerShell 3.0, and Windows PowerShell 4.0 run in the Windows Preinstallation Environment (Windows PE).</span></span> <span data-ttu-id="de488-171">I cmdlet seguenti non sono tuttavia supportati:</span><span class="sxs-lookup"><span data-stu-id="de488-171">However, the following cmdlets are not supported.</span></span>
+
+- [<span data-ttu-id="de488-172">Cmdlet di BITS (Servizio trasferimento intelligente in background)</span><span class="sxs-lookup"><span data-stu-id="de488-172">Background Intelligent Transfer Service (BITS) Cmdlets</span></span>](http://go.microsoft.com/fwlink/?LinkId=257514)
+
+- [<span data-ttu-id="de488-173">Get-EventLog</span><span class="sxs-lookup"><span data-stu-id="de488-173">Get-EventLog</span></span>](https://docs.microsoft.com/en-us/powershell/module/Microsoft.PowerShell.Management/Get-EventLog)
+
+- [<span data-ttu-id="de488-174">Get-WinEvent</span><span class="sxs-lookup"><span data-stu-id="de488-174">Get-WinEvent</span></span>](https://docs.microsoft.com/en-us/powershell/module/Microsoft.PowerShell.Diagnostics/Get-WinEvent)
+
+- [<span data-ttu-id="de488-175">Save-Help</span><span class="sxs-lookup"><span data-stu-id="de488-175">Save-Help</span></span>](https://docs.microsoft.com/en-us/powershell/module/Microsoft.PowerShell.Core/Save-Help)
+
+- [<span data-ttu-id="de488-176">Update-Help</span><span class="sxs-lookup"><span data-stu-id="de488-176">Update-Help</span></span>](https://docs.microsoft.com/en-us/powershell/module/Microsoft.PowerShell.Core/Update-Help)
+
+<span data-ttu-id="de488-177">Il servizio **WinRm** non è presente in Windows PE.</span><span class="sxs-lookup"><span data-stu-id="de488-177">Also, the **WinRM** service is not present on Windows PE.</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="de488-178">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="de488-178">See Also</span></span>
+- [<span data-ttu-id="de488-179">Guida introduttiva a Windows PowerShell</span><span class="sxs-lookup"><span data-stu-id="de488-179">Getting Started with Windows PowerShell</span></span>](../getting-started/Getting-Started-with-Windows-PowerShell.md)
+- [<span data-ttu-id="de488-180">Installazione di Windows PowerShell</span><span class="sxs-lookup"><span data-stu-id="de488-180">Installing Windows PowerShell</span></span>](Installing-Windows-PowerShell.md)
+- [<span data-ttu-id="de488-181">Avvio di Windows PowerShell</span><span class="sxs-lookup"><span data-stu-id="de488-181">Starting Windows PowerShell</span></span>](Starting-Windows-PowerShell.md)
+

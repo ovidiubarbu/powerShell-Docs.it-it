@@ -1,0 +1,40 @@
+---
+ms.date: 2017-08-12
+author: JKeithB
+ms.topic: reference
+keywords: wmf,powershell,installazione
+title: Note sulla versione di WMF 5.1
+ms.openlocfilehash: 3a6b7fb84d679d9bbe7a89e30c8c769e26f7381a
+ms.sourcegitcommit: 3f49bd2e0b786e69c71393c00ad85d05a8466753
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 08/04/2017
+---
+# <a name="windows-management-framework-wmf-51"></a>Windows Management Framework (WMF) 5.1 #
+
+WMF offre agli utenti la possibilità di aggiornare i sistemi Windows esistenti alle versioni dei componenti PowerShell, WMI, WinRM e Registrazione inventario software (SIL) rilasciati con Windows Server 2016. 
+
+WMF 5.1 può essere installato in Windows 7, Windows 8.1, Windows Server 2008 R2, 2012 e 2012 R2 e offre alcuni miglioramenti rispetto a WMF 5.0 RTM, tra cui:
+
+- Nuovi cmdlet: utenti locali e gruppi; Get-ComputerInfo
+- I miglioramenti apportati a PowerShellGet includono l'applicazione di moduli firmati e l'installazione di moduli JEA
+- È stato aggiunto il supporto di PackageManagement per i contenitori, l'installazione di CBS, l'installazione basata su EXE e i pacchetti CAB
+- Miglioramenti del debug per le classi DSC e PowerShell
+- Miglioramenti relativi alla sicurezza, incluso quando si usano i cmdlet PowerShellGet e quando si applicano i moduli firmati da catalogo provenienti dal server di pull
+- Risposte ad alcune richieste o problemi segnalati da utenti
+
+Per altre informazioni sulle novità in questa versione, vedere gli argomenti elencati in [Nuovi scenari e funzionalità](https://docs.microsoft.com/en-us/powershell/wmf/5.1/scenarios-features). 
+
+L'argomento [Installare e configurare](https://docs.microsoft.com/en-us/powershell/wmf/5.1/install-configure) elenca i requisiti e include istruzioni per l'installazione di WMF. 
+
+L'argomento [Compatibilità](https://docs.microsoft.com/en-us/powershell/wmf/5.1/compatibility) elenca quali versioni di WMF possono essere installate in quali versioni di Windows. 
+
+In [Compatibilità del prodotto](https://docs.microsoft.com/en-us/powershell/wmf/5.1/productincompat) sono elencate le applicazioni Microsoft per cui al momento non è approvato l'uso di WMF 5.1. 
+
+Le informazioni dettagliate per i componenti di WMF saranno disponibili nella documentazione di MSDN:
+
+- [PowerShell 5.1](https://docs.microsoft.com/en-us/powershell/) 
+- [WMI](https://msdn.microsoft.com/en-us/library/jj152383(v=vs.85).aspx)
+- [WinRM](https://msdn.microsoft.com/en-us/library/aa384426(v=vs.85).aspx)
+- [Registrazione inventario software](https://technet.microsoft.com/en-us/library/dn383584(v=ws.11).aspx)
+
