@@ -1,22 +1,31 @@
 ---
-ms.date: 2017-06-12
+ms.date: 2017-10-31
 author: eslesar
 ms.topic: conceptual
 keywords: dsc,powershell,configurazione,impostazione
 title: Protezione del file MOF
-ms.openlocfilehash: dc900f53c954637a407fbd026d24d20c2fdabf6e
-ms.sourcegitcommit: 3720ce4efb6735694cfb53a1b793d949af5d1bc5
+ms.openlocfilehash: f4ef2962710c7458ac947bf33270175a09de643c
+ms.sourcegitcommit: 4807ab554d55fdee499980835bcc279368b1df68
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/29/2017
+ms.lasthandoff: 11/07/2017
 ---
 # <a name="securing-the-mof-file"></a>Protezione del file MOF
 
 >Si applica a: Windows PowerShell 4.0, Windows PowerShell 5.0
 
-DSC indica ai nodi di destinazione quale configurazione devono avere inviando un file MOF che contiene queste informazioni a ogni nodo, in cui Gestione configurazione locale implementa la configurazione desiderata. Poiché questo file contiene i dettagli della configurazione, è importante garantirne la sicurezza. A tale scopo, è possibile impostare Gestione configurazione locale per verificare le credenziali di un utente. Questo argomento descrive come trasmettere queste credenziali in modo sicuro al nodo di destinazione crittografandole con i certificati.
+DSC gestisce la configurazione di nodi server applicando le informazioni archiviate in un file MOF, nel quale Gestione configurazione locale implementa lo stato finale richiesto.
+Poiché questo file contiene i dettagli della configurazione, è importante garantirne la sicurezza.
+In questo argomento viene descritto come verificare che il nodo di destinazione abbia crittografato il file.
 
->**Nota:** questo argomento illustra i certificati usati per la crittografia. Per la crittografia è sufficiente un certificato autofirmato, dal momento che la chiave privata viene sempre mantenuta segreta e la crittografia non implica l'attendibilità del documento. I certificati autofirmati *non* vanno usati a scopo di autenticazione. È consigliabile usare un certificato proveniente da un'Autorità di certificazione attendibile a scopo di autenticazione.
+A partire dalla versione 5.0 di PowerShell, l'intero file MOF viene crittografato per impostazione predefinita quando viene applicato al nodo usando il cmdlet **Start-DSCConfiguration**.
+Il processo descritto in questo articolo è obbligatorio solo se si implementa una soluzione che usa il protocollo del servizio pull se i certificati non sono gestiti, al fine di garantire che le configurazioni scaricate dal nodo di destinazione possano essere crittografate e lette dal sistema prima che siano applicate (ad esempio il servizio pull disponibile in Windows Server).
+Nei nodi registrati in [Automation DSC per Azure](https://docs.microsoft.com/en-us/azure/automation/automation-dsc-overview) i certificati vengono invece installati e gestiti automaticamente dal servizio senza un sovraccarico amministrativo.
+
+>**Nota:** questo argomento illustra i certificati usati per la crittografia.
+>Per la crittografia è sufficiente un certificato autofirmato, dal momento che la chiave privata viene sempre mantenuta segreta e la crittografia non implica l'attendibilità del documento.
+>I certificati autofirmati *non* vanno usati a scopo di autenticazione.
+>È consigliabile usare un certificato proveniente da un'Autorità di certificazione attendibile a scopo di autenticazione.
 
 ## <a name="prerequisites"></a>Prerequisiti
 
