@@ -3,7 +3,8 @@ title: Errore dei cmdlet per la gestione dei commutatori di rete
 contributor: vaibch
 ms.openlocfilehash: 8495d79aec54d93f94e745e2efccb5116ad5d944
 ms.sourcegitcommit: a3966253a165d193a42b43b9430a4dc76988f82f
-translationtype: HT
+ms.translationtype: HT
+ms.contentlocale: it-IT
 ---
 Questi cmdlet consentono di gestire i commutatori di rete su WS-Management. Alcuni cmdlet di questo modulo sono in grado di accettare i valori dalle pipeline. In WMF 5.1 (anteprima) i cmdlet di questo tipo non vengono eseguiti quando le pipeline non permettono il passaggio dei valori.
 
