@@ -1,6 +1,13 @@
-.md--- ms.date:  2017-06-05 parole chiave:  powershell,cmdlet titolo:  riferimento alle informazioni sui concetti
 ---
-
+ms.date: 2017-06-05
+keywords: powershell,cmdlet
+title: riferimento alle informazioni sui concetti
+ms.openlocfilehash: 0a155b502be35463a30833e08e679d707c39592c
+ms.sourcegitcommit: 58371abe9db4b9a0e4e1eb82d39a9f9e187355f9
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/05/2017
+---
 # <a name="understanding-concepts"></a>Informazioni sui concetti
 
 *  Oggetti in PowerShell  

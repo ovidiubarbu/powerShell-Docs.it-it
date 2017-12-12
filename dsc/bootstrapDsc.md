@@ -3,12 +3,12 @@ ms.date: 2017-06-12
 author: eslesar
 ms.topic: conceptual
 keywords: dsc,powershell,configurazione,installazione
-title: Configurare una macchina virtuale all&quot;avvio iniziale tramite DSC
-ms.openlocfilehash: a3592c50fa7f2232538fbec07129fac86c1d00b5
-ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+title: Configurare una macchina virtuale all'avvio iniziale tramite DSC
+ms.openlocfilehash: c793e36eb9caa194104f9dda2aa1d335b21b676c
+ms.sourcegitcommit: 58371abe9db4b9a0e4e1eb82d39a9f9e187355f9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/12/2017
+ms.lasthandoff: 12/05/2017
 ---
 >Si applica a: Windows PowerShell 5.0
 
@@ -21,7 +21,7 @@ Per informazioni su come configurare nuove macchine virtuali all'avvio iniziale 
 
 Per eseguire questi esempi, è necessario:
 
-- Un disco rigido virtuale di avvio. È possibile scaricare un'immagine ISO con una copia di valutazione di Windows Server 2016 in   [TechNet Evaluation Center](https://www.microsoft.com/en-us/evalcenter/evaluate-windows-server-2016). È possibile trovare istruzioni su come creare un disco rigido virtuale da un'immagine ISO in [Creating Bootable Virtual Hard Disks](https://technet.microsoft.com/en-us/library/gg318049.aspx) (Creazione di dischi rigidi virtuali di avvio).
+- Un disco rigido virtuale di avvio. È possibile scaricare un'immagine ISO con una copia di valutazione di Windows Server 2016 in [TechNet Evaluation Center](https://www.microsoft.com/en-us/evalcenter/evaluate-windows-server-2016). È possibile trovare istruzioni su come creare un disco rigido virtuale da un'immagine ISO in [Creating Bootable Virtual Hard Disks](https://technet.microsoft.com/en-us/library/gg318049.aspx) (Creazione di dischi rigidi virtuali di avvio).
 - Un computer host con Hyper-V abilitato. Per altre informazioni, vedere [Panoramica di Hyper-V](https://technet.microsoft.com/library/hh831531.aspx).
 
 Tramite DSC, è possibile automatizzare l'installazione del software e la configurazione di un computer all'avvio iniziale.
@@ -83,7 +83,7 @@ Configuration SampleIISInstall
 Spostare il file nella posizione corretta del disco rigido virtuale e rinominarlo come `Pending.mof` usando il cmdlet [Move-Item](https://technet.microsoft.comlibrary/hh849852.aspx). Ad esempio:
 
     ```powershell
-        Move-Item -Path C:\DSCTest\SampleIISInstall\localhost.mof -Destination E:\Windows\Sytem32\Configuration\Pending.mof
+        Move-Item -Path C:\DSCTest\SampleIISInstall\localhost.mof -Destination E:\Windows\System32\Configuration\Pending.mof
     ```
 6. Smontare il disco rigido virtuale tramite la chiamata al cmdlet [Dismount-VHD](https://technet.microsoft.com/library/hh848562.aspx). Ad esempio:
 
