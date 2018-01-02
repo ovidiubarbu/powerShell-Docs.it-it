@@ -1,14 +1,14 @@
 ---
-ms.date: 2017-06-12
-contributor: manikb
+ms.date: 2017-10-17
+contributor: keithb
 ms.topic: reference
 keywords: raccolta,powershell,cmdlet,psget
 title: Save-Script
-ms.openlocfilehash: 7b692d33e3f86a89505b8d37c0da4177f3dff2c2
-ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.openlocfilehash: b54e8ba074b7cadd52df781c9021332ccc90f9fd
+ms.sourcegitcommit: 58371abe9db4b9a0e4e1eb82d39a9f9e187355f9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/12/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="save-script"></a>Save-Script
 
@@ -49,5 +49,12 @@ Test-ScriptFileInfo C:\\ScriptSharingDemo\\Fabrikam-ClientScript.ps1
 Version Name Author Description
 ------- ---- ------ -----------
 1.5 Fabrikam-ClientScript manikb Description for the Fabrikam-ClientScript script
+```
+
+### <a name="example-3-save-a-prerelease-version-of-a-script-from-a-repository"></a>Esempio 3: Salvare una versione provvisoria di uno script da un repository
+Questo comando salva la versione più recente dello script Fabrikam-ClientScript dal repository GalleryINT alla cartella locale C:\ScriptSharingDemo
+
+```powershell
+Save-Script -Name Fabrikam-ClientScript -Path C:\ScriptSharingDemo -AllowPrerelease
 ```
 
