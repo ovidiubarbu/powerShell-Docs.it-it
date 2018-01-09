@@ -2,11 +2,11 @@
 ms.date: 2017-06-05
 keywords: powershell,cmdlet
 title: Creazione del secondo hop nella comunicazione remota di PowerShell
-ms.openlocfilehash: f3b8280819e43bd67bd608ffd0ba9484c2bbc26c
-ms.sourcegitcommit: 4102ecc35d473211f50a453f6ae3fbea31cb3428
+ms.openlocfilehash: 2518409369a75a49b975b9b944320c1878819421
+ms.sourcegitcommit: 1a0a0928c1e3cae4e8df8d79b0737bd7ed6b4e47
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/31/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="making-the-second-hop-in-powershell-remoting"></a>Creazione del secondo hop nella comunicazione remota di PowerShell
 
@@ -256,12 +256,12 @@ Per informazioni su JEA, vedere [Just Enough Administration](https://docs.micros
 - Non richiede una configurazione di server speciale.
 - Funziona in qualsiasi server che esegue WMF 2.0 o versione successiva.
 
-## <a name="cons"></a>Svantaggi
+### <a name="cons"></a>Svantaggi
 
 - Richiede una tecnica di codice complicata.
 - Se si esegue WMF 2.0, richiede una sintassi diversa per passare gli argomenti a una sessione remota.
 
-## <a name="example"></a>Esempio
+### <a name="example"></a>Esempio
 
 L'esempio seguente illustra come passare le credenziali in un blocco di script **Invoke-Command**:
 
