@@ -4,11 +4,11 @@ author: eslesar;mgreenegit
 ms.topic: conceptual
 keywords: dsc,powershell,configurazione,installazione
 title: Configurazione di Gestione configurazione locale
-ms.openlocfilehash: 98470f45ca7c11ea63d68da7dec9fcd844f06192
-ms.sourcegitcommit: 9a5da3f739b1eebb81ede58bd4fc8037bad87224
+ms.openlocfilehash: 6ca527aae263637bbca5a064e0d770fe9384d679
+ms.sourcegitcommit: ea01285a3aa7818d67d4761fbd8793b9b66bd5f7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/16/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="configuring-the-local-configuration-manager"></a>Configurazione di Gestione configurazione locale
 
@@ -71,7 +71,7 @@ Le altre risorse disponibili sono le seguenti:
 Oltre a specificare endpoint/percorsi del servizio di pull e le configurazioni parziali, tutte le altre proprietà di Gestione configurazione locale vengono configurate in un blocco **Settings**.
 In un blocco **Settings** sono disponibili le proprietà seguenti.
 
-|  Proprietà  |  Tipo  |  Descrizione   |
+|  Proprietà  |  Tipo  |  Description   |
 |----------- |------- |--------------- |
 | ActionAfterReboot| string| Specifica che cosa avviene dopo un riavvio durante l'applicazione di una configurazione. I valori possibili sono __"ContinueConfiguration"__ e __"StopConfiguration"__. <ul><li> __ContinueConfiguration__: continua ad applicare la configurazione corrente dopo il riavvio del computer. Questo è il valore predefinito</li><li>__StopConfiguration__: arresta la configurazione corrente dopo il riavvio del computer.</li></ul>|
 | AllowModuleOverwrite| bool| __$TRUE__ se le nuove configurazioni scaricate dal servizio di pull possono sovrascrivere quelle meno recenti nel nodo di destinazione. In caso contrario, $FALSE.|
@@ -129,7 +129,7 @@ Tenere presente che si tratta di un'implementazione limitata che include solo le
 Per definire un server di configurazione basato sul Web, creare un blocco **ConfigurationRepositoryWeb**.
 Un blocco **ConfigurationRepositoryWeb** definisce le proprietà seguenti.
 
-|Proprietà|Tipo|Descrizione|
+|Proprietà|Tipo|Description|
 |---|---|---| 
 |AllowUnsecureConnection|bool|Impostare questa proprietà su **$TRUE** per consentire le connessioni dal nodo al server senza autenticazione. Impostarla su **$FALSE** per richiedere l'autenticazione.|
 |CertificateID|string|Identificazione personale usata per eseguire l'autenticazione al server.|
@@ -142,7 +142,7 @@ Per uno script di esempio per semplificare la configurazione del valore Configur
 Per definire un server di configurazione basato su SMB, creare un blocco **ConfigurationRepositoryShare**.
 Un blocco **ConfigurationRepositoryShare** definisce le proprietà seguenti.
 
-|Proprietà|Tipo|Descrizione|
+|Proprietà|Tipo|Description|
 |---|---|---|
 |Credential|MSFT_Credential|Credenziale usata per l'autenticazione nella condivisione SMB.|
 |SourcePath|string|Percorso della condivisione SMB.|
@@ -152,7 +152,7 @@ Un blocco **ConfigurationRepositoryShare** definisce le proprietà seguenti.
 Per definire un server di risorse basato sul Web, creare un blocco **ResourceRepositoryWeb**.
 Un blocco **ResourceRepositoryWeb** definisce le proprietà seguenti.
 
-|Proprietà|Tipo|Descrizione|
+|Proprietà|Tipo|Description|
 |---|---|---|
 |AllowUnsecureConnection|bool|Impostare questa proprietà su **$TRUE** per consentire le connessioni dal nodo al server senza autenticazione. Impostarla su **$FALSE** per richiedere l'autenticazione.|
 |CertificateID|string|Identificazione personale usata per eseguire l'autenticazione al server.|
@@ -164,7 +164,7 @@ Per uno script di esempio per semplificare la configurazione del valore Resource
 Per definire un server di risorse basato su SMB, creare un blocco **ResourceRepositoryShare**.
 Un blocco **ResourceRepositoryShare** definisce le proprietà seguenti.
 
-|Proprietà|Tipo|Descrizione|
+|Proprietà|Tipo|Description|
 |---|---|---|
 |Credential|MSFT_Credential|Credenziale usata per l'autenticazione nella condivisione SMB. Per un esempio di passaggio di credenziali, vedere [Configurazione di un server di pull SMB DSC](pullServerSMB.md)|
 |SourcePath|string|Percorso della condivisione SMB.|
@@ -175,7 +175,7 @@ Per definire un server di report, creare un blocco **ReportServerWeb**.
 Il ruolo del server di report non è compatibile con il servizio di pull basato su SMB.
 Un blocco **ReportServerWeb** definisce le proprietà seguenti.
 
-|Proprietà|Tipo|Descrizione|
+|Proprietà|Tipo|Description|
 |---|---|---|
 |AllowUnsecureConnection|bool|Impostare questa proprietà su **$TRUE** per consentire le connessioni dal nodo al server senza autenticazione. Impostarla su **$FALSE** per richiedere l'autenticazione.|
 |CertificateID|string|Identificazione personale usata per eseguire l'autenticazione al server.|
@@ -190,7 +190,7 @@ Per definire una configurazione parziale, creare un blocco **PartialConfiguratio
 Per altre informazioni sulle configurazioni parziali, vedere [Configurazioni parziali DSC](partialConfigs.md).
 Un blocco **PartialConfiguration** definisce le proprietà seguenti.
 
-|Proprietà|Tipo|Descrizione|
+|Proprietà|Tipo|Description|
 |---|---|---| 
 |ConfigurationSource|string[]|Matrice di nomi di server di configurazione definiti in precedenza in blocchi **ConfigurationRepositoryWeb** e **ConfigurationRepositoryShare** da cui viene effettuato il pull della configurazione parziale.|
 |DependsOn|string{}|Elenco di nomi di altre configurazioni che devono essere completate prima di poter applicare questa configurazione parziale.|

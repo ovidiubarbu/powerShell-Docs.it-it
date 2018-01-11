@@ -1,14 +1,13 @@
 ---
 ms.date: 2017-06-12
-author: eslesar
 ms.topic: conceptual
-keywords: dsc,powershell,configurazione,impostazione
+keywords: dsc,powershell,configurazione,installazione
 title: Risorsa Group DSC
-ms.openlocfilehash: 6fb6c5f9593687d7204ff31fddd9bca978ed2707
-ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.openlocfilehash: 8a2087455a72ec1f368f890b62228b31cf4ec95a
+ms.sourcegitcommit: c72c76f6ed77b3e6f26fef3e8784b157bfc19355
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/12/2017
+ms.lasthandoff: 01/06/2018
 ---
 # <a name="dsc-group-resource"></a>Risorsa Group DSC
 
@@ -17,6 +16,7 @@ ms.lasthandoff: 06/12/2017
 La risorsa Group in Windows PowerShell DSC (Desired State Configuration) fornisce un meccanismo per gestire i gruppi locali nel nodo di destinazione.
 
 ## <a name="syntax"></a>Sintassi
+
 ```
 Group [string] #ResourceName
 {
@@ -33,20 +33,20 @@ Group [string] #ResourceName
 
 ## <a name="properties"></a>Proprietà
 
-|  Proprietà  |  Descrizione   | 
-|---|---| 
-| GroupName| Il nome del gruppo per cui si vuole specificare un determinato stato.| 
-| Credential| Le credenziali necessarie per accedere a risorse remote. **Nota**: per aggiungere tutti gli account non locali al gruppo, questo account deve avere le autorizzazioni di Active Directory appropriate. In caso contrario, quando la configurazione viene eseguita nel nodo di destinazione, si verifica un errore.  
-| Descrizione| La descrizione dell'attività.| 
-| Ensure| Indica se il gruppo esiste. Impostare questa proprietà su "Absent" per specificare che il gruppo non esiste. Se la proprietà è impostata su "Present" (valore predefinito), specifica che il gruppo esiste.| 
-| Membri| Usare questa proprietà per sostituire l'appartenenza al gruppo corrente con i membri specificati. Il valore di questa proprietà è una matrice di stringhe del formato *Dominio*\\*Nome utente*. Se si imposta questa proprietà in una configurazione, non usare la proprietà **MembersToExclude** o **MembersToInclude**. Questa operazione genera un errore.| 
-| MembersToExclude| Usare questa proprietà per rimuovere membri dall'appartenenza al gruppo esistente. Il valore di questa proprietà è una matrice di stringhe del formato *Dominio*\\*Nome utente*. Se si imposta questa proprietà in una configurazione, non usare la proprietà **Members**. Questa operazione genera un errore.| 
-| MembersToInclude| Usare questa proprietà per aggiungere membri all'appartenenza al gruppo esistente. Il valore di questa proprietà è una matrice di stringhe del formato *Dominio*\\*Nome utente*. Se si imposta questa proprietà in una configurazione, non usare la proprietà **Members**. In caso contrario, verrà generato un errore.| 
-| DependsOn | Indica che prima di configurare la risorsa è necessario eseguire la configurazione di un'altra risorsa. Ad esempio, se l'ID del blocco script di configurazione della risorsa che si vuole eseguire per primo è __ResourceName__ e il tipo è __ResourceType__, la sintassi per usare questa proprietà è `DependsOn = "[ResourceType]ResourceName"``.| 
+|  Proprietà  |  Description   |
+|---|---|
+| GroupName| Il nome del gruppo per cui si vuole specificare un determinato stato.|
+| Credential| Le credenziali necessarie per accedere a risorse remote. **Nota**: per aggiungere tutti gli account non locali al gruppo, questo account deve avere le autorizzazioni di Active Directory appropriate. In caso contrario, quando la configurazione viene eseguita nel nodo di destinazione, si verifica un errore.
+| Description| La descrizione dell'attività.|
+| Ensure| Indica se il gruppo esiste. Impostare questa proprietà su "Absent" per specificare che il gruppo non esiste. Se la proprietà è impostata su "Present" (valore predefinito), specifica che il gruppo esiste.|
+| Membri| Usare questa proprietà per sostituire l'appartenenza al gruppo corrente con i membri specificati. Il valore di questa proprietà è una matrice di stringhe del formato *Dominio*\\*Nome utente*. Se si imposta questa proprietà in una configurazione, non usare la proprietà **MembersToExclude** o **MembersToInclude**. Questa operazione genera un errore.|
+| MembersToExclude| Usare questa proprietà per rimuovere membri dall'appartenenza al gruppo esistente. Il valore di questa proprietà è una matrice di stringhe del formato *Dominio*\\*Nome utente*. Se si imposta questa proprietà in una configurazione, non usare la proprietà **Members**. Questa operazione genera un errore.|
+| MembersToInclude| Usare questa proprietà per aggiungere membri all'appartenenza al gruppo esistente. Il valore di questa proprietà è una matrice di stringhe del formato *Dominio*\\*Nome utente*. Se si imposta questa proprietà in una configurazione, non usare la proprietà **Members**. In caso contrario, verrà generato un errore.|
+| DependsOn | Indica che prima di configurare la risorsa è necessario eseguire la configurazione di un'altra risorsa. Ad esempio, se l'ID del blocco script di configurazione della risorsa che si vuole eseguire per primo è __ResourceName__ e il tipo è __ResourceType__, la sintassi per usare questa proprietà è `DependsOn = "[ResourceType]ResourceName"``.|
 
 ## <a name="example-1"></a>Esempio 1
 
-L'esempio seguente illustra come specificare che un gruppo denominato "TestGroup" sia assente. 
+L'esempio seguente illustra come specificare che un gruppo denominato "TestGroup" sia assente.
 
 ```powershell
 Group GroupExample
@@ -57,8 +57,12 @@ Group GroupExample
     GroupName = "TestGroup"
 }
 ```
+
 ## <a name="example-2"></a>Esempio 2
-L'esempio seguente illustra come aggiungere un utente Active Directory al gruppo Administrators locale come parte della compilazione di un ambiente con più computer in cui è già in uso un PSCredential per l'account amministratore locale. Questo utente viene anche usato per l'account amministratore di dominio (dopo l'innalzamento di livello di un dominio). A questo punto è necessario convertire il PSCredential esistente in credenziali descrittive del dominio per consentire l'aggiunta di un utente di dominio al gruppo Administrators locale del server membro.
+
+L'esempio seguente illustra come aggiungere un utente Active Directory al gruppo Administrators locale come parte della compilazione di un ambiente con più computer in cui è già in uso un PSCredential per l'account amministratore locale.
+Questo utente viene anche usato per l'account amministratore di dominio (dopo l'innalzamento di livello di un dominio). A questo punto è necessario convertire il PSCredential esistente in credenziali descrittive del dominio.
+Ciò consente l'aggiunta di un utente di dominio al gruppo Administrators locale del server membro.
 
 ```powershell
 @{
@@ -67,43 +71,39 @@ L'esempio seguente illustra come aggiungere un utente Active Directory al gruppo
             NodeName = '*';
             DomainName = 'SubTest.contoso.com';
          }
-     @{
+        @{
             NodeName = 'Box2';
-            AdminAccount = 'Admin-Dave_Alexanderson'   
-      }    
+            AdminAccount = 'Admin-Dave_Alexanderson'
+        }
     )
 }
-                  
+
 $domain = $node.DomainName.split('.')[0]
 $DCredential = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList ("$domain\$($credential.Username)", $Credential.Password)
 
-Group AddADUserToLocalAdminGroup
-        {
-            GroupName='Administrators'   
-            Ensure= 'Present'             
-            MembersToInclude= "$domain\$($Node.AdminAccount)"
-            Credential = $dCredential    
-            PsDscRunAsCredential = $DCredential
-        }
+Group AddADUserToLocalAdminGroup {
+    GroupName='Administrators'
+    Ensure= 'Present'
+    MembersToInclude= "$domain\$($Node.AdminAccount)"
+    Credential = $dCredential
+    PsDscRunAsCredential = $DCredential
+}
 ```
 
 ## <a name="example-3"></a>Esempio 3
-L'esempio seguente illustra come garantire che un gruppo locale, TigerTeamAdmins, nel server TigerTeamSource.Contoso.Com non contenga un account di dominio specifico, Contoso\JerryG.  
+
+L'esempio seguente illustra come garantire che un gruppo locale, TigerTeamAdmins, nel server TigerTeamSource.Contoso.Com non contenga un account di dominio specifico, Contoso\JerryG.
 
 ```powershell
-
-Configuration SecureTigerTeamSrouce 
-{
+Configuration SecureTigerTeamSrouce {
   Import-DscResource -ModuleName 'PSDesiredStateConfiguration'
-  
+
   Node TigerTeamSource.Contoso.Com {
-  Group TigerTeamAdmins
-    {
-       GroupName        = 'TigerTeamAdmins'   
-       Ensure           = 'Absent'             
-       MembersToInclude = "Contoso\JerryG"
+    Group TigerTeamAdmins {
+       GroupName        = 'TigerTeamAdmins'
+       Ensure           = 'Present'
+       MembersToExclude = "Contoso\JerryG"
     }
   }
 }
 ```
-

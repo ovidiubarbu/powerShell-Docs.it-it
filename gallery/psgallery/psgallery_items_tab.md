@@ -2,48 +2,58 @@
 ms.date: 2017-06-12
 contributor: JKeithB
 ms.topic: conceptual
-keywords: raccolta,powershell,cmdlet,psgallery
+keywords: gallery,powershell,cmdlet,psgallery
 title: psgallery_items_tab
-ms.openlocfilehash: 8424c4729436a78fec3fdbb405591fcd3c6bc6a6
-ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.openlocfilehash: 8704091542de5c19817ab0b4f77fd98987084b5d
+ms.sourcegitcommit: 1a0a0928c1e3cae4e8df8d79b0737bd7ed6b4e47
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/12/2017
+ms.lasthandoff: 12/21/2017
 ---
-<a name="items-tab"></a>Scheda Items (Elementi)
-==========
+# <a name="items-tab"></a>Scheda Items (Elementi)
 
-La scheda Items (Elementi) visualizza tutti gli elementi disponibili in PowerShell Gallery.
+La [scheda Items](https://www.powershellgallery.com/items) (Elementi) visualizza tutti gli elementi disponibili in PowerShell Gallery.
 
-Per visualizzare solo i moduli in PowerShell Gallery, fare clic su Modules (Moduli) nell'elenco a discesa della scheda Items (Elementi).  Analogamente, per visualizzare solo gli script in PowerShell Gallery, fare clic su Script nell'elenco a discesa della scheda Items (Elementi).  
-
+Esistono diversi modi per filtrare, ordinare e cercare gli elementi.
 Per altri dettagli su un particolare elemento, selezionarlo.
 
-Esistono diversi modi per ordinare gli elementi:
+## <a name="filter-by"></a>Filter By (Filtro)
 
-##<a name="filter-by"></a>Filter By (Filtro)##
-La sezione Filter By (Filtro) consente agli utenti di filtrare i risultati in base a:
-* Item Types (Tipi di elemento):
-    * Moduli
-    * Script
-* Categoria:
-    * Cmdlet
-    * DSC Resource (Risorsa DSC)
-    * Function
-    * Flusso di lavoro
+L'elenco a discesa in Filter By (Filtro) consente agli utenti di filtrare i risultati in base a:
+* Includi versione preliminare
+* Solo stabile
 
-Nota: i filtri sono inclusivi.  
-Esempio: un elemento che include sia cmdlet che funzioni viene visualizzato sia quando è selezionato Cmdlet che Function (o entrambi).  Se non è selezionato nessuno dei due tipi, l'elemento non viene visualizzato.  
-Analogamente, se vengono selezionate tutte le categorie, verranno visualizzati solo gli elementi che contengono una di queste categorie. **Non verranno visualizzati gli elementi che non appartengono ad alcuna di queste categorie.**
+Per informazioni sui concetti di "versione preliminare" e "versione stabile", vedere [Prerelease Versioning Added to PowerShellGet and PowerShell Gallery](https://blogs.msdn.microsoft.com/powershell/2017/12/05/prerelease-versioning-added-to-powershellget-and-powershell-gallery/) (Aggiunta delle versioni preliminari a PowerShellGet e PowerShell Gallery) nel blog del team di PowerShell.
 
-##<a name="sort-by"></a>Sort By (Ordina per)## 
+Le caselle di controllo sotto l'elenco a discesa consentono agli utenti di filtrare i risultati in base a:
+* Tipi di elemento
+  - Modulo
+  - Script
+* Categorie
+  - Cmdlet
+  - DSC Resource (Risorsa DSC)
+  - Function
+  - Funzionalità di ruolo
+  - Flusso di lavoro
+
+Per visualizzare solo i moduli in PowerShell Gallery, selezionare Module (Modulo) nell'elenco a discesa Item Types (Tipi di elemento).
+In modo analogo, per visualizzare solo gli script in PowerShell Gallery, selezionare Script nell'elenco a discesa Item Types (Tipi di elemento).
+
+> [!NOTE]
+> I filtri sono inclusivi.
+> Esempio: un elemento che include sia cmdlet che funzioni viene visualizzato sia quando è selezionato Cmdlet che Function (o entrambi).
+> Se non è selezionato nessuno dei due tipi, l'elemento non viene visualizzato.
+> Analogamente, se vengono selezionate tutte le categorie, verranno visualizzati solo gli elementi che contengono una di queste categorie.
+> **Non verranno visualizzati gli elementi che non appartengono ad alcuna di queste categorie.**
+
+## <a name="sort-by"></a>Sort By (Ordina per)
+
 L'elenco a discesa Sort By (Ordina per) consente agli utenti di ordinare i risultati in base a:
-* Popularity (Popolarità): la popolarità viene determinata dal numero di download.
-* A-Z: in ordine alfabetico in base al nome dell'elemento.
-* Recent (Recenti): gli elementi vengono ordinati in base alla data di pubblicazione.
+* Popularity (Popolarità): la popolarità viene determinata dal numero di download
+* A-Z: in ordine alfabetico in base al nome dell'elemento
+* Recent (Recenti): gli elementi vengono ordinati in base alla data di pubblicazione
 
+## <a name="search-box"></a>Casella di ricerca
 
-##<a name="search-box"></a>Casella di ricerca##
-La casella di ricerca consente di cercare gli elementi in base a parole chiave.  
-Vedere [Sintassi di ricerca di PowerShell Gallery](./psgallery_search_syntax.md) per altre informazioni.
-
+La casella di ricerca consente di cercare gli elementi in base a parole chiave.
+Per altre informazioni, vedere [Sintassi di ricerca di PowerShell Gallery](psgallery_search_syntax.md).
