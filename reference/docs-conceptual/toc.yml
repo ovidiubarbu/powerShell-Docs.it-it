@@ -72,8 +72,17 @@
               href: core-powershell/ise/windows-powershell-ise-object-model-reference.md
         - name: Guida di ISE
           href: core-powershell/ise-guide.md
+        - name: Visual Studio Code
+          items:
+            - name: Uso di Visual Studio Code
+              href: core-powershell/vscode/using-vscode.md
         - name: Esecuzione di comandi remoti
           href: core-powershell/running-remote-commands.md
+          items:
+            - name: Comunicazione remota di PowerShell su SSH
+              href: core-powershell/SSH-Remoting-in-PowerShell-Core.md
+            - name: Comunicazione remota di WS-Management (WS-Management) in PowerShell Core
+              href: core-powershell/WSMan-Remoting-in-PowerShell-Core.md
         - name: Accesso Web
           href: core-powershell/web-access.md
           items:
@@ -207,6 +216,10 @@
     - name: Installazione
       href: ''
       items:
+        - name: Installazione di PowerShell Core in Windows
+          href: setup/Installing-PowerShell-Core-on-Windows.md
+        - name: Installazione di PowerShell Core in macOS e Linux
+          href: setup/Installing-PowerShell-Core-on-macOS-and-Linux.md
         - name: Accessibilità in Windows PowerShell ISE
           href: setup/accessibility-in-windows-powershell-ise.md
         - name: Installazione del motore di Windows PowerShell 2.0
@@ -234,11 +247,15 @@
     - name: Novità
       href: ''
       items:
-        - name: Novità di PowerShell 50 ISE
-          href: whats-new/what-s-new-in-the-powershell-50-ise.md
-        - name: Novità di Windows PowerShell 50
-          href: whats-new/what-s-new-in-windows-powershell-50.md
         - name: Novità di PowerShell
           href: whats-new/what-s-new-with-powershell.md
+        - name: Novità di Windows PowerShell 5.0
+          href: whats-new/what-s-new-in-windows-powershell-50.md
+        - name: Novità di PowerShell 5.0 ISE
+          href: whats-new/what-s-new-in-the-powershell-50-ise.md
+        - name: Novità di PowerShell Core 6.0
+          href: whats-new/what-s-new-in-powershell-core-60.md
+    - name: Ciclo di vita del supporto di PowerShell Core
+      href: PowerShell-Core-Support.md
     - name: Glossario
       href: windows-powershell-glossary.md
