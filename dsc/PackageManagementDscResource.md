@@ -1,14 +1,13 @@
 ---
 ms.date: 2017-06-12
-author: eslesar
 ms.topic: conceptual
 keywords: dsc,powershell,configurazione,installazione
 title: Risorsa PackageManagement DSC
-ms.openlocfilehash: a984fbf5db561a696d89b60dde8b92096c6e4924
-ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.openlocfilehash: 4cd7625af7ed0bb3fe971c826ac2075841cdfdc5
+ms.sourcegitcommit: a444406120e5af4e746cbbc0558fe89a7e78aef6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/12/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="dsc-packagemanagement-resource"></a>Risorsa PackageManagement DSC
 
@@ -34,7 +33,7 @@ PackageManagement [string] #ResourceName
 ```
 
 ## <a name="properties"></a>Proprietà
-|  Proprietà  |  Descrizione   | 
+|  Proprietà  |  Description   | 
 |---|---| 
 | Nome| Specifica il nome del pacchetto da installare o disinstallare.| 
 | Source| Specifica il nome dell'origine del pacchetto in cui è possibile trovare il pacchetto. Può trattarsi di un URI o di un'origine registrata con la risorsa DSC Register-PackageSource o PackageManagementSource. La risorsa DSC MSFT_PackageManagementSource può anche registrare un'origine del pacchetto.| 

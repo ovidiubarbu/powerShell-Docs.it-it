@@ -1,14 +1,13 @@
 ---
 ms.date: 2017-06-12
-author: eslesar
 ms.topic: conceptual
 keywords: dsc,powershell,configurazione,installazione
 title: Risorsa ProcessSet DSC
-ms.openlocfilehash: b713d1a9c34eab6966de4f342991ead32c19df5d
-ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.openlocfilehash: ec1d6a04b5debc22fe2f3b4a4396c385514a3b0c
+ms.sourcegitcommit: a444406120e5af4e746cbbc0558fe89a7e78aef6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/12/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="dsc-windowsprocess-resource"></a>Risorsa WindowsProcess DSC
 
@@ -34,7 +33,7 @@ WindowsProcess [string] #ResourceName
 ```
 
 ## <a name="properties"></a>Proprietà
-|  Proprietà  |  Descrizione   | 
+|  Proprietà  |  Description   | 
 |---|---| 
 | Arguments| Stringa che contiene argomenti da passare al processo così come è. Se è necessario passare più argomenti, inserirli tutti in questa stringa.| 
 | Path| Percorsi degli eseguibili del processo. Se questi sono i nomi dei file eseguibili (non i percorsi completi), la risorsa DSC cercherà i file nella variabile **Path** di ambiente (`$env:Path`). Se i valori di questa proprietà sono percorsi completi, DSC non userà la variabile **Path** di ambiente per individuare i file e genererà un errore se il percorso non esiste. I percorsi relativi non sono consentiti.| 

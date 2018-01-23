@@ -1,14 +1,13 @@
 ---
 ms.date: 2017-06-12
-author: eslesar
 ms.topic: conceptual
 keywords: dsc,powershell,configurazione,installazione
 title: Risorsa WaitForAll DSC
-ms.openlocfilehash: dcc23ad4e6905bc277ad39348350d5425fc90ad7
-ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.openlocfilehash: 2054d2af7cd7dd839c62e77c1d4b6eee5cff34ab
+ms.sourcegitcommit: a444406120e5af4e746cbbc0558fe89a7e78aef6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/12/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="dsc-waitforall-resource"></a>Risorsa WaitForAll DSC
 
@@ -35,7 +34,7 @@ WaitForAll [string] #ResourceName
 
 ## <a name="properties"></a>Proprietà
 
-|  Proprietà  |  Descrizione   | 
+|  Proprietà  |  Description   | 
 |---|---| 
 | NomeRisorsa| Il nome della risorsa da cui dipendere.| 
 | NodeName| I nodi di destinazione della risorsa da cui dipendere.| 

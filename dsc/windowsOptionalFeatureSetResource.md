@@ -1,14 +1,13 @@
 ---
 ms.date: 2017-06-12
-author: eslesar
 ms.topic: conceptual
 keywords: dsc,powershell,configurazione,installazione
 title: Risorsa WindowsOptionalFeatureSet DSC
-ms.openlocfilehash: 3bf6a993d0ec9ce71c1e9222ddaa3bb429accb15
-ms.sourcegitcommit: 79e8f03afb8d0b0bb0a167e56464929b27f51990
+ms.openlocfilehash: 6912e5cf92f23058342bc566bd66dc4be3357a30
+ms.sourcegitcommit: a444406120e5af4e746cbbc0558fe89a7e78aef6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/26/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="dsc-windowsoptionalfeatureset-resource"></a>Risorsa WindowsOptionalFeatureSet DSC
 
@@ -37,9 +36,9 @@ WindowsOptionalFeature [string] #ResourceName
 
 ## <a name="properties"></a>Proprietà
 
-|  Proprietà  |  Descrizione   | 
+|  Proprietà  |  Description   | 
 |---|---| 
-| Name| Indica il nome delle funzionalità che si vogliono abilitare o disabilitare.| 
+| Nome| Indica il nome delle funzionalità che si vogliono abilitare o disabilitare.| 
 | Ensure| Specifica se le funzionalità sono abilitate. Per specificare che le funzionalità sono abilitate impostare la proprietà su "Enable". Per specificare che le funzionalità sono disabilitate impostare la proprietà su "Disable".|
 | Source| Non implementata.|
 | NoWindowsUpdateCheck| Specifica se DISM contatta Windows Update (WU) durante la ricerca dei file di origine per abilitare le funzionalità. Se $true, DISM non contatta WU.|

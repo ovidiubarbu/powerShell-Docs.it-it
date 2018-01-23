@@ -1,14 +1,13 @@
 ---
 ms.date: 2017-06-12
-author: eslesar
 ms.topic: conceptual
-keywords: dsc,powershell,configurazione,impostazione
+keywords: dsc,powershell,configurazione,installazione
 title: Risorsa WindowsPackageCab DSC
-ms.openlocfilehash: 9b1bf3cb95abcbe46976ae0fd328280a3a8d7f28
-ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.openlocfilehash: 1d7c8d9bf45d2eda8734daa8877315d219662c75
+ms.sourcegitcommit: a444406120e5af4e746cbbc0558fe89a7e78aef6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/12/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="dsc-windowspackagecab-resource"></a>Risorsa WindowsPackageCab DSC
 
@@ -33,9 +32,9 @@ La risorsa **WindowsPackageCab** in Windows PowerShell DSC (Desired State Config
 
 ## <a name="properties"></a>Proprietà
 
-|  Proprietà  |  Descrizione   | 
+|  Proprietà  |  Description   | 
 |---|---| 
-| Name| Indica il nome del pacchetto per cui si vuole specificare un determinato stato.| 
+| Nome| Indica il nome del pacchetto per cui si vuole specificare un determinato stato.| 
 | Ensure| Indica se il pacchetto è installato. Impostare questa proprietà su "Absent" per specificare che il pacchetto non è installato (o disinstallare il pacchetto se è installato). Impostarla su "Present" (valore predefinito) per specificare che il pacchetto è installato.|
 | Path| Percorso in cui si trova il pacchetto.| 
 | LogPath| Indica il percorso completo in cui il provider deve salvare un file di log per installare o disinstallare il pacchetto.| 

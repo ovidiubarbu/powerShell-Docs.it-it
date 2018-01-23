@@ -1,14 +1,13 @@
 ---
 ms.date: 2017-06-12
-author: eslesar
 ms.topic: conceptual
-keywords: dsc,powershell,configurazione,impostazione
+keywords: dsc,powershell,configurazione,installazione
 title: Risorsa nxPackage DSC per Linux
-ms.openlocfilehash: 11019b1cd12f23b0b498b7cb9a06e02c46c3c279
-ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.openlocfilehash: 41c627ebb39dad535f7acc8fe34739355f7a81b5
+ms.sourcegitcommit: a444406120e5af4e746cbbc0558fe89a7e78aef6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/12/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="dsc-for-linux-nxpackage-resource"></a>Risorsa nxPackage DSC per Linux
 
@@ -33,9 +32,9 @@ nxPackage <string> #ResourceName
 
 ## <a name="properties"></a>Proprietà
 
-|  Proprietà |  Descrizione | 
+|  Proprietà |  Description | 
 |---|---|
-| Name| Nome del pacchetto per cui si vuole specificare un determinato stato.| 
+| Nome| Nome del pacchetto per cui si vuole specificare un determinato stato.| 
 | Ensure| Determina se verificare l'esistenza del pacchetto. Impostare questa proprietà su "Present" per specificare che il pacchetto esiste. Impostarla su "Absent" per specificare che il pacchetto non esiste. Il valore predefinito è "Present".|  
 | PackageManager| I valori supportati sono "yum", "apt" e "zypper". Specifica lo strumento di gestione dei pacchetti da usare durante l'installazione dei pacchetti. Se si specifica **FilePath**, verrà usato il percorso fornito per installare il pacchetto. In caso contrario, verrà usato uno strumento di gestione dei pacchetti per installare il pacchetto da un repository preconfigurato. Se non si specifica né **PackageManager** né **FilePath**, viene usato il sistema di gestione dei pacchetti predefinito per il sistema.| 
 | FilePath| Percorso in cui si trova il pacchetto| 

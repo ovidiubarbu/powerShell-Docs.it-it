@@ -13,7 +13,7 @@ Ciò significa che Windows PowerShell espone il set di API offerto da .NET Frame
 
 Le API condivise tra .NET Core e .NET Framework sono definite come parte di [.NET Standard][].
 
-Per altre informazioni su eventuali modifiche della compatibilità di moduli e script tra PowerShell Core e Windows PowerShell, vedere [Compatibilità con le versioni precedenti di Windows PowerShell][#backwards-compatibility-with-windows-powershell]
+Per altre informazioni su eventuali modifiche della compatibilità di moduli e script tra PowerShell Core e Windows PowerShell, vedere [Compatibilità con le versioni precedenti di Windows PowerShell][#backwards-compatibility-with-windows-powershell](#backwards-compatibility-with-windows-powershell).
 
 ## <a name="support-for-macos-and-linux"></a>Supporto per macOS e Linux
 

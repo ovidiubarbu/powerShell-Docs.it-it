@@ -1,14 +1,13 @@
 ---
 ms.date: 2017-06-12
-author: eslesar
 ms.topic: conceptual
-keywords: dsc,powershell,configurazione,impostazione
+keywords: dsc,powershell,configurazione,installazione
 title: Risorsa nxScript DSC per Linux
-ms.openlocfilehash: 5fc448d15f9bec77be64b5f9ee801f6616cf7208
-ms.sourcegitcommit: 4807ab554d55fdee499980835bcc279368b1df68
+ms.openlocfilehash: c12fb3b405d84eedd13e4cbebf2b2bf0d7cfb4d3
+ms.sourcegitcommit: a444406120e5af4e746cbbc0558fe89a7e78aef6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="dsc-for-linux-nxscript-resource"></a>Risorsa nxScript DSC per Linux
 
@@ -31,7 +30,7 @@ nxScript <string> #ResourceName
 
 ## <a name="properties"></a>Proprietà
 
-|  Proprietà |  Descrizione | 
+|  Proprietà |  Description | 
 |---|---|
 | GetScript| Fornisce uno script eseguito quando si richiama il cmdlet [Get-DscConfiguration](https://technet.microsoft.com/en-us/library/dn521625.aspx). Lo script deve iniziare con una sequenza di caratteri shebang, ad esempio #!/bin/bash.| 
 | SetScript| Fornisce uno script. Quando si richiama il cmdlet [Start-DscConfiguration](https://technet.microsoft.com/en-us/library/dn521623.aspx), viene eseguito per primo il blocco **TestScript**. Se il blocco **TestScript** restituisce un codice di uscita diverso da 0, il blocco **SetScript** viene eseguito. Se **TestScript** restituisce un codice di uscita uguale a 0, il blocco **SetScript** non viene eseguito. Lo script deve iniziare con una sequenza di caratteri shebang, ad esempio `#!/bin/bash`.| 

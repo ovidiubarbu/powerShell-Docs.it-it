@@ -1,15 +1,14 @@
 ---
 ms.date: 2017-06-12
-author: eslesar
 ms.topic: conceptual
-keywords: dsc,powershell,configurazione,impostazione
+keywords: dsc,powershell,configurazione,installazione
 description: Fornisce un meccanismo per gestire i gruppi locali nel nodo di destinazione.
 title: Risorsa GroupSet DSC
-ms.openlocfilehash: 0907a968bfc660adc873c28e8be6572d1d5cb993
-ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.openlocfilehash: 158cb28747c5fe1987eb62b2cc0f6d6f6fb14332
+ms.sourcegitcommit: a444406120e5af4e746cbbc0558fe89a7e78aef6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/12/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="dsc-groupset-resource"></a>Risorsa GroupSet DSC
 
@@ -34,7 +33,7 @@ Group [string] #ResourceName
 
 ## <a name="properties"></a>Proprietà
 
-|  Proprietà  |  Descrizione   | 
+|  Proprietà  |  Description   | 
 |---|---| 
 | GroupName| Nomi dei gruppi per cui si vuole specificare un determinato stato.| 
 | MembersToExclude| Usare questa proprietà per rimuovere membri dall'appartenenza a gruppi esistenti. Il valore di questa proprietà è una matrice di stringhe del formato *Dominio*\\*Nome utente*. Se si imposta questa proprietà in una configurazione, non usare la proprietà **Members**. In caso contrario, verrà generato un errore.| 

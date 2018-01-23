@@ -1,14 +1,13 @@
 ---
 ms.date: 2017-06-12
-author: eslesar
 ms.topic: conceptual
-keywords: dsc,powershell,configurazione,impostazione
+keywords: dsc,powershell,configurazione,installazione
 title: Risorsa Archive DSC
-ms.openlocfilehash: 035f7cc1b7f21f7a0df2d72db0ba83bc0688356c
-ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.openlocfilehash: 0e9515f801888233148afcf1dbaebf85b28a6d79
+ms.sourcegitcommit: a444406120e5af4e746cbbc0558fe89a7e78aef6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/12/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="dsc-archive-resource"></a>Risorsa Archive DSC
 
@@ -16,7 +15,7 @@ ms.lasthandoff: 06/12/2017
 
 La risorsa Archive in Windows PowerShell DSC (Desired State Configuration) fornisce un meccanismo per decomprimere file di archivio (ZIP) in un percorso specifico.
 
-## <a name="syntax"></a>Sintassi 
+## <a name="syntax"></a>Sintassi
 ```MOF
 Archive [string] #ResourceName
 {
@@ -32,15 +31,15 @@ Archive [string] #ResourceName
 
 ## <a name="properties"></a>Proprietà
 
-|  Proprietà  |  Descrizione   | 
-|---|---| 
-| Destination| Indica il percorso in cui si vuole specificare di estrarre il contenuto dell'archivio.| 
-| Path| Specifica il percorso di origine del file di archivio.| 
-| __Checksum__| Definisce il tipo da usare per determinare se due file sono uguali. Se la proprietà __Checksum__ non è specificata, per il confronto viene usato solo il nome del file o della directory. I valori validi includono: SHA-1, SHA-256, SHA-512, createdDate, modifiedDate e none (predefinito). Se si specifica __Checksum__ senza __Validate__, la configurazione non riesce.| 
-| Ensure| Determina se verificare l'esistenza del contenuto dell'archivio in __Destination__. Impostare questa proprietà su __Present__ per specificare che il contenuto esiste. Impostarla su __Absent__ per specificare che il contenuto non esiste. Il valore predefinito è __Present__.| 
-| DependsOn | Indica che prima di configurare la risorsa è necessario eseguire la configurazione di un'altra risorsa. Ad esempio, se l'ID del blocco script di configurazione della risorsa che si vuole eseguire per primo è ResourceName e il tipo è __ResourceType__, la sintassi per usare questa proprietà è `DependsOn = "[ResourceType]ResourceName"`.| 
-| Validate| Usa la proprietà Checksum per determinare se l'archivio corrisponde alla firma. Se si specifica Checksum senza Validate, la configurazione non riesce. Se si specifica Validate senza Checksum, per impostazione predefinita viene usato un checksum SHA-256.| 
-| Force| Determinate operazioni sui file, ad esempio quando si sovrascrive un file o si elimina una directory non vuota, generano un errore. Usando la proprietà Force, tali errori vengono ignorati. Il valore predefinito è False.| 
+|  Proprietà  |  Description   |
+|---|---|
+| Destination| Indica il percorso in cui si vuole specificare di estrarre il contenuto dell'archivio.|
+| Path| Specifica il percorso di origine del file di archivio.|
+| __Checksum__| Definisce il tipo da usare per determinare se due file sono uguali. Se la proprietà __Checksum__ non è specificata, per il confronto viene usato solo il nome del file o della directory. I valori validi includono: SHA-1, SHA-256, SHA-512, createdDate, modifiedDate e none (predefinito). Se si specifica __Checksum__ senza __Validate__, la configurazione non riesce.|
+| Ensure| Determina se verificare l'esistenza del contenuto dell'archivio in __Destination__. Impostare questa proprietà su __Present__ per specificare che il contenuto esiste. Impostarla su __Absent__ per specificare che il contenuto non esiste. Il valore predefinito è __Present__.|
+| DependsOn | Indica che prima di configurare la risorsa è necessario eseguire la configurazione di un'altra risorsa. Ad esempio, se l'ID del blocco script di configurazione della risorsa che si vuole eseguire per primo è ResourceName e il tipo è __ResourceType__, la sintassi per usare questa proprietà è `DependsOn = "[ResourceType]ResourceName"`.|
+| Validate| Usa la proprietà Checksum per determinare se l'archivio corrisponde alla firma. Se si specifica Checksum senza Validate, la configurazione non riesce. Se si specifica Validate senza Checksum, per impostazione predefinita viene usato un checksum SHA-256.|
+| Force| Determinate operazioni sui file, ad esempio quando si sovrascrive un file o si elimina una directory non vuota, generano un errore. Usando la proprietà Force, tali errori vengono ignorati. Il valore predefinito è False.|
 
 ## <a name="example"></a>Esempio
 
@@ -51,6 +50,6 @@ Archive ArchiveExample {
     Ensure = "Present"  # You can also set Ensure to "Absent"
     Path = "C:\Users\Public\Documents\Test.zip"
     Destination = "C:\Users\Public\Documents\ExtractionPath"
-} 
+}
 ```
 

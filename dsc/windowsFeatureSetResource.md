@@ -1,14 +1,13 @@
 ---
 ms.date: 2017-06-12
-author: eslesar
 ms.topic: conceptual
 keywords: dsc,powershell,configurazione,installazione
 title: Risorsa WindowsFeatureSet DSC
-ms.openlocfilehash: 3cdabc36ef35c2bf912ac54393fe40024a8e8bc0
-ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.openlocfilehash: a2bb008852ccfdc04998a57d3e64e08bf05e6433
+ms.sourcegitcommit: a444406120e5af4e746cbbc0558fe89a7e78aef6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/12/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="dsc-windowsfeatureset-resource"></a>Risorsa WindowsFeatureSet DSC
 
@@ -37,9 +36,9 @@ WindowsFeatureSet [string] #ResourceName
 
 ## <a name="properties"></a>Proprietà
 
-|  Proprietà  |  Descrizione   | 
+|  Proprietà  |  Description   | 
 |---|---| 
-| Name| Nomi dei ruoli o delle funzionalità che si vogliono aggiungere o rimuovere. Corrisponde alla proprietà **Name** del cmdlet [Get-WindowsFeature](https://technet.microsoft.com/en-us/library/jj205469.aspx) e non al nome visualizzato dei ruoli o delle funzionalità.| 
+| Nome| Nomi dei ruoli o delle funzionalità che si vogliono aggiungere o rimuovere. Corrisponde alla proprietà **Name** del cmdlet [Get-WindowsFeature](https://technet.microsoft.com/en-us/library/jj205469.aspx) e non al nome visualizzato dei ruoli o delle funzionalità.| 
 | Credential| Credenziali da usare per aggiungere o rimuovere i ruoli o le funzionalità.| 
 | Ensure| Indica se i ruoli o le funzionalità vengono aggiunte. Per specificare che i ruoli o le funzionalità devono essere aggiunte, impostare questa proprietà su "Present". Per specificare che i ruoli o le funzionalità devono essere rimosse, impostare la proprietà su "Absent".| 
 | IncludeAllSubFeature| Impostare questa proprietà su **$true** per specificare tutte le funzionalità secondarie necessarie insieme alla funzionalità specificata con la proprietà **Name**.| 

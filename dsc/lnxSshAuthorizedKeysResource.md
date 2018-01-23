@@ -1,14 +1,13 @@
 ---
 ms.date: 2017-06-12
-author: eslesar
 ms.topic: conceptual
 keywords: dsc,powershell,configurazione,impostazione
 title: Risorsa nxSshAuthorizedKeys DSC per Linux
-ms.openlocfilehash: 3c145eeb86d971dc00e1c7cea60fb50c83d7b9a2
-ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.openlocfilehash: f48ecec39ffe24cee99ca08ad9d050b36c5e04bf
+ms.sourcegitcommit: a444406120e5af4e746cbbc0558fe89a7e78aef6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/12/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="dsc-for-linux-nxsshauthorizedkeys-resource"></a>Risorsa nxSshAuthorizedKeys DSC per Linux
 
@@ -30,7 +29,7 @@ nxAuthorizedKeys <string> #ResourceName
 
 ## <a name="properties"></a>Proprietà
 
-|  Proprietà |  Descrizione | 
+|  Proprietà |  Description | 
 |---|---|
 | KeyComment| Commento univoco per la chiave. Questa proprietà viene usata per identificare in modo univoco la chiave.| 
 | Ensure| Specifica se la chiave è definita. Impostare questa proprietà su "Absent" per specificare che la chiave non esiste nel file delle chiavi autorizzate dell'utente. Impostarla su "Absent" per specificare che la chiave è definita nel file delle chiavi autorizzate dell'utente.| 

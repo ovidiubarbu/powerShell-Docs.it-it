@@ -1,14 +1,13 @@
 ---
 ms.date: 2017-06-12
-author: eslesar
 ms.topic: conceptual
-keywords: dsc,powershell,configurazione,impostazione
+keywords: dsc,powershell,configurazione,installazione
 title: Introduzione a DSC (Desired State Configuration) per Linux
-ms.openlocfilehash: fd4820d27de5958a325032ca3fc202a521c131b4
-ms.sourcegitcommit: 28e71b0ae868014523631fec3f5417de751944f3
+ms.openlocfilehash: 4fd8460bc5d2564cab291904b60a1a0c26c3e5a7
+ms.sourcegitcommit: a444406120e5af4e746cbbc0558fe89a7e78aef6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="get-started-with-desired-state-configuration-dsc-for-linux"></a>Introduzione a DSC (Desired State Configuration) per Linux
 
@@ -26,7 +25,7 @@ DSC per Linux supporta le versioni seguenti del sistema operativo Linux.
 
 La tabella seguente descrive le dipendenze dei pacchetti necessarie per DSC per Linux.
 
-|  Pacchetto necessario |  Descrizione |  Versione minima | 
+|  Pacchetto necessario |  Description |  Versione minima | 
 |---|---|---|
 | glibc| Libreria GNU| 2…4 - 31.30| 
 | python| Python| 2.4 - 3.4| 
@@ -179,7 +178,7 @@ DSC per Linux include gli script per usare la configurazione dal computer Linux 
 
 I file di registro seguenti vengono generati per i messaggi di DSC per Linux.
 
-|File di registro|Directory|Descrizione|
+|File di registro|Directory|Description|
 |---|---|---|
 |omiserver.log|/var/opt/omi/log|Messaggi relativi al funzionamento del server CIM OMI.|
 |dsc.log|/var/opt/omi/log|Messaggi relativi al funzionamento delle operazioni delle risorse DSC e di Gestione configurazione locale.|

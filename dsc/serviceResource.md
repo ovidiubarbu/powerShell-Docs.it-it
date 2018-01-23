@@ -1,14 +1,13 @@
 ---
 ms.date: 2017-06-12
-author: eslesar
 ms.topic: conceptual
-keywords: dsc,powershell,configurazione,impostazione
+keywords: dsc,powershell,configurazione,installazione
 title: Risorsa Service DSC
-ms.openlocfilehash: 611729e5d971ebaf15ac947454cffadc6797927b
-ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.openlocfilehash: a549530edc19496a68c036fecbd18b0072cc6d74
+ms.sourcegitcommit: a444406120e5af4e746cbbc0558fe89a7e78aef6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/12/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="dsc-service-resource"></a>Risorsa Service DSC
 
@@ -37,15 +36,15 @@ Service [string] #ResourceName
 
 ## <a name="properties"></a>Proprietà
 
-|  Proprietà  |  Descrizione   | 
+|  Proprietà  |  Description   | 
 |---|---| 
-| Name| Indica il nome del servizio. A volte questo nome è diverso da quello visualizzato. È possibile ottenere un elenco dei servizi e del rispettivo stato corrente usando il cmdlet Get-Service.| 
+| Nome| Indica il nome del servizio. A volte questo nome è diverso da quello visualizzato. È possibile ottenere un elenco dei servizi e del rispettivo stato corrente usando il cmdlet Get-Service.| 
 | BuiltInAccount| Indica l'account di accesso da usare per il servizio. I valori consentiti per questa proprietà sono: **LocalService**, **LocalSystem** e **NetworkService**.| 
 | Credential| Indica le credenziali per l'account in cui verrà eseguito il servizio. Questa proprietà e la proprietà __BuiltinAccount__ non possono essere usate insieme.| 
 | DependsOn| Indica che prima di configurare la risorsa è necessario eseguire la configurazione di un'altra risorsa. Ad esempio, se l'ID del blocco script di configurazione della risorsa che si vuole eseguire per primo è __ResourceName__ e il tipo è __ResourceType__, la sintassi per usare questa proprietà è `DependsOn = "[ResourceType]ResourceName"`.| 
 | StartupType| Indica il tipo di avvio per il servizio. I valori consentiti per questa proprietà sono: **Automatic**, **Disabled** e **Manual**| 
 | State| Indica lo stato che si vuole specificare per il servizio.| 
-| Descrizione | Specifica la descrizione del servizio di destinazione.| 
+| Description | Specifica la descrizione del servizio di destinazione.| 
 | DisplayName | Indica il nome visualizzato del servizio di destinazione.| 
 | Ensure | Indica se il servizio di destinazione è presente nel sistema. Impostare questa proprietà su **Absent** per specificare che il servizio di destinazione non esiste. Se la proprietà è impostata su **Present** (valore predefinito), specifica che il servizio di destinazione esiste.|
 | Path | Indica il percorso del file binario per un nuovo servizio.| 

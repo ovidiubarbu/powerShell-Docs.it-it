@@ -1,14 +1,13 @@
 ---
 ms.date: 2017-06-12
-author: eslesar
 ms.topic: conceptual
 keywords: dsc,powershell,configurazione,installazione
 title: Risorsa User DSC
-ms.openlocfilehash: a4e4e8af4fcfe5c997c460613174d8583261dedf
-ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.openlocfilehash: c1b8487d9adc899950d185036ada3a2fa3747417
+ms.sourcegitcommit: a444406120e5af4e746cbbc0558fe89a7e78aef6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/12/2017
+ms.lasthandoff: 01/17/2018
 ---
 #<a name="dsc-user-resource"></a>Risorsa User DSC#
 
@@ -38,10 +37,10 @@ User [string] #ResourceName
 ```
 
 ## <a name="properties"></a>Proprietà
-|  Proprietà  |  Descrizione   | 
+|  Proprietà  |  Description   | 
 |---|---| 
 | UserName| Indica il nome dell'account per cui si vuole specificare un determinato stato.| 
-| Descrizione| Indica la descrizione che si vuole usare per l'account utente.| 
+| Description| Indica la descrizione che si vuole usare per l'account utente.| 
 | Disabled| Indica se l'account è abilitato. Impostare questa proprietà su __$true__ per specificare che l'account è disabilitato e su __$false__ per specificare che è abilitato.| 
 | Ensure| Indica se l'account esiste. Impostare questa proprietà su "Present" per specificare che l'account esiste e su "Absent" per specificare che non esiste.| 
 | FullName| Rappresenta una stringa che contiene il nome completo da usare per l'account utente.| 

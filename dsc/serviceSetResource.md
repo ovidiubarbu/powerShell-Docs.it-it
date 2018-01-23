@@ -1,14 +1,13 @@
 ---
 ms.date: 2017-06-12
-author: eslesar
 ms.topic: conceptual
 keywords: dsc,powershell,configurazione,installazione
 title: Risorsa ServiceSet DSC
-ms.openlocfilehash: 92fa4a442eb42e89195162b7831f1a96d40b84f5
-ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.openlocfilehash: 9556a1d513c3819a36c1161e3b35388ca1eb66f9
+ms.sourcegitcommit: a444406120e5af4e746cbbc0558fe89a7e78aef6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/12/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="dsc-serviceset-resource"></a>Risorsa ServiceSet DSC
 
@@ -37,9 +36,9 @@ Service [string] #ResourceName
 
 ## <a name="properties"></a>Proprietà
 
-|  Proprietà  |  Descrizione   | 
+|  Proprietà  |  Description   | 
 |---|---| 
-| Name| Indica i nomi del servizio. A volte questo nome è diverso da quelli visualizzati. È possibile ottenere un elenco dei servizi e del rispettivo stato corrente usando il cmdlet [Get-Service](https://technet.microsoft.com/en-us/library/hh849804.aspx).|
+| Nome| Indica i nomi del servizio. A volte questo nome è diverso da quelli visualizzati. È possibile ottenere un elenco dei servizi e del rispettivo stato corrente usando il cmdlet [Get-Service](https://technet.microsoft.com/en-us/library/hh849804.aspx).|
 | StartupType| Indica il tipo di avvio per il servizio. I valori consentiti per questa proprietà sono: **Automatic**, **Disabled** e **Manual**|  
 | BuiltInAccount| Indica l'account di accesso da usare per il servizio. I valori consentiti per questa proprietà sono: **LocalService**, **LocalSystem** e **NetworkService**.| 
 | State| Indica lo stato che si vuole specificare per i servizi: **Stopped** o **Running**.| 

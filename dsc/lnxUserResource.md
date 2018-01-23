@@ -1,14 +1,13 @@
 ---
 ms.date: 2017-06-12
-author: eslesar
 ms.topic: conceptual
-keywords: dsc,powershell,configurazione,impostazione
+keywords: dsc,powershell,configurazione,installazione
 title: Risorsa nxUser DSC per Linux
-ms.openlocfilehash: d708edcee592835ce448752465125d451afbd45b
-ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.openlocfilehash: 93e2b12af076fce687e045e3043c94fa82d61861
+ms.sourcegitcommit: a444406120e5af4e746cbbc0558fe89a7e78aef6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/12/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="dsc-for-linux-nxuser-resource"></a>Risorsa nxUser DSC per Linux
 
@@ -40,7 +39,7 @@ nxUser <string> #ResourceName
 | UserName| Indica il percorso in cui si vuole specificare lo stato di un file o una directory.| 
 | Ensure| Specifica se l'account esiste. Impostare questa proprietà su "Present" per specificare che l'account esiste e su "Absent" per specificare che non esiste.| 
 | FullName| Stringa che contiene il nome completo da usare per l'account utente.| 
-| Descrizione| Descrizione dell'account utente.| 
+| Description| Descrizione dell'account utente.| 
 | Password| Hash della password dell'utente nel formato appropriato per il computer Linux. In genere, è un hash salt SHA-256 o SHA-512. In Debian e Ubuntu Linux, questo valore può essere generato con il comando mkpasswd. Per altre distribuzioni Linux, è possibile usare il metodo di crittografia della libreria Crypt di Python per generare l'hash.| 
 | Disabled| Indica se l'account è abilitato. Impostare questa proprietà su **$true** per specificare che l'account è disabilitato e su **$false** per specificare che è abilitato.| 
 | PasswordChangeRequired| Indica se l'utente può modificare la password. Impostare questa proprietà su **$true** per impedire all'utente di modificare la password e su **$false** per consentire all'utente di modificare la password. Il valore predefinito è **$false**. Questa proprietà viene valutata solo se l'account utente non esisteva in precedenza e viene creato ora.| 

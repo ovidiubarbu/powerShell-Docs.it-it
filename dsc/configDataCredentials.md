@@ -1,14 +1,13 @@
 ---
 ms.date: 2017-06-12
-author: eslesar
 ms.topic: conceptual
-keywords: dsc,powershell,configurazione,impostazione
+keywords: dsc,powershell,configurazione,installazione
 title: Opzioni delle credenziali nei dati di configurazione
-ms.openlocfilehash: 94ff541fc517254ef2876c424307513eaf1d362a
-ms.sourcegitcommit: 28e71b0ae868014523631fec3f5417de751944f3
+ms.openlocfilehash: 15cdb29127d9774c58e1d6518bbba56273e7defd
+ms.sourcegitcommit: a444406120e5af4e746cbbc0558fe89a7e78aef6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="credentials-options-in-configuration-data"></a>Opzioni delle credenziali nei dati di configurazione
 >Si applica a: Windows PowerShell 5.0
@@ -21,7 +20,10 @@ Per eliminare questi messaggi di errore e di avviso, usare le parole chiave dei 
 * **PsDscAllowPlainTextPassword**
 * **PsDscAllowDomainUser**
 
->**Note:** <p>L'archiviazione o la trasmissione di password di testo normale non crittografata in genere non è protetta. È consigliabile proteggere le credenziali tramite le tecniche illustrate più avanti in questo argomento.</p> <p>Il servizio Automation DSC di Azure consente di gestire centralmente le credenziali da compilare nelle configurazioni e archiviare in modo sicuro.  Per informazioni, vedere [Compilazione di configurazioni in Azure Automation DSC/Asset credenziali](https://docs.microsoft.com/en-in/azure/automation/automation-dsc-compile#credential-assets)</p>
+> [!NOTE]
+> L'archiviazione o la trasmissione di password di testo normale non crittografata in genere non è protetta. È consigliabile proteggere le credenziali tramite le tecniche illustrate più avanti in questo argomento.
+> Il servizio Automation DSC di Azure consente di gestire centralmente le credenziali da compilare nelle configurazioni e archiviare in modo sicuro.
+> Per informazioni, vedere [Compilazione di configurazioni in Azure Automation DSC/Asset credenziali](/azure/automation/automation-dsc-compile#credential-assets)
 
 Di seguito è riportato un esempio del passaggio di credenziali non crittografate:
 
@@ -133,7 +135,8 @@ In WMF 5.0 è stata aggiunta una proprietà `PsDscRunAsCredential` automatica pe
 Per informazioni sull'uso di `PsDscRunAsCredential`, vedere [Esecuzione di DSC con le credenziali dell'utente](runAsUser.md).
 Le risorse più recenti e quelle personalizzate possono usare questa proprietà automatica invece di creare una proprietà personalizzata per le credenziali.
 
->**Nota:** la progettazione di alcune risorse prevede l'uso di più credenziali per un motivo specifico e tali risorse hanno proprietà delle credenziali proprie.
+> [!NOTE]
+> La progettazione di alcune risorse prevede l'uso di più credenziali per un motivo specifico e tali risorse hanno proprietà delle credenziali proprie.
 
 Per trovare le proprietà delle credenziali disponibili in una risorsa, usare `Get-DscResource -Name ResourceName -Syntax` o Intellisense in ISE (`CTRL+SPACE`).
 
@@ -222,8 +225,8 @@ for node 'localhost'.
 ```
 
 Questo esempio include due problemi:
-1.  Un errore indica che le password di testo semplice non sono consigliate
-2.  Un avviso sconsiglia l'uso di una credenziale di dominio
+1. Un errore indica che le password di testo semplice non sono consigliate
+2. Un avviso sconsiglia l'uso di una credenziale di dominio
 
 ## <a name="psdscallowplaintextpassword"></a>PsDscAllowPlainTextPassword
 
@@ -266,9 +269,11 @@ $cred = Get-Credential -UserName contoso\genericuser -Message "Password please"
 DomainCredentialExample -DomainCredential $cred -ConfigurationData $cd
 ```
 
->**Nota:** `NodeName` non può essere un asterisco, ma è obbligatorio un nome di nodo specifico.
+> [!NOTE]
+> `NodeName` non può essere un asterisco, ma è obbligatorio un nome di nodo specifico.
 
 **Microsoft consiglia di evitare password di testo semplice, che possono provocare rischi significativi per la sicurezza.**
+
 Un'eccezione potrebbe essere quando si usa il servizio Automation DSC di Azure poiché i dati vengono sempre archiviati crittografati, che siano in transito, inattivi nel servizio o inattivi nel nodo.
 
 ## <a name="domain-credentials"></a>Credenziali di dominio
