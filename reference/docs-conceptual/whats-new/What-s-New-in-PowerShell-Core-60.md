@@ -234,7 +234,7 @@ Per altre informazioni sui processi di PowerShell, vedere [about_Jobs](https://m
 - Aggiunte tre nuove variabili automatiche per determinare se PowerShell è in esecuzione in un dato sistema operativo: `$IsWindows`, `$IsMacOs` e `$IsLinux`.
 - Aggiunta di `GitCommitId` al banner di PowerShell Core.
   Ora non è necessario eseguire `$PSVersionTable` non appena si avvia PowerShell per ottenere la versione. (#3916) (grazie a @iSazonov)
-- Aggiunta di un file di configurazione JSON denominato `PowerShellProperties.json` in `$PSHome` per archiviare alcune impostazioni richieste prima dell'ora di avvio, ad esempio `ExecutionPolicy`.
+- Aggiunta di un file di configurazione JSON denominato `powershell.config.json` in `$PSHome` per archiviare alcune impostazioni richieste prima dell'ora di avvio, ad esempio `ExecutionPolicy`.
 - Non bloccare la pipeline durante l'esecuzione dell'eseguibile di Windows
 - Abilitata l'enumerazione delle raccolte COM. (#4553)
 
