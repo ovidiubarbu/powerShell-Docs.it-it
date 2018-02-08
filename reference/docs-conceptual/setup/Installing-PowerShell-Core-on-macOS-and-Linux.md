@@ -2,11 +2,9 @@
 
 Supporta [Ubuntu 14.04][u14], [Ubuntu 16.04][u16], [Ubuntu 17.04][u17], [Debian 8][deb8], [Debian 9][deb9], [CentOS 7][cos], [Red Hat Enterprise Linux (RHEL) 7][rhel7], [OpenSUSE 42.2][opensuse], [Fedora 25][fed25], [Fedora 26][fed26], [Arch Linux][arch] e [macOS 10.12][mac].
 
-Per le distribuzioni di Linux non supportate ufficialmente, è possibile provare a usare [PowerShell AppImage][lai].
-È anche possibile provare a distribuire i file binari di PowerShell direttamente usando l'[`tar.gz`archivio][tar] di Linux. Si devono comunque configurare le dipendenze necessarie in base al sistema operativo in passaggi distinti.
+Per le distribuzioni di Linux non supportate ufficialmente, è possibile provare a usare [PowerShell AppImage][lai]. È anche possibile provare a distribuire i file binari di PowerShell direttamente usando l'[`tar.gz`archivio][tar] di Linux. Si devono comunque configurare le dipendenze necessarie in base al sistema operativo in passaggi distinti.
 
-Tutti i pacchetti sono disponibili nella pagina delle [versioni][] di GitHub.
-Dopo aver installato il pacchetto, eseguire `pwsh` da un terminale.
+Tutti i pacchetti sono disponibili nella pagina delle [versioni][] di GitHub. Dopo aver installato il pacchetto, eseguire `pwsh` da un terminale.
 
 [u14]: #ubuntu-1404
 [u16]: #ubuntu-1604
@@ -27,8 +25,7 @@ Dopo aver installato il pacchetto, eseguire `pwsh` da un terminale.
 
 ### <a name="installation-via-package-repository---ubuntu-1404"></a>Ubuntu 14.04: installazione tramite repository dei pacchetti
 
-Per semplificare l'installazione e gli aggiornamenti, PowerShell Core per Linux è pubblicato nei repository dei pacchetti.
-Questo è il metodo preferito.
+Per semplificare l'installazione e gli aggiornamenti, PowerShell Core per Linux è pubblicato nei repository dei pacchetti. Questo è il metodo preferito.
 
 ```sh
 # Import the public repository GPG keys
@@ -47,16 +44,20 @@ sudo apt-get install -y powershell
 pwsh
 ```
 
-Dopo essersi registrati una volta come utente con privilegi avanzati nel repository di Microsoft, è sufficiente usare semplicemente `sudo apt-get upgrade powershell` per eseguirne l'aggiornamento.
+Dopo essersi registrati una volta come utente con privilegi avanzati nel repository di Microsoft, è sufficiente usare `sudo apt-get upgrade powershell` per eseguirne l'aggiornamento.
 
 ### <a name="installation-via-direct-download---ubuntu-1404"></a>Ubuntu 14.04: installazione tramite download diretto
 
-Scaricare il pacchetto Debian `powershell_6.0.0-rc-1.ubuntu.14.04_amd64.deb` dalla pagina delle [versioni][] nel computer Ubuntu.
+Scaricare il pacchetto Debian `powershell_6.0.0-1.ubuntu.14.04_amd64.deb` dalla pagina delle [versioni][] nel computer Ubuntu.
+
+```sh
+wget https://github.com/PowerShell/PowerShell/releases/download/v6.0.0/powershell_6.0.0-1.ubuntu.14.04_amd64.deb
+```
 
 A questo punto eseguire quanto segue nel terminale:
 
 ```sh
-sudo dpkg -i powershell_6.0.0-rc-1.ubuntu.14.04_amd64.deb
+sudo dpkg -i powershell_6.0.0-1.ubuntu.14.04_amd64.deb
 sudo apt-get install -f
 ```
 
@@ -92,16 +93,20 @@ sudo apt-get install -y powershell
 pwsh
 ```
 
-Dopo essersi registrati una volta come utente con privilegi avanzati nel repository di Microsoft, è sufficiente usare semplicemente `sudo apt-get upgrade powershell` per eseguirne l'aggiornamento.
+Dopo essersi registrati una volta come utente con privilegi avanzati nel repository di Microsoft, è sufficiente usare `sudo apt-get upgrade powershell` per eseguirne l'aggiornamento.
 
 ### <a name="installation-via-direct-download---ubuntu-1604"></a>Installazione tramite download diretto - Ubuntu 16.04
 
-Scaricare il pacchetto Debian `powershell_6.0.0-rc-1.ubuntu.16.04_amd64.deb` dalla pagina delle [versioni][] nel computer Ubuntu.
+Scaricare il pacchetto Debian `powershell_6.0.0-1.ubuntu.16.04_amd64.deb` dalla pagina delle [versioni][] nel computer Ubuntu:
+
+```sh
+wget https://github.com/PowerShell/PowerShell/releases/download/v6.0.0/powershell_6.0.0-1.ubuntu.16.04_amd64.deb
+```
 
 A questo punto eseguire quanto segue nel terminale:
 
 ```sh
-sudo dpkg -i powershell_6.0.0-rc-1.ubuntu.16.04_amd64.deb
+sudo dpkg -i powershell_6.0.0-1.ubuntu.16.04_amd64.deb
 sudo apt-get install -f
 ```
 
@@ -137,16 +142,20 @@ sudo apt-get install -y powershell
 pwsh
 ```
 
-Dopo essersi registrati una volta come utente con privilegi avanzati nel repository di Microsoft, è sufficiente usare semplicemente `sudo apt-get upgrade powershell` per eseguirne l'aggiornamento.
+Dopo essersi registrati una volta come utente con privilegi avanzati nel repository di Microsoft, è sufficiente usare `sudo apt-get upgrade powershell` per eseguirne l'aggiornamento.
 
 ### <a name="installation-via-direct-download---ubuntu-1704"></a>Ubuntu 17.04: installazione tramite download diretto
 
-Scaricare il pacchetto Debian `powershell_6.0.0-rc-1.ubuntu.17.04_amd64.deb` dalla pagina delle [versioni][] nel computer Ubuntu.
+Scaricare il pacchetto Debian `powershell_6.0.0-1.ubuntu.17.04_amd64.deb` dalla pagina delle [versioni][] nel computer Ubuntu:
+
+```sh
+wget https://github.com/PowerShell/PowerShell/releases/download/v6.0.0/powershell_6.0.0-1.ubuntu.17.04_amd64.deb
+```
 
 A questo punto eseguire quanto segue nel terminale:
 
 ```sh
-sudo dpkg -i powershell_6.0.0-rc-1.ubuntu.17.04_amd64.deb
+sudo dpkg -i powershell_6.0.0-1.ubuntu.17.04_amd64.deb
 sudo apt-get install -f
 ```
 
@@ -190,12 +199,16 @@ Dopo essersi registrati una volta come utente con privilegi avanzati nel reposit
 
 ### <a name="installation-via-direct-download---debian-8"></a>Debian 8: installazione tramite download diretto
 
-Scaricare il pacchetto Debian `powershell_6.0.0-rc-1.debian.8_amd64.deb` dalla pagina delle [versioni][] nel computer Debian.
+Scaricare il pacchetto Debian `powershell_6.0.0-1.debian.8_amd64.deb` dalla pagina delle [versioni][] nel computer Debian:
+
+```sh
+wget https://github.com/PowerShell/PowerShell/releases/download/v6.0.0/powershell_6.0.0-1.debian.8_amd64.deb
+```
 
 A questo punto eseguire quanto segue nel terminale:
 
 ```sh
-sudo dpkg -i powershell_6.0.0-rc-1.debian.8_amd64.deb
+sudo dpkg -i powershell_6.0.0-1.debian.8_amd64.deb
 sudo apt-get install -f
 ```
 
@@ -239,12 +252,16 @@ Dopo essersi registrati una volta come utente con privilegi avanzati nel reposit
 
 ### <a name="installation-via-direct-download---debian-9"></a>Debian 9: installazione tramite download diretto
 
-Scaricare il pacchetto Debian `powershell_6.0.0-rc-1.debian.9_amd64.deb` dalla pagina delle [versioni][] nel computer Debian.
+Scaricare il pacchetto Debian `powershell_6.0.0-1.debian.9_amd64.deb` dalla pagina delle [versioni][] nel computer Debian:
+
+```sh
+wget https://github.com/PowerShell/PowerShell/releases/download/v6.0.0/powershell_6.0.0-1.debian.9_amd64.deb
+```
 
 A questo punto eseguire quanto segue nel terminale:
 
 ```sh
-sudo dpkg -i powershell_6.0.0-rc-1.debian.9_amd64.deb
+sudo dpkg -i powershell_6.0.0-1.debian.9_amd64.deb
 sudo apt-get install -f
 ```
 
@@ -279,18 +296,22 @@ Dopo essersi registrati una volta come utente con privilegi avanzati nel reposit
 
 ### <a name="installation-via-direct-download---centos-7"></a>CentOS 7: installazione tramite download diretto
 
-Usando [CentOS 7][], scaricare il pacchetto RPM `powershell-6.0.0_rc-1.rhel.7.x86_64.rpm` dalla pagina delle [versioni][] nel computer CentOS.
+Usando [CentOS 7][], scaricare il pacchetto RPM `powershell-6.0.0-1.rhel.7.x86_64.rpm` dalla pagina delle [versioni][] nel computer CentOS:
+
+```sh
+wget https://github.com/PowerShell/PowerShell/releases/download/v6.0.0/powershell-6.0.0-1.rhel.7.x86_64.rpm
+```
 
 A questo punto eseguire quanto segue nel terminale:
 
 ```sh
-sudo yum install powershell-6.0.0_rc-1.rhel.7.x86_64.rpm
+sudo yum install powershell-6.0.0-1.rhel.7.x86_64.rpm
 ```
 
 È possibile installare il pacchetto RPM anche senza eseguire il passaggio intermedio di download del pacchetto:
 
 ```sh
-sudo yum install https://github.com/PowerShell/PowerShell/releases/download/v6.0.0-rc/powershell-6.0.0_rc-1.rhel.7.x86_64.rpm
+sudo yum install https://github.com/PowerShell/PowerShell/releases/download/v6.0.0/powershell-6.0.0-1.rhel.7.x86_64.rpm
 ```
 
 ### <a name="uninstallation---centos-7"></a>CentOS 7: disinstallazione
@@ -322,18 +343,22 @@ Dopo essersi registrati una volta come utente con privilegi avanzati nel reposit
 
 ### <a name="installation-via-direct-download---red-hat-enterprise-linux-rhel-7"></a>Red Hat Enterprise Linux (RHEL) 7: installazione tramite download diretto
 
-Scaricare il pacchetto RPM `powershell-6.0.0_rc-1.rhel.7.x86_64.rpm` dalla pagina delle [versioni][] nel computer Red Hat Enterprise Linux.
+Scaricare il pacchetto RPM `powershell-6.0.0-1.rhel.7.x86_64.rpm` dalla pagina delle [versioni][] nel computer Red Hat Enterprise Linux:
+
+```sh
+wget https://github.com/PowerShell/PowerShell/releases/download/v6.0.0/powershell_6.0.0-1.debian.9_amd64.deb
+```
 
 A questo punto eseguire quanto segue nel terminale:
 
 ```sh
-sudo yum install powershell-6.0.0_rc-1.rhel.7.x86_64.rpm
+sudo yum install powershell-6.0.0-1.rhel.7.x86_64.rpm
 ```
 
 È possibile installare il pacchetto RPM anche senza eseguire il passaggio intermedio di download del pacchetto:
 
 ```sh
-sudo yum install https://github.com/PowerShell/PowerShell/releases/download/v6.0.0-rc/powershell-6.0.0_rc-1.rhel.7.x86_64.rpm
+sudo yum install https://github.com/PowerShell/PowerShell/releases/download/v6.0.0/powershell-6.0.0-1.rhel.7.x86_64.rpm
 ```
 
 ### <a name="uninstallation---red-hat-enterprise-linux-rhel-7"></a>Red Hat Enterprise Linux (RHEL) 7: disinstallazione
@@ -372,18 +397,22 @@ pwsh
 
 ### <a name="installation-via-direct-download---opensuse-422"></a>OpenSUSE 42.2: installazione tramite download diretto
 
-Scaricare il pacchetto RPM `powershell-6.0.0_rc-1.rhel.7.x86_64.rpm` dalla pagina delle [versioni][] nel computer OpenSUSE.
+Scaricare il pacchetto RPM `powershell-6.0.0-1.rhel.7.x86_64.rpm` dalla pagina delle [versioni][] nel computer OpenSUSE:
+
+```sh
+wget https://github.com/PowerShell/PowerShell/releases/download/v6.0.0/powershell-6.0.0-1.rhel.7.x86_64.rpm
+```
 
 ```sh
 sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
-sudo zypper install powershell-6.0.0_rc-1.rhel.7.x86_64.rpm
+sudo zypper install powershell-6.0.0-1.rhel.7.x86_64.rpm
 ```
 
 È possibile installare il pacchetto RPM anche senza eseguire il passaggio intermedio di download del pacchetto:
 
 ```sh
 sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
-sudo zypper install https://github.com/PowerShell/PowerShell/releases/download/v6.0.0-rc/powershell-6.0.0_rc-1.rhel.7.x86_64.rpm
+sudo zypper install https://github.com/PowerShell/PowerShell/releases/download/v6.0.0/powershell-6.0.0-1.rhel.7.x86_64.rpm
 ```
 
 ### <a name="uninstallation---opensuse-422"></a>OpenSUSE 42.2: disinstallazione
@@ -417,18 +446,22 @@ pwsh
 
 ### <a name="installation-via-direct-download---fedora-25"></a>Fedora 25: installazione tramite download diretto
 
-Scaricare il pacchetto RPM `powershell-6.0.0_rc-1.rhel.7.x86_64.rpm` dalla pagina delle [versioni][] nel computer Fedora.
+Scaricare il pacchetto RPM `powershell-6.0.0-1.rhel.7.x86_64.rpm` dalla pagina delle [versioni][] nel computer Fedora:
+
+```sh
+wget https://github.com/PowerShell/PowerShell/releases/download/v6.0.0/powershell-6.0.0-1.rhel.7.x86_64.rpm
+```
 
 A questo punto eseguire quanto segue nel terminale:
 
 ```sh
-sudo dnf install powershell-6.0.0_rc-1.rhel.7.x86_64.rpm
+sudo dnf install powershell-6.0.0-1.rhel.7.x86_64.rpm
 ```
 
 È possibile installare il pacchetto RPM anche senza eseguire il passaggio intermedio di download del pacchetto:
 
 ```sh
-sudo dnf install https://github.com/PowerShell/PowerShell/releases/download/v6.0.0-rc/powershell-6.0.0_rc-1.rhel.7.x86_64.rpm
+sudo dnf install https://github.com/PowerShell/PowerShell/releases/download/v6.0.0/powershell-6.0.0-1.rhel.7.x86_64.rpm
 ```
 
 ### <a name="uninstallation---fedora-25"></a>Fedora 25: disinstallazione
@@ -465,14 +498,18 @@ pwsh
 
 ### <a name="installation-via-direct-download---fedora-26"></a>Fedora 26: installazione tramite download diretto
 
-Scaricare il pacchetto RPM `powershell-6.0.0_rc-1.rhel.7.x86_64.rpm` dalla pagina delle [versioni][] nel computer Fedora.
+Scaricare il pacchetto RPM `powershell-6.0.0-1.rhel.7.x86_64.rpm` dalla pagina delle [versioni][] nel computer Fedora:
+
+```sh
+wget https://github.com/PowerShell/PowerShell/releases/download/v6.0.0/powershell-6.0.0-1.rhel.7.x86_64.rpm
+```
 
 A questo punto eseguire quanto segue nel terminale:
 
 ```sh
 sudo dnf update
 sudo dnf install compat-openssl10
-sudo dnf install powershell-6.0.0_rc-1.rhel.7.x86_64.rpm
+sudo dnf install powershell-6.0.0-1.rhel.7.x86_64.rpm
 ```
 
 È possibile installare il pacchetto RPM anche senza eseguire il passaggio intermedio di download del pacchetto:
@@ -480,7 +517,7 @@ sudo dnf install powershell-6.0.0_rc-1.rhel.7.x86_64.rpm
 ```sh
 sudo dnf update
 sudo dnf install compat-openssl10
-sudo dnf install https://github.com/PowerShell/PowerShell/releases/download/v6.0.0-rc/powershell-6.0.0_rc-1.rhel.7.x86_64.rpm
+sudo dnf install https://github.com/PowerShell/PowerShell/releases/download/v6.0.0/powershell-6.0.0-1.rhel.7.x86_64.rpm
 ```
 
 ### <a name="uninstallation---fedora-26"></a>Fedora 26: disinstallazione
@@ -508,18 +545,16 @@ Per altre informazioni sull'installazione dei pacchetti da AUR, vedere il [wiki 
 
 ## <a name="linux-appimage"></a>Linux AppImage
 
-Usando una distribuzione Linux recente, scaricare `powershell-6.0.0-rc-x86_64.AppImage` di AppImage dalla pagina delle [versioni][] nel computer Linux.
+Usando una distribuzione Linux recente, scaricare `powershell-6.0.0-x86_64.AppImage` di AppImage dalla pagina delle [versioni][] nel computer Linux.
 
 A questo punto eseguire quanto segue nel terminale:
 
 ```bash
-chmod a+x powershell-6.0.0-rc-x86_64.AppImage
-./powershell-6.0.0-rc-x86_64.AppImage
+chmod a+x powershell-6.0.0-x86_64.AppImage
+./powershell-6.0.0-x86_64.AppImage
 ```
 
-[AppImage][] consente di eseguire PowerShell senza doverlo installare.
-È un'applicazione portabile che aggiunge PowerShell e le relative dipendenze (incluse le dipendenze di sistema di .NET Core) a un pacchetto integrato.
-Questo pacchetto funziona indipendentemente dalla distribuzione di Linux dell'utente ed è un singolo file binario.
+[AppImage][] consente di eseguire PowerShell senza doverlo installare. È un'applicazione portabile che aggiunge PowerShell e le relative dipendenze (incluse le dipendenze di sistema di .NET Core) a un pacchetto integrato. Questo pacchetto funziona indipendentemente dalla distribuzione di Linux dell'utente ed è un singolo file binario.
 
 [appimage]: http://appimage.org/
 
@@ -527,11 +562,9 @@ Questo pacchetto funziona indipendentemente dalla distribuzione di Linux dell'ut
 
 ### <a name="installation-via-homebrew-preferred---macos-1012"></a>MacOS 10.12: installazione tramite Homebrew (scelta consigliata)
 
-[Homebrew][brew] rappresenta la gestione pacchetti mancante per macOS.
-Se il comando `brew` non viene trovato, è necessario installare Homebrew seguendo [le istruzioni][brew].
+[Homebrew][brew] rappresenta la gestione pacchetti mancante per macOS. Se il comando `brew` non viene trovato, è necessario installare Homebrew seguendo [le istruzioni][brew].
 
-Dopo aver installato Homebrew, installare PowerShell sarà semplice.
-Prima installare [Homebrew-Cask][cask] in modo da poter installare più pacchetti:
+Dopo aver installato Homebrew, installare PowerShell sarà semplice. Prima installare [Homebrew-Cask][cask] in modo da poter installare più pacchetti:
 
 ```sh
 brew tap caskroom/cask
@@ -557,12 +590,12 @@ brew cask reinstall powershell
 
 ### <a name="installation-via-direct-download---macos-1012"></a>MacOS 10.12: installazione tramite download diretto
 
-Usando macOS 10.12, scaricare il pacchetto PKG `powershell-6.0.0-rc-osx.10.12-x64.pkg` dalla pagina delle [versioni][] nel computer macOS.
+Usando macOS 10.12, scaricare il pacchetto PKG `powershell-6.0.0-osx.10.12-x64.pkg` dalla pagina delle [versioni][] nel computer macOS.
 
 Fare doppio clic sul file e seguire i prompt oppure eseguire l'installazione dal terminale:
 
 ```sh
-sudo installer -pkg powershell-6.0.0-rc-osx.10.12-x64.pkg -target /
+sudo installer -pkg powershell-6.0.0-osx.10.12-x64.pkg -target /
 ```
 
 ### <a name="uninstallation---macos-1012"></a>MacOS 10.12: disinstallazione
@@ -579,8 +612,7 @@ Se PowerShell è stato installato tramite download diretto, PowerShell deve esse
 sudo rm -rf /usr/local/bin/pwsh /usr/local/microsoft/powershell
 ```
 
-Per disinstallare i percorsi aggiuntivi di PowerShell, ad esempio il percorso del profilo utente, vedere la sezione [Percorsi][paths] riportata di seguito in questo documento e rimuovere i percorsi con `sudo rm`.
-(Nota: questo passaggio non è necessario se PowerShell è stato installato con Homebrew.)
+Per disinstallare i percorsi aggiuntivi di PowerShell, ad esempio il percorso del profilo utente, vedere la sezione [Percorsi][paths] riportata di seguito in questo documento e rimuovere i percorsi con `sudo rm`. (Nota: questo passaggio non è necessario se PowerShell è stato installato con Homebrew.)
 
 [paths]:#paths
 
@@ -589,13 +621,14 @@ Per disinstallare i percorsi aggiuntivi di PowerShell, ad esempio il percorso de
 ### <a name="installation"></a>Installazione
 
 ```sh
-# Install prerequisites
-apt-get install libunwind8 libicu55
+# Download & Install prerequisites
+sudo apt-get install libunwind8 libicu55
 wget http://security.debian.org/debian-security/pool/updates/main/o/openssl/libssl1.0.0_1.0.1t-1+deb8u6_amd64.deb
-dpkg -i libssl1.0.0_1.0.1t-1+deb8u6_amd64.deb
+sudo dpkg -i libssl1.0.0_1.0.1t-1+deb8u6_amd64.deb
 
-# Install PowerShell
-dpkg -i powershell_6.0.0-rc-1.ubuntu.16.04_amd64.deb
+# Download & Install PowerShell
+wget https://github.com/PowerShell/PowerShell/releases/download/v6.0.0/powershell_6.0.0-1.ubuntu.16.04_amd64.deb
+sudo dpkg -i powershell_6.0.0-1.ubuntu.16.04_amd64.deb
 
 # Start PowerShell
 pwsh
@@ -605,19 +638,19 @@ pwsh
 
 ```sh
 # Grab the latest App Image
-wget https://github.com/PowerShell/PowerShell/releases/download/v6.0.0-rc/powershell-6.0.0-rc-x86_64.AppImage
+wget https://github.com/PowerShell/PowerShell/releases/download/v6.0.0/powershell-6.0.0-x86_64.AppImage
 
 # Make executable
-chmod a+x powershell-6.0.0-rc-x86_64.AppImage
+chmod a+x powershell-6.0.0-x86_64.AppImage
 
 # Start PowerShell
-./powershell-6.0.0-rc-x86_64.AppImage
+./powershell-6.0.0-x86_64.AppImage
 ```
 
 ### <a name="uninstallation---kali"></a>Kali: disinstallazione
 
 ```sh
-dpkg -r powershell_6.0.0-rc-1.ubuntu.16.04_amd64.deb
+sudo dpkg -r powershell-6.0.0-x86_64.AppImage
 ```
 
 ## <a name="raspbian"></a>Raspbian
@@ -631,13 +664,13 @@ Attualmente, PowerShell è supportato solo in Raspbian Stretch.
 sudo apt-get install libunwind8
 
 # Grab the latest tar.gz
-wget https://github.com/PowerShell/PowerShell/releases/download/v6.0.0-rc/powershell-6.0.0-rc-linux-arm32.tar.gz
+wget https://github.com/PowerShell/PowerShell/releases/download/v6.0.0/powershell-6.0.0-linux-arm32.tar.gz
 
 # Make folder to put powershell
 mkdir ~/powershell
 
 # Unpack the tar.gz file
-tar -xvf ./powershell-6.0.0-rc-linux-arm32.tar.gz -C ~/powershell
+tar -xvf ./powershell-6.0.0-linux-arm32.tar.gz -C ~/powershell
 
 # Start PowerShell
 ~/powershell/pwsh
@@ -670,8 +703,7 @@ La tabella seguente illustra le dipendenze di .NET Core 2.0 in varie distribuzio
 | CentOS 7 <br> Oracle Linux 7 <br> RHEL 7 <br> OpenSUSE 42.2 <br> Fedora 25 | libunwind, libcurl, openssl-libs, libicu |
 | Fedora 26          | libunwind, libcurl, openssl-libs, libicu, compat-openssl10 |
 
-Per distribuire i file binari di PowerShell in distribuzioni di Linux non ufficialmente supportate, si devono installare le dipendenze necessarie al sistema operativo di destinazione in due passaggi distinti.
-Ad esempio, il [dockerfile di Amazon Linux ][amazon-dockerfile] installa prima le dipendenze e poi estrae l'archivio `tar.gz` di Linux.
+Per distribuire i file binari di PowerShell in distribuzioni di Linux non ufficialmente supportate, si devono installare le dipendenze necessarie al sistema operativo di destinazione in due passaggi distinti. Ad esempio, il [dockerfile di Amazon Linux ][amazon-dockerfile] installa prima le dipendenze e poi estrae l'archivio `tar.gz` di Linux.
 
 [amazon-dockerfile]: https://github.com/PowerShell/PowerShell/blob/master/docker/community/amazonlinux/Dockerfile
 
@@ -681,38 +713,38 @@ Ad esempio, il [dockerfile di Amazon Linux ][amazon-dockerfile] installa prima l
 
 ```sh
 # Download the powershell '.tar.gz' archive
-curl -L -o /tmp/powershell.tar.gz https://github.com/PowerShell/PowerShell/releases/download/v6.0.0-rc/powershell-6.0.0-rc-linux-x64.tar.gz
+curl -L -o /tmp/powershell.tar.gz https://github.com/PowerShell/PowerShell/releases/download/v6.0.0/powershell-6.0.0-linux-x64.tar.gz
 
 # Create the target folder where powershell will be placed
-sudo mkdir -p /opt/microsoft/powershell/6.0.0-rc
+sudo mkdir -p /opt/microsoft/powershell/6.0.0
 
 # Expand powershell to the target folder
-sudo tar zxf /tmp/powershell.tar.gz -C /opt/microsoft/powershell/6.0.0-rc
+sudo tar zxf /tmp/powershell.tar.gz -C /opt/microsoft/powershell/6.0.0
 
 # Set execute permissions
-sudo chmod +x /usr/local/microsoft/powershell/6.0.0-rc/pwsh
+sudo chmod +x /usr/local/microsoft/powershell/6.0.0/pwsh
 
 # Create the symbolic link that points to pwsh
-sudo ln -s /opt/microsoft/powershell/6.0.0-rc/pwsh /usr/bin/pwsh
+sudo ln -s /opt/microsoft/powershell/6.0.0/pwsh /usr/bin/pwsh
 ```
 
 #### <a name="macos"></a>macOS
 
 ```sh
 # Download the powershell '.tar.gz' archive
-curl -L -o /tmp/powershell.tar.gz https://github.com/PowerShell/PowerShell/releases/download/v6.0.0-rc/powershell-6.0.0-rc-osx-x64.tar.gz
+curl -L -o /tmp/powershell.tar.gz https://github.com/PowerShell/PowerShell/releases/download/v6.0.0/powershell-6.0.0-osx-x64.tar.gz
 
 # Create the target folder where powershell will be placed
-sudo mkdir -p /usr/local/microsoft/powershell/6.0.0-rc
+sudo mkdir -p /usr/local/microsoft/powershell/6.0.0
 
 # Expand powershell to the target folder
-sudo tar zxf /tmp/powershell.tar.gz -C /usr/local/microsoft/powershell/6.0.0-rc
+sudo tar zxf /tmp/powershell.tar.gz -C /usr/local/microsoft/powershell/6.0.0
 
 # Set execute permissions
-sudo chmod +x /usr/local/microsoft/powershell/6.0.0-rc/pwsh
+sudo chmod +x /usr/local/microsoft/powershell/6.0.0/pwsh
 
 # Create the symbolic link that points to pwsh
-sudo ln -s /usr/local/microsoft/powershell/6.0.0-rc/pwsh /usr/local/bin/pwsh
+sudo ln -s /usr/local/microsoft/powershell/6.0.0/pwsh /usr/local/bin/pwsh
 ```
 
 ### <a name="uninstallation---binary-archives"></a>Archivi di file binari: disinstallazione
@@ -731,7 +763,7 @@ sudo rm -rf /usr/local/bin/pwsh /usr/local/microsoft/powershell
 
 ## <a name="paths"></a>Percorsi
 
-* `$PSHOME` è `/opt/microsoft/powershell/6.0.0-rc/`
+* `$PSHOME` è `/opt/microsoft/powershell/6.0.0/`
 * I profili utente vengono letti da `~/.config/powershell/profile.ps1`
 * I profili predefiniti vengono letti da `$PSHOME/profile.ps1`
 * I moduli utente vengono letti da `~/.local/share/powershell/Modules`
@@ -743,8 +775,7 @@ I profili di rispettano la configurazione per ogni host di PowerShell, pertanto 
 
 In Linux e macOS viene rispettata la [specifica della directory Base XDG][xdg-bds].
 
-Si noti che poiché macOS è una derivazione di BSD, invece di `/opt` si usa il prefisso `/usr/local`.
-Di conseguenza, `$PSHOME` è `/usr/local/microsoft/powershell/6.0.0-rc/` e il collegamento simbolico viene posizionato in `/usr/local/bin/pwsh`.
+Si noti che poiché macOS è una derivazione di BSD, invece di `/opt` si usa il prefisso `/usr/local`. Di conseguenza, `$PSHOME` è `/usr/local/microsoft/powershell/6.0.0/` e il collegamento simbolico viene posizionato in `/usr/local/bin/pwsh`.
 
 [versioni]: https://github.com/PowerShell/PowerShell/releases/latest
 [xdg-bds]: https://specifications.freedesktop.org/basedir-spec/basedir-spec-latest.html

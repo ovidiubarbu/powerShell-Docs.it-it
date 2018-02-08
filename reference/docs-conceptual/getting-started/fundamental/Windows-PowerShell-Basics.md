@@ -3,11 +3,11 @@ ms.date: 2017-06-05
 keywords: powershell,cmdlet
 title: Nozioni di base su Windows PowerShell
 ms.assetid: 6b3cbbc8-060c-4877-b00b-7300dbbe4e28
-ms.openlocfilehash: 7b5cdfce876aa7d5559fe772379829011b275a02
-ms.sourcegitcommit: d6ab9ab5909ed59cce4ce30e29457e0e75c7ac12
+ms.openlocfilehash: bd17786d2d8690b89a2d107e0da98ee45f5b2ff7
+ms.sourcegitcommit: 18e3bfae83ffe282d3fd1a45f5386f3b7250f0c0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="windows-powershell-basics"></a>Nozioni di base su Windows PowerShell
 Le interfacce utente grafiche usano alcuni concetti di base ben noti alla maggior parte degli utenti di computer. Gli utenti contano sulla familiarità di tali interfacce per eseguire le attività. I sistemi operativi offrono agli utenti una rappresentazione grafica degli elementi che possono essere visualizzati, in genere con menu a discesa per l'accesso a funzionalità specifiche e menu di scelta rapida per l'accesso a funzionalità specifiche di un determinato contesto.
@@ -18,13 +18,10 @@ La maggior parte delle interfacce della riga di comando non include schemi o mod
 
 Windows PowerShell è stato progettato per sfruttare le conoscenze storiche delle interfacce della riga di comando degli utenti. In questo capitolo verranno presentati alcuni strumenti e concetti di base utili per acquisire rapidamente familiarità con Windows PowerShell. Tali impostazioni includono:
 
-- Uso di Get-Command
+- Uso di [Get-Command](/powershell/module/Microsoft.PowerShell.Core/get-command)
 
-- Uso di Cmd.exe e dei comandi UNIX
+- Uso di [Cmd.exe](/windows-server/administration/windows-commands/cmd) e dei [comandi UNIX](/windows/wsl/reference)
 
-- Uso di comandi esterni
+- [Uso di Tab-Completion](../../core-powershell/console/using-tab-expansion.md)
 
-- Uso di Tab-Completion
-
-- Uso di Get-Help
-
+- [Uso di Get-Help](./getting-detailed-help-information.md)
