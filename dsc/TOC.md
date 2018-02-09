@@ -108,7 +108,7 @@
 
 # Modello di pull DSC
 
-## [Configurazione di un server di pull Web](pullServer.md)
+## [Servizio di pull DSC](pullServer.md)
 
 ## [Configurazione di un server di pull SMB DSC](pullServerSMB.md)
 
