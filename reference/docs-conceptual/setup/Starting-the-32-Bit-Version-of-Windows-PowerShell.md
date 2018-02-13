@@ -4,10 +4,10 @@ keywords: powershell,cmdlet
 title: Avvio della versione a 32 bit di Windows PowerShell
 ms.assetid: 12b31890-2609-4a76-8c24-0ebe78084f50
 ms.openlocfilehash: d682ce45ebc92cda3a9008ab608bacf9ef8eba57
-ms.sourcegitcommit: d6ab9ab5909ed59cce4ce30e29457e0e75c7ac12
+ms.sourcegitcommit: 18e3bfae83ffe282d3fd1a45f5386f3b7250f0c0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2017
+ms.lasthandoff: 02/08/2018
 ---
 # <a name="starting-the-32-bit-version-of-windows-powershell"></a>Avvio della versione a 32 bit di Windows PowerShell
 Quando si installa Windows PowerShell in un computer a 64 bit, oltre alla versione a 64 bit viene installato **Windows PowerShell (x86)**, una versione a 32 bit di Windows PowerShell. Quando si esegue Windows PowerShell, viene eseguita la versione a 64 bit per impostazione predefinita.

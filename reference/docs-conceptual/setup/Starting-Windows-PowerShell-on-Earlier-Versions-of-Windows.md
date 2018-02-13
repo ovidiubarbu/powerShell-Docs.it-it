@@ -4,10 +4,10 @@ keywords: powershell,cmdlet
 title: Avvio di Windows PowerShell in versioni precedenti di Windows
 ms.assetid: 57125436-3d1e-4e7f-b5c4-8f0ecb49d642
 ms.openlocfilehash: 52e3acc1fd3009ecad3b7134008e38d4edfb5ca7
-ms.sourcegitcommit: d6ab9ab5909ed59cce4ce30e29457e0e75c7ac12
+ms.sourcegitcommit: 18e3bfae83ffe282d3fd1a45f5386f3b7250f0c0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2017
+ms.lasthandoff: 02/08/2018
 ---
 # <a name="starting-windows-powershell-on-earlier-versions-of-windows"></a>Avvio di Windows PowerShell in versioni precedenti di Windows
 Questa sezione illustra come avviare Windows PowerShell e Windows PowerShell Integrated Scripting Environment (ISE) in Windows® 7, Windows Server® 2008 R2 e Windows Server® 2008. Descrive anche come abilitare la funzionalità facoltativa per Windows PowerShell ISE in Windows PowerShell 2.0 per Windows Server® 2008 R2 e Windows Server® 2008.
