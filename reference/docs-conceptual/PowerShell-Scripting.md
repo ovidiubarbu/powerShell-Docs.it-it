@@ -2,54 +2,60 @@
 ms.date: 2017-06-05
 keywords: powershell,cmdlet
 title: Scripting di PowerShell
-ms.openlocfilehash: 8d2386dc49c59a106ecdddf0feabe3344834a86d
-ms.sourcegitcommit: 3720ce4efb6735694cfb53a1b793d949af5d1bc5
+ms.openlocfilehash: 9214b9e40ff6c181f921f89ef78406af20c30e5f
+ms.sourcegitcommit: 755d7bc0740573d73613cedcf79981ca3dc81c5e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/29/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="powershell"></a>PowerShell
 
-Windows PowerShell, basato su .NET Framework, è una shell da riga di comando basata su attività nonché un linguaggio di scripting progettato espressamente per consentire agli amministratori di sistema e agli utenti avanzati di automatizzare rapidamente l'amministrazione di più sistemi operativi (Linux, macOS, Unix e Windows) e i processi correlati alle applicazioni eseguite su tali sistemi operativi.
+PowerShell, basato su .NET Framework, è una shell da riga di comando basata su attività nonché un linguaggio di scripting progettato espressamente per consentire agli amministratori di sistema e agli utenti avanzati di automatizzare rapidamente l'amministrazione di più sistemi operativi (Linux, macOS, Unix e Windows) e i processi correlati alle applicazioni eseguite su tali sistemi operativi.
 
-### <a name="powershell-is-now-open-source"></a>PowerShell è ora open source
+## <a name="powershell-is-open-source"></a>PowerShell è open source
 
-Il codice open source di base di PowerShell ora è disponibile su GitHub e aperto ai contributi della community. Per informazioni, vedere [PowerShell](https://github.com/powershell/powershell).
+Il codice open source di base di PowerShell ora è disponibile su GitHub e aperto ai contributi della community. Vedere il [codice open source di PowerShell su GitHub](https://github.com/powershell/powershell).
 
 Per iniziare, è possibile [ottenere PowerShell](https://github.com/PowerShell/PowerShell#get-powershell).
 In alternativa, è possibile iniziare da una rapida panoramica di [introduzione](https://github.com/PowerShell/PowerShell/blob/master/docs/learning-powershell)
 
-> **Nota:**  
-> tutti i collegamenti relativi a PowerShell su GitHub portano al sito GitHub.
+## <a name="powershell-design-goals"></a>Obiettivi di progettazione di PowerShell
+Windows PowerShell è progettato per migliorare la riga di comando e l'ambiente di scripting eliminando problemi di lunga data e aggiungendo nuove funzionalità.
 
-# <a name="documentation"></a>Documentazione
+### <a name="discoverability"></a>Individuabilità
+È facile individuare le funzionalità di Windows PowerShell. Ad esempio, per trovare un elenco dei cmdlet che consentono di visualizzare e modificare i servizi di Windows, digitare:
 
-La raccolta della documentazione è organizzata in quattro sezioni principali:
+```
+Get-Command *-Service
+```
 
-## <a name="whats-new-with-powershellwhats-newwhat-s-new-with-powershellmd"></a>[Novità di PowerShell](whats-new/What-s-New-With-PowerShell.md)
-Questa sezione contiene gli annunci sul prodotto, per ogni singola versione.
+Dopo aver individuato il cmdlet che esegue un'attività, è possibile ottenere altre informazioni con il cmdlet Get-Help. Per visualizzare la Guida per il cmdlet Get-Service, ad esempio, digitare:
 
-## <a name="powershell-setupsetupsetup-referencemd"></a>[Installazione di PowerShell](setup/setup-reference.md)
-Questa sezione contiene le informazioni necessarie per installare tutte le versioni di PowerShell in ogni ambiente supportato.  
+```
+Get-Help Get-Service
+```
+La maggior parte dei cmdlet genera oggetti che possono essere modificati e di cui è possibile eseguire il rendering in testo per la visualizzazione. Per una migliore comprensione dell'output del cmdlet, inviarne l'output tramite pipe al cmdlet Get-Member. Il comando seguente, ad esempio, visualizza informazioni sui membri dell'oggetto restituito dal cmdlet Get-Service.
 
-Viene descritto anche come configurare il prodotto per sicurezza, accessibilità, gestione e accesso remoti, flussi di lavoro e accesso Web.
+```
+Get-Service | Get-Member
+```
 
-## <a name="getting-started-with-powershellgetting-startedgetting-started-with-windows-powershellmd"></a>[Introduzione a PowerShell](getting-started/Getting-Started-with-Windows-PowerShell.md)
-Questa sezione è dedicata ai nuovi utenti di PowerShell, che qui accedono a tutte le informazioni necessarie per iniziare a usare il prodotto.  
-In questa sezione:
-- [Preparazione all'uso di Windows PowerShell](getting-started/Getting-Ready-to-Use-Windows-PowerShell.md), che descrive i passaggi necessari per configurare PowerShell in modo da eseguire e provare tutti i frammenti di codice e comandi presentati nella sezione "Introduzione a PowerShell".
-- Guida ai [concetti fondamentali](getting-started/fundamental-concepts.md), che spiega che cos'è PowerShell e contiene le informazioni di base necessarie per iniziare a usarlo.
-- Una serie di [concetti &lt;informativi&gt;](getting-started/understanding-concepts-reference.md), che descrivono gli elementi di base PowerShell.
-- Una serie di [informazioni di riferimento dettagliate di base per l'&lt;utilizzo&gt;](getting-started/cookbooks/basic-cookbooks-reference.md), che forniscono le istruzioni per eseguire attività standard riguardo a file, file system, Registro di sistema, processi, servizi e altre operazioni simili quotidiane.
-- Guida accurata ad altre fonti per l'[apprendimento di PowerShell](getting-started/more-powershell-learning.md).
+### <a name="consistency"></a>Coerenza
+La gestione dei sistemi può essere un'impresa complicata e gli strumenti con un'interfaccia coerente sono utili per esercitare un maggiore controllo sulla complessità intrinseca. Sfortunatamente, gli strumenti da riga di comando o gli oggetti COM gestibili tramite script non sono certo noti per la loro coerenza.
 
-## <a name="common-powershellcore-powershellcore-powershellmd"></a>[PowerShell comune](core-powershell/core-powershell.md)
-Questa sezione contiene tutti i materiali di riferimento per PowerShell.  
-In questa sezione:
-- [PowerShell Integrated Scripting Environment \(ISE\)](core-powershell/ise-guide.md)
-- [Finestra della console di PowerShell](core-powershell/console-guide.md)
-- [Gestione remota di PowerShell](core-powershell/Running-Remote-Commands.md)
-- [Flussi di lavoro di PowerShell](core-powershell/workflows-guide.md)
-- [Accesso Web di PowerShell](core-powershell/web-access.md)
-- [Glossario di PowerShell](Windows-PowerShell-Glossary.md)
+La coerenza di Windows PowerShell è una delle sue principali risorse. Ad esempio, dopo aver imparato a usare il cmdlet Sort-Object, è possibile usare tali conoscenze per ordinare l'output di qualsiasi cmdlet. Non occorre imparare le diverse routine di ordinamento di ogni cmdlet.
 
+Gli sviluppatori di cmdlet, inoltre, non devono progettare funzionalità di ordinamento per i loro cmdlet. Windows PowerShell offre loro un framework che fornisce le funzionalità di base e impone la coerenza per molti aspetti dell'interfaccia. Il framework elimina alcune delle scelte che sono in genere compito dello sviluppatore, ma, in cambio, semplifica notevolmente lo sviluppo di cmdlet affidabili e facili da usare.
+
+### <a name="interactive-and-scripting-environments"></a>Ambienti interattivi e di scripting
+Windows PowerShell è un ambiente interattivo e di scripting combinato che offre l'accesso a strumenti da riga di comando e oggetti COM, oltre a consentire l'uso della potente libreria di classi .NET Framework.
+
+Questo ambiente rappresenta un miglioramento del prompt dei comandi Windows, che rende disponibile un ambiente interattivo con più strumenti da riga di comando. Si tratta di un miglioramento anche rispetto agli script di Windows Script Host (WSH), che consentono di usare più strumenti da riga di comando e oggetti di automazione COM, ma non offrono un ambiente interattivo.
+
+Combinando l'accesso a tutte queste funzionalità, Windows PowerShell amplia le potenzialità dell'utente interattivo e dell'autore di script, oltre a rendere più gestibile l'amministrazione del sistema.
+
+### <a name="object-orientation"></a>Orientamento agli oggetti
+Sebbene le interazioni con Windows PowerShell avvengano tramite la digitazione di comandi testuali, Windows PowerShell è basato su oggetti e non sul testo. L'output di un comando è un oggetto. È possibile inviare l'oggetto di output a un altro comando come input. Di conseguenza, Windows PowerShell offre un'interfaccia familiare agli utenti esperti di altre shell, introducendo allo stesso tempo un paradigma di riga di comando nuovo e potente. Estende il concetto di invio dei dati tra i comandi grazie alla possibilità di inviare oggetti invece di testo.
+
+### <a name="easy-transition-to-scripting"></a>Facile transizione verso la creazione di script
+Con Windows PowerShell è facile passare dalla digitazione interattiva di comandi alla creazione ed esecuzione di script. È possibile digitare i comandi al prompt dei comandi di Windows PowerShell per individuare i comandi che eseguono un'attività. Questi comandi possono essere poi salvati in una trascrizione o una cronologia prima di copiarli in un file per l'uso come script.

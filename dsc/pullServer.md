@@ -1,77 +1,116 @@
 ---
-ms.date: 2017-06-12
+ms.date: 2018-02-02
 ms.topic: conceptual
 keywords: dsc,powershell,configurazione,installazione
-title: Configurazione di un server di pull Web DSC
-ms.openlocfilehash: 9a09804ef0efe3e4c92923910884710187d44ac5
-ms.sourcegitcommit: a444406120e5af4e746cbbc0558fe89a7e78aef6
+title: Servizio di pull DSC
+ms.openlocfilehash: d5e24dcc093c73d8ebbaa618517193dacc4f2aaf
+ms.sourcegitcommit: 755d7bc0740573d73613cedcf79981ca3dc81c5e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 02/09/2018
 ---
-# <a name="setting-up-a-dsc-web-pull-server"></a>Configurazione di un server di pull Web DSC
+# <a name="desired-state-configuration-pull-service"></a>Servizio di pull DSC (Desired State Configuration)
 
 > Si applica a: Windows PowerShell 5.0
 
-Un server di pull Web DSC è un servizio Web in IIS che usa un'interfaccia OData per rendere i file di configurazione DSC disponibili ai nodi di destinazione quando questi li richiedono.
+Gestione configurazione locale può essere gestito a livello centralizzato da una soluzione servizio di pull.
+Con questo approccio, il nodo gestito viene registrato con un servizio e gli viene assegnata una configurazione nelle impostazioni di Gestione configurazione locale.
+La configurazione e tutte le risorse DSC necessarie come dipendenze per la configurazione vengono scaricate nel computer e usate da Gestione configurazione locale per gestire la configurazione.
+Nel servizio vengono caricate informazioni sullo stato del computer gestito per la creazione di report.
+Questo concetto è noto come "servizio di pull".
+
+Le opzioni correnti per il servizio di pull includono:
+
+- Servizio DSC (Desired State Configuration) di Automazione di Azure
+- Un servizio di pull in esecuzione in Windows Server
+- Soluzioni open source gestite dalla community
+- Una condivisione SMB
+
+**La soluzione consigliata**, e l'opzione con il maggior numero di funzionalità disponibili, è [Automation DSC di Azure](https://docs.microsoft.com/en-us/azure/automation/automation-dsc-getting-started).
+
+Il servizio di Azure può gestire i nodi in locale nei data center privati o in cloud pubblici, come Azure e AWS.
+Per gli ambienti privati in cui i server non possono connettersi direttamente a Internet, è consigliabile limitare il traffico in uscita esclusivamente all'intervallo di indirizzi IP di Azure pubblicato (vedere gli [intervalli di indirizzi IP dei data center di Azure](https://www.microsoft.com/en-us/download/details.aspx?id=41653)).
+
+Le funzionalità del servizio online che non sono attualmente disponibili nel servizio di pull in Windows Server includono:
+- Tutti i dati vengono crittografati in transito e quando inattivi
+- I certificati client vengono creati e gestiti automaticamente
+- Archivio dei segreti per la gestione centralizzata di [password/credenziali](https://docs.microsoft.com/en-us/azure/automation/automation-credentials) o [variabili](https://docs.microsoft.com/en-us/azure/automation/automation-variables) come nomi dei server o stringhe di connessione
+- Gestione centralizzata della [configurazione di Gestione configurazione locale](metaConfig.md#basic-settings) del nodo
+- Assegnazione centralizzata delle configurazioni ai nodi client
+- Rilascio delle modifiche di configurazione a "gruppi canary" per i test prima della distribuzione in ambiente di produzione
+- Creazione di report grafici
+  - Dettagli sullo stato al livello di granularità delle risorse DSC
+  - Messaggi di errore dettagliati dai computer client per la risoluzione dei problemi
+- [Integrazione con Azure Log Analytics](https://docs.microsoft.com/en-us/azure/automation/automation-dsc-diagnostics) per gli avvisi, attività automatizzate, app Android o iOS per report e avvisi
+
+## <a name="dsc-pull-service-in-windows-server"></a>Servizio di pull DSC in Windows Server 2016
+
+È possibile configurare un servizio di pull per l'esecuzione in Windows Server.
+Si noti che la soluzione di servizio di pull inclusa in Windows Server include solo le funzionalità di archiviazione di configurazioni/moduli per il download e di acquisizione di dati di report in un database.
+Non include molte delle funzionalità offerte dal servizio in Azure e pertanto non rappresenta uno strumento ottimale per la valutazione delle modalità d'uso del servizio.
+
+Il servizio di pull offerto in Windows Server è un servizio Web in IIS che usa un'interfaccia OData per rendere i file di configurazione DSC disponibili ai nodi di destinazione quando questi li richiedono.
 
 Requisiti per l'uso di un server di pull:
 
-* Un server che esegue:
+- Un server che esegue:
   - WMF/PowerShell 5.0 o versioni successive
   - Ruolo del server IIS
   - Servizio DSC
-* Idealmente, uno strumento per la generazione di un certificato, per proteggere le credenziali passate a Gestione configurazione locale nei nodi di destinazione
+- Idealmente, uno strumento per la generazione di un certificato, per proteggere le credenziali passate a Gestione configurazione locale nei nodi di destinazione
 
-Per aggiungere il ruolo del server IIS e il servizio DSC, è possibile usare l'Aggiunta guidata ruoli e funzionalità in Server Manager oppure PowerShell. Gli script di esempio inclusi in questo argomento gestiscono entrambi i passaggi automaticamente.
+Il modo migliore per configurare Windows Server per ospitare un servizio di pull consiste nell'usare una configurazione DSC.
+Di seguito è disponibile un esempio di script.
 
-## <a name="using-the-xdscwebservice-resource"></a>Uso della risorsa xDSCWebService
-Il metodo più semplice per configurare un server di pull Web consiste nell'usare la risorsa xWebService, inclusa nel modulo xPSDesiredStateConfiguration. I passaggi seguenti descrivono come usare la risorsa in una configurazione che imposta il servizio Web.
+### <a name="using-the-xdscwebservice-resource"></a>Uso della risorsa xDSCWebService
+
+Il metodo più semplice per configurare un server di pull Web consiste nell'usare la risorsa xWebService, inclusa nel modulo xPSDesiredStateConfiguration.
+I passaggi seguenti descrivono come usare la risorsa in una configurazione che imposta il servizio Web.
 
 1. Chiamare il cmdlet [Install-Module](https://technet.microsoft.com/en-us/library/dn807162.aspx) per installare il modulo **xPSDesiredStateConfiguration**. **Nota**: il cmdlet **Install-Module** è incluso nel modulo **PowerShellGet**, disponibile in PowerShell 5.0. È possibile scaricare il modulo **PowerShellGet** per PowerShell 3.0 e 4.0 dalla pagina dell'[anteprima dei moduli PackageManagement di PowerShell](https://www.microsoft.com/en-us/download/details.aspx?id=49186). 
 1. Ottenere un certificato SSL per il server di pull DSC da un'Autorità di certificazione attendibile, all'interno dell'organizzazione o pubblica. Il certificato ricevuto dall'autorità è in genere in formato PFX. Installare il certificato nel nodo che diventerà il server di pull DSC nel percorso predefinito, ossia CERT: \LocalMachine\My. Prendere nota dell'identificazione personale del certificato.
 1. Selezionare un GUID da usare come chiave di registrazione. Per generarne uno tramite PowerShell, immettere quanto segue al prompt di PowerShell e premere Invio: ``` [guid]::newGuid()``` oppure ```New-Guid```. Questa chiave verrà usata dai nodi client come chiave condivisa per l'autenticazione durante la registrazione. Per altre informazioni, vedere la sezione Chiave di registrazione di seguito.
 1. In PowerShell ISE avviare (F5) lo script di configurazione seguente (incluso nella cartella Example del modulo **xPSDesiredStateConfiguration** come Sample_xDscWebService.ps1). Questo script configura il server di pull.
-  
-    ```powershell
-    configuration Sample_xDscPullServer
-    { 
-        param  
-        ( 
-                [string[]]$NodeName = 'localhost', 
 
-                [ValidateNotNullOrEmpty()] 
+```powershell
+    configuration Sample_xDscPullServer
+    {
+        param
+        (
+                [string[]]$NodeName = 'localhost',
+
+                [ValidateNotNullOrEmpty()]
                 [string] $certificateThumbPrint,
 
                 [Parameter(Mandatory)]
                 [ValidateNotNullOrEmpty()]
-                [string] $RegistrationKey 
-         ) 
-         
+                [string] $RegistrationKey
+         )
+
          Import-DSCResource -ModuleName xPSDesiredStateConfiguration
          Import-DSCResource –ModuleName PSDesiredStateConfiguration
 
-         Node $NodeName 
-         { 
-             WindowsFeature DSCServiceFeature 
-             { 
+         Node $NodeName
+         {
+             WindowsFeature DSCServiceFeature
+             {
                  Ensure = 'Present'
-                 Name   = 'DSC-Service'             
-             } 
+                 Name   = 'DSC-Service'
+             }
 
-             xDscWebService PSDSCPullServer 
-             { 
-                 Ensure                   = 'Present' 
-                 EndpointName             = 'PSDSCPullServer' 
-                 Port                     = 8080 
-                 PhysicalPath             = "$env:SystemDrive\inetpub\PSDSCPullServer" 
-                 CertificateThumbPrint    = $certificateThumbPrint          
-                 ModulePath               = "$env:PROGRAMFILES\WindowsPowerShell\DscService\Modules" 
-                 ConfigurationPath        = "$env:PROGRAMFILES\WindowsPowerShell\DscService\Configuration" 
+             xDscWebService PSDSCPullServer
+             {
+                 Ensure                   = 'Present'
+                 EndpointName             = 'PSDSCPullServer'
+                 Port                     = 8080
+                 PhysicalPath             = "$env:SystemDrive\inetpub\PSDSCPullServer"
+                 CertificateThumbPrint    = $certificateThumbPrint
+                 ModulePath               = "$env:PROGRAMFILES\WindowsPowerShell\DscService\Modules"
+                 ConfigurationPath        = "$env:PROGRAMFILES\WindowsPowerShell\DscService\Configuration"
                  State                    = 'Started'
-                 DependsOn                = '[WindowsFeature]DSCServiceFeature'     
+                 DependsOn                = '[WindowsFeature]DSCServiceFeature'
                  UseSecurityBestPractices = $false
-             } 
+             }
 
             File RegistrationKeyFile
             {
@@ -83,11 +122,11 @@ Il metodo più semplice per configurare un server di pull Web consiste nell'usar
         }
     }
 
-    ```
+```
 
 1. Eseguire la configurazione, passando l'identificazione personale del certificato SSL come parametro **certificateThumbPrint** e una chiave di registrazione GUID come parametro **RegistrationKey**:
 
-    ```powershell
+```powershell
     # To find the Thumbprint for an installed SSL certificate for use with the pull server list all certificates in your local store 
     # and then copy the thumbprint for the appropriate certificate by reviewing the certificate subjects
     dir Cert:\LocalMachine\my
@@ -97,9 +136,11 @@ Il metodo più semplice per configurare un server di pull Web consiste nell'usar
 
     # Run the compiled configuration to make the target node a DSC Pull Server
     Start-DscConfiguration -Path c:\Configs\PullServer -Wait -Verbose
-    ```
 
-## <a name="registration-key"></a>Chiave di registrazione
+```
+
+#### <a name="registration-key"></a>Chiave di registrazione
+
 Per consentire ai nodi client di eseguire la registrazione nel server in modo da poter usare i nomi di configurazione invece di un ID configurazione, una chiave di registrazione creata dalla configurazione precedente viene salvata in un file denominato `RegistrationKeys.txt` in `C:\Program Files\WindowsPowerShell\DscService`. La chiave di registrazione funziona come segreto condiviso usato durante la registrazione iniziale dal client con il server di pull. Il client genererà un certificato autofirmato che viene usato per l'autenticazione univoca nel server di pull dopo il corretto completamento della registrazione. L'identificazione personale del certificato viene archiviata in locale e associata all'URL del server di pull.
 > **Nota**: le chiavi di registrazione non sono supportate in PowerShell 4.0. 
 
@@ -117,14 +158,14 @@ configuration PullClientConfigID
             RefreshFrequencyMins = 30 
             RebootNodeIfNeeded   = $true
         }
-        
+
         ConfigurationRepositoryWeb CONTOSO-PullSrv
         {
             ServerURL          = 'https://CONTOSO-PullSrv:8080/PSDSCPullServer.svc'
             RegistrationKey    = '140a952b-b9d6-406b-b416-e0f759c9c0e4'
             ConfigurationNames = @('ClientConfig')
-        }   
-        
+        }
+
         ReportServerWeb CONTOSO-PullSrv
         {
             ServerURL       = 'https://CONTOSO-PullSrv:8080/PSDSCPullServer.svc'
@@ -134,30 +175,50 @@ configuration PullClientConfigID
 }
 
 PullClientConfigID -OutputPath c:\Configs\TargetNodes
-```
-> **Nota**: la sezione **ReportServerWeb** consente l'invio dei dati di report al server di pull. 
 
-L'assenza della proprietà **ConfigurationID** nel file di metaconfigurazione significa implicitamente che il server di pull supporta la versione V2 del protocollo del server di pull e quindi è richiesta una registrazione iniziale. Al contrario, la presenza di un valore **ConfigurationID** significa che viene usata la versione V1 del protocollo del server di pull e non è prevista l'elaborazione della registrazione.
+
+```
+
+> **Nota**: la sezione **ReportServerWeb** consente l'invio dei dati di report al server di pull.
+
+L'assenza della proprietà **ConfigurationID** nel file di metaconfigurazione significa implicitamente che il server di pull supporta la versione V2 del protocollo del server di pull e quindi è richiesta una registrazione iniziale.
+Al contrario, la presenza di un valore **ConfigurationID** significa che viene usata la versione V1 del protocollo del server di pull e non è prevista l'elaborazione della registrazione.
 
 >**Nota**: in uno scenario PUSH esiste un bug nella versione corrente che rende necessario definire una proprietà ConfigurationID nel file di metaconfigurazione per i nodi mai registrati in un server di pull. Verrà così forzato l'uso del protocollo V1 per il server di pull evitando messaggi di errori correlati alla registrazione.
 
 ## <a name="placing-configurations-and-resources"></a>Inserimento di configurazioni e risorse
 
-Dopo il completamento della configurazione del server di pull, le cartelle definite dalle proprietà **ConfigurationPath** e **ModulePath** nella configurazione del server di pull si trovano nella posizione in cui verranno posizionati i moduli e le configurazioni disponibili per il pull dai nodi di destinazione. Questi file devono avere un formato specifico per consentire la corretta elaborazione dal server di pull. 
+Dopo il completamento della configurazione del server di pull, le cartelle definite dalle proprietà **ConfigurationPath** e **ModulePath** nella configurazione del server di pull si trovano nella posizione in cui verranno posizionati i moduli e le configurazioni disponibili per il pull dai nodi di destinazione.
+Questi file devono avere un formato specifico per consentire la corretta elaborazione dal server di pull.
 
 ### <a name="dsc-resource-module-package-format"></a>Formato del pacchetto dei moduli di risorse DSC
 
-Ogni modulo di risorse deve essere compresso e denominato in base alla convenzione seguente `{Module Name}_{Module Version}.zip`. Ad esempio, un modulo denominato xWebAdminstration con versione 3.1.2.0 verrebbe denominato 'xWebAdministration_3.2.1.0.zip'. Ogni versione di un modulo deve essere contenuta in un unico file ZIP. Dato che esiste solo un'unica versione di una risorsa in ogni file ZIP, non è supportato il formato di modulo aggiunto in WMF 5.0 che supporta più versioni del modulo in una singola directory. Ciò significa che prima di creare un pacchetto per i moduli di risorse DSC da usare con il server di pull è necessario apportare una piccola modifica alla struttura di directory. Il formato predefinito dei moduli contenenti risorse DSC in WMF 5.0 è '{Cartella modulo}\{Versione modulo}\DscResources\{Cartella risorsa DSC}\'. Prima di creare il pacchetto per il server di pull, rimuovere la cartella **{Versione modulo}** in modo che il percorso diventi '{Cartella modulo}\DscResources\{Cartella risorsa DSC}\'. Con questa modifica, comprimere la cartella come descritto in precedenza e posizionare i file ZIP nella cartella **ModulePath**.
+Ogni modulo di risorse deve essere compresso e denominato in base alla convenzione seguente `{Module Name}_{Module Version}.zip`.
+Ad esempio, un modulo denominato xWebAdminstration con versione 3.1.2.0 verrebbe denominato 'xWebAdministration_3.2.1.0.zip'.
+Ogni versione di un modulo deve essere contenuta in un unico file ZIP.
+Dato che esiste solo un'unica versione di una risorsa in ogni file ZIP, non è supportato il formato di modulo aggiunto in WMF 5.0 che supporta più versioni del modulo in una singola directory.
+Ciò significa che prima di creare un pacchetto per i moduli di risorse DSC da usare con il server di pull è necessario apportare una piccola modifica alla struttura di directory.
+Il formato predefinito dei moduli contenenti risorse DSC in WMF 5.0 è '{Cartella modulo}\{Versione modulo}\DscResources\{Cartella risorsa DSC}\'.
+Prima di creare il pacchetto per il server di pull, rimuovere la cartella **{Versione modulo}** in modo che il percorso diventi '{Cartella modulo}\DscResources\{Cartella risorsa DSC}\'.
+Con questa modifica, comprimere la cartella come descritto in precedenza e posizionare i file ZIP nella cartella **ModulePath**.
 
 Usare `new-dscchecksum {module zip file}` per creare un file di checksum per il modulo appena aggiunto.
 
-### <a name="configuration-mof-format"></a>Formato del file MOF di configurazione 
-Un file MOF di configurazione deve essere associato a un file di checksum in modo che Gestione configurazione locale in un nodo di destinazione possa convalidare la configurazione. Per creare un checksum, chiamare il cmdlet [New-DSCCheckSum](https://technet.microsoft.com/en-us/library/dn521622.aspx). Il cmdlet accetta un parametro **Path** che specifica la cartella in cui si trova il file MOF di configurazione. Il cmdlet crea un file di checksum denominato `ConfigurationMOFName.mof.checksum`, in cui `ConfigurationMOFName` è il nome del file MOF di configurazione. Se nella cartella specificata sono presenti più file MOF di configurazione, viene creato un checksum per ogni configurazione nella cartella. Posizionare i file MOF e i file di checksum associati nella cartella **ConfigurationPath**.
+### <a name="configuration-mof-format"></a>Formato del file MOF di configurazione
+
+Un file MOF di configurazione deve essere associato a un file di checksum in modo che Gestione configurazione locale in un nodo di destinazione possa convalidare la configurazione.
+Per creare un checksum, chiamare il cmdlet [New-DSCCheckSum](https://technet.microsoft.com/en-us/library/dn521622.aspx).
+Il cmdlet accetta un parametro **Path** che specifica la cartella in cui si trova il file MOF di configurazione.
+Il cmdlet crea un file di checksum denominato `ConfigurationMOFName.mof.checksum`, in cui `ConfigurationMOFName` è il nome del file MOF di configurazione.
+Se nella cartella specificata sono presenti più file MOF di configurazione, viene creato un checksum per ogni configurazione nella cartella.
+Posizionare i file MOF e i file di checksum associati nella cartella **ConfigurationPath**.
 
 >**Nota**: se si modifica il file MOF di configurazione in qualsiasi modo, è necessario ricreare anche il file di checksum.
 
-## <a name="tooling"></a>Strumenti
+### <a name="tooling"></a>Strumenti
+
 Per facilitare la configurazione, la convalida e la gestione del server di pull, gli strumenti seguenti sono inclusi come esempi nella versione più recente del modulo xPSDesiredStateConfiguration:
+
 1. Un modulo che facilita la creazione di pacchetti per i moduli di risorse DSC e i file di configurazione per l'uso nel server di pull. [PublishModulesAndMofsToPullServer.psm1](https://github.com/PowerShell/xPSDesiredStateConfiguration/blob/dev/DSCPullServerSetup/PublishModulesAndMofsToPullServer.psm1). Ecco alcuni esempi:
 
     ```powershell
@@ -171,17 +232,24 @@ Per facilitare la configurazione, la convalida e la gestione del server di pull,
 
 1. Uno script che convalida la corretta configurazione del server di pull. [PullServerSetupTests.ps1](https://github.com/PowerShell/xPSDesiredStateConfiguration/blob/dev/DSCPullServerSetup/PullServerDeploymentVerificationTest/PullServerSetupTests.ps1).
 
+## <a name="community-solutions-for-pull-service"></a>Soluzioni della community per il servizio di pull
 
-## <a name="pull-client-configuration"></a>Configurazione dei client di pull 
+La community di DSC ha creato più soluzioni per implementare il protocollo del servizio di pull.
+Per gli ambienti locali, queste soluzioni offrono funzionalità del servizio di pull e la possibilità di offrire il proprio contribuito alla community con miglioramenti incrementali.
+
+- [Tug](https://github.com/powershellorg/tug)
+- [DSC-TRÆK](https://github.com/powershellorg/dsc-traek)
+
+## <a name="pull-client-configuration"></a>Configurazione dei client di pull
+
 Gli argomenti seguenti descrivono in modo dettagliato la configurazione dei client di pull:
 
-* [Configurazione di un client di pull DSC usando un ID configurazione](pullClientConfigID.md)
-* [Configurazione di un client di pull DSC usando nomi di configurazione](pullClientConfigNames.md)
-* [Configurazioni parziali](partialConfigs.md)
-
+- [Configurazione di un client di pull DSC usando un ID configurazione](pullClientConfigID.md)
+- [Configurazione di un client di pull DSC usando nomi di configurazione](pullClientConfigNames.md)
+- [Configurazioni parziali](partialConfigs.md)
 
 ## <a name="see-also"></a>Vedere anche
-* [Panoramica di Windows PowerShell DSC (Desired State Configuration)](overview.md).
-* [Applicazione delle configurazioni](enactingConfigurations.md)
-* [Uso di un server di report DSC](reportServer.md)
 
+- [Panoramica di Windows PowerShell DSC (Desired State Configuration)](overview.md).
+- [Applicazione delle configurazioni](enactingConfigurations.md)
+- [Uso di un server di report DSC](reportServer.md)

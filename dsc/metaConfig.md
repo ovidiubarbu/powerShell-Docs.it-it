@@ -3,11 +3,11 @@ ms.date: 2017-10-11
 ms.topic: conceptual
 keywords: dsc,powershell,configurazione,installazione
 title: Configurazione di Gestione configurazione locale
-ms.openlocfilehash: 81434b57e453ba7b64cc32dffdf309da16ef8882
-ms.sourcegitcommit: 18e3bfae83ffe282d3fd1a45f5386f3b7250f0c0
+ms.openlocfilehash: b8e0749cf2f67e395e9fd8eaf9cde33b97c0cb67
+ms.sourcegitcommit: 755d7bc0740573d73613cedcf79981ca3dc81c5e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="configuring-the-local-configuration-manager"></a>Configurazione di Gestione configurazione locale
 
@@ -25,8 +25,8 @@ Gestione configurazione locale viene eseguito in ogni nodo di destinazione ed è
 Per configurare Gestione configurazione locale in modo da specificare ognuno di questi comportamenti, è necessario usare un tipo speciale di configurazione.
 Le sezioni seguenti descrivono come configurare Gestione configurazione locale.
 
-> **Nota**: questo argomento si applica alla versione di Gestione configurazione locale introdotta in Windows PowerShell 5.0.
-Per informazioni sulla configurazione di Gestione configurazione locale in Windows PowerShell 4.0, vedere [Gestione configurazione locale di Windows PowerShell 4.0 DSC (Desired State Configuration)](metaconfig4.md).
+In Windows PowerShell 5.0 sono state introdotte nuove impostazioni per la gestione di Gestione configurazione locale.
+Per informazioni sulla configurazione di Gestione configurazione locale in Windows PowerShell 4.0, vedere [Configurazione di Gestione configurazione locale nelle versioni precedenti di Windows PowerShell](metaconfig4.md).
 
 ## <a name="writing-and-enacting-an-lcm-configuration"></a>Scrittura e applicazione di una configurazione di Gestione configurazione locale
 
@@ -90,38 +90,13 @@ In un blocco **Settings** sono disponibili le proprietà seguenti.
 
 ## <a name="pull-service"></a>Servizio di pull
 
-Le impostazioni di DSC consentono di gestire un nodo tramite il pull di configurazioni e moduli e la pubblicazione dei dati di report in una posizione remota.
-Le opzioni correnti per il servizio di pull includono:
-
-- Servizio DSC (Desired State Configuration) di Automazione di Azure
-- Un'istanza del servizio di pull in esecuzione in Windows Server
-- Una condivisione SMB (non supporta la pubblicazione di dati dei report)
-
 La configurazione di Gestione configurazione locale supporta la definizione dei tipi seguenti di endpoint del servizio di pull:
 
 - **Server di configurazione**: repository per le configurazioni DSC. Per definire i server di configurazione, usare blocchi **ConfigurationRepositoryWeb** (per server basati sul Web) e **ConfigurationRepositoryShare** (per server basati su SMB).
 - **Server di risorse**: repository per risorse DSC, incluse in pacchetti come moduli di PowerShell. Per definire i server di risorse, usare blocchi **ResourceRepositoryWeb** (per server basati sul Web) e **ResourceRepositoryShare** (per server basati su SMB).
 - **Server di report**: servizio a cui DSC invia dati di report. Per definire i server di report, usare blocchi **ReportServerWeb**. Un server di report deve essere un servizio Web.
 
-**La soluzione consigliata**, e l'opzione con il maggior numero di funzionalità disponibili, è [Automation DSC di Azure](https://docs.microsoft.com/en-us/azure/automation/automation-dsc-getting-started).
-
-Il servizio di Azure può gestire i nodi in locale nei data center privati o in cloud pubblici, come Azure e AWS.
-Per gli ambienti privati in cui i server non possono connettersi direttamente a Internet, è consigliabile limitare il traffico in uscita esclusivamente all'intervallo di indirizzi IP di Azure pubblicato (vedere gli [intervalli di indirizzi IP dei data center di Azure](https://www.microsoft.com/en-us/download/details.aspx?id=41653)).
-
-Le funzionalità del servizio online che non sono attualmente disponibili nel servizio di pull in Windows Server includono:
-- Tutti i dati vengono crittografati in transito e quando inattivi
-- I certificati client vengono creati e gestiti automaticamente
-- Archivio dei segreti per la gestione centralizzata di [password/credenziali](https://docs.microsoft.com/en-us/azure/automation/automation-credentials) o [variabili](https://docs.microsoft.com/en-us/azure/automation/automation-variables) come nomi dei server o stringhe di connessione
-- Gestione centralizzata della [configurazione di Gestione configurazione locale](metaConfig.md#basic-settings) del nodo
-- Assegnazione centralizzata delle configurazioni ai nodi client
-- Rilascio delle modifiche di configurazione a "gruppi canary" per i test prima della distribuzione in ambiente di produzione
-- Creazione di report grafici
-  - Dettagli sullo stato al livello di granularità delle risorse DSC
-  - Messaggi di errore dettagliati dai computer client per la risoluzione dei problemi
-- [Integrazione con Azure Log Analytics](https://docs.microsoft.com/en-us/azure/automation/automation-dsc-diagnostics) per gli avvisi, attività automatizzate, app Android o iOS per report e avvisi
-
-In alternativa, per informazioni sulla configurazione e sull'uso del servizio di pull HTTP in Windows Server, vedere [Configurazione di un server di pull DSC](pullServer.md).
-Tenere presente che si tratta di un'implementazione limitata che include solo le funzionalità di base per archiviare configurazioni/moduli e acquisire dati di report in un database locale.
+Per altri dettagli sul servizio di pull, vedere [Servizio di pull DSC (Desired State Configuration)](pullServer.md).
 
 ## <a name="configuration-server-blocks"></a>Blocchi per i server di configurazione
 

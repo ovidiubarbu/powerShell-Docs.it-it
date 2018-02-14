@@ -2,16 +2,18 @@
 ms.date: 2017-10-12
 ms.topic: conceptual
 keywords: dsc,powershell,configurazione,installazione
-title: Gestione configurazione locale di Windows PowerShell 4.0 DSC (Desired State Configuration)
-ms.openlocfilehash: 6ff8fa75f8ed33dc8da5285373ec1f3858cfa917
-ms.sourcegitcommit: a444406120e5af4e746cbbc0558fe89a7e78aef6
+title: Configurazione di Gestione configurazione locale nelle versioni precedenti di Windows PowerShell
+ms.openlocfilehash: 65eb2a8d5a99e977cf2f3dbd726240ec2d5a6142
+ms.sourcegitcommit: 755d7bc0740573d73613cedcf79981ca3dc81c5e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 02/09/2018
 ---
-# <a name="windows-powershell-40-desired-state-configuration-local-configuration-manager-lcm"></a>Gestione configurazione locale di Windows PowerShell 4.0 DSC (Desired State Configuration)
+# <a name="configuring-the-local-configuration-manager-in-previous-versions-of-windows-powershell"></a>Configurazione di Gestione configurazione locale nelle versioni precedenti di Windows PowerShell
 
 >Si applica a: Windows PowerShell 4.0
+
+**Per informazioni correlate a Windows PowerShell 5.0 e versioni successive, vedere [Configurazione di Gestione configurazione locale](metaConfig.md).**
 
 Gestione configurazione locale è il motore di Windows PowerShell DSC (Desired State Configuration).
 Viene eseguito in tutti i nodi di destinazione e ha la responsabilità di chiamare le risorse di configurazione incluse in uno script di configurazione DSC.
