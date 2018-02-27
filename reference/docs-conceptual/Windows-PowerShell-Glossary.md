@@ -3,11 +3,11 @@ ms.date: 2017-06-05
 keywords: powershell,cmdlet
 title: Glossario di Windows PowerShell
 ms.assetid: b0f88cbe-cb83-4912-a301-184534cb35c7
-ms.openlocfilehash: 48e5d832ead720c8bc7753c94f757ddb21846fc9
-ms.sourcegitcommit: ced46469e064736eeb1f5608abbc792ec69bdc92
+ms.openlocfilehash: 872ceb342cc72477c5142ce28a9b3b66e32bb84f
+ms.sourcegitcommit: 05d576cf107780fa52b2db4a042816be40b00fbc
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/08/2017
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="windows-powershell-glossary"></a>Glossario di Windows PowerShell
 
@@ -24,7 +24,7 @@ ms.lasthandoff: 08/08/2017
 |host|Interfaccia usata dal motore di Windows PowerShell per comunicare con l'utente. Ad esempio, l'host specifica la modalità di gestione dei prompt tra Windows PowerShell e l'utente.|
 |applicazione host|Programma che carica il motore di Windows PowerShell nel suo processo e lo usa per eseguire operazioni.|
 |metodo di elaborazione dell'input|Metodo utilizzabile da un cmdlet per elaborare i record ricevuti come input. I metodi di elaborazione dell'input includono BeginProcessing, ProcessRecord, EndProcessing e StopProcessing.|
-|modulo manifesto|Modulo di Windows PowerShell che ha un manifesto e la cui chiave ModulesToProcess è vuota.|
+|modulo manifesto|Modulo di Windows PowerShell che ha un manifesto e la cui chiave RootModule è vuota.|
 |manifesto del modulo|File di dati di Windows PowerShell (con estensione psd1) che descrive il contenuto di un modulo e che controlla la modalità di elaborazione di un modulo.|
 |stato della sessione del modulo|Stato della sessione contenente i dati pubblici e privati di un modulo di Windows PowerShell. I dati privati nello stato della sessione non sono disponibili per l'utente di una sessione di Windows PowerShell.|
 |errore non fatale|Errore che non impedisce a Windows PowerShell di continuare a elaborare il comando.|
@@ -33,7 +33,7 @@ ms.lasthandoff: 08/08/2017
 |inviare tramite pipe|In Windows PowerShell inviare i risultati del comando precedente come input al comando successivo nella pipeline.|
 |pipeline|Serie di comandi connessi con operatori pipeline (&#124;) (ASCII 124). Ogni operatore pipeline invia i risultati del comando precedente come input al comando successivo.|
 |PSSession|Tipo di sessione di Windows PowerShell creata, gestita e chiusa dall'utente.|
-|modulo radice|Modulo specificato nella chiave ModuleToProcess in un manifesto del modulo.|
+|modulo radice|Modulo specificato nella chiave RootModule in un manifesto del modulo.|
 |spazio di esecuzione|In Windows PowerShell, l'ambiente operativo in cui viene eseguito ogni comando in una pipeline.|
 |blocco di script|Nel linguaggio di programmazione di Windows PowerShell, raccolta di istruzioni o espressioni che possono essere usate come una singola unità. Un blocco di script può accettare argomenti e valori restituiti.|
 |modulo di script|Modulo di Windows PowerShell il cui modulo radice è un file di modulo di script (con estensione psm1). Un modulo di script può includere o meno un manifesto del modulo.|

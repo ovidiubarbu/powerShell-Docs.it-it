@@ -3,11 +3,11 @@ ms.date: 2017-06-05
 keywords: powershell,cmdlet
 title: Windows PowerShell Integrated Scripting Environment ISE
 ms.assetid: f156b92d-0203-46d2-89c7-b4989d32e3d2
-ms.openlocfilehash: 6a2d2bada2d8d6a1d5bedffc7b1b28fe9472544a
-ms.sourcegitcommit: 755d7bc0740573d73613cedcf79981ca3dc81c5e
+ms.openlocfilehash: 413fc375ad4617bfae59d6a1217cf9f91c2cf090
+ms.sourcegitcommit: 05d576cf107780fa52b2db4a042816be40b00fbc
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="windows-powershell-integrated-scripting-environment-ise"></a>Windows PowerShell Integrated Scripting Environment (ISE)
 
@@ -25,7 +25,7 @@ Ecco alcune delle funzionalità che sono state aggiunte in ISE nelle versioni pi
 
 **Frammenti di codice**, ovvero brevi sezioni di codice che è possibile inserire facilmente negli script durante la scrittura. È disponibile una raccolta predefinita di utili frammenti di codice ed è possibile aggiungerne altri tramite il cmdlet **New-Snippet**.
 
-È possibile creare **strumenti aggiuntivi** per aggiungere funzionalità a ISE scrivendo codice che interagisce con il [Modello a oggetti di scripting di Windows PowerShell ISE](../../core-powershell/ise/The-ISE-Object-Model-Hierarchy.md).
+È possibile creare **strumenti aggiuntivi** per aggiungere funzionalità all'ISE scrivendo codice che interagisce con il [Modello a oggetti di scripting di Windows PowerShell ISE](../../core-powershell/ise/The-ISE-Object-Model-Hierarchy.md).
 
 Questi strumenti possono visualizzare i controlli in un riquadro a schede o funzionare in modo invisibile in background. Il componente aggiuntivo **Comandi** è un buon esempio incluso nella versione 3.0 e successive, che consente di visualizzare un elenco di comandi disponibili e la rispettiva Guida.
 

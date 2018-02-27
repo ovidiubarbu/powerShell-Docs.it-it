@@ -361,8 +361,8 @@ Per un elenco completo delle correzioni e delle modifiche, consultare il [log de
   - la piattaforma del sistema operativo (`$PSVersionTable.OSDescription`)
   - la versione esatta di PowerShell (`$PSVersionTable.GitCommitId`)
 
-Se si sceglie di non usare la telemetria, è sufficiente eliminare `$PSHome\DELETE_ME_TO_DISABLE_CONSOLEHOST_TELEMETRY`.
-L'eliminazione di questo file consente di ignorare tutta la telemetria anche prima della prima esecuzione di PowerShell.
+Se si vuole rifiutare esplicitamente questa telemetria, digitare semplicemente `$PSHome\DELETE_ME_TO_DISABLE_CONSOLEHOST_TELEMETRY` o creare la variabile di ambiente `POWERSHELL_TELEMETRY_OPTOUT` con uno dei valori seguenti: `true`, `1` o `yes`.
+L'eliminazione di questo file o la creazione della variabile consente di ignorare tutta la telemetria anche prima della prima esecuzione di PowerShell.
 Si prevede inoltre di esporre i dati di telemetria e le informazioni dettagliate ottenute dalla telemetria nel [dashboard della community][community-dashboard].
 Altre informazioni sull'uso di questi dati sono disponibili in questo [post di blog][telemetry-blog].
 
