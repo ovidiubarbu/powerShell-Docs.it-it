@@ -1,0 +1,128 @@
+- name: Panoramica
+  href: readme.md
+  items:
+    - name: Raccolta
+      items:
+        - name: Guida introduttiva
+          href: psgallery/psgallery_gettingstarted.md
+        - name: Stato integrità
+          href: psgallery/psgallery_status.md
+        - name: Domande frequenti su PowerShell Gallery
+          href: psgallery/psgallery_faqs.md
+        - name: Scheda Elementi di PowerShell Gallery
+          href: psgallery/psgallery_items_tab.md
+        - name: Sintassi di ricerca di PowerShell Gallery
+          href: psgallery/psgallery_search_syntax.md
+        - name: Elementi con edizioni di PS compatibili
+          href: psgallery/psgallery_pseditions.md
+        - name: Visualizzazione FileList
+          href: psgallery/psgallery_filelist_feature.md
+        - name: Distribuire in Automazione di Azure
+          href: psgallery/psgallery_deploy_to_azure_automation.md
+        - name: Creazione di un account PowerShell Gallery
+          href: psgallery/psgallery_creating_an_account.md
+        - name: Creazione e pubblicazione di elementi
+          href: psgallery/Creating-and-Publishing-an-item.md
+        - name: Linee guida e procedure consigliate per la pubblicazione
+          href: psgallery/psgallery-PublishingGuidelines.md
+        - name: Manifesto degli elementi e interfaccia utente di PowerShell Gallery
+          href: psgallery/psgallery_ItemManifestAffectingUI.md
+        - name: Esclusione di elementi dall'elenco
+          href: psgallery/psgallery_unlist_items.md
+        - name: Eliminazione di elementi
+          href: psgallery/Deleting-Items.md
+        - name: Gestione dei proprietari di elementi
+          href: psgallery/Managing-Item-Owners.md
+        - name: Segnalare abusi
+          href: psgallery/psgallery_report_abuse.md
+        - name: Risoluzione delle controversie
+          href: psgallery/psgallery_dispute_resolution.md
+        - name: Come contattare i proprietari di elementi
+          href: psgallery/psgallery_contacting_item_owners.md
+        - name: Come contattare gli amministratori
+          href: psgallery/psgallery_contacting_administrators.md
+        - name: Pubblicazione di feedback sui social media o nei commenti
+          href: psgallery/psgallery-SocialMediaFeedback.md
+        - name: Richiedere l'accettazione della licenza per i dettagli degli elementi
+          href: psgallery/psgallery_requires_license_acceptance.md
+        - name: Richiedere l'accettazione della licenza per la distribuzione in Automazione di Azure
+          href: psgallery/psgallery_deploy_to_azure_automation_requireLicenseAcceptance.md
+- name: PowerShellGet
+  href: psget/overview.md
+  items:
+    - name: Ottenere il modulo PowerShellGet
+      href: psget/get_psget_module.md
+    - name: Modulo
+      items:
+        - name: Trovare moduli
+          href: psget/module/psget_find-module.md
+        - name: Trovare risorse DSC
+          href: psget/module/psget_find-dscresource.md
+        - name: Trovare capacità del ruolo
+          href: psget/module/psget_find-rolecapability.md
+        - name: Trovare comandi
+          href: psget/module/psget_find-command.md
+        - name: Salva
+          href: psget/module/psget_save-module.md
+        - name: Installare
+          href: psget/module/psget_install-module.md
+        - name: Aggiornamenti
+          href: psget/module/psget_update-module.md
+        - name: Disinstallazione
+          href: psget/module/psget_uninstall-module.md
+        - name: Ottenere i moduli installati
+          href: psget/module/psget_get-installedmodule.md
+        - name: Aggiornare il manifesto del modulo
+          href: psget/module/psget_update-modulemanifest.md
+        - name: Pubblicare
+          href: psget/module/psget_publish-module.md
+        - name: Moduli con edizioni di PS
+          href: psget/module/modulewithpseditionsupport.md
+        - name: Moduli per cui è richiesta l'accettazione della licenza
+          href: psget/module/RequireLicenseAcceptance.md
+        - name: Versioni preliminari
+          href: psget/module/PreReleaseModule.md
+        - name: Risoluzione dei problemi
+          href: psget/psget_cmdlets_troubleshooting.md
+    - name: Script
+      items:
+        - name: Trovare
+          href: psget/script/psget_find-script.md
+        - name: Salva
+          href: psget/script/psget_save-script.md
+        - name: Installare
+          href: psget/script/psget_install-script.md
+        - name: Aggiornamenti
+          href: psget/script/psget_update-script.md
+        - name: Disinstallazione
+          href: psget/script/psget_uninstall-script.md
+        - name: Ottenere script installati
+          href: psget/script/psget_get-installedscript.md
+        - name: Creare i file di script con i metadati
+          href: psget/script/psget_new-scriptfileinfo.md
+        - name: Testare i file di script con i metadati
+          href: psget/script/psget_test-scriptfileinfo.md
+        - name: Aggiornare i file di script con i metadati
+          href: psget/script/psget_update-scriptfileinfo.md
+        - name: Pubblicare
+          href: psget/script/psget_publish-script.md
+        - name: Script con PSEditions
+          href: psget/script/scriptwithpseditionsupport.md
+        - name: Richiedere l'accettazione della licenza per gli script
+          href: psget/script/script_RequireLicenseAcceptance.md
+        - name: Versioni preliminari
+          href: psget/script/PreReleaseScript.md
+    - name: Gestione del repository
+      items:
+        - name: Provider NuGet di bootstrap e NuGet.exe
+          href: psget/repository/bootstrapping_nuget_proivder_and_exe.md
+        - name: Registrazione del repository
+          href: psget/repository/psget_register-psrepository.md
+        - name: Presentazione del repository registrato
+          href: psget/repository/psget_get-psrepository.md
+        - name: Modifica del repository registrato
+          href: psget/repository/psget_set-psrepository.md
+        - name: Annullamento della registrazione del repository
+          href: psget/repository/psget_unregister-psrepository.md
+    - name: Cmdlet PackageManagement
+      href: psget/oneget/PackageManagement_cmdlets.md
