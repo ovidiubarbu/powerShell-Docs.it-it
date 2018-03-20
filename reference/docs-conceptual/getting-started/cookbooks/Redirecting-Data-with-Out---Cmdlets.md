@@ -9,7 +9,7 @@ ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 08/03/2017
 ---
-# <a name="redirecting-data-with-out--cmdlets"></a>Reindirizzamento dei dati con i cmdlet Out-*
+# <a name="redirecting-data-with-out--cmdlets"></a>Reindirizzamento dei dati con i cmdlet Out-\*
 In Windows PowerShell sono disponibili diversi cmdlet che consentono di controllare direttamente l'output dei dati. Questi cmdlet hanno in comune due importanti caratteristiche.
 
 Per prima cosa, in genere trasformano i dati in una forma di testo, dal momento che convertono i dati in output per i componenti di sistema che richiedono input di testo. Ciò significa che devono rappresentare gli oggetti come testo. Il testo viene pertanto formattato così com'è visualizzato nella finestra della console di Windows PowerShell.
