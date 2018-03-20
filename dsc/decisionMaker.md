@@ -3,11 +3,11 @@ ms.date: 2017-06-12
 ms.topic: conceptual
 keywords: dsc,powershell,configurazione,installazione
 title: Panoramica di DSC (Desired State Configuration) per decision maker
-ms.openlocfilehash: cbde5d22f9cf118485a0302e53ee0a75eb4b8843
-ms.sourcegitcommit: a444406120e5af4e746cbbc0558fe89a7e78aef6
+ms.openlocfilehash: 42335d674bd23a109ad8f818d3e22ef221884ca7
+ms.sourcegitcommit: 99227f62dcf827354770eb2c3e95c5cf6a3118b4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="desired-state-configuration-overview-for-decision-makers"></a>Panoramica di DSC (Desired State Configuration) per decision maker
 
@@ -17,7 +17,7 @@ Questo documento descrive i vantaggi dell'uso di PowerShell DSC (Desired State C
 
 Windows PowerShell DSC (Desired State Configuration) è una piattaforma di gestione delle configurazioni integrata in Windows e basata su standard aperti. DSC è sufficientemente flessibile per funzionare in modo affidabile e coerente in ogni fase del ciclo di distribuzione (sviluppo, test, pre-produzione, produzione), nonché quando viene applicata scalabilità orizzontale. 
 
-DSC è incentrato sulle "[configurazioni](https://msdn.microsoft.com/en-us/powershell/dsc/configurations)".
+DSC è incentrato sulle "[configurazioni](https://msdn.microsoft.com/powershell/dsc/configurations)".
 Una configurazione è un documento facile da leggere che descrive un ambiente costituito da computer ("nodi") con caratteristiche specifiche. Queste caratteristiche possono essere semplici, ad esempio per abilitare una funzionalità specifica di Windows, o complesse, ad esempio per la distribuzione di SharePoint. 
 
 In DSC sono anche integrate funzionalità di monitoraggio e creazione di report. Se un sistema non è più conforme, DSC può generare un avviso ed eseguire operazioni per correggere il sistema. 
@@ -35,11 +35,11 @@ Le configurazioni possono anche essere condivise tramite [PowerShell Gallery](ht
 
 [DevOps](http://blogs.technet.com/b/ashleymcglone/archive/2015/11/20/devops-for-n00bs-ie-windows-people.aspx) è una combinazione di persone, processi e strumenti che supportano la distribuzione e l'iterazione rapide, incentrati sull'offrire valore agli utenti finali, sia interni che esterni. La soluzione DSC è stata progettata tenendo in considerazione DevOps. La disponibilità di una singola configurazione che definisce un ambiente significa che gli sviluppatori possono codificare i requisiti in una configurazione e verificare la configurazione nel controllo del codice sorgente, mentre i team operativi possono distribuire facilmente il codice senza dover eseguire processi manuali soggetti a errori. 
 
-Le configurazioni sono anche [guidate dai dati](https://msdn.microsoft.com/en-us/powershell/dsc/configdata) e quindi i team operativi possono identificare e modificare gli ambienti in modo più semplice, senza l'intervento di uno sviluppatore. 
+Le configurazioni sono anche [guidate dai dati](https://msdn.microsoft.com/powershell/dsc/configdata) e quindi i team operativi possono identificare e modificare gli ambienti in modo più semplice, senza l'intervento di uno sviluppatore. 
 
 ## <a name="desired-state-configuration-on--and-off-premises"></a>DSC (Desired State Configuration) in ambienti locali e non locali
 
-È possibile usare DSC per gestire le distribuzioni sia locali che non locali. Per le soluzioni locali, DSC ha un [server di pull](https://msdn.microsoft.com/en-us/powershell/dsc/pullserver) che è possibile usare per centralizzare la gestione dei computer e creare report sul loro stato. Per le soluzioni cloud, è possibile usare DSC ovunque sia possibile usare Windows. Ci sono anche offerte specifiche di Azure basate su DSC (Desired State Configuration), ad esempio [Automazione di Azure](https://azure.microsoft.com/en-us/documentation/services/automation/), che consente di centralizzare la creazione di report di DSC. 
+È possibile usare DSC per gestire le distribuzioni sia locali che non locali. Per le soluzioni locali, DSC ha un [server di pull](https://msdn.microsoft.com/powershell/dsc/pullserver) che è possibile usare per centralizzare la gestione dei computer e creare report sul loro stato. Per le soluzioni cloud, è possibile usare DSC ovunque sia possibile usare Windows. Ci sono anche offerte specifiche di Azure basate su DSC (Desired State Configuration), ad esempio [Automazione di Azure](https://azure.microsoft.com/en-us/documentation/services/automation/), che consente di centralizzare la creazione di report di DSC. 
 
 ## <a name="dsc-and-compatibility"></a>DSC e compatibilità
 

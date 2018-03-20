@@ -3,11 +3,11 @@ ms.date: 2017-10-31
 ms.topic: conceptual
 keywords: dsc,powershell,configurazione,installazione
 title: Protezione del file MOF
-ms.openlocfilehash: fdb8fa17e9b5e92b56e0a62bf850529c241eee41
-ms.sourcegitcommit: a444406120e5af4e746cbbc0558fe89a7e78aef6
+ms.openlocfilehash: 1bb257f3237344f32c9035f3836dd317b75eef0a
+ms.sourcegitcommit: 99227f62dcf827354770eb2c3e95c5cf6a3118b4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="securing-the-mof-file"></a>Protezione del file MOF
 
@@ -19,7 +19,7 @@ In questo argomento viene descritto come verificare che il nodo di destinazione 
 
 A partire dalla versione 5.0 di PowerShell, l'intero file MOF viene crittografato per impostazione predefinita quando viene applicato al nodo usando il cmdlet **Start-DSCConfiguration**.
 Il processo descritto in questo articolo è obbligatorio solo se si implementa una soluzione che usa il protocollo del servizio pull se i certificati non sono gestiti, al fine di garantire che le configurazioni scaricate dal nodo di destinazione possano essere crittografate e lette dal sistema prima che siano applicate (ad esempio il servizio pull disponibile in Windows Server).
-Nei nodi registrati in [Automation DSC per Azure](https://docs.microsoft.com/en-us/azure/automation/automation-dsc-overview) i certificati vengono invece installati e gestiti automaticamente dal servizio senza un sovraccarico amministrativo.
+Nei nodi registrati in [Automation DSC per Azure](https://docs.microsoft.com/azure/automation/automation-dsc-overview) i certificati vengono invece installati e gestiti automaticamente dal servizio senza un sovraccarico amministrativo.
 
 >**Nota:** questo argomento illustra i certificati usati per la crittografia.
 >Per la crittografia è sufficiente un certificato autofirmato, dal momento che la chiave privata viene sempre mantenuta segreta e la crittografia non implica l'attendibilità del documento.
@@ -262,7 +262,7 @@ configuration CredentialEncryptionExample
 
 ## <a name="setting-up-decryption"></a>Configurazione della decrittografia
 
-Prima che [`Start-DscConfiguration`](https://technet.microsoft.com/en-us/library/dn521623.aspx) funzioni correttamente, è necessario indicare a Gestione configurazione locale in ogni nodo di destinazione il certificato da usare per decrittografare le credenziali, usando la risorsa CertificateID per verificare l'identificazione personale del certificato. Questa funzione di esempio trova il certificato locale appropriato e potrebbe dover essere personalizzata perché trovi l'esatto certificato che si vuole usare:
+Prima che [`Start-DscConfiguration`](https://technet.microsoft.com/library/dn521623.aspx) funzioni correttamente, è necessario indicare a Gestione configurazione locale in ogni nodo di destinazione il certificato da usare per decrittografare le credenziali, usando la risorsa CertificateID per verificare l'identificazione personale del certificato. Questa funzione di esempio trova il certificato locale appropriato e potrebbe dover essere personalizzata perché trovi l'esatto certificato che si vuole usare:
 
 ```powershell
 # Get the certificate that works for encryption 
@@ -311,7 +311,7 @@ configuration CredentialEncryptionExample
 
 A questo punto, è possibile eseguire la configurazione, che genera due file:
 
- * Un file *.meta.mof che configura Gestione configurazione locale per decrittografare le credenziali usando il certificato archiviato nell'archivio del computer locale e indicato dalla relativa identificazione personale. [`Set-DscLocalConfigurationManager`](https://technet.microsoft.com/en-us/library/dn521621.aspx) si applica al file *.meta.mof.
+ * Un file *.meta.mof che configura Gestione configurazione locale per decrittografare le credenziali usando il certificato archiviato nell'archivio del computer locale e indicato dalla relativa identificazione personale. [`Set-DscLocalConfigurationManager`](https://technet.microsoft.com/library/dn521621.aspx) si applica al file *.meta.mof.
  * Un file MOF che applica effettivamente la configurazione. Start-DscConfiguration applica la configurazione.
 
 I comandi seguenti eseguono questi passaggi:

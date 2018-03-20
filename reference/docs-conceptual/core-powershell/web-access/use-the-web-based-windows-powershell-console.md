@@ -2,11 +2,11 @@
 ms.date: 2017-08-23
 keywords: powershell,cmdlet
 title: usare la console di windows powershell basata sul web
-ms.openlocfilehash: 31ab17f1a1ea1353abc6f770285a2dca70da446d
-ms.sourcegitcommit: d6ab9ab5909ed59cce4ce30e29457e0e75c7ac12
+ms.openlocfilehash: a6c9812253309ba1225141cfd48d0f1c8b8785b5
+ms.sourcegitcommit: 99227f62dcf827354770eb2c3e95c5cf6a3118b4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="use-the-web-based-windows-powershell-console"></a>Usare la console di Windows PowerShell basata sul Web
 
@@ -58,7 +58,7 @@ Per impostazione predefinita, l'indirizzo di questo sito Web è *https://\<nome_
 
 Prima di accedere ad Accesso Web Windows PowerShell, assicurarsi di avere il nome o l'indirizzo IP del computer remoto da gestire.
 È necessario essere un utente autorizzato nel computer remoto, che deve essere configurato per consentire la gestione remota.
-Per altre informazioni sulla configurazione del computer per consentire la gestione remota, vedere [Abilitare e usare i comandi remoti in Windows PowerShell](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/enable-psremoting).
+Per altre informazioni sulla configurazione del computer per consentire la gestione remota, vedere [Abilitare e usare i comandi remoti in Windows PowerShell](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/enable-psremoting).
 
 Il metodo di configurazione del computer più semplice per consentire la gestione remota consiste nell'eseguire il cmdlet **Enable-PSRemoting -force** nel computer, in una sessione di Windows PowerShell aperta con diritti utente elevati, ovvero **Esegui come amministratore**.
 
@@ -74,7 +74,7 @@ Il metodo di configurazione del computer più semplice per consentire la gestion
     > - Se il computer di destinazione è il server gateway, è possibile specificare `localhost` nel campo Nome computer
     > - Se il computer di destinazione è il server gateway e il server gateway fa parte di un gruppo di lavoro, è necessario usare `<workgroup name>\<user_name>` nel campo Nome utente. È possibile usare `localhost` nel campo Nome computer.
 
-1. La sezione **Impostazioni di connessione facoltative** è relativa ai requisiti di autorizzazione del computer remoto che si vuole gestire. Per altre informazioni sui parametri equivalenti alle impostazioni di connessione facoltative, vedere la guida del cmdlet [Enter-PSSession](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/enter-pssession).
+1. La sezione **Impostazioni di connessione facoltative** è relativa ai requisiti di autorizzazione del computer remoto che si vuole gestire. Per altre informazioni sui parametri equivalenti alle impostazioni di connessione facoltative, vedere la guida del cmdlet [Enter-PSSession](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/enter-pssession).
 
     In genere, le credenziali che si usano per il passaggio attraverso il gateway di Accesso Web Windows PowerShell sono le stesse riconosciute dal computer remoto che si vuole gestire. Se tuttavia si preferisce usare credenziali diverse per gestire il computer remoto specificato nel passaggio 2, espandere la sezione **Impostazioni di connessione facoltative** e fornire le credenziali alternative. In caso contrario, andare al passaggio 6.
 

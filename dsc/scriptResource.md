@@ -3,11 +3,11 @@ ms.date: 2017-06-12
 ms.topic: conceptual
 keywords: dsc,powershell,configurazione,installazione
 title: Risorsa Script DSC
-ms.openlocfilehash: 22213b74986b45b3a8205f1584b3b0d89a92f211
-ms.sourcegitcommit: a444406120e5af4e746cbbc0558fe89a7e78aef6
+ms.openlocfilehash: d65a89ceba0b641ccb0ac3dfcc6d5ec1a48dc92a
+ms.sourcegitcommit: 99227f62dcf827354770eb2c3e95c5cf6a3118b4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="dsc-script-resource"></a>Risorsa Script DSC
 
@@ -42,9 +42,9 @@ Script [string] #ResourceName
 
 |  Proprietà  |  Description   | 
 |---|---| 
-| GetScript| Fornisce un blocco script di Windows PowerShell eseguito quando si richiama il cmdlet [Get-DscConfiguration](https://technet.microsoft.com/en-us/library/dn407379.aspx). Questo blocco deve restituire una tabella hash. La tabella hash deve contenere solo una chiave **Result** e il valore deve essere di tipo **String**.| 
-| SetScript| Fornisce un blocco script di Windows PowerShell. Quando si richiama il cmdlet [Start-DscConfiguration](https://technet.microsoft.com/en-us/library/dn521623.aspx), il blocco **TestScript** viene eseguito per primo. Se il blocco **TestScript** restituisce **$false**, il blocco **SetScript** viene eseguito. Se il blocco **TestScript** restituisce **$true**, il blocco **SetScript** non viene eseguito.| 
-| TestScript| Fornisce un blocco script di Windows PowerShell. Quando si richiama il cmdlet [Start-DscConfiguration](https://technet.microsoft.com/en-us/library/dn521623.aspx), questo blocco viene eseguito. Se restituisce **$false**, il blocco SetScript viene eseguito. Se restituisce **$true**, il blocco SetScript non viene eseguito. Il blocco **TestScript** viene eseguito anche quando si richiama il cmdlet [Test-DscConfiguration](https://technet.microsoft.com/en-us/library/dn407382.aspx). In questo caso, tuttavia, il blocco **SetScript** non viene eseguito, indipendentemente dal valore restituito dal blocco TestScript. Il blocco **TestScript** deve restituire True se l'effettiva configurazione corrisponde alla configurazione dello stato desiderato corrente e False in caso contrario. La configurazione dello stato desiderato corrente è l'ultima configurazione applicata nel nodo che usa DSC.| 
+| GetScript| Fornisce un blocco script di Windows PowerShell eseguito quando si richiama il cmdlet [Get-DscConfiguration](https://technet.microsoft.com/library/dn407379.aspx). Questo blocco deve restituire una tabella hash. La tabella hash deve contenere solo una chiave **Result** e il valore deve essere di tipo **String**.| 
+| SetScript| Fornisce un blocco script di Windows PowerShell. Quando si richiama il cmdlet [Start-DscConfiguration](https://technet.microsoft.com/library/dn521623.aspx), il blocco **TestScript** viene eseguito per primo. Se il blocco **TestScript** restituisce **$false**, il blocco **SetScript** viene eseguito. Se il blocco **TestScript** restituisce **$true**, il blocco **SetScript** non viene eseguito.| 
+| TestScript| Fornisce un blocco script di Windows PowerShell. Quando si richiama il cmdlet [Start-DscConfiguration](https://technet.microsoft.com/library/dn521623.aspx), questo blocco viene eseguito. Se restituisce **$false**, il blocco SetScript viene eseguito. Se restituisce **$true**, il blocco SetScript non viene eseguito. Il blocco **TestScript** viene eseguito anche quando si richiama il cmdlet [Test-DscConfiguration](https://technet.microsoft.com/en-us/library/dn407382.aspx). In questo caso, tuttavia, il blocco **SetScript** non viene eseguito, indipendentemente dal valore restituito dal blocco TestScript. Il blocco **TestScript** deve restituire True se l'effettiva configurazione corrisponde alla configurazione dello stato desiderato corrente e False in caso contrario. La configurazione dello stato desiderato corrente è l'ultima configurazione applicata nel nodo che usa DSC.| 
 | Credential| Indica le credenziali da usare per l'esecuzione dello script, se sono necessarie credenziali.| 
 | DependsOn| Indica che prima di configurare la risorsa è necessario eseguire la configurazione di un'altra risorsa. Ad esempio, se l'ID del blocco script di configurazione della risorsa che si vuole eseguire per primo è **ResourceName** e il tipo è **ResourceType**, la sintassi per usare questa proprietà è `DependsOn = "[ResourceType]ResourceName"`.
 

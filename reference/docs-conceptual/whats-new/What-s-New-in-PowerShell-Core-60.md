@@ -367,7 +367,7 @@ Si prevede inoltre di esporre i dati di telemetria e le informazioni dettagliate
 Altre informazioni sull'uso di questi dati sono disponibili in questo [post di blog][telemetry-blog].
 
 [github]: https://github.com/PowerShell/PowerShell
-[.NET Core 2.0]: https://docs.microsoft.com/en-us/dotnet/core/
+[.NET Core 2.0]: https://docs.microsoft.com/dotnet/core/
 [.NET Standard]: https://docs.microsoft.com/en-us/dotnet/standard/net-standard
 [os_log]: https://developer.apple.com/documentation/os/logging
 [Syslog]: https://en.wikipedia.org/wiki/Syslog
@@ -380,7 +380,7 @@ Altre informazioni sull'uso di questi dati sono disponibili in questo [post di b
 [blog di .NET]: https://blogs.msdn.microsoft.com/dotnet/2016/09/26/introducing-net-standard
 [YouTube]: https://www.youtube.com/watch?v=YI4MurjfMn8&list=PLRAdsfhKI4OWx321A_pr-7HhRNk7wOLLY
 [domande frequenti]: https://github.com/dotnet/standard/blob/master/docs/faq.md
-[CDXML]: https://msdn.microsoft.com/en-us/library/jj542525(v=vs.85).aspx
+[CDXML]: https://msdn.microsoft.com/library/jj542525(v=vs.85).aspx
 [docker-hub]: https://hub.docker.com/r/microsoft/powershell/
 [docker]: https://github.com/PowerShell/PowerShell/tree/master/docker
 [windowspsmodulepath]: https://www.powershellgallery.com/packages/WindowsPSModulePath/

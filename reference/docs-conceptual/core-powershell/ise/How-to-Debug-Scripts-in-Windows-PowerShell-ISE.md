@@ -2,11 +2,11 @@
 ms.date: 2017-06-05
 keywords: powershell,cmdlet
 title: "Modalità di esecuzione del debug degli script in Windows PowerShell ISE"
-ms.openlocfilehash: 0ec520dfcba5e4562258256570f140e618e77cdb
-ms.sourcegitcommit: 3720ce4efb6735694cfb53a1b793d949af5d1bc5
+ms.openlocfilehash: d37fb6cdcd5782cf8eff89c2b124b7c81fdaca71
+ms.sourcegitcommit: 99227f62dcf827354770eb2c3e95c5cf6a3118b4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/29/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="how-to-debug-scripts-in-windows-powershell-ise"></a>Modalità di esecuzione del debug degli script in Windows PowerShell ISE
 
@@ -42,7 +42,7 @@ Visualizza tutti i punti di interruzione nella sessione di Windows PowerShell co
 Scegliere **Elenca punti di interruzione** dal menu **Debug**. Lo script seguente è un esempio di come si può ottenere un elenco di tutti i punti di interruzione dal riquadro della console usando il cmdlet [Get-PSBreakpoint](https://technet.microsoft.com/library/0bf48936-00ab-411c-b5e0-9b10a812a3c6).
 
 ``` PowerShell
-# This command lists all breakpoints in the current session. 
+# This command lists all breakpoints in the current session.
 Get-PSBreakpoint
 ```
 
@@ -82,7 +82,7 @@ Disable-PSBreakpoint -Id 0
 La disabilitazione di un punto di interruzione non ne comporta la rimozione, ma la disattivazione fino a quando non viene abilitato di nuovo.  Per disabilitare tutti i punti di interruzione definiti nella sessione corrente, scegliere **Disattiva tutti i punti di interruzione** dal menu **Debug**. Lo script seguente è un esempio di come si possono disabilitare tutti i punti di interruzione dal riquadro della console usando il cmdlet [Disable-PSBreakpoint](https://technet.microsoft.com/library/d4974e9b-0aaa-4e20-b87f-f599a413e4e8).
 
 ``` PowerShell
-# This command disables all breakpoints in the current session. 
+# This command disables all breakpoints in the current session.
 # You can abbreviate this command as: "gbp | dbp".
 Get-PSBreakpoint | Disable-PSBreakpoint
 ```
@@ -99,13 +99,13 @@ Enable-PSBreakpoint -Id 0, 1, 5
 Per abilitare tutti i punti di interruzione definiti nella sessione corrente, scegliere **Attiva tutti i punti di interruzione** dal menu **Debug**. Lo script seguente è un esempio di come si possono abilitare tutti i punti di interruzione dal riquadro della console usando il cmdlet [Enable-PSBreakpoint](https://technet.microsoft.com/library/739e1091-3b3f-405f-a428-bec7543e5df0).
 
 ``` PowerShell
-# This command enables all breakpoints in the current session. 
+# This command enables all breakpoints in the current session.
 # You can abbreviate the command by using their aliases: "gbp | ebp".
 Get-PSBreakpoint | Enable-PSBreakpoint
 ```
 
 ## <a name="how-to-manage-a-debugging-session"></a>Come gestire una sessione di debug
-Prima di avviare il debug è necessario impostare uno o più punti di interruzione. Non si può impostare un punto di interruzione finché lo script di cui si vuole eseguire il debug non è stato salvato. Per istruzioni su come impostare un punto di interruzione, vedere [Come gestire i punti di interruzione](#how-to-manage-breakpoints) o [Set-PSBreakpoint](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/set-psbreakpoint). Dopo avere avviato il debug, non è possibile modificare uno script se non si arresta il debug. Uno script in cui sono impostati uno o più punti di interruzione viene salvato automaticamente prima dell'esecuzione.
+Prima di avviare il debug è necessario impostare uno o più punti di interruzione. Non si può impostare un punto di interruzione finché lo script di cui si vuole eseguire il debug non è stato salvato. Per istruzioni su come impostare un punto di interruzione, vedere [Come gestire i punti di interruzione](#how-to-manage-breakpoints) o [Set-PSBreakpoint](https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/set-psbreakpoint). Dopo avere avviato il debug, non è possibile modificare uno script se non si arresta il debug. Uno script in cui sono impostati uno o più punti di interruzione viene salvato automaticamente prima dell'esecuzione.
 
 ### <a name="to-start-debugging"></a>Per avviare il debug
 Premere **F5** o fare clic sull'icona **Esegui script** sulla barra degli strumenti oppure in alternativa scegliere **Esegui/Continua** dal menu **Debug**. Lo script viene eseguito finché non incontra il primo punto di interruzione. L'esecuzione viene sospesa e la riga in cui è stata sospesa viene evidenziata.
@@ -124,7 +124,7 @@ Premere **MAIUSC+F5**, scegliere **Arresta debugger** dal menu **Debug** oppure 
 ## <a name="how-to-step-over-step-into-and-step-out-while-debugging"></a>Come eseguire un'istruzione/routine, eseguire un'istruzione e uscire da un'istruzione/routine durante il debug
 Per il debug è fondamentale eseguire le istruzioni una alla volta in varie modalità. È possibile arrestare il debug in corrispondenza di una riga di codice ed esaminare i valori delle variabili e lo stato del sistema. La tabella seguente descrive le attività di debug comuni, ad esempio eseguire un'istruzione/routine, eseguire un'istruzione e uscire da un'istruzione/routine.
 
-| Attività di debug | Descrizione | Modalità di esecuzione in PowerShell ISE |
+| Attività di debug | Description | Modalità di esecuzione in PowerShell ISE |
 | --- | --- | --- |
 | **Esegui istruzione** | Esegue l'istruzione corrente e quindi arresta l'esecuzione in corrispondenza dell'istruzione successiva. Se l'istruzione corrente è una chiamata di funzione o di script, il debugger esegue tale funzione o script. In caso contrario, si ferma in corrispondenza dell'istruzione successiva. | Premere **F11**, scegliere **Esegui istruzione** dal menu **Debug** oppure digitare **S** nel riquadro della console e premere **INVIO**. |
 | **Esegui istruzione/routine** | Esegue l'istruzione corrente e quindi arresta l'esecuzione in corrispondenza dell'istruzione successiva. Se l'istruzione corrente è una chiamata di funzione o di script, il debugger esegue l'intera funzione o script e si ferma in corrispondenza dell'istruzione successiva alla chiamata di funzione. | Premere **F10**, scegliere **Esegui istruzione/routine** dal menu **Debug** oppure digitare **V** nel riquadro della console e premere **INVIO**. |
@@ -174,5 +174,4 @@ C:\ps-test\MyScript.ps1
 ```
 
 ## <a name="see-also"></a>Vedere anche
-- [Uso di Windows PowerShell ISE](Using-the-Windows-PowerShell-ISE.md)
-
+- [Esplorazione di Windows PowerShell ISE](../../getting-started/fundamental/exploring-the-windows-powershell-ise.md)

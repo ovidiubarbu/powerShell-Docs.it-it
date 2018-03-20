@@ -2,15 +2,15 @@
 
 Questo argomento offre informazioni di riepilogo per gli editori sulle procedure per modificare il manifesto per le pubblicazioni di PowerShell Gallery, con effetti sulle funzionalità dei cmdlet PowerShellGet e sull'interfaccia utente di PowerShell Gallery. Il contenuto è organizzato in base alla posizione in cui comparirà la modifica, a partire dalla sezione centrale per poi procedere con l'area di spostamento a sinistra. È disponibile una sezione di informazioni dettagliate sui tag, nella quale sono identificati i tag importanti, oltre ad alcuni dei tag usati più comunemente. La documentazione include anche due argomenti con esempi di manifesto: 
 
-* Per i moduli, vedere [Aggiornare il manifesto del modulo](https://docs.microsoft.com/en-us/powershell/gallery/psget/module/psget_update-modulemanifest)
-* Per gli script, vedere [Creare i file di script con i metadati](https://docs.microsoft.com/en-us/powershell/gallery/psget/script/psget_new-scriptfileinfo)
+* Per i moduli, vedere [Aggiornare il manifesto del modulo](https://docs.microsoft.com/powershell/gallery/psget/module/psget_update-modulemanifest)
+* Per gli script, vedere [Creare i file di script con i metadati](https://docs.microsoft.com/powershell/gallery/psget/script/psget_new-scriptfileinfo)
 
 ## <a name="powershell-gallery-feature-elements-controlled-by-the-manifest"></a>Elementi di funzionalità di PowerShell Gallery controllati dal manifesto
 
 La tabella seguente illustra gli elementi dell'interfaccia utente della pagina degli elementi di PowerShell Gallery controllati dall'editore.
 Per ogni elemento viene indicato se può essere controllato dal manifesto del modulo o dello script.
 
-| Elemento dell'interfaccia utente | Descrizione | Modulo | Script | 
+| Elemento dell'interfaccia utente | Description | Modulo | Script | 
 | --- | --- | --- | --- |
 | **Titolo** | Si tratta del nome dell'elemento pubblicato in PowerShell Gallery  | No | No |
 | **Versione** | La versione visualizzata è la stringa di versione nei metadati, con versione non definitiva se specificata. La parte principale della versione in un manifesto del modulo è rappresentata da ModuleVersion. Nel caso di uno script è identificata come .VERSION. Se viene specificata una stringa di versione non definitiva, verrà aggiunta a ModuleVersion per i moduli o specificata come parte di .VERSION per gli script. È disponibile documentazione su come specificare le stringhe di versione non definitiva nei [moduli](https://docs.microsoft.com/en-us/powershell/gallery/psget/module/prereleasemodule) negli [script](https://docs.microsoft.com/en-us/powershell/gallery/psget/script/prereleasescript). | Sì | Sì |
@@ -23,7 +23,7 @@ Per ogni elemento viene indicato se può essere controllato dal manifesto del mo
 | **FileList** | L'elenco dei file viene ricavato dal pacchetto quando viene pubblicato in PowerShell Gallery. Non è controllabile tramite le informazioni del manifesto. Nota: per ogni elemento in PowerShell Gallery viene elencato un file aggiuntivo con estensione nuspec, che non è presente dopo aver installato l'elemento in un sistema. Si tratta del manifesto del pacchetto NuGet per l'elemento e può essere ignorato. | No | No |
 | **Tag** | Per i moduli, i tag sono inclusi in PSData\PrivateData. Per gli script, viene usata la sezione .TAGS. Si noti che i tag non possono contenere spazi, anche tra virgolette. Per i tag esistono altri requisiti e significati, descritti più avanti in questo argomento nella sezione Dettagli dei tag. | Sì | Sì |
 | **Cmdlet** | Queste informazioni vengono specificate nel manifesto del modulo tramite CmdletsToExport. Si noti che la procedura consigliata prevede di elencare gli elementi in modo esplicito, invece di usare il carattere jolly "*", perché consentirà di migliorare le prestazioni di caricamento del modulo per gli utenti. | Sì | No |
-| **Funzioni** | Queste informazioni vengono specificate nel manifesto del modulo tramite FunctionsToExport. Si noti che la procedura consigliata prevede di elencare gli elementi in modo esplicito, invece di usare il carattere jolly "*", perché consentirà di migliorare le prestazioni di caricamento del modulo per gli utenti. | Sì | No |
+| **Functions** | Queste informazioni vengono specificate nel manifesto del modulo tramite FunctionsToExport. Si noti che la procedura consigliata prevede di elencare gli elementi in modo esplicito, invece di usare il carattere jolly "*", perché consentirà di migliorare le prestazioni di caricamento del modulo per gli utenti. | Sì | No |
 | **Risorse DSC** | Per i moduli che verranno usati in PowerShell versione 5.0 e versioni successive, queste informazioni vengono specificate nel manifesto tramite DscResourcesToExport. Se il modulo deve essere usato in PowerShell 4, è sconsigliabile usare DSCResourcesToExport perché non è una chiave di manifesto supportata. (DSC non era disponibile prima di PowerShell 4.) | Sì | No |
 | **Flussi di lavoro** | I flussi di lavoro vengono pubblicati in PowerShell Gallery come script e identificati come flussi di lavoro nel codice (vedere [Connect-AzureVM](https://www.powershellgallery.com/packages/Connect-AzureVM/1.0/Content/Connect-AzureVM.ps1) per un esempio). Queste informazioni non sono controllate dal manifesto. | No | No |
 | **Funzionalità di ruolo** | Queste informazioni verranno presentate quando il modulo pubblicato in PowerShell Gallery contiene uno o più file di funzionalità di ruolo (con estensione psrc), usati da JEA. Vedere la documentazione di JEA per altri dettagli sulle [funzionalità di ruolo](https://docs.microsoft.com/en-us/powershell/jea/role-capabilities). | Sì | No |
@@ -38,8 +38,8 @@ Per ogni elemento viene indicato se può essere controllato dal manifesto del mo
 
 La pagina Modifica elemento di PowerShell Gallery consente agli editori di modificare vari campi visualizzati per un elemento, in particolare:
 
-* Titolo
-* Descrizione
+* Title
+* Description
 * Riepilogo
 * URL dell'icona
 * URL della pagina iniziale del progetto
@@ -76,7 +76,7 @@ Per riferimento, ecco alcuni dei tag usati più di frequente alla data del 14/12
 | **ActiveDirectory** | AD non è attualmente usato da solo  |
 | **SQLServer** |  |
 | **DBA** |  |
-| **Security** | Defense è meno preciso |
+| **Sicurezza** | Defense è meno preciso |
 | **Database** | Il plurale inglese databases è meno consigliato |
 | **DevOps** |  |
 | **Windows** |  |

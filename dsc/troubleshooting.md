@@ -3,11 +3,11 @@ ms.date: 2017-06-12
 ms.topic: conceptual
 keywords: dsc,powershell,configurazione,installazione
 title: Risoluzione dei problemi relativi a DSC
-ms.openlocfilehash: 4141e1f3304460dcaf310ce603fdc5d9550a5069
-ms.sourcegitcommit: a444406120e5af4e746cbbc0558fe89a7e78aef6
+ms.openlocfilehash: cdb11a80daecec0e0d01071752612663ac69ac6d
+ms.sourcegitcommit: 99227f62dcf827354770eb2c3e95c5cf6a3118b4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="troubleshooting-dsc"></a>Risoluzione dei problemi relativi a DSC
 
@@ -21,7 +21,7 @@ Desired State Configuration (DSC) in Windows PowerShell dipende da WinRM. WinRM 
 
 ## <a name="using-get-dscconfigurationstatus"></a>Uso di Get-DscConfigurationStatus
 
-Il cmdlet [Get-DscConfigurationStatus](https://technet.microsoft.com/en-us/library/mt517868.aspx) ottiene informazioni di alto livello sullo stato di configurazione da un nodo di destinazione. Viene restituito un oggetto completo che include informazioni dettagliate sull'esito positivo o negativo dell'esecuzione della configurazione. È possibile esaminare l'oggetto per scoprire i dettagli sull'esecuzione della configurazione, ad esempio:
+Il cmdlet [Get-DscConfigurationStatus](https://technet.microsoft.com/library/mt517868.aspx) ottiene informazioni di alto livello sullo stato di configurazione da un nodo di destinazione. Viene restituito un oggetto completo che include informazioni dettagliate sull'esito positivo o negativo dell'esecuzione della configurazione. È possibile esaminare l'oggetto per scoprire i dettagli sull'esecuzione della configurazione, ad esempio:
 
 * Tutte le risorse con errori
 * Qualsiasi risorsa che ha richiesto un riavvio
@@ -621,5 +621,5 @@ onlyProperty                            PSComputerName
 * [Creare risorse Windows PowerShell DSC (Desired State Configuration) personalizzate](authoringResource.md)
 
 ### <a name="other-resources"></a>Risorse aggiuntive
-* [Cmdlet di Windows PowerShell DSC (Desired State Configuration)](https://technet.microsoft.com/en-us/library/dn521624(v=wps.630).aspx)
+* [Cmdlet di Windows PowerShell DSC (Desired State Configuration)](https://technet.microsoft.com/library/dn521624(v=wps.630).aspx)
 

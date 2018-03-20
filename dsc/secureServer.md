@@ -3,11 +3,11 @@ ms.date: 2017-06-12
 ms.topic: conceptual
 keywords: dsc,powershell,configurazione,installazione
 title: Procedure consigliate per i server di pull
-ms.openlocfilehash: 045f98475d6182b329ecf048038a98e933684a82
-ms.sourcegitcommit: a444406120e5af4e746cbbc0558fe89a7e78aef6
+ms.openlocfilehash: 3d0ab969b7a0de9d428becc4b9bdb124a7a44c2c
+ms.sourcegitcommit: 99227f62dcf827354770eb2c3e95c5cf6a3118b4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="pull-server-best-practices"></a>Procedure consigliate per i server di pull
 
@@ -24,7 +24,7 @@ Pubblicato | Aprile 2015
 ## <a name="abstract"></a>Contenuto
 
 Questo documento è designato a offrire procedure ufficiali a coloro che pianificano di implementare un server di pull per la configurazione dello stato desiderato tramite Windows PowerShell. Un server di pull è un servizio semplice, la cui distribuzione dovrebbe impiegare solo alcuni minuti. Sebbene questo documento includa procedure tecniche che possono essere usate in una distribuzione, il suo scopo è di essere un riferimento per procedure consigliate e per gli elementi da considerare prima di eseguire una distribuzione.
-I lettori devono avere una conoscenza di base di DSC e dei termini usati per descrivere i componenti inclusi in una distribuzione DSC. Per altre informazioni, vedere [Panoramica di Windows PowerShell DSC (Desired State Configuration)](https://technet.microsoft.com/en-us/library/dn249912.aspx).
+I lettori devono avere una conoscenza di base di DSC e dei termini usati per descrivere i componenti inclusi in una distribuzione DSC. Per altre informazioni, vedere [Panoramica di Windows PowerShell DSC (Desired State Configuration)](https://technet.microsoft.com/library/dn249912.aspx).
 Poiché si presuppone che DSC evolverà presto verso una cadenza cloud, la tecnologia che sta alla base, inclusi i server di pull, evolverà e presenterà nuove funzionalità. Questo documento include nell'appendice una tabella delle versioni, che offre riferimenti a versioni precedenti e a soluzioni future per incoraggiare la creazione di strutture che guardano al futuro.
 
 Le due sezioni principali di questo documento sono:
@@ -43,7 +43,7 @@ Windows PowerShell offre un set di estensioni del linguaggio per la configurazio
 ### <a name="pull-server-role"></a>Ruolo del server di pull  
 Un server di pull offre un servizio centralizzato per archiviare le configurazioni che saranno accessibili per i nodi di destinazione.
  
-Il ruolo del server di pull può essere distribuito come istanza del server Web o come condivisione di file SMB. La funzionalità del server Web include un'interfaccia OData e può facoltativamente includere funzionalità per i nodi di destinazione per restituire la conferma di un esito positivo o negativo quando vengono applicate le configurazioni. Questa funzionalità è utile in ambienti in cui è presente un numero elevato di nodi di destinazione. Dopo la configurazione di un nodo di destinazione (noto anche come client) verso il server di pull, vengono scaricati e applicati i dati della configurazione più recente e gli script necessari. Questa operazione può essere eseguita come distribuzione singola o come processo ripetuto. Ciò rende il server di pull un'importante risorsa per la gestione di modifiche su larga scala. Per altre informazioni, vedere [Windows PowerShell Desired State Configuration Pull Servers](https://technet.microsoft.com/en-us/library/dn249913.aspx) (Server di pull per la configurazione dello stato desiderato tramite Windows PowerShell) e [Push and Pull Configuration Modes](https://technet.microsoft.com/en-us/library/dn249913.aspx) (Modalità di configurazione push e pull).
+Il ruolo del server di pull può essere distribuito come istanza del server Web o come condivisione di file SMB. La funzionalità del server Web include un'interfaccia OData e può facoltativamente includere funzionalità per i nodi di destinazione per restituire la conferma di un esito positivo o negativo quando vengono applicate le configurazioni. Questa funzionalità è utile in ambienti in cui è presente un numero elevato di nodi di destinazione. Dopo la configurazione di un nodo di destinazione (noto anche come client) verso il server di pull, vengono scaricati e applicati i dati della configurazione più recente e gli script necessari. Questa operazione può essere eseguita come distribuzione singola o come processo ripetuto. Ciò rende il server di pull un'importante risorsa per la gestione di modifiche su larga scala. Per altre informazioni, vedere [Windows PowerShell Desired State Configuration Pull Servers](https://technet.microsoft.com/library/dn249913.aspx) (Server di pull per la configurazione dello stato desiderato tramite Windows PowerShell) e [Push and Pull Configuration Modes](https://technet.microsoft.com/library/dn249913.aspx) (Modalità di configurazione push e pull).
 
 ## <a name="configuration-planning"></a>Pianificazione della configurazione
 

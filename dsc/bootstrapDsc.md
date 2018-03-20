@@ -3,11 +3,11 @@ ms.date: 2017-06-12
 ms.topic: conceptual
 keywords: dsc,powershell,configurazione,installazione
 title: Configurare una macchina virtuale all'avvio iniziale tramite DSC
-ms.openlocfilehash: 76c990ee7c98ea47d1fc3d7bd955ce6a993e28a6
-ms.sourcegitcommit: a444406120e5af4e746cbbc0558fe89a7e78aef6
+ms.openlocfilehash: ff06aafa6db49d93a9b42e38ac7c3e9a11657bd5
+ms.sourcegitcommit: 99227f62dcf827354770eb2c3e95c5cf6a3118b4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 03/15/2018
 ---
 >Si applica a: Windows PowerShell 5.0
 
@@ -20,7 +20,7 @@ Per informazioni su come configurare nuove macchine virtuali all'avvio iniziale 
 
 Per eseguire questi esempi, è necessario:
 
-- Un disco rigido virtuale di avvio. È possibile scaricare un'immagine ISO con una copia di valutazione di Windows Server 2016 in [TechNet Evaluation Center](https://www.microsoft.com/en-us/evalcenter/evaluate-windows-server-2016). È possibile trovare istruzioni su come creare un disco rigido virtuale da un'immagine ISO in [Creating Bootable Virtual Hard Disks](https://technet.microsoft.com/en-us/library/gg318049.aspx) (Creazione di dischi rigidi virtuali di avvio).
+- Un disco rigido virtuale di avvio. È possibile scaricare un'immagine ISO con una copia di valutazione di Windows Server 2016 in [TechNet Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-windows-server-2016). È possibile trovare istruzioni su come creare un disco rigido virtuale da un'immagine ISO in [Creating Bootable Virtual Hard Disks](https://technet.microsoft.com/library/gg318049.aspx) (Creazione di dischi rigidi virtuali di avvio).
 - Un computer host con Hyper-V abilitato. Per altre informazioni, vedere [Panoramica di Hyper-V](https://technet.microsoft.com/library/hh831531.aspx).
 
 Tramite DSC, è possibile automatizzare l'installazione del software e la configurazione di un computer all'avvio iniziale.

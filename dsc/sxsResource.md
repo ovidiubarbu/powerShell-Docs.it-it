@@ -3,11 +3,11 @@ ms.date: 2017-06-12
 ms.topic: conceptual
 keywords: dsc,powershell,configurazione,installazione
 title: "Uso di risorse con più versioni"
-ms.openlocfilehash: 8bd8b1dab9418c6d8cf64cd682c527a7f039cdb4
-ms.sourcegitcommit: a444406120e5af4e746cbbc0558fe89a7e78aef6
+ms.openlocfilehash: 5ca4eadfe23a4675e1b81b86d4274d7f113228fe
+ms.sourcegitcommit: 99227f62dcf827354770eb2c3e95c5cf6a3118b4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="using-resources-with-multiple-versions"></a>Uso di risorse con più versioni
 
@@ -17,7 +17,7 @@ In PowerShell 5.0, le risorse DSC possono avere più versioni e possono essere i
 
 ## <a name="installing-multiple-resource-versions-side-by-side"></a>Installazione di più versioni delle risorse side-by-side
 
-È possibile usare i parametri **MinimumVersion**, **MaximumVersion** e **RequiredVersion** del cmdlet [Install-Module](https://technet.microsoft.com/en-us/library/dn807162.aspx) per specificare la versione di un modulo da installare. La chiamata di **Install-Module** senza specificare una versione installa la versione più recente.
+È possibile usare i parametri **MinimumVersion**, **MaximumVersion** e **RequiredVersion** del cmdlet [Install-Module](https://technet.microsoft.com/library/dn807162.aspx) per specificare la versione di un modulo da installare. La chiamata di **Install-Module** senza specificare una versione installa la versione più recente.
 
 Ad esempio, sono disponibili più versioni del modulo **xFailOverCluster**, ognuno dei quali contiene una risorsa **xCluster**. Il risultato della chiamata di **Install-Module** senza specificare il numero della versione è il seguente:
 

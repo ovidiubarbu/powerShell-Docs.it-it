@@ -2,11 +2,11 @@
 ms.date: 2017-06-27
 keywords: powershell,cmdlet
 title: "Regole di autorizzazione e funzionalità di sicurezza di Accesso Web Windows PowerShell"
-ms.openlocfilehash: 6b50fdc0f2854d8af6147432fed1a155d26f57e7
-ms.sourcegitcommit: d6ab9ab5909ed59cce4ce30e29457e0e75c7ac12
+ms.openlocfilehash: 19e4aa1bb55178ec2634af0771afe2db5db3423c
+ms.sourcegitcommit: 99227f62dcf827354770eb2c3e95c5cf6a3118b4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="authorization-rules-and-security-features-of-windows-powershell-web-access"></a>Regole di autorizzazione e funzionalità di sicurezza di Accesso Web Windows PowerShell
 
@@ -32,7 +32,7 @@ Come con gli altri cmdlet di Windows PowerShell che includono un parametro Crede
 Per creare un oggetto PSCredential che contiene le credenziali da passare a un computer remoto, eseguire il cmdlet [Get-Credential](https://msdn.microsoft.com/powershell/reference/5.1/microsoft.powershell.security/Get-Credential).
 
 Le regole di autenticazione Accesso Web Windows PowerShell sono costituite da elenchi di operazioni consentite.
-Ogni regola definisce una connessione consentita fra utenti, computer di destinazione e specifiche [configurazioni di sessione](https://msdn.microsoft.com/en-us/powershell/reference/5.1/microsoft.powershell.core/about/about_session_configurations) di Windows PowerShell, denominate anche endpoint o _spazi di esecuzione_, nei computer di destinazione specificati.
+Ogni regola definisce una connessione consentita fra utenti, computer di destinazione e specifiche [configurazioni di sessione](https://msdn.microsoft.com/powershell/reference/5.1/microsoft.powershell.core/about/about_session_configurations) di Windows PowerShell, denominate anche endpoint o _spazi di esecuzione_, nei computer di destinazione specificati.
 Per una spiegazione degli **spazi di esecuzione** vedere [Beginning Use of PowerShell Runspaces](https://blogs.technet.microsoft.com/heyscriptingguy/2015/11/26/beginning-use-of-powershell-runspaces-part-1/) (Uso iniziale degli spazi di esecuzione di PowerShell)
 
 > **Nota sulla sicurezza**
@@ -103,7 +103,7 @@ Tali regole vengono valutate solo dopo l'autenticazione dell'utente nel gateway 
 L'ultimo livello di sicurezza di Accesso Web Windows PowerShell è costituito dalla configurazione di protezione del computer di destinazione.
 Gli utenti devono avere i diritti di accesso appropriati, configurati sia nel computer di destinazione che nelle regole di autorizzazione di Accesso Web Windows PowerShell, per eseguire una console Windows PowerShell basata sul Web che può operare sul computer di destinazione con Accesso Web Windows PowerShell.
 
-Questo livello offre un meccanismo di sicurezza uguale a quello che valuta i tentativi di connessione quando un utente crea una sessione remota di Windows PowerShell per un computer di destinazione direttamente da Windows PowerShell, eseguendo il cmdlet [Enter-PSSession](https://msdn.microsoft.com/powershell/reference/5.1/microsoft.powershell.core/Enter-PSSession) o [New-PSSession](https://msdn.microsoft.com/en-us/powershell/reference/5.1/microsoft.powershell.core/new-pssession).
+Questo livello offre un meccanismo di sicurezza uguale a quello che valuta i tentativi di connessione quando un utente crea una sessione remota di Windows PowerShell per un computer di destinazione direttamente da Windows PowerShell, eseguendo il cmdlet [Enter-PSSession](https://msdn.microsoft.com/powershell/reference/5.1/microsoft.powershell.core/Enter-PSSession) o [New-PSSession](https://msdn.microsoft.com/powershell/reference/5.1/microsoft.powershell.core/new-pssession).
 
 Per impostazione predefinita, Accesso Web Windows PowerShell usa il nome utente e la password principali per eseguire l'autenticazione sia nel gateway che nel computer di destinazione.
 La sezione **Impostazioni di connessione facoltative** della pagina di accesso basata sul Web offre agli utenti la possibilità di specificare credenziali diverse per il computer di destinazione, se sono necessarie.

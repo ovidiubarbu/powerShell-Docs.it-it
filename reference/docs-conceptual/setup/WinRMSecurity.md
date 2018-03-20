@@ -2,11 +2,11 @@
 ms.date: 2017-06-05
 keywords: powershell,cmdlet
 title: WinRMSecurity
-ms.openlocfilehash: 65cf12466c9dc8fc8b77d79b0d63a6ae61e64d60
-ms.sourcegitcommit: d6ab9ab5909ed59cce4ce30e29457e0e75c7ac12
+ms.openlocfilehash: 0522844fded847a3fd45c1b3890a141357edb2b2
+ms.sourcegitcommit: 99227f62dcf827354770eb2c3e95c5cf6a3118b4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="powershell-remoting-security-considerations"></a>Considerazioni sulla sicurezza della comunicazione remota di PowerShell
 
@@ -14,7 +14,7 @@ La comunicazione remota di PowerShell è il metodo consigliato per gestire i sis
 
 ## <a name="what-is-powershell-remoting"></a>Informazioni sulla comunicazione remota di PowerShell
 
-La comunicazione remota di PowerShell usa la [Gestione remota Windows (WinRM)](https://msdn.microsoft.com/en-us/library/windows/desktop/aa384426.aspx), ovvero l'implementazione Microsoft del protocollo [Web Services for Management (WS-Management)](http://www.dmtf.org/sites/default/files/standards/documents/DSP0226_1.2.0.pdf), per consentire agli utenti di eseguire i comandi di PowerShell nei computer remoti. È possibile trovare altre informazioni sull'uso della comunicazione remota di PowerShell in [Esecuzione di comandi remoti](https://technet.microsoft.com/en-us/library/dd819505.aspx).
+La comunicazione remota di PowerShell usa la [Gestione remota Windows (WinRM)](https://msdn.microsoft.com/library/windows/desktop/aa384426.aspx), ovvero l'implementazione Microsoft del protocollo [Web Services for Management (WS-Management)](http://www.dmtf.org/sites/default/files/standards/documents/DSP0226_1.2.0.pdf), per consentire agli utenti di eseguire i comandi di PowerShell nei computer remoti. È possibile trovare altre informazioni sull'uso della comunicazione remota di PowerShell in [Esecuzione di comandi remoti](https://technet.microsoft.com/library/dd819505.aspx).
 
 La comunicazione remota di PowerShell non corrisponde all'uso del parametro **ComputerName** di un cmdlet per l'esecuzione in un computer remoto che usa RPC (Remote Procedure Call) come protocollo sottostante.
 
@@ -33,7 +33,7 @@ Sulle reti private, la regola del firewall di Windows predefinita per la comunic
 
 ## <a name="process-isolation"></a>Isolamento del processo
 
-La comunicazione remota di PowerShell usa [Gestione remota Windows (WinRM)](https://msdn.microsoft.com/en-us/library/windows/desktop/aa384426) per la comunicazione tra computer. WinRM viene eseguito come servizio dell'account del servizio di rete e genera processi isolati eseguiti come account utente per ospitare le istanze di PowerShell. Un'istanza di PowerShell in esecuzione per un solo utente non ha accesso a un processo che esegue un'istanza di PowerShell con un altro account utente.
+La comunicazione remota di PowerShell usa [Gestione remota Windows (WinRM)](https://msdn.microsoft.com/library/windows/desktop/aa384426) per la comunicazione tra computer. WinRM viene eseguito come servizio dell'account del servizio di rete e genera processi isolati eseguiti come account utente per ospitare le istanze di PowerShell. Un'istanza di PowerShell in esecuzione per un solo utente non ha accesso a un processo che esegue un'istanza di PowerShell con un altro account utente.
 
 ## <a name="event-logs-generated-by-powershell-remoting"></a>Registri eventi generati dalla comunicazione remota di Powershell
 
@@ -50,10 +50,10 @@ Indipendentemente dal protocollo di trasporto usato (HTTP o HTTPS), la comunicaz
 
 L'autenticazione conferma l'identità del client al server e, idealmente, l'identità del server al client.
     
-Quando un client si connette a un server di dominio usando il proprio nome di computer, ad esempio server01 o server01. contoso.com, il protocollo di autenticazione predefinito è [Kerberos](https://msdn.microsoft.com/en-us/library/windows/desktop/aa378747.aspx).
+Quando un client si connette a un server di dominio usando il proprio nome di computer, ad esempio server01 o server01. contoso.com, il protocollo di autenticazione predefinito è [Kerberos](https://msdn.microsoft.com/library/windows/desktop/aa378747.aspx).
 Kerberos garantisce l'identità dell'utente e l'identità del server senza inviare credenziali riutilizzabili.
 
-Quando un client si connette a un server di dominio tramite il relativo indirizzo IP o si connette a un server del gruppo di lavoro, l'autenticazione Kerberos non può essere applicata. In questo caso la comunicazione remota di PowerShell si basa sul [protocollo di autenticazione NTLM](https://msdn.microsoft.com/en-us/library/windows/desktop/aa378749.aspx), che garantisce l'identità dell'utente senza che sia necessario inviare credenziali delegabili. Per dimostrare l'identità dell'utente, il protocollo NTLM richiede che sia il client che il server calcolino una chiave di sessione dalla password dell'utente senza mai scambiare la stessa password. Il server in genere non conosce la password dell'utente, quindi comunica con il controller di dominio, che conosce la password e calcola la chiave della sessione per il server. 
+Quando un client si connette a un server di dominio tramite il relativo indirizzo IP o si connette a un server del gruppo di lavoro, l'autenticazione Kerberos non può essere applicata. In questo caso la comunicazione remota di PowerShell si basa sul [protocollo di autenticazione NTLM](https://msdn.microsoft.com/library/windows/desktop/aa378749.aspx), che garantisce l'identità dell'utente senza che sia necessario inviare credenziali delegabili. Per dimostrare l'identità dell'utente, il protocollo NTLM richiede che sia il client che il server calcolino una chiave di sessione dalla password dell'utente senza mai scambiare la stessa password. Il server in genere non conosce la password dell'utente, quindi comunica con il controller di dominio, che conosce la password e calcola la chiave della sessione per il server. 
       
 Il protocollo NTLM, tuttavia, garantisce l'identità del server. Come con tutti i protocolli che usano NTLM per l'autenticazione, un utente malintenzionato con accesso all'account computer di un computer aggiunto al dominio può richiamare il controller di dominio per calcolare una chiave di sessione NTLM e quindi rappresentare il server.
 

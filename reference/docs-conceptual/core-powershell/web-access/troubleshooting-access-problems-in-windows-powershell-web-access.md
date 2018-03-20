@@ -2,11 +2,11 @@
 ms.date: 2017-08-23
 keywords: powershell,cmdlet
 title: risoluzione dei problemi di accesso in accesso web windows powershell
-ms.openlocfilehash: 08a9fd286ed8a40e9423deb7d29dc0a8ecf8e5b1
-ms.sourcegitcommit: 4102ecc35d473211f50a453f6ae3fbea31cb3428
+ms.openlocfilehash: 6e51df3f4c6ac196c855ad918a91394d02c7d75e
+ms.sourcegitcommit: 99227f62dcf827354770eb2c3e95c5cf6a3118b4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/31/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="troubleshooting-access-problems-in-windows-powershell-web-access"></a>Risoluzione dei problemi di accesso in Accesso Web Windows PowerShell
 
@@ -34,7 +34,7 @@ Il problema può essere dovuto a uno dei motivi seguenti.
 
   Verificare che tale funzione sia abilitata nel computer a cui l'utente sta tentando di connettersi.
 
-  Per altre informazioni, vedere [How to Configure Your Computer for Remoting](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_remote_requirements#how-to-configure-your-computer-for-remoting) (Come configurare il computer per la comunicazione remota).
+  Per altre informazioni, vedere [How to Configure Your Computer for Remoting](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_remote_requirements#how-to-configure-your-computer-for-remoting) (Come configurare il computer per la comunicazione remota).
 
 ## <a name="internal-server-error"></a>Errore interno del server
 
@@ -132,7 +132,7 @@ Le regole di autorizzazione non supportano gli indirizzi IPv6 nel formato dei no
 Per specificare un computer di destinazione tramite un indirizzo IPv6, nella regola di autorizzazione utilizzare l'indirizzo IPv6 originale, che contiene due punti (:).
 Sia i nomi di dominio che gli indirizzi IPv6 in formato numerico, ovvero con i due punti (:) sono supportati come nome del computer di destinazione nella pagina di accesso di Accesso Web Windows PowerShell, ma non nelle regole di autorizzazione. 
 
-Per altre informazioni sugli indirizzi IPv6, vedere l'articolo [Funzionamento di IPv6](https://technet.microsoft.com/en-us/library/cc781672(v=ws.10).aspx).
+Per altre informazioni sugli indirizzi IPv6, vedere l'articolo [Funzionamento di IPv6](https://technet.microsoft.com/library/cc781672(v=ws.10).aspx).
 
 ## <a name="see-also"></a>Vedere anche
 

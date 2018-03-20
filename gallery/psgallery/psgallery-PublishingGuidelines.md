@@ -5,11 +5,11 @@ ms.topic: conceptual
 keywords: gallery,powershell,cmdlet,psgallery
 description: Linee guida per gli autori
 title: Linee guida e procedure consigliate per la pubblicazione in PowerShell Gallery
-ms.openlocfilehash: 882a33c00cc024ad2bbb05a3283e058a61035e3a
-ms.sourcegitcommit: f069ff0689006fece768f178c10e3e3eeaee09f0
+ms.openlocfilehash: 25bbe31bcc805808c311829598e3c29991f72aad
+ms.sourcegitcommit: 99227f62dcf827354770eb2c3e95c5cf6a3118b4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/13/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="powershellgallery-publishing-guidelines-and-best-practices"></a>Linee guida e procedure consigliate per la pubblicazione in PowerShell Gallery
 
@@ -19,7 +19,7 @@ Gli elementi pubblicati attenendosi a queste linee guida hanno maggiori probabil
 Di seguito sono elencate le linee guida che definiscono un elemento PowerShell Gallery di qualità, le impostazioni facoltative più importanti di un manifesto e suggerimenti per migliorare il codice con il feedback dei revisori iniziali e con [Powershell Script Analyzer](https://aka.ms/psscriptanalyzer). Inoltre sono incluse linee guida per creare versioni del modulo, documentazione, test ed esempi per l'uso degli elementi condivisi.
 Questa documentazione segue in gran parte le linee guida per la pubblicazione di [moduli risorsa DSC di qualità](https://github.com/PowerShell/DscResources/blob/master/HighQualityModuleGuidelines.md).
 
-Per informazioni sulle modalità di pubblicazione di un elemento in PowerShell Gallery vedere [Creazione e pubblicazione di elementi](https://msdn.microsoft.com/en-us/powershell/gallery/psgallery/creating-and-publishing-an-item).
+Per informazioni sulle modalità di pubblicazione di un elemento in PowerShell Gallery vedere [Creazione e pubblicazione di elementi](https://msdn.microsoft.com/powershell/gallery/psgallery/creating-and-publishing-an-item).
 
 Sono graditi i commenti e i suggerimenti relativi a queste linee guida. Per pubblicare osservazioni è possibile aprire un caso nell'[archivio della documentazione Github](https://github.com/powershell/powershell-docs/).
 
@@ -71,7 +71,7 @@ In MSDN vari articoli illustrano come includere documentazione con gli elementi 
 * Suggerimenti per la creazione della documentazione sono disponibili in [How to Write Cmdlet Help](https://go.microsoft.com/fwlink/?LinkID=123415) (Come scrivere documentazione per i cmdlet).
 * La creazione di documentazione per i cmdlet è l'approccio migliore per script, funzioni o cmdlet di PowerShell.
   Per informazioni su come creare la Guida per i cmdlet, vedere prima [How to Write Cmdlet Help](https://go.microsoft.com/fwlink/?LinkID=123415) (Come scrivere la Guida per i cmdlet) in MSDN Library.
-  Per aggiungere elementi di documentazione in uno script vedere [About Comment Based Help](https://msdn.microsoft.com/en-us/powershell/reference/5.1/microsoft.powershell.core/about/about_comment_based_help) (Informazioni sulla documentazione basata sui commenti).
+  Per aggiungere elementi di documentazione in uno script vedere [About Comment Based Help](https://msdn.microsoft.com/powershell/reference/5.1/microsoft.powershell.core/about/about_comment_based_help) (Informazioni sulla documentazione basata sui commenti).
 * Molti moduli includono anche documentazione in formato testo, ad esempio file Markdown.
   Questa soluzione può essere utile se è disponibile un sito del progetto in Github, dove Markdown è un formato molto usato.
   La procedura consigliata è l'uso di [Markdown per Github](https://help.github.com/categories/writing-on-github/)

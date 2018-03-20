@@ -3,11 +3,11 @@ ms.date: 2017-06-12
 ms.topic: conceptual
 keywords: dsc,powershell,configurazione,installazione
 title: Opzioni delle credenziali nei dati di configurazione
-ms.openlocfilehash: 15cdb29127d9774c58e1d6518bbba56273e7defd
-ms.sourcegitcommit: a444406120e5af4e746cbbc0558fe89a7e78aef6
+ms.openlocfilehash: 6ddf82c2b63309255ec3187d650677a6c3c2afb0
+ms.sourcegitcommit: 99227f62dcf827354770eb2c3e95c5cf6a3118b4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="credentials-options-in-configuration-data"></a>Opzioni delle credenziali nei dati di configurazione
 >Si applica a: Windows PowerShell 5.0
@@ -156,7 +156,7 @@ Group [String] #ResourceName
 }
 ```
 
-Questo esempio usa una risorsa [Group](https://msdn.microsoft.com/en-us/powershell/dsc/groupresource), inclusa nel modulo di risorse DSC `PSDesiredStateConfiguration` predefinito.
+Questo esempio usa una risorsa [Group](https://msdn.microsoft.com/powershell/dsc/groupresource), inclusa nel modulo di risorse DSC `PSDesiredStateConfiguration` predefinito.
 La risorsa può creare gruppi locali e aggiungere o rimuovere membri.
 Accetta sia la proprietà `Credential` sia la proprietà `PsDscRunAsCredential` automatica.
 Tuttavia, la risorsa usa solo la proprietà `Credential`.
@@ -231,7 +231,7 @@ Questo esempio include due problemi:
 ## <a name="psdscallowplaintextpassword"></a>PsDscAllowPlainTextPassword
 
 Il primo messaggio di errore contiene un URL con la documentazione.
-Il collegamento descrive come crittografare le password usando una struttura [ConfigurationData](https://msdn.microsoft.com/en-us/powershell/dsc/configdata) e un certificato.
+Il collegamento descrive come crittografare le password usando una struttura [ConfigurationData](https://msdn.microsoft.com/powershell/dsc/configdata) e un certificato.
 Per altre informazioni sui certificati e su DSC, [leggere questo post](http://aka.ms/certs4dsc).
 
 Per forzare una password di testo semplice, la risorsa richiede la presenza della parola chiave `PsDscAllowPlainTextPassword` nella sezione dei dati di configurazione, nel modo seguente:

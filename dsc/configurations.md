@@ -3,11 +3,11 @@ ms.date: 2017-06-12
 ms.topic: conceptual
 keywords: dsc,powershell,configurazione,installazione
 title: Configurazioni DSC
-ms.openlocfilehash: 3fd2846d0fbfb0ae9baa44cde66afe1f5be65cf7
-ms.sourcegitcommit: a444406120e5af4e746cbbc0558fe89a7e78aef6
+ms.openlocfilehash: 14db60126fd6c3d11d425a28c749a8e8b81122ca
+ms.sourcegitcommit: 99227f62dcf827354770eb2c3e95c5cf6a3118b4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="dsc-configurations"></a>Configurazioni DSC
 
@@ -62,7 +62,7 @@ Configuration MyDscConfiguration {
         }
     }
 }
-MyDscConfiguration -ComputerName <MyComputer>
+MyDscConfiguration -ComputerName $ComputerName
 
 ```
 
@@ -141,11 +141,11 @@ Configuration DependsOnExample {
 ## <a name="using-new-resources-in-your-configuration"></a>Uso di nuove risorse nella configurazione
 
 Eseguendo gli esempi precedenti, si ricevere un avviso che informa che è stata usata una risorsa senza importarla in modo esplicito.
-Oggi DSC include 12 risorse come parte del modulo PSDesiredStateConfiguration. Le altre risorse nei moduli esterni devono essere inserite in `$env:PSModulePath` nell'ordine perché Gestione configurazione locale sia in grado di riconoscerle. È possibile usare un nuovo cmdlet, [Get-DscResource](https://technet.microsoft.com/en-us/library/dn521625.aspx), per determinare le risorse installate nel sistema e disponibili per l'uso da parte di Gestione configurazione locale. Dopo che i moduli vengono inseriti in `$env:PSModulePath` e sono riconosciuti correttamente da [Get-DscResource](https://technet.microsoft.com/en-us/library/dn521625.aspx), devono comunque essere caricati nella configurazione. 
+Oggi DSC include 12 risorse come parte del modulo PSDesiredStateConfiguration. Le altre risorse nei moduli esterni devono essere inserite in `$env:PSModulePath` nell'ordine perché Gestione configurazione locale sia in grado di riconoscerle. È possibile usare un nuovo cmdlet, [Get-DscResource](https://technet.microsoft.com/library/dn521625.aspx), per determinare le risorse installate nel sistema e disponibili per l'uso da parte di Gestione configurazione locale. Dopo che i moduli vengono inseriti in `$env:PSModulePath` e sono riconosciuti correttamente da [Get-DscResource](https://technet.microsoft.com/library/dn521625.aspx), devono comunque essere caricati nella configurazione. 
 **Import-DscResource** è una parola chiave dinamica che può essere riconosciuta solo all'interno di un blocco **Configuration**, ovvero non è un cmdlet. 
 **Import-DscResource** supporta due parametri:
 - **ModuleName** corrisponde al modo consigliato di usare **Import-DscResource**. Questo parametro accetta il nome del modulo che contiene le risorse da importare, nonché una matrice di stringhe di nomi di modulo. 
-- **Name** è il nome della risorsa da importare. Non si tratta del nome descrittivo restituito come "Name" da [Get-DscResource](https://technet.microsoft.com/en-us/library/dn521625.aspx), ma del nome di classe usato per definire lo schema della risorsa (restituito come **ResourceType** da [Get-DscResource](https://technet.microsoft.com/en-us/library/dn521625.aspx)). 
+- **Name** è il nome della risorsa da importare. Non si tratta del nome descrittivo restituito come "Name" da [Get-DscResource](https://technet.microsoft.com/library/dn521625.aspx), ma del nome di classe usato per definire lo schema della risorsa (restituito come **ResourceType** da [Get-DscResource](https://technet.microsoft.com/library/dn521625.aspx)). 
 
 ## <a name="see-also"></a>Vedere anche
 * [Panoramica di Windows PowerShell DSC (Desired State Configuration)](overview.md).

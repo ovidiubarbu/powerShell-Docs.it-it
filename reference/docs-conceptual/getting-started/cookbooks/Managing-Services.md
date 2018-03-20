@@ -3,11 +3,11 @@ ms.date: 2017-06-05
 keywords: powershell,cmdlet
 title: Gestione dei servizi
 ms.assetid: 7a410e4d-514b-4813-ba0c-0d8cef88df31
-ms.openlocfilehash: 9fd6c8bcfecc99756188409629ddf94b880aab91
-ms.sourcegitcommit: 74255f0b5f386a072458af058a15240140acb294
+ms.openlocfilehash: 1e83566b1cb3c0c9c3c78a5877e52552ee51b0e9
+ms.sourcegitcommit: 99227f62dcf827354770eb2c3e95c5cf6a3118b4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="managing-services"></a>Gestione dei servizi
 Sono disponibili otto cmdlet Service principali, progettati per una vasta gamma di attività dei servizi. Verranno esaminati solo l'elenco e la modifica dello stato di esecuzione dei servizi, ma è possibile ottenere un elenco di cmdlet Service usando **Get-Help \&#42;-Service**, oltre a trovare informazioni sui diversi cmdlet Service con **Get-Help<Cmdlet-Name>**, ad esempio **Get-Help New-Service**.
@@ -138,11 +138,11 @@ Il cmdlet Set-Service consente di modificare le proprietà di un servizio in un 
 
 Per usare Set-Service in Windows Vista e versioni successive di Windows, aprire Windows PowerShell con l'opzione "Esegui come amministratore".
 
-Per altre informazioni, vedere [Set-Service [m2]](https://technet.microsoft.com/en-us/library/b71e29ed-372b-4e32-a4b7-5eb6216e56c3).
+Per altre informazioni, vedere [Set-Service [m2]](https://technet.microsoft.com/library/b71e29ed-372b-4e32-a4b7-5eb6216e56c3).
 
 ## <a name="see-also"></a>Vedere anche
 - [Get-Service [m2]](https://technet.microsoft.com/en-us/library/0a09cb22-0a1c-4a79-9851-4e53075f9cf6)
-- [Set-Service [m2]](https://technet.microsoft.com/en-us/library/b71e29ed-372b-4e32-a4b7-5eb6216e56c3)
+- [Set-Service [m2]](https://technet.microsoft.com/library/b71e29ed-372b-4e32-a4b7-5eb6216e56c3)
 - [Restart-Service [m2]](https://technet.microsoft.com/en-us/library/45acf50d-2277-4523-baf7-ce7ced977d0f)
 - [Suspend-Service [m2]](https://technet.microsoft.com/en-us/library/c8492b87-0e21-4faf-8054-3c83c2ec2826)
 

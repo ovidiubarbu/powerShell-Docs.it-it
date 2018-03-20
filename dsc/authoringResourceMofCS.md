@@ -3,17 +3,17 @@ ms.date: 2017-06-12
 ms.topic: conceptual
 keywords: dsc,powershell,configurazione,installazione
 title: Creazione di una risorsa DSC in C#
-ms.openlocfilehash: 2fc6b8c127bca29e8f66fc7bd8d2828fdfe39f3c
-ms.sourcegitcommit: a444406120e5af4e746cbbc0558fe89a7e78aef6
+ms.openlocfilehash: 4d276edf1180573df61b62d18a9f90cfa1cd4112
+ms.sourcegitcommit: 99227f62dcf827354770eb2c3e95c5cf6a3118b4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="authoring-a-dsc-resource-in-c"></a>Creazione di una risorsa DSC in C#
 
 > Si applica a: Windows PowerShell 4.0, Windows PowerShell 5.0
 
-In genere, una risorsa personalizzata di Windows PowerShell DSC (Desired State Configuration) viene implementata in uno script di PowerShell. È tuttavia anche possibile implementare la funzionalità di una risorsa DSC personalizzata scrivendo cmdlet in C#. Per informazioni introduttive sulla scrittura di cmdlet in C#, vedere [Scrittura di un cmdlet di Windows PowerShell](https://technet.microsoft.com/en-us/library/dd878294.aspx).
+In genere, una risorsa personalizzata di Windows PowerShell DSC (Desired State Configuration) viene implementata in uno script di PowerShell. È tuttavia anche possibile implementare la funzionalità di una risorsa DSC personalizzata scrivendo cmdlet in C#. Per informazioni introduttive sulla scrittura di cmdlet in C#, vedere [Scrittura di un cmdlet di Windows PowerShell](https://technet.microsoft.com/library/dd878294.aspx).
 
 A parte l'implementazione della risorsa in C# come cmdlet, i processi di creazione dello schema MOF, creazione della struttura di cartelle, importazione e uso della risorsa DSC personalizzata sono uguali a quelli descritti in [Scrittura di una risorsa DSC personalizzata con MOF](authoringResourceMOF.md).
 
@@ -281,5 +281,5 @@ $env: psmodulepath (folder)
 #### <a name="concepts"></a>Concetti
 [Scrittura di una risorsa DSC personalizzata con MOF](authoringResourceMOF.md)
 #### <a name="other-resources"></a>Risorse aggiuntive
-[Scrittura di un cmdlet di Windows PowerShell](https://msdn.microsoft.com/en-us/library/dd878294.aspx)
+[Scrittura di un cmdlet di Windows PowerShell](https://msdn.microsoft.com/library/dd878294.aspx)
 

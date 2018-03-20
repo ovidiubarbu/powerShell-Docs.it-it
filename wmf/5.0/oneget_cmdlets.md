@@ -3,11 +3,11 @@ ms.date: 2017-06-12
 author: JKeithB
 ms.topic: reference
 keywords: wmf,powershell,installazione
-ms.openlocfilehash: 6cba004890fc4b1dfac40920f751f61b0530cce9
-ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.openlocfilehash: 134c22efe4fb86045ffb326e109dfbcc741bcf2f
+ms.sourcegitcommit: 99227f62dcf827354770eb2c3e95c5cf6a3118b4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/12/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="packagemanagement-cmdlets"></a>Cmdlet PackageManagement
 Questi sono gli elementi centrali del modulo PackageManagement per il supporto di individuazione, installazione e inventario del software. Provare i cmdlet per queste operazioni:
@@ -31,7 +31,7 @@ PS C:\> Install-Module PackageManagement –Force
 ```
 In questo caso, è necessario accedere di nuovo alla sessione di PowerShell per passare alla nuova versione di PackageManagement.
 
-## <a name="find-package-cmdlethttpstechnetmicrosoftcomen-uslibrarydn890709aspx"></a>[Cmdlet Find-Package](https://technet.microsoft.com/en-us/library/dn890709.aspx)
+## <a name="find-package-cmdlethttpstechnetmicrosoftcomlibrarydn890709aspx"></a>[Cmdlet Find-Package](https://technet.microsoft.com/library/dn890709.aspx)
 Questo cmdlet consente l'individuazione dei pacchetti software in origini pacchetti disponibili tramite provider di pacchetti caricati.
 ```powershell
 # Find all available Windows PowerShell module packages from galleries registered
@@ -51,7 +51,7 @@ Find-Package -Name jquery –Provider NuGet -Source http://www.nuget.org/api/v2/
 Find-Package -Name jquery –Provider NuGet –RequiredVersion 2.1.4 -Source nuget.org
 ```
 
-## <a name="find-packageprovider-cmdlethttpstechnetmicrosoftcomen-uslibrarymt676544aspx"></a>[Cmdlet Find-PackageProvider](https://technet.microsoft.com/en-us/library/mt676544.aspx)
+## <a name="find-packageprovider-cmdlethttpstechnetmicrosoftcomlibrarymt676544aspx"></a>[Cmdlet Find-PackageProvider](https://technet.microsoft.com/library/mt676544.aspx)
 Il cmdlet Find-PackageProvider consente di trovare i provider PackageManagement corrispondenti disponibili nelle origini pacchetti registrate con PowerShellGet. Questi sono i provider di pacchetti disponibili per l'installazione con il cmdlet Install-PackageProvider. Per impostazione predefinita, sono inclusi i moduli disponibili in PowerShell Gallery con i tag 'PackageManagement' e 'Provider'. 
 
 Find-PackageProvider consente anche di trovare i provider PackageManagement corrispondenti disponibili nell'archivio BLOB di Azure di PackageManagement, in cui viene usato il provider di boostrapper PackageManagement per la ricerca e l'installazione.
@@ -66,7 +66,7 @@ Find-PackageProvider -Name "Nuget" -AllVersions
 Find-PackageProvider -Name "Gistprovider" -Source "PSGallery"
 ```
 
-## <a name="get-package-cmdlethttpstechnetmicrosoftcomen-uslibrarydn890704aspx"></a>[Cmdlet Get-Package](https://technet.microsoft.com/en-us/library/dn890704.aspx)
+## <a name="get-package-cmdlethttpstechnetmicrosoftcomlibrarydn890704aspx"></a>[Cmdlet Get-Package](https://technet.microsoft.com/library/dn890704.aspx)
 Questo cmdlet restituisce un elenco di tutti i pacchetti software installati con PackageManagement.
 ```powershell
 # Get all the packages installed by Programs provider

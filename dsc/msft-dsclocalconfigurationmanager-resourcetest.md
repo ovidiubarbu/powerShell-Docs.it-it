@@ -3,11 +3,11 @@ ms.date: 2017-06-12
 ms.topic: conceptual
 keywords: dsc,powershell,configurazione,installazione
 title: Metodo ResourceTest della classe MSFT_DSCLocalConfigurationManager
-ms.openlocfilehash: 3c88f74c5f623502e8cbe0d7aa7390fca75569a9
-ms.sourcegitcommit: a444406120e5af4e746cbbc0558fe89a7e78aef6
+ms.openlocfilehash: 799b1cd91dfacf25c0e5e734ca96d20a776103f0
+ms.sourcegitcommit: 99227f62dcf827354770eb2c3e95c5cf6a3118b4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="resourcetest-method-of-the-msftdsclocalconfigurationmanager-class"></a>Metodo ResourceTest della classe MSFT_DSCLocalConfigurationManager
 
@@ -35,7 +35,7 @@ Il nome della risorsa da chiamare.
 Il nome del modulo che contiene la risorsa da chiamare.
 
 *resourceProperty* \[in\]  
-Specifica il nome della proprietà delle risorse e il relativo valore in una tabella hash rispettivamente come chiave e valore. Usare il cmdlet [Get-DscResource](https://technet.microsoft.com/en-us/library/dn521625.aspx) per individuare le proprietà delle risorse e i relativi tipi.
+Specifica il nome della proprietà delle risorse e il relativo valore in una tabella hash rispettivamente come chiave e valore. Usare il cmdlet [Get-DscResource](https://technet.microsoft.com/library/dn521625.aspx) per individuare le proprietà delle risorse e i relativi tipi.
 
 *InDesiredState* \[out\]  
 In fase di restituzione, questa proprietà è impostata su **true** se il nodo di destinazione è nello stato desiderato.

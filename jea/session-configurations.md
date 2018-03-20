@@ -4,11 +4,11 @@ author: rpsqrd
 ms.topic: conceptual
 keywords: jea,powershell,sicurezza
 title: Configurazioni della sessione JEA
-ms.openlocfilehash: 0a8931ae15caf04a3639ab46f130e5f5b0498d8c
-ms.sourcegitcommit: 0733db9a05e89e6a23f6b52b9edd784fcbe8beec
+ms.openlocfilehash: c475a90a59d91b074f954cfb656b00142444c052
+ms.sourcegitcommit: 99227f62dcf827354770eb2c3e95c5cf6a3118b4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="jea-session-configurations"></a>Configurazioni della sessione JEA
 
@@ -38,7 +38,7 @@ New-PSSessionConfigurationFile -SessionType RestrictedRemoteServer -Path .\MyJEA
 
 È possibile aprire il file di configurazione sessione in qualsiasi editor di testo.
 Il campo `-SessionType RestrictedRemoteServer` indica che la configurazione sessione verrà usata da JEA per una gestione sicura.
-Le sessioni configurate in questo modo funzioneranno in [modalità NoLanguage](https://technet.microsoft.com/en-us/library/dn433292.aspx) e hanno disponibili solo gli 8 comandi (e alias) predefiniti seguenti:
+Le sessioni configurate in questo modo funzioneranno in [modalità NoLanguage](https://technet.microsoft.com/library/dn433292.aspx) e hanno disponibili solo gli 8 comandi (e alias) predefiniti seguenti:
 
 - Clear-Host (cls, clear)
 - Exit-PSSession (exsn, exit)
@@ -128,7 +128,7 @@ Gli utenti standard non devono avere accesso alla cartella e solo un set limitat
 ### <a name="user-drive"></a>Unità utente
 
 Se gli utenti che si connettono hanno bisogno di copiare file dal e nell'endpoint JEA per eseguire un comando, è possibile abilitare l'unità utente nel file di configurazione sessione.
-L'unità utente è una [PSDrive](https://msdn.microsoft.com/en-us/powershell/scripting/getting-started/cookbooks/managing-windows-powershell-drives) con mapping a una cartella univoca per ogni utente che si connette.
+L'unità utente è una [PSDrive](https://msdn.microsoft.com/powershell/scripting/getting-started/cookbooks/managing-windows-powershell-drives) con mapping a una cartella univoca per ogni utente che si connette.
 Questa cartella ha lo scopo di offrire uno spazio agli utenti per copiare file nel e dal sistema senza concedere accesso al sistema intero o al provider del file system.
 Il contenuto dell'unità utente è persistente tra le sessioni per consentire situazioni in cui la connettività di rete viene interrotta.
 

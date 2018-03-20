@@ -3,11 +3,11 @@ ms.date: 2017-06-12
 ms.topic: conceptual
 keywords: dsc,powershell,configurazione,installazione
 title: Metodo ResourceGet della classe MSFT_DSCLocalConfigurationManager
-ms.openlocfilehash: df90cb6859413c94be992c8cbc30171e9bd3d6de
-ms.sourcegitcommit: a444406120e5af4e746cbbc0558fe89a7e78aef6
+ms.openlocfilehash: 2c055b3fab468f85c9e2f91cf1eaf1a4353b4660
+ms.sourcegitcommit: 99227f62dcf827354770eb2c3e95c5cf6a3118b4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="resourceget-method-of-the-msftdsclocalconfigurationmanager-class"></a>Metodo ResourceGet della classe MSFT_DSCLocalConfigurationManager
 
@@ -35,7 +35,7 @@ Il nome della risorsa da chiamare.
 Il nome del modulo che contiene la risorsa da chiamare.
 
 *resourceProperty* \[in\]  
-Specifica il nome della proprietà delle risorse e il relativo valore in una tabella hash rispettivamente come chiave e valore. Usare il cmdlet [Get-DscResource](https://technet.microsoft.com/en-us/library/dn521625.aspx) per individuare le proprietà delle risorse e i relativi tipi.
+Specifica il nome della proprietà delle risorse e il relativo valore in una tabella hash rispettivamente come chiave e valore. Usare il cmdlet [Get-DscResource](https://technet.microsoft.com/library/dn521625.aspx) per individuare le proprietà delle risorse e i relativi tipi.
 
 *configurations* \[out\]  
 In fase di restituzione, contiene un'istanza incorporata delle configurazioni.

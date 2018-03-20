@@ -3,11 +3,11 @@ ms.date: 2017-06-05
 keywords: powershell,cmdlet
 title: "Accessibilità in Windows PowerShell ISE"
 ms.assetid: a078f9d1-dd6b-4323-b16d-0622cd993aa8
-ms.openlocfilehash: 505ec3aca84b5ad0b9d58a1ec84d80e3aa86db7a
-ms.sourcegitcommit: 3720ce4efb6735694cfb53a1b793d949af5d1bc5
+ms.openlocfilehash: 7f758a46bdc722482b9e8a9baaff0a075f64ece9
+ms.sourcegitcommit: 99227f62dcf827354770eb2c3e95c5cf6a3118b4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/29/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="accessibility-in-windows-powershell-ise"></a>Accessibilità in Windows PowerShell ISE
 Questo argomento descrive le funzionalità di accessibilità di Windows PowerShell Integrated Scripting Environment (ISE) che potrebbero risultare utili.
@@ -22,7 +22,7 @@ Questo argomento descrive le funzionalità di accessibilità di Windows PowerShe
 
 Microsoft cerca di sviluppare prodotti e servizi che siano facili da utilizzare per chiunque. Gli argomenti seguenti forniscono informazioni sulle funzionalità, i prodotti e i servizi che migliorano l'accessibilità di Windows PowerShell ISE per gli utenti disabili.
 
-Windows PowerShell ISE supporta la modalità a contrasto elevato. Per gli utenti con problemi di vista sono disponibili informazioni sui punti di interruzione tramite i cmdlet per la gestione dei punti di interruzione, come [Get-PSBreakpoint](https://technet.microsoft.com/en-us/library/0bf48936-00ab-411c-b5e0-9b10a812a3c6) e [Set-PSBreakpoint](https://technet.microsoft.com/en-us/library/6afd5d2c-a285-4796-8607-3cbf49471420). Per altre informazioni, vedere 'Come gestire i punti di interruzione' in [Modalità di esecuzione del debug degli script in Windows PowerShell ISE](../core-powershell/ise/How-to-Debug-Scripts-in-Windows-PowerShell-ISE.md). Oltre alle funzionalità e utilità di accessibilità disponibili in Microsoft Windows, le funzionalità seguenti rendono Windows PowerShell ISE più accessibile agli utenti disabili:
+Windows PowerShell ISE supporta la modalità a contrasto elevato. Per gli utenti con problemi di vista sono disponibili informazioni sui punti di interruzione tramite i cmdlet per la gestione dei punti di interruzione, come [Get-PSBreakpoint](https://technet.microsoft.com/library/0bf48936-00ab-411c-b5e0-9b10a812a3c6) e [Set-PSBreakpoint](https://technet.microsoft.com/library/6afd5d2c-a285-4796-8607-3cbf49471420). Per altre informazioni, vedere 'Come gestire i punti di interruzione' in [Modalità di esecuzione del debug degli script in Windows PowerShell ISE](../core-powershell/ise/How-to-Debug-Scripts-in-Windows-PowerShell-ISE.md). Oltre alle funzionalità e utilità di accessibilità disponibili in Microsoft Windows, le funzionalità seguenti rendono Windows PowerShell ISE più accessibile agli utenti disabili:
 
 - Tasti di scelta rapida
 
