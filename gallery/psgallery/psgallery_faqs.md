@@ -4,11 +4,11 @@ contributor: JKeithB
 ms.topic: conceptual
 keywords: gallery,powershell,cmdlet,psgallery
 title: psgallery_faqs
-ms.openlocfilehash: 80aaaa5e50e1bd85b93df721a4859e3020d1f315
-ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.openlocfilehash: b856c44f3733d4a7c236d901edb391091d9d546e
+ms.sourcegitcommit: 99227f62dcf827354770eb2c3e95c5cf6a3118b4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/12/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="frequently-asked-questions"></a>Domande frequenti
 
@@ -18,7 +18,7 @@ Un modulo di PowerShell è un pacchetto riutilizzabile che contiene alcune funzi
 
 ## <a name="what-is-a-powershell-script"></a>Che cos'è uno script di PowerShell?
 
-Uno script di PowerShell è composto da una serie di comandi che vengono archiviati in un file ps1 per abilitare il riutilizzo e la condivisione. Anche i flussi di lavoro di PowerShell sono script di PowerShell che descrivono e stabiliscono la sequenza di un set di attività. Per altre informazioni, visitare [Informazioni sul flusso di lavoro di Windows PowerShell](https://technet.microsoft.com/en-us/library/jj134242.aspx).
+Uno script di PowerShell è composto da una serie di comandi che vengono archiviati in un file ps1 per abilitare il riutilizzo e la condivisione. Anche i flussi di lavoro di PowerShell sono script di PowerShell che descrivono e stabiliscono la sequenza di un set di attività. Per altre informazioni, visitare [Informazioni sul flusso di lavoro di Windows PowerShell](https://technet.microsoft.com/library/jj134242.aspx).
 
 ## <a name="how-are-powershell-scripts-different-from-powershell-modules"></a>Quali sono le differenze tra gli script e i moduli di PowerShell?
 
@@ -48,7 +48,7 @@ Le cause di questo errore sono le seguenti:
 
 ## <a name="why-cant-i-sign-in-with-my-personal-account-but-i-could-sign-in-yesterday"></a>Perché non riesco ad accedere con l'account personale che ieri funzionava?
 
-Tenere presente che l'account della raccolta non consente di apportare modifiche all'alias di posta elettronica principale. Per altre informazioni, vedere [Gestire gli alias per l'account Microsoft](https://windows.microsoft.com/en-us/windows/outlook/add-alias-account).
+Tenere presente che l'account della raccolta non consente di apportare modifiche all'alias di posta elettronica principale. Per altre informazioni, vedere [Gestire gli alias per l'account Microsoft](https://windows.microsoft.com/windows/outlook/add-alias-account).
 
 ## <a name="why-dont-i-see-all-the-gallery-items-when-i-select-all-the-category-checkboxes-on-the-items-tab"></a>Perché non sono visualizzati tutti gli elementi della raccolta quando si selezionano tutte le caselle di controllo Category (Categoria) nella scheda Items (Elementi)?
 
@@ -58,8 +58,8 @@ Quando si seleziona una casella di controllo Category (Categoria), implicitament
 
 Qualsiasi tipo di modulo di PowerShell, inclusi i moduli di script, i moduli binari e i moduli del manifesto, può essere pubblicato nella raccolta. Per pubblicare un modulo, PowerShellGet deve avere alcune informazioni, ovvero la versione, la descrizione, l'autore e la modalità di licenza. Queste informazioni vengono lette nell'ambito del processo di pubblicazione dal file *manifesto del modulo* (con estensione psd1) o nel valore del parametro **LicenseUri** del cmdlet [**Publish-Module**](https://go.microsoft.com/fwlink/?LinkID=760387&clcid=0x409). Tutti i moduli pubblicati nella raccolta devono includere manifesti dei moduli. Tutti i moduli che includono le informazioni seguenti nei propri manifesti possono essere pubblicati nella raccolta:
 
-- Version
-- Descrizione
+- Versione
+- Description
 - Autore
 - URI per le condizioni di licenza del modulo, come parte della sezione **PrivateData** del manifesto o nel parametro **LicenseUri** del cmdlet [**Publish-Module**](https://go.microsoft.com/fwlink/?LinkID=760387&clcid=0x409).
 
@@ -76,7 +76,7 @@ Per aggiornare i campi del file manifesto del modulo, usare il cmdlet [**Update-
 Nella raccolta può essere pubblicato qualsiasi tipo di script PowerShell, sia script che flussi di lavoro. Per pubblicare uno script, PowerShellGet deve avere alcune informazioni, ovvero la versione, la descrizione, l'autore e la modalità di licenza. Queste informazioni vengono lette nell'ambito del processo di pubblicazione dalla sezione *PSScriptInfo* del file di script o dal valore del parametro **LicenseUri** del cmdlet [**Publish-Script**](https://go.microsoft.com/fwlink/?LinkID=760387&clcid=0x409). Tutti gli script pubblicati nella raccolta devono includere informazioni sui metadati. Tutti gli script che includono le informazioni seguenti nella sezione PSScriptInfo possono essere pubblicati nella raccolta:
 
 - Version
-- Descrizione
+- Description
 - Autore
 - URI per le condizioni di licenza dello script, come parte della sezione **PSScriptInfo** dello script o nel parametro **LicenseUri** del cmdlet [**Publish-Script**](https://go.microsoft.com/fwlink/?LinkID=760387&clcid=0x409).
 
@@ -156,7 +156,7 @@ Di conseguenza, **PowerShellGet** richiede uno dei sistemi operativi seguenti:
 - Windows Server 2012 R2
 - Windows Server 2008 R2 SP1
 
-**PowerShellGet** richiede inoltre .NET Framework 4.5 o versione successiva. È possibile installare .NET Framework 4.5 o versione successiva da [qui](https://msdn.microsoft.com/en-us/library/5a4x27ek.aspx).
+**PowerShellGet** richiede inoltre .NET Framework 4.5 o versione successiva. È possibile installare .NET Framework 4.5 o versione successiva da [qui](https://msdn.microsoft.com/library/5a4x27ek.aspx).
 
 ## <a name="is-it-possible-to-reserve-names-for-items-that-will-be-published-in-future"></a>È possibile riservare i nomi per elementi che verranno pubblicati in futuro?
 

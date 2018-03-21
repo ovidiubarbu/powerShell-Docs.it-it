@@ -2,11 +2,11 @@
 ms.date: 2017-08-23
 keywords: powershell,cmdlet
 title: installare e usare accesso web windows powershell
-ms.openlocfilehash: 63e25fa2b1fc7c0a2b57763e337c25ece17a3296
-ms.sourcegitcommit: f069ff0689006fece768f178c10e3e3eeaee09f0
+ms.openlocfilehash: 2ad7a701dbb464088d6ed47d49a8dc3fb9b911f8
+ms.sourcegitcommit: 99227f62dcf827354770eb2c3e95c5cf6a3118b4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/13/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="install-and-use-windows-powershell-web-access"></a>Installare e usare Accesso Web Windows PowerShell
 
@@ -29,7 +29,7 @@ Per installare e configurare Accesso Web Windows PowerShell, è necessaria una p
 1. [Configurare una regola di autorizzazione restrittiva](#configure-a-restrictive-authorization-rule)
 
 Prima di installare e configurare Accesso Web Windows PowerShell, è consigliabile leggere l'intera guida, che include istruzioni su come installare, proteggere e disinstallare Accesso Web Windows PowerShell.
-L'argomento [Usare la console di Windows PowerShell basata sul Web](https://technet.microsoft.com/en-us/library/hh831417(v=ws.11).aspx) illustra il modo in cui l'utente accede alla console basata sul Web e descrive le limitazioni e le differenze tra la console di Windows PowerShell basata sul Web e la console di **powershell.exe**. Gli utenti finali della console basata sul Web devono leggere l'argomento [Usare la console di Windows PowerShell basata sul Web](use-the-web-based-windows-powershell-console.md), ma possono evitare di leggere il resto della guida.
+L'argomento [Usare la console di Windows PowerShell basata sul Web](https://technet.microsoft.com/library/hh831417(v=ws.11).aspx) illustra il modo in cui l'utente accede alla console basata sul Web e descrive le limitazioni e le differenze tra la console di Windows PowerShell basata sul Web e la console di **powershell.exe**. Gli utenti finali della console basata sul Web devono leggere l'argomento [Usare la console di Windows PowerShell basata sul Web](use-the-web-based-windows-powershell-console.md), ma possono evitare di leggere il resto della guida.
 
 Questo argomento non offre informazioni dettagliate sulle operazioni eseguite nel server Web IIS, ma illustra solo le procedure necessarie per configurare il gateway di Accesso Web Windows PowerShell come indicato nell'argomento. Per altre informazioni sulla configurazione e la protezione dei siti Web in IIS, consultare le risorse della documentazione di IIS indicate nella sezione Vedere anche.
 
@@ -212,7 +212,7 @@ Per altre informazioni sulla sicurezza e sulle regole di autorizzazione di Acces
 
     - Nella schermata **Start** di Windows fare clic con il pulsante destro del mouse su **Windows PowerShell** e quindi scegliere **Esegui come amministratore**.
 
-2. Passaggio facoltativo per la limitazione dell'accesso utente usando configurazioni di sessione: verificare che le configurazioni di sessione da usare nelle proprie regole esistano già. Se non sono ancora state create, usare le istruzioni per la creazione di configurazioni di sessione disponibili in [about_Session_Configuration_Files](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_session_configurations).
+2. Passaggio facoltativo per la limitazione dell'accesso utente usando configurazioni di sessione: verificare che le configurazioni di sessione da usare nelle proprie regole esistano già. Se non sono ancora state create, usare le istruzioni per la creazione di configurazioni di sessione disponibili in [about_Session_Configuration_Files](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_session_configurations).
 
 3. Digitare il comando seguente e quindi premere **INVIO**.
 
@@ -296,7 +296,7 @@ Le istruzioni in questa sezione riguardano l'installazione dell'applicazione Web
 
 11. Aprire una sessione del browser in un dispositivo client. Per altre informazioni sui browser e i dispositivi supportati, vedere la sezione [Browser e dispositivi client supportati](#browser-and-client-device-support) in questo argomento.
 
-12. Aprire il nuovo sito Web di Accesso Web Windows PowerShell, **https://\<*nome_server_gateway*\>/pswa.
+12. Aprire il nuovo sito Web di Accesso Web Windows PowerShell, **https://\<*nome_server_gateway*\>/pswa**.
 
     Il browser dovrebbe visualizzare la pagina di accesso della console di Accesso Web Windows PowerShell.
 
@@ -384,7 +384,7 @@ Per altre informazioni sulla sicurezza e sulle regole di autorizzazione di Acces
 
 2. ![Nota sulla sicurezza](images/SecurityNote.jpeg) Passaggio facoltativo per limitare l'accesso agli utenti tramite le configurazioni di sessione:
 
-    Verificare che le configurazioni di sessione da usare nelle regole esistano già. Se non sono ancora state create, usare le istruzioni per la creazione di configurazioni di sessione disponibili in [about_Session_Configuration_Files](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_session_configurations).
+    Verificare che le configurazioni di sessione da usare nelle regole esistano già. Se non sono ancora state create, usare le istruzioni per la creazione di configurazioni di sessione disponibili in [about_Session_Configuration_Files](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_session_configurations).
 
 3. Digitare il comando seguente e quindi premere **INVIO**.
 

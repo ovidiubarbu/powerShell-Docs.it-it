@@ -4,18 +4,18 @@ author: JKeithB
 ms.topic: reference
 keywords: wmf,powershell,installazione
 title: "Nuovi scenari e funzionalità in WMF 5.1"
-ms.openlocfilehash: 430781c5c9a59fc544db4f94098313ae1e9cf610
-ms.sourcegitcommit: a6ee6e64d369ecf82c730411bed9750278fdb5c1
+ms.openlocfilehash: da3dfb2243c00e3faf637d3dbcb70016cfabb011
+ms.sourcegitcommit: 99227f62dcf827354770eb2c3e95c5cf6a3118b4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/18/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="new-scenarios-and-features-in-wmf-51"></a>Nuovi scenari e funzionalità in WMF 5.1 #
 
 > Nota: queste informazioni sono provvisorie e soggette a modifiche.
 
 ## <a name="powershell-editions"></a>Edizioni di PowerShell ##
-A partire dalla versione 5.1, PowerShell è disponibile in diverse edizioni che indicano vari set di funzionalità e compatibilità della piattaforma.
+A partire dalla versione 5.1, PowerShell è disponibile in diverse edizioni che indicano diversi set di funzionalità e compatibilità della piattaforma.
 
 - **Desktop Edition:** è basata su .NET Framework e fornisce compatibilità con script e moduli destinati a versioni di PowerShell che eseguono edizioni footprint complete di Windows, ad esempio Server Core e Windows Desktop.
 - **Core Edition:** è basata su .NET Core e fornisce compatibilità con script e moduli destinati a versioni di PowerShell che eseguono edizioni footprint ridotte di Windows, ad esempio Nano Server e Windows IoT.
@@ -28,7 +28,7 @@ A partire dalla versione 5.1, PowerShell è disponibile in diverse edizioni che 
 
 ## <a name="catalog-cmdlets"></a>Cmdlet di catalogo  
 
-Sono stati aggiunti due nuovi cmdlet nel modulo [Microsoft.PowerShell.Security](https://technet.microsoft.com/en-us/library/hh847877.aspx) che generano e convalidano i file di catalogo di Windows.  
+Sono stati aggiunti due nuovi cmdlet nel modulo [Microsoft.PowerShell.Security](https://technet.microsoft.com/library/hh847877.aspx) che generano e convalidano i file di catalogo di Windows.  
 
 ###<a name="new-filecatalog"></a>New-FileCatalog 
 --------------------------------
@@ -62,7 +62,7 @@ Test-FileCatalog [-CatalogFilePath] <string> [[-Path] <string[]>] [-Detailed] [-
 
 ![](../images/TestFileCatalog.jpg)
 
-Questo cmdlet confronta tutti gli hash di file e i relativi percorsi trovati nel *catalogo* con altri sul *disco*. Se rileva eventuali mancate corrispondenze tra i percorsi e gli hash di file restituisce lo stato *ValidationFailed*. Gli utenti possono recuperare tutte queste informazioni usando il parametro *-Detailed*. Visualizza inoltre lo stato di accesso al catalogo nella proprietà *Signature* che è equivalente alla chiamata del cmdlet [Get-AuthenticodeSignature](https://technet.microsoft.com/en-us/library/hh849805.aspx) nel file di catalogo. Gli utenti possono inoltre ignorare alcuni file durante la convalida usando il parametro *- FilesToSkip*. 
+Questo cmdlet confronta tutti gli hash di file e i relativi percorsi trovati nel *catalogo* con altri sul *disco*. Se rileva eventuali mancate corrispondenze tra i percorsi e gli hash di file restituisce lo stato *ValidationFailed*. Gli utenti possono recuperare tutte queste informazioni usando il parametro *-Detailed*. Visualizza inoltre lo stato di accesso al catalogo nella proprietà *Signature* che è equivalente alla chiamata del cmdlet [Get-AuthenticodeSignature](https://technet.microsoft.com/library/hh849805.aspx) nel file di catalogo. Gli utenti possono inoltre ignorare alcuni file durante la convalida usando il parametro *- FilesToSkip*. 
 
 
 ## <a name="module-analysis-cache"></a>Modulo Analysis Cache ##
@@ -107,7 +107,7 @@ In WMF 5.1:
 
 
 ##<a name="improvements-to-pester"></a>Miglioramenti a Pester
-In WMF 5.1, la versione di Pester fornita con PowerShell è stata aggiornata da versione 3.3.5 a 3.4.0 con l'aggiunta di Commit https://github.com/pester/Pester/pull/484/commits/3854ae8a1f215b39697ac6c2607baf42257b102e, che migliora il comportamento di Pester su Nano Server. 
+In WMF 5.1 la versione di Pester acclusa a PowerShell è stata aggiornata dalla versione 3.3.5 alla 3.4.0 con l'aggiunta del commit https://github.com/pester/Pester/pull/484/commits/3854ae8a1f215b39697ac6c2607baf42257b102e, che migliora il comportamento di Pester su Nano Server. 
 
-Per conoscere le modifiche dalla versione 3.3.5 alla versione 3.4.0, vedere il file ChangeLog.md all'indirizzo https://github.com/pester/Pester/blob/master/CHANGELOG.md
+È possibile vedere quali modifiche sono state apportate nelle versioni dalla 3.3.5 alla 3.4.0 esaminando il file ChangeLog.md all'indirizzo https://github.com/pester/Pester/blob/master/CHANGELOG.md
 

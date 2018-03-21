@@ -4,11 +4,11 @@ contributor: JKeithB
 ms.topic: conceptual
 keywords: gallery,powershell,cmdlet,psgallery
 title: psgallery_gettingstarted
-ms.openlocfilehash: d13c23cd6f9cce433cd3fe1ad5f2d00e3ef0527c
-ms.sourcegitcommit: 3720ce4efb6735694cfb53a1b793d949af5d1bc5
+ms.openlocfilehash: 2117712b0081db4a21f8480b458a499ed84dc512
+ms.sourcegitcommit: 99227f62dcf827354770eb2c3e95c5cf6a3118b4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/29/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="get-started-with-the-powershell-gallery"></a>Introduzione a PowerShell Gallery
 
@@ -52,7 +52,7 @@ PowerShellGet fa anche parte di Windows Management Framework (WMF) 5.0, che è p
 
 Per filtrare i risultati dalla raccolta, è possibile usare i parametri seguenti di [Find-Module](https://go.microsoft.com/fwlink/?LinkId=821658) e [Find-Script](https://go.microsoft.com/fwlink/?LinkId=822322):
 
-- Name
+- Nome
 - AllVersions
 - MinimumVersion
 - RequiredVersion
@@ -103,7 +103,7 @@ Per impostazione predefinita, [Install-Module](https://go.microsoft.com/fwlink/?
 
 Per distribuire un elemento da PowerShell Gallery in Automazione di Azure, fare clic su **Deploy to Azure Automation** (Distribuisci in Automazione di Azure) nella pagina dei dettagli dell'elemento. Si verrà reindirizzati al portale di gestione di Azure, in cui si accede usando le credenziali del proprio account di Azure. Se si distribuiscono elementi con dipendenze, verranno distribuite tutte le dipendenze in Automazione di Azure. Il pulsante Deploy to Azure Automation (Distribuisci in Automazione di Azure) può essere disabilitato aggiungendo il tag **AzureAutomationNotSupported** ai metadati dell'elemento.
 
-Per altre informazioni su Automazione di Azure, vedere il [sito Web di Automazione di Azure](http://azure.microsoft.com/en-us/services/automation/).
+Per altre informazioni su Automazione di Azure, vedere il [sito Web di Automazione di Azure](http://azure.microsoft.com/services/automation/).
 
 ## <a name="updating-items-from-the-powershell-gallery"></a>Aggiornamento di elementi da PowerShell Gallery
 

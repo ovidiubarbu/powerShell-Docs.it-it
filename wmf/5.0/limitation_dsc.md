@@ -3,11 +3,11 @@ ms.date: 2017-06-12
 author: JKeithB
 ms.topic: reference
 keywords: wmf,powershell,installazione
-ms.openlocfilehash: f39328b240a36deb40d484c4aedb889cee91dc8d
-ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.openlocfilehash: ad1d19eeb70a19cd3d1493b9a09b115af755feb4
+ms.sourcegitcommit: 99227f62dcf827354770eb2c3e95c5cf6a3118b4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/12/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="desired-state-configuration-dsc-known-issues-and-limitations"></a>Problemi noti e limitazioni di Desired State Configuration (DSC)
 
@@ -16,7 +16,7 @@ ms.lasthandoff: 06/12/2017
 
 Nelle versioni WMF 4.0 e WMF 5.0 Preview, DSC non consente lunghezze maggiori di 121 caratteri per le password nella configurazione. DSC imponeva l'uso di password brevi anche se erano preferibili password lunghe e complesse. Questa modifica consente una lunghezza arbitraria per le password nella configurazione DSC.
 
-**Soluzione:** creare nuovamente il certificato con utilizzo chiavi Crittografia dati o Crittografia chiavi e l'utilizzo chiavi avanzato Crittografia documento (1.3.6.1.4.1.311.80.1). Per altre informazioni, vedere l'articolo di Technet <https://technet.microsoft.com/en-us/library/dn807171.aspx>.
+**Soluzione:** creare nuovamente il certificato con utilizzo chiavi Crittografia dati o Crittografia chiavi e l'utilizzo chiavi avanzato Crittografia documento (1.3.6.1.4.1.311.80.1). Nell'articolo Technet <https://technet.microsoft.com/library/dn807171.aspx> sono disponibili altre informazioni.
 
 
 <a name="dsc-cmdlets-may-fail-after-installing-wmf-50-rtm"></a>Potrebbero verificarsi problemi con i cmdlet DSC dopo l'installazione di WMF 5.0 RTM

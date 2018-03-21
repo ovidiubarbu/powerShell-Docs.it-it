@@ -3,11 +3,11 @@ ms.date: 2017-06-05
 keywords: powershell,cmdlet
 title: "Novità di PowerShell 5.0 ISE"
 ms.assetid: 38648d47-7c27-4b37-a40e-ad29948519c2
-ms.openlocfilehash: 89dcc905ce200d06029e148c9675269e6f518fa3
-ms.sourcegitcommit: 3720ce4efb6735694cfb53a1b793d949af5d1bc5
+ms.openlocfilehash: 9fd25a4759602bebf2b5df2c17d0c816a15e5e2b
+ms.sourcegitcommit: 99227f62dcf827354770eb2c3e95c5cf6a3118b4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/29/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="what39s-new-in-the-windows-powershell-ise"></a>Novità di Windows PowerShell ISE
 Questo argomento illustra le funzionalità nuove e aggiornate introdotte nelle versioni di Windows PowerShell Integrated Scripting Environment (ISE).
@@ -15,7 +15,7 @@ Questo argomento illustra le funzionalità nuove e aggiornate introdotte nelle v
 ## <a name="feature-description"></a>Descrizione delle funzionalità
 Windows PowerShell ISE è un'applicazione host che consente di scrivere, eseguire e testare script e moduli in un ambiente grafico e intuitivo. Le principali funzionalità, come la sintassi contraddistinta dal colore, la funzionalità di completamento tramite tasto TAB, il debug visivo, la conformità a Unicode e la Guida sensibile al contesto garantiscono un'esperienza di scripting più dettagliata.
 
-Per un'introduzione a Windows PowerShell ISE, vedere [Panoramica di Windows PowerShell Integrated Scripting Environment](https://technet.microsoft.com/en-us/library/3c1892c2-bf84-4cb6-af26-1f453be9e671).
+Per un'introduzione a Windows PowerShell ISE, vedere [Panoramica di Windows PowerShell Integrated Scripting Environment](https://technet.microsoft.com/library/3c1892c2-bf84-4cb6-af26-1f453be9e671).
 
 ## <a name="new-and-changed-functionality-in-windows-powershell-ise"></a>Funzionalità nuove e modificate in Windows PowerShell ISE
 Nella tabella seguente sono elencate alcune delle funzionalità nuove e modificate per questa versione di Windows PowerShell ISE in Windows PowerShell.
@@ -222,7 +222,7 @@ Show-Command è una novità di Windows PowerShell ISE 3.0.
 ## <a name="see-also"></a>Vedere anche
 Per altre informazioni sull'uso di Windows PowerShell ISE in Windows PowerShell, vedere i collegamenti seguenti.
 
-- [Uso di Windows PowerShell ISE (Integrated Scripting Environment)](../core-powershell/ise/Using-the-Windows-PowerShell-ISE.md)
+- [Esplorazione di Windows PowerShell ISE (Integrated Scripting Environment)](../getting-started/fundamental/exploring-the-windows-powershell-ise.md)
 - [ISE nel Wiki di TechNet](http://social.technet.microsoft.com/wiki/search/searchresults.aspx?q=ISE)
 - [Script Center](http://technet.microsoft.com/scriptcenter/default)
 

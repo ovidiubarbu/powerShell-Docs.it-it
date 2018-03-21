@@ -4,11 +4,11 @@ author: rpsqrd
 ms.topic: conceptual
 keywords: jea,powershell,sicurezza
 title: Prerequisiti di JEA
-ms.openlocfilehash: 75d5db2ba446df1d461050d187dc1495a22fef18
-ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.openlocfilehash: e6ee16e34eb9f1f0b2f3601c1aa9e90ab4f785f1
+ms.sourcegitcommit: 99227f62dcf827354770eb2c3e95c5cf6a3118b4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/12/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="prerequisites"></a>Prerequisiti
 
@@ -72,7 +72,7 @@ Gli utenti di Windows 10 devono installare gli aggiornamenti delle funzionalità
 ## <a name="enable-powershell-remoting"></a>Comunicazione remota di PowerShell
 
 La comunicazione remota di PowerShell costituisce la base su cui viene compilato JEA.
-È quindi necessario assicurarsi che la comunicazione remota di PowerShell sia abilitata e [adeguatamente protetta](https://msdn.microsoft.com/en-us/powershell/scripting/setup/winrmsecurity) nel sistema prima di poter usare JEA.
+È quindi necessario assicurarsi che la comunicazione remota di PowerShell sia abilitata e [adeguatamente protetta](https://msdn.microsoft.com/powershell/scripting/setup/winrmsecurity) nel sistema prima di poter usare JEA.
 
 La comunicazione remota di PowerShell è abilitata per impostazione predefinita su Windows Server 2012, 2012 R2 e 2016.
 È possibile abilitare la comunicazione remota di PowerShell eseguendo il comando seguente in una finestra di PowerShell con privilegi elevati.
@@ -109,6 +109,6 @@ Non è necessaria la registrazione del modulo di PowerShell per JEA, tuttavia è
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Additional information about PowerShell Remoting and WinRM security](https://msdn.microsoft.com/en-us/powershell/scripting/setup/winrmsecurity) (Altre informazioni sulla comunicazione remota di PowerShell e sulla sicurezza di WinRM)
+- [Additional information about PowerShell Remoting and WinRM security](https://msdn.microsoft.com/powershell/scripting/setup/winrmsecurity) (Altre informazioni sulla comunicazione remota di PowerShell e sulla sicurezza di WinRM)
 - [Post di blog sulla sicurezza di *PowerShell ♥ the Blue Team*](https://blogs.msdn.microsoft.com/powershell/2015/06/09/powershell-the-blue-team/)
 
