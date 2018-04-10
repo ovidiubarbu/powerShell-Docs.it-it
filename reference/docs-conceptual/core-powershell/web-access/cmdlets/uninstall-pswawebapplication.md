@@ -1,16 +1,16 @@
 ---
-description: 
+description: ''
 ms.topic: article
 ms.prod: powershell
 keywords: powershell,cmdlet
-ms.date: 2016-12-12
+ms.date: 12/12/2016
 title: uninstall pswawebapplication
 ms.technology: powershell
-ms.openlocfilehash: cc54c94426d754ff2d3bf658e3e92083f02cd6c7
-ms.sourcegitcommit: a444406120e5af4e746cbbc0558fe89a7e78aef6
+ms.openlocfilehash: 139c8358a24e54dec630f8c78737728330ba4aa2
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="uninstall-pswawebapplication"></a>Uninstall-PswaWebApplication
 
@@ -36,7 +36,7 @@ Il cmdlet **Uninstall-PswaWebApplication** disinstalla l'applicazione Web Window
 Indica che il certificato di test creato dal cmdlet **Install\_PswaWebApplication**, con il parametro **UseTestCertificate**, viene eliminato.
 Viene rimosso solo il certificato di test con lo stesso nome di quello creato dal cmdlet **Install-PswaWebApplication**.
 
-|||  
+|||
 |-|-|
 | Alias                              | Nessuno                                 |
 | Obbligatorio?                            | False                                |
@@ -49,7 +49,7 @@ Viene rimosso solo il certificato di test con lo stesso nome di quello creato da
 
 Specifica il nome dell'applicazione Web da disinstallare.
 
-|||  
+|||
 |-|-|
 | Alias                              | Nessuno                                 |
 | Obbligatorio?                            | False                                |
@@ -62,7 +62,7 @@ Specifica il nome dell'applicazione Web da disinstallare.
 
 Specifica il nome del sito Web in cui è installata l'applicazione Web.
 
-|||  
+|||
 |-|-|
 | Alias                              | Nessuno                                 |
 | Obbligatorio?                            | False                                |
@@ -75,7 +75,7 @@ Specifica il nome del sito Web in cui è installata l'applicazione Web.
 
 Richiede conferma prima di eseguire il cmdlet.
 
-|||  
+|||
 |-|-|
 | Obbligatorio?                            | False                                |
 | Posizione?                            | denominato                                |
@@ -88,7 +88,7 @@ Richiede conferma prima di eseguire il cmdlet.
 Mostra gli effetti dell'esecuzione del cmdlet.
 Il cmdlet non viene eseguito.
 
-|||  
+|||
 |-|-|
 | Obbligatorio?                            | False                                |
 | Posizione?                            | denominato                                |

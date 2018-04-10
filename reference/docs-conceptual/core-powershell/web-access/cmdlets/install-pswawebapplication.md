@@ -1,16 +1,16 @@
 ---
-description: 
+description: ''
 ms.topic: article
 ms.prod: powershell
 keywords: powershell,cmdlet
-ms.date: 2016-12-12
+ms.date: 12/12/2016
 title: install pswawebapplication
 ms.technology: powershell
-ms.openlocfilehash: ce4d01fbe8a83924e7023d792c68c903a32e07d4
-ms.sourcegitcommit: a444406120e5af4e746cbbc0558fe89a7e78aef6
+ms.openlocfilehash: c7f7768a41b6784d8c29afa1fccf0b855160b777
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="install-pswawebapplication"></a>Install-PswaWebApplication
 
@@ -35,7 +35,7 @@ Il cmdlet **Install-PswaWebApplication** consente di configurare l'applicazione 
 
 Specifica che viene creato un certificato di test. Se questo parametro è impostato su true, il cmdlet crea un certificato di test e configura l'applicazione Web Accesso Web Windows PowerShell in modo che usi il certificato per le richieste HTTPS. Se questo parametro è impostato su false, non viene creato alcun certificato o binding. Impostare questo valore su false se si usa un altro certificato per Accesso Web Windows PowerShell.
 
-|||  
+|||
 |-|-|
 | Alias                              | Nessuno                                 |
 | Obbligatorio?                            | False                                |
@@ -48,7 +48,7 @@ Specifica che viene creato un certificato di test. Se questo parametro è impost
 
 Specifica il nome per l'applicazione Web. Il nome viene visualizzato come parte finale dell'URL di Accesso Web Windows PowerShell.
 
-|||  
+|||
 |-|-|
 | Alias                              | Nessuno                                 |
 | Obbligatorio?                            | False                                |
@@ -61,7 +61,7 @@ Specifica il nome per l'applicazione Web. Il nome viene visualizzato come parte 
 
 Specifica il nome del sito Web del server Web (IIS) in cui installare l'applicazione Web Accesso Web Windows PowerShell.
 
-|||  
+|||
 |-|-|
 | Alias                              | Nessuno                                 |
 | Obbligatorio?                            | False                                |
@@ -74,7 +74,7 @@ Specifica il nome del sito Web del server Web (IIS) in cui installare l'applicaz
 
 Richiede conferma prima di eseguire il cmdlet.
 
-|||  
+|||
 |-|-|
 | Obbligatorio?                            | False                                |
 | Posizione?                            | denominato                                |
@@ -87,7 +87,7 @@ Richiede conferma prima di eseguire il cmdlet.
 Mostra gli effetti dell'esecuzione del cmdlet.
 Il cmdlet non viene eseguito.
 
-|||  
+|||
 |-|-|
 | Obbligatorio?                            | False                                |
 | Posizione?                            | denominato                                |

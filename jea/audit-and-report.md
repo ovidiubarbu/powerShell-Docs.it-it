@@ -1,14 +1,14 @@
 ---
-ms.date: 2017-06-12
+ms.date: 06/12/2017
 author: rpsqrd
 ms.topic: conceptual
 keywords: jea,powershell,sicurezza
 title: Controllo e creazione di report in JEA
-ms.openlocfilehash: 57148bc3753bdd751bfa21fc3198aca3f8654849
-ms.sourcegitcommit: 99227f62dcf827354770eb2c3e95c5cf6a3118b4
+ms.openlocfilehash: 7fc670c77b5fbf9bce8fb55dd99a2f9a984100d2
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="auditing-and-reporting-on-jea"></a>Controllo e creazione di report in JEA
 
@@ -144,11 +144,11 @@ Per ogni comando eseguito da un utente, viene scritta una riga "CommandInvocatio
 ParameterBindings segue ogni CommandInvocation per specificare informazioni su ogni parametro e valore usato con il comando.
 Nell'esempio precedente, è possibile notare che nel parametro "Name" è stato specificato il valore "Dns" per il cmdlet "Get-Service".
 
-L'output di ogni comando genera anche un CommandInvocation, in genere per Out-Default. InputObject di Out-Default è l'oggetto PowerShell restituito dal comando.
+L'output di ogni comando genera anche un CommandInvocation, in genere per Out-Default.
+InputObject di Out-Default è l'oggetto PowerShell restituito dal comando.
 I dettagli di tale oggetto vengono aggiunti in alcune righe di sotto, emulando strettamente ciò che avrebbe visto l'utente.
 
 ## <a name="see-also"></a>Vedere anche
 
 - [Controllare le azioni dell'utente in una sessione JEA](audit-and-report.md)
 - [Post di blog sulla sicurezza di *PowerShell ♥ the Blue Team*](https://blogs.msdn.microsoft.com/powershell/2015/06/09/powershell-the-blue-team/)
-

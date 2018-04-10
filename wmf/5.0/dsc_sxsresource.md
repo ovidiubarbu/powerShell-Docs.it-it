@@ -1,13 +1,13 @@
 ---
-ms.date: 2017-06-12
+ms.date: 06/12/2017
 author: JKeithB
 ms.topic: reference
-keywords: wmf,powershell,impostazione
-ms.openlocfilehash: 3261e5a07b8181190a04de3f210da50f23bb2953
-ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+keywords: wmf,powershell,installazione
+ms.openlocfilehash: a565f2befddc32f5088fa3e158f58d2dd78d41b4
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/12/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="side-by-side-module-versioning-support-for-dsc-resources"></a>Supporto delle versioni di moduli side-by-side per le risorse DSC
 
@@ -20,4 +20,3 @@ Per altre informazioni, vedere [Uso di risorse con più versioni](https://msdn.m
 In questa versione sono presenti i seguenti problemi noti per l'installazione side-by-side:
 
 -   Non è supportato l'uso di due diverse versioni della risorsa DSC all'interno della stessa configurazione.
-

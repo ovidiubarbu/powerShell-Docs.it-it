@@ -1,13 +1,13 @@
 ---
-ms.date: 2017-06-12
+ms.date: 06/12/2017
 author: JKeithB
 ms.topic: reference
 keywords: wmf,powershell,installazione
-ms.openlocfilehash: e8620cdeb90792e86d091d3e19a169f9dfa690f9
-ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.openlocfilehash: 306241bc5ec854c0e2ed835009a79b21fc249f14
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/12/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="known-issues-and-limitations"></a>Limitazioni e problemi noti
 
@@ -63,23 +63,23 @@ Esistono due possibili soluzioni al problema in base alla versione di Windows Se
 **Soluzione:**
 - Per i sistemi che eseguono **Windows Server 2008 R2**
   1. Aprire PowerShell come amministratore
-  2. Eseguire il comando seguente 
-  
+  2. Eseguire il comando seguente
+
   ```powershell
     Set-SilLogging –TargetUri https://BlankTarget –CertificateThumbprint 0123456789
   ```
   3. Eseguire il comando e ignorare l'errore, perché è previsto.
-  
+
   ```powershell
     Publish-SilData
    ```
   4. Eliminare i file nella directory \Windows\System32\Logfiles\SIL\
-  
+
   ```powershell
     Remove-Item -Recurse $env:SystemRoot\System32\Logfiles\SIL\
   ```
   5. Installare tutti gli aggiornamenti Windows importanti disponibili e iniziare a usare Sysyprep normalmente.
-  
+
 - Per i sistemi che eseguono **Windows Server 2012**
   1.    Dopo l'installazione di WMF 5.0 nel server in cui usare Sysprep, eseguire l'accesso come amministratore.
   2.    Copiare Generize.xml dalla directory \Windows\System32\Sysprep\ActionFiles\ in un percorso esterno alla directory Windows, ad esempio C:\.
@@ -96,24 +96,23 @@ Esistono due possibili soluzioni al problema in base alla versione di Windows Se
   7.    Eseguire il comando seguente per assumere la proprietà del file Generalize.xml nella cartella system32:
 
     ```
-    Takeown /f C:\Windows\System32\Sysprep\ActionFiles\Generalize.xml 
+    Takeown /f C:\Windows\System32\Sysprep\ActionFiles\Generalize.xml
     ```
 
   8.    Eseguire il comando seguente per impostare le autorizzazioni appropriate sul file:
 
     ```
-    Cacls C:\Windows\System32\ Sysprep\ActionFiles\Generalize.xml /G `<AdministratorUserName>`:F 
+    Cacls C:\Windows\System32\ Sysprep\ActionFiles\Generalize.xml /G `<AdministratorUserName>`:F
     ```
-      * Rispondere Sì al prompt di conferma. 
+      * Rispondere Sì al prompt di conferma.
       * Si noti che `<AdministratorUserName>` deve essere sostituito dal nome utente che è l'amministratore nel computer. Ad esempio, "Amministratore".
-      
+
   9.    Copiare il file modificato e salvato nella directory Sysprep usando il comando seguente:
 
     ```
-    xcopy C:\Generalize.xml C:\Windows\System32\Sysprep\ActionFiles\Generalize.xml 
+    xcopy C:\Generalize.xml C:\Windows\System32\Sysprep\ActionFiles\Generalize.xml
     ```
       * Rispondere Sì per sovrascrivere (se non si riceve alcuna richiesta di conferma della sovrascrittura, controllare il percorso specificato).
       * Si presuppone che la versione modificata del file Generalize.xml sia stata copiata in C:\.
 
   10.   Il file Generalize.xml è ora aggiornato con la soluzione alternativa. Eseguire Sysprep con l'opzione generalize abilitata.
-

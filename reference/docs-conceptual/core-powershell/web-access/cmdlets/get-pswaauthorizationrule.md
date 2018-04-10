@@ -1,16 +1,16 @@
 ---
-description: 
+description: ''
 ms.topic: article
 ms.prod: powershell
 keywords: powershell,cmdlet
-ms.date: 2016-12-12
+ms.date: 12/12/2016
 title: get pswaauthorizationrule
 ms.technology: powershell
-ms.openlocfilehash: 003195457660a18b9bbed065181b6d8c23835348
-ms.sourcegitcommit: a444406120e5af4e746cbbc0558fe89a7e78aef6
+ms.openlocfilehash: 74c044c329d8b6a305b86c9056a7041fb5fd046b
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="get-pswaauthorizationrule"></a>Get-PswaAuthorizationRule
 
@@ -41,7 +41,7 @@ Se non si specifica né il parametro **Id** né il parametro **RuleName**, quest
 
 Specifica gli identificatori (ID) delle regole che il cmdlet deve restituire. Se non è stato specificato alcun ID, il cmdlet restituisce tutte le regole di autorizzazione.
 
-|||  
+|||
 |-|-|
 | Alias                              | Nessuno                                 |
 | Obbligatorio?                            | False                                |
@@ -54,7 +54,7 @@ Specifica gli identificatori (ID) delle regole che il cmdlet deve restituire. Se
 
 Specifica i nomi delle regole di autorizzazione da recuperare. Questo parametro restituisce tutte le regole che corrispondono esattamente ai nomi delle regole delle stringhe in questa matrice.
 
-|||  
+|||
 |-|-|
 | Alias                              | Nessuno                                 |
 | Obbligatorio?                            | True                                 |

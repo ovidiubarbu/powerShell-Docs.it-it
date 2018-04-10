@@ -1,106 +1,112 @@
 ---
-ms.date: 2017-06-12
+ms.date: 06/12/2017
 ms.topic: conceptual
 keywords: dsc,powershell,configurazione,installazione
 title: Uso dei dati di configurazione
-ms.openlocfilehash: b56a3f970b0b5121585dc4ed2f32da3243b980bd
-ms.sourcegitcommit: a444406120e5af4e746cbbc0558fe89a7e78aef6
+ms.openlocfilehash: 19544494a547a06d87701b38585844cb11d03e33
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="using-configuration-data-in-dsc"></a>Uso dei dati di configurazione in DSC
 
 >Si applica a: Windows PowerShell 4.0, Windows PowerShell 5.0
 
-Con il parametro DSC predefinito **ConfigurationData** è possibile definire i dati che possono essere usati in una configurazione. Ciò consente di creare una singola configurazione da usare per più nodi o ambienti diversi. Ad esempio, se si sviluppa un'applicazione, è possibile usare una sola configurazione per l'ambiente di sviluppo e per quello di produzione e usare i dati di configurazione per specificare i dati per ogni ambiente.
+Con il parametro DSC predefinito **ConfigurationData** è possibile definire i dati che possono essere usati in una configurazione.
+Ciò consente di creare una singola configurazione da usare per più nodi o ambienti diversi.
+Ad esempio, se si sviluppa un'applicazione, è possibile usare una sola configurazione per l'ambiente di sviluppo e per quello di produzione e usare i dati di configurazione per specificare i dati per ogni ambiente.
 
-Questo argomento descrive la struttura della tabella hash **ConfigurationData**. Per esempi di come usare i dati di configurazione, vedere [Separazione dei dati di configurazione e dell'ambiente](separatingEnvData.md).
+Questo argomento descrive la struttura della tabella hash **ConfigurationData**.
+Per esempi di come usare i dati di configurazione, vedere [Separazione dei dati di configurazione e dell'ambiente](separatingEnvData.md).
 
 ## <a name="the-configurationdata-common-parameter"></a>Parametro comune ConfigurationData
 
-Una configurazione DSC accetta il parametro comune **ConfigurationData** specificato quando si compila la configurazione. Per informazioni sulla compilazione delle configurazioni, vedere [Configurazioni DSC](configurations.md).
+Una configurazione DSC accetta il parametro comune **ConfigurationData** specificato quando si compila la configurazione.
+Per informazioni sulla compilazione delle configurazioni, vedere [Configurazioni DSC](configurations.md).
 
-Il parametro **ConfigurationData** è una tabella hash che deve avere almeno una chiave denominata **AllNodes**. Può avere anche una o più chiavi aggiuntive.
+Il parametro **ConfigurationData** è una tabella hash che deve avere almeno una chiave denominata **AllNodes**.
+Può avere anche una o più chiavi aggiuntive.
 
 >**Nota:** gli esempi di questo argomento usano una singola chiave aggiuntiva (diverso dalla chiave denominata **AllNodes**) denominata `NonNodeData`, ma è possibile includere qualsiasi numero di chiavi aggiuntive e assegnare loro un nome qualsiasi.
 
 ```powershell
-$MyData = 
+$MyData =
 @{
     AllNodes = @()
-    NonNodeData = ""   
+    NonNodeData = ""
 }
 ```
 
 Il valore della chiave **AllNodes** è una matrice. Ogni elemento della matrice è anche una tabella hash che deve avere almeno una chiave denominata **NodeName**:
 
 ```powershell
-$MyData = 
+$MyData =
 @{
-    AllNodes = 
+    AllNodes =
     @(
         @{
             NodeName = "VM-1"
         },
 
- 
+
         @{
             NodeName = "VM-2"
         },
 
- 
+
         @{
             NodeName = "VM-3"
         }
     );
 
-    NonNodeData = ""   
+    NonNodeData = ""
 }
 ```
 
 È anche possibile aggiungere altre chiavi a ogni tabella hash:
 
 ```powershell
-$MyData = 
+$MyData =
 @{
-    AllNodes = 
+    AllNodes =
     @(
         @{
             NodeName = "VM-1"
             Role     = "WebServer"
         },
 
- 
+
         @{
             NodeName = "VM-2"
             Role     = "SQLServer"
         },
 
- 
+
         @{
             NodeName = "VM-3"
             Role     = "WebServer"
         }
     );
 
-    NonNodeData = ""   
+    NonNodeData = ""
 }
 ```
 
-Per applicare una proprietà a tutti i nodi, è possibile creare un membro della matrice **AllNodes** ha come **NodeName** `*`. Ad esempio, per assegnare a ogni nodo una proprietà `LogPath`, è possibile usare questo script:
+Per applicare una proprietà a tutti i nodi, è possibile creare un membro della matrice **AllNodes** ha come **NodeName** `*`.
+Ad esempio, per assegnare a ogni nodo una proprietà `LogPath`, è possibile usare questo script:
 
 ```powershell
-$MyData = 
+$MyData =
 @{
-    AllNodes = 
+    AllNodes =
     @(
         @{
             NodeName     = "*"
             LogPath      = "C:\Logs"
         },
 
- 
+
         @{
             NodeName     = "VM-1"
             Role         = "WebServer"
@@ -108,13 +114,13 @@ $MyData =
             SiteName     = "Website1"
         },
 
- 
+
         @{
             NodeName     = "VM-2"
             Role         = "SQLServer"
         },
 
- 
+
         @{
             NodeName     = "VM-3"
             Role         = "WebServer"
@@ -129,7 +135,8 @@ Questo equivale ad aggiungere una proprietà con nome `LogPath` e valore `"C:\Lo
 
 ## <a name="defining-the-configurationdata-hashtable"></a>Definizione della tabella hash ConfigurationData
 
-È possibile definire **ConfigurationData** come variabile all'interno dello stesso file di script di una configurazione, come negli esempi precedenti, o in un file `.psd1` separato. Per definire **ConfigurationData** in un file `.psd1`, creare un file che contiene solo la tabella hash che rappresenta i dati di configurazione.
+È possibile definire **ConfigurationData** come variabile all'interno dello stesso file di script di una configurazione, come negli esempi precedenti, o in un file `.psd1` separato.
+Per definire **ConfigurationData** in un file `.psd1`, creare un file che contiene solo la tabella hash che rappresenta i dati di configurazione.
 
 Ad esempio, è possibile creare un file denominato `MyData.psd1` con il seguente contenuto:
 
@@ -186,11 +193,11 @@ DSC offre tre variabili speciali che possono essere usate in uno script di confi
 ## <a name="using-non-node-data"></a>Uso di dati non specifici per un nodo
 
 Come illustrato negli esempi precedenti, la tabella hash **ConfigurationData** può avere una o più chiavi oltre alla chiave obbligatoria **AllNodes**.
-Negli esempi di questo argomento è stato usato un solo nodo aggiuntivo che è stato denominato `NonNodeData`. È comunque possibile definire qualsiasi numero di chiavi aggiuntive e assegnare alle chiavi qualsiasi nome.
+Negli esempi di questo argomento è stato usato un solo nodo aggiuntivo che è stato denominato `NonNodeData`.
+È comunque possibile definire qualsiasi numero di chiavi aggiuntive e assegnare alle chiavi qualsiasi nome.
 
 Per un esempio d'uso di dati non nodo, vedere [Separazione dei dati di configurazione e dell'ambiente](separatingEnvData.md).
 
 ## <a name="see-also"></a>Vedere anche
 - [Opzioni delle credenziali nei dati di configurazione](configDataCredentials.md)
 - [Configurazioni DSC](configurations.md)
-

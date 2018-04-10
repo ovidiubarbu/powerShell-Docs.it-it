@@ -1,15 +1,16 @@
 ---
-ms.date: 2017-06-05
+ms.date: 06/05/2017
 keywords: powershell,cmdlet
 title: Come usare il riquadro della console in Windows PowerShell ISE
 ms.assetid: 44d67705-87c7-4a69-a53e-6471fdebb757
-ms.openlocfilehash: 59e97bbc12269d855c4f3715171636647d4cc634
-ms.sourcegitcommit: d6ab9ab5909ed59cce4ce30e29457e0e75c7ac12
+ms.openlocfilehash: 5bbbdd3b1f0324ff1a4f2298459f58640c4dc9a6
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="how-to-use-the-console-pane-in-the-windows-powershell-ise"></a>Come usare il riquadro della console in Windows PowerShell ISE
+
 Il riquadro della console in Windows PowerShell Integrated Scripting Environment (ISE) funziona esattamente come la finestra della console di Windows PowerShell ISE autonoma.
 
 Per eseguire un comando nel riquadro della console, digitare un comando e quindi premere INVIO. Per immettere più comandi da eseguire in sequenza, digitare MAIUSC+INVIO tra un comando e l'altro. Per informazioni su come digitare i comandi, vedere [Come usare la funzionalità di completamento tramite TAB nel riquadro di script e nel riquadro della console](How-to-Use-Tab-Completion-in-the-Script-Pane-and-Console-Pane.md).
@@ -25,5 +26,5 @@ A partire da Windows PowerShell v3, il riquadro di output è unito al riquadro d
 - Cancellare tutto il testo nel riquadro della console. Per cancellare il contenuto del riquadro della console, è possibile fare clic sull'icona **Cancella riquadro Console** nella barra degli strumenti oppure eseguire il comando **Clear-Host** o il relativo alias, **cls**.
 
 ## <a name="see-also"></a>Vedere anche
-- [Uso di Windows PowerShell ISE](Using-the-Windows-PowerShell-ISE.md)
 
+- [Introduzione a Windows PowerShell ISE](Introducing-the-Windows-PowerShell-ISE.md)

@@ -1,20 +1,20 @@
 ---
-ms.date: 2017-06-12
+ms.date: 06/12/2017
 contributor: manikb
 ms.topic: reference
 keywords: raccolta,powershell,cmdlet,psget
 title: Find-Script
-ms.openlocfilehash: df62a9934d8013d37bd0083c03f90fa7fa05ac0c
-ms.sourcegitcommit: 58371abe9db4b9a0e4e1eb82d39a9f9e187355f9
+ms.openlocfilehash: 1f5076d94015c0b1041591144f1f0fe36819204b
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="find-script"></a>Find-Script
 
 Consente di trovare file di script di PowerShell da una raccolta online che soddisfano i criteri specificati.
 
-## <a name="description"></a>Descrizione
+## <a name="description"></a>Description
 
 Find-Script consente di trovare file di script da repository registrati che corrispondono a criteri specificati.
 Per ogni script trovato, Find-Script restituisce un oggetto PSRepositoryItemInfo che facoltativamente può essere inviato tramite pipe al cmdlet Install-Script per l'installazione di script.
@@ -24,7 +24,7 @@ Il cmdlet Find-Script consente di individuare i file di script con criteri di ri
 - Find-Script consente di filtrare usando i parametri di versione MinimumVersion, MaximumVersion, RequiredVersion e AllVersions.
   - Questi parametri si escludono a vicenda, ad eccezione di MinimumVersion e MaximumVersion.
   - I parametri di versione sono consentiti solo con il nome del singolo script senza caratteri jolly.
-  - Se il parametro RequiredVersion non è specificato, Find-Script restituisce la versione più recente dello script maggiore o uguale alla versione minima specificata. Se la versione minima non è specificata, restituisce la versione più recente dello script. 
+  - Se il parametro RequiredVersion non è specificato, Find-Script restituisce la versione più recente dello script maggiore o uguale alla versione minima specificata. Se la versione minima non è specificata, restituisce la versione più recente dello script.
   - Se il parametro RequiredVersion è specificato, Find-Script restituisce unicamente la versione dello script che corrisponde esattamente alla versione specificata.
 - Find-Script consente di filtrare in base ai metadati di script usando il parametro -Tag.
 - Find-Script consente di filtrare in base al linguaggio di ricerca specifico del repository usando il parametro -Filter.
@@ -61,7 +61,7 @@ Find-Script -Name *Azure*
 # Find all versions of a script
 Find-Script -Name Connect-O365 -AllVersions
 
-# Find a script with -MinimumVersion. 
+# Find a script with -MinimumVersion.
 # With MinimumVersion we can find a script whose version is greate than or equal to the specified MinimumVersion value.
 Find-Script Connect-O365 -MinimumVersion 1.4
 
@@ -155,4 +155,3 @@ Cmdlet                         {}
 
 
 ```
-

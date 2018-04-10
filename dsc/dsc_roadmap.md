@@ -5,4 +5,4 @@
 | Pacchetto scaricabile | TBD | TBD | TBD | TBD |
 | TBD | TBD | TBD | TBD | TBD |
 
-*Nota: questa tabella è attualmente solo un segnaposto. Verrà aggiornata nei prossimi mesi e verrà mantenuta aggiornata in linea con l'avanzamento dei progetti.* 
+*Nota: questa tabella è attualmente solo un segnaposto. Verrà aggiornata nei prossimi mesi e verrà mantenuta aggiornata in linea con l'avanzamento dei progetti.*

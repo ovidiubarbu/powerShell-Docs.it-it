@@ -1,13 +1,13 @@
 ---
-ms.date: 2017-06-12
+ms.date: 06/12/2017
 ms.topic: conceptual
 keywords: dsc,powershell,configurazione,installazione
 title: Risorsa Package DSC
-ms.openlocfilehash: 68b996e0f51e60bc178c27e3a71f07fb7220f847
-ms.sourcegitcommit: a444406120e5af4e746cbbc0558fe89a7e78aef6
+ms.openlocfilehash: cfa9d53d5ea588b0ec97e5503302a451caa09e03
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="dsc-package-resource"></a>Risorsa Package DSC
 
@@ -33,17 +33,17 @@ Package [string] #ResourceName
 ```
 
 ## <a name="properties"></a>Proprietà
-|  Proprietà  |  Description   | 
-|---|---| 
-| Nome| Indica il nome del pacchetto per cui si vuole specificare un determinato stato.| 
-| Path| Percorso in cui si trova il pacchetto.| 
-| ProductId| Indica l'ID prodotto che identifica in modo univoco il pacchetto.| 
-| Arguments| Elenca una stringa di argomenti che verrà passata al pacchetto esattamente nel modo specificato.| 
-| Credential| Fornisce l'accesso al pacchetto in un'origine remota. Questa proprietà non viene usata per installare il pacchetto. Il pacchetto viene sempre installato nel sistema locale.| 
-| Ensure| Indica se il pacchetto è installato. Impostare questa proprietà su "Absent" per specificare che il pacchetto non è installato (o disinstallare il pacchetto se è installato). Impostarla su "Present" (valore predefinito) per specificare che il pacchetto è installato.| 
-| LogPath| Indica il percorso completo in cui il provider deve salvare un file di log per installare o disinstallare il pacchetto.| 
-| DependsOn | Indica che prima di configurare la risorsa è necessario eseguire la configurazione di un'altra risorsa. Ad esempio, se l'ID del blocco script di configurazione della risorsa che si vuole eseguire per primo è **ResourceName** e il tipo è **ResourceType**, la sintassi per usare questa proprietà è `DependsOn = "[ResourceType]ResourceName"``.| 
-| ReturnCode| Indica il codice restituito previsto. Se l'effettivo codice restituito non corrisponde al valore previsto specificato qui, la configurazione restituirà un errore.| 
+|  Proprietà  |  Description   |
+|---|---|
+| Nome| Indica il nome del pacchetto per cui si vuole specificare un determinato stato.|
+| Path| Percorso in cui si trova il pacchetto.|
+| ProductId| Indica l'ID prodotto che identifica in modo univoco il pacchetto.|
+| Arguments| Elenca una stringa di argomenti che verrà passata al pacchetto esattamente nel modo specificato.|
+| Credential| Fornisce l'accesso al pacchetto in un'origine remota. Questa proprietà non viene usata per installare il pacchetto. Il pacchetto viene sempre installato nel sistema locale.|
+| Ensure| Indica se il pacchetto è installato. Impostare questa proprietà su "Absent" per specificare che il pacchetto non è installato (o disinstallare il pacchetto se è installato). Impostarla su "Present" (valore predefinito) per specificare che il pacchetto è installato.|
+| LogPath| Indica il percorso completo in cui il provider deve salvare un file di log per installare o disinstallare il pacchetto.|
+| DependsOn | Indica che prima di configurare la risorsa è necessario eseguire la configurazione di un'altra risorsa. Ad esempio, se l'ID del blocco script di configurazione della risorsa che si vuole eseguire per primo è **ResourceName** e il tipo è **ResourceType**, la sintassi per usare questa proprietà è `DependsOn = "[ResourceType]ResourceName"``.|
+| ReturnCode| Indica il codice restituito previsto. Se l'effettivo codice restituito non corrisponde al valore previsto specificato qui, la configurazione restituirà un errore.|
 
 ## <a name="example"></a>Esempio
 
@@ -58,7 +58,6 @@ Configuration PackageTest
         Path        = "$Env:SystemDrive\TestFolder\TestProject.msi"
         Name        = "TestPackage"
         ProductId   = "ACDDCDAF-80C6-41E6-A1B9-8ABD8A05027E"
-    } 
+    }
 }
 ```
-

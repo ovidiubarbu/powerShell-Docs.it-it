@@ -1,13 +1,13 @@
 ---
-ms.date: 2017-06-12
+ms.date: 06/12/2017
 ms.topic: conceptual
 keywords: dsc,powershell,configurazione,installazione
 title: Risorsa nxScript DSC per Linux
-ms.openlocfilehash: c12fb3b405d84eedd13e4cbebf2b2bf0d7cfb4d3
-ms.sourcegitcommit: a444406120e5af4e746cbbc0558fe89a7e78aef6
+ms.openlocfilehash: 7c8c3aa16af5b31c0a549972288c9466bb56609d
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="dsc-for-linux-nxscript-resource"></a>Risorsa nxScript DSC per Linux
 
@@ -30,21 +30,21 @@ nxScript <string> #ResourceName
 
 ## <a name="properties"></a>Proprietà
 
-|  Proprietà |  Description | 
+|  Proprietà |  Description |
 |---|---|
-| GetScript| Fornisce uno script eseguito quando si richiama il cmdlet [Get-DscConfiguration](https://technet.microsoft.com/en-us/library/dn521625.aspx). Lo script deve iniziare con una sequenza di caratteri shebang, ad esempio #!/bin/bash.| 
-| SetScript| Fornisce uno script. Quando si richiama il cmdlet [Start-DscConfiguration](https://technet.microsoft.com/en-us/library/dn521623.aspx), viene eseguito per primo il blocco **TestScript**. Se il blocco **TestScript** restituisce un codice di uscita diverso da 0, il blocco **SetScript** viene eseguito. Se **TestScript** restituisce un codice di uscita uguale a 0, il blocco **SetScript** non viene eseguito. Lo script deve iniziare con una sequenza di caratteri shebang, ad esempio `#!/bin/bash`.| 
-| TestScript| Fornisce uno script. Quando si richiama il cmdlet [Start-DscConfiguration](https://technet.microsoft.com/en-us/library/dn521623.aspx), questo script viene eseguito. Se restituisce un codice di uscita diverso da 0, il blocco SetScript viene eseguito. Se restituisce un codice di uscita uguale a 0, il blocco **SetScript** non viene eseguito. **TestScript** viene eseguito anche quando si richiama il cmdlet [Test-DscConfiguration](https://technet.microsoft.com/en-us/library/dn407382.aspx). In questo caso, tuttavia, il blocco **SetScript** non viene eseguito, indipendentemente dal codice di uscita restituito da **TestScript**. **TestScript** deve restituire un codice di uscita uguale a 0 se l'effettiva configurazione corrisponde alla configurazione dello stato desiderato corrente e un codice di uscita diverso da 0 in caso contrario. La configurazione dello stato desiderato corrente è l'ultima configurazione applicata al nodo che usa DSC. Lo script deve iniziare con una sequenza di caratteri shebang, ad esempio 1#!/bin/bash.1| 
-| User| Utente per l'esecuzione dello script.| 
-| Group| Gruppo per l'esecuzione dello script.| 
-| DependsOn | Indica che prima di configurare la risorsa è necessario eseguire la configurazione di un'altra risorsa. Ad esempio, se il valore di **ID** del blocco script di configurazione della risorsa che si vuole eseguire per primo è **ResourceName** e il tipo è **ResourceType**, la sintassi per usare questa proprietà è `DependsOn = "[ResourceType]ResourceName"`.| 
+| GetScript| Fornisce uno script eseguito quando si richiama il cmdlet [Get-DscConfiguration](https://technet.microsoft.com/en-us/library/dn521625.aspx). Lo script deve iniziare con una sequenza di caratteri shebang, ad esempio #!/bin/bash.|
+| SetScript| Fornisce uno script. Quando si richiama il cmdlet [Start-DscConfiguration](https://technet.microsoft.com/en-us/library/dn521623.aspx), viene eseguito per primo il blocco **TestScript**. Se il blocco **TestScript** restituisce un codice di uscita diverso da 0, il blocco **SetScript** viene eseguito. Se **TestScript** restituisce un codice di uscita uguale a 0, il blocco **SetScript** non viene eseguito. Lo script deve iniziare con una sequenza di caratteri shebang, ad esempio `#!/bin/bash`.|
+| TestScript| Fornisce uno script. Quando si richiama il cmdlet [Start-DscConfiguration](https://technet.microsoft.com/en-us/library/dn521623.aspx), questo script viene eseguito. Se restituisce un codice di uscita diverso da 0, il blocco SetScript viene eseguito. Se restituisce un codice di uscita uguale a 0, il blocco **SetScript** non viene eseguito. **TestScript** viene eseguito anche quando si richiama il cmdlet [Test-DscConfiguration](https://technet.microsoft.com/en-us/library/dn407382.aspx). In questo caso, tuttavia, il blocco **SetScript** non viene eseguito, indipendentemente dal codice di uscita restituito da **TestScript**. **TestScript** deve restituire un codice di uscita uguale a 0 se l'effettiva configurazione corrisponde alla configurazione dello stato desiderato corrente e un codice di uscita diverso da 0 in caso contrario. La configurazione dello stato desiderato corrente è l'ultima configurazione applicata al nodo che usa DSC. Lo script deve iniziare con una sequenza di caratteri shebang, ad esempio 1#!/bin/bash.1|
+| User| Utente per l'esecuzione dello script.|
+| Group| Gruppo per l'esecuzione dello script.|
+| DependsOn | Indica che prima di configurare la risorsa è necessario eseguire la configurazione di un'altra risorsa. Ad esempio, se il valore di **ID** del blocco script di configurazione della risorsa che si vuole eseguire per primo è **ResourceName** e il tipo è **ResourceType**, la sintassi per usare questa proprietà è `DependsOn = "[ResourceType]ResourceName"`.|
 
 ## <a name="example"></a>Esempio
 
 L'esempio seguente illustra l'uso della risorsa **nxScript** per eseguire attività aggiuntive di gestione della configurazione.
 
 ```
-Import-DSCResource -Module nx 
+Import-DSCResource -Module nx
 
 Node $node {
 nxScript KeepDirEmpty{
@@ -69,7 +69,6 @@ else
     exit 0
 fi
 '@
-} 
+}
 }
 ```
-

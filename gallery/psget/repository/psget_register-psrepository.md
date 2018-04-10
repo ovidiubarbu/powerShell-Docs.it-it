@@ -1,22 +1,22 @@
 ---
-ms.date: 2017-06-12
+ms.date: 06/12/2017
 contributor: manikb
 ms.topic: reference
 keywords: raccolta,powershell,cmdlet,psget
 title: Register-PSRepository
-ms.openlocfilehash: badac5dc1157bbfa79058630c5c2f260d2151bd8
-ms.sourcegitcommit: 3720ce4efb6735694cfb53a1b793d949af5d1bc5
+ms.openlocfilehash: 7a7d1bf56a87161f6ec735399b15b19f317282b6
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/29/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="register-psrepository"></a>Register-PSRepository
 
 Ottiene i repository registrati in un computer.
 
-## <a name="description"></a>Descrizione
+## <a name="description"></a>Description
 
-Il cmdlet Register-PSRepository consente di registrare il repository online per i moduli di PowerShell. Dopo aver registrato un repository, è possibile farvi riferimento dai cmdlet Find-Module, Install-Module e Publish-Module. Quello registrato diventa il repository predefinito in Find-Module e Install-Module. 
+Il cmdlet Register-PSRepository consente di registrare il repository online per i moduli di PowerShell. Dopo aver registrato un repository, è possibile farvi riferimento dai cmdlet Find-Module, Install-Module e Publish-Module. Quello registrato diventa il repository predefinito in Find-Module e Install-Module.
 
 I repository registrati sono specifici dell'utente. Non vengono registrati in un contesto a livello di sistema.
 
@@ -33,7 +33,8 @@ Get-Command -Name Register-PSRepository -Module PowerShellGet -Syntax
 ## <a name="example-commands"></a>Comandi di esempio
 
 ### <a name="register-a-powershell-repository"></a>Registrare un repository di PowerShell
-È possibile configurare PowerShellGet per l'uso su repository interni. Dopo aver registrato un repository, è possibile usare Find-Module e Install-Module per usarlo.
+È possibile configurare PowerShellGet per l'uso su repository interni.
+Dopo aver registrato un repository, è possibile usare Find-Module e Install-Module per usarlo.
 
 ```powershell
 # Register a default repository
@@ -114,4 +115,3 @@ ScriptPublishLocation : https://customgallery.cloudapp.net/api/v2/package/
 ProviderOptions : {}
 
 ```
-

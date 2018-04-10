@@ -1,13 +1,13 @@
 ---
-ms.date: 2017-06-12
+ms.date: 06/12/2017
 ms.topic: conceptual
 keywords: dsc,powershell,configurazione,installazione
 title: Introduzione a DSC (Desired State Configuration)
-ms.openlocfilehash: e21017f24db8c90229063895c1a7e4c6f0546d0c
-ms.sourcegitcommit: a444406120e5af4e746cbbc0558fe89a7e78aef6
+ms.openlocfilehash: 25bcd46bbf62a6ebb727519a65732377363e68c0
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/09/2018
 ---
 > Si applica a: Windows PowerShell 4.0, Windows PowerShell 5.0
 
@@ -37,7 +37,7 @@ In un editor di testo digitare il testo seguente:
 </body>
 ```
 
-Salvare il file come `index.htm` nella cartella `test` creata in precedenza. 
+Salvare il file come `index.htm` nella cartella `test` creata in precedenza.
 
 ## <a name="write-the-configuration"></a>Scrivere la configurazione
 
@@ -122,7 +122,7 @@ Start-DscConfiguration .\WebsiteTest
 
 ## <a name="test-the-configuration"></a>Verificare la configurazione
 
-È possibile chiamare il cmdlet [DscConfigurationStatus Get](/reference/5.1/PSDesiredStateConfiguration/Get-DscConfigurationStatus) per verificare se la configurazione è stata applicata. 
+È possibile chiamare il cmdlet [DscConfigurationStatus Get](/reference/5.1/PSDesiredStateConfiguration/Get-DscConfigurationStatus) per verificare se la configurazione è stata applicata.
 
 È anche possibile testare i risultati direttamente, in questo caso passando a `http://localhost/` in un Web browser.
 Dovrebbe essere visualizzata la pagina HTML "Hello World" creata nel primo passaggio di questo esempio.
@@ -132,6 +132,3 @@ Dovrebbe essere visualizzata la pagina HTML "Hello World" creata nel primo passa
 - Ulteriori informazioni sulle configurazioni DSC sono disponibili in [Configurazioni DSC](configurations.md).
 - Per informazioni sulle risorse DSC disponibili e su come creare risorse DSC personalizzate, vedere [Risorse DSC](resources.md).
 - Le configurazioni e le risorse DSC sono disponibili in [PowerShell Gallery](https://www.powershellgallery.com/).
-
-
-

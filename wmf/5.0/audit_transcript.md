@@ -1,13 +1,13 @@
 ---
-ms.date: 2017-06-12
+ms.date: 06/12/2017
 author: JKeithB
 ms.topic: reference
 keywords: wmf,powershell,installazione
-ms.openlocfilehash: 9f26960ea118eccf92b1f931535347383a4b177d
-ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.openlocfilehash: 814b1172505e1bac59a75fee494e9741f7d1f820
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/12/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="enhanced-transcription-options"></a>Opzioni avanzate di trascrizione
 
@@ -16,4 +16,3 @@ La funzionalità di trascrizione di Windows PowerShell è stata migliorata per c
 Oltre a estendere la disponibilità della trascrizione, è stata aggiornata anche la funzionalità stessa per supportare l'annidamento arbitrario delle trascrizioni, metadati aggiuntivi nell'intestazione della trascrizione risultante e l'impostazione di una directory di output della trascrizione (per supportare la raccolta di log centralizzata).
 
 Le opzioni per la trascrizione (inclusa l'attivazione di una trascrizione a livello di sistema) possono essere configurate con l'impostazione di Criteri di gruppo **Attiva trascrizione di PowerShell** in Modelli amministrativi -> Componenti di Windows -> Windows PowerShell.
-

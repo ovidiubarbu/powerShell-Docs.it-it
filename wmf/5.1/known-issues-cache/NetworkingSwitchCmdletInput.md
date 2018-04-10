@@ -1,16 +1,24 @@
 ---
-title: Errore dei cmdlet per la gestione dei commutatori di rete
+ms.date: 06/12/2017
+author: JKeithB
+ms.topic: reference
+keywords: wmf,powershell,installazione
 contributor: vaibch
-ms.openlocfilehash: 8495d79aec54d93f94e745e2efccb5116ad5d944
-ms.sourcegitcommit: a3966253a165d193a42b43b9430a4dc76988f82f
+title: Errore dei cmdlet per la gestione dei commutatori di rete
+ms.openlocfilehash: 626809513e7a8f1aa2c47a48c74e69ca4077f598
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: HT
 ms.contentlocale: it-IT
+ms.lasthandoff: 04/09/2018
 ---
-Questi cmdlet consentono di gestire i commutatori di rete su WS-Management. Alcuni cmdlet di questo modulo sono in grado di accettare i valori dalle pipeline. In WMF 5.1 (anteprima) i cmdlet di questo tipo non vengono eseguiti quando le pipeline non permettono il passaggio dei valori.
+Questi cmdlet consentono di gestire i commutatori di rete su WS-Management.
+Alcuni cmdlet di questo modulo sono in grado di accettare i valori dalle pipeline.
+In WMF 5.1 (anteprima) i cmdlet di questo tipo non vengono eseguiti quando le pipeline non permettono il passaggio dei valori.
 
 Se non viene usato il parametro "InputObject", l'esecuzione del cmdlet dovrebbe continuare senza errori.
 
-Di seguito è riportato l'elenco dei cmdlet interessati, ovvero quelli che sono in grado di accettare un valore per il parametro "InputObject" dalla pipeline. Se questo valore non viene passato dalla pipeline, il cmdlet non verrà eseguito.
+Di seguito è riportato l'elenco dei cmdlet interessati, ovvero quelli che sono in grado di accettare un valore per il parametro "InputObject" dalla pipeline.
+Se questo valore non viene passato dalla pipeline, il cmdlet non verrà eseguito.
 
 - Disable-NetworkSwitchEthernetPort
 - Enable-NetworkSwitchEthernetPort

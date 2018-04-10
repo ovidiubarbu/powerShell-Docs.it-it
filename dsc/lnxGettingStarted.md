@@ -1,13 +1,13 @@
 ---
-ms.date: 2017-06-12
+ms.date: 06/12/2017
 ms.topic: conceptual
 keywords: dsc,powershell,configurazione,installazione
 title: Introduzione a DSC (Desired State Configuration) per Linux
-ms.openlocfilehash: 4fd8460bc5d2564cab291904b60a1a0c26c3e5a7
-ms.sourcegitcommit: a444406120e5af4e746cbbc0558fe89a7e78aef6
+ms.openlocfilehash: b2f35ebe84dfd9f68ca07e7630534be59f8a1aa3
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="get-started-with-desired-state-configuration-dsc-for-linux"></a>Introduzione a DSC (Desired State Configuration) per Linux
 
@@ -25,14 +25,14 @@ DSC per Linux supporta le versioni seguenti del sistema operativo Linux.
 
 La tabella seguente descrive le dipendenze dei pacchetti necessarie per DSC per Linux.
 
-|  Pacchetto necessario |  Description |  Versione minima | 
+|  Pacchetto necessario |  Description |  Versione minima |
 |---|---|---|
-| glibc| Libreria GNU| 2…4 - 31.30| 
-| python| Python| 2.4 - 3.4| 
-| omiserver| OMI (Open Management Infrastructure)| 1.0.8.1| 
-| openssl| Librerie OpenSSL| 0.9.8 o 1.0| 
-| ctypes| Libreria Python CTypes| La versione deve corrispondere a quella di Python| 
-| libcurl| Libreria client HTTP cURL| 7.15.1| 
+| glibc| Libreria GNU| 2…4 - 31.30|
+| python| Python| 2.4 - 3.4|
+| omiserver| OMI (Open Management Infrastructure)| 1.0.8.1|
+| openssl| Librerie OpenSSL| 0.9.8 o 1.0|
+| ctypes| Libreria Python CTypes| La versione deve corrispondere a quella di Python|
+| libcurl| Libreria client HTTP cURL| 7.15.1|
 
 ## <a name="installing-dsc-for-linux"></a>Installazione di DSC per Linux
 
@@ -52,12 +52,12 @@ Eseguire il comando seguente per installare OMI in un sistema CentOS 7 x64.
 
 ### <a name="installing-dsc"></a>Installazione di DSC
 
-DSC per Linux è disponibile per il download [qui](https://github.com/Microsoft/PowerShell-DSC-for-Linux/releases/latest). 
+DSC per Linux è disponibile per il download [qui](https://github.com/Microsoft/PowerShell-DSC-for-Linux/releases/latest).
 
 Per installare DSC, installare il pacchetto appropriato per il sistema Linux (RPM o DEB), la versione OpenSSL (ssl_098 o ssl_100) e l'architettura (x64/x86). I pacchetti RPM sono appropriati per CentOS, Red Hat Enterprise Linux, SUSE Linux Enterprise Server e Oracle Linux. I pacchetti DEB sono appropriati per Debian GNU/Linux e Ubuntu Server. I pacchetti ssl_098 sono appropriati per i computer in cui è installato OpenSSL 0.9.8, mentre i pacchetti ssl_100 sono appropriati per i computer in cui è installato OpenSSL 1.0.
 
 > **Nota**: per determinare la versione di OpenSSL installata, eseguire il comando openssl version.
- 
+
 Eseguire il comando seguente per installare DSC in un sistema CentOS 7 x64.
 
 `# sudo rpm -Uvh dsc-1.0.0-254.ssl_100.x64.rpm`
@@ -74,10 +74,10 @@ La parola chiave Configuration di Windows PowerShell viene usata per creare una 
 1. Importare il modulo nx. Il modulo nx di Windows PowerShell contiene lo schema per le risorse incorporate per DSC per Linux e deve essere installato nel computer locale e importato nella configurazione.
 
     - Per installare il modulo nx, copiare la directory del modulo nx in `$env:USERPROFILE\Documents\WindowsPowerShell\Modules\` o `$PSHOME\Modules`. Il modulo nx è incluso nel pacchetto di installazione (MSI) di DSC per Linux. Per importare il modulo nx nella configurazione, usare il comando __Import-DSCResource__:
-    
+
 ```powershell
 Configuration ExampleConfiguration{
-   
+
     Import-DSCResource -Module nx
 
 }
@@ -86,9 +86,9 @@ Configuration ExampleConfiguration{
 
 ```powershell
 Configuration ExampleConfiguration{
-   
+
     Import-DscResource -Module nx
- 
+
     Node  "linuxhost.contoso.com"{
     nxFile ExampleFile {
 
@@ -100,7 +100,7 @@ Configuration ExampleConfiguration{
 
     }
 }
-ExampleConfiguration -OutputPath:"C:\temp" 
+ExampleConfiguration -OutputPath:"C:\temp"
 ```
 
 ### <a name="push-the-configuration-to-the-linux-computer"></a>Effettuare il push della configurazione nel computer Linux
@@ -117,8 +117,8 @@ $Credential = Get-Credential -UserName:"root" -Message:"Enter Password:"
 #$opt = New-CimSessionOption -UseSsl:$true -SkipCACheck:$true -SkipCNCheck:$true -SkipRevocationCheck:$true
 
 #Options for a trusted SSL certificate
-$opt = New-CimSessionOption -UseSsl:$true 
-$Sess=New-CimSession -Credential:$credential -ComputerName:$Node -Port:5986 -Authentication:basic -SessionOption:$opt -OperationTimeoutSec:90 
+$opt = New-CimSessionOption -UseSsl:$true
+$Sess=New-CimSession -Credential:$credential -ComputerName:$Node -Port:5986 -Authentication:basic -SessionOption:$opt -OperationTimeoutSec:90
 ```
 
 > **Nota**:
@@ -162,7 +162,7 @@ DSC per Linux include gli script per usare la configurazione dal computer Linux 
 
 `# sudo ./RemoveModule.py cnx_Resource`
 
-* StartDscLocalConfigurationManager.py 
+* StartDscLocalConfigurationManager.py
 
  Applica un file MOF di configurazione al computer. Simile al cmdlet [Start-DscConfiguration](https://technet.microsoft.com/en-us/library/dn521623.aspx). Richiede il percorso del file MOF di configurazione da applicare.
 
@@ -182,4 +182,3 @@ I file di registro seguenti vengono generati per i messaggi di DSC per Linux.
 |---|---|---|
 |omiserver.log|/var/opt/omi/log|Messaggi relativi al funzionamento del server CIM OMI.|
 |dsc.log|/var/opt/omi/log|Messaggi relativi al funzionamento delle operazioni delle risorse DSC e di Gestione configurazione locale.|
-

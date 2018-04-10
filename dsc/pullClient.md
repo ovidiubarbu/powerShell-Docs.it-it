@@ -1,13 +1,13 @@
 ---
-ms.date: 2017-06-12
+ms.date: 06/12/2017
 ms.topic: conceptual
 keywords: dsc,powershell,configurazione,installazione
 title: Configurazione di un client di pull DSC
-ms.openlocfilehash: 98a67b8d27eeb445bb70f75253ca31e12207d5bd
-ms.sourcegitcommit: a444406120e5af4e746cbbc0558fe89a7e78aef6
+ms.openlocfilehash: e6d73187566db2756ae24dabe0a825fffb5ecce0
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="setting-up-a-dsc-pull-client"></a>Configurazione di un client di pull DSC
 
@@ -22,4 +22,3 @@ Gli argomenti seguenti illustrano come configurare i client di pull:
 * [Configurazione di un client di pull usando un ID configurazione](pullClientConfigID.md)
 
 > **Nota**: questi argomenti si applicano a PowerShell 5.0. Per configurare un client di pull in PowerShell 4.0, vedere [Configurazione di un client di pull usando un ID configurazione in PowerShell 4.0](pullClientConfigID4.md).
-

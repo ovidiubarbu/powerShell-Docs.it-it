@@ -1,18 +1,18 @@
 ---
-ms.date: 2017-06-12
+ms.date: 06/12/2017
 author: JKeithB
 ms.topic: reference
 keywords: wmf,powershell,installazione
-ms.openlocfilehash: 8d5f8cc8c85d584b195483e464e878857629a78e
-ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.openlocfilehash: d34a267bae7e48afe4442256d7f112da3a97eb7d
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/12/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="clipboard-cmdlets"></a>Cmdlet Clipboard
 **Get-Clipboard** e **Set-Clipboard** rendono più semplice il trasferimento del contenuto in e da una sessione di Windows PowerShell. Se ad esempio si usa Esplora risorse per copiare tre file negli Appunti (selezionandoli e premendo `ctrl-c` ad esempio), è possibile accedere facilmente al contenuto degli Appunti come elenco di file:
 
-```powershell 
+```powershell
 PS C:\\&gt; Get-Clipboard -Format FileDropList
 
 Directory: C:\\Users\\slee\\Downloads\\Example
@@ -30,4 +30,3 @@ Mode LastWriteTime Length Name
 
 
 I cmdlet Clipboard supportano immagini, file audio, elenchi di file e testo.
-

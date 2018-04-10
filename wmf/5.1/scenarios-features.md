@@ -1,14 +1,14 @@
 ---
-ms.date: 2017-06-12
+ms.date: 06/12/2017
 author: JKeithB
 ms.topic: reference
 keywords: wmf,powershell,installazione
-title: "Nuovi scenari e funzionalità in WMF 5.1"
-ms.openlocfilehash: da3dfb2243c00e3faf637d3dbcb70016cfabb011
-ms.sourcegitcommit: 99227f62dcf827354770eb2c3e95c5cf6a3118b4
+title: Nuovi scenari e funzionalità in WMF 5.1
+ms.openlocfilehash: f0e50fc87208d6ee9edba9c660b9243621f02bb4
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="new-scenarios-and-features-in-wmf-51"></a>Nuovi scenari e funzionalità in WMF 5.1 #
 
@@ -26,35 +26,41 @@ A partire dalla versione 5.1, PowerShell è disponibile in diverse edizioni che 
 - [Filtrare i risultati di Get-Module in base a CompatiblePSEditions]()
 - [Impedire l'esecuzione di script a meno che non vengano eseguiti in un'edizione compatibile di PowerShell]()
 
-## <a name="catalog-cmdlets"></a>Cmdlet di catalogo  
+## <a name="catalog-cmdlets"></a>Cmdlet di catalogo
 
-Sono stati aggiunti due nuovi cmdlet nel modulo [Microsoft.PowerShell.Security](https://technet.microsoft.com/library/hh847877.aspx) che generano e convalidano i file di catalogo di Windows.  
+Sono stati aggiunti due nuovi cmdlet nel modulo [Microsoft.PowerShell.Security](https://technet.microsoft.com/library/hh847877.aspx) che generano e convalidano i file di catalogo di Windows.
 
-###<a name="new-filecatalog"></a>New-FileCatalog 
+###<a name="new-filecatalog"></a>New-FileCatalog
 --------------------------------
 
-New-FileCatalog crea un file di catalogo Windows per set di cartelle e file. Questo file di catalogo contiene gli hash per tutti i file nei percorsi specificati. Gli utenti possono distribuire il gruppo di cartelle con il corrispondente file di catalogo che rappresenta le cartelle. Queste informazioni sono utili per convalidare se sono state apportate modifiche alle cartelle dall'ora di creazione del catalogo.    
+New-FileCatalog crea un file di catalogo Windows per set di cartelle e file.
+Questo file di catalogo contiene gli hash per tutti i file nei percorsi specificati.
+Gli utenti possono distribuire il gruppo di cartelle con il corrispondente file di catalogo che rappresenta le cartelle.
+Queste informazioni sono utili per convalidare se sono state apportate modifiche alle cartelle dall'ora di creazione del catalogo.
 
 ```powershell
 New-FileCatalog [-CatalogFilePath] <string> [[-Path] <string[]>] [-CatalogVersion <int>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
-Sono supportate le versioni 1 e 2 del catalogo. La versione 1 usa l'algoritmo di hash SHA1 per creare hash di file; la versione 2 usa SHA256. La versione 2 del catalogo non è supportata in *Windows Server 2008 R2* e in *Windows 7*. È necessario usare la versione 2 del catalogo su *Windows 8*, *Windows Server 2012* e sistemi operativi successivi.  
+Sono supportate le versioni 1 e 2 del catalogo.
+La versione 1 usa l'algoritmo di hash SHA1 per creare hash di file; la versione 2 usa SHA256.
+La versione 2 del catalogo non è supportata in *Windows Server 2008 R2* e in *Windows 7*.
+È necessario usare la versione 2 del catalogo su *Windows 8*, *Windows Server 2012* e sistemi operativi successivi.
 
 ![](../images/NewFileCatalog.jpg)
 
-Questa operazione crea il file di catalogo. 
+Questa operazione crea il file di catalogo.
 
-![](../images/CatalogFile1.jpg)  
+![](../images/CatalogFile1.jpg)
 
-![](../images/CatalogFile2.jpg) 
+![](../images/CatalogFile2.jpg)
 
-Per verificare l'integrità dei file di catalogo (Pester.cat nell'esempio precedente), accedere tramite il cmdlet [Set-AuthenticodeSignature](https://technet.microsoft.com/library/hh849819.aspx).   
+Per verificare l'integrità dei file di catalogo (Pester.cat nell'esempio precedente), accedere tramite il cmdlet [Set-AuthenticodeSignature](https://technet.microsoft.com/library/hh849819.aspx).
 
 
-###<a name="test-filecatalog"></a>Test-FileCatalog 
+###<a name="test-filecatalog"></a>Test-FileCatalog
 --------------------------------
 
-Test-FileCatalog convalida il catalogo che rappresenta un set di cartelle. 
+Test-FileCatalog convalida il catalogo che rappresenta un set di cartelle.
 
 ```powershell
 Test-FileCatalog [-CatalogFilePath] <string> [[-Path] <string[]>] [-Detailed] [-FilesToSkip <string[]>] [-WhatIf] [-Confirm] [<CommonParameters>]
@@ -62,7 +68,11 @@ Test-FileCatalog [-CatalogFilePath] <string> [[-Path] <string[]>] [-Detailed] [-
 
 ![](../images/TestFileCatalog.jpg)
 
-Questo cmdlet confronta tutti gli hash di file e i relativi percorsi trovati nel *catalogo* con altri sul *disco*. Se rileva eventuali mancate corrispondenze tra i percorsi e gli hash di file restituisce lo stato *ValidationFailed*. Gli utenti possono recuperare tutte queste informazioni usando il parametro *-Detailed*. Visualizza inoltre lo stato di accesso al catalogo nella proprietà *Signature* che è equivalente alla chiamata del cmdlet [Get-AuthenticodeSignature](https://technet.microsoft.com/library/hh849805.aspx) nel file di catalogo. Gli utenti possono inoltre ignorare alcuni file durante la convalida usando il parametro *- FilesToSkip*. 
+Questo cmdlet confronta tutti gli hash di file e i relativi percorsi trovati nel *catalogo* con altri sul *disco*.
+Se rileva eventuali mancate corrispondenze tra i percorsi e gli hash di file restituisce lo stato *ValidationFailed*.
+Gli utenti possono recuperare tutte queste informazioni usando il parametro *-Detailed*.
+Visualizza inoltre lo stato di accesso al catalogo nella proprietà *Signature* che è equivalente alla chiamata del cmdlet [Get-AuthenticodeSignature](https://technet.microsoft.com/library/hh849805.aspx) nel file di catalogo.
+Gli utenti possono inoltre ignorare alcuni file durante la convalida usando il parametro *- FilesToSkip*.
 
 
 ## <a name="module-analysis-cache"></a>Modulo Analysis Cache ##
@@ -71,13 +81,17 @@ A partire da WMF 5.1, PowerShell fornisce il controllo sul file che viene usato 
 Per impostazione predefinita, questa cache è archiviata nel file `${env:LOCALAPPDATA}\Microsoft\Windows\PowerShell\ModuleAnalysisCache`.
 La cache viene in genere letta all'avvio durante la ricerca di un comando e viene scritta in un thread in background ad un certo punto dopo l'importazione di un modulo.
 
-Per modificare il percorso predefinito della cache, impostare la variabile di ambiente `$env:PSModuleAnalysisCachePath` prima di avviare PowerShell. Le modifiche apportate a questa variabile di ambiente influiranno solo sui processi figlio. Il valore deve denominare un percorso completo (nome di file incluso) per il quale PowerShell dispone dell'autorizzazione per creare e scrivere file. Per disabilitare la cache del file, impostare questo valore su un percorso non valido, ad esempio:
+Per modificare il percorso predefinito della cache, impostare la variabile di ambiente `$env:PSModuleAnalysisCachePath` prima di avviare PowerShell.
+Le modifiche apportate a questa variabile di ambiente influiranno solo sui processi figlio.
+Il valore deve denominare un percorso completo (nome di file incluso) per il quale PowerShell dispone dell'autorizzazione per creare e scrivere file.
+Per disabilitare la cache del file, impostare questo valore su un percorso non valido, ad esempio:
 
 ```powershell
 $env:PSModuleAnalysisCachePath = 'nul'
 ```
 
-Questo imposta il percorso su un dispositivo non valido. Se PowerShell non riesce a scrivere nel percorso, non verrà restituito alcun errore. Sarà tuttavia possibile visualizzare una segnalazione errori mediante un'utilità di traccia:
+Questo imposta il percorso su un dispositivo non valido.
+Se PowerShell non riesce a scrivere nel percorso, non verrà restituito alcun errore. Sarà tuttavia possibile visualizzare una segnalazione errori mediante un'utilità di traccia:
 
 ```powershell
 Trace-Command -PSHost -Name Modules -Expression { Import-Module Microsoft.PowerShell.Management -Force }
@@ -94,12 +108,14 @@ L'impostazione di questa variabile di ambiente avrà effetto immediato nel proce
 
 ##<a name="specifying-module-version"></a>Specifica della versione del modulo
 
-In WMF 5.1 `using module` si comporta esattamente come altre costruzioni correlate ai moduli di PowerShell. In precedenza, non era possibile specificare una versione particolare del modulo. Se erano presenti più versioni, veniva restituito un errore.
+In WMF 5.1 `using module` si comporta esattamente come altre costruzioni correlate ai moduli di PowerShell.
+In precedenza, non era possibile specificare una versione particolare del modulo. Se erano presenti più versioni, veniva restituito un errore.
 
 
 In WMF 5.1:
 
-* È possibile usare il [costruttore ModuleSpecification (Hashtable)](https://msdn.microsoft.com/library/jj136290). Questa tabella hash ha lo stesso formato di `Get-Module -FullyQualifiedName`.
+* È possibile usare il [costruttore ModuleSpecification (Hashtable)](https://msdn.microsoft.com/library/jj136290).
+Questa tabella hash ha lo stesso formato di `Get-Module -FullyQualifiedName`.
 
 **Esempio:** `using module @{ModuleName = 'PSReadLine'; RequiredVersion = '1.1'}`
 
@@ -107,7 +123,6 @@ In WMF 5.1:
 
 
 ##<a name="improvements-to-pester"></a>Miglioramenti a Pester
-In WMF 5.1 la versione di Pester acclusa a PowerShell è stata aggiornata dalla versione 3.3.5 alla 3.4.0 con l'aggiunta del commit https://github.com/pester/Pester/pull/484/commits/3854ae8a1f215b39697ac6c2607baf42257b102e, che migliora il comportamento di Pester su Nano Server. 
+In WMF 5.1 la versione di Pester acclusa a PowerShell è stata aggiornata dalla versione 3.3.5 alla 3.4.0 con l'aggiunta del commit https://github.com/pester/Pester/pull/484/commits/3854ae8a1f215b39697ac6c2607baf42257b102e, che migliora il comportamento di Pester su Nano Server.
 
 È possibile vedere quali modifiche sono state apportate nelle versioni dalla 3.3.5 alla 3.4.0 esaminando il file ChangeLog.md all'indirizzo https://github.com/pester/Pester/blob/master/CHANGELOG.md
-

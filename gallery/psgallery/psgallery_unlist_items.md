@@ -1,27 +1,28 @@
 ---
-ms.date: 2017-06-12
+ms.date: 06/12/2017
 contributor: JKeithB
 ms.topic: conceptual
 keywords: gallery,powershell,cmdlet,psgallery
 title: psgallery_unlist_items
-ms.openlocfilehash: 8fa09c77e144f14bf0fd3493dff7650897100715
-ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.openlocfilehash: af48f2ca889dcc101d466e40f2ecbe0cdf62c066
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/12/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="unlisting-items"></a>Esclusione di elementi dall'elenco
 
 **Perché la rimozione di un elemento da PowerShell Gallery non è disponibile come opzione?**
 
-PowerShell Gallery non supporta l'eliminazione permanente di elementi da parte degli utenti. Questo consente ad altre persone di creare dipendenze sugli elementi dell'utente senza preoccupazioni per possibili interruzioni nel futuro. Se, ad esempio, il modulo Pester dipende dal modulo Azure e quest'ultimo viene rimosso da PowerShell Gallery, l'utente non può più usare il modulo Pester.
+PowerShell Gallery non supporta l'eliminazione permanente di elementi da parte degli utenti.
+Questo consente ad altre persone di creare dipendenze sugli elementi dell'utente senza preoccupazioni per possibili interruzioni nel futuro.
+Se, ad esempio, il modulo Pester dipende dal modulo Azure e quest'ultimo viene rimosso da PowerShell Gallery, l'utente non può più usare il modulo Pester.
 
 Anziché rimuovere un elemento, tuttavia, è possibile escluderlo dall'elenco.
 
 **Quali sono le conseguenze dell'esclusione di un elemento dall'elenco in PowerShell Gallery?**
 
-L'esclusione di un elemento dall'elenco, ad esempio un modulo o uno script, in PowerShell Gallery determina la rimozione di tale elemento dalla scheda Elementi.
-Gli elementi esclusi dall'elenco, inoltre, non possono essere individuati usando la barra di ricerca.
+L'esclusione di un elemento dall'elenco, ad esempio un modulo o uno script, in PowerShell Gallery determina la rimozione di tale elemento dalla scheda Elementi. Gli elementi esclusi dall'elenco, inoltre, non possono essere individuati usando la barra di ricerca.
 Il solo modo per scaricare un elemento escluso dall'elenco consiste nello specificarne esattamente il nome e la versione.
 Per questo motivo, l'esclusione di un elemento dall'elenco non interrompe altri moduli o script che dipendono da esso.
 
@@ -35,6 +36,4 @@ Gli scenari di eliminazione validi sono i seguenti:
 - Elementi con contenuto potenzialmente dannoso.
 - Elementi contenenti dati sensibili.
 
-Per inviare una richiesta di eliminazione di un elemento agli amministratori di PowerShell Gallery, visitare la pagina dei dettagli dell'elemento e selezionare Come contattare il supporto tecnico.  
-
-
+Per inviare una richiesta di eliminazione di un elemento agli amministratori di PowerShell Gallery, visitare la pagina dei dettagli dell'elemento e selezionare Come contattare il supporto tecnico.

@@ -1,6 +1,8 @@
 # <a name="item-manifest-values-that-impact-the-powershell-gallery-ui"></a>Valori del manifesto degli elementi con effetti sull'interfaccia utente di PowerShell Gallery
 
-Questo argomento offre informazioni di riepilogo per gli editori sulle procedure per modificare il manifesto per le pubblicazioni di PowerShell Gallery, con effetti sulle funzionalità dei cmdlet PowerShellGet e sull'interfaccia utente di PowerShell Gallery. Il contenuto è organizzato in base alla posizione in cui comparirà la modifica, a partire dalla sezione centrale per poi procedere con l'area di spostamento a sinistra. È disponibile una sezione di informazioni dettagliate sui tag, nella quale sono identificati i tag importanti, oltre ad alcuni dei tag usati più comunemente. La documentazione include anche due argomenti con esempi di manifesto: 
+Questo argomento offre informazioni di riepilogo per gli editori sulle procedure per modificare il manifesto per le pubblicazioni di PowerShell Gallery, con effetti sulle funzionalità dei cmdlet PowerShellGet e sull'interfaccia utente di PowerShell Gallery.
+Il contenuto è organizzato in base alla posizione in cui comparirà la modifica, a partire dalla sezione centrale per poi procedere con l'area di spostamento a sinistra. È disponibile una sezione di informazioni dettagliate sui tag, nella quale sono identificati i tag importanti, oltre ad alcuni dei tag usati più comunemente.
+La documentazione include anche due argomenti con esempi di manifesto:
 
 * Per i moduli, vedere [Aggiornare il manifesto del modulo](https://docs.microsoft.com/powershell/gallery/psget/module/psget_update-modulemanifest)
 * Per gli script, vedere [Creare i file di script con i metadati](https://docs.microsoft.com/powershell/gallery/psget/script/psget_new-scriptfileinfo)
@@ -10,7 +12,7 @@ Questo argomento offre informazioni di riepilogo per gli editori sulle procedure
 La tabella seguente illustra gli elementi dell'interfaccia utente della pagina degli elementi di PowerShell Gallery controllati dall'editore.
 Per ogni elemento viene indicato se può essere controllato dal manifesto del modulo o dello script.
 
-| Elemento dell'interfaccia utente | Description | Modulo | Script | 
+| Elemento dell'interfaccia utente | Description | Modulo | Script |
 | --- | --- | --- | --- |
 | **Titolo** | Si tratta del nome dell'elemento pubblicato in PowerShell Gallery  | No | No |
 | **Versione** | La versione visualizzata è la stringa di versione nei metadati, con versione non definitiva se specificata. La parte principale della versione in un manifesto del modulo è rappresentata da ModuleVersion. Nel caso di uno script è identificata come .VERSION. Se viene specificata una stringa di versione non definitiva, verrà aggiunta a ModuleVersion per i moduli o specificata come parte di .VERSION per gli script. È disponibile documentazione su come specificare le stringhe di versione non definitiva nei [moduli](https://docs.microsoft.com/en-us/powershell/gallery/psget/module/prereleasemodule) negli [script](https://docs.microsoft.com/en-us/powershell/gallery/psget/script/prereleasescript). | Sì | Sì |
@@ -49,18 +51,26 @@ La pagina Modifica elemento di PowerShell Gallery consente agli editori di modif
 * Note sulla versione
 * Richiesta della licenza
 
-Questo approccio non è in genere consigliato, eccetto quando è necessario per correggere le informazioni visualizzate per una versione precedente di un modulo. Gli utenti che acquisiscono il modulo vedranno che i metadati non corrispondono a ciò che viene visualizzato in PowerShell Gallery, con conseguenti dubbi in merito all'elemento. Ciò causerà di frequente l'invio di richieste ai proprietari dell'elemento per avere conferme in merito alle modifiche. Ogni volta che si usa questo approccio è consigliabile pubblicare una nuova versione dell'elemento con le stesse modifiche. 
+Questo approccio non è in genere consigliato, eccetto quando è necessario per correggere le informazioni visualizzate per una versione precedente di un modulo.
+Gli utenti che acquisiscono il modulo vedranno che i metadati non corrispondono a ciò che viene visualizzato in PowerShell Gallery, con conseguenti dubbi in merito all'elemento.
+Ciò causerà di frequente l'invio di richieste ai proprietari dell'elemento per avere conferme in merito alle modifiche.
+Ogni volta che si usa questo approccio è consigliabile pubblicare una nuova versione dell'elemento con le stesse modifiche.
 
 ## <a name="tag-details"></a>Dettagli dei tag
 
-I tag sono semplici consumer di stringhe usati per trovare gli elementi. I tag risultano particolarmente utili quando vengono usati in modo coerente per molti elementi correlati allo stesso argomento. L'uso di più varianti della stessa parola (ad esempio elemento ed elementi o test e testing) offre in genere pochi vantaggi. I tag sono stringhe composte da una sola parola senza distinzione tra maiuscole e minuscole e non possono includere spazi vuoti. In presenza di una frase che si ritiene possa essere utile per la ricerca da parte degli utenti, aggiungerla alla descrizione dell'elemento in modo che compaia nei risultati della ricerca. Usare la convenzione Pascal per maiuscole/minuscole, trattini, caratteri di sottolineatura o punti se occorre per migliorare la leggibilità. Prestare attenzione quando si creano tag lunghi, complessi e non comuni, perché spesso contengono errori di ortografia. 
+I tag sono semplici consumer di stringhe usati per trovare gli elementi.
+I tag risultano particolarmente utili quando vengono usati in modo coerente per molti elementi correlati allo stesso argomento. L'uso di più varianti della stessa parola (ad esempio elemento ed elementi o test e testing) offre in genere pochi vantaggi.
+I tag sono stringhe composte da una sola parola senza distinzione tra maiuscole e minuscole e non possono includere spazi vuoti. In presenza di una frase che si ritiene possa essere utile per la ricerca da parte degli utenti, aggiungerla alla descrizione dell'elemento in modo che compaia nei risultati della ricerca. Usare la convenzione Pascal per maiuscole/minuscole, trattini, caratteri di sottolineatura o punti se occorre per migliorare la leggibilità. Prestare attenzione quando si creano tag lunghi, complessi e non comuni, perché spesso contengono errori di ortografia.
 
-È importante evidenziare alcuni tag, perché vengono gestiti in modo speciale da PowerShell Gallery e dai cmdlet PowerShellGet. PSEdition_Desktop e PSEdition_Core sono esempi specifici e sono descritti più indietro. 
+È importante evidenziare alcuni tag, perché vengono gestiti in modo speciale da PowerShell Gallery e dai cmdlet PowerShellGet. PSEdition_Desktop e PSEdition_Core sono esempi specifici e sono descritti più indietro.
 
-Come già indicato, i tag sono utili soprattutto quando sono specifici e vengono usati in modo coerente per molti elementi. Per un editore che cerca di individuare i tag migliori da usare, il modo più semplice consiste nel cercare i tag che si stanno valutando in PowerShell Gallery. Il risultato ideale è che vengano restituiti molti elementi e che le descrizioni degli elementi siano in linea con l'uso previsto delle parole chiave. 
+Come già indicato, i tag sono utili soprattutto quando sono specifici e vengono usati in modo coerente per molti elementi.
+Per un editore che cerca di individuare i tag migliori da usare, il modo più semplice consiste nel cercare i tag che si stanno valutando in PowerShell Gallery.
+Il risultato ideale è che vengano restituiti molti elementi e che le descrizioni degli elementi siano in linea con l'uso previsto delle parole chiave.
 
-Per riferimento, ecco alcuni dei tag usati più di frequente alla data del 14/12/2017. In alcuni casi, a fianco del tag sono indicate opzioni simili, ma meno ottimali.
-È consigliabile usare il tag preferito, perché produce meno risultati non significativi e migliori risultati di ricerca per gli utenti. 
+Per riferimento, ecco alcuni dei tag usati più di frequente alla data del 14/12/2017.
+In alcuni casi, a fianco del tag sono indicate opzioni simili, ma meno ottimali.
+È consigliabile usare il tag preferito, perché produce meno risultati non significativi e migliori risultati di ricerca per gli utenti.
 
 
 | **Tag preferito** | **Alternative e note** |
@@ -125,5 +135,3 @@ Per riferimento, ecco alcuni dei tag usati più di frequente alla data del 14/12
 | **MSI** |  |
 | **Mac** |  |
 | **PoshBot** |  |
-
-

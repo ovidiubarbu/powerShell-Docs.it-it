@@ -1,20 +1,22 @@
 ---
-ms.date: 2017-06-05
+ms.date: 06/05/2017
 keywords: powershell,cmdlet
 title: Rimozione di oggetti dalla pipeline Where Object
 ms.assetid: 01df8b22-2d22-4e2c-a18d-c004cd3cc284
-ms.openlocfilehash: 4140c4c3ebb26223d03ca139992fedf6e184a38b
-ms.sourcegitcommit: 74255f0b5f386a072458af058a15240140acb294
+ms.openlocfilehash: 2d89defdb1b234a9d0021fc06e1f05a95bb1bce9
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="removing-objects-from-the-pipeline-where-object"></a>Rimozione di oggetti dalla pipeline (Where-Object)
+
 In Windows PowerShell spesso si generano e si passano più oggetti a una pipeline di quelli desiderati. È possibile specificare le proprietà di oggetti specifici da visualizzare usando i cmdlet **Format**, ma questo non consente di risolvere il problema della rimozione di interi oggetti dalla visualizzazione. Si consiglia di filtrare gli oggetti prima della fine di una pipeline, in modo da eseguire operazioni solo su un sottoinsieme degli oggetti generati inizialmente.
 
 Windows PowerShell include un cmdlet **Where-Object** che consente di testare ogni oggetto nella pipeline e passarlo lungo la pipeline solo se soddisfa una specifica condizione di test. Gli oggetti che non superano il test vengono rimossi dalla pipeline. La condizione di test viene specificata sotto forma di valore del parametro **Where-ObjectFilterScript**.
 
 ### <a name="performing-simple-tests-with-where-object"></a>Esecuzione di test semplici con Where-Object
+
 Il valore di **FilterScript** è un *blocco di script*, uno o più comandi di Windows PowerShell racchiusi tra parentesi graffe ({}), che restituisce true o false. Questi blocchi di script possono essere molto semplici, ma per la loro creazione è richiesta familiarità con un altro concetto di Windows PowerShell, gli operatori di confronto. Un operatore di confronto mette a confronto gli elementi visualizzati alle sue due estremità. Gli operatori di confronto iniziano con un carattere "-" e sono seguiti da un nome. Gli operatori di confronto di base possono essere usati con qualsiasi tipo di oggetto. Quelli più avanzati potrebbero funzionare solo su testo o array.
 
 > [!NOTE]
@@ -44,12 +46,13 @@ PS> 1,2,3,4 | Where-Object -FilterScript {$_ -lt 3}
 ```
 
 ### <a name="filtering-based-on-object-properties"></a>Filtro in base alle proprietà dell'oggetto
+
 Dal momento che $_ fa riferimento all'oggetto della pipeline corrente, è possibile accedere alle relative proprietà per i test.
 
 È ad esempio possibile esaminare la classe Win32_SystemDriver in Strumentazione gestione Windows (WMI). Potrebbero esserci centinaia di driver di sistema in un determinato sistema, ma solo uno specifico set di driver di sistema potrebbe essere interessante, ad esempio quello dei driver attualmente in esecuzione. Se si usa Get-Member per visualizzare i membri di Win32_SystemDriver (**Get-WmiObject -Class Win32_SystemDriver | Get-Member -MemberType Property**), si noterà che la proprietà pertinente è State e che ha il valore "Running" quando il driver è in esecuzione. È possibile filtrare i driver di sistema selezionando solo quelli in esecuzione digitando:
 
-```
-Get-WmiObject -Class Win32_SystemDriver | Where-Object -FilterScript {$_.State -eq "Running"}
+```powershell
+Get-WmiObject -Class Win32_SystemDriver | Where-Object -FilterScript {$_.State -eq 'Running'}
 ```
 
 Questa operazione genera comunque un lungo elenco. Si consiglia di applicare un filtro per selezionare solo i driver impostati per l'avvio automatico testando anche il valore StartMode:
@@ -89,8 +92,8 @@ mssmbios                                Microsoft System Management BIOS Driver
 
 Sono presenti due elementi Where-Object nel comando precedente, ma possono essere espressi con un unico elemento Where-Object usando l'operatore logico -and, come nell'esempio seguente:
 
-```
-Get-WmiObject -Class Win32_SystemDriver | Where-Object -FilterScript { ($_.State -eq "Running") -and ($_.StartMode -eq "Manual") } | Format-Table -Property Name,DisplayName
+```powershell
+Get-WmiObject -Class Win32_SystemDriver | Where-Object -FilterScript { ($_.State -eq 'Running') -and ($_.StartMode -eq 'Manual') } | Format-Table -Property Name,DisplayName
 ```
 
 Nella tabella seguente sono elencati gli operatori logici standard.
@@ -101,4 +104,3 @@ Nella tabella seguente sono elencati gli operatori logici standard.
 |-or|OR logico; true se i valori a entrambe le estremità sono true|(1 -eq 1) -or (1 -eq 2)|
 |-not|NOT logico; inverte true e false|-not (1 -eq 2)|
 |\!|NOT logico; inverte true e false|\!(1 -eq 2)|
-

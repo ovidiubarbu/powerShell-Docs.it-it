@@ -1,17 +1,17 @@
 ---
-ms.date: 2017-06-12
+ms.date: 06/12/2017
 ms.topic: conceptual
 keywords: dsc,powershell,configurazione,installazione
 title: Risorsa User DSC
-ms.openlocfilehash: c1b8487d9adc899950d185036ada3a2fa3747417
-ms.sourcegitcommit: a444406120e5af4e746cbbc0558fe89a7e78aef6
+ms.openlocfilehash: 1c3efa8e3bf945c45834cbea7ddb0a6c3ffc5f45
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/09/2018
 ---
 #<a name="dsc-user-resource"></a>Risorsa User DSC#
 
- 
+
 >Si applica a: Windows PowerShell 4.0, Windows PowerShell 5.0
 
 
@@ -37,18 +37,18 @@ User [string] #ResourceName
 ```
 
 ## <a name="properties"></a>Proprietà
-|  Proprietà  |  Description   | 
-|---|---| 
-| UserName| Indica il nome dell'account per cui si vuole specificare un determinato stato.| 
-| Description| Indica la descrizione che si vuole usare per l'account utente.| 
-| Disabled| Indica se l'account è abilitato. Impostare questa proprietà su __$true__ per specificare che l'account è disabilitato e su __$false__ per specificare che è abilitato.| 
-| Ensure| Indica se l'account esiste. Impostare questa proprietà su "Present" per specificare che l'account esiste e su "Absent" per specificare che non esiste.| 
-| FullName| Rappresenta una stringa che contiene il nome completo da usare per l'account utente.| 
-| Password| Indica la password da usare per l'account. | 
-| PasswordChangeNotAllowed| Indica se l'utente può modificare la password. Impostare questa proprietà su __$true__ per impedire all'utente di modificare la password e su __$false__ per consentire all'utente di modificare la password. Il valore predefinito è __$false__.| 
-| PasswordChangeRequired| Indica se l'utente dovrà cambiare la password all'accesso successivo. Impostare questa proprietà su __$true__ se l'utente deve cambiare la password. Il valore predefinito è __$true__.| 
-| PasswordNeverExpires| Indica se la password scadrà. Impostare questa proprietà su __$true__ per specificare che la password per questo utente non scade mai e su __$false__ se la password scade. Il valore predefinito è __$false__.| 
-| DependsOn | Indica che prima di configurare la risorsa è necessario eseguire la configurazione di un'altra risorsa. Ad esempio, se l'ID del blocco script di configurazione della risorsa che si vuole eseguire per primo è __ResourceName__ e il tipo è __ResourceType__, la sintassi per usare questa proprietà è `DependsOn = "[ResourceType]ResourceName"`.| 
+|  Proprietà  |  Description   |
+|---|---|
+| UserName| Indica il nome dell'account per cui si vuole specificare un determinato stato.|
+| Description| Indica la descrizione che si vuole usare per l'account utente.|
+| Disabled| Indica se l'account è abilitato. Impostare questa proprietà su __$true__ per specificare che l'account è disabilitato e su __$false__ per specificare che è abilitato.|
+| Ensure| Indica se l'account esiste. Impostare questa proprietà su "Present" per specificare che l'account esiste e su "Absent" per specificare che non esiste.|
+| FullName| Rappresenta una stringa che contiene il nome completo da usare per l'account utente.|
+| Password| Indica la password da usare per l'account. |
+| PasswordChangeNotAllowed| Indica se l'utente può modificare la password. Impostare questa proprietà su __$true__ per impedire all'utente di modificare la password e su __$false__ per consentire all'utente di modificare la password. Il valore predefinito è __$false__.|
+| PasswordChangeRequired| Indica se l'utente dovrà cambiare la password all'accesso successivo. Impostare questa proprietà su __$true__ se l'utente deve cambiare la password. Il valore predefinito è __$true__.|
+| PasswordNeverExpires| Indica se la password scadrà. Impostare questa proprietà su __$true__ per specificare che la password per questo utente non scade mai e su __$false__ se la password scade. Il valore predefinito è __$false__.|
+| DependsOn | Indica che prima di configurare la risorsa è necessario eseguire la configurazione di un'altra risorsa. Ad esempio, se l'ID del blocco script di configurazione della risorsa che si vuole eseguire per primo è __ResourceName__ e il tipo è __ResourceType__, la sintassi per usare questa proprietà è `DependsOn = "[ResourceType]ResourceName"`.|
 
 ## <a name="example"></a>Esempio
 
@@ -61,4 +61,3 @@ User UserExample
     DependsOn = "[Group]GroupExample" # Configures GroupExample first
 }
 ```
-

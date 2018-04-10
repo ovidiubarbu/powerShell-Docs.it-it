@@ -1,13 +1,13 @@
 ---
-ms.date: 2017-06-12
+ms.date: 06/12/2017
 ms.topic: conceptual
 keywords: dsc,powershell,configurazione,installazione
 title: Risorsa nxPackage DSC per Linux
-ms.openlocfilehash: 41c627ebb39dad535f7acc8fe34739355f7a81b5
-ms.sourcegitcommit: a444406120e5af4e746cbbc0558fe89a7e78aef6
+ms.openlocfilehash: 0a62bb01c2daa57bd5d6f1ef131ec8ae6d6f81ee
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="dsc-for-linux-nxpackage-resource"></a>Risorsa nxPackage DSC per Linux
 
@@ -26,29 +26,29 @@ nxPackage <string> #ResourceName
     [ ReturnCode = <uint32> ]
     [ LogPath = <string> ]
     [ DependsOn = <string[]> ]
-    
+
 }
 ```
 
 ## <a name="properties"></a>Proprietà
 
-|  Proprietà |  Description | 
+|  Proprietà |  Description |
 |---|---|
-| Nome| Nome del pacchetto per cui si vuole specificare un determinato stato.| 
-| Ensure| Determina se verificare l'esistenza del pacchetto. Impostare questa proprietà su "Present" per specificare che il pacchetto esiste. Impostarla su "Absent" per specificare che il pacchetto non esiste. Il valore predefinito è "Present".|  
-| PackageManager| I valori supportati sono "yum", "apt" e "zypper". Specifica lo strumento di gestione dei pacchetti da usare durante l'installazione dei pacchetti. Se si specifica **FilePath**, verrà usato il percorso fornito per installare il pacchetto. In caso contrario, verrà usato uno strumento di gestione dei pacchetti per installare il pacchetto da un repository preconfigurato. Se non si specifica né **PackageManager** né **FilePath**, viene usato il sistema di gestione dei pacchetti predefinito per il sistema.| 
-| FilePath| Percorso in cui si trova il pacchetto| 
-| PackageGroup| Se **$true**, **Name** sarà il nome di un gruppo di pacchetti da usare con **PackageManager**. **PacakgeGroup** non è un valore valido quando si specifica **FilePath**.| 
-| Arguments| Stringa di argomenti che verrà passata al pacchetto esattamente nel modo specificato.| 
-| ReturnCode| Codice restituito previsto. Se l'effettivo codice restituito non corrisponde al valore previsto specificato qui, la configurazione restituirà un errore.| 
-| DependsOn | Indica che prima di configurare la risorsa è necessario eseguire la configurazione di un'altra risorsa. Ad esempio, se il valore di **ID** del blocco script di configurazione della risorsa che si vuole eseguire per primo è **ResourceName** e il tipo è **ResourceType**, la sintassi per usare questa proprietà è `DependsOn = "[ResourceType]ResourceName"`.| 
+| Nome| Nome del pacchetto per cui si vuole specificare un determinato stato.|
+| Ensure| Determina se verificare l'esistenza del pacchetto. Impostare questa proprietà su "Present" per specificare che il pacchetto esiste. Impostarla su "Absent" per specificare che il pacchetto non esiste. Il valore predefinito è "Present".|
+| PackageManager| I valori supportati sono "yum", "apt" e "zypper". Specifica lo strumento di gestione dei pacchetti da usare durante l'installazione dei pacchetti. Se si specifica **FilePath**, verrà usato il percorso fornito per installare il pacchetto. In caso contrario, verrà usato uno strumento di gestione dei pacchetti per installare il pacchetto da un repository preconfigurato. Se non si specifica né **PackageManager** né **FilePath**, viene usato il sistema di gestione dei pacchetti predefinito per il sistema.|
+| FilePath| Percorso in cui si trova il pacchetto|
+| PackageGroup| Se **$true**, **Name** sarà il nome di un gruppo di pacchetti da usare con **PackageManager**. **PacakgeGroup** non è un valore valido quando si specifica **FilePath**.|
+| Arguments| Stringa di argomenti che verrà passata al pacchetto esattamente nel modo specificato.|
+| ReturnCode| Codice restituito previsto. Se l'effettivo codice restituito non corrisponde al valore previsto specificato qui, la configurazione restituirà un errore.|
+| DependsOn | Indica che prima di configurare la risorsa è necessario eseguire la configurazione di un'altra risorsa. Ad esempio, se il valore di **ID** del blocco script di configurazione della risorsa che si vuole eseguire per primo è **ResourceName** e il tipo è **ResourceType**, la sintassi per usare questa proprietà è `DependsOn = "[ResourceType]ResourceName"`.|
 
 ## <a name="example"></a>Esempio
 
 L'esempio seguente specifica che il pacchetto denominato "httpd" è installato in un computer Linux, usando lo strumento di gestione dei pacchetti "Yum".
 
 ```
-Import-DSCResource -Module nx 
+Import-DSCResource -Module nx
 
 Node $node {
 nxPackage httpd
@@ -59,4 +59,3 @@ nxPackage httpd
 }
 }
 ```
-

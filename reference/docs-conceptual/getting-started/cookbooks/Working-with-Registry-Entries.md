@@ -1,18 +1,20 @@
 ---
-ms.date: 2017-06-05
+ms.date: 06/05/2017
 keywords: powershell,cmdlet
 title: Gestione delle voci del Registro di sistema
 ms.assetid: fd254570-27ac-4cc9-81d4-011afd29b7dc
-ms.openlocfilehash: 039203a1a6549d4ba33424a278e4803a5e143d4d
-ms.sourcegitcommit: 74255f0b5f386a072458af058a15240140acb294
+ms.openlocfilehash: bffdf80931fc4dc570b584623487077dc5d449dc
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="working-with-registry-entries"></a>Gestione delle voci del Registro di sistema
+
 Poiché le voci del Registro di sistema sono proprietà di chiavi e, in quanto tali, non possono essere esplorate direttamente, è necessario adottare un approccio leggermente diverso per gestirle.
 
 ### <a name="listing-registry-entries"></a>Visualizzazione di un elenco di voci del Registro di sistema
+
 Esistono molti modi diversi per esaminare le voci del Registro di sistema. Il modo più semplice consiste nell'ottenere i nomi di proprietà associati a una chiave. Ad esempio, per visualizzare i nomi delle voci nella chiave del Registro di sistema **HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Windows\\CurrentVersion**, usare **Get-Item**. Le chiavi del Registro di sistema hanno una proprietà con il nome generico "Property" che corrisponde a un elenco delle voci contenute al loro interno. Il comando seguente seleziona la proprietà Property ed espande gli elementi in modo che vengano visualizzati in un elenco:
 
 ```
@@ -52,13 +54,13 @@ Le proprietà correlate a Windows PowerShell per la chiave sono precedute tutte 
 
 È possibile usare la notazione "**.**" per fare riferimento al percorso corrente. È possibile usare **Set-Location** per passare prima al contenitore del Registro di sistema **CurrentVersion**:
 
-```
+```powershell
 Set-Location -Path Registry::HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion
 ```
 
 In alternativa è possibile usare la proprietà predefinita HKLM PSDrive con **Set-Location**:
 
-```
+```powershell
 Set-Location -Path hklm:\SOFTWARE\Microsoft\Windows\CurrentVersion
 ```
 
@@ -76,6 +78,7 @@ ProgramFilesDir     : C:\Program Files
 L'espansione del percorso funziona come nel file system, quindi da questo percorso è possibile ottenere l'elenco **ItemProperty** per **HKLM:\\SOFTWARE\\Microsoft\\Windows\\Help** usando **Get-ItemProperty -Path ..\\Help**.
 
 ### <a name="getting-a-single-registry-entry"></a>Recupero di una singola voce del Registro di sistema
+
 Per recuperare una voce specifica di una chiave del Registro di sistema, è possibile usare uno dei diversi approcci disponibili. In questo esempio viene trovato il valore di **DevicePath** in **HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion**.
 
 Usare **Get-ItemProperty** con il parametro **Path** per specificare il nome della chiave e il parametro **Name** per specificare il nome della voce **DevicePath**.
@@ -117,6 +120,7 @@ PS> (New-Object -ComObject WScript.Shell).RegRead("HKLM\SOFTWARE\Microsoft\Windo
 ```
 
 ### <a name="creating-new-registry-entries"></a>Creazione di nuove voci del Registro di sistema
+
 Per aggiungere una nuova voce denominata "PowerShellPath" alla chiave **CurrentVersion**, usare **New-ItemProperty** con il percorso della chiave e il nome e il valore della voce. Per questo esempio, verrà usato il valore della variabile **$PSHome** di Windows PowerShell, in cui è archiviato il percorso della directory di installazione di Windows PowerShell.
 
 È possibile aggiungere la nuova voce alla chiave usando il comando seguente, che restituisce anche informazioni sulla nuova voce:
@@ -148,30 +152,31 @@ PowerShellPath : C:\Program Files\Windows PowerShell\v1.0
 > [!NOTE]
 > È possibile aggiungere una voce del Registro di sistema in più posizioni specificando una matrice di valori nel parametro **Path**:
 
-```
+```powershell
 New-ItemProperty -Path HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion, HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion -Name PowerShellPath -PropertyType String -Value $PSHome
 ```
 
 È anche possibile sovrascrivere un valore preesistente di una voce del Registro di sistema aggiungendo il parametro **Force** a qualsiasi comando **New-ItemProperty**.
 
 ### <a name="renaming-registry-entries"></a>Ridenominazione delle voci del Registro di sistema
+
 Per rinominare la voce **PowerShellPath** in "PSHome", usare **Rename-ItemProperty**:
 
-```
+```powershell
 Rename-ItemProperty -Path HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion -Name PowerShellPath -NewName PSHome
 ```
 
 Per visualizzare il valore rinominato, aggiungere il parametro **PassThru** al comando.
 
-```
+```powershell
 Rename-ItemProperty -Path HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion -Name PowerShellPath -NewName PSHome -passthru
 ```
 
 ### <a name="deleting-registry-entries"></a>Eliminazione di voci del Registro di sistema
+
 Per eliminare le voci del Registro di sistema PSHome e PowerShellPath, usare **Remove-ItemProperty**:
 
-```
+```powershell
 Remove-ItemProperty -Path HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion -Name PSHome
 Remove-ItemProperty -Path HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion -Name PowerShellPath
 ```
-

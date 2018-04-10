@@ -1,13 +1,13 @@
 ---
-ms.date: 2017-06-12
+ms.date: 06/12/2017
 author: JKeithB
 ms.topic: reference
 keywords: wmf,powershell,installazione
-ms.openlocfilehash: 3392db954c22030bb64ae5093619d23952e1fcdb
-ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.openlocfilehash: 78ae7ecd40b4d8ad0a6750f43002986483ab18a7
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/12/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="uninstallation-instructions"></a>Istruzioni di disinstallazione
 
@@ -33,4 +33,3 @@ wusa /uninstall /kb:3134760
 2.  Aprire **Programmi** e quindi **Disinstalla un programma**.
 3.  Fare clic su **Visualizza aggiornamenti installati**.
 4.  Selezionare **Windows Management Framework 5.0** nell'elenco degli aggiornamenti installati. Questi aggiornamenti corrispondono a *KB3134758*, *KB3134759* o *KB3134760*. Fare clic su **Disinstalla**.
-

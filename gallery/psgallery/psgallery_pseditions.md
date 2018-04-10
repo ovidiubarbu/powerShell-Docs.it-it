@@ -1,14 +1,14 @@
 ---
-ms.date: 2017-06-12
+ms.date: 06/12/2017
 contributor: JKeithB
 ms.topic: conceptual
-keywords: raccolta,powershell,cmdlet,psgallery
+keywords: gallery,powershell,cmdlet,psgallery
 title: psgallery_pseditions
-ms.openlocfilehash: 6634da5c2dadee9c0c6470b3d3e8883e6d02160f
-ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.openlocfilehash: 0b30c1da53832a6b74be7aa14ed9331b1e9fe643
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/12/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="items-with-compatible-powershell-editions"></a>Elementi con versioni di PowerShell compatibili
 A partire dalla versione 5.1, PowerShell è disponibile in diverse edizioni che indicano vari set di funzionalità e compatibilità della piattaforma.
@@ -33,4 +33,3 @@ Usare Tags:"PSEdition_Desktop" e Tags:"PSEdition_Core" per filtrare gli elementi
 ## <a name="more-details-on-authoring-and-finding-the-items-with-compatible-powershell-editions"></a>Altre informazioni sulla creazione e la ricerca di elementi con versioni di PowerShell compatibili
 ### <a name="modules-with-pseditionspsgetmodulemodulewithpseditionsupportmd"></a>[Moduli con edizioni di PS](../psget/module/modulewithpseditionsupport.md)
 ### <a name="scripts-with-pseditionspsgetscriptscriptwithpseditionsupportmd"></a>[Script con PSEditions](../psget/script/scriptwithpseditionsupport.md)
-

@@ -1,13 +1,13 @@
 ---
-ms.date: 2017-06-05
+ms.date: 06/05/2017
 keywords: powershell,cmdlet
 title: Imparare i nomi usati in Windows PowerShell
 ms.assetid: b4d0fd22-8298-4ee6-82ae-9b6f2907c986
-ms.openlocfilehash: 28c821c4a617b6ac775dbdda8ade3d15c3f218c3
-ms.sourcegitcommit: 74255f0b5f386a072458af058a15240140acb294
+ms.openlocfilehash: 381aa619a41ccacb2ff3a4cdbc2b75b7f04282d1
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="learning-windows-powershell-names"></a>Imparare i nomi usati in Windows PowerShell
 Nella maggior parte delle interfacce della riga di comando, imparare nomi e parametri dei comandi richiede molto tempo. Il problema è che esistono pochissimi schemi, quindi l'unica possibilità è memorizzare ogni comando e parametro che è necessario usare regolarmente.
@@ -57,7 +57,7 @@ Cmdlet          Resume-Service                  Resume-Service [-Name] <Stri...
 Cmdlet          Set-Service                     Set-Service [-Name] <String>...
 Cmdlet          Start-Service                   Start-Service [-Name] <Strin...
 Cmdlet          Stop-Service                    Stop-Service [-Name] <String...
-Cmdlet          Suspend-Service                 Suspend-Service [-Name] <Str... 
+Cmdlet          Suspend-Service                 Suspend-Service [-Name] <Str...
 ...
 ```
 
@@ -91,4 +91,3 @@ Windows PowerShell ha svariati parametri noti come *parametri comuni*. Poiché q
 I cmdlet fondamentali di Windows PowerShell usano nomi standard per i parametri simili. Anche se l'uso di particolari nomi di parametro non è obbligatorio, esistono linee guida esplicite mirate a favorire la standardizzazione.
 
 Ad esempio, le linee guida consigliano di chiamare un parametro che fa riferimento a un computer in base al nome **ComputerName**, invece di usare Server, Host, System, Node o altre parole alternative comuni. Tra i principali nomi di parametro suggeriti vi sono **Force**, **Exclude**, **Include**, **PassThru**, **Path** e **CaseSensitive**.
-

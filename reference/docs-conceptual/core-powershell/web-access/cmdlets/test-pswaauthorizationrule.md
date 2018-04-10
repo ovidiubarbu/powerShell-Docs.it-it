@@ -1,16 +1,16 @@
 ---
-description: 
+description: ''
 ms.topic: article
 ms.prod: powershell
 keywords: powershell,cmdlet
-ms.date: 2016-12-12
+ms.date: 12/12/2016
 title: test pswaauthorizationrule
 ms.technology: powershell
-ms.openlocfilehash: fb2937397616160c70b056e412e42fb8ff4c2f27
-ms.sourcegitcommit: a444406120e5af4e746cbbc0558fe89a7e78aef6
+ms.openlocfilehash: ed6d56b2f3c4ee4ac410cdaadda312bffe506ee9
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="test-pswaauthorizationrule"></a>Test-PswaAuthorizationRule
 
@@ -47,7 +47,7 @@ I parametri per questo cmdlet corrispondono ai campi della pagina di accesso di 
 
 Specifica il nome del computer da testare.
 
-|||  
+|||
 |-|-|
 | Alias                              | Nessuno                                 |
 | Obbligatorio?                            | True                                 |
@@ -60,7 +60,7 @@ Specifica il nome del computer da testare.
 
 Specifica il nome della configurazione di sessione di Windows PowerShell, nota anche come endpoint o spazio di esecuzione, per eseguire il test.
 
-|||  
+|||
 |-|-|
 | Alias                              | Nessuno                                 |
 | Obbligatorio?                            | False                                |
@@ -73,7 +73,7 @@ Specifica il nome della configurazione di sessione di Windows PowerShell, nota a
 
 Specifica l'URI della connessione da testare.
 
-|||  
+|||
 |-|-|
 | Alias                              | Nessuno                                 |
 | Obbligatorio?                            | True                                 |
@@ -86,7 +86,7 @@ Specifica l'URI della connessione da testare.
 
 Specifica un oggetto **PSCredential** per un account utente che verrà usato per testare le regole di autorizzazione di Accesso Web Windows PowerShell. Se non si aggiunge questo parametro, il cmdlet usa l'account utente attualmente connesso. Per ottenere un oggetto **PSCredential**, necessario per testare le regole di autorizzazione in modalità remota, eseguire il cmdlet [Get-Credential](http://go.microsoft.com/fwlink/?LinkID=293936).
 
-|||  
+|||
 |-|-|
 | Alias                              | Nessuno                                 |
 | Obbligatorio?                            | False                                |
@@ -99,7 +99,7 @@ Specifica un oggetto **PSCredential** per un account utente che verrà usato per
 
 Specifica un sottoinsieme di regole da testare. Se questo parametro non viene specificato, il cmdlet esegue i test su tutte le regole di autorizzazione.
 
-|||  
+|||
 |-|-|
 | Alias                              | Nessuno                                 |
 | Obbligatorio?                            | False                                |
@@ -112,7 +112,7 @@ Specifica un sottoinsieme di regole da testare. Se questo parametro non viene sp
 
 Specifica il nome dell'utente da testare.
 
-|||  
+|||
 |-|-|
 | Alias                              | Nessuno                                 |
 | Obbligatorio?                            | True                                 |

@@ -1,18 +1,18 @@
 ---
-ms.date: 2017-06-05
+ms.date: 06/05/2017
 keywords: powershell,cmdlet
 title: Preparativi per l'uso di Windows PowerShell
 ms.assetid: 6dc7052d-cc5a-4220-950f-98f963a2b587
-ms.openlocfilehash: de09c74e938f11a130864b1620d6c169006a27be
-ms.sourcegitcommit: 4807ab554d55fdee499980835bcc279368b1df68
+ms.openlocfilehash: 5e095984286ff89958dc0a4e3d27e40eae5b2c5e
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="getting-ready-to-use-windows-powershell"></a>Preparativi per l'uso di Windows PowerShell
 Dopo l'installazione e l'avvio di Windows PowerShell, prendere in considerazione le opzioni di installazione seguenti. È possibile eseguire queste attività in qualsiasi momento.
 
-- **Installare i file della Guida.** I cmdlet inclusi in Windows PowerShell 3.0 non vengono forniti con i file della Guida. Tuttavia, è possibile usare il cmdlet [Update-Help](/powershell/module/microsoft.powershell.core/update-help) per scaricare e installare i file della Guida più recenti nel computer in uso. Quando i file vengono installati, è possibile usare il cmdlet [Get-Help](/powershell/module/microsoft.powershell.core/get-help) per visualizzarli direttamente nella riga di comando. Per altre informazioni, vedere [about_Updatable_Help](/powershell/module/microsoft.powershell.core/about/about_execution_policies).
+- **Installare i file della Guida.** I cmdlet inclusi in Windows PowerShell 3.0 non vengono forniti con i file della Guida. Tuttavia, è possibile usare il cmdlet [Update-Help](/powershell/module/microsoft.powershell.core/update-help) per scaricare e installare i file della Guida più recenti nel computer in uso. Quando i file vengono installati, è possibile usare il cmdlet [Get-Help](/powershell/module/microsoft.powershell.core/get-help) per visualizzarli direttamente nella riga di comando. Per altre informazioni, vedere [about_Updatable_Help](/powershell/module/microsoft.powershell.core/about/about_updatable_help).
 
     Se si decide di non installare i file della Guida, è comunque possibile leggere gli argomenti della Guida online. Per trovare la versione online degli argomenti della Guida per qualsiasi cmdlet, digitare: `Get-Help <CmdletName> -Online`. Per esplorare gli argomenti della guida di Windows PowerShell, vedere la [documentazione di PowerShell](/powershell/scripting).
 
@@ -25,4 +25,3 @@ Dopo l'installazione e l'avvio di Windows PowerShell, prendere in considerazione
 ## <a name="see-also"></a>Vedere anche
 - [Installazione di Windows PowerShell](../setup/Installing-Windows-PowerShell.md)
 - [Avvio di Windows PowerShell](/powershell/scripting/setup/starting-windows-powershell)
-

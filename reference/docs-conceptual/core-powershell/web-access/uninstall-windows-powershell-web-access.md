@@ -1,12 +1,12 @@
 ---
-ms.date: 2017-08-23
+ms.date: 08/23/2017
 keywords: powershell,cmdlet
 title: disinstallare accesso web windows powershell
-ms.openlocfilehash: b6e6a2374e6b4b2be8742019c5f1e4d5b5d1abe3
-ms.sourcegitcommit: 3720ce4efb6735694cfb53a1b793d949af5d1bc5
+ms.openlocfilehash: 22c874d766445dccedd8494097daf16c30fa66ff
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/29/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="uninstall-windows-powershell-web-access"></a>Disinstallare Accesso Web Windows PowerShell
 
@@ -29,7 +29,7 @@ Le procedure in questa sezione consentono di installare sia:
 
 - l'applicazione Web Accesso Web Windows PowerShell, sia
 - la funzionalità Accesso Web Windows PowerShell
- 
+
 usando i cmdlet di Windows PowerShell.
 
 ### <a name="step-1-delete-the-web-application-using-cmdlets"></a>Passaggio 1: Eliminare l'applicazione Web usando i cmdlet
@@ -96,9 +96,9 @@ Le procedure in questa sezione consentono di disinstallare l'applicazione Web Ac
 
 > ![Nota di avviso](images/SecurityNote.jpeg)**Nota**:
 >
-> Durante la disinstallazione il certificato non viene eliminato. 
+> Durante la disinstallazione il certificato non viene eliminato.
 >
-> Se è stato creato un certificato autofirmato o si utilizza un certificato di prova e si desidera rimuoverlo, eliminare il certificato in Gestione IIS. 
+> Se è stato creato un certificato autofirmato o si utilizza un certificato di prova e si desidera rimuoverlo, eliminare il certificato in Gestione IIS.
 
 ### <a name="step-2-uninstall-windows-powershell-web-access-using-the-remove-roles-and-features-wizard"></a>Passaggio 2: Disinstallare Accesso Web Windows PowerShell usando Rimozione guidata ruoli e funzionalità
 

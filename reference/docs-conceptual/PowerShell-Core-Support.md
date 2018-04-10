@@ -67,7 +67,7 @@ Installando il modulo [`WindowsPSModulePath`][] è possibile aggiungere `PSModul
 Installare prima il modulo `WindowsPSModulePath` da PowerShell Gallery:
 
 ```powershell
-# Add `-Scope CurrentUser` if you're installing as non-admin 
+# Add `-Scope CurrentUser` if you're installing as non-admin
 Install-Module WindowsPSModulePath -Force
 ```
 

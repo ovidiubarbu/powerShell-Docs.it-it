@@ -1,12 +1,12 @@
 ---
-ms.date: 2017-08-25
+ms.date: 08/25/2017
 keywords: powershell,cmdlet
 title: Oggetto ObjectModelRoot
-ms.openlocfilehash: eb3424ff147c35364fa08543d59ebd30f6d2d857
-ms.sourcegitcommit: d6ab9ab5909ed59cce4ce30e29457e0e75c7ac12
+ms.openlocfilehash: 2670321ebac1eac4ecc8457afb796f9f260da471
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="the-objectmodelroot-object"></a>Oggetto ObjectModelRoot
 
@@ -17,7 +17,7 @@ Questo argomento descrive le proprietà dell'oggetto **ObjectModelRoot**.
 
 ### <a name="currentfile"></a>CurrentFile
 
-> Supportato in Windows PowerShell ISE 2.0 e versioni successive. 
+> Supportato in Windows PowerShell ISE 2.0 e versioni successive.
 
 Proprietà di sola lettura che ottiene il file, il quale è associato a tale oggetto host con stato attivo.
 
@@ -35,24 +35,23 @@ Proprietà di sola lettura che ottiene lo strumento aggiuntivo di Windows PowerS
 
 ### <a name="currentvisibleverticaltool"></a>CurrentVisibleVerticalTool
 
-> Supportato in Windows PowerShell ISE 2.0 e versioni successive. 
+> Supportato in Windows PowerShell ISE 2.0 e versioni successive.
 
 Proprietà di sola lettura che ottiene lo strumento aggiuntivo di Windows PowerShell ISE attualmente visibile che si trova nel riquadro strumenti verticale nella parte destra dell'editor.
 
 ### <a name="options"></a>Options
 
-> Supportato in Windows PowerShell ISE 2.0 e versioni successive. 
+> Supportato in Windows PowerShell ISE 2.0 e versioni successive.
 
 Proprietà di sola lettura che ottiene le varie opzioni che possono modificare le impostazioni in Windows PowerShell ISE.
 
 ### <a name="powershelltabs"></a>PowerShellTabs
 
-> Supportato in Windows PowerShell ISE 2.0 e versioni successive. 
+> Supportato in Windows PowerShell ISE 2.0 e versioni successive.
 
 Proprietà di sola lettura che ottiene la raccolta di schede di PowerShell, che sono aperte in Windows PowerShell ISE. Per impostazione predefinita, questo oggetto contiene una sola scheda di PowerShell. Tuttavia, è possibile aggiungere altre schede di PowerShell a questo oggetto usando gli script o i menu di Windows PowerShell ISE.
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Modello a oggetti di scripting di Windows PowerShell ISE](The-Windows-PowerShell-ISE-Scripting-Object-Model.md)
-- [Riferimenti al modello a oggetti di Windows PowerShell ISE](Windows-PowerShell-ISE-Object-Model-Reference.md)
+- [Scopo del modello a oggetti di scripting di Windows PowerShell ISE](Purpose-of-the-Windows-PowerShell-ISE-Scripting-Object-Model.md)
 - [Gerarchia del modello a oggetti ISE](The-ISE-Object-Model-Hierarchy.md)

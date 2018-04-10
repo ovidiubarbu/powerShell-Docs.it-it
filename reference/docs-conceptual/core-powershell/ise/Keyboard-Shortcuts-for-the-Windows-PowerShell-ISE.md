@@ -1,18 +1,20 @@
 ---
-ms.date: 2017-06-05
+ms.date: 06/05/2017
 keywords: powershell,cmdlet
 title: Tasti di scelta rapida per Windows PowerShell ISE
 ms.assetid: 8328b946-0f02-4ef4-ac28-2743a1b4043b
-ms.openlocfilehash: 21c4b43b1ab94e2b533413362319ec42ac8a15aa
-ms.sourcegitcommit: 74255f0b5f386a072458af058a15240140acb294
+ms.openlocfilehash: e17fee4cf0cc8ac7aa0bb36acde3b452919312d0
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="keyboard-shortcuts-for-the-windows-powershell-ise"></a>Tasti di scelta rapida per Windows PowerShell ISE
+
 Usare i tasti di scelta rapida seguenti per eseguire azioni in Windows PowerShell® Integrated Scripting Environment (ISE). Windows PowerShell ISE è disponibile nell'ambito dei sistemi operativi Windows Server e Windows Client, ma può anche essere installato in alcuni sistemi operativi Windows precedenti come parte del [pacchetto di download di Windows Management Framework 4.0](http://go.microsoft.com/fwlink/?LinkID=293881).
 
 ## <a name="keyboard-shortcuts-for-editing-text"></a>Tasti di scelta rapida per la modifica del testo
+
 È possibile usare i tasti di scelta rapida seguenti durante la modifica del testo.
 
 |Azione|Tasti di scelta rapida|Posizione|
@@ -34,6 +36,7 @@ Usare i tasti di scelta rapida seguenti per eseguire azioni in Windows PowerShel
 |**Annulla**|CTRL+Z|Riquadro di script, riquadro dei comandi|
 
 ## <a name="keyboard-shortcuts-for-running-scripts"></a>Tasti di scelta rapida per l'esecuzione di script
+
 È possibile usare i tasti di scelta rapida seguenti durante l'esecuzione di script nel riquadro di script.
 
 |Azione|Tasto di scelta rapida|
@@ -47,6 +50,7 @@ Usare i tasti di scelta rapida seguenti per eseguire azioni in Windows PowerShel
 |**TAB** (passaggio allo script precedente)|CTRL+MAIUSC+TAB **Nota:** la pressione di TAB per passare allo script precedente funziona solo quando è aperta una sola scheda di Windows PowerShell o quando sono aperte più schede di Windows PowerShell, ma lo stato attivo si trova nel riquadro di script.|
 
 ## <a name="keyboard-shortcuts-for-customizing-the-view"></a>Tasti di scelta rapida per la personalizzazione della visualizzazione
+
 È possibile usare i tasti di scelta rapida seguenti per personalizzare la visualizzazione in Windows PowerShell ISE. Sono accessibili da tutti i riquadri nell'applicazione.
 
 |Azione|Tasto di scelta rapida|
@@ -63,6 +67,7 @@ Usare i tasti di scelta rapida seguenti per eseguire azioni in Windows PowerShel
 |**Zoom indietro**|CTRL+SEGNO MENO|
 
 ## <a name="keyboard-shortcuts-for-debugging-scripts"></a>Tasti di scelta rapida per il debug di script
+
 È possibile usare i tasti di scelta rapida seguenti durante il debug di script.
 
 |Azione|Tasto di scelta rapida|Posizione|
@@ -93,6 +98,7 @@ Usare i tasti di scelta rapida seguenti per eseguire azioni in Windows PowerShel
 |**Visualizza i comandi di debug della console**|H o ?|Riquadro della console, durante il debug di uno script|
 
 ## <a name="keyboard-shortcuts-for-windows-powershell-tabs"></a>Tasti di scelta rapida per le schede di Windows PowerShell
+
 È possibile usare i tasti di scelta rapida seguenti durante l'uso delle schede di PowerShell.
 
 |Azione|Tasto di scelta rapida|
@@ -103,6 +109,7 @@ Usare i tasti di scelta rapida seguenti per eseguire azioni in Windows PowerShel
 |**Scheda successiva di Windows PowerShell**|CTRL+TAB Questo tasto di scelta rapida funziona solo se non ci sono file aperti in alcuna scheda di Windows PowerShell.|
 
 ## <a name="keyboard-shortcuts-for-starting-and-exiting"></a>Tasti di scelta rapida per avvio e uscita
+
 È possibile usare i tasti di scelta rapida seguenti per avviare la console di Windows PowerShell (PowerShell.exe) o per uscire da Windows PowerShell ISE.
 
 |Azione|Tasto di scelta rapida|
@@ -111,5 +118,5 @@ Usare i tasti di scelta rapida seguenti per eseguire azioni in Windows PowerShel
 |**Avviare PowerShell.exe** (console di Windows PowerShell).|CTRL+MAIUSC+P|
 
 ## <a name="see-also"></a>Vedere anche
-- [PowerShell Magazine: l'elenco completo dei tasti di scelta rapida di Windows PowerShell ISE](http://www.powershellmagazine.com/2013/01/29/the-complete-list-of-powershell-ise-3-0-keyboard-shortcuts/)
 
+- [PowerShell Magazine: l'elenco completo dei tasti di scelta rapida di Windows PowerShell ISE](http://www.powershellmagazine.com/2013/01/29/the-complete-list-of-powershell-ise-3-0-keyboard-shortcuts/)

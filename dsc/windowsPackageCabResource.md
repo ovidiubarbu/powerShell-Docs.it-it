@@ -1,13 +1,13 @@
 ---
-ms.date: 2017-06-12
+ms.date: 06/12/2017
 ms.topic: conceptual
 keywords: dsc,powershell,configurazione,installazione
 title: Risorsa WindowsPackageCab DSC
-ms.openlocfilehash: 1d7c8d9bf45d2eda8734daa8877315d219662c75
-ms.sourcegitcommit: a444406120e5af4e746cbbc0558fe89a7e78aef6
+ms.openlocfilehash: af45956c1fe8cffa1d7fd779847eded9e3f6b51e
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="dsc-windowspackagecab-resource"></a>Risorsa WindowsPackageCab DSC
 
@@ -15,7 +15,7 @@ ms.lasthandoff: 01/17/2018
 
 La risorsa **WindowsPackageCab** in Windows PowerShell DSC (Desired State Configuration) offre un meccanismo per installare o disinstallare pacchetti CAB in un nodo di destinazione.
 
-È necessario che nel nodo di destinazione sia installato il modulo PowerShell Gestione e manutenzione immagini distribuzione. Per informazioni, vedere [Usare Gestione e manutenzione immagini distribuzione in Windows PowerShell](https://msdn.microsoft.com/en-us/windows/hardware/commercialize/manufacture/desktop/use-dism-in-windows-powershell-s14). 
+È necessario che nel nodo di destinazione sia installato il modulo PowerShell Gestione e manutenzione immagini distribuzione. Per informazioni, vedere [Usare Gestione e manutenzione immagini distribuzione in Windows PowerShell](https://msdn.microsoft.com/en-us/windows/hardware/commercialize/manufacture/desktop/use-dism-in-windows-powershell-s14).
 
 
 ## <a name="syntax"></a>Sintassi
@@ -32,13 +32,13 @@ La risorsa **WindowsPackageCab** in Windows PowerShell DSC (Desired State Config
 
 ## <a name="properties"></a>Proprietà
 
-|  Proprietà  |  Description   | 
-|---|---| 
-| Nome| Indica il nome del pacchetto per cui si vuole specificare un determinato stato.| 
+|  Proprietà  |  Description   |
+|---|---|
+| Nome| Indica il nome del pacchetto per cui si vuole specificare un determinato stato.|
 | Ensure| Indica se il pacchetto è installato. Impostare questa proprietà su "Absent" per specificare che il pacchetto non è installato (o disinstallare il pacchetto se è installato). Impostarla su "Present" (valore predefinito) per specificare che il pacchetto è installato.|
-| Path| Percorso in cui si trova il pacchetto.| 
-| LogPath| Indica il percorso completo in cui il provider deve salvare un file di log per installare o disinstallare il pacchetto.| 
-| DependsOn | Indica che prima di configurare la risorsa è necessario eseguire la configurazione di un'altra risorsa. Ad esempio, se l'ID del blocco script di configurazione della risorsa che si vuole eseguire per primo è **ResourceName** e il tipo è **ResourceType**, la sintassi per usare questa proprietà è `DependsOn = "[ResourceType]ResourceName"``.| 
+| Path| Percorso in cui si trova il pacchetto.|
+| LogPath| Indica il percorso completo in cui il provider deve salvare un file di log per installare o disinstallare il pacchetto.|
+| DependsOn | Indica che prima di configurare la risorsa è necessario eseguire la configurazione di un'altra risorsa. Ad esempio, se l'ID del blocco script di configurazione della risorsa che si vuole eseguire per primo è **ResourceName** e il tipo è **ResourceType**, la sintassi per usare questa proprietà è `DependsOn = "[ResourceType]ResourceName"``.|
 
 ## <a name="example"></a>Esempio
 
@@ -76,4 +76,3 @@ Configuration Sample_WindowsPackageCab
     }
 }
 ```
-

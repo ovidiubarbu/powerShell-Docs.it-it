@@ -1,23 +1,25 @@
 ---
-ms.date: 2017-06-12
+ms.date: 06/12/2017
 contributor: JKeithB
 ms.topic: conceptual
-keywords: raccolta,powershell,cmdlet,psgallery
+keywords: gallery,powershell,cmdlet,psgallery
 title: Gestione dei proprietari di elementi
-ms.openlocfilehash: fcd538148f9ff1ac96324b567d54d643f1756c93
-ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.openlocfilehash: e550b74ebde00cfbb154dbf4fb1fa4ae0582e029
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/12/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="managing-item-owners"></a>Gestione dei proprietari di elementi
 
 La proprietà di un elemento in PowerShell Gallery è definita dalla persona che ha pubblicato l'elemento in questione in PowerShell Gallery.
 A volte questi metadati devono essere gestiti anche dopo la pubblicazione dell'elemento iniziale. Questo significa che i metadati del proprietario devono essere modificabili, mentre l'elemento stesso non lo è.
 
-Tutti i proprietari di elementi hanno pari diritti. Questo significa che qualsiasi proprietario di elemento può pubblicare una nuova versione dell'elemento stesso. Significa anche che qualsiasi proprietario di elemento può rimuovere un altro proprietario di elemento. Nessun proprietario ha un'autorità maggiore di altri proprietari.  
+Tutti i proprietari di elementi hanno pari diritti.
+Questo significa che qualsiasi proprietario di elemento può pubblicare una nuova versione dell'elemento stesso. Significa anche che qualsiasi proprietario di elemento può rimuovere un altro proprietario di elemento.
+Nessun proprietario ha un'autorità maggiore di altri proprietari.
 
-## <a name="setting-an-items-initial-owner"></a>Impostazione del proprietario iniziale di un elemento 
+## <a name="setting-an-items-initial-owner"></a>Impostazione del proprietario iniziale di un elemento
 
 Quando un elemento viene pubblicato in PowerShell Gallery, il proprietario iniziale viene definito dall'utente che ha pubblicato l'elemento in questione. Questo è determinato dal titolare della chiave API usata nel cmdlet Publish-Module.
 
@@ -78,4 +80,3 @@ Gli amministratori eseguiranno quindi un processo per verificare la proprietà d
 Se stabiliscono che l'utente deve essere un proprietario dell'elemento, gli amministratori useranno il collegamento 'Manage Owners' (Gestisci proprietari) e invieranno all'utente un invito a diventare proprietario.
 Gli amministratori agiranno in questo modo solo dopo aver verificato il diritto dell'utente a essere un proprietario. Questo tipo di processo varia a seconda delle circostanze.
 Spesso gli amministratori useranno l'URL di progetto dell'elemento per contattare il proprietario del progetto stesso. In alternativa, per contattare il proprietario del progetto potranno essere usati Twitter, la posta elettronica o altri sistemi.
-

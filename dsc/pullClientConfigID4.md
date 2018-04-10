@@ -1,13 +1,13 @@
 ---
-ms.date: 2017-06-12
+ms.date: 06/12/2017
 ms.topic: conceptual
 keywords: dsc,powershell,configurazione,installazione
 title: Configurazione di un client di pull usando un ID configurazione in PowerShell 4.0
-ms.openlocfilehash: 2449a4ddfea5c0ee7096ad7478e80166eb095bbe
-ms.sourcegitcommit: a444406120e5af4e746cbbc0558fe89a7e78aef6
+ms.openlocfilehash: 7074d842b7b99ef3fb6498b6dbc1e561b14caf16
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="setting-up-a-pull-client-using-configuration-id-in-powershell-40"></a>Configurazione di un client di pull usando un ID configurazione in PowerShell 4.0
 
@@ -18,28 +18,28 @@ Per ogni nodo di destinazione è necessario specificare che venga usata la modal
 Lo script seguente configura Gestione configurazione locale per il pull delle configurazioni da un server denominato "PullServer":
 
 ```powershell
-Configuration SimpleMetaConfigurationForPull 
-{ 
-    LocalConfigurationManager 
-    { 
+Configuration SimpleMetaConfigurationForPull
+{
+    LocalConfigurationManager
+    {
         ConfigurationID = "1C707B86-EF8E-4C29-B7C1-34DA2190AE24";
         RefreshMode = "PULL";
         DownloadManagerName = "WebDownloadManager";
         RebootNodeIfNeeded = $true;
         RefreshFrequencyMins = 30;
-        ConfigurationModeFrequencyMins = 30; 
+        ConfigurationModeFrequencyMins = 30;
         ConfigurationMode = "ApplyAndAutoCorrect";
         DownloadManagerCustomData = @{ServerUrl = "http://PullServer:8080/PSDSCPullServer/PSDSCPullServer.svc"; AllowUnsecureConnection = “TRUE”}
-    } 
-} 
+    }
+}
 SimpleMetaConfigurationForPull -Output "."
 ```
 
-Nello script, **DownloadManagerCustomData** passa l'URL del server di pull e (per questo esempio) consente una connessione non protetta. 
+Nello script, **DownloadManagerCustomData** passa l'URL del server di pull e (per questo esempio) consente una connessione non protetta.
 
 Dopo essere stato eseguito, questo script crea una nuova cartella di output denominata **SimpleMetaConfigurationForPull** e inserisce in questa cartella un file MOF di metaconfigurazione.
 
-Per applicare la configurazione, usare **Set-DscLocalConfigurationManager** con i parametri per **ComputerName** (usare "localhost") e **Path** (percorso del file localhost.meta.mof nel nodo di destinazione). Ad esempio: 
+Per applicare la configurazione, usare **Set-DscLocalConfigurationManager** con i parametri per **ComputerName** (usare "localhost") e **Path** (percorso del file localhost.meta.mof nel nodo di destinazione). Ad esempio:
 ```powershell
 Set-DSCLocalConfigurationManager –ComputerName localhost –Path . –Verbose.
 ```
@@ -53,20 +53,20 @@ Se il server di pull viene configurato come condivisione file SMB, piuttosto che
 **DscFileDownloadManager** accetta una proprietà **SourcePath** invece di **ServerUrl**. Lo script seguente configura Gestione configurazione locale per il pull da una condivisione SMB denominata "SmbDscShare" su un server chiamato "CONTOSO-SERVER":
 
 ```powershell
-Configuration SimpleMetaConfigurationForPull 
-{ 
-    LocalConfigurationManager 
-    { 
+Configuration SimpleMetaConfigurationForPull
+{
+    LocalConfigurationManager
+    {
         ConfigurationID = "1C707B86-EF8E-4C29-B7C1-34DA2190AE24";
         RefreshMode = "PULL";
         DownloadManagerName = "DscFileDownloadManager";
         RebootNodeIfNeeded = $true;
         RefreshFrequencyMins = 30;
-        ConfigurationModeFrequencyMins = 30; 
+        ConfigurationModeFrequencyMins = 30;
         ConfigurationMode = "ApplyAndAutoCorrect";
         DownloadManagerCustomData = @{ServerUrl = "\\CONTOSO-SERVER\SmbDscShare"}
-    } 
-} 
+    }
+}
 SimpleMetaConfigurationForPull -Output "."
 ```
 
@@ -74,4 +74,3 @@ SimpleMetaConfigurationForPull -Output "."
 
 - [Configurazione di un server di pull Web DSC](pullServer.md)
 - [Configurazione di un server di pull SMB DSC](pullServerSMB.md)
-

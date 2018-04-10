@@ -1,20 +1,20 @@
 ---
-ms.date: 2017-10-17
+ms.date: 10/17/2017
 contributor: keithb
 ms.topic: reference
 keywords: raccolta,powershell,cmdlet,psget
 title: Save-Script
-ms.openlocfilehash: b54e8ba074b7cadd52df781c9021332ccc90f9fd
-ms.sourcegitcommit: 58371abe9db4b9a0e4e1eb82d39a9f9e187355f9
+ms.openlocfilehash: 67697fc0e70fb31cad9ad5ae7ce01debef160b81
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="save-script"></a>Save-Script
 
 Il cmdlet Save-Script consente di verificare il file di script salvandolo in una posizione specificata.
 
-## <a name="description"></a>Descrizione
+## <a name="description"></a>Description
 
 Il cmdlet Save-Script salva lo script specificato.
 
@@ -57,4 +57,3 @@ Questo comando salva la versione più recente dello script Fabrikam-ClientScript
 ```powershell
 Save-Script -Name Fabrikam-ClientScript -Path C:\ScriptSharingDemo -AllowPrerelease
 ```
-
