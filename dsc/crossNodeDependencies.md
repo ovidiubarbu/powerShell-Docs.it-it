@@ -1,29 +1,29 @@
 ---
-ms.date: 2017-06-12
+ms.date: 06/12/2017
 ms.topic: conceptual
 keywords: dsc,powershell,configurazione,installazione
 title: Specifica delle dipendenze tra nodi
-ms.openlocfilehash: f4411161d819d96803f57600646409d5bfe827b9
-ms.sourcegitcommit: a444406120e5af4e746cbbc0558fe89a7e78aef6
+ms.openlocfilehash: c563563118c4df8aeee442d3b30b79f7b7700fc7
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/09/2018
 ---
-# <a name="specifying-cross-node-dependencies"></a><span data-ttu-id="d042b-103">Specifica delle dipendenze tra nodi</span><span class="sxs-lookup"><span data-stu-id="d042b-103">Specifying cross-node dependencies</span></span>
+# <a name="specifying-cross-node-dependencies"></a><span data-ttu-id="167f4-103">Specifica delle dipendenze tra nodi</span><span class="sxs-lookup"><span data-stu-id="167f4-103">Specifying cross-node dependencies</span></span>
 
-> <span data-ttu-id="d042b-104">Si applica a: Windows PowerShell 5.0</span><span class="sxs-lookup"><span data-stu-id="d042b-104">Applies To: Windows PowerShell 5.0</span></span>
+> <span data-ttu-id="167f4-104">Si applica a: Windows PowerShell 5.0</span><span class="sxs-lookup"><span data-stu-id="167f4-104">Applies To: Windows PowerShell 5.0</span></span>
 
-<span data-ttu-id="d042b-105">DSC fornisce risorse speciali quali **WaitForAll**, **WaitForAny** e **WaitForSome** che possono essere usate nelle configurazioni per specificare le dipendenze nelle configurazioni di altri nodi.</span><span class="sxs-lookup"><span data-stu-id="d042b-105">DSC provides special resources, **WaitForAll**, **WaitForAny**, and **WaitForSome** that can be used in configurations to specify dependencies on configurations on other nodes.</span></span> <span data-ttu-id="d042b-106">Il comportamento di queste risorse è il seguente:</span><span class="sxs-lookup"><span data-stu-id="d042b-106">The behavior of these resources is as follows:</span></span>
+<span data-ttu-id="167f4-105">DSC fornisce risorse speciali quali **WaitForAll**, **WaitForAny** e **WaitForSome** che possono essere usate nelle configurazioni per specificare le dipendenze nelle configurazioni di altri nodi.</span><span class="sxs-lookup"><span data-stu-id="167f4-105">DSC provides special resources, **WaitForAll**, **WaitForAny**, and **WaitForSome** that can be used in configurations to specify dependencies on configurations on other nodes.</span></span> <span data-ttu-id="167f4-106">Il comportamento di queste risorse è il seguente:</span><span class="sxs-lookup"><span data-stu-id="167f4-106">The behavior of these resources is as follows:</span></span>
 
-* <span data-ttu-id="d042b-107">**WaitForAll**: ha esito positivo se la risorsa specificata è nello stato desiderato in tutti i nodi di destinazione definiti nella proprietà **NodeName**.</span><span class="sxs-lookup"><span data-stu-id="d042b-107">**WaitForAll**: Succeeds if the specified resource is in the desired state on all target nodes defined in the **NodeName** property.</span></span>
-* <span data-ttu-id="d042b-108">**WaitForAny**: ha esito positivo se la risorsa specificata è nello stato desiderato in almeno uno dei nodi di destinazione definiti nella proprietà **NodeName**.</span><span class="sxs-lookup"><span data-stu-id="d042b-108">**WaitForAny**: Succeeds if the specified resource is in the desired state on at least one of the target nodes defined in the **NodeName** property.</span></span>
-* <span data-ttu-id="d042b-109">**WaitForSome**: specifica una proprietà **NodeCount** oltre alla proprietà **NodeName**.</span><span class="sxs-lookup"><span data-stu-id="d042b-109">**WaitForSome**: Specifies a **NodeCount** property in addition to a **NodeName** property.</span></span> <span data-ttu-id="d042b-110">La risorsa ha esito positivo se si trova nello stato desiderato in un numero minimo di nodi, specificato in **NodeCount**, definito dalla proprietà **NodeName**.</span><span class="sxs-lookup"><span data-stu-id="d042b-110">The resource succeeds if the resource is in the desired state on a minimum number of nodes (specified by **NodeCount**) defined by the **NodeName** property.</span></span> 
+* <span data-ttu-id="167f4-107">**WaitForAll**: ha esito positivo se la risorsa specificata è nello stato desiderato in tutti i nodi di destinazione definiti nella proprietà **NodeName**.</span><span class="sxs-lookup"><span data-stu-id="167f4-107">**WaitForAll**: Succeeds if the specified resource is in the desired state on all target nodes defined in the **NodeName** property.</span></span>
+* <span data-ttu-id="167f4-108">**WaitForAny**: ha esito positivo se la risorsa specificata è nello stato desiderato in almeno uno dei nodi di destinazione definiti nella proprietà **NodeName**.</span><span class="sxs-lookup"><span data-stu-id="167f4-108">**WaitForAny**: Succeeds if the specified resource is in the desired state on at least one of the target nodes defined in the **NodeName** property.</span></span>
+* <span data-ttu-id="167f4-109">**WaitForSome**: specifica una proprietà **NodeCount** oltre alla proprietà **NodeName**.</span><span class="sxs-lookup"><span data-stu-id="167f4-109">**WaitForSome**: Specifies a **NodeCount** property in addition to a **NodeName** property.</span></span> <span data-ttu-id="167f4-110">La risorsa ha esito positivo se si trova nello stato desiderato in un numero minimo di nodi, specificato in **NodeCount**, definito dalla proprietà **NodeName**.</span><span class="sxs-lookup"><span data-stu-id="167f4-110">The resource succeeds if the resource is in the desired state on a minimum number of nodes (specified by **NodeCount**) defined by the **NodeName** property.</span></span>
 
-## <a name="using-waitforxxxx-resources"></a><span data-ttu-id="d042b-111">Uso delle risorse WaitForXXXX</span><span class="sxs-lookup"><span data-stu-id="d042b-111">Using WaitForXXXX resources</span></span>
+## <a name="using-waitforxxxx-resources"></a><span data-ttu-id="167f4-111">Uso delle risorse WaitForXXXX</span><span class="sxs-lookup"><span data-stu-id="167f4-111">Using WaitForXXXX resources</span></span>
 
-<span data-ttu-id="d042b-112">Per usare le risorse **WaitForXXXX**, creare un blocco di risorsa contenente il tipo di risorsa che specifica la risorsa DSC e i nodi da attendere.</span><span class="sxs-lookup"><span data-stu-id="d042b-112">To use the **WaitForXXXX** resources, you create a resource block of that resource type that specifies the DSC resource and node(s) to wait for.</span></span> <span data-ttu-id="d042b-113">Quindi usare la proprietà **DependsOn** su eventuali altri blocchi di risorse nella configurazione per attendere che le condizioni specificate nel nodo **WaitForXXXX** abbiano esito positivo.</span><span class="sxs-lookup"><span data-stu-id="d042b-113">You then use the **DependsOn** property in any other resource blocks in your configuration to wait for the conditions specified in the **WaitForXXXX** node to succeed.</span></span>
+<span data-ttu-id="167f4-112">Per usare le risorse **WaitForXXXX**, creare un blocco di risorsa contenente il tipo di risorsa che specifica la risorsa DSC e i nodi da attendere.</span><span class="sxs-lookup"><span data-stu-id="167f4-112">To use the **WaitForXXXX** resources, you create a resource block of that resource type that specifies the DSC resource and node(s) to wait for.</span></span> <span data-ttu-id="167f4-113">Quindi usare la proprietà **DependsOn** su eventuali altri blocchi di risorse nella configurazione per attendere che le condizioni specificate nel nodo **WaitForXXXX** abbiano esito positivo.</span><span class="sxs-lookup"><span data-stu-id="167f4-113">You then use the **DependsOn** property in any other resource blocks in your configuration to wait for the conditions specified in the **WaitForXXXX** node to succeed.</span></span>
 
-<span data-ttu-id="d042b-114">Nella configurazione seguente, ad esempio, il nodo di destinazione è in attesa del completamento della risorsa **xADDomain** nel nodo **MyDC** con un numero massimo di 30 tentativi, a intervalli di 15 secondi, prima che il nodo di destinazione possa essere aggiunto al dominio.</span><span class="sxs-lookup"><span data-stu-id="d042b-114">For example, in the following configuration, the target node is waiting for the **xADDomain** resource to finish on the **MyDC** node with maximum number of 30 retries, at 15-second intervals, before the target node can join the domain.</span></span>
+<span data-ttu-id="167f4-114">Nella configurazione seguente, ad esempio, il nodo di destinazione è in attesa del completamento della risorsa **xADDomain** nel nodo **MyDC** con un numero massimo di 30 tentativi, a intervalli di 15 secondi, prima che il nodo di destinazione possa essere aggiunto al dominio.</span><span class="sxs-lookup"><span data-stu-id="167f4-114">For example, in the following configuration, the target node is waiting for the **xADDomain** resource to finish on the **MyDC** node with maximum number of 30 retries, at 15-second intervals, before the target node can join the domain.</span></span>
 
 ```powershell
 Configuration JoinDomain
@@ -35,13 +35,13 @@ Configuration JoinDomain
     {
         WindowsFeature InstallAD
         {
-            Ensure = 'Present' 
-            Name = 'AD-Domain-Services' 
+            Ensure = 'Present'
+            Name = 'AD-Domain-Services'
         }
 
-        xADDomain NewDomain 
-        { 
-            DomainName = 'Contoso.com'            
+        xADDomain NewDomain
+        {
+            DomainName = 'Contoso.com'
             DomainAdministratorCredential = (Get-Credential)
             SafemodeAdministratorPassword = (Get-Credential)
             DatabasePath = "C:\Windows\NTDS"
@@ -73,10 +73,9 @@ Configuration JoinDomain
 }
 ```
 
-><span data-ttu-id="d042b-115">**Nota**: per impostazione predefinita, le risorse WaitForXXX eseguono un solo tentativo prima dell'esito negativo.</span><span class="sxs-lookup"><span data-stu-id="d042b-115">**Note:** By default the WaitForXXX resources try one time and then fail.</span></span> <span data-ttu-id="d042b-116">Sebbene non sia obbligatorio, è consigliabile specificare un intervallo per i tentativi e il loro numero.</span><span class="sxs-lookup"><span data-stu-id="d042b-116">Although it is not required, you will typically want to specify a retry interval and count.</span></span>
+><span data-ttu-id="167f4-115">**Nota**: per impostazione predefinita, le risorse WaitForXXX eseguono un solo tentativo prima dell'esito negativo.</span><span class="sxs-lookup"><span data-stu-id="167f4-115">**Note:** By default the WaitForXXX resources try one time and then fail.</span></span> <span data-ttu-id="167f4-116">Sebbene non sia obbligatorio, è consigliabile specificare un intervallo per i tentativi e il loro numero.</span><span class="sxs-lookup"><span data-stu-id="167f4-116">Although it is not required, you will typically want to specify a retry interval and count.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="d042b-117">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="d042b-117">See Also</span></span>
-* [<span data-ttu-id="d042b-118">Configurazioni DSC</span><span class="sxs-lookup"><span data-stu-id="d042b-118">DSC Configurations</span></span>](configurations.md)
-* [<span data-ttu-id="d042b-119">Risorse DSC</span><span class="sxs-lookup"><span data-stu-id="d042b-119">DSC Resources</span></span>](resources.md)
-* [<span data-ttu-id="d042b-120">Configurazione di Gestione configurazione locale</span><span class="sxs-lookup"><span data-stu-id="d042b-120">Configuring The Local Configuration Manager</span></span>](metaConfig.md)
-
+## <a name="see-also"></a><span data-ttu-id="167f4-117">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="167f4-117">See Also</span></span>
+* [<span data-ttu-id="167f4-118">Configurazioni DSC</span><span class="sxs-lookup"><span data-stu-id="167f4-118">DSC Configurations</span></span>](configurations.md)
+* [<span data-ttu-id="167f4-119">Risorse DSC</span><span class="sxs-lookup"><span data-stu-id="167f4-119">DSC Resources</span></span>](resources.md)
+* [<span data-ttu-id="167f4-120">Configurazione di Gestione configurazione locale</span><span class="sxs-lookup"><span data-stu-id="167f4-120">Configuring The Local Configuration Manager</span></span>](metaConfig.md)
