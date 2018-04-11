@@ -1,13 +1,13 @@
 ---
-ms.date: 2017-06-12
+ms.date: 06/12/2017
 ms.topic: conceptual
 keywords: dsc,powershell,configurazione,installazione
 title: Metodo RemoveConfiguration della classe MSFT_DSCLocalConfigurationManager
-ms.openlocfilehash: fed45836293adedbce18f01cfe53cdfa1a474975
-ms.sourcegitcommit: a444406120e5af4e746cbbc0558fe89a7e78aef6
+ms.openlocfilehash: e0ae8a50212b70841d210d7b2d666a2855218d1a
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="removeconfiguration-method-of-the-msftdsclocalconfigurationmanager-class"></a>Metodo RemoveConfiguration della classe MSFT_DSCLocalConfigurationManager
 
@@ -26,8 +26,7 @@ uint32 RemoveConfiguration(
 <a name="parameters"></a>Parametri
 ----------
 
-*Stage* \[in\]  
-Specifica il documento di configurazione da rimuovere. I valori validi sono i seguenti:
+*Stage* \[in\] Specifica il documento di configurazione da rimuovere. I valori validi sono i seguenti:
 
 |Value |Description |
 |:--- |:---|
@@ -35,8 +34,7 @@ Specifica il documento di configurazione da rimuovere. I valori validi sono i se
 |**2** | Il documento di configurazione **in sospeso** (pending.mof).  |
 |**4** | Il documento di configurazione **precedente** (previous.mof). |
 
-*Force* \[in\]  
-**true** per forzare la rimozione della configurazione.
+*Force* \[in\] **true** per forzare la rimozione della configurazione.
 
 ## <a name="return-value"></a>Valore restituito
 ------------
@@ -58,11 +56,3 @@ Si tratta di un metodo statico.
 
 
 [**MSFT_DSCLocalConfigurationManager**](msft-dsclocalconfigurationmanager.md)
-
-
- 
-
- 
-
-
-

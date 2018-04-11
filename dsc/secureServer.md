@@ -1,13 +1,13 @@
 ---
-ms.date: 2017-06-12
+ms.date: 06/12/2017
 ms.topic: conceptual
 keywords: dsc,powershell,configurazione,installazione
 title: Procedure consigliate per i server di pull
-ms.openlocfilehash: 3d0ab969b7a0de9d428becc4b9bdb124a7a44c2c
-ms.sourcegitcommit: 99227f62dcf827354770eb2c3e95c5cf6a3118b4
+ms.openlocfilehash: 7de523ad16aee77d87ec4d3334d296997020aa19
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="pull-server-best-practices"></a>Procedure consigliate per i server di pull
 
@@ -17,8 +17,8 @@ Riepilogo: questo documento illustra processi e estendibilità per supportare i 
 
 | |Informazioni sul documento|
 |:---|:---|
-Autore | Michael Greene  
-Revisori | Ben Gelens, Ravikanth Chaganti, Aleksandar Nikolic  
+Autore | Michael Greene
+Revisori | Ben Gelens, Ravikanth Chaganti, Aleksandar Nikolic
 Pubblicato | Aprile 2015
 
 ## <a name="abstract"></a>Contenuto
@@ -31,8 +31,8 @@ Le due sezioni principali di questo documento sono:
 
  - Pianificazione della configurazione
  - Guida all'installazione
- 
-### <a name="versions-of-the-windows-management-framework"></a>Versioni di Windows Management Framework 
+
+### <a name="versions-of-the-windows-management-framework"></a>Versioni di Windows Management Framework
 Le informazioni contenute in questo documento sono applicabili a Windows Management Framework 5.0. Anche se WMF 5.0 non è necessario per la distribuzione e l'operatività di un server di pull, in questo documento si fa riferimento alla versione 5.0.
 
 ### <a name="windows-powershell-desired-state-configuration"></a>Configurazione dello stato desiderato tramite Windows PowerShell
@@ -40,10 +40,11 @@ La configurazione dello stato desiderato (DSC) è una piattaforma di gestione ch
 
 Windows PowerShell offre un set di estensioni del linguaggio per la configurazione dello stato desiderato che è possibile usare per creare e gestire configurazioni dichiarative.
 
-### <a name="pull-server-role"></a>Ruolo del server di pull  
+### <a name="pull-server-role"></a>Ruolo del server di pull
 Un server di pull offre un servizio centralizzato per archiviare le configurazioni che saranno accessibili per i nodi di destinazione.
- 
-Il ruolo del server di pull può essere distribuito come istanza del server Web o come condivisione di file SMB. La funzionalità del server Web include un'interfaccia OData e può facoltativamente includere funzionalità per i nodi di destinazione per restituire la conferma di un esito positivo o negativo quando vengono applicate le configurazioni. Questa funzionalità è utile in ambienti in cui è presente un numero elevato di nodi di destinazione. Dopo la configurazione di un nodo di destinazione (noto anche come client) verso il server di pull, vengono scaricati e applicati i dati della configurazione più recente e gli script necessari. Questa operazione può essere eseguita come distribuzione singola o come processo ripetuto. Ciò rende il server di pull un'importante risorsa per la gestione di modifiche su larga scala. Per altre informazioni, vedere [Windows PowerShell Desired State Configuration Pull Servers](https://technet.microsoft.com/library/dn249913.aspx) (Server di pull per la configurazione dello stato desiderato tramite Windows PowerShell) e [Push and Pull Configuration Modes](https://technet.microsoft.com/library/dn249913.aspx) (Modalità di configurazione push e pull).
+
+Il ruolo del server di pull può essere distribuito come istanza del server Web o come condivisione di file SMB. La funzionalità del server Web include un'interfaccia OData e può facoltativamente includere funzionalità per i nodi di destinazione per restituire la conferma di un esito positivo o negativo quando vengono applicate le configurazioni. Questa funzionalità è utile in ambienti in cui è presente un numero elevato di nodi di destinazione.
+Dopo la configurazione di un nodo di destinazione (noto anche come client) verso il server di pull, vengono scaricati e applicati i dati della configurazione più recente e gli script necessari. Questa operazione può essere eseguita come distribuzione singola o come processo ripetuto. Ciò rende il server di pull un'importante risorsa per la gestione di modifiche su larga scala. Per altre informazioni, vedere [Windows PowerShell Desired State Configuration Pull Servers](https://technet.microsoft.com/library/dn249913.aspx) (Server di pull per la configurazione dello stato desiderato tramite Windows PowerShell) e [Push and Pull Configuration Modes](https://technet.microsoft.com/library/dn249913.aspx) (Modalità di configurazione push e pull).
 
 ## <a name="configuration-planning"></a>Pianificazione della configurazione
 
@@ -59,7 +60,9 @@ In aggiunta all'installazione del contenuto più recente da Windows Update, sono
 
 ### <a name="wmf"></a>WMF
 
-Windows Server 2012 R2 include una funzionalità denominata servizio DSC. La caratteristica servizio DSC offre la funzionalità del server di pull, inclusi i file binari che supportano l'endpoint OData. WMF è incluso in Windows Server e viene aggiornato regolarmente tra le versioni di Windows Server. Le [nuove versioni di WMF 5.0](http://aka.ms/wmf5latest) possono includere aggiornamenti per la funzionalità del servizio DSC. Per questo motivo, è consigliabile scaricare la versione più recente di WMF ed esaminare le note sulla versione per determinare se la versione include un aggiornamento per la funzionalità servizio DSC. È anche necessario esaminare la sezione delle note sulla versione che indica se lo stato di progettazione per uno scenario o per un aggiornamento è elencato come stabile o sperimentale. Per consentire un ciclo di versioni agile, le singole funzionalità possono essere dichiarate stabili, ovvero sono pronte per essere usate in un ambiente di produzione, anche se WMF viene rilasciato in anteprima.
+Windows Server 2012 R2 include una funzionalità denominata servizio DSC. La caratteristica servizio DSC offre la funzionalità del server di pull, inclusi i file binari che supportano l'endpoint OData.
+WMF è incluso in Windows Server e viene aggiornato regolarmente tra le versioni di Windows Server. Le [nuove versioni di WMF 5.0](http://aka.ms/wmf5latest) possono includere aggiornamenti per la funzionalità del servizio DSC. Per questo motivo, è consigliabile scaricare la versione più recente di WMF ed esaminare le note sulla versione per determinare se la versione include un aggiornamento per la funzionalità servizio DSC. È anche necessario esaminare la sezione delle note sulla versione che indica se lo stato di progettazione per uno scenario o per un aggiornamento è elencato come stabile o sperimentale.
+Per consentire un ciclo di versioni agile, le singole funzionalità possono essere dichiarate stabili, ovvero sono pronte per essere usate in un ambiente di produzione, anche se WMF viene rilasciato in anteprima.
 Altre funzionalità che storicamente sono state aggiornate dalle versioni di WMF (per altre informazioni, vedere le note sulla versione WMF):
 
  - Windows PowerShell Integrated Scripting Environment (ISE)
@@ -77,7 +80,7 @@ Usare il cmdlet **Install-Module** cmdlet dal modulo **PowerShellGet**.
 Install-Module xPSDesiredStateConfiguration
 ```
 
-Il modulo **PowerShellGet** scaricherà il modulo in: 
+Il modulo **PowerShellGet** scaricherà il modulo in:
 
 `C:\Program Files\Windows PowerShell\Modules`
 
@@ -93,10 +96,7 @@ Si ha accesso ai file di installazione di Windows Server che includono già gli 
 
 Le distribuzioni di server di pull sono supportate nei server fisici e virtuali. I requisiti di dimensioni per il server di pull si allineano con i requisiti per Windows Server 2012 R2.
 
-CPU: processore 1.4 GHz a 64 bit  
-Memoria: 512 MB  
-Spazio su disco: 32 GB  
-Rete: scheda Gigabit Ethernet  
+CPU: processore a 64 bit da 1,4 GHz Memoria: 512 MB Spazio su disco: 32 GB Rete: scheda Gigabit Ethernet
 
 Pianificazione dell'attività|
 ---|
@@ -107,15 +107,22 @@ Quali dimensioni del server saranno richieste?|
 
 ### <a name="accounts"></a>Account
 
-Non sono previsti requisiti di account di servizio per distribuire un'istanza del server di pull. Ci sono tuttavia scenari in cui il sito Web può essere eseguito nel contesto di un account utente locale. Ad esempio, se è necessario accedere a una condivisione di archiviazione per il contenuto del sito Web e Windows Server o il dispositivo che ospita la condivisione di archiviazione non sono aggiunti a un dominio.
+Non sono previsti requisiti di account di servizio per distribuire un'istanza del server di pull.
+Ci sono tuttavia scenari in cui il sito Web può essere eseguito nel contesto di un account utente locale.
+Ad esempio, se è necessario accedere a una condivisione di archiviazione per il contenuto del sito Web e Windows Server o il dispositivo che ospita la condivisione di archiviazione non sono aggiunti a un dominio.
 
 ### <a name="dns-records"></a>Record DNS
 
-È necessario avere un nome di server quando si configurano i client che usano un ambiente server di pull. In ambienti di test, viene in genere usato il nome host del server oppure può essere usato l'indirizzo IP per il server se la risoluzione dei nomi DNS non è disponibile. Negli ambienti di produzione o in un ambiente lab che ha lo scopo di rappresentare una distribuzione di produzione, la procedura consigliata consiste nel creare un record CNAME DNS.
+È necessario avere un nome di server quando si configurano i client che usano un ambiente server di pull.
+In ambienti di test, viene in genere usato il nome host del server oppure può essere usato l'indirizzo IP per il server se la risoluzione dei nomi DNS non è disponibile.
+Negli ambienti di produzione o in un ambiente lab che ha lo scopo di rappresentare una distribuzione di produzione, la procedura consigliata consiste nel creare un record CNAME DNS.
 
-Un CNAME DNS consente di creare un alias come riferimento al record dell'host (A). Lo scopo del record del nome aggiuntivo è incrementare la flessibilità, se dovesse essere necessaria una modifica in futuro. Un CNAME consente di isolare la configurazione del client in modo che le modifiche all'ambiente di server, ad esempio la sostituzione di un server di pull o l'aggiunta di altri server di pull, non richiedano una modifica corrispondente alla configurazione del client.
+Un CNAME DNS consente di creare un alias come riferimento al record dell'host (A).
+Lo scopo del record del nome aggiuntivo è incrementare la flessibilità, se dovesse essere necessaria una modifica in futuro.
+Un CNAME consente di isolare la configurazione del client in modo che le modifiche all'ambiente di server, ad esempio la sostituzione di un server di pull o l'aggiunta di altri server di pull, non richiedano una modifica corrispondente alla configurazione del client.
 
-Quando si sceglie un nome per il record DNS, tenere presente l'architettura della soluzione. Se si usa il bilanciamento del carico, il certificato usato per proteggere il traffico su HTTPS deve condividere lo stesso nome del record DNS. 
+Quando si sceglie un nome per il record DNS, tenere presente l'architettura della soluzione.
+Se si usa il bilanciamento del carico, il certificato usato per proteggere il traffico su HTTPS deve condividere lo stesso nome del record DNS.
 
 Scenario |Procedura consigliata
 :---|:---
@@ -134,7 +141,8 @@ Se necessario, quale tipo di soluzione di bilanciamento del carico verrà usato?
 
 ### <a name="public-key-infrastructure"></a>Infrastruttura a chiave pubblica (PKI)
 
-La maggior parte delle organizzazioni richiedono oggi che il traffico di rete, in particolare il traffico che include dati sensibili, ad esempio la configurazione dei server, debba essere validato e/o crittografato durante il trasferimento. Sebbene sia possibile distribuire un server di pull tramite HTTP che facilita le richieste client in testo non crittografato, è consigliabile proteggere il traffico tramite HTTPS. Il servizio può essere configurato per l'uso di HTTPS tramite un set di parametri nella risorsa DSC **xPSDesiredStateConfiguration**.
+La maggior parte delle organizzazioni richiedono oggi che il traffico di rete, in particolare il traffico che include dati sensibili, ad esempio la configurazione dei server, debba essere validato e/o crittografato durante il trasferimento.
+Sebbene sia possibile distribuire un server di pull tramite HTTP che facilita le richieste client in testo non crittografato, è consigliabile proteggere il traffico tramite HTTPS. Il servizio può essere configurato per l'uso di HTTPS tramite un set di parametri nella risorsa DSC **xPSDesiredStateConfiguration**.
 
 I requisiti del certificato per proteggere il traffico HTTPS per il server di pull non sono diversi da quelli per la protezione di qualsiasi altro sito Web HTTPS. Il modello **Web Server** in Servizi certificati di Windows Server soddisfa le funzionalità necessarie.
 
@@ -149,9 +157,11 @@ Qual è il periodo di tempo predefinito prima della scadenza?|
 
 ### <a name="choosing-an-architecture"></a>Scelta di un'architettura
 
-Un server di pull può essere distribuito tramite un servizio Web ospitato in IIS o tramite una condivisione file SMB. Nella maggior parte dei casi, l'uso del servizio Web offre maggiore flessibilità. Non è insolito che il traffico HTTPS oltrepassi i limiti di rete, mentre il traffico SMB è spesso filtrato o bloccato tra le reti. Il servizio Web offre anche l'opzione di includere un server di conformità o Gestione rapporti Web (entrambi gli argomenti verranno trattati in una versione futura di questo documento) che offrono ai client un meccanismo di restituire lo stato a un server per una visibilità centralizzata. SMB offre un'opzione per alcuni ambienti in cui i criteri indicano che un server Web non debba essere usato e per altri ambienti che rendono il ruolo del server Web indesiderato. In entrambi i casi, è necessario valutare i requisiti per la firma e la crittografia del traffico. HTTPS, firma SMB e criteri IPSEC sono tutte opzioni da considerare.
+Un server di pull può essere distribuito tramite un servizio Web ospitato in IIS o tramite una condivisione file SMB. Nella maggior parte dei casi, l'uso del servizio Web offre maggiore flessibilità. Non è insolito che il traffico HTTPS oltrepassi i limiti di rete, mentre il traffico SMB è spesso filtrato o bloccato tra le reti. Il servizio Web offre anche l'opzione di includere un server di conformità o Gestione rapporti Web (entrambi gli argomenti verranno trattati in una versione futura di questo documento) che offrono ai client un meccanismo di restituire lo stato a un server per una visibilità centralizzata.
+SMB offre un'opzione per alcuni ambienti in cui i criteri indicano che un server Web non debba essere usato e per altri ambienti che rendono il ruolo del server Web indesiderato.
+In entrambi i casi, è necessario valutare i requisiti per la firma e la crittografia del traffico. HTTPS, firma SMB e criteri IPSEC sono tutte opzioni da considerare.
 
-#### <a name="load-balancing"></a>Bilanciamento del carico  
+#### <a name="load-balancing"></a>Bilanciamento del carico
 I client che interagiscono con il servizio Web eseguono una richiesta di informazioni restituita in una risposta singola. Nessuna richiesta sequenziale è obbligatoria, pertanto non è necessario assicurarsi che per la piattaforma del bilanciamento del carico siano sempre mantenute le sessioni in un server singolo.
 
 Pianificazione dell'attività|
@@ -166,11 +176,11 @@ La soluzione di bilanciamento del carico richiede che PKI sia gestito dal dispos
 
 ### <a name="staging-configurations-and-modules-on-the-pull-server"></a>Gestione temporanea di configurazioni e moduli nel server di pull
 
-Come parte della pianificazione della configurazione, è necessario determinare quali moduli e configurazioni DSC verranno ospitati dal server di pull. Ai fini della pianificazione della configurazione è importante avere una conoscenza di base su come preparare e distribuire contenuto a un server di pull. 
+Come parte della pianificazione della configurazione, è necessario determinare quali moduli e configurazioni DSC verranno ospitati dal server di pull. Ai fini della pianificazione della configurazione è importante avere una conoscenza di base su come preparare e distribuire contenuto a un server di pull.
 
-In futuro, questa sezione verrà estesa e inclusa in una guida operativa per il server di pull DSC.  La guida illustrerà il processo quotidiano per la gestione di moduli e configurazioni nel tempo con l'automazione. 
+In futuro, questa sezione verrà estesa e inclusa in una guida operativa per il server di pull DSC.  La guida illustrerà il processo quotidiano per la gestione di moduli e configurazioni nel tempo con l'automazione.
 
-#### <a name="dsc-modules"></a>Moduli DSC  
+#### <a name="dsc-modules"></a>Moduli DSC
 I client che richiedono una configurazione avranno bisogno dei moduli DSC richiesti. Una funzionalità del server di pull consiste nell'automatizzare la distribuzione su richiesta dei moduli DSC ai client. Se si distribuisce un server di pull per la prima volta, ad esempio come lab o modello di verifica, probabilmente si dipenderà dai moduli DSC che sono disponibili nei repository pubblici, ad esempio la raccolta di PowerShell o i repository GitHub di PowerShell.org per i moduli DSC.
 
 È fondamentale ricordare che anche per le origini online attendibile, ad esempio PowerShell Gallery, ogni modulo che viene scaricato da un repository pubblico deve essere esaminato da un utente con esperienza in PowerShell e conoscenza dell'ambiente in cui i moduli verranno usati prima di essere usati nell'ambiente di produzione. Durante il completamento di questa attività, è consigliabile verificare la presenza di eventuali payload aggiuntivi nel modulo che possono essere rimossi, ad esempio gli script di esempio e la documentazione. Ciò riduce la larghezza di banda di rete per ogni client durante la prima richiesta, quando i moduli verranno scaricati nella rete dal server al client.
@@ -194,7 +204,8 @@ Il team sarà anche responsabile per la gestione della piattaforma di automazion
 
 #### <a name="dsc-configurations"></a>Configurazioni DSC
 
-Lo scopo di un server di pull è fornire un meccanismo centralizzato per la distribuzione delle configurazioni DSC ai nodi client. Le configurazioni sono archiviate nel server come documenti MOF. Ogni documento verrà denominato con un identificatore univoco globale (GUID). Quando i client vengono configurati per la connessione a un server di pull, viene assegnato l'identificatore GUID per la configurazione che i client devono richiedere. Questo sistema di riferimento a configurazioni da identificatori GUID garantisce l'univocità globale ed è flessibile al punto che può essere applicata una configurazione con granularità per ogni nodo o come configurazione del ruolo che si estende su più server che devono avere configurazioni identiche.
+Lo scopo di un server di pull è fornire un meccanismo centralizzato per la distribuzione delle configurazioni DSC ai nodi client. Le configurazioni sono archiviate nel server come documenti MOF.
+Ogni documento verrà denominato con un identificatore univoco globale (GUID). Quando i client vengono configurati per la connessione a un server di pull, viene assegnato l'identificatore GUID per la configurazione che i client devono richiedere. Questo sistema di riferimento a configurazioni da identificatori GUID garantisce l'univocità globale ed è flessibile al punto che può essere applicata una configurazione con granularità per ogni nodo o come configurazione del ruolo che si estende su più server che devono avere configurazioni identiche.
 
 #### <a name="guids"></a>Identificatori univoci globali (GUID)
 
@@ -289,26 +300,26 @@ Start-DscConfiguration -Wait -Force -Verbose -Path 'C:\PullServerConfig\'
 #      * Automatically load certificate from Certificate Authority
 #      * Locate Modules and Configuration data on remote SMB share
 #      * Manage state of default websites in IIS
-    
+
 param (
-        [Parameter(Mandatory=$true)] 
-        [ValidateNotNullorEmpty()] 
+        [Parameter(Mandatory=$true)]
+        [ValidateNotNullorEmpty()]
         [System.String] $ServerName,
         [System.String] $DomainName,
         [System.String] $CARootName,
         [System.String] $CAServerFQDN,
         [System.String] $CertSubject,
         [System.String] $SMBShare,
-        [Parameter(Mandatory=$true)] 
-        [ValidateNotNullorEmpty()] 
+        [Parameter(Mandatory=$true)]
+        [ValidateNotNullorEmpty()]
         [PsCredential] $Credential
     )
-    
+
 Configuration PullServer {
     Import-DscResource -ModuleName xPSDesiredStateConfiguration, xWebAdministration, xCertificate, xComputerManagement
     Node localhost
     {
-            
+
         # Configure the server to automatically corret configuration drift including reboots if needed.
         LocalConfigurationManager
         {
@@ -316,14 +327,14 @@ Configuration PullServer {
             RebootNodeifNeeded = $node.RebootNodeifNeeded
             CertificateId = $node.Thumbprint
         }
-    
+
         # Remove all GUI interfaces so the server has minimum running footprint.
         WindowsFeature ServerCore
         {
             Ensure = 'Absent'
             Name = 'User-Interfaces-Infra'
         }
-    
+
         # Set the server name and if needed, join a domain. If not joining a domain, remove the DomainName parameter.
         xComputer DomainJoin
         {
@@ -331,7 +342,7 @@ Configuration PullServer {
             DomainName = $Node.DomainName
             Credential = $Node.Credential
         }
-    
+
         # The next series of settings disable SSL and enable TLS, for environments where that is required by policy.
         Registry TLS1_2ServerEnabled
         {
@@ -373,14 +384,14 @@ Configuration PullServer {
             ValueData = 0
             ValueType = 'Dword'
         }
-    
+
         # Install the Windows Server DSC Service feature
         WindowsFeature DSCServiceFeature
         {
             Ensure = 'Present'
             Name = 'DSC-Service'
         }
-    
+
         # If using a certificate from a local Active Directory Enterprise Root Certificate Authority, complete a request and install the certificate
         xCertReq SSLCert
         {
@@ -390,7 +401,7 @@ Configuration PullServer {
             AutoRenew = $Node.AutoRenew
             Credential = $Node.Credential
         }
-    
+
         # Use the DSC resource to simplify deployment of the web service.  You might also consider modifying the default port, possibly leveraging port 443 in environments where that is enforced as a standard.
         xDSCWebService PSDSCPullServer
         {
@@ -405,10 +416,10 @@ Configuration PullServer {
             State = 'Started'
             DependsOn = '[WindowsFeature]DSCServiceFeature'
         }
-    
+
         # Validate web config file contains current DB settings
         xWebConfigKeyValue CorrectDBProvider
-        { 
+        {
             ConfigSection = 'AppSettings'
             Key = 'dbprovider'
             Value = 'System.Data.OleDb'
@@ -416,17 +427,17 @@ Configuration PullServer {
             DependsOn = '[xDSCWebService]PSDSCPullServer'
         }
         xWebConfigKeyValue CorrectDBConnectionStr
-        { 
+        {
             ConfigSection = 'AppSettings'
             Key = 'dbconnectionstr'
             Value = 'Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Program Files\WindowsPowerShell\DscService\Devices.mdb;'
             WebsitePath = 'IIS:\sites\PSDSCPullServer'
             DependsOn = '[xDSCWebService]PSDSCPullServer'
         }
-    
+
         # Stop the default website
-        xWebsite StopDefaultSite  
-        { 
+        xWebsite StopDefaultSite
+        {
             Ensure = 'Present'
             Name = 'Default Web Site'
             State = 'Stopped'
@@ -456,8 +467,8 @@ $configData = @{
 PullServer -ConfigurationData $configData -OutputPath 'C:\PullServerConfig\'
 Set-DscLocalConfigurationManager -ComputerName localhost -Path 'C:\PullServerConfig\'
 Start-DscConfiguration -Wait -Force -Verbose -Path 'C:\PullServerConfig\'
-    
-# .\Script.ps1 -ServerName web1 -domainname 'test.pha' -carootname 'test-dc01-ca' -caserverfqdn 'dc01.test.pha' -certsubject 'CN=service.test.pha' -smbshare '\\sofs1.test.pha\share' 
+
+# .\Script.ps1 -ServerName web1 -domainname 'test.pha' -carootname 'test-dc01-ca' -caserverfqdn 'dc01.test.pha' -certsubject 'CN=service.test.pha' -smbshare '\\sofs1.test.pha\share'
 ```
 
 
@@ -468,7 +479,7 @@ Start-DscConfiguration -Wait -Force -Verbose -Path 'C:\PullServerConfig\'
 function Verify-DSCPullServer ($fqdn) {
     ([xml](invoke-webrequest "https://$($fqdn):8080/psdscpullserver.svc" | % Content)).service.workspace.collection.href
 }
-Verify-DSCPullServer 'INSERT SERVER FQDN' 
+Verify-DSCPullServer 'INSERT SERVER FQDN'
 
 Expected Result:
 Action
@@ -485,14 +496,14 @@ Configuration PullClient {
     $ID,
     $Server
     )
-        LocalConfigurationManager 
-                { 
+        LocalConfigurationManager
+                {
                     ConfigurationID = $ID;
                     RefreshMode = 'PULL';
                     DownloadManagerName = 'WebDownloadManager';
                     RebootNodeIfNeeded = $true;
                     RefreshFrequencyMins = 30;
-                    ConfigurationModeFrequencyMins = 15; 
+                    ConfigurationModeFrequencyMins = 15;
                     ConfigurationMode = 'ApplyAndAutoCorrect';
                     DownloadManagerCustomData = @{ServerUrl = "http://"+$Server+":8080/PSDSCPullServer.svc"; AllowUnsecureConnection = $true}
                 }
@@ -504,13 +515,13 @@ Set-DscLocalConfigurationManager -ComputerName 'Localhost' -Path 'C:\DSCConfig\'
 
 ## <a name="additional-references-snippets-and-examples"></a>Riferimenti aggiuntivi, frammenti di codice ed esempi
 
-Questo esempio illustra come avviare manualmente una connessione client (richiede WMF5) per il test. 
+Questo esempio illustra come avviare manualmente una connessione client (richiede WMF5) per il test.
 
 ```powershell
 Update-DSCConfiguration –Wait -Verbose
 ```
 
-Il cmdlet [Add-DnsServerResourceRecordName](http://bit.ly/1G1H31L) viene usato per aggiungere un tipo di record CNAME a una zona DNS. 
+Il cmdlet [Add-DnsServerResourceRecordName](http://bit.ly/1G1H31L) viene usato per aggiungere un tipo di record CNAME a una zona DNS.
 
 La funzione di PowerShell per [creare un checksum e pubblicare MOF DSC al Server di Pull SMB](http://bit.ly/1E46BhI) genera automaticamente il checksum necessario e quindi copia la configurazione MOF e i file di checksum nel server di pull SMB.
 
@@ -518,10 +529,7 @@ La funzione di PowerShell per [creare un checksum e pubblicare MOF DSC al Server
 
 Un file di dati viene archiviato per creare informazioni durante la distribuzione di un server di pull che include il servizio Web OData. Il tipo di file dipende dal sistema operativo, come specificato di seguito.
 
- - **Windows Server 2012**  
-Il tipo di file sarà sempre MDB
- - **Windows Server 2012 R2**  
-Il tipo di file predefinito è EDB a meno che non venga specificato un file con estensione MDB nella configurazione
+ - **Windows Server 2012** Il tipo di file sarà sempre MDB
+ - **Windows Server 2012 R2** Il tipo di file predefinito è EDB a meno che non venga specificato un file con estensione MDB nella configurazione
 
 Nello [script di esempio avanzato](https://github.com/mgreenegit/Whitepapers/blob/Dev/PullServerCPIG.md#installation-and-configuration-scripts) per installare un server di pull è incluso anche un esempio di come controllare automaticamente le impostazioni del file web.config per evitare qualsiasi possibilità di errore causato dal tipo di file.
-

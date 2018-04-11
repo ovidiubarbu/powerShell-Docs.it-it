@@ -1,15 +1,15 @@
 ---
-ms.date: 2017-06-12
+ms.date: 06/12/2017
 author: JKeithB
 ms.topic: reference
 keywords: wmf,powershell,installazione
 contributor: ryanpu
 title: Miglioramenti apportati a JEA (Just Enough Administration)
-ms.openlocfilehash: 2811b4deb3f4fca513791c7389ee5f9f877dbfe8
-ms.sourcegitcommit: 75f70c7df01eea5e7a2c16f9a3ab1dd437a1f8fd
+ms.openlocfilehash: c80472fa4372331bf2cf9ab0b7513021354d1408
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/12/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="improvements-to-just-enough-administration-jea"></a>Miglioramenti apportati a JEA (Just Enough Administration)
 
@@ -50,7 +50,7 @@ Copy-Item -Path User:\SampleFile.txt -Destination . -FromSession $jeasession
 
 In alcuni casi, per un'attività che un utente deve eseguire in una sessione JEA potrebbe essere necessario accedere a risorse che non si trovano nel computer locale.
 Quando una sessione JEA è configurata per l'uso di un account virtuale, qualsiasi tentativo di accedere a tali risorse risulterà proveniente dall'identità del computer locale, non dall'account virtuale o dall'utente connesso.
-In TP5 è stato abilitato il supporto per l'esecuzione di JEA nel contesto di un [account del servizio gestito del gruppo] (https://technet.microsoft.com/it-it/library/jj128431(v=ws.11\).aspx). In tal modo, risulta molto più semplice accedere alle risorse di rete usando un'identità di dominio.
+In TP5 è stato abilitato il supporto per l'esecuzione di JEA nel contesto di un [account del servizio gestito del gruppo] (https://technet.microsoft.com/en-us/library/jj128431(v=ws.11\).aspx). In tal modo, risulta molto più semplice accedere alle risorse di rete usando un'identità di dominio.
 
 Per configurare una sessione JEA per l'esecuzione con un account del servizio gestito del gruppo, usare la nuova chiave seguente nel file PSSC:
 
@@ -93,4 +93,3 @@ RequiredGroups = @{ And = 'elevated-jea', @{ Or = '2FA-logon', 'smartcard-logon'
 ## <a name="fixed-virtual-accounts-are-now-supported-on-windows-server-2008-r2"></a>Correzione: gli account virtuali sono ora supportati in Windows Server 2008 R2
 In WMF 5.1 è ora possibile usare account virtuali in Windows Server 2008 R2, abilitando configurazioni coerenti e parità di funzionalità in Windows Server 2008 R2 - 2016.
 Gli account virtuali continuano a non essere supportati quando si usa JEA in Windows 7.
-

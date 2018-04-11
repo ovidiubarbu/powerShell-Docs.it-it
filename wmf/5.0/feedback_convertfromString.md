@@ -1,13 +1,13 @@
 ---
-ms.date: 2017-06-12
+ms.date: 06/12/2017
 author: JKeithB
 ms.topic: reference
 keywords: wmf,powershell,installazione
-ms.openlocfilehash: 3413672e73705252225300a853c10a514500baa2
-ms.sourcegitcommit: 99227f62dcf827354770eb2c3e95c5cf6a3118b4
-ms.translationtype: MT
+ms.openlocfilehash: cedda61241df4965fe5db723f03e3497f046fa44
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="extract-and-parse-structured-objects-out-of-string"></a>Estrarre e analizzare oggetti strutturati da contenuto String
 Sono state anche introdotte alcune funzionalità aggiuntive per il cmdlet ConvertFrom-String:
@@ -67,7 +67,7 @@ Copiare alcuni esempi in un file, che verrà usato come modello:
 
     Renton, WA
 
-   
+
 
 Racchiudere i dati da estrarre tra parentesi graffe, assegnando anche un nome. Dato che la proprietà **Name** e le altre proprietà associate possono comparire più volte, usare un asterisco (\*) per indicare che i risultati includeranno più record, invece di estrarre una serie di proprietà in un unico record:
 
@@ -89,5 +89,4 @@ Da questo set di esempi, **ConvertFrom-String** può ora estrarre automaticament
 > ----------                     ----               ----     -----
 > Ana Trujillo...                Ana Trujillo       Redmond  WA Antonio Moreno...              Antonio Moreno     Renton   WA Thomas Hardy...                Thomas Hardy       Seattle  WA Christina Berglund...          Christina Berglund Redmond  WA Hanna Moos...                  Hanna Moos         Puyallup WA
 
-Per apportare ulteriori modifiche ai dati nel testo estratto, la proprietà **ExtentText** acquisisce il testo non elaborato da cui è stato estratto il record. Per fornire commenti e suggerimenti su questa funzionalità o per condividere il contenuto per cui risulta problematica la scrittura di esempi, inviare tramite posta elettronica <psdmfb@microsoft.com>.
-
+Per apportare ulteriori modifiche ai dati nel testo estratto, la proprietà **ExtentText** acquisisce il testo non elaborato da cui è stato estratto il record. Per fornire commenti e suggerimenti su questa funzionalità o per condividere contenuto per cui risulta problematica la scrittura di esempi, inviare un messaggio di posta elettronica a <psdmfb@microsoft.com>.

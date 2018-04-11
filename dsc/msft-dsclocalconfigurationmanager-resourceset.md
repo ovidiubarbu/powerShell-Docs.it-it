@@ -1,13 +1,13 @@
 ---
-ms.date: 2017-06-12
+ms.date: 06/12/2017
 ms.topic: conceptual
 keywords: dsc,powershell,configurazione,installazione
 title: Metodo ResourceSet della classe MSFT_DSCLocalConfigurationManager
-ms.openlocfilehash: 3486ef559102929f8d05994a4bf6e45d49a0c140
-ms.sourcegitcommit: 99227f62dcf827354770eb2c3e95c5cf6a3118b4
+ms.openlocfilehash: b5f437a123bd38df21f30d11e71d2c3b36bc9f3a
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="resourceset-method-of-the-msftdsclocalconfigurationmanager-class"></a>Metodo ResourceSet della classe MSFT_DSCLocalConfigurationManager
 
@@ -28,17 +28,13 @@ uint32 ResourceSet(
 <a name="parameters"></a>Parametri
 ----------
 
-*ResourceType* \[in\]  
-Il nome della risorsa da chiamare.
+*ResourceType* \[in\] Nome della risorsa da chiamare.
 
-*ModuleName* \[in\]  
-Il nome del modulo che contiene la risorsa da chiamare.
+*ModuleName* \[in\] Nome del modulo che contiene la risorsa da chiamare.
 
-*resourceProperty* \[in\]  
-Specifica il nome della proprietà delle risorse e il relativo valore in una tabella hash rispettivamente come chiave e valore. Usare il cmdlet [Get-DscResource](https://technet.microsoft.com/library/dn521625.aspx) per individuare le proprietà delle risorse e i relativi tipi.
+*resourceProperty* \[in\] Specifica il nome della proprietà delle risorse e il relativo valore in una tabella hash rispettivamente come chiave e valore. Usare il cmdlet [Get-DscResource](https://technet.microsoft.com/library/dn521625.aspx) per individuare le proprietà delle risorse e i relativi tipi.
 
-*RebootRequired* \[out\]  
-In fase di restituzione, questa proprietà è impostata su **true** se il nodo deve essere riavviato.
+*RebootRequired* \[out\] Al termine dell'esecuzione, questa proprietà viene impostata su **true** se il nodo deve essere riavviato.
 
 ## <a name="return-value"></a>Valore restituito
 ------------
@@ -60,10 +56,3 @@ Si tratta di un metodo statico.
 
 
 [**MSFT_DSCLocalConfigurationManager**](msft-dsclocalconfigurationmanager.md)
-
- 
-
- 
-
-
-

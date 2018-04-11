@@ -1,13 +1,13 @@
 ---
-ms.date: 2017-06-12
+ms.date: 06/12/2017
 ms.topic: conceptual
 keywords: dsc,powershell,configurazione,installazione
 title: Metodo GetConfigurationResultOutput della classe MSFT_DSCLocalConfigurationManager
-ms.openlocfilehash: f6106bb28dc20004b5bbb6df2d8e719cf0c453f0
-ms.sourcegitcommit: a444406120e5af4e746cbbc0558fe89a7e78aef6
+ms.openlocfilehash: f4c2ddaa37cdafeff1a442f3f1fa656788a1c6c8
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="getconfigurationresultoutput-method-of-the-msftdsclocalconfigurationmanager-class"></a>Metodo GetConfigurationResultOutput della classe MSFT_DSCLocalConfigurationManager
 
@@ -27,14 +27,11 @@ uint32 GetConfigurationResultOutput(
 <a name="parameters"></a>Parametri
 ----------
 
-*jobId* \[in\]  
-L'ID del processo di cui ottenere i dati di output.
+*jobId* \[in\] ID del processo per cui ottenere i dati di output.
 
-*resumeOutputBookmark* \[in\]  
-Specifica che l'output deve essere la continuazione di un segnalibro precedente.
+*resumeOutputBookmark* \[in\] Specifica che l'output deve essere la continuazione di un segnalibro precedente.
 
-*output* \[out\]  
-L'output per il processo specificato.
+*output* \[out\] Output per il processo specificato.
 
 ## <a name="return-value"></a>Valore restituito
 ------------
@@ -56,10 +53,3 @@ Si tratta di un metodo statico.
 
 
 [**MSFT_DSCLocalConfigurationManager**](msft-dsclocalconfigurationmanager.md)
-
- 
-
- 
-
-
-

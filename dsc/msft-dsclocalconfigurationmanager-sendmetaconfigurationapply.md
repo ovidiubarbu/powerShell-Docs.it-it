@@ -1,13 +1,13 @@
 ---
-ms.date: 2017-06-12
+ms.date: 06/12/2017
 ms.topic: conceptual
 keywords: dsc,powershell,configurazione,installazione
 title: Metodo SendMetaConfigurationApply della classe MSFT_DSCLocalConfigurationManager
-ms.openlocfilehash: 350555220757b1939b1de34ab423e963635eb53c
-ms.sourcegitcommit: a444406120e5af4e746cbbc0558fe89a7e78aef6
+ms.openlocfilehash: ab82b239ddfdb4075d9440cd66343266b3c08eda
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="sendmetaconfigurationapply-method-of-the-msftdsclocalconfigurationmanager-class"></a>Metodo SendMetaConfigurationApply della classe MSFT_DSCLocalConfigurationManager
 
@@ -26,11 +26,9 @@ uint32 SendMetaConfigurationApply(
 <a name="parameters"></a>Parametri
 ----------
 
-*ConfigurationData* \[in\]  
-I dati dell'ambiente per la configurazione.
+*ConfigurationData* \[in\] Dati dell'ambiente per la configurazione.
 
-*force* \[in\]  
-**true** per forzare l'arresto della configurazione.
+*force* \[in\] **true** per forzare l'arresto della configurazione.
 
 ## <a name="return-value"></a>Valore restituito
 ------------
@@ -52,11 +50,3 @@ Si tratta di un metodo statico.
 
 
 [**MSFT_DSCLocalConfigurationManager**](msft-dsclocalconfigurationmanager.md)
-
-
- 
-
- 
-
-
-

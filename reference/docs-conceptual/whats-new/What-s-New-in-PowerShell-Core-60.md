@@ -133,7 +133,7 @@ Installando il modulo [`WindowsPSModulePath`][windowspsmodulepath], è possibile
 Installare prima il modulo `WindowsPSModulePath` da PowerShell Gallery:
 
 ```powershell
-# Add `-Scope CurrentUser` if you're installing as non-admin 
+# Add `-Scope CurrentUser` if you're installing as non-admin
 Install-Module WindowsPSModulePath -Force
 ```
 
@@ -160,7 +160,7 @@ Ciò significa che è possibile usare cmdlet come `Enter-PSSession` e `New-PSSes
 
 Per altre informazioni sulla configurazione e sull'uso della comunicazione remota basata su SSH, vedere [Comunicazione remota di PowerShell su SSH][ssh-remoting].
 
-## <a name="default-encoding-is-utf-8-without-a-bom"></a>La codifica predefinita è UTF-8 senza BOM
+## <a name="default-encoding-is-utf-8-without-a-bom-except-for-new-modulemanifest"></a>La codifica predefinita è UTF-8 senza BOM, con l'eccezione di New-ModuleManifest
 
 In passato i cmdlet di Windows PowerShell come `Get-Content` e `Set-Content` usavano codifiche diverse, ad esempio ASCII e UTF-16.
 La varianza nei valori di codifica predefiniti causavano problemi quando si combinavano i cmdlet senza specificare una codifica.
@@ -179,7 +179,6 @@ Questa modifica interessa i cmdlet seguenti:
 - Format-Hex
 - Get-Content
 - Import-Csv
-- New-ModuleManifest
 - Out-File
 - Select-String
 - Send-MailMessage
@@ -190,6 +189,8 @@ Questi cmdlet sono anche stati aggiornati in modo che il parametro `-Encoding` a
 Anche il valore predefinito di `$OutputEncoding` è stato modificato in UTF-8.
 
 Come procedura consigliata, è opportuno impostare in modo esplicito le codifiche negli script usando il parametro `-Encoding` per produrre un comportamento deterministico tra le piattaforme.
+
+Il cmdlet `New-ModuleManifest` non ha il parametro **Encoding**. La codifica del file manifesto del modulo (con estensione psd1) creato con il cmdlet `New-ModuleManifest` dipende dall'ambiente: se si tratta di PowerShell Core in esecuzione in Linux la codifica è UTF-8 (senza BOM). In caso contrario, la codifica è UTF-16 (con BOM). (#3940)
 
 ## <a name="support-backgrounding-of-pipelines-with-ampersand--3360"></a>Supporto del background delle pipeline con la e commerciale (`&`) (#3360)
 
@@ -225,7 +226,7 @@ Per altre informazioni sui processi di PowerShell, vedere [about_Jobs](https://m
   - `GitCommitId`: questo è l'ID commit Git del ramo o tag Git in cui è stato compilato PowerShell.
     Per le compilazioni rilasciate corrisponde probabilmente a `PSVersion`.
   - `OS`: stringa di versione del sistema operativo restituita da`[System.Runtime.InteropServices.RuntimeInformation]::OSDescription`
-  - `Platform`: valore restituito da `[System.Environment]::OSVersion.Platform`, impostato su `Win32NT` in Windows, `MacOSX` in macOS e `Unix` in Linux.
+  - `Platform`: valore restituito da `[System.Environment]::OSVersion.Platform`, impostato su `Win32NT` in Windows, `Unix` in macOS e `Unix` in Linux.
 - Rimossa la proprietà `BuildVersion` da `$PSVersionTable`.
   Questa proprietà è strettamente legata alla versione build di Windows.
   Si consiglia invece di usare `GitCommitId` per recuperare la versione build esatta di PowerShell Core. (#3877) (grazie a @iSazonov)
@@ -268,7 +269,7 @@ Per altre informazioni sui processi di PowerShell, vedere [about_Jobs](https://m
 - Aggiunta di `-ResponseHeadersVariable` a `Invoke-RestMethod` per abilitare l'acquisizione delle intestazioni di risposta. (#4888) (grazie @markekraus)
 - Correzione dei cmdlet Web in modo da includere la risposta HTTP nell'eccezione quando il codice di stato della risposta indica l'esito negativo. (#3201)
 - Modifica dei cmdlet Web `UserAgent` da `WindowsPowerShell` a `PowerShell`. (#4914) (grazie @markekraus)
-- Aggiunto il rilevamento esplicito di `ContentType` a `Invoke-RestMethod` (&#4692;)
+- Aggiunto il rilevamento esplicito di `ContentType` a `Invoke-RestMethod` (4692 #)
 - Correzione dei cmdlet Web `-SkipHeaderValidation` in modo che funzionino con le intestazioni agente utente non standard. (#4479 & #4512) (grazie@markekraus)
 
 ### <a name="json-cmdlets"></a>Cmdlet JSON

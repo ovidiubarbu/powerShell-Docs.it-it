@@ -1,13 +1,13 @@
 ---
-ms.date: 2017-06-12
+ms.date: 06/12/2017
 ms.topic: conceptual
 keywords: dsc,powershell,configurazione,installazione
 title: Metodo PerformRequiredConfigurationChecks della classe MSFT_DSCLocalConfigurationManager
-ms.openlocfilehash: 687c92f2dac5e8855731713e81390ac67615231e
-ms.sourcegitcommit: a444406120e5af4e746cbbc0558fe89a7e78aef6
+ms.openlocfilehash: 9cc4384088fcc39b09979b8ae4d023fc46307b13
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="performrequiredconfigurationchecks-method-of-the-msftdsclocalconfigurationmanager-class"></a>Metodo PerformRequiredConfigurationChecks della classe MSFT_DSCLocalConfigurationManager
 
@@ -25,8 +25,7 @@ uint32 PerformRequiredConfigurationChecks(
 <a name="parameters"></a>Parametri
 ----------
 
-*Flags* \[in\]  
-Una maschera di bit che specifica il tipo di verifica di coerenza da eseguire. I valori seguenti sono validi e possono essere combinati tramite un'operazione bit per bit **OR**:
+*Flags* \[in\] Maschera di bit che specifica il tipo di verifica di coerenza da eseguire. I valori seguenti sono validi e possono essere combinati tramite un'operazione bit per bit **OR**:
 
 |Value |Description |
 |:--- |:---|
@@ -55,11 +54,3 @@ Si tratta di un metodo statico.
 
 
 [**MSFT_DSCLocalConfigurationManager**](msft-dsclocalconfigurationmanager.md)
-
-
- 
-
- 
-
-
-

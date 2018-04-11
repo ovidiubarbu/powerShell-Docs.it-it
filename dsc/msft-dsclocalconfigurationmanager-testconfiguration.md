@@ -1,13 +1,13 @@
 ---
-ms.date: 2017-06-12
+ms.date: 06/12/2017
 ms.topic: conceptual
 keywords: dsc,powershell,configurazione,installazione
 title: Metodo TestConfiguration della classe MSFT_DSCLocalConfigurationManager
-ms.openlocfilehash: 04f0f3146473dc71f492086449d9dce5467c55db
-ms.sourcegitcommit: a444406120e5af4e746cbbc0558fe89a7e78aef6
+ms.openlocfilehash: 7815d458a9a67639a31c917510097212d104eb8a
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="testconfiguration-method-of-the-msftdsclocalconfigurationmanager-class"></a>Metodo TestConfiguration della classe MSFT_DSCLocalConfigurationManager
 
@@ -28,17 +28,13 @@ uint32 TestConfiguration(
 <a name="parameters"></a>Parametri
 ----------
 
-*configurationData* \[in\]  
-Dati dell'ambiente per la configurazione.
+*configurationData* \[in\] Dati dell'ambiente per la configurazione.
 
-*InDesiredState* \[out\]  
-In fase di restituzione, specifica se il nodo gestito è nello stato specificato dal documento di configurazione.
+*InDesiredState* \[out\] Al termine dell'esecuzione, specifica se il nodo gestito è nello stato specificato dal documento di configurazione.
 
-*ResourcesInDesiredState* \[out\]  
-In fase di restituzione, contiene un'istanza incorporata della classe **MSFT_ResourceInDesiredState** che specifica le risorse che si trovano nello stato desiderato.
+*ResourcesInDesiredState* \[out\] Al termine dell'esecuzione, contiene un'istanza incorporata della classe **MSFT_ResourceInDesiredState** che specifica le risorse che si trovano nello stato desiderato.
 
-*ResourcesNotInDesiredState* \[out\]  
-In fase di restituzione, contiene un'istanza incorporata della classe **MSFT_ResourceNotInDesiredState** che specifica le risorse che non si trovano nello stato desiderato.
+*ResourcesNotInDesiredState* \[out\] Al termine dell'esecuzione, contiene un'istanza incorporata della classe **MSFT_ResourceNotInDesiredState** che specifica le risorse che non si trovano nello stato desiderato.
 
 ## <a name="return-value"></a>Valore restituito
 ------------
@@ -60,11 +56,3 @@ Si tratta di un metodo statico.
 
 
 [**MSFT_DSCLocalConfigurationManager**](msft-dsclocalconfigurationmanager.md)
-
-
- 
-
- 
-
-
-

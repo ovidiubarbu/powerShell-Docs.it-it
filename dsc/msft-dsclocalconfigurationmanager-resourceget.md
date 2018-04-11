@@ -1,13 +1,13 @@
 ---
-ms.date: 2017-06-12
+ms.date: 06/12/2017
 ms.topic: conceptual
 keywords: dsc,powershell,configurazione,installazione
 title: Metodo ResourceGet della classe MSFT_DSCLocalConfigurationManager
-ms.openlocfilehash: 2c055b3fab468f85c9e2f91cf1eaf1a4353b4660
-ms.sourcegitcommit: 99227f62dcf827354770eb2c3e95c5cf6a3118b4
+ms.openlocfilehash: 3fd7ae54eb3ae782156dc4619ee0b6905dfb1212
+ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="resourceget-method-of-the-msftdsclocalconfigurationmanager-class"></a>Metodo ResourceGet della classe MSFT_DSCLocalConfigurationManager
 
@@ -28,17 +28,13 @@ uint32 ResourceGet(
 <a name="parameters"></a>Parametri
 ----------
 
-*ResourceType* \[in\]  
-Il nome della risorsa da chiamare.
+*ResourceType* \[in\] Nome della risorsa da chiamare.
 
-*ModuleName* \[in\]  
-Il nome del modulo che contiene la risorsa da chiamare.
+*ModuleName* \[in\] Nome del modulo che contiene la risorsa da chiamare.
 
-*resourceProperty* \[in\]  
-Specifica il nome della proprietà delle risorse e il relativo valore in una tabella hash rispettivamente come chiave e valore. Usare il cmdlet [Get-DscResource](https://technet.microsoft.com/library/dn521625.aspx) per individuare le proprietà delle risorse e i relativi tipi.
+*resourceProperty* \[in\] Specifica il nome della proprietà delle risorse e il relativo valore in una tabella hash rispettivamente come chiave e valore. Usare il cmdlet [Get-DscResource](https://technet.microsoft.com/library/dn521625.aspx) per individuare le proprietà delle risorse e i relativi tipi.
 
-*configurations* \[out\]  
-In fase di restituzione, contiene un'istanza incorporata delle configurazioni.
+*configurations* \[out\] Al termine dell'esecuzione, contiene un'istanza incorporata delle configurazioni.
 
 ## <a name="return-value"></a>Valore restituito
 ------------
@@ -60,11 +56,3 @@ Si tratta di un metodo statico.
 
 
 [**MSFT_DSCLocalConfigurationManager**](msft-dsclocalconfigurationmanager.md)
-
-
- 
-
- 
-
-
-
