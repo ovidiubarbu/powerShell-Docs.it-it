@@ -283,7 +283,7 @@ L'uso di un account locale elimina la potenziale esposizione delle credenziali d
 
 **Quando si usano credenziali con risorse DSC, se possibile preferire un account locale a un account di dominio.**
 
-Se la proprietà `Username` della credenziale contiene un carattere "\'" o "@", DSC la considera un account di dominio.
+Se la proprietà `Username` della credenziale contiene un carattere "\'" o "\@", DSC la considera un account di dominio.
 Un'eccezione riguarda "localhost", "127.0.0.1" e "::1" nella parte del dominio del nome utente.
 
 ## <a name="psdscallowdomainuser"></a>PSDscAllowDomainUser
