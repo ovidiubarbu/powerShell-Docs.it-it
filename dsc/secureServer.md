@@ -3,15 +3,18 @@ ms.date: 06/12/2017
 ms.topic: conceptual
 keywords: dsc,powershell,configurazione,installazione
 title: Procedure consigliate per i server di pull
-ms.openlocfilehash: 7de523ad16aee77d87ec4d3334d296997020aa19
-ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
+ms.openlocfilehash: d8d8667e2fc608e0c5948a0b5046bf92801b49db
+ms.sourcegitcommit: ece1794c94be4880a2af5a2605ed4721593643b6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="pull-server-best-practices"></a>Procedure consigliate per i server di pull
 
 >Si applica a: Windows PowerShell 4.0, Windows PowerShell 5.0
+
+> [!IMPORTANT]
+> Il server di pull (funzionalità di Windows *servizio DSC*) è un componente supportato di Windows Server, tuttavia non si prevede di offrire nuove caratteristiche o funzionalità. È consigliabile avviare la transizione dei client gestiti ad [Automation DSC per Azure](/azure/automation/automation-dsc-getting-started) (include funzionalità superiori al server di pull in Windows Server) o a una delle soluzioni della community riportate [qui](pullserver.md#community-solutions-for-pull-service).
 
 Riepilogo: questo documento illustra processi e estendibilità per supportare i tecnici che preparano la soluzione. I dettagli inclusi offrono procedure consigliate identificate dai clienti e validate dal team del prodotto per garantire che le indicazioni siano stabili e valide per il futuro.
 

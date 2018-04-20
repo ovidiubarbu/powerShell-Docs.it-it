@@ -3,15 +3,18 @@ ms.date: 06/12/2017
 ms.topic: conceptual
 keywords: dsc,powershell,configurazione,installazione
 title: Uso di un server di report DSC
-ms.openlocfilehash: e239414dc30c7458c509392792d4775d04f2311a
-ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
+ms.openlocfilehash: 49e022d3c3c1e117eac4cb3c874ca8dcfe628237
+ms.sourcegitcommit: ece1794c94be4880a2af5a2605ed4721593643b6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="using-a-dsc-report-server"></a>Uso di un server di report DSC
 
 > Si applica a: Windows PowerShell 5.0
+
+> [!IMPORTANT]
+> Il server di pull (funzionalità di Windows *servizio DSC*) è un componente supportato di Windows Server, tuttavia non si prevede di offrire nuove caratteristiche o funzionalità. È consigliabile avviare la transizione dei client gestiti ad [Automation DSC per Azure](/azure/automation/automation-dsc-getting-started) (include funzionalità superiori al server di pull in Windows Server) o a una delle soluzioni della community riportate [qui](pullserver.md#community-solutions-for-pull-service).
 
 >**Nota:** il server di report descritto in questo argomento non è disponibile in PowerShell 4.0.
 
