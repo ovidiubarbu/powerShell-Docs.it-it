@@ -8,7 +8,8 @@ ISE non è supportata in PowerShell Core, mentre Visual Studio Core è supportat
 Prima di procedere con l'avvio, verificare che PowerShell sia presente nel sistema.
 Per carichi di lavoro moderni in Windows, macOS e Linux, vedere:
 
-- [Installazione di PowerShell Core in macOS e Linux][install-pscore-linux]
+- [Installazione di PowerShell Core in Linux][install-pscore-linux]
+- [Installazione di PowerShell Core in macOS][install-pscore-macos]
 - [Installazione di PowerShell Core in Windows][install-pscore-windows]
 
 Per carichi di lavoro di Windows PowerShell tradizionali, vedere [Installazione di Windows PowerShell][install-winps].
@@ -171,7 +172,8 @@ Esistono alcuni blog che possono risultare utili per iniziare subito con l'esten
 - [Debug di script di PowerShell in Visual Studio Code – Parte 2][debugging-part2]
 
 [ise]: ../ise-guide.md
-[install-pscore-linux]:  ../../setup/Installing-PowerShell-Core-on-macOS-and-Linux.md
+[install-pscore-linux]:  ../../setup/Installing-PowerShell-Core-on-Linux.md
+[install-pscore-macos]:  ../../setup/Installing-PowerShell-Core-on-macOS.md
 [install-pscore-windows]: ../../setup/Installing-PowerShell-Core-on-Windows.md
 [install-winps]: ../../setup/Installing-Windows-PowerShell.md
 [ps-extension]:https://blogs.msdn.microsoft.com/cdndevs/2015/12/11/visual-studio-code-powershell-extension/
