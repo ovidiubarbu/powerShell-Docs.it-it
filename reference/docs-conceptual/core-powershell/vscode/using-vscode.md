@@ -25,7 +25,7 @@ Per carichi di lavoro di Windows PowerShell tradizionali, vedere [Installazione 
 > [!IMPORTANT]
 > In macOS è necessario installare OpenSSL affinché l'estensione di PowerShell funzioni correttamente.
 > Il modo più semplice per eseguire questa operazione consiste nell'installare [Homebrew](http://brew.sh/) e quindi eseguire `brew install openssl`.
-> A questo punto l'estensione di PowerShell sarà in grado di caricare correttamente.
+> VS Code ora può caricare l'estensione PowerShell.
 
 - **Windows**: seguire le istruzioni di installazione nella pagina per l'[Esecuzione di Visual Studio Core su Windows](https://code.visualstudio.com/docs/setup/windows)
 
@@ -39,7 +39,7 @@ Per carichi di lavoro di Windows PowerShell tradizionali, vedere [Installazione 
 - Avviare **Quick Open** premendo **CTRL+P** (**CMD+P** su Mac).
 - In Quick Open digitare `ext install powershell` e fare clic su **INVIO**.
 - La vista **Estensioni** si aprirà nella barra laterale. Selezionare l'estensione di PowerShell da Microsoft.
-  Verranno visualizzate informazioni come:
+  Dovrebbe essere visualizzato un contenuto simile al seguente:
 
   ![VSCode](../../images/vscode.png)
 
@@ -55,7 +55,7 @@ Per uscire da Visual Studio Code, **File->Esci**.
 
 #### <a name="using-a-specific-installed-version-of-powershell"></a>Uso di una versione specifica di PowerShell
 
-Se si vuole usare un'installazione specifica di PowerShell con Visual Studio Code, è necessario aggiungere una nuova variabile per il file nelle impostazioni utente.
+Se si vuole usare un'installazione specifica di PowerShell con Visual Studio Code, è necessario aggiungere una nuova variabile al file delle impostazioni utente.
 
 1. Fare clic su **File -> Preferenze -> Impostazioni**
 1. Nell'editor verranno visualizzati due riquadri.
@@ -96,7 +96,7 @@ Per Visual Studio Code, è consigliabile usare le impostazioni di configurazione
 
 A partire dalla versione 1.9 di Visual Studio Code, è possibile eseguire il debug degli script di PowerShell senza dover aprire la cartella contenente lo script in questione.
 È sufficiente aprire il file di script di PowerShell tramite **File->Apri File...** , impostare un punto di interruzione su una riga (premere F9) e quindi premere F5 per avviare il debug.
-Verrà visualizzato il riquadro delle azioni di debug che consente di interrompere il debugger, eseguire le istruzioni, riavviare e arrestare il debug.
+Verrà visualizzato il riquadro delle azioni di debug che consente di interrompere il debugger, eseguire le istruzioni, riprendere e arrestare il debug.
 
 ### <a name="workspace-debugging"></a>Debug dell'area di lavoro
 
@@ -120,7 +120,7 @@ Seguire questi passaggi per creare il file di configurazione di debug:
    Scegliere **PowerShell**.
 
    Quando si esegue questa operazione, Visual Studio Code crea una directory e un file ".vscode\launch.json" nella radice della cartella dell'area di lavoro.
-   Qui è archiviata la configurazione di debug. Se i file si trovano in un repository Git, in genere si vuole salvare il file launch.json.
+   Qui è archiviata la configurazione di debug. Se i file si trovano in un repository Git, in genere si vuole eseguire il commit del file launch.json.
    I contenuti del file launch.json sono i seguenti:
 
 ```json
@@ -153,7 +153,7 @@ Seguire questi passaggi per creare il file di configurazione di debug:
 ```
 
 Rappresenta gli scenari di debug comuni.
-Tuttavia quando si apre il file nell'editor, verrà visualizzato il pulsante **Aggiungi configurazione...**.
+Tuttavia quando si apre il file nell'editor, viene visualizzato il pulsante **Aggiungi configurazione...**.
 Premere questo pulsante per aggiungere altre configurazioni di debug per PowerShell. Una configurazione utile da aggiungere è **PowerShell: avvia Script**.
 Con questa configurazione, è possibile scegliere un file specifico con gli argomenti facoltativi che devono essere avviati ogni volta che si preme F5, a prescindere dal file attivo nell'editor.
 

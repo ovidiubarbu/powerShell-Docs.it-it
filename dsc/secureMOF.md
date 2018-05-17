@@ -3,11 +3,11 @@ ms.date: 10/31/2017
 ms.topic: conceptual
 keywords: dsc,powershell,configurazione,installazione
 title: Protezione del file MOF
-ms.openlocfilehash: 80ef37ef1bdcb0a8b0ad343b4eab99f1bc66e116
-ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
+ms.openlocfilehash: 00a33a5d628921bcd04aa904a1aa8ee4345af48f
+ms.sourcegitcommit: 4a841ebda3339ae2477e0f5f5be8c01740221232
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="securing-the-mof-file"></a>Protezione del file MOF
 
@@ -134,10 +134,10 @@ In alternativa, è possibile creare il certificato di crittografia nel **nodo di
 Questo è il metodo corrente per l'implementazione della crittografia delle credenziali DSC in _Nano Server_.
 Anche se il file PFX è protetto da password, è opportuno mantenere il file in sicurezza durante il trasferimento.
 L'esempio seguente consente di:
- 1. creare un certificato nel **nodo di creazione**.
- 2. esportare il certificato con la chiave privata nel **nodo di creazione**.
- 3. rimuove la chiave privata dal **nodo di creazione**, mantenendo il certificato della chiave pubblica nell'archivio **My**.
- 4. importare il certificato di chiave privata nell'archivio certificati radice nel **nodo di destinazione**.
+ 1. Creare un certificato nel **nodo di creazione**.
+ 2. Esportare il certificato con la chiave privata nel **nodo di creazione**.
+ 3. Rimuovere la chiave privata dal **nodo di creazione**, mantenendo il certificato della chiave pubblica nell'archivio **My**.
+ 4. Importare il certificato di chiave privata nell'archivio certificati My(Personal) nel **nodo di destinazione**.
    - È necessario aggiungerlo all'archivio radice in modo che risulti attendibile per il **nodo di destinazione**.
 
 #### <a name="on-the-authoring-node-create-and-export-the-certificate"></a>Sul nodo di creazione: creare ed esportare il certificato
