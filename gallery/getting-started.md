@@ -1,0 +1,100 @@
+---
+ms.date: 06/12/2017
+contributor: JKeithB
+ms.topic: conceptual
+keywords: gallery,powershell,cmdlet,psgallery
+title: psgallery_gettingstarted
+ms.openlocfilehash: c3aafe9e76eda9acdd4787f63dc0f8c71a20d02a
+ms.sourcegitcommit: e9ad4d85fd7eb72fb5bc37f6ca3ae1282ae3c6d7
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 05/10/2018
+---
+# <a name="get-started-with-the-powershell-gallery"></a><span data-ttu-id="24d46-103">Introduzione a PowerShell Gallery</span><span class="sxs-lookup"><span data-stu-id="24d46-103">Get Started with the PowerShell Gallery</span></span>
+
+<span data-ttu-id="24d46-104">Per eseguire il download di elementi da PowerShell Gallery nel sistema, è necessario il modulo [PowerShellGet](/powershell/module/powershellget).</span><span class="sxs-lookup"><span data-stu-id="24d46-104">Downloading items from the PowerShell Gallery to your system requires the [PowerShellGet](/powershell/module/powershellget) module.</span></span> <span data-ttu-id="24d46-105">Il modulo PowerShellGet è disponibile nei prodotti indicati di seguito.</span><span class="sxs-lookup"><span data-stu-id="24d46-105">You can find the PowerShellGet module in any of the following.</span></span> <span data-ttu-id="24d46-106">Non è necessario eseguire l'accesso per scaricare elementi da PowerShell Gallery.</span><span class="sxs-lookup"><span data-stu-id="24d46-106">You do not need to sign in to download items from the PowerShell Gallery.</span></span>
+
+## <a name="discovering-items-from-the-powershell-gallery"></a><span data-ttu-id="24d46-107">Individuazione di elementi da PowerShell Gallery</span><span class="sxs-lookup"><span data-stu-id="24d46-107">Discovering items from the PowerShell Gallery</span></span>
+
+<span data-ttu-id="24d46-108">È possibile trovare elementi in PowerShell Gallery usando il controllo **Ricerca** in questo sito Web o sfogliando le pagine Moduli e Script.</span><span class="sxs-lookup"><span data-stu-id="24d46-108">You can find items in the PowerShell Gallery by using the **Search** control on this website, or by browsing through the Modules and Scripts pages.</span></span> <span data-ttu-id="24d46-109">Per trovare elementi in PowerShell Gallery, è anche possibile eseguire i cmdlet [Find-Module][] e [Find-Script][] (a seconda dal tipo di elemento) con `-Repository PSGallery`.</span><span class="sxs-lookup"><span data-stu-id="24d46-109">You can also find items from the PowerShell Gallery by running the [Find-Module][] and [Find-Script][] cmdlets, depending on the item type, with `-Repository PSGallery`.</span></span>
+
+<span data-ttu-id="24d46-110">Per filtrare i risultati dalla raccolta è possibile usare i parametri seguenti:</span><span class="sxs-lookup"><span data-stu-id="24d46-110">Filtering results from the Gallery can be done by using the following parameters:</span></span>
+
+- <span data-ttu-id="24d46-111">Nome</span><span class="sxs-lookup"><span data-stu-id="24d46-111">Name</span></span>
+- <span data-ttu-id="24d46-112">AllVersions</span><span class="sxs-lookup"><span data-stu-id="24d46-112">AllVersions</span></span>
+- <span data-ttu-id="24d46-113">MinimumVersion</span><span class="sxs-lookup"><span data-stu-id="24d46-113">MinimumVersion</span></span>
+- <span data-ttu-id="24d46-114">RequiredVersion</span><span class="sxs-lookup"><span data-stu-id="24d46-114">RequiredVersion</span></span>
+- <span data-ttu-id="24d46-115">Tag</span><span class="sxs-lookup"><span data-stu-id="24d46-115">Tag</span></span>
+- <span data-ttu-id="24d46-116">Includes</span><span class="sxs-lookup"><span data-stu-id="24d46-116">Includes</span></span>
+- <span data-ttu-id="24d46-117">DscResource</span><span class="sxs-lookup"><span data-stu-id="24d46-117">DscResource</span></span>
+- <span data-ttu-id="24d46-118">RoleCapability</span><span class="sxs-lookup"><span data-stu-id="24d46-118">RoleCapability</span></span>
+- <span data-ttu-id="24d46-119">Command</span><span class="sxs-lookup"><span data-stu-id="24d46-119">Command</span></span>
+- <span data-ttu-id="24d46-120">Filter</span><span class="sxs-lookup"><span data-stu-id="24d46-120">Filter</span></span>
+
+<span data-ttu-id="24d46-121">Se si vogliono solo trovare risorse DSC specifiche nella raccolta, è possibile eseguire il cmdlet [Find-DscResource].</span><span class="sxs-lookup"><span data-stu-id="24d46-121">If you're only interested in discovering specific DSC resources in the Gallery, you can run the [Find-DscResource] cmdlet.</span></span> <span data-ttu-id="24d46-122">Find-DscResource restituisce dati sulle risorse DSC contenute nella raccolta.</span><span class="sxs-lookup"><span data-stu-id="24d46-122">Find-DscResource returns data on DSC resources contained in the Gallery.</span></span>
+<span data-ttu-id="24d46-123">Dato che le risorse DSC vengono sempre fornite come parte di un modulo, è comunque necessario eseguire [Install-Module][] per installare tali risorse DSC.</span><span class="sxs-lookup"><span data-stu-id="24d46-123">Because DSC resources are always delivered as part of a module, you still need to run [Install-Module][] to install those DSC resources.</span></span>
+
+## <a name="learning-about-items-in-the-powershell-gallery"></a><span data-ttu-id="24d46-124">Informazioni sugli elementi in PowerShell Gallery</span><span class="sxs-lookup"><span data-stu-id="24d46-124">Learning about items in the PowerShell Gallery</span></span>
+
+<span data-ttu-id="24d46-125">Dopo avere identificato un elemento di interesse, può essere utile ottenere altre informazioni che lo riguardano.</span><span class="sxs-lookup"><span data-stu-id="24d46-125">Once you've identified an item you're interested in, you may want to learn more about it.</span></span> <span data-ttu-id="24d46-126">A questo scopo, è possibile esaminare la pagina specifica dell'elemento nella raccolta.</span><span class="sxs-lookup"><span data-stu-id="24d46-126">You can do this by examining that item's specific page on the Gallery.</span></span> <span data-ttu-id="24d46-127">In quella pagina verranno indicati tutti i metadati caricati con l'elemento.</span><span class="sxs-lookup"><span data-stu-id="24d46-127">On that page, you'll be able to see all of the metadata uploaded with the item.</span></span> <span data-ttu-id="24d46-128">I metadati per un elemento vengono forniti dall'autore dell'elemento e non sono verificati da Microsoft.</span><span class="sxs-lookup"><span data-stu-id="24d46-128">This metadata for an item is provided by the item's author, and is not verified by Microsoft.</span></span> <span data-ttu-id="24d46-129">Il proprietario dell'elemento è fortemente legato all'account della raccolta usato per pubblicare l'elemento ed è più affidabile rispetto al campo relativo all'autore.</span><span class="sxs-lookup"><span data-stu-id="24d46-129">The Owner of the item is strongly tied to the Gallery account used to publish the item, and is more trustworthy than the Author field.</span></span>
+
+<span data-ttu-id="24d46-130">Se si individua un elemento che si ritiene non essere stato pubblicato in buona fede, fare clic su **Report Abuse** (Segnala abusi) nella pagina dell'elemento.</span><span class="sxs-lookup"><span data-stu-id="24d46-130">If you discover an item that you feel is not published in good faith, click **Report Abuse** on that item's page.</span></span>
+
+<span data-ttu-id="24d46-131">Se si esegue [Find-Module][] o [Find-Script][], è possibile visualizzare questi dati nell'oggetto PSGetModuleInfo restituito.</span><span class="sxs-lookup"><span data-stu-id="24d46-131">If you're running [Find-Module][] or [Find-Script][], you can view this data in the returned PSGetModuleInfo object.</span></span> <span data-ttu-id="24d46-132">Ad esempio, l'esecuzione di `Find-Module -Name PSReadLine -Repository PSGallery |Get-Member` restituisce i dati nel modulo PSReadLine nella raccolta.</span><span class="sxs-lookup"><span data-stu-id="24d46-132">For example, running `Find-Module -Name PSReadLine -Repository PSGallery |Get-Member` returns data on the PSReadLine module in the Gallery.</span></span>
+
+## <a name="downloading-items-from-the-powershell-gallery"></a><span data-ttu-id="24d46-133">Download di elementi da PowerShell Gallery</span><span class="sxs-lookup"><span data-stu-id="24d46-133">Downloading items from the PowerShell Gallery</span></span>
+
+<span data-ttu-id="24d46-134">Per il download di elementi da PowerShell Gallery è consigliabile seguire il processo seguente:</span><span class="sxs-lookup"><span data-stu-id="24d46-134">We encourage the following process when downloading items from the PowerShell Gallery:</span></span>
+
+### <a name="inspect"></a><span data-ttu-id="24d46-135">Controllare</span><span class="sxs-lookup"><span data-stu-id="24d46-135">Inspect</span></span>
+
+<span data-ttu-id="24d46-136">Per scaricare un elemento dalla raccolta per ispezionarlo, eseguire il cmdlet [Save-Module][] o [Save-Script][], a seconda del tipo di elemento.</span><span class="sxs-lookup"><span data-stu-id="24d46-136">To download an item from the Gallery for inspection, run either the [Save-Module][] or [Save-Script][] cmdlet, depending on the item type.</span></span> <span data-ttu-id="24d46-137">In questo modo è possibile salvare l'elemento in locale senza installarlo, quindi ispezionarne il contenuto.</span><span class="sxs-lookup"><span data-stu-id="24d46-137">This lets you save the item locally without installing it, and inspect the item contents.</span></span> <span data-ttu-id="24d46-138">L'elemento salvato dovrà poi essere eliminato manualmente.</span><span class="sxs-lookup"><span data-stu-id="24d46-138">Remember to delete the saved item manually.</span></span>
+
+<span data-ttu-id="24d46-139">Alcuni di questi elementi vengono creati da Microsoft, altri dalla community di PowerShell.</span><span class="sxs-lookup"><span data-stu-id="24d46-139">Some of these items are authored by Microsoft, and others are authored by the PowerShell community.</span></span>
+<span data-ttu-id="24d46-140">Microsoft consiglia di esaminare il contenuto e il codice degli elementi in questa raccolta prima dell'installazione.</span><span class="sxs-lookup"><span data-stu-id="24d46-140">Microsoft recommends that you review the contents and code of items on this gallery prior to installation.</span></span>
+
+<span data-ttu-id="24d46-141">Se si individua un elemento che si ritiene non essere stato pubblicato in buona fede, fare clic su **Report Abuse** (Segnala abusi) nella pagina dell'elemento.</span><span class="sxs-lookup"><span data-stu-id="24d46-141">If you discover an item that you feel is not published in good faith, click **Report Abuse** on that item's page.</span></span>
+
+### <a name="install"></a><span data-ttu-id="24d46-142">Installare</span><span class="sxs-lookup"><span data-stu-id="24d46-142">Install</span></span>
+
+<span data-ttu-id="24d46-143">Per installare un elemento dalla raccolta per usarlo, eseguire il cmdlet [Install-Module][] o [Install-Script][], a seconda del tipo di elemento.</span><span class="sxs-lookup"><span data-stu-id="24d46-143">To install an item from the Gallery for use, run either the [Install-Module][] or [Install-Script][] cmdlet, depending on the item type.</span></span>
+
+<span data-ttu-id="24d46-144">[Install-Module][] installa il modulo in `$env:ProgramFiles\WindowsPowerShell\Modules` per impostazione predefinita.</span><span class="sxs-lookup"><span data-stu-id="24d46-144">[Install-Module][] installs the module to `$env:ProgramFiles\WindowsPowerShell\Modules` by default.</span></span>
+<span data-ttu-id="24d46-145">È necessario un account Administrator.</span><span class="sxs-lookup"><span data-stu-id="24d46-145">This requires an administrator account.</span></span> <span data-ttu-id="24d46-146">Se si aggiunge il parametro `-Scope CurrentUser` il modulo viene installato in `$env:USERPROFILE\Documents\WindowsPowerShell\Modules`.</span><span class="sxs-lookup"><span data-stu-id="24d46-146">If you add the `-Scope CurrentUser` parameter, the module is installed to `$env:USERPROFILE\Documents\WindowsPowerShell\Modules` .</span></span>
+
+<span data-ttu-id="24d46-147">[Install-Script][] installa lo script in `$env:ProgramFiles\WindowsPowerShell\Scripts` per impostazione predefinita.</span><span class="sxs-lookup"><span data-stu-id="24d46-147">[Install-Script][] installs the script to `$env:ProgramFiles\WindowsPowerShell\Scripts` by default.</span></span>
+<span data-ttu-id="24d46-148">È necessario un account Administrator.</span><span class="sxs-lookup"><span data-stu-id="24d46-148">This requires an administrator account.</span></span> <span data-ttu-id="24d46-149">Se si aggiunge il parametro `-Scope CurrentUser` lo script viene installato in `$env:USERPROFILE\Documents\WindowsPowerShell\Scripts`.</span><span class="sxs-lookup"><span data-stu-id="24d46-149">If you add the `-Scope CurrentUser` parameter, the script is installed to `$env:USERPROFILE\Documents\WindowsPowerShell\Scripts` .</span></span>
+
+<span data-ttu-id="24d46-150">Per impostazione predefinita, [Install-Module][] e [Install-Script][] installano la versione più recente di un elemento.</span><span class="sxs-lookup"><span data-stu-id="24d46-150">By default, [Install-Module][] and [Install-Script][] installs the most current version of an item.</span></span>
+<span data-ttu-id="24d46-151">Per installare una versione precedente dell'elemento aggiungere il parametro `-RequiredVersion`.</span><span class="sxs-lookup"><span data-stu-id="24d46-151">To install an older version of the item, add the `-RequiredVersion` parameter.</span></span>
+
+### <a name="deploy"></a><span data-ttu-id="24d46-152">Distribuire</span><span class="sxs-lookup"><span data-stu-id="24d46-152">Deploy</span></span>
+
+<span data-ttu-id="24d46-153">Per distribuire un elemento da PowerShell Gallery in Automazione di Azure, fare clic su **Deploy to Azure Automation** (Distribuisci in Automazione di Azure) nella pagina dei dettagli dell'elemento.</span><span class="sxs-lookup"><span data-stu-id="24d46-153">To deploy an item from the PowerShell Gallery to Azure Automation, click **Deploy to Azure Automation** on the item details page.</span></span> <span data-ttu-id="24d46-154">Si verrà reindirizzati al portale di gestione di Azure, in cui si accede usando le credenziali del proprio account di Azure.</span><span class="sxs-lookup"><span data-stu-id="24d46-154">You will be redirected to the Azure Management Portal, where you sign in by using your Azure account credentials.</span></span> <span data-ttu-id="24d46-155">Se si distribuiscono elementi con dipendenze, verranno distribuite tutte le dipendenze in Automazione di Azure.</span><span class="sxs-lookup"><span data-stu-id="24d46-155">Note that deploying items with dependencies will deploy all the dependencies to Azure Automation.</span></span> <span data-ttu-id="24d46-156">Il pulsante Deploy to Azure Automation (Distribuisci in Automazione di Azure) può essere disabilitato aggiungendo il tag **AzureAutomationNotSupported** ai metadati dell'elemento.</span><span class="sxs-lookup"><span data-stu-id="24d46-156">The 'Deploy to Azure Automation' button can be disabled by adding the **AzureAutomationNotSupported** tag to your item metadata.</span></span>
+
+<span data-ttu-id="24d46-157">Per altre informazioni su Automazione di Azure, vedere la documentazione di [Automazione di Azure](/azure/automation).</span><span class="sxs-lookup"><span data-stu-id="24d46-157">To learn more about Azure Automation, see the [Azure Automation](/azure/automation) documentation.</span></span>
+
+## <a name="updating-items-from-the-powershell-gallery"></a><span data-ttu-id="24d46-158">Aggiornamento di elementi da PowerShell Gallery</span><span class="sxs-lookup"><span data-stu-id="24d46-158">Updating items from the PowerShell Gallery</span></span>
+
+<span data-ttu-id="24d46-159">Per aggiornare gli elementi installati da PowerShell Gallery eseguire i cmdlet [Update-Module][] o [Update-Script][].</span><span class="sxs-lookup"><span data-stu-id="24d46-159">To update items installed from the PowerShell Gallery, run either the [Update-Module][] or [Update-Script][] cmdlet.</span></span> <span data-ttu-id="24d46-160">Quando viene eseguito senza parametri aggiuntivi, [Update-Module][] prova ad aggiornare ogni modulo installato eseguendo [Install-Module][].</span><span class="sxs-lookup"><span data-stu-id="24d46-160">When run without any additional parameters, [Update-Module][] attempts to update each module installed by running [Install-Module][].</span></span> <span data-ttu-id="24d46-161">Per aggiornare i moduli in modo selettivo aggiungere il parametro `-Name`.</span><span class="sxs-lookup"><span data-stu-id="24d46-161">To selectively update modules, add the `-Name` parameter.</span></span>
+
+<span data-ttu-id="24d46-162">In modo analogo, anche [Update-Script][] eseguito senza parametri aggiuntivi prova ad aggiornare ogni script installato eseguendo [Install-Script][].</span><span class="sxs-lookup"><span data-stu-id="24d46-162">Similarly, when run without any additional parameters, [Update-Script][] also attempts to update each script installed by running [Install-Script][].</span></span> <span data-ttu-id="24d46-163">Per aggiornare gli script in modo selettivo aggiungere il parametro `-Name`.</span><span class="sxs-lookup"><span data-stu-id="24d46-163">To selectively update scripts, add the `-Name` parameter.</span></span>
+
+## <a name="list-items-that-you-have-installed-from-the-powershell-gallery"></a><span data-ttu-id="24d46-164">Ottenere l'elenco degli elementi installati da PowerShell Gallery</span><span class="sxs-lookup"><span data-stu-id="24d46-164">List items that you have installed from the PowerShell Gallery</span></span>
+
+<span data-ttu-id="24d46-165">Per scoprire quali moduli sono stati installati da PowerShell Gallery, eseguire il cmdlet [Get-InstalledModule][].</span><span class="sxs-lookup"><span data-stu-id="24d46-165">To find out which modules you have installed from the PowerShell Gallery, run the [Get-InstalledModule][] cmdlet.</span></span> <span data-ttu-id="24d46-166">Questo comando elenca tutti i moduli presenti nel sistema che sono stati installati direttamente da PowerShell Gallery.</span><span class="sxs-lookup"><span data-stu-id="24d46-166">This command lists all of the modules you have on your system that were installed directly from the PowerShell Gallery.</span></span>
+
+<span data-ttu-id="24d46-167">Analogamente, per scoprire quali script sono stati installati da PowerShell Gallery, eseguire il cmdlet [Get-InstalledScript][].</span><span class="sxs-lookup"><span data-stu-id="24d46-167">Similarly, to find out which scripts you have installed from the PowerShell Gallery, run the [Get-InstalledScript][] cmdlet.</span></span> <span data-ttu-id="24d46-168">Questo comando elenca tutti gli script presenti nel sistema che sono stati installati direttamente da PowerShell Gallery.</span><span class="sxs-lookup"><span data-stu-id="24d46-168">This command lists all of the scripts you have on your system that were installed directly from the PowerShell Gallery.</span></span>
+
+[Find-DscResource]: /powershell/module/powershellget/Find-DscResource
+[Find-Module]: /powershell/module/powershellget/Find-Module
+[Find-Script]: /powershell/module/powershellget/Find-Script
+[Get-InstalledModule]: /powershell/module/powershellget/Get-InstalledModule
+[Get-InstalledScript]: /powershell/module/powershellget/Get-InstalledScript
+[Install-Module]: /powershell/module/powershellget/Install-Module
+[Install-Script]: /powershell/module/powershellget/Install-Script
+[Publish-Module]: /powershell/module/powershellget/Publish-Module
+[Publish-Script]: /powershell/module/powershellget/Publish-Script
+[Register-PSRepository]: /powershell/module/powershellget/Register-Repository
+[Save-Module]: /powershell/module/powershellget/Save-Module
+[Save-Script]: /powershell/module/powershellget/Save-Script
