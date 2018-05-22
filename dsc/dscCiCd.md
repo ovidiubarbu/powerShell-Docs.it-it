@@ -1,13 +1,12 @@
 ---
 ms.date: 06/12/2017
-ms.topic: conceptual
 keywords: dsc,powershell,configurazione,installazione
 title: Creazione di una pipeline di integrazione continua e distribuzione continua con DSC
-ms.openlocfilehash: a3803a8e6fe6ff1b93758a73ccd54754d7bb2a84
-ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
+ms.openlocfilehash: ce0f2ed79f5f96a1c38e0beaf32529aba7538963
+ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2018
+ms.lasthandoff: 05/16/2018
 ---
 # <a name="building-a-continuous-integration-and-continuous-deployment-pipeline-with-dsc"></a>Creazione di una pipeline di integrazione continua e distribuzione continua con DSC
 
@@ -373,7 +372,7 @@ Ora verrà configurato un trigger che attiva la compilazione del progetto ogni v
 1. In TFS fare clic sulla scheda **Compilazione e versione**
 1. Selezionare la definizione di compilazione `DNS Infra` e fare clic su **Modifica**
 1. Fare clic sulla scheda **Trigger**
-1. Selezionare **Integrazione continua (CI)**e selezionare `refs/heads/ci-cd-example` nell'elenco a discesa dei rami
+1. Selezionare **Integrazione continua (CI)** e selezionare `refs/heads/ci-cd-example` nell'elenco a discesa dei rami
 1. Fare clic su **Salva** e quindi su **OK**
 
 Ora qualsiasi modifica al repository Git in TFS attiva una compilazione automatizzata.

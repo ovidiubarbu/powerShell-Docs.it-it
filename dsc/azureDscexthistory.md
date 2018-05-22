@@ -1,16 +1,13 @@
 ---
 description: Informazioni sulla cronologia delle versioni per l'estensione DSC (Desired State Configuration) in Azure.
 ms.date: 05/09/2018
-ms.topic: conceptual
 keywords: dsc, powershell, azure, estensione
 title: Cronologia delle versioni dell'estensione DSC di Azure
-author: DCtheGeek
-ms.author: dacoulte
-ms.openlocfilehash: 59c014b4b169a589561f57c1ee2a5e861137aee5
-ms.sourcegitcommit: e9ad4d85fd7eb72fb5bc37f6ca3ae1282ae3c6d7
+ms.openlocfilehash: 81dfcf81bd8f8685a0c8c81cd07bc5447e1abf94
+ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 05/16/2018
 ---
 # <a name="azure-desired-state-configuration-extension-version-history"></a>Cronologia delle versioni dell'estensione DSC (Desired State Configuration) di Azure
 

@@ -118,7 +118,7 @@ PowerShell Core usa [.NET Standard][] 2.0 per garantire la compatibilità binari
 Molti moduli di PowerShell dipendono da tali assembly (spesso DLL), quindi .NET Standard consente di continuare a usare .NET Core.
 PowerShell Core include anche un'euristica per la ricerca nelle cartelle note, ad esempio dove si trova in genere Global Assembly Cache sul disco, per trovare le dipendenze DLL di .NET Framework.
 
-Maggiori informazioni su .NET Standard sono disponibili nel [blog di .NET][], in questo video di [YouTube][] e in queste [domande frequenti][] su GitHub.
+Maggiori informazioni su .NET Standard sono disponibili nel [Blog di .NET][], in questo video di [YouTube][] e in queste [domande frequenti][] su GitHub.
 
 È stato fatto il possibile per garantire che il linguaggio di PowerShell e i moduli "predefiniti" (ad esempio `Microsoft.PowerShell.Management`, `Microsoft.PowerShell.Utility` e così via) funzionino come in Windows PowerShell.
 In molti casi, con il supporto della community, sono state aggiunte nuove funzionalità e correzioni di bug ai cmdlet.
@@ -373,12 +373,12 @@ Altre informazioni sull'uso di questi dati sono disponibili in questo [post di b
 [os_log]: https://developer.apple.com/documentation/os/logging
 [Syslog]: https://en.wikipedia.org/wiki/Syslog
 [ssh-remoting]: ../core-powershell/SSH-Remoting-in-PowerShell-Core.md
-[breaking-changes]: https://github.com/PowerShell/PowerShell/tree/master/docs/BREAKINGCHANGES.md
+[breaking-changes]: breaking-changes-ps6.md
 [log delle modifiche]: https://github.com/PowerShell/PowerShell/tree/master/CHANGELOG.md
 [community-dashboard]: https://aka.ms/PSGitHubBI
 [telemetry-blog]: https://blogs.msdn.microsoft.com/powershell/2017/01/31/powershell-open-source-community-dashboard/
 [.NET Standard]: https://docs.microsoft.com/dotnet/standard/net-standard
-[blog di .NET]: https://blogs.msdn.microsoft.com/dotnet/2016/09/26/introducing-net-standard
+[Blog di .NET]: https://blogs.msdn.microsoft.com/dotnet/2016/09/26/introducing-net-standard
 [YouTube]: https://www.youtube.com/watch?v=YI4MurjfMn8&list=PLRAdsfhKI4OWx321A_pr-7HhRNk7wOLLY
 [domande frequenti]: https://github.com/dotnet/standard/blob/master/docs/faq.md
 [CDXML]: https://msdn.microsoft.com/library/jj542525(v=vs.85).aspx

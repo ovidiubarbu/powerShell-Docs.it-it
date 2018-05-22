@@ -1,15 +1,14 @@
 ---
 ms.date: 06/12/2017
-author: JKeithB
-ms.topic: reference
 keywords: wmf,powershell,installazione
+ms.topic: conceptual
 contributor: vaibch
 title: Errore dei cmdlet per la gestione dei commutatori di rete
-ms.openlocfilehash: 626809513e7a8f1aa2c47a48c74e69ca4077f598
-ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
+ms.openlocfilehash: 197a25411a82e5d256a9420706535d5411991f1b
+ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2018
+ms.lasthandoff: 05/16/2018
 ---
 Questi cmdlet consentono di gestire i commutatori di rete su WS-Management.
 Alcuni cmdlet di questo modulo sono in grado di accettare i valori dalle pipeline.
