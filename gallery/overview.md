@@ -1,14 +1,4 @@
----
-ms.date: 06/12/2017
-contributor: JKeithB
-ms.topic: conceptual
-keywords: raccolta,powershell,cmdlet,psgallery, psget
-title: PowerShell Gallery
-ms.openlocfilehash: cffb2f0182ffe9072f9fbbc7f4cdfcf28de276db
-ms.sourcegitcommit: e9ad4d85fd7eb72fb5bc37f6ca3ae1282ae3c6d7
-ms.translationtype: HT
-ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
+ and --- ms.date:  06/12/2017 contributor:  JKeithB keywords:  gallery,powershell,cmdlet,psgallery,psget title:  PowerShell Gallery
 ---
 # <a name="the-powershell-gallery"></a>PowerShell Gallery
 
@@ -28,9 +18,9 @@ Per altre informazioni su come usare i comandi PowerShellGet con PowerShell Gall
 
 ## <a name="supported-operating-systems"></a>Sistemi operativi supportati
 
-Il modulo **PowerShellGet** richiede **PowerShell 3.0 o versione successiva**.
+Il modulo **PowerShellGet** richiede **Windows PowerShell 3.0 o versione successiva** o **PowerShell Core 6.0 o versione successiva**.
 
-Di conseguenza, **PowerShellGet** richiede uno dei sistemi operativi seguenti:
+È disponibile una versione appropriata di **Windows PowerShell** per questi sistemi operativi:
 
 - Windows 10
 - Windows 8.1 Pro
@@ -41,6 +31,10 @@ Di conseguenza, **PowerShellGet** richiede uno dei sistemi operativi seguenti:
 - Windows Server 2008 R2 SP1
 
 **PowerShellGet** richiede anche .NET Framework 4.5 o versione successiva. È possibile installare .NET Framework 4.5 o versione successiva da [qui](https://msdn.microsoft.com/library/5a4x27ek.aspx).
+
+**PowerShell Core** supporta molti sistemi operativi. Vedere [questo articolo](https://blogs.msdn.microsoft.com/powershell/2018/01/10/powershell-core-6-0-generally-available-ga-and-supported/) per un elenco completo.
+
+Molti moduli ospitati nella raccolta supporteranno sistemi operativi diversi e hanno requisiti aggiuntivi. Per altre informazioni, vedere la documentazione per i moduli.
 
 ## <a name="got-a-question-have-feedback"></a>Domande? Commenti e suggerimenti?
 

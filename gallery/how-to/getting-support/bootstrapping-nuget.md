@@ -1,6 +1,13 @@
-
 ---
-ms.date :  06/12/2017 collaboratore:  manikb ms.topic:  parole chiave di riferimento:  gallery,powershell,cmdlet,psget titolo:  Bootstrap di NuGet
+ms.date: 06/12/2017
+contributor: manikb
+keywords: raccolta,powershell,cmdlet,psget
+title: Bootstrap di NuGet
+ms.openlocfilehash: f707e23737361ee7f82a16150402c9e719ee0ae1
+ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="bootstrap-the-nuget-provider-and-nugetexe"></a>Bootstrap del provider NuGet e di NuGet.exe
 
