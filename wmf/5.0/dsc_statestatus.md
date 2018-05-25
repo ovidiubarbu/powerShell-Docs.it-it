@@ -1,11 +1,11 @@
 ---
 ms.date: 06/12/2017
 keywords: wmf,powershell,installazione
-ms.openlocfilehash: 272843efb68c42105af6eb88ad6a95b581da47ae
-ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
+ms.openlocfilehash: 7b4e4dbeaf9c3c48e7b2dfc74435dfa2cd9c7ea7
+ms.sourcegitcommit: 735ccab3fb3834ccd8559fab6700b798e8e5ffbf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/16/2018
+ms.lasthandoff: 05/25/2018
 ---
 # <a name="unified-and-consistent-state-and-status-representation"></a>Rappresentazione degli stati unificata e coerente
 
@@ -21,7 +21,7 @@ La rappresentazione dello stato di Gestione configurazione locale e delle operaz
 
 Nella tabella seguente sono illustrate le proprietà correlate allo stato risultanti in alcuni scenari tipici.
 
-| **Scenario**                    | **LCMState\***       | **Stato** | **RebootRequested**  | **ResourcesInDesiredState**  | **ResourcesNotInDesiredState** |
+| Scenario                    | LCMState       | Stato | RebootRequested  | ResourcesInDesiredState  | ResourcesNotInDesiredState |
 |---------------------------------|----------------------|------------|---------------|------------------------------|--------------------------------|
 | S**^**                          | Idle                 | Operazione completata    | $false        | S                            | $null                          |
 | F**^**                          | PendingConfiguration | Operazioni non riuscite    | $false        | $null                        | F                              |
@@ -46,11 +46,13 @@ $ResourcesInDesiredState = (Get-DscConfigurationStatus).ResourcesInDesiredState
 
 $ResourcesNotInDesiredState = (Get-DscConfigurationStatus).ResourcesNotInDesiredState
 ```
+
 ## <a name="enhancement-in-get-dscconfigurationstatus-cmdlet"></a>Miglioramenti per il cmdlet Get-DscConfigurationStatus
 
 In questa versione sono stati introdotti alcuni miglioramenti per il cmdlet Get-DscConfigurationStatus. In precedenza, la proprietà StartDate degli oggetti restituiti dal cmdlet è di tipo String. Ora è di tipo Datetime e questo facilita operazioni complesse di selezione e filtro basate sulle proprietà intrinseche di un oggetto Datetime.
+
 ```powershell
-(Get-DscConfigurationStatus).StartDate | fl \*
+(Get-DscConfigurationStatus).StartDate | fl *
 DateTime : Friday, November 13, 2015 1:39:44 PM
 Date : 11/13/2015 12:00:00 AM
 Day : 13
@@ -68,14 +70,16 @@ Year : 2015
 ```
 
 Ecco un esempio che restituisce tutti i record di operazioni DSC eseguite nello stesso giorno della settimana di oggi.
+
 ```powershell
-(Get-DscConfigurationStatus –All) | where { $\_.startdate.dayofweek -eq (Get-Date).DayOfWeek }
+(Get-DscConfigurationStatus –All) | where { $_.startdate.dayofweek -eq (Get-Date).DayOfWeek }
 ```
 
 Vengono eliminati i record delle operazioni che non apportano modifiche alla configurazione del nodo, ad esempio le operazioni di sola lettura. Pertanto, le operazioni Test-DscConfiguration e Get-DscConfiguration non vengono più modificate negli oggetti restituiti dal cmdlet Get-DscConfigurationStatus.
 I record dell'operazione di impostazione della metaconfigurazione viene aggiunto all'oggetto restituito dal cmdlet Get-DscConfigurationStatus.
 
 Di seguito è riportato un esempio di risultato restituito dal cmdlet Get-DscConfigurationStatus -All.
+
 ```powershell
 All configuration operations:
 
@@ -89,12 +93,15 @@ Success 11/13/2015 11:20:44 AM LocalConfigurationManager False
 ```
 
 ## <a name="enhancement-in-get-dsclocalconfigurationmanager-cmdlet"></a>Miglioramenti per il cmdlet Get-DscLocalConfigurationManager
+
 È stato aggiunto un nuovo campo LCMStateDetail all'oggetto restituito dal cmdlet Get-DscLocalConfigurationManager. Questo campo viene popolato quando LCMState è "Busy". Può essere recuperato dal cmdlet seguente:
+
 ```powershell
 (Get-DscLocalConfigurationManager).LCMStateDetail
 ```
 
 Quello che segue è un esempio dell'output di un'operazione di monitoraggio continuo per una configurazione che richiede due riavvii in un nodo remoto.
+
 ```powershell
 Start a configuration that requires two reboots
 
