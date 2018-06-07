@@ -131,7 +131,7 @@ I sottosistemi SSH vengono usati per stabilire un processo PowerShell nel comput
     - Aggiungere una voce del sottosistema PowerShell
 
     ```
-    Subsystem powershell /usr/local/bin/powershell -sshs -NoLogo -NoProfile
+    Subsystem powershell /usr/local/bin/pwsh -sshs -NoLogo -NoProfile
     ```
 
     - Facoltativamente è possibile abilitare l'autenticazione della chiave
@@ -242,7 +242,7 @@ GitCommitId                    v6.0.0-alpha.17
 1. Il comando sudo non funziona nella sessione remota per computer Linux.
 
 [PowerShell Core per Windows]: https://github.com/PowerShell/PowerShell/blob/master/docs/installation/windows.md#msi
-[OpenSSH - Win32]: https://github.com/PowerShell/Win32-OpenSSH
+[OpenSSH - Win32]: https://github.com/PowerShell/Win32-OpenSSH/releases
 [installazione]: https://github.com/PowerShell/Win32-OpenSSH/wiki/Install-Win32-OpenSSH
 [PowerShell per Linux]: https://github.com/PowerShell/PowerShell/blob/master/docs/installation/linux.md#ubuntu-1404
 [SSH per Ubuntu]: https://help.ubuntu.com/lts/serverguide/openssh-server.html
