@@ -1,41 +1,48 @@
 ---
-ms.date: 06/12/2017
+ms.date: 06/20/2018
 keywords: dsc,powershell,configurazione,installazione
 title: Risorsa PackageManagementSource DSC
-ms.openlocfilehash: 3e67cec9058ecb0e43f882f98f5ec8b92e261a09
-ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
+ms.openlocfilehash: 5d049b05c387cafe27edb202d569852b10852dce
+ms.sourcegitcommit: 01d6985ed190a222e9da1da41596f524f607a5bc
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/16/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34753771"
 ---
 # <a name="dsc-packagemanagementsource-resource"></a>Risorsa PackageManagementSource DSC
 
-> Si applica a: Windows PowerShell 4.0, Windows PowerShell 5.0
+> Si applica a: Windows PowerShell 4.0, Windows PowerShell 5.0, Windows PowerShell 5.1
 
 La risorsa **PackageManagementSource** in Windows PowerShell DSC (Desired State Configuration) fornisce un meccanismo per registrare o annullare la registrazione di origini di Gestione pacchetti in un nodo di destinazione. **Le origini di Gestione pacchetti registrate in questo modo vengono registrate nel contesto del sistema, utilizzabile dall'account di sistema o dal motore di DSC.** Questa risorsa richiede il modulo **PackageManagement**, disponibile da http://PowerShellGallery.com.
+
+> [!IMPORTANT]
+> La versione del modulo **PackageManagement** deve essere almeno la 1.1.7.0 affinché le informazioni sulle proprietà seguenti siano corrette.
 
 ## <a name="syntax"></a>Sintassi
 
 ```
-PSModule [string] #ResourceName
+PackageManagementSource [String] #ResourceName
 {
     Name = [string]
-    [ Ensure = [string] { Absent | Present }  ]
-    [ InstallationPolicy = [string] ]
-    [ ProviderName = [string] ]
-    [ SourceUri = [string] ]
-    [ SourceCredential = [PSCredential] ]
+    ProviderName = [string]
+    SourceLocation = [string]
+    [DependsOn = [string[]]]
+    [Ensure = [string]{ Absent | Present }]
+    [InstallationPolicy = [string]{ Trusted | Untrusted }]
+    [PsDscRunAsCredential = [PSCredential]]
+    [SourceCredential = [PSCredential]]
 }
 ```
 
 ## <a name="properties"></a>Proprietà
-|  Proprietà  |  Description   |
+
+|  Proprietà  |  Descrizione   |
 |---|---|
 | Nome| Specifica il nome dell'origine del pacchetto da registrare o di cui annullare la registrazione nel sistema.|
-| Ensure| Determina se l'origine del pacchetto deve essere registrata oppure se ne deve essere annullata la registrazione.|
-| InstallationPolicy| Determina se considerare attendibile l'origine del pacchetto. Uno dei valori possibili: "Untrusted", "Trusted".|
 | ProviderName| Specifica il nome del provider OneGet tramite il quale è possibile l'interoperabilità con l'origine del pacchetto.|
-| SourceUri| Specifica l'URI dell'origine del pacchetto.|
+| SourceLocation| Specifica l'URI dell'origine del pacchetto.|
+| Ensure| Determina se l'origine del pacchetto deve essere registrata oppure se ne deve essere annullata la registrazione.|
+| InstallationPolicy| Usato dai provider, ad esempio il provider NuGet predefinito. Determina se considerare attendibile l'origine del pacchetto. Uno dei valori possibili: "Untrusted", "Trusted".|
 | SourceCredential| Fornisce l'accesso al pacchetto in un'origine remota.|
 
 ## <a name="example"></a>Esempio
@@ -50,7 +57,7 @@ Configuration PackageManagementSourceTest
         Ensure      = "Present"
         Name        = "MyNuget"
         ProviderName= "Nuget"
-        SourceUri   = "http://nuget.org/api/v2/"
+        SourceLocation   = "http://nuget.org/api/v2/"
         InstallationPolicy ="Trusted"
     }
 }
