@@ -3,14 +3,15 @@ ms.date: 06/05/2017
 keywords: powershell,cmdlet
 title: Recupero di informazioni sui comandi
 ms.assetid: 56f8e5b4-d97c-4e59-abbe-bf13e464eb0d
-ms.openlocfilehash: 1426c171d74afc87751f7d31d46571b9c98fa47e
-ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
+ms.openlocfilehash: c51579fe2cdf4f2a0d3248d1aaf3f1f9cac83868
+ms.sourcegitcommit: 01d6985ed190a222e9da1da41596f524f607a5bc
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34482727"
 ---
 # <a name="getting-information-about-commands"></a>Recupero di informazioni sui comandi
-Il cmdlet **Get-Command** di Windows PowerShell ottiene tutti i comandi disponibili nella sessione corrente. Quando si digita **Get-Command** al prompt di Windows PowerShell, verrà visualizzato un output simile al seguente:
+Il cmdlet `Get-Command` di Windows PowerShell ottiene tutti i comandi disponibili nella sessione corrente. Quando si digita `Get-Command` a un prompt di PowerShell, viene visualizzato un output simile al seguente:
 
 ```
 PS> Get-Command
@@ -24,13 +25,13 @@ Cmdlet          Add-Member                      Add-Member [-MemberType] <PS...
 
 Questo output è simile all'output della Guida di Cmd.exe, ossia un riepilogo di comandi interni in formato tabella. Nell'estratto dell'output del comando **Get-Command** illustrato sopra, ogni comando visualizzato ha un cmdlet di tipo CommandType. Un cmdlet è un tipo di comando intrinseco di Windows PowerShell, che corrisponde approssimativamente ai comandi **dir** e **cd** di Cmd.exe e ai comandi predefiniti delle shell UNIX, ad esempio BASH.
 
-Nell'output del comando **Get-Command** tutte le definizioni terminano con puntini di sospensione (...) per indicare che PowerShell non può visualizzare tutto il contenuto nello spazio disponibile. Quando Windows PowerShell visualizza l'output, lo formatta come testo e quindi lo dispone in modo che i dati si adattino perfettamente alla finestra. Questo aspetto verrà trattato più avanti nella sezione sui formattatori.
+Nell'output del comando `Get-Command` tutte le definizioni terminano con puntini di sospensione (...) per indicare che PowerShell non riesce a visualizzare tutto il contenuto nello spazio disponibile. Quando Windows PowerShell visualizza l'output, lo formatta come testo e quindi lo dispone in modo che i dati si adattino perfettamente alla finestra. Questo aspetto verrà trattato più avanti nella sezione sui formattatori.
 
-Il cmdlet **Get-Command** ha un parametro **Syntax** che ottiene la sintassi di ogni cmdlet. Per ottenere la sintassi del cmdlet Get-Help, usare il comando seguente:
-
-**Get-Command Get-Help -Syntax**
+Il cmdlet `Get-Command` ha un parametro **Syntax** che ottiene la sintassi di ogni cmdlet. Per ottenere la sintassi del cmdlet Get-Help, usare il comando seguente:
 
 ```
+Get-Command Get-Help -Syntax
+
 Get-Help [[-Name] <String>] [-Path <String>] [-Category <String[]>] [-Component <String[]>] [-Functionality <String[]>]
  [-Role <String[]>] [-Full] [-Online] [-Verbose] [-Debug] [-ErrorAction <ActionPreference>] [-WarningAction <ActionPreference>] [-ErrorVariable <String>] [-WarningVariable <String>] [-OutVariable <String>] [-OutBuffer <Int32>]
 
@@ -49,31 +50,31 @@ Il comando **Get-Command** non elenca tutti i comandi disponibili in Windows Pow
 
 Per ottenere tutti i comandi della sessione, digitare:
 
-```
+```powershell
 Get-Command *
 ```
 
 Poiché questo elenco include file esterni nel percorso di ricerca, potrebbe contenere migliaia di elementi. Risulta più utile esaminare un set ridotto di comandi.
 
-Per ottenere comandi nativi di altri tipi, usare il parametro **CommandType** del cmdlet **Get-Command**.
+Per ottenere comandi nativi di altri tipi, usare il parametro **CommandType** del cmdlet `Get-Command`.
 
 > [!NOTE]
-> L'asterisco (\*) viene usato per la corrispondenza con caratteri jolly negli argomenti dei comandi di Windows PowerShell. Il carattere \* indica una corrispondenza con uno o più caratteri qualsiasi. È possibile digitare **Get-Command a\&#42;** per trovare tutti i comandi che iniziano con la lettera "a". A differenza di quanto avviene con Cmd.exe, il carattere jolly di Windows PowerShell corrisponde anche a un punto.
+> L'asterisco (\*) viene usato per la corrispondenza con caratteri jolly negli argomenti dei comandi di Windows PowerShell. Il carattere \* indica una corrispondenza con uno o più caratteri qualsiasi. È possibile digitare `Get-Command a*` per trovare tutti i comandi che iniziano con la lettera "a". A differenza di quanto avviene con Cmd.exe, il carattere jolly di Windows PowerShell corrisponde anche a un punto.
 
 Per ottenere gli alias di comandi, ovvero i nomi alternativi assegnati, digitare:
 
-```
+```powershell
 Get-Command -CommandType Alias
 ```
 
 Per ottenere le funzioni della sessione corrente, digitare:
 
-```
+```powershell
 Get-Command -CommandType Function
 ```
 
 Per visualizzare gli script nel percorso di ricerca di Windows PowerShell, digitare:
 
-```
+```powershell
 Get-Command -CommandType Script
 ```

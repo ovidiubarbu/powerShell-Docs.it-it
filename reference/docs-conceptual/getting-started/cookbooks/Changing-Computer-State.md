@@ -3,11 +3,12 @@ ms.date: 06/05/2017
 keywords: powershell,cmdlet
 title: Modifica dello stato del computer
 ms.assetid: 8093268b-27f8-4a49-8871-142c5cc33f01
-ms.openlocfilehash: 3d3983c6d9e9b11db62bd71805da51be83331fdb
-ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
+ms.openlocfilehash: c659ad54325b0f7305f882e1cb9607062abad6a4
+ms.sourcegitcommit: 2ffb9fa92129c2001379ca2c17646466721f7165
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2018
+ms.lasthandoff: 06/09/2018
+ms.locfileid: "35251518"
 ---
 # <a name="changing-computer-state"></a>Modifica dello stato del computer
 
@@ -49,16 +50,16 @@ Per altre informazioni e per individuare altre funzionalità del metodo Win32Shu
 
 L'arresto e il riavvio dei computer sono in genere gli stessi tipi di attività. Gli strumenti per l'arresto di un computer di solito consentono anche di riavviarlo e viceversa. Sono disponibili due opzioni semplici per riavviare un computer da Windows PowerShell. Usare Tsshutdn.exe o Shutdown.exe con gli argomenti appropriati. È possibile ottenere informazioni dettagliate sull'utilizzo con **tsshutdn.exe /?** o **shutdown.exe /?**.
 
-È possibile eseguire le operazioni di arresto e riavvio anche usando **Win32_OperatingSystem** direttamente da Windows PowerShell.
+È possibile eseguire le operazioni di arresto e riavvio anche direttamente da Windows PowerShell.
 
-Per arrestare il computer, usare il metodo Win32Shutdown con il contrassegno **1**.
+Per arrestare il computer, usare il comando di riavvio del computer
 
 ```powershell
-(Get-WmiObject -Class Win32_OperatingSystem -ComputerName .).Win32Shutdown(1)
+stop-computer
 ```
 
-Per riavviare il sistema operativo, usare il metodo Win32Shutdown con il contrassegno **2**.
+Per riavviare il sistema operativo, usare il comando di riavvio del computer
 
 ```powershell
-(Get-WmiObject -Class Win32_OperatingSystem -ComputerName .).Win32Shutdown(2)
+restart-computer
 ```

@@ -1,15 +1,16 @@
 ---
 ms.date: 06/12/2017
 keywords: wmf,powershell,installazione
-ms.openlocfilehash: 4bfedd585958f84889954bd9ee022ea47ac191b2
-ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
+ms.openlocfilehash: e7198999c17b5c0d77724a82b322e6485065225e
+ms.sourcegitcommit: 01d6985ed190a222e9da1da41596f524f607a5bc
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/16/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34482846"
 ---
 # <a name="software-inventory-logging-sil"></a>Registrazione inventario software (SIL)
 
-**IMPORTANTE: ** *quando si installa WMF 5.0 in un computer Windows Server 2012 R2 Server che già esegue SIL, è necessario eseguire il cmdlet Start-SilLogging una volta dopo l'installazione di WMF, perché il processo di installazione arresta erroneamente la funzionalità Registrazione inventario software.*
+**IMPORTANTE:** *quando si installa WMF 5.0 in un computer Windows Server 2012 R2 Server che già esegue SIL, è necessario eseguire il cmdlet Start-SilLogging una volta dopo l'installazione di WMF, perché il processo di installazione arresta erroneamente la funzionalità Registrazione inventario software.*
 
 Registrazione inventario software contribuisce a ridurre i costi operativi associati al recupero di informazioni accurate sul software Microsoft installato localmente in un server, ma soprattutto in più server in un ambiente IT (presupponendo che il software sia installato ed eseguito in tutto l'ambiente IT). A condizione che ce ne sia uno disponibile configurato, è possibile inoltrare questi dati a un server di aggregazione e raccogliere i dati di log in un'unica posizione tramite un processo automatico uniforme.
 

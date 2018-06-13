@@ -74,7 +74,7 @@ I sottosistemi SSH vengono usati per stabilire un processo PowerShell nel comput
 
 ## <a name="setup-on-linux-ubuntu-1404-machine"></a>Installazione in computer Linux (Ubuntu 14.04)
 
-1. Installare la versione più recente della build di [PowerShell per Linux] da GitHub
+1. Installare la versione più recente della build di [PowerShell Core per Linux] da GitHub
 1. Installare [SSH per Ubuntu] in base alle esigenze
 
     ```bash
@@ -109,7 +109,7 @@ I sottosistemi SSH vengono usati per stabilire un processo PowerShell nel comput
 
 ## <a name="setup-on-macos-machine"></a>Installazione in computer MacOS
 
-1. Installare la build più recente di [PowerShell per MacOS]
+1. Installare la build più recente di [PowerShell Core per MacOS]
     - Assicurarsi che la comunicazione remota SSH sia abilitata attenendosi alla procedura seguente:
       - Aprire `System Preferences`
       - Fare clic su `Sharing`
@@ -241,9 +241,9 @@ GitCommitId                    v6.0.0-alpha.17
 
 1. Il comando sudo non funziona nella sessione remota per computer Linux.
 
-[PowerShell Core per Windows]: https://github.com/PowerShell/PowerShell/blob/master/docs/installation/windows.md#msi
+[PowerShell Core per Windows]: ../setup/installing-powershell-core-on-windows.md#msi
+[PowerShell Core per Linux]: ../setup/installing-powershell-core-on-linux.md#ubuntu-1404
+[PowerShell Core per MacOS]: ../setup/installing-powershell-core-on-macos.md
 [OpenSSH - Win32]: https://github.com/PowerShell/Win32-OpenSSH/releases
 [installazione]: https://github.com/PowerShell/Win32-OpenSSH/wiki/Install-Win32-OpenSSH
-[PowerShell per Linux]: https://github.com/PowerShell/PowerShell/blob/master/docs/installation/linux.md#ubuntu-1404
 [SSH per Ubuntu]: https://help.ubuntu.com/lts/serverguide/openssh-server.html
-[PowerShell per MacOS]: https://github.com/PowerShell/PowerShell/blob/master/docs/installation/macos.md#macos-1012
