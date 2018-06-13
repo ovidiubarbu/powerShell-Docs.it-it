@@ -3,11 +3,12 @@ ms.date: 06/05/2017
 keywords: powershell,cmdlet
 title: Avvio del motore di Windows PowerShell 2.0
 ms.assetid: edafc2fa-7576-49c2-bbba-9336f4bcfc28
-ms.openlocfilehash: 585e1003554362d11fe99414bd3e80c497799a88
-ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
+ms.openlocfilehash: 618745ff4865dd046acf46487e87c3ca0e324f95
+ms.sourcegitcommit: 01d6985ed190a222e9da1da41596f524f607a5bc
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34482965"
 ---
 # <a name="starting-the-windows-powershell-20-engine"></a>Avvio del motore di Windows PowerShell 2.0
 
@@ -37,13 +38,13 @@ Per eseguire il motore di Windows PowerShell 2.0 in una sessione remota, creare 
 
 Si tratta di un'attività avanzata, che in genere viene eseguita dagli amministratori di sistema.
 
-La procedura seguente usa il parametro **PSVersion** del cmdlet [Register-PSSessionConfiguration](https://technet.microsoft.com/en-us/library/e9152ae2-bd6d-4056-9bc7-dc1893aa29ea) per creare una configurazione di sessione che usa il motore di Windows PowerShell 2.0. Si può anche usare il parametro **PowerShellVersion** del cmdlet [New-PSSessionConfigurationFile](https://technet.microsoft.com/en-us/library/5f3e3633-6e90-479c-aea9-ba45a1954866) per creare un file di configurazione per una sessione che carica il motore di Windows PowerShell 2.0. Per modificare una configurazione di sessione in modo che usi il motore di Windows PowerShell 2.0 si può usare il parametro **PSVersion** del cmdlet [Set-PSSessionConfiguration](https://technet.microsoft.com/en-us/library/b21fbad3-1759-4260-b206-dcb8431cd6ea).
+La procedura seguente usa il parametro **PSVersion** del cmdlet [Register-PSSessionConfiguration](https://technet.microsoft.com/library/e9152ae2-bd6d-4056-9bc7-dc1893aa29ea) per creare una configurazione di sessione che usa il motore di Windows PowerShell 2.0. Si può anche usare il parametro **PowerShellVersion** del cmdlet [New-PSSessionConfigurationFile](https://technet.microsoft.com/library/5f3e3633-6e90-479c-aea9-ba45a1954866) per creare un file di configurazione per una sessione che carica il motore di Windows PowerShell 2.0. Per modificare una configurazione di sessione in modo che usi il motore di Windows PowerShell 2.0 si può usare il parametro **PSVersion** del cmdlet [Set-PSSessionConfiguration](https://technet.microsoft.com/library/b21fbad3-1759-4260-b206-dcb8431cd6ea).
 
-Per altre informazioni sui file di configurazione della sessione, vedere [about_Session_Configuration_Files](https://technet.microsoft.com/en-us/library/c7217447-1ebf-477b-a8ef-4dbe9a1473b8). Per informazioni sulle configurazioni di sessione, incluse impostazione e sicurezza, vedere [about_Session_Configurations[v4]](https://technet.microsoft.com/en-us/library/a2fbe12a-350c-4d04-be50-24102824e3ab).
+Per altre informazioni sui file di configurazione della sessione, vedere [about_Session_Configuration_Files](https://technet.microsoft.com/library/c7217447-1ebf-477b-a8ef-4dbe9a1473b8). Per informazioni sulle configurazioni di sessione, incluse impostazione e sicurezza, vedere [about_Session_Configurations[v4]](https://technet.microsoft.com/library/a2fbe12a-350c-4d04-be50-24102824e3ab).
 
 #### <a name="to-start-a-remote-windows-powershell-20-session"></a>Per avviare una sessione remota di Windows PowerShell 2.0
 
-1. Per creare una configurazione di sessione che richiede il motore di Windows PowerShell 2.0, usare il parametro **PSVersion** del cmdlet [Register-PSSessionConfiguration](https://technet.microsoft.com/en-us/library/e9152ae2-bd6d-4056-9bc7-dc1893aa29ea) impostando il valore "2.0". Eseguire questo comando nel computer che si trova sul "lato server" o ricevente della connessione.
+1. Per creare una configurazione di sessione che richiede il motore di Windows PowerShell 2.0, usare il parametro **PSVersion** del cmdlet [Register-PSSessionConfiguration](https://technet.microsoft.com/library/e9152ae2-bd6d-4056-9bc7-dc1893aa29ea) impostando il valore "2.0". Eseguire questo comando nel computer che si trova sul "lato server" o ricevente della connessione.
 
    Il comando di esempio seguente crea la configurazione di sessione PS2 nel computer Server01. Per eseguire il comando, avviare Windows PowerShell 4.0 o Windows PowerShell 3.0 con l'opzione **Esegui come amministratore**.
 
@@ -51,7 +52,7 @@ Per altre informazioni sui file di configurazione della sessione, vedere [about_
    Register-PSSessionConfiguration -Name PS2 -PSVersion 2.0
    ```
 
-2. Per creare nel computer Server01 una sessione che usa la configurazione di sessione PS2, usare il parametro **ConfigurationName** dei cmdlet per la creazione di una sessione remota, ad esempio [New-PSSession](https://technet.microsoft.com/en-us/library/76f6628c-054c-4eda-ba7a-a6f28daaa26f).
+2. Per creare nel computer Server01 una sessione che usa la configurazione di sessione PS2, usare il parametro **ConfigurationName** dei cmdlet per la creazione di una sessione remota, ad esempio [New-PSSession](https://technet.microsoft.com/library/76f6628c-054c-4eda-ba7a-a6f28daaa26f).
 
    All'avvio di una sessione che usa la configurazione di sessione, il motore di Windows PowerShell 2.0 viene caricato automaticamente.
 
@@ -63,7 +64,7 @@ Per altre informazioni sui file di configurazione della sessione, vedere [about_
 
 ## <a name="how-to-start-a-background-job-with-the-windows-powershell-20-engine"></a>Come avviare un processo in background con il motore di Windows PowerShell 2.0
 
-Per avviare un processo in background con il motore di Windows PowerShell 2.0, usare il parametro **PSVersion** del cmdlet [Start-Job](https://technet.microsoft.com/en-us/library/2bc04935-0deb-4ec0-b856-d7290cca6442).
+Per avviare un processo in background con il motore di Windows PowerShell 2.0, usare il parametro **PSVersion** del cmdlet [Start-Job](https://technet.microsoft.com/library/2bc04935-0deb-4ec0-b856-d7290cca6442).
 
 Il comando seguente avvia un processo in background con il motore di Windows PowerShell 2.0
 

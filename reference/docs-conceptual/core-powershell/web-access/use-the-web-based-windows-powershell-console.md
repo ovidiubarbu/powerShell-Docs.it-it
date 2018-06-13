@@ -2,11 +2,12 @@
 ms.date: 08/23/2017
 keywords: powershell,cmdlet
 title: usare la console di windows powershell basata sul web
-ms.openlocfilehash: 3ef2b39279745ffe78fa928247e8a1fb76519ba0
-ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
+ms.openlocfilehash: 5d29a6f97fddf4b329fcc7097cf7d40d47d22cca
+ms.sourcegitcommit: 01d6985ed190a222e9da1da41596f524f607a5bc
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34483152"
 ---
 # <a name="use-the-web-based-windows-powershell-console"></a>Usare la console di Windows PowerShell basata sul Web
 
@@ -81,7 +82,7 @@ Il metodo di configurazione del computer più semplice per consentire la gestion
 
     In genere, le credenziali che si usano per il passaggio attraverso il gateway di Accesso Web Windows PowerShell sono le stesse riconosciute dal computer remoto che si vuole gestire. Se tuttavia si preferisce usare credenziali diverse per gestire il computer remoto specificato nel passaggio 2, espandere la sezione **Impostazioni di connessione facoltative** e fornire le credenziali alternative. In caso contrario, andare al passaggio 6.
 
-1. Se l'amministratore di Accesso Web Windows PowerShell ha creato una configurazione di sessione personalizzata per gli utenti di Accesso Web Windows PowerShell, digitare il nome della configurazione di sessione nel campo **Nome configurazione**. Per altre informazioni sulle configurazioni di sessione, vedere [about_Session_Configurations](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_session_configurations).
+1. Se l'amministratore di Accesso Web Windows PowerShell ha creato una configurazione di sessione personalizzata per gli utenti di Accesso Web Windows PowerShell, digitare il nome della configurazione di sessione nel campo **Nome configurazione**. Per altre informazioni sulle configurazioni di sessione, vedere [about_Session_Configurations](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_session_configurations).
 
 1. Mantenere il valore di **Tipo di autenticazione** impostato su **Predefinito**, a meno che l'amministratore di Accesso Web Windows PowerShell non abbia fornito istruzioni per procedere diversamente.
 

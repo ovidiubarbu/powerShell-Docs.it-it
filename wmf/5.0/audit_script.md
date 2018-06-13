@@ -1,11 +1,12 @@
 ---
 ms.date: 06/12/2017
 keywords: wmf,powershell,installazione
-ms.openlocfilehash: 2627b9d02788bd31a5384587406df533faf2cfaf
-ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
+ms.openlocfilehash: b8f175cee0a1de501b64890fdc2798f4f6421a14
+ms.sourcegitcommit: 2ffb9fa92129c2001379ca2c17646466721f7165
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/17/2018
+ms.lasthandoff: 06/09/2018
+ms.locfileid: "35251484"
 ---
 # <a name="script-tracing-and-logging"></a>Traccia e registrazione degli script
 
@@ -104,4 +105,4 @@ $sortedScripts = $created | sort { $_.Properties[0].Value }
 $mergedScript = -join ($sortedScripts | % { $_.Properties[2].Value })
 ```
 
-Come per tutti i sistemi di registrazione con un buffer limitato per la conservazione (ad esempio, i log ETW), un attacco contro questa infrastruttura si basa sull'inondare (flood) il log di eventi spuri per nascondere prove precedenti. Per proteggersi da questo tipo di attacco, assicurarsi di aver configurato una qualche forma di raccolta del registro eventi (ad esempio, l'inoltro degli eventi di Windows o il [monitoraggio del registro eventi di Windows per individuare i nemici](http://www.nsa.gov/ia/_files/app/Spotting_the_Adversary_with_Windows_Event_Log_Monitoring.pdf)) per spostare i registri eventi in una posizione al di fuori del computer non appena possibile.
+Come per tutti i sistemi di registrazione con un buffer limitato per la conservazione (ad esempio, i log ETW), un attacco contro questa infrastruttura si basa sull'inondare (flood) il log di eventi spuri per nascondere prove precedenti. Per proteggersi da questo tipo di attacco, assicurarsi di aver configurato una qualche forma di raccolta del registro eventi (ad esempio, l'inoltro degli eventi di Windows o il [monitoraggio del registro eventi di Windows per individuare i nemici](https://www.iad.gov/iad/library/reports/spotting-the-adversary-with-windows-event-log-monitoring.cfm)) per spostare i registri eventi in una posizione al di fuori del computer non appena possibile.

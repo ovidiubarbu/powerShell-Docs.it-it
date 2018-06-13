@@ -2,11 +2,12 @@
 ms.date: 06/27/2017
 keywords: powershell,cmdlet
 title: Regole di autorizzazione e funzionalità di sicurezza di Accesso Web Windows PowerShell
-ms.openlocfilehash: 0e765ae90661a054ca9bae71d0f6d449cccb185d
-ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
+ms.openlocfilehash: 1b4d4339efda78a5cb719921a9cb06881d119930
+ms.sourcegitcommit: 01d6985ed190a222e9da1da41596f524f607a5bc
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34483135"
 ---
 # <a name="authorization-rules-and-security-features-of-windows-powershell-web-access"></a>Regole di autorizzazione e funzionalità di sicurezza di Accesso Web Windows PowerShell
 
@@ -112,7 +113,7 @@ Se l'utente non specifica altre credenziali, per la connessione al computer di d
 Le regole di autorizzazione possono essere utilizzate per consentire agli utenti di accedere a una configurazione di sessione specifica.
 È possibile creare configurazioni di sessione o _spazi di esecuzione con restrizioni_ per Accesso Web Windows PowerShell e consentire a utenti specifici di connettersi solo a configurazioni di sessione specifiche, quando accedono ad Accesso Web Windows PowerShell.
 È possibile usare gli elenchi di controllo di accesso (ACL) per identificare gli utenti che hanno accesso a endpoint specifici e limitare ulteriormente l'accesso all'endpoint per un gruppo di utenti specifico, usando le regole di autorizzazione descritte in questa sezione.
-Per altre informazioni sugli spazi di esecuzione con restrizioni, vedere [Creating a constrained runspace](https://msdn.microsoft.com/en-us/library/dn614668) (Creazione di uno spazio di esecuzione con restrizioni).
+Per altre informazioni sugli spazi di esecuzione con restrizioni, vedere [Creating a constrained runspace](https://msdn.microsoft.com/library/dn614668) (Creazione di uno spazio di esecuzione con restrizioni).
 
 ### <a name="configuring-authorization-rules"></a>Configurazione delle regole di autorizzazione
 
@@ -122,7 +123,7 @@ La seconda procedura illustra come rimuovere una regola di autorizzazione non pi
 
 Se si prevede di usare configurazioni di sessione personalizzate per consentire a utenti specifici di lavorare esclusivamente in spazi di esecuzione di Accesso Web Windows PowerShell con restrizioni, creare le configurazioni di sessione personalizzate prima di aggiungere le regole di autorizzazione che vi fanno riferimento.
 Non è possibile usare i cmdlet di Accesso Web Windows PowerShell per creare configurazioni di sessione personalizzate.
-Per altre informazioni sulla creazione di configurazioni di sessione personalizzate, vedere [about_Session_Configuration_Files](https://msdn.microsoft.com/en-us/powershell/reference/5.1/microsoft.powershell.core/about/about_session_configuration_files).
+Per altre informazioni sulla creazione di configurazioni di sessione personalizzate, vedere [about_Session_Configuration_Files](https://msdn.microsoft.com/powershell/reference/5.1/microsoft.powershell.core/about/about_session_configuration_files).
 
 L'unico carattere jolly supportato dai cmdlet di Accesso Web Windows PowerShell è l'asterisco ( \* ).
 I caratteri jolly all'interno delle stringhe non sono supportati. Utilizzare un singolo asterisco per proprietà (utenti, computer o configurazioni di sessione).
@@ -142,7 +143,7 @@ I caratteri jolly all'interno delle stringhe non sono supportati. Utilizzare un 
 2. **Passaggio facoltativo** Per limitare l'accesso agli utenti tramite le configurazioni di sessione:
 
     Verificare che le configurazioni di sessione da usare esistano già nelle regole.
-Se non sono ancora state create, usare le istruzioni per la creazione di configurazioni di sessione disponibili in [about_Session_Configuration_Files](https://msdn.microsoft.com/en-us/powershell/reference/5.1/microsoft.powershell.core/about/about_session_configuration_files).
+Se non sono ancora state create, usare le istruzioni per la creazione di configurazioni di sessione disponibili in [about_Session_Configuration_Files](https://msdn.microsoft.com/powershell/reference/5.1/microsoft.powershell.core/about/about_session_configuration_files).
 
 3. Questa regola di autorizzazione consente a un utente specifico di accedere a un computer della rete a cui ha accesso normalmente usando una configurazione di sessione specifica con ambito limitato alle esigenze tipiche dell'utente in termini di script e cmdlet. Digitare il comando seguente e quindi premere **INVIO**.
 
@@ -253,6 +254,6 @@ Se il server gateway esegue Windows Server 2012 R2, Accesso Web Windows PowerShe
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Installare e usare Accesso Web Windows PowerShell](https://technet.microsoft.com/en-us/library/hh831611(v=ws.11).aspx)
+- [Installare e usare Accesso Web Windows PowerShell](https://technet.microsoft.com/library/hh831611(v=ws.11).aspx)
 - [about_Session_Configurations](https://technet.microsoft.com/library/dd819508.aspx)
 - [Windows PowerShell Web Access Cmdlets](cmdlets/web-access-cmdlets.md) (Cmdlet di Accesso Web Windows PowerShell)
