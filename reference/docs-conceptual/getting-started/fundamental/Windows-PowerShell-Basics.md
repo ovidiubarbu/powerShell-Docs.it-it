@@ -8,6 +8,7 @@ ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 04/09/2018
+ms.locfileid: "30950535"
 ---
 # <a name="windows-powershell-basics"></a>Nozioni di base su Windows PowerShell
 Le interfacce utente grafiche usano alcuni concetti di base ben noti alla maggior parte degli utenti di computer. Gli utenti contano sulla familiarità di tali interfacce per eseguire le attività. I sistemi operativi offrono agli utenti una rappresentazione grafica degli elementi che possono essere visualizzati, in genere con menu a discesa per l'accesso a funzionalità specifiche e menu di scelta rapida per l'accesso a funzionalità specifiche di un determinato contesto.

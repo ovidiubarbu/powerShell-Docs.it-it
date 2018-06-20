@@ -7,6 +7,7 @@ ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/16/2018
+ms.locfileid: "34189959"
 ---
 # <a name="resource-authoring-checklist"></a>Elenco di controllo per la creazione di risorse
 Questo elenco di controllo è un elenco di procedure consigliate durante la creazione di una nuova risorsa DSC.

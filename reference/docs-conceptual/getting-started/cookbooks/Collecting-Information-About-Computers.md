@@ -8,6 +8,7 @@ ms.sourcegitcommit: 4a841ebda3339ae2477e0f5f5be8c01740221232
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33677315"
 ---
 # <a name="collecting-information-about-computers"></a>Raccolta di informazioni sui computer
 

@@ -6,6 +6,7 @@ ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/16/2018
+ms.locfileid: "34189415"
 ---
 # <a name="new-language-features-in-powershell-50"></a>Nuove funzionalità del linguaggio in PowerShell 5.0
 

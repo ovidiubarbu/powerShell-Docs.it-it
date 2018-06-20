@@ -9,6 +9,7 @@ ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/16/2018
+ms.locfileid: "34188684"
 ---
 Questi cmdlet consentono di gestire i commutatori di rete su WS-Management.
 Alcuni cmdlet di questo modulo sono in grado di accettare i valori dalle pipeline.

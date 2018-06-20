@@ -6,6 +6,7 @@ ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34218434"
 ---
 # <a name="side-by-side-module-versioning-support-for-dsc-resources"></a>Supporto delle versioni di moduli side-by-side per le risorse DSC
 

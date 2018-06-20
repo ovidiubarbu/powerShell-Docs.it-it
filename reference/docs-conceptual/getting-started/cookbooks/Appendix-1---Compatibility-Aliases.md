@@ -8,6 +8,7 @@ ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 04/09/2018
+ms.locfileid: "30954637"
 ---
 # <a name="appendix-1---compatibility-aliases"></a>Appendice 1 - Alias per la compatibilità
 

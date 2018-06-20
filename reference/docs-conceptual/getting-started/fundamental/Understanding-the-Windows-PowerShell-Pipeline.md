@@ -8,6 +8,7 @@ ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 04/09/2018
+ms.locfileid: "30951070"
 ---
 # <a name="understanding-the-windows-powershell-pipeline"></a>Informazioni sulla pipeline di Windows PowerShell
 Il piping è usato praticamente ovunque in Windows PowerShell. Anche se sullo schermo viene visualizzato del testo, Windows PowerShell non invia tramite pipe testo tra i comandi, bensì oggetti.

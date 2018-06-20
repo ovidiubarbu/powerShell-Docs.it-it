@@ -8,6 +8,7 @@ ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 04/09/2018
+ms.locfileid: "30954841"
 ---
 # <a name="creating-a-graphical-date-picker"></a>Creazione di un controllo grafico di selezione data
 

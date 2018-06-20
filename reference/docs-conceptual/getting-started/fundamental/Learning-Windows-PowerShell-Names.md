@@ -8,6 +8,7 @@ ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 04/09/2018
+ms.locfileid: "30953474"
 ---
 # <a name="learning-windows-powershell-names"></a>Imparare i nomi usati in Windows PowerShell
 Nella maggior parte delle interfacce della riga di comando, imparare nomi e parametri dei comandi richiede molto tempo. Il problema è che esistono pochissimi schemi, quindi l'unica possibilità è memorizzare ogni comando e parametro che è necessario usare regolarmente.

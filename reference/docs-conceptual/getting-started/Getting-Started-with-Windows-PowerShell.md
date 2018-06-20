@@ -8,6 +8,7 @@ ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 04/09/2018
+ms.locfileid: "30949486"
 ---
 # <a name="getting-started-with-windows-powershell"></a>Guida introduttiva a Windows PowerShell
 Windows PowerShell è una shell da riga di comando di Windows progettata appositamente per gli amministratori di sistema. Windows PowerShell include un prompt interattivo e un ambiente di scripting che può essere usato in modo indipendente o in combinazione.

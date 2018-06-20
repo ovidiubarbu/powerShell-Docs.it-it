@@ -8,6 +8,7 @@ ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 04/09/2018
+ms.locfileid: "30952580"
 ---
 # <a name="powershellexe-command-line-help"></a>Guida della riga di comando PowerShell.exe
 

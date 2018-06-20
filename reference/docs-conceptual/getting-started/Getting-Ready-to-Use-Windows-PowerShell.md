@@ -8,6 +8,7 @@ ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 04/09/2018
+ms.locfileid: "30950968"
 ---
 # <a name="getting-ready-to-use-windows-powershell"></a>Preparativi per l'uso di Windows PowerShell
 Dopo l'installazione e l'avvio di Windows PowerShell, prendere in considerazione le opzioni di installazione seguenti. È possibile eseguire queste attività in qualsiasi momento.

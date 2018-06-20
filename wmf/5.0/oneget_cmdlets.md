@@ -6,6 +6,7 @@ ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34221954"
 ---
 # <a name="packagemanagement-cmdlets"></a>Cmdlet PackageManagement
 Questi sono gli elementi centrali del modulo PackageManagement per il supporto di individuazione, installazione e inventario del software. Provare i cmdlet per queste operazioni:

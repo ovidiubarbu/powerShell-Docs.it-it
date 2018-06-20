@@ -8,6 +8,7 @@ ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 04/09/2018
+ms.locfileid: "30953328"
 ---
 # <a name="using-variables-to-store-objects"></a>Uso di variabili per l'archiviazione di oggetti
 PowerShell opera sugli oggetti. PowerShell consente di creare variabili, fondamentalmente oggetti denominati, per salvare l'output in modo da portelo usare in seguito. Se si è abituati a usare le variabili in altre shell, tenere presente che le variabili di PowerShell sono oggetti e non testo.
