@@ -6,6 +6,7 @@ ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34225675"
 ---
 # <a name="deliver-a-configuration-document-without-applying"></a><span data-ttu-id="c3d3a-102">Recapitare un documento di configurazione senza applicarlo</span><span class="sxs-lookup"><span data-stu-id="c3d3a-102">Deliver a configuration document without applying</span></span>
 

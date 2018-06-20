@@ -8,6 +8,7 @@ ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 04/09/2018
+ms.locfileid: "30949826"
 ---
 # <a name="other-useful-scripting-objects"></a><span data-ttu-id="b963e-103">Altri oggetti di scripting utili</span><span class="sxs-lookup"><span data-stu-id="b963e-103">Other Useful Scripting Objects</span></span>
 

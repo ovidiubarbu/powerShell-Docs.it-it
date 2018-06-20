@@ -8,6 +8,7 @@ ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34219454"
 ---
 # <a name="known-issues-in-wmf-51"></a><span data-ttu-id="54ab0-103">Problemi noti in WMF 5.1</span><span class="sxs-lookup"><span data-stu-id="54ab0-103">Known Issues in WMF 5.1</span></span> #
 

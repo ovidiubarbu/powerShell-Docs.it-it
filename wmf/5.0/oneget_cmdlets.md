@@ -6,6 +6,7 @@ ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34221954"
 ---
 # <a name="packagemanagement-cmdlets"></a><span data-ttu-id="cf2cf-102">Cmdlet PackageManagement</span><span class="sxs-lookup"><span data-stu-id="cf2cf-102">PackageManagement Cmdlets</span></span>
 <span data-ttu-id="cf2cf-103">Questi sono gli elementi centrali del modulo PackageManagement per il supporto di individuazione, installazione e inventario del software.</span><span class="sxs-lookup"><span data-stu-id="cf2cf-103">This is the core of PackageManagement to support software discovery, installation, and inventory (SDII).</span></span> <span data-ttu-id="cf2cf-104">Provare i cmdlet per queste operazioni:</span><span class="sxs-lookup"><span data-stu-id="cf2cf-104">Try out the cmdlets for these operations:</span></span>

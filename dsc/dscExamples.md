@@ -7,6 +7,7 @@ ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34218298"
 ---
 # <a name="dsc-examples"></a><span data-ttu-id="ca123-103">Esempi DSC</span><span class="sxs-lookup"><span data-stu-id="ca123-103">DSC examples</span></span>
 

@@ -8,6 +8,7 @@ ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 04/09/2018
+ms.locfileid: "30954892"
 ---
 # <a name="multiple-selection-list-boxes"></a><span data-ttu-id="fee52-103">Caselle di riepilogo a selezione multipla</span><span class="sxs-lookup"><span data-stu-id="fee52-103">Multiple-selection List Boxes</span></span>
 

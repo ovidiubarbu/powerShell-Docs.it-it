@@ -7,6 +7,7 @@ ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34225624"
 ---
 # <a name="dsc-function-to-query-node-information-from-pull-server"></a><span data-ttu-id="ed94f-103">Funzione DSC per eseguire query delle informazioni sui nodi dal server di pull</span><span class="sxs-lookup"><span data-stu-id="ed94f-103">DSC function to query node information from pull server.</span></span>
 

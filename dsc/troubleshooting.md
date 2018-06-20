@@ -7,6 +7,7 @@ ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/16/2018
+ms.locfileid: "34190010"
 ---
 # <a name="troubleshooting-dsc"></a><span data-ttu-id="23738-103">Risoluzione dei problemi relativi a DSC</span><span class="sxs-lookup"><span data-stu-id="23738-103">Troubleshooting DSC</span></span>
 

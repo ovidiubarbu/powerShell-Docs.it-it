@@ -8,6 +8,7 @@ ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 04/09/2018
+ms.locfileid: "30949656"
 ---
 # <a name="working-with-objects"></a><span data-ttu-id="2248e-103">Utilizzo degli oggetti</span><span class="sxs-lookup"><span data-stu-id="2248e-103">Working with Objects</span></span>
 

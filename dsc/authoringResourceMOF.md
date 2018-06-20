@@ -7,6 +7,7 @@ ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/16/2018
+ms.locfileid: "34189636"
 ---
 # <a name="writing-a-custom-dsc-resource-with-mof"></a><span data-ttu-id="26b2d-103">Scrittura di una risorsa DSC personalizzata con MOF</span><span class="sxs-lookup"><span data-stu-id="26b2d-103">Writing a custom DSC resource with MOF</span></span>
 

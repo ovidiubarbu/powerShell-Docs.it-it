@@ -7,6 +7,7 @@ ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34222089"
 ---
 # <a name="just-enough-administration"></a><span data-ttu-id="41495-103">Just Enough Administration</span><span class="sxs-lookup"><span data-stu-id="41495-103">Just Enough Administration</span></span>
 

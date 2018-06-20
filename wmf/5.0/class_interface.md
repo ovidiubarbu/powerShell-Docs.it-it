@@ -6,6 +6,7 @@ ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34225488"
 ---
 # <a name="declare-implemented-interface"></a><span data-ttu-id="c8fe1-102">Dichiarare l'interfaccia implementata</span><span class="sxs-lookup"><span data-stu-id="c8fe1-102">Declare Implemented Interface</span></span>
 

@@ -6,6 +6,7 @@ ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34225573"
 ---
 # <a name="new-built-in-dsc-resources"></a><span data-ttu-id="5e6c3-102">Nuove risorse DSC predefinite</span><span class="sxs-lookup"><span data-stu-id="5e6c3-102">New built-in DSC resources</span></span>
 

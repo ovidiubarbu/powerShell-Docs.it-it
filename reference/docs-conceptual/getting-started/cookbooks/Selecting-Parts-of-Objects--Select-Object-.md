@@ -8,6 +8,7 @@ ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 04/09/2018
+ms.locfileid: "30953889"
 ---
 # <a name="selecting-parts-of-objects-select-object"></a><span data-ttu-id="847d4-103">Selezione di parti di oggetti (Select-Object)</span><span class="sxs-lookup"><span data-stu-id="847d4-103">Selecting Parts of Objects (Select-Object)</span></span>
 

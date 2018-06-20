@@ -7,6 +7,7 @@ ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34218366"
 ---
 # <a name="writing-a-single-instance-dsc-resource-best-practice"></a><span data-ttu-id="1008e-103">Scrittura di una risorsa DSC a istanza singola (procedura consigliata)</span><span class="sxs-lookup"><span data-stu-id="1008e-103">Writing a single-instance DSC resource (best practice)</span></span>
 

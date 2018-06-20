@@ -8,6 +8,7 @@ ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 04/09/2018
+ms.locfileid: "30952070"
 ---
 # <a name="windows-powershell-integrated-scripting-environment-ise"></a><span data-ttu-id="1db41-103">Windows PowerShell Integrated Scripting Environment (ISE)</span><span class="sxs-lookup"><span data-stu-id="1db41-103">Windows PowerShell Integrated Scripting Environment (ISE)</span></span>
 

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/16/2018
+ms.locfileid: "34189993"
 ---
 # <a name="desired-state-configuration-pull-service"></a><span data-ttu-id="95468-103">Servizio di pull DSC (Desired State Configuration)</span><span class="sxs-lookup"><span data-stu-id="95468-103">Desired State Configuration Pull Service</span></span>
 

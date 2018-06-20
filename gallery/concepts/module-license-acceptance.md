@@ -8,6 +8,7 @@ ms.sourcegitcommit: e9ad4d85fd7eb72fb5bc37f6ca3ae1282ae3c6d7
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34048478"
 ---
 # <a name="modules-requiring-license-acceptance"></a><span data-ttu-id="2da74-103">Moduli per cui è richiesta l'accettazione della licenza</span><span class="sxs-lookup"><span data-stu-id="2da74-103">Modules Requiring License Acceptance</span></span>
 

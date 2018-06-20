@@ -6,6 +6,7 @@ ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34219233"
 ---
 # <a name="information-stream"></a><span data-ttu-id="a0821-102">Flusso di informazioni</span><span class="sxs-lookup"><span data-stu-id="a0821-102">Information Stream</span></span>
 

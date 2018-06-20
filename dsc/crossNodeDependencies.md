@@ -7,6 +7,7 @@ ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34218621"
 ---
 # <a name="specifying-cross-node-dependencies"></a><span data-ttu-id="4f8af-103">Specifica delle dipendenze tra nodi</span><span class="sxs-lookup"><span data-stu-id="4f8af-103">Specifying cross-node dependencies</span></span>
 

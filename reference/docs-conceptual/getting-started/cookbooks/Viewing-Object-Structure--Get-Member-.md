@@ -8,6 +8,7 @@ ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 04/09/2018
+ms.locfileid: "30950744"
 ---
 # <a name="viewing-object-structure-get-member"></a><span data-ttu-id="3a9c4-103">Visualizzazione della struttura degli oggetti (Get-Member)</span><span class="sxs-lookup"><span data-stu-id="3a9c4-103">Viewing Object Structure (Get-Member)</span></span>
 

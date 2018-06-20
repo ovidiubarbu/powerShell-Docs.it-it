@@ -6,6 +6,7 @@ ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34225607"
 ---
 # <a name="call-base-class-constructor"></a><span data-ttu-id="b231e-102">Chiamare il costruttore della classe di base</span><span class="sxs-lookup"><span data-stu-id="b231e-102">Call Base Class Constructor</span></span>
 

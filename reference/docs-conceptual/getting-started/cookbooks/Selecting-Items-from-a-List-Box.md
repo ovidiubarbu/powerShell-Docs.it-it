@@ -8,6 +8,7 @@ ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 04/09/2018
+ms.locfileid: "30951682"
 ---
 # <a name="selecting-items-from-a-list-box"></a><span data-ttu-id="c8363-103">Selezione di elementi di una casella di riepilogo</span><span class="sxs-lookup"><span data-stu-id="c8363-103">Selecting Items from a List Box</span></span>
 

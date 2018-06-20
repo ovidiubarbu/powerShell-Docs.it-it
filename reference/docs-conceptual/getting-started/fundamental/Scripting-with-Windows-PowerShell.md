@@ -8,6 +8,7 @@ ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 04/09/2018
+ms.locfileid: "30949401"
 ---
 # <a name="scripting-with-windows-powershell"></a><span data-ttu-id="47a45-103">Scrittura di script con Windows PowerShell</span><span class="sxs-lookup"><span data-stu-id="47a45-103">Scripting with Windows PowerShell</span></span>
 

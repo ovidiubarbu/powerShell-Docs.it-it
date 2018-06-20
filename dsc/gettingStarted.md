@@ -7,6 +7,7 @@ ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/16/2018
+ms.locfileid: "34189721"
 ---
 # <a name="getting-started-with-powershell-desired-state-configuration"></a><span data-ttu-id="f7faf-103">Introduzione a PowerShell DSC (Desired State Configuration)</span><span class="sxs-lookup"><span data-stu-id="f7faf-103">Getting Started with PowerShell Desired State Configuration</span></span> #
 

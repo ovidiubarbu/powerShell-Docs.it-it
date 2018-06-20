@@ -8,6 +8,7 @@ ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/16/2018
+ms.locfileid: "34189068"
 ---
 # <a name="catalog-cmdlets"></a><span data-ttu-id="d2d35-103">Cmdlet di catalogo</span><span class="sxs-lookup"><span data-stu-id="d2d35-103">Catalog Cmdlets</span></span>
 

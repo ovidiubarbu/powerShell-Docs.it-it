@@ -8,6 +8,7 @@ ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 04/09/2018
+ms.locfileid: "30954501"
 ---
 # <a name="working-with-printers"></a><span data-ttu-id="a2283-103">Utilizzo delle stampanti</span><span class="sxs-lookup"><span data-stu-id="a2283-103">Working with Printers</span></span>
 

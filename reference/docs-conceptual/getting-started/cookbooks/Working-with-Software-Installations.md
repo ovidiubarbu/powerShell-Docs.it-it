@@ -8,6 +8,7 @@ ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 04/09/2018
+ms.locfileid: "30952818"
 ---
 # <a name="working-with-software-installations"></a><span data-ttu-id="a6170-103">Gestione delle installazioni di software</span><span class="sxs-lookup"><span data-stu-id="a6170-103">Working with Software Installations</span></span>
 

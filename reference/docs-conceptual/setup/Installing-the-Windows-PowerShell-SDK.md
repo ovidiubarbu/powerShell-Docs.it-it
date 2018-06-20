@@ -8,6 +8,7 @@ ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 04/09/2018
+ms.locfileid: "30953566"
 ---
 # <a name="installing-the-windows-powershell-sdk"></a><span data-ttu-id="e9eb4-103">Installazione di Windows PowerShell SDK</span><span class="sxs-lookup"><span data-stu-id="e9eb4-103">Installing the Windows PowerShell SDK</span></span>
 
