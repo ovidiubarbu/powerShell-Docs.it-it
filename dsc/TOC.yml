@@ -161,6 +161,8 @@
           href: lnxGroupResource.md
         - name: Risorsa nxPackage
           href: lnxPackageResource.md
+        - name: Risorsa nxScript
+          href: lnxScriptResource.md
         - name: Risorsa nxService
           href: lnxServiceResource.md
         - name: Risorsa nxSshAuthorizedKeys
