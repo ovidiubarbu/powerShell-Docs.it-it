@@ -2,19 +2,18 @@
 ms.date: 06/12/2017
 keywords: dsc,powershell,configurazione,installazione
 title: Metodo GetConfigurationResultOutput della classe MSFT_DSCLocalConfigurationManager
-ms.openlocfilehash: 73d10a8b44e5056e3fce1598518630a84aff6ceb
-ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
+ms.openlocfilehash: ea572a4a66befd4e4b8d83e2957632b1b5ed7d93
+ms.sourcegitcommit: 8b076ebde7ef971d7465bab834a3c2a32471ef6f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/16/2018
-ms.locfileid: "34186807"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37893944"
 ---
 # <a name="getconfigurationresultoutput-method-of-the-msftdsclocalconfigurationmanager-class"></a>Metodo GetConfigurationResultOutput della classe MSFT_DSCLocalConfigurationManager
 
 Recupera l'output dell'agente di configurazione associato a un processo specifico.
 
-<a name="syntax"></a>Sintassi
-------
+## <a name="syntax"></a>Sintassi
 
 ```mof
 uint32 GetConfigurationResultOutput(
@@ -24,8 +23,7 @@ uint32 GetConfigurationResultOutput(
 );
 ```
 
-<a name="parameters"></a>Parametri
-----------
+## <a name="parameters"></a>Parametri
 
 *jobId* \[in\] ID del processo per cui ottenere i dati di output.
 
@@ -34,7 +32,6 @@ uint32 GetConfigurationResultOutput(
 *output* \[out\] Output per il processo specificato.
 
 ## <a name="return-value"></a>Valore restituito
-------------
 
 In caso di esito positivo, il valore restituisce zero, altrimenti, restituisce un codice di errore.
 
@@ -43,13 +40,11 @@ In caso di esito positivo, il valore restituisce zero, altrimenti, restituisce u
 Si tratta di un metodo statico.
 
 ## <a name="requirements"></a>Requisiti
-------------
->**MOF:** DscCore.mof
 
->**Spazio dei nomi**: Root\Microsoft\Windows\DesiredStateConfiguration
+**MOF:** DscCore.mof
 
+**Spazio dei nomi**: Root\Microsoft\Windows\DesiredStateConfiguration
 
 ## <a name="see-also"></a>Vedere anche
-
 
 [**MSFT_DSCLocalConfigurationManager**](msft-dsclocalconfigurationmanager.md)

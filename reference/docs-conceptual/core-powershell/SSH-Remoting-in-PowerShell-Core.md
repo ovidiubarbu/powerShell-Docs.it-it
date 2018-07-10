@@ -55,6 +55,22 @@ I sottosistemi SSH vengono usati per stabilire un processo PowerShell nel comput
     ```
     Subsystem    powershell c:/program files/powershell/6.0.0/pwsh.exe -sshs -NoLogo -NoProfile
     ```
+    
+    > [!NOTE]
+    È presente un bug in OpenSSH per Windows che impedisce il funzionamento dei percorsi eseguibili nel sottosistema che contengono spazi.
+    Per ottenere altre informazioni, vedere [questo problema in GitHub](https://github.com/PowerShell/Win32-OpenSSH/issues/784).
+    
+    Una soluzione consiste nel creare un collegamento simbolico alla directory di installazione di Powershell che non contenga spazi:
+    
+    ```powershell
+    mklink /D c:\pwsh "C:\Program Files\PowerShell\6.0.0"
+    ```
+
+    e quindi immetterlo nel sottosistema:
+ 
+    ```
+    Subsystem    powershell c:\pwsh\pwsh.exe -sshs -NoLogo -NoProfile
+    ```
 
     - Facoltativamente è possibile abilitare l'autenticazione della chiave
 

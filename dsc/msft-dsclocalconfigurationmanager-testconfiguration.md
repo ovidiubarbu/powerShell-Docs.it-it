@@ -2,19 +2,18 @@
 ms.date: 06/12/2017
 keywords: dsc,powershell,configurazione,installazione
 title: Metodo TestConfiguration della classe MSFT_DSCLocalConfigurationManager
-ms.openlocfilehash: 2df04d317bd5e7a5c2a713d92be57c5c9a9f5e8c
-ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
+ms.openlocfilehash: d746832b01310f43a7aae33dd0fa70c0928bb3e0
+ms.sourcegitcommit: 8b076ebde7ef971d7465bab834a3c2a32471ef6f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34219012"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37893927"
 ---
 # <a name="testconfiguration-method-of-the-msftdsclocalconfigurationmanager-class"></a>Metodo TestConfiguration della classe MSFT_DSCLocalConfigurationManager
 
 Consente di inviare il documento di configurazione al nodo gestito e verificare la configurazione corrente sulla base del documento.
 
-<a name="syntax"></a>Sintassi
-------
+## <a name="syntax"></a>Sintassi
 
 ```mof
 uint32 TestConfiguration(
@@ -25,8 +24,7 @@ uint32 TestConfiguration(
 );
 ```
 
-<a name="parameters"></a>Parametri
-----------
+## <a name="parameters"></a>Parametri
 
 *configurationData* \[in\] Dati dell'ambiente per la configurazione.
 
@@ -37,7 +35,6 @@ uint32 TestConfiguration(
 *ResourcesNotInDesiredState* \[out\] Al termine dell'esecuzione, contiene un'istanza incorporata della classe **MSFT_ResourceNotInDesiredState** che specifica le risorse che non si trovano nello stato desiderato.
 
 ## <a name="return-value"></a>Valore restituito
-------------
 
 In caso di esito positivo, il valore restituisce zero, altrimenti, restituisce un codice di errore.
 
@@ -46,13 +43,11 @@ In caso di esito positivo, il valore restituisce zero, altrimenti, restituisce u
 Si tratta di un metodo statico.
 
 ## <a name="requirements"></a>Requisiti
-------------
->**MOF:** DscCore.mof
 
->**Spazio dei nomi**: Root\Microsoft\Windows\DesiredStateConfiguration
+**MOF:** DscCore.mof
 
+**Spazio dei nomi**: Root\Microsoft\Windows\DesiredStateConfiguration
 
 ## <a name="see-also"></a>Vedere anche
-
 
 [**MSFT_DSCLocalConfigurationManager**](msft-dsclocalconfigurationmanager.md)

@@ -2,19 +2,18 @@
 ms.date: 06/12/2017
 keywords: dsc,powershell,configurazione,installazione
 title: Metodo SendConfigurationApplyAsync della classe MSFT_DSCLocalConfigurationManager
-ms.openlocfilehash: acd8f380f1c49eb008563398c2c3de3fce5477f9
-ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
+ms.openlocfilehash: b028079cf826719967858f50e357b441ba8f9d79
+ms.sourcegitcommit: 8b076ebde7ef971d7465bab834a3c2a32471ef6f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/16/2018
-ms.locfileid: "34186678"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37893895"
 ---
 # <a name="sendconfigurationapplyasync-method-of-the-msftdsclocalconfigurationmanager-class"></a>Metodo SendConfigurationApplyAsync della classe MSFT_DSCLocalConfigurationManager
 
 Invia il documento di configurazione in modo asicrono al nodo gestito e usa l'agente di configurazione per applicare la configurazione.
 
-<a name="syntax"></a>Sintassi
-------
+## <a name="syntax"></a>Sintassi
 
 ```mof
 uint32 SendConfigurationApplyAsync(
@@ -24,8 +23,7 @@ uint32 SendConfigurationApplyAsync(
 );
 ```
 
-<a name="parameters"></a>Parametri
-----------
+## <a name="parameters"></a>Parametri
 
 *ConfigurationData* \[in\] Dati dell'ambiente per la configurazione.
 
@@ -34,7 +32,6 @@ uint32 SendConfigurationApplyAsync(
 *jobId* \[in\] ID del processo per cui inviare la configurazione.
 
 ## <a name="return-value"></a>Valore restituito
-------------
 
 In caso di esito positivo, il valore restituisce zero, altrimenti, restituisce un codice di errore.
 
@@ -43,13 +40,11 @@ In caso di esito positivo, il valore restituisce zero, altrimenti, restituisce u
 Si tratta di un metodo statico.
 
 ## <a name="requirements"></a>Requisiti
-------------
->**MOF:** DscCore.mof
 
->**Spazio dei nomi**: Root\Microsoft\Windows\DesiredStateConfiguration
+**MOF:** DscCore.mof
 
+**Spazio dei nomi**: Root\Microsoft\Windows\DesiredStateConfiguration
 
 ## <a name="see-also"></a>Vedere anche
-
 
 [**MSFT_DSCLocalConfigurationManager**](msft-dsclocalconfigurationmanager.md)

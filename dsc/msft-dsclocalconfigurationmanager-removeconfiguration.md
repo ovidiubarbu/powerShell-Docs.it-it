@@ -2,19 +2,18 @@
 ms.date: 06/12/2017
 keywords: dsc,powershell,configurazione,installazione
 title: Metodo RemoveConfiguration della classe MSFT_DSCLocalConfigurationManager
-ms.openlocfilehash: c68d17d38336dec08e078366ea5f2071fcf7c5a8
-ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
+ms.openlocfilehash: 03555cc73da1272bdebebc3d93b26aaf8fabc18e
+ms.sourcegitcommit: 8b076ebde7ef971d7465bab834a3c2a32471ef6f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/16/2018
-ms.locfileid: "34189738"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37892685"
 ---
 # <a name="removeconfiguration-method-of-the-msftdsclocalconfigurationmanager-class"></a>Metodo RemoveConfiguration della classe MSFT_DSCLocalConfigurationManager
 
 Rimuove i file di configurazione.
 
-<a name="syntax"></a>Sintassi
-------
+## <a name="syntax"></a>Sintassi
 
 ```mof
 uint32 RemoveConfiguration(
@@ -23,8 +22,7 @@ uint32 RemoveConfiguration(
 );
 ```
 
-<a name="parameters"></a>Parametri
-----------
+## <a name="parameters"></a>Parametri
 
 *Stage* \[in\] Specifica il documento di configurazione da rimuovere. I valori validi sono i seguenti:
 
@@ -37,7 +35,6 @@ uint32 RemoveConfiguration(
 *Force* \[in\] **true** per forzare la rimozione della configurazione.
 
 ## <a name="return-value"></a>Valore restituito
-------------
 
 In caso di esito positivo, il valore restituisce zero, altrimenti, restituisce un codice di errore.
 
@@ -46,13 +43,11 @@ In caso di esito positivo, il valore restituisce zero, altrimenti, restituisce u
 Si tratta di un metodo statico.
 
 ## <a name="requirements"></a>Requisiti
-------------
->**MOF:** DscCore.mof
 
->**Spazio dei nomi**: Root\Microsoft\Windows\DesiredStateConfiguration
+**MOF:** DscCore.mof
 
+**Spazio dei nomi**: Root\Microsoft\Windows\DesiredStateConfiguration
 
 ## <a name="see-also"></a>Vedere anche
-
 
 [**MSFT_DSCLocalConfigurationManager**](msft-dsclocalconfigurationmanager.md)
