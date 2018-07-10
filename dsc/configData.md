@@ -2,16 +2,16 @@
 ms.date: 06/12/2017
 keywords: dsc,powershell,configurazione,installazione
 title: Uso dei dati di configurazione
-ms.openlocfilehash: d42c43fddb54050adcbac949e7f67f3b41b540f1
-ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
+ms.openlocfilehash: 9b0b213e2d71bfdb473fd98f8080de5c874c70e2
+ms.sourcegitcommit: 68093cc12a7a22c53d11ce7d33c18622921a0dd1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/16/2018
-ms.locfileid: "34189687"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36940379"
 ---
 # <a name="using-configuration-data-in-dsc"></a>Uso dei dati di configurazione in DSC
 
->Si applica a: Windows PowerShell 4.0, Windows PowerShell 5.0
+> Si applica a: Windows PowerShell 4.0, Windows PowerShell 5.0
 
 Con il parametro DSC predefinito **ConfigurationData** è possibile definire i dati che possono essere usati in una configurazione.
 Ciò consente di creare una singola configurazione da usare per più nodi o ambienti diversi.
@@ -28,7 +28,8 @@ Per informazioni sulla compilazione delle configurazioni, vedere [Configurazioni
 Il parametro **ConfigurationData** è una tabella hash che deve avere almeno una chiave denominata **AllNodes**.
 Può avere anche una o più chiavi aggiuntive.
 
->**Nota:** gli esempi di questo argomento usano una singola chiave aggiuntiva (diverso dalla chiave denominata **AllNodes**) denominata `NonNodeData`, ma è possibile includere qualsiasi numero di chiavi aggiuntive e assegnare loro un nome qualsiasi.
+> [!NOTE]
+> Gli esempi di questo argomento usano una singola chiave aggiuntiva (diverso dalla chiave denominata **AllNodes**) denominata `NonNodeData`, ma è possibile includere qualsiasi numero di chiavi aggiuntive e assegnare loro un nome qualsiasi.
 
 ```powershell
 $MyData =
@@ -188,6 +189,7 @@ DSC offre tre variabili speciali che possono essere usate in uno script di confi
 
 - **$AllNodes** si riferisce all'intera raccolta di nodi definita in **ConfigurationData**. È possibile filtrare la raccolta **AllNodes** usando **.Where()** e **.Foreach()**.
 - **Node** fa riferimento a una particolare voce della raccolta **AllNodes** dopo che viene filtrato usando **.Where()** o **.Foreach()**.
+  - Sono disponibili altre informazioni su questi metodi in [about_arrays](/powershell/reference/3.0/Microsoft.PowerShell.Core/About/about_Arrays.md)
 - **ConfigurationData** fa riferimento all'intera tabella hash che viene passata come parametro durante la compilazione di una configurazione.
 
 ## <a name="using-non-node-data"></a>Uso di dati non specifici per un nodo
@@ -199,5 +201,6 @@ Negli esempi di questo argomento è stato usato un solo nodo aggiuntivo che è s
 Per un esempio d'uso di dati non nodo, vedere [Separazione dei dati di configurazione e dell'ambiente](separatingEnvData.md).
 
 ## <a name="see-also"></a>Vedere anche
+
 - [Opzioni delle credenziali nei dati di configurazione](configDataCredentials.md)
 - [Configurazioni DSC](configurations.md)

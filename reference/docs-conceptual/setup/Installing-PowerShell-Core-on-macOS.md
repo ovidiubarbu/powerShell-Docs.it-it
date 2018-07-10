@@ -36,8 +36,7 @@ brew cask upgrade powershell
 ```
 
 > [!NOTE]
-> I comandi precedenti possono essere chiamati dall'interno di un host PowerShell (pwsh), ma in tal caso è necessario chiudere e riavviare la shell di PowerShell per completare l'aggiornamento
-> e aggiornare i valori visualizzati in $PSVersionTable.
+> I comandi precedenti possono essere chiamati dall'interno di un host PowerShell (pwsh), ma in tal caso è necessario uscire e riavviare la shell di PowerShell per completare l'aggiornamento e aggiornare i valori visualizzati in $PSVersionTable.
 
 [brew]: http://brew.sh/
 [cask]: https://caskroom.github.io/
@@ -98,7 +97,7 @@ Per rimuovere i percorsi aggiuntivi di PowerShell, vedere la sezione [Percorsi][
 
 ## <a name="paths"></a>Percorsi
 
-* `$PSHOME` è `/opt/microsoft/powershell/6.0.0/`
+* `$PSHOME` è `/usr/local/microsoft/powershell/6.0.2/`
 * I profili utente vengono letti da `~/.config/powershell/profile.ps1`
 * I profili predefiniti vengono letti da `$PSHOME/profile.ps1`
 * I moduli utente vengono letti da `~/.local/share/powershell/Modules`
@@ -112,7 +111,7 @@ Di conseguenza, i profili specifici dell'host predefinito sono presenti in `Micr
 PowerShell rispetta la [specifica della directory Base XDG][xdg-bds] in macOS.
 
 Poiché macOS è una derivazione di BSD, viene usato il prefisso `/usr/local` invece di `/opt`.
-Di conseguenza, `$PSHOME` è `/usr/local/microsoft/powershell/6.0.0/` e il collegamento simbolico viene posizionato in `/usr/local/bin/pwsh`.
+Di conseguenza, `$PSHOME` è `/usr/local/microsoft/powershell/6.0.2/` e il collegamento simbolico viene posizionato in `/usr/local/bin/pwsh`.
 
 [versioni]: https://github.com/PowerShell/PowerShell/releases/latest
 [xdg-bds]: https://specifications.freedesktop.org/basedir-spec/basedir-spec-latest.html

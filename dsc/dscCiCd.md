@@ -2,12 +2,12 @@
 ms.date: 06/12/2017
 keywords: dsc,powershell,configurazione,installazione
 title: Creazione di una pipeline di integrazione continua e distribuzione continua con DSC
-ms.openlocfilehash: ce0f2ed79f5f96a1c38e0beaf32529aba7538963
-ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
+ms.openlocfilehash: faeef5022cbd984cab0620b69db19de8b84cca0e
+ms.sourcegitcommit: 68093cc12a7a22c53d11ce7d33c18622921a0dd1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/16/2018
-ms.locfileid: "34190554"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36940345"
 ---
 # <a name="building-a-continuous-integration-and-continuous-deployment-pipeline-with-dsc"></a>Creazione di una pipeline di integrazione continua e distribuzione continua con DSC
 
@@ -36,6 +36,7 @@ Per compilare ed eseguire questo esempio, è necessario un ambiente con più com
 Si tratta del computer in cui verranno eseguite tutte le operazioni di impostazione ed esecuzione dell'esempio.
 
 Il computer client deve essere un computer Windows dotato dei componenti seguenti:
+
 - [Git](https://git-scm.com/)
 - repository Git locale clonato da https://github.com/PowerShell/Demo_CI
 - un editor di testo, ad esempio [Visual Studio Code](https://code.visualstudio.com/)
@@ -73,21 +74,22 @@ Se il repository Demo_CI non è stato ancora clonato nel computer client, esegui
 1. Dal computer client passare al server TFS in un Web browser.
 1. In TFS [creare un nuovo progetto team](https://www.visualstudio.com/en-us/docs/setup-admin/create-team-project) denominato Demo_CI.
 
-    Assicurarsi che **Controllo versione** sia impostato su **Git**.
+   Assicurarsi che **Controllo versione** sia impostato su **Git**.
 1. Dal computer client aggiungere un remote al repository appena creato in TFS con il comando seguente:
 
-    `git remote add tfs <YourTFSRepoURL>`
+   `git remote add tfs <YourTFSRepoURL>`
 
-    Dove `<YourTFSRepoURL>` è l'URL clone del repository TFS creato nel passaggio precedente.
+   Dove `<YourTFSRepoURL>` è l'URL clone del repository TFS creato nel passaggio precedente.
 
-    Se non si conosce la posizione di questo URL, vedere [Clone an existing Git repo](https://www.visualstudio.com/en-us/docs/git/tutorial/clone) (Clonare un repository Git esistente).
+   Se non si conosce la posizione di questo URL, vedere [Clone an existing Git repo](https://www.visualstudio.com/en-us/docs/git/tutorial/clone) (Clonare un repository Git esistente).
 1. Eseguire il push del codice dal repository locale al repository TFS con il comando seguente:
 
-    `git push tfs --all`
+   `git push tfs --all`
 1. Il repository TFS verrà popolato con il codice Demo_CI.
 
->**Nota:** questo esempio usa il codice nel ramo `ci-cd-example` del repository Git.
->Assicurarsi di specificare questo ramo come ramo predefinito nel progetto TFS e per i trigger CI/CD creati.
+> [!NOTE]
+> Questo esempio usa il codice nel ramo `ci-cd-example` del repository Git.
+> Assicurarsi di specificare questo ramo come ramo predefinito nel progetto TFS e per i trigger CI/CD creati.
 
 ## <a name="understanding-the-code"></a>Informazioni sul codice
 
@@ -154,6 +156,8 @@ Node $AllNodes.Where{$_.Role -eq 'DNSServer'}.NodeName
 ```
 
 Questa trova tutti i nodi definiti con il ruolo `DNSServer` nei [dati di configurazione](configData.md), creati tramite lo script `DevEnv.ps1`.
+
+Sono disponibili altre informazioni sul metodo `Where` in [about_arrays](/powershell/reference/3.0/Microsoft.PowerShell.Core/About/about_Arrays.md)
 
 L'uso di dati di configurazione per definire i nodi è importante quando si esegue l'integrazione continua. È probabile infatti che le informazioni sui nodi siano diverse da un ambiente all'altro e l'uso di dati di configurazione consente di apportare facilmente modifiche a tali informazioni senza modificare il codice di configurazione.
 
@@ -348,12 +352,12 @@ Questa istruzione di compilazione esegue gli unit test dello script Pester esami
 
 1. Aggiungere ognuna delle righe seguenti a **Contenuto**:
 
-    ```
-    initiate.ps1
-    **\deploy.ps1
-    **\Acceptance\**
-    **\Integration\**
-    ```
+   ```
+   initiate.ps1
+   **\deploy.ps1
+   **\Acceptance\**
+   **\Integration\**
+   ```
 
 1. Impostare **TargetFolder** su `$(Build.ArtifactStagingDirectory)\`
 
