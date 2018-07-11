@@ -3,12 +3,12 @@ ms.date: 06/05/2017
 keywords: powershell,cmdlet
 title: Altri oggetti di scripting utili
 ms.assetid: 4d781196-720b-4ccc-90d2-c570e5e719f5
-ms.openlocfilehash: 0e87e9919199e011ab5abec5b07dccc8494ad64a
-ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
+ms.openlocfilehash: 2ae9bc1864daedbcb0070c5f3862a6c98f8db2d4
+ms.sourcegitcommit: 8b076ebde7ef971d7465bab834a3c2a32471ef6f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2018
-ms.locfileid: "30949826"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37893281"
 ---
 # <a name="other-useful-scripting-objects"></a>Altri oggetti di scripting utili
 
@@ -33,14 +33,14 @@ $psUnsupportedConsoleApplications
 
 ### <a name="pslocalhelp"></a>$psLocalHelp
 
-Si tratta di un oggetto Dictionary che conserva un mapping sensibile al contesto tra gli argomenti della Guida e i relativi collegamenti associati nel file della Guida HTML compilato locale. Viene usato per trovare la Guida locale per un determinato argomento. È possibile aggiungere o eliminare argomenti da questo elenco. L'esempio di codice seguente mostra alcune coppie chiave-valore contenute in **$psLocalHelp**.
+Si tratta di un oggetto Dictionary che conserva un mapping sensibile al contesto tra gli argomenti della Guida e i relativi collegamenti associati nel file della Guida HTML compilato locale. Viene usato per trovare la Guida locale per un determinato argomento. È possibile aggiungere o eliminare argomenti da questo elenco. L'esempio di codice seguente mostra alcune coppie chiave-valore di esempio contenute in `$psLocalHelp`.
 
 ```powershell
 # See the local help map
 $psLocalHelp | Format-List
 ```
 
-### <a name="sample-output"></a>Output di esempio
+### <a name="pslocalhelp-sample-output"></a>Output di esempio $psLocalHelp
 
 |||
 |-|-|
@@ -61,14 +61,14 @@ Si tratta di un oggetto Dictionary che conserva un mapping sensibile al contesto
 $psOnlineHelp | Format-List
 ```
 
-### <a name="sample-output"></a>Output di esempio
+## <a name="psonilnehelp-sample-output"></a>Output di esempio $psOnilneHelp
 
 |||
 |-|-|
 |Chiave: Add-Computer|Valore: http://go.microsoft.com/fwlink/p/?LinkID=135194|
 |Chiave: Add-Content|Valore: http://go.microsoft.com/fwlink/p/?LinkID=113278|
 
- Lo script seguente aggiunge una voce all'elenco.
+Lo script seguente aggiunge una voce all'elenco.
 
 ```powershell
 $psOnlineHelp.Add("get-myNoun", "http://www.mydomain.com/MyNoun.html")
@@ -76,4 +76,4 @@ $psOnlineHelp.Add("get-myNoun", "http://www.mydomain.com/MyNoun.html")
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Scopo del modello a oggetti di scripting di Windows PowerShell ISE](../../core-powershell/ise/Purpose-of-the-Windows-PowerShell-ISE-Scripting-Object-Model.md)
+[Scopo del modello a oggetti di scripting di Windows PowerShell ISE](../../core-powershell/ise/Purpose-of-the-Windows-PowerShell-ISE-Scripting-Object-Model.md)

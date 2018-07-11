@@ -3,12 +3,12 @@ ms.date: 06/12/2017
 contributor: JKeithB
 keywords: gallery,powershell,cmdlet,psgallery
 title: Eliminazione di elementi
-ms.openlocfilehash: 3f67f78d63e5cf797d00ce43f95fb3b4f62d6f7c
-ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
+ms.openlocfilehash: 454cd404437bf1c31b9a1b81cd9dd0ac81e6b0f6
+ms.sourcegitcommit: 8b076ebde7ef971d7465bab834a3c2a32471ef6f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34218230"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37893094"
 ---
 # <a name="deleting-items"></a>Eliminazione di elementi
 
@@ -20,4 +20,4 @@ Quando un elemento viene escluso dall'elenco, non viene più individuato dalle r
 
 Se si verifica una situazione eccezionale che richiede l'eliminazione di un elemento, tale operazione può essere eseguita manualmente dal team di PowerShell Gallery.
 Una violazione di copyright o la presenza di contenuto potenzialmente dannoso è una ragione valida per procedere all'eliminazione.
-In questo caso, è necessario inviare una richiesta di supporto tramite [PowerShell Gallery] (http://www.PowerShellGallery.com).
+In questo caso, è necessario inviare una richiesta di supporto tramite [PowerShell Gallery](http://www.PowerShellGallery.com).

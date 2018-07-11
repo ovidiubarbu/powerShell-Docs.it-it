@@ -2,12 +2,12 @@
 ms.date: 05/17/2018
 keywords: powershell,core
 title: Problemi noti di PowerShell 6.0
-ms.openlocfilehash: 6ad1bcaf1de06f204b57eb8ce23b3053ba4a5b38
-ms.sourcegitcommit: 2d9cf1ccb9a653db7726a408ebcb65530dcb1522
+ms.openlocfilehash: 7fa6b9935ae75b62df72609b8a9ec16246b1c610
+ms.sourcegitcommit: 8b076ebde7ef971d7465bab834a3c2a32471ef6f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34309612"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37893689"
 ---
 # <a name="known-issues-for-powershell-60"></a>Problemi noti di PowerShell 6.0
 
@@ -55,7 +55,7 @@ Vedere il [problema #954](https://github.com/PowerShell/PowerShell/issues/954) p
 
 PowerShell in Linux/macOS usa .NET Core che è un subset della versione completa di .NET Framework in Microsoft Windows. Ciò è importante perché PowerShell consente l'accesso diretto a tipi, metodi e altri elementi del framework sottostante. Di conseguenza, gli script eseguiti in Windows potrebbero non essere eseguiti in piattaforme non Windows a causa delle differenze nei framework. Per altre informazioni su .NET Core Framework, vedere <https://dotnetfoundation.org/net-core>
 
-Con l'avvento di [.NET 2.0 Standard](https://blogs.msdn.microsoft.com/dotnet/2016/09/26/introducing-net-standard/), .NET Core 2.0 renderà di nuovo disponibili molti dei tipi e dei metodi tradizionali presenti nella versione completa di .NET Framework. Questo significa che PowerShell Core sarà in grado di caricare molti moduli tradizionali di Windows PowerShell senza apportare modifiche. È possibile seguire il lavoro correlato a .NET Standard 2.0 [qui](https://github.com/PowerShell/PowerShell/projects/4).
+Con l'avvento di [.NET Standard 2.0](https://blogs.msdn.microsoft.com/dotnet/2016/09/26/introducing-net-standard/), .NET Core 2.0 renderà di nuovo disponibili molti dei tipi e dei metodi tradizionali presenti nella versione completa di .NET Framework. Questo significa che PowerShell Core sarà in grado di caricare molti moduli tradizionali di Windows PowerShell senza apportare modifiche. È possibile seguire il lavoro correlato a .NET Standard 2.0 [qui](https://github.com/PowerShell/PowerShell/projects/4).
 
 ### <a name="redirection-issues"></a>Problemi di reindirizzamento
 
@@ -64,14 +64,17 @@ Il reindirizzamento dell'input non è supportato in PowerShell su qualsiasi piat
 
 Usare `Get-Content` per scrivere il contenuto di un file nella pipeline.
 
-L'output reindirizzato conterrà il byte order mark (BOM) Unicode quando viene usata la codifica predefinita UTF-8. Il BOM causerà problemi quando si utilizzano utilità che non lo prevedono o per le aggiunte a un file. Usare `-Encoding Ascii` per scrivere testo ASCII che non includerà un BOM non essendo Unicode. (Nota: vedere [RFC0020](https://github.com/PowerShell/PowerShell-RFC/issues/71) per inviare commenti e suggerimenti su come migliorare l'esperienza di codifica per PowerShell Core per tutte le piattaforme. Stiamo lavorando per supportare UTF-8 senza un BOM e per modificare potenzialmente le impostazioni predefinite di codifica per vari cmdlet in tutte le piattaforme.)
+L'output reindirizzato conterrà il byte order mark (BOM) Unicode quando viene usata la codifica predefinita UTF-8. Il BOM causerà problemi quando si utilizzano utilità che non lo prevedono o per le aggiunte a un file. Usare `-Encoding Ascii` per scrivere testo ASCII che non includerà un BOM non essendo Unicode.
+
+> [!Note]
+> Vedere [RFC0020](https://github.com/PowerShell/PowerShell-RFC/issues/71) per inviare commenti e suggerimenti su come migliorare l'esperienza di codifica per PowerShell Core per tutte le piattaforme. Stiamo lavorando per supportare UTF-8 senza un BOM e per modificare potenzialmente le impostazioni predefinite di codifica per vari cmdlet in tutte le piattaforme.
 
 ### <a name="job-control"></a>Controllo dei processi
 
 PowerShell in Linux/macOS non supporta il controllo dei processi.
 I comandi `fg` e `bg` non sono disponibili.
 
-Per il momento, è possibile usare i [processi di PowerShell](https://msdn.microsoft.com/powershell/reference/5.1/microsoft.powershell.core/about/about_jobs) che funzionano in tutte le piattaforme.
+Per il momento, è possibile usare i [processi di PowerShell](/powershell/module/microsoft.powershell.core/about/about_jobs) che funzionano in tutte le piattaforme.
 
 ### <a name="remoting-support"></a>Supporto della comunicazione remota
 
@@ -87,7 +90,7 @@ La possibilità di creare endpoint di comunicazione remota con amministrazione v
 
 ### <a name="sudo-exec-and-powershell"></a>`sudo`, `exec` e PowerShell
 
-Dato che PowerShell esegue la maggior parte dei comandi in memoria (come Python o Ruby), non è possibile usare sudo direttamente con i comandi predefiniti di PowerShell. È ovviamente possibile eseguire `powershell` da sudo. Se è necessario eseguire un cmdlet di PowerShell dall'interno di PowerShell con sudo, ad esempio `sudo Set-Date 8/18/2016`, eseguire `sudo powershell Set-Date 8/18/2016`. Analogamente, non è possibile eseguire direttamente un comando predefinito di PowerShell, ma è invece necessario eseguire `exec powershell item_to_exec`.
+Dato che PowerShell esegue la maggior parte dei comandi in memoria (come Python o Ruby), non è possibile usare sudo direttamente con i comandi predefiniti di PowerShell. È ovviamente possibile eseguire `powershell` da sudo. Se è necessario eseguire un cmdlet di PowerShell dall'interno di PowerShell con sudo, ad esempio `sudo `Set-Date` 8/18/2016`, eseguire `sudo powershell `Set-Date` 8/18/2016`. Analogamente, non è possibile eseguire direttamente un comando predefinito di PowerShell, ma è invece necessario eseguire `exec powershell item_to_exec`.
 
 Questo problema è attualmente monitorato come parte del problema #3232.
 
@@ -99,45 +102,13 @@ Un numero elevato di comandi (cmdlet) normalmente disponibili in PowerShell non 
 
 Nella tabella seguente sono elencati i comandi che sicuramente non funzionano in PowerShell in Linux/macOS.
 
-<table>
-<th>Comandi</th><th>Stato operativo</th><th>Note</th>
-<tr>
-<td>Get-Service, New-Service, Restart-Service, Resume-Service, Set-Service, Start-Service, Stop-Service, Suspend-Service
-<td>Non disponibile.
-<td>Questi comandi non verranno riconosciuti. Questo problema dovrebbe essere risolto in una versione futura.
-</tr>
-<tr>
-<td>Get-Acl, Set-Acl
-<td>Non disponibile.
-<td>Questi comandi non verranno riconosciuti. Questo problema dovrebbe essere risolto in una versione futura.
-</tr>
-<tr>
-<td>Get-AuthenticodeSignature, Set-AuthenticodeSignature
-<td>Non disponibile.
-<td>Questi comandi non verranno riconosciuti. Questo problema dovrebbe essere risolto in una versione futura.
-</tr>
-<tr>
-<td>Wait-Process
-<td>Disponibile, non funziona correttamente. <td>Ad esempio, `Start-Process gvim -PassThru | Wait-Process` non funziona; l'attesa del processo ha esito negativo.
-</tr>
-<tr>
-<td>Register-PSSessionConfiguration, Unregister-PSSessionConfiguration, Get-PSSessionConfiguration
-<td>Disponibili, ma non funzionano.
-<td>Scrive un messaggio di errore che indica che i comandi non funzionano. Questi dovrebbero essere corretti in una versione futura.
-</tr>
-<tr>
-<td>Get-Event, New-Event, Register-EngineEvent, Register-WmiEvent, Remove-Event, Unregister-Event
-<td>Disponibili, ma non sono disponibili origini evento.
-<td>I comandi di gestione degli eventi di PowerShell sono presenti, ma la maggior parte delle origini evento usate con i comandi (ad esempio System.Timers.Timer) non è disponibile in Linux rendendo quindi inutili i comandi nella versione alfa.
-</tr>
-<tr>
-<td>Set-ExecutionPolicy
-<td>Disponibile, ma non funziona.
-<td>Restituisce un messaggio che indica che non è supportato in questa piattaforma. I criteri di esecuzione sono una "cintura di sicurezza" pensata per gli utenti, che consente di impedire all'utente di commettere errori onerosi. Non è un limite di sicurezza.
-</tr>
-<tr>
-<td>New-PSSessionOption, New-PSTransportOption
-<td>Disponibili, ma New-PSSession non funziona.
-<td>Il funzionamento di New-PSSessionOption e New-PSTransportOption non è attualmente verificato, ora che New-PSSession funziona.
-</tr>
-</table>
+|Comandi |Stato operativo | Note|
+|---------|------------------|------|
+|`Get-Service`, `New-Service`, `Restart-Service`, `Resume-Service`, `Set-Service`, `Start-Service`, `Stop-Service`, `Suspend-Service`|Non disponibile.|Questi comandi non verranno riconosciuti. Questo problema dovrebbe essere risolto in una versione futura.|
+|`Get-Acl`, `Set-Acl`|Non disponibile.|Questi comandi non verranno riconosciuti. Questo problema dovrebbe essere risolto in una versione futura.|
+|`Get-AuthenticodeSignature`, `Set-AuthenticodeSignature`|Non disponibile.|Questi comandi non verranno riconosciuti. Questo problema dovrebbe essere risolto in una versione futura.|
+|`Wait-Process`|Disponibile, non funziona correttamente. |Ad esempio 'Start-Process gvim -PassThru | Wait-Process' non funziona; l'attesa del processo ha esito negativo.|
+|`Register-PSSessionConfiguration`, `Unregister-PSSessionConfiguration`, `Get-PSSessionConfiguration`|Disponibile, ma non funziona.|Scrive un messaggio di errore che indica che i comandi non funzionano. Questi dovrebbero essere corretti in una versione futura.|
+|`Get-Event`, `New-Event`, `Register-EngineEvent`, `Register-WmiEvent`, `Remove-Event`, `Unregister-Event`|Disponibili, ma non sono disponibili origini evento.|I comandi di gestione degli eventi di PowerShell sono presenti, ma la maggior parte delle origini evento usate con i comandi (ad esempio System.Timers.Timer) non è disponibile in Linux rendendo quindi inutili i comandi nella versione alfa.|
+|`Set-ExecutionPolicy`|Disponibile, ma non funziona.|Restituisce un messaggio che indica che non è supportato in questa piattaforma. I criteri di esecuzione sono una "cintura di sicurezza" pensata per gli utenti, che consente di impedire all'utente di commettere errori onerosi. Non è un limite di sicurezza.|
+|`New-PSSessionOption`, `New-PSTransportOption`|Disponibile, ma `New-PSSession` non funziona.|Il funzionamento di `New-PSSessionOption` e `New-PSTransportOption` non è attualmente verificato ora che funziona `New-PSSession`.|

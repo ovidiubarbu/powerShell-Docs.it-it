@@ -2,40 +2,43 @@
 ms.date: 06/12/2017
 keywords: dsc,powershell,configurazione,installazione
 title: Configurare una macchina virtuale all'avvio iniziale tramite DSC
-ms.openlocfilehash: d6dd997e607152d09d24b55370bb2f85810b333e
-ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
+ms.openlocfilehash: 2f228a38379d1e65b31c03594e876f7226474fc3
+ms.sourcegitcommit: 8b076ebde7ef971d7465bab834a3c2a32471ef6f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/16/2018
-ms.locfileid: "34190265"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37893353"
 ---
->Si applica a: Windows PowerShell 5.0
-
->**Nota:** la chiave del Registro di sistema **DSCAutomationHostEnabled** descritta in questo argomento non è disponibile in PowerShell 4.0.
-Per informazioni su come configurare nuove macchine virtuali all'avvio iniziale di PowerShell 4.0, vedere [Want to Automatically Configure Your Machines Using DSC at Initial Boot-up?](https://blogs.msdn.microsoft.com/powershell/2014/02/28/want-to-automatically-configure-your-machines-using-dsc-at-initial-boot-up/) (Configurare automaticamente le macchine virtuali usando DSC all'avvio iniziale)
-
 # <a name="configure-a-virtual-machines-at-initial-boot-up-by-using-dsc"></a>Configurare una macchina virtuale all'avvio iniziale tramite DSC
+
+> [!IMPORTANT]
+> Si applica a: Windows PowerShell 5.0
 
 ## <a name="requirements"></a>Requisiti
 
+> [!NOTE] 
+> La chiave del Registro di sistema **DSCAutomationHostEnabled** descritta in questo argomento non è disponibile in PowerShell 4.0.
+> Per informazioni su come configurare nuove macchine virtuali all'avvio iniziale di PowerShell 4.0, vedere [Want to Automatically Configure Your Machines Using DSC at Initial Boot-up?]> (Configurare automaticamente le macchine virtuali usando DSC all'avvio iniziale) (https://blogs.msdn.microsoft.com/powershell/2014/02/28/want-to-automatically-configure-your-machines-using-dsc-at-initial-boot-up/)
+
 Per eseguire questi esempi, è necessario:
 
-- Un disco rigido virtuale di avvio. È possibile scaricare un'immagine ISO con una copia di valutazione di Windows Server 2016 in [TechNet Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-windows-server-2016). È possibile trovare istruzioni su come creare un disco rigido virtuale da un'immagine ISO in [Creating Bootable Virtual Hard Disks](https://technet.microsoft.com/library/gg318049.aspx) (Creazione di dischi rigidi virtuali di avvio).
-- Un computer host con Hyper-V abilitato. Per altre informazioni, vedere [Panoramica di Hyper-V](https://technet.microsoft.com/library/hh831531.aspx).
+- Un disco rigido virtuale di avvio. È possibile scaricare un'immagine ISO con una copia di valutazione di Windows Server 2016 in [TechNet Evaluation Center](https://www.microsoft.com/en-us/evalcenter/evaluate-windows-server-2016). È possibile trovare istruzioni su come creare un disco rigido virtuale da un'immagine ISO in [Creating Bootable Virtual Hard Disks](/previous-versions/windows/it-pro/windows-7/gg318049(v=ws.10)) (Creazione di dischi rigidi virtuali di avvio).
+- Un computer host con Hyper-V abilitato. Per altre informazioni, vedere [Panoramica di Hyper-V](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831531(v=ws.11)).
 
-Tramite DSC, è possibile automatizzare l'installazione del software e la configurazione di un computer all'avvio iniziale.
-A tale scopo, inserire un documento di configurazione MOF o una metaconfigurazione nei supporti di avvio (ad esempio, un disco rigido Virtuale) in modo che vengano eseguiti durante il processo di avvio iniziale.
-Questo comportamento viene specificato dalla [chiave del Registro di sistema DSCAutomationHostEnabled](DSCAutomationHostEnabled.md) in **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies**.
-Per impostazione predefinita, il valore di questa chiave è 2, che consente l'esecuzione di DSC all'avvio.
+  Tramite DSC, è possibile automatizzare l'installazione del software e la configurazione di un computer all'avvio iniziale.
+  A tale scopo, inserire un documento di configurazione MOF o una metaconfigurazione nei supporti di avvio (ad esempio, un disco rigido Virtuale) in modo che vengano eseguiti durante il processo di avvio iniziale.
+  Questo comportamento viene specificato dalla chiave del Registro di sistema [DSCAutomationHostEnabled](DSCAutomationHostEnabled.md) in `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies`.
+  Per impostazione predefinita, il valore di questa chiave è 2, che consente l'esecuzione di DSC all'avvio.
 
-Se si preferisce che DSC non venga eseguito all'avvio, impostare il valore della [chiave del Registro di sistema DSCAutomationHostEnabled](DSCAutomationHostEnabled.md) su 0.
+  Se si preferisce che DSC non venga eseguito all'avvio, impostare il valore della [chiave del Registro di sistema DSCAutomationHostEnabled](DSCAutomationHostEnabled.md) su 0.
 
 - Inserire un documento MOF in un disco rigido virtuale
 - Inserire una metaconfigurazione DSC in un disco rigido virtuale
 - Disabilitare DSC in fase di avvio
 
->**Nota:** è possibile inserire `Pending.mof` e `MetaConfig.mof` in un computer contemporaneamente.
-Se entrambi i file sono presenti, le impostazioni specificate in `MetaConfig.mof` hanno la precedenza.
+> [!NOTE]
+> È possibile inserire `Pending.mof` e `MetaConfig.mof` in un computer contemporaneamente.
+> Se entrambi i file sono presenti, le impostazioni specificate in `MetaConfig.mof` hanno la precedenza.
 
 ## <a name="inject-a-configuration-mof-document-into-a-vhd"></a>Inserire un documento MOF in un disco rigido virtuale
 
@@ -62,35 +65,38 @@ Configuration SampleIISInstall
 
 ### <a name="to-inject-the-configuration-mof-document-on-the-vhd"></a>Per inserire il documento di configurazione MOF nel disco rigido virtuale
 
-1. Montare il disco rigido virtuale in cui si vuole inserire la configurazione mediante la chiamata al cmdlet [Mount-VHD](https://technet.microsoft.com/library/hh848551.aspx). Ad esempio:
+1. Montare il disco rigido virtuale in cui si vuole inserire la configurazione mediante la chiamata al cmdlet [Mount-VHD](/powershell/module/hyper-v/mount-vhd). Ad esempio:
 
-    ```powershell
-    Mount-VHD -Path C:\users\public\documents\vhd\Srv16.vhd
-    ```
+   ```powershell
+   Mount-VHD -Path C:\users\public\documents\vhd\Srv16.vhd
+   ```
+
 2. In un computer che esegue PowerShell 5.0 o versione successiva salvare la configurazione precedente (**SampleIISInstall**) come file di script PowerShell (con estensione ps1).
 
 3. Nella console di PowerShell, passare alla cartella in cui è stato salvato il file con estensione ps1.
 
 4. Eseguire i comandi PowerShell seguenti per compilare il documento MOF. Per informazioni sulla compilazione delle configurazioni DSC, vedere [Configurazioni DSC](configurations.md):
 
-    ```powershell
-    . .\SampleIISInstall.ps1
-    SampleIISInstall
-    ```
+   ```powershell
+   . .\SampleIISInstall.ps1
+   SampleIISInstall
+   ```
 
 5. Verrà creato un file `localhost.mof` in una nuova cartella denominata `SampleIISInstall`.
-Spostare il file nella posizione corretta del disco rigido virtuale e rinominarlo come `Pending.mof` usando il cmdlet [Move-Item](https://technet.microsoft.comlibrary/hh849852.aspx). Ad esempio:
+   Spostare il file nella posizione corretta del disco rigido virtuale e rinominarlo come `Pending.mof` usando il cmdlet [Move-Item](https://technet.microsoft.comlibrary/hh849852.aspx). Ad esempio:
 
-    ```powershell
-        Move-Item -Path C:\DSCTest\SampleIISInstall\localhost.mof -Destination E:\Windows\System32\Configuration\Pending.mof
-    ```
-6. Smontare il disco rigido virtuale tramite la chiamata al cmdlet [Dismount-VHD](https://technet.microsoft.com/library/hh848562.aspx). Ad esempio:
+   ```powershell
+       Move-Item -Path C:\DSCTest\SampleIISInstall\localhost.mof -Destination E:\Windows\System32\Configuration\Pending.mof
+   ```
 
-    ```powershell
-    Dismount-VHD -Path C:\users\public\documents\vhd\Srv16.vhd
-    ```
+6. Smontare il disco rigido virtuale tramite la chiamata al cmdlet [Dismount-VHD](/powershell/module/hyper-v/dismount-vhd). Ad esempio:
+
+   ```powershell
+   Dismount-VHD -Path C:\users\public\documents\vhd\Srv16.vhd
+   ```
 
 7. Creare una macchina virtuale usando il disco rigido virtuale in cui è installato il documento MOF di DSC.
+
 Dopo l'avvio iniziale e l'installazione del sistema operativo, verrà installato IIS.
 È possibile verificare questo aspetto chiamando il cmdlet [Get-WindowsFeature](https://technet.microsoft.com/library/jj205469.aspx).
 
@@ -127,11 +133,11 @@ configuration PullClientBootstrap
 
 ### <a name="to-inject-the-metaconfiguration-mof-document-on-the-vhd"></a>Per inserire il documento di metaconfigurazione MOF nel disco rigido virtuale
 
-1. Montare il disco rigido virtuale in cui si vuole inserire la metaconfigurazione mediante la chiamata al cmdlet [Mount-VHD](https://technet.microsoft.com/library/hh848551.aspx). Ad esempio:
+1. Montare il disco rigido virtuale in cui si vuole inserire la metaconfigurazione mediante la chiamata al cmdlet [Mount-VHD](/powershell/module/hyper-v/mount-vhd). Ad esempio:
 
-    ```powershell
-    Mount-VHD -Path C:\users\public\documents\vhd\Srv16.vhd
-    ```
+   ```powershell
+   Mount-VHD -Path C:\users\public\documents\vhd\Srv16.vhd
+   ```
 
 2. [Configurare un server di pull Web DSC](pullServer.md) e salvare la configurazione **SampleIISInistall** nella cartella appropriata.
 
@@ -141,66 +147,70 @@ configuration PullClientBootstrap
 
 5. Eseguire i comandi PowerShell seguenti per compilare il documento di metaconfigurazione MOF. Per informazioni sulla compilazione delle configurazioni DSC, vedere [Configurazioni DSC](configurations.md):
 
-    ```powershell
-    . .\PullClientBootstrap.ps1
-    PullClientBootstrap
-    ```
+   ```powershell
+   . .\PullClientBootstrap.ps1
+   PullClientBootstrap
+   ```
 
 6. Verrà creato un file `localhost.meta.mof` in una nuova cartella denominata `PullClientBootstrap`.
-Spostare il file nella posizione corretta del disco rigido virtuale e rinominarlo come `MetaConfig.mof` usando il cmdlet [Move-Item](https://technet.microsoft.comlibrary/hh849852.aspx).
+   Spostare il file nella posizione corretta del disco rigido virtuale e rinominarlo come `MetaConfig.mof` usando il cmdlet [Move-Item](https://technet.microsoft.comlibrary/hh849852.aspx).
 
-    ```powershell
-    Move-Item -Path C:\DSCTest\PullClientBootstrap\localhost.meta.mof -Destination E:\Windows\Sytem32\Configuration\MetaConfig.mof
-    ```
+   ```powershell
+   Move-Item -Path C:\DSCTest\PullClientBootstrap\localhost.meta.mof -Destination E:\Windows\System32\Configuration\MetaConfig.mof
+   ```
 
-7. Smontare il disco rigido virtuale tramite la chiamata al cmdlet [Dismount-VHD](https://technet.microsoft.com/library/hh848562.aspx). Ad esempio:
+7. Smontare il disco rigido virtuale tramite la chiamata al cmdlet [Dismount-VHD](/powershell/module/hyper-v/dismount-vhd). Ad esempio:
 
-    ```powershell
-    Dismount-VHD -Path C:\users\public\documents\vhd\Srv16.vhd
-    ```
+   ```powershell
+   Dismount-VHD -Path C:\users\public\documents\vhd\Srv16.vhd
+   ```
 
 8. Creare una macchina virtuale usando il disco rigido virtuale in cui è installato il documento MOF di DSC.
+
 Dopo l'avvio iniziale e l'installazione del sistema operativo, DSC effettuerà il pull della configurazione dal server di pull e verrà installato IIS.
 È possibile verificare questo aspetto chiamando il cmdlet [Get-WindowsFeature](https://technet.microsoft.com/library/jj205469.aspx).
 
 ## <a name="disable-dsc-at-boot-time"></a>Disabilitare DSC in fase di avvio
 
-Per impostazione predefinita, il valore della chiave **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\DSCAutomationHostEnabled** è impostato su 2, che consente l'esecuzione di una configurazione DSC se il computer è in stato in sospeso o corrente. Se non si vuole far eseguire una configurazione all'avvio iniziale, è necessario impostare il valore di questa chiave su 0:
+Per impostazione predefinita, il valore della chiave `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\DSCAutomationHostEnabled` è impostato su 2, che consente l'esecuzione di una configurazione DSC se il computer è in stato in sospeso o aggiornato. Se non si vuole far eseguire una configurazione all'avvio iniziale, è necessario impostare il valore di questa chiave su 0:
 
-1. Montare il disco rigido virtuale tramite la chiamata al cmdlet [Mount-VHD](https://technet.microsoft.com/library/hh848551.aspx). Ad esempio:
+1. Montare il disco rigido virtuale tramite la chiamata al cmdlet [Mount-VHD](/powershell/module/hyper-v/mount-vhd). Ad esempio:
 
-    ```powershell
-    Mount-VHD -Path C:\users\public\documents\vhd\Srv16.vhd
-    ```
+   ```powershell
+   Mount-VHD -Path C:\users\public\documents\vhd\Srv16.vhd
+   ```
 
-2. Caricare la sottochiave del Registro di sistema **HKLM\Software** dal disco rigido virtuale chiamando `reg load`.
+2. Caricare la sottochiave del Registro di sistema `HKLM\Software` dal disco rigido virtuale chiamando `reg load`.
 
-    ```
-    reg load HKLM\Vhd E:\Windows\System32\Config\Software`
-    ```
+   ```powershell
+   reg load HKLM\Vhd E:\Windows\System32\Config\Software`
+   ```
 
-3. Passare a **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\*** tramite il provider del Registro di sistema di PowerShell.
+3. Passare a `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\*` tramite il provider del Registro di sistema di PowerShell.
 
-    ```powershell
-    Set-Location HKLM:\Software\Microsoft\Windows\CurrentVersion\Policies`
-    ```
+   ```powershell
+   Set-Location HKLM:\Software\Microsoft\Windows\CurrentVersion\Policies`
+   ```
 
 4. Modificare il valore di `DSCAutomationHostEnabled` in 0.
 
-    ```powershell
-    Set-ItemProperty -Path . -Name DSCAutomationHostEnabled -Value 0
-    ```
+   ```powershell
+   Set-ItemProperty -Path . -Name DSCAutomationHostEnabled -Value 0
+   ```
 
 5. Scaricare il Registro di sistema eseguendo i comandi seguenti:
 
-    ```powershell
-    [gc]::Collect()
-    reg unload HKLM\Vhd
-    ```
+   ```powershell
+   [gc]::Collect()
+   reg unload HKLM\Vhd
+   ```
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Configurazioni DSC](configurations.md)
-- [Chiave del Registro di sistema DSCAutomationHostEnabled](DSCAutomationHostEnabled.md)
-- [Configurazione di Gestione configurazione locale](metaConfig.md)
-- [Configurazione di un server di pull Web DSC](pullServer.md)
+[Configurazioni DSC](configurations.md)
+
+[Chiave del Registro di sistema DSCAutomationHostEnabled](DSCAutomationHostEnabled.md)
+
+[Configurazione di Gestione configurazione locale](metaConfig.md)
+
+[Configurazione di un server di pull Web DSC](pullServer.md)

@@ -2,18 +2,18 @@
 ms.date: 06/20/2018
 keywords: dsc,powershell,configurazione,installazione
 title: Risorsa PackageManagement DSC
-ms.openlocfilehash: 3d52934b130d59acee4d7f8a92da2c743c1eb305
-ms.sourcegitcommit: 01d6985ed190a222e9da1da41596f524f607a5bc
+ms.openlocfilehash: 281aee13eb005f00b23c97870eaefaa332d9c232
+ms.sourcegitcommit: 8b076ebde7ef971d7465bab834a3c2a32471ef6f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34753788"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37892502"
 ---
 # <a name="dsc-packagemanagement-resource"></a>Risorsa PackageManagement DSC
 
-> Si applica a: Windows PowerShell 4.0, Windows PowerShell 5.0, Windows PowerShell 5.1
+Si applica a: Windows PowerShell 4.0, Windows PowerShell 5.0, Windows PowerShell 5.1
 
-La risorsa **PackageManagement** in Windows PowerShell DSC (Desired State Configuration) fornisce un meccanismo per installare o disinstallare pacchetti di Gestione pacchetti in un nodo di destinazione. Questa risorsa richiede il modulo **PackageManagement**, disponibile da http://PowerShellGallery.com.
+La risorsa **PackageManagement** in Windows PowerShell DSC (Desired State Configuration) fornisce un meccanismo per installare o disinstallare pacchetti di Gestione pacchetti in un nodo di destinazione. Questa risorsa richiede il modulo **PackageManagement**, disponibile da [http://PowerShellGallery.com](http://PowerShellGallery.com).
 
 > [!IMPORTANT]
 > La versione del modulo **PackageManagement** deve essere almeno la 1.1.7.0 affinché le informazioni sulle proprietà seguenti siano corrette.

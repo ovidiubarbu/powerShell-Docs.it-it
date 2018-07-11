@@ -3,12 +3,12 @@ ms.date: 06/09/2017
 schema: 2.0.0
 keywords: powershell
 title: Moduli per cui è richiesta l'accettazione della licenza
-ms.openlocfilehash: fe197ea271e18580a221ad4d5245b685bd81775b
-ms.sourcegitcommit: e9ad4d85fd7eb72fb5bc37f6ca3ae1282ae3c6d7
+ms.openlocfilehash: 93f92f6e83bcf18a40c3d89eb39a154e16ca5063
+ms.sourcegitcommit: 8b076ebde7ef971d7465bab834a3c2a32471ef6f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34048478"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37893111"
 ---
 # <a name="modules-requiring-license-acceptance"></a>Moduli per cui è richiesta l'accettazione della licenza
 
@@ -35,29 +35,26 @@ I moduli che prevedono la richiesta di accettazione della licenza da parte degli
     - **Update-Module:** il modulo verrà aggiornato.
   - Se la licenza non viene accettata.
     - L'operazione verrà annullata.
-- Tutti i cmdlet controlleranno se sono presenti i metadati (RequireLicenseAcceptance e versione del formato) che indicano che è richiesta l'accettazione della licenza.
-  - Se la versione del formato del client è precedente alla 2.0, l'operazione avrà esito negativo e verrà richiesto all'utente di aggiornare il client.
-  - Se il modulo è stato pubblicato con una versione del formato precedente alla 2.0, il flag RequireLicenseAcceptance flag verrà ignorato.
+    - Tutti i cmdlet controlleranno se sono presenti i metadati (RequireLicenseAcceptance e versione del formato) che indicano che è richiesta l'accettazione della licenza.
+    - Se la versione del formato del client è precedente alla 2.0, l'operazione avrà esito negativo e verrà richiesto all'utente di aggiornare il client.
+    - Se il modulo è stato pubblicato con una versione del formato precedente alla 2.0, il flag RequireLicenseAcceptance flag verrà ignorato.
 
+## <a name="module-dependencies"></a>Dipendenze del modulo
 
- ## <a name="module-dependencies"></a>Dipendenze del modulo
 - Durante le operazioni Install/Save/Update, se un modulo dipendente (qualcos'altro dipende dal modulo) richiede l'accettazione della licenza, sarà richiesto il comportamento di accettazione della licenza sopra descritto.
 - Se la versione del modulo è già elencata nel catalogo locale come installata nel sistema, il controllo della licenza non viene eseguito.
 - Durante le operazioni Install/Save/Update, se un modulo dipendente richiede una licenza e la licenza non viene accettata, l'operazione avrà esito negativo e si seguiranno i processi normali per i casi di installazione/salvataggio/aggiornamento non riusciti per l'elemento.
 
- ## <a name="impact-on--force"></a>Impatto su -Force
+## <a name="impact-on--force"></a>Impatto su -Force
 
-Specificare -Force NON è sufficiente per accettare una licenza. Per autorizzare l'installazione è richiesto il parametro -AcceptLicense. Se si specifica il parametro -Force, RequiredLicenseAcceptance è True e il parametro -AcceptLicense non viene specificato, l'operazione avrà esito negativo.
+Specificare `–Force` NON è sufficiente per accettare una licenza. Per autorizzare l'installazione è richiesto il parametro `–AcceptLicense`. Se si specifica il parametro `–Force`, RequiredLicenseAcceptance è True e il parametro `–AcceptLicense` non viene specificato, l'operazione avrà esito negativo.
 
 ## <a name="examples"></a>ESEMPI
 
 ### <a name="example-1-update-module-manifest-to-require-license-acceptance"></a>Esempio 1: aggiornare il manifesto del modulo per richiedere l'accettazione della licenza
 
-```PowerShell
-PS> Update-ModuleManifest -Path C:\modulemanifest.psd1 -RequireLicenseAcceptance
-
-PrivateData = @{
-
+```powershell
+Update-ModuleManifest -Path C:\modulemanifest.psd1 -RequireLicenseAcceptance -PrivateData @{
     PSData = @{
         # Flag to indicate whether the module requires explicit user acceptance
         RequireLicenseAcceptance = $true
@@ -70,9 +67,11 @@ Questo comando aggiorna il file manifesto e imposta il flag RequireLicenseAccept
 
 ### <a name="example-2-install-module-requiring-license-acceptance"></a>Esempio 2: installare un modulo che richiede l'accettazione della licenza
 
-```PowerShell
-PS> Install-Module -Name ModuleRequireLicenseAcceptance
+```powershell
+Install-Module -Name ModuleRequireLicenseAcceptance
+```
 
+```output
 License Acceptance
 
 License 2.0
@@ -85,23 +84,25 @@ copies of the Software.
 
 Do you accept the license terms for module 'ModuleRequireLicenseAcceptance'.
 [Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help (default is "N"):
-
 ```
 
 Questo comando mostra la licenza dal file license.txt e richiede all'utente di accettare la licenza.
 
 ### <a name="example-3-install-module-requiring-license-acceptance-with--acceptlicense"></a>Esempio 3: installare un modulo che richiede l'accettazione della licenza con -AcceptLicense
 
-```PowerShell
-PS> Install-Module -Name ModuleRequireLicenseAcceptance -AcceptLicense
+```powershell
+Install-Module -Name ModuleRequireLicenseAcceptance -AcceptLicense
 ```
 
 Il modulo viene installato senza visualizzare alcuna richiesta di accettazione della licenza.
 
 ### <a name="example-4-install-module-requiring-license-acceptance-with--force"></a>Esempio 4: installare un modulo che richiede l'accettazione della licenza con -Force
 
-```PowerShell
-PS> Install-Module -Name ModuleRequireLicenseAcceptance -Force
+```powershell
+Install-Module -Name ModuleRequireLicenseAcceptance -Force
+```
+
+```output
 PackageManagement\Install-Package : License Acceptance is required for module 'ModuleRequireLicenseAcceptance'. Please specify '-AcceptLicense' to perform this operation.
 At C:\Program Files\WindowsPowerShell\Modules\PowerShellGet\1.1.3.3\PSModule.psm1:1837 char:21
 + ...          $null = PackageManagement\Install-Package @PSBoundParameters
@@ -116,9 +117,11 @@ At C:\Program Files\WindowsPowerShell\Modules\PowerShellGet\1.1.3.3\PSModule.psm
 
 Il modulo 'ModuleWithDependency' dipende dal modulo 'ModuleRequireLicenseAcceptance'. All'utente viene richiesto di accettare la licenza.
 
-```PowerShell
-PS> Install-Module -Name ModuleWithDependency
+```powershell
+Install-Module -Name ModuleWithDependency
+```
 
+```output
 License Acceptance
 MIT License 2.0
 Copyright (c) 2016 PowerShell Team
@@ -136,24 +139,27 @@ Do you accept the license terms for module 'ModuleRequireLicenseAcceptance'.
 
 Il modulo 'ModuleWithDependency' dipende dal modulo 'ModuleRequireLicenseAcceptance'. All'utente non viene richiesto di accettare la licenza perché viene specificato il parametro -AcceptLicense.
 
-```PowerShell
-PS>  Install-Module -Name ModuleWithDependency -AcceptLicense
+```powershell
+Install-Module -Name ModuleWithDependency -AcceptLicense
 ```
 
 ### <a name="example-7-install-module-requiring-license-acceptance-on-a-client-older-than-psgetformatversion-20"></a>Esempio 7: installare un modulo che richiede l'accettazione della licenza in un client meno recente di PSGetFormatVersion 2.0
 
-```PowerShell
-PS C:\windows\system32> Install-Module -Name ModuleRequireLicenseAcceptance
+```powershell
+Install-Module -Name ModuleRequireLicenseAcceptance
+```
 
+```output
 WARNING: The specified module 'ModuleRequireLicenseAcceptance' with PowerShellGetFormatVersion '2.0' is not supported by the current version of PowerShellGet. Get the latest version of the PowerShellGet module to install this module, 'ModuleRequireLicenseAcceptance'.
-
 ```
 
 ### <a name="example-8-save-module-requiring-license-acceptance"></a>Esempio 8: salvare un modulo che richiede l'accettazione della licenza
 
-```PowerShell
-PS> Save-Module -Name ModuleRequireLicenseAcceptance -Path C:\Saved
+```powershell
+Save-Module -Name ModuleRequireLicenseAcceptance -Path C:\Saved
+```
 
+```output
 License Acceptance
 
 License 2.0
@@ -172,17 +178,19 @@ Questo comando mostra la licenza dal file license.txt e richiede all'utente di a
 
 ### <a name="example-9-save-module-requiring-license-acceptance-with--acceptlicense"></a>Esempio 9: salvare un modulo che richiede l'accettazione della licenza con -AcceptLicense
 
-```PowerShell
-PS> Save-Module -Name ModuleRequireLicenseAcceptance -AcceptLicense -Path C:\Saved
+```powershell
+Save-Module -Name ModuleRequireLicenseAcceptance -AcceptLicense -Path C:\Saved
 ```
 
 Il modulo viene salvato senza alcuna richiesta di accettazione della licenza.
 
 ### <a name="example-10-update-module-requiring-license-acceptance"></a>Esempio 10: aggiornare un modulo che richiede l'accettazione della licenza
 
-```PowerShell
-PS> Update-Module -Name ModuleRequireLicenseAcceptance
+```powershell
+Update-Module -Name ModuleRequireLicenseAcceptance
+```
 
+```output
 License Acceptance
 
 License 2.0
@@ -201,16 +209,16 @@ Questo comando mostra la licenza dal file license.txt e richiede all'utente di a
 
 ### <a name="example-11-update-module-requiring-license-acceptance-with--acceptlicense"></a>Esempio 11: aggiornare un modulo che richiede l'accettazione della licenza con -AcceptLicense
 
-```PowerShell
-PS> Update-Module -Name ModuleRequireLicenseAcceptance -AcceptLicense
+```powershell
+Update-Module -Name ModuleRequireLicenseAcceptance -AcceptLicense
 ```
 
 Il modulo viene aggiornato senza alcuna richiesta di accettazione della licenza.
 
 ## <a name="more-details"></a>Altri dettagli
 
-### <a name="require-license-acceptance-for-scriptsscript-license-acceptancemd"></a>[Richiedere l'accettazione della licenza per gli script](./script-license-acceptance.md)
+[Richiedere l'accettazione della licenza per gli script](./script-license-acceptance.md)
 
-### <a name="require-license-acceptance-support-on-powershellgalleryhow-toworking-with-itemsitems-that-require-license-acceptancemd"></a>[Richiedere il supporto dell'accettazione della licenza in PowerShell Gallery](../how-to/working-with-items/items-that-require-license-acceptance.md)
+[Richiedere il supporto dell'accettazione della licenza in PowerShell Gallery](../how-to/working-with-items/items-that-require-license-acceptance.md)
 
-### <a name="require-license-acceptance-on-deploy-to-azure-automationhow-toworking-with-itemsdeploy-to-azure-automationmd"></a>[Richiedere l'accettazione della licenza per la distribuzione in Automazione di Azure](../how-to/working-with-items/deploy-to-azure-automation.md)
+[Richiedere l'accettazione della licenza per la distribuzione in Automazione di Azure](../how-to/working-with-items/deploy-to-azure-automation.md)

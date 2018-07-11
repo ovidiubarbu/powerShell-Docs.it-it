@@ -2,12 +2,12 @@
 ms.date: 06/12/2017
 keywords: dsc,powershell,configurazione,installazione
 title: Introduzione a DSC (Desired State Configuration) per Linux
-ms.openlocfilehash: 0534cede979eb2917adb608dba622539fe4bdc45
-ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
+ms.openlocfilehash: d5a4a17fbcffbbbd6df3dd902dbd104769b7d17e
+ms.sourcegitcommit: 8b076ebde7ef971d7465bab834a3c2a32471ef6f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/16/2018
-ms.locfileid: "34189432"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37893597"
 ---
 # <a name="get-started-with-desired-state-configuration-dsc-for-linux"></a>Introduzione a DSC (Desired State Configuration) per Linux
 
@@ -16,6 +16,7 @@ Questo argomento illustra come iniziare a usare PowerShell DSC (Desired State Co
 ## <a name="supported-linux-operation-system-versions"></a>Versioni del sistema operativo Linux supportate
 
 DSC per Linux supporta le versioni seguenti del sistema operativo Linux.
+
 - CentOS 5, 6 e 7 (x86/x64)
 - Debian GNU/Linux 6, 7 e 8 (x86/x64)
 - Oracle Linux 5, 6 e 7 (x86/x64)
@@ -44,7 +45,8 @@ DSC (Desired State Configuration) per Linux richiede il server CIM OMI (Open Man
 
 Per installare OMI, installare il pacchetto appropriato per il sistema Linux (RPM o DEB), la versione OpenSSL (ssl_098 o ssl_100) e l'architettura (x64/x86). I pacchetti RPM sono appropriati per CentOS, Red Hat Enterprise Linux, SUSE Linux Enterprise Server e Oracle Linux. I pacchetti DEB sono appropriati per Debian GNU/Linux e Ubuntu Server. I pacchetti ssl_098 sono appropriati per i computer in cui è installato OpenSSL 0.9.8, mentre i pacchetti ssl_100 sono appropriati per i computer in cui è installato OpenSSL 1.0.
 
-> **Nota**: per determinare la versione di OpenSSL installata, eseguire il comando `openssl version`.
+> [!NOTE]
+> Per determinare la versione di OpenSSL installata, eseguire il comando `openssl version`.
 
 Eseguire il comando seguente per installare OMI in un sistema CentOS 7 x64.
 
@@ -52,16 +54,16 @@ Eseguire il comando seguente per installare OMI in un sistema CentOS 7 x64.
 
 ### <a name="installing-dsc"></a>Installazione di DSC
 
-DSC per Linux è disponibile per il download [qui](https://github.com/Microsoft/PowerShell-DSC-for-Linux/releases/latest).
+DSC per Linux è disponibile per il download [qui](https://github.com/Microsoft/PowerShell-DSC-for-Linux/releases/tag/v1.1.1-294).
 
 Per installare DSC, installare il pacchetto appropriato per il sistema Linux (RPM o DEB), la versione OpenSSL (ssl_098 o ssl_100) e l'architettura (x64/x86). I pacchetti RPM sono appropriati per CentOS, Red Hat Enterprise Linux, SUSE Linux Enterprise Server e Oracle Linux. I pacchetti DEB sono appropriati per Debian GNU/Linux e Ubuntu Server. I pacchetti ssl_098 sono appropriati per i computer in cui è installato OpenSSL 0.9.8, mentre i pacchetti ssl_100 sono appropriati per i computer in cui è installato OpenSSL 1.0.
 
-> **Nota**: per determinare la versione di OpenSSL installata, eseguire il comando openssl version.
+> [!NOTE]
+> Per determinare la versione di OpenSSL installata, eseguire il comando openssl version.
 
 Eseguire il comando seguente per installare DSC in un sistema CentOS 7 x64.
 
 `# sudo rpm -Uvh dsc-1.0.0-254.ssl_100.x64.rpm`
-
 
 ## <a name="using-dsc-for-linux"></a>Uso di DSC per Linux
 
@@ -73,39 +75,41 @@ La parola chiave Configuration di Windows PowerShell viene usata per creare una 
 
 1. Importare il modulo nx. Il modulo nx di Windows PowerShell contiene lo schema per le risorse incorporate per DSC per Linux e deve essere installato nel computer locale e importato nella configurazione.
 
-    - Per installare il modulo nx, copiare la directory del modulo nx in `$env:USERPROFILE\Documents\WindowsPowerShell\Modules\` o `$PSHOME\Modules`. Il modulo nx è incluso nel pacchetto di installazione (MSI) di DSC per Linux. Per importare il modulo nx nella configurazione, usare il comando __Import-DSCResource__:
+   - Per installare il modulo nx, copiare la directory del modulo nx in `$env:USERPROFILE\Documents\WindowsPowerShell\Modules\` o `$PSHOME\Modules`. Il modulo nx è incluso nel pacchetto di installazione (MSI) di DSC per Linux. Per importare il modulo nx nella configurazione, usare il comando `Import-DSCResource`:
 
-```powershell
-Configuration ExampleConfiguration{
+   ```powershell
+   Configuration ExampleConfiguration{
 
     Import-DSCResource -Module nx
 
-}
-```
+   }
+   ```
+
 2. Definire una configurazione e generare il documento di configurazione:
 
-```powershell
-Configuration ExampleConfiguration{
+   ```powershell
+   Configuration ExampleConfiguration
+   {
+        Import-DscResource -Module nx
 
-    Import-DscResource -Module nx
+        Node  "linuxhost.contoso.com"
+        {
+            nxFile ExampleFile 
+            {
+                DestinationPath = "/tmp/example"
+                Contents = "hello world `n"
+                Ensure = "Present"
+                Type = "File"
+            }
+        }
+   }
 
-    Node  "linuxhost.contoso.com"{
-    nxFile ExampleFile {
-
-        DestinationPath = "/tmp/example"
-        Contents = "hello world `n"
-        Ensure = "Present"
-        Type = "File"
-    }
-
-    }
-}
-ExampleConfiguration -OutputPath:"C:\temp"
-```
+   ExampleConfiguration -OutputPath:"C:\temp"
+   ```
 
 ### <a name="push-the-configuration-to-the-linux-computer"></a>Effettuare il push della configurazione nel computer Linux
 
-È possibile effettuare il push dei documenti di configurazione (file MOF) nel computer Linux usando il cmdlet [Start-DscConfiguration](https://technet.microsoft.com/en-us/library/dn521623.aspx). Per usare questo cmdlet, insieme ai cmdlet [Get-DscConfiguration](https://technet.microsoft.com/en-us/library/dn407379.aspx) o [Test-DscConfiguration](https://technet.microsoft.com/en-us/library/dn407382.aspx), in remoto in un computer Linux, è necessario usare una sessione CIMSession. Il cmdlet [New-CimSession](http://go.microsoft.com/fwlink/?LinkId=227967) viene usato per creare una sessione CIMSession nel computer Linux.
+È possibile effettuare il push dei documenti di configurazione (file MOF) nel computer Linux usando il cmdlet [Start-DscConfiguration](/powershell/module/PSDesiredStateConfiguration/Start-DscConfiguration). Per usare questo cmdlet, insieme ai cmdlet [Get-DscConfiguration](/powershell/module/PSDesiredStateConfiguration/Get-DscConfiguration) o [Test-DscConfiguration](/powershell/module/PSDesiredStateConfiguration/Test-DscConfiguration), in remoto in un computer Linux, è necessario usare una sessione CIMSession. Il cmdlet [New-CimSession](http://go.microsoft.com/fwlink/?LinkId=227967) viene usato per creare una sessione CIMSession nel computer Linux.
 
 Il codice seguente illustra come creare una sessione CIMSession per DSC per Linux.
 
@@ -121,11 +125,11 @@ $opt = New-CimSessionOption -UseSsl:$true
 $Sess=New-CimSession -Credential:$credential -ComputerName:$Node -Port:5986 -Authentication:basic -SessionOption:$opt -OperationTimeoutSec:90
 ```
 
-> **Nota**:
-* Per la modalità "Push", le credenziali dell'utente devono corrispondere all'utente ROOT nel computer Linux.
-* DSC per Linux supporta solo le connessioni SSL/TLS. Il cmdlet New-CimSession deve essere usato con il parametro –UseSSL impostato su $true.
-* Il certificato SSL usato da OMI (per DSC) è specificato nel file: `/opt/omi/etc/omiserver.conf` con le proprietà: pemfile e keyfile.
-Se il certificato non è considerato attendibile dal computer Windows in cui si esegue il cmdlet [New-CimSession](http://go.microsoft.com/fwlink/?LinkId=227967), è possibile scegliere di ignorare la convalida del certificato con le opzioni di CIMSession: `-SkipCACheck:$true -SkipCNCheck:$true -SkipRevocationCheck:$true`
+> [!NOTE]
+> Per la modalità "Push", le credenziali dell'utente devono corrispondere all'utente ROOT nel computer Linux.
+> DSC per Linux supporta solo le connessioni SSL/TLS. Il cmdlet `New-CimSession` deve essere usato con il parametro -UseSSL impostato su $true.
+> Il certificato SSL usato da OMI (per DSC) è specificato nel file: `/opt/omi/etc/omiserver.conf` con le proprietà: pemfile e keyfile.
+> Se il certificato non è considerato attendibile dal computer Windows in cui si esegue il cmdlet [New-CimSession](http://go.microsoft.com/fwlink/?LinkId=227967), è possibile scegliere di ignorare la convalida del certificato con le opzioni di CIMSession: `-SkipCACheck:$true -SkipCNCheck:$true -SkipRevocationCheck:$true`
 
 Eseguire il comando seguente per effettuare il push della configurazione DSC nel nodo Linux.
 
@@ -138,39 +142,40 @@ Le configurazioni possono essere distribuite in un computer Linux con un server 
 ### <a name="working-with-configurations-locally"></a>Uso di configurazioni in locale
 
 DSC per Linux include gli script per usare la configurazione dal computer Linux locale. Questi script si trovano in `/opt/microsoft/dsc/Scripts` e includono quanto segue:
-* GetDscConfiguration.py
 
- Restituisce la configurazione corrente applicata al computer. Simile al cmdlet Get-DscConfiguration di Windows PowerShell.
+- GetDscConfiguration.py
+
+Restituisce la configurazione corrente applicata al computer. Simile al cmdlet di Windows PowerShell `Get-DscConfiguration`.
 
 `# sudo ./GetDscConfiguration.py`
 
-* GetDscLocalConfigurationManager.py
+- GetDscLocalConfigurationManager.py
 
- Restituisce la metaconfigurazione corrente applicata al computer. Simile al cmdlet [Get-DSCLocalConfigurationManager](https://technet.microsoft.com/en-us/library/dn407378.aspx).
+Restituisce la metaconfigurazione corrente applicata al computer. Simile al cmdlet [Get-DSCLocalConfigurationManager](/powershell/module/PSDesiredStateConfiguration/Get-DscLocalConfigurationManager).
 
 `# sudo ./GetDscLocalConfigurationManager.py`
 
-* InstallModule.py
+- InstallModule.py
 
- Installa un modulo di risorse DSC personalizzato. Richiede il percorso di un file ZIP contenente la libreria di oggetti condivisi del modulo e i file MOF dello schema.
+Installa un modulo di risorse DSC personalizzato. Richiede il percorso di un file ZIP contenente la libreria di oggetti condivisi del modulo e i file MOF dello schema.
 
 `# sudo ./InstallModule.py /tmp/cnx_Resource.zip`
 
-* RemoveModule.py
+- RemoveModule.py
 
- Rimuove un modulo di risorse DSC personalizzato. Richiede il nome del modulo da rimuovere.
+Rimuove un modulo di risorse DSC personalizzato. Richiede il nome del modulo da rimuovere.
 
 `# sudo ./RemoveModule.py cnx_Resource`
 
-* StartDscLocalConfigurationManager.py
+- StartDscLocalConfigurationManager.py
 
- Applica un file MOF di configurazione al computer. Simile al cmdlet [Start-DscConfiguration](https://technet.microsoft.com/en-us/library/dn521623.aspx). Richiede il percorso del file MOF di configurazione da applicare.
+Applica un file MOF di configurazione al computer. Simile al cmdlet [Start-DscConfiguration](/powershell/module/PSDesiredStateConfiguration/Start-DscConfiguration). Richiede il percorso del file MOF di configurazione da applicare.
 
 `# sudo ./StartDscLocalConfigurationManager.py –configurationmof /tmp/localhost.mof`
 
-* SetDscLocalConfigurationManager.py
+- SetDscLocalConfigurationManager.py
 
- Applica un file MOF di metaconfigurazione al computer. Simile al cmdlet [Set-DSCLocalConfigurationManager](https://technet.microsoft.com/en-us/library/dn521621.aspx). Richiede il percorso del file MOF di metaconfigurazione da applicare.
+Applica un file MOF di metaconfigurazione al computer. Simile al cmdlet [Set-DSCLocalConfigurationManager](/powershell/module/PSDesiredStateConfiguration/Set-DscLocalConfigurationManager). Richiede il percorso del file MOF di metaconfigurazione da applicare.
 
 `# sudo ./SetDscLocalConfigurationManager.py –configurationmof /tmp/localhost.meta.mof`
 
@@ -180,5 +185,5 @@ I file di registro seguenti vengono generati per i messaggi di DSC per Linux.
 
 |File di registro|Directory|Description|
 |---|---|---|
-|omiserver.log|/var/opt/omi/log|Messaggi relativi al funzionamento del server CIM OMI.|
-|dsc.log|/var/opt/omi/log|Messaggi relativi al funzionamento delle operazioni delle risorse DSC e di Gestione configurazione locale.|
+|**omiserver.log**|`/var/opt/omi/log`|Messaggi relativi al funzionamento del server CIM OMI.|
+|**dsc.log**|`/var/opt/omi/log`|Messaggi relativi al funzionamento delle operazioni delle risorse DSC e di Gestione configurazione locale.|

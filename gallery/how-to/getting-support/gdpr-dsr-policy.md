@@ -3,12 +3,12 @@ ms.date: 03/27/2018
 contributor: JKeithB
 keywords: raccolta,powershell,psgallery,GDPR
 title: Conformità al regolamento GDPR di PowerShell Gallery
-ms.openlocfilehash: dca1a82952c284980a84caafa13b2807e47e25a0
-ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
+ms.openlocfilehash: 14b82fa07df52f02f0d7577cb0eef70faa4285a2
+ms.sourcegitcommit: 8b076ebde7ef971d7465bab834a3c2a32471ef6f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/16/2018
-ms.locfileid: "34189755"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37893247"
 ---
 # <a name="powershell-gallery-gdpr-compliance"></a>Conformità al regolamento GDPR di PowerShell Gallery
 
@@ -25,9 +25,9 @@ La normativa GDPR è valida ovunque ci si trovi.
 
 PowerShell Gallery archivia le informazioni seguenti, che possono essere trasmesse dagli utenti e includere informazioni personali:
 
-* Account di PowerShell Gallery
-* Elementi pubblicati in PowerShell Gallery
-* Corrispondenza di posta elettronica con il team PowerShell Gallery
+- Account di PowerShell Gallery
+- Elementi pubblicati in PowerShell Gallery
+- Corrispondenza di posta elettronica con il team PowerShell Gallery
 
 La maggior parte degli utenti non crea un account di PowerShell Gallery.
 Non è necessario un account, a meno che non si intenda pubblicare un elemento o usare la funzionalità "Proprietario contatto" in PowerShell Gallery.
@@ -45,15 +45,15 @@ Le sezioni seguenti descrivono come PowerShell Gallery supporta le richieste DSR
 
 La corrispondenza tramite posta elettronica può includere quanto segue:
 
-* Messaggio di posta elettronica inviato ai proprietari di elementi di PowerShell Gallery se l'analisi del codice rileva un problema con un elemento pubblicato da tali proprietari in PowerShell Gallery
-* Messaggio di posta elettronica inviato da qualsiasi utente al team di PowerShell Gallery usando l'indirizzo di posta elettronica disponibile nella pagina "Contattaci" (cgadmin@microsoft.com)
-* Utenti registrati che usano la funzionalità "Proprietario contatto" in PowerShell Gallery per inviare posta elettronica al proprietario di un elemento di PowerShell Gallery
+- Messaggio di posta elettronica inviato ai proprietari di elementi di PowerShell Gallery se l'analisi del codice rileva un problema con un elemento pubblicato da tali proprietari in PowerShell Gallery
+- Messaggio di posta elettronica inviato da qualsiasi utente al team di PowerShell Gallery usando l'indirizzo di posta elettronica disponibile nella pagina "Contattaci" [cgadmin@microsoft.com](mailto:cgadmin@microsoft.com)
+- Utenti registrati che usano la funzionalità "Proprietario contatto" in PowerShell Gallery per inviare posta elettronica al proprietario di un elemento di PowerShell Gallery
 
 Per i messaggi di posta elettronica inviati da o a PowerShell Gallery sono previsti criteri di conservazione di 90 giorni, che supportano eventuali verifiche di sicurezza nel caso in cui venga rilevato codice dannoso in PowerShell Gallery.
 In bse ai criteri i messaggi di posta elettronica vengono eliminati dopo 90 giorni.
 
 È possibile richiedere copie di tutti i messaggi di posta elettronica scambiati tra l'indirizzo di posta elettronica dell'utente e PowerShell Gallery nei 90 giorni precedenti.
-Per richiedere questa corrispondenza inviare un messaggio di posta elettronica all'indirizzo cgadmin@microsoft.com, con il titolo: "DSR Request for emails relating to this account" (Richiesta DSR per i messaggi di posta elettronica relativi a questo account).
+Per richiedere questa corrispondenza inviare un messaggio di posta elettronica all'indirizzo [cgadmin@microsoft.com](mailto:cgadmin@microsoft.com), con il titolo: "DSR Request for emails relating to this account" (Richiesta DSR per i messaggi di posta elettronica relativi a questo account).
 Nel corpo del messaggio specificare le informazioni richieste, ad esempio: Please send all emails sent to or received from this email address. (Si prega di inviare tutti i messaggi di posta elettronica inviati o ricevuti da questo indirizzo di posta elettronica.) Entro 7 giorni lavorativi si riceveranno tutti i messaggi che includono l'indirizzo di posta elettronica risalenti a un massimo di 90 giorni dalla data della richiesta.
 
 ### <a name="powershell-gallery-account-information"></a>Informazioni sull'account PowerShell Gallery
@@ -78,13 +78,13 @@ Questo script esporta una copia di ogni versione di ogni elemento incluso in Pow
 È possibile scaricare lo script usando il comando PowerShell seguente:
 
 ```powershell
-Save-Script GetPSGalleryItemsForAuthor -path <local folder location> -repository psgallery
+Save-Script Get-repository psgallery
 ```
 
 Quindi è possibile eseguire direttamente lo script eseguendo il comando PowerShell seguente:
 
 ```powershell
-cd <local folder location >
+# cd <local folder location>
 .\GetPSGalleryItemsForAuthor.ps1
 ```
 
@@ -95,9 +95,9 @@ Viene chiesto di specificare l'autore e la cartella del sistema in cui salvare g
 Per eliminare l'account di PowerShell Gallery o qualsiasi elemento di proprietà dell'utente in PowerShell Gallery, inviare un messaggio di posta elettronica all'indirizzo cgadmin@microsoft.com con il titolo: "GDPR Request for items relating to this account" (Richiesta GDPR per elementi associati a questo account).
 Nel corpo del messaggio indicare le informazioni da eliminare. Ad esempio:
 
-* Please delete version x.y.z of my item "item name" (Eliminare la versione x.y.z del mio elemento "nome elemento")
-* Please delete all versions of my item "item name" (Eliminare tutte le versioni del mio elemento "nome elemento")
-* Please delete my PowerShell Gallery account (Eliminare il mio account PowerShell Gallery)
+- Please delete version x.y.z of my item "item name" (Eliminare la versione x.y.z del mio elemento "nome elemento")
+- Please delete all versions of my item "item name" (Eliminare tutte le versioni del mio elemento "nome elemento")
+- Please delete my PowerShell Gallery account (Eliminare il mio account PowerShell Gallery)
 
 Gli amministratori di PowerShell Gallery risponderanno entro 7 giorni lavorativi.
 Gli elementi specificati verranno eliminati entro 30 giorni dall'invio della richiesta.

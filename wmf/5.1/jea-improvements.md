@@ -4,12 +4,12 @@ ms.topic: conceptual
 keywords: wmf,powershell,installazione
 contributor: ryanpu
 title: Miglioramenti apportati a JEA (Just Enough Administration)
-ms.openlocfilehash: 47a58a6fae9f3a41ec527ec1f77ac1c196336669
-ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
+ms.openlocfilehash: 79271e77a539764e7a18842efd919413cdc8ab9f
+ms.sourcegitcommit: 8b076ebde7ef971d7465bab834a3c2a32471ef6f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34222418"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37892720"
 ---
 # <a name="improvements-to-just-enough-administration-jea"></a>Miglioramenti apportati a JEA (Just Enough Administration)
 
@@ -18,7 +18,7 @@ ms.locfileid: "34222418"
 È ora possibile copiare in remoto file in/da un endpoint JEA e avere la certezza che l'utente che si connette non potrà copiare *nessun* file nel sistema.
 A questo scopo, è necessario configurare il file PSSC in modo da consentire il montaggio di un'unità utente per la connessione degli utenti.
 L'unità utente è un nuovo dispositivo PSDrive che è esclusivo per ogni utente che si connette e che viene mantenuto da una sessione all'altra.
-Quando si usa Copy-Item per copiare file in o da una sessione JEA, esiste un vincolo in base al quale l'accesso è consentito solo all'unità utente.
+Quando si usa `Copy-Item` per copiare file in o da una sessione JEA, esiste un vincolo in base al quale l'accesso è consentito solo all'unità utente.
 I tentativi di copiare i file in altre unità PSDrive avranno esito negativo.
 
 Per configurare l'unità utente nel file di configurazione della sessione JEA, usare i nuovi campi seguenti:
@@ -30,7 +30,7 @@ UserDriveMaximumSize = 10485760    # 10 MB
 
 La cartella che supporta l'unità utente verrà creata in `$env:LOCALAPPDATA\Microsoft\Windows\PowerShell\DriveRoots\DOMAIN_USER`
 
-Per utilizzare l'unità utente e copiare i file in/da un endpoint JEA configurato per esporre l'unità utente, usare i parametri `-ToSession` e `-FromSession` su Copy-Item.
+Per utilizzare l'unità utente e copiare i file in/da un endpoint JEA configurato per esporre l'unità utente, usare i parametri `-ToSession` e `-FromSession` su `Copy-Item`.
 
 ```powershell
 # Connect to the JEA endpoint
@@ -64,7 +64,8 @@ GroupManagedServiceAccount = 'myGMSAforJEA'
 RunAsVirtualAccount = $false
 ```
 
-> **Nota:** gli account del servizio gestiti del gruppo non garantiscono l'isolamento o la limitazione dell'ambito degli account virtuali.
+> [!NOTE]
+> Gli account del servizio gestiti del gruppo non garantiscono l'isolamento o la limitazione dell'ambito degli account virtuali.
 > Ogni utente che si connette condividerà la stessa identità degli account del servizio gestiti del gruppo, che può avere le autorizzazioni necessarie per accedere all'intera azienda.
 > Prestare molta attenzione quando si sceglie di usare un account del servizio gestito del gruppo e, quando possibile, dare sempre la preferenza agli account virtuali limitati al computer locale.
 
@@ -91,5 +92,6 @@ RequiredGroups = @{ And = 'elevated-jea', @{ Or = '2FA-logon', 'smartcard-logon'
 ```
 
 ## <a name="fixed-virtual-accounts-are-now-supported-on-windows-server-2008-r2"></a>Correzione: gli account virtuali sono ora supportati in Windows Server 2008 R2
+
 In WMF 5.1 è ora possibile usare account virtuali in Windows Server 2008 R2, abilitando configurazioni coerenti e parità di funzionalità in Windows Server 2008 R2 - 2016.
 Gli account virtuali continuano a non essere supportati quando si usa JEA in Windows 7.

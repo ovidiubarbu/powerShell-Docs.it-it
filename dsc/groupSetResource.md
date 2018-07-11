@@ -3,12 +3,12 @@ ms.date: 06/12/2017
 keywords: dsc,powershell,configurazione,installazione
 description: Fornisce un meccanismo per gestire i gruppi locali nel nodo di destinazione.
 title: Risorsa GroupSet DSC
-ms.openlocfilehash: 3d6fdcaef6053964d3fb3b709a5263d291a7c840
-ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
+ms.openlocfilehash: 487a76ca7703b2c57b940b4c5bd176eada6c8019
+ms.sourcegitcommit: 8b076ebde7ef971d7465bab834a3c2a32471ef6f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34222354"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37892427"
 ---
 # <a name="dsc-groupset-resource"></a>Risorsa GroupSet DSC
 
@@ -18,7 +18,8 @@ La risorsa **GroupSet** in Windows PowerShell DSC (Desired State Configuration) 
 
 Usare questa risorsa quando si vuole aggiungere e/o rimuovere lo stesso elenco di membri per più di un gruppo, rimuovere più di un gruppo o aggiungere più di un gruppo con lo stesso elenco di membri.
 
-##<a name="syntax"></a>Sintassi##
+## <a name="syntax"></a>Sintassi
+
 ```
 Group [string] #ResourceName
 {
@@ -43,7 +44,7 @@ Group [string] #ResourceName
 | MembersToInclude| Usare questa proprietà per aggiungere membri all'appartenenza al gruppo esistente. Il valore di questa proprietà è una matrice di stringhe del formato *Dominio*\\*Nome utente*. Se si imposta questa proprietà in una configurazione, non usare la proprietà **Members**. In caso contrario, verrà generato un errore.|
 | DependsOn | Indica che prima di configurare la risorsa è necessario eseguire la configurazione di un'altra risorsa. Ad esempio, se l'ID del blocco script di configurazione della risorsa che si vuole eseguire per primo è __ResourceName__ e il tipo è __ResourceType__, la sintassi per usare questa proprietà è `DependsOn = "[ResourceType]ResourceName"``.|
 
-## <a name="example-1"></a>Esempio 1
+## <a name="example-1-ensuring-groups-are-present"></a>Esempio 1: Verifica che i gruppi siano presenti
 
 L'esempio seguente illustra come assicurarsi che siano presenti due gruppi denominati "myGroup" e "myOtherGroup".
 
@@ -73,8 +74,8 @@ $cd = @{
     )
 }
 
-
 GroupSetTest -ConfigurationData $cd
 ```
 
->**Nota:** in questo esempio vengono usate credenziali in testo non crittografato per maggiore semplicità. Per informazioni sulla crittografia delle credenziali nel file MOF della configurazione, vedere [Protezione del file MOF](secureMOF.md).
+> [!NOTE] 
+> In questo esempio vengono usate credenziali in testo non crittografato per maggiore semplicità. Per informazioni sulla crittografia delle credenziali nel file MOF della configurazione, vedere [Protezione del file MOF](secureMOF.md).

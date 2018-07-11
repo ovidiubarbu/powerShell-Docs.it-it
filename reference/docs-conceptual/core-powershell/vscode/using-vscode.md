@@ -22,19 +22,19 @@ Per carichi di lavoro di Windows PowerShell tradizionali, vedere [Installazione 
 
 - **macOS**: seguire le istruzioni di installazione nella pagina per l'[Esecuzione di Visual Studio Core su macOS](https://code.visualstudio.com/docs/setup/mac)
 
-> [!IMPORTANT]
-> In macOS è necessario installare OpenSSL affinché l'estensione di PowerShell funzioni correttamente.
-> Il modo più semplice per eseguire questa operazione consiste nell'installare [Homebrew](http://brew.sh/) e quindi eseguire `brew install openssl`.
-> VS Code ora può caricare l'estensione PowerShell.
+  > [!IMPORTANT]
+  > In macOS è necessario installare OpenSSL affinché l'estensione di PowerShell funzioni correttamente.
+  > Il modo più semplice per eseguire questa operazione consiste nell'installare [Homebrew](http://brew.sh/) e quindi eseguire `brew install openssl`.
+  > VS Code ora può caricare l'estensione PowerShell.
 
 - **Windows**: seguire le istruzioni di installazione nella pagina per l'[Esecuzione di Visual Studio Core su Windows](https://code.visualstudio.com/docs/setup/windows)
 
 ### <a name="2-installing-powershell-extension"></a>2. Installazione dell'estensione di PowerShell
 
 - Avviare l'app di Visual Studio Code per:
-    - **Windows**: digitando `code` nella sessione di PowerShell
-    - **Linux**: digitando `code` nel terminale
-    - **Linux**: digitando `code` nel terminale
+  - **Windows**: digitando `code` nella sessione di PowerShell
+  - **Linux**: digitando `code` nel terminale
+  - **Linux**: digitando `code` nel terminale
 
 - Avviare **Quick Open** premendo **CTRL+P** (**CMD+P** su Mac).
 - In Quick Open digitare `ext install powershell` e fare clic su **INVIO**.
@@ -58,10 +58,10 @@ Per uscire da Visual Studio Code, **File->Esci**.
 Se si vuole usare un'installazione specifica di PowerShell con Visual Studio Code, è necessario aggiungere una nuova variabile al file delle impostazioni utente.
 
 1. Fare clic su **File -> Preferenze -> Impostazioni**
-1. Nell'editor verranno visualizzati due riquadri.
+2. Nell'editor verranno visualizzati due riquadri.
    Nel riquadro di destra (`settings.json`) inserire la seguente impostazione, relativa al proprio sistema operativo, tra parentesi graffe (`{` e `}`) e sostituire *<version>* con la versione di PowerShell installata:
 
-  ```json
+   ```json
     // On Windows:
     "powershell.powerShellExePath": "c:/Program Files/PowerShell/<version>/pwsh.exe"
 
@@ -70,9 +70,10 @@ Se si vuole usare un'installazione specifica di PowerShell con Visual Studio Cod
 
     // On macOS:
     "powershell.powerShellExePath": "/usr/local/microsoft/powershell/<version>/pwsh"
-  ```
-1. Sostituire l'impostazione con il percorso PowerShell desiderato eseguibile
-1. Salvare il file di impostazioni e riavviare Visual Studio Code
+   ```
+
+3. Sostituire l'impostazione con il percorso PowerShell desiderato eseguibile
+4. Salvare il file di impostazioni e riavviare Visual Studio Code
 
 #### <a name="configuration-settings-for-visual-studio-code"></a>Impostazioni di configurazione per Visual Studio Code
 
@@ -112,19 +113,19 @@ Ad esempio, è possibile aggiungere una configurazione per:
 - avviare una sessione interattiva nel debugger
 - collegare il debugger a un processo host di PowerShell
 
-Seguire questi passaggi per creare il file di configurazione di debug:
+  Seguire questi passaggi per creare il file di configurazione di debug:
 
-1. Aprire la vista **Debug** premendo **CTRL+MAIUSC+D** (**CMD+MAIUSC+D** su Mac).
-1. Premere l'icona a forma di ingranaggio **Configura** sulla barra degli strumenti.
-1. Visual Studio Code richiederà di **selezionare l'ambiente**.
-   Scegliere **PowerShell**.
+  1. Aprire la vista **Debug** premendo **CTRL+MAIUSC+D** (**CMD+MAIUSC+D** su Mac).
+  2. Premere l'icona a forma di ingranaggio **Configura** sulla barra degli strumenti.
+  3. Visual Studio Code richiederà di **selezionare l'ambiente**.
+  Scegliere **PowerShell**.
 
-   Quando si esegue questa operazione, Visual Studio Code crea una directory e un file ".vscode\launch.json" nella radice della cartella dell'area di lavoro.
-   Qui è archiviata la configurazione di debug. Se i file si trovano in un repository Git, in genere si vuole eseguire il commit del file launch.json.
-   I contenuti del file launch.json sono i seguenti:
+  Quando si esegue questa operazione, Visual Studio Code crea una directory e un file ".vscode\launch.json" nella radice della cartella dell'area di lavoro.
+  Qui è archiviata la configurazione di debug. Se i file si trovano in un repository Git, in genere si vuole eseguire il commit del file launch.json.
+  I contenuti del file launch.json sono i seguenti:
 
-```json
-{
+  ```json
+  {
     "version": "0.2.0",
     "configurations": [
         {
@@ -149,19 +150,21 @@ Seguire questi passaggi per creare il file di configurazione di debug:
             "cwd": "${workspaceRoot}"
         }
     ]
-}
-```
+  }
+  ```
 
-Rappresenta gli scenari di debug comuni.
-Tuttavia quando si apre il file nell'editor, viene visualizzato il pulsante **Aggiungi configurazione...**.
-Premere questo pulsante per aggiungere altre configurazioni di debug per PowerShell. Una configurazione utile da aggiungere è **PowerShell: avvia Script**.
-Con questa configurazione, è possibile scegliere un file specifico con gli argomenti facoltativi che devono essere avviati ogni volta che si preme F5, a prescindere dal file attivo nell'editor.
+  Rappresenta gli scenari di debug comuni.
+  Tuttavia quando si apre il file nell'editor, viene visualizzato il pulsante **Aggiungi configurazione...**.
+  Premere questo pulsante per aggiungere altre configurazioni di debug per PowerShell. Una configurazione utile da aggiungere è **PowerShell: avvia Script**.
+  Con questa configurazione, è possibile scegliere un file specifico con gli argomenti facoltativi che devono essere avviati ogni volta che si preme F5, a prescindere dal file attivo nell'editor.
 
-Una volta stabilita la configurazione di debug, è possibile selezionare la configurazione da usare durante una sessione di debug selezionandone una dal menu a discesa relativo alla configurazione nella visualizzazione della barra degli strumenti **Debug**.
+  Una volta stabilita la configurazione di debug, è possibile selezionare la configurazione da usare durante una sessione di debug selezionandone una dal menu a discesa relativo alla configurazione nella visualizzazione della barra degli strumenti **Debug**.
 
-Esistono alcuni blog che possono risultare utili per iniziare subito con l'estensione di PowerShell per Visual Studio Code
+  Esistono alcuni blog che possono risultare utili per iniziare subito con l'estensione di PowerShell per Visual Studio Code
 
-- Visual Studio Code: [estensione di PowerShell][ps-extension]
+Visual Studio Code:
+
+- [Estensione PowerShell][ps-extension]
 - [Scrivere ed eseguire il debug degli script di PowerShell in Visual Studio Code][debug]
 - [Indicazioni sul debug con Visual Studio Code][vscode-guide]
 - [Debug di PowerShell in Visual Studio Code][ps-vscode]
@@ -176,15 +179,15 @@ Esistono alcuni blog che possono risultare utili per iniziare subito con l'esten
 [install-pscore-macos]:  ../../setup/Installing-PowerShell-Core-on-macOS.md
 [install-pscore-windows]: ../../setup/Installing-PowerShell-Core-on-Windows.md
 [install-winps]: ../../setup/Installing-Windows-PowerShell.md
-[ps-extension]:https://blogs.msdn.microsoft.com/cdndevs/2015/12/11/visual-studio-code-powershell-extension/
-[debug]:https://blogs.msdn.microsoft.com/powershell/2015/11/16/announcing-powershell-language-support-for-visual-studio-code-and-more/
-[vscode-guide]:https://johnpapa.net/debugging-with-visual-studio-code/
-[ps-vscode]:https://github.com/PowerShell/vscode-powershell/tree/master/examples
-[getting-started]:https://blogs.technet.microsoft.com/heyscriptingguy/2016/12/05/get-started-with-powershell-development-in-visual-studio-code/
-[editing-part1]:https://blogs.technet.microsoft.com/heyscriptingguy/2017/01/11/visual-studio-code-editing-features-for-powershell-development-part-1/
-[editing-part2]:https://blogs.technet.microsoft.com/heyscriptingguy/2017/01/12/visual-studio-code-editing-features-for-powershell-development-part-2/
-[debugging-part1]:https://blogs.technet.microsoft.com/heyscriptingguy/2017/02/06/debugging-powershell-script-in-visual-studio-code-part-1/
-[debugging-part2]:https://blogs.technet.microsoft.com/heyscriptingguy/2017/02/13/debugging-powershell-script-in-visual-studio-code-part-2/
+[ps-extension]: https://blogs.msdn.microsoft.com/cdndevs/2015/12/11/visual-studio-code-powershell-extension/
+[debug]: https://blogs.msdn.microsoft.com/powershell/2015/11/16/announcing-powershell-language-support-for-visual-studio-code-and-more/
+[vscode-guide]: https://johnpapa.net/debugging-with-visual-studio-code/
+[ps-vscode]: https://github.com/PowerShell/vscode-powershell/tree/master/examples
+[getting-started]: https://blogs.technet.microsoft.com/heyscriptingguy/2016/12/05/get-started-with-powershell-development-in-visual-studio-code/
+[editing-part1]: https://blogs.technet.microsoft.com/heyscriptingguy/2017/01/11/visual-studio-code-editing-features-for-powershell-development-part-1/
+[editing-part2]: https://blogs.technet.microsoft.com/heyscriptingguy/2017/01/12/visual-studio-code-editing-features-for-powershell-development-part-2/
+[debugging-part1]: https://blogs.technet.microsoft.com/heyscriptingguy/2017/02/06/debugging-powershell-script-in-visual-studio-code-part-1/
+[debugging-part2]: https://blogs.technet.microsoft.com/heyscriptingguy/2017/02/13/debugging-powershell-script-in-visual-studio-code-part-2/
 
 ## <a name="powershell-extension-for-visual-studio-code"></a>Estensione di PowerShell per Visual Studio Code
 

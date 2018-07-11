@@ -2,21 +2,21 @@
 ms.date: 06/12/2017
 keywords: dsc,powershell,configurazione,installazione
 title: Uso di un server di report DSC
-ms.openlocfilehash: 143e0bdd9b637cee87a676ed327fe6ff3a7fd719
-ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
+ms.openlocfilehash: bcd414e9cc6d3b321676aaab6bbc3ca1b02e80aa
+ms.sourcegitcommit: 8b076ebde7ef971d7465bab834a3c2a32471ef6f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/16/2018
-ms.locfileid: "34188548"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37893138"
 ---
 # <a name="using-a-dsc-report-server"></a>Uso di un server di report DSC
 
-> Si applica a: Windows PowerShell 5.0
+Si applica a: Windows PowerShell 5.0
 
 > [!IMPORTANT]
 > Il server di pull (funzionalità di Windows *servizio DSC*) è un componente supportato di Windows Server, tuttavia non si prevede di offrire nuove caratteristiche o funzionalità. È consigliabile avviare la transizione dei client gestiti ad [Automation DSC per Azure](/azure/automation/automation-dsc-getting-started) (include funzionalità superiori al server di pull in Windows Server) o a una delle soluzioni della community riportate [qui](pullserver.md#community-solutions-for-pull-service).
-
->**Nota:** il server di report descritto in questo argomento non è disponibile in PowerShell 4.0.
+>
+> **Nota** Il server di report descritto in questo argomento non è disponibile in PowerShell 4.0.
 
 È possibile configurare Gestione configurazione locale in un nodo per inviare report sullo stato della configurazione a un server di pull, su cui è quindi possibile eseguire query per recuperare i dati. Ogni volta che il nodo controlla e applica una configurazione, invia un report al server di report. Questi report vengono archiviati in un database nel server e possono essere recuperati chiamando il servizio Web di gestione dei report. Ogni report contiene informazioni come le configurazioni applicate e l'esito dell'applicazione, le risorse usate, eventuali errori generati e le ore di inizio e fine.
 
@@ -56,6 +56,7 @@ configuration ReportClientConfig
         }
     }
 }
+
 ReportClientConfig
 ```
 
@@ -91,11 +92,12 @@ configuration PullClientConfig
 PullClientConfig
 ```
 
->**Nota:** è possibile assegnare il nome desiderato al servizio Web quando si configura un server di pull, ma la proprietà **ServerURL** deve corrispondere al nome del servizio.
+> [!NOTE]
+> È possibile assegnare il nome desiderato al servizio Web quando si configura un server di pull, ma la proprietà **ServerURL** deve corrispondere al nome del servizio.
 
 ## <a name="getting-report-data"></a>Recupero dei dati dei report
 
-I report inviati al server di pull vengono immessi in un database nel server. I report sono disponibili tramite chiamate al servizio Web. Per recuperare i report per un nodo specifico, inviare una richiesta HTTP al servizio Web di report nel formato seguente: `http://CONTOSO-REPORT:8080/PSDSCReportServer.svc/Nodes(AgentId= 'MyNodeAgentId')/Reports` dove `MyNodeAgentId` è il valore di AgentId del nodo per cui ottenere i report. È possibile ottenere il valore di AgentID per un nodo chiamando [Get-DscLocalConfigurationManager](https://technet.microsoft.com/library/dn407378.aspx) in tale nodo.
+I report inviati al server di pull vengono immessi in un database nel server. I report sono disponibili tramite chiamate al servizio Web. Per recuperare i report per un nodo specifico, inviare una richiesta HTTP al servizio Web di report nel formato seguente: `http://CONTOSO-REPORT:8080/PSDSCReportServer.svc/Nodes(AgentId='MyNodeAgentId')/Reports` dove `MyNodeAgentId` è il valore di AgentId del nodo per cui ottenere i report. È possibile ottenere il valore di AgentID per un nodo chiamando [Get-DscLocalConfigurationManager](/powershell/module/PSDesiredStateConfiguration/Get-DscLocalConfigurationManager) in tale nodo.
 
 I report vengono restituiti come matrice di oggetti JSON.
 
@@ -104,7 +106,12 @@ Lo script seguente restituisce i report per il nodo in cui viene eseguito:
 ```powershell
 function GetReport
 {
-    param($AgentId = "$((glcm).AgentId)", $serviceURL = "http://CONTOSO-REPORT:8080/PSDSCPullServer.svc")
+    param
+    (
+        $AgentId = "$((glcm).AgentId)", 
+        $serviceURL = "http://CONTOSO-REPORT:8080/PSDSCPullServer.svc"
+    )
+
     $requestUri = "$serviceURL/Nodes(AgentId= '$AgentId')/Reports"
     $request = Invoke-WebRequest -Uri $requestUri  -ContentType "application/json;odata=minimalmetadata;streaming=true;charset=utf-8" `
                -UseBasicParsing -Headers @{Accept = "application/json";ProtocolVersion = "2.0"} `
@@ -121,8 +128,9 @@ Se si imposta una variabile sul risultato della funzione **GetReport**, è possi
 ```powershell
 $reports = GetReport
 $reports[1]
+```
 
-
+```output
 JobId                : 019dfbe5-f99f-11e5-80c6-001dd8b8065c
 OperationType        : Consistency
 RefreshMode          : Pull
@@ -168,7 +176,9 @@ Si noti che la proprietà **StatusData** è un oggetto con un numero di propriet
 ```powershell
 $statusData = $reportMostRecent.StatusData | ConvertFrom-Json
 $statusData
+```
 
+```output
 StartDate                  : 2016-04-04T11:21:41.2990000-07:00
 IPV6Addresses              : {2001:4898:d8:f2f2:852b:b255:b071:283b, fe80::852b:b255:b071:283b%12, ::2000:0:0:0, ::1...}
 DurationInSeconds          : 25
@@ -205,7 +215,9 @@ Tra le altre cose, viene indicato che la configurazione più recente ha chiamato
 
 ```powershell
 $statusData.ResourcesInDesiredState
+```
 
+```output
 SourceInfo        : C:\ReportTest\Sample_xFirewall_AddFirewallRule.ps1::16::9::Archive
 ModuleName        : PSDesiredStateConfiguration
 DurationInSeconds : 2.672
@@ -222,6 +234,9 @@ InDesiredState    : True
 Si noti che questi esempi servono solo per dare un'idea di cosa è possibile fare con i dati dei report. Per informazioni introduttive sull'uso di JSON in PowerShell, vedere il post di blog [Playing with JSON and PowerShell](https://blogs.technet.microsoft.com/heyscriptingguy/2015/10/08/playing-with-json-and-powershell/).
 
 ## <a name="see-also"></a>Vedere anche
-- [Configurazione di Gestione configurazione locale](metaConfig.md)
-- [Configurazione di un server di pull Web DSC](pullServer.md)
-- [Configurazione di un client di pull usando nomi di configurazione](pullClientConfigNames.md)
+
+[Configurazione di Gestione configurazione locale](metaConfig.md)
+
+[Configurazione di un server di pull Web DSC](pullServer.md)
+
+[Configurazione di un client di pull usando nomi di configurazione](pullClientConfigNames.md)

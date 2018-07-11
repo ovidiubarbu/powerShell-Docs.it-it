@@ -2,28 +2,28 @@
 ms.date: 06/12/2017
 keywords: wmf,powershell,installazione
 title: Miglioramenti della console in WMF 5.1
-ms.openlocfilehash: fb689002caf42203d760f11acc64e52cfa681069
-ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
+ms.openlocfilehash: a8e82e2f973916c2ed5007eba90ee6f2b7a9a769
+ms.sourcegitcommit: 8b076ebde7ef971d7465bab834a3c2a32471ef6f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/16/2018
-ms.locfileid: "34189313"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37892927"
 ---
-# <a name="console-improvements-in-wmf-51"></a>Miglioramenti della console in WMF 5.1#
+# <a name="console-improvements-in-wmf-51"></a>Miglioramenti della console in WMF 5.1
 
 ## <a name="powershell-console-improvements"></a>Miglioramenti apportati alla console di PowerShell
 
 Per migliorare l'uso della console, sono state apportate a powershell.exe in WMF 5.1 le modifiche seguenti:
 
-###<a name="vt100-support"></a>Supporto per VT100
+### <a name="vt100-support"></a>Supporto per VT100
 
-Windows 10 ha aggiunto il supporto per le [sequenze di escape VT100](https://msdn.microsoft.com/en-us/library/windows/desktop/mt638032(v=vs.85).aspx).
+Windows 10 ha aggiunto il supporto per le [sequenze di escape VT100](/windows/console/console-virtual-terminal-sequences).
 Quando si calcola la larghezza delle tabelle, PowerShell ignorerà determinate sequenze di escape di formattazione VT100.
 
 PowerShell ha inoltre aggiunto una nuova API che può essere usata per la formattazione di codice in modo da determinare se VT100 è supportato.
 Ad esempio:
 
-```
+```powershell
 if ($host.UI.SupportsVirtualTerminal)
 {
     $esc = [char]0x1b
@@ -34,7 +34,8 @@ else
     "A default hello"
 }
 ```
-Ecco un [esempio](https://gist.github.com/lzybkr/dcb973dccd54900b67783c48083c28f7) completo che può essere usato per evidenziare le corrispondenze di Select-String.
+
+Ecco un [esempio](https://gist.github.com/lzybkr/dcb973dccd54900b67783c48083c28f7) completo che può essere usato per evidenziare le corrispondenze di `Select-String`.
 Salvare l'esempio in un file denominato `MatchInfo.format.ps1xml` quindi per usarlo, nel profilo o altrove, eseguire `Update-FormatData -Prepend MatchInfo.format.ps1xml`.
 
 Si noti che le sequenze di escape VT100 sono supportate solo a partire dall'aggiornamento Aniversary di Windows 10. Non sono supportate nei sistemi precedenti.
