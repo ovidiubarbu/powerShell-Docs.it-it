@@ -2,12 +2,12 @@
 ms.date: 06/27/2017
 keywords: powershell,cmdlet
 title: Regole di autorizzazione e funzionalità di sicurezza di Accesso Web Windows PowerShell
-ms.openlocfilehash: a3a743d83ae3e387ee51056042c98753104e925e
-ms.sourcegitcommit: 8b076ebde7ef971d7465bab834a3c2a32471ef6f
+ms.openlocfilehash: 14bb18cfc5d9826523a239aede42307a7688eaf5
+ms.sourcegitcommit: 77f62a55cac8c13d69d51eef5fade18f71d66955
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37893723"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39094246"
 ---
 # <a name="authorization-rules-and-security-features-of-windows-powershell-web-access"></a>Regole di autorizzazione e funzionalità di sicurezza di Accesso Web Windows PowerShell
 
@@ -163,9 +163,8 @@ Di seguito sono riportati alcuni esempi relativi a questo scenario.
 
 - Un amministratore ha configurato un ambiente di test privato e desidera consentire a tutti gli utenti autorizzati della rete di accedere a tutti i computer della rete che utilizzando normalmente, con accesso a tutte le configurazioni di sessione che utilizzando normalmente. Poiché si tratta di un ambiente di test privato, l'amministratore crea una regola di autorizzazione non sicura. - L'amministratore esegue il cmdlet `Add-PswaAuthorizationRule * * *`, che utilizza il carattere jolly **\*** per rappresentare tutti gli utenti, tutti i computer e tutte le configurazioni. - Questa regola equivale alla seguente: `Add-PswaAuthorizationRule -UserName * -ComputerName * -ConfigurationName *`.
 
-  >[!NOTE]
-  >
-  >Non è consigliabile usare questa regola in un ambiente sicuro, perché elude il livello di sicurezza fornito da Accesso Web Windows PowerShell.
+  > [!NOTE]
+  > Non è consigliabile usare questa regola in un ambiente sicuro, perché elude il livello di sicurezza fornito da Accesso Web Windows PowerShell.
 
 - Un amministratore deve consentire agli utenti di connettersi ai computer di destinazione di un ambiente che include sia gruppi di lavoro che domini. I computer dei gruppi di lavoro vengono talvolta utilizzati per connettersi ai computer di destinazione nei domini e i computer dei domini vengono talvolta utilizzati per connettersi a computer di destinazione nei gruppi di lavoro. L'amministratore ha incluso il server gateway, *PswaServer*, nel gruppo di lavoro e il computer di destinazione *srv1.contoso.com* in un dominio. *Chris* è un utente locale autorizzato sia nel server gateway del gruppo di lavoro che nel computer di destinazione. Nel server del gruppo di lavoro il suo nome utente è *chrisLocal*, mentre nel computer di destinazione è *contoso\\chris*. Per autorizzare Chris ad accedere a srv1.contoso.com, l'amministratore aggiunge la regola seguente.
 
@@ -180,10 +179,9 @@ Nello scenario precedente Accesso Web Windows PowerShell può stabilire la conne
 
 1. Autenticazione nel server gateway del gruppo di lavoro, con l'aggiunta di un nome utente con formato *nome_server*\\*nome_utente* alla regola di autorizzazione
 
-2. Autenticazione nel computer di destinazione con le credenziali alternative specificate nell'area **Impostazioni di connessione facoltative** della pagina di accesso
+1. Autenticazione nel computer di destinazione con le credenziali alternative specificate nell'area **Impostazioni di connessione facoltative** della pagina di accesso
 
    > [!NOTE]
-   >
    > Se il gateway e i computer di destinazione si trovano in gruppi di lavoro o domini diversi, è necessario stabilire una relazione di trust tra i computer nei due gruppi di lavoro, i due domini o tra il gruppo di lavoro e il dominio. Tale relazione non può essere configurata usando i cmdlet di Accesso Web Windows PowerShell per le regole di autorizzazione. Le regole di autorizzazione non definiscono una relazione di trust fra computer, ma si limitano ad autorizzare gli utenti a connettersi a specifici computer di destinazione e configurazioni di sessione. Per altre informazioni su come configurare una relazione di trust fra domini diversi, vedere l'articolo relativo alla [creazione di relazioni di trust fra domini e foreste](https://technet.microsoft.com/library/cc794775.aspx").
    > Per altre informazioni su come aggiungere i computer del gruppo di lavoro a un elenco di host attendibili, vedere [Gestione remota tramite Server Manager](https://technet.microsoft.com/library/dd759202.aspx)
 
