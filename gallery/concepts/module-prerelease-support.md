@@ -3,12 +3,12 @@ ms.date: 09/26/2017
 contributor: keithb
 keywords: raccolta,powershell,cmdlet,psget
 title: Versioni di modulo non definitive
-ms.openlocfilehash: 2a4fcd40353450e5ba03910984c5a05772a93d0d
-ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
+ms.openlocfilehash: 371aae7eed4afe341755133c5ee2d356cd5876e0
+ms.sourcegitcommit: 77f62a55cac8c13d69d51eef5fade18f71d66955
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/16/2018
-ms.locfileid: "34189840"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39093780"
 ---
 # <a name="prerelease-module-versions"></a>Versioni di modulo non definitive
 
@@ -108,7 +108,6 @@ C:\windows\system32> Get-InstalledModule TestPackage
 Version         Name                                Repository           Description
 -------         ----                                ----------           -----------
 1.9.0-alpha     TestPackage                         PSGallery            Package used to validate changes to the PowerShe...
-
 ```
 
 L'installazione side-by-side di versioni di un modulo che si differenziano solo per la versione non definitiva specificata non è supportata. Quando si installa un modulo con PowerShellGet, versioni diverse dello stesso modulo vengono installate side-by-side creando un nome di cartella con ModuleVersion. Per il nome di cartella viene usato ModuleVersion, senza la stringa Prerelease. Se un utente installa MyModule versione 2.5.0-alpha, il modulo viene installato nella cartella MyModule\2.5.0. Se l'utente installa quindi la versione 2.5.0-beta, la versione 2.5.0-beta __sovrascriverà__ il contenuto della cartella MyModule\2.5.0. Uno dei vantaggi di questo approccio è rappresentato dal fatto che non è necessario disinstallare la versione non definitiva dopo aver installato la versione pronta per la produzione. L'esempio seguente mostra cosa accade:

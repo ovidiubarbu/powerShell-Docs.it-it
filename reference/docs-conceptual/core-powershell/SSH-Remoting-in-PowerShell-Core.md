@@ -46,8 +46,8 @@ I sottosistemi SSH vengono usati per stabilire un processo PowerShell nel comput
    New-PSSession [-HostName] <string[]> [-Name <string[]>] [-UserName <string>] [-KeyFilePath <string>] [-SSHTransport] [<CommonParameters>]
    ```
 
-2. Installare la build più recente di [OpenSSH - Win32] da GitHub usando le istruzioni di [installazione]
-3. Modificare il file sshd_config nel percorso in cui è installato OpenSSH - Win32
+1. Installare la build più recente di [OpenSSH - Win32] da GitHub usando le istruzioni di [installazione]
+1. Modificare il file sshd_config nel percorso in cui è installato OpenSSH - Win32
    - Verificare che l'autenticazione della password sia abilitata
 
    ```
@@ -59,8 +59,8 @@ I sottosistemi SSH vengono usati per stabilire un processo PowerShell nel comput
     ```
 
     > [!NOTE]
-    È presente un bug in OpenSSH per Windows che impedisce il funzionamento dei percorsi eseguibili nel sottosistema che contengono spazi.
-    Per ottenere altre informazioni, vedere [questo problema in GitHub](https://github.com/PowerShell/Win32-OpenSSH/issues/784).
+    > È presente un bug in OpenSSH per Windows che impedisce il funzionamento dei percorsi eseguibili nel sottosistema che contengono spazi.
+    > Per ottenere altre informazioni, vedere [questo problema in GitHub](https://github.com/PowerShell/Win32-OpenSSH/issues/784).
 
     Una soluzione consiste nel creare un collegamento simbolico alla directory di installazione di Powershell che non contenga spazi:
 
@@ -84,27 +84,27 @@ I sottosistemi SSH vengono usati per stabilire un processo PowerShell nel comput
    PubkeyAuthentication yes
    ```
 
-4. Riavviare il servizio sshd
+1. Riavviare il servizio sshd
 
    ```powershell
    Restart-Service sshd
    ```
 
-5. Aggiungere il percorso in cui è installato OpenSSH alla variabile di percorso Env
+1. Aggiungere il percorso in cui è installato OpenSSH alla variabile di percorso Env
    - Dovrebbe trovarsi nelle righe di `C:\Program Files\OpenSSH\`
    - In questo modo ssh.exe può essere individuato
 
 ## <a name="setup-on-linux-ubuntu-1404-machine"></a>Installazione in computer Linux (Ubuntu 14.04)
 
 1. Installare la build più recente di [PowerShell Core per Linux] da GitHub
-2. Installare [SSH per Ubuntu] in base alle esigenze
+1. Installare [SSH per Ubuntu] in base alle esigenze
 
    ```bash
    sudo apt install openssh-client
    sudo apt install openssh-server
    ```
 
-3. Modificare il file sshd_config nel percorso /etc/ssh
+1. Modificare il file sshd_config nel percorso /etc/ssh
    - Verificare che l'autenticazione della password sia abilitata
 
    ```
@@ -123,7 +123,7 @@ I sottosistemi SSH vengono usati per stabilire un processo PowerShell nel comput
    PubkeyAuthentication yes
    ```
 
-4. Riavviare il servizio sshd
+1. Riavviare il servizio sshd
 
    ```bash
    sudo service sshd restart
@@ -137,7 +137,7 @@ I sottosistemi SSH vengono usati per stabilire un processo PowerShell nel comput
      - Fare clic su `Sharing`
      - Controllare `Remote Login`: deve indicare `Remote Login: On`
      - Consentire l'accesso agli utenti appropriati
-2. Modificare il file `sshd_config` nel percorso `/private/etc/ssh/sshd_config`
+1. Modificare il file `sshd_config` nel percorso `/private/etc/ssh/sshd_config`
    - Usare l'editor preferito o
 
      ```bash
@@ -162,7 +162,7 @@ I sottosistemi SSH vengono usati per stabilire un processo PowerShell nel comput
      PubkeyAuthentication yes
      ```
 
-3. Riavviare il servizio sshd
+1. Riavviare il servizio sshd
 
    ```bash
    sudo launchctl stop com.openssh.sshd

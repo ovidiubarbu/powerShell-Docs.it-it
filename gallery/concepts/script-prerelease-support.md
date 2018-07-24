@@ -3,12 +3,12 @@ ms.date: 10/17/2017
 contributor: keithb
 keywords: raccolta,powershell,cmdlet,psget
 title: Versioni non definitive degli script
-ms.openlocfilehash: 5b93da418b836d537491d3f1e4e29fa2e61f2f77
-ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
+ms.openlocfilehash: 7d4cec9d2b4ee5ad0b19ad5d9c68bb68747abd57
+ms.sourcegitcommit: 77f62a55cac8c13d69d51eef5fade18f71d66955
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/16/2018
-ms.locfileid: "34188565"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39093849"
 ---
 # <a name="prerelease-versions-of-scripts"></a>Versioni non definitive degli script
 
@@ -38,7 +38,6 @@ Una sezione di esempio del manifesto di uno script con una versione non definiti
 ...
 
 #>
-
 ```
 
 Per usare un suffisso di versione non definitiva, la stringa di versione deve soddisfare i requisiti seguenti:

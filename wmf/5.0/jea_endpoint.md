@@ -1,12 +1,12 @@
 ---
 ms.date: 06/12/2017
 keywords: wmf,powershell,installazione
-ms.openlocfilehash: 66db78cfb136f22cad9078d7113dad085ee667a5
-ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
+ms.openlocfilehash: e4910e95a417da61661aaddd98b2dc7da9f98a3d
+ms.sourcegitcommit: 77f62a55cac8c13d69d51eef5fade18f71d66955
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/16/2018
-ms.locfileid: "34188429"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39093719"
 ---
 # <a name="creating-and-connecting-to-a-jea-endpoint"></a>Creazione e connessione a un endpoint JEA
 Per creare un endpoint JEA, è necessario creare e registrare un file di configurazione di sessione di PowerShell appositamente configurato, che può essere generato con il cmdlet **New-PSSessionConfigurationFile**.
@@ -128,8 +128,8 @@ Copyright = '(c) 2015 Administrator. All rights reserved.'
 # AssembliesToLoad = 'System.Web', 'System.OtherAssembly, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
 
 }
-
 ```
+
 Per poterle usare in una configurazione di sessione JEA, le capacità del ruolo devono essere salvate come modulo di PowerShell valido in una directory denominata "RoleCapabilities". Per un modulo possono esistere più file di capacità del ruolo, se necessario.
 
 Per iniziare a configurare i cmdlet, le funzioni, gli alias e gli script a cui può accedere un utente durante la connessione a una sessione JEA, aggiungere regole personalizzate nel file delle capacità del ruolo, come indicato nei modelli impostati come commento. Per informazioni più approfondite su come è possibile configurare le capacità del ruolo, vedere la [guida all'esperienza](http://aka.ms/JEA) completa.
@@ -141,9 +141,11 @@ Register-PSSessionConfiguration -Name Maintenance -Path "C:\ProgramData\JEAConfi
 ```
 
 ## <a name="connect-to-a-jea-endpoint"></a>Connettersi a un Endpoint JEA
+
 La connessione a un Endpoint JEA funziona nello stesso modo della connessione a qualsiasi altro endpoint di PowerShell.  È sufficiente specificare il nome dell'endpoint JEA come parametro "ConfigurationName" per **New-PSSession**, **Invoke-Command** o **Enter-PSSession**.
 
 ```powershell
 Enter-PSSession -ConfigurationName Maintenance -ComputerName localhost
 ```
+
 Dopo essersi connessi alla sessione JEA, sarà consentita solo l'esecuzione dei comandi inclusi tra le capacità del ruolo a cui si ha accesso. Se si tenta di eseguire qualsiasi comando non consentito per il ruolo, si verificherà un errore.

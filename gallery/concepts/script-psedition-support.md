@@ -3,12 +3,12 @@ ms.date: 06/12/2017
 contributor: manikb
 keywords: raccolta,powershell,cmdlet,psget
 title: Script con versioni di PowerShell compatibili
-ms.openlocfilehash: 27b50be4e99b6c6b8fa089d1d4a436a27eeb17c9
-ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
+ms.openlocfilehash: 386e65295641fb6932c13047246742531aeaec64
+ms.sourcegitcommit: 77f62a55cac8c13d69d51eef5fade18f71d66955
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34219250"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39093661"
 ---
 # <a name="script-with-compatible-powershell-editions"></a>Script con versioni di PowerShell compatibili
 
@@ -56,13 +56,11 @@ Gli utenti di PowerShell Gallery possono trovare l'elenco degli script supportat
 Gli script senza PSEdition_Desktop e PSEditon_Core sono considerati idonei per le edizioni Desktop di PowerShell.
 
 ```powershell
-
 # Find scripts supported on PowerShell Desktop edition
 Find-Script -Tag PSEditon_Desktop
 
 # Find scripts supported on PowerShell Core editions
 Find-Script -Tag PSEditon_Core
-
 ```
 
 ## <a name="more-details"></a>Altri dettagli

@@ -1,12 +1,12 @@
 ---
 ms.date: 06/12/2017
 keywords: wmf,powershell,installazione
-ms.openlocfilehash: 0e8d0cb1e4afa7bc791d45bfb0b981654cb09ed5
-ms.sourcegitcommit: 8b076ebde7ef971d7465bab834a3c2a32471ef6f
+ms.openlocfilehash: b279d388754c5ee42215f21317f7b3d8089b7608
+ms.sourcegitcommit: 77f62a55cac8c13d69d51eef5fade18f71d66955
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37892570"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39093882"
 ---
 # <a name="unified-and-consistent-state-and-status-representation"></a>Rappresentazione degli stati unificata e coerente
 
@@ -15,11 +15,11 @@ In questa versione è stata introdotta una serie di miglioramenti per lo stato d
 La rappresentazione dello stato di Gestione configurazione locale e delle operazioni DSC è stata rivista e unificata in base alle regole seguenti:
 
 1. La risorsa non elaborata non influisce sullo stato di Gestione configurazione locale e DSC.
-2. Gestione configurazione locale interrompe l'elaborazione di ulteriori risorse quando rileva una risorsa che richiede il riavvio.
-3. Una risorsa che richiede il riavvio non è nello stato desiderato fino all'effettiva esecuzione del riavvio.
-4. In presenza di una risorsa in errore, Gestione configurazione locale continua con l'elaborazione di altre risorse, a condizione che non siano dipendenti da quelle in errore.
-5. Lo stato complessivo restituito dal cmdlet `Get-DscConfigurationStatus` è il soprainsieme dello stato di tutte le risorse.
-6. Lo stato PendingReboot è un soprainsieme dello stato PendingConfiguration.
+1. Gestione configurazione locale interrompe l'elaborazione di ulteriori risorse quando rileva una risorsa che richiede il riavvio.
+1. Una risorsa che richiede il riavvio non è nello stato desiderato fino all'effettiva esecuzione del riavvio.
+1. In presenza di una risorsa in errore, Gestione configurazione locale continua con l'elaborazione di altre risorse, a condizione che non siano dipendenti da quelle in errore.
+1. Lo stato complessivo restituito dal cmdlet `Get-DscConfigurationStatus` è il soprainsieme dello stato di tutte le risorse.
+1. Lo stato PendingReboot è un soprainsieme dello stato PendingConfiguration.
 
    Nella tabella seguente sono illustrate le proprietà correlate allo stato risultanti in alcuni scenari tipici.
 
