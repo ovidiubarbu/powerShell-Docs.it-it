@@ -2,12 +2,12 @@
 ms.date: 06/12/2017
 keywords: dsc,powershell,configurazione,installazione
 title: Risorsa Registry DSC
-ms.openlocfilehash: 8819b3704fa1a61d2be5ce11c974542f48177e09
-ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
+ms.openlocfilehash: b77710d7a6fc599949e78c17af309ad88a1a0872
+ms.sourcegitcommit: 77f62a55cac8c13d69d51eef5fade18f71d66955
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/16/2018
-ms.locfileid: "34188701"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39093586"
 ---
 # <a name="dsc-registry-resource"></a>Risorsa Registry DSC
 
@@ -32,35 +32,22 @@ Registry [string] #ResourceName
 ```
 
 ## <a name="properties"></a>Proprietà
+
 |  Proprietà  |  Description   |
 |---|---|
 | Key| Indica il percorso della chiave del Registro di sistema per cui si vuole specificare un determinato stato. Questo percorso deve includere l'hive.|
 | ValueName| Indica il nome del valore del Registro di sistema. Per aggiungere o rimuovere una chiave del Registro di sistema specificare questa proprietà come stringa vuota, senza specificare ValueType o ValueData. Per modificare o rimuovere il valore predefinito di una chiave del Registro di sistema specificare questa proprietà come stringa vuota e specificare ValueType o ValueData.|
 | Ensure| Indica se la chiave e il valore esistono. Impostare questa proprietà su "Present" per specificare che la chiave e il valore esistono. Impostare questa proprietà su "Absent" per specificare che la chiave e il valore non esistono. Il valore predefinito è "Present".|
-| Force| Se la chiave del Registro di sistema è presente, __Force__ la sovrascrive con il nuovo valore. Se si elimina una chiave del Registro di sistema con sottochiavi il valore deve essere __$true__.|
-| Hex| Indica se i dati verranno espressi in formato esadecimale. Se questa proprietà è specificata, i dati con valori DWORD o QWORD vengono presentati in formato esadecimale. La proprietà non è valida per altri tipi. Il valore predefinito è __$false__.|
-| DependsOn| Indica che prima di configurare la risorsa è necessario eseguire la configurazione di un'altra risorsa. Ad esempio, se l'ID del blocco script di configurazione della risorsa che si vuole eseguire per primo è __ResourceName__ e il tipo è __ResourceType__, la sintassi per usare questa proprietà è `DependsOn = "[ResourceType]ResourceName"`.|
+| Force| Se la chiave del Registro di sistema è presente, **Force** la sovrascrive con il nuovo valore. Se si elimina una chiave del Registro di sistema con sottochiavi il valore deve essere **$true**. |
+| Hex| Indica se i dati verranno espressi in formato esadecimale. Se questa proprietà è specificata, i dati con valori DWORD o QWORD vengono presentati in formato esadecimale. La proprietà non è valida per altri tipi. Il valore predefinito è **$false**.|
+| DependsOn| Indica che prima di configurare la risorsa è necessario eseguire la configurazione di un'altra risorsa. Ad esempio, se l'ID del blocco script di configurazione della risorsa che si vuole eseguire per primo è **ResourceName** e il tipo è **ResourceType**, la sintassi per usare questa proprietà è `DependsOn = "[ResourceType]ResourceName"`.|
 | ValueData| Dati per il valore del Registro di sistema.|
-| ValueType| Indica il tipo di valore. I tipi supportati sono:
-<ul><li>Stringa (REG_SZ)</li>
-
-
-<li>Binario (REG-BINARY)</li>
-
-
-<li>Dword a 32 bit (REG_DWORD)</li>
-
-
-<li>Qword a 64 bit (REG_QWORD)</li>
-
-
-<li>Multistringa (REG_MULTI_SZ)</li>
-
-
-<li>Stringa espandibile (REG_EXPAND_SZ)</li></ul>
+| ValueType| Indica il tipo di valore. I tipi supportati sono: stringa (REG_SZ), binario (REG-BINARY), DWORD a 32bit (REG_DWORD), QWORD a 64 bit (REG_QWORD), multistringa (REG_MULTI_SZ), stringa espandibile (REG_EXPAND_SZ) |
 
 ## <a name="example"></a>Esempio
+
 Questo esempio garantisce che sia presente una chiave denominata "ExampleKey" nell'hive **HKEY\_LOCAL\_MACHINE**.
+
 ```powershell
 Configuration RegistryTest
 {
@@ -74,5 +61,5 @@ Configuration RegistryTest
 }
 ```
 
->**Nota:** la modifica di un'impostazione del Registro di sistema nell'hive **HKEY\_CURRENT\_USER** richiede l'esecuzione della configurazione con le credenziali dell'utente anziché come il sistema.
->È possibile usare la proprietà **PsDscRunAsCredential** per specificare le credenziali utente per la configurazione. Per un esempio, vedere [Esecuzione di DSC con le credenziali dell'utente](runAsUser.md)
+> [!NOTE]
+> La modifica di un'impostazione del Registro di sistema nell'hive **HKEY\_CURRENT\_USER** richiede l'esecuzione della configurazione con le credenziali dell'utente anziché come il sistema. È possibile usare la proprietà **PsDscRunAsCredential** per specificare le credenziali utente per la configurazione. Per un esempio, vedere [Esecuzione di DSC con le credenziali dell'utente](runAsUser.md).

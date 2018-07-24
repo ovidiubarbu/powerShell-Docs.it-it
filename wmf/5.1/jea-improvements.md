@@ -4,12 +4,12 @@ ms.topic: conceptual
 keywords: wmf,powershell,installazione
 contributor: ryanpu
 title: Miglioramenti apportati a JEA (Just Enough Administration)
-ms.openlocfilehash: 79271e77a539764e7a18842efd919413cdc8ab9f
-ms.sourcegitcommit: 8b076ebde7ef971d7465bab834a3c2a32471ef6f
+ms.openlocfilehash: a9a8a0fd2b726ded33aa07c205292efd7148f3f0
+ms.sourcegitcommit: 77f62a55cac8c13d69d51eef5fade18f71d66955
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37892720"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39093620"
 ---
 # <a name="improvements-to-just-enough-administration-jea"></a>Miglioramenti apportati a JEA (Just Enough Administration)
 
@@ -50,7 +50,7 @@ Copy-Item -Path User:\SampleFile.txt -Destination . -FromSession $jeasession
 
 In alcuni casi, per un'attività che un utente deve eseguire in una sessione JEA potrebbe essere necessario accedere a risorse che non si trovano nel computer locale.
 Quando una sessione JEA è configurata per l'uso di un account virtuale, qualsiasi tentativo di accedere a tali risorse risulterà proveniente dall'identità del computer locale, non dall'account virtuale o dall'utente connesso.
-In TP5 è stato abilitato il supporto per l'esecuzione di JEA nel contesto di un [account del servizio gestito del gruppo] (https://technet.microsoft.com/en-us/library/jj128431(v=ws.11\).aspx). In tal modo, risulta molto più semplice accedere alle risorse di rete usando un'identità di dominio.
+In TP5 è stato abilitato il supporto per l'esecuzione di JEA nel contesto di un [account del servizio gestito del gruppo](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj128431\(v=ws.11\)). In tal modo, risulta molto più semplice accedere alle risorse di rete usando un'identità di dominio.
 
 Per configurare una sessione JEA per l'esecuzione con un account del servizio gestito del gruppo, usare la nuova chiave seguente nel file PSSC:
 
