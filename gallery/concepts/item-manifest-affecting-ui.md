@@ -3,12 +3,12 @@ ms.date: 06/09/2017
 schema: 2.0.0
 keywords: powershell
 title: Valori del manifesto degli elementi con effetti sull'interfaccia utente di PowerShell Gallery
-ms.openlocfilehash: fd5e48f8cc36795742ae597fc7715f7377605b6f
-ms.sourcegitcommit: 8b076ebde7ef971d7465bab834a3c2a32471ef6f
+ms.openlocfilehash: 00350d3558e2bfa487fb116304956ffa7291ee05
+ms.sourcegitcommit: 77f62a55cac8c13d69d51eef5fade18f71d66955
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37893478"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39093974"
 ---
 # <a name="item-manifest-values-that-impact-the-powershell-gallery-ui"></a>Valori del manifesto degli elementi con effetti sull'interfaccia utente di PowerShell Gallery
 
@@ -84,65 +84,67 @@ Per riferimento, ecco alcuni dei tag usati più di frequente alla data del 14/12
 In alcuni casi, a fianco del tag sono indicate opzioni simili, ma meno ottimali.
 È consigliabile usare il tag preferito, perché produce meno risultati non significativi e migliori risultati di ricerca per gli utenti.
 
-| **Tag preferito** | **Alternative e note** |
+| Tag preferito | Alternative e note |
 | --- | --- |
-| **Azure** |  |
-| **DSC** | DesiredStateConfiguration è meno consigliato perché troppo lungo |
-| **ResourceManager** | L'acronimo ARM viene usato per descrivere un gruppo di processori, quindi è sconsigliabile usarlo per Azure Resource Manager | **DSCResourceKit** |  |
-| **SQL** |  |
-| **AWS** |  |
-| **DSCResource** |  |
-| **Automation** |  |
-| **REST** |  |
-| **ActiveDirectory** | AD non è attualmente usato da solo  |
-| **SQLServer** |  |
-| **DBA** |  |
-| **Sicurezza** | Defense è meno preciso |
-| **Database** | Il plurale inglese databases è meno consigliato |
-| **DevOps** |  |
-| **Windows** |  |
-| **Build** |  |
-| **Deployment** | Il verbo deploy è usato meno frequentemente |
-| **Cloud** |  |
-| **GIT** |  |
-| **Test** | Testing è meno consigliato |
-| **VersionControl** | Version è meno preciso, anche se usato più frequentemente  |
-| **Logging** | Uso preferito come azione |
-| **Log** | Uso preferito come oggetto |
-| **Backup** |  |
-| **IaaS** |  |
-| **Linux** |  |
-| **IIS** |  |
-| **AzureAutomation** |  |
-| **Storage** |  |
-| **GitHub** |  |
-| **Json** |  |
-| **Exchange** |  |
-| **Network** | Il tag networking è simile, ma meno usato |
-| **SharePoint** |  |
-| **Reporting** | Reporting è un'azione, report è un oggetto |
-| **Report** | Report è un oggetto |
-| **WinRM** |  |
-| **Monitoring** |  |
-| **VSTS** |  |
-| **Excel** |  |
-| **Google** |  |
-| **Color** |  |
-| **DNS** |  |
-| **Office365** | È preferibile indicare Office per intero. Il tag O365 è usato meno comunemente, sebbene più breve | **Gitlab** |  |
-| **Pester** |  |
-| **AzureAD** |  |
-| **HTML** |  |
-| **Hyper-V** | HyperV è usato meno comunemente come tag |
-| **Configuration** |  |
-| **ChatOps** |  |
-| **PackageManagement** |  |
-| **WMI** |  |
-| **Firewall** |  |
-| **Docker** |  |
-| **Appveyor** |  |
-| **AzureRm** | Usato principalmente per i moduli AzureRM |
-| **Zip** |  |
-| **MSI** |  |
-| **Mac** |  |
-| **PoshBot** |  |
+| Azure |  |
+| DSC | DesiredStateConfiguration è meno consigliato perché troppo lungo |
+| ResourceManager | L'acronimo ARM viene usato per descrivere un gruppo di processori, quindi è sconsigliabile usarlo per Azure Resource Manager |
+| DSCResourceKit |  |
+| SQL |  |
+| AWS |  |
+| DSCResource |  |
+| Automazione |  |
+| REST |  |
+| ActiveDirectory | AD non è attualmente usato da solo  |
+| SQLServer |  |
+| DBA |  |
+| Sicurezza | Defense è meno preciso |
+| Database | Il plurale inglese databases è meno consigliato |
+| DevOps |  |
+| Windows |  |
+| Build |  |
+| Distribuzione | Il verbo deploy è usato meno frequentemente |
+| Cloud |  |
+| GIT |  |
+| Test | Testing è meno consigliato |
+| VersionControl | Version è meno preciso, anche se usato più frequentemente  |
+| Registrazione | Uso preferito come azione |
+| Log | Uso preferito come oggetto |
+| Backup |  |
+| IaaS |  |
+| Linux |  |
+| IIS |  |
+| AzureAutomation |  |
+| Archiviazione |  |
+| GitHub |  |
+| Json |  |
+| Exchange |  |
+| Rete | Il tag networking è simile, ma meno usato |
+| SharePoint |  |
+| Creazione di report | Reporting è un'azione, report è un oggetto |
+| Report | Report è un oggetto |
+| WinRM |  |
+| Monitoraggio |  |
+| VSTS |  |
+| Excel |  |
+| Google |  |
+| Colore |  |
+| DNS |  |
+| Office365 | È preferibile indicare Office per intero. Il tag O365 è usato meno comunemente, sebbene più breve |
+| Gitlab |  |
+| Pester |  |
+| AzureAD |  |
+| HTML |  |
+| Hyper-V | HyperV è usato meno comunemente come tag |
+| Configurazione |  |
+| ChatOps |  |
+| PackageManagement |  |
+| WMI |  |
+| Firewall |  |
+| Docker |  |
+| Appveyor |  |
+| AzureRm | Usato principalmente per i moduli AzureRM |
+| Zip |  |
+| MSI |  |
+| Mac |  |
+| PoshBot |  |

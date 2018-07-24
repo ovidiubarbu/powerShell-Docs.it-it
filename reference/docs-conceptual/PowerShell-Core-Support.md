@@ -31,24 +31,47 @@ Nei Criteri moderni relativi al ciclo di vita viene anche indicato che Microsoft
 
 ## <a name="supported-platforms"></a>Piattaforme supportate
 
-PowerShell Core è ufficialmente supportato sulle piattaforme seguenti:
+Vedere la tabella seguente per scoprire in quale piattaforma è ufficialmente supportata la versione di PowerShell Core in uso.
 
-* Windows 7, 8.1 e 10
-* Windows Server 2008 R2, 2012 R2, 2016
-* [Canale semestrale di Windows Server][semi-annual]
-* Ubuntu 14.04, 16.04 e 17.04
-* Debian 8.7+ e 9
-* CentOS 7
-* Red Hat Enterprise Linux 7
-* OpenSUSE 42.2
-* Fedora 27, 28
-* macOS 10.12+
+La nostra community ha anche reso disponibili pacchetti per alcune piattaforme, ma non sono ufficialmente supportati.
+Questi pacchetti sono contrassegnati come `Community` nella tabella.
 
-La nostra community ha anche reso disponibili pacchetti per le piattaforme seguenti, ma non sono ufficialmente supportati:
+Le piattaforme elencate come `Experimental` non sono ufficialmente supportate, ma sono disponibili per la sperimentazione e per l'invio di commenti e suggerimenti.
 
-* Arch Linux
-* Kali Linux
-* AppImage (funziona su più piattaforme Linux)
+|                                                   | 6.0         | 6.1         |
+|---------------------------------------------------|:-----------:|:-----------:|
+| Windows 7, 8.1 e 10                            | Funzionalità supportata   | Funzionalità supportata   |
+| Windows Server 2008 R2, 2012 R2, 2016             | Funzionalità supportata   | Funzionalità supportata   |
+| [Canale semestrale di Windows Server][semi-annual] | Funzionalità supportata   | Funzionalità supportata   |
+| Ubuntu 14.04 e 16.04                           | Funzionalità supportata   | Funzionalità supportata   |
+| Ubuntu 17.10 e 18.04                           |             | Funzionalità supportata   |
+| Debian 8.7+ e 9                                | Funzionalità supportata   | Funzionalità supportata   |
+| CentOS 7                                          | Funzionalità supportata   | Funzionalità supportata   |
+| Red Hat Enterprise Linux 7                        | Funzionalità supportata   | Funzionalità supportata   |
+| OpenSUSE 42.2                                     | Funzionalità supportata   | Funzionalità supportata   |
+| Fedora 27                                         | Funzionalità supportata   | Funzionalità supportata   |
+| Fedora 28                                         |             | Funzionalità supportata   |
+| macOS 10.12+                                      | Funzionalità supportata   | Funzionalità supportata   |
+| Arch                                              | Community   | Community   |
+| Raspbian                                          | Sperimentale| Community   |
+| Kali                                              | Community   | Community   |
+| AppImage (funziona su più piattaforme Linux)     | Community   | Community   |
+
+## <a name="platform-which-are-out-of-support"></a>Piattaforme non più supportate
+
+Quando una versione di una piattaforma raggiunge la fine del ciclo di vita come definito dal proprietario della piattaforma, anche PowerShell Core interromperà il supporto per tale versione. I pacchetti rilasciati in precedenza rimarranno disponibili per i clienti che devono accedervi, ma non verranno più forniti il supporto formale e gli aggiornamenti di qualsiasi tipo.
+
+Pertanto, il supporto per le versioni seguenti è stato terminato dai proprietari della distribuzione e tali versioni non sono più supportate.
+
+| Sistema operativo       | Versione | Fine vita                                                                                 |
+|----------|---------|---------------------------------------------------------------------------------------------|
+| Fedora   | 26      | [Maggio 2018](https://fedoramagazine.org/fedora-26-end-life/)                                  |
+| Fedora   | 25      | [Dicembre 2017](https://fedoramagazine.org/fedora-25-end-life/)                             |
+| Fedora   | 24      | [Agosto 2017](https://fedoramagazine.org/fedora-24-eol/)                                    |
+| openSUSE | 42.2    | [Gennaio 2018](https://lists.opensuse.org/opensuse-security-announce/2017-11/msg00066.html) |
+| openSUSE | 42.1    | [Maggio 2017](https://lists.opensuse.org/opensuse-security-announce/2017-05/msg00053.html)     |
+| Ubuntu   | 17.04   | [Gennaio 2018](https://lists.ubuntu.com/archives/ubuntu-announce/2018-January.txt)          |
+| Ubuntu   | 16.10   | [Luglio 2017](https://lists.ubuntu.com/archives/ubuntu-announce/2017-July/000223.html)        |
 
 ## <a name="notes-on-licensing"></a>Note sulla licenza
 
