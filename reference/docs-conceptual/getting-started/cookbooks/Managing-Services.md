@@ -3,16 +3,16 @@ ms.date: 06/05/2017
 keywords: powershell,cmdlet
 title: Gestione dei servizi
 ms.assetid: 7a410e4d-514b-4813-ba0c-0d8cef88df31
-ms.openlocfilehash: f3231d1922568e552534f3d3face3864d1610d65
-ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
+ms.openlocfilehash: e2388f5d73a320a69faae0772c8403a7d77f8b52
+ms.sourcegitcommit: 77f62a55cac8c13d69d51eef5fade18f71d66955
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2018
-ms.locfileid: "30951199"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39094171"
 ---
 # <a name="managing-services"></a>Gestione dei servizi
 
-Sono disponibili otto cmdlet Service principali, progettati per una vasta gamma di attività dei servizi. Verranno esaminati solo l'elenco e la modifica dello stato di esecuzione dei servizi, ma è possibile ottenere un elenco di cmdlet Service usando **Get-Help \&#42;-Service**, oltre a trovare informazioni sui diversi cmdlet Service con **Get-Help<Cmdlet-Name>**, ad esempio **Get-Help New-Service**.
+Sono disponibili otto cmdlet Service principali, progettati per una vasta gamma di attività dei servizi. Verranno esaminati solo l'elenco e la modifica dello stato di esecuzione dei servizi, ma è possibile ottenere un elenco di cmdlet Service usando **Get-Help \*-Service**, oltre a trovare informazioni sui diversi cmdlet Service con **Get-Help \<Cmdlet-Name\>**, ad esempio **Get-Help New-Service**.
 
 ## <a name="getting-services"></a>Ottenere servizi
 
