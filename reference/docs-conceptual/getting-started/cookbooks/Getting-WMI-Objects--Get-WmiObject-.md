@@ -121,7 +121,7 @@ TotalVirtualMemorySize TotalVisibleMemory FreePhysicalMemory FreeVirtualMemory F
 ```
 
 > [!NOTE]
-> I caratteri jolly possono essere usati con i nomi delle proprietà in **Format-Table**, pertanto l'elemento finale della pipeline può essere ridotto a *`Format-Table -Property Total,Free`
+> I caratteri jolly possono essere usati con i nomi delle proprietà in **Format-Table**, pertanto l'elemento finale della pipeline può essere ridotto a `Format-Table -Property Total,Free`
 
 I dati relativi alla memoria potrebbero essere più leggibili se si formattano come elenco digitando:
 
