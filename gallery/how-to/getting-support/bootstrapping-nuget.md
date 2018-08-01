@@ -3,24 +3,20 @@ ms.date: 06/12/2017
 contributor: manikb
 keywords: raccolta,powershell,cmdlet,psget
 title: Bootstrap di NuGet
-ms.openlocfilehash: 2d321097fda201c0d8f843b2194a161eceabe4e1
-ms.sourcegitcommit: 77f62a55cac8c13d69d51eef5fade18f71d66955
+ms.openlocfilehash: e82fe7bec2e6b7a321fb173cdf9a54c5a97d5f18
+ms.sourcegitcommit: c3f1a83b59484651119630f3089aa51b6e7d4c3c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39094018"
+ms.lasthandoff: 07/26/2018
+ms.locfileid: "39267848"
 ---
 # <a name="bootstrap-the-nuget-provider-and-nugetexe"></a>Bootstrap del provider NuGet e di NuGet.exe
 
-Il file NuGet.exe non è incluso nella versione più recente del provider NuGet.
-Per le operazioni di pubblicazione di un modulo o uno script, PowerShellGet richiede il file NuGet.exe eseguibile binario.
-Per tutte le altre operazioni, che includono la *ricerca*,l' *installazione*, il *salvataggio* e la *disinstallazione*, è necessario soltanto il provider NuGet.
-PowerShellGet include la logica per gestire un bootstrap combinato del provider NuGet e di NuGet.exe o un bootstrap del solo provider NuGet.
-In entrambi i casi deve essere visualizzato un solo messaggio di richiesta.
-Se il computer non è connesso a Internet, è necessario che l'utente o un amministratore copi un'istanza attendibile del provider NuGet e/o del file NuGet.exe nel computer disconnesso.
+Il file NuGet.exe non è incluso nella versione più recente del provider NuGet. Per le operazioni di pubblicazione di un modulo o uno script, PowerShellGet richiede il file NuGet.exe eseguibile binario. Per tutte le altre operazioni, che includono la *ricerca*,l' *installazione*, il *salvataggio* e la *disinstallazione*, è necessario soltanto il provider NuGet.
+PowerShellGet include la logica per gestire un bootstrap combinato del provider NuGet e di NuGet.exe o un bootstrap del solo provider NuGet. In entrambi i casi deve essere visualizzato un solo messaggio di richiesta. Se il computer non è connesso a Internet, è necessario che l'utente o un amministratore copi un'istanza attendibile del provider NuGet e/o del file NuGet.exe nel computer disconnesso.
 
 > [!NOTE]
-> A partire dalla versione 6, il provider NuGet è incluso nell'installazione di PowerShell. [http://github.com/powershell/powershell](http://github.com/powershell/powershell)
+> A partire dalla versione 6, il provider NuGet è incluso nell'installazione di PowerShell.
 
 ## <a name="resolving-error-when-the-nuget-provider-has-not-been-installed-on-a-machine-that-is-internet-connected"></a>Risoluzione dell'errore se il provider NuGet non è stato installato in un computer connesso a Internet
 
@@ -123,15 +119,11 @@ VERBOSE: Successfully published module 'Contoso' to the module publish location 
 
 ## <a name="manually-bootstrapping-the-nuget-provider-on-a-machine-that-is-not-connected-to-the-internet"></a>Bootstrap manuale del provider NuGet in un computer non connesso a Internet
 
-I processi illustrati in precedenza presuppongono che il computer sia connesso a Internet e in grado di scaricare file da un percorso pubblico.
-Se il download non è possibile, l'unica opzione consiste nell'eseguire il bootstrap di un computer usando i processi descritti in precedenza e nel copiare manualmente il provider nel nodo isolato tramite un processo attendibile offline.
-Il caso d'uso più comune per questo scenario è rappresentato da una raccolta privata disponibile per il supporto di un ambiente isolato.
+I processi illustrati in precedenza presuppongono che il computer sia connesso a Internet e in grado di scaricare file da un percorso pubblico. Se il download non è possibile, l'unica opzione consiste nell'eseguire il bootstrap di un computer usando i processi descritti in precedenza e nel copiare manualmente il provider nel nodo isolato tramite un processo attendibile offline. Il caso d'uso più comune per questo scenario è rappresentato da una raccolta privata disponibile per il supporto di un ambiente isolato.
 
 Dopo aver completato il processo precedente per eseguire il bootstrap di un computer connesso a Internet, i file del provider saranno disponibili nel percorso seguente:
 
-```
-C:\Program Files\PackageManagement\ProviderAssemblies\
-```
+`C:\Program Files\PackageManagement\ProviderAssemblies\`
 
 La struttura di cartelle e file del provider NuGet sarà la seguente (eventualmente con un numero di versione diverso):
 
@@ -147,11 +139,9 @@ Copiare le cartelle e il file usando un processo attendibile nei computer offlin
 
 In aggiunta al processo per il bootstrap manuale del provider NuGet, se il computer verrà usato per pubblicare moduli o script in una raccolta privata usando il cmdlet `Publish-Module` o `Publish-Script`, sarà necessario il file eseguibile binario NuGet.exe.
 
-Il caso d'uso più comune per questo scenario è rappresentato da una raccolta privata disponibile per il supporto di un ambiente isolato.
-Sono disponibili due opzioni per ottenere il file NuGet.exe.
+Il caso d'uso più comune per questo scenario è rappresentato da una raccolta privata disponibile per il supporto di un ambiente isolato. Sono disponibili due opzioni per ottenere il file NuGet.exe.
 
-La prima opzione consiste nell'eseguire il bootstrap di un computer connesso a Internet e nel copiare i file nei computer offline usando un processo attendibile.
-Dopo aver eseguito il bootstrap del computer connesso a Internet, il file binario NuGet.exe si troverà in una delle due cartelle seguenti:
+La prima opzione consiste nell'eseguire il bootstrap di un computer connesso a Internet e nel copiare i file nei computer offline usando un processo attendibile. Dopo aver eseguito il bootstrap del computer connesso a Internet, il file binario NuGet.exe si troverà in una delle due cartelle seguenti:
 
 Se i cmdlet `Publish-Module` o `Publish-Script` sono stati eseguiti con autorizzazioni elevate (come amministratore):
 
@@ -165,9 +155,7 @@ Se i cmdlet sono stati eseguiti come utente senza autorizzazioni elevate:
 $env:userprofile\AppData\Local\Microsoft\Windows\PowerShell\PowerShellGet\
 ```
 
-Una seconda alternativa è il download di NuGet.exe dal sito Web NuGet.Org: [https://dist.nuget.org/index.html](https://www.nuget.org/downloads) Quando si seleziona una versione NugGet per i computer di produzione, assicurarsi che sia successiva alla versione 2.8.5.208 e identificare la versione con etichetta "consigliata".
-Ricordarsi di sbloccare il file se è stato scaricato tramite un browser.
-Questa operazione può essere eseguita usando il cmdlet `Unblock-File`.
+Una seconda alternativa è il download di NuGet.exe dal sito Web NuGet.Org: [https://dist.nuget.org/index.html](https://www.nuget.org/downloads) Quando si seleziona una versione NugGet per i computer di produzione, assicurarsi che sia successiva alla versione 2.8.5.208 e identificare la versione con etichetta "consigliata". Ricordarsi di sbloccare il file se è stato scaricato tramite un browser. Questa operazione può essere eseguita usando il cmdlet `Unblock-File`.
 
 In entrambi i casi, è possibile copiare il file di NuGet.exe in qualsiasi percorso in `$env:path`, ma i percorsi standard sono:
 

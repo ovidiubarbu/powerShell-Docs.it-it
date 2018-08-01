@@ -1,19 +1,19 @@
 ---
 ms.date: 06/12/2017
 keywords: wmf,powershell,installazione
-ms.openlocfilehash: 2fb2e4b0c40322b5ec78fabede22a7e3ecbbd2aa
-ms.sourcegitcommit: 77f62a55cac8c13d69d51eef5fade18f71d66955
+ms.openlocfilehash: cd3338ae305896e282056a871974e5f899ef6ff5
+ms.sourcegitcommit: c3f1a83b59484651119630f3089aa51b6e7d4c3c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39093763"
+ms.lasthandoff: 07/26/2018
+ms.locfileid: "39268579"
 ---
 # <a name="reporting-on-jea"></a>Creazione di report per JEA
 
 Per creare report sullo stato della configurazione JEA, è possibile usare:
 
 1. **Get-PSSessionConfiguration** per restituire un elenco di tutti gli endpoint registrati in un determinato computer.
-1. **Get-PSSessionCapability** per ottenere un report delle capacità a disposizione di ogni utente su un endpoint specifico.
+2. **Get-PSSessionCapability** per ottenere un report delle capacità a disposizione di ogni utente su un endpoint specifico.
 
 Ecco un esempio di **Get-PSSessionCapability**:
 
@@ -41,5 +41,6 @@ Cmdlet          Restart-Service                                    3.0.0.0 Micro
 ```
 
 Per creare un report delle _azioni_ eseguite dagli utenti durante una sessione JEA, è possibile:
+
 1. Abilitare le trascrizioni "Over The Shoulder" per l'endpoint JEA e vedere la directory delle trascrizioni per un log completo delle azioni di ogni utente
 2. Attivare la registrazione per i moduli di PowerShell ed esaminare i registri eventi di PowerShell.
