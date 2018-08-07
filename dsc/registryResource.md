@@ -2,16 +2,16 @@
 ms.date: 06/12/2017
 keywords: dsc,powershell,configurazione,installazione
 title: Risorsa Registry DSC
-ms.openlocfilehash: b77710d7a6fc599949e78c17af309ad88a1a0872
-ms.sourcegitcommit: 77f62a55cac8c13d69d51eef5fade18f71d66955
+ms.openlocfilehash: 8d74473d167b70182c3a16c1d39d2a9e797afb1b
+ms.sourcegitcommit: c3f1a83b59484651119630f3089aa51b6e7d4c3c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39093586"
+ms.lasthandoff: 07/26/2018
+ms.locfileid: "39267722"
 ---
 # <a name="dsc-registry-resource"></a>Risorsa Registry DSC
 
-> Si applica a: Windows PowerShell 4.0, Windows PowerShell 5.0
+_Si applica a: Windows PowerShell 4.0, Windows PowerShell 5.0_
 
 La risorsa **Registry** in Windows PowerShell DSC (Desired State Configuration) fornisce un meccanismo per gestire i valori e le chiavi del Registro di sistema in un nodo di destinazione.
 
@@ -33,8 +33,8 @@ Registry [string] #ResourceName
 
 ## <a name="properties"></a>Proprietà
 
-|  Proprietà  |  Description   |
-|---|---|
+| Proprietà | Description |
+| --- | --- |
 | Key| Indica il percorso della chiave del Registro di sistema per cui si vuole specificare un determinato stato. Questo percorso deve includere l'hive.|
 | ValueName| Indica il nome del valore del Registro di sistema. Per aggiungere o rimuovere una chiave del Registro di sistema specificare questa proprietà come stringa vuota, senza specificare ValueType o ValueData. Per modificare o rimuovere il valore predefinito di una chiave del Registro di sistema specificare questa proprietà come stringa vuota e specificare ValueType o ValueData.|
 | Ensure| Indica se la chiave e il valore esistono. Impostare questa proprietà su "Present" per specificare che la chiave e il valore esistono. Impostare questa proprietà su "Absent" per specificare che la chiave e il valore non esistono. Il valore predefinito è "Present".|
@@ -62,4 +62,4 @@ Configuration RegistryTest
 ```
 
 > [!NOTE]
-> La modifica di un'impostazione del Registro di sistema nell'hive **HKEY\_CURRENT\_USER** richiede l'esecuzione della configurazione con le credenziali dell'utente anziché come il sistema. È possibile usare la proprietà **PsDscRunAsCredential** per specificare le credenziali utente per la configurazione. Per un esempio, vedere [Esecuzione di DSC con le credenziali dell'utente](runAsUser.md).
+> La modifica di un'impostazione del Registro di sistema nell'hive `HKEY\CURRENT\USER` richiede l'esecuzione della configurazione con le credenziali dell'utente anziché come il sistema. È possibile usare la proprietà **PsDscRunAsCredential** per specificare le credenziali utente per la configurazione. Per un esempio, vedere [Esecuzione di DSC con le credenziali dell'utente](runAsUser.md).

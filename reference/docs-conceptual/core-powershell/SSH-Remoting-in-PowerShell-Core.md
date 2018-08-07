@@ -3,14 +3,9 @@
 
 ## <a name="overview"></a>Panoramica
 
-La comunicazione remota di PowerShell solitamente usa WinRM per la negoziazione di connessione e il trasporto dei dati.
-Per questa implementazione di comunicazione remota è stato scelto SSH in quanto è ora disponibile per piattaforme Linux e Windows e consente una vera comunicazione remota multipiattaforma per PowerShell.
-Tuttavia, WinRM offre anche un solido modello di hosting per le sessioni remote di PowerShell che questa implementazione ancora non offre.
-Ciò significa che la configurazione di endpoint remoto e il profilo JEA (Just Enough Administration) di PowerShell non sono ancora supportati in questa implementazione.
+La comunicazione remota di PowerShell solitamente usa WinRM per la negoziazione di connessione e il trasporto dei dati. Per questa implementazione di comunicazione remota è stato scelto SSH in quanto è ora disponibile per piattaforme Linux e Windows e consente una vera comunicazione remota multipiattaforma per PowerShell. Tuttavia, WinRM offre anche un solido modello di hosting per le sessioni remote di PowerShell che questa implementazione ancora non offre. Ciò significa che la configurazione di endpoint remoto e il profilo JEA (Just Enough Administration) di PowerShell non sono ancora supportati in questa implementazione.
 
-La comunicazione remota SSH per PowerShell consente di eseguire la comunicazione remota di base di sessioni di PowerShell tra computer Windows e Linux.
-Ciò avviene creando un processo di hosting di PowerShell nel computer di destinazione come sottosistema SSH.
-Infine il processo verrà modificato in un modello di hosting più generale simile al funzionamento di WinRM per supportare la configurazione dell'endpoint e del profilo JEA.
+La comunicazione remota SSH per PowerShell consente di eseguire la comunicazione remota di base di sessioni di PowerShell tra computer Windows e Linux. Ciò avviene creando un processo di hosting di PowerShell nel computer di destinazione come sottosistema SSH. Infine il processo verrà modificato in un modello di hosting più generale simile al funzionamento di WinRM per supportare la configurazione dell'endpoint e del profilo JEA.
 
 I cmdlet `New-PSSession`, `Enter-PSSession` e `Invoke-Command` hanno ora un nuovo set di parametri per semplificare la nuova connessione di comunicazione remota
 
@@ -18,24 +13,18 @@ I cmdlet `New-PSSession`, `Enter-PSSession` e `Invoke-Command` hanno ora un nuov
 [-HostName <string>]  [-UserName <string>]  [-KeyFilePath <string>]
 ```
 
-Questo nuovo set di parametri verrà probabilmente modificato, ma per ora consente di creare sessioni Pssession di SSH con cui è possibile interagire dalla riga di comando o da cui è possibile richiamare comandi e script.
-È necessario specificare il computer di destinazione con il parametro HostName e il nome utente con il parametro UserName.
-Quando si eseguono i cmdlet in modo interattivo dalla riga di comando di PowerShell verrà richiesto di immettere una password.
-Ma è anche possibile usare l'autenticazione con chiave SSH e specificare un percorso di file di chiave privata con il parametro KeyFilePath.
+Questo nuovo set di parametri verrà probabilmente modificato, ma per ora consente di creare sessioni Pssession di SSH con cui è possibile interagire dalla riga di comando o da cui è possibile richiamare comandi e script. È necessario specificare il computer di destinazione con il parametro HostName e il nome utente con il parametro UserName. Quando si eseguono i cmdlet in modo interattivo dalla riga di comando di PowerShell verrà richiesto di immettere una password. Ma è anche possibile usare l'autenticazione con chiave SSH e specificare un percorso di file di chiave privata con il parametro KeyFilePath.
 
 ## <a name="general-setup-information"></a>Informazioni generali di installazione
 
-SSH deve essere installato in tutti i computer.
-È necessario installare sia il client (`ssh.exe`) che il server (`sshd.exe`) in modo da poter provare la comunicazione remota da e verso i computer.
-Per Windows è necessario installare [OpenSSH - Win32 da GitHub](https://github.com/PowerShell/Win32-OpenSSH/releases).
-Per Linux è necessario installare SSH, incluso il server sshd, appropriato per la piattaforma in uso.
-Sono necessari anche una build o un pacchetto di PowerShell recenti da GitHub con la funzionalità di comunicazione remota SSH.
-I sottosistemi SSH vengono usati per stabilire un processo PowerShell nel computer remoto quindi il server SSH dovrà essere configurato a tale scopo.
-È anche necessario abilitare l'autenticazione della password e, facoltativamente, l'autenticazione basata su chiavi.
+SSH deve essere installato in tutti i computer. È necessario installare sia il client (`ssh.exe`) che il server (`sshd.exe`) in modo da poter provare la comunicazione remota da e verso i computer. Per Windows è necessario installare [OpenSSH - Win32 da GitHub](https://github.com/PowerShell/Win32-OpenSSH/releases).
+Per Linux è necessario installare SSH, incluso il server sshd, appropriato per la piattaforma in uso. Sono necessari anche una build o un pacchetto di PowerShell recenti da GitHub con la funzionalità di comunicazione remota SSH.
+I sottosistemi SSH vengono usati per stabilire un processo PowerShell nel computer remoto quindi il server SSH dovrà essere configurato a tale scopo. È anche necessario abilitare l'autenticazione della password e, facoltativamente, l'autenticazione basata su chiavi.
 
 ## <a name="setup-on-windows-machine"></a>Installazione in computer Windows
 
 1. Installare la versione più recente di [PowerShell Core per Windows]
+
    - È possibile stabilire se la comunicazione remota SSH è supportata esaminando i set di parametri per `New-PSSession`
 
    ```powershell
@@ -46,65 +35,68 @@ I sottosistemi SSH vengono usati per stabilire un processo PowerShell nel comput
    New-PSSession [-HostName] <string[]> [-Name <string[]>] [-UserName <string>] [-KeyFilePath <string>] [-SSHTransport] [<CommonParameters>]
    ```
 
-1. Installare la build più recente di [OpenSSH - Win32] da GitHub usando le istruzioni di [installazione]
-1. Modificare il file sshd_config nel percorso in cui è installato OpenSSH - Win32
+2. Installare la build più recente di [OpenSSH - Win32] da GitHub usando le istruzioni di [installazione]
+3. Modificare il file sshd_config nel percorso in cui è installato OpenSSH - Win32
+
    - Verificare che l'autenticazione della password sia abilitata
 
-   ```
-   PasswordAuthentication yes
-   ```
+     ```
+     PasswordAuthentication yes
+     ```
 
-    ```
-    Subsystem    powershell c:/program files/powershell/6.0.0/pwsh.exe -sshs -NoLogo -NoProfile
-    ```
+     ```
+     Subsystem    powershell c:/program files/powershell/6.0.0/pwsh.exe -sshs -NoLogo -NoProfile
+     ```
 
-    > [!NOTE]
-    > È presente un bug in OpenSSH per Windows che impedisce il funzionamento dei percorsi eseguibili nel sottosistema che contengono spazi.
-    > Per ottenere altre informazioni, vedere [questo problema in GitHub](https://github.com/PowerShell/Win32-OpenSSH/issues/784).
+     > [!NOTE]
+     > È presente un bug in OpenSSH per Windows che impedisce il funzionamento dei percorsi eseguibili nel sottosistema che contengono spazi.
+     > Per ottenere altre informazioni, vedere [questo problema in GitHub](https://github.com/PowerShell/Win32-OpenSSH/issues/784).
 
-    Una soluzione consiste nel creare un collegamento simbolico alla directory di installazione di Powershell che non contenga spazi:
+     Una soluzione consiste nel creare un collegamento simbolico alla directory di installazione di Powershell che non contenga spazi:
 
-    ```powershell
-    mklink /D c:\pwsh "C:\Program Files\PowerShell\6.0.0"
-    ```
+     ```powershell
+     mklink /D c:\pwsh "C:\Program Files\PowerShell\6.0.0"
+     ```
 
-    e quindi immetterlo nel sottosistema:
+     e quindi immetterlo nel sottosistema:
 
-    ```
-    Subsystem    powershell c:\pwsh\pwsh.exe -sshs -NoLogo -NoProfile
-    ```
+     ```
+     Subsystem    powershell c:\pwsh\pwsh.exe -sshs -NoLogo -NoProfile
+     ```
 
-   ```
-   Subsystem    powershell c:/program files/powershell/6.0.0/pwsh.exe -sshs -NoLogo -NoProfile
-   ```
+     ```
+     Subsystem    powershell c:/program files/powershell/6.0.0/pwsh.exe -sshs -NoLogo -NoProfile
+     ```
 
    - Facoltativamente è possibile abilitare l'autenticazione della chiave
 
-   ```
-   PubkeyAuthentication yes
-   ```
+     ```
+     PubkeyAuthentication yes
+     ```
 
-1. Riavviare il servizio sshd
+4. Riavviare il servizio sshd
 
    ```powershell
    Restart-Service sshd
    ```
 
-1. Aggiungere il percorso in cui è installato OpenSSH alla variabile di percorso Env
+5. Aggiungere il percorso in cui è installato OpenSSH alla variabile di percorso Env
+
    - Dovrebbe trovarsi nelle righe di `C:\Program Files\OpenSSH\`
    - In questo modo ssh.exe può essere individuato
 
 ## <a name="setup-on-linux-ubuntu-1404-machine"></a>Installazione in computer Linux (Ubuntu 14.04)
 
 1. Installare la build più recente di [PowerShell Core per Linux] da GitHub
-1. Installare [SSH per Ubuntu] in base alle esigenze
+2. Installare [SSH per Ubuntu] in base alle esigenze
 
    ```bash
    sudo apt install openssh-client
    sudo apt install openssh-server
    ```
 
-1. Modificare il file sshd_config nel percorso /etc/ssh
+3. Modificare il file sshd_config nel percorso /etc/ssh
+
    - Verificare che l'autenticazione della password sia abilitata
 
    ```
@@ -123,7 +115,7 @@ I sottosistemi SSH vengono usati per stabilire un processo PowerShell nel comput
    PubkeyAuthentication yes
    ```
 
-1. Riavviare il servizio sshd
+4. Riavviare il servizio sshd
 
    ```bash
    sudo service sshd restart
@@ -132,12 +124,15 @@ I sottosistemi SSH vengono usati per stabilire un processo PowerShell nel comput
 ## <a name="setup-on-macos-machine"></a>Installazione in computer MacOS
 
 1. Installare la build più recente di [PowerShell Core per MacOS]
+
    - Assicurarsi che la comunicazione remota SSH sia abilitata attenendosi alla procedura seguente:
      - Aprire `System Preferences`
      - Fare clic su `Sharing`
      - Controllare `Remote Login`: deve indicare `Remote Login: On`
      - Consentire l'accesso agli utenti appropriati
-1. Modificare il file `sshd_config` nel percorso `/private/etc/ssh/sshd_config`
+
+2. Modificare il file `sshd_config` nel percorso `/private/etc/ssh/sshd_config`
+
    - Usare l'editor preferito o
 
      ```bash
@@ -162,7 +157,7 @@ I sottosistemi SSH vengono usati per stabilire un processo PowerShell nel comput
      PubkeyAuthentication yes
      ```
 
-1. Riavviare il servizio sshd
+3. Riavviare il servizio sshd
 
    ```bash
    sudo launchctl stop com.openssh.sshd
@@ -171,10 +166,7 @@ I sottosistemi SSH vengono usati per stabilire un processo PowerShell nel comput
 
 ## <a name="powershell-remoting-example"></a>Esempio di comunicazione remota di PowerShell
 
-Il modo più semplice per testare la comunicazione remota è semplicemente provarla su un singolo computer.
-Qui verrà creata una sessione remota verso lo stesso computer in Linux.
-Si noti che vengono usati i cmdlet di PowerShell da un prompt dei comandi in modo che siano visibili i prompt di SSH che chiedono di verificare il computer host, nonché le richieste di password.
-È possibile eseguire la stessa operazione in un computer Windows per assicurarsi che la comunicazione remota funzioni e quindi eseguirla tra i computer cambiando semplicemente il nome host.
+Il modo più semplice per testare la comunicazione remota è semplicemente provarla su un singolo computer. Qui verrà creata una sessione remota verso lo stesso computer in Linux. Si noti che vengono usati i cmdlet di PowerShell da un prompt dei comandi in modo che siano visibili i prompt di SSH che chiedono di verificare il computer host, nonché le richieste di password. È possibile eseguire la stessa operazione in un computer Windows per assicurarsi che la comunicazione remota funzioni e quindi eseguirla tra i computer cambiando semplicemente il nome host.
 
 ```powershell
 #
@@ -301,7 +293,7 @@ GitCommitId                    v6.0.0-alpha.17
 
 ### <a name="known-issues"></a>Problemi noti
 
-- Il comando sudo non funziona nella sessione remota per computer Linux.
+Il comando sudo non funziona nella sessione remota per computer Linux.
 
 ## <a name="see-also"></a>Vedere anche
 

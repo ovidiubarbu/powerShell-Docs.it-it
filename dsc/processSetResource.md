@@ -2,16 +2,16 @@
 ms.date: 06/12/2017
 keywords: dsc,powershell,configurazione,installazione
 title: Risorsa ProcessSet DSC
-ms.openlocfilehash: d18d2c96239abd83cea735e0fbce198d0456cea6
-ms.sourcegitcommit: 77f62a55cac8c13d69d51eef5fade18f71d66955
+ms.openlocfilehash: 33000786a9e17e11168b5e08c3bcfcacf3af2611
+ms.sourcegitcommit: c3f1a83b59484651119630f3089aa51b6e7d4c3c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39093991"
+ms.lasthandoff: 07/26/2018
+ms.locfileid: "39268018"
 ---
 # <a name="dsc-windowsprocess-resource"></a>Risorsa WindowsProcess DSC
 
-> Si applica a: Windows PowerShell 5.0
+_Si applica a: Windows PowerShell 5.0_
 
 La risorsa **ProcessSet** in Windows PowerShell DSC (Desired State Configuration) fornisce un meccanismo per configurare i processi in un nodo di destinazione. Questa risorsa è una [risorsa composta](authoringResourceComposite.md) che chiama la [risorsa WindowsProcess](windowsProcessResource.md) per ogni gruppo specificato nel parametro `GroupName`.
 
@@ -34,8 +34,8 @@ WindowsProcess [string] #ResourceName
 
 ## <a name="properties"></a>Proprietà
 
-|  Proprietà  |  Description   |
-|---|---|
+| Proprietà | Description |
+| --- | --- |
 | Arguments| Stringa che contiene argomenti da passare al processo così come è. Se è necessario passare più argomenti, inserirli tutti in questa stringa.|
 | Path| Percorsi degli eseguibili del processo. Se questi sono i nomi dei file eseguibili (non i percorsi completi), la risorsa DSC cercherà i file nella variabile **Path** di ambiente (`$env:Path`). Se i valori di questa proprietà sono percorsi completi, DSC non userà la variabile **Path** di ambiente per individuare i file e genererà un errore se il percorso non esiste. I percorsi relativi non sono consentiti.|
 | Credential| Indica le credenziali per l'avvio del processo.|
@@ -44,4 +44,4 @@ WindowsProcess [string] #ResourceName
 | StandardInputPath| Flusso da cui il processo riceve l'input standard.|
 | StandardOutputPath| Percorso del file in cui i processi scrivono l'output standard. Qualsiasi file esistente verrà sovrascritto.|
 | WorkingDirectory| Percorso usato come directory di lavoro corrente per i processi.|
-| DependsOn | Indica che prima di configurare la risorsa è necessario eseguire la configurazione di un'altra risorsa. Ad esempio, se l'ID del blocco script di configurazione della risorsa che si vuole eseguire per primo è **ResourceName** e il tipo è **_ResourceType**, la sintassi per usare questa proprietà è 'DependsOn = "[ResourceType]ResourceName"''.|
+| DependsOn | Indica che prima di configurare la risorsa è necessario eseguire la configurazione di un'altra risorsa. Ad esempio, se il valore di ID del blocco script di configurazione della risorsa che si vuole eseguire per primo è **ResourceName** e il tipo è **_ResourceType**, la sintassi per usare questa proprietà è `DependsOn = "[ResourceType]ResourceName"`.|

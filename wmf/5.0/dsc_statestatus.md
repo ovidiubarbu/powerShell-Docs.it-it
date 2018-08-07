@@ -1,12 +1,12 @@
 ---
 ms.date: 06/12/2017
 keywords: wmf,powershell,installazione
-ms.openlocfilehash: b279d388754c5ee42215f21317f7b3d8089b7608
-ms.sourcegitcommit: 77f62a55cac8c13d69d51eef5fade18f71d66955
+ms.openlocfilehash: bed1186c10082bbdac7249503bf623678f13fccd
+ms.sourcegitcommit: c3f1a83b59484651119630f3089aa51b6e7d4c3c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39093882"
+ms.lasthandoff: 07/26/2018
+ms.locfileid: "39267940"
 ---
 # <a name="unified-and-consistent-state-and-status-representation"></a>Rappresentazione degli stati unificata e coerente
 
@@ -15,40 +15,41 @@ In questa versione è stata introdotta una serie di miglioramenti per lo stato d
 La rappresentazione dello stato di Gestione configurazione locale e delle operazioni DSC è stata rivista e unificata in base alle regole seguenti:
 
 1. La risorsa non elaborata non influisce sullo stato di Gestione configurazione locale e DSC.
-1. Gestione configurazione locale interrompe l'elaborazione di ulteriori risorse quando rileva una risorsa che richiede il riavvio.
-1. Una risorsa che richiede il riavvio non è nello stato desiderato fino all'effettiva esecuzione del riavvio.
-1. In presenza di una risorsa in errore, Gestione configurazione locale continua con l'elaborazione di altre risorse, a condizione che non siano dipendenti da quelle in errore.
-1. Lo stato complessivo restituito dal cmdlet `Get-DscConfigurationStatus` è il soprainsieme dello stato di tutte le risorse.
-1. Lo stato PendingReboot è un soprainsieme dello stato PendingConfiguration.
+2. Gestione configurazione locale interrompe l'elaborazione di ulteriori risorse quando rileva una risorsa che richiede il riavvio.
+3. Una risorsa che richiede il riavvio non è nello stato desiderato fino all'effettiva esecuzione del riavvio.
+4. In presenza di una risorsa in errore, Gestione configurazione locale continua con l'elaborazione di altre risorse, a condizione che non siano dipendenti da quelle in errore.
+5. Lo stato complessivo restituito dal cmdlet `Get-DscConfigurationStatus` è il soprainsieme dello stato di tutte le risorse.
+6. Lo stato PendingReboot è un soprainsieme dello stato PendingConfiguration.
 
-   Nella tabella seguente sono illustrate le proprietà correlate allo stato risultanti in alcuni scenari tipici.
+Nella tabella seguente sono illustrate le proprietà correlate allo stato risultanti in alcuni scenari tipici.
 
-   | Scenario                    | LCMState       | Stato | RebootRequested  | ResourcesInDesiredState  | ResourcesNotInDesiredState |
-   |---------------------------------|----------------------|------------|---------------|------------------------------|--------------------------------|
-   | S**^**                          | Idle                 | Operazione completata    | $false        | S                            | $null                          |
-   | F**^**                          | PendingConfiguration | Operazioni non riuscite    | $false        | $null                        | F                              |
-   | S,F                             | PendingConfiguration | Operazioni non riuscite    | $false        | S                            | F                              |
-   | F,S                             | PendingConfiguration | Operazioni non riuscite    | $false        | S                            | F                              |
-   | S<sub>1</sub>, F, S<sub>2</sub> | PendingConfiguration | Operazioni non riuscite    | $false        | S<sub>1</sub>, S<sub>2</sub> | F                              |
-   | F<sub>1</sub>, S, F<sub>2</sub> | PendingConfiguration | Operazioni non riuscite    | $false        | S                            | F<sub>1</sub>, F<sub>2</sub>   |
-   | S, r                            | PendingReboot        | Operazione completata    | $true         | S                            | r                              |
-   | F, r                            | PendingReboot        | Operazioni non riuscite    | $true         | $null                        | F, r                           |
-   | r, S                            | PendingReboot        | Operazione completata    | $true         | $null                        | r                              |
-   | r, F                            | PendingReboot        | Operazione completata    | $true         | $null                        | r                              |
+| Scenario                        | LCMState             | Stato     | RebootRequested | ResourcesInDesiredState   | ResourcesNotInDesiredState |
+|---------------------------------|----------------------|------------|---------------|------------------------------|--------------------------------|
+| S**^**                          | Idle                 | Operazione completata    | $false        | S                            | $null                          |
+| F**^**                          | PendingConfiguration | Operazioni non riuscite    | $false        | $null                        | F                              |
+| S,F                             | PendingConfiguration | Operazioni non riuscite    | $false        | S                            | F                              |
+| F,S                             | PendingConfiguration | Operazioni non riuscite    | $false        | S                            | F                              |
+| S<sub>1</sub>, F, S<sub>2</sub> | PendingConfiguration | Operazioni non riuscite    | $false        | S<sub>1</sub>, S<sub>2</sub> | F                              |
+| F<sub>1</sub>, S, F<sub>2</sub> | PendingConfiguration | Operazioni non riuscite    | $false        | S                            | F<sub>1</sub>, F<sub>2</sub>   |
+| S, r                            | PendingReboot        | Operazione completata    | $true         | S                            | r                              |
+| F, r                            | PendingReboot        | Operazioni non riuscite    | $true         | $null                        | F, r                           |
+| r, S                            | PendingReboot        | Operazione completata    | $true         | $null                        | r                              |
+| r, F                            | PendingReboot        | Operazione completata    | $true         | $null                        | r                              |
 
-   ^
-   S<sub>i</sub>: una serie di risorse applicata correttamente F<sub>i</sub>: una serie di risorse applicata non correttamente r: una risorsa che richiede il riavvio\*
+- S<sub>i</sub>: una serie di risorse applicata correttamente
+- F<sub>i</sub>: una serie di risorse con applicazione non riuscita
+- r: una risorsa che richiede il riavvio
 
-   ```powershell
-   $LCMState = (Get-DscLocalConfigurationManager).LCMState
-   $Status = (Get-DscConfigurationStatus).Status
+```powershell
+$LCMState = (Get-DscLocalConfigurationManager).LCMState
+$Status = (Get-DscConfigurationStatus).Status
 
-   $RebootRequested = (Get-DscConfigurationStatus).RebootRequested
+$RebootRequested = (Get-DscConfigurationStatus).RebootRequested
 
-   $ResourcesInDesiredState = (Get-DscConfigurationStatus).ResourcesInDesiredState
+$ResourcesInDesiredState = (Get-DscConfigurationStatus).ResourcesInDesiredState
 
-   $ResourcesNotInDesiredState = (Get-DscConfigurationStatus).ResourcesNotInDesiredState
-   ```
+$ResourcesNotInDesiredState = (Get-DscConfigurationStatus).ResourcesNotInDesiredState
+```
 
 ## <a name="enhancement-in-get-dscconfigurationstatus-cmdlet"></a>Miglioramenti per il cmdlet Get-DscConfigurationStatus
 
@@ -56,32 +57,32 @@ Sono stati apportati alcuni miglioramenti al cmdlet `Get-DscConfigurationStatus`
 
 ```powershell
 (Get-DscConfigurationStatus).StartDate | Format-List *
-DateTime : Friday, November 13, 2015 1:39:44 PM
-Date : 11/13/2015 12:00:00 AM
-Day : 13
-DayOfWeek : Friday
-DayOfYear : 317
-Hour : 13
-Kind : Local
+
+DateTime    : Friday, November 13, 2015 1:39:44 PM
+Date        : 11/13/2015 12:00:00 AM
+Day         : 13
+DayOfWeek   : Friday
+DayOfYear   : 317
+Hour        : 13
+Kind        : Local
 Millisecond : 886
-Minute : 39
-Month : 11
-Second : 44
-Ticks : 635830187848860000
-TimeOfDay : 13:39:44.8860000
-Year : 2015
+Minute      : 39
+Month       : 11
+Second      : 44
+Ticks       : 635830187848860000
+TimeOfDay   : 13:39:44.8860000
+Year        : 2015
 ```
 
-Ecco un esempio che restituisce tutti i record di operazioni DSC eseguite nello stesso giorno della settimana di oggi.
+L'esempio seguente restituisce tutti i record di operazioni DSC eseguite nello stesso giorno della settimana del giorno corrente.
 
 ```powershell
 (Get-DscConfigurationStatus –All) | Where-Object { $_.startdate.dayofweek -eq (Get-Date).DayOfWeek }
 ```
 
-Vengono eliminati i record delle operazioni che non apportano modifiche alla configurazione del nodo, ad esempio le operazioni di sola lettura. Pertanto `Test-DscConfiguration`, le operazioni `Get-DscConfiguration` non vengono più modificate negli oggetti restituiti dal cmdlet `Get-DscConfigurationStatus`.
-I record dell'operazione di impostazione della metaconfigurazione vengono aggiunti all'oggetto restituito dal cmdlet `Get-DscConfigurationStatus`.
+Vengono eliminati i record delle operazioni che non apportano modifiche alla configurazione del nodo, ad esempio le operazioni di sola lettura. Pertanto `Test-DscConfiguration`, le operazioni `Get-DscConfiguration` non vengono più modificate negli oggetti restituiti dal cmdlet `Get-DscConfigurationStatus`. I record dell'operazione di impostazione della metaconfigurazione vengono aggiunti all'oggetto restituito dal cmdlet `Get-DscConfigurationStatus`.
 
-Di seguito è riportato un esempio di risultato restituito dal cmdlet `Get-DscConfigurationStatus` -All.
+Di seguito è riportato un esempio di risultato restituito dal cmdlet `Get-DscConfigurationStatus –All`.
 
 ```output
 All configuration operations:

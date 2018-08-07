@@ -3,22 +3,22 @@ ms.date: 06/05/2017
 keywords: powershell,cmdlet
 title: Gestione dei servizi
 ms.assetid: 7a410e4d-514b-4813-ba0c-0d8cef88df31
-ms.openlocfilehash: e2388f5d73a320a69faae0772c8403a7d77f8b52
-ms.sourcegitcommit: 77f62a55cac8c13d69d51eef5fade18f71d66955
+ms.openlocfilehash: 81fd8802215da80ce22fa3fd4750b1df6efe8206
+ms.sourcegitcommit: c3f1a83b59484651119630f3089aa51b6e7d4c3c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39094171"
+ms.lasthandoff: 07/26/2018
+ms.locfileid: "39268076"
 ---
 # <a name="managing-services"></a>Gestione dei servizi
 
-Sono disponibili otto cmdlet Service principali, progettati per una vasta gamma di attività dei servizi. Verranno esaminati solo l'elenco e la modifica dello stato di esecuzione dei servizi, ma è possibile ottenere un elenco di cmdlet Service usando **Get-Help \*-Service**, oltre a trovare informazioni sui diversi cmdlet Service con **Get-Help \<Cmdlet-Name\>**, ad esempio **Get-Help New-Service**.
+Sono disponibili otto cmdlet Service principali, progettati per una vasta gamma di attività dei servizi. Verranno esaminati solo l'elenco e la modifica dello stato di esecuzione dei servizi, ma è possibile ottenere un elenco di cmdlet Service usando `Get-Help \*-Service`, oltre a trovare informazioni sui diversi cmdlet Service con `Get-Help <Cmdlet-Name>`, ad esempio `Get-Help New-Service`.
 
 ## <a name="getting-services"></a>Ottenere servizi
 
-È possibile ottenere servizi in un computer locale o remoto usando il cmdlet **Get-Service**. Come con **Get-Process**, l'uso del comando **Get-Service** senza parametri restituisce tutti i servizi. È possibile filtrare per nome, usando anche un asterisco come carattere jolly:
+È possibile ottenere i servizi in un computer locale o remoto usando il cmdlet `Get-Service`. Come con `Get-Process`, l'uso del comando `Get-Service` senza parametri restituisce tutti i servizi. È possibile filtrare per nome, usando anche un asterisco come carattere jolly:
 
-```
+```powershell
 PS> Get-Service -Name se*
 
 Status   Name               DisplayName
@@ -30,7 +30,7 @@ Stopped  ServiceLayer       ServiceLayer
 
 Poiché non è sempre ovvio quale sia il nome effettivo di un servizio, potrebbe essere necessario individuare i servizi in base al nome visualizzato. È possibile farlo usando il nome specifico, caratteri jolly o un elenco di nomi visualizzati:
 
-```
+```powershell
 PS> Get-Service -DisplayName se*
 
 Status   Name               DisplayName
@@ -63,7 +63,7 @@ Questi parametri visualizzano solo i valori delle proprietà DependentServices e
 
 Il comando seguente ottiene i servizi richiesti dal servizio LanmanWorkstation.
 
-```
+```powershell
 PS> Get-Service -Name LanmanWorkstation -RequiredServices
 
 Status   Name               DisplayName
@@ -76,7 +76,7 @@ Running  NSI                Network Store Interface Service
 
 Il comando seguente ottiene i servizi che richiedono il servizio LanmanWorkstation.
 
-```
+```powershell
 PS> Get-Service -Name LanmanWorkstation -DependentServices
 
 Status   Name               DisplayName
@@ -94,6 +94,7 @@ Get-Service -Name * | Where-Object {$_.RequiredServices -or $_.DependentServices
 ```
 
 ## <a name="stopping-starting-suspending-and-restarting-services"></a>Arresto, avvio, sospensione e riavvio di servizi
+
 I cmdlet Service hanno tutti lo stesso formato generale. I servizi possono essere specificati in base al nome comune o al nome visualizzato e accettano elenchi e caratteri jolly come valori. Per arrestare lo spooler di stampa, usare:
 
 ```powershell
@@ -112,9 +113,9 @@ Per sospendere lo spooler di stampa, usare:
 Suspend-Service -Name spooler
 ```
 
-Il cmdlet **Restart-Service** funziona esattamente come gli altri cmdlet Service, ma di seguito sono disponibili alcuni esempi più complessi. Il suo uso più semplice prevede che venga specificato il nome del servizio:
+Il cmdlet `Restart-Service` funziona esattamente come gli altri cmdlet Service, ma di seguito sono disponibili alcuni esempi più complessi. Il suo uso più semplice prevede che venga specificato il nome del servizio:
 
-```
+```powershell
 PS> Restart-Service -Name spooler
 
 WARNING: Waiting for service 'Print Spooler (Spooler)' to finish starting...
@@ -126,7 +127,7 @@ Si noterà che viene visualizzato un messaggio di avviso ripetuto sull'avvio del
 
 Per riavviare più servizi, è possibile ottenere un elenco di servizi, filtrarli e quindi eseguire il riavvio:
 
-```
+```powershell
 PS> Get-Service | Where-Object -FilterScript {$_.CanStop} | Restart-Service
 
 WARNING: Waiting for service 'Computer Browser (Browser)' to finish stopping...
@@ -147,9 +148,10 @@ Invoke-Command -ComputerName Server01 {Restart-Service Spooler}
 
 ## <a name="setting-service-properties"></a>Impostazione delle proprietà dei servizi
 
-Il cmdlet Set-Service consente di modificare le proprietà di un servizio in un computer locale o remoto. Poiché lo stato del servizio è una proprietà, è possibile usare questo cmdlet per avviare, arrestare e sospendere un servizio. Il cmdlet Set-Service ha anche un parametro StartupType che consente di modificare il tipo di avvio del servizio.
+Il cmdlet `Set-Service` consente di modificare le proprietà di un servizio in un computer locale o remoto. Poiché lo stato del servizio è una proprietà, è possibile usare questo cmdlet per avviare, arrestare e sospendere un servizio.
+Il cmdlet Set-Service ha anche un parametro StartupType che consente di modificare il tipo di avvio del servizio.
 
-Per usare Set-Service in Windows Vista e versioni successive di Windows, aprire Windows PowerShell con l'opzione "Esegui come amministratore".
+Per usare `Set-Service` in Windows Vista e versioni successive di Windows, aprire Windows PowerShell con l'opzione "Esegui come amministratore".
 
 Per altre informazioni, vedere [Set-Service [m2]](https://technet.microsoft.com/library/b71e29ed-372b-4e32-a4b7-5eb6216e56c3).
 

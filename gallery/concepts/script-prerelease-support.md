@@ -3,12 +3,12 @@ ms.date: 10/17/2017
 contributor: keithb
 keywords: raccolta,powershell,cmdlet,psget
 title: Versioni non definitive degli script
-ms.openlocfilehash: 7d4cec9d2b4ee5ad0b19ad5d9c68bb68747abd57
-ms.sourcegitcommit: 77f62a55cac8c13d69d51eef5fade18f71d66955
+ms.openlocfilehash: 14ae1968e5ee73260b6eae05b11185069d047e93
+ms.sourcegitcommit: c3f1a83b59484651119630f3089aa51b6e7d4c3c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39093849"
+ms.lasthandoff: 07/26/2018
+ms.locfileid: "39268467"
 ---
 # <a name="prerelease-versions-of-scripts"></a>Versioni non definitive degli script
 
@@ -45,12 +45,12 @@ Per usare un suffisso di versione non definitiva, la stringa di versione deve so
 - È possibile specificare un suffisso di versione non definitiva solo quando la versione è 3 segmenti per Major.Minor.Build.
   Ciò è conforme alla convenzione SemVer v1.0.0
 - Il suffisso di versione non definitiva è una stringa che inizia con un segno meno e può contenere caratteri alfanumerici ASCII [0-9A-Za-z-]
-- Poiché attualmente sono supportate solo stringhe di versione non definitiva SemVer v1.0.0, il suffisso di versione non definitiva __non deve__ contenere punti o + [. +], consentiti in SemVer 2.0
+- Poiché attualmente sono supportate solo stringhe di versione non definitiva SemVer v1.0.0, il suffisso di versione non definitiva **non deve** contenere punti o + [. +], consentiti in SemVer 2.0
 - Esempi di stringhe PrereleaseString supportate includono: -alpha, -alpha1, -BETA, -update20171020
 
-__Impatto del controllo delle versioni non definitive sull'ordinamento e sulle cartelle di installazione__
+### <a name="prerelease-versioning-impact-on-sort-order-and-installation-folders"></a>Impatto del controllo delle versioni non definitive sull'ordinamento e sulle cartelle di installazione
 
-Quando viene usata una versione non definitiva l'ordinamento viene modificato, un aspetto importante durante la pubblicazione in PowerShell Gallery e l'installazione di script con i comandi di PowerShellGet. Se sono presenti due versioni di script con numero di versione, l'ordinamento è basato sulla parte della stringa che segue il segno meno. Di conseguenza, la versione 2.5.0-alpha è precedente alla versione 2.5.0-beta che è a sua volta precedente alla versione 2.5.0-gamma. Se due script hanno lo stesso numero di versione e uno solo include PrereleaseString, lo script __senza__ il suffisso di versione non definitiva viene considerato la versione pronta per la produzione e viene ordinato come versione successiva alla versione non definitiva. Ad esempio, quando viene eseguito il confronto delle versioni 2.5.0 e 2.5.0-beta, la versione 2.5.0 viene considerata la più recente.
+Quando viene usata una versione non definitiva l'ordinamento viene modificato, un aspetto importante durante la pubblicazione in PowerShell Gallery e l'installazione di script con i comandi di PowerShellGet. Se sono presenti due versioni di script con numero di versione, l'ordinamento è basato sulla parte della stringa che segue il segno meno. Di conseguenza, la versione 2.5.0-alpha è precedente alla versione 2.5.0-beta che è a sua volta precedente alla versione 2.5.0-gamma. Se due script hanno lo stesso numero di versione e uno solo include PrereleaseString, lo script **senza** il suffisso di versione non definitiva viene considerato la versione pronta per la produzione e viene ordinato come versione successiva alla versione non definitiva. Ad esempio, quando viene eseguito il confronto delle versioni 2.5.0 e 2.5.0-beta, la versione 2.5.0 viene considerata la più recente.
 
 Durante la pubblicazione in PowerShell Gallery, per impostazione predefinita la versione dello script in fase di pubblicazione deve essere successiva a qualsiasi versione pubblicata precedentemente presente in PowerShell Gallery. Un server di pubblicazione può aggiornare la versione 2.5.0-alpha con la versione 2.5.0-beta o con la versione 2.5.0 (senza suffisso di versione non definitiva).
 
@@ -61,7 +61,7 @@ L'uso di elementi di versione non definitiva con i comandi di PowerShellGet Find
 Le uniche eccezioni nei comandi di script di PowerShellGet sono rappresentate da Get-InstalledScript e da alcuni casi di utilizzo di Uninstall-Script.
 
 - Get-InstalledScript visualizza sempre automaticamente le informazioni di versione non definitiva nella stringa di versione, se presente.
-- Uninstall-Script disinstalla per impostazione predefinita la versione più recente di uno script, se non è specificata __alcuna versione__. Questo comportamento non è stato modificato. Tuttavia, se una versione non definitiva viene specificata usando -RequiredVersion, è necessario specificare -AllowPrerelease.
+- Uninstall-Script disinstalla per impostazione predefinita la versione più recente di uno script, se non è specificata **alcuna versione**. Questo comportamento non è stato modificato. Tuttavia, se viene specificata una versione non definitiva con `-RequiredVersion`, è necessario specificare `-AllowPrerelease`.
 
 ## <a name="examples"></a>Esempi
 
@@ -83,13 +83,13 @@ Version        Name                                Repository           Descript
 # To install a prerelease, you must specify -AllowPrerelease. Specifying a prerelease version string is not sufficient.
 
 C:\windows\system32> Install-Script TestPackage -RequiredVersion 1.9.0-alpha
+
 PackageManagement\Find-Package : No match was found for the specified search criteria and script name 'TestPackage'.
 Try Get-PSRepository to see all available registered script repositories.
 At C:\Program Files\WindowsPowerShell\Modules\PowerShellGet\1.6.0\PSModule.psm1:1455 char:3
 +         PackageManagement\Find-Package @PSBoundParameters | Microsoft ...
 +         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    + CategoryInfo          : ObjectNotFound: (Microsoft.Power...ets.FindPackage:FindPackage) [Find-Package], Exceptio
-   n
+    + CategoryInfo          : ObjectNotFound: (Microsoft.Power...ets.FindPackage:FindPackage)[Find-Package], Exception
     + FullyQualifiedErrorId : NoMatchFoundForCriteria,Microsoft.PowerShell.PackageManagement.Cmdlets.FindPackage
 
 # The previous command failed because -AllowPrerelease was not specified.

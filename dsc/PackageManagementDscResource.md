@@ -2,12 +2,12 @@
 ms.date: 06/20/2018
 keywords: dsc,powershell,configurazione,installazione
 title: Risorsa PackageManagement DSC
-ms.openlocfilehash: 281aee13eb005f00b23c97870eaefaa332d9c232
-ms.sourcegitcommit: 8b076ebde7ef971d7465bab834a3c2a32471ef6f
+ms.openlocfilehash: 18cbbfe0715c82dcfdf4a5fb6ee36ee814e43d3b
+ms.sourcegitcommit: c3f1a83b59484651119630f3089aa51b6e7d4c3c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37892502"
+ms.lasthandoff: 07/26/2018
+ms.locfileid: "39268093"
 ---
 # <a name="dsc-packagemanagement-resource"></a>Risorsa PackageManagement DSC
 
@@ -39,8 +39,8 @@ PackageManagement [string] #ResourceName
 
 ## <a name="properties"></a>Proprietà
 
-|  Proprietà  |  Description   |
-|---|---|
+| Proprietà | Description |
+| --- | --- |
 | Nome| Specifica il nome del pacchetto da installare o disinstallare.|
 | AdditionalParameters| Tabella hash specifica del provider dei parametri passati a `Get-Package -AdditionalArguments`. Ad esempio, per il provider NuGet è possibile passare parametri aggiuntivi come DestinationPath.|
 | Ensure| Determina se il pacchetto deve essere installato o disinstallato.|
@@ -54,10 +54,11 @@ PackageManagement [string] #ResourceName
 ## <a name="additional-parameters"></a>Parametri aggiuntivi
 
 Nella tabella seguente sono elencate le opzioni per la proprietà AdditionalParameters.
-|  Parametro  | Description   |
-|---|---|
+
+| Parametro | Description |
+| --- | --- |
 | DestinationPath| Usato dai provider, ad esempio il provider NuGet predefinito. Specifica un percorso di file in cui si vuole installare il pacchetto.|
-| InstallationPolicy| Usato dai provider, ad esempio il provider NuGet predefinito. Determina se considerare attendibile l'origine del pacchetto. Uno dei valori possibili: "Untrusted", "Trusted".|
+| InstallationPolicy| Usato dai provider, ad esempio il provider NuGet predefinito. Determina se considerare attendibile l'origine del pacchetto. Uno dei valori `Untrusted` o `Trusted`.|
 
 ## <a name="example"></a>Esempio
 

@@ -2,7 +2,7 @@
 
 ## <a name="msi"></a>MSI
 
-Per installare PowerShell in un client Windows o Windows Server (funziona in Windows 7 SP1, Server 2008 R2 e versioni successive), scaricare il pacchetto MSI dalla pagina [releases][] di GitHub.
+Per installare PowerShell in un client Windows o Windows Server (funziona in Windows 7 SP1, Server 2008 R2 e versioni successive), scaricare il pacchetto MSI dalla pagina delle [versioni][] di GitHub.
 
 Il file MSI è simile al seguente `PowerShell-<version>-win-<os-arch>.msi`
 <!-- TODO: should be updated to point to the Download Center as well -->
@@ -126,12 +126,12 @@ La procedura seguente consente di eseguire la distribuzione di PowerShell Core i
 PowerShell Core supporta il protocollo di comunicazione remota di PowerShell (PSRP) tramite WS-Management e SSH.
 Per altre informazioni, vedere:
 
-- [Comunicazione remota SSH in PowerShell Core][ssh-remoting]
-- [Comunicazione remota WS-Management in PowerShell Core][wsman-remoting]
+- [SSH Remoting in PowerShell Core][ssh-remoting] (Comunicazione remota SSH in PowerShell Core)
+- [WSMan Remoting in PowerShell Core][wsman-remoting] (Comunicazione remota WS-Management in PowerShell Core)
 
 ## <a name="artifact-installation-instructions"></a>Istruzioni di installazione dell'artefatto
 
-Un archivio con i componenti di CoreCLR viene pubblicato per ogni build CI tramite [AppVeyor][].
+Un archivio con i bit di CoreCL viene pubblicato per ogni build CI tramite [AppVeyor][].
 
 Per installare PowerShell Core dall'artefatto CoreCLR:
 
@@ -140,4 +140,9 @@ Per installare PowerShell Core dall'artefatto CoreCLR:
 3. Estrarre il file ZIP nella directory `bin`
 4. `./bin/pwsh.exe`
 
-<!-- [download-center]: TODO --> [releases]: https://github.com/PowerShell/PowerShell/releases [ssh-remoting]: ../core-powershell/SSH-Remoting-in-PowerShell-Core.md [wsman-remoting]: ../core-powershell/WSMan-Remoting-in-PowerShell-Core.md [AppVeyor]: https://ci.appveyor.com/project/PowerShell/powershell
+<!-- [download-center]: TODO -->
+
+[versioni]: https://github.com/PowerShell/PowerShell/releases
+[ssh-remoting]: ../core-powershell/SSH-Remoting-in-PowerShell-Core.md
+[wsman-remoting]: ../core-powershell/WSMan-Remoting-in-PowerShell-Core.md
+[AppVeyor]: https://ci.appveyor.com/project/PowerShell/powershell
