@@ -1,3 +1,14 @@
+---
+title: Novità di PowerShell Core 6.0
+description: Nuove funzionalità e modifiche rilasciate in PowerShell Core 6.0
+ms.date: 08/06/2018
+ms.openlocfilehash: f0cddad223528cd0f2b4f392faeb6e08e1050c51
+ms.sourcegitcommit: 01ac77cd0b00e4e5e964504563a9212e8002e5e0
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39587245"
+---
 # <a name="whats-new-in-powershell-core-60"></a>Novità di PowerShell Core 6.0
 
 [PowerShell Core 6.0][github] è una nuova edizione di PowerShell multipiattaforma (Windows, macOS e Linux), open source e creata per gli ambienti eterogenei e il cloud ibrido.
@@ -118,7 +129,7 @@ PowerShell Core usa [.NET Standard][] 2.0 per garantire la compatibilità binari
 Molti moduli di PowerShell dipendono da tali assembly (spesso DLL), quindi .NET Standard consente di continuare a usare .NET Core.
 PowerShell Core include anche un'euristica per la ricerca nelle cartelle note, ad esempio dove si trova in genere Global Assembly Cache sul disco, per trovare le dipendenze DLL di .NET Framework.
 
-Maggiori informazioni su .NET Standard sono disponibili nel [Blog di .NET][], in questo video di [YouTube][] e in queste [domande frequenti][] su GitHub.
+Maggiori informazioni su .NET Standard sono disponibili nel [blog di .NET][], in questo video di [YouTube][] e in queste [domande frequenti][] su GitHub.
 
 È stato fatto il possibile per garantire che il linguaggio di PowerShell e i moduli "predefiniti" (ad esempio `Microsoft.PowerShell.Management`, `Microsoft.PowerShell.Utility` e così via) funzionino come in Windows PowerShell.
 In molti casi, con il supporto della community, sono state aggiunte nuove funzionalità e correzioni di bug ai cmdlet.

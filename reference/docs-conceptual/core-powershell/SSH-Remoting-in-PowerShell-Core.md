@@ -1,4 +1,14 @@
-
+---
+title: Comunicazione remota di PowerShell su SSH
+description: Comunicazione remota in PowerShell Core tramite SSH
+ms.date: 08/06/2018
+ms.openlocfilehash: 27a8fc5623796a270a2ea67aa550c9a0998e766b
+ms.sourcegitcommit: 01ac77cd0b00e4e5e964504563a9212e8002e5e0
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39587500"
+---
 # <a name="powershell-remoting-over-ssh"></a>Comunicazione remota di PowerShell su SSH
 
 ## <a name="overview"></a>Panoramica

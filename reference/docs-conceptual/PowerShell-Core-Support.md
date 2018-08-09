@@ -1,3 +1,14 @@
+---
+title: Ciclo di vita del supporto di PowerShell Core
+description: Criteri che disciplinano il supporto per PowerShell Core
+ms.date: 08/06/2018
+ms.openlocfilehash: 2e0ca1b9c133e6f316a40aff13365d0489059165
+ms.sourcegitcommit: 01ac77cd0b00e4e5e964504563a9212e8002e5e0
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39587160"
+---
 # <a name="powershell-core-support-lifecycle"></a>Ciclo di vita del supporto di PowerShell Core
 
 PowerShell Core è un set distinto di strumenti e componenti che viene fornito, installato e configurato separatamente da Windows PowerShell.
@@ -44,7 +55,8 @@ Le piattaforme elencate come `Experimental` non sono ufficialmente supportate, m
 | Windows Server 2008 R2, 2012 R2, 2016             | Funzionalità supportata   | Funzionalità supportata   |
 | [Canale semestrale di Windows Server][semi-annual] | Funzionalità supportata   | Funzionalità supportata   |
 | Ubuntu 14.04 e 16.04                           | Funzionalità supportata   | Funzionalità supportata   |
-| Ubuntu 17.10 e 18.04                           |             | Funzionalità supportata   |
+| Ubuntu 18.04                                      |             | Funzionalità supportata   |
+| Ubuntu 18.10 (tramite pacchetto Snap)                   |             | Community   |
 | Debian 8.7+ e 9                                | Funzionalità supportata   | Funzionalità supportata   |
 | CentOS 7                                          | Funzionalità supportata   | Funzionalità supportata   |
 | Red Hat Enterprise Linux 7                        | Funzionalità supportata   | Funzionalità supportata   |
@@ -56,6 +68,10 @@ Le piattaforme elencate come `Experimental` non sono ufficialmente supportate, m
 | Raspbian                                          | Sperimentale| Community   |
 | Kali                                              | Community   | Community   |
 | AppImage (funziona su più piattaforme Linux)     | Community   | Community   |
+| [Pacchetto Snap](https://snapcraft.io/powershell)   | Vedere la nota    | Vedere la nota    |
+
+> [!NOTE]
+> I pacchetti Snap saranno sperimentali per un determinato periodo di tempo.  Successivamente, se come previsto Snap non introdurrà nuovi problemi di supporto, il supporto seguirà la distribuzione in cui è in esecuzione il pacchetto.
 
 ## <a name="platform-which-are-out-of-support"></a>Piattaforme non più supportate
 
@@ -65,13 +81,14 @@ Pertanto, il supporto per le versioni seguenti è stato terminato dai proprietar
 
 | Sistema operativo       | Versione | Fine vita                                                                                 |
 |----------|---------|---------------------------------------------------------------------------------------------|
-| Fedora   | 26      | [Maggio 2018](https://fedoramagazine.org/fedora-26-end-life/)                                  |
-| Fedora   | 25      | [Dicembre 2017](https://fedoramagazine.org/fedora-25-end-life/)                             |
 | Fedora   | 24      | [Agosto 2017](https://fedoramagazine.org/fedora-24-eol/)                                    |
-| openSUSE | 42.2    | [Gennaio 2018](https://lists.opensuse.org/opensuse-security-announce/2017-11/msg00066.html) |
+| Fedora   | 25      | [Dicembre 2017](https://fedoramagazine.org/fedora-25-end-life/)                             |
+| Fedora   | 26      | [Maggio 2018](https://fedoramagazine.org/fedora-26-end-life/)                                  |
 | openSUSE | 42.1    | [Maggio 2017](https://lists.opensuse.org/opensuse-security-announce/2017-05/msg00053.html)     |
-| Ubuntu   | 17.04   | [Gennaio 2018](https://lists.ubuntu.com/archives/ubuntu-announce/2018-January.txt)          |
+| openSUSE | 42.2    | [Gennaio 2018](https://lists.opensuse.org/opensuse-security-announce/2017-11/msg00066.html) |
 | Ubuntu   | 16.10   | [Luglio 2017](https://lists.ubuntu.com/archives/ubuntu-announce/2017-July/000223.html)        |
+| Ubuntu   | 17.04   | [Gennaio 2018](https://lists.ubuntu.com/archives/ubuntu-announce/2018-January.txt)          |
+| Ubuntu   | 17.10   | [Luglio 2018](https://lists.ubuntu.com/archives/ubuntu-announce/2018-July/000232.html)        |
 
 ## <a name="notes-on-licensing"></a>Note sulla licenza
 
