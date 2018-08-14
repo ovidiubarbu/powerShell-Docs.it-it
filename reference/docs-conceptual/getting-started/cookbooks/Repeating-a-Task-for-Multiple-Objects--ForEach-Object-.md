@@ -3,16 +3,16 @@ ms.date: 06/05/2017
 keywords: powershell,cmdlet
 title: Ripetizione di un'attività per più oggetti ForEach-Object
 ms.assetid: 6697a12d-2470-4ed6-b5bb-c35e5d525eb6
-ms.openlocfilehash: 8b8002af3ade0905421760ce29cdc84b084236e9
-ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
+ms.openlocfilehash: 64d85edad4a6931b2376b95b6d1f5b4d5194399f
+ms.sourcegitcommit: 01ac77cd0b00e4e5e964504563a9212e8002e5e0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2018
-ms.locfileid: "30954280"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39587262"
 ---
 # <a name="repeating-a-task-for-multiple-objects-foreach-object"></a>Ripetizione di un'attività per più oggetti (ForEach-Object)
 
-Il cmdlet **ForEach-Object** usa blocchi di script e il descrittore $_ per l'oggetto pipeline corrente per consentire l'esecuzione di un comando in ogni oggetto della pipeline. Può essere usato per eseguire alcune attività complesse.
+Il cmdlet **ForEach-Object** usa blocchi di script e il descrittore `$_` per l'oggetto pipeline corrente per consentire l'esecuzione di un comando in ogni oggetto della pipeline. Può essere usato per eseguire alcune attività complesse.
 
 Un caso in cui può risultare utile è la manipolazione dei dati per renderli più utili. Ad esempio, la classe Win32_LogicalDisk di WMI può essere usata per restituire informazioni sullo spazio disponibile per ogni disco locale. Tuttavia, i dati vengono restituiti in termini di byte, cosa che rende difficile la lettura:
 
