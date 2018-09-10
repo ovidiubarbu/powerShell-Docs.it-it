@@ -1,35 +1,37 @@
 ---
-ms.date: 06/05/2017
+ms.date: 08/27/2018
 keywords: powershell,cmdlet
 title: Uso di variabili per l'archiviazione di oggetti
 ms.assetid: b1688d73-c173-491e-9ba6-6d0c1cc852de
-ms.openlocfilehash: e52f0a344d0ad13db42b34bed912d584c99b0e30
-ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
+ms.openlocfilehash: f4254199facb914c68a487b281b30070c35550a1
+ms.sourcegitcommit: c170a1608d20d3c925d79c35fa208f650d014146
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2018
-ms.locfileid: "30953328"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43353219"
 ---
-# <a name="using-variables-to-store-objects"></a><span data-ttu-id="41abc-103">Uso di variabili per l'archiviazione di oggetti</span><span class="sxs-lookup"><span data-stu-id="41abc-103">Using Variables to Store Objects</span></span>
-<span data-ttu-id="41abc-104">PowerShell opera sugli oggetti.</span><span class="sxs-lookup"><span data-stu-id="41abc-104">PowerShell works with objects.</span></span> <span data-ttu-id="41abc-105">PowerShell consente di creare variabili, fondamentalmente oggetti denominati, per salvare l'output in modo da portelo usare in seguito.</span><span class="sxs-lookup"><span data-stu-id="41abc-105">PowerShell lets you create variables, essentially named objects, to preserve output for later use.</span></span> <span data-ttu-id="41abc-106">Se si è abituati a usare le variabili in altre shell, tenere presente che le variabili di PowerShell sono oggetti e non testo.</span><span class="sxs-lookup"><span data-stu-id="41abc-106">If you are used to working with variables in other shells remember that PowerShell variables are objects, not text.</span></span>
+# <a name="using-variables-to-store-objects"></a><span data-ttu-id="5ce91-103">Uso di variabili per l'archiviazione di oggetti</span><span class="sxs-lookup"><span data-stu-id="5ce91-103">Using variables to store objects</span></span>
 
-<span data-ttu-id="41abc-107">Le variabili vengono sempre specificate con il carattere iniziale $ e possono includere qualsiasi carattere alfanumerico o carattere di sottolineatura nei nomi.</span><span class="sxs-lookup"><span data-stu-id="41abc-107">Variables are always specified with the initial character $, and can include any alphanumeric characters or the underscore in their names.</span></span>
+<span data-ttu-id="5ce91-104">PowerShell opera sugli oggetti.</span><span class="sxs-lookup"><span data-stu-id="5ce91-104">PowerShell works with objects.</span></span> <span data-ttu-id="5ce91-105">PowerShell permette di creare oggetti denominati noti come variabili.</span><span class="sxs-lookup"><span data-stu-id="5ce91-105">PowerShell lets you create named objects known as variables.</span></span>
+<span data-ttu-id="5ce91-106">I nomi delle variabili possono includere il carattere di sottolineatura e qualsiasi carattere alfanumerico.</span><span class="sxs-lookup"><span data-stu-id="5ce91-106">Variables names can include the underscore character can any alphanumeric characters.</span></span> <span data-ttu-id="5ce91-107">Se usata in PowerShell, una variabile viene sempre specificata tramite il carattere \$ seguito dal nome della variabile.</span><span class="sxs-lookup"><span data-stu-id="5ce91-107">When used in PowerShell, a variable is always specified using the \$ character followed by variable name.</span></span>
 
-### <a name="creating-a-variable"></a><span data-ttu-id="41abc-108">Creazione di una variabile</span><span class="sxs-lookup"><span data-stu-id="41abc-108">Creating a Variable</span></span>
-<span data-ttu-id="41abc-109">È possibile creare una variabile digitando un nome di variabile valido:</span><span class="sxs-lookup"><span data-stu-id="41abc-109">You can create a variable by typing a valid variable name:</span></span>
+## <a name="creating-a-variable"></a><span data-ttu-id="5ce91-108">Creazione di una variabile</span><span class="sxs-lookup"><span data-stu-id="5ce91-108">Creating a variable</span></span>
+
+<span data-ttu-id="5ce91-109">È possibile creare una variabile digitando un nome di variabile valido:</span><span class="sxs-lookup"><span data-stu-id="5ce91-109">You can create a variable by typing a valid variable name:</span></span>
 
 ```
 PS> $loc
 PS>
 ```
 
-<span data-ttu-id="41abc-110">Non verrà restituito alcun risultato perché **$loc** non ha un valore.</span><span class="sxs-lookup"><span data-stu-id="41abc-110">This returns no result because **$loc** does not have a value.</span></span> <span data-ttu-id="41abc-111">È possibile creare una variabile e assegnarle un valore nello stesso passaggio.</span><span class="sxs-lookup"><span data-stu-id="41abc-111">You can create a variable and assign it a value in the same step.</span></span> <span data-ttu-id="41abc-112">PowerShell crea la variabile solo se non esiste. In caso contrario, assegna il valore specificato alla variabile esistente.</span><span class="sxs-lookup"><span data-stu-id="41abc-112">PowerShell only creates the variable if it does not exist; otherwise, it assigns the specified value to the existing variable.</span></span> <span data-ttu-id="41abc-113">Per archiviare la posizione corrente nella variabile **$loc**, digitare:</span><span class="sxs-lookup"><span data-stu-id="41abc-113">To store your current location in the variable **$loc**, type:</span></span>
+<span data-ttu-id="5ce91-110">Questo esempio non restituisce alcun risultato, perché `$loc` non ha un valore.</span><span class="sxs-lookup"><span data-stu-id="5ce91-110">This example returns no result because `$loc` doesn't have a value.</span></span> <span data-ttu-id="5ce91-111">È possibile creare una variabile e assegnarle un valore nello stesso passaggio.</span><span class="sxs-lookup"><span data-stu-id="5ce91-111">You can create a variable and assign it a value in the same step.</span></span> <span data-ttu-id="5ce91-112">PowerShell crea la variabile solo se non esiste.</span><span class="sxs-lookup"><span data-stu-id="5ce91-112">PowerShell only creates the variable if it doesn't exist.</span></span>
+<span data-ttu-id="5ce91-113">In caso contrario, assegna il valore specificato alla variabile esistente.</span><span class="sxs-lookup"><span data-stu-id="5ce91-113">Otherwise, it assigns the specified value to the existing variable.</span></span> <span data-ttu-id="5ce91-114">L'esempio seguente archivia il percorso corrente nella variabile `$loc`:</span><span class="sxs-lookup"><span data-stu-id="5ce91-114">The following example stores the current location in the variable `$loc`:</span></span>
 
-```
+```powershell
 $loc = Get-Location
 ```
 
-<span data-ttu-id="41abc-114">Non viene visualizzato alcun output quando si digita il comando perché l'output viene inviato a $loc.</span><span class="sxs-lookup"><span data-stu-id="41abc-114">There is no output displayed when you type this command because the output is sent to $loc.</span></span> <span data-ttu-id="41abc-115">In PowerShell l'output visualizzato è un effetto collaterale del fatto che i dati non indirizzati diversamente vengono sempre inviati allo schermo.</span><span class="sxs-lookup"><span data-stu-id="41abc-115">In PowerShell, displayed output is a side effect of the fact that data, which is not otherwise directed, always gets sent to the screen.</span></span> <span data-ttu-id="41abc-116">Digitando $loc verrà visualizzata la posizione corrente:</span><span class="sxs-lookup"><span data-stu-id="41abc-116">Typing $loc will show your current location:</span></span>
+<span data-ttu-id="5ce91-115">Quando si digita questo comando, PowerShell non visualizza alcun output.</span><span class="sxs-lookup"><span data-stu-id="5ce91-115">PowerShell displays no output when you type this command.</span></span> <span data-ttu-id="5ce91-116">PowerShell invia l'output di "Get-Location" a `$loc`.</span><span class="sxs-lookup"><span data-stu-id="5ce91-116">PowerShell sends the output of 'Get-Location' to `$loc`.</span></span> <span data-ttu-id="5ce91-117">In PowerShell i dati che non vengono assegnati o reindirizzati vengono inviati allo schermo.</span><span class="sxs-lookup"><span data-stu-id="5ce91-117">In PowerShell, data that isn't assigned or redirected is sent to the screen.</span></span> <span data-ttu-id="5ce91-118">Se si digita `$loc`, viene visualizzato il percorso corrente:</span><span class="sxs-lookup"><span data-stu-id="5ce91-118">Typing `$loc` shows your current location:</span></span>
 
 ```
 PS> $loc
@@ -39,9 +41,9 @@ Path
 C:\temp
 ```
 
-<span data-ttu-id="41abc-117">È possibile usare **Get-Member** per visualizzare informazioni sul contenuto delle variabili.</span><span class="sxs-lookup"><span data-stu-id="41abc-117">You can use **Get-Member** to display information about the contents of variables.</span></span> <span data-ttu-id="41abc-118">L'invio attraverso la pipe di $loc a Get-Member indicherà che si tratta di un oggetto **PathInfo**, proprio come l'output da Get-Location:</span><span class="sxs-lookup"><span data-stu-id="41abc-118">Piping $loc to Get-Member will show you that it is a **PathInfo** object, just like the output from Get-Location:</span></span>
+<span data-ttu-id="5ce91-119">È possibile usare `Get-Member` per visualizzare informazioni sul contenuto delle variabili.</span><span class="sxs-lookup"><span data-stu-id="5ce91-119">You can use `Get-Member` to display information about the contents of variables.</span></span> <span data-ttu-id="5ce91-120">`Get-Member` mostra che `$loc` è un oggetto **PathInfo**, proprio come l'output di `Get-Location`:</span><span class="sxs-lookup"><span data-stu-id="5ce91-120">`Get-Member` shows you that `$loc` is a **PathInfo** object, just like the output from `Get-Location`:</span></span>
 
-```
+```powershell
 PS> $loc | Get-Member -MemberType Property
 
    TypeName: System.Management.Automation.PathInfo
@@ -54,47 +56,47 @@ Provider     Property   System.Management.Automation.ProviderInfo Provider {...
 ProviderPath Property   System.String ProviderPath {get;}
 ```
 
-### <a name="manipulating-variables"></a><span data-ttu-id="41abc-119">Manipolazione delle variabili</span><span class="sxs-lookup"><span data-stu-id="41abc-119">Manipulating Variables</span></span>
-<span data-ttu-id="41abc-120">PowerShell include diversi comandi per la manipolazione delle variabili.</span><span class="sxs-lookup"><span data-stu-id="41abc-120">PowerShell provides several commands to manipulate variables.</span></span> <span data-ttu-id="41abc-121">È possibile visualizzare un elenco completo in un formato leggibile digitando:</span><span class="sxs-lookup"><span data-stu-id="41abc-121">You can see a complete listing in a readable form by typing:</span></span>
+## <a name="manipulating-variables"></a><span data-ttu-id="5ce91-121">Modifica delle variabili</span><span class="sxs-lookup"><span data-stu-id="5ce91-121">Manipulating variables</span></span>
 
-```
+<span data-ttu-id="5ce91-122">PowerShell include diversi comandi per la manipolazione delle variabili.</span><span class="sxs-lookup"><span data-stu-id="5ce91-122">PowerShell provides several commands to manipulate variables.</span></span> <span data-ttu-id="5ce91-123">È possibile visualizzare un elenco completo in un formato leggibile digitando:</span><span class="sxs-lookup"><span data-stu-id="5ce91-123">You can see a complete listing in a readable form by typing:</span></span>
+
+```powershell
 Get-Command -Noun Variable | Format-Table -Property Name,Definition -AutoSize -Wrap
 ```
 
-<span data-ttu-id="41abc-122">Oltre alle variabili create nella sessione corrente di PowerShell, esistono diverse variabili definite dal sistema.</span><span class="sxs-lookup"><span data-stu-id="41abc-122">In addition to the variables you create in your current PowerShell session, there are several system-defined variables.</span></span> <span data-ttu-id="41abc-123">È possibile usare il cmdlet **Remove-Variable** per cancellare tutte le variabili non controllate da PowerShell.</span><span class="sxs-lookup"><span data-stu-id="41abc-123">You can use the **Remove-Variable** cmdlet to clear out all of the variables which are not controlled by PowerShell.</span></span> <span data-ttu-id="41abc-124">Digitare il comando seguente per cancellare tutte le variabili:</span><span class="sxs-lookup"><span data-stu-id="41abc-124">Type the following command to clear all variables:</span></span>
+<span data-ttu-id="5ce91-124">PowerShell crea anche diverse variabili definite dal sistema.</span><span class="sxs-lookup"><span data-stu-id="5ce91-124">PowerShell also creates several system-defined variables.</span></span> <span data-ttu-id="5ce91-125">È possibile usare il cmdlet `Remove-Variable` per rimuovere dalla sessione corrente le variabili che non sono controllate da PowerShell.</span><span class="sxs-lookup"><span data-stu-id="5ce91-125">You can use the `Remove-Variable` cmdlet to remove variables, which are not controlled by PowerShell, from the current session.</span></span> <span data-ttu-id="5ce91-126">Digitare il comando seguente per cancellare tutte le variabili:</span><span class="sxs-lookup"><span data-stu-id="5ce91-126">Type the following command to clear all variables:</span></span>
 
-```
+```powershell
 Remove-Variable -Name * -Force -ErrorAction SilentlyContinue
 ```
 
-<span data-ttu-id="41abc-125">Verrà restituito il prompt di conferma visualizzato di seguito.</span><span class="sxs-lookup"><span data-stu-id="41abc-125">This will produce the confirmation prompt you see below.</span></span>
+<span data-ttu-id="5ce91-127">Dopo aver eseguito il comando precedente, il cmdlet `Get-Variable` mostra le variabili di sistema di PowerShell.</span><span class="sxs-lookup"><span data-stu-id="5ce91-127">After running the previous command, the `Get-Variable` cmdlet shows the PowerShell system variables.</span></span>
 
-```
-Confirm
-Are you sure you want to perform this action?
-Performing operation "Remove Variable" on Target "Name: Error".
-[Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help
-(default is "Y"):A
-```
+<span data-ttu-id="5ce91-128">PowerShell crea anche un'unità di variabili.</span><span class="sxs-lookup"><span data-stu-id="5ce91-128">PowerShell also creates a variable drive.</span></span> <span data-ttu-id="5ce91-129">Usare l'esempio seguente per visualizzare tutte le variabili di PowerShell usando l'unità delle variabili:</span><span class="sxs-lookup"><span data-stu-id="5ce91-129">Use the following example to display all PowerShell variables using the variable drive:</span></span>
 
-<span data-ttu-id="41abc-126">Se si esegue poi il cmdlet **Get-Variable**, verranno visualizzate le variabili di PowerShell rimanenti.</span><span class="sxs-lookup"><span data-stu-id="41abc-126">If you then run the **Get-Variable** cmdlet, you will see the remaining PowerShell variables.</span></span> <span data-ttu-id="41abc-127">Dato che esiste anche un'unità di PowerShell per le variabili, è possibile visualizzare tutte le variabili di PowerShell anche digitando:</span><span class="sxs-lookup"><span data-stu-id="41abc-127">Since there is also a variable PowerShell drive, you can also display all PowerShell variables by typing:</span></span>
-
-```
+```powershell
 Get-ChildItem variable:
 ```
 
-### <a name="using-cmdexe-variables"></a><span data-ttu-id="41abc-128">Uso delle variabili di Cmd.exe</span><span class="sxs-lookup"><span data-stu-id="41abc-128">Using Cmd.exe Variables</span></span>
-<span data-ttu-id="41abc-129">Anche se PowerShell non è Cmd.exe, viene eseguito in un ambiente della shell di comando e può usare le stesse variabili disponibili in qualsiasi ambiente in Windows.</span><span class="sxs-lookup"><span data-stu-id="41abc-129">Although PowerShell is not Cmd.exe, it runs in a command shell environment and can use the same variables available in any environment in Windows.</span></span> <span data-ttu-id="41abc-130">Queste variabili vengono esposte tramite un'unità denominata **env:**.</span><span class="sxs-lookup"><span data-stu-id="41abc-130">These variables are exposed through a drive named **env**:.</span></span> <span data-ttu-id="41abc-131">È possibile visualizzare queste variabili digitando:</span><span class="sxs-lookup"><span data-stu-id="41abc-131">You can view these variables by typing:</span></span>
+## <a name="using-cmdexe-variables"></a><span data-ttu-id="5ce91-130">Uso di variabili di cmd.exe</span><span class="sxs-lookup"><span data-stu-id="5ce91-130">Using cmd.exe variables</span></span>
 
-```
+<span data-ttu-id="5ce91-131">PowerShell può usare le stesse variabili di ambiente disponibili per qualsiasi processo Windows, incluso **cmd.exe**.</span><span class="sxs-lookup"><span data-stu-id="5ce91-131">PowerShell can use the same environment variables available to any Windows process, including **cmd.exe**.</span></span> <span data-ttu-id="5ce91-132">Queste variabili vengono esposte tramite un'unità denominata `env:`.</span><span class="sxs-lookup"><span data-stu-id="5ce91-132">These variables are exposed through a drive named `env:`.</span></span> <span data-ttu-id="5ce91-133">È possibile visualizzare queste variabili digitando il comando seguente:</span><span class="sxs-lookup"><span data-stu-id="5ce91-133">You can view these variables by typing the following command:</span></span>
+
+```powershell
 Get-ChildItem env:
 ```
 
-<span data-ttu-id="41abc-132">Sebbene i cmdlet per le variabili standard non siano progettati per l'utilizzo con le variabili **env:**, è comunque possibile usarle specificando il prefisso **env:**.</span><span class="sxs-lookup"><span data-stu-id="41abc-132">Although the standard variable cmdlets are not designed to work with **env:** variables, you can still use them by specifying the **env:** prefix.</span></span> <span data-ttu-id="41abc-133">Per visualizzare la directory radice del sistema operativo, ad esempio, è possibile usare la variabile **%SystemRoot%** della shell dei comandi da PowerShell digitando:</span><span class="sxs-lookup"><span data-stu-id="41abc-133">For example, to see the operating system root directory, you can use the command-shell **%SystemRoot%** variable from within PowerShell by typing:</span></span>
+<span data-ttu-id="5ce91-134">I cmdlet `*-Variable` standard non sono progettati per funzionare con variabili di ambiente.</span><span class="sxs-lookup"><span data-stu-id="5ce91-134">The standard `*-Variable` cmdlets aren't designed to work with environment variables.</span></span> <span data-ttu-id="5ce91-135">È possibile accedere alle variabili di ambiente usando il prefisso di unità `env:`.</span><span class="sxs-lookup"><span data-stu-id="5ce91-135">Environment variables are accessed using the `env:` drive prefix.</span></span> <span data-ttu-id="5ce91-136">Ad esempio, la variabile **%SystemRoot%** in **cmd.exe** contiene il nome della directory radice del sistema operativo.</span><span class="sxs-lookup"><span data-stu-id="5ce91-136">For example, the **%SystemRoot%** variable in **cmd.exe** contains the operating system's root directory name.</span></span> <span data-ttu-id="5ce91-137">In PowerShell è possibile usare `$env:SystemRoot` per accedere allo stesso valore.</span><span class="sxs-lookup"><span data-stu-id="5ce91-137">In PowerShell, you use `$env:SystemRoot` to access the same value.</span></span>
 
 ```
 PS> $env:SystemRoot
 C:\WINDOWS
 ```
 
-<span data-ttu-id="41abc-134">È anche possibile creare e modificare le variabili di ambiente da PowerShell.</span><span class="sxs-lookup"><span data-stu-id="41abc-134">You can also create and modify environment variables from within PowerShell.</span></span> <span data-ttu-id="41abc-135">Le variabili di ambiente a cui si accede da Windows PowerShell rispettano le normali regole per le variabili di ambiente valide in altre posizioni in Windows.</span><span class="sxs-lookup"><span data-stu-id="41abc-135">Environment variables accessed from Windows PowerShell conform to the normal rules for environment variables elsewhere in Windows.</span></span>
+<span data-ttu-id="5ce91-138">È anche possibile creare e modificare le variabili di ambiente da PowerShell.</span><span class="sxs-lookup"><span data-stu-id="5ce91-138">You can also create and modify environment variables from within PowerShell.</span></span> <span data-ttu-id="5ce91-139">Le variabili di ambiente in PowerShell seguono le stesse regole per le variabili di ambiente usate altrove nel sistema operativo.</span><span class="sxs-lookup"><span data-stu-id="5ce91-139">Environment variables in PowerShell follow the same rules for environment variables used elsewhere in the operating system.</span></span> <span data-ttu-id="5ce91-140">L'esempio seguente crea una nuova variabile di ambiente:</span><span class="sxs-lookup"><span data-stu-id="5ce91-140">The following example creates a new environment variable:</span></span>
+
+```powershell
+$env:LIB_PATH='/usr/local/lib'
+```
+
+<span data-ttu-id="5ce91-141">Benché non sia necessario, spesso i nomi delle variabili di ambiente usano tutte lettere maiuscole.</span><span class="sxs-lookup"><span data-stu-id="5ce91-141">Though not required, is it common for environment variable names to use all uppercase letters.</span></span>
