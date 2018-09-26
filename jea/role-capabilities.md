@@ -2,12 +2,12 @@
 ms.date: 06/12/2017
 keywords: jea,powershell,sicurezza
 title: Funzionalità del ruolo JEA
-ms.openlocfilehash: 0531baa284e66a42a162329ea20ecfdca6d0b526
-ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
+ms.openlocfilehash: bd0a995adc60e50049ff99d6b23e7c2aeb745a18
+ms.sourcegitcommit: e46b868f56f359909ff7c8230b1d1770935cce0e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/16/2018
-ms.locfileid: "34190537"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45522942"
 ---
 # <a name="jea-role-capabilities"></a>Funzionalità del ruolo JEA
 
@@ -181,9 +181,9 @@ Le funzioni definite nei file delle funzionalità del ruolo sono comunque sogget
 
 Select-Object è un'impostazione predefinita, un cmdlet vincolato in tutte le sessioni JEA che non consente di selezionare le proprietà arbitrarie in oggetti.
 Per usare Select-Object non vincolato in funzioni, è necessario richiedere in modo esplicito l'implementazione completa, specificando il nome FQMN.
-Tutti i cmdlet vincolati in una sessione JEA hanno lo stesso comportamento se chiamati da una funzione, in linea con la [precedenza dei comandi](https://msdn.microsoft.com/en-us/powershell/reference/3.0/microsoft.powershell.core/about/about_command_precedence) di PowerShell.
+Tutti i cmdlet vincolati in una sessione JEA hanno lo stesso comportamento se chiamati da una funzione, in linea con la [precedenza dei comandi](https://msdn.microsoft.com/powershell/reference/3.0/microsoft.powershell.core/about/about_command_precedence) di PowerShell.
 
-Se si creano molte funzioni personalizzate, potrebbe risultare più facile inserirle in un [modulo di script di PowerShell](https://msdn.microsoft.com/en-us/library/dd878340(v=vs.85).aspx).
+Se si creano molte funzioni personalizzate, potrebbe risultare più facile inserirle in un [modulo di script di PowerShell](https://msdn.microsoft.com/library/dd878340(v=vs.85).aspx).
 È possibile quindi rendere tali funzioni visibili nella sessione JEA tramite il campo VisibleFunctions, così come si farebbe con i moduli incorporati e di terze parti.
 
 ## <a name="place-role-capabilities-in-a-module"></a>Inserire le funzionalità del ruolo in un modulo
@@ -207,7 +207,7 @@ New-Item -ItemType Directory $rcFolder
 Copy-Item -Path .\MyFirstJEARole.psrc -Destination $rcFolder
 ```
 
-Per altre informazioni sui moduli di PowerShell, sui manifesti dei moduli e sulla variabile di ambiente PSModulePath, vedere [Understanding a PowerShell Module](https://msdn.microsoft.com/en-us/library/dd878324.aspx) (Informazioni sui moduli di PowerShell).
+Per altre informazioni sui moduli di PowerShell, sui manifesti dei moduli e sulla variabile di ambiente PSModulePath, vedere [Understanding a PowerShell Module](https://msdn.microsoft.com/library/dd878324.aspx) (Informazioni sui moduli di PowerShell).
 
 ## <a name="updating-role-capabilities"></a>Aggiornamento delle funzionalità del ruolo
 

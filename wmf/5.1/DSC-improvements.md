@@ -3,12 +3,12 @@ ms.date: 06/12/2017
 ms.topic: conceptual
 keywords: wmf,powershell,installazione
 title: Miglioramenti di DSC in WMF 5.1
-ms.openlocfilehash: 32bdde6d43d17cc76c454fe10b00097753a9eebe
-ms.sourcegitcommit: 2d9cf1ccb9a653db7726a408ebcb65530dcb1522
+ms.openlocfilehash: 92f82d62550e105a187fd7c0c58b49367c646a7e
+ms.sourcegitcommit: e46b868f56f359909ff7c8230b1d1770935cce0e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34309543"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45523043"
 ---
 # <a name="improvements-in-desired-state-configuration-dsc-in-wmf-51"></a>Miglioramenti di Desired State Configuration (DSC) in WMF 5.1
 
@@ -154,7 +154,7 @@ Set-DscLocalConfigurationManager -Path .\RegistrationMetaConfig -Verbose
 
 ## <a name="using-psdscrunascredential-with-dsc-composite-resources"></a>Usare PsDscRunAsCredential con le risorse composite DSC
 
-È stato aggiunto il supporto per l'uso di [*PsDscRunAsCredential*](https://msdn.microsoft.com/cs-cz/powershell/dsc/runasuser) con le risorse [composite](https://msdn.microsoft.com/en-us/powershell/dsc/authoringresourcecomposite) DSC.
+È stato aggiunto il supporto per l'uso di [*PsDscRunAsCredential*](https://msdn.microsoft.com/cs-cz/powershell/dsc/runasuser) con le risorse [composite](https://msdn.microsoft.com/powershell/dsc/authoringresourcecomposite) DSC.
 
 È ora possibile specificare un valore per PsDscRunAsCredential quando si usano risorse composite all'interno delle configurazioni.
 Quando specificato, tutte le risorse vengono eseguite all'interno di una risorsa composita come utente RunAs.
@@ -162,7 +162,7 @@ Se una risorsa composita chiama un'altra risorsa composita, tutte le relative ri
 Le credenziali RunAs vengono propagate a tutti i livelli della gerarchia di risorse composite.
 Se una risorsa all'interno di una risorsa composita specifica un valore per PsDscRunAsCredential, durante la compilazione della configurazione si verifica un errore di merge.
 
-Questo esempio mostra l'uso con la risorsa composita [WindowsFeatureSet](https://msdn.microsoft.com/en-us/powershell/wmf/dsc_newresources) inclusa nel modulo PSDesiredStateConfiguration.
+Questo esempio mostra l'uso con la risorsa composita [WindowsFeatureSet](https://msdn.microsoft.com/powershell/wmf/dsc_newresources) inclusa nel modulo PSDesiredStateConfiguration.
 
 ```powershell
 Configuration InstallWindowsFeature

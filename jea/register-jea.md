@@ -2,12 +2,12 @@
 ms.date: 06/12/2017
 keywords: jea,powershell,sicurezza
 title: Registrazione delle configurazioni JEA
-ms.openlocfilehash: cda899b20378b0183a3d88ecfd593aaf7356e967
-ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
+ms.openlocfilehash: 2c4a8f64c966903a6eb8fcabe4cd25ae7f98b2c4
+ms.sourcegitcommit: e46b868f56f359909ff7c8230b1d1770935cce0e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/16/2018
-ms.locfileid: "34188514"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45522855"
 ---
 # <a name="registering-jea-configurations"></a>Registrazione delle configurazioni JEA
 
@@ -57,7 +57,7 @@ Se la registrazione ha esito positivo, è possibile [usare JEA](using-jea.md).
 
 ## <a name="multi-machine-configuration-with-dsc"></a>Configurazione di più computer con DSC
 
-Se si distribuisce JEA su più computer, il modello di distribuzione più semplice consiste nell'usare la risorsa [Desired State Configuration (DSC)](https://msdn.microsoft.com/en-us/powershell/dsc/overview) di JEA per distribuire rapidamente e in modo coerente JEA in ogni computer.
+Se si distribuisce JEA su più computer, il modello di distribuzione più semplice consiste nell'usare la risorsa [Desired State Configuration (DSC)](https://msdn.microsoft.com/powershell/dsc/overview) di JEA per distribuire rapidamente e in modo coerente JEA in ogni computer.
 
 Per distribuire JEA con DSC, è necessario assicurarsi che siano soddisfatti i prerequisiti seguenti:
 - Sono state create una o più funzionalità del ruolo e aggiunte a un modulo di PowerShell valido.
@@ -110,7 +110,7 @@ Configuration JEAMaintenance
 }
 ```
 
-Questa configurazione può quindi essere applicata in un sistema [chiamando direttamente Gestione configurazione locale](https://msdn.microsoft.com/en-us/powershell/dsc/metaconfig) o aggiornando la [configurazione server di pull](https://msdn.microsoft.com/en-us/powershell/dsc/pullserver).
+Questa configurazione può quindi essere applicata in un sistema [chiamando direttamente Gestione configurazione locale](https://msdn.microsoft.com/powershell/dsc/metaconfig) o aggiornando la [configurazione server di pull](https://msdn.microsoft.com/powershell/dsc/pullserver).
 
 La risorsa DSC consente anche di sostituire l'endpoint di comunicazione remota Microsoft.PowerShell predefinito.
 In questo caso, la risorsa registrerà automaticamente un endpoint di backup non vincolato denominato "Microsoft.PowerShell.Restricted" con il valore predefinito WinRM ACL (consentendo ai membri del gruppo Utenti gestione remota e Administrators locale di accedere all'endpoint).

@@ -4,12 +4,12 @@ contributor: JKeithB
 keywords: gallery,powershell,cmdlet,psgallery
 description: Linee guida per gli autori
 title: Linee guida e procedure consigliate per la pubblicazione in PowerShell Gallery
-ms.openlocfilehash: 3aca76f8904c7eb64e5c96ae4f0f26014e0d2609
-ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
+ms.openlocfilehash: 11207a312f916506f855c0e6e292752f72fc04c1
+ms.sourcegitcommit: e46b868f56f359909ff7c8230b1d1770935cce0e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/16/2018
-ms.locfileid: "34190333"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45523029"
 ---
 # <a name="powershellgallery-publishing-guidelines-and-best-practices"></a>Linee guida e procedure consigliate per la pubblicazione in PowerShell Gallery
 
@@ -172,12 +172,12 @@ PowerShell supporta la convalida della firma del codice con due approcci princip
 - Firma di moduli mediante catalogo
 
 La firma dei file di PowerShell è un metodo consolidato e garantisce che il codice eseguito è stato generato da una fonte attendibile e non è stato modificato.
-Informazioni dettagliate sulla firma dei file di script di PowerShell sono disponibili nell'argomento [About signing](https://msdn.microsoft.com/en-us/powershell/reference/5.1/microsoft.powershell.core/about/about_signing) (Informazioni sulla firma).
+Informazioni dettagliate sulla firma dei file di script di PowerShell sono disponibili nell'argomento [About signing](https://msdn.microsoft.com/powershell/reference/5.1/microsoft.powershell.core/about/about_signing) (Informazioni sulla firma).
 Per riassumere, è possibile aggiungere una firma a qualsiasi file PS1 convalidato da PowerShell quando viene caricato lo script.
-È possibile vincolare PowerShell all'uso di script firmati con i cmdlet dei [criteri di esecuzione](https://msdn.microsoft.com/en-us/powershell/reference/5.1/microsoft.powershell.core/about/about_execution_policies).
+È possibile vincolare PowerShell all'uso di script firmati con i cmdlet dei [criteri di esecuzione](https://msdn.microsoft.com/powershell/reference/5.1/microsoft.powershell.core/about/about_execution_policies).
 
 La firma di moduli mediante catalogo è una funzionalità aggiunta in PowerShell 5.1.
-Le modalità per la firma di un modulo sono descritte nell'argomento [Cmdlet di catalogo](https://msdn.microsoft.com/en-us/powershell/wmf/5.1/catalog-cmdlets).
+Le modalità per la firma di un modulo sono descritte nell'argomento [Cmdlet di catalogo](https://msdn.microsoft.com/powershell/wmf/5.1/catalog-cmdlets).
 Per riassumere, la firma mediante catalogo viene eseguita creando un file di catalogo che contiene un valore hash per ogni file nel modulo, quindi firmando questo file.
 I cmdlet PowerShellGet publish-module, install-module, save-module e update-module verificano la validità della firma, quindi confermano che il valore hash di ogni elemento corrisponda a quello presente nel catalogo.
 Se nel sistema è installata una versione precedente del modulo, install-module verifica che l'autorità di firma della nuova versione corrisponda a quella dell'installazione precedente.
