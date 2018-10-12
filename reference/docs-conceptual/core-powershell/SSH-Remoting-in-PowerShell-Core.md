@@ -2,12 +2,12 @@
 title: Comunicazione remota di PowerShell su SSH
 description: Comunicazione remota in PowerShell Core tramite SSH
 ms.date: 08/14/2018
-ms.openlocfilehash: 1de034d667aa9a377e5460e7eb474402c690cb42
-ms.sourcegitcommit: 56b9be8503a5a1342c0b85b36f5ba6f57c281b63
+ms.openlocfilehash: 451a55a588381cc9bec265895b2bfad6b6f6e73c
+ms.sourcegitcommit: a652b12a0b87cdd0c8eb76381ae015467dd7b8cd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/21/2018
-ms.locfileid: "43133104"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46134281"
 ---
 # <a name="powershell-remoting-over-ssh"></a>Comunicazione remota di PowerShell su SSH
 
@@ -167,6 +167,14 @@ Per Linux, installare SSH (incluso il server sshd) nel modo appropriato per la p
    sudo launchctl stop com.openssh.sshd
    sudo launchctl start com.openssh.sshd
    ```
+
+## <a name="authentication"></a>Autenticazione
+
+La comunicazione remota di PowerShell su SSH si affida allo scambio di autenticazioni tra il clienti SSH e il servizio SSH e non implementa alcuno schema di autenticazione.
+Ciò significa che tutti gli schemi di autenticazione configurati, tra cui l'autenticazione a più fattori, sono gestiti da SSH e indipendenti da PowerShell.
+Ad esempio, è possibile configurare il servizio SSH per richiedere l'autenticazione con chiave pubblica e una password monouso per maggiore sicurezza.
+La configurazione dell'autenticazione a più fattori non rientra nell'ambito di questa documentazione.
+Fare riferimento alla documentazione per SSH su come configurare l'autenticazione a più fattori in modo corretto e verificare se funziona all'esterno di PowerShell prima di provare a usarlo con la comunicazione remota di PowerShell.
 
 ## <a name="powershell-remoting-example"></a>Esempio di comunicazione remota di PowerShell
 

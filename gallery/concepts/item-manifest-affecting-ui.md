@@ -3,12 +3,12 @@ ms.date: 06/09/2017
 schema: 2.0.0
 keywords: powershell
 title: Valori del manifesto degli elementi con effetti sull'interfaccia utente di PowerShell Gallery
-ms.openlocfilehash: 60415193129fe040b53d35b1f8701408cfc4989d
-ms.sourcegitcommit: c3f1a83b59484651119630f3089aa51b6e7d4c3c
+ms.openlocfilehash: e7e9910504a665e464add0a83454cec64c1a0937
+ms.sourcegitcommit: 601609575a3214ea7086a3bcb586ae0d1df3d418
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/26/2018
-ms.locfileid: "39268178"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46532971"
 ---
 # <a name="item-manifest-values-that-impact-the-powershell-gallery-ui"></a>Valori del manifesto degli elementi con effetti sull'interfaccia utente di PowerShell Gallery
 
@@ -44,6 +44,8 @@ La tabella seguente illustra gli elementi dell'interfaccia utente della pagina d
 | **Cronologia versioni** | La cronologia delle versioni riflette gli aggiornamenti apportati a un modulo in PowerShell Gallery. Se una versione di un elemento viene nascosta tramite la funzionalità di eliminazione, non verrà visualizzata nella cronologia delle versioni, se non per i proprietari dell'elemento. | No | No |
 | **Sito di progetto** | Il sito di progetto viene specificato per i moduli nella sezione Privatedata\PSData del manifesto del modulo tramite un ProjectURI. Nel manifesto di uno script queste informazioni sono controllate tramite .PROJECTURI. | Sì | Sì |
 | **Licenza** | È possibile specificare un collegamento alla licenza per i moduli nella sezione Privatedata\PSData del manifesto del modulo tramite un LicenseURI. Nel manifesto di uno script queste informazioni sono controllate tramite .LICENSEURI. È importante notare che se non viene specificata una licenza tramite LicenseURI, o in un modulo, le condizioni per l'utilizzo dell'elemento sono quelle definite per PowerShell Gallery. Vedere le condizioni per l'utilizzo per altri dettagli. | Sì | Sì |
+| **Icona** | Un'icona può essere specificata per qualsiasi elemento in PowerShell Gallery specificando il flag IconURI nel manifesto dello script o nella sezione Privatedata-PSData del manifesto del modulo. Il flag IconURI deve puntare a un'immagine 32x32 con sfondo trasparente. L'URI **deve** essere un URL diretto dell'immagine e **non deve** passare a una pagina Web contenente l'immagine o a un file nel pacchetto di PowerShell Gallery. | Sì | Sì |
+
 
 ## <a name="editing-item-details"></a>Modifica dei dettagli degli elementi
 

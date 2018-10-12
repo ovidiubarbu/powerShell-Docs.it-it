@@ -3,16 +3,20 @@ ms.date: 06/12/2017
 contributor: JKeithB
 keywords: gallery,powershell,cmdlet,psgallery
 title: Introduzione a PowerShell Gallery
-ms.openlocfilehash: 83974698152e75efac66ea725a9c220486676d6f
-ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
+ms.openlocfilehash: 39998df1a2bf9363dd008dc96a802157c8d691d7
+ms.sourcegitcommit: e46b868f56f359909ff7c8230b1d1770935cce0e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/16/2018
-ms.locfileid: "34190163"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45523056"
 ---
 # <a name="get-started-with-the-powershell-gallery"></a>Introduzione a PowerShell Gallery
 
-Per eseguire il download di elementi da PowerShell Gallery nel sistema, è necessario il modulo [PowerShellGet](/powershell/module/powershellget). Il modulo PowerShellGet è disponibile nei prodotti indicati di seguito. Non è necessario eseguire l'accesso per scaricare elementi da PowerShell Gallery.
+La modalità appropriata per installare elementi di PowerShell Gallery consiste nell'usare i cmdlet inclusi nel modulo [PowerShellGet](/powershell/module/powershellget). Non è necessario eseguire l'accesso per scaricare elementi da PowerShell Gallery.
+
+> [!NOTE]
+> È possibile scaricare un pacchetto direttamente da PowerShell Gallery, ma non è un approccio consigliato. Per altre informazioni, vedere [Download manuale del pacchetto](https://msdn.microsoft.com/en-us/powershell/gallery/psgallery/how-to/working-with-items/manual-download.md).  
+
 
 ## <a name="discovering-items-from-the-powershell-gallery"></a>Individuazione di elementi da PowerShell Gallery
 
@@ -40,7 +44,8 @@ Dopo avere identificato un elemento di interesse, può essere utile ottenere alt
 
 Se si individua un elemento che si ritiene non essere stato pubblicato in buona fede, fare clic su **Report Abuse** (Segnala abusi) nella pagina dell'elemento.
 
-Se si esegue [Find-Module][] o [Find-Script][], è possibile visualizzare questi dati nell'oggetto PSGetModuleInfo restituito. Ad esempio, l'esecuzione di `Find-Module -Name PSReadLine -Repository PSGallery |Get-Member` restituisce i dati nel modulo PSReadLine nella raccolta.
+Se si esegue [Find-Module][] o [Find-Script][], è possibile visualizzare questi dati nell'oggetto PSGetModuleInfo restituito. Ad esempio, l'esecuzione di `Find-Module -Name PSReadLine -Repository PSGallery |Get-Member`
+restituisce i dati nel modulo PSReadLine nella raccolta.
 
 ## <a name="downloading-items-from-the-powershell-gallery"></a>Download di elementi da PowerShell Gallery
 
