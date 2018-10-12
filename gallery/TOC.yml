@@ -1,3 +1,4 @@
+items:
 - name: Panoramica
   href: readme.md
 - name: Installazione di PowerShellGet
@@ -6,79 +7,93 @@
   href: getting-started.md
 - name: Procedura dettagliata
   items:
-    - name: Ricerca di elementi in PowerShell Gallery
-      items:
-        - name: Ricerca di elementi
-          href: how-to/finding-items/search-syntax.md
-        - name: Ricerca in base a PSEdition
-          href: how-to/finding-items/searching-by-psedition.md
-        - name: Filtro dei risultati di ricerca
-          href: how-to/finding-items/filtering-items.md
-    - name: Pubblicazione in PowerShell Gallery
-      items:
-        - name: Creazione e pubblicazione di elementi
-          href: how-to/publishing-items/publishing-an-item.md
-        - name: Creazione di un account PowerShell Gallery
-          href: how-to/publishing-items/creating-an-account.md
-        - name: Esclusione di elementi dall'elenco
-          href: how-to/publishing-items/unlisting-items.md
-        - name: Eliminazione di elementi
-          href: how-to/publishing-items/deleting-items.md
-        - name: Gestione dei proprietari di elementi
-          href: how-to/publishing-items/managing-item-owners.md
-    - name: Uso degli elementi
-      items:
-        - name: Visualizzazione FileList
-          href: how-to/working-with-items/filelist-view.md
-        - name: Distribuire in Automazione di Azure
-          href: how-to/working-with-items/deploy-to-azure-automation.md
-        - name: Elementi che richiedono l'accettazione della licenza
-          href: how-to/working-with-items/items-that-require-license-acceptance.md
-        - name: Come contattare i proprietari di elementi
-          href: how-to/working-with-items/contacting-item-owners.md
-        - name: Pubblicazione di feedback sui social media o nei commenti
-          href: how-to/working-with-items/social-media-feedback.md
+  - name: Ricerca di elementi in PowerShell Gallery
+    items:
+    - name: Ricerca di elementi
+      href: how-to/finding-items/search-syntax.md
+    - name: Ricerca in base a PSEdition
+      href: how-to/finding-items/searching-by-psedition.md
+    - name: Filtro dei risultati di ricerca
+      href: how-to/finding-items/filtering-items.md
+  - name: Pubblicazione in PowerShell Gallery
+    items:
+    - name: Creazione e pubblicazione di elementi
+      href: how-to/publishing-items/publishing-an-item.md
+    - name: Creazione di un account PowerShell Gallery
+      href: how-to/publishing-items/creating-an-account.md
+    - name: Esclusione di elementi dall'elenco
+      href: how-to/publishing-items/unlisting-items.md
+    - name: Eliminazione di elementi
+      href: how-to/publishing-items/deleting-items.md
+    - name: Gestione dei proprietari di elementi
+      href: how-to/publishing-items/managing-item-owners.md
+  - name: Uso degli elementi
+    items:
+    - name: Visualizzazione FileList
+      href: how-to/working-with-items/filelist-view.md
+    - name: Distribuire in Automazione di Azure
+      href: how-to/working-with-items/deploy-to-azure-automation.md
+    - name: Download manuale del pacchetto
+      href: how-to/working-with-items/manual-download.md
+    - name: Elementi che richiedono l'accettazione della licenza
+      href: how-to/working-with-items/items-that-require-license-acceptance.md
+    - name: Come contattare i proprietari di elementi
+      href: how-to/working-with-items/contacting-item-owners.md
+    - name: Pubblicazione di feedback sui social media o nei commenti
+      href: how-to/working-with-items/social-media-feedback.md
+  - name: Gestione del profilo dell'account
+    items:
+    - name: Impostazioni dell'account di PowerShell Gallery
+      href: how-to/managing-profile/managing-account.md
+    - name: Gestione delle chiavi API
+      href: how-to/managing-profile/creating-apikeys.md
 - name: Concetti
   items:
-    - name: Linee guida e procedure consigliate per la pubblicazione
-      href: concepts/publishing-guidelines.md
-    - name: Manifesto degli elementi e interfaccia utente di PowerShell Gallery
-      href: concepts/item-manifest-affecting-ui.md
-    - name: Richiedere valori PSEditions specifici
-      items:
-        - name: Scrittura di script con il supporto di PSEditions
-          href: concepts/script-psedition-support.md
-        - name: Scrittura di moduli con il supporto di PSEdition
-          href: concepts/module-psedition-support.md
-    - name: Richiedere l'accettazione della licenza
-      items:
-        - name: Richiedere l'accettazione della licenza per gli script
-          href: concepts/script-license-acceptance.md
-        - name: Richiedere l'accettazione della licenza per i moduli
-          href: concepts/module-license-acceptance.md
-    - name: Definizione di elementi come versione preliminare
-      items:
-        - name: Definizione di un modulo come versione preliminare
-          href: concepts/module-prerelease-support.md
-        - name: Definizione di uno script come versione preliminare
-          href: concepts/script-prerelease-support.md
-    - name: Profilo regole PSScriptAnalyzer
-      href: concepts/scriptanalyzer-rule-profile.md
+  - name: Linee guida e procedure consigliate per la pubblicazione
+    href: concepts/publishing-guidelines.md
+  - name: Manifesto degli elementi e interfaccia utente di PowerShell Gallery
+    href: concepts/item-manifest-affecting-ui.md
+  - name: Richiedere valori PSEditions specifici
+    items:
+    - name: Scrittura di script con il supporto di PSEditions
+      href: concepts/script-psedition-support.md
+    - name: Scrittura di moduli con il supporto di PSEdition
+      href: concepts/module-psedition-support.md
+  - name: Richiedere l'accettazione della licenza
+    items:
+    - name: Richiedere l'accettazione della licenza per gli script
+      href: concepts/script-license-acceptance.md
+    - name: Richiedere l'accettazione della licenza per i moduli
+      href: concepts/module-license-acceptance.md
+  - name: Definizione di elementi come versione preliminare
+    items:
+    - name: Definizione di un modulo come versione preliminare
+      href: concepts/module-prerelease-support.md
+    - name: Definizione di uno script come versione preliminare
+      href: concepts/script-prerelease-support.md
+  - name: Profilo regole PSScriptAnalyzer
+    href: concepts/scriptanalyzer-rule-profile.md
 - name: Possibilità di ricevere assistenza
   items:
-    - name: Segnalare abusi
-      href: how-to/getting-support/report-abuse.md
-    - name: Risoluzione delle controversie
-      href: how-to/getting-support/dispute-resolution.md
-    - name: Come contattare gli amministratori
-      href: how-to/getting-support/contacting-administrators.md
-    - name: Risoluzione dei problemi
-      href: how-to/getting-support/troubleshooting-cmdlets.md
-    - name: Provider NuGet di bootstrap e NuGet.exe
-      href: how-to/getting-support/bootstrapping-nuget.md
-    - name: Conformità al Regolamento generale sulla protezione dei dati (GDPR)
-      href: how-to/getting-support/gdpr-dsr-policy.md
+  - name: Segnalare abusi
+    href: how-to/getting-support/report-abuse.md
+  - name: Risoluzione delle controversie
+    href: how-to/getting-support/dispute-resolution.md
+  - name: Come contattare gli amministratori
+    href: how-to/getting-support/contacting-administrators.md
+  - name: Risoluzione dei problemi
+    href: how-to/getting-support/troubleshooting-cmdlets.md
+  - name: Provider NuGet di bootstrap e NuGet.exe
+    href: how-to/getting-support/bootstrapping-nuget.md
+  - name: Conformità al Regolamento generale sulla protezione dei dati (GDPR)
+    href: how-to/getting-support/gdpr-dsr-policy.md
 - name: Domande frequenti su PowerShell Gallery
   href: faqs.md
 - name: Cmdlet PowerShellGet
-  href: 'https://docs.microsoft.com/powershell/module/powershellget/'
+  href: https://docs.microsoft.com/powershell/module/powershellget/
+ms.openlocfilehash: 32577b81229d456922a6be9bfdc8156d337fd719
+ms.sourcegitcommit: e46b868f56f359909ff7c8230b1d1770935cce0e
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45522923"
