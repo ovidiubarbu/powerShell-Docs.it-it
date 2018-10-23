@@ -3,12 +3,12 @@ ms.date: 08/27/2018
 keywords: powershell,cmdlet
 title: Ottenere informazioni dettagliate della Guida
 ms.assetid: 6fb4daf7-8607-4a3e-b692-f77631adc1b9
-ms.openlocfilehash: 88f0357b935a7c75df07d667e3f2f2d0e493f89d
-ms.sourcegitcommit: 59727f71dc204785a1bcdedc02716d8340a77aeb
+ms.openlocfilehash: d2578604ec7c01c0b2734bd180e1babaca58b153
+ms.sourcegitcommit: 6749f67c32e05999e10deb9d45f90f45ac21a599
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43134035"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48851273"
 ---
 # <a name="getting-detailed-help-information"></a>Ottenere informazioni dettagliate della Guida
 
@@ -149,7 +149,7 @@ La visualizzazione online degli articoli della Guida è uno dei metodi migliori 
 Per ottenere informazioni della Guida online, usare il parametro **Online** del cmdlet `Get-Help`. Tutti gli articoli della Guida per PowerShell, inclusi gli articoli della Guida di carattere concettuale (About) e sui provider, sono disponibili online nella documentazione di [PowerShell](/powershell/scripting/powershell-scripting).
 
 > [!NOTE]
-> Non è possibile usare il parametro **Online** con gli articoli della Guida di natura concettuale (about_*) o sui provider.
+> Non è possibile usare il parametro **Online** con gli articoli della Guida di natura concettuale (about_\*) o sui provider.
 > Poiché la Guida online è facoltativa, non funziona per ogni cmdlet, funzione o script.
 
 Ad esempio, per ottenere la versione online dell'articolo della Guida sul cmdlet `Get-ChildItem`, digitare:
