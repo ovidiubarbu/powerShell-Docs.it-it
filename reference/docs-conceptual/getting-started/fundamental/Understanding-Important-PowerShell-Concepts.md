@@ -3,12 +3,12 @@ ms.date: 08/23/2018
 keywords: powershell,cmdlet
 title: Concetti importanti relativi a PowerShell
 ms.assetid: 3e601e38-4520-4578-a48d-b6779f1d35ee
-ms.openlocfilehash: 577ea0764a172e1821bc492417d8b4e546e31b0b
-ms.sourcegitcommit: c170a1608d20d3c925d79c35fa208f650d014146
+ms.openlocfilehash: fad64563d1a7a6abd4f0e430331f81f91f43d312
+ms.sourcegitcommit: 6749f67c32e05999e10deb9d45f90f45ac21a599
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "43353195"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48850998"
 ---
 # <a name="understanding-important-powershell-concepts"></a>Concetti importanti relativi a PowerShell
 
@@ -23,7 +23,7 @@ Se in passato sono stati usati strumenti di elaborazione del testo per elaborare
 
 ## <a name="the-command-family-is-extensible"></a>La famiglia di comandi è estendibile
 
-Interfacce come **cmd.exe** non permettono di estendere direttamente il set di comandi predefinito. È possibile creare strumenti da riga di comando esterni da eseguire in **cmd.exe**. Tuttavia, questi strumenti esterni non includono servizi, come l'integrazione della Guida. **cmd.exe** non riconosce automaticamente questi strumenti esterni come comandi validi.
+Interfacce come **cmd.exe** non consentono di estendere direttamente il set di comandi predefinito. È possibile creare strumenti da riga di comando esterni da eseguire in **cmd.exe**. Tuttavia, questi strumenti esterni non includono servizi, come l'integrazione della Guida. **cmd.exe** non riconosce automaticamente questi strumenti esterni come comandi validi.
 
 I comandi nativi in PowerShell sono noti con il nome di *cmdlet* (pronunciato command-let). È possibile creare moduli e funzioni di cmdlet personalizzati usando codice compilato o script. I moduli possono aggiungere cmdlet e provider alla shell. PowerShell supporta anche script analoghi a quelli della shell UNIX e ai file batch di **cmd.exe**.
 
