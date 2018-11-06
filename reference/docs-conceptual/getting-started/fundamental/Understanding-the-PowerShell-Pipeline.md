@@ -3,12 +3,12 @@ ms.date: 08/23/2018
 keywords: powershell,cmdlet
 title: Informazioni sulle pipeline di PowerShell
 ms.assetid: 6be50926-7943-4ef7-9499-4490d72a63fb
-ms.openlocfilehash: 3ee03f001668fb24ff9be1ea6ecb3817e319d0ee
-ms.sourcegitcommit: 59727f71dc204785a1bcdedc02716d8340a77aeb
+ms.openlocfilehash: fc7c7f57bdce458185a0f5bdb8bc1fbbd81d0d61
+ms.sourcegitcommit: 98b7cfd8ad5718efa8e320526ca76c3cc4141d78
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43134129"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50002856"
 ---
 # <a name="understanding-pipelines"></a>Informazioni sulle pipeline
 
@@ -61,7 +61,7 @@ d-----        8/23/2018   5:07 PM                catroot2
 
 La divisione in pagine riduce anche l'utilizzo della CPU perché i trasferimenti vengono elaborati nel cmdlet `Out-Host` quando è pronta per la visualizzazione una pagina completa. I cmdlet precedenti nella pipeline sospendono l'esecuzione finché non è disponibile la pagina di output successiva.
 
-È possibile notare la differenza con Gestione attività Windows per monitorare l'uso della CPU e della memoria da parte di PowerShell. Eseguire questo comando: `Get-ChildItem C:\\Windows -Recurse`. Confrontare l'utilizzo della CPU e della memoria con questo comando: `Get-ChildItem C:\\Windows -Recurse | Out-Host -Paging`.
+È possibile notare la differenza con Gestione attività Windows per monitorare l'uso della CPU e della memoria da parte di PowerShell. Eseguire questo comando: `Get-ChildItem C:\Windows -Recurse`. Confrontare l'utilizzo della CPU e della memoria con questo comando: `Get-ChildItem C:\Windows -Recurse | Out-Host -Paging`.
 
 ## <a name="objects-in-the-pipeline"></a>Oggetti nella pipeline
 

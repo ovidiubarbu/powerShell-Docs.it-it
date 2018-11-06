@@ -3,12 +3,12 @@ ms.date: 06/12/2017
 keywords: dsc,powershell,configurazione,installazione
 description: Fornisce un meccanismo per gestire i gruppi locali nel nodo di destinazione.
 title: Risorsa GroupSet DSC
-ms.openlocfilehash: 487a76ca7703b2c57b940b4c5bd176eada6c8019
-ms.sourcegitcommit: 8b076ebde7ef971d7465bab834a3c2a32471ef6f
+ms.openlocfilehash: 6fa8e9637da896848e859dc60a42add12e973b34
+ms.sourcegitcommit: e76665315fd928bf85210778f1fea2be15264fea
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37892427"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "50226118"
 ---
 # <a name="dsc-groupset-resource"></a>Risorsa GroupSet DSC
 

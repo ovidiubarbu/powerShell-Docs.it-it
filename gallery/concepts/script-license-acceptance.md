@@ -3,12 +3,12 @@ ms.date: 06/09/2017
 schema: 2.0.0
 keywords: powershell
 title: Richiedere l'accettazione della licenza per gli script
-ms.openlocfilehash: 6374c8c8536dd0c8f27580a5b8895b8db18424f9
-ms.sourcegitcommit: e9ad4d85fd7eb72fb5bc37f6ca3ae1282ae3c6d7
+ms.openlocfilehash: e7101eb6a480dd87965b7b9be9d49583042b603f
+ms.sourcegitcommit: 98b7cfd8ad5718efa8e320526ca76c3cc4141d78
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34048366"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50002583"
 ---
 # <a name="requiring-license-acceptance-for-scripts"></a>Richiedere l'accettazione della licenza per gli script
 
@@ -49,5 +49,5 @@ PS> Install-Script -Name ScriptRequireLicenseAcceptance -AcceptLicense
 ## <a name="more-details"></a>Altri dettagli
 
 - [Richiedere il supporto dell'accettazione della licenza per i moduli](module-license-acceptance.md)
-- [Richiedere il supporto dell'accettazione della licenza in PowerShell Gallery](../how-to/working-with-items/items-that-require-license-acceptance.md)
-- [Richiedere l'accettazione della licenza per la distribuzione in Automazione di Azure](../how-to/working-with-items/deploy-to-azure-automation.md)
+- [Richiedere il supporto dell'accettazione della licenza in PowerShell Gallery](../how-to/working-with-packages/packages-that-require-license-acceptance.md)
+- [Richiedere l'accettazione della licenza per la distribuzione in Automazione di Azure](../how-to/working-with-packages/deploy-to-azure-automation.md)
