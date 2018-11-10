@@ -2,12 +2,12 @@
 ms.date: 06/05/2017
 keywords: powershell,cmdlet
 title: Novità di Windows PowerShell 5.0
-ms.openlocfilehash: f5a27c0541e21b379f88b318cbe09a0344c1b372
-ms.sourcegitcommit: 01d6985ed190a222e9da1da41596f524f607a5bc
+ms.openlocfilehash: 7a2ef581f2cd867b35533597d4942fd5bfc94570
+ms.sourcegitcommit: e76665315fd928bf85210778f1fea2be15264fea
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34483186"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "50225812"
 ---
 # <a name="whats-new-in-windows-powershell-50"></a>Novità di Windows PowerShell 5.0
 Windows PowerShell 5.0 include nuove funzionalità significative che ne estendono e migliorano l'uso e consentono di controllare e gestire gli ambienti Windows in modo più semplice e completo.
@@ -511,7 +511,7 @@ Per Windows PowerShell 3.0, Windows PowerShell Integrated Scripting Environment 
 Windows PowerShell è basato su Common Language Runtime 4.0. Gli autori di cmdlet, script e flussi di lavoro possono usare le nuove classi di Microsoft .NET Framework 4 in Windows PowerShell, con funzionalità come la compatibilità e la distribuzione di applicazioni, Managed Extensibility Framework, calcolo parallelo, rete, Windows Communication Foundation e Windows Workflow Foundation.
 
 ### <a name="support-for-windows-preinstallation-environment"></a>Supporto per l'Ambiente preinstallazione di Windows
-Windows PowerShell 3.0 è un componente facoltativo di Ambiente preinstallazione di Windows (Windows PE) 4.0 per Windows 8. Windows PE è un sistema operativo minimo che avvia un computer privo di sistema operativo e lo prepara per l'installazione di Windows. Può essere usato per partizionare e formattare unità disco rigido, copiare immagini del disco in un computer e avviare l'installazione di Windows da una condivisione di rete. Windows PowerShell 3.0 può essere usato in Windows PE per gestire scenari di distribuzione, diagnostica e ripristino.
+Windows PowerShell 3.0 è un componente facoltativo di Ambiente preinstallazione di Windows (Windows PE) 4.0 per Windows 8. Windows PE è un sistema operativo minimale che avvia un computer privo di sistema operativo e lo prepara per l'installazione di Windows. Può essere usato per partizionare e formattare unità disco rigido, copiare immagini del disco in un computer e avviare l'installazione di Windows da una condivisione di rete. Windows PowerShell 3.0 può essere usato in Windows PE per gestire scenari di distribuzione, diagnostica e ripristino.
 
 ### <a name="disconnected-sessions"></a>Sessioni disconnesse
 A partire da Windows PowerShell 3.0, le sessioni permanenti gestite dall'utente ("PSSession") create con il cmdlet New-PSSession vengono salvate nel computer remoto. Non dipendono più dalla sessione in cui sono state create.
@@ -582,7 +582,7 @@ Nelle versioni precedenti di Windows PowerShell il controllo a questo livello er
 
 Per creare un file di configurazione di sessione, usare il cmdlet [New-PSSessionConfigurationFile](https://technet.microsoft.com/library/5f3e3633-6e90-479c-aea9-ba45a1954866). Per applicare il file a una configurazione di sessione, usare il cmdlet [Register-PSSessionConfiguration](https://technet.microsoft.com/library/e9152ae2-bd6d-4056-9bc7-dc1893aa29ea) o [Set-PSSessionConfiguration](https://technet.microsoft.com/library/b21fbad3-1759-4260-b206-dcb8431cd6ea).
 
-Per altre informazioni, vedere [about_Session_Configuration_Files](https://technet.microsoft.com/library/c7217447-1ebf-477b-a8ef-4dbe9a1473b8) e [New-PSSessionConfigurationFile](https://technet.microsoft.com/library/5f3e3633-6e90-479c-aea9-ba45a1954866).
+Per altre informazioni, vedere [about_Session_Configuration_Files](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_session_configuration_files?view=powershell-5.0) e [New-PSSessionConfigurationFile](https://technet.microsoft.com/library/5f3e3633-6e90-479c-aea9-ba45a1954866).
 
 ### <a name="scheduled-jobs-and-task-scheduler-integration"></a>Processi pianificati e integrazione con l'Utilità di pianificazione
 È ora possibile pianificare i processi in background di Windows PowerShell e gestirli in Windows PowerShell e nell'Utilità di pianificazione.
@@ -656,7 +656,7 @@ L'importazione automatica dei moduli viene avviata usando il cmdlet in un comand
 
 È possibile abilitare, disabilitare e configurare l'importazione automatica dei moduli usando la variabile di preferenza **$PSModuleAutoLoadingPreference**.
 
-Per altre informazioni, vedere [about_Modules [v4]](https://technet.microsoft.com/library/94f57429-a539-4aee-bb0d-205cd7e801f9), [about_Preference_Variables [v4]](https://technet.microsoft.com/library/31344314-be29-4286-b039-afa5460cbe8b) e gli argomenti della Guida sui cmdlet [Get-Command](https://technet.microsoft.com/library/59c6d302-6e8c-48b7-a6f6-f0172df936ad) e [Import-Module](https://technet.microsoft.com/library/af616c24-e122-4098-930e-1e3ea2080ade).
+Per altre informazioni, vedere [about_Modules](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_modules?view=powershell-5.0), [about_Preference_Variables [v4]](https://technet.microsoft.com/library/31344314-be29-4286-b039-afa5460cbe8b) e gli argomenti della Guida sui cmdlet [Get-Command](https://technet.microsoft.com/library/59c6d302-6e8c-48b7-a6f6-f0172df936ad) e [Import-Module](https://technet.microsoft.com/library/af616c24-e122-4098-930e-1e3ea2080ade).
 
 ### <a name="module-experience-improvements"></a>Miglioramento dell'esperienza con i moduli
 Windows PowerShell 3.0 offre il supporto di funzionalità avanzate per il modulo, tra cui le nuove funzionalità seguenti.

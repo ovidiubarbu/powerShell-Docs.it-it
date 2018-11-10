@@ -2,12 +2,12 @@
 title: Comunicazione remota di PowerShell su SSH
 description: Comunicazione remota in PowerShell Core tramite SSH
 ms.date: 08/14/2018
-ms.openlocfilehash: 84c3896fe28847beb03e930f933bb4a9dfad397f
-ms.sourcegitcommit: 6749f67c32e05999e10deb9d45f90f45ac21a599
+ms.openlocfilehash: 842e67e96661bca8be54aab33cbc11aa23dbd1c0
+ms.sourcegitcommit: 47becf2823ece251a7264db2387bb503cf3abaa9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48851238"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49451066"
 ---
 # <a name="powershell-remoting-over-ssh"></a>Comunicazione remota di PowerShell su SSH
 
@@ -15,7 +15,7 @@ ms.locfileid: "48851238"
 
 La comunicazione remota di PowerShell solitamente usa WinRM per la negoziazione di connessione e il trasporto dei dati. SSH è ora disponibile per le piattaforme Linux e Windows e permette a PowerShell di offrire un'autentica comunicazione remota multipiattaforma.
 
-WinRM offre un solido modello di hosting per sessioni remote di PowerShell. Questa implementazione di comunicazione remota basata su SSH attualmente non supporta la configurazione di endpoint remoti e JEA (Just Enough Administration).
+WinRM offre un solido modello di hosting per sessioni remote di PowerShell. La comunicazione remota basata su SSH attualmente non supporta la configurazione di endpoint remoti e JEA (Just Enough Administration).
 
 La comunicazione remota SSH permette la comunicazione remota di base di sessioni di PowerShell tra computer Windows e Linux. La comunicazione remota SSH crea un processo host di PowerShell nel computer di destinazione come sottosistema SSH.
 In futuro verrà implementato un modello di hosting generale, simile a WinRM, per supportare la configurazione degli endpoint e JEA.
@@ -48,7 +48,7 @@ Per Linux, installare SSH (incluso il server sshd) nel modo appropriato per la p
    ```
 
 2. Installare la versione più recente della build [OpenSSH - Win32](https://github.com/PowerShell/Win32-OpenSSH/releases) da GitHub usando le istruzioni di [installazione](https://github.com/PowerShell/Win32-OpenSSH/wiki/Install-Win32-OpenSSH)
-3. Modificare il file sshd_config nel percorso in cui è installato OpenSSH - Win32
+3. Modificare il file sshd_config disponibile all'indirizzo `%ProgramData%\ssh`.
 
    - Verificare che l'autenticazione della password sia abilitata
 
@@ -57,7 +57,7 @@ Per Linux, installare SSH (incluso il server sshd) nel modo appropriato per la p
      ```
 
      ```
-     Subsystem    powershell c:/program files/powershell/6.0.4/pwsh.exe -sshs -NoLogo -NoProfile
+     Subsystem    powershell c:/program files/powershell/6/pwsh.exe -sshs -NoLogo -NoProfile
      ```
 
      > [!NOTE]
@@ -66,7 +66,7 @@ Per Linux, installare SSH (incluso il server sshd) nel modo appropriato per la p
      Una soluzione consiste nel creare un collegamento simbolico alla directory di installazione di PowerShell senza spazi:
 
      ```powershell
-     mklink /D c:\pwsh "C:\Program Files\PowerShell\6.0.4"
+     mklink /D c:\pwsh "C:\Program Files\PowerShell\6"
      ```
 
      e quindi immetterlo nel sottosistema:

@@ -2,12 +2,12 @@
 ms.date: 05/17/2018
 keywords: powershell,core
 title: Problemi noti di PowerShell 6.0
-ms.openlocfilehash: e3e718be903ff2223064d5790d3d0fe554ef04cd
-ms.sourcegitcommit: c3f1a83b59484651119630f3089aa51b6e7d4c3c
+ms.openlocfilehash: ce40a1925e564fbd2c661e70ec36d3842d915dfe
+ms.sourcegitcommit: 47becf2823ece251a7264db2387bb503cf3abaa9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/26/2018
-ms.locfileid: "39268003"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49450997"
 ---
 # <a name="known-issues-for-powershell-60"></a>Problemi noti di PowerShell 6.0
 
@@ -90,9 +90,9 @@ La possibilità di creare endpoint di comunicazione remota con amministrazione v
 
 ### <a name="sudo-exec-and-powershell"></a>`sudo`, `exec` e PowerShell
 
-Dato che PowerShell esegue la maggior parte dei comandi in memoria (come Python o Ruby), non è possibile usare sudo direttamente con i comandi predefiniti di PowerShell. È ovviamente possibile eseguire `powershell` da sudo. Se è necessario eseguire un cmdlet di PowerShell dall'interno di PowerShell con sudo, ad esempio `sudo `Set-Date` 8/18/2016`, eseguire `sudo powershell `Set-Date` 8/18/2016`. Analogamente, non è possibile eseguire direttamente un comando predefinito di PowerShell, ma è invece necessario eseguire `exec powershell item_to_exec`.
+Dato che PowerShell esegue la maggior parte dei comandi in memoria (come Python o Ruby), non è possibile usare sudo direttamente con i comandi predefiniti di PowerShell. È ovviamente possibile eseguire `pwsh` da sudo. Se è necessario eseguire un cmdlet di PowerShell dall'interno di PowerShell con sudo, ad esempio `sudo Set-Date 8/18/2016`, eseguire `sudo pwsh Set-Date 8/18/2016`. Analogamente, non è possibile eseguire direttamente un comando predefinito di PowerShell, ma è invece necessario eseguire `exec pwsh item_to_exec`.
 
-Questo problema è attualmente monitorato come parte del problema #3232.
+Questo problema è attualmente monitorato come parte del problema [#3232](https://github.com/PowerShell/PowerShell/issues/3232).
 
 ### <a name="missing-cmdlets"></a>Cmdlet mancanti
 

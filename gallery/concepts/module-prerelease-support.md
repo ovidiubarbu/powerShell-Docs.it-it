@@ -3,21 +3,21 @@ ms.date: 09/26/2017
 contributor: keithb
 keywords: raccolta,powershell,cmdlet,psget
 title: Versioni di modulo non definitive
-ms.openlocfilehash: 9c3ddb623fbcb7f4b3453dd70cdc56a8dc2e9f6a
-ms.sourcegitcommit: c3f1a83b59484651119630f3089aa51b6e7d4c3c
+ms.openlocfilehash: f58b5adfeba7ed06d231c76accbd52508c7d67d6
+ms.sourcegitcommit: 98b7cfd8ad5718efa8e320526ca76c3cc4141d78
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/26/2018
-ms.locfileid: "39268620"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50002770"
 ---
 # <a name="prerelease-module-versions"></a>Versioni di modulo non definitive
 
-A partire dalla versione 1.6.0, PowerShellGet e PowerShell Gallery consentono di contrassegnare le versioni successive alla versione 1.0.0 come versioni non definitive. In precedenza, gli elementi non definitivi potevano avere solo una versione che iniziasse con 0. L'obiettivo di queste funzionalità è quello di offrire un maggior supporto per la convenzione di controllo delle versioni [SemVer v1.0.0](http://semver.org/spec/v1.0.0.html) senza interrompere la compatibilità con le versioni precedenti con PowerShell versioni 3 e successive o le versioni esistenti di PowerShellGet. Questo argomento illustra le funzionalità specifiche dei moduli. Le funzionalità equivalenti per gli script sono descritte nell'argomento [Versioni non definitive degli script](script-prerelease-support.md). Usando queste funzionalità, i server di pubblicazione possono identificare un modulo o uno script come versione 2.5.0-alpha e rilasciare in seguito una versione pronta per la produzione 2.5.0 che sostituisce la versione non definitiva.
+A partire dalla versione 1.6.0, PowerShellGet e PowerShell Gallery consentono di contrassegnare le versioni successive alla versione 1.0.0 come versioni non definitive. In precedenza, i pacchetti non definitivi potevano avere solo una versione che iniziava con 0. L'obiettivo di queste funzionalità è quello di offrire un maggior supporto per la convenzione di controllo delle versioni [SemVer v1.0.0](http://semver.org/spec/v1.0.0.html) senza interrompere la compatibilità con le versioni precedenti con PowerShell versioni 3 e successive o le versioni esistenti di PowerShellGet. Questo argomento illustra le funzionalità specifiche dei moduli. Le funzionalità equivalenti per gli script sono descritte nell'argomento [Versioni non definitive degli script](script-prerelease-support.md). Usando queste funzionalità, i server di pubblicazione possono identificare un modulo o uno script come versione 2.5.0-alpha e rilasciare in seguito una versione pronta per la produzione 2.5.0 che sostituisce la versione non definitiva.
 
 In generale, le funzionalità di modulo non definitivo includono:
 
-- L'aggiunta di una stringa Prerelease alla sezione PSData del manifesto del modulo identifica il modulo come versione non definitiva. Quando il modulo viene pubblicato in PowerShell Gallery, i dati vengono estratti dal manifesto e usati per identificare gli elementi di versione non definitiva.
-- L'acquisizione degli elementi di versione non definitiva richiede l'aggiunta del flag `-AllowPrerelease` ai comandi di PowerShellGet `Find-Module`, `Install-Module`, `Update-Module` e `Save-Module`. Se il flag non viene specificato, gli elementi di versione non definitiva non vengono visualizzati.
+- L'aggiunta di una stringa Prerelease alla sezione PSData del manifesto del modulo identifica il modulo come versione non definitiva. Quando il modulo viene pubblicato in PowerShell Gallery, i dati vengono estratti dal manifesto e usati per identificare i pacchetti in versione non definitiva.
+- L'acquisizione di pacchetti in versione non definitiva richiede l'aggiunta del flag `-AllowPrerelease` ai comandi di PowerShellGet `Find-Module`, `Install-Module`, `Update-Module` e `Save-Module`. Se il flag non viene specificato, i pacchetti in versione non definitiva non vengono visualizzati.
 - Le versioni di modulo visualizzate da `Find-Module`, `Get-InstalledModule` e in PowerShell Gallery vengono visualizzate come stringa singola con la stringa Prerelease aggiunta alla fine, come nella versione 2.5.0-alpha.
 
 Di seguito sono descritti i dettagli delle funzionalità.
@@ -51,7 +51,7 @@ I requisiti della stringa Prerelease sono i seguenti:
 
 - È possibile specificare una stringa Prerelease solo quando ModuleVersion è 3 segmenti per Major.Minor.Build. Ciò è conforme alla convenzione SemVer v1.0.0.
 - Un segno meno è il delimitatore tra il numero di build e la stringa Prerelease. È possibile includere un segno meno nella stringa Prerelease solo come primo carattere.
-- La stringa Prerelease può contenere solo caratteri alfanumerici ASCII [0-9A-Za-z-]. È consigliabile fare in modo che la stringa Prerelease inizi con un carattere alfabetico per rendere più semplice l'identificazione di una versione non definitiva durante la ricerca in un elenco di elementi.
+- La stringa Prerelease può contenere solo caratteri alfanumerici ASCII [0-9A-Za-z-]. È consigliabile fare in modo che la stringa Prerelease inizi con un carattere alfabetico per rendere più semplice l'identificazione di una versione non definitiva durante la ricerca in un elenco di pacchetti.
 - Attualmente sono supportate solo stringhe Prerelease SemVer v1.0.0. La stringa Prerelease **non deve** contenere punti o + [.+], consentiti in SemVer 2.0.
 - Esempi di stringhe Prerelease supportate includono: -alpha, -alpha1, -BETA, -update20171020
 
@@ -61,9 +61,9 @@ Quando viene usata una versione non definitiva l'ordinamento viene modificato, u
 
 Durante la pubblicazione in PowerShell Gallery, per impostazione predefinita la versione del modulo in fase di pubblicazione deve essere successiva a qualsiasi versione pubblicata precedentemente presente in PowerShell Gallery.
 
-## <a name="finding-and-acquiring-prerelease-items-using-powershellget-commands"></a>Ricerca e acquisizione di elementi di versione non definitiva mediante i comandi di PowerShellGet
+## <a name="finding-and-acquiring-prerelease-packages-using-powershellget-commands"></a>Ricerca e acquisizione di pacchetti in versione non definitiva mediante i comandi di PowerShellGet
 
-L'uso di elementi di versione non definitiva con i comandi di PowerShellGet Find-Module, Install-Module, Update-Module e Save-Module richiede l'aggiunta del flag -AllowPrerelease. Se il flag -AllowPrerelease è specificato, gli elementi di versione non definitiva, se presenti, vengono visualizzati. Se il flag -AllowPrerelease non è specificato, gli elementi di versione non definitiva non vengono visualizzati.
+L'uso di pacchetti in versione non definitiva con i comandi di PowerShellGet Find-Module, Install-Module, Update-Module e Save-Module richiede l'aggiunta del flag -AllowPrerelease. Se il flag -AllowPrerelease è specificato, i pacchetti in versione non definitiva verranno inclusi, se presenti. Se il flag -AllowPrerelease non è specificato, i pacchetti in versione non definitiva non verranno visualizzati.
 
 Le uniche eccezioni nei comandi di modulo di PowerShellGet sono rappresentate da Get-InstalledModule e da alcuni casi di utilizzo di Uninstall-Module.
 

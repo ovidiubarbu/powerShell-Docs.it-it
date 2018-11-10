@@ -2,12 +2,12 @@
 ms.date: 06/12/2017
 keywords: dsc,powershell,configurazione,installazione
 title: Risorsa WaitForAny DSC
-ms.openlocfilehash: c9700c908f8601db85f9c922445969a34b59d453
-ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
+ms.openlocfilehash: 39100f0fc52092c54bbecab55e3ef3dfabb4c70e
+ms.sourcegitcommit: e76665315fd928bf85210778f1fea2be15264fea
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/16/2018
-ms.locfileid: "34186712"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "50226050"
 ---
 # <a name="dsc-waitforany-resource"></a>Risorsa WaitForAny DSC
 
@@ -15,7 +15,7 @@ ms.locfileid: "34186712"
 
 La risorsa DSC **WaitForSome** può essere usata all'interno di un blocco del nodo in una [configurazione DSC](configurations.md) per specificare le dipendenze da configurazioni in altri nodi.
 
-La risorsa ha esito positivo se la risorsa specificata dalla proprietà **ResourceName** è nello stato desiderato in qualsiasi nodo di destinazione definito nella proprietà **NodeName**.
+La risorsa ha esito positivo se la risorsa specificata dalla proprietà **ResourceName** è nello stato desiderato in tutti i nodi di destinazione definiti nella proprietà **NodeName**.
 
 
 ## <a name="syntax"></a>Sintassi

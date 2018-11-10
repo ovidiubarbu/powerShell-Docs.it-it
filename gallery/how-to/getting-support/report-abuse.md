@@ -3,13 +3,13 @@ ms.date: 06/12/2017
 contributor: JKeithB
 keywords: gallery,powershell,cmdlet,psgallery
 title: Segnalare abusi
-ms.openlocfilehash: 49f68ba634644c5d22d38a254b4c8c93ea9374d0
-ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
+ms.openlocfilehash: 70e599a26c6f04312ed7fc188047721bf96fefe2
+ms.sourcegitcommit: 98b7cfd8ad5718efa8e320526ca76c3cc4141d78
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34218332"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50002019"
 ---
 # <a name="report-abuse"></a>Segnalare abusi
 
-Se si rileva un elemento che viola gli elementi sopra elencati, fare clic sul collegamento **Report Abuse** (Segnala abusi) nella pagina dei dettagli dell'elemento e inviare un report.
+Se si rileva un pacchetto che viola gli elementi sopra elencati, fare clic sul collegamento **Report Abuse** (Segnala abusi) nella pagina dei dettagli del pacchetto e inviare un report.

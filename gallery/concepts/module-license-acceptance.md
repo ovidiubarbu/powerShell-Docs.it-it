@@ -3,18 +3,18 @@ ms.date: 06/09/2017
 schema: 2.0.0
 keywords: powershell
 title: Moduli per cui è richiesta l'accettazione della licenza
-ms.openlocfilehash: 93f92f6e83bcf18a40c3d89eb39a154e16ca5063
-ms.sourcegitcommit: 8b076ebde7ef971d7465bab834a3c2a32471ef6f
+ms.openlocfilehash: 369e32d5278a2e1bf1d3f2ae67f670c524b9f878
+ms.sourcegitcommit: 98b7cfd8ad5718efa8e320526ca76c3cc4141d78
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37893111"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50002668"
 ---
 # <a name="modules-requiring-license-acceptance"></a>Moduli per cui è richiesta l'accettazione della licenza
 
 ## <a name="synopsis"></a>RIEPILOGO
 
-Gli uffici legali di alcuni editori di moduli richiedono che i clienti accettino in modo esplicito la licenza prima di installare il modulo da PowerShell Gallery. Se un utente installa, aggiorna o salva un modulo con PowerShellGet, direttamente o come dipendenza per un altro elemento, e tale modulo richiede all'utente di accettare una licenza, l'utente deve confermare l'accettazione della licenza o l'operazione ha esito negativo.
+Gli uffici legali di alcuni editori di moduli richiedono che i clienti accettino in modo esplicito la licenza prima di installare il modulo da PowerShell Gallery. Se un utente installa, aggiorna o salva un modulo con PowerShellGet, direttamente o come dipendenza per un altro pacchetto, e tale modulo richiede all'utente di accettare una licenza, l'utente deve confermare l'accettazione della licenza o l'operazione ha esito negativo.
 
 ## <a name="publish-requirements-for-modules"></a>Requisiti di pubblicazione per i moduli
 
@@ -43,7 +43,7 @@ I moduli che prevedono la richiesta di accettazione della licenza da parte degli
 
 - Durante le operazioni Install/Save/Update, se un modulo dipendente (qualcos'altro dipende dal modulo) richiede l'accettazione della licenza, sarà richiesto il comportamento di accettazione della licenza sopra descritto.
 - Se la versione del modulo è già elencata nel catalogo locale come installata nel sistema, il controllo della licenza non viene eseguito.
-- Durante le operazioni Install/Save/Update, se un modulo dipendente richiede una licenza e la licenza non viene accettata, l'operazione avrà esito negativo e si seguiranno i processi normali per i casi di installazione/salvataggio/aggiornamento non riusciti per l'elemento.
+- Durante le operazioni Install/Save/Update, se un modulo dipendente richiede una licenza e la licenza non viene accettata, l'operazione avrà esito negativo e si seguiranno i processi normali per i casi di installazione/salvataggio/aggiornamento non riusciti per il pacchetto.
 
 ## <a name="impact-on--force"></a>Impatto su -Force
 
@@ -219,6 +219,6 @@ Il modulo viene aggiornato senza alcuna richiesta di accettazione della licenza.
 
 [Richiedere l'accettazione della licenza per gli script](./script-license-acceptance.md)
 
-[Richiedere il supporto dell'accettazione della licenza in PowerShell Gallery](../how-to/working-with-items/items-that-require-license-acceptance.md)
+[Richiedere il supporto dell'accettazione della licenza in PowerShell Gallery](../how-to/working-with-packages/packages-that-require-license-acceptance.md)
 
-[Richiedere l'accettazione della licenza per la distribuzione in Automazione di Azure](../how-to/working-with-items/deploy-to-azure-automation.md)
+[Richiedere l'accettazione della licenza per la distribuzione in Automazione di Azure](../how-to/working-with-packages/deploy-to-azure-automation.md)

@@ -3,21 +3,21 @@ ms.date: 10/17/2017
 contributor: keithb
 keywords: raccolta,powershell,cmdlet,psget
 title: Versioni non definitive degli script
-ms.openlocfilehash: 14ae1968e5ee73260b6eae05b11185069d047e93
-ms.sourcegitcommit: c3f1a83b59484651119630f3089aa51b6e7d4c3c
+ms.openlocfilehash: 4e7eab682008ed57163c51fe3a61a744b347bef2
+ms.sourcegitcommit: 98b7cfd8ad5718efa8e320526ca76c3cc4141d78
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/26/2018
-ms.locfileid: "39268467"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50002736"
 ---
 # <a name="prerelease-versions-of-scripts"></a>Versioni non definitive degli script
 
-A partire dalla versione 1.6.0, PowerShellGet e PowerShell Gallery consentono di contrassegnare le versioni successive alla versione 1.0.0 come versioni non definitive. In precedenza, gli elementi non definitivi potevano avere solo una versione che iniziasse con 0. L'obiettivo di queste funzionalità è quello di offrire un maggior supporto per la convenzione di controllo delle versioni [SemVer v1.0.0](http://semver.org/spec/v1.0.0.html) senza interrompere la compatibilità con le versioni precedenti con PowerShell versioni 3 e successive o le versioni esistenti di PowerShellGet. Questo argomento illustra le funzionalità specifiche degli script. Le funzionalità equivalenti per i moduli sono descritte nell'argomento [Versioni di modulo non definitive](module-prerelease-support.md). Usando queste funzionalità, i server di pubblicazione possono identificare uno script come versione 2.5.0-alpha e rilasciare in seguito una versione pronta per la produzione 2.5.0 che sostituisce la versione non definitiva.
+A partire dalla versione 1.6.0, PowerShellGet e PowerShell Gallery consentono di contrassegnare le versioni successive alla versione 1.0.0 come versioni non definitive. In precedenza, i pacchetti non definitivi potevano avere solo una versione che iniziava con 0. L'obiettivo di queste funzionalità è quello di offrire un maggior supporto per la convenzione di controllo delle versioni [SemVer v1.0.0](http://semver.org/spec/v1.0.0.html) senza interrompere la compatibilità con le versioni precedenti con PowerShell versioni 3 e successive o le versioni esistenti di PowerShellGet. Questo argomento illustra le funzionalità specifiche degli script. Le funzionalità equivalenti per i moduli sono descritte nell'argomento [Versioni di modulo non definitive](module-prerelease-support.md). Usando queste funzionalità, i server di pubblicazione possono identificare uno script come versione 2.5.0-alpha e rilasciare in seguito una versione pronta per la produzione 2.5.0 che sostituisce la versione non definitiva.
 
 In generale, le funzionalità di script non definitivo includono:
 
-- Aggiunta di un suffisso PrereleaseString alla stringa di versione nel manifesto dello script. Quando gli script vengono pubblicati in PowerShell Gallery, i dati vengono estratti dal manifesto e usati per identificare gli elementi di versione non definitiva.
-- L'acquisizione degli elementi di versione non definitiva richiede l'aggiunta del flag -AllowPrerelease ai comandi di PowerShellGet Find-Script, Install-Script, Update-Script e Save-Script. Se il flag non viene specificato, gli elementi di versione non definitiva non vengono visualizzati.
+- Aggiunta di un suffisso PrereleaseString alla stringa di versione nel manifesto dello script. Quando gli script vengono pubblicati in PowerShell Gallery, i dati vengono estratti dal manifesto e usati per identificare i pacchetti in versione non definitiva.
+- L'acquisizione di pacchetti in versione non definitiva richiede l'aggiunta del flag -AllowPrerelease ai comandi di PowerShellGet Find-Script, Install-Script, Update-Script e Save-Script. Se il flag non viene specificato, i pacchetti in versione non definitiva non vengono visualizzati.
 - Le versioni di script visualizzate da Find-Script, Get-InstalledScript e in PowerShell Gallery vengono visualizzate con PrereleaseString, come in 2.5.0-alpha.
 
 Di seguito sono descritti i dettagli delle funzionalità.
@@ -54,9 +54,9 @@ Quando viene usata una versione non definitiva l'ordinamento viene modificato, u
 
 Durante la pubblicazione in PowerShell Gallery, per impostazione predefinita la versione dello script in fase di pubblicazione deve essere successiva a qualsiasi versione pubblicata precedentemente presente in PowerShell Gallery. Un server di pubblicazione può aggiornare la versione 2.5.0-alpha con la versione 2.5.0-beta o con la versione 2.5.0 (senza suffisso di versione non definitiva).
 
-## <a name="finding-and-acquiring-prerelease-items-using-powershellget-commands"></a>Ricerca e acquisizione di elementi di versione non definitiva mediante i comandi di PowerShellGet
+## <a name="finding-and-acquiring-prerelease-packages-using-powershellget-commands"></a>Ricerca e acquisizione di pacchetti in versione non definitiva mediante i comandi di PowerShellGet
 
-L'uso di elementi di versione non definitiva con i comandi di PowerShellGet Find-Script, Install-Script, Update-Script e Save-Script richiede l'aggiunta del flag -AllowPrerelease. Se il flag -AllowPrerelease è specificato, gli elementi di versione non definitiva, se presenti, vengono visualizzati. Se il flag -AllowPrerelease non è specificato, gli elementi di versione non definitiva non vengono visualizzati.
+L'uso di pacchetti in versione non definitiva con i comandi di PowerShellGet Find-Script, Install-Script, Update-Script e Save-Script richiede l'aggiunta del flag -AllowPrerelease. Se il flag -AllowPrerelease è specificato, i pacchetti in versione non definitiva verranno inclusi, se presenti. Se il flag -AllowPrerelease non è specificato, i pacchetti in versione non definitiva non verranno visualizzati.
 
 Le uniche eccezioni nei comandi di script di PowerShellGet sono rappresentate da Get-InstalledScript e da alcuni casi di utilizzo di Uninstall-Script.
 

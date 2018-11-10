@@ -2,19 +2,19 @@
 ms.date: 06/12/2017
 keywords: jea,powershell,sicurezza
 title: Registrazione delle configurazioni JEA
-ms.openlocfilehash: 2c4a8f64c966903a6eb8fcabe4cd25ae7f98b2c4
-ms.sourcegitcommit: e46b868f56f359909ff7c8230b1d1770935cce0e
+ms.openlocfilehash: 160aa95283da57a10aad5fdd4043adb1354a5db5
+ms.sourcegitcommit: 98b7cfd8ad5718efa8e320526ca76c3cc4141d78
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45522855"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50002907"
 ---
 # <a name="registering-jea-configurations"></a>Registrazione delle configurazioni JEA
 
 > Si applica a: Windows PowerShell 5.0
 
-L'ultimo passaggio prima di poter usare JEA dopo aver creato le [funzionalità del ruolo](role-capabilities.md) e i [file di configurazione sessione](session-configurations.md) consiste nel registrare l'endpoint JEA.
-Questo processo si applica alle informazioni sulla configurazione sessione per il sistema e rende gli endpoint disponibili per gli utenti e i motori di automazione.
+Dopo aver creato le [funzionalità del ruolo](role-capabilities.md) e i [file di configurazione sessione](session-configurations.md), l'ultimo passaggio prima di poter usare JEA consiste nel registrare l'endpoint JEA.
+La registrazione dell'endpoint JEA nel sistema rende l'endpoint disponibile per l'uso da parte degli utenti e dei motori di automazione.
 
 ## <a name="single-machine-configuration"></a>Configurazione di un computer singolo
 
@@ -25,7 +25,7 @@ Prima di iniziare, verificare che siano soddisfatti i prerequisiti seguenti:
 - È stato creato e verificato un file di configurazione sessione.
 - L'utente che registra la configurazione JEA ha diritti di amministratore sui sistemi.
 
-Sarà anche necessario selezionare un nome per l'endpoint JEA.
+È anche necessario selezionare un nome per l'endpoint JEA.
 Il nome dell'endpoint JEA è necessario quando gli utenti vogliono connettersi al sistema tramite JEA.
 È possibile usare il cmdlet [Get-PSSessionConfiguration](https://msdn.microsoft.com/powershell/reference/5.1/microsoft.powershell.core/get-pssessionconfiguration) per verificare i nomi degli endpoint esistenti nel sistema.
 Gli endpoint che iniziano con "microsoft" sono in genere inclusi in Windows.
@@ -48,12 +48,12 @@ Register-PSSessionConfiguration -Path .\MyJEAConfig.pssc -Name 'JEAMaintenance' 
 ```
 
 > [!WARNING]
-> Il comando riportato di sopra riavvierà il servizio WinRM nel sistema.
+> Il comando riportato di sopra riavvia il servizio WinRM nel sistema.
 > Questo comando termina tutte le sessioni di comunicazione remota di PowerShell e anche eventuali configurazioni DSC in corso.
 > Per evitare di interrompere operazioni aziendali in corso, è consigliabile che ogni computer di produzione sia offline prima di eseguire il comando.
 
 Se la registrazione ha esito positivo, è possibile [usare JEA](using-jea.md).
-È possibile eliminare il file di configurazione sessione in qualsiasi momento perché non viene più usato dopo la registrazione.
+È possibile eliminare il file di configurazione sessione in qualsiasi momento perché non viene più usato dopo la registrazione dell'endpoint.
 
 ## <a name="multi-machine-configuration-with-dsc"></a>Configurazione di più computer con DSC
 
@@ -67,7 +67,7 @@ Per distribuire JEA con DSC, è necessario assicurarsi che siano soddisfatti i p
 - È stata scaricata la [risorse DSC di JEA](https://github.com/PowerShell/JEA/tree/master/DSC%20Resource)
 
 In un computer di destinazione (o in un server di pull, se usato), creare una configurazione DSC per l'endpoint JEA.
-In questa configurazione, si userà la risorsa DSC di Just Enough Administration (JEA) per impostare il file di configurazione sessione e la risorsa File per copiare le funzionalità di ruolo dalla condivisione file.
+In questa configurazione, si usa la risorsa DSC di Just Enough Administration (JEA) per impostare il file di configurazione sessione e la risorsa File per copiare le funzionalità di ruolo dalla condivisione file.
 
 Le proprietà seguenti possono essere configurate tramite la risorsa DSC:
 - Definizioni dei ruoli
@@ -113,12 +113,12 @@ Configuration JEAMaintenance
 Questa configurazione può quindi essere applicata in un sistema [chiamando direttamente Gestione configurazione locale](https://msdn.microsoft.com/powershell/dsc/metaconfig) o aggiornando la [configurazione server di pull](https://msdn.microsoft.com/powershell/dsc/pullserver).
 
 La risorsa DSC consente anche di sostituire l'endpoint di comunicazione remota Microsoft.PowerShell predefinito.
-In questo caso, la risorsa registrerà automaticamente un endpoint di backup non vincolato denominato "Microsoft.PowerShell.Restricted" con il valore predefinito WinRM ACL (consentendo ai membri del gruppo Utenti gestione remota e Administrators locale di accedere all'endpoint).
+In questo caso, la risorsa registra automaticamente un endpoint di backup non vincolato denominato "Microsoft.PowerShell.Restricted" con il valore predefinito WinRM ACL (consentendo ai membri del gruppo Utenti gestione remota e Administrators locale di accedere all'endpoint).
 
 ## <a name="unregistering-jea-configurations"></a>Annullamento delle configurazioni JEA
 
 Per rimuovere un endpoint JEA da un sistema, usare il cmdlet [Unregister-PSSessionConfiguration](https://msdn.microsoft.com/powershell/reference/5.1/microsoft.powershell.core/Unregister-PSSessionConfiguration).
-L'annullamento della registrazione di un endpoint JEA impedirà agli utenti nuovi di creare sessioni JEA nuove nel sistema.
+L'annullamento della registrazione di un endpoint JEA impedisce ai nuovi utenti di creare sessioni JEA nuove nel sistema.
 Ciò consente anche di aggiornare una configurazione JEA registrando di nuovo un file di configurazione sessione aggiornato con lo stesso nome di endpoint.
 
 ```powershell
@@ -127,8 +127,8 @@ Unregister-PSSessionConfiguration -Name 'ContosoMaintenance' -Force
 ```
 
 > [!WARNING]
-> L'annullamento della registrazione di un endpoint JEA riavvierà il servizio WinRM.
-> Questa operazione interromperà la maggior parte delle operazioni di gestione remota in corso, incluse altre sessioni di PowerShell, le chiamate WMI e alcuni strumenti di gestione.
+> L'annullamento della registrazione di un endpoint JEA causa il riavvio del servizio WinRM.
+> Questa operazione interrompe la maggior parte delle operazioni di gestione remota in corso, incluse altre sessioni di PowerShell, le chiamate WMI e alcuni strumenti di gestione.
 > Annullare solo la registrazione degli endpoint di PowerShell nelle finestre di manutenzione pianificata.
 
 ## <a name="next-steps"></a>Passaggi successivi

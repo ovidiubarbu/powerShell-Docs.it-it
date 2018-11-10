@@ -2,12 +2,12 @@
 title: Uso di Visual Studio Code per sviluppare PowerShell
 description: Uso di Visual Studio Code per sviluppare PowerShell
 ms.date: 08/06/2018
-ms.openlocfilehash: 8fbaba826624199d06fe4fdc785998e0135d7fe7
-ms.sourcegitcommit: 59727f71dc204785a1bcdedc02716d8340a77aeb
+ms.openlocfilehash: 9c06ce72c39d08e75fcb7e5cf9d5f92ae5dd8ed9
+ms.sourcegitcommit: e76665315fd928bf85210778f1fea2be15264fea
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43134101"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "50225795"
 ---
 # <a name="using-visual-studio-code-for-powershell-development"></a>Uso di Visual Studio Code per sviluppare PowerShell
 
@@ -124,12 +124,11 @@ Ad esempio, è possibile aggiungere una configurazione per:
 - avviare una sessione interattiva nel debugger
 - collegare il debugger a un processo host di PowerShell
 
-  Seguire questi passaggi per creare il file di configurazione di debug:
+Seguire questi passaggi per creare il file di configurazione di debug:
 
   1. Aprire la vista **Debug** premendo **CTRL+MAIUSC+D** (**CMD+MAIUSC+D** su Mac).
   2. Premere l'icona a forma di ingranaggio **Configura** sulla barra degli strumenti.
-  3. Visual Studio Code richiederà di **selezionare l'ambiente**.
-  Scegliere **PowerShell**.
+  3. Visual Studio Code richiederà di **selezionare l'ambiente**. Scegliere **PowerShell**.
 
   Quando si esegue questa operazione, Visual Studio Code crea una directory e un file ".vscode\launch.json" nella radice della cartella dell'area di lavoro.
   Qui è archiviata la configurazione di debug. Se i file si trovano in un repository Git, in genere si vuole eseguire il commit del file launch.json.
@@ -171,9 +170,7 @@ Ad esempio, è possibile aggiungere una configurazione per:
 
   Una volta stabilita la configurazione di debug, è possibile selezionare la configurazione da usare durante una sessione di debug selezionandone una dal menu a discesa relativo alla configurazione nella visualizzazione della barra degli strumenti **Debug**.
 
-  Esistono alcuni blog che possono risultare utili per iniziare subito con l'estensione di PowerShell per Visual Studio Code
-
-Visual Studio Code:
+Esistono alcuni blog che possono risultare utili per iniziare subito con l'estensione di PowerShell per Visual Studio Code:
 
 - [Estensione PowerShell][ps-extension]
 - [Scrivere ed eseguire il debug degli script di PowerShell in Visual Studio Code][debug]

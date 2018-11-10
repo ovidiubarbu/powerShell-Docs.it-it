@@ -3,25 +3,25 @@ ms.date: 06/12/2017
 contributor: JKeithB
 keywords: raccolta,powershell,cmdlet,psgallery, psget
 title: PowerShell Gallery
-ms.openlocfilehash: dc7e8dd7e4d96d8424a62cb3256c3164b63a3684
-ms.sourcegitcommit: 01d6985ed190a222e9da1da41596f524f607a5bc
+ms.openlocfilehash: d3e3b9d8bb3d6cefd3a3bfe79b012bb1dc1d8a2d
+ms.sourcegitcommit: e76665315fd928bf85210778f1fea2be15264fea
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34482931"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "50225619"
 ---
 # <a name="the-powershell-gallery"></a>PowerShell Gallery
 
 PowerShell Gallery è il repository centrale per i contenuti PowerShell. Al suo interno è possibile trovare utili moduli di PowerShell che contengono comandi di PowerShell o risorse DSC (Desired State Configuration).
-Sono anche disponibili script di PowerShell, alcuni dei quali possono contenere flussi di lavoro di PowerShell e descrivono e stabiliscono la sequenza di un set di attività. Alcuni di questi elementi vengono creati da Microsoft, altri dalla community di PowerShell.
+Sono anche disponibili script di PowerShell, alcuni dei quali possono contenere flussi di lavoro di PowerShell e descrivono e stabiliscono la sequenza di un set di attività. Alcuni di questi pacchetti sono creati da Microsoft, altri dalla community di PowerShell.
 
 ## <a name="powershellget-overview"></a>Panoramica di PowerShellGet
 
-Il modulo PowerShellGet contiene i cmdlet per l'individuazione, l'installazione, l'aggiornamento e la pubblicazione di elementi PowerShell quali moduli, risorse DSC, capacità del ruolo e script da [PowerShell Gallery](https://www.PowerShellGallery.com) e altri repository privati.
+Il modulo PowerShellGet contiene i cmdlet per l'individuazione, l'installazione, l'aggiornamento e la pubblicazione di pacchetti di PowerShell che contengono artefatti come moduli, risorse DSC, capacità del ruolo e script da [PowerShell Gallery](https://www.PowerShellGallery.com) e altri repository privati.
 
 ## <a name="getting-started-with-the-gallery"></a>Introduzione a PowerShell Gallery
 
-L'installazione di elementi di Gallery richiede la versione più recente del modulo PowerShellGet.
+L'installazione di pacchetti da PowerShell Gallery richiede la versione più recente del modulo PowerShellGet.
 Per istruzioni complete, vedere [Installazione di PowerShellGet](installing-psget.md).
 
 Per altre informazioni su come usare i comandi PowerShellGet con PowerShell Gallery, consultare la pagina [Introduzione](getting-started.md). È inoltre possibile eseguire *Update-Help -Module PowerShellGet* per installare la Guida locale per tali comandi.
@@ -36,13 +36,14 @@ Il modulo **PowerShellGet** richiede **Windows PowerShell 3.0 o versione success
 - Windows 8.1 Pro
 - Windows 8.1 Enterprise
 - Windows 7 SP1
+- Windows Server 2019
 - Windows Server 2016
 - Windows Server 2012 R2
 - Windows Server 2008 R2 SP1
 
-**PowerShellGet** richiede anche .NET Framework 4.5 o versione successiva. È possibile installare .NET Framework 4.5 o versione successiva da [qui](https://msdn.microsoft.com/library/5a4x27ek.aspx).
+**PowerShellGet** richiede .NET Framework 4.5 o versione successiva. È possibile installare .NET Framework 4.5 o versione successiva da [qui](https://msdn.microsoft.com/library/5a4x27ek.aspx).
 
-**PowerShell Core** supporta molti sistemi operativi. Vedere [questo articolo](https://blogs.msdn.microsoft.com/powershell/2018/01/10/powershell-core-6-0-generally-available-ga-and-supported/) per un elenco completo.
+Poiché **PowerShell Core** è multipiattaforma e questo significa che funziona in Windows, Linux e MacOS, anche **PowerShellGet** è disponibile in tali sistemi. Per un elenco completo dei sistemi supportati da **PowerShell Core** vedere [Installazione di varie versioni di PowerShell](/powershell/scripting/setup/installing-powershell).
 
 Molti moduli ospitati nella raccolta supporteranno sistemi operativi diversi e hanno requisiti aggiuntivi. Per altre informazioni, vedere la documentazione per i moduli.
 
