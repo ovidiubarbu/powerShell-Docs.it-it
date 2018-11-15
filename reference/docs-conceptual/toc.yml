@@ -181,10 +181,8 @@ items:
     href: getting-started/cookbooks/changing-computer-state.md
   - name: Raccolta di informazioni sui computer
     href: getting-started/cookbooks/collecting-information-about-computers.md
-  - name: Creazione di una casella di input personalizzata
-    href: getting-started/cookbooks/creating-a-custom-input-box.md
-  - name: Creazione di un controllo grafico di selezione data
-    href: getting-started/cookbooks/creating-a-graphical-date-picker.md
+  - name: Decodificare un comando PowerShell da un processo in esecuzione
+    href: getting-started/cookbooks/Decode-PowerShell-Command-from-a-Running-Process.md
   - name: Gestione del percorso corrente
     href: getting-started/cookbooks/managing-current-location.md
   - name: Gestione dei processi con i cmdlet Process
@@ -195,16 +193,18 @@ items:
     href: getting-started/cookbooks/managing-windows-powershell-drives.md
   - name: Manipolazione diretta di elementi
     href: getting-started/cookbooks/manipulating-items-directly.md
+  - name: Creazione di una casella di input personalizzata
+    href: getting-started/cookbooks/creating-a-custom-input-box.md
+  - name: Creazione di un controllo grafico di selezione data
+    href: getting-started/cookbooks/creating-a-graphical-date-picker.md
   - name: Caselle di riepilogo a selezione multipla
     href: getting-started/cookbooks/multiple-selection-list-boxes.md
-  - name: Altri oggetti di scripting utili
-    href: getting-started/cookbooks/other-useful-scripting-objects.md
+  - name: Selezione di elementi in una casella di riepilogo
+    href: getting-started/cookbooks/selecting-items-from-a-list-box.md
   - name: Esecuzione di attività di rete
     href: getting-started/cookbooks/performing-networking-tasks.md
   - name: Reindirizzamento dei dati con i cmdlet Out
     href: getting-started/cookbooks/redirecting-data-with-out---cmdlets.md
-  - name: Selezione di elementi in una casella di riepilogo
-    href: getting-started/cookbooks/selecting-items-from-a-list-box.md
   - name: Uso dei comandi Format per modificare la visualizzazione dell'output
     href: getting-started/cookbooks/using-format-commands-to-change-output-view.md
   - name: Visualizzazione della struttura degli oggetti (Get-Member)
@@ -238,13 +238,15 @@ items:
     href: getting-started/cookbooks/working-with-registry-keys.md
   - name: Gestione delle installazioni di software
     href: getting-started/cookbooks/working-with-software-installations.md
+  - name: Altri oggetti di scripting utili
+    href: getting-started/cookbooks/other-useful-scripting-objects.md
   - name: Appendice 1 Alias per la compatibilità
     href: getting-started/cookbooks/appendix-1---compatibility-aliases.md
   - name: Appendice 2 Creazione di un collegamento personalizzato per PowerShell
     href: getting-started/cookbooks/appendix-2---creating-a-custom-powershell-shortcut.md
-ms.openlocfilehash: e1cc2802354cbb58a8d4cc19903a62339aa333b5
-ms.sourcegitcommit: e76665315fd928bf85210778f1fea2be15264fea
+ms.openlocfilehash: 4a1d2db118f9f26da16a57208d801305087b58f2
+ms.sourcegitcommit: 91786b03704fbd2d185f674df0bc67faddfb6288
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "50225744"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51619144"
