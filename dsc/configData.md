@@ -2,12 +2,12 @@
 ms.date: 06/12/2017
 keywords: dsc,powershell,configurazione,installazione
 title: Uso dei dati di configurazione
-ms.openlocfilehash: 9b0b213e2d71bfdb473fd98f8080de5c874c70e2
-ms.sourcegitcommit: 68093cc12a7a22c53d11ce7d33c18622921a0dd1
-ms.translationtype: HT
+ms.openlocfilehash: f2d25b9ced805fb4c91378ebfe840104eb6ce52a
+ms.sourcegitcommit: 91786b03704fbd2d185f674df0bc67faddfb6288
+ms.translationtype: MTE95
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36940379"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51619178"
 ---
 # <a name="using-configuration-data-in-dsc"></a>Uso dei dati di configurazione in DSC
 
@@ -185,12 +185,13 @@ MyDscConfiguration -ConfigurationData .\MyData.psd1
 
 ## <a name="using-configurationdata-variables-in-a-configuration"></a>Uso delle variabili ConfigurationData in una configurazione
 
-DSC offre tre variabili speciali che possono essere usate in uno script di configurazione: **$AllNodes**, **$Node** e **$ConfigurationData**.
+DSC offre le seguenti variabili speciali che possono essere utilizzate in uno script di configurazione:
 
 - **$AllNodes** si riferisce all'intera raccolta di nodi definita in **ConfigurationData**. È possibile filtrare la raccolta **AllNodes** usando **.Where()** e **.Foreach()**.
+- **ConfigurationData** fa riferimento all'intera tabella hash che viene passata come parametro durante la compilazione di una configurazione.
+- **MyTypeName** contiene il [configuration](configurations.md) la variabile viene usata nel nome. Ad esempio, nella configurazione `MyDscConfiguration`, il `$MyTypeName` avrà un valore di `MyDscConfiguration`.
 - **Node** fa riferimento a una particolare voce della raccolta **AllNodes** dopo che viene filtrato usando **.Where()** o **.Foreach()**.
   - Sono disponibili altre informazioni su questi metodi in [about_arrays](/powershell/reference/3.0/Microsoft.PowerShell.Core/About/about_Arrays.md)
-- **ConfigurationData** fa riferimento all'intera tabella hash che viene passata come parametro durante la compilazione di una configurazione.
 
 ## <a name="using-non-node-data"></a>Uso di dati non specifici per un nodo
 
