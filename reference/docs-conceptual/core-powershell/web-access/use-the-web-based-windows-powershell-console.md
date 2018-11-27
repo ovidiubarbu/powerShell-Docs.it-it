@@ -2,12 +2,12 @@
 ms.date: 08/23/2017
 keywords: powershell,cmdlet
 title: usare la console di windows powershell basata sul web
-ms.openlocfilehash: 5d29a6f97fddf4b329fcc7097cf7d40d47d22cca
-ms.sourcegitcommit: 01d6985ed190a222e9da1da41596f524f607a5bc
-ms.translationtype: HT
+ms.openlocfilehash: 2bb9c6ef486ef32012a15f9890997cf2fa6a3a0b
+ms.sourcegitcommit: 221b7daab7f597f8b2e4864cf9b5d9dda9b9879b
+ms.translationtype: MTE95
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34483152"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52320653"
 ---
 # <a name="use-the-web-based-windows-powershell-console"></a>Usare la console di Windows PowerShell basata sul Web
 
@@ -169,7 +169,7 @@ ALT+F7 | Cancella l'elenco della cronologia dei comandi.
 
     Se si prova a creare una nuova sessione o a usarla con Accesso Web Windows PowerShell, si potrebbe riscontrare una limitazione al doppio hop, ovvero la connessione a un secondo computer dalla prima connessione. Accesso Web Windows PowerShell usa uno spazio di esecuzione remoto e attualmente **PowerShell.exe** non consente di stabilire una connessione remota a un secondo computer da uno spazio di esecuzione remoto. Se si prova a connettersi a un secondo computer remoto da una connessione esistente usando il cmdlet **Enter-PSSession**, potrebbero essere generati diversi errori, ad esempio un messaggio simile a "Non è possibile ottenere risorse di rete".
 
-    Per evitare errori relativi al doppio hop, l'amministratore deve configurare l'autenticazione CredSSP nell'ambiente di rete dell'organizzazione. Per altre informazioni sulla configurazione dell'autenticazione CredSSP, vedere il blog relativo a [CredSSP per la comunicazione remota con un secondo hop](http://blogs.msdn.com/b/powershell/archive/2008/06/05/credssp-for-second-hop-remoting-part-i-domain-account.aspx) nel sito Web Microsoft. È anche possibile fornire credenziali esplicite quando si vuole gestire un secondo computer remoto. È improbabile che le credenziali implicite consentano il secondo hop.
+    Per evitare errori relativi al doppio hop, l'amministratore deve configurare l'autenticazione CredSSP nell'ambiente di rete dell'organizzazione. Per altre informazioni sulla configurazione dell'autenticazione CredSSP, vedere il blog relativo a [CredSSP per la comunicazione remota con un secondo hop](https://blogs.msdn.com/b/powershell/archive/2008/06/05/credssp-for-second-hop-remoting-part-i-domain-account.aspx) nel sito Web Microsoft. È anche possibile fornire credenziali esplicite quando si vuole gestire un secondo computer remoto. È improbabile che le credenziali implicite consentano il secondo hop.
 
 - Comunicazione remota
 
@@ -224,12 +224,12 @@ ALT+F7 | Cancella l'elenco della cronologia dei comandi.
 
         Si può modificare l'altezza della console in modo simile.
 
-        Altri esempi per personalizzare la visualizzazione della console sono disponibili nel [Blog del Team di Windows PowerShell](http://blogs.msdn.com/b/powershell/).
+        Altri esempi per personalizzare la visualizzazione della console sono disponibili nel [Blog del Team di Windows PowerShell](https://blogs.msdn.com/b/powershell/).
 
 ## <a name="see-also"></a>Vedere anche
 
 - [Informazioni di riferimento per i cmdlet di Windows PowerShell](https://technet.microsoft.com/library/ee407531(ws.10).aspx)
 - [Windows PowerShell su Microsoft TechNet](https://technet.microsoft.com/library/bb978526.aspx)
-- [Archivio di Script Center su Technet](http://gallery.technet.microsoft.com/scriptcenter)
+- [Archivio di Script Center su Technet](https://gallery.technet.microsoft.com/scriptcenter)
 - [Script Center: blog "Hey, Scripting Guy!"](https://technet.microsoft.com/scriptcenter)
-- [Blog del team di Windows PowerShell](http://blogs.msdn.com/b/powershell/)
+- [Blog del team di Windows PowerShell](https://blogs.msdn.com/b/powershell/)

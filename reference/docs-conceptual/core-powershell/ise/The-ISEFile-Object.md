@@ -3,12 +3,12 @@ ms.date: 06/05/2017
 keywords: powershell,cmdlet
 title: Oggetto ISEFile
 ms.assetid: 1c6d91f3-c556-42a2-a017-79b6b7b4b7db
-ms.openlocfilehash: 276e8f04a827e18999b5b3ecb08f47de4f4b23b1
-ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
-ms.translationtype: HT
+ms.openlocfilehash: 24549720b8bc35435882533b0eb138de432ede65
+ms.sourcegitcommit: 221b7daab7f597f8b2e4864cf9b5d9dda9b9879b
+ms.translationtype: MTE95
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2018
-ms.locfileid: "30951393"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52320874"
 ---
 # <a name="the-isefile-object"></a>Oggetto ISEFile
 
@@ -22,7 +22,7 @@ Supportato in Windows PowerShell ISE 2.0 e versioni successive.
 
 Salva il file su disco.
 
-**\[saveEncoding\]** - [System.Text.Encoding](http://msdn.microsoft.com/library/system.text.encoding.aspx) facoltativo: parametro di codifica caratteri facoltativo da usare per il file salvato. Il valore predefinito è **UTF8**.
+**\[saveEncoding\]** - [System.Text.Encoding](https://msdn.microsoft.com/library/system.text.encoding.aspx) facoltativo: parametro di codifica caratteri facoltativo da usare per il file salvato. Il valore predefinito è **UTF8**.
 
 ### <a name="exceptions"></a>Eccezioni
 
@@ -48,7 +48,7 @@ Salva il file con il nome file e la codifica specificati.
 
 **filename** - Stringa Nome da usare per salvare il file.
 
-**\[saveEncoding\]** - [System.Text.Encoding](http://msdn.microsoft.com/library/system.text.encoding.aspx) facoltativo: parametro di codifica caratteri facoltativo da usare per il file salvato. Il valore predefinito è **UTF8**.
+**\[saveEncoding\]** - [System.Text.Encoding](https://msdn.microsoft.com/library/system.text.encoding.aspx) facoltativo: parametro di codifica caratteri facoltativo da usare per il file salvato. Il valore predefinito è **UTF8**.
 
 ### <a name="exceptions"></a>Eccezioni
 

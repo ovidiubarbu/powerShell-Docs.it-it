@@ -3,16 +3,16 @@ ms.date: 08/24/2018
 keywords: powershell,cmdlet
 title: Imparare i nomi usati in PowerShell
 ms.assetid: b4d0fd22-8298-4ee6-82ae-9b6f2907c986
-ms.openlocfilehash: a4f7e12c2b30e8ae6d1cf5a125d613d2d7558c34
-ms.sourcegitcommit: 6749f67c32e05999e10deb9d45f90f45ac21a599
-ms.translationtype: HT
+ms.openlocfilehash: 6ed1f99513f00c174147876e1982c0d12869cacb
+ms.sourcegitcommit: 221b7daab7f597f8b2e4864cf9b5d9dda9b9879b
+ms.translationtype: MTE95
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48851256"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52320483"
 ---
 # <a name="learning-powershell-names"></a>Imparare i nomi usati in PowerShell
 
-L'apprendimento dei nomi dei comandi e dei parametri richiede un notevole investimento di tempo con la maggior parte delle interfacce della riga di comando. Il problema è l'assenza di modelli generali. La memorizzazione è l'unico modo per apprendere i comandi e i parametri usati più di frequente.
+L'apprendimento dei nomi dei comandi e dei parametri richiede un notevole investimento di tempo con la maggior parte delle interfacce della riga di comando. Il problema è l'assenza di modelli generali. La memorizzazione delle è l'unico modo per apprendere i comandi e parametri che è necessario usare regolarmente.
 
 Quando si usa un nuovo comando o parametro, non è sempre possibile usare gli elementi già noti. È necessario trovare e apprendere un nuovo nome. Normalmente, le interfacce della riga di comando iniziano con un piccolo set di strumenti e quindi crescono attraverso aggiunte incrementali. Per questo motivo, è facile comprendere come non vi sia una struttura standard.
 Questo approccio sembra logico per i nomi di comando, poiché ogni comando è uno strumento separato. PowerShell usa un metodo migliore per gestire i nomi di comando.

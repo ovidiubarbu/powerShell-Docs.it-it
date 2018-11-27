@@ -2,12 +2,12 @@
 ms.date: 06/05/2017
 keywords: powershell,cmdlet
 title: WinRMSecurity
-ms.openlocfilehash: 43e77067e301cdf1b792cb0d24b72ee0abb3349a
-ms.sourcegitcommit: 01d6985ed190a222e9da1da41596f524f607a5bc
-ms.translationtype: HT
+ms.openlocfilehash: 59717e4806857e6760de523335bbee6028da8e84
+ms.sourcegitcommit: 221b7daab7f597f8b2e4864cf9b5d9dda9b9879b
+ms.translationtype: MTE95
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34482948"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52320551"
 ---
 # <a name="powershell-remoting-security-considerations"></a>Considerazioni sulla sicurezza della comunicazione remota di PowerShell
 
@@ -15,7 +15,7 @@ La comunicazione remota di PowerShell è il metodo consigliato per gestire i sis
 
 ## <a name="what-is-powershell-remoting"></a>Informazioni sulla comunicazione remota di PowerShell
 
-La comunicazione remota di PowerShell usa la [Gestione remota Windows (WinRM)](https://msdn.microsoft.com/library/windows/desktop/aa384426.aspx), ovvero l'implementazione Microsoft del protocollo [Web Services for Management (WS-Management)](http://www.dmtf.org/sites/default/files/standards/documents/DSP0226_1.2.0.pdf), per consentire agli utenti di eseguire i comandi di PowerShell nei computer remoti. È possibile trovare altre informazioni sull'uso della comunicazione remota di PowerShell in [Esecuzione di comandi remoti](https://technet.microsoft.com/library/dd819505.aspx).
+La comunicazione remota di PowerShell usa la [Gestione remota Windows (WinRM)](https://msdn.microsoft.com/library/windows/desktop/aa384426.aspx), ovvero l'implementazione Microsoft del protocollo [Web Services for Management (WS-Management)](https://www.dmtf.org/sites/default/files/standards/documents/DSP0226_1.2.0.pdf), per consentire agli utenti di eseguire i comandi di PowerShell nei computer remoti. È possibile trovare altre informazioni sull'uso della comunicazione remota di PowerShell in [Esecuzione di comandi remoti](https://technet.microsoft.com/library/dd819505.aspx).
 
 La comunicazione remota di PowerShell non corrisponde all'uso del parametro **ComputerName** di un cmdlet per l'esecuzione in un computer remoto che usa RPC (Remote Procedure Call) come protocollo sottostante.
 

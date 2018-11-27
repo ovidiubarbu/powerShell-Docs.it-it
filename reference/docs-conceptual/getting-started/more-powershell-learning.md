@@ -2,12 +2,12 @@
 ms.date: 06/05/2017
 keywords: powershell,cmdlet
 title: Altre risorse di formazione per PowerShell
-ms.openlocfilehash: 17f96620bbb483ca580d351584d5650a6734b876
-ms.sourcegitcommit: 59e568ac9fa8ba28e2c96932b7c84d4a855fed2f
-ms.translationtype: HT
+ms.openlocfilehash: da9dfeca3d2d2cfadf6ace0aa98007d16a548aae
+ms.sourcegitcommit: 221b7daab7f597f8b2e4864cf9b5d9dda9b9879b
+ms.translationtype: MTE95
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46289209"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52320415"
 ---
 # <a name="more-powershell-learning"></a>Altre risorse di formazione per PowerShell
 
@@ -33,23 +33,23 @@ Oltre alla Guida disponibile dalla riga di comando, le risorse seguenti offrono 
 
 #### <a name="windows-powershell-essentials-for-the-busy-admin-series"></a>Serie Windows PowerShell Essentials for the Busy Admin
 
-- [Video su PowerShell: motivi per imparare a usare Windows PowerShell Parte 1](http://dlbmodigital.microsoft.com/webcasts/wmv/23976_Dnl_L.wmv)
-- [Video sulla pipeline: come combinare i comandi di Windows PowerShell per divertirsi e guadagnare Parte 2](http://dlbmodigital.microsoft.com/webcasts/wmv/23977_Dnl_L.wmv)
-- [Video sui provider: informazioni sui provider di Windows PowerShell Parte 3](http://dlbmodigital.microsoft.com/webcasts/wmv/23978_Dnl_L.wmv)
-- [Video sugli eventi: i registri eventi di Windows PowerShell Parte 4](http://dlbmodigital.microsoft.com/webcasts/wmv/23979_Dnl_L.wmv)
-- [Video sulle funzionalità remote: uso di Windows PowerShell per gestire il Desktop remoto Parte 5](http://dlbmodigital.microsoft.com/webcasts/wmv/23980_Dnl_L.wmv)
+- [Video su PowerShell: motivi per imparare a usare Windows PowerShell Parte 1](https://dlbmodigital.microsoft.com/webcasts/wmv/23976_Dnl_L.wmv)
+- [Video sulla pipeline: come combinare i comandi di Windows PowerShell per divertirsi e guadagnare Parte 2](https://dlbmodigital.microsoft.com/webcasts/wmv/23977_Dnl_L.wmv)
+- [Video sui provider: informazioni sui provider di Windows PowerShell Parte 3](https://dlbmodigital.microsoft.com/webcasts/wmv/23978_Dnl_L.wmv)
+- [Video sugli eventi: i registri eventi di Windows PowerShell Parte 4](https://dlbmodigital.microsoft.com/webcasts/wmv/23979_Dnl_L.wmv)
+- [Video sulle funzionalità remote: uso di Windows PowerShell per gestire il Desktop remoto Parte 5](https://dlbmodigital.microsoft.com/webcasts/wmv/23980_Dnl_L.wmv)
 
 #### <a name="learn-it-now-before-its-an-emergency"></a>Apprenderne con calma il funzionamento prima che diventi un requisito essenziale
 
-- [Windows PowerShell: apprenderne con calma il funzionamento prima che diventi un requisito essenziale - Parte 1](http://dlbmodigital.microsoft.com/webcasts/wmv/1032481530_Dnl_L.wmv)
-- [Windows PowerShell: apprenderne con calma il funzionamento prima che diventi un requisito essenziale - Parte 2](http://dlbmodigital.microsoft.com/webcasts/wmv/1032481542_Dnl_L.wmv)
-- [Windows PowerShell: apprenderne con calma il funzionamento prima che diventi un requisito essenziale - Parte 3](http://dlbmodigital.microsoft.com/webcasts/wmv/1032481548_Dnl_L.wmv)
-- [Windows PowerShell: apprenderne con calma il funzionamento prima che diventi un requisito essenziale - Parte 4](http://dlbmodigital.microsoft.com/webcasts/wmv/1032481552_Dnl_L.wmv)
-- [Windows PowerShell: apprenderne con calma il funzionamento prima che diventi un requisito essenziale - Parte 5](http://dlbmodigital.microsoft.com/webcasts/wmv/1032481554_Dnl_L.wmv)
+- [Windows PowerShell: apprenderne con calma il funzionamento prima che diventi un requisito essenziale - Parte 1](https://dlbmodigital.microsoft.com/webcasts/wmv/1032481530_Dnl_L.wmv)
+- [Windows PowerShell: apprenderne con calma il funzionamento prima che diventi un requisito essenziale - Parte 2](https://dlbmodigital.microsoft.com/webcasts/wmv/1032481542_Dnl_L.wmv)
+- [Windows PowerShell: apprenderne con calma il funzionamento prima che diventi un requisito essenziale - Parte 3](https://dlbmodigital.microsoft.com/webcasts/wmv/1032481548_Dnl_L.wmv)
+- [Windows PowerShell: apprenderne con calma il funzionamento prima che diventi un requisito essenziale - Parte 4](https://dlbmodigital.microsoft.com/webcasts/wmv/1032481552_Dnl_L.wmv)
+- [Windows PowerShell: apprenderne con calma il funzionamento prima che diventi un requisito essenziale - Parte 5](https://dlbmodigital.microsoft.com/webcasts/wmv/1032481554_Dnl_L.wmv)
 
 ## <a name="resources-for-windows-powershell-developers"></a>Risorse per sviluppatori di Windows PowerShell
 
 Le risorse seguenti consentono agli sviluppatori di creare moduli, funzioni, cmdlet e applicazioni di hosting di Windows PowerShell.
 
-- [Windows PowerShell SDK](http://go.microsoft.com/fwlink/p/?LinkID=89595). Fornisce contenuti di riferimento.
-- [Manuale del programmatore di Windows PowerShell](http://go.microsoft.com/fwlink/p/?LinkID=89596). Fornisce esercitazioni. Contiene anche informazioni sui concetti di base di Windows PowerShell.
+- [Windows PowerShell SDK](https://go.microsoft.com/fwlink/p/?LinkID=89595). Fornisce contenuti di riferimento.
+- [Manuale del programmatore di Windows PowerShell](https://go.microsoft.com/fwlink/p/?LinkID=89596). Fornisce esercitazioni. Contiene anche informazioni sui concetti di base di Windows PowerShell.

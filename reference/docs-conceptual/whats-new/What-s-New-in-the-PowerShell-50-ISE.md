@@ -3,12 +3,12 @@ ms.date: 06/05/2017
 keywords: powershell,cmdlet
 title: Novità di PowerShell 5.0 ISE
 ms.assetid: 38648d47-7c27-4b37-a40e-ad29948519c2
-ms.openlocfilehash: 35b825cfa6ea720d0af3537c5d1b16c5ececb701
-ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
-ms.translationtype: HT
+ms.openlocfilehash: f05e3f3f95c8ceec6e843b8a1c79e6f092e1b87b
+ms.sourcegitcommit: 221b7daab7f597f8b2e4864cf9b5d9dda9b9879b
+ms.translationtype: MTE95
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2018
-ms.locfileid: "30953583"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52320585"
 ---
 # <a name="what39s-new-in-the-windows-powershell-ise"></a>Novità di Windows PowerShell ISE
 Questo argomento illustra le funzionalità nuove e aggiornate introdotte nelle versioni di Windows PowerShell Integrated Scripting Environment (ISE).
@@ -63,7 +63,7 @@ Per usare frammenti di codice in Windows PowerShell 3.0 o versioni successive, s
 ### <a name="add-on-tools"></a>Strumenti aggiuntivi
 **Funzionalità aggiunta in PowerShell 3.0**
 
-Windows PowerShell ISE supporta ora strumenti aggiuntivi, ovvero controlli Windows Presentation Foundation (WPF) aggiunti tramite il modello a oggetti. Gli strumenti aggiuntivi possono essere visualizzati nella console in un riquadro verticale o orizzontale. Più strumenti aggiuntivi di un riquadro vengono visualizzati come controllo a schede. È inoltre possibile aggiungere o rimuovere strumenti aggiuntivi prodotti da fornitori non Microsoft. Per altre informazioni su come importare o rimuovere strumenti aggiuntivi, vedere [Operazioni di Windows PowerShell ISE](http://technet.microsoft.com/library/cc732148.aspx).
+Windows PowerShell ISE supporta ora strumenti aggiuntivi, ovvero controlli Windows Presentation Foundation (WPF) aggiunti tramite il modello a oggetti. Gli strumenti aggiuntivi possono essere visualizzati nella console in un riquadro verticale o orizzontale. Più strumenti aggiuntivi di un riquadro vengono visualizzati come controllo a schede. È inoltre possibile aggiungere o rimuovere strumenti aggiuntivi prodotti da fornitori non Microsoft. Per altre informazioni su come importare o rimuovere strumenti aggiuntivi, vedere [Operazioni di Windows PowerShell ISE](https://technet.microsoft.com/library/cc732148.aspx).
 
 **Valore aggiunto da queste modifiche**
 
@@ -224,5 +224,5 @@ Show-Command è una novità di Windows PowerShell ISE 3.0.
 Per altre informazioni sull'uso di Windows PowerShell ISE in Windows PowerShell, vedere i collegamenti seguenti.
 
 - [Esplorazione di Windows PowerShell ISE (Integrated Scripting Environment)](../getting-started/fundamental/exploring-the-windows-powershell-ise.md)
-- [ISE nel Wiki di TechNet](http://social.technet.microsoft.com/wiki/search/searchresults.aspx?q=ISE)
-- [Script Center](http://technet.microsoft.com/scriptcenter/default)
+- [ISE nel Wiki di TechNet](https://social.technet.microsoft.com/wiki/search/searchresults.aspx?q=ISE)
+- [Script Center](https://technet.microsoft.com/scriptcenter/default)

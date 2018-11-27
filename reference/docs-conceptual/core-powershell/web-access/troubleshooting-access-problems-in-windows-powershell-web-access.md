@@ -2,12 +2,12 @@
 ms.date: 08/23/2017
 keywords: powershell,cmdlet
 title: risoluzione dei problemi di accesso in accesso web windows powershell
-ms.openlocfilehash: ef476d8e386e5380cb2c9dda69180dfce8748bf4
-ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
-ms.translationtype: HT
+ms.openlocfilehash: c9b98c7a1685679eb88b718de0351154cb84e92e
+ms.sourcegitcommit: 221b7daab7f597f8b2e4864cf9b5d9dda9b9879b
+ms.translationtype: MTE95
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2018
-ms.locfileid: "30953447"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52320993"
 ---
 # <a name="troubleshooting-access-problems-in-windows-powershell-web-access"></a>Risoluzione dei problemi di accesso in Accesso Web Windows PowerShell
 
@@ -49,7 +49,7 @@ Questo problema può verificarsi per gli utenti che effettuano l'accesso con un 
 
 #### <a name="workaround"></a>Soluzione alternativa
 
-1. [Installare ed eseguire Internet Explorer 10](http://ie.microsoft.com/testdrive/info/downloads/Default.html)
+1. [Installare ed eseguire Internet Explorer 10](https://ie.microsoft.com/testdrive/info/downloads/Default.html)
 1. Modificare la **modalità documento** di Internet Explorer impostando gli standard *IE10*.
    1. Premere **F12** per aprire la console di Strumenti di sviluppo
    1. In Internet Explorer 10 fare clic su **Modalità browser** e selezionare *Internet Explorer 10*.

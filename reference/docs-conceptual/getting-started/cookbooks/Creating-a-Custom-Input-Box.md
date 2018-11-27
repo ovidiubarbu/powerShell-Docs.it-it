@@ -3,12 +3,12 @@ ms.date: 06/05/2017
 keywords: powershell,cmdlet
 title: Creazione di una casella di input personalizzata
 ms.assetid: 0b12e56c-299f-40ee-afbf-d30d23ed2565
-ms.openlocfilehash: 681a75a28a8fb03eb4442d5e20b32b25a337d540
-ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
-ms.translationtype: HT
+ms.openlocfilehash: 2d04ad6df65cdb4ff13d136dea47bbba6a01f3a2
+ms.sourcegitcommit: 221b7daab7f597f8b2e4864cf9b5d9dda9b9879b
+ms.translationtype: MTE95
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2018
-ms.locfileid: "30954756"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52320398"
 ---
 # <a name="creating-a-custom-input-box"></a>Creazione di una casella di input personalizzata
 
@@ -120,7 +120,7 @@ $label.Text = 'Please enter the information in the space below:'
 $form.Controls.Add($label)
 ```
 
-Aggiungere il controllo, in questo caso una casella di testo, che consente agli utenti di specificare le informazioni descritte nel testo dell'etichetta. Oltre alle caselle di testo, è possibile applicare molti altri controlli. Per altre informazioni, vedere [Spazio dei nomi System.Windows.Forms](http://msdn.microsoft.com/library/k50ex0x9(v=vs.110).aspx) in MSDN.
+Aggiungere il controllo, in questo caso una casella di testo, che consente agli utenti di specificare le informazioni descritte nel testo dell'etichetta. Oltre alle caselle di testo, è possibile applicare molti altri controlli. Per altre informazioni, vedere [Spazio dei nomi System.Windows.Forms](https://msdn.microsoft.com/library/k50ex0x9(v=vs.110).aspx) in MSDN.
 
 ```powershell
 $textBox = New-Object System.Windows.Forms.TextBox
@@ -152,13 +152,13 @@ Infine, il codice all'interno del blocco **If** indica a Windows cosa fare con i
 ```powershell
 if ($result -eq [System.Windows.Forms.DialogResult]::OK)
 {
-    $x = $textBox.Text
-    $x
+    $x = $textBox.Text
+    $x
 }
 ```
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Blog Hey Scripting Guy: perché questi esempi di GUI di PowerShell non funzionano?](http://go.microsoft.com/fwlink/?LinkId=506644)
+- [Blog Hey Scripting Guy: perché questi esempi di GUI di PowerShell non funzionano?](https://go.microsoft.com/fwlink/?LinkId=506644)
 - [GitHub: WinFormsExampleUpdates di Dave Wyatt](https://github.com/dlwyatt/WinFormsExampleUpdates)
-- [Suggerimento della settimana su Windows PowerShell: Creazione di una casella di input personalizzata](http://technet.microsoft.com/library/ff730941.aspx)
+- [Suggerimento della settimana su Windows PowerShell: Creazione di una casella di input personalizzata](https://technet.microsoft.com/library/ff730941.aspx)

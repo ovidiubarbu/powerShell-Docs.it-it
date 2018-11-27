@@ -3,17 +3,17 @@ ms.date: 08/27/2018
 keywords: powershell,cmdlet
 title: Uso di variabili per l'archiviazione di oggetti
 ms.assetid: b1688d73-c173-491e-9ba6-6d0c1cc852de
-ms.openlocfilehash: f4254199facb914c68a487b281b30070c35550a1
-ms.sourcegitcommit: c170a1608d20d3c925d79c35fa208f650d014146
-ms.translationtype: HT
+ms.openlocfilehash: d166ec58dc658c1b134030c9a9592249ee40d4f5
+ms.sourcegitcommit: 221b7daab7f597f8b2e4864cf9b5d9dda9b9879b
+ms.translationtype: MTE95
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "43353219"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52320959"
 ---
 # <a name="using-variables-to-store-objects"></a>Uso di variabili per l'archiviazione di oggetti
 
 PowerShell opera sugli oggetti. PowerShell permette di creare oggetti denominati noti come variabili.
-I nomi delle variabili possono includere il carattere di sottolineatura e qualsiasi carattere alfanumerico. Se usata in PowerShell, una variabile viene sempre specificata tramite il carattere \$ seguito dal nome della variabile.
+I nomi delle variabili possono includere il carattere di sottolineatura e caratteri alfanumerici. Se usata in PowerShell, una variabile viene sempre specificata tramite il carattere \$ seguito dal nome della variabile.
 
 ## <a name="creating-a-variable"></a>Creazione di una variabile
 
