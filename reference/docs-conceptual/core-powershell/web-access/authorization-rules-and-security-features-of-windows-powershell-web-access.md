@@ -2,12 +2,12 @@
 ms.date: 06/27/2017
 keywords: powershell,cmdlet
 title: Regole di autorizzazione e funzionalità di sicurezza di Accesso Web Windows PowerShell
-ms.openlocfilehash: e9bed3900263a51b1b8236a3c3430154a5d11886
-ms.sourcegitcommit: 31a221d982305c7f999b1afeb15e3629e9620de8
-ms.translationtype: HT
+ms.openlocfilehash: 95c61d3a0431cda9dee738d1c9f5ec843c1209f3
+ms.sourcegitcommit: 221b7daab7f597f8b2e4864cf9b5d9dda9b9879b
+ms.translationtype: MTE95
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "43133102"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52321080"
 ---
 # <a name="authorization-rules-and-security-features-of-windows-powershell-web-access"></a>Regole di autorizzazione e funzionalità di sicurezza di Accesso Web Windows PowerShell
 
@@ -20,19 +20,19 @@ Accesso Web di Windows PowerShell in Windows Server 2012 R2 e Windows Server 201
 ## <a name="configuring-authorization-rules-and-site-security"></a>Configurazione delle regole di autorizzazione e della sicurezza del sito
 
 Dopo che Accesso Web Windows PowerShell è stato installato e il gateway è stato configurato, gli utenti possono aprire la pagina di accesso in un browser, ma non possono accedere finché l'amministratore di Accesso Web Windows PowerShell non concede esplicitamente l'accesso. Il controllo di accesso di Accesso Web Windows PowerShell viene gestito con il set di cmdlet di Windows PowerShell descritto nella tabella seguente. Non esiste un'interfaccia grafica paragonabile per aggiungere o gestire le regole di autorizzazione.
-Vedere [Windows PowerShell Web Access Cmdlets](cmdlets/web-access-cmdlets.md) (Cmdlet di Accesso Web Windows PowerShell).
+Vedere [Windows PowerShell Web Access Cmdlets](/powershell/module/powershellwebaccess/?view=winserver2012r2-ps) (Cmdlet di Accesso Web Windows PowerShell).
 
 Gli amministratori possono definire `{0-n}` regole di autenticazione per Accesso Web Windows PowerShell. Poiché la sicurezza predefinita è di tipo restrittivo, l'assenza di regole di autenticazione implica che nessun utente può accedere ad alcun elemento.
 
-I cmdlet [Add-PswaAuthorizationRule](cmdlets/add-pswaauthorizationrule.md) e [Test-PswaAuthorizationRule](cmdlets/test-pswaauthorizationrule.md) in Windows Server 2012 R2 includono ora un parametro Credential che consente di aggiungere e testare le regole di autorizzazione di Accesso Web Windows PowerShell da un computer remoto o in una sessione di Accesso Web Windows PowerShell attiva. Come con gli altri cmdlet di Windows PowerShell che includono un parametro Credential, è possibile specificare un oggetto PSCredential come valore del parametro. Per creare un oggetto PSCredential che contiene le credenziali da passare a un computer remoto, eseguire il cmdlet [Get-Credential](/powershell/module/microsoft.powershell.security/Get-Credential).
+I cmdlet [Add-PswaAuthorizationRule](/powershell/module/powershellwebaccess/add-pswaauthorizationrule?view=winserver2012r2-ps) e [Test-PswaAuthorizationRule](/powershell/module/powershellwebaccess/test-pswaauthorizationrule?view=winserver2012r2-ps) in Windows Server 2012 R2 includono ora un parametro Credential che consente di aggiungere e testare le regole di autorizzazione di Accesso Web Windows PowerShell da un computer remoto o in una sessione di Accesso Web Windows PowerShell attiva. Come con gli altri cmdlet di Windows PowerShell che includono un parametro Credential, è possibile specificare un oggetto PSCredential come valore del parametro. Per creare un oggetto PSCredential che contiene le credenziali da passare a un computer remoto, eseguire il cmdlet [Get-Credential](/powershell/module/microsoft.powershell.security/Get-Credential).
 
-Le regole di autenticazione Accesso Web Windows PowerShell sono costituite da elenchi di operazioni consentite. Ogni regola definisce una connessione consentita fra utenti, computer di destinazione e specifiche [configurazioni di sessione](/powershell/reference/5.1/microsoft.powershell.core/about/about_session_configurations) di Windows PowerShell, denominate anche endpoint o _spazi di esecuzione_, nei computer di destinazione specificati.
-Per una spiegazione degli **spazi di esecuzione** vedere [Beginning Use of PowerShell Runspaces](https://blogs.technet.microsoft.com/heyscriptingguy/2015/11/26/beginning-use-of-powershell-runspaces-part-1/) (Uso iniziale degli spazi di esecuzione di PowerShell)
+Le regole di autenticazione Accesso Web Windows PowerShell sono costituite da elenchi di operazioni consentite. Ogni regola definisce una connessione consentita fra utenti, computer di destinazione e specifiche [configurazioni di sessione](/powershell/module/microsoft.powershell.core/about/about_session_configurations?view=powershell-5.1) di Windows PowerShell, denominate anche endpoint o _spazi di esecuzione_, nei computer di destinazione specificati.
+Per una spiegazione degli **spazi di esecuzione** vedere [Uso iniziale degli spazi di esecuzione di PowerShell](https://blogs.technet.microsoft.com/heyscriptingguy/2015/11/26/beginning-use-of-powershell-runspaces-part-1/)
 
 > [!IMPORTANT]
 > Affinché un utente possa ottenere l'accesso, è sufficiente che una sola regola risulti vera. Se dalla console basata sul Web si consente a un utente di accedere a un computer, con accesso al linguaggio completo o solo ai cmdlet di Windows PowerShell per la gestione remota, tale utente potrà accedere (o passare) ad altri computer connessi al primo computer di destinazione. Il modo più sicuro per configurare Accesso Web Windows PowerShell consiste nel limitare l'accesso degli utenti alle sole configurazioni di sessione vincolate che consentono di eseguire specifiche attività che devono essere in genere eseguite in modalità remota.
 
-I cmdlet illustrati in [Windows PowerShell Web Access Cmdlets](cmdlets/web-access-cmdlets.md) (Cmdlet di Accesso Web Windows PowerShell) consentono di creare un set di regole di accesso, che viene usato per autorizzare un utente nel gateway di Accesso Web Windows PowerShell. Le regole sono diverse dagli elenchi di controllo di accesso (ACL) nei computer di destinazione e forniscono un livello di sicurezza aggiuntivo per l'accesso Web. Ulteriori informazioni sulla sicurezza verranno fornite nelle sezioni successive.
+I cmdlet illustrati in [Windows PowerShell Web Access Cmdlets](/powershell/module/powershellwebaccess/?view=winserver2012r2-ps) (Cmdlet di Accesso Web Windows PowerShell) consentono di creare un set di regole di accesso, che viene usato per autorizzare un utente nel gateway di Accesso Web Windows PowerShell. Le regole sono diverse dagli elenchi di controllo di accesso (ACL) nei computer di destinazione e forniscono un livello di sicurezza aggiuntivo per l'accesso Web. Ulteriori informazioni sulla sicurezza verranno fornite nelle sezioni successive.
 
 Se un utente non supera tali livelli di sicurezza, riceve un messaggio di "accesso negato" nella finestra del browser. Anche se i dettagli relativi alla sicurezza vengono registrati nel server gateway, agli utenti finali non viene comunicato il numero dei livelli di sicurezza superati o il livello a cui si è verificato l'errore di accesso o autenticazione.
 
@@ -229,4 +229,4 @@ Se il server gateway esegue Windows Server 2012 R2, Accesso Web Windows PowerShe
 
 [about_Session_Configurations](https://technet.microsoft.com/library/dd819508.aspx)
 
-[Windows PowerShell Web Access Cmdlets](cmdlets/web-access-cmdlets.md) (Cmdlet di Accesso Web Windows PowerShell)
+[Windows PowerShell Web Access Cmdlets](/powershell/module/powershellwebaccess/?view=winserver2012r2-ps) (Cmdlet di Accesso Web Windows PowerShell)

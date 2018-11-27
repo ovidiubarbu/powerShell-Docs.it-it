@@ -3,12 +3,12 @@ ms.date: 06/05/2017
 keywords: powershell,cmdlet
 title: Creazione di un controllo grafico di selezione data
 ms.assetid: c1cb722c-41e9-4baa-be83-59b4653222e9
-ms.openlocfilehash: 3727c90c314a6fc1b3a338ec60e44259f153d954
-ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
-ms.translationtype: HT
+ms.openlocfilehash: 6dd43a3b1f4c67633ad1755de3db88eb8c6772c8
+ms.sourcegitcommit: 221b7daab7f597f8b2e4864cf9b5d9dda9b9879b
+ms.translationtype: MTE95
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2018
-ms.locfileid: "30954841"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52320330"
 ---
 # <a name="creating-a-graphical-date-picker"></a>Creazione di un controllo grafico di selezione data
 
@@ -137,6 +137,6 @@ if ($result -eq [System.Windows.Forms.DialogResult]::OK)
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Blog Hey Scripting Guy: perché questi esempi di GUI di PowerShell non funzionano?](http://go.microsoft.com/fwlink/?LinkId=506644)
+- [Blog Hey Scripting Guy: perché questi esempi di GUI di PowerShell non funzionano?](https://go.microsoft.com/fwlink/?LinkId=506644)
 - [GitHub: WinFormsExampleUpdates di Dave Wyatt](https://github.com/dlwyatt/WinFormsExampleUpdates)
-- [Suggerimento della settimana su Windows PowerShell: Creazione di un controllo grafico di selezione data](http://technet.microsoft.com/library/ff730942.aspx)
+- [Suggerimento della settimana su Windows PowerShell: Creazione di un controllo grafico di selezione data](https://technet.microsoft.com/library/ff730942.aspx)

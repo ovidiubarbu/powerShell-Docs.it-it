@@ -3,16 +3,16 @@ ms.date: 06/05/2017
 keywords: powershell,cmdlet
 title: Tasti di scelta rapida per Windows PowerShell ISE
 ms.assetid: 8328b946-0f02-4ef4-ac28-2743a1b4043b
-ms.openlocfilehash: e17fee4cf0cc8ac7aa0bb36acde3b452919312d0
-ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
-ms.translationtype: HT
+ms.openlocfilehash: 1abae849ce599b586357fd2a8db46c608932bd4e
+ms.sourcegitcommit: 221b7daab7f597f8b2e4864cf9b5d9dda9b9879b
+ms.translationtype: MTE95
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2018
-ms.locfileid: "30953821"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52320806"
 ---
 # <a name="keyboard-shortcuts-for-the-windows-powershell-ise"></a>Tasti di scelta rapida per Windows PowerShell ISE
 
-Usare i tasti di scelta rapida seguenti per eseguire azioni in Windows PowerShell® Integrated Scripting Environment (ISE). Windows PowerShell ISE è disponibile nell'ambito dei sistemi operativi Windows Server e Windows Client, ma può anche essere installato in alcuni sistemi operativi Windows precedenti come parte del [pacchetto di download di Windows Management Framework 4.0](http://go.microsoft.com/fwlink/?LinkID=293881).
+Usare i tasti di scelta rapida seguenti per eseguire azioni in Windows PowerShell® Integrated Scripting Environment (ISE). Windows PowerShell ISE è disponibile nell'ambito dei sistemi operativi Windows Server e Windows Client, ma può anche essere installato in alcuni sistemi operativi Windows precedenti come parte del [pacchetto di download di Windows Management Framework 4.0](https://go.microsoft.com/fwlink/?LinkID=293881).
 
 ## <a name="keyboard-shortcuts-for-editing-text"></a>Tasti di scelta rapida per la modifica del testo
 
@@ -120,4 +120,4 @@ Usare i tasti di scelta rapida seguenti per eseguire azioni in Windows PowerShel
 
 ## <a name="see-also"></a>Vedere anche
 
-- [PowerShell Magazine: l'elenco completo dei tasti di scelta rapida di Windows PowerShell ISE](http://www.powershellmagazine.com/2013/01/29/the-complete-list-of-powershell-ise-3-0-keyboard-shortcuts/)
+- [PowerShell Magazine: l'elenco completo dei tasti di scelta rapida di Windows PowerShell ISE](https://www.powershellmagazine.com/2013/01/29/the-complete-list-of-powershell-ise-3-0-keyboard-shortcuts/)

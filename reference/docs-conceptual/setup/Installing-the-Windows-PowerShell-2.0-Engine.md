@@ -3,12 +3,12 @@ ms.date: 06/05/2017
 keywords: powershell,cmdlet
 title: Installazione del motore di Windows PowerShell 2.0
 ms.assetid: 82928f2b-f96a-4ae6-a0d0-6e7b181da308
-ms.openlocfilehash: 0b3282a1a67886509e749af0f499c47fe7a99411
-ms.sourcegitcommit: cf195b090b3223fa4917206dfec7f0b603873cdf
-ms.translationtype: HT
+ms.openlocfilehash: fb5ed1a5508ddca6925e9281a53caf5e6701870f
+ms.sourcegitcommit: 221b7daab7f597f8b2e4864cf9b5d9dda9b9879b
+ms.translationtype: MTE95
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2018
-ms.locfileid: "30952342"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52320500"
 ---
 # <a name="installing-the-windows-powershell-20-engine"></a>Installazione del motore di Windows PowerShell 2.0
 Questo argomento illustra come installare il motore di Windows PowerShell 2.0.
@@ -70,7 +70,7 @@ Usare le procedure seguenti per aggiungere le funzionalità Motore di Windows Po
 Per informazioni sull'avvio del motore di Windows PowerShell 2.0, vedere [Avvio del motore di Windows PowerShell 2.0](Starting-the-Windows-PowerShell-2.0-Engine.md).
 
 ## <a name="on-earlier-systems"></a>Nei sistemi precedenti
-Il pacchetto [Windows Management Framework 4.0](http://go.microsoft.com/fwlink/?LinkID=293881) che installa Windows PowerShell 4.0 in Windows 7, Windows Server 2008 R2 e Windows Server 2012 include il motore di Windows PowerShell 2.0. Il motore di Windows PowerShell 2.0 è abilitato e pronto per l'uso, se necessario, senza altri interventi di installazione, configurazione o impostazione.
+Il pacchetto [Windows Management Framework 4.0](https://go.microsoft.com/fwlink/?LinkID=293881) che installa Windows PowerShell 4.0 in Windows 7, Windows Server 2008 R2 e Windows Server 2012 include il motore di Windows PowerShell 2.0. Il motore di Windows PowerShell 2.0 è abilitato e pronto per l'uso, se necessario, senza altri interventi di installazione, configurazione o impostazione.
 
 Il pacchetto Windows Management Framework 3.0 che installa Windows PowerShell 3.0 in Windows 7, Windows Server 2008 R2 e Windows Server 2008 include il motore di Windows PowerShell 2.0. Il motore di Windows PowerShell 2.0 è abilitato e pronto per l'uso, se necessario, senza altri interventi di installazione, configurazione o impostazione.
 
