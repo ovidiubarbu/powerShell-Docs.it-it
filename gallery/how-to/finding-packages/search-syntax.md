@@ -3,22 +3,23 @@ ms.date: 06/12/2017
 contributor: JKeithB
 keywords: gallery,powershell,cmdlet,psgallery
 title: Sintassi di ricerca di PowerShell Gallery
-ms.openlocfilehash: 9aadb6771c85845cc3fa05cb56f0194b060d1c1b
-ms.sourcegitcommit: 98b7cfd8ad5718efa8e320526ca76c3cc4141d78
-ms.translationtype: HT
+ms.openlocfilehash: aabcaa1f1b5b641ab5033c9ba2e358477c84a23b
+ms.sourcegitcommit: e24525046dd37166b9d83eeecdc534726316f429
+ms.translationtype: MTE95
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50003778"
+ms.lasthandoff: 12/01/2018
+ms.locfileid: "52742857"
 ---
 # <a name="gallery-search-syntax"></a>Sintassi di ricerca di PowerShell Gallery
 
-PowerShell Gallery offre una casella di ricerca di testo in cui è possibile usare parole, frasi ed espressioni di parole chiave per restringere i risultati della ricerca.
+È possibile cercare la PowerShell Gallery usando il [sito web della raccolta di PowerShell](https://www.powershellgallery.com/).
+Sito web di PowerShell Gallery offre searchbox un testo in cui è possibile usare parole, frasi ed espressioni di parole chiave per restringere i risultati della ricerca.
 
 ## <a name="search-by-keywords"></a>Ricerca per parole chiave
 
     dsc azure sql
 
-La funzionalità di ricerca troverà e restituirà tutti i documenti rilevanti che contengono tutte e 3 le parole chiave.
+Ricerca tenta di trovare documenti rilevanti che contengono tutte le parole 3 chiave e restituire documenti corrispondenti.
 
 ## <a name="search-using-phrases-and-keywords"></a>Ricerca per frasi e parole chiave
 
@@ -37,10 +38,9 @@ Qual è la differenza tra ID e Title? ID è il nome usato nella console. Title �
 
 ## <a name="examples"></a>Esempi
 
-    ID:"PSReadline"
-    id:"AzureRM.Profile"
-
-trova i pacchetti con "PSReadline" o "AzureRM.Profile" nei rispettivi campi ID.
+    ID:PSReadline
+    
+Trova tutti i pacchetti con un ID contenente "PSReadline".
 
     Id:"AzureRM.Profile"
 
@@ -50,40 +50,35 @@ Il filtro 'Id' è una corrispondenza della sottostringa, quindi se si cerca:
 
     Id:"azure"
 
-si ottengono risultati come 'AzureRM.Profile' e 'Azure.Storage'.
+In questo modo i risultati che includono azurerm. Profile ' e 'Storage'.
 
-È possibile cercare anche più parole chiave in un singolo campo. Oppure combinare e associare i campi.
+È possibile cercare anche più parole chiave in un singolo campo. 
 
     id:azure tags:intellisense
-    id:azure id:storage
 
-È anche possibile eseguire ricerche di frasi:
+Ed è possibile eseguire ricerche di frasi usando le virgolette doppie:
 
     id:"azure.storage"
 
-
 Per cercare tutti i pacchetti con tag DSC.
 
-    Tags:"DSC"
+    Tags:DSC
 
 Per cercare tutti i pacchetti con la funzione specificata.
 
-    Functions:"Update-AzureRM"
+    Functions:Get-TreeSize
 
 Per cercare tutti i pacchetti con il cmdlet specificato.
 
-    Cmdlets:"Get-AzureRmEnvironment"
+    Cmdlets:Get-AzureRmEnvironment
 
 Per cercare tutti i pacchetti con il nome di risorsa DSC specificato.
 
-    DscResources:"xArchive"
+    DscResources:xArchive
 
 Per cercare tutti i pacchetti con il valore PowerShellVersion specificato
 
-    PowerShellVersion:"5.0"
-    PowerShellVersion:"3.0"
-    PowerShellVersion:"2.0"
-
+    PowerShellVersion:2.0
 
 Infine, se si usa un campo non supportato, ad esempio 'commands', il campo verrà semplicemente ignorato e la ricerca verrà eseguita su tutti i campi. Quindi, la query seguente
 

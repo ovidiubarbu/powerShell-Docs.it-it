@@ -3,16 +3,16 @@ ms.date: 06/12/2017
 contributor: JKeithB
 keywords: gallery,powershell,cmdlet,psgallery
 title: Introduzione a PowerShell Gallery
-ms.openlocfilehash: 85b0a754aba25d850dc918024419318554f92b33
-ms.sourcegitcommit: e76665315fd928bf85210778f1fea2be15264fea
-ms.translationtype: HT
+ms.openlocfilehash: c8beba3009e462ce52cdecd34fc0313d9234f289
+ms.sourcegitcommit: 1082b13115c5c5be4b76574ba55307b3e567983f
+ms.translationtype: MTE95
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "50225676"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52576890"
 ---
 # <a name="getting-started-with-the-powershell-gallery"></a>Introduzione a PowerShell Gallery
 
-Il modo appropriato per installare pacchetti di PowerShell Gallery consiste nell'usare i cmdlet inclusi nel modulo [PowerShellGet](/powershell/module/powershellget). Non è necessario eseguire l'accesso per scaricare elementi da PowerShell Gallery.
+PowerShell Gallery è un repository di pacchetti che contiene gli script, moduli e le risorse DSC, è possibile scaricare e usare. Si usano i cmdlet di [PowerShellGet](/powershell/module/powershellget) module per installare i pacchetti da PowerShell Gallery. Non è necessario eseguire l'accesso per scaricare elementi da PowerShell Gallery.
 
 > [!NOTE]
 > È possibile scaricare un pacchetto direttamente da PowerShell Gallery, ma non è un approccio consigliato.
@@ -20,9 +20,9 @@ Il modo appropriato per installare pacchetti di PowerShell Gallery consiste nell
 
 ## <a name="discovering-packages-from-the-powershell-gallery"></a>Individuazione di pacchetti da PowerShell Gallery
 
-È possibile trovare pacchetti in PowerShell Gallery usando il controllo **Ricerca** in questo sito Web o sfogliando le pagine Moduli e Script. Per trovare pacchetti in PowerShell Gallery, è anche possibile eseguire i cmdlet [Find-Module][] e [Find-Script][] (a seconda dal tipo di elemento) con `-Repository PSGallery`.
+È possibile trovare i pacchetti in PowerShell Gallery usando il **ricerca** controllo in di PowerShell Gallery [home page del](https://www.powershellgallery.com), o sfogliando i moduli e script dal [pagina pacchetti ](https://www.powershellgallery.com/packages). È anche possibile trovare i pacchetti da PowerShell Gallery eseguendo il [Find-Module][], [Find-DscResource], e [Find-Script][] cmdlet, a seconda del tipo di pacchetto, con `-Repository PSGallery`.
 
-Per filtrare i risultati dalla raccolta è possibile usare i parametri seguenti:
+È possibile filtrare i risultati dalla raccolta usando i parametri seguenti:
 
 - Nome
 - AllVersions
@@ -75,15 +75,15 @@ Per installare una versione precedente del pacchetto, aggiungere il parametro `-
 
 ### <a name="deploy"></a>Distribuire
 
-Per distribuire un pacchetto da PowerShell Gallery in Automazione di Azure, fare clic su **Deploy to Azure Automation** (Distribuisci in Automazione di Azure) nella pagina dei dettagli del pacchetto. Si verrà reindirizzati al portale di gestione di Azure, a cui si accede usando le credenziali del proprio account di Azure. Se si distribuiscono pacchetti con dipendenze, verranno distribuite tutte le dipendenze in Automazione di Azure. Il pulsante 'Deploy to Azure Automation' (Distribuisci in Automazione di Azure) può essere disabilitato aggiungendo il tag **AzureAutomationNotSupported** ai metadati del pacchetto.
+Per distribuire un pacchetto da PowerShell Gallery in automazione di Azure, fare clic su **automazione di Azure**, quindi fare clic su **Deploy to Azure Automation** nella pagina dei dettagli del pacchetto. Si verrà reindirizzati al portale di gestione di Azure in cui accedere usando le credenziali dell'account Azure. Si noti che la distribuzione di pacchetti con dipendenze distribuisce tutte le dipendenze in automazione di Azure. Il pulsante 'Deploy to Azure Automation' (Distribuisci in Automazione di Azure) può essere disabilitato aggiungendo il tag **AzureAutomationNotSupported** ai metadati del pacchetto.
 
 Per altre informazioni su Automazione di Azure, vedere la documentazione di [Automazione di Azure](/azure/automation).
 
 ## <a name="updating-packages-from-the-powershell-gallery"></a>Aggiornamento dei pacchetti da PowerShell Gallery
 
-Per aggiornare i pacchetti installati da PowerShell Gallery eseguire il cmdlet [Update-Module][] o [Update-Script][]. Quando viene eseguito senza parametri aggiuntivi, [Update-Module][] prova ad aggiornare ogni modulo installato eseguendo [Install-Module][]. Per aggiornare i moduli in modo selettivo aggiungere il parametro `-Name`.
+Per aggiornare i pacchetti installati da PowerShell Gallery eseguire il cmdlet [Update-Module][] o [Update-Script][]. Quando viene eseguito senza parametri aggiuntivi, [] [Update-Module] tenta di aggiornare tutti i moduli installati eseguendo [Install-Module][]. Per aggiornare i moduli in modo selettivo aggiungere il parametro `-Name`. 
 
-In modo analogo, anche [Update-Script][] eseguito senza parametri aggiuntivi prova ad aggiornare ogni script installato eseguendo [Install-Script][]. Per aggiornare gli script in modo selettivo aggiungere il parametro `-Name`.
+Analogamente, quando viene eseguito senza parametri aggiuntivi, [] [Update-Script] tenta anche di aggiornare tutti gli script installati eseguendo [Install-Script][]. Per aggiornare gli script in modo selettivo aggiungere il parametro `-Name`.
 
 ## <a name="list-packages-that-you-have-installed-from-the-powershell-gallery"></a>Ottenere l'elenco dei pacchetti installati da PowerShell Gallery
 

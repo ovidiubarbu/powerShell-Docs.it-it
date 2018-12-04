@@ -3,16 +3,16 @@ ms.date: 09/11/2018
 contributor: JKeithB
 keywords: raccolta,powershell,psgallery
 title: Download manuale del pacchetto
-ms.openlocfilehash: 0952aa4ec474850af5219fb2e0e9ee3e954b0f9a
-ms.sourcegitcommit: 98b7cfd8ad5718efa8e320526ca76c3cc4141d78
-ms.translationtype: HT
+ms.openlocfilehash: 57baa14089b803f58c42ccb54553ecace841e34b
+ms.sourcegitcommit: e24525046dd37166b9d83eeecdc534726316f429
+ms.translationtype: MTE95
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50003773"
+ms.lasthandoff: 12/01/2018
+ms.locfileid: "52742823"
 ---
 # <a name="manual-package-download"></a>Download manuale del pacchetto
 
-Powershell Gallery supporta il download di un pacchetto direttamente dal sito Web, senza usare i cmdlet PowerShellGet. Il pacchetto verrà scaricato come file di pacchetto NuGet (NUPKG), che si può facilmente copiare in un repository interno.
+Powershell Gallery supporta il download di un pacchetto direttamente dal sito Web, senza usare i cmdlet PowerShellGet. È possibile scaricare qualsiasi pacchetto come file di pacchetto (con estensione nupkg) NuGet, che è quindi possibile copiare in un repository interno.
 
 > [!NOTE]
 > Il download manuale del pacchetto **non** deve essere inteso come sostituzione del cmdlet Install-Module.
@@ -45,7 +45,7 @@ L'approccio più semplice consiste nel rimuovere gli elementi specifici di NuGet
 1. Estrarre il contenuto del pacchetto NuGet in una cartella locale.
 2. Eliminare gli elementi specifici di NuGet dalla cartella.
 3. Rinominare la cartella. Il nome della cartella predefinita è in genere `<name>.<version>`. La versione può includere "-prerelease" se il modulo è contrassegnato come versione non definitiva. Rinominare la cartella usando solo il nome del modulo. Ad esempio, "azurerm.storage.5.0.4-preview" diventa "azurerm.storage".
-4. Copiare la cartella in PSModulePath.
+4. Copiare la cartella in una delle cartelle nel `$env:PSModulePath value`. `$env:PSModulePath` è un set delimitato da punto e virgola dei percorsi in cui dovrebbe essere PowerShell per i moduli.
 
 > [!IMPORTANT]
 > Il download manuale non include le dipendenze richieste dal modulo. Se il pacchetto ha dipendenze, devono essere installate nel sistema affinché questo modulo funzioni correttamente. PowerShell Gallery visualizza tutte le dipendenze richieste dal pacchetto.
