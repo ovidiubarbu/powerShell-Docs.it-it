@@ -2,12 +2,12 @@
 ms.date: 06/05/2017
 keywords: powershell,cmdlet
 title: Novità di Windows PowerShell 5.0
-ms.openlocfilehash: 78304b0eac6e58e43bffc3abb7059a1e4b02de23
-ms.sourcegitcommit: 221b7daab7f597f8b2e4864cf9b5d9dda9b9879b
+ms.openlocfilehash: 9bd18b37b53890713faeeabc634876e5f48725da
+ms.sourcegitcommit: 7ed6ff9a3ce0b8b485d12dc2f5107c23d4b6e68b
 ms.translationtype: MTE95
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52320721"
+ms.lasthandoff: 12/06/2018
+ms.locfileid: "52978896"
 ---
 # <a name="whats-new-in-windows-powershell-50"></a>Novità di Windows PowerShell 5.0
 Windows PowerShell 5.0 include nuove funzionalità significative che ne estendono e migliorano l'uso e consentono di controllare e gestire gli ambienti Windows in modo più semplice e completo.
@@ -38,9 +38,9 @@ Molti aggiornamenti e miglioramenti per Windows PowerShell Desired State Configu
   - [New-DscChecksum](https://technet.microsoft.com/library/dn521622.aspx) supporta ora i percorsi UNC.
 
 - Nuovi cmdlet nel modulo [PSDesiredStateConfiguration](https://technet.microsoft.com/library/dn391651(v=wps.640).aspx)
-  - [Update-DscConfiguration](https://technet.microsoft.com/library/mt143541(v=wps.630).aspx): esegue un controllo del server di pull su richiesta.
-  - [Stop-DscConfiguration](https://technet.microsoft.com/library/mt143542(v=wps.630).aspx): arresta una configurazione già in esecuzione.
-  - [Remove-DscConfigurationDocument](https://technet.microsoft.com/library/mt143544(v=wps.630).aspx): consente di rimuovere i documenti di configurazione nelle varie fasi (in sospeso, precedente o corrente).
+  - [Update-DscConfiguration](https://technet.microsoft.com/library/mt143541(v=wps.630).aspx)  Esegue un controllo server di pull su richiesta.
+  - [Stop-DscConfiguration](https://technet.microsoft.com/library/mt143542(v=wps.630).aspx)  Arresta una configurazione che è già in esecuzione.
+  - [Remove-DscConfigurationDocument](https://technet.microsoft.com/library/mt143544(v=wps.630).aspx)  Consente di rimuovere i documenti di configurazione nelle varie fasi (in sospeso, precedente o corrente).
 
 - Miglioramenti del linguaggio
   - DependsOn supporta ora risorse composite.
@@ -64,10 +64,10 @@ Molti aggiornamenti e miglioramenti per Windows PowerShell Desired State Configu
 
 - Miglioramenti della flessibilità
   - La risorsa LocalConfigurationManager ha una nuova proprietà **ActionAfterReboot**.
-    - ContinueConfiguration (valore predefinito): riprende automaticamente una configurazione dopo il riavvio di un nodo di destinazione.
-    - StopConfiguration: non riprende automaticamente una configurazione dopo il riavvio di un nodo.
+    - ContinueConfiguration (valore predefinito): Riprende automaticamente una configurazione dopo il riavvio di un nodo di destinazione.
+    - StopConfiguration Non riprende automaticamente una configurazione dopo il riavvio di un nodo.
   - L'esecuzione di un controllo di coerenza può ora avvenire più spesso di un'operazione PULL o viceversa.
-  - Supporto per il controllo delle versioni: DSC ora può riconoscere un documento che è stato generato in un client più recente. È incluso in [WMF 5.0](https://aka.ms/wmf5download).
+  - Supporto per il controllo delle versioni:  DSC ora può riconoscere un documento che è stato generato in un client più recente (incluso con [WMF 5.0](https://aka.ms/wmf5download)).
 
 - Miglioramenti di prevenzione degli errori
   - La versione del modulo viene ora imposta prima dell'applicazione di una configurazione.
@@ -132,9 +132,9 @@ Molti aggiornamenti e miglioramenti per Windows PowerShell Desired State Configu
 - È stato aggiunto il nuovo stato AtBreakpoint per i processi di Windows PowerShell. Lo stato AtBreakpoint si applica quando un processo esegue uno script che include punti di interruzione e lo script raggiunge un punto di interruzione. Quando un processo viene interrotto in corrispondenza di un punto di interruzione di debug, è necessario eseguire il debug del processo tramite il cmdlet Debug-Job.
 - Windows PowerShell 5.0 implementa il supporto per più versioni di un singolo modulo di Windows PowerShell nella stessa cartella in $PSModulePath. È stata aggiunta la proprietà RequiredVersion alla classe ModuleSpecification per facilitare il recupero della versione desiderata di un modulo. Questa proprietà e la proprietà ModuleVersion si escludono a vicenda. La proprietà RequiredVersion è ora supportata come parte del valore del parametro FullyQualifiedName dei cmdlet Get-Module, Import-Module e Remove-Module.
 - È ora possibile eseguire la convalida della versione del modulo eseguendo il cmdlet Test-ModuleManifest.
-- I risultati del cmdlet Get-Command includono ora una colonna Version. È stata aggiunta una nuova proprietà Version alla classe CommandInfo. Get-Command mostra i comandi da più versioni dello stesso modulo. La proprietà Version fa inoltre parte delle classi derivate di CmdletInfo, ovvero CmdletInfo e ApplicationInfo.
+- I risultati del cmdlet Get-Command includono ora una colonna Version. È stata aggiunta una nuova proprietà Version alla classe CommandInfo. Get-Command mostra i comandi da più versioni dello stesso modulo. La proprietà Version fa inoltre parte delle classi derivate di CmdletInfo: CmdletInfo e ApplicationInfo.
 - Get-Command include il nuovo parametro -ShowCommandInfo, che restituisce informazioni ShowCommand in forma di PSObjects. Questa funzionalità è particolarmente utile quando si esegue Show-Command in Windows PowerShell ISE usando la comunicazione remota di Windows PowerShell. Il parametro -ShowCommandInfo sostituisce la funzione Get-SerializedCommand esistente nel modulo Microsoft.PowerShell.Utility, ma lo script Get-SerializedCommand è ancora disponibile per il supporto di script di livello inferiore.
-- Il nuovo cmdlet Get-ItemPropertyValue consente di ottenere il valore di una proprietà senza usare la notazione del punto. Nelle versioni precedenti di Windows PowerShell è ad esempio possibile eseguire il comando seguente per ottenere il valore della proprietà Application Base della chiave del Registro di sistema PowerShellEngine: **(Get-ItemProperty -Path HKLM:\\SOFTWARE\\Microsoft\\PowerShell\\3\\PowerShellEngine -Name ApplicationBase).ApplicationBase**. A partire da Windows PowerShell 5.0 è possibile eseguire **Get-ItemPropertyValue -Path HKLM:\\SOFTWARE\\Microsoft\\PowerShell\\3\\PowerShellEngine -Name ApplicationBase**.
+- Il nuovo cmdlet Get-ItemPropertyValue consente di ottenere il valore di una proprietà senza usare la notazione del punto. Nelle versioni precedenti di Windows PowerShell, ad esempio, è possibile eseguire il comando seguente per ottenere il valore della proprietà ApplicationBase della chiave del Registro di sistema PowerShellEngine: **(Get-ItemProperty-Path HKLM:\\SOFTWARE\\Microsoft\\PowerShell\\3\\PowerShellEngine-nome ApplicationBase). ApplicationBase**. A partire da Windows PowerShell 5.0 è possibile eseguire **Get-ItemPropertyValue -Path HKLM:\\SOFTWARE\\Microsoft\\PowerShell\\3\\PowerShellEngine -Name ApplicationBase**.
 - La console di Windows PowerShell usa ora la colorazione della sintassi, come in Windows PowerShell ISE.
 - Il nuovo modulo NetworkSwitch contiene cmdlet che consentono di applicare la configurazione di commutatore, LAN virtuale (VLAN) e porte del commutatore di rete di livello 2 di base ai commutatori di rete con certificazione per il logo di Windows Server 2012 R2.
 - È stato aggiunto il parametro FullyQualifiedName ai cmdlet Import-Module e Remove-Module per supportare l'archiviazione di più versioni di un singolo modulo.
@@ -221,7 +221,7 @@ Windows PowerShell 4.0 include le nuove funzionalità seguenti.
 - È stato aggiunto il parametro **Passthru** ai cmdlet **Enable-JobTrigger** e **Disable-JobTrigger**. Questo parametro visualizza tutti gli oggetti creati o modificati dal comando.
 - I nomi dei parametri per specificare un gruppo di lavoro nei cmdlet **Add-Computer** e **Remove-Computer** sono ora coerenti. Entrambi i cmdlet usano ora il parametro **WorkgroupName**.
 - È stato aggiunto il nuovo parametro comune **PipelineVariable**, che consente di salvare i risultati di un comando (o di parte di esso) inviato tramite pipe come variabile che può quindi essere passata attraverso il resto della pipeline.
-- È ora supportato il filtro delle raccolte tramite la sintassi di un metodo. Questo significa che è possibile filtrare una raccolta di oggetti usando una sintassi semplificata, simile a quella di Where() o Where-Object, formattata come una chiamata a metodo. Di seguito è riportato un esempio: (Get-Process).where({$_.Name -match 'powershell'})
+- È ora supportato il filtro delle raccolte tramite la sintassi di un metodo. Questo significa che è possibile filtrare una raccolta di oggetti usando una sintassi semplificata, simile a quella di Where() o Where-Object, formattata come una chiamata a metodo. Di seguito viene riportato un esempio. (Get-Process).where({$_.Name -match 'powershell'})
 - Il cmdlet **Get-Process** include ora il nuovo parametro opzionale **IncludeUserName**.
 - È stato aggiunto il nuovo cmdlet **Get-FileHash**, che restituisce l'hash di un file specificato in uno dei diversi formati disponibili.
 - In Windows PowerShell 4.0, se un modulo usa la chiave **DefaultCommandPrefix** nel manifesto o se l'utente importa un modulo con il parametro **Prefix**, la proprietà **ExportedCommands** del modulo mostra i comandi nel modulo con il prefisso. I nomi dei comandi eseguiti usando la sintassi qualificata di modulo ModuleName\\CommandName devono includere il prefisso.
@@ -410,7 +410,7 @@ A partire da Windows PowerShell 3.0, gli autori dei cmdlet scritti in C# possono
 
 È anche possibile includere un valore **HelpUri** nel primo collegamento correlato di un file della Guida sui cmdlet basato su XML o la direttiva .Link della Guida basata su commenti in una funzione.
 
-Per altre informazioni, vedere [Supporto per la Guida online](https://go.microsoft.com/fwlink/?LinkId=242132) in MSDN.
+Per altre informazioni sul supporto per la Guida online, vedere [supporto della Guida Online](/powershell/developer/module/supporting-online-help) in Microsoft Docs.
 
 ### <a name="cim-integration"></a>Integrazione con CIM
 
