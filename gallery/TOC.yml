@@ -11,8 +11,8 @@ items:
     items:
     - name: Ricerca di pacchetti
       href: how-to/finding-packages/search-syntax.md
-    - name: Ricerca in base a PSEdition
-      href: how-to/finding-packages/searching-by-psedition.md
+    - name: Ricerca in base alla compatibilità
+      href: how-to/finding-packages/searching-by-compatibility.md
     - name: Filtro dei risultati di ricerca
       href: how-to/finding-packages/filtering-packages.md
   - name: Pubblicazione in PowerShell Gallery
@@ -93,9 +93,9 @@ items:
   href: faqs.md
 - name: Cmdlet PowerShellGet
   href: https://docs.microsoft.com/powershell/module/powershellget/
-ms.openlocfilehash: 3b414bb44e3f278457277791cf3b1a3d767ecb68
-ms.sourcegitcommit: 1082b13115c5c5be4b76574ba55307b3e567983f
+ms.openlocfilehash: 8b3d2d121c167f3677d3691c8bc481644b95b204
+ms.sourcegitcommit: 548547b2d5fc73e726bb9fec6175d452a351d975
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52576873"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53655311"
