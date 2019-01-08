@@ -2,12 +2,12 @@
 ms.date: 06/12/2017
 keywords: jea,powershell,sicurezza
 title: Configurazioni della sessione JEA
-ms.openlocfilehash: bdf3659357045203d90e8083613e51cce657da1a
-ms.sourcegitcommit: e46b868f56f359909ff7c8230b1d1770935cce0e
-ms.translationtype: HT
+ms.openlocfilehash: 1b598522d43b2c1a26a739a67cee5181b21a7c32
+ms.sourcegitcommit: 548547b2d5fc73e726bb9fec6175d452a351d975
+ms.translationtype: MTE95
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45522961"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53655464"
 ---
 # <a name="jea-session-configurations"></a>Configurazioni della sessione JEA
 
@@ -80,6 +80,8 @@ Quando si specifica uno o più gruppi di sicurezza, l'account virtuale non appar
 RunAsVirtualAccount = $true
 RunAsVirtualAccountGroups = 'NetworkOperator', 'NetworkAuditor'
 ```
+> [!NOTE]
+> Gli account virtuali sono temporaneamente concesso l'accesso come un servizio direttamente nei criteri di sicurezza server locale.  Se uno del VirtualAccountGroups specificato è già stato concesso questo diritto nel criterio, il singolo account virtuale non è più essere aggiunti e rimossi dai criteri.  Può essere utile in scenari come i controller di dominio in cui le revisioni per i criteri di protezione controller di dominio sono strettamente controllate.  Questo è disponibile solo in Windows Server 2016 con il mese di novembre 2018 o rollup successive e Windows Server 2019 con gennaio 2019 o cumulativo successivo.
 
 #### <a name="group-managed-service-account"></a>Account del servizio gestito del gruppo
 

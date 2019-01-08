@@ -3,19 +3,19 @@ ms.date: 06/12/2017
 contributor: manikb
 keywords: raccolta,powershell,cmdlet,psget
 title: Moduli con versioni di PowerShell compatibili
-ms.openlocfilehash: 0a95b47b506fbdddbb98b455a1d10d0f08ce402b
-ms.sourcegitcommit: 98b7cfd8ad5718efa8e320526ca76c3cc4141d78
-ms.translationtype: HT
+ms.openlocfilehash: bda924393d37ea1596fbf0d813c10cbdea33c218
+ms.sourcegitcommit: 548547b2d5fc73e726bb9fec6175d452a351d975
+ms.translationtype: MTE95
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50002685"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53655328"
 ---
 # <a name="modules-with-compatible-powershell-editions"></a>Moduli con versioni di PowerShell compatibili
 
 A partire dalla versione 5.1, PowerShell è disponibile in diverse edizioni che indicano vari set di funzionalità e compatibilità della piattaforma.
 
-- **Desktop Edition:** è basata su .NET Framework e fornisce compatibilità con script e moduli destinati a versioni di PowerShell che eseguono edizioni footprint complete di Windows, ad esempio Server Core e Windows Desktop.
-- **Core Edition:** è basata su .NET Core e fornisce compatibilità con script e moduli destinati a versioni di PowerShell che eseguono edizioni footprint ridotte di Windows, ad esempio Nano Server e Windows IoT.
+- Desktop Edition Basato su .NET Framework e fornisce compatibilità con script e moduli destinati a versioni di PowerShell che eseguono edizioni footprint complete di Windows, ad esempio Server Core e Windows Desktop.
+- **Core Edition:** Basata su .NET Core e fornisce compatibilità con script e moduli destinati a versioni di PowerShell che eseguono edizioni footprint ridotte di Windows, ad esempio Nano Server e Windows IoT.
 
 L'edizione di PowerShell in esecuzione viene visualizzata nella proprietà PSEdition di `$PSVersionTable`.
 
@@ -96,7 +96,7 @@ Gli autori dei moduli possono pubblicare un singolo modulo destinato a una o ent
 
 Un modulo singolo può essere usato sia nell'edizione Desktop che nell'edizione Core purché l'autore vi aggiunga la logica necessaria in RootModule o nel manifesto del modulo usando la variabile $PSEdition. I moduli possono avere due set di DLL compilate con destinazione a CoreCLR e FullCLR. Di seguito sono riportate le due opzioni per creare il pacchetto del modulo con la logica per il caricamento delle DLL appropriate.
 
-### <a name="option-1-packaging-a-module-for-targeting-multiple-versions-and-multiple-editions-of-powershell"></a>Opzione 1: creazione di un modulo destinabile a più versioni e più edizioni di PowerShell
+### <a name="option-1-packaging-a-module-for-targeting-multiple-versions-and-multiple-editions-of-powershell"></a>Opzione 1: Creazione di un modulo destinabile a più versioni e più edizioni di PowerShell
 
 Contenuto della cartella del modulo
 
@@ -174,7 +174,7 @@ $PSModule.OnRemove = {
 }
 ```
 
-### <a name="option-2-use-psedition-variable-in-the-psd1-file-to-load-the-proper-dlls-and-nestedrequired-modules"></a>Opzione 2: uso della variabile $PSEdition nel file PSD1 per caricare le DLL appropriate e moduli nidificati/richiesti
+### <a name="option-2-use-psedition-variable-in-the-psd1-file-to-load-the-proper-dlls-and-nestedrequired-modules"></a>Opzione 2: Usare $PSEdition variabile nel file PSD1 per caricare le DLL appropriate e moduli nidificati/richiesti
 
 Nella versione PS 5.1 o successiva la variabile globale $PSEdition è consentita nel file manifesto del modulo. Usando questa variabile l'autore del modulo può specificare i valori condizionali nel file manifesto del modulo. È possibile fare riferimento alla variabile $PSEdition in modalità linguaggio con restrizioni o in una sezione di dati.
 
@@ -260,6 +260,6 @@ Find-Module -Tag PSEdition_Core
 
 [Script con PSEditions](script-psedition-support.md)
 
-[Supporto di PSEditions nella raccolta di PowerShell](../how-to/finding-packages/searching-by-psedition.md)
+[Supporto di PSEditions nella raccolta di PowerShell](../how-to/finding-packages/searching-by-compatibility.md)
 
 [Aggiornare il manifesto del modulo](/powershell/module/powershellget/update-modulemanifest)
