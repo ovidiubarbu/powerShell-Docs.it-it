@@ -1,0 +1,19 @@
+---
+ms.date: 06/12/2017
+keywords: dsc,powershell,configurazione,installazione
+title: White paper
+ms.openlocfilehash: 645378802e1ab592857e442db5bc86ac33817e5e
+ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
+ms.translationtype: MTE95
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53401225"
+---
+# <a name="whitepapers"></a><span data-ttu-id="494b7-103">White paper</span><span class="sxs-lookup"><span data-stu-id="494b7-103">Whitepapers</span></span>
+
+<span data-ttu-id="494b7-104">I seguenti white paper sono stati pubblicati per fornire informazioni aggiuntive sugli argomenti correlati alla configurazione dello stato desiderato tramite PowerShell.</span><span class="sxs-lookup"><span data-stu-id="494b7-104">The following whitepapers have been published to provide additional information on topics related to PowerShell Desired State Configuration.</span></span>
+
+## <a name="the-release-pipeline-model"></a><span data-ttu-id="494b7-105">Il modello della pipeline di tipo Versione</span><span class="sxs-lookup"><span data-stu-id="494b7-105">The Release Pipeline Model</span></span>
+<span data-ttu-id="494b7-106">L'applicazione dei modelli e delle procedure delle tecniche usate dagli sviluppatori alle operazioni può offrire vantaggi.</span><span class="sxs-lookup"><span data-stu-id="494b7-106">There are benefits to be gained when patterns and practices from developer techniques are applied to operations.</span></span> <span data-ttu-id="494b7-107">In particolare, una soluzione completamente automatizzata in cui l'infrastruttura viene gestita come codice e tutte le modifiche vengono convalidate in modo automatico prima di raggiungere la produzione.</span><span class="sxs-lookup"><span data-stu-id="494b7-107">Notably, a fully automated solution where infrastructure is managed as code and all changes are automatically validated before reaching production.</span></span> <span data-ttu-id="494b7-108">Si tratta di un cambiamento del processo riconosciuto dagli innovatori del settore.</span><span class="sxs-lookup"><span data-stu-id="494b7-108">This is a process shift that is recognized among industry innovators.</span></span> <span data-ttu-id="494b7-109">Per le organizzazioni che già usano questi processi, dovrebbe essere chiaro come sfruttare la piattaforma Microsoft.</span><span class="sxs-lookup"><span data-stu-id="494b7-109">For organizations already leveraging these processes, it should be clear how to leverage Microsoft platforms.</span></span> <span data-ttu-id="494b7-110">Per le organizzazioni che non hanno familiarità con l'argomento, dovrebbe essere chiaro come adattare questo processo all'ambiente e il suo valore nella cultura aziendale.</span><span class="sxs-lookup"><span data-stu-id="494b7-110">For organizations that are new to the topic, it should be clear how to bring this process to your environment and what it means to your organizational culture.</span></span> <span data-ttu-id="494b7-111">Questo documento illustra i componenti di una pipeline di tipo Versione per la configurazione come codice, il valore aggiunto per le operazioni e le soluzioni usate quando si progetta una nuova architettura per la pipeline di tipo Versione.</span><span class="sxs-lookup"><span data-stu-id="494b7-111">This document explains the components of a Release Pipeline for configuration as code, the value to operations, and solutions that are used when designing a new Release Pipeline architecture.</span></span>
+
+<span data-ttu-id="494b7-112">**[Scarica il PDF](http://aka.ms/thereleasepipelinemodelpdf)**</span><span class="sxs-lookup"><span data-stu-id="494b7-112">**[Download PDF](http://aka.ms/thereleasepipelinemodelpdf)**</span></span>
