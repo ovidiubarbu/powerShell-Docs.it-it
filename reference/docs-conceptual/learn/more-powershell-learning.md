@@ -1,0 +1,41 @@
+---
+ms.date: 06/05/2017
+keywords: powershell,cmdlet
+title: Altre risorse di formazione per PowerShell
+ms.openlocfilehash: 5e81801df99a55a358d1d1405bdc79f882aae92f
+ms.sourcegitcommit: 9df29dfc637191b62ca591893c251c1e02d4eb4c
+ms.translationtype: MTE95
+ms.contentlocale: it-IT
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54012552"
+---
+# <a name="more-powershell-learning"></a><span data-ttu-id="7aeed-103">Altre risorse di formazione per PowerShell</span><span class="sxs-lookup"><span data-stu-id="7aeed-103">More PowerShell learning</span></span>
+
+<span data-ttu-id="7aeed-104">Altre fonti per informazioni su PowerShell</span><span class="sxs-lookup"><span data-stu-id="7aeed-104">Other sources to learn PowerShell</span></span>
+
+## <a name="resources-for-windows-powershell-users"></a><span data-ttu-id="7aeed-105">Risorse per gli utenti di Windows PowerShell</span><span class="sxs-lookup"><span data-stu-id="7aeed-105">Resources for Windows PowerShell users</span></span>
+
+<span data-ttu-id="7aeed-106">Oltre alla Guida disponibile dalla riga di comando, le risorse seguenti offrono altre informazioni per gli utenti che vogliono eseguire Windows PowerShell.</span><span class="sxs-lookup"><span data-stu-id="7aeed-106">In addition to the Help available at the command line, the following resources provide more information for users who want to run Windows PowerShell.</span></span>
+
+- <span data-ttu-id="7aeed-107">[Blog del team di Windows PowerShell](https://blogs.msdn.microsoft.com/powershell/).</span><span class="sxs-lookup"><span data-stu-id="7aeed-107">[Windows PowerShell Team Blog](https://blogs.msdn.microsoft.com/powershell/).</span></span> <span data-ttu-id="7aeed-108">La risorsa ottimale per acquisire informazioni direttamente dal team di prodotto di Windows PowerShell.</span><span class="sxs-lookup"><span data-stu-id="7aeed-108">The best resource for learning directly from the Windows PowerShell product team.</span></span>
+- <span data-ttu-id="7aeed-109">Il blog [The Hey, Scripting Guy! ](https://blogs.technet.microsoft.com/heyscriptingguy/) pubblica nuovi contenuti sette giorni alla settimana e viene costantemente valutato tra i primi cinque di tutti i blog Microsoft.</span><span class="sxs-lookup"><span data-stu-id="7aeed-109">[The Hey, Scripting Guy! Blog](https://blogs.technet.microsoft.com/heyscriptingguy/) publishes new content seven days a week, and is consistently ranked in the top five of all Microsoft blogs.</span></span> <span data-ttu-id="7aeed-110">Gli articoli, basati su scenario, sono scritti in modo coinvolgente e brillante.</span><span class="sxs-lookup"><span data-stu-id="7aeed-110">The articles are scenario-driven, and written in an engaging and lively manner.</span></span>
+- <span data-ttu-id="7aeed-111">La [pagina di formazioni su PowerShell](https://blogs.technet.microsoft.com/heyscriptingguy/2015/01/04/weekend-scripter-the-best-ways-to-learn-powershell/) rappresenta l'hub di Windows PowerShell in TechNet Script Center.</span><span class="sxs-lookup"><span data-stu-id="7aeed-111">[The Learn PowerShell page](https://blogs.technet.microsoft.com/heyscriptingguy/2015/01/04/weekend-scripter-the-best-ways-to-learn-powershell/) is the Windows PowerShell hub on the TechNet Script Center.</span></span> <span data-ttu-id="7aeed-112">Questa pagina ospita una serie di sessioni video per principianti condotte dal Microsoft Scripting Guy Ed Wilson.</span><span class="sxs-lookup"><span data-stu-id="7aeed-112">This page hosts a series of beginner video sessions conducted by the Microsoft Scripting Guy Ed Wilson.</span></span> <span data-ttu-id="7aeed-113">Contiene anche quiz su Windows PowerShell, collegamenti a contenuti della community e altro ancora.</span><span class="sxs-lookup"><span data-stu-id="7aeed-113">It also contains Windows PowerShell quizzes, links to community content, and more.</span></span>
+- <span data-ttu-id="7aeed-114">In caso di domande su Windows PowerShell,</span><span class="sxs-lookup"><span data-stu-id="7aeed-114">Have questions about using Windows PowerShell?</span></span> <span data-ttu-id="7aeed-115">è possibile entrare in contatto con centinaia di altre persone con interessi simili nel [forum TechNet di PowerShell](https://social.technet.microsoft.com/Forums/home?forum=winserverpowershell).</span><span class="sxs-lookup"><span data-stu-id="7aeed-115">Connect with hundreds of other people who have similar interests on the [TechNet PowerShell forum](https://social.technet.microsoft.com/Forums/home?forum=winserverpowershell).</span></span>
+
+## <a name="video-training"></a><span data-ttu-id="7aeed-116">Video di formazione</span><span class="sxs-lookup"><span data-stu-id="7aeed-116">Video Training</span></span>
+
+### <a name="microsoft-virtual-academy"></a><span data-ttu-id="7aeed-117">Microsoft Virtual Academy</span><span class="sxs-lookup"><span data-stu-id="7aeed-117">Microsoft Virtual Academy</span></span>
+
+- [<span data-ttu-id="7aeed-118">Introduzione rapida a PowerShell 3.0</span><span class="sxs-lookup"><span data-stu-id="7aeed-118">Getting Started with PowerShell 3.0 Jump Start</span></span>](https://mva.microsoft.com/en-US/training-courses/getting-started-with-powershell-30-jump-start-8276)
+- [<span data-ttu-id="7aeed-119">Strumenti avanzati e creazione di script con PowerShell 3.0</span><span class="sxs-lookup"><span data-stu-id="7aeed-119">Advanced Tools & Scripting with PowerShell 3.0 Jump Start</span></span>](https://mva.microsoft.com/en-US/training-courses/advanced-tools-scripting-with-powershell-30-jump-start-8277)
+
+### <a name="channel-9-videos"></a><span data-ttu-id="7aeed-120">Video di Channel 9</span><span class="sxs-lookup"><span data-stu-id="7aeed-120">Channel 9 videos</span></span>
+
+<span data-ttu-id="7aeed-121">Channel 9 è la piattaforma di pubblicazione di video.</span><span class="sxs-lookup"><span data-stu-id="7aeed-121">Channel 9 is our video publishing platform.</span></span> <span data-ttu-id="7aeed-122">Sono disponibili centinaia di video su PowerShell.</span><span class="sxs-lookup"><span data-stu-id="7aeed-122">There are hundreds of videos about PowerShell available.</span></span> <span data-ttu-id="7aeed-123">[Ricerca per "PowerShell"](https://channel9.msdn.com/Search?term=PowerShell&sortBy=top-rated) per vedere i video sono disponibili.</span><span class="sxs-lookup"><span data-stu-id="7aeed-123">[Search for "PowerShell"](https://channel9.msdn.com/Search?term=PowerShell&sortBy=top-rated) to see what videos are available.</span></span>
+
+## <a name="resources-for-windows-powershell-developers"></a><span data-ttu-id="7aeed-124">Risorse per sviluppatori di Windows PowerShell</span><span class="sxs-lookup"><span data-stu-id="7aeed-124">Resources for Windows PowerShell Developers</span></span>
+
+<span data-ttu-id="7aeed-125">Le risorse seguenti consentono agli sviluppatori di creare moduli, funzioni, cmdlet e applicazioni di hosting di Windows PowerShell.</span><span class="sxs-lookup"><span data-stu-id="7aeed-125">The following resources provide resources to help developers create their own Windows PowerShell modules, functions, cmdlets, providers, and hosting applications.</span></span>
+
+- <span data-ttu-id="7aeed-126">[Windows PowerShell SDK](https://go.microsoft.com/fwlink/p/?LinkID=89595).</span><span class="sxs-lookup"><span data-stu-id="7aeed-126">[Windows PowerShell SDK](https://go.microsoft.com/fwlink/p/?LinkID=89595).</span></span> <span data-ttu-id="7aeed-127">Fornisce contenuti di riferimento.</span><span class="sxs-lookup"><span data-stu-id="7aeed-127">Provides reference content.</span></span>
+- <span data-ttu-id="7aeed-128">[Manuale del programmatore di Windows PowerShell](https://go.microsoft.com/fwlink/p/?LinkID=89596).</span><span class="sxs-lookup"><span data-stu-id="7aeed-128">[Windows PowerShell Programmer's Guide](https://go.microsoft.com/fwlink/p/?LinkID=89596).</span></span> <span data-ttu-id="7aeed-129">Fornisce esercitazioni.</span><span class="sxs-lookup"><span data-stu-id="7aeed-129">Provides tutorials.</span></span> <span data-ttu-id="7aeed-130">Contiene anche informazioni sui concetti di base di Windows PowerShell.</span><span class="sxs-lookup"><span data-stu-id="7aeed-130">Also contains information about fundamental Windows PowerShell concepts.</span></span>
