@@ -4,7 +4,7 @@ keywords: powershell,cmdlet
 title: Regole di autorizzazione e funzionalità di sicurezza di Accesso Web Windows PowerShell
 ms.openlocfilehash: 95c61d3a0431cda9dee738d1c9f5ec843c1209f3
 ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
-ms.translationtype: MTE95
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 12/14/2018
 ms.locfileid: "53401590"
@@ -156,7 +156,7 @@ Per ogni sessione di Windows PowerShell viene usata una configurazione di sessio
 - Un amministratore crea un endpoint, denominato **EndpointPswa** e basato su uno spazio di esecuzione con restrizioni, quindi crea la regola `*,*,PswaEndpoint` e distribuisce l'endpoint agli altri computer. La regola consente a tutti gli utenti di accedere a tutti i computer con endpoint **EndpointPswa**.
   Se questa è l'unica regola di autorizzazione definita nel set di regole, i computer che non dispongono di tale endpoint non sono accessibili.
 
-- L'amministratore ha creato un endpoint basato su uno spazio di esecuzione con restrizioni denominato **EndpointPswa** e vuole limitare l'accesso a utenti specifici. L'amministratore crea un gruppo di utenti denominato SupportoLivello1** e definisce la regola **Level1Support\*, Endpointpswa**. La regola concede agli utenti del gruppo **SupportoLivello1** l'accesso a tutti i computer che dispongono della configurazione **EndpointPswa**. Analogamente, è possibile impostare l'accesso con restrizioni per un insieme di computer specifico.
+- L'amministratore ha creato un endpoint basato su uno spazio di esecuzione con restrizioni denominato **EndpointPswa** e vuole limitare l'accesso a utenti specifici. L'amministratore crea un gruppo di utenti denominato **SupportoLivello1** e definisce la regola **SupportoLivello1,\*,EndpointPswa**. La regola concede agli utenti del gruppo **SupportoLivello1** l'accesso a tutti i computer che dispongono della configurazione **EndpointPswa**. Analogamente, è possibile impostare l'accesso con restrizioni per un insieme di computer specifico.
 
 - Alcuni amministratori forniscono maggiori diritti di accesso a determinati utenti, ad esempio creando i due gruppi di utenti **Amministratori** e **SupportoBase**. L'amministratore crea anche un endpoint basato su uno spazio di esecuzione con restrizioni denominato **EndpointPswa** e definisce le due regole seguenti: **Amministratori,\*,\*** e **SupportoBase,\*,EndpointPswa**. La prima regola fornisce l'accesso a tutti i computer a tutti gli utenti del gruppo **Amministratori**, mentre la seconda consente a tutti gli utenti del gruppo **SupportoBase** di accedere solo ai computer con **EndpointPswa**.
 
