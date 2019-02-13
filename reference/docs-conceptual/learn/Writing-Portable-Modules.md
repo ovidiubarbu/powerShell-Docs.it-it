@@ -3,11 +3,11 @@ ms.date: 12/14/2018
 keywords: powershell,cmdlet
 title: Scrittura di moduli portabili
 ms.openlocfilehash: 38a93b5b030d58784b91292e2cd060b3a2c19a00
-ms.sourcegitcommit: d396d0e4cfe3d279f399c17e7337380a31d373ac
+ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
 ms.translationtype: MTE95
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2018
-ms.locfileid: "53747722"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55682552"
 ---
 # <a name="portable-modules"></a>Moduli portatili
 
@@ -176,9 +176,9 @@ Tuttavia, non è necessario alla destinazione .NET Standard per un modulo per la
 
 ## <a name="powershell-standard-library"></a>Libreria Standard di PowerShell
 
-Il [Standard di PowerShell][] libreria è una specifica formale delle APIs PowerShell disponibili in tutte le versioni di PowerShell maggiore o uguale alla versione di tale standard.
+Il [PowerShell Standard][] libreria è una specifica formale delle APIs PowerShell disponibili in tutte le versioni di PowerShell maggiore o uguale alla versione di tale standard.
 
-Ad esempio, [Standard di PowerShell 5.1][] è compatibile con Windows PowerShell 5.1 e PowerShell Core 6.0 o versioni successive.
+Ad esempio, [PowerShell Standard 5.1][] è compatibile con Windows PowerShell 5.1 e PowerShell Core 6.0 o versioni successive.
 
 È consigliabile che si compila il modulo usando la libreria Standard di PowerShell. La libreria garantisce che le API sono disponibili e implementate in Windows PowerShell e PowerShell Core 6.
 Standard di PowerShell deve sempre essere compatibile con l'inoltro. Un modulo compilato utilizzando PowerShell 5.1 libreria Standard saranno sempre compatibile con le versioni future di PowerShell.
@@ -261,8 +261,8 @@ Esempio:
 [controlli di runtime]: /dotnet/api/system.runtime.interopservices.runtimeinformation.frameworkdescription#System_Runtime_InteropServices_RuntimeInformation_FrameworkDescription
 [INTERFACCIA CLI DI .NET]: /dotnet/core/tools/?tabs=netcore2x
 [.NET Standard]: /dotnet/standard/net-standard
-[Standard di PowerShell]: https://github.com/PowerShell/PowerShellStandard
-[Standard di PowerShell 5.1]: https://www.nuget.org/packages/PowerShellStandard.Library/5.1.0
+[PowerShell Standard]: https://github.com/PowerShell/PowerShellStandard
+[PowerShell Standard 5.1]: https://www.nuget.org/packages/PowerShellStandard.Library/5.1.0
 [PowerShell Gallery]: https://www.powershellgallery.com
 [.NET portability Analyzer]: https://github.com/Microsoft/dotnet-apiport
 [CompatiblePSEditions]: /powershell/gallery/concepts/module-psedition-support

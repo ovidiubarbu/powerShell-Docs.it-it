@@ -3,11 +3,11 @@ ms.date: 12/12/2018
 keywords: dsc,powershell,configurazione,installazione
 title: Configurare un Client di Pull usando gli ID di configurazione in PowerShell 4.0
 ms.openlocfilehash: 9adc767e91ff19d373c122a0d493e7b8703d5476
-ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
+ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
 ms.translationtype: MTE95
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53401758"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55680592"
 ---
 # <a name="set-up-a-pull-client-using-configuration-ids-in-powershell-40"></a>Configurare un Client di Pull usando gli ID di configurazione in PowerShell 4.0
 
@@ -69,7 +69,7 @@ Configuration PullClientConfigId
 PullClientConfigId -Output "."
 ```
 
-## <a name="smb-share"></a>Condivisione SMB
+## <a name="smb-share"></a>SMB Share
 
 Se il server di pull è configurato come una condivisione file SMB, piuttosto che un servizio web, si imposta la **DownloadManagerName** al **DscFileDownloadManager** anziché il **WebDownLoadManager**. Il **DscFileDownloadManager** richiede la specifica di un **SourcePath** proprietà nel **DownloadManagerCustomData**. Lo script seguente configura Gestione configurazione locale per il pull da una condivisione SMB denominata "SmbDscShare" su un server chiamato "CONTOSO-SERVER".
 

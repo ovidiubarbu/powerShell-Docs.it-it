@@ -3,11 +3,11 @@ ms.date: 12/12/2018
 keywords: dsc,powershell,configurazione,installazione
 title: Risorse DSC
 ms.openlocfilehash: 1f77b5e6630a2e3de6e1d1a05638f94d2df039ae
-ms.sourcegitcommit: e04292a9c10de9a8391d529b7f7aa3753b362dbe
+ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
 ms.translationtype: MTE95
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54046692"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55681012"
 ---
 # <a name="dsc-resources"></a>Risorse DSC
 
@@ -128,7 +128,7 @@ Risorse predefinite di Windows
 * [Risorsa WindowsFeatureSet](../reference/resources/windows/windowsFeatureSetResource.md)
 * [Risorsa WindowsOptionalFeature](../reference/resources/windows/windowsOptionalFeatureResource.md)
 * [Risorsa WindowsOptionalFeatureSet](../reference/resources/windows/windowsOptionalFeatureSetResource.md)
-* [Risorsa WindowsPackageCabResource](../reference/resources/windows/windowsPackageCabResource.md)
+* [WindowsPackageCabResource Resource](../reference/resources/windows/windowsPackageCabResource.md)
 * [Risorsa WindowsProcess](../reference/resources/windows/windowsProcessResource.md)
 
 [Dipendenze tra nodi](../configurations/crossNodeDependencies.md) risorse

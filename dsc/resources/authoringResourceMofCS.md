@@ -3,11 +3,11 @@ ms.date: 06/12/2017
 keywords: dsc,powershell,configurazione,installazione
 title: Creazione di una risorsa DSC in C#
 ms.openlocfilehash: dcda36d27f2191f140eaaf209e1c85263d2cd8e1
-ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
+ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
 ms.translationtype: MTE95
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53401321"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55683129"
 ---
 # <a name="authoring-a-dsc-resource-in-c"></a>Creazione di una risorsa DSC in C#
 

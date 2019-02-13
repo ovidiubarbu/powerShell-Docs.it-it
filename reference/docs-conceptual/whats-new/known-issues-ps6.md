@@ -3,11 +3,11 @@ ms.date: 05/17/2018
 keywords: powershell,core
 title: Problemi noti di PowerShell 6.0
 ms.openlocfilehash: ce40a1925e564fbd2c661e70ec36d3842d915dfe
-ms.sourcegitcommit: 47becf2823ece251a7264db2387bb503cf3abaa9
-ms.translationtype: HT
+ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.translationtype: MTE95
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49450997"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55681509"
 ---
 # <a name="known-issues-for-powershell-60"></a>Problemi noti di PowerShell 6.0
 
@@ -107,7 +107,7 @@ Nella tabella seguente sono elencati i comandi che sicuramente non funzionano in
 |`Get-Service`, `New-Service`, `Restart-Service`, `Resume-Service`, `Set-Service`, `Start-Service`, `Stop-Service`, `Suspend-Service`|Non disponibile.|Questi comandi non verranno riconosciuti. Questo problema dovrebbe essere risolto in una versione futura.|
 |`Get-Acl`, `Set-Acl`|Non disponibile.|Questi comandi non verranno riconosciuti. Questo problema dovrebbe essere risolto in una versione futura.|
 |`Get-AuthenticodeSignature`, `Set-AuthenticodeSignature`|Non disponibile.|Questi comandi non verranno riconosciuti. Questo problema dovrebbe essere risolto in una versione futura.|
-|`Wait-Process`|Disponibile, non funziona correttamente. |Ad esempio 'Start-Process gvim -PassThru | Wait-Process' non funziona; l'attesa del processo ha esito negativo.|
+|`Wait-Process`|Disponibile, non funziona correttamente. |Ad esempio, `Start-Process gvim -PassThru | Wait-Process` non funziona; l'attesa del processo ha esito negativo.|
 |`Register-PSSessionConfiguration`, `Unregister-PSSessionConfiguration`, `Get-PSSessionConfiguration`|Disponibile, ma non funziona.|Scrive un messaggio di errore che indica che i comandi non funzionano. Questi dovrebbero essere corretti in una versione futura.|
 |`Get-Event`, `New-Event`, `Register-EngineEvent`, `Register-WmiEvent`, `Remove-Event`, `Unregister-Event`|Disponibili, ma non sono disponibili origini evento.|I comandi di gestione degli eventi di PowerShell sono presenti, ma la maggior parte delle origini evento usate con i comandi (ad esempio System.Timers.Timer) non è disponibile in Linux rendendo quindi inutili i comandi nella versione alfa.|
 |`Set-ExecutionPolicy`|Disponibile, ma non funziona.|Restituisce un messaggio che indica che non è supportato in questa piattaforma. I criteri di esecuzione sono una "cintura di sicurezza" pensata per gli utenti, che consente di impedire all'utente di commettere errori onerosi. Non è un limite di sicurezza.|

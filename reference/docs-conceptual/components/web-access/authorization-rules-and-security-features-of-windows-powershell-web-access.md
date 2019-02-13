@@ -2,16 +2,16 @@
 ms.date: 06/27/2017
 keywords: powershell,cmdlet
 title: Regole di autorizzazione e funzionalità di sicurezza di Accesso Web Windows PowerShell
-ms.openlocfilehash: 95c61d3a0431cda9dee738d1c9f5ec843c1209f3
-ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
-ms.translationtype: HT
+ms.openlocfilehash: c426b8cfb10829241ba244a5d840c91e1de9f66e
+ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.translationtype: MTE95
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53401590"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55681262"
 ---
 # <a name="authorization-rules-and-security-features-of-windows-powershell-web-access"></a>Regole di autorizzazione e funzionalità di sicurezza di Accesso Web Windows PowerShell
 
-Aggiornamento: 24 giugno 2013
+Ultimo aggiornamento: 24 giugno 2013
 
 Si applica a: Windows Server 2012 R2, Windows Server 2012
 
@@ -186,13 +186,13 @@ Nello scenario precedente Accesso Web Windows PowerShell può stabilire la conne
 
 ### <a name="using-a-single-set-of-authorization-rules-for-multiple-sites"></a>Utilizzo di un singolo set di regole di autorizzazione per più siti
 
-Le regole di autorizzazione sono archiviate in un file XML, Per impostazione predefinita, il nome del percorso del file XML è `%windir%\Web\PowershellWebAccess\data\AuthorizationRules.xml`.
+Le regole di autorizzazione sono archiviate in un file XML, Per impostazione predefinita, il nome del percorso del file XML è `$env:windir\Web\PowershellWebAccess\data\AuthorizationRules.xml`.
 
-Il percorso del file XML delle regole di autorizzazione è archiviato nel file **powwa.config**, disponibile in `%windir%\Web\PowershellWebAccess\data`. L'amministratore ha la possibilità di modificare il riferimento al percorso predefinito in **powwa.config**, per soddisfare preferenze o requisiti specifici. La possibilità di modificare il percorso del file consente di usare le stesse regole di autorizzazione per più gateway di Accesso Web Windows PowerShell, se si vuole creare una configurazione di questo tipo.
+Il percorso del file XML delle regole di autorizzazione è archiviato nel file **powwa.config**, disponibile in `$env:windir\Web\PowershellWebAccess\data`. L'amministratore ha la possibilità di modificare il riferimento al percorso predefinito in **powwa.config**, per soddisfare preferenze o requisiti specifici. La possibilità di modificare il percorso del file consente di usare le stesse regole di autorizzazione per più gateway di Accesso Web Windows PowerShell, se si vuole creare una configurazione di questo tipo.
 
 ## <a name="session-management"></a>Gestione delle sessioni
 
-Per impostazione predefinita, Accesso Web Windows PowerShell consente un massimo di tre sessioni contemporanee per utente. Per modificare il numero di sessioni supportato per ogni utente, è possibile modificare il file **web.config** dell'applicazione Web in Gestione IIS. Il percorso del file **web.config** è `$Env:Windir\Web\PowerShellWebAccess\wwwroot\Web.config`.
+Per impostazione predefinita, Accesso Web Windows PowerShell consente un massimo di tre sessioni contemporanee per utente. Per modificare il numero di sessioni supportato per ogni utente, è possibile modificare il file **web.config** dell'applicazione Web in Gestione IIS. Il percorso del file **web.config** è `$env:windir\Web\PowerShellWebAccess\wwwroot\Web.config`.
 
 Per impostazione predefinita, il server Web IIS è configurato in modo da riavviare il pool di applicazioni in caso di modifica delle impostazioni. Ad esempio, se si modifica il file **web.config**, il pool di applicazioni viene riavviato. Dal momento che **Accesso Web Windows PowerShell** usa gli stati sessione in memoria, gli utenti connessi alle sessioni di **Accesso Web Windows PowerShell** perdono il proprio stato al riavvio del pool di applicazioni.
 

@@ -3,11 +3,11 @@ title: Come replicare l'esperienza di ISE in Visual Studio Code
 description: Come replicare l'esperienza di ISE in Visual Studio Code
 ms.date: 08/06/2018
 ms.openlocfilehash: 983da850c13d72bcdc7b2d33970c6e9e06b3d869
-ms.sourcegitcommit: 9df29dfc637191b62ca591893c251c1e02d4eb4c
+ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
 ms.translationtype: MTE95
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54012484"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55681949"
 ---
 # <a name="how-to-replicate-the-ise-experience-in-visual-studio-code"></a>Come replicare l'esperienza di ISE in Visual Studio Code
 
@@ -19,9 +19,9 @@ Questo documento cerca di impostazioni di elenco che è possibile configurare in
 
 | Function                              | Associazione di ISE                  | Associazione di Visual Studio code                              |
 | ----------------                      | -----------                  | --------------                              |
-| Debugger di interruzione e di interruzione          | <kbd>CTRL</kbd>+<kbd>B</kbd> | <kbd>F6</kbd>                               |
+| Debugger di interruzione e di interruzione          | <kbd>Ctrl</kbd>+<kbd>B</kbd> | <kbd>F6</kbd>                               |
 | Eseguire testo riga/evidenziato corrente | <kbd>F8</kbd>                | <kbd>F8</kbd>                               |
-| Elenco di frammenti disponibili               | <kbd>CTRL</kbd>+<kbd>J</kbd> | <kbd>CTRL</kbd>+<kbd>Alt</kbd>+<kbd>J</kbd> |
+| Elenco di frammenti disponibili               | <kbd>CTRL</kbd>+<kbd>J</kbd> | <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>J</kbd> |
 
 ### <a name="custom-key-bindings"></a>Associazioni di chiavi personalizzate
 

@@ -4,11 +4,11 @@ ms.topic: conceptual
 keywords: wmf,powershell,installazione
 title: Miglioramenti di DSC in WMF 5.1
 ms.openlocfilehash: 92f82d62550e105a187fd7c0c58b49367c646a7e
-ms.sourcegitcommit: e46b868f56f359909ff7c8230b1d1770935cce0e
-ms.translationtype: HT
+ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.translationtype: MTE95
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45523043"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55677577"
 ---
 # <a name="improvements-in-desired-state-configuration-dsc-in-wmf-51"></a>Miglioramenti di Desired State Configuration (DSC) in WMF 5.1
 
@@ -206,12 +206,12 @@ Questa funzionalità impedisce che i nodi eseguano configurazioni o file di modu
 ### <a name="how-to-sign-configuration-and-module"></a>Come firmare la configurazione e il modulo
 
 ***
-* File di configurazione (.MOFs): il cmdlet di PowerShell esistente [Set-AuthenticodeSignature](https://technet.microsoft.com/library/hh849819.aspx) supporta ora la firma dei file MOF.
-* Moduli: la firma dei moduli viene effettuata firmando il catalogo del modulo corrispondente eseguendo i passaggi seguenti:
-    1. Creare un file di catalogo: un file di catalogo contiene una raccolta di hash di crittografia o identificazioni personali.
+* I file di configurazione (. File MOF): Cmdlet di PowerShell esistente [Set-AuthenticodeSignature](https://technet.microsoft.com/library/hh849819.aspx) è stato esteso per supportare la firma dei file MOF.
+* Moduli Firma dei moduli viene effettuata firmando il catalogo del modulo corrispondente usando la procedura seguente:
+    1. Creare un file di catalogo: Un file di catalogo contiene una raccolta di hash di crittografia o identificazioni personali.
        Ogni identificazione personale corrisponde a un file incluso nel modulo.
        Il nuovo cmdlet [New-FileCatalog](https://technet.microsoft.com/library/cc732148.aspx) è stato aggiunto per consentire agli utenti di creare un file di catalogo per il modulo.
-    2. Firmare il file di catalogo: usare [Set-AuthenticodeSignature](https://technet.microsoft.com/library/hh849819.aspx) per firmare il file di catalogo.
+    2. Firmare il file di catalogo: Uso [Set-AuthenticodeSignature](https://technet.microsoft.com/library/hh849819.aspx) per firmare il file di catalogo.
     3. Posizionare il file di catalogo all'interno della cartella del modulo.
 Per convenzione, il file di catalogo del modulo deve trovarsi nella cartella del modulo con lo stesso nome di quest'ultimo.
 

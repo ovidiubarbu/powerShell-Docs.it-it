@@ -3,15 +3,15 @@ ms.date: 06/12/2017
 keywords: dsc,powershell,configurazione,installazione
 title: Risorsa Registry DSC
 ms.openlocfilehash: e0ae1a4a27edc08c4e6ccd47786426917eb1ccb4
-ms.sourcegitcommit: e04292a9c10de9a8391d529b7f7aa3753b362dbe
+ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
 ms.translationtype: MTE95
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54047727"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55682259"
 ---
 # <a name="dsc-registry-resource"></a>Risorsa Registry DSC
 
-Si applica a: Windows PowerShell 4.0, Windows PowerShell 5.0_
+_Si applica a: Windows PowerShell 4.0, Windows PowerShell 5.0_
 
 La risorsa **Registry** in Windows PowerShell DSC (Desired State Configuration) fornisce un meccanismo per gestire i valori e le chiavi del Registro di sistema in un nodo di destinazione.
 

@@ -3,11 +3,11 @@ ms.date: 06/12/2017
 keywords: dsc,powershell,configurazione,installazione
 title: Metodo SendConfigurationApplyAsync della classe MSFT_DSCLocalConfigurationManager
 ms.openlocfilehash: b028079cf826719967858f50e357b441ba8f9d79
-ms.sourcegitcommit: e04292a9c10de9a8391d529b7f7aa3753b362dbe
+ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
 ms.translationtype: MTE95
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54047672"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55682989"
 ---
 # <a name="sendconfigurationapplyasync-method-of-the-msftdsclocalconfigurationmanager-class"></a>Metodo SendConfigurationApplyAsync della classe MSFT_DSCLocalConfigurationManager
 
@@ -41,9 +41,9 @@ Si tratta di un metodo statico.
 
 ## <a name="requirements"></a>Requisiti
 
-MOF** DscCore.mof
+**MOF:** DscCore.mof
 
-spazio dei nomi {0} Root\Microsoft\Windows\DesiredStateConfiguration
+**Spazio dei nomi**: Root\Microsoft\Windows\DesiredStateConfiguration
 
 ## <a name="see-also"></a>Vedere anche
 

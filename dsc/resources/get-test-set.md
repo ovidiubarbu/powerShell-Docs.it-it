@@ -2,12 +2,12 @@
 ms.date: 12/12/2018
 keywords: dsc,powershell,configurazione,installazione
 title: Get-Test-Set
-ms.openlocfilehash: e46710954679bf20f4536c6efbcbd4dafd9e629e
-ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
+ms.openlocfilehash: 6d059518a49926bc5fb56e37e7d3d4d2c66bddec
+ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
 ms.translationtype: MTE95
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53401446"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55682202"
 ---
 # <a name="get-test-set"></a>Get-Test-Set
 
@@ -237,6 +237,6 @@ VERBOSE: Time taken for configuration job to complete is 1.379 seconds
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Panoramica della piattaforma DSC di Automazione di Azure](https://docs.microsoft.com/en-us/azure/automation/automation-dsc-overview)
+- [Panoramica della piattaforma DSC di Automazione di Azure](https://docs.microsoft.com/azure/automation/automation-dsc-overview)
 - [Configurazione di un server di pull SMB](../pull-server/pullServerSMB.md)
 - [Configurazione di un client di pull](../pull-server/pullClientConfigID.md)

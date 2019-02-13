@@ -3,11 +3,11 @@ ms.date: 06/12/2017
 keywords: dsc,powershell,configurazione,installazione
 title: Separazione dei dati di configurazione e dell'ambiente
 ms.openlocfilehash: 24a92e5e4f15959498b57a1488a688d5548f3585
-ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
+ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
 ms.translationtype: MTE95
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53401291"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55682049"
 ---
 # <a name="separating-configuration-and-environment-data"></a>Separazione dei dati di configurazione e dell'ambiente
 

@@ -2,12 +2,12 @@
 ms.date: 10/16/2017
 keywords: dsc,powershell,configurazione,installazione
 title: Applicazione delle configurazioni
-ms.openlocfilehash: 4a6e7e511446ab27307683ad3d5676391e7c791c
-ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
+ms.openlocfilehash: 2a40f2055dda78cc0cb6cb05a5e14dce48be9d00
+ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
 ms.translationtype: MTE95
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53401903"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55677739"
 ---
 # <a name="enacting-configurations"></a>Applicazione delle configurazioni
 
@@ -48,6 +48,6 @@ Tenere presente, tuttavia, che questa implementazione offre funzionalità limita
 
 Gli argomenti seguenti illustrano il servizio e i client di pull:
 
-- [Panoramica della piattaforma DSC di Automazione di Azure](https://docs.microsoft.com/en-us/azure/automation/automation-dsc-overview)
+- [Panoramica della piattaforma DSC di Automazione di Azure](https://docs.microsoft.com/azure/automation/automation-dsc-overview)
 - [Configurazione di un server di pull SMB](pullServerSMB.md)
 - [Configurazione di un client di pull](pullClientConfigID.md)

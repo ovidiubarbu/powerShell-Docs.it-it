@@ -3,11 +3,11 @@ ms.date: 12/12/2018
 keywords: dsc,powershell,configurazione,installazione
 title: Configurare un Client di Pull usando un ID configurazione in PowerShell 5.0 e versioni successive
 ms.openlocfilehash: 8d8cf478f9127e1b7005d1b9e832e84b11612c9c
-ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
+ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
 ms.translationtype: MTE95
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53401602"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55680872"
 ---
 # <a name="set-up-a-pull-client-using-configuration-ids-in-powershell-50-and-later"></a>Configurare un Client di Pull usando un ID configurazione in PowerShell 5.0 e versioni successive
 
@@ -81,7 +81,7 @@ PullClientConfigID
 
 Nello script il blocco **ConfigurationRepositoryWeb** definisce il server di pull. Il **ServerUrl** specifica l'url di pull DSC
 
-### <a name="smb-share"></a>Condivisione SMB
+### <a name="smb-share"></a>SMB Share
 
 Lo script seguente configura Gestione configurazione locale per il pull delle configurazioni da una condivisione SMB `\\SMBPullServer\Pull`.
 
@@ -150,7 +150,7 @@ configuration PullClientConfigID
 PullClientConfigID
 ```
 
-### <a name="smb-share"></a>Condivisione SMB
+### <a name="smb-share"></a>SMB Share
 
 Nell'esempio seguente viene illustrata una metaconfigurazione che configura un client per il pull delle configurazioni da una condivisione SMB `\\SMBPullServer\Configurations`e le risorse da una condivisione SMB `\\SMBPullServer\Resources`.
 
@@ -280,7 +280,7 @@ configuration PullClientConfigID
 PullClientConfigID
 ```
 
-### <a name="smb-share"></a>Condivisione SMB
+### <a name="smb-share"></a>SMB Share
 
 Un server di report non può essere una condivisione SMB.
 

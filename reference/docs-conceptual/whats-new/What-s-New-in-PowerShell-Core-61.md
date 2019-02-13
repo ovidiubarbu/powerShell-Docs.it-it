@@ -2,12 +2,12 @@
 title: Novità di PowerShell Core 6.1
 description: Nuove funzionalità e modifiche rilasciate in PowerShell Core 6.1
 ms.date: 09/13/2018
-ms.openlocfilehash: 4e39780a0ff446993005bba6284741f3b4b02549
-ms.sourcegitcommit: 6749f67c32e05999e10deb9d45f90f45ac21a599
-ms.translationtype: HT
+ms.openlocfilehash: 1b41368bee92850e3593ebf4f5b8a469c4282d98
+ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.translationtype: MTE95
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48851308"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55682319"
 ---
 # <a name="whats-new-in-powershell-core-61"></a>Novità di PowerShell Core 6.1
 
@@ -37,7 +37,7 @@ Il Windows Compatibility Pack consente a PowerShell Core di usare **più di 1900
 
 ## <a name="support-for-application-whitelisting"></a>Supporto per l'inserimento delle applicazioni nell'elenco degli elementi consentiti
 
-PowerShell Core 6.1 offre lo stesso supporto di Windows PowerShell 5.1 per l'inserimento delle applicazioni nell'elenco elementi consentiti con [AppLocker](https://docs.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/applocker/applocker-overview) e [Device Guard](https://docs.microsoft.com/en-us/windows/security/threat-protection/device-guard/introduction-to-device-guard-virtualization-based-security-and-windows-defender-application-control).
+PowerShell Core 6.1 offre lo stesso supporto di Windows PowerShell 5.1 per l'inserimento delle applicazioni nell'elenco elementi consentiti con [AppLocker](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-control/applocker/applocker-overview) e [Device Guard](https://docs.microsoft.com/windows/security/threat-protection/device-guard/introduction-to-device-guard-virtualization-based-security-and-windows-defender-application-control).
 L'inserimento delle applicazioni nell'elenco degli elementi consentiti offre un controllo granulare dei file binari di cui è consentita l'esecuzione con la sono possono essere eseguiti usato con il [linguaggio vincolato](https://blogs.msdn.microsoft.com/powershell/2017/11/02/powershell-constrained-language-mode/) di PowerShell.
 
 ## <a name="performance-improvements"></a>Miglioramenti delle prestazioni
@@ -209,7 +209,7 @@ Se `pwsh.exe` non è disponibile, PowerShell Direct esegue il fallback per usare
 
 `Enable-PSRemoting` ora crea due configurazioni della sessione di comunicazione remota:
 
-- Una per la versione principale di PowerShell. Ad esempio, `PowerShell.6`. Questo endpoint può essere usato come base per gli aggiornamenti di versioni secondarie come configurazione di sessione di PowerShell 6 "a livello di sistema"
+- Una per la versione principale di PowerShell. Ad esempio, `PowerShell.6` Questo endpoint può essere usato come base per gli aggiornamenti di versioni secondarie come configurazione di sessione di PowerShell 6 "a livello di sistema"
 - Una configurazione di sessione specifica della versione, ad esempio: `PowerShell.6.1.0`
 
 Questo comportamento è utile se si prevede di avere più versioni di PowerShell 6 installate e accessibili nello stesso computer.

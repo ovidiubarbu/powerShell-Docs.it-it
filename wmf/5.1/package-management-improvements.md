@@ -4,12 +4,12 @@ ms.topic: conceptual
 keywords: wmf,powershell,installazione
 contributor: jianyunt, quoctruong
 title: Miglioramenti della gestione pacchetti in WMF 5.1
-ms.openlocfilehash: 1ebd574bd98a056de634ac688244813c1947618e
-ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
-ms.translationtype: HT
+ms.openlocfilehash: adcddcc94022f4961f3dd23c2cd56f2a8720049b
+ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.translationtype: MTE95
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/16/2018
-ms.locfileid: "34187460"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55682562"
 ---
 # <a name="improvements-to-package-management-in-wmf-51"></a>Miglioramenti della gestione pacchetti in WMF 5.1#
 
@@ -26,22 +26,22 @@ Ciò si verifica perché il parametro `-Version` è un alias del parametro `-Min
 
 ### <a name="multiple-prompts-for-bootstrapping-the-nuget-provider"></a>Più richieste per l'avvio del provider NuGet
 
-**Scenario**: quando si esegue `Find-Module` o `Install-Module` o altri cmdlet PackageManagement nel computer in uso per la prima volta, PackageManagement tenta di avviare il provider NuGet. Ciò avviene perché il provider PowerShellGet usa anche il provider NuGet per scaricare i moduli di PowerShell. PackageManagement quindi chiede all'utente l'autorizzazione per installare il provider NuGet. Dopo che l'utente seleziona "Sì" per l'avvio, verrà installata la versione più recente del provider NuGet.
+**Scenario**: Quando si esegue `Find-Module` o `Install-Module` o altri cmdlet PackageManagement nel computer per la prima volta, PackageManagement tenta di avviare il provider NuGet. Ciò avviene perché il provider PowerShellGet usa anche il provider NuGet per scaricare i moduli di PowerShell. PackageManagement quindi chiede all'utente l'autorizzazione per installare il provider NuGet. Dopo che l'utente seleziona "Sì" per l'avvio, verrà installata la versione più recente del provider NuGet.
 
 Se tuttavia si dispone di una versione precedente del provider NuGet installata nel computer in uso, in alcuni casi viene caricata per prima la versione precedente di NuGet nella sessione di PowerShell. Si tratta della race condition di PackageManagement. PowerShellGet richiede tuttavia la versione più recente del provider NuGet, pertanto PowerShellGet chiede a PackageManagement di avviare nuovamente il provider NuGet. Ciò comporta l'esecuzione di più richieste di avvio del provider NuGet.
 
-**Soluzione**: in WMF 5.1, PackageManagement carica la versione più recente del provider NuGet per evitare l'esecuzione di più richieste di avvio del provider NuGet.
+**Soluzione**: In WMF 5.1, PackageManagement carica la versione più recente del provider NuGet per evitare più richieste di avvio del provider NuGet.
 
 È possibile aggirare il problema anche eliminando manualmente la versione precedente del provider NuGet (NuGet-Anycpu.exe), se presente, da $env:Programmi\PackageManagement\ProviderAssemblies $env:LOCALAPPDATA\PackageManagement\ProviderAssemblies
 
 
 ### <a name="support-for-packagemanagement-on-computers-with-intranet-access-only"></a>Supporto per PackageManagement nei computer solo con accesso Intranet
 
-**Scenario**: in uno scenario aziendale gli utenti operano in un ambiente in cui non è presente alcun accesso Internet, ma solo Intranet. In WMF 5.0, PackageManagement non supporta questo caso.
+**Scenario**: Per lo scenario aziendale, gli utenti operano in un ambiente in cui è presente alcun accesso a Internet ma Intranet solo. In WMF 5.0, PackageManagement non supporta questo caso.
 
-**Scenario**: in WMF 5.0, PackageManagement non supporta i computer che dispongono solo dell'accesso Intranet, ma non Internet.
+**Scenario**: In WMF 5.0, PackageManagement non supporta computer che dispongono solo Intranet, ma non Internet, l'accesso.
 
-**Soluzione**: in WMF 5.1, è possibile seguire questa procedura per consentire ai computer Intranet di usare PackageManagement:
+**Soluzione**: In WMF 5.1, è possibile seguire questa procedura per consentire ai computer Intranet di usare PackageManagement:
 
 1. Scaricare il provider NuGet usando un altro computer che dispone di una connessione Internet tramite `Install-PackageProvider -Name NuGet`.
 
