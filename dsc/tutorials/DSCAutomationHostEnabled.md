@@ -2,19 +2,19 @@
 ms.date: 06/12/2017
 keywords: dsc,powershell,configurazione,installazione
 title: Chiave del Registro di sistema DSCAutomationHostEnabled
-ms.openlocfilehash: 38e3189323c39a522b2ccad89f5cfcadf5e45616
-ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
+ms.openlocfilehash: 2bccd2738b9f61efd656fdf0f98cf71affdbe781
+ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
 ms.translationtype: MTE95
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53401189"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55678004"
 ---
 >Si applica a: Windows PowerShell 5.0
 
 # <a name="dscautomationhostenabled-registry-key"></a>Chiave del Registro di sistema DSCAutomationHostEnabled
 
-DSC usa la chiave del Registro di sistema **DSCAutomationHostEnabled** in **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies** per abilitare la configurazione del computer all'avvio iniziale.
-DSCAutomationHostEnabled supporta tre modalità:
+DSC Usa la **DSCAutomationHostEnabled** chiave di registro **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System** per abilitare la configurazione della macchina al iniziale avvio.
+**DSCAutomationHostEnabled** supporta tre modalità:
 
 |  Valore DSCAutomationHostEnabled  |  Description   |
 |---|---|
