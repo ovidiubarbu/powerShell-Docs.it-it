@@ -3,10 +3,10 @@ ms.date: 06/12/2017
 keywords: dsc,powershell,configurazione,installazione
 title: Opzioni delle credenziali nei dati di configurazione
 ms.openlocfilehash: 2a326e45bbbad7bd2362b66b88bf61b98df7b02e
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: 6ae5b50a4b3ffcd649de1525c3ce6f15d3669082
 ms.translationtype: MTE95
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2019
+ms.lasthandoff: 02/18/2019
 ms.locfileid: "55681232"
 ---
 # <a name="credentials-options-in-configuration-data"></a>Opzioni delle credenziali nei dati di configurazione
@@ -25,7 +25,7 @@ Per eliminare questi messaggi di errore e di avviso, usare le parole chiave dei 
 > [!NOTE]
 > L'archiviazione o la trasmissione di password di testo normale non crittografata in genere non è protetta. È consigliabile proteggere le credenziali tramite le tecniche illustrate più avanti in questo argomento.
 > Il servizio Automation DSC di Azure consente di gestire centralmente le credenziali da compilare nelle configurazioni e archiviare in modo sicuro.
-> Per informazioni, vedere: [Compilazione di configurazioni DSC / asset credenziali](/azure/automation/automation-dsc-compile#credential-assets)
+> Per informazioni, vedere [Compilazione di configurazioni in Azure Automation DSC/Asset credenziali](/azure/automation/automation-dsc-compile#credential-assets)
 
 ## <a name="handling-credentials-in-dsc"></a>Gestione delle credenziali in DSC
 
@@ -65,7 +65,7 @@ Tuttavia, la risorsa usa solo la proprietà `Credential`.
 
 Per altre informazioni sulla proprietà `PsDscRunAsCredential`, vedere [Esecuzione di DSC con le credenziali dell'utente](runAsUser.md).
 
-## <a name="example-the-group-resource-credential-property"></a>Esempio: La risorsa del gruppo di proprietà Credential
+## <a name="example-the-group-resource-credential-property"></a>Esempio: proprietà Credential della risorsa Group
 
 Poiché DSC viene eseguito in `Local System`, ha già le autorizzazioni necessarie per modificare gruppi e utenti locali.
 Se il membro aggiunto è un account locale, non è necessaria alcuna credenziale.
