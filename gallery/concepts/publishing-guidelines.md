@@ -4,12 +4,12 @@ contributor: JKeithB
 keywords: gallery,powershell,cmdlet,psgallery
 description: Linee guida per gli autori
 title: Linee guida e procedure consigliate per la pubblicazione in PowerShell Gallery
-ms.openlocfilehash: a996a820d6bd52e796a41659c6f468662dbff0f4
-ms.sourcegitcommit: 548547b2d5fc73e726bb9fec6175d452a351d975
+ms.openlocfilehash: 64c3d607b13dce64f70f138fdee849e5baaf85df
+ms.sourcegitcommit: 6ae5b50a4b3ffcd649de1525c3ce6f15d3669082
 ms.translationtype: MTE95
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53655396"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56265570"
 ---
 # <a name="powershellgallery-publishing-guidelines-and-best-practices"></a>Linee guida e procedure consigliate per la pubblicazione in PowerShell Gallery
 
@@ -93,8 +93,8 @@ La community valuta positivamente i proprietari di pacchetti che offrono rispost
 
 In PowerShell Gallery sono disponibili due metodi per aggiungere commenti e suggerimenti:
 
-- Contattare il proprietario: Ciò consente a un utente inviare un messaggio di posta elettronica a proprietari del pacchetto. È importante che il proprietario del pacchetto controlli l'indirizzo di posta elettronica specificato con i pacchetti di PowerShell Gallery e risponda alle segnalazioni. L'unico svantaggio di questo metodo è il fatto che solo l'utente e il proprietario visualizzano questa comunicazione, pertanto è possibile che il proprietario debba rispondere molte volte alla stessa domanda.
-- Commenti Nella parte inferiore del pacchetto di pagina è un campo di commento.
+- Contact Owner (Contatta il proprietario): l'utente può inviare un messaggio di posta elettronica al o ai proprietari del pacchetto. È importante che il proprietario del pacchetto controlli l'indirizzo di posta elettronica specificato con i pacchetti di PowerShell Gallery e risponda alle segnalazioni. L'unico svantaggio di questo metodo è il fatto che solo l'utente e il proprietario visualizzano questa comunicazione, pertanto è possibile che il proprietario debba rispondere molte volte alla stessa domanda.
+- Comments (Commenti): nella parte inferiore della pagina del pacchetto è disponibile un campo Comment (Commento).
   Il vantaggio di questa opzione è il fatto che altri utenti possono vedere i commenti e le risposte, pertanto è necessario rispondere alla stessa domanda per un numero minore di volte.
   È consigliabile che il proprietario di un pacchetto segua i commenti aggiunti per ogni pacchetto.
 Per informazioni su come procedere, vedere [Pubblicazione di feedback sui social media o nei commenti](../how-to/working-with-packages/social-media-feedback.md).
@@ -140,11 +140,11 @@ Quando viene specificato un ProjectURI, PowerShell Gallery include un collegamen
 
 Usare i seguenti tag per illustrare agli utenti che funzioneranno bene con loro ambiente pacchetti:
 
-- PSEdition_Desktop: Pacchetti che sono compatibili con Windows PowerShell 
-- PSEdition_Core: Pacchetti che sono compatibili con Powershell Core 
-- Windows Pacchetti che sono compatibili con il sistema operativo Windows
-- Linux Pacchetti che sono compatibili con i sistemi operativi di Linux 
-- MacOS 10.12 Pacchetti che sono compatibili con il sistema operativo Mac
+- PSEdition_Desktop: I pacchetti che sono compatibili con Windows PowerShell 
+- PSEdition_Core: I pacchetti compatibili con Powershell Core 
+- Windows: I pacchetti che sono compatibili con il sistema operativo Windows
+- Linux: I pacchetti che sono compatibili con i sistemi operativi di Linux 
+- MacOS: I pacchetti che sono compatibili con il sistema operativo Mac
 
 ## <a name="include-tests"></a>Includere test
 
@@ -203,7 +203,7 @@ La versione del pacchetto deve essere inclusa nei dati del manifesto.
 - La versione deve essere strutturata con 3 blocchi numerici separati da punti, ad esempio 0.1.1 o 4.11.192
 - Le versioni che iniziano con "0" indicano che il pacchetto non è ancora pronto per la produzione e il primo numero dovrebbe iniziare con "0" solo se è l'unico numero usato
 - La modifica del primo numero (da 1.9.9999 a 2.0.0) indica modifiche strutturali di primaria importanza alla versione.
-- La modifica del secondo numero (da 1.01 a 1.02) indica modifiche a livello di funzionalità, ad esempio l'aggiunta di nuovi cmdlet a un modulo.
+- La modifica del secondo numero (da 1.1 a 1.2) indica modifiche a livello di funzionalità, ad esempio l'aggiunta di nuovi cmdlet a un modulo.
 - La modifica del terzo numero indica modifiche meno importanti, ad esempio l'aggiunta di nuovi parametri, esempi aggiornati o nuovi test.
 - Per la creazione di elenchi di versioni in PowerShell le versioni vengono ordinate come stringhe, quindi 1.01.0 verrà considerato maggiore di 1.001.0.
 
