@@ -2,12 +2,12 @@
 ms.date: 06/05/2017
 keywords: powershell,cmdlet
 title: Creazione del secondo hop nella comunicazione remota di PowerShell
-ms.openlocfilehash: 06ca43e3e0524d89ec6f66f6553c4c75072beaf3
-ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
+ms.openlocfilehash: 1b6e5ad53346324adc7be2d013e154c8600afa4f
+ms.sourcegitcommit: 6ae5b50a4b3ffcd649de1525c3ce6f15d3669082
 ms.translationtype: MTE95
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53401459"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56265587"
 ---
 # <a name="making-the-second-hop-in-powershell-remoting"></a>Creazione del secondo hop nella comunicazione remota di PowerShell
 
@@ -24,7 +24,7 @@ Ci sono diversi modi per risolvere questo problema. In questo argomento vengono 
 
 È possibile usare [Credential Security Support Provider (CredSSP)](https://msdn.microsoft.com/library/windows/desktop/bb931352.aspx) per l'autenticazione. CredSSP memorizza le credenziali nel server remoto (_ServerB_), quindi il suo uso potrebbe facilitare il furto di credenziali. Se il computer remoto viene compromesso, l'utente malintenzionato ha accesso alle credenziali dell'utente. Per impostazione predefinita, CredSSP è disabilitato sia nei computer client che nei computer server. È opportuno abilitare CredSSP solo negli ambienti più attendibili. Ad esempio, quando un amministratore di dominio si connette a un controller di dominio perché il controller di dominio è estremamente attendibile.
 
-Per altre informazioni sui problemi di sicurezza quando si utilizza CredSSP per la comunicazione remota di PowerShell, vedere [sabotaggio accidentale: Prestare attenzione CredSSP](https://www.powershellmagazine.com/2014/03/06/accidental-sabotage-beware-of-credssp).
+Per altre informazioni sui problemi di sicurezza relativi all'uso di CredSSP per la comunicazione remota di PowerShell, vedere [Accidental Sabotage: Beware of CredSSP](https://www.powershellmagazine.com/2014/03/06/accidental-sabotage-beware-of-credssp) (Sabotaggio accidentale: attenzione a CredSSP).
 
 Per altre informazioni sugli attacchi con furto di credenziali, vedere [Mitigating Pass-the-Hash (PtH) Attacks and Other Credential Theft](https://www.microsoft.com/en-us/download/details.aspx?id=36036) (Mitigazione degli attacchi Pass-the-Hash (PtH) e di altre tecniche per il furto delle credenziali).
 
@@ -43,7 +43,7 @@ Per un esempio su come abilitare e usare CredSSP per la comunicazione remota di 
 
 È anche possibile usare la delega non vincolata Kerberos per creare il secondo hop. Tuttavia, questo metodo non offre alcun controllo su dove vengono usate le credenziali delegate.
 
->**Nota:** gli account di Active Directory che hanno il set di proprietà **L'account è sensibile e non può essere delegato** non possono essere delegati. Per altre informazioni, vedere [lo stato attivo della protezione: Analysing "Account è sensibile e non può essere delegato" per gli account con privilegi](https://blogs.technet.microsoft.com/poshchap/2015/05/01/security-focus-analysing-account-is-sensitive-and-cannot-be-delegated-for-privileged-accounts/) e [impostazioni e strumenti di autenticazione Kerberos](https://technet.microsoft.com/library/cc738673(v=ws.10).aspx)
+>**Nota:** gli account di Active Directory che hanno il set di proprietà **L'account è sensibile e non può essere delegato** non possono essere delegati. Per altre informazioni, vedere [Security Focus: Analysing 'Account is sensitive and cannot be delegated' for Privileged Accounts](https://blogs.technet.microsoft.com/poshchap/2015/05/01/security-focus-analysing-account-is-sensitive-and-cannot-be-delegated-for-privileged-accounts/) (Considerazione sulla sicurezza: analisi del set di proprietà "L'account è sensibile e non può essere delegato" per gli account privilegiati) e [Kerberos Authentication Tools and Settings](https://technet.microsoft.com/library/cc738673(v=ws.10).aspx) (Strumenti e impostazioni dell'autenticazione Kerberos).
 
 ### <a name="pros"></a>Vantaggi
 
@@ -56,9 +56,10 @@ Per un esempio su come abilitare e usare CredSSP per la comunicazione remota di 
 
 ## <a name="kerberos-constrained-delegation"></a>Delega vincolata Kerberos
 
-È possibile usare la delega vincolata legacy (non basata sulle risorse) per creare il secondo hop.
+È possibile usare la delega vincolata legacy (non basata sulle risorse) per creare il secondo hop. Configurare la delega vincolata Kerberos con l'opzione "Usa un qualsiasi protocollo di autenticazione" per consentire la transizione di protocollo.
 
->**Nota:** gli account di Active Directory che hanno il set di proprietà **L'account è sensibile e non può essere delegato** non possono essere delegati. Per altre informazioni, vedere [lo stato attivo della protezione: Analysing "Account è sensibile e non può essere delegato" per gli account con privilegi](https://blogs.technet.microsoft.com/poshchap/2015/05/01/security-focus-analysing-account-is-sensitive-and-cannot-be-delegated-for-privileged-accounts/) e [impostazioni e strumenti di autenticazione Kerberos](https://technet.microsoft.com/library/cc738673(v=ws.10).aspx)
+> [!NOTE]
+> gli account di Active Directory che hanno il set di proprietà **L'account è sensibile e non può essere delegato** non possono essere delegati. Per altre informazioni, vedere [Security Focus: Analysing 'Account is sensitive and cannot be delegated' for Privileged Accounts](https://blogs.technet.microsoft.com/poshchap/2015/05/01/security-focus-analysing-account-is-sensitive-and-cannot-be-delegated-for-privileged-accounts/) (Considerazione sulla sicurezza: analisi del set di proprietà "L'account è sensibile e non può essere delegato" per gli account privilegiati) e [Kerberos Authentication Tools and Settings](https://technet.microsoft.com/library/cc738673(v=ws.10).aspx) (Strumenti e impostazioni dell'autenticazione Kerberos).
 
 ### <a name="pros"></a>Vantaggi
 
@@ -76,7 +77,7 @@ Per un esempio su come abilitare e usare CredSSP per la comunicazione remota di 
 Co l'uso della delega vincolata Kerberos basata sulle risorse (introdotta in Windows Server 2012), si configura la delega delle credenziali nell'oggetto del server dove si trovano le risorse.
 Nello scenario del secondo hop illustrato in precedenza, si configura il _ServerC_ per specificare da dove verranno accettate le credenziali delegate.
 
->**Nota:** gli account di Active Directory che hanno il set di proprietà **L'account è sensibile e non può essere delegato** non possono essere delegati. Per altre informazioni, vedere [lo stato attivo della protezione: Analysing "Account è sensibile e non può essere delegato" per gli account con privilegi](https://blogs.technet.microsoft.com/poshchap/2015/05/01/security-focus-analysing-account-is-sensitive-and-cannot-be-delegated-for-privileged-accounts/) e [impostazioni e strumenti di autenticazione Kerberos](https://technet.microsoft.com/library/cc738673(v=ws.10).aspx)
+>**Nota:** gli account di Active Directory che hanno il set di proprietà **L'account è sensibile e non può essere delegato** non possono essere delegati. Per altre informazioni, vedere [Security Focus: Analysing 'Account is sensitive and cannot be delegated' for Privileged Accounts](https://blogs.technet.microsoft.com/poshchap/2015/05/01/security-focus-analysing-account-is-sensitive-and-cannot-be-delegated-for-privileged-accounts/) (Considerazione sulla sicurezza: analisi del set di proprietà "L'account è sensibile e non può essere delegato" per gli account privilegiati) e [Kerberos Authentication Tools and Settings](https://technet.microsoft.com/library/cc738673(v=ws.10).aspx) (Strumenti e impostazioni dell'autenticazione Kerberos).
 
 ### <a name="pros"></a>Vantaggi
 
@@ -213,7 +214,7 @@ Set-ADComputer -Identity $ServerC -PrincipalsAllowedToDelegateToAccount $null
 - [How Windows Server 2012 Eases the Pain of Kerberos Constrained Delegation, Part 1](https://windowsitpro.com/security/how-windows-server-2012-eases-pain-kerberos-constrained-delegation-part-1) (Come Windows Server 2012 semplifica i problemi della delega vincolata Kerberos, parte 1)
 - [How Windows Server 2012 Eases the Pain of Kerberos Constrained Delegation, Part 1](https://windowsitpro.com/security/how-windows-server-2012-eases-pain-kerberos-constrained-delegation-part-2) (Come Windows Server 2012 semplifica i problemi della delega vincolata Kerberos, parte 2)
 - [Understanding Kerberos Constrained Delegation for Azure Active Directory Application Proxy Deployments with Integrated Windows Authentication](https://aka.ms/kcdpaper) (Informazioni sulla delega vincolata Kerberos per le distribuzioni proxy dell'applicazione Azure Active Directory con l'Autenticazione integrata di Windows)
-- [[MS-ADA2]: Active Directory Schema attributi M2.210 attributo msDS-AllowedToActOnBehalfOfOtherIdentity](https://msdn.microsoft.com/library/hh554126.aspx)
+- [[MS-ADA2]: Active Directory Schema Attributes M2.210 Attribute msDS-AllowedToActOnBehalfOfOtherIdentity](https://msdn.microsoft.com/library/hh554126.aspx) ([MS-ADA2]: attributi dello schema di Active Directory M2.210 Attributo msDS-AllowedToActOnBehalfOfOtherIdentity)
 - [[MS-SFU]: Kerberos Protocol Extensions: Service for User and Constrained Delegation Protocol 1.3.2 S4U2proxy](https://msdn.microsoft.com/library/cc246079.aspx) ([MS-SFU]: estensioni del protocollo Kerberos: servizio per utenti e protocollo di delega vincolata 1.3.2 S4U2proxy)
 - [Delega vincolata Kerberos basata sulle risorse](https://blog.kloud.com.au/2013/07/11/kerberos-constrained-delegation/)
 - [Remote Administration Without Constrained Delegation Using PrincipalsAllowedToDelegateToAccount](https://blogs.msdn.microsoft.com/taylorb/2012/11/06/remote-administration-without-constrained-delegation-using-principalsallowedtodelegatetoaccount/) (Amministrazione remota senza delega vincolata tramite PrincipalsAllowedToDelegateToAccount)
