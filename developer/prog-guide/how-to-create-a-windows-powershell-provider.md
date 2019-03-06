@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Windows PowerShell Programmer's Guide, providers
 ms.assetid: 863e48e9-7206-4c6a-a59a-2ab2d30396bc
 caps.latest.revision: 5
-ms.openlocfilehash: a114a4b0d5a5bfcc0d072f83f0e59ca6d329a172
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: 286df63e75d6372cb41c974e60e79b02bd13686e
+ms.sourcegitcommit: 69abc5ad16e5dd29ddfb1853e266a4bfd1d59d59
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56862407"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57429670"
 ---
 # <a name="how-to-create-a-windows-powershell-provider"></a>Come creare un provider di Windows PowerShell
 
@@ -33,7 +33,6 @@ Windows PowerShell sono disponibili diversi provider (ad esempio il provider Fil
 
 ## <a name="accessing-the-stored-data-using-windows-powershell-paths"></a>L'accesso ai dati archiviati mediante i percorsi di Windows PowerShell
 
-Provider di Windows PowerShell sono accessibili per il runtime di Windows PowerShell e comandi a livello di codice tramite l'uso di percorsi di Windows PowerShell. La maggior parte dei casi, questi percorsi vengono utilizzati per accedere direttamente ai dati tramite il provider. Tuttavia, alcuni percorsi possono essere risolti ai percorsi del provider interne che consentono un cmdlet per usare application programming interface (API) non Windows PowerShell per accedere ai dati. Per altre informazioni sul funzionamento di provider di Windows PowerShell all'interno di Windows PowerShell, vedere [modalità di funzionamento di Windows PowerShell](http://msdn.microsoft.com/en-us/ced30e23-10af-4700-8933-49873bd84d58).
 Provider di Windows PowerShell sono accessibili per il runtime di Windows PowerShell e comandi a livello di codice tramite l'uso di percorsi di Windows PowerShell. La maggior parte dei casi, questi percorsi vengono utilizzati per accedere direttamente ai dati tramite il provider. Tuttavia, alcuni percorsi possono essere risolti ai percorsi del provider interne che consentono un cmdlet per usare application programming interface (API) non Windows PowerShell per accedere ai dati. Per altre informazioni sul funzionamento di provider di Windows PowerShell all'interno di Windows PowerShell, vedere [modalità di funzionamento di Windows PowerShell](http://msdn.microsoft.com/en-us/ced30e23-10af-4700-8933-49873bd84d58).
 
 ## <a name="exposing-provider-cmdlets-using-windows-powershell-drives"></a>Unità di esporre i cmdlet del Provider usando Windows PowerShell
@@ -64,8 +63,6 @@ La tabella seguente Elenca argomenti che includono esempi di codice che compilan
 |[Creazione di un Provider di proprietà di PowerShell di Windows](./creating-a-windows-powershell-property-provider.md)|In questo argomento viene illustrato come creare un provider di Windows PowerShell che consente all'utente di modificare le proprietà degli elementi in un archivio dati.|
 
 ## <a name="see-also"></a>Vedere anche
-
-[Funzionamento di Windows PowerShell](http://msdn.microsoft.com/en-us/ced30e23-10af-4700-8933-49873bd84d58)
 
 [Funzionamento di Windows PowerShell](http://msdn.microsoft.com/en-us/ced30e23-10af-4700-8933-49873bd84d58)
 

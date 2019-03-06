@@ -11,12 +11,12 @@ helpviewer_keywords:
 - container providers [PowerShell Programmer's Guide]
 ms.assetid: a7926647-0d18-45b2-967e-b31f92004bc4
 caps.latest.revision: 5
-ms.openlocfilehash: 8c111f8f2943043e4ad2a6a8677db4afe1b3cdab
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: e0d83a742eae2bcde2e691860a5f2b3e5862d2de
+ms.sourcegitcommit: 69abc5ad16e5dd29ddfb1853e266a4bfd1d59d59
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56863167"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57430036"
 ---
 # <a name="creating-a-windows-powershell-container-provider"></a>Creazione di un provider di contenitori di Windows PowerShell
 
@@ -25,7 +25,6 @@ In questo argomento viene descritto come creare un provider di Windows PowerShel
 I provider compatibile con gli archivi dati a più livelli sono dette provider di contenitore di Windows PowerShell. Tuttavia, tenere presente che è possibile utilizzare un provider di contenitore di Windows PowerShell solo quando è presente un contenitore (non i contenitori nidificati) con gli elementi in esso. Se sono presenti contenitori annidati, è necessario implementare un provider di navigazione di Windows PowerShell. Per altre informazioni sull'implementazione del provider di navigazione di Windows PowerShell, vedere [creazione di un Provider di navigazione di Windows PowerShell](./creating-a-windows-powershell-navigation-provider.md).
 
 > [!NOTE]
-> È possibile scaricare il C# file di origine (AccessDBSampleProvider04.cs) per questo provider tramite il Microsoft Windows Software Development Kit per Windows Vista e i componenti di Runtime di .NET Framework 3.0. Per istruzioni sul download, vedere [come installare Windows PowerShell e il Download di Windows PowerShell SDK](/powershell/developer/installing-the-windows-powershell-sdk).
 > È possibile scaricare il C# file di origine (AccessDBSampleProvider04.cs) per questo provider tramite il Microsoft Windows Software Development Kit per Windows Vista e i componenti di Runtime di .NET Framework 3.0. Per istruzioni sul download, vedere [come installare Windows PowerShell e il Download di Windows PowerShell SDK](/powershell/developer/installing-the-windows-powershell-sdk).
 >
 > Sono disponibili in file di origine scaricato il  **\<esempi di PowerShell >** directory.
@@ -418,7 +417,6 @@ Per il codice di esempio completo, vedere [esempio di codice AccessDbProviderSam
 ## <a name="building-the-windows-powershell-provider"></a>Creazione del Provider di Windows PowerShell
 
 Visualizzare [come registrare i cmdlet, provider e ospitare applicazioni](http://msdn.microsoft.com/en-us/a41e9054-29c8-40ab-bf2b-8ce4e7ec1c8c).
-Visualizzare [come registrare i cmdlet, provider e ospitare applicazioni](http://msdn.microsoft.com/en-us/a41e9054-29c8-40ab-bf2b-8ce4e7ec1c8c).
 
 ## <a name="testing-the-windows-powershell-provider"></a>Test di un Provider Windows PowerShell
 
@@ -537,8 +535,6 @@ Quando il provider di Windows PowerShell è stato registrato con Windows PowerSh
 [Implementazione di un Provider di Windows PowerShell](./creating-a-windows-powershell-item-provider.md)
 
 [Implementazione di un Provider di navigazione Windows PowerShell](./creating-a-windows-powershell-navigation-provider.md)
-
-[Come registrare i cmdlet, provider e applicazioni Host](http://msdn.microsoft.com/en-us/a41e9054-29c8-40ab-bf2b-8ce4e7ec1c8c)
 
 [Come registrare i cmdlet, provider e applicazioni Host](http://msdn.microsoft.com/en-us/a41e9054-29c8-40ab-bf2b-8ce4e7ec1c8c)
 

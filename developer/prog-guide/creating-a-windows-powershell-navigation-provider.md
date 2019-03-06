@@ -11,19 +11,18 @@ helpviewer_keywords:
 - providers [PowerShell Programmer's Guide], navigation provider
 ms.assetid: 8bd3224d-ca6f-4640-9464-cb4d9f4e13b1
 caps.latest.revision: 5
-ms.openlocfilehash: 066aa188d5d7dfde5af424a3bb8f15ff51c1e936
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: cbc8ce0600553f9e9ab973d6f92ea5eafde310e2
+ms.sourcegitcommit: 69abc5ad16e5dd29ddfb1853e266a4bfd1d59d59
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56856957"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57430034"
 ---
 # <a name="creating-a-windows-powershell-navigation-provider"></a>Creazione di un provider di navigazione di Windows PowerShell
 
 In questo argomento viene descritto come creare un provider di navigazione di Windows PowerShell che può passare l'archivio dati. Questo tipo di provider supporta comandi ricorsiva, i contenitori nidificati e i percorsi relativi.
 
 > [!NOTE]
-> È possibile scaricare il C# file di origine (AccessDBSampleProvider05.cs) per questo provider tramite il Microsoft Windows Software Development Kit per Windows Vista e i componenti di Runtime di .NET Framework 3.0. Per istruzioni sul download, vedere [come installare Windows PowerShell e il Download di Windows PowerShell SDK](/powershell/developer/installing-the-windows-powershell-sdk).
 > È possibile scaricare il C# file di origine (AccessDBSampleProvider05.cs) per questo provider tramite il Microsoft Windows Software Development Kit per Windows Vista e i componenti di Runtime di .NET Framework 3.0. Per istruzioni sul download, vedere [come installare Windows PowerShell e il Download di Windows PowerShell SDK](/powershell/developer/installing-the-windows-powershell-sdk).
 >
 > Sono disponibili in file di origine scaricato il  **\<esempi di PowerShell >** directory.
@@ -186,11 +185,9 @@ Per il codice di esempio completo, vedere [esempio di codice AccessDbProviderSam
 ## <a name="defining-object-types-and-formatting"></a>Definizione di tipi di oggetto e formattazione
 
 È possibile che un provider aggiungere i membri per gli oggetti esistenti o definire nuovi oggetti. Per altre informazioni, vedere[estendendo i tipi di oggetto e formattazione](http://msdn.microsoft.com/en-us/da976d91-a3d6-44e8-affa-466b1e2bd351).
-È possibile che un provider aggiungere i membri per gli oggetti esistenti o definire nuovi oggetti. Per altre informazioni, vedere[estendendo i tipi di oggetto e formattazione](http://msdn.microsoft.com/en-us/da976d91-a3d6-44e8-affa-466b1e2bd351).
 
 ## <a name="building-the-windows-powershell-provider"></a>Creazione del provider di Windows PowerShell
 
-Per altre informazioni, vedere [come registrare i cmdlet, provider e applicazioni Host](http://msdn.microsoft.com/en-us/a41e9054-29c8-40ab-bf2b-8ce4e7ec1c8c).
 Per altre informazioni, vedere [come registrare i cmdlet, provider e applicazioni Host](http://msdn.microsoft.com/en-us/a41e9054-29c8-40ab-bf2b-8ce4e7ec1c8c).
 
 ## <a name="testing-the-windows-powershell-provider"></a>Test di un provider Windows PowerShell
@@ -323,11 +320,7 @@ Quando il provider di Windows PowerShell è stato registrato con Windows PowerSh
 
 [Estensione di tipi di oggetto e la formattazione](http://msdn.microsoft.com/en-us/da976d91-a3d6-44e8-affa-466b1e2bd351)
 
-[Estensione di tipi di oggetto e la formattazione](http://msdn.microsoft.com/en-us/da976d91-a3d6-44e8-affa-466b1e2bd351)
-
 [Implementare un provider di contenitori Windows PowerShell](./creating-a-windows-powershell-container-provider.md)
-
-[Come registrare i cmdlet, provider e applicazioni Host](http://msdn.microsoft.com/en-us/a41e9054-29c8-40ab-bf2b-8ce4e7ec1c8c)
 
 [Come registrare i cmdlet, provider e applicazioni Host](http://msdn.microsoft.com/en-us/a41e9054-29c8-40ab-bf2b-8ce4e7ec1c8c)
 

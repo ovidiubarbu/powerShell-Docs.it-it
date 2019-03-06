@@ -8,19 +8,18 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: af25b560-017a-4d53-a8c3-97c5ab66b9d4
 caps.latest.revision: 5
-ms.openlocfilehash: 303d194e857bf9d56de815bc00f5ca45dc957686
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: d4c8dfc3d40d61abc99feec68aa159709d05cf92
+ms.sourcegitcommit: 69abc5ad16e5dd29ddfb1853e266a4bfd1d59d59
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56861227"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57429823"
 ---
 # <a name="accessdbprovidersample03-code-sample"></a>Codice di esempio di AccessDbProviderSample03
 
 Il codice seguente viene illustrata l'implementazione del provider di Windows PowerShell descritto nella [creazione di un Provider di Windows PowerShell](./creating-a-windows-powershell-item-provider.md). Questo provider che consente di modificare i dati in un archivio dati.
 
 > [!NOTE]
-> È possibile scaricare il C# file di origine (AccessDBSampleProvider03.cs) per questo provider tramite il Microsoft Windows Software Development Kit per Windows Vista e i componenti di Runtime di .NET Framework 3.0. Per istruzioni sul download, vedere [come installare Windows PowerShell e il Download di Windows PowerShell SDK](/powershell/developer/installing-the-windows-powershell-sdk).
 > È possibile scaricare il C# file di origine (AccessDBSampleProvider03.cs) per questo provider tramite il Microsoft Windows Software Development Kit per Windows Vista e i componenti di Runtime di .NET Framework 3.0. Per istruzioni sul download, vedere [come installare Windows PowerShell e il Download di Windows PowerShell SDK](/powershell/developer/installing-the-windows-powershell-sdk).
 >
 > Sono disponibili in file di origine scaricato il  **\<esempi di PowerShell >** directory.

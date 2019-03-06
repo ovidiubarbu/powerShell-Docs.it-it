@@ -11,19 +11,18 @@ helpviewer_keywords:
 - providers [PowerShell Programmer's Guide], content provider
 ms.assetid: 3da88ff9-c4c7-4ace-aa24-0a29c8cfa060
 caps.latest.revision: 6
-ms.openlocfilehash: 6e5d79487539d4f58922e2686f1fdba08797f305
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: 5e35d2fdfa4c6bd70c1b69ca1f357ee8d8ebcdc4
+ms.sourcegitcommit: 69abc5ad16e5dd29ddfb1853e266a4bfd1d59d59
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56855307"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57429976"
 ---
 # <a name="creating-a-windows-powershell-content-provider"></a>Creazione di un provider di contenuti di Windows PowerShell
 
 Questo argomento descrive come creare un provider di Windows PowerShell che consente all'utente di modificare il contenuto degli elementi in un archivio dati. Di conseguenza, un provider che consente di modificare il contenuto degli elementi viene considerato un provider di contenuti di Windows PowerShell.
 
 > [!NOTE]
-> È possibile scaricare il C# file di origine (AccessDBSampleProvider06.cs) per questo provider tramite il Microsoft Windows Software Development Kit per Windows Vista e i componenti di Runtime di .NET Framework 3.0. Per istruzioni sul download, vedere [come installare Windows PowerShell e il Download di Windows PowerShell SDK](/powershell/developer/installing-the-windows-powershell-sdk).
 > È possibile scaricare il C# file di origine (AccessDBSampleProvider06.cs) per questo provider tramite il Microsoft Windows Software Development Kit per Windows Vista e i componenti di Runtime di .NET Framework 3.0. Per istruzioni sul download, vedere [come installare Windows PowerShell e il Download di Windows PowerShell SDK](/powershell/developer/installing-the-windows-powershell-sdk).
 >
 > Sono disponibili in file di origine scaricato il  **\<esempi di PowerShell >** directory.
@@ -233,11 +232,9 @@ Per il codice di esempio completo, vedere [esempio di codice AccessDbProviderSam
 ## <a name="defining-object-types-and-formatting"></a>Definizione di tipi di oggetto e formattazione
 
 Durante la scrittura di un provider, potrebbe essere necessario aggiungere i membri per gli oggetti esistenti o definire nuovi oggetti. Quando questa operazione, è necessario creare un file di tipi che è possibile usare Windows PowerShell per identificare i membri dell'oggetto e un file di formato che definisce la modalità di visualizzazione dell'oggetto. Per altre informazioni, vedere [estendendo i tipi di oggetto e formattazione](http://msdn.microsoft.com/en-us/da976d91-a3d6-44e8-affa-466b1e2bd351).
-Durante la scrittura di un provider, potrebbe essere necessario aggiungere i membri per gli oggetti esistenti o definire nuovi oggetti. Quando questa operazione, è necessario creare un file di tipi che è possibile usare Windows PowerShell per identificare i membri dell'oggetto e un file di formato che definisce la modalità di visualizzazione dell'oggetto. Per altre informazioni, vedere [estendendo i tipi di oggetto e formattazione](http://msdn.microsoft.com/en-us/da976d91-a3d6-44e8-affa-466b1e2bd351).
 
 ## <a name="building-the-windows-powershell-provider"></a>Creazione del Provider di Windows PowerShell
 
-Visualizzare [come registrare i cmdlet, provider e ospitare applicazioni](http://msdn.microsoft.com/en-us/a41e9054-29c8-40ab-bf2b-8ce4e7ec1c8c).
 Visualizzare [come registrare i cmdlet, provider e ospitare applicazioni](http://msdn.microsoft.com/en-us/a41e9054-29c8-40ab-bf2b-8ce4e7ec1c8c).
 
 ## <a name="testing-the-windows-powershell-provider"></a>Test di un Provider Windows PowerShell
@@ -285,11 +282,7 @@ Country   : USA
 
 [Estensione di tipi di oggetto e la formattazione](http://msdn.microsoft.com/en-us/da976d91-a3d6-44e8-affa-466b1e2bd351)
 
-[Estensione di tipi di oggetto e la formattazione](http://msdn.microsoft.com/en-us/da976d91-a3d6-44e8-affa-466b1e2bd351)
-
 [Implementare un provider di navigazione Windows PowerShell](./creating-a-windows-powershell-navigation-provider.md)
-
-[Come registrare i cmdlet, provider e applicazioni Host](http://msdn.microsoft.com/en-us/a41e9054-29c8-40ab-bf2b-8ce4e7ec1c8c)
 
 [Come registrare i cmdlet, provider e applicazioni Host](http://msdn.microsoft.com/en-us/a41e9054-29c8-40ab-bf2b-8ce4e7ec1c8c)
 
