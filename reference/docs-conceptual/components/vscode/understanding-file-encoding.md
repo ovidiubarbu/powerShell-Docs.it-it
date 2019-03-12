@@ -2,12 +2,12 @@
 title: Informazioni sulla codifica di file in VSCode e PowerShell
 description: Configurare la codifica di file in Visual Studio code e PowerShell
 ms.date: 02/28/2019
-ms.openlocfilehash: f3b133b4bee7688821a5960429e2f26b69b01e12
-ms.sourcegitcommit: ce46e5098786e19d521b4bf948ff62d2b90bc53e
+ms.openlocfilehash: 9cf445ebd0c2bb2dbdf4438f02dafe3df3a5d1e2
+ms.sourcegitcommit: 69abc5ad16e5dd29ddfb1853e266a4bfd1d59d59
 ms.translationtype: MTE95
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57251473"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57429806"
 ---
 # <a name="understanding-file-encoding-in-vscode-and-powershell"></a>Informazioni sulla codifica di file in VSCode e PowerShell
 
@@ -68,8 +68,8 @@ Questo utile [riferimento](https://www.i18nqa.com/debug/utf8-debug.html) sono el
 L'estensione di PowerShell interagisce con gli script in numerosi modi:
 
 1. Quando gli script vengono modificati in Visual Studio code, i contenuti vengono inviati tramite Visual Studio code per l'estensione. Il [protocollo di Server di linguaggio][] impone che questo contenuto è stato trasferito in UTF-8. Non è pertanto possibile che l'estensione ottenere la codifica non corretta.
-2. Quando gli script vengono eseguiti direttamente nella Console integrata, vengono letti dal file di PowerShell direttamente. Tf PowerShell codifica è diverso da di VSCode, qualcosa può andare storto qui.
-3. Quando uno script che viene aperto in VSCode fa riferimento a un altro script che non sia aperto in Visual Studio code, l'estensione per il fallback al caricamento del contenuto dello script che dal file system. L'estensione di PowerShell per impostazione predefinita la codifica UTF-8, ma utilizza BOM, o [indicatore ordine byte][], il rilevamento per selezionare la codifica corretta.
+2. Quando gli script vengono eseguiti direttamente nella Console integrata, vengono letti dal file di PowerShell direttamente. Se la codifica PowerShell differisce di VSCode, un elemento può essere inserito errato qui.
+3. Quando uno script che viene aperto in VSCode fa riferimento a un altro script che non sia aperto in Visual Studio code, l'estensione per il fallback al caricamento del contenuto dello script che dal file system. L'estensione di PowerShell per impostazione predefinita la codifica UTF-8, ma utilizza [BOM][], o indicatore ordine byte, il rilevamento per selezionare la codifica corretta.
 
 Il problema si verifica quando presupponendo che la codifica dei formati senza BOM (ad esempio [UTF-8][] con alcun BOM e [Windows-1252][]).
 L'estensione di PowerShell viene impostato su UTF-8. L'estensione non è possibile modificare le impostazioni di codifica di Visual Studio code.
@@ -100,7 +100,7 @@ DB sono facoltative e non è la loro adozione più famosi nel mondo Linux perch�
 
 Della VSCode codifica predefinita è UTF-8 senza BOM.
 
-Per impostare [codifica VSCode][], passare alle impostazioni di Visual Studio code (<kbd>Ctrl<kbd>+</kbd>,</kbd>) e impostare il `"files.encoding"` impostazione:
+Per impostare [Codifica di Visual Studio code][], passare alle impostazioni di Visual Studio code (<kbd>Ctrl<kbd>+</kbd>,</kbd>) e impostare il `"files.encoding"` impostazione:
 
 ```json
 "files.encoding": "utf8bom"
@@ -136,7 +136,7 @@ Se non si vuole queste impostazioni interessano tutti i tipi di file, Visual Stu
 Della PowerShell codifica predefinita varia a seconda della versione:
 
 - In PowerShell 6 o versione successiva, la codifica predefinita è UTF-8 senza BOM in tutte le piattaforme.
-- In Windows PowerShell, la codifica predefinita è in genere sui Windows-1252, un'estensione della [latin 1][], noto anche come ISO 8859-1.
+- In Windows PowerShell, la codifica predefinita è in genere sui Windows-1252, un'estensione della [latin-1][], noto anche come ISO 8859-1.
 
 In PowerShell 5 o versione successiva è possibile trovare la codifica predefinita con questo:
 
@@ -192,7 +192,7 @@ Non è possibile forzare di PowerShell per usare una codifica input specifico. P
 
 ### <a name="existing-scripts"></a>Script esistenti
 
-Gli script già presente nel file system potrebbero dover essere codificata nuovamente per la nuova codifica scelta. Nella barra nella parte inferiore di VSCode, verrà visualizzata l'etichetta UTF-8. Fare clic per aprire la barra delle azioni e selezionare **Salva con codifica**. È ora possibile selezionare una nuova codifica per il file. Visualizzare [codifica VSCode][] per le istruzioni complete.
+Gli script già presente nel file system potrebbero dover essere codificata nuovamente per la nuova codifica scelta. Nella barra nella parte inferiore di VSCode, verrà visualizzata l'etichetta UTF-8. Fare clic per aprire la barra delle azioni e selezionare **Salva con codifica**. È ora possibile selezionare una nuova codifica per il file. Visualizzare [Codifica di Visual Studio code][] per le istruzioni complete.
 
 Se è necessario codificare di nuovo più file, è possibile usare lo script seguente:
 
@@ -267,9 +267,9 @@ Esistono alcuni altri post interessante su codifica e la configurazione di codif
 [@mklement0]: https://github.com/mklement0
 [@rkeithhill]: https://github.com/rkeithhill
 [Windows-1252]: https://wikipedia.org/wiki/Windows-1252
-[latin 1]: https://wikipedia.org/wiki/ISO/IEC_8859-1
+[latin-1]: https://wikipedia.org/wiki/ISO/IEC_8859-1
 [UTF-8]: https://wikipedia.org/wiki/UTF-8
-[indicatore ordine byte]: https://wikipedia.org/wiki/Byte_order_mark
+[BOM]: https://wikipedia.org/wiki/Byte_order_mark
 [UTF-16]: https://wikipedia.org/wiki/UTF-16
 [Protocollo di Server di linguaggio]: https://microsoft.github.io/language-server-protocol/
-[codifica VSCode]: https://code.visualstudio.com/docs/editor/codebasics#_file-encoding-support
+[Codifica di Visual Studio code]: https://code.visualstudio.com/docs/editor/codebasics#_file-encoding-support
