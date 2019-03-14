@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: a0ef5ac9-8254-4832-ace8-84b356c10f08
 caps.latest.revision: 13
-ms.openlocfilehash: 9aff23647e55e8c9c41c54e5b62cedc15fb28a2d
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: ff4fe159eedc47fc69f4d783cd90d2b0e888c0d5
+ms.sourcegitcommit: 5990f04b8042ef2d8e571bec6d5b051e64c9921c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56857167"
+ms.lasthandoff: 03/12/2019
+ms.locfileid: "57794706"
 ---
 # <a name="background-jobs"></a>Processi in background
 
@@ -21,7 +21,6 @@ I cmdlet possono eseguire l'azione internamente o come un Windows PowerShell*pro
 
 ## <a name="background-jobs-child-jobs-and-the-job-repository"></a>I processi in background, i processi figlio e l'archivio di processi
 
-L'oggetto processo restituito dai cmdlet che supportano i processi in background definisce il processo. (Il [Start-Job](/powershell/module/Microsoft.PowerShell.Core/Start-Job) cmdlet restituisce anche un oggetto processo.) Il nome del processo, un identificatore che consente di specificare il processo, le informazioni sullo stato e i processi figlio sono inclusi in questa definizione. Il processo non esegue nessuna delle operazioni. Ogni processo in background ha almeno un processo figlio perché il processo figlio esegue il lavoro effettivo. Quando si esegue un cmdlet in modo che il lavoro viene eseguito come processo in background, il cmdlet necessario aggiungere il processo e i processi figlio a un repository comune, definito come il *archivio di processi*.
 L'oggetto processo restituito dai cmdlet che supportano i processi in background definisce il processo. (Il [Start-Job](/powershell/module/Microsoft.PowerShell.Core/Start-Job) cmdlet restituisce anche un oggetto processo.) Il nome del processo, un identificatore che consente di specificare il processo, le informazioni sullo stato e i processi figlio sono inclusi in questa definizione. Il processo non esegue nessuna delle operazioni. Ogni processo in background ha almeno un processo figlio perché il processo figlio esegue il lavoro effettivo. Quando si esegue un cmdlet in modo che il lavoro viene eseguito come processo in background, il cmdlet necessario aggiungere il processo e i processi figlio a un repository comune, definito come il *archivio di processi*.
 
 Per altre informazioni su come i processi in background vengono gestiti dalla riga di comando, vedere gli argomenti seguenti:

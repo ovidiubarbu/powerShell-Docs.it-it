@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 459b6d0f-d596-4269-9113-915a283c1e28
 caps.latest.revision: 10
-ms.openlocfilehash: afb865b3f6fdb8be96084b3a7fc69b51b23a6d35
-ms.sourcegitcommit: c581c4c8036edf55147e7bce4b00c860da6c5a8b
+ms.openlocfilehash: e0593fa5e58c49d93eae7d0516e080b43ad7decf
+ms.sourcegitcommit: 5990f04b8042ef2d8e571bec6d5b051e64c9921c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56863687"
+ms.lasthandoff: 03/12/2019
+ms.locfileid: "57794672"
 ---
 # <a name="host06-sample"></a>Esempio di Host06
 
@@ -43,7 +43,6 @@ In questo esempio viene illustrato come compilare un'applicazione host basata su
 
 - Implementare il [System.Management.Automation.Host.Ihostuisupportsmultiplechoiceselection](/dotnet/api/System.Management.Automation.Host.IHostUISupportsMultipleChoiceSelection) interfaccia.
 
-- Implementare il [System.Management.Automation.Host.Ihostsupportsinteractivesession](/dotnet/api/System.Management.Automation.Host.IHostSupportsInteractiveSession) interfaccia per supportare la comunicazione remota interattiva tramite il [Enter-PsSession](/powershell/module/Microsoft.PowerShell.Core/Enter-PSSession) e [ Exit-PsSession](/powershell/module/Microsoft.PowerShell.Core/Exit-PSSession) cmdlet.
 - Implementare il [System.Management.Automation.Host.Ihostsupportsinteractivesession](/dotnet/api/System.Management.Automation.Host.IHostSupportsInteractiveSession) interfaccia per supportare la comunicazione remota interattiva tramite il [Enter-PsSession](/powershell/module/Microsoft.PowerShell.Core/Enter-PSSession) e [ Exit-PsSession](/powershell/module/Microsoft.PowerShell.Core/Exit-PSSession) cmdlet.
 
 - Usare l'API di suddividere in token per colorare la riga di comando com'è digitato.

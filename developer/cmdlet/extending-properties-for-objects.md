@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: f33ff3e9-213c-44aa-92ab-09450e65c676
 caps.latest.revision: 11
-ms.openlocfilehash: dcab755f565cd176c85ef6b9c719bceae10301b4
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: be31d03b02394cb1694909cf7b65bbc2a29f6976
+ms.sourcegitcommit: 5990f04b8042ef2d8e571bec6d5b051e64c9921c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56854527"
+ms.lasthandoff: 03/12/2019
+ms.locfileid: "57795437"
 ---
 # <a name="extending-properties-for-objects"></a>Estensione delle proprietà per gli oggetti
 
@@ -101,7 +101,6 @@ Nell'esempio seguente, il `VersionInfo` proprietà viene aggiunta al [FileInfo? 
 
 ## <a name="property-sets"></a>Set di proprietà
 
-Un set di proprietà definisce un gruppo di proprietà estese che possono fare riferimento il nome del set. Ad esempio, il `Property` parametro del [Format-Table](/powershell/module/Microsoft.PowerShell.Utility/Format-Table) cmdlet è possibile specificare una proprietà specifica impostata da visualizzare. Quando viene specificato un set di proprietà, vengono visualizzate solo le proprietà che appartengono al set.
 Un set di proprietà definisce un gruppo di proprietà estese che possono fare riferimento il nome del set. Ad esempio, il `Property` parametro del [Format-Table](/powershell/module/Microsoft.PowerShell.Utility/Format-Table) cmdlet è possibile specificare una proprietà specifica impostata da visualizzare. Quando viene specificato un set di proprietà, vengono visualizzate solo le proprietà che appartengono al set.
 
 Non vi è alcuna restrizione sul numero di set di proprietà che possono essere definiti per un oggetto. Tuttavia, è necessario specificare il set di proprietà usate per definire le proprietà di visualizzazione predefinita di un oggetto all'interno del set di membri PSStandardMembers. Nel file Types.ps1xml tipi, i nomi di set di proprietà predefiniti includono DefaultDisplayProperty DefaultDisplayPropertySet e DefaultKeyPropertySet. Qualsiasi proprietà aggiuntiva che aggiungono al set di membri PSStandardMembers vengono ignorati.

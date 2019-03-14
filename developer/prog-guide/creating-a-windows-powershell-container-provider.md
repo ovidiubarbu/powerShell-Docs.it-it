@@ -11,12 +11,12 @@ helpviewer_keywords:
 - container providers [PowerShell Programmer's Guide]
 ms.assetid: a7926647-0d18-45b2-967e-b31f92004bc4
 caps.latest.revision: 5
-ms.openlocfilehash: e0d83a742eae2bcde2e691860a5f2b3e5862d2de
-ms.sourcegitcommit: 69abc5ad16e5dd29ddfb1853e266a4bfd1d59d59
+ms.openlocfilehash: de75e19abc0ee440e724fba7bf578ce240fbf2df
+ms.sourcegitcommit: 5990f04b8042ef2d8e571bec6d5b051e64c9921c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57430036"
+ms.lasthandoff: 03/12/2019
+ms.locfileid: "57795454"
 ---
 # <a name="creating-a-windows-powershell-container-provider"></a>Creazione di un provider di contenitori di Windows PowerShell
 
@@ -40,7 +40,7 @@ Ecco un elenco delle sezioni in questo argomento. Se non si ha familiarità con 
 
 - [Definizione di una classe di Provider contenitore di Windows PowerShell](#Defining-a-Windows-PowerShell-Container-Provider-Class)
 
-- [Definizione funzionalità di Base]()
+- [Definizione funzionalità di Base](#defining-base-functionality)
 
 - [Recupero degli elementi figlio](#Retrieving-Child-Items)
 
@@ -69,8 +69,6 @@ Ecco un elenco delle sezioni in questo argomento. Se non si ha familiarità con 
 - [Associare i parametri dinamici al `Copy-Item` Cmdlet](#Attaching-Dynamic-Parameters-to-the-Copy-Item-Cmdlet)
 
 - [Esempio di codice](#Code-Sample)
-
-- [Definizione di tipi di oggetto e formattazione]()
 
 - [Creazione del Provider di Windows PowerShell](#Building-the-Windows-PowerShell-Provider)
 

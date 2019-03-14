@@ -8,16 +8,15 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 0a49e3c4-6a1b-404c-aefc-134e5ce3d108
 caps.latest.revision: 11
-ms.openlocfilehash: 3d9edb9d2af8ab15764d97256f49f674255e7ee7
-ms.sourcegitcommit: c581c4c8036edf55147e7bce4b00c860da6c5a8b
+ms.openlocfilehash: 63bcdc6b273b47f8eb743928d2eaa5ef91470df5
+ms.sourcegitcommit: 5990f04b8042ef2d8e571bec6d5b051e64c9921c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56863797"
+ms.lasthandoff: 03/12/2019
+ms.locfileid: "57794417"
 ---
 # <a name="host05-sample"></a>Esempio di Host05
 
-In questo esempio viene illustrato come compilare un'applicazione host basata su console interattiva che legge i comandi dalla riga di comando, esegue i comandi e quindi Visualizza i risultati nella console. L'applicazione host supporta anche le chiamate a computer remoti tramite i cmdlet [Enter-PsSession](/powershell/module/Microsoft.PowerShell.Core/Enter-PSSession) e [Exit-PsSession](/powershell/module/Microsoft.PowerShell.Core/Exit-PSSession).
 In questo esempio viene illustrato come compilare un'applicazione host basata su console interattiva che legge i comandi dalla riga di comando, esegue i comandi e quindi Visualizza i risultati nella console. L'applicazione host supporta anche le chiamate a computer remoti tramite i cmdlet [Enter-PsSession](/powershell/module/Microsoft.PowerShell.Core/Enter-PSSession) e [Exit-PsSession](/powershell/module/Microsoft.PowerShell.Core/Exit-PSSession).
 
 ## <a name="requirements"></a>Requisiti
@@ -44,7 +43,6 @@ In questo esempio viene illustrato come compilare un'applicazione host basata su
 
 - Implementare il [System.Management.Automation.Host.Ihostuisupportsmultiplechoiceselection](/dotnet/api/System.Management.Automation.Host.IHostUISupportsMultipleChoiceSelection) interfaccia.
 
-- Implementare il [System.Management.Automation.Host.Ihostsupportsinteractivesession](/dotnet/api/System.Management.Automation.Host.IHostSupportsInteractiveSession) interfaccia per supportare la comunicazione remota interattiva tramite il [Enter-PsSession](/powershell/module/Microsoft.PowerShell.Core/Enter-PSSession) e [ Exit-PsSession](/powershell/module/Microsoft.PowerShell.Core/Exit-PSSession) cmdlet.
 - Implementare il [System.Management.Automation.Host.Ihostsupportsinteractivesession](/dotnet/api/System.Management.Automation.Host.IHostSupportsInteractiveSession) interfaccia per supportare la comunicazione remota interattiva tramite il [Enter-PsSession](/powershell/module/Microsoft.PowerShell.Core/Enter-PSSession) e [ Exit-PsSession](/powershell/module/Microsoft.PowerShell.Core/Exit-PSSession) cmdlet.
 
 ## <a name="example"></a>Esempio

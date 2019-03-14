@@ -8,16 +8,15 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: bf54eac7-88c6-4108-a5f6-2f0906d1662b
 caps.latest.revision: 5
-ms.openlocfilehash: 06281a1260dbdc120867fce89e6d5c8dd0754b87
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: f65a90023df88fceafae1d1875ddf46b9088e2b8
+ms.sourcegitcommit: 5990f04b8042ef2d8e571bec6d5b051e64c9921c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56856667"
+ms.lasthandoff: 03/12/2019
+ms.locfileid: "57795352"
 ---
 # <a name="naming-help-files"></a>Denominazione dei file della Guida
 
-Questo argomento illustra come assegnare un nome di un file della Guida basati su XML in modo che il [Get-Help](/powershell/module/Microsoft.PowerShell.Core/Get-Help) cmdlet possibile trovarlo. I requisiti di nomi variano per ogni tipo di comando.
 Questo argomento illustra come assegnare un nome di un file della Guida basati su XML in modo che il [Get-Help](/powershell/module/Microsoft.PowerShell.Core/Get-Help) cmdlet possibile trovarlo. I requisiti di nomi variano per ogni tipo di comando.
 
 ## <a name="cmdlet-help-files"></a>File della Guida dei cmdlet
@@ -30,7 +29,6 @@ Il file della Guida per un C# cmdlet devono essere specificate per l'assembly in
 
 Il formato di nome di assembly è obbligatorio anche quando l'assembly è un modulo annidato.
 
-Ad esempio, il [Get-WinEvent; PSITPro5_Diagnostic; ](/powershell/module/Microsoft.PowerShell.Diagnostics/Get-WinEvent) cmdlet è definito nell'assembly Microsoft.PowerShell.Diagnostics.dll. Il `Get-Help` cmdlet Cerca un argomento della Guida per il `Get-WinEvent` cmdlet solo nel file Microsoft.PowerShell.Diagnostics.dll help.xml nella directory del modulo.
 Ad esempio, il [Get-WinEvent; PSITPro5_Diagnostic; ](/powershell/module/Microsoft.PowerShell.Diagnostics/Get-WinEvent) cmdlet è definito nell'assembly Microsoft.PowerShell.Diagnostics.dll. Il `Get-Help` cmdlet Cerca un argomento della Guida per il `Get-WinEvent` cmdlet solo nel file Microsoft.PowerShell.Diagnostics.dll help.xml nella directory del modulo.
 
 ## <a name="provider-help-files"></a>File della Guida di provider
@@ -47,7 +45,6 @@ Ad esempio, il provider Certificate è definito nell'assembly Microsoft.PowerShe
 
 ## <a name="function-help-files"></a>File della Guida (funzione)
 
-Funzioni possono essere documentate con [della Guida basata sui commenti](/powershell/module/microsoft.powershell.core/about/about_comment_based_help) o documentati nel file XML della Guida. Quando la funzione è documentata in un file XML, la funzione deve avere un `.ExternalHelp` commento (parola chiave) che associa la funzione con il file XML. In caso contrario, il `Get-Help` cmdlet non è possibile trovare il file della Guida.
 Funzioni possono essere documentate con [della Guida basata sui commenti](/powershell/module/microsoft.powershell.core/about/about_comment_based_help) o documentati nel file XML della Guida. Quando la funzione è documentata in un file XML, la funzione deve avere un `.ExternalHelp` commento (parola chiave) che associa la funzione con il file XML. In caso contrario, il `Get-Help` cmdlet non è possibile trovare il file della Guida.
 
 Non sono previsti requisiti tecnici per il nome di un file della Guida funzione. Tuttavia, una procedura consigliata è assegnare un nome file della Guida per il modulo di script in cui la funzione è definita. Ad esempio, la funzione seguente è definita nel file MyModule.psm1.

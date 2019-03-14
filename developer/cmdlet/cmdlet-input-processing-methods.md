@@ -10,12 +10,12 @@ helpviewer_keywords:
 - virtual methods (PowerShell SDK]
 ms.assetid: b0bb8172-c9fa-454b-9f1b-57c3fe60671b
 caps.latest.revision: 12
-ms.openlocfilehash: dfaaa19fd3d4eb65a3fd335fb984a69874688f27
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: 7f8d25e03707052b1d5b62e245caae360da11d0b
+ms.sourcegitcommit: 5990f04b8042ef2d8e571bec6d5b051e64c9921c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56861487"
+ms.lasthandoff: 03/12/2019
+ms.locfileid: "57794944"
 ---
 # <a name="cmdlet-input-processing-methods"></a>Metodi di elaborazione degli input dei cmdlet
 
@@ -43,7 +43,6 @@ Per un esempio più dettagliato di come usare il [System.Management.Automation.C
 ## <a name="input-processing-tasks"></a>Attività di elaborazione di input
 
 I cmdlet possono eseguire l'override di [System.Management.Automation.Cmdlet.Processrecord%2A? Displayproperty = Fullname](/dotnet/api/system.management.automation.cmdlet.processrecord?view=powershellsdk-1.1.0) metodo per elaborare l'input che viene inviato al cmdlet. Quando Windows PowerShell elabora una pipeline di comandi, Windows PowerShell chiama questo metodo per ogni record di input che viene elaborato dal cmdlet. Per altre informazioni sul modo in cui Windows PowerShell richiama la pipeline dei comandi, vedere [ciclo di vita di elaborazione Cmdlet](https://msdn.microsoft.com/en-us/3202f55c-314d-4ac3-ad78-4c7ca72253c5).
-I cmdlet possono eseguire l'override di [System.Management.Automation.Cmdlet.Processrecord%2A? Displayproperty = Fullname](/dotnet/api/system.management.automation.cmdlet.processrecord?view=powershellsdk-1.1.0) metodo per elaborare l'input che viene inviato al cmdlet. Quando Windows PowerShell elabora una pipeline di comandi, Windows PowerShell chiama questo metodo per ogni record di input che viene elaborato dal cmdlet. Per altre informazioni sul modo in cui Windows PowerShell richiama la pipeline dei comandi, vedere [ciclo di vita di elaborazione Cmdlet](https://msdn.microsoft.com/en-us/3202f55c-314d-4ac3-ad78-4c7ca72253c5).
 
 Il codice seguente viene illustrata un'implementazione del [System.Management.Automation.Cmdlet.Processrecord%2A? Displayproperty = Fullname](/dotnet/api/system.management.automation.cmdlet.processrecord?view=powershellsdk-1.1.0) (metodo).
 
@@ -64,7 +63,6 @@ Per un esempio più dettagliato di come usare il [System.Management.Automation.C
 
 I cmdlet devono eseguire l'override di [System.Management.Automation.Cmdlet.Endprocessing%2A? Displayproperty = Fullname](/dotnet/api/system.management.automation.cmdlet.endprocessing?view=powershellsdk-1.1.0) metodo per aggiungere tutte le operazioni post-elaborazione sono valide per tutti i record che sono stati elaborati dal cmdlet. Ad esempio, il cmdlet potrebbe essere necessario pulire le variabili oggetto dopo l'operazione è terminata l'elaborazione.
 
-Quando Windows PowerShell elabora una pipeline di comandi, Windows PowerShell viene chiamato questo metodo una volta per ogni istanza del cmdlet nella pipeline. Tuttavia, è importante ricordare che il runtime di Windows PowerShell non chiamerà il [System.Management.Automation.Cmdlet.Endprocessing%2A? Displayproperty = Fullname](/dotnet/api/system.management.automation.cmdlet.endprocessing?view=powershellsdk-1.1.0) metodo se il cmdlet viene annullato metà attraverso l'elaborazione di input o se una terminazione errore si verifica in qualsiasi parte del cmdlet. Per questo motivo, un cmdlet che richiede la pulizia degli oggetti devono implementare l'intero [System. IDisposable](/dotnet/api/System.IDisposable) criterio, inclusi un finalizzatore, in modo che il runtime può chiamare entrambe le [ System.Management.Automation.Cmdlet.Endprocessing%2A? Displayproperty = Fullname](/dotnet/api/system.management.automation.cmdlet.endprocessing?view=powershellsdk-1.1.0) e [System.Idisposable.Dispose*](/dotnet/api/System.IDisposable.Dispose) metodi alla fine dell'elaborazione. Per altre informazioni sul modo in cui Windows PowerShell richiama la pipeline dei comandi, vedere [ciclo di vita di elaborazione Cmdlet](https://msdn.microsoft.com/en-us/3202f55c-314d-4ac3-ad78-4c7ca72253c5).
 Quando Windows PowerShell elabora una pipeline di comandi, Windows PowerShell viene chiamato questo metodo una volta per ogni istanza del cmdlet nella pipeline. Tuttavia, è importante ricordare che il runtime di Windows PowerShell non chiamerà il [System.Management.Automation.Cmdlet.Endprocessing%2A? Displayproperty = Fullname](/dotnet/api/system.management.automation.cmdlet.endprocessing?view=powershellsdk-1.1.0) metodo se il cmdlet viene annullato metà attraverso l'elaborazione di input o se una terminazione errore si verifica in qualsiasi parte del cmdlet. Per questo motivo, un cmdlet che richiede la pulizia degli oggetti devono implementare l'intero [System. IDisposable](/dotnet/api/System.IDisposable) criterio, inclusi un finalizzatore, in modo che il runtime può chiamare entrambe le [ System.Management.Automation.Cmdlet.Endprocessing%2A? Displayproperty = Fullname](/dotnet/api/system.management.automation.cmdlet.endprocessing?view=powershellsdk-1.1.0) e [System.Idisposable.Dispose*](/dotnet/api/System.IDisposable.Dispose) metodi alla fine dell'elaborazione. Per altre informazioni sul modo in cui Windows PowerShell richiama la pipeline dei comandi, vedere [ciclo di vita di elaborazione Cmdlet](https://msdn.microsoft.com/en-us/3202f55c-314d-4ac3-ad78-4c7ca72253c5).
 
 Il codice seguente viene illustrata un'implementazione del [System.Management.Automation.Cmdlet.Processrecord%2A? Displayproperty = Fullname](/dotnet/api/system.management.automation.cmdlet.processrecord?view=powershellsdk-1.1.0) (metodo).

@@ -8,16 +8,15 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 9ab83bcb-2d31-4744-a8bc-2ee22e48fc1b
 caps.latest.revision: 17
-ms.openlocfilehash: b74d3443e644bde9ec909a2cb8e0d94a6f3c2385
-ms.sourcegitcommit: c581c4c8036edf55147e7bce4b00c860da6c5a8b
+ms.openlocfilehash: 8ce6cf1fcabf306b412b6f97915f34ab15436202
+ms.sourcegitcommit: 5990f04b8042ef2d8e571bec6d5b051e64c9921c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56863757"
+ms.lasthandoff: 03/12/2019
+ms.locfileid: "57795182"
 ---
 # <a name="host02-sample"></a>Esempio di Host02
 
-In questo esempio viene illustrato come scrivere un'applicazione host che usa il runtime di Windows PowerShell insieme a un'implementazione host personalizzata. L'applicazione host imposta le impostazioni cultura dell'host per la lingua tedesca, esegue il cmdlet [Get-Process](/powershell/module/Microsoft.PowerShell.Management/Get-Process) e visualizza i risultati allo stesso modo di quando si usa pwrsh.exe e quindi stampa i dati e l'ora correnti in tedesco.
 In questo esempio viene illustrato come scrivere un'applicazione host che usa il runtime di Windows PowerShell insieme a un'implementazione host personalizzata. L'applicazione host imposta le impostazioni cultura dell'host per la lingua tedesca, esegue il cmdlet [Get-Process](/powershell/module/Microsoft.PowerShell.Management/Get-Process) e visualizza i risultati allo stesso modo di quando si usa pwrsh.exe e quindi stampa i dati e l'ora correnti in tedesco.
 
 ## <a name="requirements"></a>Requisiti

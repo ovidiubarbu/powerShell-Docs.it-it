@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 4d68a8f3-fba0-44c5-97b9-9fc191d269a5
 caps.latest.revision: 13
-ms.openlocfilehash: 2bf2447eba07b74f8cc14c9820fc1c1774370b2f
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: c11e50913d2654b786e0e8cfeaf41454999bf75e
+ms.sourcegitcommit: 5990f04b8042ef2d8e571bec6d5b051e64c9921c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56854007"
+ms.lasthandoff: 03/12/2019
+ms.locfileid: "57794970"
 ---
 # <a name="strongly-encouraged-development-guidelines"></a>Linee guida sullo sviluppo vivamente consigliate
 
@@ -107,7 +107,6 @@ Se il parametro deve distinguere tra i 3 valori: "" non è specificato e, $false
 
 #### <a name="support-arrays-for-parameters"></a>Supporta le matrici di parametri
 
-Spesso, gli utenti devono eseguire la stessa operazione su più argomenti. Per i quali un cmdlet debba accettare una matrice come parametro di input in modo che un utente può passare gli argomenti nel parametro come una variabile di Windows PowerShell. Ad esempio, il [Get-Process](/powershell/module/Microsoft.PowerShell.Management/Get-Process) cmdlet Usa una matrice di stringhe che identificano i nomi dei processi da recuperare.
 Spesso, gli utenti devono eseguire la stessa operazione su più argomenti. Per i quali un cmdlet debba accettare una matrice come parametro di input in modo che un utente può passare gli argomenti nel parametro come una variabile di Windows PowerShell. Ad esempio, il [Get-Process](/powershell/module/Microsoft.PowerShell.Management/Get-Process) cmdlet Usa una matrice di stringhe che identificano i nomi dei processi da recuperare.
 
 #### <a name="support-the-passthru-parameter"></a>Supporta il parametro PassThru

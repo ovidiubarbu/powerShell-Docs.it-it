@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 7674636e-a0f2-4587-bfc5-dd3e6ce5489e
 caps.latest.revision: 6
-ms.openlocfilehash: 8874cc18416937c4d3cb30d801f2714410304c8c
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: 5b6ae54ee6c843996c875189b6ee553be5e4f614
+ms.sourcegitcommit: 5990f04b8042ef2d8e571bec6d5b051e64c9921c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56860877"
+ms.lasthandoff: 03/12/2019
+ms.locfileid: "57794383"
 ---
 # <a name="how-updatable-help-works"></a>Come funziona la Guida aggiornabile
 
@@ -21,7 +21,6 @@ Questo argomento viene illustrato come i processi per la Guida aggiornabile del 
 
 ## <a name="the-update-help-process"></a>Il processo di Update-Help
 
-L'elenco seguente descrive le operazioni dei [Update-Help](/powershell/module/Microsoft.PowerShell.Core/Update-Help) cmdlet quando un utente esegue un comando per aggiornare i file della Guida per un modulo in determinate impostazioni cultura dell'interfaccia utente.
 L'elenco seguente descrive le operazioni dei [Update-Help](/powershell/module/Microsoft.PowerShell.Core/Update-Help) cmdlet quando un utente esegue un comando per aggiornare i file della Guida per un modulo in determinate impostazioni cultura dell'interfaccia utente.
 
 1. `Update-Help` Ottiene il file XML HelpInfo remoto dal percorso specificato dal valore della **HelpInfoURI** chiave nel manifesto del modulo e convalida il file a fronte dello schema. (Per visualizzare lo schema, vedere [dello Schema XML HelpInfo](./helpinfo-xml-schema.md).) Quindi `Update-Help` Cerca un file XML HelpInfo locale per il modulo nella directory del modulo nel computer dell'utente.
@@ -36,7 +35,6 @@ L'elenco seguente descrive le operazioni dei [Update-Help](/powershell/module/Mi
 
 ## <a name="the-save-help-process"></a>Il processo di Save-Help
 
-L'elenco seguente descrive le azioni del [Save-Help](/powershell/module/Microsoft.PowerShell.Core/Save-Help) e [Update-Help](/powershell/module/Microsoft.PowerShell.Core/Update-Help) cmdlet quando un utente esegue i comandi per aggiornare i file della Guida in una condivisione file e quindi usare tali file per aggiornare i file della Guida di computer dell'utente.
 L'elenco seguente descrive le azioni del [Save-Help](/powershell/module/Microsoft.PowerShell.Core/Save-Help) e [Update-Help](/powershell/module/Microsoft.PowerShell.Core/Update-Help) cmdlet quando un utente esegue i comandi per aggiornare i file della Guida in una condivisione file e quindi usare tali file per aggiornare i file della Guida di computer dell'utente.
 
 Il `Save-Help` cmdlet esegue le azioni seguenti in risposta a un comando per salvare i file della Guida per un modulo in una condivisione di file specificato dal **DestinationPath** parametro.
