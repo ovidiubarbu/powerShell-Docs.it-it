@@ -8,61 +8,61 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 6d6d43fa-c900-4e2f-952d-deccd584236f
 caps.latest.revision: 11
-ms.openlocfilehash: 0d7bbfd8be3bf2bd1af75a45ca4db016dfb6bff6
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: 6142350e3843a5feddcb5cee8901bbfa607d8d4c
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56857957"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58055999"
 ---
-# <a name="typename-element-for-selectioncondition-for-entryselectedby-for-widecontrol-format"></a><span data-ttu-id="d0f3f-102">Elemento TypeName per SelectionCondition per EntrySelectedBy per WideControl (formato)</span><span class="sxs-lookup"><span data-stu-id="d0f3f-102">TypeName Element for SelectionCondition for EntrySelectedBy for WideControl (Format)</span></span>
+# <a name="typename-element-for-selectioncondition-for-entryselectedby-for-widecontrol-format"></a><span data-ttu-id="1a19b-102">Elemento TypeName per SelectionCondition per EntrySelectedBy per WideControl (formato)</span><span class="sxs-lookup"><span data-stu-id="1a19b-102">TypeName Element for SelectionCondition for EntrySelectedBy for WideControl (Format)</span></span>
 
-<span data-ttu-id="d0f3f-103">Specifica un tipo .NET che attiva la condizione.</span><span class="sxs-lookup"><span data-stu-id="d0f3f-103">Specifies a .NET type that triggers the condition.</span></span> <span data-ttu-id="d0f3f-104">Quando questo tipo è presente, la definizione viene utilizzata.</span><span class="sxs-lookup"><span data-stu-id="d0f3f-104">When this type is present, the definition is used.</span></span>
+<span data-ttu-id="1a19b-103">Specifica un tipo .NET che attiva la condizione.</span><span class="sxs-lookup"><span data-stu-id="1a19b-103">Specifies a .NET type that triggers the condition.</span></span> <span data-ttu-id="1a19b-104">Quando questo tipo è presente, la definizione viene utilizzata.</span><span class="sxs-lookup"><span data-stu-id="1a19b-104">When this type is present, the definition is used.</span></span>
 
-<span data-ttu-id="d0f3f-105">Elemento (formato) elemento ViewDefinitions (formato) visualizzazione elemento (formato) elemento WideControl (formato) elemento WideEntries (formato) elemento WideEntry (formato) EntrySelectedBy elemento di configurazione per elemento SelectionCondition WideEntry (formato) per EntrySelectedBy per elemento TypeName WideEntry (formato) per SelectionCondition per EntrySelectedBy per WideEntry (formato)</span><span class="sxs-lookup"><span data-stu-id="d0f3f-105">Configuration Element (Format) ViewDefinitions Element (Format) View Element (Format) WideControl Element (Format) WideEntries Element (Format) WideEntry Element (Format) EntrySelectedBy Element for WideEntry (Format) SelectionCondition Element for EntrySelectedBy for WideEntry (Format) TypeName Element for SelectionCondition for EntrySelectedBy for WideEntry (Format)</span></span>
+<span data-ttu-id="1a19b-105">Elemento (formato) elemento ViewDefinitions (formato) visualizzazione elemento (formato) elemento WideControl (formato) elemento WideEntries (formato) elemento WideEntry (formato) EntrySelectedBy elemento di configurazione per elemento SelectionCondition WideEntry (formato) per EntrySelectedBy per elemento TypeName WideEntry (formato) per SelectionCondition per EntrySelectedBy per WideEntry (formato)</span><span class="sxs-lookup"><span data-stu-id="1a19b-105">Configuration Element (Format) ViewDefinitions Element (Format) View Element (Format) WideControl Element (Format) WideEntries Element (Format) WideEntry Element (Format) EntrySelectedBy Element for WideEntry (Format) SelectionCondition Element for EntrySelectedBy for WideEntry (Format) TypeName Element for SelectionCondition for EntrySelectedBy for WideEntry (Format)</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="d0f3f-106">Sintassi</span><span class="sxs-lookup"><span data-stu-id="d0f3f-106">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="1a19b-106">Sintassi</span><span class="sxs-lookup"><span data-stu-id="1a19b-106">Syntax</span></span>
 
 ```xml
 <TypeName>Nameof.NetType</TypeName>
 ```
 
-## <a name="attributes-and-elements"></a><span data-ttu-id="d0f3f-107">Attributi ed elementi</span><span class="sxs-lookup"><span data-stu-id="d0f3f-107">Attributes and Elements</span></span>
+## <a name="attributes-and-elements"></a><span data-ttu-id="1a19b-107">Attributi ed elementi</span><span class="sxs-lookup"><span data-stu-id="1a19b-107">Attributes and Elements</span></span>
 
-<span data-ttu-id="d0f3f-108">Le sezioni seguenti descrivono gli attributi e gli elementi figlio dell'elemento padre del `TypeName` elemento.</span><span class="sxs-lookup"><span data-stu-id="d0f3f-108">The following sections describe attributes, child elements, and the parent element of the `TypeName` element.</span></span>
+<span data-ttu-id="1a19b-108">Le sezioni seguenti descrivono gli attributi e gli elementi figlio dell'elemento padre del `TypeName` elemento.</span><span class="sxs-lookup"><span data-stu-id="1a19b-108">The following sections describe attributes, child elements, and the parent element of the `TypeName` element.</span></span>
 
-### <a name="attributes"></a><span data-ttu-id="d0f3f-109">Attributes</span><span class="sxs-lookup"><span data-stu-id="d0f3f-109">Attributes</span></span>
+### <a name="attributes"></a><span data-ttu-id="1a19b-109">Attributes</span><span class="sxs-lookup"><span data-stu-id="1a19b-109">Attributes</span></span>
 
-<span data-ttu-id="d0f3f-110">Nessuna.</span><span class="sxs-lookup"><span data-stu-id="d0f3f-110">None.</span></span>
+<span data-ttu-id="1a19b-110">Nessuna.</span><span class="sxs-lookup"><span data-stu-id="1a19b-110">None.</span></span>
 
-### <a name="child-elements"></a><span data-ttu-id="d0f3f-111">Elementi figlio</span><span class="sxs-lookup"><span data-stu-id="d0f3f-111">Child Elements</span></span>
+### <a name="child-elements"></a><span data-ttu-id="1a19b-111">Elementi figlio</span><span class="sxs-lookup"><span data-stu-id="1a19b-111">Child Elements</span></span>
 
-<span data-ttu-id="d0f3f-112">Nessuna.</span><span class="sxs-lookup"><span data-stu-id="d0f3f-112">None.</span></span>
+<span data-ttu-id="1a19b-112">Nessuna.</span><span class="sxs-lookup"><span data-stu-id="1a19b-112">None.</span></span>
 
-### <a name="parent-elements"></a><span data-ttu-id="d0f3f-113">Elementi padre</span><span class="sxs-lookup"><span data-stu-id="d0f3f-113">Parent Elements</span></span>
+### <a name="parent-elements"></a><span data-ttu-id="1a19b-113">Elementi padre</span><span class="sxs-lookup"><span data-stu-id="1a19b-113">Parent Elements</span></span>
 
-|<span data-ttu-id="d0f3f-114">Elemento</span><span class="sxs-lookup"><span data-stu-id="d0f3f-114">Element</span></span>|<span data-ttu-id="d0f3f-115">Description</span><span class="sxs-lookup"><span data-stu-id="d0f3f-115">Description</span></span>|
+|<span data-ttu-id="1a19b-114">Elemento</span><span class="sxs-lookup"><span data-stu-id="1a19b-114">Element</span></span>|<span data-ttu-id="1a19b-115">Description</span><span class="sxs-lookup"><span data-stu-id="1a19b-115">Description</span></span>|
 |-------------|-----------------|
-|[<span data-ttu-id="d0f3f-116">Elemento SelectionCondition per EntrySelectedBy per WideEntry (formato)</span><span class="sxs-lookup"><span data-stu-id="d0f3f-116">SelectionCondition Element for EntrySelectedBy for WideEntry (Format)</span></span>](./selectioncondition-element-for-entryselectedby-for-widecontrol-format.md)|<span data-ttu-id="d0f3f-117">Definisce la condizione che deve essere presente per questa voce wide da usare.</span><span class="sxs-lookup"><span data-stu-id="d0f3f-117">Defines the condition that must exist for this wide entry to be used.</span></span>|
+|[<span data-ttu-id="1a19b-116">Elemento SelectionCondition per EntrySelectedBy per WideEntry (formato)</span><span class="sxs-lookup"><span data-stu-id="1a19b-116">SelectionCondition Element for EntrySelectedBy for WideEntry (Format)</span></span>](./selectioncondition-element-for-entryselectedby-for-widecontrol-format.md)|<span data-ttu-id="1a19b-117">Definisce la condizione che deve essere presente per questa voce wide da usare.</span><span class="sxs-lookup"><span data-stu-id="1a19b-117">Defines the condition that must exist for this wide entry to be used.</span></span>|
 
-## <a name="text-value"></a><span data-ttu-id="d0f3f-118">Valore di testo</span><span class="sxs-lookup"><span data-stu-id="d0f3f-118">Text Value</span></span>
+## <a name="text-value"></a><span data-ttu-id="1a19b-118">Valore di testo</span><span class="sxs-lookup"><span data-stu-id="1a19b-118">Text Value</span></span>
 
-<span data-ttu-id="d0f3f-119">Specificare il nome completo del tipo .NET, ad esempio `System.IO.DirectoryInfo`.</span><span class="sxs-lookup"><span data-stu-id="d0f3f-119">Specify the fully qualified name of the .NET type, such as `System.IO.DirectoryInfo`.</span></span>
+<span data-ttu-id="1a19b-119">Specificare il nome completo del tipo .NET, ad esempio `System.IO.DirectoryInfo`.</span><span class="sxs-lookup"><span data-stu-id="1a19b-119">Specify the fully qualified name of the .NET type, such as `System.IO.DirectoryInfo`.</span></span>
 
-## <a name="remarks"></a><span data-ttu-id="d0f3f-120">Osservazioni</span><span class="sxs-lookup"><span data-stu-id="d0f3f-120">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="1a19b-120">Osservazioni</span><span class="sxs-lookup"><span data-stu-id="1a19b-120">Remarks</span></span>
 
-<span data-ttu-id="d0f3f-121">La condizione di selezione può includere un tipo .NET o una selezione set, ma non è possibile specificare entrambi.</span><span class="sxs-lookup"><span data-stu-id="d0f3f-121">The selection condition can specify a .NET type or a selection set, but cannot specify both.</span></span> <span data-ttu-id="d0f3f-122">Per altre informazioni su come usare le condizioni di selezione, vedere [che definisce le condizioni per quando i dati vengono visualizzati](./defining-conditions-for-displaying-data.md).</span><span class="sxs-lookup"><span data-stu-id="d0f3f-122">For more information about how to use selection conditions, see [Defining Conditions for when Data is Displayed](./defining-conditions-for-displaying-data.md).</span></span>
+<span data-ttu-id="1a19b-121">La condizione di selezione può includere un tipo .NET o una selezione set, ma non è possibile specificare entrambi.</span><span class="sxs-lookup"><span data-stu-id="1a19b-121">The selection condition can specify a .NET type or a selection set, but cannot specify both.</span></span> <span data-ttu-id="1a19b-122">Per altre informazioni su come usare le condizioni di selezione, vedere [che definisce le condizioni per quando i dati vengono visualizzati](./defining-conditions-for-displaying-data.md).</span><span class="sxs-lookup"><span data-stu-id="1a19b-122">For more information about how to use selection conditions, see [Defining Conditions for when Data is Displayed](./defining-conditions-for-displaying-data.md).</span></span>
 
-<span data-ttu-id="d0f3f-123">Per altre informazioni sugli altri componenti di una visualizzazione più ampia, vedere [creazione di una visualizzazione più ampia](./creating-a-wide-view.md).</span><span class="sxs-lookup"><span data-stu-id="d0f3f-123">For more information about other components of a wide view, see [Creating a Wide View](./creating-a-wide-view.md).</span></span>
+<span data-ttu-id="1a19b-123">Per altre informazioni sugli altri componenti di una visualizzazione più ampia, vedere [creazione di una visualizzazione più ampia](./creating-a-wide-view.md).</span><span class="sxs-lookup"><span data-stu-id="1a19b-123">For more information about other components of a wide view, see [Creating a Wide View](./creating-a-wide-view.md).</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="d0f3f-124">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="d0f3f-124">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="1a19b-124">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="1a19b-124">See Also</span></span>
 
-[<span data-ttu-id="d0f3f-125">Creazione di una visualizzazione più ampia</span><span class="sxs-lookup"><span data-stu-id="d0f3f-125">Creatng a Wide View</span></span>](./creating-a-wide-view.md)
+[<span data-ttu-id="1a19b-125">Creazione di una visualizzazione più ampia</span><span class="sxs-lookup"><span data-stu-id="1a19b-125">Creating a Wide View</span></span>](./creating-a-wide-view.md)
 
-[<span data-ttu-id="d0f3f-126">La definizione delle condizioni per quando i dati vengono visualizzati</span><span class="sxs-lookup"><span data-stu-id="d0f3f-126">Defining Conditions for When Data Is Displayed</span></span>](./defining-conditions-for-displaying-data.md)
+[<span data-ttu-id="1a19b-126">La definizione delle condizioni per quando i dati vengono visualizzati</span><span class="sxs-lookup"><span data-stu-id="1a19b-126">Defining Conditions for When Data Is Displayed</span></span>](./defining-conditions-for-displaying-data.md)
 
-[<span data-ttu-id="d0f3f-127">Elemento SelectionCondition per EntrySelectedBy per WideEntry (formato)</span><span class="sxs-lookup"><span data-stu-id="d0f3f-127">SelectionCondition Element for EntrySelectedBy for WideEntry (Format)</span></span>](./selectioncondition-element-for-entryselectedby-for-widecontrol-format.md)
+[<span data-ttu-id="1a19b-127">Elemento SelectionCondition per EntrySelectedBy per WideEntry (formato)</span><span class="sxs-lookup"><span data-stu-id="1a19b-127">SelectionCondition Element for EntrySelectedBy for WideEntry (Format)</span></span>](./selectioncondition-element-for-entryselectedby-for-widecontrol-format.md)
 
-[<span data-ttu-id="d0f3f-128">Elemento SelectionSetName per SelectionCondition per EntrySelectedBy per WideEntry (formato)</span><span class="sxs-lookup"><span data-stu-id="d0f3f-128">SelectionSetName Element for SelectionCondition for EntrySelectedBy for WideEntry (Format)</span></span>](./selectionsetname-element-for-selectioncondition-for-entryselectedby-for-wideentry-format.md)
+[<span data-ttu-id="1a19b-128">Elemento SelectionSetName per SelectionCondition per EntrySelectedBy per WideEntry (formato)</span><span class="sxs-lookup"><span data-stu-id="1a19b-128">SelectionSetName Element for SelectionCondition for EntrySelectedBy for WideEntry (Format)</span></span>](./selectionsetname-element-for-selectioncondition-for-entryselectedby-for-wideentry-format.md)
 
-[<span data-ttu-id="d0f3f-129">La scrittura di un File di formattazione di PowerShell</span><span class="sxs-lookup"><span data-stu-id="d0f3f-129">Writing a PowerShell Formatting File</span></span>](./writing-a-powershell-formatting-file.md)
+[<span data-ttu-id="1a19b-129">La scrittura di un File di formattazione di PowerShell</span><span class="sxs-lookup"><span data-stu-id="1a19b-129">Writing a PowerShell Formatting File</span></span>](./writing-a-powershell-formatting-file.md)

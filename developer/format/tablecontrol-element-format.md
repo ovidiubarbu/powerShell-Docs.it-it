@@ -8,20 +8,20 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 1550b068-dfbc-4ae0-9aa1-72c9a680ec59
 caps.latest.revision: 15
-ms.openlocfilehash: dd48e82452e83f93e2e005c9db53bbc51d8b2eb4
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: 3942c008e026b0b99db3c77af4a0152b50fffc4e
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56858917"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58054578"
 ---
-# <a name="tablecontrol-element-format"></a><span data-ttu-id="984b2-102">Elemento TableControl (formato)</span><span class="sxs-lookup"><span data-stu-id="984b2-102">TableControl Element (Format)</span></span>
+# <a name="tablecontrol-element-format"></a><span data-ttu-id="d22cf-102">Elemento TableControl (formato)</span><span class="sxs-lookup"><span data-stu-id="d22cf-102">TableControl Element (Format)</span></span>
 
-<span data-ttu-id="984b2-103">Definisce un formato di tabella per una visualizzazione.</span><span class="sxs-lookup"><span data-stu-id="984b2-103">Defines a table format for a view.</span></span>
+<span data-ttu-id="d22cf-103">Definisce un formato di tabella per una visualizzazione.</span><span class="sxs-lookup"><span data-stu-id="d22cf-103">Defines a table format for a view.</span></span>
 
-<span data-ttu-id="984b2-104">Elemento TABLE di elemento (formato) visualizzazione elemento ViewDefinitions (formato) (formato)</span><span class="sxs-lookup"><span data-stu-id="984b2-104">ViewDefinitions Element (Format) View Element (Format) TableControl Element (Format)</span></span>
+<span data-ttu-id="d22cf-104">Elemento TABLE di elemento (formato) visualizzazione elemento ViewDefinitions (formato) (formato)</span><span class="sxs-lookup"><span data-stu-id="d22cf-104">ViewDefinitions Element (Format) View Element (Format) TableControl Element (Format)</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="984b2-105">Sintassi</span><span class="sxs-lookup"><span data-stu-id="984b2-105">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="d22cf-105">Sintassi</span><span class="sxs-lookup"><span data-stu-id="d22cf-105">Syntax</span></span>
 
 ```xml
 <TableControl>
@@ -33,36 +33,36 @@ ms.locfileid: "56858917"
 
 ```
 
-## <a name="attributes-and-elements"></a><span data-ttu-id="984b2-106">Attributi ed elementi</span><span class="sxs-lookup"><span data-stu-id="984b2-106">Attributes and Elements</span></span>
+## <a name="attributes-and-elements"></a><span data-ttu-id="d22cf-106">Attributi ed elementi</span><span class="sxs-lookup"><span data-stu-id="d22cf-106">Attributes and Elements</span></span>
 
-<span data-ttu-id="984b2-107">Le sezioni seguenti descrivono l'elemento padre di attributi e gli elementi figlio di `TableControl` elemento.</span><span class="sxs-lookup"><span data-stu-id="984b2-107">The following sections describe attributes, child elements, and parent element of the `TableControl` element.</span></span> <span data-ttu-id="984b2-108">È necessario specificare le righe della tabella.</span><span class="sxs-lookup"><span data-stu-id="984b2-108">You must specify the rows of the table.</span></span> <span data-ttu-id="984b2-109">Tutti gli elementi figlio sono facoltativi.</span><span class="sxs-lookup"><span data-stu-id="984b2-109">All other child elements are optional.</span></span>
+<span data-ttu-id="d22cf-107">Le sezioni seguenti descrivono l'elemento padre di attributi e gli elementi figlio di `TableControl` elemento.</span><span class="sxs-lookup"><span data-stu-id="d22cf-107">The following sections describe attributes, child elements, and parent element of the `TableControl` element.</span></span> <span data-ttu-id="d22cf-108">È necessario specificare le righe della tabella.</span><span class="sxs-lookup"><span data-stu-id="d22cf-108">You must specify the rows of the table.</span></span> <span data-ttu-id="d22cf-109">Tutti gli elementi figlio sono facoltativi.</span><span class="sxs-lookup"><span data-stu-id="d22cf-109">All other child elements are optional.</span></span>
 
-### <a name="attributes"></a><span data-ttu-id="984b2-110">Attributes</span><span class="sxs-lookup"><span data-stu-id="984b2-110">Attributes</span></span>
+### <a name="attributes"></a><span data-ttu-id="d22cf-110">Attributes</span><span class="sxs-lookup"><span data-stu-id="d22cf-110">Attributes</span></span>
 
-<span data-ttu-id="984b2-111">Nessuna.</span><span class="sxs-lookup"><span data-stu-id="984b2-111">None.</span></span>
+<span data-ttu-id="d22cf-111">Nessuna.</span><span class="sxs-lookup"><span data-stu-id="d22cf-111">None.</span></span>
 
-### <a name="child-elements"></a><span data-ttu-id="984b2-112">Elementi figlio</span><span class="sxs-lookup"><span data-stu-id="984b2-112">Child Elements</span></span>
+### <a name="child-elements"></a><span data-ttu-id="d22cf-112">Elementi figlio</span><span class="sxs-lookup"><span data-stu-id="d22cf-112">Child Elements</span></span>
 
-|<span data-ttu-id="984b2-113">Elemento</span><span class="sxs-lookup"><span data-stu-id="984b2-113">Element</span></span>|<span data-ttu-id="984b2-114">Description</span><span class="sxs-lookup"><span data-stu-id="984b2-114">Description</span></span>|
+|<span data-ttu-id="d22cf-113">Elemento</span><span class="sxs-lookup"><span data-stu-id="d22cf-113">Element</span></span>|<span data-ttu-id="d22cf-114">Description</span><span class="sxs-lookup"><span data-stu-id="d22cf-114">Description</span></span>|
 |-------------|-----------------|
-|[<span data-ttu-id="984b2-115">AutoSize (elemento) per Table (formato)</span><span class="sxs-lookup"><span data-stu-id="984b2-115">AutoSize Element for TableControl (Format)</span></span>](./autosize-element-for-tablecontrol-format.md)|<span data-ttu-id="984b2-116">Elemento facoltativo.</span><span class="sxs-lookup"><span data-stu-id="984b2-116">Optional element.</span></span><br /><br /> <span data-ttu-id="984b2-117">Specifica se la dimensione della colonna e il numero di colonne vengono adattate in base alla dimensione dei dati.</span><span class="sxs-lookup"><span data-stu-id="984b2-117">Specifies whether the column size and the number of columns are adjusted based on the size of the data.</span></span>|
-|[<span data-ttu-id="984b2-118">Elemento HideTableHeaders per Table (formato)</span><span class="sxs-lookup"><span data-stu-id="984b2-118">HideTableHeaders Element for TableControl (Format)</span></span>](./hidetableheaders-element-format.md)|<span data-ttu-id="984b2-119">Elemento facoltativo.</span><span class="sxs-lookup"><span data-stu-id="984b2-119">Optional element.</span></span><br /><br /> <span data-ttu-id="984b2-120">Indica se l'intestazione della tabella non viene visualizzato.</span><span class="sxs-lookup"><span data-stu-id="984b2-120">Indicates whether the header of the table is not displayed.</span></span>|
-|[<span data-ttu-id="984b2-121">Elemento TableHeaders per Table (formato)</span><span class="sxs-lookup"><span data-stu-id="984b2-121">TableHeaders Element for TableControl (Format)</span></span>](./tableheaders-element-format.md)|<span data-ttu-id="984b2-122">Elemento obbligatorio.</span><span class="sxs-lookup"><span data-stu-id="984b2-122">Required element.</span></span><br /><br /> <span data-ttu-id="984b2-123">Definisce le etichette, la larghezza e l'allineamento dei dati per le colonne della visualizzazione della tabella.</span><span class="sxs-lookup"><span data-stu-id="984b2-123">Defines the labels, the widths, and the alignment of the data for the columns of the table view.</span></span>|
-|[<span data-ttu-id="984b2-124">Elemento TableRowEntries per TableCotrol (formato)</span><span class="sxs-lookup"><span data-stu-id="984b2-124">TableRowEntries Element for TableCotrol (Format)</span></span>](./tablerowentries-element-for-tablecontrol-format.md)|<span data-ttu-id="984b2-125">Elemento facoltativo.</span><span class="sxs-lookup"><span data-stu-id="984b2-125">Optional element.</span></span><br /><br /> <span data-ttu-id="984b2-126">Fornisce le definizioni della visualizzazione della tabella.</span><span class="sxs-lookup"><span data-stu-id="984b2-126">Provides the definitions of the table view.</span></span>|
+|[<span data-ttu-id="d22cf-115">AutoSize (elemento) per Table (formato)</span><span class="sxs-lookup"><span data-stu-id="d22cf-115">AutoSize Element for TableControl (Format)</span></span>](./autosize-element-for-tablecontrol-format.md)|<span data-ttu-id="d22cf-116">Elemento facoltativo.</span><span class="sxs-lookup"><span data-stu-id="d22cf-116">Optional element.</span></span><br /><br /> <span data-ttu-id="d22cf-117">Specifica se la dimensione della colonna e il numero di colonne vengono adattate in base alla dimensione dei dati.</span><span class="sxs-lookup"><span data-stu-id="d22cf-117">Specifies whether the column size and the number of columns are adjusted based on the size of the data.</span></span>|
+|[<span data-ttu-id="d22cf-118">Elemento HideTableHeaders per Table (formato)</span><span class="sxs-lookup"><span data-stu-id="d22cf-118">HideTableHeaders Element for TableControl (Format)</span></span>](./hidetableheaders-element-format.md)|<span data-ttu-id="d22cf-119">Elemento facoltativo.</span><span class="sxs-lookup"><span data-stu-id="d22cf-119">Optional element.</span></span><br /><br /> <span data-ttu-id="d22cf-120">Indica se l'intestazione della tabella non viene visualizzato.</span><span class="sxs-lookup"><span data-stu-id="d22cf-120">Indicates whether the header of the table is not displayed.</span></span>|
+|[<span data-ttu-id="d22cf-121">Elemento TableHeaders per Table (formato)</span><span class="sxs-lookup"><span data-stu-id="d22cf-121">TableHeaders Element for TableControl (Format)</span></span>](./tableheaders-element-format.md)|<span data-ttu-id="d22cf-122">Elemento obbligatorio.</span><span class="sxs-lookup"><span data-stu-id="d22cf-122">Required element.</span></span><br /><br /> <span data-ttu-id="d22cf-123">Definisce le etichette, la larghezza e l'allineamento dei dati per le colonne della visualizzazione della tabella.</span><span class="sxs-lookup"><span data-stu-id="d22cf-123">Defines the labels, the widths, and the alignment of the data for the columns of the table view.</span></span>|
+|[<span data-ttu-id="d22cf-124">Elemento TableRowEntries per Table (formato)</span><span class="sxs-lookup"><span data-stu-id="d22cf-124">TableRowEntries Element for TableControl (Format)</span></span>](./tablerowentries-element-for-tablecontrol-format.md)|<span data-ttu-id="d22cf-125">Elemento facoltativo.</span><span class="sxs-lookup"><span data-stu-id="d22cf-125">Optional element.</span></span><br /><br /> <span data-ttu-id="d22cf-126">Fornisce le definizioni della visualizzazione della tabella.</span><span class="sxs-lookup"><span data-stu-id="d22cf-126">Provides the definitions of the table view.</span></span>|
 
-### <a name="parent-elements"></a><span data-ttu-id="984b2-127">Elementi padre</span><span class="sxs-lookup"><span data-stu-id="984b2-127">Parent Elements</span></span>
+### <a name="parent-elements"></a><span data-ttu-id="d22cf-127">Elementi padre</span><span class="sxs-lookup"><span data-stu-id="d22cf-127">Parent Elements</span></span>
 
-|<span data-ttu-id="984b2-128">Elemento</span><span class="sxs-lookup"><span data-stu-id="984b2-128">Element</span></span>|<span data-ttu-id="984b2-129">Description</span><span class="sxs-lookup"><span data-stu-id="984b2-129">Description</span></span>|
+|<span data-ttu-id="d22cf-128">Elemento</span><span class="sxs-lookup"><span data-stu-id="d22cf-128">Element</span></span>|<span data-ttu-id="d22cf-129">Description</span><span class="sxs-lookup"><span data-stu-id="d22cf-129">Description</span></span>|
 |-------------|-----------------|
-|[<span data-ttu-id="984b2-130">Elemento di visualizzazione (formato)</span><span class="sxs-lookup"><span data-stu-id="984b2-130">View Element (Format)</span></span>](./view-element-format.md)|<span data-ttu-id="984b2-131">Definisce una vista che consente di visualizzare i membri di uno o più oggetti.</span><span class="sxs-lookup"><span data-stu-id="984b2-131">Defines a view that is used to display the members of one or more objects.</span></span>|
+|[<span data-ttu-id="d22cf-130">Elemento di visualizzazione (formato)</span><span class="sxs-lookup"><span data-stu-id="d22cf-130">View Element (Format)</span></span>](./view-element-format.md)|<span data-ttu-id="d22cf-131">Definisce una vista che consente di visualizzare i membri di uno o più oggetti.</span><span class="sxs-lookup"><span data-stu-id="d22cf-131">Defines a view that is used to display the members of one or more objects.</span></span>|
 
-## <a name="remarks"></a><span data-ttu-id="984b2-132">Osservazioni</span><span class="sxs-lookup"><span data-stu-id="984b2-132">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="d22cf-132">Osservazioni</span><span class="sxs-lookup"><span data-stu-id="d22cf-132">Remarks</span></span>
 
-<span data-ttu-id="984b2-133">Per altre informazioni sui componenti di visualizzazione di una tabella, vedere [creazione di una visualizzazione tabella](./creating-a-table-view.md).</span><span class="sxs-lookup"><span data-stu-id="984b2-133">For more information about the components of a table view, see [Creating a Table View](./creating-a-table-view.md).</span></span>
+<span data-ttu-id="d22cf-133">Per altre informazioni sui componenti di visualizzazione di una tabella, vedere [creazione di una visualizzazione tabella](./creating-a-table-view.md).</span><span class="sxs-lookup"><span data-stu-id="d22cf-133">For more information about the components of a table view, see [Creating a Table View](./creating-a-table-view.md).</span></span>
 
-## <a name="example"></a><span data-ttu-id="984b2-134">Esempio</span><span class="sxs-lookup"><span data-stu-id="984b2-134">Example</span></span>
+## <a name="example"></a><span data-ttu-id="d22cf-134">Esempio</span><span class="sxs-lookup"><span data-stu-id="d22cf-134">Example</span></span>
 
-<span data-ttu-id="984b2-135">Questo esempio viene illustrato un `TableControl` che consente di visualizzare le proprietà dell'elemento il [System.Serviceprocess.Servicecontroller](/dotnet/api/System.ServiceProcess.ServiceController) oggetto.</span><span class="sxs-lookup"><span data-stu-id="984b2-135">This example shows a `TableControl` element that is used to display the properties of the [System.Serviceprocess.Servicecontroller](/dotnet/api/System.ServiceProcess.ServiceController) object.</span></span>
+<span data-ttu-id="d22cf-135">Questo esempio viene illustrato un `TableControl` che consente di visualizzare le proprietà dell'elemento il [System.Serviceprocess.Servicecontroller](/dotnet/api/System.ServiceProcess.ServiceController) oggetto.</span><span class="sxs-lookup"><span data-stu-id="d22cf-135">This example shows a `TableControl` element that is used to display the properties of the [System.Serviceprocess.Servicecontroller](/dotnet/api/System.ServiceProcess.ServiceController) object.</span></span>
 
 ```xml
 <View>
@@ -78,18 +78,18 @@ ms.locfileid: "56858917"
 
 ```
 
-## <a name="see-also"></a><span data-ttu-id="984b2-136">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="984b2-136">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d22cf-136">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="d22cf-136">See Also</span></span>
 
-[<span data-ttu-id="984b2-137">Creazione di una visualizzazione tabella</span><span class="sxs-lookup"><span data-stu-id="984b2-137">Creating a Table View</span></span>](./creating-a-table-view.md)
+[<span data-ttu-id="d22cf-137">Creazione di una visualizzazione tabella</span><span class="sxs-lookup"><span data-stu-id="d22cf-137">Creating a Table View</span></span>](./creating-a-table-view.md)
 
-[<span data-ttu-id="984b2-138">Elemento di visualizzazione (formato)</span><span class="sxs-lookup"><span data-stu-id="984b2-138">View Element (Format)</span></span>](./view-element-format.md)
+[<span data-ttu-id="d22cf-138">Elemento di visualizzazione (formato)</span><span class="sxs-lookup"><span data-stu-id="d22cf-138">View Element (Format)</span></span>](./view-element-format.md)
 
-[<span data-ttu-id="984b2-139">AutoSize (elemento) per Table (formato)</span><span class="sxs-lookup"><span data-stu-id="984b2-139">AutoSize Element for TableControl (Format)</span></span>](./autosize-element-for-tablecontrol-format.md)
+[<span data-ttu-id="d22cf-139">AutoSize (elemento) per Table (formato)</span><span class="sxs-lookup"><span data-stu-id="d22cf-139">AutoSize Element for TableControl (Format)</span></span>](./autosize-element-for-tablecontrol-format.md)
 
-[<span data-ttu-id="984b2-140">Elemento HideTableHeaders (formato)</span><span class="sxs-lookup"><span data-stu-id="984b2-140">HideTableHeaders Element (Format)</span></span>](./hidetableheaders-element-format.md)
+[<span data-ttu-id="d22cf-140">Elemento HideTableHeaders (formato)</span><span class="sxs-lookup"><span data-stu-id="d22cf-140">HideTableHeaders Element (Format)</span></span>](./hidetableheaders-element-format.md)
 
-[<span data-ttu-id="984b2-141">Elemento TableHeaders (formato)</span><span class="sxs-lookup"><span data-stu-id="984b2-141">TableHeaders Element (Format)</span></span>](./tableheaders-element-format.md)
+[<span data-ttu-id="d22cf-141">Elemento TableHeaders (formato)</span><span class="sxs-lookup"><span data-stu-id="d22cf-141">TableHeaders Element (Format)</span></span>](./tableheaders-element-format.md)
 
-[<span data-ttu-id="984b2-142">Elemento TableRowEntries (formato)</span><span class="sxs-lookup"><span data-stu-id="984b2-142">TableRowEntries Element (Format)</span></span>](./tablerowentries-element-for-tablecontrol-format.md)
+[<span data-ttu-id="d22cf-142">Elemento TableRowEntries (formato)</span><span class="sxs-lookup"><span data-stu-id="d22cf-142">TableRowEntries Element (Format)</span></span>](./tablerowentries-element-for-tablecontrol-format.md)
 
-[<span data-ttu-id="984b2-143">La scrittura di un File di formattazione di PowerShell</span><span class="sxs-lookup"><span data-stu-id="984b2-143">Writing a PowerShell Formatting File</span></span>](./writing-a-powershell-formatting-file.md)
+[<span data-ttu-id="d22cf-143">La scrittura di un File di formattazione di PowerShell</span><span class="sxs-lookup"><span data-stu-id="d22cf-143">Writing a PowerShell Formatting File</span></span>](./writing-a-powershell-formatting-file.md)
