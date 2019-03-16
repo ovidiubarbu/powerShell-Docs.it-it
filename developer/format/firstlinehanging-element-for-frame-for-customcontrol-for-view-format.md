@@ -8,18 +8,18 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: c6ac3d86-0529-4b93-9bc7-ee94fcef9618
 caps.latest.revision: 8
-ms.openlocfilehash: ae4ad8ae3e6cb5d1174dc001b30aa84dd182a606
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: ea43e025f5f653ff000e1d7591b535e73da5c9e5
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56860237"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58054221"
 ---
 # <a name="firstlinehanging-element-for-frame-for-customcontrol-for-view-format"></a>Elemento FirstLineHanging per Frame per CustomControl per View (formato)
 
 Specifica il numero di caratteri la prima riga di dati verrà spostata a sinistra. Questo elemento viene usato quando si definisce una vista di controllo personalizzato.
 
-Elemento (formato) elemento ViewDefinitions (formato) visualizzazione elemento (formato) elemento CustomControl (formato) CustomEntries elemento di configurazione per CustomControl elemento di visualizzazione (formato) CustomEntry per CustomEntries per elemento CustomItem visualizzazione (formato) CustomEntry per elemento Frame CutomControlView (formato) per CustomItem per CustomControl elemento di visualizzazione (formato) FirstLineHanging per Frame per CustomControl per visualizzazione (formato)
+Elemento (formato) elemento ViewDefinitions (formato) visualizzazione elemento (formato) elemento CustomControl (formato) CustomEntries elemento di configurazione per CustomControl elemento di visualizzazione (formato) CustomEntry per CustomEntries per elemento CustomItem visualizzazione (formato) CustomEntry per elemento Frame CustomControlView (formato) per CustomItem per CustomControl elemento di visualizzazione (formato) FirstLineHanging per Frame per CustomControl per visualizzazione (formato)
 
 ## <a name="syntax"></a>Sintassi
 

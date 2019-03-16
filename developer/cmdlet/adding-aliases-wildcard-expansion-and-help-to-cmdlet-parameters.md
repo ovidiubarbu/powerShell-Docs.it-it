@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 931ccace-c565-4a98-8dcc-df00f86394b1
 caps.latest.revision: 8
-ms.openlocfilehash: 0f025213087e6f308adf8e597fc01c1320251f76
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: db664e589f625855b5a33a02c522d6b238ad2810
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56859327"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58054875"
 ---
 # <a name="adding-aliases-wildcard-expansion-and-help-to-cmdlet-parameters"></a>Aggiunta di alias, espansione di caratteri jolly e guida per i parametri del cmdlet
 
@@ -110,7 +110,7 @@ Il codice seguente da questo cmdlet Stop-Process definisce il `HelpMessage` attr
 
 ## <a name="overriding-an-input-processing-method"></a>Si esegue l'override di un metodo di elaborazione dell'Input
 
-Il cmdlet deve eseguire l'override di un metodo di elaborazione dell'input, in genere si tratterà [System.Management.Automation.Cmdlet.Processrecord*](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord). Quando si modifica il sistema, è necessario chiamare il cmdlet di [System.Management.Automation.Cmdlet.Shouldprocess*](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) e [System.Management.Automation.Cmdlet.Shouldcontinue*](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue) metodi per consentire il utente di fornire commenti e suggerimenti prima viene apportata una modifica. Per altre informazioni su questi metodi, vedere [creazione di un Cmdlet che modifichi il sistema](./creating-a-cmdlet-that-modifies-the-system.md).
+Il cmdlet deve eseguire l'override di un metodo di elaborazione dell'input, in genere si tratterà [System.Management.Automation.Cmdlet.ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord). Quando si modifica il sistema, è necessario chiamare il cmdlet di [System.Management.Automation.Cmdlet.ShouldProcess](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) e [System.Management.Automation.Cmdlet.ShouldContinue](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue) metodi per consentire all'utente per fornire commenti e suggerimenti prima viene apportata una modifica. Per altre informazioni su questi metodi, vedere [creazione di un Cmdlet che modifichi il sistema](./creating-a-cmdlet-that-modifies-the-system.md).
 
 ## <a name="supporting-wildcard-expansion"></a>Supporto di espansione di caratteri jolly
 

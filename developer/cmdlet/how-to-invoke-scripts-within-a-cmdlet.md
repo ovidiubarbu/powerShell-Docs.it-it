@@ -8,16 +8,16 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: cc0bc6ce-48a5-4d9c-927e-636bca743e9f
 caps.latest.revision: 9
-ms.openlocfilehash: 4b4d5645785b751eb1390e196f5b9437b4a1e13b
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: 7dcb8bc20ab56225764854f9dc6fdfd858ed7451
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56855837"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58055785"
 ---
 # <a name="how-to-invoke-scripts-within-a-cmdlet"></a>Come richiamare gli script all'interno di un cmdlet
 
-In questo esempio viene illustrato come richiamare uno script che viene fornito a un cmdlet. Lo script viene eseguito dal cmdlet e i relativi risultati vengono restituiti al cmdlet come una raccolta di [System.Management.Automation.Psobject](/dotnet/api/System.Management.Automation.PSObject) oggetti.
+In questo esempio viene illustrato come richiamare uno script che viene fornito a un cmdlet. Lo script viene eseguito dal cmdlet e i relativi risultati vengono restituiti al cmdlet come una raccolta di [System.Management.Automation.PSObject](/dotnet/api/System.Management.Automation.PSObject) oggetti.
 
 ## <a name="to-invoke-a-script-block"></a>Per richiamare un blocco di script
 
@@ -37,7 +37,7 @@ In questo esempio viene illustrato come richiamare uno script che viene fornito 
                                   );
     ```
 
-2. Quindi, lo script esegue l'iterazione attraverso la raccolta restituita di [System.Management.Automation.Psobject](/dotnet/api/System.Management.Automation.PSObject) oggetti ed eseguire le operazioni necessarie.
+2. Quindi, lo script esegue l'iterazione attraverso la raccolta restituita di [System.Management.Automation.PSObject](/dotnet/api/System.Management.Automation.PSObject) oggetti ed eseguire le operazioni necessarie.
 
     ```c
     foreach (PSObject psObject in psObjects)

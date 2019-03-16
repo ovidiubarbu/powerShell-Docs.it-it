@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: d0c6d03f-1c1a-43d8-928e-e3290e90e0bc
 caps.latest.revision: 5
-ms.openlocfilehash: 947d0c0188df5bba3a9fb617fe5abf0b3b28eb51
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: 2e9dbc9ff8f9507f2008cd6e114ba6fec36b10bf
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56857997"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58054612"
 ---
 # <a name="how-to-add-syntax-to-a-cmdlet-help-topic"></a>Come aggiungere la sintassi a un argomento della Guida sui cmdlet
 
@@ -112,7 +112,7 @@ In genere, sono necessari i valori dei parametri sono segnaposto e i valori dei 
 
    Abbreviare i tipi, purché il significato è chiaro, ad esempio "string" per System. String e "int" per System.Int32.
 
-   Elencare tutti i valori delle enumerazioni, ad esempio il parametro - type nell'esempio precedente, può essere impostata su "basic" o "avanzata".
+   Elencare tutti i valori delle enumerazioni, ad esempio il parametro - type nell'esempio precedente, che può essere impostata su "basic" o "avanzata".
 
    Passare i parametri, ad esempio - elenco dell'esempio precedente, non dispongono di valori.
 

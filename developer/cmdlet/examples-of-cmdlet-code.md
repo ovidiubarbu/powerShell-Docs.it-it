@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 6fed2f68-ce6d-4a8f-bf21-f94f27a155c2
 caps.latest.revision: 9
-ms.openlocfilehash: 39c0814faf72cdb4b24730acb2ae429a2f465b32
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: 936728d64f30a08fb9e2fa9ccef103683594aa3e
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56863127"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58056261"
 ---
 # <a name="examples-of-cmdlet-code"></a>Esempi di codice dei cmdlet
 
@@ -38,7 +38,7 @@ In questa sezione contiene esempi di codice del cmdlet che è possibile utilizza
 
 [Come eseguire l'Override di metodi di elaborazione di Input](./how-to-override-input-processing-methods.md) questi esempi illustrano la struttura di base usata per eseguire l'override di metodi BeginProcessing, ProcessRecord ed EndProcessing.
 
-[Come supporto per le chiamate ShouldProcess](./how-to-request-confirmations.md) in questo esempio viene illustrato come il [System.Management.Automation.Cmdlet.Shouldprocess*](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) e [System.Management.Automation.Cmdlet.Shouldcontinue*](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue)metodi devono essere chiamati da all'interno di un cmdlet.
+[Come supporto per le chiamate ShouldProcess](./how-to-request-confirmations.md) in questo esempio viene illustrato come il [System.Management.Automation.Cmdlet.ShouldProcess](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) e [System.Management.Automation.Cmdlet.ShouldContinue](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue) metodi devono essere chiamati da all'interno di un cmdlet.
 
 [Modalità di supporto delle transazioni](./how-to-support-transactions.md) in questo esempio viene illustrato come indicare che il cmdlet supporta le transazioni e come implementare l'azione da eseguita quando il cmdlet viene usato all'interno di una transazione.
 

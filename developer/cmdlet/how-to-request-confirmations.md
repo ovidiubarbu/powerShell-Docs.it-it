@@ -8,16 +8,16 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: f24f77d5-e224-4b62-b128-535e045d333e
 caps.latest.revision: 9
-ms.openlocfilehash: 8cfbcacf93733667ffba63a252c86518c0919b57
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: 19e96b612a8778d82cdbafb528a7ffeb01f15f99
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56863407"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58058820"
 ---
 # <a name="how-to-request-confirmations"></a>Come richiedere conferme
 
-In questo esempio viene illustrato come chiamare le [System.Management.Automation.Cmdlet.Shouldprocess*](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) e [System.Management.Automation.Cmdlet.Shouldcontinue*](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue) metodi per richiedere conferme dal prima di eseguire un'azione dell'utente.
+In questo esempio viene illustrato come chiamare le [System.Management.Automation.Cmdlet.ShouldProcess](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) e [System.Management.Automation.Cmdlet.ShouldContinue](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue) metodi per richiedere conferme dal prima di eseguire un'azione dell'utente.
 
 > [!IMPORTANT]
 > Per altre informazioni su come Windows PowerShell gestisce queste richieste, vedere [richiesta di conferma](./requesting-confirmation-from-cmdlets.md).
@@ -43,13 +43,13 @@ In questo esempio viene illustrato come chiamare le [System.Management.Automatio
     private bool force;
     ```
 
-3. Aggiungere un `if` istruzione che usa il valore restituito del [System.Management.Automation.Cmdlet.Shouldprocess*](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) metodo per determinare se il [System.Management.Automation.Cmdlet.Shouldcontinue*](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue) viene chiamato il metodo.
+3. Aggiungere un `if` istruzione che usa il valore restituito del [System.Management.Automation.Cmdlet.ShouldProcess](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) metodo per determinare se il [System.Management.Automation.Cmdlet.ShouldContinue](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue) viene chiamato il metodo.
 
-4. Aggiungere una seconda `if` istruzione che usa il valore restituito del [System.Management.Automation.Cmdlet.Shouldcontinue*](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue) metodo e il valore della `Force` parametro per determinare se l'operazione deve essere eseguita.
+4. Aggiungere una seconda `if` istruzione che usa il valore restituito del [System.Management.Automation.Cmdlet.ShouldContinue](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue) metodo e il valore della `Force` parametro per determinare se l'operazione deve essere eseguita.
 
 ## <a name="example"></a>Esempio
 
-Nell'esempio di codice seguente, il [System.Management.Automation.Cmdlet.Shouldprocess*](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) e [System.Management.Automation.Cmdlet.Shouldcontinue*](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue) metodi vengono chiamati dall'interno di eseguire l'override del [System.Management.Automation.Cmdlet.Processrecord*](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) (metodo). Tuttavia, è anche possibile chiamare questi metodi dall'input altri metodi di elaborazione.
+Nell'esempio di codice seguente, il [System.Management.Automation.Cmdlet.ShouldProcess](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) e [System.Management.Automation.Cmdlet.ShouldContinue](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue) metodi vengono chiamati all'interno dell'override del [System.Management.Automation.Cmdlet.ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) (metodo). Tuttavia, è anche possibile chiamare questi metodi dall'input altri metodi di elaborazione.
 
 ```csharp
 protected override void ProcessRecord()

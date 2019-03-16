@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: ee3a7e56-7331-4f71-9ecb-7a59b8021c68
 caps.latest.revision: 10
-ms.openlocfilehash: fd013384a4b588bcdb397d7771425fe5c031c48f
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: d9109e8d5b69a25ad52b90bcaff9628b01067211
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56856697"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58057621"
 ---
 # <a name="accessdbprovidersample04"></a>AccessDBProviderSample04
 
@@ -30,7 +30,7 @@ In questo esempio viene illustrato quanto segue:
 
 - Definizione di una classe di provider che deriva dal [System.Management.Automation.Provider.Containercmdletprovider](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider) classe.
 
-- Sovrascrivendo il [System.Management.Automation.Provider.Containercmdletprovider.Copyitem*](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.CopyItem) metodo per modificare il comportamento del `Copy-Item` cmdlet che consente all'utente di copiare gli elementi da una posizione a un'altra. (In questo esempio non illustra come aggiungere parametri dinamici al `Copy-Item` cmdlet.)
+- Sovrascrivendo il [System.Management.Automation.Provider.ContainerCmdletProvider.CopyItem](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.CopyItem) metodo per modificare il comportamento del `Copy-Item` cmdlet che consente all'utente di copiare gli elementi da una posizione a un'altra. (In questo esempio non illustra come aggiungere parametri dinamici al `Copy-Item` cmdlet.)
 
 - Sovrascrivendo il [System.Management.Automation.Provider.Containercmdletprovider.Getchilditems*](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.GetChildItems) metodo per modificare il comportamento del cmdlet Get-ChildItems, che consente all'utente di recuperare gli elementi figlio dell'elemento padre . (In questo esempio mostra come aggiungere parametri dinamici per il cmdlet Get-ChildItems).
 

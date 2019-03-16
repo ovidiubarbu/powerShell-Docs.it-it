@@ -8,18 +8,18 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 45c45800-a87d-456e-b07c-12d4d8c27c67
 caps.latest.revision: 8
-ms.openlocfilehash: 431e5d8407b9f689a5224b329d8c7b52802e19e1
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: 2c6a3d678ca68dc0d189f6ab981fdea5fef894cb
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56854917"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58056482"
 ---
 # <a name="displayerror-element-format"></a>Elemento DisplayError (formato)
 
 Specifica che la stringa #ERR viene visualizzata quando si verifica un errore la visualizzazione di una porzione di dati.
 
-Configurazione (formato) elemento DefaultSettings (formato) DisplayError elemento (Frmat)
+Configurazione (formato) elemento DefaultSettings (formato) DisplayError elemento (formato)
 
 ## <a name="syntax"></a>Sintassi
 

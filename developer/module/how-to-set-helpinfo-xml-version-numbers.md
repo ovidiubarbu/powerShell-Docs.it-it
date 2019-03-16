@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 93a00463-af58-41c8-b088-450909fa1d05
 caps.latest.revision: 6
-ms.openlocfilehash: d69e8a734aa96ff9b7911815fb43b81103548b59
-ms.sourcegitcommit: 5990f04b8042ef2d8e571bec6d5b051e64c9921c
+ms.openlocfilehash: b98e6879bbfe0e3ec1a9ab37496dde44caf523a4
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2019
-ms.locfileid: "57794349"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58054136"
 ---
 # <a name="how-to-set-helpinfo-xml-version-numbers"></a>Come impostare i numeri di versione di XML HelpInfo
 
@@ -21,7 +21,8 @@ In questo argomento viene illustrato come impostare e aumentare i numeri di vers
 
 ## <a name="how-to-set-helpinfo-xml-version-numbers"></a>Come impostare i numeri di versione di XML HelpInfo
 
-I numeri di versione in un file XML HelpInfo sono fondamentali per il funzionamento di Guida aggiornabile. Il [Update-Help](/powershell/module/Microsoft.PowerShell.Core/Update-Help) e [Save-Help](/powershell/module/Microsoft.PowerShell.Core/Update-Help) cmdlet scaricano nuovi file della Guida solo quando il numero di versione per impostazioni cultura dell'interfaccia utente nel file XML HelpInfo remoto è maggiore del numero di versione per le impostazioni cultura dell'interfaccia utente di XML HelpInfo locale, o è presente alcun file XML HelpInfo locale.
+I numeri di versione in un file XML HelpInfo sono fondamentali per il funzionamento di Guida aggiornabile.
+Il [Update-Help](/powershell/module/Microsoft.PowerShell.Core/Update-Help) e [Save-Help](/powershell/module/Microsoft.PowerShell.Core/Save-Help) cmdlet scaricano nuovi file della Guida solo quando il numero di versione per impostazioni cultura dell'interfaccia utente nel file XML HelpInfo remoto è maggiore del numero di versione per le impostazioni cultura dell'interfaccia utente di XML HelpInfo locale, o è presente alcun file XML HelpInfo locale.
 
 Il file XML HelpInfo utilizza il numero di versione in 4 parti definito nel **Version** classi di Microsoft .NET Framework. Il formato è `N1.N2.N3.N4`. Gli autori di moduli possono usare qualsiasi schema che è consentito di numerazione delle versioni di **Version** classe. La Guida aggiornabile richiede solo che il numero di versione per un aumento delle impostazioni cultura dell'interfaccia utente quando una nuova versione del file CAB per tali impostazioni cultura dell'interfaccia utente viene caricata nel percorso specificato dal **HelpContentURI** elemento nel file XML HelpInfo.
 

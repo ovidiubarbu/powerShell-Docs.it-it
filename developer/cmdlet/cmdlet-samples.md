@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: b99d53fc-0af9-426b-82ce-09955e031d4b
 caps.latest.revision: 13
-ms.openlocfilehash: d919d4ad8554e762230c1448d81b50e27c38ba99
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: 0fa4a5f804586c51ae6a36121f9aab041b0989cc
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56863367"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58058046"
 ---
 # <a name="cmdlet-samples"></a>Esempi di cmdlet
 
@@ -39,7 +39,7 @@ In questa sezione viene descritto il codice di esempio fornito in Windows PowerS
 
 [Esempio StopProcessSample04](./stopprocesssample04-sample.md) questo esempio viene illustrato come scrivere un cmdlet che dichiara i set di parametri, specifica il parametro predefinito impostato e può accettare un oggetto di input.
 
-[Esempio Events01](./events01-sample.md) in questo esempio viene illustrato come creare un cmdlet che consente all'utente di registrare gli eventi generati da [FileSystemWatcher](/dotnet/api/System.IO.FileSystemWatcher). Con questo cmdlet gli utenti possono, ad esempio, registrare un'azione da eseguire quando viene creato un file in una directory specifica. In questo esempio deriva dal [Microsoft.Powershell.Commands.Objecteventregistrationbase](/dotnet/api/Microsoft.PowerShell.Commands.ObjectEventRegistrationBase) classe di base.
+[Esempio Events01](./events01-sample.md) in questo esempio viene illustrato come creare un cmdlet che consente all'utente di registrare gli eventi generati da [FileSystemWatcher](/dotnet/api/System.IO.FileSystemWatcher). Con questo cmdlet gli utenti possono, ad esempio, registrare un'azione da eseguire quando viene creato un file in una directory specifica. In questo esempio deriva dal [Microsoft.PowerShell.Commands.Objecteventregistrationbase](/dotnet/api/Microsoft.PowerShell.Commands.ObjectEventRegistrationBase) classe di base.
 
 ## <a name="see-also"></a>Vedere anche
 

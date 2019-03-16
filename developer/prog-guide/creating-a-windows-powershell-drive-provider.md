@@ -12,12 +12,12 @@ helpviewer_keywords:
 - drives [PowerShell Programmer's Guide]
 ms.assetid: 2b446841-6616-4720-9ff8-50801d7576ed
 caps.latest.revision: 6
-ms.openlocfilehash: d1546ab0b0e6b5502f35c92c01ce148211c53db2
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: 174d3a6860790295e1b73f32d9c1bad46b653917
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56855797"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58055650"
 ---
 # <a name="creating-a-windows-powershell-drive-provider"></a>Creazione di un provider di unità di Windows PowerShell
 
@@ -73,7 +73,7 @@ Per consentire al runtime di Windows PowerShell creare un'unità, il provider de
 
 L'override di questo metodo deve eseguire le operazioni seguenti:
 
-- Verificare che il [System.Management.Automation.Psdriveinfo.Root*](/dotnet/api/System.Management.Automation.PSDriveInfo.Root) membro esista e che può essere stabilita una connessione all'archivio dati.
+- Verificare che il [System.Management.Automation.PSDriveinfo.Root*](/dotnet/api/System.Management.Automation.PSDriveInfo.Root) membro esista e che può essere stabilita una connessione all'archivio dati.
 
 - Creare un'unità e popolare il membro di connessione, supportare la `New-PSDrive` cmdlet.
 
@@ -81,7 +81,7 @@ L'override di questo metodo deve eseguire le operazioni seguenti:
 
 - Modificare il [psdriveinfo](/dotnet/api/System.Management.Automation.PSDriveInfo) dell'oggetto che descrive l'unità con qualsiasi informazione di affidabilità o le prestazioni necessarie o fornire dati aggiuntivi per i chiamanti utilizzano l'unità.
 
-- Gestire gli errori usando il [System.Management.Automation.Provider.Cmdletprovider.Writeerror*](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.WriteError) metodo e quindi restituirla `null`.
+- Gestire gli errori usando il [System.Management.Automation.Provider.Cmdletprovider.WriteError](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.WriteError) metodo e quindi restituirla `null`.
 
   Questo metodo restituisce le informazioni unità che è state passate al metodo o una versione specifica del provider.
 

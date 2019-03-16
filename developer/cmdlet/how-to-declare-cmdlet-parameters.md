@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 0c0509cc-5a50-49ad-a74f-5527023d0270
 caps.latest.revision: 10
-ms.openlocfilehash: d6613889ebd2ba139ce0b3de1b8d24e4aec37d2a
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: 80e3e27bcf72b078c192525a843a3b3afb306529
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56861397"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58059168"
 ---
 # <a name="how-to-declare-cmdlet-parameters"></a>Come dichiarare i parametri dei cmdlet
 
@@ -83,7 +83,7 @@ Per altre informazioni relative all'attributo di parametro, vedere [dichiarazion
 
 ## <a name="how-to-declare-a-switch-parameter"></a>Come dichiarare un parametro opzionale
 
-- Definire una proprietà pubblica come tipo [System.Management.Automation.Switchparameter](/dotnet/api/System.Management.Automation.SwitchParameter)e quindi dichiarare l'attributo di parametro.
+- Definire una proprietà pubblica come tipo [System.Management.Automation.SwitchParameter](/dotnet/api/System.Management.Automation.SwitchParameter)e quindi dichiarare l'attributo di parametro.
 
     ```csharp
     [Parameter(Position = 1)]
@@ -116,7 +116,7 @@ Per altre informazioni sull'attributo Alias, vedere [dichiarazione di attributo 
 
 ## <a name="see-also"></a>Vedere anche
 
-[System.Management.Automation.Switchparameter](/dotnet/api/System.Management.Automation.SwitchParameter)
+[System.Management.Automation.SwitchParameter](/dotnet/api/System.Management.Automation.SwitchParameter)
 
 [Dichiarazione di attributo di parametro](./parameter-attribute-declaration.md)
 

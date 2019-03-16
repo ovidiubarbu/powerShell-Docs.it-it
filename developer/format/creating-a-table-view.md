@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 1f405afb-70b5-4fe0-9986-bc07401d93fd
 caps.latest.revision: 23
-ms.openlocfilehash: 832527ea4b042812c39934cd7e124201c6dc2ea4
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: 862f942facafff6cea66c4f8f1040772c6a62ec3
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56861497"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58057366"
 ---
 # <a name="creating-a-table-view"></a>Creazione di una visualizzazione tabella
 
@@ -95,7 +95,7 @@ Gli elementi XML seguenti vengono usati per definire una visualizzazione elenco:
 
 2. Il [TableColumnHeader](./tablecolumnheader-element-format.md) elemento definisce gli elementi visualizzati nella parte superiore di una colonna della tabella. Questi elementi vengono specificati nell'ordine in cui le intestazioni visualizzate.
 
-   Non sono previsti limiti per il numero di questi elemento che è possibile usare, ma il numero di [TableColumnHeader](./tablecolumnheader-element-format.md) devono essere uguale il numero di elementi nella visualizzazione tabella [TableRowEntry](./tablerowentry-element-for-tablerowentroes-for-tablecontrol-format.md) elementi usati.
+   Non sono previsti limiti per il numero di questi elemento che è possibile usare, ma il numero di [TableColumnHeader](./tablecolumnheader-element-format.md) devono essere uguale il numero di elementi nella visualizzazione tabella [TableRowEntry](./tablerowentry-element-for-tablerowentries-for-tablecontrol-format.md) elementi usati.
 
 3. Il [etichetta](./label-element-for-tablecolumnheader-for-tablecontrol-format.md) elemento specifica il testo visualizzato. Questo elemento è facoltativo.
 
@@ -136,7 +136,7 @@ Gli elementi XML seguenti sono utilizzabile per fornire le definizioni per una r
 
 - Il [EntrySelectedBy](./entryselectedby-element-for-tablerowentry-for-tablecontrol-format.md) elemento specifica gli oggetti visualizzati da una definizione specifica. Questo elemento è facoltativo ed è necessario solo quando si definiscono più [TableRowEntry](./listentry-element-for-listcontrol-format.md) gli elementi che consentono di visualizzare diversi oggetti.
 
-- Il [Wrap](./wrap-element-for-tablerowentry-for-tablecontrl-format.md) elemento specifica che il testo che supera la larghezza della colonna viene visualizzato nella riga successiva. Per impostazione predefinita, il testo di dimensioni superiori alla larghezza della colonna viene troncato.
+- Il [Wrap](./wrap-element-for-tablerowentry-for-tablecontrol-format.md) elemento specifica che il testo che supera la larghezza della colonna viene visualizzato nella riga successiva. Per impostazione predefinita, il testo di dimensioni superiori alla larghezza della colonna viene troncato.
 
 - Il [TableColumnItems](./tablecolumnitems-element-for-tablerowentry-for-tablecontrol-format.md) elemento definisce le proprietà o gli script i cui valori vengono visualizzati nella riga.
 

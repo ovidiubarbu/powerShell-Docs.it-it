@@ -14,12 +14,12 @@ helpviewer_keywords:
 - error records [PowerShell], non-terminating
 ms.assetid: 0b014035-52ea-44cb-ab38-bbe463c5465a
 caps.latest.revision: 8
-ms.openlocfilehash: 7b54fc220a66a47c25b3e8cba644882d31713cb7
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: 45f5934314a2871ceb921c7a66b9dfb658d0bd99
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56857687"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58057944"
 ---
 # <a name="cmdlet-error-reporting"></a>Segnalazione di errori dei cmdlet
 
@@ -43,7 +43,7 @@ Le linee guida seguenti sono utilizzabile per determinare se una condizione di e
 
 ## <a name="reporting-nonterminating-errors"></a>Segnalazione di errori non fatali
 
-La segnalazione di un errore non fatali deve sempre essere eseguita all'interno di implementazione del cmdlet del [System.Management.Automation.Cmdlet.Beginprocessing*](/dotnet/api/System.Management.Automation.Cmdlet.BeginProcessing) metodo, il [ System.Management.Automation.Cmdlet.Processrecord*](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) metodo, o il [System.Management.Automation.Cmdlet.Endprocessing*](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing) (metodo). Questi tipi di errori vengono segnalati tramite la chiamata di [System.Management.Automation.Cmdlet.Writeerror*](/dotnet/api/System.Management.Automation.Cmdlet.WriteError) metodo che a sua volta invia un record di errore nel flusso di errori.
+La segnalazione di un errore non fatali deve sempre essere eseguita all'interno di implementazione del cmdlet del [System.Management.Automation.Cmdlet.BeginProcessing](/dotnet/api/System.Management.Automation.Cmdlet.BeginProcessing) metodo, il [ System.Management.Automation.Cmdlet.ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) metodo, o il [System.Management.Automation.Cmdlet.EndProcessing](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing) (metodo). Questi tipi di errori vengono segnalati tramite la chiamata di [System.Management.Automation.Cmdlet.WriteError](/dotnet/api/System.Management.Automation.Cmdlet.WriteError) metodo che a sua volta invia un record di errore nel flusso di errori.
 
 ## <a name="reporting-terminating-errors"></a>Segnalazione di errori di terminazione
 
@@ -53,7 +53,7 @@ Gli errori vengono segnalati mediante la generazione di eccezioni o chiamando il
 
 ## <a name="error-records"></a>Record degli errori
 
-Windows PowerShell descrive una condizione di errore non fatali tramite l'uso di [System.Management.Automation.Errorrecord](/dotnet/api/System.Management.Automation.ErrorRecord) oggetti. Ciascuna [System.Management.Automation.Errorrecord](/dotnet/api/System.Management.Automation.ErrorRecord) oggetto fornisce le informazioni sulle categorie di errore, un oggetto di destinazione facoltativo e dettagli sulla condizione di errore.
+Windows PowerShell descrive una condizione di errore non fatali tramite l'uso di [System.Management.Automation.ErrorRecord](/dotnet/api/System.Management.Automation.ErrorRecord) oggetti. Ciascuna [System.Management.Automation.ErrorRecord](/dotnet/api/System.Management.Automation.ErrorRecord) oggetto fornisce le informazioni sulle categorie di errore, un oggetto di destinazione facoltativo e dettagli sulla condizione di errore.
 
 ### <a name="error-identifiers"></a>Identificatori degli errori
 
@@ -61,7 +61,7 @@ Identificatore dell'errore è una semplice stringa che identifica la condizione 
 
 Le seguenti linee guida da seguire quando si specificano gli identificatori degli errori.
 
-- Assegnare gli identificatori di errore diversi, estremamente specifici, ai percorsi del codice diversi. Ogni percorso di codice che chiama [System.Management.Automation.Cmdlet.Writeerror*](/dotnet/api/System.Management.Automation.Cmdlet.WriteError) oppure [System.Management.Automation.Cmdlet.Throwterminatingerror*](/dotnet/api/System.Management.Automation.Cmdlet.ThrowTerminatingError) deve avere un proprio identificatore dell'errore.
+- Assegnare gli identificatori di errore diversi, estremamente specifici, ai percorsi del codice diversi. Ogni percorso di codice che chiama [System.Management.Automation.Cmdlet.WriteError](/dotnet/api/System.Management.Automation.Cmdlet.WriteError) oppure [System.Management.Automation.Cmdlet.Throwterminatingerror*](/dotnet/api/System.Management.Automation.Cmdlet.ThrowTerminatingError) deve avere un proprio identificatore dell'errore.
 
 - Gli identificatori degli errori deve essere univoci a tipi di eccezione CLR per errori sia irreversibili che non fatali.
 

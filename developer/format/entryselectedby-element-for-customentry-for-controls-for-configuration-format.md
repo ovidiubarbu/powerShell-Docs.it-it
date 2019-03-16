@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 30abae8f-c7f7-479d-ad85-19e07ddef204
 caps.latest.revision: 10
-ms.openlocfilehash: e930e4422afd203feda6a389655ff8a355e3bec0
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: 81eca4f66f0057074612f2d60482b45adc36357b
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56858667"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58059219"
 ---
 # <a name="entryselectedby-element-for-customentry-for-controls-for-configuration-format"></a>Elemento EntrySelectedBy per CustomEntry per Controls per Configuration (formato)
 
@@ -65,6 +65,6 @@ Come minimo, ogni definizione deve avere almeno un tipo, set di selezione o cond
 
 [Elemento CustomEntry per CustomControl per i controlli per la configurazione (formato)](./customentry-element-for-customcontrol-for-controls-for-configuration-format.md)
 
-[Elemento TypeName per EntrySelectdBy per i controlli per la configurazione (formato)](./typename-element-for-selectioncondition-for-controls-for-configuration-format.md)
+[Elemento TypeName per EntrySelectedBy per i controlli per la configurazione (formato)](./typename-element-for-selectioncondition-for-controls-for-configuration-format.md)
 
 [La scrittura di un File di formattazione di PowerShell](./writing-a-powershell-formatting-file.md)

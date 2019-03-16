@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: e082c2e3-12ce-4032-9caf-bf6b2e0dcf81
 caps.latest.revision: 23
-ms.openlocfilehash: 67e041756974dcd84e15cdb4edaf91be45122e28
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: eaa927ec90df6053843f5c942357fed4c7dee966
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56859207"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58059491"
 ---
 # <a name="how-to-write-a-powershell-module-manifest"></a>Come scrivere un manifesto del modulo di PowerShell
 
@@ -77,7 +77,7 @@ Nella tabella seguente vengono descritti gli elementi che è possibile avere in 
 |PowerShellVersion<br /><br /> Tipo: string|' '|Versione minima del motore di Windows PowerShell richiesto da questo modulo. Valori validi correnti sono 1.0, 2.0, 3.0, 4.0 e 5.0.<br /><br /> Esempio: `PowerShellVersion = '5.0'`|
 |PowerShellHostName<br /><br /> Tipo: string|' '|Specifica il nome dell'host di Windows PowerShell che è necessario il modulo. Questo nome viene fornito da Windows PowerShell. Per trovare il nome di un programma host, nel programma, digitare: `$host.name` .<br /><br /> Esempio: `PowerShellHostName = 'Windows PowerShell ISE Host'`|
 |PowerShellHostVersion<br /><br /> Tipo: string|' '|Versione minima dell'host di Windows PowerShell richiesto da questo modulo.<br /><br /> Esempio: `PowerShellHostVersion = '2.0'`|
-|DotNetFrameworkVersion<br /><br /> Tipo: string|' '|Versione minima di Microsoft .NET Framework richiesta da questo modulo.<br /><br /> Esempio: `DotNetFrameorkVersion = '3.5'`|
+|DotNetFrameworkVersion<br /><br /> Tipo: string|' '|Versione minima di Microsoft .NET Framework richiesta da questo modulo.<br /><br /> Esempio: `DotNetFrameworkVersion = '3.5'`|
 |CLRVersion<br /><br /> Tipo: string|' '|Versione minima di common language runtime (CLR) richiesto da questo modulo.<br /><br /> Esempio: `CLRVersion = '3.5'`|
 |ProcessorArchitecture<br /><br /> Tipo: string|' '|Architettura del processore (None, X86, Amd64) richiesto da questo modulo. I valori validi sono x86, AMD64, IA64 e Nessuno (sconosciuto o non specificato).<br /><br /> Esempio: `ProcessorArchitecture = 'x86'`|
 |RequiredModules<br /><br /> Type: [string[]]|@()|Moduli che devono essere importati nell'ambiente globale prima di importare questo modulo. Verranno caricati tutti i moduli elencati a meno che non sono già stati caricati. (Ad esempio, alcuni moduli potrebbero già essere caricati da un modulo diverso.). È anche possibile specificare una versione specifica per caricare utilizzando `RequiredVersion` anziché `ModuleVersion`. Quando si usa `ModuleVersion` caricherà la versione più recente disponibile con almeno la versione specificata.<br /><br /> Esempio: `RequiredModules = @(@{ModuleName="myDependentModule", ModuleVersion="2.0",Guid="cfc45206-1e49-459d-a8ad-5b571ef94857"})`<br /><br /> Esempio: `RequiredModules = @(@{ModuleName="myDependentModule", RequiredVersion="1.5",Guid="cfc45206-1e49-459d-a8ad-5b571ef94857"})`|

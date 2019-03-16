@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: d5891467-8e13-484d-b7af-32e6bffab35d
 caps.latest.revision: 4
-ms.openlocfilehash: 2aca4483e500432ef9f52804e85678d2268aa4cd
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: b2e8f272a82ee03de306fd8eac45e109142f6284
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56856137"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58054799"
 ---
 # <a name="common-workflow-parameters"></a>Parametri comuni del flusso di lavoro
 
@@ -26,7 +26,7 @@ Parametri comuni del flusso di lavoro sono raggruppati in diverse categorie come
 |Nome|Tipo|Description|Può essere specificato dall'utente finale in fase di esecuzione?|Può essere specificato dall'autore del flusso di lavoro in fase di creazione?|Può essere specificato dall'autore del flusso di lavoro per la creazione di istanze?|
 |----------|----------|-----------------|-----------------------------------------------------|------------------------------------------------------------|-----------------------------------------------------------|
 |PSComputerName|String[]|Un elenco di nomi di computer per cui si desidera avviare i processi.|Sì|Yes|Sì|
-|PSCredential|[System.Management.Automation.Pscredential](/dotnet/api/System.Management.Automation.PSCredential)|Le credenziali di autenticazione da usare per l'accesso al computer specificato dal parametro PSComputerName. Questo parametro è valido solo se viene specificato PSComputerName.|Sì|Yes|Sì|
+|PSCredential|[System.Management.Automation.PSCredential](/dotnet/api/System.Management.Automation.PSCredential)|Le credenziali di autenticazione da usare per l'accesso al computer specificato dal parametro PSComputerName. Questo parametro è valido solo se viene specificato PSComputerName.|Sì|Yes|Sì|
 |PSPort|UInt32|La porta da utilizzare per l'esecuzione del flusso di lavoro.|Sì|Yes|Sì|
 |PSUseSSL|Booleano|Usare il protocollo di sicuro Sockets Layer (SSL) per stabilire una connessione sicura al computer remoto per l'esecuzione del flusso di lavoro.|Sì|Yes|Sì|
 |PSConfigurationName|String|La configurazione di sessione utilizzata per eseguire il flusso di lavoro.|Sì|Yes|Sì|

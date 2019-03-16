@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 6602730d-3892-4656-80c7-7bca2d14337f
 caps.latest.revision: 14
-ms.openlocfilehash: 59921a92661482b8d518b82f490c9879643543bb
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: f5781c0c03aca41d01a44598a9a8c00d6d21d2fd
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56859867"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58059576"
 ---
 # <a name="types-of-cmdlet-parameters"></a>Tipi di parametri del cmdlet
 
@@ -91,13 +91,13 @@ private string userName;
 
 ## <a name="switch-parameters"></a>Parametri opzionali
 
-Windows PowerShell fornisce un' [System.Management.Automation.Switchparameter](/dotnet/api/System.Management.Automation.SwitchParameter) tipo che consente di definire un parametro il cui valore viene impostato automaticamente su `false` se il parametro non viene specificato quando è il cmdlet viene chiamato. Se possibile, usare parametri di opzione anziché i parametri booleani.
+Windows PowerShell fornisce un' [System.Management.Automation.SwitchParameter](/dotnet/api/System.Management.Automation.SwitchParameter) tipo che consente di definire un parametro il cui valore viene impostato automaticamente su `false` se il parametro non viene specificato quando è il cmdlet viene chiamato. Se possibile, usare parametri di opzione anziché i parametri booleani.
 
 Si consideri l'esempio seguente. Per impostazione predefinita, alcuni cmdlet di Windows PowerShell non passare un oggetto di output alla pipeline. Tuttavia, questi cmdlet hanno un `PassThru` passare parametri che esegue l'override del comportamento predefinito. Se il `PassThru` viene specificato quando vengono chiamati questi cmdlet, il cmdlet restituisce un oggetto di output alla pipeline.
 
-Se è necessario il parametro venga specificato un valore predefinito di `true` quando il parametro non viene specificato nella chiamata, provare a invertire il senso di parametro. Per esempio, anziché impostare l'attributo di parametro da un valore booleano `true`, dichiarare la proprietà come il [System.Management.Automation.Switchparameter](/dotnet/api/System.Management.Automation.SwitchParameter) digitare e quindi impostare il valore predefinito del parametro da `false`.
+Se è necessario il parametro venga specificato un valore predefinito di `true` quando il parametro non viene specificato nella chiamata, provare a invertire il senso di parametro. Per esempio, anziché impostare l'attributo di parametro da un valore booleano `true`, dichiarare la proprietà come il [System.Management.Automation.SwitchParameter](/dotnet/api/System.Management.Automation.SwitchParameter) digitare e quindi impostare il valore predefinito del parametro da `false`.
 
-Per definire un parametro opzionale, dichiarare la proprietà come il [System.Management.Automation.Switchparameter](/dotnet/api/System.Management.Automation.SwitchParameter) digitare, come illustrato nell'esempio seguente.
+Per definire un parametro opzionale, dichiarare la proprietà come il [System.Management.Automation.SwitchParameter](/dotnet/api/System.Management.Automation.SwitchParameter) digitare, come illustrato nell'esempio seguente.
 
 ```csharp
 [Parameter(Position = 1)]

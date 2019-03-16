@@ -8,16 +8,16 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: c00afd46-758a-4aec-b865-2c9d8f6a17ad
 caps.latest.revision: 5
-ms.openlocfilehash: b9b42c818981090496f7b14a1cb8bdec14a5d5bb
-ms.sourcegitcommit: 69abc5ad16e5dd29ddfb1853e266a4bfd1d59d59
+ms.openlocfilehash: 67081528ebe14fbb082091c1b9500de82069b48f
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57429721"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58054646"
 ---
 # <a name="getproc04-code-samples"></a>Codici di esempio di GetProc04
 
-Ecco gli esempi di codice per il cmdlet di esempio GetProc04. Questo è il `Get-Process` cmdlet esempio descritto in [aggiunta non fatali di segnalazione errori per il Cmdlet](../cmdlet/adding-non-terminating-error-reporting-to-your-cmdlet.md). Ciò `Get-Process` le chiamate di cmdlet di [System.Management.Automation.Cmdlet.Writeerror*](/dotnet/api/System.Management.Automation.Cmdlet.WriteError) metodo ogni volta che viene generata un'eccezione di operazione non valida durante il recupero delle informazioni sul processo.
+Ecco gli esempi di codice per il cmdlet di esempio GetProc04. Questo è il `Get-Process` cmdlet esempio descritto in [aggiunta non fatali di segnalazione errori per il Cmdlet](../cmdlet/adding-non-terminating-error-reporting-to-your-cmdlet.md). Ciò `Get-Process` le chiamate di cmdlet di [System.Management.Automation.Cmdlet.WriteError](/dotnet/api/System.Management.Automation.Cmdlet.WriteError) metodo ogni volta che viene generata un'eccezione di operazione non valida durante il recupero delle informazioni sul processo.
 
 > [!NOTE]
 > È possibile scaricare il C# file di origine (getprov04.cs) per questo cmdlet Get-Process tramite il Microsoft Windows Software Development Kit per Windows Vista e i componenti di Runtime di .NET Framework 3.0. Per istruzioni sul download, vedere [come installare Windows PowerShell e il Download di Windows PowerShell SDK](/powershell/developer/installing-the-windows-powershell-sdk).

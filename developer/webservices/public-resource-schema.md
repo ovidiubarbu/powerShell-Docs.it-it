@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: e67298ee-a773-4402-8afb-d97ad0e030e5
 caps.latest.revision: 4
-ms.openlocfilehash: a9204ca7b28fc5792ef9bd18f6b0b24964de7386
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: c7e20ff0f36e8cab2d414ff2e5924b3359ad9c60
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56859547"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58057247"
 ---
 # <a name="public-resource-schema"></a>Schema delle risorse pubbliche
 
@@ -21,7 +21,7 @@ OData di gestione Usa MOF per definire le risorse e le relative proprietà. Le p
 
 ## <a name="defining-a-resource"></a>La definizione di una risorsa
 
-Ogni risorsa corrisponde a un oggetto restituito da un cmdlet di Windows PowerShell. Nel file MOF risorse publc, si definisce una risorsa con la dichiarazione di una classe. La classe è costituita da proprietà che corrispondono alle proprietà dell'oggetto. Ad esempio, nell'esempio seguente, il [Diagnostics](/dotnet/api/System.Diagnostics.Process) classe è rappresentata da MOF seguenti.
+Ogni risorsa corrisponde a un oggetto restituito da un cmdlet di Windows PowerShell. Nella risorsa pubblica file MOF, si definisce una risorsa con la dichiarazione di una classe. La classe è costituita da proprietà che corrispondono alle proprietà dell'oggetto. Ad esempio, nell'esempio seguente, il [Diagnostics](/dotnet/api/System.Diagnostics.Process) classe è rappresentata da MOF seguenti.
 
 ```csharp
 class PswsTest_Process
@@ -55,7 +55,7 @@ class PswsTest_ProcessModule
 };
 ```
 
-Per dichiarare una proprietà di entità come un tipo complesso, si dichiara la classe come un `string` tipo con il `EmbeddedInstance` qualificatore, incluso il nome del tipo complesso. Il seguente esempio hshows la dichiarazione di una proprietà del `PswsTest_ProcessModule` tipo dichiarato nell'esempio precedente.
+Per dichiarare una proprietà di entità come un tipo complesso, si dichiara la classe come un `string` tipo con il `EmbeddedInstance` qualificatore, incluso il nome del tipo complesso. Nell'esempio seguente illustra la dichiarazione di una proprietà del `PswsTest_ProcessModule` tipo dichiarato nell'esempio precedente.
 
 ```csharp
 [Required, EmbeddedInstance("PswsTest_ProcessModule")] String Modules[];
@@ -63,7 +63,7 @@ Per dichiarare una proprietà di entità come un tipo complesso, si dichiara la 
 
 ### <a name="associating-entities"></a>Associazione entità
 
-È possibile associare due entità con i qualificatori di associazione e AssocationClass. Per altre informazioni, vedere [associazione di entità OData di gestione](./associating-management-odata-entities.md).
+È possibile associare due entità con i qualificatori di associazione e AssociationClass. Per altre informazioni, vedere [associazione di entità OData di gestione](./associating-management-odata-entities.md).
 
 ### <a name="derived-types"></a>Tipi derivati
 
@@ -72,17 +72,16 @@ Per dichiarare una proprietà di entità come un tipo complesso, si dichiara la 
 ```csharp
 Class Product {
 
-[Key] String ProductName;
+    [Key] String ProductName;
 
 };
 
 Class DairyProduct : Product {
 
-Uint16 PercentFat;
+    Uint16 PercentFat;
 };
 Class POPProduct : Product {
 
-Boolean IsCarbonated;
+    Boolean IsCarbonated;
 };
-
 ```

@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 8f1069f7-8fa8-4622-9e2c-af29b0b961c2
 caps.latest.revision: 6
-ms.openlocfilehash: 803fe4ae24a4f8022639c5b6d6298100859177ce
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: a50de014988336c473c565b506a73de1c864d7e0
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56858357"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58058233"
 ---
 # <a name="provider-cmdlet-dynamic-parameters"></a>Parametri dinamici del cmdlet del provider
 
@@ -73,7 +73,7 @@ Ecco un elenco di parametri statici che può essere utilizzato per aggiungere i 
 
 `Copy-Item` cmdlet è possibile definire i parametri dinamici attivate dal trigger la `Path`, `Destination`, e `Recurse` i parametri del `Copy-Item` cmdlet implementando il [ System.Management.Automation.Provider.Containercmdletprovider.Copyitemdynamicparameters*](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.CopyItemDynamicParameters) (metodo).
 
-Cmdlet Get-ChildItems è possibile definire i parametri dinamici che vengono attivati dal `Path` e `Recures` i parametri delle `Get-ChildItem` cmdlet implementando il [ System.Management.Automation.Provider.Containercmdletprovider.Getchilditemsdynamicparameters*](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.GetChildItemsDynamicParameters) e [System.Management.Automation.Provider.Containercmdletprovider.Getchildnamesdynamicparameters*](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.GetChildNamesDynamicParameters) metodi.
+Cmdlet Get-ChildItems è possibile definire i parametri dinamici che vengono attivati dal `Path` e `Recurse` i parametri delle `Get-ChildItem` cmdlet implementando il [ System.Management.Automation.Provider.Containercmdletprovider.Getchilditemsdynamicparameters*](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.GetChildItemsDynamicParameters) e [System.Management.Automation.Provider.Containercmdletprovider.Getchildnamesdynamicparameters*](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.GetChildNamesDynamicParameters) metodi.
 
 `Get-Content` cmdlet è possibile definire i parametri dinamici attivate dal trigger la `Path` parametro del `Get-Content` cmdlet implementando il [ System.Management.Automation.Provider.Icontentcmdletprovider.Getcontentreaderdynamicparameters*](/dotnet/api/System.Management.Automation.Provider.IContentCmdletProvider.GetContentReaderDynamicParameters) (metodo).
 

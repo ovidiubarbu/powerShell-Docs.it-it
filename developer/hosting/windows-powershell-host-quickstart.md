@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 5a134b81-bd0c-4e1c-a2f0-9acbe852745a
 caps.latest.revision: 9
-ms.openlocfilehash: 2c6a4bca03ee7f62371cbc296f854464167e5a62
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: cc014487a680747ad59437052f79d4576154a1cb
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56857397"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58059678"
 ---
 # <a name="windows-powershell-host-quickstart"></a>Guida introduttiva dell'host di Windows PowerShell
 
@@ -112,7 +112,7 @@ Mentre lo spazio di esecuzione predefinito usato negli esempi precedenti carica 
 
 ### <a name="creating-an-initialsessionstate-object"></a>Creazione di un oggetto InitialSessionState
 
-Per creare uno spazio di esecuzione personalizzata, è innanzitutto necessario creare un [System.Management.Automation.Runspaces.InitialSessionState](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) oggetto. Nell'esempio seguente, usiamo il [System.Management.Automation.Runspaces.RunspaceFactory](/dotnet/api/System.Management.Automation.Runspaces.RunspaceFactory) per creare un ruspace dopo la creazione di un valore predefinito [System.Management.Automation.Runspaces.InitialSessionState](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) oggetti.
+Per creare uno spazio di esecuzione personalizzata, è innanzitutto necessario creare un [System.Management.Automation.Runspaces.InitialSessionState](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) oggetto. Nell'esempio seguente, usiamo il [System.Management.Automation.Runspaces.RunspaceFactory](/dotnet/api/System.Management.Automation.Runspaces.RunspaceFactory) per creare uno spazio di esecuzione dopo la creazione di un valore predefinito [System.Management.Automation.Runspaces.InitialSessionState ](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) oggetto.
 
 ```csharp
 InitialSessionState iss = InitialSessionState.CreateDefault();
@@ -126,7 +126,7 @@ ps.Invoke();
 
 ### <a name="constraining-the-runspace"></a>Vincolare lo spazio di esecuzione
 
-Nell'esempio precedente è stato creato un valore predefinito [System.Management.Automation.Runspaces.InitialSessionState](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) oggetto che consente di caricare tutti i core predefinito Windows PowerShell. È possibile inoltre hanno chiamato la [System.Management.Automation.Runspaces.InitialSessionState.CreateDefault2*](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState.CreateDefault2) metodo per creare un oggetto InitialSessionState che carica solo i comandi nel Mirosoft.PowerShell.Core snap-in. Per creare uno spazio di esecuzione più limitato, è necessario creare un oggetto vuoto [System.Management.Automation.Runspaces.InitialSessionState](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) chiamando il [ System.Management.Automation.Runspaces.InitialSessionState.Create*](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState.Create) (metodo) e quindi aggiungervi i comandi di InitialSessionState.
+Nell'esempio precedente è stato creato un valore predefinito [System.Management.Automation.Runspaces.InitialSessionState](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) oggetto che consente di caricare tutti i core predefinito Windows PowerShell. È possibile inoltre hanno chiamato la [System.Management.Automation.Runspaces.InitialSessionState.CreateDefault2*](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState.CreateDefault2) metodo per creare un oggetto InitialSessionState che carica solo i comandi nel Microsoft.PowerShell.Core snap-in. Per creare uno spazio di esecuzione più limitato, è necessario creare un oggetto vuoto [System.Management.Automation.Runspaces.InitialSessionState](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) chiamando il [ System.Management.Automation.Runspaces.InitialSessionState.Create*](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState.Create) (metodo) e quindi aggiungervi i comandi di InitialSessionState.
 
 Con uno spazio di esecuzione che carica solo i comandi che specificano offre prestazioni notevolmente migliorate.
 

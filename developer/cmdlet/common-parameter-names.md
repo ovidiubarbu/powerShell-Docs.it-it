@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 0db9f54c-4014-4450-9e81-c9f5fe562a0e
 caps.latest.revision: 12
-ms.openlocfilehash: a421d151ac3fdbb763668dd6fbf775f5b91a833f
-ms.sourcegitcommit: 6ae5b50a4b3ffcd649de1525c3ce6f15d3669082
+ms.openlocfilehash: c65deeda6b2ef1b52de55035dc606259a7f2d232
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56863647"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58059661"
 ---
 # <a name="common-parameter-names"></a>Nomi dei parametri comuni
 
@@ -30,7 +30,7 @@ I parametri seguenti vengono aggiunti a tutti i cmdlet e accessibili ogni volta 
 
 Tipo di dati: SwitchParameter
 
-Questo parametro specifica se il debug a livello di programmazione dei messaggi che possono essere visualizzati nella riga di comando. Questi messaggi sono per la risoluzione dei problemi di funzionamento del cmdlet e vengono generati da chiamate al [System.Management.Automation.Cmdlet.Writedebug*](/dotnet/api/System.Management.Automation.Cmdlet.WriteDebug) (metodo). I messaggi di debug non sono necessario essere localizzati.
+Questo parametro specifica se il debug a livello di programmazione dei messaggi che possono essere visualizzati nella riga di comando. Questi messaggi sono per la risoluzione dei problemi di funzionamento del cmdlet e vengono generati da chiamate al [System.Management.Automation.Cmdlet.WriteDebug](/dotnet/api/System.Management.Automation.Cmdlet.WriteDebug) (metodo). I messaggi di debug non sono necessario essere localizzati.
 
 ### <a name="erroraction-alias-ea"></a>ErrorAction (alias: con contratto Enterprise Agreement)
 
@@ -60,7 +60,7 @@ Questo parametro definisce il numero di oggetti da memorizzare nel buffer di out
 
 Tipo di dati: SwitchParameter
 
-Questo parametro specifica se il cmdlet scrive esplicativi messaggi che possono essere visualizzati nella riga di comando. Questi messaggi sono destinati a fornire informazioni aggiuntive all'utente e vengono generati da chiamate al [System.Management.Automation.Cmdlet.Writeverbose*](/dotnet/api/System.Management.Automation.Cmdlet.WriteVerbose) (metodo).
+Questo parametro specifica se il cmdlet scrive esplicativi messaggi che possono essere visualizzati nella riga di comando. Questi messaggi sono destinati a fornire informazioni aggiuntive all'utente e vengono generati da chiamate al [System.Management.Automation.Cmdlet.WriteVerbose](/dotnet/api/System.Management.Automation.Cmdlet.WriteVerbose) (metodo).
 
 ### <a name="warningaction-alias-wa"></a>WarningAction (alias: wa)
 

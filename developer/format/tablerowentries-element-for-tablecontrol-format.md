@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: d10b68ca-256c-4c58-b503-73f7777b39ae
 caps.latest.revision: 15
-ms.openlocfilehash: d93750f919c1075f173dc9ac70324cc003e36879
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: 88de19be02de4933f892e02093403a82ccdd5788
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56862187"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58055734"
 ---
 # <a name="tablerowentries-element-for-tablecontrol-format"></a>Elemento TableRowEntries per TableControl (formato)
 
@@ -41,7 +41,7 @@ Nessuna.
 
 |Elemento|Description|
 |-------------|-----------------|
-|[Elemento TableRowEntry per TableRowEntries per Table (formato)](./tablerowentry-element-for-tablerowentroes-for-tablecontrol-format.md)|Elemento obbligatorio.<br /><br /> Definisce i dati che viene visualizzati in una riga della tabella.|
+|[Elemento TableRowEntry per TableRowEntries per Table (formato)](./tablerowentry-element-for-tablerowentries-for-tablecontrol-format.md)|Elemento obbligatorio.<br /><br /> Definisce i dati che viene visualizzati in una riga della tabella.|
 
 ### <a name="parent-elements"></a>Elementi padre
 
@@ -84,6 +84,6 @@ L'esempio seguente mostra una `TableRowEntries` elemento che definisce una riga 
 
 [Elemento Table (formato)](./tablecontrol-element-format.md)
 
-[Elemento TableRowEntry (formato)](./tablerowentry-element-for-tablerowentroes-for-tablecontrol-format.md)
+[Elemento TableRowEntry (formato)](./tablerowentry-element-for-tablerowentries-for-tablecontrol-format.md)
 
 [La scrittura di un File di formattazione di PowerShell](./writing-a-powershell-formatting-file.md)

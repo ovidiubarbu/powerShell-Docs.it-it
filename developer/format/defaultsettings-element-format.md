@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 41c56499-ee20-4821-830a-478fdcc33f83
 caps.latest.revision: 11
-ms.openlocfilehash: 59cc0514087cc52438e0d1271b8b77a7799eb32c
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: bc95c62222eb2806f92499257a397c2e4ec5dbab
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56855667"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58059066"
 ---
 # <a name="defaultsettings-element-format"></a>Elemento DefaultSettings (formato)
 
@@ -45,7 +45,7 @@ Nessuna.
 
 |Elemento|Description|
 |-------------|-----------------|
-|[Elemento DisplayError (Frmat)](./displayerror-element-format.md)|Elemento facoltativo.<br /><br /> Specifica che la stringa #ERR viene visualizzata quando si verifica un errore durante la visualizzazione di una porzione di dati.|
+|[Elemento DisplayError (formato)](./displayerror-element-format.md)|Elemento facoltativo.<br /><br /> Specifica che la stringa #ERR viene visualizzata quando si verifica un errore durante la visualizzazione di una porzione di dati.|
 |[Elemento EnumerableExpansions (formato)](./enumerableexpansions-element-format.md)|Elemento facoltativo.<br /><br /> Definisce i diversi modi in cui gli oggetti .NET vengono espanse quando vengono visualizzati in una vista.|
 |[PropertyCountForTable (formato)](./propertycountfortable-element-format.md)|Elemento facoltativo.<br /><br /> Specifica il numero minimo di proprietà che deve avere un oggetto per visualizzare l'oggetto in una visualizzazione tabella.|
 |[Elemento ShowError (formato)](./showerror-element-format.md)|Elemento facoltativo.<br /><br /> Specifica che il record di errore completo viene visualizzato quando si verifica un errore durante la visualizzazione di una porzione di dati.|
@@ -63,7 +63,7 @@ Nessuna.
 
 [Elemento di configurazione](./configuration-element-format.md)
 
-[Elemento DisplayError (Frmat)](./displayerror-element-format.md)
+[Elemento DisplayError (formato)](./displayerror-element-format.md)
 
 [Elemento EnumerableExpansions (formato)](./enumerableexpansions-element-format.md)
 

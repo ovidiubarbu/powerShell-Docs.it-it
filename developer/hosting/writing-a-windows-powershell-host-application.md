@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 81aeafad-dbc3-4712-8bb9-e6a417be260f
 caps.latest.revision: 15
-ms.openlocfilehash: 2039e181becd1b39fc3d6cf0cdbcf0c20e9fc206
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: 2df5a59833fcdd58c6b2afbb4882111592fb3d76
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56863177"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58056431"
 ---
 # <a name="writing-a-windows-powershell-host-application"></a>Scrittura di un'applicazione host di Windows PowerShell
 
@@ -29,7 +29,7 @@ Gli argomenti seguenti illustrano come creare un'applicazione che ospita
 
 [Aggiunta e la chiamata di comandi](./adding-and-invoking-commands.md) viene illustrato come creare ed eseguire una pipeline di comandi nell'applicazione host...
 
-[Creazione di spazi di esecuzione remota](./creating-remote-runspaces.md) Expains come connettersi a uno spazio di esecuzione a un computer remoto.
+[Creazione di spazi di esecuzione remota](./creating-remote-runspaces.md) spiega come connettersi a uno spazio di esecuzione a un computer remoto.
 
 [Creazione di un'interfaccia utente personalizzata](./creating-a-custom-user-interface.md) vengono forniti collegamenti a esempi e interfacce utente personalizzate presenta.
 

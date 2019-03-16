@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: d43684ce-7c3d-4d14-8dbd-061c111ee805
 caps.latest.revision: 12
-ms.openlocfilehash: faa9ba78397e713400f6072df9915f20d966bb37
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: d05437aaa9652e7f81d0854d1a746acffe145699
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56859447"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58056907"
 ---
 # <a name="tablecolumnitems-element-for-tablerowentry-for-tablecontrol-format"></a>Elemento TableColumnItems per TableRowEntry per TableControl (formato)
 
@@ -47,7 +47,7 @@ Nessuna.
 
 |Elemento|Description|
 |-------------|-----------------|
-|[Elemento TableRowEntry per TableRowEntries per Table (formato)](./tablerowentry-element-for-tablerowentroes-for-tablecontrol-format.md)|Definisce i dati che viene visualizzati in una riga della tabella.|
+|[Elemento TableRowEntry per TableRowEntries per Table (formato)](./tablerowentry-element-for-tablerowentries-for-tablecontrol-format.md)|Definisce i dati che viene visualizzati in una riga della tabella.|
 
 ## <a name="remarks"></a>Osservazioni
 
@@ -80,6 +80,6 @@ L'esempio seguente mostra un `TableColumnItems` che definisce tre proprietà del
 
 [Elemento TableColumnItem (formato)](./tablecolumnitem-element-for-tablecolumnitems-for-tablecontrol-format.md)
 
-[Elemento TableRowEntry (formato)](./tablerowentry-element-for-tablerowentroes-for-tablecontrol-format.md)
+[Elemento TableRowEntry (formato)](./tablerowentry-element-for-tablerowentries-for-tablecontrol-format.md)
 
 [La scrittura di un File di formattazione di PowerShell](./writing-a-powershell-formatting-file.md)

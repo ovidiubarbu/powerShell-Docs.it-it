@@ -10,12 +10,12 @@ helpviewer_keywords:
 - parameter sets [PowerShell Programmer's Guide]
 ms.assetid: a6131db4-fd6e-45f1-bd47-17e7174afd56
 caps.latest.revision: 8
-ms.openlocfilehash: b02a2e0d4b0a27c261b0bc05febda7826ad5276e
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: f0bff11618c18bf53b9c2a185445795a17306fa3
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56859267"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58054986"
 ---
 # <a name="adding-parameter-sets-to-a-cmdlet"></a>Aggiunta dei set di parametri a un cmdlet
 
@@ -179,7 +179,7 @@ Anche se è necessario un parametro univoco per ogni set di parametri, i paramet
 
 ## <a name="overriding-an-input-processing-method"></a>Si esegue l'override di un metodo di elaborazione dell'Input
 
-Ogni cmdlet è necessario eseguire l'override di un metodo di elaborazione dell'input, in genere si tratterà il [System.Management.Automation.Cmdlet.Processrecord*](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) (metodo). In questo cmdlet, il [System.Management.Automation.Cmdlet.Processrecord*](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) è sottoposto a override in modo che il cmdlet può elaborare qualsiasi numero di processi. Contiene un'istruzione Select che chiama un metodo diverso basato su quale set di parametri l'utente ha specificato.
+Ogni cmdlet è necessario eseguire l'override di un metodo di elaborazione dell'input, in genere si tratterà il [System.Management.Automation.Cmdlet.ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) (metodo). In questo cmdlet, il [System.Management.Automation.Cmdlet.ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) è sottoposto a override in modo che il cmdlet può elaborare qualsiasi numero di processi. Contiene un'istruzione Select che chiama un metodo diverso basato su quale set di parametri l'utente ha specificato.
 
 ```csharp
 protected override void ProcessRecord()

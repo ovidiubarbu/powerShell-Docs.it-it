@@ -13,12 +13,12 @@ helpviewer_keywords:
 - confirm impact [PowerShell Programmer's Guide]
 ms.assetid: 59be4120-1700-4d92-a308-ef4a32ccf11a
 caps.latest.revision: 8
-ms.openlocfilehash: d93cc4a05a6625d073791c067d1e9b6662c3a565
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: bbe9f0213754d1cc47e0fd9a7a898bde916c0636
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56856337"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58055139"
 ---
 # <a name="creating-a-cmdlet-that-modifies-the-system"></a>Creazione di un cmdlet che modifica il sistema
 
@@ -26,15 +26,15 @@ In alcuni casi un cmdlet è necessario modificare lo stato del sistema, non solo
 
 Per supportare la conferma un cmdlet deve fare due cose.
 
-- Dichiarare che il cmdlet supporta conferma quando si specifica la [System.Management.Automation.Cmdletattribute](/dotnet/api/System.Management.Automation.CmdletAttribute) attributo impostando la parola chiave SupportsShouldProcess su `true`.
+- Dichiarare che il cmdlet supporta conferma quando si specifica la [System.Management.Automation.CmdletAttribute](/dotnet/api/System.Management.Automation.CmdletAttribute) attributo impostando la parola chiave SupportsShouldProcess su `true`.
 
-- Chiamare [System.Management.Automation.Cmdlet.Shouldprocess*](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) durante l'esecuzione del cmdlet (come illustrato nell'esempio seguente).
+- Chiamare [System.Management.Automation.Cmdlet.ShouldProcess](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) durante l'esecuzione del cmdlet (come illustrato nell'esempio seguente).
 
 Grazie al supporto di conferma, espone un cmdlet di `Confirm` e `WhatIf` parametri che vengono forniti da Windows PowerShell e anche soddisfano le linee guida sullo sviluppo per i cmdlet (per altre informazioni sulle linee guida sullo sviluppo di cmdlet, vedere [ Linee guida sullo sviluppo di cmdlet](./cmdlet-development-guidelines.md).).
 
 ## <a name="changing-the-system"></a>La modifica del sistema
 
-L'atto di "modifica il sistema" si riferisce a tutti i cmdlet che potenzialmente modifica lo stato del sistema di fuori di Windows PowerShell. Ad esempio, l'arresto di un processo, Abilita o disabilita un account utente o aggiunta di una riga a una tabella di database sono tutte le modifiche apportate al sistema che deve essere confermata. Operazioni di lettura dei dati o stabiliscono le connessioni temporanee, invece, non modificare il sistema e in genere non necessitano di una conferma. Conferma non serve anche per le azioni il cui effetto è limitata all'interno del runtime di Windows PowerShell, ad esempio `set-variable`. I cmdlet che possono o non potrebbero apportare una modifica permanente devono dichiarare `SupportsShouldProcess` e chiamare [System.Management.Automation.Cmdlet.Shouldprocess*](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) solo se si sta tentando di apportare una modifica permanente.
+L'atto di "modifica il sistema" si riferisce a tutti i cmdlet che potenzialmente modifica lo stato del sistema di fuori di Windows PowerShell. Ad esempio, l'arresto di un processo, Abilita o disabilita un account utente o aggiunta di una riga a una tabella di database sono tutte le modifiche apportate al sistema che deve essere confermata. Operazioni di lettura dei dati o stabiliscono le connessioni temporanee, invece, non modificare il sistema e in genere non necessitano di una conferma. Conferma non serve anche per le azioni il cui effetto è limitata all'interno del runtime di Windows PowerShell, ad esempio `set-variable`. I cmdlet che possono o non potrebbero apportare una modifica permanente devono dichiarare `SupportsShouldProcess` e chiamare [System.Management.Automation.Cmdlet.ShouldProcess](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) solo se si sta tentando di apportare una modifica permanente.
 
 > [!NOTE]
 > Conferma ShouldProcess si applica solo ai cmdlet. Se un comando o lo script modifica lo stato in esecuzione di un sistema chiamando direttamente i metodi .NET o proprietà o da applicazioni chiamanti all'esterno di Windows PowerShell, questa forma di conferma non saranno disponibile.
@@ -77,11 +77,11 @@ Di seguito è la definizione della classe per questo cmdlet Stop-Process.
 public class StopProcCommand : Cmdlet
 ```
 
-Tenere presente che nel [System.Management.Automation.Cmdletattribute](/dotnet/api/System.Management.Automation.CmdletAttribute) dichiarazione, il `SupportsShouldProcess` parola chiave di attributo è impostato su `true` per abilitare il cmdlet di effettuare chiamate a [ System.Management.Automation.Cmdlet.Shouldprocess*](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) e [System.Management.Automation.Cmdlet.Shouldcontinue*](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue). Senza questo set di parole chiave, il `Confirm` e `WhatIf` parametri non sarà disponibili per l'utente.
+Tenere presente che nel [System.Management.Automation.CmdletAttribute](/dotnet/api/System.Management.Automation.CmdletAttribute) dichiarazione, il `SupportsShouldProcess` parola chiave di attributo è impostato su `true` per abilitare il cmdlet di effettuare chiamate a [ System.Management.Automation.Cmdlet.ShouldProcess](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) e [System.Management.Automation.Cmdlet.ShouldContinue](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue). Senza questo set di parole chiave, il `Confirm` e `WhatIf` parametri non sarà disponibili per l'utente.
 
 ### <a name="extremely-destructive-actions"></a>Azioni distruttive
 
-Alcune operazioni sono estremamente distruttive, ad esempio la riformattazione di una partizione disco rigido attivo. In questi casi, è necessario impostare il cmdlet `ConfirmImpact`  =  `ConfirmImpact.High` quando si dichiara il [System.Management.Automation.Cmdletattribute](/dotnet/api/System.Management.Automation.CmdletAttribute) attributo. Questa impostazione forza il cmdlet per richiesta conferma all'utente, anche quando l'utente non ha specificato il `Confirm` parametro. Tuttavia, gli sviluppatori di cmdlet devono evitare un uso eccessivo `ConfirmImpact` per le operazioni che sono semplicemente potenzialmente distruttive, ad esempio l'eliminazione di un account utente. Tenere presente che, se `ConfirmImpact` è impostata su [System.Management.Automation.Confirmimpact.High](/dotnet/api/System.Management.Automation.ConfirmImpact.High).
+Alcune operazioni sono estremamente distruttive, ad esempio la riformattazione di una partizione disco rigido attivo. In questi casi, è necessario impostare il cmdlet `ConfirmImpact`  =  `ConfirmImpact.High` quando si dichiara il [System.Management.Automation.CmdletAttribute](/dotnet/api/System.Management.Automation.CmdletAttribute) attributo. Questa impostazione forza il cmdlet per richiesta conferma all'utente, anche quando l'utente non ha specificato il `Confirm` parametro. Tuttavia, gli sviluppatori di cmdlet devono evitare un uso eccessivo `ConfirmImpact` per le operazioni che sono semplicemente potenzialmente distruttive, ad esempio l'eliminazione di un account utente. Tenere presente che, se `ConfirmImpact` è impostata su [System.Management.Automation.Confirmimpact.High](/dotnet/api/System.Management.Automation.ConfirmImpact.High).
 
 In modo analogo, alcune operazioni sono probabilmente non distruttiva, sebbene in teoria modificano tuttavia lo stato di un sistema all'esterno di Windows PowerShell in esecuzione. Questi cmdlet è possono impostare `ConfirmImpact` al [System.Management.Automation.Confirmimpact.Low](/dotnet/api/system.management.automation.confirmimpact?view=powershellsdk-1.1.0). Si possono ignorare le richieste di conferma in cui l'utente ha richiesto di confermare le operazioni di solo supporto a impatto e a impatto elevato.
 
@@ -93,7 +93,7 @@ Il cmdlet Stop-Process definisce tre parametri: `Name`, `Force`, e `PassThru`.
 
 Il `Name` parametro corrisponde al `Name` proprietà dell'oggetto di input di processo. Tenere presente che il `Name` in questo esempio il parametro è obbligatorio, come il cmdlet avrà esito negativo se non dispone di un processo denominato arrestare.
 
-Il `Force` parametro consente all'utente di eseguire l'override di chiamate a [System.Management.Automation.Cmdlet.Shouldcontinue*](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue). In effetti, tutti i cmdlet che chiama [System.Management.Automation.Cmdlet.Shouldcontinue*](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue) deve avere una `Force` parametri in modo che quando `Force` viene specificato, il cmdlet ignora la chiamata a [ System.Management.Automation.Cmdlet.Shouldcontinue*](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue) e procede con l'operazione. Tenere presente che questa operazione non influenza le chiamate a [System.Management.Automation.Cmdlet.Shouldprocess*](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess).
+Il `Force` parametro consente all'utente di eseguire l'override di chiamate a [System.Management.Automation.Cmdlet.ShouldContinue](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue). In effetti, tutti i cmdlet che chiama [System.Management.Automation.Cmdlet.ShouldContinue](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue) deve avere una `Force` parametri in modo che quando `Force` viene specificato, il cmdlet ignora la chiamata a [ System.Management.Automation.Cmdlet.ShouldContinue](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue) e procede con l'operazione. Tenere presente che questa operazione non influenza le chiamate a [System.Management.Automation.Cmdlet.ShouldProcess](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess).
 
 Il `PassThru` parametro consente all'utente di indicare se il cmdlet passa un oggetto di output tramite la pipeline, in questo caso, dopo un processo viene arrestato. Tenere presente che questo parametro è correlato al cmdlet stesso anziché a una proprietà dell'oggetto di input.
 
@@ -142,7 +142,7 @@ private bool passThru;
 
 ## <a name="overriding-an-input-processing-method"></a>Si esegue l'override di un metodo di elaborazione dell'Input
 
-Il cmdlet deve eseguire l'override di un metodo di elaborazione dell'input. Il codice seguente illustra il [System.Management.Automation.Cmdlet.Processrecord*](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) sostituzione usata nel cmdlet Stop-Process esempio. Per ogni richiesta di nome di processo, questo metodo garantisce che il processo non è un processo speciale, tenta di arrestare il processo e quindi invia un oggetto di output se il `PassThru` parametro è specificato.
+Il cmdlet deve eseguire l'override di un metodo di elaborazione dell'input. Il codice seguente illustra il [System.Management.Automation.Cmdlet.ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) sostituzione usata nel cmdlet Stop-Process esempio. Per ogni richiesta di nome di processo, questo metodo garantisce che il processo non è un processo speciale, tenta di arrestare il processo e quindi invia un oggetto di output se il `PassThru` parametro è specificato.
 
 ```csharp
 protected override void ProcessRecord()
@@ -200,9 +200,9 @@ protected override void ProcessRecord()
                 processName);
 
           // It is possible that ProcessRecord is called multiple times
-          // when the Name parameter reveives objects as input from the
+          // when the Name parameter receives objects as input from the
           // pipeline. So to retain YesToAll and NoToAll input that the
-          // user may enter across mutilple calls to ProcessRecord, this
+          // user may enter across multiple calls to ProcessRecord, this
           // information is stored as private members of the cmdlet.
           if (!ShouldContinue(message, "Warning!",
                               ref yesToAll,
@@ -210,7 +210,7 @@ protected override void ProcessRecord()
           {
             continue;
           }
-        } // if (cricicalProcess...
+        } // if (criticalProcess...
         // Stop the named process.
         try
         {
@@ -246,14 +246,14 @@ protected override void ProcessRecord()
 
 ## <a name="calling-the-shouldprocess-method"></a>La chiamata al metodo ShouldProcess
 
-Deve chiamare il metodo del cmdlet di elaborazione dell'input di [System.Management.Automation.Cmdlet.Shouldprocess*](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) metodo per confermare l'esecuzione di un'operazione prima che all'esecuzione viene apportata una modifica (ad esempio, l'eliminazione di file) stato del sistema. In questo modo il runtime di Windows PowerShell fornire il comportamento corretto "WhatIf" e "Conferma" all'interno della shell.
+Deve chiamare il metodo del cmdlet di elaborazione dell'input di [System.Management.Automation.Cmdlet.ShouldProcess](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) metodo per confermare l'esecuzione di un'operazione prima di allo stato di esecuzione viene apportata una modifica (ad esempio, l'eliminazione di file) del sistema. In questo modo il runtime di Windows PowerShell fornire il comportamento corretto "WhatIf" e "Conferma" all'interno della shell.
 
 > [!NOTE]
-> Se un cmdlet indica il supporto deve essere elaborato e non riesce a eseguire la [System.Management.Automation.Cmdlet.Shouldprocess*](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) chiamare, l'utente può modificare il sistema in modo imprevisto.
+> Se un cmdlet indica il supporto deve essere elaborato e non riesce a eseguire la [System.Management.Automation.Cmdlet.ShouldProcess](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) chiamare, l'utente può modificare il sistema in modo imprevisto.
 
-La chiamata a [System.Management.Automation.Cmdlet.Shouldprocess*](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) invia il nome della risorsa da modificare per l'utente, con il runtime di Windows PowerShell prendendo in considerazione tutte le impostazioni della riga di comando o variabili di preferenza determinare ciò che deve essere visualizzato all'utente.
+La chiamata a [System.Management.Automation.Cmdlet.ShouldProcess](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) invia il nome della risorsa da modificare per l'utente, con il runtime di Windows PowerShell prendendo in considerazione tutte le impostazioni della riga di comando o variabili di preferenza determinare ciò che deve essere visualizzato all'utente.
 
-L'esempio seguente illustra la chiamata a [System.Management.Automation.Cmdlet.Shouldprocess*](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) dall'override del [System.Management.Automation.Cmdlet.Processrecord*](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) metodo di esempio di cmdlet Stop-Process.
+L'esempio seguente illustra la chiamata a [System.Management.Automation.Cmdlet.ShouldProcess](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) dall'override del [System.Management.Automation.Cmdlet.ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) nell'esempio di metodo Cmdlet Stop-Process.
 
 ```csharp
 if (!ShouldProcess(string.Format("{0} ({1})", processName,
@@ -265,9 +265,9 @@ if (!ShouldProcess(string.Format("{0} ({1})", processName,
 
 ## <a name="calling-the-shouldcontinue-method"></a>La chiamata al metodo ShouldContinue
 
-La chiamata per il [System.Management.Automation.Cmdlet.Shouldcontinue*](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue) metodo invia un messaggio secondario all'utente. Questa chiamata viene eseguita dopo la chiamata a [System.Management.Automation.Cmdlet.Shouldprocess*](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) restituisce `true` e, se il `Force` parametro non è stato impostato su `true`. L'utente può quindi fornire commenti e suggerimenti, ad esempio, se l'operazione deve proseguire. Chiama il cmdlet [System.Management.Automation.Cmdlet.Shouldcontinue*](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue) come un controllo aggiuntivo per le modifiche del sistema potenzialmente pericolose o quando si desidera fornire all'utente, le opzioni yes to all e no-to-all.
+La chiamata per il [System.Management.Automation.Cmdlet.ShouldContinue](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue) metodo invia un messaggio secondario all'utente. Questa chiamata viene eseguita dopo la chiamata a [System.Management.Automation.Cmdlet.ShouldProcess](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) restituisce `true` e, se il `Force` parametro non è stato impostato su `true`. L'utente può quindi fornire commenti e suggerimenti, ad esempio, se l'operazione deve proseguire. Chiama il cmdlet [System.Management.Automation.Cmdlet.ShouldContinue](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue) come un controllo aggiuntivo per le modifiche del sistema potenzialmente pericolose o quando si desidera fornire all'utente, le opzioni yes to all e no-to-all.
 
-L'esempio seguente illustra la chiamata a [System.Management.Automation.Cmdlet.Shouldcontinue*](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue) dall'override del [System.Management.Automation.Cmdlet.Processrecord*](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) metodo di esempio di cmdlet Stop-Process.
+L'esempio seguente illustra la chiamata a [System.Management.Automation.Cmdlet.ShouldContinue](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue) dall'override del [System.Management.Automation.Cmdlet.ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) nell'esempio di metodo Cmdlet Stop-Process.
 
 ```csharp
 if (criticalProcess &&!force)
@@ -277,9 +277,9 @@ if (criticalProcess &&!force)
         processName);
 
   // It is possible that ProcessRecord is called multiple times
-  // when the Name parameter reveives objects as input from the
+  // when the Name parameter receives objects as input from the
   // pipeline. So to retain YesToAll and NoToAll input that the
-  // user may enter across mutilple calls to ProcessRecord, this
+  // user may enter across multiple calls to ProcessRecord, this
   // information is stored as private members of the cmdlet.
   if (!ShouldContinue(message, "Warning!",
                       ref yesToAll,
@@ -287,12 +287,12 @@ if (criticalProcess &&!force)
   {
     continue;
   }
-} // if (cricicalProcess...
+} // if (criticalProcess...
 ```
 
 ## <a name="stopping-input-processing"></a>Arresto l'elaborazione dell'Input
 
-Il metodo di un cmdlet che rende le modifiche di sistema di elaborazione dell'input è necessario fornire un modo per arrestare l'elaborazione dell'input. Nel caso di questo cmdlet Stop-Process, viene eseguita una chiamata dal [System.Management.Automation.Cmdlet.Processrecord*](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) metodo per il [System.Diagnostics.Process.Kill*](/dotnet/api/System.Diagnostics.Process.Kill) (metodo). Poiché il `PassThru` parametro è impostato su `true`, [System.Management.Automation.Cmdlet.Processrecord*](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) chiama inoltre [System.Management.Automation.Cmdlet.Writeobject*](/dotnet/api/System.Management.Automation.Cmdlet.WriteObject) a inviare l'oggetto processo per la pipeline.
+Il metodo di un cmdlet che rende le modifiche di sistema di elaborazione dell'input è necessario fornire un modo per arrestare l'elaborazione dell'input. Nel caso di questo cmdlet Stop-Process, viene eseguita una chiamata dal [System.Management.Automation.Cmdlet.ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) metodo per il [System.Diagnostics.Process.Kill*](/dotnet/api/System.Diagnostics.Process.Kill) (metodo). Poiché il `PassThru` parametro è impostato su `true`, [System.Management.Automation.Cmdlet.ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) chiama inoltre [System.Management.Automation.Cmdlet.WriteObject](/dotnet/api/System.Management.Automation.Cmdlet.WriteObject) inviare l'oggetto processo per la pipeline.
 
 ## <a name="code-sample"></a>Esempio di codice
 

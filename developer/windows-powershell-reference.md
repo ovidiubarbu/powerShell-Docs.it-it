@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Windows PowerShell SDK
 ms.assetid: cbba4879-bcac-484a-9906-4bbe2cd1eb33
 caps.latest.revision: 11
-ms.openlocfilehash: dfda6cb68b089a30a156760345420ee80d1d3ae9
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: 86595ebaac32318a4e3b9a3c4b295c73fb2e1c75
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56862107"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58055496"
 ---
 # <a name="windows-powershell-reference"></a>Guida di riferimento di Windows PowerShell
 
@@ -47,10 +47,10 @@ Oltre a SDK di Windows PowerShell, le risorse seguenti forniscono altre informaz
 
 [System.Management.Automation.Provider](/dotnet/api/System.Management.Automation.Provider) questo spazio dei nomi contiene le classi, enumerazioni e le interfacce necessarie per implementare un provider di Windows PowerShell. In particolare, il [System.Management.Automation.Provider.Cmdletprovider](/dotnet/api/System.Management.Automation.Provider.CmdletProvider) classe è la classe base da cui tutti di Windows PowerShell devono essere derivate le classi di provider.
 
-[Microsoft.Powershell.Commands](/dotnet/api/Microsoft.PowerShell.Commands) questo spazio dei nomi contiene le classi per i cmdlet e i provider implementati da Windows PowerShell. Analogamente, è consigliabile creare un *YourName*. I comandi dello spazio dei nomi per i cmdlet implementati dallo sviluppatore.
+[Microsoft.PowerShell.Commands](/dotnet/api/Microsoft.PowerShell.Commands) questo spazio dei nomi contiene le classi per i cmdlet e i provider implementati da Windows PowerShell. Analogamente, è consigliabile creare un *YourName*. I comandi dello spazio dei nomi per i cmdlet implementati dallo sviluppatore.
 
 [System.Management.Automation.Host](/dotnet/api/System.Management.Automation.Host) questo spazio dei nomi contiene le classi, enumerazioni e le interfacce che il cmdlet viene utilizzato per definire l'interazione tra il nome utente e Windows PowerShell.
 
-[System.Management.Automation.Internal](/dotnet/api/System.Management.Automation.Internal) questo spazio dei nomi contiene le classi di base utilizzate da altre classi dello spazio dei nomi. Ad esempio, il [System.Management.Automation.Internal.Cmdletmetadataattribute](/dotnet/api/System.Management.Automation.Internal.CmdletMetadataAttribute) classe è la classe base per il [System.Management.Automation.Cmdletattribute](/dotnet/api/System.Management.Automation.CmdletAttribute) classe.
+[System.Management.Automation.Internal](/dotnet/api/System.Management.Automation.Internal) questo spazio dei nomi contiene le classi di base utilizzate da altre classi dello spazio dei nomi. Ad esempio, il [System.Management.Automation.Internal.Cmdletmetadataattribute](/dotnet/api/System.Management.Automation.Internal.CmdletMetadataAttribute) classe è la classe base per il [System.Management.Automation.CmdletAttribute](/dotnet/api/System.Management.Automation.CmdletAttribute) classe.
 
 [System.Management.Automation.Runspaces](/dotnet/api/System.Management.Automation.Runspaces) questo spazio dei nomi contiene le classi, enumerazioni e le interfacce utilizzate per creare uno spazio di esecuzione di Windows PowerShell. In questo contesto, lo spazio di esecuzione di Windows PowerShell è il contesto in cui una o più pipeline di Windows PowerShell richiamano i cmdlet. Vale a dire, i cmdlet funzionano all'interno del contesto di uno spazio di esecuzione di Windows PowerShell. Per altre informazioni aboutWindows spazi di esecuzione di PowerShell, vedere [spazi di esecuzione di Windows PowerShell](http://msdn.microsoft.com/en-us/a1582cfe-f06d-4aff-adc6-71f49a860ce9).

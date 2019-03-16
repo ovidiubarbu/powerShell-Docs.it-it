@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 4a1adad7-e864-4892-9d26-a6476a9698d2
 caps.latest.revision: 7
-ms.openlocfilehash: fd708473d04a76bcf6cf3a8f8278e1d15fb9addf
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: b65d953169f6daf15fb617ce4d0303cf4cb584ee
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56858657"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58057774"
 ---
 # <a name="scriptblock-element-for-selectioncondition-for-entryselectedby-for-listcontrol-format"></a>Elemento ScriptBlock per SelectionCondition per EntrySelectedBy per ListControl (formato)
 
@@ -59,7 +59,7 @@ Per altre informazioni su altri componenti di una visualizzazione elenco, vedere
 
 [Elemento ListEntry (formato)](./listentry-element-for-listcontrol-format.md)
 
-[Elemento PropertyName per SelectionCondition per EmtrySelectedBy per ListEntry (formato)](./propertyname-element-for-selectioncondition-for-entryselectedby-for-listcontrol-format.md)
+[Elemento PropertyName per SelectionCondition per EntrySelectedBy per ListEntry (formato)](./propertyname-element-for-selectioncondition-for-entryselectedby-for-listcontrol-format.md)
 
 [Elemento SelectionCondition per EntrySelectedBy per ListEntry (formato)](./selectioncondition-element-for-entryselectedby-for-listcontrol-format.md)
 

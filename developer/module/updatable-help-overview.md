@@ -10,12 +10,12 @@ applies_to:
 - Windows PowerShell 3.0
 ms.assetid: 3f7388a9-9fa8-42bc-b294-538c9a01e30a
 caps.latest.revision: 12
-ms.openlocfilehash: 4e962890fa1d5c282a02a89f0ae2e263844c635e
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: f2dfb9642ba2dde38124142b659b425bbbb00f37
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56856967"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58057604"
 ---
 # <a name="updatable-help-overview"></a>Panoramica della Guida aggiornabile
 
@@ -31,7 +31,9 @@ La Guida aggiornabile è completamente supportata da tutti i moduli di Windows P
 
 La Guida aggiornabile comprende le funzionalità seguenti.
 
-- Il [Update-Help](/powershell/module/Microsoft.PowerShell.Core/Update-Help) cmdlet, che determina se gli utenti hanno la Guida più recente nei file per un modulo e, in caso contrario, scarica i file della Guida più recenti da Internet, li decomprime e li installa nella sottodirectory del modulo corretto di computer dell'utente. Gli utenti possono usare la [Get-Help](/powershell/module/Microsoft.PowerShell.Core/Update-Help) cmdlet per visualizzare gli argomenti della Guida appena installato immediatamente. Essi non è necessario riavviare Windows PowerShell.
+- Il [Update-Help](/powershell/module/Microsoft.PowerShell.Core/Update-Help) cmdlet, che determina se gli utenti hanno la Guida più recente nei file per un modulo e, in caso contrario, scarica i file della Guida più recenti da Internet, li decomprime e li installa nella sottodirectory del modulo corretto di computer dell'utente.
+  Gli utenti possono usare la [Get-Help](/powershell/module/Microsoft.PowerShell.Core/Get-Help) cmdlet per visualizzare gli argomenti della Guida appena installato immediatamente.
+  Essi non è necessario riavviare PowerShell.
 
 - Il [Save-Help](/powershell/module/Microsoft.PowerShell.Core/Save-Help) cmdlet, che scarica la Guida più recente di file da Internet e li salva nella directory del file system. Gli utenti possono usare il `Update-Help` cmdlet per ottenere i file della Guida dalla directory del file system e decomprimere e installarle nella sottodirectory del modulo nel computer dell'utente. Il `Save-Help` cmdlet è progettato per gli utenti con o senza accesso a Internet e per le aziende che preferiscono limitare l'accesso a Internet.
 

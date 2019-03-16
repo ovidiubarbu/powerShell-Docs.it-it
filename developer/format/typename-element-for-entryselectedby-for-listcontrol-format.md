@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 33c7345c-b808-4c1e-bd54-cb870b407432
 caps.latest.revision: 14
-ms.openlocfilehash: 3f0c0ba1fe85d70557e67a30b3a9a59a33043475
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: 0f7216d4dcc0380bceb47ea7c15b3d4a7e5ceeb2
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56856107"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58059695"
 ---
 # <a name="typename-element-for-entryselectedby-for-listcontrol-format"></a>Elemento TypeName per EntrySelectedBy per ListControl (formato)
 
@@ -74,6 +74,6 @@ Nell'esempio seguente viene illustrato come specificare un insieme di una voce d
 
 [Elemento EntrySelectedBy per ListEntry (formato)](./entryselectedby-element-for-listentry-for-listcontrol-format.md)
 
-[Elemento SelectionSetName per EnrtySelectedBy per ListEntry (formato)](./selectionsetname-element-for-entryselectedby-for-listcontrol-format.md)
+[Elemento SelectionSetName per EntrySelectedBy per ListEntry (formato)](./selectionsetname-element-for-entryselectedby-for-listcontrol-format.md)
 
 [La scrittura di un File di formattazione di PowerShell](./writing-a-powershell-formatting-file.md)

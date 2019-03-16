@@ -8,20 +8,20 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: ae37e3f3-5fd6-4ff6-bf66-a249ff96822b
 caps.latest.revision: 7
-ms.openlocfilehash: 5d6ad7f62c451a0013f6c52b294fac9abd0b4bf1
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: 2afa0e79d9de781149f31a45666d13f98ca10a26
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56862587"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58057893"
 ---
 # <a name="implementing-custom-authorization-for-a-management-odata-web-service"></a>Implementazione dell'autorizzazione personalizzata per un servizio Web OData di gestione
 
-Usando il servizio Web di Windows PowerShell richiede una terza parte implementare il [Microsoft.Management.Odata.Customauthorization](/dotnet/api/Microsoft.Management.Odata.CustomAuthorization) interfaccia da esporre i cmdlet di Windows PowerShell. Questa interfaccia esegue l'autorizzazione utente per il servizio web. Dopo aver scritto il codice per implementare l'interfaccia, è necessario compilarlo in una DLL da utilizzare nell'applicazione web.
+Usando il servizio Web di Windows PowerShell richiede una terza parte implementare il [Microsoft.Management.Odata.CustomAuthorization](/dotnet/api/Microsoft.Management.Odata.CustomAuthorization) interfaccia da esporre i cmdlet di Windows PowerShell. Questa interfaccia esegue l'autorizzazione utente per il servizio web. Dopo aver scritto il codice per implementare l'interfaccia, è necessario compilarlo in una DLL da utilizzare nell'applicazione web.
 
 ## <a name="pass-through-authorization"></a>Autorizzazione di pass-through
 
-Il modo più semplice per implementare il [Microsoft.Management.Odata.Customauthorization](/dotnet/api/Microsoft.Management.Odata.CustomAuthorization) interfaccia è un'implementazione pass-through che autorizza tutti gli utenti. Questo esempio viene non fornito alcun sicurezza e s fornito solo come un llustration come implementare l'interfaccia. Un'implementazione del [Microsoft.Management.Odata.Customauthorization](/dotnet/api/Microsoft.Management.Odata.CustomAuthorization) interfaccia deve eseguire l'override di due metodi: [Microsoft.Management.Odata.Customauthorization.Authorizeuser*](/dotnet/api/Microsoft.Management.Odata.CustomAuthorization.AuthorizeUser) e [Microsoft.Management.Odata.Customauthorization.Getmembershipid*](/dotnet/api/Microsoft.Management.Odata.CustomAuthorization.GetMembershipId). In questo esempio, il [Microsoft.Management.Odata.Customauthorization.Authorizeuser*](/dotnet/api/Microsoft.Management.Odata.CustomAuthorization.AuthorizeUser) restituisce sempre il **System.Security.Principal.WindowsIdentity** oggetto associato all'utente corrente .
+Il modo più semplice per implementare il [Microsoft.Management.Odata.CustomAuthorization](/dotnet/api/Microsoft.Management.Odata.CustomAuthorization) interfaccia è un'implementazione pass-through che autorizza tutti gli utenti. Questo esempio viene non fornito alcun sicurezza e s fornito solo come un'illustrazione di come implementare l'interfaccia. Un'implementazione del [Microsoft.Management.Odata.CustomAuthorization](/dotnet/api/Microsoft.Management.Odata.CustomAuthorization) interfaccia deve eseguire l'override di due metodi: [Microsoft.Management.Odata.CustomAuthorization.AuthorizeUser](/dotnet/api/Microsoft.Management.Odata.CustomAuthorization.AuthorizeUser) e [Microsoft.Management.Odata.CustomAuthorization.GetMembershipId](/dotnet/api/Microsoft.Management.Odata.CustomAuthorization.GetMembershipId). In questo esempio, il [Microsoft.Management.Odata.CustomAuthorization.AuthorizeUser](/dotnet/api/Microsoft.Management.Odata.CustomAuthorization.AuthorizeUser) restituisce sempre il **System.Security.Principal.WindowsIdentity** oggetto associato all'utente corrente.
 
 ```csharp
 namespace Microsoft.Samples. HYPERLINK "VBScript:u(%227%22,19)" Management. HYPERLINK "VBScript:u(%227%22,30)" OData. HYPERLINK "VBScript:u(%227%22,36)" BasicPlugins
@@ -68,7 +68,7 @@ namespace Microsoft.Samples. HYPERLINK "VBScript:u(%227%22,19)" Management. HYPE
 
         /// <summary>
 
-        /// Default managemnet system state key
+        /// Default management system state key
 
         /// </summary>
 
@@ -134,7 +134,7 @@ namespace Microsoft.Samples. HYPERLINK "VBScript:u(%227%22,19)" Management. HYPE
 
 ### <a name="role-based-authorization"></a>Autorizzazione basata sui ruoli
 
-L'esempio seguente implementa un criterio di autorizzazione basata sui ruoli. I criteri vengono definiti in un file XML che si trova nella directory principale dell'applicazione con Web. config e i file MOF e XML schema di mapping. Per informazioni su come configurare il file di schema di autorizzazione, vedere [autorizzazione basata sui ruoli di configurazione](./configuring-role-based-authorization.md). La prima parte dell'esempio implementa il [Microsoft.Management.Odata.Customauthorization.Authorizeuser*](/dotnet/api/Microsoft.Management.Odata.CustomAuthorization.AuthorizeUser) e [Microsoft.Management.Odata.Customauthorization.Getmembershipid*](/dotnet/api/Microsoft.Management.Odata.CustomAuthorization.GetMembershipId) metodi. In questo caso, i metodi di interfaccia chiamano metodi `RbacSystem` classe (definito di seguito) che le effettive operazioni di verifica delle autorizzazioni per l'utente.
+L'esempio seguente implementa un criterio di autorizzazione basata sui ruoli. I criteri vengono definiti in un file XML che si trova nella directory principale dell'applicazione con Web. config e i file MOF e XML schema di mapping. Per informazioni su come configurare il file di schema di autorizzazione, vedere [autorizzazione basata sui ruoli di configurazione](./configuring-role-based-authorization.md). La prima parte dell'esempio implementa il [Microsoft.Management.Odata.CustomAuthorization.AuthorizeUser](/dotnet/api/Microsoft.Management.Odata.CustomAuthorization.AuthorizeUser) e [Microsoft.Management.Odata.CustomAuthorization.GetMembershipId](/dotnet/api/Microsoft.Management.Odata.CustomAuthorization.GetMembershipId) metodi. In questo caso, i metodi di interfaccia chiamano metodi `RbacSystem` classe (definito di seguito) che le effettive operazioni di verifica delle autorizzazioni per l'utente.
 
 ```csharp
 namespace Microsoft.Samples.Management.OData.RoleBasedPlugins
@@ -209,7 +209,7 @@ namespace Microsoft.Samples.Management.OData.RoleBasedPlugins
 
     /// <summary>
     /// Keeps Configuration for the RbacSystem
-    /// It reads the RacSystem configuration for configuratin file and creates RbacConfiguration
+    /// It reads the RacSystem configuration for configuration file and creates RbacConfiguration
     /// </summary>
     [Serializable]
     [XmlRoot("RbacConfiguration")]
@@ -719,7 +719,7 @@ namespace Microsoft.Samples.Management.OData.RoleBasedPlugins
             /// Indicates whether the current object is equal to another object of the object type.
             /// </summary>
             /// <param name="other">Other object instance</param>
-            /// <returns>true, if both instace are same else false</returns>
+            /// <returns>true, if both instance are same else false</returns>
             public override bool Equals(object other)
             {
                 return this.Equals(other as RbacUserInfo);
@@ -738,4 +738,4 @@ namespace Microsoft.Samples.Management.OData.RoleBasedPlugins
 }
 ```
 
-Infine, la classe RbacSystem implementa metodi che l'operazione di verifica delle autorizzazioni per l'utente e restituisce lo stato di autorizzazione per i metodi definiti nell'implementazione del [Microsoft.Management.Odata.Customauthorization ](/dotnet/api/Microsoft.Management.Odata.CustomAuthorization) interfaccia.
+Infine, la classe RbacSystem implementa metodi che l'operazione di verifica delle autorizzazioni per l'utente e restituisce lo stato di autorizzazione per i metodi definiti nell'implementazione del [Microsoft.Management.Odata.CustomAuthorization ](/dotnet/api/Microsoft.Management.Odata.CustomAuthorization) interfaccia.

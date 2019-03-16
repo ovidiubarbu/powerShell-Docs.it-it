@@ -8,18 +8,18 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: f2a1531a-a92a-4606-9d54-c5df80d34f33
 caps.latest.revision: 8
-ms.openlocfilehash: 2f3bb481722363557c93ebbc5e6df62baeff2555
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: e0550dacc33f45f45ba105ca5cb4d2e5b5d675fb
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56862007"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58056057"
 ---
 # <a name="adding-non-terminating-error-reporting-to-your-cmdlet"></a>Aggiunta di segnalazioni di errori non irreversibili al cmdlet
 
-I cmdlet possono segnalare gli errori non fatali chiamando il [System.Management.Automation.Cmdlet.Writeerror*](/dotnet/api/System.Management.Automation.Cmdlet.WriteError) (metodo) e comunque continuare a operare sull'oggetto di input corrente o in entrata ulteriormente gli oggetti di pipeline. Questa sezione viene illustrato come creare un cmdlet che segnala gli errori non fatali dai relativi metodi di elaborazione dell'input.
+I cmdlet possono segnalare gli errori non fatali chiamando il [System.Management.Automation.Cmdlet.WriteError](/dotnet/api/System.Management.Automation.Cmdlet.WriteError) (metodo) e comunque continuare a operare sull'oggetto di input corrente o in entrata ulteriormente gli oggetti di pipeline. Questa sezione viene illustrato come creare un cmdlet che segnala gli errori non fatali dai relativi metodi di elaborazione dell'input.
 
-Per gli errori non fatali (così come gli errori irreversibili), il cmdlet è necessario passare un [System.Management.Automation.Errorrecord](/dotnet/api/System.Management.Automation.ErrorRecord) oggetto che identifica l'errore. Ogni record di errore è identificato da una stringa univoca, chiamata "identificatore dell'errore". Oltre all'identificatore, la categoria di ogni errore è specificata dalle costanti definite da un [System.Management.Automation.Errorcategory](/dotnet/api/System.Management.Automation.ErrorCategory) enumerazione. L'utente può visualizzare gli errori in base alla categoria basati impostando il `$ErrorView` variabile "CategoryView".
+Per gli errori non fatali (così come gli errori irreversibili), il cmdlet è necessario passare un [System.Management.Automation.ErrorRecord](/dotnet/api/System.Management.Automation.ErrorRecord) oggetto che identifica l'errore. Ogni record di errore è identificato da una stringa univoca, chiamata "identificatore dell'errore". Oltre all'identificatore, la categoria di ogni errore è specificata dalle costanti definite da un [System.Management.Automation.Errorcategory](/dotnet/api/System.Management.Automation.ErrorCategory) enumerazione. L'utente può visualizzare gli errori in base alla categoria basati impostando il `$ErrorView` variabile "CategoryView".
 
 Per altre informazioni sui record di errore, vedere [record di errore di Windows PowerShell](./windows-powershell-error-records.md).
 
@@ -101,11 +101,11 @@ Tutti i cmdlet devono eseguire l'override di almeno uno dei metodi forniti dall'
 > [!NOTE]
 > Il cmdlet consente di gestire ogni record più indipendente possibile.
 
-Esegue l'override di questo cmdlet Get-Proc il [System.Management.Automation.Cmdlet.Processrecord*](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) metodo per gestire il `Name` parametro per l'input fornito dall'utente o uno script. Questo metodo otterranno i processi per ogni nome di processo richiesto o tutti i processi se viene fornito alcun nome. Dettagli di questa sostituzione sono disponibili nella [la creazione del primo Cmdlet](./creating-a-cmdlet-without-parameters.md).
+Esegue l'override di questo cmdlet Get-Proc il [System.Management.Automation.Cmdlet.ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) metodo per gestire il `Name` parametro per l'input fornito dall'utente o uno script. Questo metodo otterranno i processi per ogni nome di processo richiesto o tutti i processi se viene fornito alcun nome. Dettagli di questa sostituzione sono disponibili nella [la creazione del primo Cmdlet](./creating-a-cmdlet-without-parameters.md).
 
 #### <a name="things-to-remember-when-reporting-errors"></a>Aspetti da ricordare quando si segnalano gli errori
 
-Il [System.Management.Automation.Errorrecord](/dotnet/api/System.Management.Automation.ErrorRecord) che il cmdlet ha esito positivo quando la scrittura di un errore richiede un'eccezione alla base dell'oggetto. Seguire le linee guida di .NET durante la determinazione di eccezione da usare. In sostanza, se l'errore è semanticamente identico un'eccezione esistente, il cmdlet deve usare o derivare da tale eccezione. In caso contrario, consigliabile derivare una nuova eccezione o una gerarchia di eccezione direttamente dai [System. Exception](/dotnet/api/System.Exception) classe.
+Il [System.Management.Automation.ErrorRecord](/dotnet/api/System.Management.Automation.ErrorRecord) che il cmdlet ha esito positivo quando la scrittura di un errore richiede un'eccezione alla base dell'oggetto. Seguire le linee guida di .NET durante la determinazione di eccezione da usare. In sostanza, se l'errore è semanticamente identico un'eccezione esistente, il cmdlet deve usare o derivare da tale eccezione. In caso contrario, consigliabile derivare una nuova eccezione o una gerarchia di eccezione direttamente dai [System. Exception](/dotnet/api/System.Exception) classe.
 
 Durante la creazione di identificatori di errore, accessibili tramite la proprietà FullyQualifiedErrorId della classe ErrorRecord, tenere presente quanto segue.
 
@@ -135,7 +135,7 @@ Le eccezioni non gestite non vengono rilevate da Windows PowerShell nelle condiz
 
 ## <a name="reporting-nonterminating-errors"></a>Segnalazione di errori non fatali
 
-Uno dei metodi di elaborazione dell'input può segnalare un errore non fatali per il flusso di output usando il [System.Management.Automation.Cmdlet.Writeerror*](/dotnet/api/System.Management.Automation.Cmdlet.WriteError) (metodo). Di seguito è riportato un esempio di codice da questo cmdlet Get-Process che illustra la chiamata a [System.Management.Automation.Cmdlet.Writeerror*](/dotnet/api/System.Management.Automation.Cmdlet.WriteError) all'interno dell'override del [ System.Management.Automation.Cmdlet.Processrecord*](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) (metodo). In questo caso, la chiamata viene eseguita se il cmdlet non è possibile trovare un processo per un identificatore di processo specificato.
+Uno dei metodi di elaborazione dell'input può segnalare un errore non fatali per il flusso di output usando il [System.Management.Automation.Cmdlet.WriteError](/dotnet/api/System.Management.Automation.Cmdlet.WriteError) (metodo). Di seguito è riportato un esempio di codice da questo cmdlet Get-Process che illustra la chiamata a [System.Management.Automation.Cmdlet.WriteError](/dotnet/api/System.Management.Automation.Cmdlet.WriteError) all'interno dell'override del [ System.Management.Automation.Cmdlet.ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) (metodo). In questo caso, la chiamata viene eseguita se il cmdlet non è possibile trovare un processo per un identificatore di processo specificato.
 
 ```csharp
 protected override void ProcessRecord()

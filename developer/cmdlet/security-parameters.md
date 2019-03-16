@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: e199bba3-90d3-41ca-9d78-cb502e58508d
 caps.latest.revision: 6
-ms.openlocfilehash: c8b3f907a80d1f6125a5ac04236245503db76ed0
-ms.sourcegitcommit: ce46e5098786e19d521b4bf948ff62d2b90bc53e
+ms.openlocfilehash: 9b4d83aeaf45eab1365dec5fbf48c3c796ed5bde
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57251303"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58057130"
 ---
 # <a name="security-parameters"></a>Parametri di sicurezza
 
@@ -29,7 +29,7 @@ La tabella seguente elenca i nomi consigliati e funzionalità per i parametri ut
 |**CertStoreLocation**<br>Tipo di dati: String|Implementare questo parametro in modo che l'utente può specificare il percorso dell'archivio certificati. Il percorso è in genere un percorso di file.|
 |**CertSubjectName**<br>Tipo di dati: String|Implementare questo parametro in modo che l'utente può specificare l'autorità emittente di un certificato o in modo che l'utente può specificare una sottostringa.|
 |**CertUsage**<br>Tipo di dati: String|Implementare questo parametro per specificare l'utilizzo della chiave o l'utilizzo chiavi avanzato. La chiave può essere rappresentata come una maschera di bit, un po', un identificatore di oggetto (OID), o una stringa.|
-|**Credenziali**<br>Tipo di dati: [System.Management.Automation.Pscredential](/dotnet/api/System.Management.Automation.PSCredential)|Implementare questo parametro in modo che il cmdlet chiederà automaticamente all'utente per un nome utente o password. Se una credenziale completa non viene fornita direttamente, viene visualizzato un prompt dei comandi per entrambi.|
+|**Credenziali**<br>Tipo di dati: [System.Management.Automation.PSCredential](/dotnet/api/System.Management.Automation.PSCredential)|Implementare questo parametro in modo che il cmdlet chiederà automaticamente all'utente per un nome utente o password. Se una credenziale completa non viene fornita direttamente, viene visualizzato un prompt dei comandi per entrambi.|
 |**CSPName**<br>Tipo di dati: String|Implementare questo parametro in modo che l'utente può specificare il nome del provider di servizi certificati (CSP).|
 |**CSPType**<br>Tipo di dati: Intero|Implementare questo parametro in modo che l'utente può specificare il tipo di CSP.|
 |**Gruppo**<br>Tipo di dati: String|Implementare questo parametro in modo che l'utente può specificare una raccolta di entità per l'accesso. Per altre informazioni, vedere la descrizione del **Principal** parametro.|
