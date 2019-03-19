@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: e15712c9c5f4a2fa2648674fd4d6f167d4342b6f
+ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "58142210"
+---
 # <a name="contributor-guide"></a>Guida per i collaboratori
 
 Grazie per l'interesse dimostrato a fornire il proprio contributo a documentazione di qualità.

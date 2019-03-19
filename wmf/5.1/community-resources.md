@@ -3,15 +3,15 @@ ms.date: 06/12/2017
 ms.topic: conceptual
 keywords: wmf,powershell,installazione
 title: Risorse della community
-ms.openlocfilehash: 144fa655d4c14656246bc6c86e7c43f1ea8dca3c
-ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
+ms.openlocfilehash: a26f6eefeb3beb41575675b3dd4077f056606a70
+ms.sourcegitcommit: 5990f04b8042ef2d8e571bec6d5b051e64c9921c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34219369"
+ms.lasthandoff: 03/12/2019
+ms.locfileid: "57794876"
 ---
-# <a name="community-resources"></a>Risorse della community #
-> Nota: queste informazioni sono provvisorie e soggette a modifiche.
+# <a name="community-resources"></a>Risorse della community
+> Nota: Queste informazioni sono provvisorie e soggette a modifiche.
 
 Il team di PowerShell è lieto di ricevere commenti e suggerimenti sul prodotto e supporta diverse modalità di contatto.
 Tutte le modalità elencate di seguito consentono di inviare commenti e suggerimenti, ma è consigliabile iniziare con i collegamenti nella home page di PowerShell.
