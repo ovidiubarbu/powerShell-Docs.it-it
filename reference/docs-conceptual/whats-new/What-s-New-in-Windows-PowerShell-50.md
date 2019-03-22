@@ -2,19 +2,21 @@
 ms.date: 06/05/2017
 keywords: powershell,cmdlet
 title: Novità di Windows PowerShell 5.0
-ms.openlocfilehash: 06088e4a974ed4fb2a245fb9acfa780710a8ccc4
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
-ms.translationtype: MTE95
+ms.openlocfilehash: a21e6af9f23ac8bb3ddf84dbfa67a67f3ff93b24
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55682849"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58055105"
 ---
 # <a name="whats-new-in-windows-powershell-50"></a>Novità di Windows PowerShell 5.0
+
 Windows PowerShell 5.0 include nuove funzionalità significative che ne estendono e migliorano l'uso e consentono di controllare e gestire gli ambienti Windows in modo più semplice e completo.
 
 Windows PowerShell 5.0 è compatibile con le versioni precedenti. Cmdlet, provider, moduli, snap-in, script, funzioni e profili progettati per Windows PowerShell 4.0, Windows PowerShell 3.0 e Windows PowerShell 2.0 in genere funzionano in Windows PowerShell 5.0 senza modifiche.
 
 ## <a name="installing-windows-powershell"></a>Installazione di Windows PowerShell
+
 Windows PowerShell 5.0 viene installato per impostazione predefinita in Windows Server 2016 Technical Preview e Windows 10.
 
 Per installare Windows PowerShell 5.0 in Windows Server 2012 R2, Windows 8.1 Enterprise o Windows 8.1 Pro, scaricare e installare [Windows Management Framework 5.0](https://aka.ms/wmf5download). Prima di installare Windows Management Framework 5.0, leggere i dettagli sul download e soddisfare tutti i requisiti di sistema.
@@ -27,6 +29,7 @@ Per installare Windows PowerShell 5.0 in Windows Server 2012 R2, Windows 8.1 Ent
 - [Nuove funzionalità di Windows PowerShell 3.0](#new-features-in-windows-powershell-30)
 
 ## <a name="windows-powershell-40-updates-in-november-2014-update-rollup-kb-3000850"></a>Aggiornamenti di Windows PowerShell 4.0 nell'aggiornamento cumulativo di novembre 2014 (KB 3000850)
+
 Molti aggiornamenti e miglioramenti per Windows PowerShell Desired State Configuration (DSC) in Windows PowerShell 4.0 sono disponibili nell'[aggiornamento cumulativo di novembre 2014 per Windows RT 8.1, Windows 8.1 e Windows Server 2012 R2](https://support.microsoft.com/kb/3000850/) (KB 3000850). È possibile determinare se l'aggiornamento KB 3000850 è installato nel sistema eseguendo `Get-Hotfix -Id KB3000850` in Windows PowerShell.
 
 - Aggiornamenti per i cmdlet esistenti nel modulo [PSDesiredStateConfiguration](https://technet.microsoft.com/library/dn391651(v=wps.640).aspx)
@@ -38,9 +41,9 @@ Molti aggiornamenti e miglioramenti per Windows PowerShell Desired State Configu
   - [New-DscChecksum](https://technet.microsoft.com/library/dn521622.aspx) supporta ora i percorsi UNC.
 
 - Nuovi cmdlet nel modulo [PSDesiredStateConfiguration](https://technet.microsoft.com/library/dn391651(v=wps.640).aspx)
-  - [Update-DscConfiguration](https://technet.microsoft.com/library/mt143541(v=wps.630).aspx)  Esegue un controllo server di pull su richiesta.
-  - [Stop-DscConfiguration](https://technet.microsoft.com/library/mt143542(v=wps.630).aspx)  Arresta una configurazione che è già in esecuzione.
-  - [Remove-DscConfigurationDocument](https://technet.microsoft.com/library/mt143544(v=wps.630).aspx)  Consente di rimuovere i documenti di configurazione nelle varie fasi (in sospeso, precedente o corrente).
+  - [Update-DscConfiguration](https://technet.microsoft.com/library/mt143541(v=wps.630).aspx):  Esegue un controllo del server di pull su richiesta.
+  - [Stop-DscConfiguration](https://technet.microsoft.com/library/mt143542(v=wps.630).aspx):  Arresta una configurazione già in esecuzione.
+  - [Remove-DscConfigurationDocument](https://technet.microsoft.com/library/mt143544(v=wps.630).aspx):  Consente di rimuovere i documenti di configurazione nelle varie fasi (in sospeso, precedente o corrente).
 
 - Miglioramenti del linguaggio
   - DependsOn supporta ora risorse composite.
@@ -65,9 +68,9 @@ Molti aggiornamenti e miglioramenti per Windows PowerShell Desired State Configu
 - Miglioramenti della flessibilità
   - La risorsa LocalConfigurationManager ha una nuova proprietà **ActionAfterReboot**.
     - ContinueConfiguration (valore predefinito): Riprende automaticamente una configurazione dopo il riavvio di un nodo di destinazione.
-    - StopConfiguration Non riprende automaticamente una configurazione dopo il riavvio di un nodo.
+    - StopConfiguration: Non riprende automaticamente una configurazione dopo il riavvio di un nodo.
   - L'esecuzione di un controllo di coerenza può ora avvenire più spesso di un'operazione PULL o viceversa.
-  - Supporto per il controllo delle versioni:  DSC ora può riconoscere un documento che è stato generato in un client più recente (incluso con [WMF 5.0](https://aka.ms/wmf5download)).
+  - Supporto per il controllo delle versioni:  DSC ora può riconoscere un documento che è stato generato in un client più recente (incluso in [WMF 5.0](https://aka.ms/wmf5download)).
 
 - Miglioramenti di prevenzione degli errori
   - La versione del modulo viene ora imposta prima dell'applicazione di una configurazione.
@@ -132,19 +135,19 @@ Molti aggiornamenti e miglioramenti per Windows PowerShell Desired State Configu
 - È stato aggiunto il nuovo stato AtBreakpoint per i processi di Windows PowerShell. Lo stato AtBreakpoint si applica quando un processo esegue uno script che include punti di interruzione e lo script raggiunge un punto di interruzione. Quando un processo viene interrotto in corrispondenza di un punto di interruzione di debug, è necessario eseguire il debug del processo tramite il cmdlet Debug-Job.
 - Windows PowerShell 5.0 implementa il supporto per più versioni di un singolo modulo di Windows PowerShell nella stessa cartella in $PSModulePath. È stata aggiunta la proprietà RequiredVersion alla classe ModuleSpecification per facilitare il recupero della versione desiderata di un modulo. Questa proprietà e la proprietà ModuleVersion si escludono a vicenda. La proprietà RequiredVersion è ora supportata come parte del valore del parametro FullyQualifiedName dei cmdlet Get-Module, Import-Module e Remove-Module.
 - È ora possibile eseguire la convalida della versione del modulo eseguendo il cmdlet Test-ModuleManifest.
-- I risultati del cmdlet Get-Command includono ora una colonna Version. È stata aggiunta una nuova proprietà Version alla classe CommandInfo. Get-Command mostra i comandi da più versioni dello stesso modulo. La proprietà Version fa inoltre parte delle classi derivate di CmdletInfo: CmdletInfo e ApplicationInfo.
+- I risultati del cmdlet Get-Command includono ora una colonna Version. È stata aggiunta una nuova proprietà Version alla classe CommandInfo. Get-Command mostra i comandi da più versioni dello stesso modulo. La proprietà Version è inclusa anche nelle classi derivate di CmdletInfo: CmdletInfo e ApplicationInfo.
 - Get-Command include il nuovo parametro -ShowCommandInfo, che restituisce informazioni ShowCommand in forma di PSObjects. Questa funzionalità è particolarmente utile quando si esegue Show-Command in Windows PowerShell ISE usando la comunicazione remota di Windows PowerShell. Il parametro -ShowCommandInfo sostituisce la funzione Get-SerializedCommand esistente nel modulo Microsoft.PowerShell.Utility, ma lo script Get-SerializedCommand è ancora disponibile per il supporto di script di livello inferiore.
-- Il nuovo cmdlet Get-ItemPropertyValue consente di ottenere il valore di una proprietà senza usare la notazione del punto. Nelle versioni precedenti di Windows PowerShell, ad esempio, è possibile eseguire il comando seguente per ottenere il valore della proprietà ApplicationBase della chiave del Registro di sistema PowerShellEngine: **(Get-ItemProperty-Path HKLM:\\SOFTWARE\\Microsoft\\PowerShell\\3\\PowerShellEngine-nome ApplicationBase). ApplicationBase**. A partire da Windows PowerShell 5.0 è possibile eseguire **Get-ItemPropertyValue -Path HKLM:\\SOFTWARE\\Microsoft\\PowerShell\\3\\PowerShellEngine -Name ApplicationBase**.
+- Il nuovo cmdlet Get-ItemPropertyValue consente di ottenere il valore di una proprietà senza usare la notazione del punto. Ad esempio, nelle versioni precedenti di Windows PowerShell è possibile eseguire il comando seguente per ottenere il valore della proprietà Application Base della chiave del Registro di sistema PowerShellEngine: **(Get-ItemProperty -Path HKLM:\\SOFTWARE\\Microsoft\\PowerShell\\3\\PowerShellEngine -Name ApplicationBase).ApplicationBase**. A partire da Windows PowerShell 5.0 è possibile eseguire **Get-ItemPropertyValue -Path HKLM:\\SOFTWARE\\Microsoft\\PowerShell\\3\\PowerShellEngine -Name ApplicationBase**.
 - La console di Windows PowerShell usa ora la colorazione della sintassi, come in Windows PowerShell ISE.
 - Il nuovo modulo NetworkSwitch contiene cmdlet che consentono di applicare la configurazione di commutatore, LAN virtuale (VLAN) e porte del commutatore di rete di livello 2 di base ai commutatori di rete con certificazione per il logo di Windows Server 2012 R2.
 - È stato aggiunto il parametro FullyQualifiedName ai cmdlet Import-Module e Remove-Module per supportare l'archiviazione di più versioni di un singolo modulo.
 - Per i cmdlet Save-Help, Update-Help, Import-PSSession, Export-PSSession e Get-Command è disponibile il nuovo parametro FullyQualifiedModule di tipo ModuleSpecification. Aggiungere questo parametro per specificare un modulo usando il nome completo.
 - Il valore di **$PSVersionTable.PSVersion** è stato aggiornato alla versione 5.0.
-- WMF 5.0 (PowerShell 5.0) include il **Pester** modulo.  Pester è un framework di unit test per PowerShell. Fornisce alcune parole chiave di semplice utilizzo che consentono di creare i test per gli script. 
- 
+- WMF 5.0 (PowerShell 5.0) include il modulo **Pester**.  Pester è un framework di testing unità per PowerShell. Offre alcune parole chiave di semplice utilizzo che consentono di creare test per gli script.
+
 ### <a name="new-features-in-windows-powershell-desired-state-configuration"></a>Nuove funzionalità di Windows PowerShell Desired State Configuration
 
-- I miglioramenti del linguaggio di Windows PowerShell consentono di usare classi per definire risorse di Windows PowerShell Desired State Configuration (DSC). Import-DscResource è ora una parola chiave effettivamente dinamica. Windows PowerShell analizza il modulo radice del modulo specificato alla ricerca delle classi che contengono l'attributo DscResource. È ora possibile usare classi per definire le risorse DSC, senza che sia richiesto un file MOF o una sottocartella DSCResource nella cartella del modulo. Un file di modulo di Windows PowerShell può contenere più classi di risorse DSC.
+- I miglioramenti del linguaggio di Windows PowerShell consentono di usare classi per definire risorse di Windows PowerShell Desired State Configuration (DSC). Import-DscResource è ora una parola chiave dinamica. Windows PowerShell analizza il modulo radice del modulo specificato alla ricerca delle classi che contengono l'attributo DscResource. È ora possibile usare classi per definire le risorse DSC, senza che sia richiesto un file MOF o una sottocartella DSCResource nella cartella del modulo. Un file di modulo di Windows PowerShell può contenere più classi di risorse DSC.
 - È stato aggiunto il nuovo parametro ThrottleLimit per i cmdlet seguenti nel modulo PSDesiredStateConfiguration. Aggiungere il parametro ThrottleLimit per specificare il numero di computer o dispositivi di destinazione a cui si vuole applicare il comando contemporaneamente.
   - Get-DscConfiguration
   - Get-DscConfigurationStatus
@@ -166,8 +169,8 @@ Molti aggiornamenti e miglioramenti per Windows PowerShell Desired State Configu
 - È stato aggiunto il supporto di 32 bit (x86) per la parola chiave **Configuration**.
 - Windows PowerShell include ora il supporto della Guida personalizzata per le configurazioni DSC, definito aggiungendo \[CmdletBinding()] alla funzione di configurazione generata.
 - Il nuovo attributo **DscLocalConfigurationManager** definisce un blocco di configurazione come metaconfigurazione, usata per configurare Gestione configurazione locale DSC. Questo attributo limita una configurazione ai soli elementi per configurare Gestione configurazione locale DSC. Durante l'elaborazione, questa configurazione genera un file \*.meta.mof che viene poi inviato ai nodi di destinazione appropriati tramite il cmdlet Set-DscLocalConfigurationManager.
-- Le configurazioni parziali sono ora consentite in Windows PowerShell 5.0. È possibile recapitare i documenti di configurazione a un nodo in frammenti. Affinché un nodo possa ricevere più frammenti di un documento di configurazione, l'istanza di Gestione configurazione locale nel nodo deve essere prima impostata in modo da specificare i frammenti previsti
-- La sincronizzazione tra computer è una novità di DSC in Windows PowerShell 5.0. Grazie alle risorse predefinite WaitFor\* (**WaitForAll**, **WaitForAny** e **WaitForSome**), è ora possibile specificare le dipendenze tra i computer durante le esecuzioni della configurazione, senza orchestrazione esterna. Queste risorse consentono la sincronizzazione tra nodi tramite connessioni CIM sul protocollo WS-Man. Una configurazione può aspettare la modifica dello stato di una risorsa specifica di un altro computer.
+- Le configurazioni parziali sono ora consentite in Windows PowerShell 5.0. È possibile recapitare i documenti di configurazione a un nodo in frammenti. Affinché un nodo possa ricevere più frammenti di un documento di configurazione, è necessario innanzitutto impostare Gestione configurazione locale del nodo in modo da specificare i frammenti previsti
+- La sincronizzazione tra computer è una novità di DSC in Windows PowerShell 5.0. Grazie alle risorse predefinite WaitFor\* (**WaitForAll**, **WaitForAny** e **WaitForSome**), è ora possibile specificare le dipendenze tra i computer durante le esecuzioni della configurazione, senza orchestrazione esterna. Queste risorse consentono la sincronizzazione tra nodi tramite connessioni CIM sul protocollo WS-Man. Una configurazione può attendere la modifica dello stato di una risorsa specifica di un altro computer.
 - La nuova funzionalità di sicurezza con delega JEA (Just Enough Administration) si basa su DSC e gli spazi di esecuzione limitati di Windows PowerShell per proteggere le aziende da perdite di dati o compromissioni causate dai dipendenti, sia intenzionalmente che non. Per altre informazioni su JEA, inclusa la posizione da cui è possibile scaricare la risorsa xJEA DSC, vedere il post di blog di [presentazione dei dettagli di JEA (Just Enough Administration)](https://blogs.technet.com/b/privatecloud/archive/2014/05/14/just-enough-administration-step-by-step.aspx).
 - Sono stati aggiungi i nuovi cmdlet seguenti al modulo PSDesiredStateConfiguration.
   - Il nuovo cmdlet Get-DscConfigurationStatus ottiene informazioni generali sullo stato di configurazione da un nodo di destinazione. È possibile ottenere lo stato dell'ultima configurazione o di tutte.
@@ -178,7 +181,7 @@ Molti aggiornamenti e miglioramenti per Windows PowerShell Desired State Configu
 
 ### <a name="new-features-in-windows-powershell-ise"></a>Nuove funzionalità di Windows PowerShell ISE
 
-- È ora possibile modificare gli script di Windows PowerShell remota e i file in una copia locale di Windows PowerShell ISE eseguendo Enter-PSSession per avviare una sessione remota nel computer in cui sono archiviati i file che si desidera modificare e quindi eseguendo **PSEdit \<percorso e nome file nel computer remoto\>**. Questa funzionalità semplifica la modifica dei file di Windows PowerShell archiviati nell'opzione di installazione Server Core di Windows Server, in cui non è possibile eseguire Windows PowerShell ISE.
+- È ora possibile modificare script e file remoti di Windows PowerShell in una copia locale di Windows PowerShell ISE eseguendo Enter-PSSession per avviare una sessione remota nel computer in cui sono archiviati i file da modificare e quindi eseguendo **PSEdit \<percorso e nome file nel computer remoto\>**. Questa funzionalità semplifica la modifica dei file di Windows PowerShell archiviati nell'opzione di installazione Server Core di Windows Server, in cui non è possibile eseguire Windows PowerShell ISE.
 - Il cmdlet Start-Transcript è ora supportato in Windows PowerShell ISE.
 - È ora possibile eseguire il debug di script remoti in Windows PowerShell ISE.
 - Il nuovo comando di menu **Interrompi tutto** (CTRL+B) consente di interrompere l'esecuzione nel debugger sia per script in esecuzione in locale che in remoto.
@@ -222,7 +225,7 @@ Windows PowerShell 4.0 include le nuove funzionalità seguenti.
 - È stato aggiunto il parametro **Passthru** ai cmdlet **Enable-JobTrigger** e **Disable-JobTrigger**. Questo parametro visualizza tutti gli oggetti creati o modificati dal comando.
 - I nomi dei parametri per specificare un gruppo di lavoro nei cmdlet **Add-Computer** e **Remove-Computer** sono ora coerenti. Entrambi i cmdlet usano ora il parametro **WorkgroupName**.
 - È stato aggiunto il nuovo parametro comune **PipelineVariable**, che consente di salvare i risultati di un comando (o di parte di esso) inviato tramite pipe come variabile che può quindi essere passata attraverso il resto della pipeline.
-- È ora supportato il filtro delle raccolte tramite la sintassi di un metodo. Questo significa che è possibile filtrare una raccolta di oggetti usando una sintassi semplificata, simile a quella di Where() o Where-Object, formattata come una chiamata a metodo. Di seguito è riportato un esempio: (Get-Process).where({$_.Name -match 'powershell'})
+- È ora supportato il filtro delle raccolte tramite la sintassi di un metodo. Questo significa che è possibile filtrare una raccolta di oggetti usando una sintassi semplificata, simile a quella di Where() o Where-Object, formattata come una chiamata a metodo. Di seguito viene riportato un esempio. (Get-Process).where({$_.Name -match 'powershell'})
 - Il cmdlet **Get-Process** include ora il nuovo parametro opzionale **IncludeUserName**.
 - È stato aggiunto il nuovo cmdlet **Get-FileHash**, che restituisce l'hash di un file specificato in uno dei diversi formati disponibili.
 - In Windows PowerShell 4.0, se un modulo usa la chiave **DefaultCommandPrefix** nel manifesto o se l'utente importa un modulo con il parametro **Prefix**, la proprietà **ExportedCommands** del modulo mostra i comandi nel modulo con il prefisso. I nomi dei comandi eseguiti usando la sintassi qualificata di modulo ModuleName\\CommandName devono includere il prefisso.
@@ -316,7 +319,7 @@ Windows PowerShell 3.0 include le nuove funzionalità seguenti.
 
 ### <a name="windows-powershell-workflow"></a>Flusso di lavoro di Windows PowerShell
 
-Il flusso di lavoro di Windows PowerShell estende le potenzialità di Windows Workflow Foundation a Windows PowerShell. È possibile scrivere flussi di lavoro in XAML o nel linguaggio di Windows PowerShell ed eseguirli allo stesso modo dei cmdlet. Il [Get-Command](https://technet.microsoft.com/library/59c6d302-6e8c-48b7-a6f6-f0172df936ad) cmdlet Ottiene i comandi del flusso di lavoro e il [Get-Help](https://technet.microsoft.com/library/1f46eeb4-49d7-4bec-bb29-395d9b42f54a) cmdlet Ottiene la Guida per i flussi di lavoro.
+Il flusso di lavoro di Windows PowerShell estende le potenzialità di Windows Workflow Foundation a Windows PowerShell. È possibile scrivere flussi di lavoro in XAML o nel linguaggio di Windows PowerShell ed eseguirli allo stesso modo dei cmdlet. Il cmdlet [Get-Command](https://technet.microsoft.com/library/59c6d302-6e8c-48b7-a6f6-f0172df936ad) ottiene i comandi del flusso di lavoro e il cmdlet [Get-Help](https://technet.microsoft.com/library/1f46eeb4-49d7-4bec-bb29-395d9b42f54a) visualizza la Guida.
 
 I flussi di lavoro sono sequenze di attività di gestione di più computer ad esecuzione prolungata, ripetibili, frequenti, parallelizzabili, interrompibili, sospendibili e riavviabili. Possono essere ripresi dopo un'interruzione intenzionale o accidentale, come un'interruzione di rete, un riavvio di Windows o un'interruzione dell'alimentazione.
 
@@ -411,7 +414,7 @@ A partire da Windows PowerShell 3.0, gli autori dei cmdlet scritti in C# possono
 
 È anche possibile includere un valore **HelpUri** nel primo collegamento correlato di un file della Guida sui cmdlet basato su XML o la direttiva .Link della Guida basata su commenti in una funzione.
 
-Per altre informazioni sul supporto per la Guida online, vedere [supporto della Guida Online](/powershell/developer/module/supporting-online-help) in Microsoft Docs.
+Per altre informazioni, vedere [Supporto per la Guida online](/powershell/developer/module/supporting-online-help) in Microsoft Docs.
 
 ### <a name="cim-integration"></a>Integrazione con CIM
 
@@ -482,7 +485,9 @@ Nell'installazione di sistema di Windows PowerShell sono stati aggiunti nuovi cm
 |New-CimSessionOption|Update-Help|
 |New-IseSnippet||
 
-### <a name="improvements-to-existing-core-cmdlets-and-providerswindows-powershell-30-includes-new-features-for-existing-cmdlets-including-the-simplified-syntax-and-new-parameters-for-the-following-cmdlets-computer-cmdlets-csv-cmdlets-get-childitem-get-command-get-content-get-history-measure-object-security-cmdlets-select-object-select-string-split-path-start-process-tee-object-test-connection-add-member-and-wmi-cmdlets"></a>Miglioramenti dei cmdlet di sistema esistente e ProvidersWindows PowerShell 3.0 include nuove funzionalità per i cmdlet esistenti inclusa la sintassi semplificata e nuovi parametri per i cmdlet seguenti: cmdlet Computer, cmdlet CSV, Get-ChildItem, Get-Command, Get-Content, Get-History, Measure-Object, cmdlet Security, Select-Object, Select-String, Split-Path, Start-Process, Tee-Object, Test-Connection, Add-Member e cmdlet WMI.
+### <a name="improvements-to-existing-core-cmdlets-and-providers"></a>Miglioramenti dei cmdlet e provider principali esistenti
+
+Windows PowerShell 3.0 include nuove funzionalità per gli attuali cmdlet, tra cui una sintassi migliorata e nuovi parametri per i cmdlet seguenti: cmdlet Computer, cmdlet CSV, Get-ChildItem, Get-Command, Get-Content, Get-History, Measure-Object, cmdlet Security, Select-Object, Select-String, Split-Path, Start-Process, Tee-Object, Test-Connection, Add-Member e cmdlet WMI.
 
 Anche i provider di Windows PowerShell sono stati migliorati in modo significativo, con l'aggiunta del supporto del provider Certificate per la gestione di certificati SSL (Secure Socket Layer) per l'hosting Web, il supporto di unità di rete permanenti basate su credenziali e flussi di dati alternativi nelle unità di file system.
 

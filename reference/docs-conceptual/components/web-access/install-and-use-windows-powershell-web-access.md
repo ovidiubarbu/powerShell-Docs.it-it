@@ -2,16 +2,16 @@
 ms.date: 08/23/2017
 keywords: powershell,cmdlet
 title: installare e usare accesso web windows powershell
-ms.openlocfilehash: 5517347560b25f032baa77ecc2d769fb1e74ba4f
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
-ms.translationtype: MTE95
+ms.openlocfilehash: 53558f9be5065c7f630f06e535ddab4d7ad72d9e
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55677589"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58056720"
 ---
 # <a name="install-and-use-windows-powershell-web-access"></a>Installare e usare Accesso Web Windows PowerShell
 
-Aggiornamento: 5 novembre 2013 (modificato: Agosto 23, 2017
+Aggiornamento: 5 novembre 2013 (Data di modifica: 23 agosto 2017)
 
 Si applica a: Windows Server 2012 R2, Windows Server 2012
 
@@ -97,7 +97,7 @@ Per usare la console di Accesso Web Windows PowerShell basata sul Web, i browser
    `Install-WindowsFeature -Name WindowsPowerShellWebAccess -ComputerName <computer_name> -IncludeManagementTools -Restart`
 
    > [!NOTE]
-   > Se si installa Accesso Web Windows PowerShell usando i cmdlet di Windows PowerShell, gli strumenti di gestione del server Web (IIS) non vengono installati per impostazione predefinita. Per installare gli strumenti di gestione nello stesso server che ospita il gateway di Accesso Web Windows PowerShell, aggiungere il parametro `-IncludeManagementTools` al comando di installazione, come specificato in questo passaggio. Se il sito Web di Accesso Web Windows PowerShell viene gestito da un computer remoto, installare lo snap-in Gestione IIS installando [Strumenti di amministrazione remota del server per Windows 8.1](https://www.microsoft.com/en-us/download/details.aspx?id=39296) o [Strumenti di amministrazione remota del server per Windows 8](https://www.microsoft.com/en-us/download/details.aspx?id=28972) nel computer da cui si vuole gestire il gateway.
+   > Se si installa Accesso Web Windows PowerShell usando i cmdlet di Windows PowerShell, gli strumenti di gestione del server Web (IIS) non vengono installati per impostazione predefinita. Per installare gli strumenti di gestione nello stesso server che ospita il gateway di Accesso Web Windows PowerShell, aggiungere il parametro `-IncludeManagementTools` al comando di installazione, come specificato in questo passaggio. Se il sito Web di Accesso Web Windows PowerShell deve essere gestito da un computer remoto, installare lo snap-in Gestione IIS installando [Strumenti di amministrazione remota del server per Windows 8.1](https://www.microsoft.com/en-us/download/details.aspx?id=39296) o [Strumenti di amministrazione remota del server per Windows 8](https://www.microsoft.com/en-us/download/details.aspx?id=28972) nel computer da cui si vuole gestire il gateway.
 
    Per installare ruoli e funzionalità in un disco rigido virtuale offline, è necessario aggiungere i parametri `-ComputerName` e `-VHD` . Il parametro `-ComputerName` contiene il nome del server in cui montare il disco rigido virtuale e il parametro `-VHD` contiene il percorso del file VHD nel server specificato.
 
@@ -178,7 +178,7 @@ Per impostazione predefinita, il cmdlet installa l'applicazione Web **pswa** e i
 7. Nella finestra di dialogo **Aggiungi binding sito** selezionare **https** nel campo **Tipo**.
 
 8. Nel campo **Certificato SSL** selezionare il certificato firmato dal menu a discesa.
-   Fare clic su **OK**. Per altre informazioni su come ottenere un certificato, vedere [Per configurare un certificato SSL in Gestione IIS](#to-configure-an-ssl-certificate-in-iis-Manager) in questo argomento.
+   Fare clic su **OK**. Per altre informazioni su come ottenere un certificato, vedere [Per configurare un certificato SSL in Gestione IIS](#to-configure-an-ssl-certificate-in-iis-manager) in questo argomento.
 
    L'applicazione Web Accesso Web Windows PowerShell ora è configurata per usare il certificato SSL firmato.
 
@@ -200,7 +200,7 @@ Per altre informazioni sulla sicurezza e sulle regole di autorizzazione di Acces
    - Nel desktop di Windows fare clic con il pulsante destro del mouse su **Windows PowerShell** nella barra delle applicazioni e scegliere **Esegui come amministratore**.
    - Nella schermata **Start** di Windows fare clic con il pulsante destro del mouse su **Windows PowerShell** e quindi scegliere **Esegui come amministratore**.
 
-2. Passaggio facoltativo per la limitazione dell'accesso utente usando configurazioni di sessione: verificare che le configurazioni di sessione da usare nelle proprie regole esistano già. Se non sono ancora state create, usare le istruzioni per la creazione di configurazioni di sessione disponibili in [about_Session_Configuration_Files](/powershell/module/microsoft.powershell.core/about/about_session_configurations).
+2. Passaggio facoltativo per limitare l'accesso agli utenti tramite le configurazioni di sessione: Verificare che le configurazioni di sessione da usare nelle regole esistano già. Se non sono ancora state create, usare le istruzioni per la creazione di configurazioni di sessione disponibili in [about_Session_Configuration_Files](/powershell/module/microsoft.powershell.core/about/about_session_configurations).
 
 3. Digitare il comando seguente e quindi premere **INVIO**.
 
@@ -273,7 +273,7 @@ Le istruzioni in questa sezione riguardano l'installazione dell'applicazione Web
 
 8. Nel campo **Percorso fisico** cercare e selezionare il percorso dell'applicazione. È possibile usare il percorso predefinito, `$env:windir/Web/PowerShellWebAccess/wwwroot`. Fare clic su **OK**.
 
-9. Eseguire i passaggi illustrati nella procedura [Per configurare un certificato SSL in Gestione IIS](#to-configure-an-ssl-certificate-in-iis-Manager) in questo argomento.
+9. Eseguire i passaggi illustrati nella procedura [Per configurare un certificato SSL in Gestione IIS](#to-configure-an-ssl-certificate-in-iis-manager) in questo argomento.
 
 10. ![](images/SecurityNote.jpeg) Passaggio di sicurezza facoltativo:
 
@@ -318,7 +318,7 @@ Le istruzioni in questa sezione riguardano l'installazione dell'applicazione Web
 
 1. Per il nuovo sito Web viene automaticamente creato un pool di applicazioni. Per utilizzare un pool di applicazioni diverso, fare clic su **Seleziona** per selezionare il pool di applicazioni da associare al nuovo sito Web. Selezionare il pool di applicazioni alternativo nella finestra di dialogo **Seleziona pool di applicazioni** , quindi fare clic su **OK**.
 
-1. Nel **percorso fisico** testo passare a % windir%/Web/PowerShellWebAccess/wwwroot.
+1. Nella casella di testo **Percorso fisico** accedere a %windir%/Web/PowerShellWebAccess/wwwroot.
 
 1. Nel campo **Tipo** dell'area **Binding** selezionare **https**.
 
@@ -329,7 +329,7 @@ Le istruzioni in questa sezione riguardano l'installazione dell'applicazione Web
 
 1. Facoltativamente, se è necessario per l'organizzazione, specificare un nome host significativo per l'organizzazione e gli utenti, ad esempio **`www.contoso.com`**. Fare clic su **OK**.
 
-1. Per un ambiente di produzione più sicuro, è consigliabile specificare un certificato valido firmato da una CA. È necessario fornire un certificato SSL perché gli utenti possono connettersi a Accesso Web Windows PowerShell solo con un sito Web HTTPS. Per altre informazioni su come ottenere un certificato, vedere [Per configurare un certificato SSL in Gestione IIS](#to-configure-an-ssl-certificate-in-iis-Manager) in questo argomento.
+1. Per un ambiente di produzione più sicuro, è consigliabile specificare un certificato valido firmato da una CA. È necessario fornire un certificato SSL perché gli utenti possono connettersi a Accesso Web Windows PowerShell solo con un sito Web HTTPS. Per altre informazioni su come ottenere un certificato, vedere [Per configurare un certificato SSL in Gestione IIS](#to-configure-an-ssl-certificate-in-iis-manager) in questo argomento.
 
 1. Fare clic su **OK** per chiudere la finestra di dialogo **Aggiungi sito Web**.
 

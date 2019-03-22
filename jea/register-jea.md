@@ -2,12 +2,12 @@
 ms.date: 06/12/2017
 keywords: jea,powershell,sicurezza
 title: Registrazione delle configurazioni JEA
-ms.openlocfilehash: 160aa95283da57a10aad5fdd4043adb1354a5db5
-ms.sourcegitcommit: 98b7cfd8ad5718efa8e320526ca76c3cc4141d78
+ms.openlocfilehash: 6fa0ce434c8e70eb718545e99417bfe034cda6bf
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50002907"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58059440"
 ---
 # <a name="registering-jea-configurations"></a>Registrazione delle configurazioni JEA
 
@@ -113,7 +113,7 @@ Configuration JEAMaintenance
 Questa configurazione può quindi essere applicata in un sistema [chiamando direttamente Gestione configurazione locale](https://msdn.microsoft.com/powershell/dsc/metaconfig) o aggiornando la [configurazione server di pull](https://msdn.microsoft.com/powershell/dsc/pullserver).
 
 La risorsa DSC consente anche di sostituire l'endpoint di comunicazione remota Microsoft.PowerShell predefinito.
-In questo caso, la risorsa registra automaticamente un endpoint di backup non vincolato denominato "Microsoft.PowerShell.Restricted" con il valore predefinito WinRM ACL (consentendo ai membri del gruppo Utenti gestione remota e Administrators locale di accedere all'endpoint).
+In questo caso, la risorsa registra automaticamente un endpoint di backup senza vincoli denominato "Microsoft.PowerShell.Restricted" con il valore predefinito WinRM ACL, consentendo così ai membri del gruppo Utenti gestione remota e Administrators locale di accedere all'endpoint.
 
 ## <a name="unregistering-jea-configurations"></a>Annullamento delle configurazioni JEA
 

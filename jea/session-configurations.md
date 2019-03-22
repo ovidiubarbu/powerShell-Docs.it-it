@@ -2,12 +2,12 @@
 ms.date: 06/12/2017
 keywords: jea,powershell,sicurezza
 title: Configurazioni della sessione JEA
-ms.openlocfilehash: 1b598522d43b2c1a26a739a67cee5181b21a7c32
-ms.sourcegitcommit: 548547b2d5fc73e726bb9fec6175d452a351d975
-ms.translationtype: MTE95
+ms.openlocfilehash: b98726ea7ed3aabdfd05034c3b70118e327160cd
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53655464"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58056592"
 ---
 # <a name="jea-session-configurations"></a>Configurazioni della sessione JEA
 
@@ -60,7 +60,7 @@ L'utente decide quale identità JEA userà nel file di configurazione sessione.
 
 #### <a name="local-virtual-account"></a>Account virtuale locale
 
-Se i ruoli supportati da questo endpoint JEA sono tutti usati per gestire il computer locale, e l'account di amministratore locale è sufficiente per eseguire i comandi correttamente, è necessario configurare JEA per usare un account virtuale locale.
+Se i ruoli supportati da questo endpoint JEA sono tutti usati per gestire il computer locale, e l'account Amministratore locale è sufficiente per eseguire i comandi correttamente, è necessario configurare JEA per usare un account virtuale locale.
 Gli account virtuali sono account temporanei e univoci per un utente specifico. Sono validi solo per la durata della sessione di PowerShell.
 In un server membro o in una workstation, gli account virtuali appartengono al gruppo **Administrators** del computer locale e hanno accesso alla maggior parte delle risorse di sistema.
 In un controller di dominio Active Directory, gli account virtuali appartengono al gruppo **Domain Admins** del dominio.
@@ -80,8 +80,9 @@ Quando si specifica uno o più gruppi di sicurezza, l'account virtuale non appar
 RunAsVirtualAccount = $true
 RunAsVirtualAccountGroups = 'NetworkOperator', 'NetworkAuditor'
 ```
+
 > [!NOTE]
-> Gli account virtuali sono temporaneamente concesso l'accesso come un servizio direttamente nei criteri di sicurezza server locale.  Se uno del VirtualAccountGroups specificato è già stato concesso questo diritto nel criterio, il singolo account virtuale non è più essere aggiunti e rimossi dai criteri.  Può essere utile in scenari come i controller di dominio in cui le revisioni per i criteri di protezione controller di dominio sono strettamente controllate.  Questo è disponibile solo in Windows Server 2016 con il mese di novembre 2018 o rollup successive e Windows Server 2019 con gennaio 2019 o cumulativo successivo.
+> Agli account virtuali viene temporaneamente concesso il diritto relativo all'accesso come servizio nei criteri di sicurezza del server locale.  Se a uno dei gruppi di account virtuali è già stato concesso questo diritto nei criteri, il singolo account virtuale non sarà più aggiunto né rimosso dai criteri.  Può essere utile in alcuni scenari, ad esempio nei controller di dominio, dove le revisioni dei criteri di sicurezza dei controller di dominio sono sottoposte ad attenti controlli.  Questa opzione è disponibile solo in Windows Server 2016 con l'aggiornamento cumulativo di Novembre 2018 o aggiornamento cumulativo successivo e in Windows Server 2019 con l'aggiornamento cumulativo di Gennaio 2019 o aggiornamento cumulativo successivo.
 
 #### <a name="group-managed-service-account"></a>Account del servizio gestito del gruppo
 
@@ -104,7 +105,6 @@ Gli account gMSA dovrebbero essere usati solo quando è necessario accedere alle
 
 > [!NOTE]
 > Gli account del servizio gestito del gruppo sono disponibili solo in Windows PowerShell 5.1 o versione successiva e nei computer uniti in un dominio.
-
 
 #### <a name="more-information-about-run-as-users"></a>Altre informazioni su utenti RunAs
 
@@ -179,6 +179,7 @@ RoleDefinitions = @{
 ```
 
 ### <a name="role-capability-search-order"></a>Ordine di ricerca delle funzionalità del ruolo
+
 Come illustrato nell'esempio precedente, le funzionalità del ruolo vengono indicate dal nome flat (nome file senza estensione) del file delle funzionalità del ruolo.
 Se più funzionalità del ruolo sono disponibili nel sistema con lo stesso nome flat, PowerShell userà l'ordine di ricerca implicito per selezionare il file delle funzionalità del ruolo effettivo.
 **Non** concederà accesso a tutti i file delle funzionalità del ruolo con lo stesso nome.
@@ -217,6 +218,7 @@ RequiredGroups = @{ And = 'elevated-jea', @{ Or = '2FA-logon', 'smartcard-logon'
 > Le regole di accesso condizionale sono disponibili solo in Windows PowerShell 5.1 o versione successiva.
 
 ### <a name="other-properties"></a>Altre proprietà
+
 I file di configurazione sessione consentono di eseguire tutte le operazioni di un file delle funzionalità del ruolo, ma non possono offrire agli utenti che si connettono accesso ai diversi comandi.
 Se si vuole concedere agli utenti l'accesso a specifici cmdlet, funzioni o provider, è possibile impostarlo direttamente nel file di configurazione sessione.
 Per un elenco completo delle proprietà supportate nel file di configurazione sessione, eseguire `Get-Help New-PSSessionConfigurationFile -Full`.

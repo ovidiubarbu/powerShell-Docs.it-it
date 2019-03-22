@@ -4,12 +4,12 @@ contributor: JKeithB
 keywords: gallery,powershell,cmdlet,psgallery
 description: Linee guida per gli autori
 title: Linee guida e procedure consigliate per la pubblicazione in PowerShell Gallery
-ms.openlocfilehash: 64c3d607b13dce64f70f138fdee849e5baaf85df
-ms.sourcegitcommit: 6ae5b50a4b3ffcd649de1525c3ce6f15d3669082
-ms.translationtype: MTE95
+ms.openlocfilehash: 25c359c7acbe7430762a275d8cc4a28f527ec57a
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56265570"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58056499"
 ---
 # <a name="powershellgallery-publishing-guidelines-and-best-practices"></a>Linee guida e procedure consigliate per la pubblicazione in PowerShell Gallery
 
@@ -33,7 +33,7 @@ I pacchetti creati usando queste linee guida hanno molte più probabilità di es
 - Rispondere a commenti e suggerimenti
 - Includere moduli anziché script
 - Includere un collegamento a un sito di progetto
-- Contrassegnare il pacchetto con le piattaforme e i PSEdition(s) compatibile 
+- Contrassegnare il pacchetto con PSEdition(s) e le piattaforme compatibili
 - Includere test con i moduli
 - Includere e/o collegare condizioni di licenza
 - Firmare il codice
@@ -93,8 +93,8 @@ La community valuta positivamente i proprietari di pacchetti che offrono rispost
 
 In PowerShell Gallery sono disponibili due metodi per aggiungere commenti e suggerimenti:
 
-- Contact Owner (Contatta il proprietario): l'utente può inviare un messaggio di posta elettronica al o ai proprietari del pacchetto. È importante che il proprietario del pacchetto controlli l'indirizzo di posta elettronica specificato con i pacchetti di PowerShell Gallery e risponda alle segnalazioni. L'unico svantaggio di questo metodo è il fatto che solo l'utente e il proprietario visualizzano questa comunicazione, pertanto è possibile che il proprietario debba rispondere molte volte alla stessa domanda.
-- Comments (Commenti): nella parte inferiore della pagina del pacchetto è disponibile un campo Comment (Commento).
+- Contact Owner (Contatta il proprietario): consente all'utente di inviare un messaggio di posta elettronica al proprietario del pacchetto. È importante che il proprietario del pacchetto controlli l'indirizzo di posta elettronica specificato con i pacchetti di PowerShell Gallery e risponda alle segnalazioni. L'unico svantaggio di questo metodo è il fatto che solo l'utente e il proprietario visualizzano questa comunicazione, pertanto è possibile che il proprietario debba rispondere molte volte alla stessa domanda.
+- Comments (Commenti): nella parte inferiore della pagina del pacchetto è disponibile un campo per inserire un commento.
   Il vantaggio di questa opzione è il fatto che altri utenti possono vedere i commenti e le risposte, pertanto è necessario rispondere alla stessa domanda per un numero minore di volte.
   È consigliabile che il proprietario di un pacchetto segua i commenti aggiunti per ogni pacchetto.
 Per informazioni su come procedere, vedere [Pubblicazione di feedback sui social media o nei commenti](../how-to/working-with-packages/social-media-feedback.md).
@@ -136,15 +136,15 @@ Entrambi gli ambienti possono essere considerati siti di progetto.
 
 Quando viene specificato un ProjectURI, PowerShell Gallery include un collegamento al sito di progetto sul lato sinistro della pagina del pacchetto.
 
-## <a name="tag-your-package-with-the-compatible-pseditions-and-platforms"></a>Contrassegnare il pacchetto con le piattaforme e i PSEdition(s) compatibile 
+## <a name="tag-your-package-with-the-compatible-pseditions-and-platforms"></a>Contrassegnare il pacchetto con PSEdition(s) e le piattaforme compatibili
 
-Usare i seguenti tag per illustrare agli utenti che funzioneranno bene con loro ambiente pacchetti:
+Usare i tag seguenti per indicare agli utenti quali pacchetti funzioneranno con il loro ambiente:
 
-- PSEdition_Desktop: I pacchetti che sono compatibili con Windows PowerShell 
-- PSEdition_Core: I pacchetti compatibili con Powershell Core 
-- Windows: I pacchetti che sono compatibili con il sistema operativo Windows
-- Linux: I pacchetti che sono compatibili con i sistemi operativi di Linux 
-- MacOS: I pacchetti che sono compatibili con il sistema operativo Mac
+- PSEdition_Desktop : i pacchetti compatibili con Windows PowerShell
+- PSEdition_Core : i pacchetti compatibili con PowerShell Core
+- Windows : i pacchetti compatibili con il sistema operativo Windows
+- Linux : i pacchetti compatibili con i sistemi operativi Linux
+- MacOS : i pacchetti compatibili con i sistemi operativi Mac
 
 ## <a name="include-tests"></a>Includere test
 
@@ -251,4 +251,3 @@ L'approccio più efficace per i pacchetti pubblicati in PowerShell Gallery è il
 - Decidere se firmare il codice del pacchetto
 - Quando si ritiene che il progetto sia pronto per l'uso in un ambiente di produzione, pubblicare la versione 1.0.0 in PowerShell Gallery.
 - Continuare a raccogliere commenti e suggerimenti e sviluppare ulteriormente il codice in base all'input degli utenti.
-

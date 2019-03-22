@@ -2,12 +2,12 @@
 ms.date: 08/24/2018
 keywords: dsc,powershell,configurazione,installazione
 title: Risorsa Script DSC
-ms.openlocfilehash: ef84239820a44aab2a028f7f0fe17653a851b72e
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
-ms.translationtype: MTE95
+ms.openlocfilehash: 86dfb74bf52d8907686bb955fd722f4fb8b9131b
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55678022"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58054748"
 ---
 # <a name="dsc-script-resource"></a>Risorsa Script DSC
 
@@ -61,7 +61,7 @@ Il cmdlet [Test-DscConfiguration](/powershell/module/PSDesiredStateConfiguration
 
 ## <a name="examples"></a>Esempi
 
-### <a name="example-1-write-sample-text-using-a-script-resource"></a>Esempio 1: Scrivere un testo di esempio usando una risorsa di Script
+### <a name="example-1-write-sample-text-using-a-script-resource"></a>Esempio 1: Scrivere testo di esempio tramite una risorsa Script
 
 Questo esempio testa la presenza di `C:\TempFolder\TestFile.txt` in ogni nodo. Se il file non esiste, viene creato tramite `SetScript`. `GetScript` restituisce il contenuto del file, senza usare il valore restituito.
 
@@ -86,7 +86,7 @@ Configuration ScriptTest
 }
 ```
 
-### <a name="example-2-compare-version-information-using-a-script-resource"></a>Esempio 2: Confrontare le informazioni sulla versione utilizzando una risorsa di Script
+### <a name="example-2-compare-version-information-using-a-script-resource"></a>Esempio 2: Confrontare le informazioni sulla versione tramite una risorsa Script
 
 Questo esempio recupera informazioni sulla versione *conforme* da un file di testo nel computer di creazione e le archivia nella variabile `$version`. Durante la generazione del file MOF del nodo, DSC sostituisce le variabili `$using:version` in ogni blocco di script con il valore della variabile `$version`. Durante l'esecuzione, la versione *conforme* viene archiviata in un file di testo in ogni nodo e confrontata e aggiornata nelle esecuzioni successive.
 

@@ -3,12 +3,12 @@ ms.date: 06/12/2017
 contributor: manikb
 keywords: raccolta,powershell,cmdlet,psget
 title: Installazione di PowerShellGet
-ms.openlocfilehash: 5c51cb1c7ea2538cc5f8503ce6c5d80edda70e15
-ms.sourcegitcommit: 98b7cfd8ad5718efa8e320526ca76c3cc4141d78
+ms.openlocfilehash: 23a53a9117c9f6a7ad157b635cd7ff4b3b3444c5
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50002224"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58054825"
 ---
 # <a name="installing-powershellget"></a>Installazione di PowerShellGet
 
@@ -57,7 +57,7 @@ ms.locfileid: "50002224"
   Exit
   ```
 
-- Verificare che i moduli PowerShellGet e PackageManagement non siano caricati in nessun altro processo.
+- Verificare che i moduli PowerShellGet e PackageManagement non siano caricati in altri processi.
 - Eliminare il contenuto delle cartelle `$env:ProgramFiles\WindowsPowerShell\Modules\PowerShellGet\` e `$env:ProgramFiles\WindowsPowerShell\Modules\PackageManagement\`.
 - Riaprire la console di PowerShell con privilegi elevati ed eseguire i comandi seguenti.
 

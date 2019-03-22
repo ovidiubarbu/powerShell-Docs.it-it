@@ -2,24 +2,24 @@
 ms.date: 12/12/2018
 keywords: dsc,powershell,configurazione,installazione
 title: Dipendenze delle risorse con DependsOn
-ms.openlocfilehash: 0d060f7d99bd261b0766028b245d4d32a5e1c349
-ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
-ms.translationtype: MTE95
+ms.openlocfilehash: 5ea08c76c203188f41513ad0cc1f4571579b4172
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53401381"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58055700"
 ---
 # <a name="resource-dependencies-using-dependson"></a>Dipendenze delle risorse con DependsOn
 
-Quando si scrivono [configurazioni](configurations.md), si aggiungono [blocchi di risorse](../resources/resources.md) per configurare gli aspetti di un nodo di destinazione. Man mano che si aggiungere blocchi di risorse, le configurazioni possono aumentare di molto grande e complesso da gestire. Una richiesta di questo tipo è l'ordine applicato dei blocchi di risorse. In genere le risorse vengono applicate nell'ordine con che cui vengono definite all'interno della configurazione. Con la configurazione di crescita più grandi e complesse, è possibile usare il `DependsOn` chiave per modificare l'ordine applicato delle risorse, specificando che una risorsa dipende da un'altra risorsa.
+Quando si scrivono [configurazioni](configurations.md), si aggiungono [blocchi di risorse](../resources/resources.md) per configurare gli aspetti di un nodo di destinazione. Man mano che si aggiungono blocchi di risorse, le configurazioni possono aumentare considerevolmente di dimensione e diventare complesse da gestire. Uno dei problemi è l'ordine di applicazione dei blocchi di risorse. In genere le risorse vengono applicate nell'ordine con che cui vengono definite all'interno della configurazione. Se la configurazione aumenta di dimensione e diventa più complessa, è possibile usare la chiave `DependsOn` per gestire l'ordine di applicazione delle risorse, specificando che una risorsa dipende da un'altra risorsa.
 
-Il `DependsOn` chiave può essere utilizzata in qualsiasi blocco di risorse. Viene definito con lo stesso meccanismo di chiave/valore come altre chiavi di risorsa. Il `DependsOn` chiave è prevista una matrice di stringhe con la sintassi seguente.
+La chiave `DependsOn` può essere usata in qualsiasi blocco di risorse. Viene definita con lo stesso meccanismo di chiave/valore di altre chiavi della risorsa. Per la chiave `DependsOn` è prevista una matrice di stringhe con la sintassi seguente.
 
 ```
-DependsOn = '[<Resource Type>]<Resoure Name>', '[<Resource Type>]<Resource Name'
+DependsOn = '[<Resource Type>]<Resource Name>', '[<Resource Type>]<Resource Name'
 ```
 
-Nell'esempio seguente consente di configurare una regola del firewall dopo l'abilitazione e la configurazione del profilo pubblico.
+L'esempio seguente consente di configurare una regola del firewall dopo aver abilitato e configurato il profilo pubblico.
 
 ```powershell
 # Install the NetworkingDSC module to configure firewall rules and profiles.
@@ -60,7 +60,7 @@ Configuration ConfigureFirewall
 ConfigureFirewall -OutputPath C:\Temp\
 ```
 
-Quando si applica la configurazione, il profilo del firewall verrà sempre configurato prima di tutto indipendentemente dall'ordine con cui vengono definiti i blocchi di risorse. Se si applica la configurazione, assicurarsi di prendere nota di nodi di destinazione esistente configurazione in modo che se si desidera, è possibile ripristinare.
+Quando si applica la configurazione, il profilo del firewall verrà configurato sempre per primo indipendentemente dall'ordine con cui vengono definiti i blocchi di risorse. Se si applica la configurazione, prendere nota della configurazione esistente dei nodi di destinazione in modo da poterla ripristinare se necessario.
 
 ```
 PS> Start-DSCConfiguration -Verbose -Wait -Path C:\Temp\ -ComputerName localhost
@@ -118,13 +118,13 @@ VERBOSE: Operation 'Invoke CimMethod' complete.
 VERBOSE: Time taken for configuration job to complete is 15.385 seconds
 ```
 
-Questo processo assicura anche che se il **FirewallProfile** risorsa ha esito negativo per qualsiasi motivo, il **Firewall** blocco non verrà eseguita anche se è stato definito prima di tutto. Il `DependsOn` chiave consente una maggiore flessibilità nella risorsa blocchi di raggruppamento e assicurarsi che le dipendenze siano risolte prima dell'esecuzione di una risorsa.
+In questo modo si garantisce anche che, se per qualsiasi motivo, la risorsa **FirewallProfile** avesse esito negativo, il blocco **Firewall** non sarà eseguito nonostante sia stata definito per primo. La chiave `DependsOn` consente una maggiore flessibilità nel raggruppamento dei blocchi di risorse. Assicura che le dipendenze siano risolte prima dell'esecuzione di una risorsa.
 
-Nelle configurazioni più avanzate, è anche possibile usare [tra nodo di dipendenza](crossNodeDependencies.md) per consentire un controllo ancora più granulare (ad esempio, garantendo un controller di dominio è configurato prima di unirsi a un client al dominio).
+Nelle configurazioni più avanzate è anche possibile usare [la dipendenza tra nodi](crossNodeDependencies.md) per consentire un controllo ancora più granulare. In questo modo si assicura che un controller di dominio sia configurato prima di aggiungere un client al dominio.
 
 ## <a name="cleaning-up"></a>Pulizia
 
-Se è stata applicata la configurazione precedente, è possibile invertire le chiavi per annullare le modifiche. Nell'esempio precedente, impostando il **abilitato** chiave su false disabiliterà la regola del firewall e profilo. È necessario modificare l'esempio in base alle esigenze per la corrispondenza di stato configurato precedente del nodo di destinazione.
+Se è stata applicata la configurazione precedente, è possibile invertire le chiavi per annullare le modifiche. Se nell'esempio precedente si imposta la chiave **Enabled** su False, la regola e il profilo del firewall saranno disabilitati. Modificare l'esempio ove necessario per trovare corrispondenza con lo stato configurato precedente del nodo di destinazione.
 
 ```powershell
         Firewall Firewall
@@ -143,4 +143,4 @@ Se è stata applicata la configurazione precedente, è possibile invertire le ch
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Uso delle dipendenze tra nodi](./crossNodeDependencies.md)
+- [Usare le dipendenze tra nodi](./crossNodeDependencies.md)

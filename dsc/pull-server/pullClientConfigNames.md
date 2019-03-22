@@ -1,34 +1,35 @@
 ---
 ms.date: 06/12/2017
 keywords: dsc,powershell,configurazione,installazione
-title: Configurare un Client di Pull usando nomi di configurazione in PowerShell 5.0 e versioni successive
-ms.openlocfilehash: fd038a105da7a83ecad9b571e611b65c8ec847b3
-ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
-ms.translationtype: MTE95
+title: Configurare un client di pull usando nomi di configurazione in PowerShell 5.0 e versioni successive
+ms.openlocfilehash: d591e2a757130ccecaf4eaf9f363f607fca82b93
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53401788"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58058190"
 ---
-# <a name="set-up-a-pull-client-using-configuration-names-in-powershell-50-and-later"></a>Configurare un Client di Pull usando nomi di configurazione in PowerShell 5.0 e versioni successive
+# <a name="set-up-a-pull-client-using-configuration-names-in-powershell-50-and-later"></a>Configurare un client di pull usando nomi di configurazione in PowerShell 5.0 e versioni successive
 
 > Si applica a: Windows PowerShell 5.0
 
 > [!IMPORTANT]
 > Il server di pull (funzionalità di Windows *servizio DSC*) è un componente supportato di Windows Server, tuttavia non si prevede di offrire nuove caratteristiche o funzionalità. È consigliabile avviare la transizione dei client gestiti ad [Automation DSC per Azure](/azure/automation/automation-dsc-getting-started) (include funzionalità superiori al server di pull in Windows Server) o a una delle soluzioni della community riportate [qui](pullserver.md#community-solutions-for-pull-service).
 
-Prima di configurare un client di pull, è necessario configurare un server di pull. Anche se quest'ordine non sia obbligatorio, consente la risoluzione dei problemi e consente di assicurarsi che la registrazione è riuscita. Per configurare un server di pull, è possibile usare le guide seguenti:
+Prima di configurare un client di pull, è necessario configurare un server di pull. Anche se quest'ordine non è obbligatorio, facilita la risoluzione dei problemi e agevola la riuscita della registrazione. Per configurare un server di pull, è possibile usare le guide seguenti:
 
 - [Configurare un server di pull SMB DSC](pullServerSmb.md)
 - [Configurare un server di pull HTTP DSC](pullServer.md)
 
-Ogni nodo di destinazione può essere configurato per scaricare le configurazioni, risorse e anche segnalare lo stato. Le sezioni seguenti illustrano come configurare un client di pull con una condivisione SMB o HTTP Server di Pull DSC. Quando Gestione configurazione locale del nodo viene aggiornato, ti contatterà per il percorso configurato per scaricare eventuali configurazioni assegnate. Se tutte le risorse necessarie non sono presenti nel nodo, verrà automaticamente scaricato li dal percorso configurato. Se il nodo è configurato con un [Server di Report](reportServer.md), quindi segnala lo stato dell'operazione.
+Ogni nodo di destinazione può essere configurato in modo che possa scaricare configurazioni e risorse e persino segnalare il proprio stato. Le sezioni seguenti illustrano come configurare un client di pull con una condivisione SMB o on server di pull DSC HTTP. Quando Gestione configurazione locale del nodo si aggiorna, contatta la posizione configurata per scaricare tutte le configurazioni assegnate. Se una o più risorse necessarie non sono presenti nel nodo, le scarica automaticamente dalla posizione configurata. Se il nodo è configurato con un [server di report](reportServer.md), segnala quindi lo stato dell'operazione.
 
-> **Nota**: Questo argomento si applica a PowerShell 5.0.
-Per informazioni sulla configurazione di un client di pull in PowerShell 4.0, vedere [configurare un client di pull usando un ID configurazione in PowerShell 4.0](pullClientConfigID4.md)
+> [!NOTE]
+> Questo argomento si applica a PowerShell 5.0.
+> Per informazioni sulla configurazione di un client di pull in PowerShell 4.0, vedere [Configurare un client di pull usando un ID configurazione in PowerShell 4.0](pullClientConfigID4.md)
 
-## <a name="configure-the-pull-client-lcm"></a>Configurare il client di pull Gestione configurazione locale
+## <a name="configure-the-pull-client-lcm"></a>Configurare Gestione configurazione locale del client di pull
 
-L'esecuzione di uno degli esempi seguenti viene creata una nuova cartella di output denominata **PullClientConfigName** e inserisce un file MOF di metaconfigurazione esiste. In questo caso, il file MOF di metaconfigurazione sarà denominato `localhost.meta.mof`.
+L'esecuzione di uno degli esempi che seguono crea una nuova cartella di output denominata **PullClientConfigName** e inserisce in questa cartella un file MOF di metaconfigurazione. In questo caso, il file MOF di metaconfigurazione sarà denominato `localhost.meta.mof`.
 
 Per applicare la configurazione, chiamare il cmdlet **Set-DscLocalConfigurationManager**, con il valore di **Path** impostato sul percorso del file MOF di metaconfigurazione. Ad esempio:
 
@@ -38,18 +39,19 @@ Set-DSCLocalConfigurationManager –ComputerName localhost –Path .\PullClientC
 
 ## <a name="configuration-name"></a>Nome della configurazione
 
-Gli esempi seguenti set di **ConfigurationName** proprietà di Gestione configurazione locale per il nome di una configurazione compilata in precedenza, creato per questo scopo. Il **ConfigurationName** viene usato Gestione configurazione locale per trovare la configurazione appropriata nel server di pull. Il file MOF di configurazione nel server di pull deve essere denominato `<ConfigurationName>.mof`, in questo caso, "ClientConfig.mof". Per altre informazioni, vedere [pubblicare le configurazioni a un Server di Pull (v4/v5)](publishConfigs.md).
+Gli esempi seguenti impostano la proprietà **ConfigurationName** di Gestione configurazione locale sul nome di una configurazione compilata in precedenza, creato per questo scopo. Il valore di **ConfigurationName** viene usato da Gestione configurazione locale per trovare la configurazione appropriata nel server di pull. Il nome del file MOF di configurazione nel server di pull deve essere `<ConfigurationName>.mof`, in questo caso, "ClientConfig.mof". Per altre informazioni, vedere [Pubblicare le configurazioni in un server di pull (v4/v5)](publishConfigs.md).
 
-## <a name="set-up-a-pull-client-to-download-configurations"></a>Configurare un Client di Pull per scaricare le configurazioni
+## <a name="set-up-a-pull-client-to-download-configurations"></a>Configurare un client di pull per scaricare configurazioni
 
-Ogni client deve essere configurato **Pull** modalità e fornire l'url di server di pull in cui la configurazione viene archiviata. A tale scopo, è necessario configurare Gestione configurazione locale con le informazioni richieste. Per configurare Gestione configurazione locale, è necessario creare un tipo speciale di configurazione usando l'attributo **DSCLocalConfigurationManager**. Per altre informazioni sulla configurazione di Gestione configurazione locale, vedere [Configurazione di Gestione configurazione locale](../managing-nodes/metaConfig.md).
+Ogni client deve essere configurato in modalità **Pull** e deve ricevere l'URL del server di pull in cui è archiviata la sua configurazione. A tale scopo, è necessario configurare Gestione configurazione locale con le informazioni richieste. Per configurare Gestione configurazione locale, è necessario creare un tipo speciale di configurazione usando l'attributo **DSCLocalConfigurationManager**. Per altre informazioni sulla configurazione di Gestione configurazione locale, vedere [Configurazione di Gestione configurazione locale](../managing-nodes/metaConfig.md).
 
 Lo script seguente configura Gestione configurazione locale per il pull delle configurazioni da un server denominato "CONTOSO-PullSrv".
 
 - Nello script il blocco **ConfigurationRepositoryWeb** definisce il server di pull. La proprietà **ServerURL** specifica l'endpoint per il server di pull.
 
 - La proprietà **RegistrationKey** è una chiave condivisa tra tutti i nodi client per un server di pull e il server di pull stesso. Lo stesso valore viene archiviato in un file nel server di pull.
-  > **Nota**: Le chiavi di registrazione funzionano solo con **web** i server di pull. Con un server di pull **SMB** è necessario usare **ConfigurationID**.
+  > [!NOTE]
+  > Le chiavi di registrazione funzionano solo con i server di pull **Web**. Con un server di pull **SMB** è necessario usare **ConfigurationID**.
   > Per informazioni sulla configurazione di un server di pull usando **ConfigurationID**, vedere [Configurazione di un client di pull usando un ID configurazione](pullClientConfigId.md).
 
 - La proprietà **ConfigurationNames** è una matrice che specifica i nomi delle configurazioni per il nodo client.
@@ -79,11 +81,11 @@ configuration PullClientConfigNames
 PullClientConfigNames
 ```
 
-## <a name="set-up-a-pull-client-to-download-resources"></a>Configurare un Client di Pull per scaricare le risorse
+## <a name="set-up-a-pull-client-to-download-resources"></a>Configurare un client di pull per scaricare risorse
 
-Se si specifica solo un **ConfigurationRepositoryWeb** oppure **ConfigurationRepositoryShare** nella configurazione di Gestione configurazione locale (come nell'esempio precedente), il client di pull effettuerà il pull delle risorse da parte dello stesso posizione in cui sono archiviati i file "MOF". È anche possibile specificare percorsi diversi in cui i client possono scaricare le risorse. Per specificare un server delle risorse, usare un blocco **ResourceRepositoryWeb** (per un server di pull Web) o **ResourceRepositoryShare** (per un server di pull SMB).
+Se si specifica solo un blocco **ConfigurationRepositoryWeb** o **ConfigurationRepositoryShare** nella configurazione di Gestione configurazione locale, come nell'esempio precedente, il client di pull eseguirà il pull delle risorse dalla stessa posizione in cui sono archiviati i file con estensione "mof". È anche possibile specificare posizioni diverse per il download delle risorse da parte dei client. Per specificare un server delle risorse, usare un blocco **ResourceRepositoryWeb** (per un server di pull Web) o **ResourceRepositoryShare** (per un server di pull SMB).
 
-Nell'esempio seguente viene illustrata una metaconfigurazione che configura un client di scaricare le configurazioni da un Server di Pull e le risorse da una condivisione SMB.
+L'esempio seguente illustra una metaconfigurazione che configura un client per il download di configurazioni da un server di pull e per il download di risorse da una condivisione SMB.
 
 ```powershell
 [DSCLocalConfigurationManager()]
@@ -113,12 +115,12 @@ configuration PullClientConfigNames
 PullClientConfigNames
 ```
 
-## <a name="set-up-a-pull-client-to-report-status"></a>Configurare un Client di Pull per segnalare lo stato
+## <a name="set-up-a-pull-client-to-report-status"></a>Configurare un client di pull per la segnalazione dello stato
 
-È possibile usare un singolo server di pull per le configurazioni, risorse e i report. Creazione di report non è configurato per i client per impostazione predefinita. Per configurare un client per segnalare lo stato, è necessario creare un **ReportRepositoryWeb** blocco. Nell'esempio seguente viene illustrata una metaconfigurazione che configura un client per il pull di configurazioni e risorse e per l'invio di dati di report a un singolo server di pull.
+È possibile usare un unico server di pull per le configurazioni, le risorse e i report. Per impostazione predefinita, la creazione di report non è configurata per i client. Per configurare un client per la segnalazione dello stato, è necessario creare un blocco **ReportRepositoryWeb**. Nell'esempio seguente viene illustrata una metaconfigurazione che configura un client per il pull di configurazioni e risorse e per l'invio di dati di report a un singolo server di pull.
 
 > [!NOTE]
-> Un server di report non può essere una condivisione SMB.
+> Un server di report non può fungere da condivisione SMB.
 
 ```powershell
 [DSCLocalConfigurationManager()]

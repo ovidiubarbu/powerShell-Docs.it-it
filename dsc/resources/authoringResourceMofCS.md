@@ -2,14 +2,14 @@
 ms.date: 06/12/2017
 keywords: dsc,powershell,configurazione,installazione
 title: Creazione di una risorsa DSC in C#
-ms.openlocfilehash: dcda36d27f2191f140eaaf209e1c85263d2cd8e1
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
-ms.translationtype: MTE95
+ms.openlocfilehash: 6f2bb4d411237f13e2735c2e5f630b4f40dc6842
+ms.sourcegitcommit: 5990f04b8042ef2d8e571bec6d5b051e64c9921c
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55683129"
+ms.lasthandoff: 03/12/2019
+ms.locfileid: "57794230"
 ---
-# <a name="authoring-a-dsc-resource-in-c"></a>Creazione di una risorsa DSC in C#
+# <a name="authoring-a-dsc-resource-in-c"></a>Creazione di una risorsa DSC in C\#
 
 > Si applica a: Windows PowerShell 4.0, Windows PowerShell 5.0
 

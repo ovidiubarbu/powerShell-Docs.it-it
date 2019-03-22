@@ -2,12 +2,12 @@
 ms.date: 06/12/2017
 keywords: dsc,powershell,configurazione,installazione
 title: Procedure consigliate per i server di pull
-ms.openlocfilehash: da67f8fd793878b097ffb260afad0fcf5c69bb04
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
-ms.translationtype: MTE95
+ms.openlocfilehash: fe483a487f85f2e4edb0928fccfe98746ae11231
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55681449"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58057706"
 ---
 # <a name="pull-server-best-practices"></a>Procedure consigliate per i server di pull
 
@@ -16,7 +16,7 @@ Si applica a: Windows PowerShell 4.0, Windows PowerShell 5.0
 > [!IMPORTANT]
 > Il server di pull (funzionalità di Windows *servizio DSC*) è un componente supportato di Windows Server, tuttavia non si prevede di offrire nuove caratteristiche o funzionalità. È consigliabile avviare la transizione dei client gestiti ad [Automation DSC per Azure](/azure/automation/automation-dsc-getting-started) (include funzionalità superiori al server di pull in Windows Server) o a una delle soluzioni della community riportate [qui](pullserver.md#community-solutions-for-pull-service).
 
-Riepilogo: Questo documento è destinato a processi e estendibilità per supportare i tecnici che preparano la soluzione. I dettagli inclusi offrono procedure consigliate identificate dai clienti e validate dal team del prodotto per garantire che le indicazioni siano stabili e valide per il futuro.
+Riepilogo: questo documento illustra processi ed estendibilità per supportare i tecnici che preparano la soluzione. I dettagli inclusi offrono procedure consigliate identificate dai clienti e validate dal team del prodotto per garantire che le indicazioni siano stabili e valide per il futuro.
 
 | |Informazioni sul documento|
 |:---|:---|
@@ -64,7 +64,7 @@ La distribuzione di un server di pull richiede la funzionalità del servizio DSC
 
 ### <a name="software-downloads"></a>Download del software
 
-Oltre a installare il contenuto più recente da Windows Update, sono disponibili due download considerati importanti per distribuire un server di pull DSC: La versione più recente di Windows Management Framework e un modulo DSC per automatizzare il provisioning di server di pull.
+Oltre a installare i contenuti più recenti da Windows Update, per distribuire un server di pull DSC è consigliabile scaricare la versione più recente di Windows Management Framework e un modulo DSC per automatizzare il provisioning del server di pull.
 
 ### <a name="wmf"></a>WMF
 
@@ -104,7 +104,7 @@ Si ha accesso ai file di installazione di Windows Server che includono già gli 
 
 Le distribuzioni di server di pull sono supportate nei server fisici e virtuali. I requisiti di dimensioni per il server di pull si allineano con i requisiti per Windows Server 2012 R2.
 
-CPU: 1.4 processore GHz a 64 bit della memoria: 512 MB di spazio su disco 32 GB rete: Scheda Gigabit Ethernet
+CPU: processore a 64 bit da 1,4 GHz Memoria: 512 MB Spazio su disco: 32 GB Rete: scheda Gigabit Ethernet
 
 Pianificazione dell'attività|
 ---|
@@ -260,7 +260,7 @@ Il comando chiederà conferma prima di scaricare il modulo.
 
 Il metodo migliore per distribuire un server di pull DSC è usare uno script di configurazione DSC. Questo documento illustra script che includono impostazioni di base per configurare solo il servizio Web DSC e impostazioni avanzate per configurare completamente Windows Server, incluso il servizio Web DSC.
 
-Nota:  Attualmente il `xPSDesiredStateConfiguation` modulo DSC richiede il server come impostazioni locali EN-US.
+Nota:  attualmente il modulo DSC `xPSDesiredStateConfiguration` richiede che il server sia configurato su impostazioni locali EN-US.
 
 ### <a name="basic-configuration-for-windows-server-2012"></a>Configurazione di base per Windows Server 2012
 

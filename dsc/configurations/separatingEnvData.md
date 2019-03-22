@@ -2,12 +2,12 @@
 ms.date: 06/12/2017
 keywords: dsc,powershell,configurazione,installazione
 title: Separazione dei dati di configurazione e dell'ambiente
-ms.openlocfilehash: 24a92e5e4f15959498b57a1488a688d5548f3585
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
-ms.translationtype: MTE95
+ms.openlocfilehash: 305a766fec81d4ea4afce187756188b067a2048b
+ms.sourcegitcommit: 5990f04b8042ef2d8e571bec6d5b051e64c9921c
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55682049"
+ms.lasthandoff: 03/12/2019
+ms.locfileid: "57794927"
 ---
 # <a name="separating-configuration-and-environment-data"></a>Separazione dei dati di configurazione e dell'ambiente
 
@@ -88,7 +88,7 @@ Mode                LastWriteTime         Length Name
 
 Di seguito è riportato un esempio completo che usa una singola configurazione per impostare sia l'ambiente di sviluppo che quello di produzione di un sito Web. Nell'ambiente di sviluppo IIS e SQL Server vengono installati in un singolo nodo. Nell'ambiente di produzione IIS e SQL Server vengono installati in nodi separati. Nell'esempio verrà usato un file di dati di configurazione con estensione psd1 per specificare i dati per i due diversi ambienti.
 
- ### <a name="configuration-data-file"></a>File di dati di configurazione
+### <a name="configuration-data-file"></a>File di dati di configurazione
 
 I dati degli ambienti di sviluppo e produzione verranno definiti in un file denominato `DevProdEnvData.psd1` come indicato di seguito:
 
@@ -135,7 +135,7 @@ Anche il contenuto del sito è diverso, come specificato dalle proprietà `SiteC
 
 Alla fine dello script di configurazione viene chiamata la configurazione (compilata in un documento MOF), passando `DevProdEnvData.psd1` come parametro `$ConfigurationData`.
 
->**Nota:** Questa configurazione richiede i moduli `xSqlPs` e `xWebAdministration` da installare nel nodo di destinazione.
+>**Nota:** Per questa configurazione è necessario installare i moduli `xSqlPs` e `xWebAdministration` nel nodo di destinazione.
 
 Definire la configurazione in un file denominato `MyWebApp.ps1`:
 

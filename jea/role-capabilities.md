@@ -2,12 +2,12 @@
 ms.date: 06/12/2017
 keywords: jea,powershell,sicurezza
 title: Funzionalità del ruolo JEA
-ms.openlocfilehash: bd0a995adc60e50049ff99d6b23e7c2aeb745a18
-ms.sourcegitcommit: e46b868f56f359909ff7c8230b1d1770935cce0e
+ms.openlocfilehash: b93d206680de485d6cb7a8cb26d63afda5bf8421
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45522942"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58055054"
 ---
 # <a name="jea-role-capabilities"></a>Funzionalità del ruolo JEA
 
@@ -101,7 +101,6 @@ Esempio                                                                         
 `@{ Name = 'My-Func'; Parameters = @{ Name = 'Param1'; ValidateSet = 'Value1', 'Value2' }}`  | Consente all'utente di eseguire `My-Func` con il parametro `Param1`. Solo "Value1" e "Value2" possono essere specificati per il parametro.
 `@{ Name = 'My-Func'; Parameters = @{ Name = 'Param1'; ValidatePattern = 'contoso.*' }}`     | Consente all'utente di eseguire `My-Func` con il parametro `Param1`. Per il parametro può essere specificato qualsiasi valore che inizia con "contoso".
 
-
 > [!WARNING]
 > In base alle procedure consigliate sulla sicurezza, è consigliabile non usare caratteri jolly nella definizione di cmdlet o funzioni visibili.
 > In alternativa, è necessario elencare in modo esplicito ogni comando attendibile per assicurarsi che nessun altro comando che condivide lo stesso schema di denominazione venga involontariamente autorizzato.
@@ -126,7 +125,7 @@ Molti file eseguibili consentono di leggere lo stato attuale e quindi modificarl
 
 Si consideri ad esempio il ruolo di amministratore di un file server che vuole controllare quali condivisioni di rete sono ospitate dal computer locale.
 Un modo per eseguire questa operazione è usare `net share`.
-Tuttavia, consentire l'uso di net.exe è molto pericoloso perché l'amministratore può facilmente usare il comando per ottenere privilegi di amministratore con `net group Administrators unprivilegedjeauser /add`.
+Consentire tuttavia l'uso di net.exe è molto pericoloso perché l'amministratore potrebbe facilmente usare il comando per ottenere privilegi di amministratore con `net group Administrators unprivilegedjeauser /add`.
 Un approccio migliore consiste nell'usare [Get-SmbShare](https://technet.microsoft.com/library/jj635704.aspx) che consente di ottenere lo stesso risultato, ma ha un ambito più ristretto.
 
 Quando si rendono disponibili comandi esterni per gli utenti di una sessione JEA, specificare sempre il percorso completo del file eseguibile per assicurarsi che non venga eseguito un programma denominato in modo analogo (e potenzialmente pericoloso) che si trova in un'altra posizione nel sistema.
@@ -171,7 +170,6 @@ FunctionDefinitions = @{
 > [!IMPORTANT]
 > Non dimenticare di aggiungere il nome delle funzioni personalizzate per il campo **VisibleFunctions** in modo che possano essere eseguite dagli utenti JEA.
 
-
 Il corpo (blocco di script) di funzioni personalizzate viene eseguito nella modalità linguaggio predefinita per il sistema e non è soggetto ai vincoli di linguaggio di JEA.
 Ciò significa che le funzioni possono accedere al file system e al Registro di sistema ed eseguire comandi che non sono stati resi visibili nel file delle funzionalità del ruolo.
 Evitare l'esecuzione di codice arbitrario quando si usano parametri ed evitare il piping dell'input dell'utente direttamente nei cmdlet, ad esempio `Invoke-Expression`.
@@ -211,14 +209,12 @@ Per altre informazioni sui moduli di PowerShell, sui manifesti dei moduli e sull
 
 ## <a name="updating-role-capabilities"></a>Aggiornamento delle funzionalità del ruolo
 
-
 È possibile aggiornare un file delle funzionalità del ruolo in qualsiasi momento semplicemente salvando le modifiche.
 Ogni nuova sessione JEA avviata dopo l'aggiornamento delle funzionalità del ruolo includerà le funzionalità modificate.
 
 Per questo motivo il controllo dell'accesso alla cartella delle funzionalità del ruolo è molto importante.
 Solo gli amministratori estremamente attendibili dovrebbero aver accesso per modificare i file delle funzionalità del ruolo.
 Se un utente non attendibile può modificare i file delle funzionalità del ruolo, sarà in grado di ottenere accesso ai cmdlet che consentono di elevare i privilegi.
-
 
 Gli amministratori che vogliono bloccare l'accesso alle funzionalità del ruolo devono assicurarsi che il sistema locale abbia accesso di lettura ai file delle funzionalità del ruolo e ai moduli inclusi.
 
@@ -256,16 +252,14 @@ $roleB = @{
                      @{ Name = 'Restart-Service'; Parameters = @{ Name = 'DisplayName'; ValidateSet = 'DNS Server' } }
 }
 
-# Resulting permisisons for a user who belongs to both role A and B
-# - The constraint in role B for the DisplayName parameter on Get-Service is ignored becuase of rule #4
+# Resulting permissions for a user who belongs to both role A and B
+# - The constraint in role B for the DisplayName parameter on Get-Service is ignored because of rule #4
 # - The ValidateSets for Restart-Service are merged because both roles use ValidateSet on the same parameter per rule #5
 $mergedAandB = @{
     VisibleCmdlets = 'Get-Service',
                      @{ Name = 'Restart-Service'; Parameters = @{ Name = 'DisplayName'; ValidateSet = 'DNS Client', 'DNS Server' } }
 }
 ```
-
-
 
 **VisibleExternalCommands, VisibleAliases, VisibleProviders, ScriptsToProcess**
 

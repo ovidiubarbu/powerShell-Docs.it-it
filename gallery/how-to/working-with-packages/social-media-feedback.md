@@ -3,16 +3,16 @@ ms.date: 06/12/2017
 contributor: JKeithB
 keywords: gallery,powershell,cmdlet,psgallery
 title: Pubblicazione di feedback sui social media o nei commenti
-ms.openlocfilehash: a7cdcc2ff2c18fb606d077adf0bdecf57c90703f
-ms.sourcegitcommit: 98b7cfd8ad5718efa8e320526ca76c3cc4141d78
+ms.openlocfilehash: a27a2fc7cf54835cb53b11382c20d1354345a5a3
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50003762"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58055003"
 ---
 # <a name="providing-feedback-via-social-media-or-comments"></a>Pubblicazione di feedback sui social media o nei commenti
 
-Powershell Gallery supporta due approcci per gli utenti che vogliono offrire commenti e suggerimenti pubblici su un pacchetto:
+PowerShell Gallery supporta due approcci per gli utenti che vogliono offrire commenti e suggerimenti pubblici su un pacchetto:
 
 - Usare i collegamenti sul lato sinistro per condividere un pacchetto su siti di social media quali Twitter, LinkedIn o Facebook.
 - Usare la funzionalità dei commenti per inviare commenti su un pacchetto e consentire agli autori di monitorare i commenti sui pacchetti che pubblicano.
@@ -27,7 +27,6 @@ Gli utenti devono eseguire l'accesso al sito che hanno scelto per condividere il
 Gli utenti sono invitati a eseguire questa operazione se pensano di consigliare un pacchetto ad altri utenti.
 PowerShell Gallery verifica tutte le condivisioni di un dato pacchetto sui social media e visualizza il numero di volte in cui il pacchetto è stato condiviso in ognuno di essi.
 Poiché tale indicazione visualizza solo il numero di volte in cui un pacchetto è stato condiviso, verrà interpretata dagli altri utenti come il numero di "like" del pacchetto.
-
 
 ## <a name="comments"></a>Commenti
 

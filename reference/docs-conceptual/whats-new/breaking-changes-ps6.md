@@ -2,12 +2,12 @@
 ms.date: 05/17/2018
 keywords: powershell,core
 title: Modifiche di rilievo in PowerShell Core 6.0
-ms.openlocfilehash: d477a9b27e8d5df6653ee40f8b606879b60a80c7
-ms.sourcegitcommit: 548547b2d5fc73e726bb9fec6175d452a351d975
-ms.translationtype: MTE95
+ms.openlocfilehash: 975c978629f81f0f13a235c3d304e5ec03bae6d0
+ms.sourcegitcommit: 5990f04b8042ef2d8e571bec6d5b051e64c9921c
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53655447"
+ms.lasthandoff: 03/12/2019
+ms.locfileid: "57795692"
 ---
 # <a name="breaking-changes-for-powershell-60"></a>Modifiche di rilievo in PowerShell Core 6.0
 
@@ -65,6 +65,10 @@ A causa dell'uso di API non supportate, `Microsoft.PowerShell.LocalAccounts` è 
 ### <a name="-counter-cmdlets"></a>Cmdlet di `*-Counter`
 
 A causa dell'uso di API non supportate, `*-Counter` è stato rimosso da PowerShell Core finché non viene trovata una soluzione migliore.
+
+### <a name="-eventlog-cmdlets"></a>Cmdlet di `*-EventLog`
+
+A causa dell'uso di API non supportate, `*-EventLog` è stato rimosso da PowerShell Core fino a quando non viene trovata una soluzione migliore. `Get-WinEvent` e `Create-WinEvent` sono disponibili per ottenere e creare gli eventi in Windows.
 
 ## <a name="enginelanguage-changes"></a>Modifiche del motore/linguaggio
 
@@ -181,7 +185,7 @@ A causa di API non supportate, il modulo `LocalAccounts` e i cmdlet `Counter` ne
 
 ### <a name="executing-powershell-script-with-bool-parameter-does-not-work-4036httpsgithubcompowershellpowershellissues4036"></a>L'esecuzione dello script di PowerShell con il parametro bool non funziona [#4036](https://github.com/PowerShell/PowerShell/issues/4036)
 
-In precedenza, l'uso powershell.exe (ora `pwsh.exe`) per eseguire un script di PowerShell tramite `-File` non consentiva in alcun modo di passare $true/$false come valori di parametro. È stato aggiunto il supporto di $true/$false come valori analizzati ai parametri. Sono supportati anche valori di parametro perché la sintassi attualmente documentata non funziona.
+In precedenza, l'uso di **powershell.exe** (ora **pwsh.exe**) per eseguire uno script di PowerShell tramite `-File` non consentiva in alcun modo di passare `$true`/`$false` come valori di parametro. È stato aggiunto il supporto di `$true`/`$false` come valori analizzati ai parametri. Sono supportati anche valori di parametro perché la sintassi attualmente documentata non funziona.
 
 ### <a name="remove-clrversion-property-from-psversiontable-4027httpsgithubcompowershellpowershellissues4027"></a>Rimuovere la proprietà `ClrVersion` da `$PSVersionTable` [#4027](https://github.com/PowerShell/PowerShell/issues/4027)
 
@@ -193,7 +197,7 @@ Abilitare l'uso di shebang di PowerShell su piattaforme non Windows. Nei sistemi
 
 ### <a name="implement-unicode-escape-parsing-3958httpsgithubcompowershellpowershellissues3958"></a>Implementare l'analisi per escape Unicode [#3958](https://github.com/PowerShell/PowerShell/issues/3958)
 
-`` `u#### `` o `` `u{####} `` viene convertito nel carattere Unicode corrispondente. Per restituire un valore letterale `` `u ``, usare il carattere di escape per l'apice inverso: ``` ``u ```.
+`` `u####`` o `` `u{####}`` viene convertito nel carattere Unicode corrispondente. Per restituire un valore letterale `` `u``, usare il carattere di escape per l'apice inverso: ``` ``u```.
 
 ### <a name="change-new-modulemanifest-encoding-to-utf8nobom-on-non-windows-platforms-3940httpsgithubcompowershellpowershellissues3940"></a>Modificare la codifica `New-ModuleManifest` in `UTF8NoBOM` nelle piattaforme non Windows [#3940](https://github.com/PowerShell/PowerShell/issues/3940)
 
@@ -271,4 +275,4 @@ L'API .NET sottostante dei cmdlet Web è stato modificata in `System.Net.Http.Ht
 - Le impostazioni di `System.Net.ServicePointManager` non vengono più rispettate.
 - Non è attualmente disponibile l'autenticazione basata su certificati in macOS.
 - L'uso di `-Credential` su un URI `http://` genererà un errore. Usare un URI `https://` oppure specificare il parametro `-AllowUnencryptedAuthentication` per eliminare l'errore.
-- `-MaximumRedirection` genera ora un errore quando tenta di reindirizzamento supera il limite specificato invece di restituire i risultati del reindirizzamento ultimo.
+- `-MaximumRedirection` genera ora un errore fatale quando i tentativi di reindirizzamento superano il limite specificato anziché restituire i risultati dell'ultimo reindirizzamento.

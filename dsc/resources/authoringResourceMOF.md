@@ -2,12 +2,12 @@
 ms.date: 06/12/2017
 keywords: dsc,powershell,configurazione,installazione
 title: Scrittura di una risorsa DSC personalizzata con MOF
-ms.openlocfilehash: 5917e20769e750042a9855649ff5bec36ad14eb4
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
-ms.translationtype: MTE95
+ms.openlocfilehash: f243c3e3297711e6f6346a0f813a9c017fe227c3
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55682082"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58059729"
 ---
 # <a name="writing-a-custom-dsc-resource-with-mof"></a>Scrittura di una risorsa DSC personalizzata con MOF
 
@@ -69,7 +69,8 @@ Si noti quanto segue in relazione al codice precedente:
 
 Lo script di risorsa implementa la logica della risorsa. In questo modulo è necessario includere tre funzioni denominate **Get-TargetResource**, **Set-TargetResource** e **Test-TargetResource**. Tutte e tre le funzioni devono accettare un set di parametri identico al set di proprietà definito nello schema MOF creato per la risorsa. In questo documento il set di proprietà è detto "proprietà della risorsa". Archiviare queste tre funzioni in un file denominato <ResourceName>.psm1. Nell'esempio seguente le funzioni vengono archiviate in un file denominato Demo_IISWebsite.psm1.
 
-> **Nota**: quando si esegue lo stesso script di configurazione nella risorsa più volte, non devono venire generati errori e la risorsa deve rimanere nello stesso stato impostato quando si esegue lo script una sola volta. A tale scopo, verificare che le funzioni **Get-TargetResource** e **Test-TargetResource** non modifichino la risorsa e che richiamando la funzione **Set-TargetResource** più di una volta in una sequenza con gli stessi valori dei parametri si ottenga lo stesso risultato che si ottiene richiamandola una sola volta.
+> [!NOTE]
+> quando si esegue lo stesso script di configurazione nella risorsa più volte, non devono essere generati errori e la risorsa deve rimanere nello stesso stato impostato quando si esegue lo script una sola volta. A tale scopo, verificare che le funzioni **Get-TargetResource** e **Test-TargetResource** non modifichino la risorsa e che richiamando la funzione **Set-TargetResource** più di una volta in una sequenza con gli stessi valori dei parametri si ottenga lo stesso risultato che si ottiene richiamandola una sola volta.
 
 Nell'implementazione della funzione **Get-TargetResource** usare i valori delle proprietà chiave della risorsa forniti come parametri per controllare lo stato dell'istanza di risorsa specificata. Questa funzione deve restituire una tabella hash che elenca tutte le proprietà della risorsa come chiavi e i valori effettivi di queste proprietà come valori corrispondenti. Il codice seguente fornisce un esempio.
 
@@ -276,7 +277,7 @@ FunctionsToExport = @("Get-TargetResource", "Set-TargetResource", "Test-TargetRe
 
 ## <a name="supporting-psdscrunascredential"></a>Supporto di PsDscRunAsCredential
 
->**Nota:** **PsDscRunAsCredential** è supportata in PowerShell 5.0 e versioni successive.
+>**Nota:** **PsDscRunAsCredential** è supportato in PowerShell 5.0 e versioni successive.
 
 La proprietà **PsDscRunAsCredential** può essere usata nel blocco di risorsa delle [configurazioni DSC](../configurations/configurations.md) per specificare che la risorsa deve essere eseguita in un insieme di credenziali specificato.
 Per altre informazioni, vedere [Esecuzione di DSC con le credenziali dell'utente](../configurations/runAsUser.md).
@@ -291,15 +292,15 @@ if (PsDscContext.RunAsUser) {
 }
 ```
 
-## <a name="rebooting-the-node"></a>Il riavvio del nodo
+## <a name="rebooting-the-node"></a>Riavvio del nodo
 
-Se le azioni intraprese nel `Set-TargetResource` funzione richiedono un riavvio, è possibile usare un flag globale per indicare a Gestione configurazione locale per riavviare il nodo. Il riavvio si verifica subito dopo il `Set-TargetResource` funzione viene completata.
+Se le azioni eseguite nella funzione `Set-TargetResource` richiedono un riavvio, è possibile usare il flag globale per indicare alla Gestione configurazione locale di riavviare il nodo. Il riavvio avviene direttamente dopo che la funzione `Set-TargetResource` è stata completata.
 
-All'interno di `Set-TargetResource` di funzione, aggiungere la riga di codice seguente.
+All'interno della funzione `Set-TargetResource` aggiungere la riga di codice seguente.
 
 ```powershell
 # Include this line if the resource requires a system reboot.
 $global:DSCMachineStatus = 1
 ```
 
-Affinché Gestione configurazione locale riavviare il nodo, il **RebootNodeIfNeeded** flag deve essere impostata su `$true`. Il **ActionAfterReboot** impostazione deve inoltre essere impostata su **ContinueConfiguration**, ovvero l'impostazione predefinita. Per altre informazioni sulla configurazione di Gestione configurazione locale, vedere [configurazione di Gestione configurazione locale](../managing-nodes/metaConfig.md), o [configurazione di Gestione configurazione locale (v4)](../managing-nodes/metaConfig4.md).
+Affinché la Gestione configurazione locale riavvi il nodo, è necessario che il flag **RebootNodeIfNeeded** sia impostato su `$true`. È anche necessario che l'opzione **ActionAfterReboot** sia impostata sul valore predefinito **ContinueConfiguration**. Per altre informazioni sulla configurazione della Gestione configurazione locale, vedere [Configurazione di Gestione configurazione locale](../managing-nodes/metaConfig.md) o [Configurazione di Gestione configurazione locale (v4)](../managing-nodes/metaConfig4.md).

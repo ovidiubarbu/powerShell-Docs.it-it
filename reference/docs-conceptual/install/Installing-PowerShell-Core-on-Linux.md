@@ -2,12 +2,12 @@
 title: Installazione di PowerShell Core in Linux
 description: Informazioni sull'installazione di PowerShell Core in varie distribuzioni Linux
 ms.date: 08/06/2018
-ms.openlocfilehash: 2ab9beb19e5f90b392413eee31e3fed317e267b0
-ms.sourcegitcommit: 6ae5b50a4b3ffcd649de1525c3ce6f15d3669082
-ms.translationtype: MTE95
+ms.openlocfilehash: 718be0f03f136d6eb7d78fff51abdc36f6a8f0c2
+ms.sourcegitcommit: 5990f04b8042ef2d8e571bec6d5b051e64c9921c
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56265536"
+ms.lasthandoff: 03/12/2019
+ms.locfileid: "57795726"
 ---
 # <a name="installing-powershell-core-on-linux"></a>Installazione di PowerShell Core in Linux
 
@@ -195,7 +195,7 @@ sudo apt-get remove powershell
 ## <a name="ubuntu-1810"></a>Ubuntu 18.10
 
 > [!NOTE]
-> Come 18.10 è un' [versione intermedia](https://www.ubuntu.com/about/release-cycle), è sufficiente [supportato dalla community](https://docs.microsoft.com/en-us/powershell/scripting/powershell-support-lifecycle?view=powershell-6).
+> Poiché la versione 18.10 è una [versione provvisoria](https://www.ubuntu.com/about/release-cycle), la versione è [supportata solo dalla community](https://docs.microsoft.com/en-us/powershell/scripting/powershell-support-lifecycle?view=powershell-6).
 
 L'installazione nella versione 18.10 è supportata tramite `snapd`. Per istruzioni complete, vedere [Pacchetto Snap][snap].
 
@@ -669,7 +669,7 @@ La tabella seguente illustra le dipendenze di .NET Core 2.0 ufficialmente suppor
 Per distribuire i file binari di PowerShell in distribuzioni di Linux non ufficialmente supportate, si devono installare le dipendenze necessarie al sistema operativo di destinazione in due passaggi distinti.
 Ad esempio, il [dockerfile di Amazon Linux ][amazon-dockerfile] installa prima le dipendenze e poi estrae l'archivio `tar.gz` di Linux.
 
-[amazon-dockerfile]: https://github.com/PowerShell/PowerShell/blob/master/docker/community/amazonlinux/Dockerfile
+[amazon-dockerfile]: https://github.com/PowerShell/PowerShell-Docker/blob/master/release/community-stable/amazonlinux/docker/Dockerfile
 
 ### <a name="installation---binary-archives"></a>Archivi di file binari: installazione
 

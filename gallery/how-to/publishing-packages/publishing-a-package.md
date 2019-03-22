@@ -3,12 +3,12 @@ ms.date: 06/12/2017
 contributor: JKeithB
 keywords: gallery,powershell,cmdlet,psgallery
 title: Creazione e pubblicazione di un elemento
-ms.openlocfilehash: 70696535a3bf540ff75a2dc43bca80cb1adf8f45
-ms.sourcegitcommit: 9df29dfc637191b62ca591893c251c1e02d4eb4c
-ms.translationtype: MTE95
+ms.openlocfilehash: 0e0f871b5d43508735e396224fdfd1a29b1e91c0
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54012535"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58055479"
 ---
 # <a name="creating-and-publishing-an-item"></a>Creazione e pubblicazione di un elemento
 
@@ -22,7 +22,7 @@ I requisiti minimi per la pubblicazione di un elemento in PowerShell Gallery son
 - Verificare che i metadati necessari siano inclusi nell'elemento
 - Usare gli strumenti di pre-convalida per verificare che l'elemento sia pronto per essere pubblicato
 - Pubblicare l'elemento in PowerShell Gallery usando i comandi Publish-Module e Publish-Script
-- Rispondere a domande o dubbi riguardano l'elemento
+- Rispondere alle domande o ai dubbi che riguardano l'elemento
 
 PowerShell Gallery accetta moduli e script PowerShell. Con script si intende uno script PowerShell che sia un singolo file e non faccia parte di un modulo più grande.
 
@@ -32,7 +32,7 @@ Vedere [Creating a PowerShell Gallery Account](/powershell/gallery/how-to/publis
 
 Dopo aver creato un account, è possibile ottenere la chiave API necessaria per pubblicare un elemento. Dopo aver eseguito l'accesso con l'account, il nome utente sarà visualizzato nella parte superiore delle pagine di PowerShell Gallery al posto di Register (Registrazione). Facendo clic sul proprio nome utente si aprirà la pagina My Account (Account personale), nella quale è contenuta la chiave API.
 
-Nota: La chiave API deve essere gestita nel modo più sicuro l'account di accesso e la password.
+Nota: La chiave API deve essere protetta come l'account di accesso e la password.
 Con questa chiave chiunque può infatti aggiornare qualsiasi elemento in PowerShell Gallery.
 È consigliabile aggiornare la chiave regolarmente, usando il comando Reset Key (Ripristina chiave) nella pagina My Account (Account personale).
 
@@ -43,18 +43,18 @@ PowerShell Gallery offre informazioni agli utenti della raccolta ottenendole dai
 
 I cmdlet [New-ModuleManifest](/powershell/module/microsoft.powershell.core/new-modulemanifest) e [New-ScriptFileInfo](/powershell/module/PowerShellGet/New-ScriptFileInfo) creano il modello di manifesto con segnaposto per tutti gli elementi del manifesto.
 
-Entrambi i manifesti contengono due sezioni importanti per la pubblicazione, i dati di chiave primaria e l'area PSData di PrivateData. I dati della chiave primari in un manifesto del modulo PowerShell sono tutti gli elementi esterni alla sezione PrivateData. Le chiavi primarie sono correlate alla versione di PowerShell in uso. Non sono supportate chiavi non definite. PrivateData supporta l'aggiunta di nuove chiavi, in modo che gli elementi specifici per PowerShell Gallery siano contenuti in PSData.
+Entrambi i manifesti contengono due sezioni importanti per la pubblicazione, i dati di chiave primaria e l'area PSData di PrivateData. I dati della chiave primaria in un manifesto del modulo PowerShell sono tutti gli elementi esterni alla sezione PrivateData. Le chiavi primarie sono correlate alla versione di PowerShell in uso. Non sono supportate chiavi non definite. PrivateData supporta l'aggiunta di nuove chiavi, in modo che gli elementi specifici per PowerShell Gallery siano contenuti in PSData.
 
 
 Gli elementi del manifesto più importanti da compilare per la pubblicazione dell'elemento in PowerShell Gallery sono i seguenti:
 
 - Nome dello script o del modulo: questi nomi ottenuti dai nomi di .PS1 per uno script o di .PSD1 per un modulo.
-- Versione - si tratta di una chiave primaria obbligatoria, formato deve rispettare le linee guida SemVer. Per informazioni dettagliate, vedere le procedure consigliate.
-- Autore - questa è una chiave primaria obbligatoria e contiene il nome da associare all'elemento.
-Vedere gli autori e proprietari riportato di seguito.
+- Versione: si tratta di una chiave primaria obbligatoria. Il formato deve rispettare le linee guida SemVer. Per informazioni dettagliate, vedere le procedure consigliate.
+- Autore: si tratta di una chiave primaria obbligatoria. Contiene il nome da associare all'elemento.
+Vedere le informazioni su autori e proprietari riportate di seguito.
 - Descrizione: si tratta di una chiave primaria obbligatoria. Viene usata per illustrare brevemente lo scopo di questo elemento e gli eventuali requisiti per il suo uso
 - ProjectURI: si tratta di un campo URI consigliato in PSData che contiene un collegamento a un repository Github o percorso simile in cui è possibile sviluppare l'elemento
-- I tag - è consigliabile contrassegnare il pacchetto di base la compatibilità con le piattaforme e PSEditions sicuro. Per informazioni dettagliate, vedere la [linee guida per la pubblicazione](../../concepts/publishing-guidelines.md#tag-your-package-with-the-compatible-pseditions-and-platforms).
+- Tag: è consigliabile aggiungere tag al pacchetto in base alla compatibilità con le edizioni di PS e le piattaforme. Per informazioni dettagliate, vedere le [linee guida per la pubblicazione](../../concepts/publishing-guidelines.md#tag-your-package-with-the-compatible-pseditions-and-platforms).
 
 Gli autori e i proprietari degli elementi di PowerShell Gallery sono concetti correlati, ma non sempre corrispondenti. I proprietari di un elemento sono gli utenti che hanno un account PowerShell Gallery e autorizzazione per gestire l'elemento. È possibile che gli elementi siano aggiornabili da molti proprietari. Il proprietario è disponibile solo da PowerShell Gallery e viene perso se l'elemento viene copiato da un sistema in un altro. L'autore è una stringa compilata nei dati del manifesto. Fa pertanto sempre parte dell'elemento. Di seguito sono riportati i consigli per gli elementi di prodotti Microsoft:
 
@@ -75,7 +75,7 @@ Prima di pubblicare l'elemento in PowerShell Gallery, è necessario eseguire alc
 Se le informazioni sul manifesto contenute nell'elemento non possono essere lette dall'infrastruttura di PowerShell Gallery, l'elemento non potrà essere pubblicato.
 [Test-ModuleManifest](/powershell/module/microsoft.powershell.core/test-modulemanifest) intercetta i problemi comuni che possono rendere inutilizzabile il modulo dopo essere stato installato. Eseguire questo strumento per ogni modulo prima che sia pubblicato in PowerShell Gallery.
 
-Analogamente [Test-ScriptFileInfo](/powershell/module/PowerShellGet/test-scriptfileinfo) convalida i metadati in uno script. Eseguire questo strumento su ogni script (pubblicato separatamente da un modulo) prima che sia pubblicato in Powershell Gallery.
+Analogamente [Test-ScriptFileInfo](/powershell/module/PowerShellGet/test-scriptfileinfo) convalida i metadati in uno script. Eseguire questo strumento su ogni script (pubblicato separatamente da un modulo) prima che sia pubblicato in PowerShell Gallery.
 
 
 ## <a name="publishing-items"></a>Pubblicazione degli elementi
@@ -89,12 +89,12 @@ La maggior parte delle altre opzioni nella riga di comando deve essere contenuta
 
 Per evitare errori, è consigliabile provare i comandi usando Whatif-Verbose, prima della pubblicazione. Questa operazione consente di velocizzare il processo, in quanto ogni volta che si pubblica in PowerShell Gallery, è necessario aggiornare il numero di versione nella sezione manifesto dell'elemento.
 
-Esempi sono:
+Alcuni esempi potrebbero essere:
 
-* `Publish-Module -Path ".\MyModule" -NugetAPIKey "GUID" -Whatif -Verbose`
-* `Publish-Script -Path ".\MyScriptFile.PS1" -NugetAPIKey "GUID" -Whatif -Verbose`
+* `Publish-Module -Path ".\MyModule" -NugetAPIKey "GUID" -WhatIf -Verbose`
+* `Publish-Script -Path ".\MyScriptFile.PS1" -NugetAPIKey "GUID" -WhatIf -Verbose`
 
-Esaminare attentamente l'output e se non vengono visualizzati errori o avvisi, ripetere il comando senza - Whatif.
+Esaminare attentamente l'output e, se non vengono visualizzati errori o avvisi, ripetere il comando senza - Whatif.
 
 Tutti gli elementi pubblicati in PowerShell Gallery vengono analizzati da PowerShell Script Analyzer e vengono sottoposti ad analisi per rilevare eventuali virus. I problemi qui riscontrati vengono inviati all'autore della pubblicazione perché li risolva.
 

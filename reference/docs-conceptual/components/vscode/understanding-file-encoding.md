@@ -1,45 +1,45 @@
 ---
 title: Informazioni sulla codifica di file in VSCode e PowerShell
-description: Configurare la codifica di file in Visual Studio code e PowerShell
+description: Configurare la codifica di file in VS Code e PowerShell
 ms.date: 02/28/2019
-ms.openlocfilehash: 9cf445ebd0c2bb2dbdf4438f02dafe3df3a5d1e2
-ms.sourcegitcommit: 69abc5ad16e5dd29ddfb1853e266a4bfd1d59d59
-ms.translationtype: MTE95
+ms.openlocfilehash: 73e766832d56a08bd5ef16df11899a0aab0badae
+ms.sourcegitcommit: 5990f04b8042ef2d8e571bec6d5b051e64c9921c
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57429806"
+ms.lasthandoff: 03/12/2019
+ms.locfileid: "57795116"
 ---
 # <a name="understanding-file-encoding-in-vscode-and-powershell"></a>Informazioni sulla codifica di file in VSCode e PowerShell
 
-Quando si usa Visual Studio Code per creare e modificare gli script di PowerShell, è importante che i file vengono salvati utilizzando il formato di codifica di carattere corretto.
+Quando si usa VS Code per creare e modificare gli script di PowerShell, è importante che i file vengano salvati usando il formato corretto della codifica dei caratteri.
 
 ## <a name="what-is-file-encoding-and-why-is-it-important"></a>Che cos'è la codifica dei file e perché è importante?
 
-Visual Studio code gestisce l'interfaccia tra una risorse umane immettendo stringhe di caratteri in un buffer e blocchi di lettura/scrittura di byte nel file System. Quando Visual Studio code consente di salvare un file, Usa un codifica a tale scopo del testo.
+VS Code gestisce l'interfaccia tra una persona che immette stringhe di caratteri in un buffer e i blocchi di lettura/scrittura di byte nel File system. Quando VS Code salva un file, usa un codifica di testo per eseguire l'operazione.
 
-Allo stesso modo, quando si esegue uno script di PowerShell è necessario convertire i byte in un file in caratteri per ricostruire il file in un programma di PowerShell. Poiché Visual Studio code scrive il file e PowerShell legge il file, devono usare lo stesso sistema di codifica. Questo processo di analisi di uno script di PowerShell passa: *byte* -> *caratteri* -> *token*  ->   *albero sintattico astratto* -> *esecuzione*.
+Analogamente, quando PowerShell esegue uno script deve convertire i byte di un file in caratteri per ricostruire il file in un programma di PowerShell. Poiché VS Code scrive il file e PowerShell legge il file, devono usare lo stesso sistema di codifica. Il processo di analisi di uno script di PowerShell script è: *byte* -> *caratteri* -> *token* -> *albero sintattico astratto* -> *esecuzione*.
 
-Visual Studio code sia PowerShell vengono installati con una configurazione di codifica predefinito adeguato. Tuttavia, la codifica predefinita utilizzata da PowerShell è stato modificato con la versione di PowerShell Core (v6.x). Per assicurarsi di non aver problemi tramite PowerShell o l'estensione di PowerShell in Visual Studio code, è necessario configurare le impostazioni di Visual Studio code e PowerShell in modo corretto.
+Sia VS Code che PowerShell vengono installati con una configurazione di codifica predefinita appropriata. Tuttavia la codifica predefinita usata da PowerShell è cambiata con il rilascio di PowerShell Core (v6.x). Per assicurarsi di non avere problemi usando PowerShell o l'estensione di PowerShell in VS Code, è necessario configurare le impostazioni di VS Code e di PowerShell in modo corretto.
 
 ## <a name="common-causes-of-encoding-issues"></a>Cause più comuni dei problemi di codifica
 
-Problemi di codifica si verificano durante la codifica di Visual Studio code o file di script non corrispondono alla codifica prevista di PowerShell. Non è possibile per PowerShell determinare automaticamente la codifica del file.
+I problemi di codifica si verificano se la codifica di VS Code o il file di script non corrisponde alla codifica prevista di PowerShell. Non è possibile per PowerShell determinare automaticamente la codifica del file.
 
-Si è più soggetto a problemi di codifica quando si usano caratteri non nel [set di caratteri ASCII a 7 bit](https://ascii.cl/). Ad esempio:
+I problemi di codifica si verificano con maggiore probabilità quando si usano caratteri non del [set di caratteri ASCII a 7 bit](https://ascii.cl/). Ad esempio:
 
-- I caratteri latin accentati (`É`, `ü`)
-- Caratteri non latini come cirillico (`Д`, `Ц`)
-- Han cinese (`脚`, `本`)
+- Caratteri latini accentati (`É`, `ü`)
+- Caratteri non latini, ad esempio cirillico (`Д`, `Ц`)
+- Cinese Han (`脚`, `本`)
 
-Motivi comuni per i problemi di codifica sono:
+I motivi comuni per i problemi di codifica sono:
 
-- Le codifiche di VSCode e PowerShell non sono state modificate i valori predefiniti. Per PowerShell 5.1 e versioni precedenti, il valore predefinito è diversa da VSCode codifica.
-- Un altro editor è aperto e sovrascrivere il file in una nuova codifica. Ciò si verifica spesso con ISE.
-- Il file è archiviato nel controllo del codice sorgente in una codifica diversa dal quale Visual Studio code o da PowerShell prevede. Questa situazione può verificarsi quando i collaboratori usano l'editor con diverse configurazioni di codifica.
+- Le codifiche di VSCode e PowerShell non sono state modificate rispetto ai valori predefiniti. Per PowerShell 5.1 e versioni precedenti la codifica predefinita è diversa da quella di VSCode.
+- Un altro editor ha aperto e sovrascritto il file in una nuova codifica. Ciò si verifica spesso con ISE.
+- Il file è sottoposto al controllo del codice sorgente in una codifica diversa da quella prevista da VS Code o PowerShell. Questa situazione può verificarsi quando i collaboratori usano editor con diverse configurazioni di codifica.
 
-### <a name="how-to-tell-when-you-have-encoding-issues"></a>Come sapere quando hai i problemi di codifica
+### <a name="how-to-tell-when-you-have-encoding-issues"></a>Come sapere quando sono presenti problemi di codifica
 
-Errori di codifica spesso vengono visualizzati come analizzare gli errori negli script. Se le sequenze di caratteri insoliti si trova nello script, ciò può rappresentare il problema. Nell'esempio seguente, un trattino (`–`) viene visualizzato come i caratteri `â€“`:
+Spesso gli errori di codifica si presentano come errori di analisi negli script. Se si rilevano strane sequenze di caratteri nello script, questo può essere il problema. Nell'esempio seguente un trattino (`–`) viene visualizzato come i caratteri `â€“`:
 
 ```Output
 Send-MailMessage : A positional parameter cannot be found that accepts argument 'Testing FuseMail SMTP...'.
@@ -50,57 +50,59 @@ At C:\Users\<User>\<OneDrive>\Development\PowerShell\Scripts\Send-EmailUsingSmtp
     + FullyQualifiedErrorId : PositionalParameterNotFound,Microsoft.PowerShell.Commands.SendMailMessage
 ```
 
-Questo problema si verifica perché Visual Studio code consente di codificare il carattere `–` in formato UTF-8 come i byte `0xE2 0x80 0x93`.
-Quando questi byte vengono decodificati come Windows-1252, vengono interpretate come caratteri `â€“`.
+Questo problema si verifica perché VS Code codifica il carattere `–` in formato UTF-8 come i byte `0xE2 0x80 0x93`.
+Quando questi byte vengono decodificati come Windows-1252, vengono interpretati come caratteri `â€“`.
 
-Alcune sequenze di caratteri insoliti che potrebbero essere visualizzati includono:
+Di seguito sono riportate alcune sequenze di caratteri insolite che potrebbero essere visualizzate:
 
+<!-- markdownlint-disable MD038 -->
 - `â€“` invece di `–`
 - `â€”` invece di `—`
 - `Ã„2` invece di `Ä`
-- `Â` invece di ` ` (spazi unificatori)
+- `Â` invece di ` ` (spazio unificatore)
 - `Ã©` invece di `é`
+<!-- markdownlint-enable MD038 -->
 
-Questo utile [riferimento](https://www.i18nqa.com/debug/utf8-debug.html) sono elencati i modelli comuni che indicano un problema di codifica UTF-8 o Windows-1252.
+In questo utile [riferimento](https://www.i18nqa.com/debug/utf8-debug.html) sono elencati i modelli che più spesso indicano un problema di codifica UTF-8 o Windows-1252.
 
-## <a name="how-the-powershell-extension-in-vscode-interacts-with-encodings"></a>Modalità di interazione con codifiche l'estensione di PowerShell in Visual Studio code
+## <a name="how-the-powershell-extension-in-vscode-interacts-with-encodings"></a>Modalità di interazione con le codifiche dell'estensione di PowerShell in VS Code
 
-L'estensione di PowerShell interagisce con gli script in numerosi modi:
+L'estensione di PowerShell interagisce con gli script in diversi modi:
 
-1. Quando gli script vengono modificati in Visual Studio code, i contenuti vengono inviati tramite Visual Studio code per l'estensione. Il [protocollo di Server di linguaggio][] impone che questo contenuto è stato trasferito in UTF-8. Non è pertanto possibile che l'estensione ottenere la codifica non corretta.
-2. Quando gli script vengono eseguiti direttamente nella Console integrata, vengono letti dal file di PowerShell direttamente. Se la codifica PowerShell differisce di VSCode, un elemento può essere inserito errato qui.
-3. Quando uno script che viene aperto in VSCode fa riferimento a un altro script che non sia aperto in Visual Studio code, l'estensione per il fallback al caricamento del contenuto dello script che dal file system. L'estensione di PowerShell per impostazione predefinita la codifica UTF-8, ma utilizza [BOM][], o indicatore ordine byte, il rilevamento per selezionare la codifica corretta.
+1. Quando gli script vengono modificati in VS Code, i contenuti vengono inviati da VS Code all'estensione. Il [protocollo di server di linguaggio][] impone che il contenuto venga trasferito in UTF-8. Di conseguenza, non è possibile che l'estensione riceva la codifica non corretta.
+2. Quando gli script vengono eseguiti direttamente nella console integrata, vengono letti da PowerShell direttamente dal file. Se la codifica di PowerShell è diversa da quella di VSCode, si può verificare un problema.
+3. Quando uno script aperto in VSCode fa riferimento a un altro script che non è aperto in VS Code, l'estensione esegue il fallback al caricamento del contenuto dello script dal File system. L'estensione di PowerShell per impostazione predefinita usa la codifica UTF-8, ma usa il rilevamento [byte order mark][], o BOM, per selezionare la codifica corretta.
 
-Il problema si verifica quando presupponendo che la codifica dei formati senza BOM (ad esempio [UTF-8][] con alcun BOM e [Windows-1252][]).
-L'estensione di PowerShell viene impostato su UTF-8. L'estensione non è possibile modificare le impostazioni di codifica di Visual Studio code.
-Per altre informazioni, vedere [problema #824](https://github.com/Microsoft/vscode/issues/824).
+Il problema si verifica quando si presuppone l'uso della codifica dei formati senza BOM, ad esempio [UTF-8][] senza BOM e [Windows-1252][].
+L'estensione di PowerShell usa UTF-8 come valore predefinito. L'estensione non è in grado di modificare le impostazioni di codifica di VS Code.
+Per altre informazioni, vedere il [problema n. 824](https://github.com/Microsoft/vscode/issues/824).
 
-## <a name="choosing-the-right-encoding"></a>Scegliere la codifica a destra
+## <a name="choosing-the-right-encoding"></a>Scelta della codifica corretta
 
-Le applicazioni e sistemi diversi possono utilizzare codifiche differenti:
+Applicazioni e sistemi diversi possono usare codifiche diverse:
 
-- In .NET Standard, sul web e nel mondo Linux, UTF-8 è ora dominante codifica.
-- Molte applicazioni .NET Framework usano [UTF-16][]. Per motivi di cronologia, è talvolta definito "Unicode", un termine che ora si riferisce a un'ampia [standard](https://en.wikipedia.org/wiki/Unicode) che include sia UTF-8 e UTF-16.
-- In Windows, molte applicazioni native risalenti a Unicode continuano a usare Windows-1252 per impostazione predefinita.
+- In .NET Standard, sul Web e nel mondo Linux, UTF-8 è ora la codifica dominante.
+- Molte applicazioni .NET Framework usano la codifica [UTF-16][]. Per motivi storici, a volte viene definita "Unicode", un termine che ora si riferisce a uno [standard](https://en.wikipedia.org/wiki/Unicode) diffuso che include sia UTF-8 che UTF-16.
+- In Windows molte applicazioni native precedenti a Unicode continuano a usare Windows-1252 per impostazione predefinita.
 
-Le codifiche Unicode prevedono inoltre il concetto di un byte order mark (BOM). DB verificano all'inizio del testo per indicare a quale codifica il testo è tramite un decodificatore. Per le codifiche multibyte, indica anche il carattere BOM [ordine dei byte](https://en.wikipedia.org/wiki/Endianness) della codifica. DB sono progettate per essere byte che si verificano raramente in testo non Unicode, che consente di stimare ragionevolmente anche che il testo è Unicode quando è presente un carattere BOM.
+Le codifiche Unicode prevedono inoltre il concetto di un byte order mark (BOM). I BOM si trovano all'inizio del testo per indicare a un decodificatore quale codifica sta usando il testo. Per le codifiche multibyte, il BOM indica anche l'[ordine dei byte](https://en.wikipedia.org/wiki/Endianness) della codifica. I BOM sono progettati come byte che si verificano raramente nel testo non Unicode e la presenza di un BOM suggerisce che un testo è Unicode.
 
-DB sono facoltative e non è la loro adozione più famosi nel mondo Linux perché viene utilizzata una convenzione affidabile UTF-8 ovunque. La maggior parte delle applicazioni Linux presumono che l'input di testo è codificato in UTF-8. Mentre molte applicazioni di Linux riconoscerà e gestire correttamente un carattere BOM, un numero, non sono iniziali agli elementi nel testo manipolati con tali applicazioni.
+I BOM sono facoltativi e la loro adozione non è altrettanto diffusa nel mondo Linux perché viene usata ovunque una convenzione affidabile di UTF-8. La maggior parte delle applicazioni Linux presume che l'input di testo sia codificato in UTF-8. Benché molte applicazioni di Linux siano in grado di riconoscere e gestire correttamente un BOM, alcune non lo sono e la manipolazione del testo in queste applicazioni produce degli artefatti.
 
 **Di conseguenza**:
 
-- Se si lavora principalmente con le applicazioni di Windows e Windows PowerShell, è preferibile una codifica come UTF-8 con BOM o UTF-16.
-- Se si lavora su piattaforme, è preferibile UTF-8 con BOM.
-- Se si lavora principalmente in contesti associati a Linux, è preferibile UTF-8 senza BOM.
-- Windows-1252 e latino 1 sono essenzialmente le codifiche legacy che è necessario evitare se possibile.
-  Tuttavia, alcune applicazioni di Windows precedenti potrebbero dipendono da tali.
-- È anche importante notare che la firma degli script [dipendente dalla codifica](https://github.com/PowerShell/PowerShell/issues/3466), vale a dire una modifica della codifica in uno script firmato richiederanno riapposizione della firma.
+- Se si lavora principalmente con le applicazioni Windows e Windows PowerShell, è preferibile la codifica UTF-8 con BOM o UTF-16.
+- Se si lavora su varie piattaforme, è preferibile usare UTF-8 con BOM.
+- Se si lavora principalmente in contesti associati a Linux, è preferibile usare UTF-8 senza BOM.
+- Windows-1252 e latin-1 sono essenzialmente le codifiche legacy che è opportuno evitare, se possibile.
+  Tuttavia, alcune applicazioni Windows più datate possono dipendere da esse.
+- È anche importante notare che la firma degli script [dipende dalla codifica](https://github.com/PowerShell/PowerShell/issues/3466), ovvero una modifica della codifica in uno script firmato richiede una nuova operazione di firma.
 
-## <a name="configuring-vscode"></a>Configurazione di Visual Studio code
+## <a name="configuring-vscode"></a>Configurazione di VS Code
 
-Della VSCode codifica predefinita è UTF-8 senza BOM.
+La codifica predefinita di VS Code è UTF-8 senza BOM.
 
-Per impostare [Codifica di Visual Studio code][], passare alle impostazioni di Visual Studio code (<kbd>Ctrl<kbd>+</kbd>,</kbd>) e impostare il `"files.encoding"` impostazione:
+Per impostare la [codifica di VS Code][], accedere alle impostazioni di VS Code (<kbd>CTRL<kbd>+</kbd>,</kbd>) e specificare l'impostazione `"files.encoding"`:
 
 ```json
 "files.encoding": "utf8bom"
@@ -110,11 +112,11 @@ Alcuni valori possibili sono:
 
 - `utf8`: [UTF-8] senza BOM
 - `utf8bom`: [UTF-8] con BOM
-- `utf16le`: Little endian [UTF-16]
-- `utf16be`: Big endian [UTF-16]
+- `utf16le`: [UTF-16] little endian
+- `utf16be`: [UTF-16] big endian
 - `windows1252`: [Windows-1252]
 
-È necessario ottenere un elenco a discesa per questo oggetto nella visualizzazione GUI o visualizzare i completamenti per tale nel file JSON.
+Per questo oggetto è possibile ottenere un elenco a discesa nella visualizzazione GUI o i relativi completamenti nella visualizzazione JSON.
 
 È anche possibile aggiungere quanto segue per rilevare automaticamente la codifica quando è possibile:
 
@@ -122,7 +124,7 @@ Alcuni valori possibili sono:
 "files.autoGuessEncoding": true
 ```
 
-Se non si vuole queste impostazioni interessano tutti i tipi di file, Visual Studio code consente inoltre alle configurazioni per ogni lingua. Creare un'impostazione specifica del linguaggio inserendo le impostazioni in un `[<language-name>]` campo. Ad esempio:
+Se si vuole evitare che queste impostazioni influiscano su tutti i tipi di file, VS Code consente anche di definire configurazioni diverse in base al linguaggio. Per creare un'impostazione specifica del linguaggio, inserire le impostazioni in un campo `[<language-name>]`. Ad esempio:
 
 ```json
 "[powershell]": {
@@ -133,12 +135,12 @@ Se non si vuole queste impostazioni interessano tutti i tipi di file, Visual Stu
 
 ## <a name="configuring-powershell"></a>Configurazione di PowerShell
 
-Della PowerShell codifica predefinita varia a seconda della versione:
+La codifica predefinita di PowerShell varia a seconda della versione:
 
-- In PowerShell 6 o versione successiva, la codifica predefinita è UTF-8 senza BOM in tutte le piattaforme.
-- In Windows PowerShell, la codifica predefinita è in genere sui Windows-1252, un'estensione della [latin-1][], noto anche come ISO 8859-1.
+- In PowerShell 6 o versione successiva la codifica predefinita è UTF-8 senza BOM su tutte le piattaforme.
+- In Windows PowerShell la codifica predefinita normalmente è Windows-1252, un'estensione di [latin-1][], nota anche come ISO 8859-1.
 
-In PowerShell 5 o versione successiva è possibile trovare la codifica predefinita con questo:
+In PowerShell 5 o versione successiva è possibile trovare la codifica predefinita in questo modo:
 
 ```powershell
 [psobject].Assembly.GetTypes() | Where-Object { $_.Name -eq 'ClrFacade'} |
@@ -147,7 +149,7 @@ In PowerShell 5 o versione successiva è possibile trovare la codifica predefini
   }
 ```
 
-Quanto segue [script](https://gist.github.com/rjmholt/3d8dd4849f718c914132ce3c5b278e0e) può essere utilizzato per determinare ciò che codifica la sessione di PowerShell viene dedotto per uno script senza un carattere BOM.
+Lo [script](https://gist.github.com/rjmholt/3d8dd4849f718c914132ce3c5b278e0e) seguente può essere usato per determinare ciò che deduce la codifica della sessione di PowerShell per uno script senza BOM.
 
 ```powershell
 $badBytes = [byte[]]@(0xC3, 0x80)
@@ -180,19 +182,19 @@ finally
 }
 ```
 
-È possibile configurare PowerShell per usare una codifica specificata in termini più generali tramite le impostazioni del profilo. Vedere gli articoli seguenti:
+È possibile configurare PowerShell in modo che usi una codifica specifica più in generale usando le impostazioni del profilo. Vedere gli articoli seguenti:
 
-- [@mklement0]del [risposte sulla codifica di PowerShell su StackOverflow](https://stackoverflow.com/a/40098904).
-- [@rkeithhill]del [post di blog sulla gestione dell'input senza BOM UTF-8 in PowerShell](https://rkeithhill.wordpress.com/2010/05/26/handling-native-exe-output-encoding-in-utf8-with-no-bom/).
+- [@mklement0]: [risposta sulla codifica di PowerShell per StackOverflow](https://stackoverflow.com/a/40098904).
+- [@rkeithhill]: [post di blog sulla gestione dell'input UTF-8 senza BOM in PowerShell](https://rkeithhill.wordpress.com/2010/05/26/handling-native-exe-output-encoding-in-utf8-with-no-bom/).
 
-Non è possibile forzare di PowerShell per usare una codifica input specifico. PowerShell 5.1 e versioni precedenti per impostazione predefinita a Windows-1252 codifica quando non è presente alcun BOM. Per motivi di interoperabilità, è consigliabile salvare gli script in formato Unicode con un carattere BOM.
+Non è possibile forzare PowerShell perché usi una codifica specifica per l'input. PowerShell 5.1 e versioni precedenti per impostazione predefinita usa la codifica Windows-1252 quando non è presente alcun BOM. Per motivi di interoperabilità, è preferibile salvare gli script in formato Unicode con BOM.
 
 > [!IMPORTANT]
-> Qualsiasi altro strumento, è necessario un tocco PowerShell script può essere influenzato dalle scelte di codifica o codificare di nuovo gli script a un'altra codifica.
+> Le scelte in termini di codifica possono influire su eventuali altri strumenti che usano gli script di PowerShell o può essere opportuno codificare di nuovo gli script usando un'altra codifica.
 
 ### <a name="existing-scripts"></a>Script esistenti
 
-Gli script già presente nel file system potrebbero dover essere codificata nuovamente per la nuova codifica scelta. Nella barra nella parte inferiore di VSCode, verrà visualizzata l'etichetta UTF-8. Fare clic per aprire la barra delle azioni e selezionare **Salva con codifica**. È ora possibile selezionare una nuova codifica per il file. Visualizzare [Codifica di Visual Studio code][] per le istruzioni complete.
+Può essere necessario ricodificare gli script già presenti nel file system in base alla nuova codifica scelta. Nella barra inferiore di VS Code viene visualizzata l'etichetta UTF-8. Fare clic sull'etichetta per aprire la barra delle azioni e selezionare **Salva con codifica**. È ora possibile selezionare una nuova codifica per il file. Vedere [Codifica di VS Code][] per le istruzioni complete.
 
 Se è necessario codificare di nuovo più file, è possibile usare lo script seguente:
 
@@ -205,62 +207,62 @@ Get-ChildItem *.ps1 -Recurse | ForEach-Object {
 
 ### <a name="the-powershell-integrated-scripting-environment-ise"></a>PowerShell Integrated Scripting Environment (ISE)
 
-Se è anche possibile modificare gli script con PowerShell ISE, è necessario sincronizzare le impostazioni di codifica non esiste.
+Se inoltre si modificano gli script con l'ISE di PowerShell, è necessario sincronizzare le impostazioni di codifica nell'ISE.
 
-ISE deve rispettare un indicatore ordine byte, ma è anche possibile usare la reflection per [impostare la codifica](https://bensonxion.wordpress.com/2012/04/25/powershell-ise-default-saveas-encoding/).
-Si noti che questo non sarebbe vengano resi persistenti tra le Startup.
+L'ISE deve rispettare un BOM, ma è anche possibile usare la reflection per [impostare la codifica](https://bensonxion.wordpress.com/2012/04/25/powershell-ise-default-saveas-encoding/).
+Si noti che questa condizione non sarebbe persistente da un avvio all'altro.
 
-### <a name="source-control-software"></a>Software per il controllo origine
+### <a name="source-control-software"></a>Software di controllo del codice sorgente
 
-Alcuni strumenti di controllo di origine, ad esempio git, ignorare le codifiche; GIT tiene traccia solo i byte.
-Altri, come TFS o Mercurial, non potranno essere. Anche alcuni strumenti basati su git si basano su decodifica il testo.
+Alcuni strumenti per il controllo del codice sorgente ignorano le codifiche, ad esempio GIT tiene traccia solo dei byte.
+Altri strumenti, ad esempio TFS o Mercurial, si comportano diversamente. Anche alcuni strumenti basati su GIT usano la decodifica del testo.
 
-In questo caso, assicurarsi di:
+In questo caso verificare quanto segue:
 
-- Configurare la codifica nel controllo del codice sorgente per corrispondano alla configurazione di Visual Studio code di testo.
-- Verificare che tutti i file vengono archiviati nel controllo del codice sorgente nella codifica pertinenti.
-- Essere ben consapevoli delle modifiche per la codifica ricevuta tramite controllo del codice sorgente. Un segno di questa chiave è delle differenze che indica le modifiche, ma non sembra in cui sono stati modificati (perché è stato byte ma non hanno caratteri).
+- Configurare la codifica del testo nel controllo del codice sorgente in modo che corrisponda alla configurazione di VS Code.
+- Verificare che tutti i file vengano sottoposti al controllo del codice sorgente con la codifica pertinente.
+- Fare attenzione alle modifiche della codifica segnalate dal controllo del codice sorgente. Un segno evidente è un diff che indica la presenza di modifiche quando apparentemente non ce ne sono (perché i byte sono cambiati e i caratteri no).
 
 ### <a name="collaborators-environments"></a>Ambienti dei collaboratori
 
-Nella parte superiore di configurazione di controllo del codice sorgente, verificare che i collaboratori in qualsiasi file che condivisi non siano le impostazioni di cui eseguire l'override di codifica per codificare di nuovo i file di PowerShell.
+Oltre a configurare il controllo del codice sorgente, verificare che i collaboratori che accedono ai file condivisi non usino impostazioni che sostituiscono la codifica in uso ricodificando i file di PowerShell.
 
 ### <a name="other-programs"></a>Altri programmi
 
-Qualsiasi altro programma che legge o scrive uno script di PowerShell potrebbe codificarli nuovamente.
+Qualsiasi altro programma che legge o scrive uno script di PowerShell può ricodificarlo.
 
 Di seguito sono riportati alcuni esempi:
 
-- Usando gli Appunti per copiare e incollare uno script. Questo è comune in scenari come:
+- Uso degli Appunti per copiare e incollare uno script. Questa situazione è comune in scenari come:
   - Copia di uno script in una macchina virtuale
-  - Copia di uno script all'esterno di un messaggio di posta elettronica o una pagina Web
-  - Copia di uno script all'interno o all'esterno di un documento Microsoft Word o PowerPoint.
+  - Copia di uno script da un messaggio di posta elettronica o una pagina Web
+  - Copia di uno script in o da un documento Microsoft Word o PowerPoint
 - Altri editor di testo, ad esempio:
   - Blocco note
   - vim
   - Qualsiasi altro editor di script di PowerShell
-- Modifica delle utilità, ad esempio testo:
+- Utilità di modifica del testo, ad esempio:
   - `Get-Content`/`Set-Content`/`Out-File`
   - Operatori di reindirizzamento di PowerShell, ad esempio `>` e `>>`
   - `sed`/`awk`
-- I programmi di trasferimento del file, ad esempio:
-  - Un web browser, durante il download degli script
+- Programmi di trasferimento file, ad esempio:
+  - Un Web browser, durante il download degli script
   - Una condivisione file
 
-Alcuni di questi strumenti gestiscono in byte anziché di testo, ma altri offrono configurazioni di codifica. In questi casi in cui è necessario configurare una codifica, è necessario renderlo lo stesso come editor di codifica per evitare eventuali problemi.
+Alcuni di questi strumenti gestiscono i byte anziché il testo, ma altri offrono configurazioni di codifica. Nei casi in cui è necessario configurare una codifica, tenere presente che deve essere la stessa codifica usata dall'editor per evitare problemi.
 
-## <a name="other-resources-on-encoding-in-powershell"></a>Altre risorse sulla codifica in PowerShell
+## <a name="other-resources-on-encoding-in-powershell"></a>Altre risorse per la codifica in PowerShell
 
-Esistono alcuni altri post interessante su codifica e la configurazione di codifica in PowerShell che vale la pena di un'operazione di lettura:
+Esistono alcuni post interessanti sulla codifica e la configurazione della codifica in PowerShell che vale la pena leggere:
 
-- [@mklement0]del [riepilogo della codifica di PowerShell su StackOverflow](https://stackoverflow.com/questions/40098771/changing-powershells-default-output-encoding-to-utf-8)
-- Problemi precedenti aperto in vscode-PowerShell per la codifica dei problemi:
+- [@mklement0]: [riepilogo della codifica di PowerShell per StackOverflow](https://stackoverflow.com/questions/40098771/changing-powershells-default-output-encoding-to-utf-8)
+- Problemi segnalati in precedenza in vscode-PowerShell riguardo alla codifica dei problemi:
   - [#1308](https://github.com/PowerShell/vscode-powershell/issues/1308)
   - [#1628](https://github.com/PowerShell/vscode-powershell/issues/1628)
   - [#1680](https://github.com/PowerShell/vscode-powershell/issues/1680)
   - [#1744](https://github.com/PowerShell/vscode-powershell/issues/1744)
   - [#1751](https://github.com/PowerShell/vscode-powershell/issues/1751)
-- [Il modello di distribuzione classica *opinione di Joel su Software* scriviamo su Unicode](https://www.joelonsoftware.com/2003/10/08/the-absolute-minimum-every-software-developer-absolutely-positively-must-know-about-unicode-and-character-sets-no-excuses/)
+- [Il classico documento *Joel on Software* su Unicode](https://www.joelonsoftware.com/2003/10/08/the-absolute-minimum-every-software-developer-absolutely-positively-must-know-about-unicode-and-character-sets-no-excuses/)
 - [Codifica in .NET Standard](https://github.com/dotnet/standard/issues/260#issuecomment-289549508)
 
 
@@ -269,7 +271,7 @@ Esistono alcuni altri post interessante su codifica e la configurazione di codif
 [Windows-1252]: https://wikipedia.org/wiki/Windows-1252
 [latin-1]: https://wikipedia.org/wiki/ISO/IEC_8859-1
 [UTF-8]: https://wikipedia.org/wiki/UTF-8
-[BOM]: https://wikipedia.org/wiki/Byte_order_mark
+[byte order mark]: https://wikipedia.org/wiki/Byte_order_mark
 [UTF-16]: https://wikipedia.org/wiki/UTF-16
-[Protocollo di Server di linguaggio]: https://microsoft.github.io/language-server-protocol/
-[Codifica di Visual Studio code]: https://code.visualstudio.com/docs/editor/codebasics#_file-encoding-support
+[Protocollo di server di linguaggio]: https://microsoft.github.io/language-server-protocol/
+[Codifica di VS Code]: https://code.visualstudio.com/docs/editor/codebasics#_file-encoding-support

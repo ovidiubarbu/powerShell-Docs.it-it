@@ -2,12 +2,12 @@
 ms.date: 10/30/2018
 keywords: dsc,powershell,configurazione,installazione
 title: Risoluzione dei problemi relativi a DSC
-ms.openlocfilehash: e1f36bbc97569ac0d65f003ee08f52ec174a4520
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
-ms.translationtype: MTE95
+ms.openlocfilehash: 5ee1b68f4f769426fea3c8e10738c3bb6ef94480
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55678070"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58059746"
 ---
 # <a name="troubleshooting-dsc"></a>Risoluzione dei problemi relativi a DSC
 
@@ -74,19 +74,19 @@ InDesiredState        :    False
 InitialState          :
 InstanceName          :    ServiceDll
 RebootRequested       :    False
-ReosurceName          :    File
+ResourceName          :    File
 StartDate             :    11/24/2015  3:44:56
 PSComputerName        :
 ```
 
-## <a name="my-script-wont-run-using-dsc-logs-to-diagnose-script-errors"></a>Non viene eseguito lo script: Uso di DSC Registra per diagnosticare gli errori di script
+## <a name="my-script-wont-run-using-dsc-logs-to-diagnose-script-errors"></a>Lo script non viene eseguito: uso di log DSC per diagnosticare gli errori di script
 
 Come tutti i software Windows, DSC registra errori ed eventi in [registri](/windows/desktop/EventLog/about-event-logging) che possono essere visualizzati dal [Visualizzatore eventi](https://support.microsoft.com/hub/4338813/windows-help).
 Esaminando questi registri è possibile comprendere perché un'operazione specifica non è riuscita e come evitare l'errore in futuro. La scrittura di script di configurazione può essere complessa, quindi per rendere più semplice il rilevamento degli errori durante la scrittura è possibile usare la risorsa Log DSC per tenere traccia dello stato della configurazione nel registro eventi DSC Analytic.
 
 ## <a name="where-are-dsc-event-logs"></a>Dove sono i registri eventi DSC?
 
-Nel Visualizzatore eventi, gli eventi DSC sono: **Le applicazioni e servizi di log/Microsoft/Windows/Desired State Configuration**
+In Visualizzatore eventi gli eventi DSC si trovano in: **Registri applicazioni e servizi/Microsoft/Windows/Desired State Configuration**
 
 Per visualizzare i registri eventi è anche possibile eseguire il cmdlet di PowerShell corrispondente, [Get-WinEvent](/powershell/module/Microsoft.PowerShell.Diagnostics/Get-WinEvent):
 
@@ -100,7 +100,7 @@ TimeCreated                     Id LevelDisplayName Message
 11/17/2014 10:27:23 PM        4102 Information      Job {02C38626-D95A-47F1-9DA2-C1D44A7128E7} :
 ```
 
-Come illustrato in precedenza, il nome del log principale di DSC è **Microsoft->Windows->DSC** (gli altri nomi di log in Windows non sono riportati per brevità). Il nome principale viene aggiunto al nome del canale per creare il nome completo del registro. Il motore DSC scrive principalmente in tre tipi di log: [I log di Debug, operativo e analitico](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc722404(v=ws.11)). Poiché i registri di debug e analitico sono disattivati per impostazione predefinita, è necessario abilitarli nel Visualizzatore eventi. A tale scopo, aprire il Visualizzatore eventi digitando Show-EventLog in Windows PowerShell oppure fare clic sul pulsante **Start**, scegliere **Pannello di controllo**, fare clic su **Strumenti di amministrazione** e quindi su **Visualizzatore eventi**.
+Come illustrato in precedenza, il nome del log principale di DSC è **Microsoft->Windows->DSC** (gli altri nomi di log in Windows non sono riportati per brevità). Il nome principale viene aggiunto al nome del canale per creare il nome completo del registro. Il motore DSC usa principalmente tre tipi di registri: [operativi, analitici e di debug](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc722404(v=ws.11)). Poiché i registri di debug e analitico sono disattivati per impostazione predefinita, è necessario abilitarli nel Visualizzatore eventi. A tale scopo, aprire il Visualizzatore eventi digitando Show-EventLog in Windows PowerShell oppure fare clic sul pulsante **Start**, scegliere **Pannello di controllo**, fare clic su **Strumenti di amministrazione** e quindi su **Visualizzatore eventi**.
 Scegliere **Visualizza registri analitici e di debug** dal menu **Visualizza** del Visualizzatore eventi. Il nome del registro per il canale analitico è **Microsoft-Windows-Dsc/Analytic** e per il canale di debug è **Microsoft-Windows-Dsc/Debug**. È anche possibile usare l'utilità [wevtutil](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/cc732848(v=ws.11)) per abilitare i registri, come illustrato nell'esempio seguente.
 
 ```powershell
@@ -327,7 +327,7 @@ SRV1   OPERATIONAL  6/24/2016 10:51:54 AM Job runs under the following LCM setti
 SRV1   OPERATIONAL  6/24/2016 10:51:54 AM Operation Consistency Check or Pull completed successfully.
 ```
 
-Passare il **GUID** assegnato a un'operazione DSC specifica (come restituito dal `Get-xDscOperation` cmdlet) per ottenere i dettagli dell'evento per l'operazione DSC:
+Passare il **GUID** assegnato a una specifica operazione DSC, come restituito dal cmdlet `Get-xDscOperation`, per ottenere i dettagli degli eventi per l'operazione DSC:
 
 ```powershell
 PS C:\DiagnosticsTest> Trace-xDscOperation -JobID 9e0bfb6b-3a3a-11e6-9165-00155d390509
@@ -461,7 +461,7 @@ SRV2   OPERATIONAL  6/24/2016 11:36:56 AM Operation Consistency Check or Pull co
 SRV2   ANALYTIC     6/24/2016 11:36:56 AM Deleting file from C:\Windows\System32\Configuration\DSCEngineCach...
 ```
 
-## <a name="my-resources-wont-update-how-to-reset-the-cache"></a>Risorse personali non vengono aggiornate: Come reimpostare la cache
+## <a name="my-resources-wont-update-how-to-reset-the-cache"></a>Le risorse non vengono aggiornate: come reimpostare la cache
 
 Il motore DSC memorizza nella cache le risorse implementate come modulo di PowerShell, per garantire maggiore efficienza.
 Tuttavia, ciò può provocare problemi quando si crea una risorsa e contemporaneamente la si testa, perché DSC carica la versione memorizzata nella cache fino a quando non viene riavviato il processo. Per fare in modo che DSC carichi la versione più recente, è necessario terminare in modo esplicito il processo che ospita il motore DSC.

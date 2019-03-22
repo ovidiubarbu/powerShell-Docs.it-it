@@ -2,12 +2,12 @@
 title: Comunicazione remota di PowerShell su SSH
 description: Comunicazione remota in PowerShell Core tramite SSH
 ms.date: 08/14/2018
-ms.openlocfilehash: b5c6bd70841e270c2c128601612c07af9d9aa6e4
-ms.sourcegitcommit: 548547b2d5fc73e726bb9fec6175d452a351d975
-ms.translationtype: MTE95
+ms.openlocfilehash: 1d7bcb69c7e784bf745cb5c2633106ea53f6226a
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53655294"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58056533"
 ---
 # <a name="powershell-remoting-over-ssh"></a>Comunicazione remota di PowerShell su SSH
 
@@ -30,7 +30,7 @@ Per creare una sessione remota, è necessario specificare il computer di destina
 
 ## <a name="general-setup-information"></a>Informazioni generali di installazione
 
-SSH deve essere installato in tutti i computer. Installare sia il client SSH (`ssh.exe`) sia il server (`sshd.exe`) in modo da poter comunicare in remoto da e verso i computer. OpenSSH per Windows è ora disponibile in Windows 10 build 1809 e Windows Server 2019. Per altre informazioni, vedere [OpenSSH per Windows](/windows-server/administration/openssh/openssh_overview). Per Linux, installare SSH (incluso il server sshd) nel modo appropriato per la piattaforma in uso. È necessario installare anche PowerShell Core da GitHub per ottenere la funzionalità di comunicazione remota SSH. Il server SSH deve essere configurato per creare un sottosistema SSH in modo da ospitare un processo PowerShell nel computer remoto. È anche necessario configurare l'autenticazione basata su password o su chiave.
+SSH deve essere installato in tutti i computer. Installare sia il client SSH (`ssh.exe`) sia il server (`sshd.exe`) in modo da poter comunicare in remoto da e verso i computer. OpenSSH per Windows è ora disponibile in Windows 10 build 1809 e Windows Server 2019. Per altre informazioni, vedere [OpenSSH in Windows](/windows-server/administration/openssh/openssh_overview). Per Linux, installare SSH (incluso il server sshd) nel modo appropriato per la piattaforma in uso. È necessario installare anche PowerShell Core da GitHub per ottenere la funzionalità di comunicazione remota SSH. Il server SSH deve essere configurato per creare un sottosistema SSH in modo da ospitare un processo PowerShell nel computer remoto. È anche necessario configurare l'autenticazione basata su password o su chiave.
 
 ## <a name="set-up-on-windows-machine"></a>Installazione in computer Windows
 
@@ -46,8 +46,8 @@ SSH deve essere installato in tutti i computer. Installare sia il client SSH (`s
    New-PSSession [-HostName] <string[]> [-Name <string[]>] [-UserName <string>] [-KeyFilePath <string>] [-SSHTransport] [<CommonParameters>]
    ```
 
-2. Installare l'ultima OpenSSH-Win32. Per istruzioni sull'installazione, vedere [installazione di OpenSSH](/windows-server/administration/openssh/openssh_install_firstuse).
-3. Modificare il `sshd_config` file si trova in `%ProgramData%\ssh`.
+2. Installare la versione più recente di OpenSSH Win32. Per le istruzioni di installazione, vedere [Installazione di OpenSSH](/windows-server/administration/openssh/openssh_install_firstuse).
+3. Modificare il file `sshd_config` in `$env:ProgramData\ssh`.
 
    - Verificare che l'autenticazione della password sia abilitata
 
@@ -314,6 +314,6 @@ Il comando sudo non funziona in una sessione remota verso computer Linux.
 
 [PowerShell Core per MacOS](../../install/installing-powershell-core-on-macos.md)
 
-[OpenSSH per Windows](/windows-server/administration/openssh/openssh_overview)
+[OpenSSH in Windows](/windows-server/administration/openssh/openssh_overview)
 
 [SSH per Ubuntu](https://help.ubuntu.com/lts/serverguide/openssh-server.html)

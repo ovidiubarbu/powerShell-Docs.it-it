@@ -2,12 +2,12 @@
 ms.date: 06/12/2017
 keywords: dsc,powershell,configurazione,installazione
 title: Uso di un server di report DSC
-ms.openlocfilehash: 8647f80c311ee49a5cc4d57360472386e01b044e
-ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
-ms.translationtype: MTE95
+ms.openlocfilehash: 73208477a74ff3c615d7d515fcad555beabe8f32
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53401789"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58059270"
 ---
 # <a name="using-a-dsc-report-server"></a>Uso di un server di report DSC
 
@@ -16,7 +16,8 @@ Si applica a: Windows PowerShell 5.0
 > [!IMPORTANT]
 > Il server di pull (funzionalità di Windows *servizio DSC*) è un componente supportato di Windows Server, tuttavia non si prevede di offrire nuove caratteristiche o funzionalità. È consigliabile avviare la transizione dei client gestiti ad [Automation DSC per Azure](/azure/automation/automation-dsc-getting-started) (include funzionalità superiori al server di pull in Windows Server) o a una delle soluzioni della community riportate [qui](pullserver.md#community-solutions-for-pull-service).
 >
-> **Nota** Il server di report descritto in questo argomento non è disponibile in PowerShell 4.0.
+> [!NOTE]
+> Il server di report descritto in questo argomento non è disponibile in PowerShell 4.0.
 
 È possibile configurare Gestione configurazione locale in un nodo per inviare report sullo stato della configurazione a un server di pull, su cui è quindi possibile eseguire query per recuperare i dati. Ogni volta che il nodo controlla e applica una configurazione, invia un report al server di report. Questi report vengono archiviati in un database nel server e possono essere recuperati chiamando il servizio Web di gestione dei report. Ogni report contiene informazioni come le configurazioni applicate e l'esito dell'applicazione, le risorse usate, eventuali errori generati e le ore di inizio e fine.
 
@@ -97,7 +98,7 @@ PullClientConfig
 
 ## <a name="getting-report-data"></a>Recupero dei dati dei report
 
-I report inviati al server di pull vengono immessi in un database nel server. I report sono disponibili tramite chiamate al servizio Web. Per recuperare i report per un nodo specifico, inviare una richiesta HTTP al servizio web nel formato seguente: `http://CONTOSO-REPORT:8080/PSDSCReportServer.svc/Nodes(AgentId='MyNodeAgentId')/Reports`
+I report inviati al server di pull vengono immessi in un database nel server. I report sono disponibili tramite chiamate al servizio Web. Per recuperare i report relativi a un nodo specifico, inviare una richiesta HTTP al servizio Web del report nel formato seguente: `http://CONTOSO-REPORT:8080/PSDSCReportServer.svc/Nodes(AgentId='MyNodeAgentId')/Reports`
 dove `MyNodeAgentId` è il valore di AgentId del nodo per cui ottenere i report. È possibile ottenere il valore di AgentID per un nodo chiamando [Get-DscLocalConfigurationManager](/powershell/module/PSDesiredStateConfiguration/Get-DscLocalConfigurationManager) in tale nodo.
 
 I report vengono restituiti come matrice di oggetti JSON.
