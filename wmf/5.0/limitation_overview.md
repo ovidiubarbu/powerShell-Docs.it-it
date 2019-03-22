@@ -1,115 +1,115 @@
 ---
 ms.date: 06/12/2017
 keywords: wmf,powershell,installazione
-ms.openlocfilehash: 4eb2f0bac4f2169a9a06d80cb4fa214a09cdfa86
-ms.sourcegitcommit: 8b076ebde7ef971d7465bab834a3c2a32471ef6f
+ms.openlocfilehash: 3d74217621d00dfd68cad1c45d187a9c2ffb9980
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37892985"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58054375"
 ---
-# <a name="known-issues-and-limitations"></a><span data-ttu-id="99d8a-102">Limitazioni e problemi noti</span><span class="sxs-lookup"><span data-stu-id="99d8a-102">Known Issues and Limitations</span></span>
+# <a name="known-issues-and-limitations"></a><span data-ttu-id="f1107-102">Limitazioni e problemi noti</span><span class="sxs-lookup"><span data-stu-id="f1107-102">Known Issues and Limitations</span></span>
 
-## <a name="powershell-shortcuts-are-broken-when-used-for-the-first-time"></a><span data-ttu-id="99d8a-103">I collegamenti per PowerShell non funzionano la prima volta</span><span class="sxs-lookup"><span data-stu-id="99d8a-103">PowerShell Shortcuts are broken when used for the first time</span></span>
+## <a name="powershell-shortcuts-are-broken-when-used-for-the-first-time"></a><span data-ttu-id="f1107-103">I collegamenti per PowerShell non funzionano la prima volta</span><span class="sxs-lookup"><span data-stu-id="f1107-103">PowerShell Shortcuts are broken when used for the first time</span></span>
 
-<span data-ttu-id="99d8a-104">**Soluzione:** eseguire una delle operazioni seguenti:</span><span class="sxs-lookup"><span data-stu-id="99d8a-104">**Resolution:** Perform one of the following actions:</span></span>
+<span data-ttu-id="f1107-104">**Soluzione:** Eseguire una delle azioni seguenti:</span><span class="sxs-lookup"><span data-stu-id="f1107-104">**Resolution:** Perform one of the following actions:</span></span>
 
-1. <span data-ttu-id="99d8a-105">Fare clic con il pulsante destro del mouse sul collegamento di PowerShell.</span><span class="sxs-lookup"><span data-stu-id="99d8a-105">Right click on the PowerShell shortcut.</span></span> <span data-ttu-id="99d8a-106">Selezionare "Windows PowerShell" per avviare il programma in modalità senza privilegi elevati.</span><span class="sxs-lookup"><span data-stu-id="99d8a-106">Select “Windows PowerShell” to launch in a non-elevated mode.</span></span>
-2. <span data-ttu-id="99d8a-107">Fare clic con il pulsante destro del mouse sul collegamento di PowerShell.</span><span class="sxs-lookup"><span data-stu-id="99d8a-107">Right click on the PowerShell shortcut.</span></span> <span data-ttu-id="99d8a-108">Fare clic con il pulsante destro del mouse su "Windows PowerShell" e selezionare "Esegui come amministratore" per avviare il programma in modalità con privilegi elevati.</span><span class="sxs-lookup"><span data-stu-id="99d8a-108">Right click on “Windows PowerShell” and select “Run As Administrator” to launch in an elevated mode.</span></span>
+1. <span data-ttu-id="f1107-105">Fare clic con il pulsante destro del mouse sul collegamento di PowerShell.</span><span class="sxs-lookup"><span data-stu-id="f1107-105">Right click on the PowerShell shortcut.</span></span> <span data-ttu-id="f1107-106">Selezionare "Windows PowerShell" per avviare il programma in modalità senza privilegi elevati.</span><span class="sxs-lookup"><span data-stu-id="f1107-106">Select “Windows PowerShell” to launch in a non-elevated mode.</span></span>
+2. <span data-ttu-id="f1107-107">Fare clic con il pulsante destro del mouse sul collegamento di PowerShell.</span><span class="sxs-lookup"><span data-stu-id="f1107-107">Right click on the PowerShell shortcut.</span></span> <span data-ttu-id="f1107-108">Fare clic con il pulsante destro del mouse su "Windows PowerShell" e selezionare "Esegui come amministratore" per avviare il programma in modalità con privilegi elevati.</span><span class="sxs-lookup"><span data-stu-id="f1107-108">Right click on “Windows PowerShell” and select “Run As Administrator” to launch in an elevated mode.</span></span>
 
-<span data-ttu-id="99d8a-109">Dopo aver eseguito una delle azioni precedenti, i collegamenti per PowerShell funzioneranno.</span><span class="sxs-lookup"><span data-stu-id="99d8a-109">Once you have performed either of the above actions, the PowerShell shortcuts will work.</span></span> <span data-ttu-id="99d8a-110">Queste azioni devono essere eseguite una sola volta.</span><span class="sxs-lookup"><span data-stu-id="99d8a-110">These actions need to be performed only once.</span></span>
+<span data-ttu-id="f1107-109">Dopo aver eseguito una delle azioni precedenti, i collegamenti per PowerShell funzioneranno.</span><span class="sxs-lookup"><span data-stu-id="f1107-109">Once you have performed either of the above actions, the PowerShell shortcuts will work.</span></span> <span data-ttu-id="f1107-110">Queste azioni devono essere eseguite una sola volta.</span><span class="sxs-lookup"><span data-stu-id="f1107-110">These actions need to be performed only once.</span></span>
 
-## <a name="powershell-modules-and-dsc-resources-report-errors-about-executionpolicy-on-windows-7"></a><span data-ttu-id="99d8a-111">I moduli di PowerShell e le risorse DSC segnalano errori per ExecutionPolicy in Windows 7</span><span class="sxs-lookup"><span data-stu-id="99d8a-111">PowerShell Modules and DSC Resources report errors about ExecutionPolicy on Windows 7</span></span>
+## <a name="powershell-modules-and-dsc-resources-report-errors-about-executionpolicy-on-windows-7"></a><span data-ttu-id="f1107-111">I moduli di PowerShell e le risorse DSC segnalano errori per ExecutionPolicy in Windows 7</span><span class="sxs-lookup"><span data-stu-id="f1107-111">PowerShell Modules and DSC Resources report errors about ExecutionPolicy on Windows 7</span></span>
 
-<span data-ttu-id="99d8a-112">In Windows 7 l'uso dei moduli di PowerShell e delle risorse DSC potrebbe causare la segnalazione di errori per ExecutionPolicy.</span><span class="sxs-lookup"><span data-stu-id="99d8a-112">On Windows 7, the use of PowerShell modules and DSC resources may result in errors reported about ExecutionPolicy.</span></span>
+<span data-ttu-id="f1107-112">In Windows 7 l'uso dei moduli di PowerShell e delle risorse DSC potrebbe causare la segnalazione di errori per ExecutionPolicy.</span><span class="sxs-lookup"><span data-stu-id="f1107-112">On Windows 7, the use of PowerShell modules and DSC resources may result in errors reported about ExecutionPolicy.</span></span>
 
-<span data-ttu-id="99d8a-113">**Soluzione:** impostare ExecutionPolicy su RemoteSigned eseguendo il comando seguente in una sessione di PowerShell con privilegi elevata (Esegui come amministratore):</span><span class="sxs-lookup"><span data-stu-id="99d8a-113">**Resolution:** Set the ExecutionPolicy to RemoteSigned by running the following command in an elevated PowerShell session (Run as Administrator):</span></span>
+<span data-ttu-id="f1107-113">**Soluzione:** impostare ExecutionPolicy su RemoteSigned eseguendo il comando seguente in una sessione di PowerShell con privilegi elevati (Esegui come amministratore):</span><span class="sxs-lookup"><span data-stu-id="f1107-113">**Resolution:** Set the ExecutionPolicy to RemoteSigned by running the following command in an elevated PowerShell session (Run as Administrator):</span></span>
 
 ```powershell
 Set-ExecutionPolicy RemoteSigned
 ```
 
-## <a name="connecting-to-an-old-remote-exchange-endpoint-causes-a-crash"></a><span data-ttu-id="99d8a-114">La connessione a un endpoint di Exchange remoto precedente causa un arresto anomalo</span><span class="sxs-lookup"><span data-stu-id="99d8a-114">Connecting to an old remote Exchange endpoint causes a crash</span></span>
+## <a name="connecting-to-an-old-remote-exchange-endpoint-causes-a-crash"></a><span data-ttu-id="f1107-114">La connessione a un endpoint di Exchange remoto precedente causa un arresto anomalo</span><span class="sxs-lookup"><span data-stu-id="f1107-114">Connecting to an old remote Exchange endpoint causes a crash</span></span>
 
-<span data-ttu-id="99d8a-115">L'endpoint di Exchange precedente reindirizza a un nuovo endpoint.</span><span class="sxs-lookup"><span data-stu-id="99d8a-115">The old Exchange endpoint redirects to a new endpoint.</span></span> <span data-ttu-id="99d8a-116">È presente un bug nella logica di reindirizzamento che causa un arresto anomalo.</span><span class="sxs-lookup"><span data-stu-id="99d8a-116">There is a bug in the redirection logic that results in a crash.</span></span>
+<span data-ttu-id="f1107-115">L'endpoint di Exchange precedente reindirizza a un nuovo endpoint.</span><span class="sxs-lookup"><span data-stu-id="f1107-115">The old Exchange endpoint redirects to a new endpoint.</span></span> <span data-ttu-id="f1107-116">È presente un bug nella logica di reindirizzamento che causa un arresto anomalo.</span><span class="sxs-lookup"><span data-stu-id="f1107-116">There is a bug in the redirection logic that results in a crash.</span></span>
 
-<span data-ttu-id="99d8a-117">**Soluzione:** connettersi direttamente al nuovo endpoint.</span><span class="sxs-lookup"><span data-stu-id="99d8a-117">**Resolution:** Connect directly to the new endpoint.</span></span>
+<span data-ttu-id="f1107-117">**Soluzione:** connettersi direttamente al nuovo endpoint.</span><span class="sxs-lookup"><span data-stu-id="f1107-117">**Resolution:** Connect directly to the new endpoint.</span></span>
 
-## <a name="software-inventory-logging-feature-is-erroneously-stopped-after-wmf-50-installation-on-windows-server-2012-r2"></a><span data-ttu-id="99d8a-118">La funzionalità Registrazione inventario software viene arrestata erroneamente dopo l'installazione di WMF 5.0 in Windows Server 2012 R2</span><span class="sxs-lookup"><span data-stu-id="99d8a-118">Software Inventory Logging feature is erroneously stopped after WMF 5.0 installation on Windows Server 2012 R2</span></span>
+## <a name="software-inventory-logging-feature-is-erroneously-stopped-after-wmf-50-installation-on-windows-server-2012-r2"></a><span data-ttu-id="f1107-118">La funzionalità Registrazione inventario software viene arrestata erroneamente dopo l'installazione di WMF 5.0 in Windows Server 2012 R2</span><span class="sxs-lookup"><span data-stu-id="f1107-118">Software Inventory Logging feature is erroneously stopped after WMF 5.0 installation on Windows Server 2012 R2</span></span>
 
-<span data-ttu-id="99d8a-119">Quando si installa WMF 5.0 in un computer Windows Server 2012 R2 in cui è già in esecuzione Registrazione inventario software, questa funzionalità viene arrestata erroneamente dopo l'installazione.</span><span class="sxs-lookup"><span data-stu-id="99d8a-119">When installing WMF 5.0 on a Windows Server 2012 R2 that is already running SIL, the Software Inventory Logging feature is erroneously stopped after installation.</span></span>
+<span data-ttu-id="f1107-119">Quando si installa WMF 5.0 in un computer Windows Server 2012 R2 in cui è già in esecuzione Registrazione inventario software, questa funzionalità viene arrestata erroneamente dopo l'installazione.</span><span class="sxs-lookup"><span data-stu-id="f1107-119">When installing WMF 5.0 on a Windows Server 2012 R2 that is already running SIL, the Software Inventory Logging feature is erroneously stopped after installation.</span></span>
 
-<span data-ttu-id="99d8a-120">**Soluzione:** eseguire il cmdlet Start-SilLogging una volta dopo l'installazione di WMF, perché il processo di installazione arresta erroneamente la funzionalità Registrazione inventario software.</span><span class="sxs-lookup"><span data-stu-id="99d8a-120">**Resolution:** Run the Start-SilLogging cmdlet once after the WMF installation, as the installation process will errantly stop the Software Inventory Logging feature.</span></span>
+<span data-ttu-id="f1107-120">**Soluzione:** eseguire il cmdlet Start-SilLogging una volta dopo l'installazione di WMF, perché il processo di installazione arresta erroneamente la funzionalità Registrazione inventario software.</span><span class="sxs-lookup"><span data-stu-id="f1107-120">**Resolution:** Run the Start-SilLogging cmdlet once after the WMF installation, as the installation process will errantly stop the Software Inventory Logging feature.</span></span>
 
-## <a name="get-childitem-does-not-work-if--literalpath-and--recurse-are-used-together"></a><span data-ttu-id="99d8a-121">`Get-ChildItem` non funziona se si usano insieme -LiteralPath e -Recurse</span><span class="sxs-lookup"><span data-stu-id="99d8a-121">`Get-ChildItem` does not work if -LiteralPath and -Recurse are used together</span></span>
+## <a name="get-childitem-does-not-work-if--literalpath-and--recurse-are-used-together"></a><span data-ttu-id="f1107-121">`Get-ChildItem` non funziona se si usano insieme -LiteralPath e -Recurse</span><span class="sxs-lookup"><span data-stu-id="f1107-121">`Get-ChildItem` does not work if -LiteralPath and -Recurse are used together</span></span>
 
-<span data-ttu-id="99d8a-122">Se un nome di directory contiene un carattere jolly non valido, `Get-ChildItem` non produrrà i risultati previsti quando si usano insieme entrambe le opzioni -LiteralPath e -Recurse.</span><span class="sxs-lookup"><span data-stu-id="99d8a-122">If a directory name contains an invalid wildcard character, then `Get-ChildItem` will not produce expected results when both -LiteralPath and -Recurse are used together.</span></span>
+<span data-ttu-id="f1107-122">Se un nome di directory contiene un carattere jolly non valido, `Get-ChildItem` non produrrà i risultati previsti quando si usano insieme entrambe le opzioni -LiteralPath e -Recurse.</span><span class="sxs-lookup"><span data-stu-id="f1107-122">If a directory name contains an invalid wildcard character, then `Get-ChildItem` will not produce expected results when both -LiteralPath and -Recurse are used together.</span></span>
 
-<span data-ttu-id="99d8a-123">**Soluzione:** non è ideale, ma la soluzione attuale consiste nell'implementare la ricorsione nello script anziché affidarsi al cmdlet.</span><span class="sxs-lookup"><span data-stu-id="99d8a-123">**Resolution:** Not ideal, but current workaround is to implement recursion in the script rather than rely on the cmdlet.</span></span>
+<span data-ttu-id="f1107-123">**Soluzione:** non è ideale, ma la soluzione attuale consiste nell'implementare la ricorsione nello script anziché affidarsi al cmdlet.</span><span class="sxs-lookup"><span data-stu-id="f1107-123">**Resolution:** Not ideal, but current workaround is to implement recursion in the script rather than rely on the cmdlet.</span></span>
 
-## <a name="sysprep-fails-after-wmf-50-installation"></a><span data-ttu-id="99d8a-124">Sysprep smette di funzionare dopo l'installazione di WMF 5.0</span><span class="sxs-lookup"><span data-stu-id="99d8a-124">Sysprep fails after WMF 5.0 installation</span></span>
+## <a name="sysprep-fails-after-wmf-50-installation"></a><span data-ttu-id="f1107-124">Sysprep smette di funzionare dopo l'installazione di WMF 5.0</span><span class="sxs-lookup"><span data-stu-id="f1107-124">Sysprep fails after WMF 5.0 installation</span></span>
 
-<span data-ttu-id="99d8a-125">Esistono due possibili soluzioni al problema in base alla versione di Windows Server in esecuzione.</span><span class="sxs-lookup"><span data-stu-id="99d8a-125">There are two workarounds for this issue depending on the version of Windows Server you are running.</span></span>
+<span data-ttu-id="f1107-125">Esistono due possibili soluzioni al problema in base alla versione di Windows Server in esecuzione.</span><span class="sxs-lookup"><span data-stu-id="f1107-125">There are two workarounds for this issue depending on the version of Windows Server you are running.</span></span>
 
-<span data-ttu-id="99d8a-126">**Soluzione:**</span><span class="sxs-lookup"><span data-stu-id="99d8a-126">**Resolution:**</span></span>
+<span data-ttu-id="f1107-126">**Soluzione:**</span><span class="sxs-lookup"><span data-stu-id="f1107-126">**Resolution:**</span></span>
 
-- <span data-ttu-id="99d8a-127">Per i sistemi che eseguono **Windows Server 2008 R2**</span><span class="sxs-lookup"><span data-stu-id="99d8a-127">For systems running **Windows Server 2008 R2**</span></span>
-  1. <span data-ttu-id="99d8a-128">Aprire PowerShell come amministratore</span><span class="sxs-lookup"><span data-stu-id="99d8a-128">Open Powershell as an administrator</span></span>
-  2. <span data-ttu-id="99d8a-129">Eseguire il comando seguente</span><span class="sxs-lookup"><span data-stu-id="99d8a-129">Run the following command</span></span>
+- <span data-ttu-id="f1107-127">Per i sistemi che eseguono **Windows Server 2008 R2**</span><span class="sxs-lookup"><span data-stu-id="f1107-127">For systems running **Windows Server 2008 R2**</span></span>
+  1. <span data-ttu-id="f1107-128">Aprire PowerShell con un account amministratore</span><span class="sxs-lookup"><span data-stu-id="f1107-128">Open PowerShell as an administrator</span></span>
+  2. <span data-ttu-id="f1107-129">Eseguire il comando seguente</span><span class="sxs-lookup"><span data-stu-id="f1107-129">Run the following command</span></span>
 
      ```powershell
      Set-SilLogging –TargetUri https://BlankTarget –CertificateThumbprint 0123456789
      ```
 
-  3. <span data-ttu-id="99d8a-130">Eseguire il comando e ignorare l'errore, perché è previsto.</span><span class="sxs-lookup"><span data-stu-id="99d8a-130">Run the command and ignore the error, as they are expected.</span></span>
+  3. <span data-ttu-id="f1107-130">Eseguire il comando e ignorare l'errore, perché è previsto.</span><span class="sxs-lookup"><span data-stu-id="f1107-130">Run the command and ignore the error, as they are expected.</span></span>
 
      ```powershell
      Publish-SilData
      ```
 
-  4. <span data-ttu-id="99d8a-131">Eliminare i file nella directory \Windows\System32\Logfiles\SIL\\</span><span class="sxs-lookup"><span data-stu-id="99d8a-131">Delete the files in  \Windows\System32\Logfiles\SIL\ directory</span></span>
+  4. <span data-ttu-id="f1107-131">Eliminare i file nella directory \Windows\System32\Logfiles\SIL\\</span><span class="sxs-lookup"><span data-stu-id="f1107-131">Delete the files in  \Windows\System32\Logfiles\SIL\ directory</span></span>
 
      ```powershell
      Remove-Item -Recurse $env:SystemRoot\System32\Logfiles\SIL\
      ```
 
-  5. <span data-ttu-id="99d8a-132">Installare tutti gli aggiornamenti Windows importanti disponibili e iniziare a usare Sysyprep normalmente.</span><span class="sxs-lookup"><span data-stu-id="99d8a-132">Install all available important Windows Updates, and begin Sysyprep operation normally.</span></span>
+  5. <span data-ttu-id="f1107-132">Installare tutti gli aggiornamenti Windows importanti disponibili e iniziare a usare Sysyprep normalmente.</span><span class="sxs-lookup"><span data-stu-id="f1107-132">Install all available important Windows Updates, and begin Sysyprep operation normally.</span></span>
 
-- <span data-ttu-id="99d8a-133">Per i sistemi che eseguono **Windows Server 2012**</span><span class="sxs-lookup"><span data-stu-id="99d8a-133">For systems running **Windows Server 2012**</span></span>
-  1. <span data-ttu-id="99d8a-134">Dopo l'installazione di WMF 5.0 nel server in cui usare Sysprep, eseguire l'accesso come amministratore.</span><span class="sxs-lookup"><span data-stu-id="99d8a-134">After installing WMF 5.0 on the server to be Sysprep’d, login as administrator.</span></span>
-  2. <span data-ttu-id="99d8a-135">Copiare Generize.xml dalla directory \Windows\System32\Sysprep\ActionFiles\ in un percorso esterno alla directory Windows, ad esempio C:\.</span><span class="sxs-lookup"><span data-stu-id="99d8a-135">Copy Generize.xml from directory \Windows\System32\Sysprep\ActionFiles\ to a location outside of the Windows directory, C:\ for example.</span></span>
-  3. <span data-ttu-id="99d8a-136">Aprire la copia Generalize.xml con il Blocco note.</span><span class="sxs-lookup"><span data-stu-id="99d8a-136">Open your Generalize.xml copy with notepad.</span></span>
-  4. <span data-ttu-id="99d8a-137">Trovare e rimuovere il testo seguente, di cui è necessario eliminare ogni istanza (si troveranno verso la fine del documento).</span><span class="sxs-lookup"><span data-stu-id="99d8a-137">Find and remove the following text, one instance of each needs to be deleted (they will be near the end of the document).</span></span>
+- <span data-ttu-id="f1107-133">Per i sistemi che eseguono **Windows Server 2012**</span><span class="sxs-lookup"><span data-stu-id="f1107-133">For systems running **Windows Server 2012**</span></span>
+  1. <span data-ttu-id="f1107-134">Dopo l'installazione di WMF 5.0 nel server in cui usare Sysprep, eseguire l'accesso come amministratore.</span><span class="sxs-lookup"><span data-stu-id="f1107-134">After installing WMF 5.0 on the server to be Sysprep’d, login as administrator.</span></span>
+  2. <span data-ttu-id="f1107-135">Copiare Generize.xml dalla directory \Windows\System32\Sysprep\ActionFiles\ in un percorso esterno alla directory Windows, ad esempio C:\.</span><span class="sxs-lookup"><span data-stu-id="f1107-135">Copy Generize.xml from directory \Windows\System32\Sysprep\ActionFiles\ to a location outside of the Windows directory, C:\ for example.</span></span>
+  3. <span data-ttu-id="f1107-136">Aprire la copia Generalize.xml con il Blocco note.</span><span class="sxs-lookup"><span data-stu-id="f1107-136">Open your Generalize.xml copy with notepad.</span></span>
+  4. <span data-ttu-id="f1107-137">Trovare e rimuovere il testo seguente, di cui è necessario eliminare ogni istanza (si troveranno verso la fine del documento).</span><span class="sxs-lookup"><span data-stu-id="f1107-137">Find and remove the following text, one instance of each needs to be deleted (they will be near the end of the document).</span></span>
 
      ```xml
      <sysprepOrder order="0x3200"></sysprepOrder>
      <sysprepOrder order="0x3300"></sysprepOrder>
      ```
 
-  5. <span data-ttu-id="99d8a-138">Salvare la copia modificata del file Generalize.xml e chiuderlo.</span><span class="sxs-lookup"><span data-stu-id="99d8a-138">Save the edited copy of Generalize.xml and close the file.</span></span>
-  6. <span data-ttu-id="99d8a-139">Aprire una finestra del prompt dei comandi come amministratore</span><span class="sxs-lookup"><span data-stu-id="99d8a-139">Open a command prompt as administrator</span></span>
-  7. <span data-ttu-id="99d8a-140">Eseguire il comando seguente per assumere la proprietà del file Generalize.xml nella cartella system32:</span><span class="sxs-lookup"><span data-stu-id="99d8a-140">Run the following command to take ownership of the Generalize.xml file in system32 folder:</span></span>
+  5. <span data-ttu-id="f1107-138">Salvare la copia modificata del file Generalize.xml e chiuderlo.</span><span class="sxs-lookup"><span data-stu-id="f1107-138">Save the edited copy of Generalize.xml and close the file.</span></span>
+  6. <span data-ttu-id="f1107-139">Aprire una finestra del prompt dei comandi come amministratore</span><span class="sxs-lookup"><span data-stu-id="f1107-139">Open a command prompt as administrator</span></span>
+  7. <span data-ttu-id="f1107-140">Eseguire il comando seguente per assumere la proprietà del file Generalize.xml nella cartella system32:</span><span class="sxs-lookup"><span data-stu-id="f1107-140">Run the following command to take ownership of the Generalize.xml file in system32 folder:</span></span>
 
      ```powershell
      Takeown /f C:\Windows\System32\Sysprep\ActionFiles\Generalize.xml
      ```
 
-  8. <span data-ttu-id="99d8a-141">Eseguire il comando seguente per impostare le autorizzazioni appropriate sul file:</span><span class="sxs-lookup"><span data-stu-id="99d8a-141">Run the following command to set appropriate permission on the file:</span></span>
+  8. <span data-ttu-id="f1107-141">Eseguire il comando seguente per impostare le autorizzazioni appropriate sul file:</span><span class="sxs-lookup"><span data-stu-id="f1107-141">Run the following command to set appropriate permission on the file:</span></span>
 
      ```powershell
      Cacls C:\Windows\System32\ Sysprep\ActionFiles\Generalize.xml /G `<AdministratorUserName>`:F
      ```
 
-     - <span data-ttu-id="99d8a-142">Rispondere Sì al prompt di conferma.</span><span class="sxs-lookup"><span data-stu-id="99d8a-142">Answer Yes at the prompt for confirmation.</span></span>
-     - <span data-ttu-id="99d8a-143">Si noti che `<AdministratorUserName>` deve essere sostituito dal nome utente che è l'amministratore nel computer.</span><span class="sxs-lookup"><span data-stu-id="99d8a-143">Note that `<AdministratorUserName>` should be replaced by the username who is administrator on the machine.</span></span> <span data-ttu-id="99d8a-144">Ad esempio, "Amministratore".</span><span class="sxs-lookup"><span data-stu-id="99d8a-144">For example, "Administrator".</span></span>
+     - <span data-ttu-id="f1107-142">Rispondere Sì al prompt di conferma.</span><span class="sxs-lookup"><span data-stu-id="f1107-142">Answer Yes at the prompt for confirmation.</span></span>
+     - <span data-ttu-id="f1107-143">Si noti che `<AdministratorUserName>` deve essere sostituito dal nome utente che è l'amministratore nel computer.</span><span class="sxs-lookup"><span data-stu-id="f1107-143">Note that `<AdministratorUserName>` should be replaced by the username who is administrator on the machine.</span></span> <span data-ttu-id="f1107-144">Ad esempio, "Amministratore".</span><span class="sxs-lookup"><span data-stu-id="f1107-144">For example, "Administrator".</span></span>
 
-  9. <span data-ttu-id="99d8a-145">Copiare il file modificato e salvato nella directory Sysprep usando il comando seguente:</span><span class="sxs-lookup"><span data-stu-id="99d8a-145">Copy the file you edited and saved over to the Sysprep directory using the following command:</span></span>
+  9. <span data-ttu-id="f1107-145">Copiare il file modificato e salvato nella directory Sysprep usando il comando seguente:</span><span class="sxs-lookup"><span data-stu-id="f1107-145">Copy the file you edited and saved over to the Sysprep directory using the following command:</span></span>
 
      ```powershell
      xcopy C:\Generalize.xml C:\Windows\System32\Sysprep\ActionFiles\Generalize.xml
      ```
 
-     - <span data-ttu-id="99d8a-146">Rispondere Sì per sovrascrivere (se non si riceve alcuna richiesta di conferma della sovrascrittura, controllare il percorso specificato).</span><span class="sxs-lookup"><span data-stu-id="99d8a-146">Answer Yes to overwrite (note that if there is no prompt to overwrite, double check the path entered).</span></span>
-     - <span data-ttu-id="99d8a-147">Si presuppone che la versione modificata del file Generalize.xml sia stata copiata in C:\.</span><span class="sxs-lookup"><span data-stu-id="99d8a-147">Assumes your edited copy of Generalize.xml was copied to C:\ .</span></span>
+     - <span data-ttu-id="f1107-146">Rispondere Sì per sovrascrivere (se non si riceve alcuna richiesta di conferma della sovrascrittura, controllare il percorso specificato).</span><span class="sxs-lookup"><span data-stu-id="f1107-146">Answer Yes to overwrite (note that if there is no prompt to overwrite, double check the path entered).</span></span>
+     - <span data-ttu-id="f1107-147">Si presuppone che la versione modificata del file Generalize.xml sia stata copiata in C:\.</span><span class="sxs-lookup"><span data-stu-id="f1107-147">Assumes your edited copy of Generalize.xml was copied to C:\ .</span></span>
 
-  10. <span data-ttu-id="99d8a-148">Il file Generalize.xml è ora aggiornato con la soluzione alternativa.</span><span class="sxs-lookup"><span data-stu-id="99d8a-148">Generalize.xml is now updated with the workaround.</span></span> <span data-ttu-id="99d8a-149">Eseguire Sysprep con l'opzione generalize abilitata.</span><span class="sxs-lookup"><span data-stu-id="99d8a-149">Please run Sysprep with the generalize option enabled.</span></span>
+  10. <span data-ttu-id="f1107-148">Il file Generalize.xml è ora aggiornato con la soluzione alternativa.</span><span class="sxs-lookup"><span data-stu-id="f1107-148">Generalize.xml is now updated with the workaround.</span></span> <span data-ttu-id="f1107-149">Eseguire Sysprep con l'opzione generalize abilitata.</span><span class="sxs-lookup"><span data-stu-id="f1107-149">Please run Sysprep with the generalize option enabled.</span></span>

@@ -2,25 +2,26 @@
 ms.date: 06/12/2017
 keywords: dsc,powershell,configurazione,installazione
 title: Configurazione di un client di pull DSC
-ms.openlocfilehash: b7cd6dc0087eb8368c5467df4c3c7266ed704451
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
-ms.translationtype: MTE95
+ms.openlocfilehash: 54c68ac26e5388260e252ce01418170e26ddecde
+ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55681862"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58054255"
 ---
-# <a name="setting-up-a-dsc-pull-client"></a><span data-ttu-id="d2cd1-103">Configurazione di un client di pull DSC</span><span class="sxs-lookup"><span data-stu-id="d2cd1-103">Setting up a DSC pull client</span></span>
+# <a name="setting-up-a-dsc-pull-client"></a><span data-ttu-id="46b18-103">Configurazione di un client di pull DSC</span><span class="sxs-lookup"><span data-stu-id="46b18-103">Setting up a DSC pull client</span></span>
 
-> <span data-ttu-id="d2cd1-104">Si applica a: Windows PowerShell 4.0, Windows PowerShell 5.0</span><span class="sxs-lookup"><span data-stu-id="d2cd1-104">Applies To: Windows PowerShell 4.0, Windows PowerShell 5.0</span></span>
+> <span data-ttu-id="46b18-104">Si applica a: Windows PowerShell 4.0, Windows PowerShell 5.0</span><span class="sxs-lookup"><span data-stu-id="46b18-104">Applies To: Windows PowerShell 4.0, Windows PowerShell 5.0</span></span>
 
 > [!IMPORTANT]
-> <span data-ttu-id="d2cd1-105">Il server di pull (funzionalità di Windows *servizio DSC*) è un componente supportato di Windows Server, tuttavia non si prevede di offrire nuove caratteristiche o funzionalità.</span><span class="sxs-lookup"><span data-stu-id="d2cd1-105">The Pull Server (Windows Feature *DSC-Service*) is a supported component of Windows Server however there are no plans to offer new features or capabilities.</span></span> <span data-ttu-id="d2cd1-106">È consigliabile avviare la transizione dei client gestiti ad [Automation DSC per Azure](/azure/automation/automation-dsc-getting-started) (include funzionalità superiori al server di pull in Windows Server) o a una delle soluzioni della community riportate [qui](pullserver.md#community-solutions-for-pull-service).</span><span class="sxs-lookup"><span data-stu-id="d2cd1-106">It is recommended to begin transitioning managed clients to [Azure Automation DSC](/azure/automation/automation-dsc-getting-started) (includes features beyond Pull Server on Windows Server) or one of the community solutions listed [here](pullserver.md#community-solutions-for-pull-service).</span></span>
+> <span data-ttu-id="46b18-105">Il server di pull (funzionalità di Windows *servizio DSC*) è un componente supportato di Windows Server, tuttavia non si prevede di offrire nuove caratteristiche o funzionalità.</span><span class="sxs-lookup"><span data-stu-id="46b18-105">The Pull Server (Windows Feature *DSC-Service*) is a supported component of Windows Server however there are no plans to offer new features or capabilities.</span></span> <span data-ttu-id="46b18-106">È consigliabile avviare la transizione dei client gestiti ad [Automation DSC per Azure](/azure/automation/automation-dsc-getting-started) (include funzionalità superiori al server di pull in Windows Server) o a una delle soluzioni della community riportate [qui](pullserver.md#community-solutions-for-pull-service).</span><span class="sxs-lookup"><span data-stu-id="46b18-106">It is recommended to begin transitioning managed clients to [Azure Automation DSC](/azure/automation/automation-dsc-getting-started) (includes features beyond Pull Server on Windows Server) or one of the community solutions listed [here](pullserver.md#community-solutions-for-pull-service).</span></span>
 
-<span data-ttu-id="d2cd1-107">Per ogni nodo di destinazione è necessario specificare che venga usata la modalità pull e fornire l'URL o il percorso di file per contattare il server di pull da cui ottenere le configurazioni e le risorse, oltre alla posizione in cui inviare i dati di report.</span><span class="sxs-lookup"><span data-stu-id="d2cd1-107">Each target node has to be told to use pull mode and given the URL or file location where it can contact the pull server to get configurations and resources, and where it should send report data.</span></span>
+<span data-ttu-id="46b18-107">Per ogni nodo di destinazione è necessario specificare che venga usata la modalità pull e fornire l'URL o il percorso di file per contattare il server di pull da cui ottenere le configurazioni e le risorse, oltre alla posizione in cui inviare i dati di report.</span><span class="sxs-lookup"><span data-stu-id="46b18-107">Each target node has to be told to use pull mode and given the URL or file location where it can contact the pull server to get configurations and resources, and where it should send report data.</span></span>
 
-<span data-ttu-id="d2cd1-108">Gli argomenti seguenti illustrano come configurare i client di pull:</span><span class="sxs-lookup"><span data-stu-id="d2cd1-108">The following topics explain how to set up pull clients:</span></span>
+<span data-ttu-id="46b18-108">Gli argomenti seguenti illustrano come configurare i client di pull:</span><span class="sxs-lookup"><span data-stu-id="46b18-108">The following topics explain how to set up pull clients:</span></span>
 
-* [<span data-ttu-id="d2cd1-109">Configurazione di un client di pull usando nomi di configurazione</span><span class="sxs-lookup"><span data-stu-id="d2cd1-109">Setting up a pull client using configuration names</span></span>](pullClientConfigNames.md)
-* [<span data-ttu-id="d2cd1-110">Configurazione di un client di pull usando un ID configurazione</span><span class="sxs-lookup"><span data-stu-id="d2cd1-110">Setting up a pull client using configuration ID</span></span>](pullClientConfigID.md)
+* [<span data-ttu-id="46b18-109">Configurazione di un client di pull usando nomi di configurazione</span><span class="sxs-lookup"><span data-stu-id="46b18-109">Setting up a pull client using configuration names</span></span>](pullClientConfigNames.md)
+* [<span data-ttu-id="46b18-110">Configurazione di un client di pull usando un ID configurazione</span><span class="sxs-lookup"><span data-stu-id="46b18-110">Setting up a pull client using configuration ID</span></span>](pullClientConfigID.md)
 
-> <span data-ttu-id="d2cd1-111">**Nota**: Questi argomenti si applicano a PowerShell 5.0.</span><span class="sxs-lookup"><span data-stu-id="d2cd1-111">**Note**: These topics apply to PowerShell 5.0.</span></span> <span data-ttu-id="d2cd1-112">Per configurare un client di pull in PowerShell 4.0, vedere [Configurazione di un client di pull usando un ID configurazione in PowerShell 4.0](pullClientConfigID4.md).</span><span class="sxs-lookup"><span data-stu-id="d2cd1-112">To set up a pull client in PowerShell 4.0, see [Setting up a pull client using configuration ID in PowerShell 4.0](pullClientConfigID4.md).</span></span>
+> [!NOTE]
+> <span data-ttu-id="46b18-111">Questi argomenti si applicano a PowerShell 5.0.</span><span class="sxs-lookup"><span data-stu-id="46b18-111">These topics apply to PowerShell 5.0.</span></span> <span data-ttu-id="46b18-112">Per configurare un client di pull in PowerShell 4.0, vedere [Configurazione di un client di pull usando un ID configurazione in PowerShell 4.0](pullClientConfigID4.md).</span><span class="sxs-lookup"><span data-stu-id="46b18-112">To set up a pull client in PowerShell 4.0, see [Setting up a pull client using configuration ID in PowerShell 4.0](pullClientConfigID4.md).</span></span>
