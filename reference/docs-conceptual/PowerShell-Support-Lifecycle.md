@@ -2,24 +2,26 @@
 title: Ciclo di vita del supporto di PowerShell Core
 description: Criteri che disciplinano il supporto per PowerShell Core
 ms.date: 08/06/2018
-ms.openlocfilehash: cb1daf953b11ffba8f39bcc05a8b122350c497eb
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
-ms.translationtype: MTE95
+ms.openlocfilehash: 178e5c43520f9a392ca219b9f785eb18b1ec5436
+ms.sourcegitcommit: f268dce5b5e72be669be0c6634b8db11369bbae2
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55682959"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58623859"
 ---
 # <a name="powershell-core-support-lifecycle"></a>Ciclo di vita del supporto di PowerShell Core
 
 PowerShell Core è un set distinto di strumenti e componenti che viene fornito, installato e configurato separatamente da Windows PowerShell.
-Pertanto, PowerShell Core non è incluso in Windows 7/8.1/10 o Windows Server al contratto di licenza.
+PowerShell Core non è pertanto incluso nei contratti di licenza di Windows 7/8.1/10 o Windows Server.
 
 PowerShell Core è tuttavia supportato nei contratti di supporto Microsoft tradizionali, tra cui [Premier][], [Microsoft Enterprise Agreement][enterprise-agreement] e [Microsoft Software Assurance][assurance].
 È anche possibile acquistare il [supporto assistito][] per PowerShell Core inviando una richiesta di supporto per il problema riscontrato.
 
+## <a name="community-support"></a>Supporto della community
+
 È inoltre disponibile il [supporto della community][] in GitHub dove è possibile segnalare un problema o un bug oppure inviare una richiesta di funzionalità.
-Inoltre, è possibile ricevere assistenza da altri membri della community nella pagina Generale [Microsoft Community][] o il Microsoft [PowerShell Tech Community][].
-Microsoft non ci sono garanzie che la community verrà indirizzo o di risolvere il problema in modo tempestivo.
+È anche possibile ricevere assistenza da altri membri della community nella pagina generale di [Microsoft Community][] o in Microsoft [PowerShell Tech Community][].
+Microsoft non offre garanzie che il problema verrà affrontato o risolto in modo tempestivo dalla community.
 Nel caso di un problema che richieda attenzione immediata è consigliabile usare le tradizionali opzioni di supporto a pagamento.
 
 ## <a name="lifecycle-of-powershell-core"></a>Ciclo di vita di PowerShell Core
@@ -27,68 +29,73 @@ Nel caso di un problema che richieda attenzione immediata è consigliabile usare
 PowerShell Core adotta i [Criteri moderni Microsoft relativi al ciclo di vita][modern].
 Questo ciclo di vita del supporto è stato pensato per mantenere i clienti sempre aggiornati con le versioni più recenti.
 
-Il ramo della versione 6.x di PowerShell Core verrà aggiornato approssimativamente ogni sei mesi (esempi: 6.0, 6.1, 6.2, ecc.)
+Il ramo della versione 6.x di PowerShell Core verrà aggiornato approssimativamente ogni sei mesi (ad esempio, 6.0, 6.1, 6.2 e così via).
 
 > [!IMPORTANT]
 > Per continuare a ricevere il supporto è necessario eseguire l'aggiornamento entro sei mesi dal rilascio di ogni nuova versione secondaria.
 
-Ad esempio, se PowerShell Core 6.1 viene rilasciato il 1 ° luglio 2018, dovrebbe eseguire l'aggiornamento a PowerShell Core 6.1 dal 1 ° gennaio 2019 per mantenere il supporto tecnico.
+Ad esempio, se PowerShell Core 6.1 viene rilasciato il 1° luglio 2018, sarà necessario eseguire l'aggiornamento a PowerShell Core 6.1 entro il 1° gennaio 1 2019 per mantenere il supporto.
+
+> [!IMPORTANT]
+> Per continuare a ricevere il supporto, è necessario eseguire l'aggiornamento entro 30 giorni dal rilascio di ogni nuova versione di patch.
+
+Ad esempio, se si esegue PowerShell Core 6.1 e la versione 6.1.3 è stata rilasciata il 19 febbraio 2019, per mantenere il supporto occorre eseguire l'aggiornamento a PowerShell Core 6.1.3 entro il 21 marzo 2019, ovvero 30 giorni dopo il rilascio.
+Se vengono trovate correzioni richieste, queste verranno rilasciate nell'aggiornamento cumulativo successivo.
 
 ![Ciclo di vita del ramo PowerShell Core][lifecycle-chart]
 
-I criteri del ciclo di vita moderni richiede inoltre che Microsoft offrire ai clienti preavviso di 12 mesi prima di sospendere il supporto per un prodotto (vale a dire, PowerShell Core).
+Nei Criteri moderni relativi al ciclo di vita viene anche indicato che Microsoft segnalerà ai clienti il termine del supporto per un prodotto (ad esempio, PowerShell Core) con un preavviso di 12 mesi.
 
-Infine, prevediamo di PowerShell Core verrà adottato il "Long Term servicing" approccio.
-Questo approccio per la manutenzione, richiede solo per la manutenzione e aggiornamenti della protezione al supporto per una determinato ramo/versione di 6.x.
+Infine, è previsto che per PowerShell Core verrà adottato l'approccio "Long Term Servicing" (manutenzione a lungo termine).
+Con questo approccio, verranno inclusi nel supporto solo gli aggiornamenti di manutenzione e di sicurezza per un determinato ramo/versione di 6.x.
 
 ## <a name="supported-platforms"></a>Piattaforme supportate
 
-Nella tabella seguente per visualizzare la versione di PowerShell Core si usa la piattaforma è ufficialmente supportata.
+Vedere la tabella seguente per scoprire in quale piattaforma è ufficialmente supportata la versione di PowerShell Core in uso.
 
 La nostra community ha anche reso disponibili pacchetti per alcune piattaforme, ma non sono ufficialmente supportati.
 Questi pacchetti sono contrassegnati come `Community` nella tabella.
 
 Le piattaforme elencate come `Experimental` non sono ufficialmente supportate, ma sono disponibili per la sperimentazione e per l'invio di commenti e suggerimenti.
 
-|                                                   | 6.0         | 6.1         |
+|                                                   | 6.1         | 6.2         |
 |---------------------------------------------------|:-----------:|:-----------:|
 | Windows 7, 8.1 e 10                            | Funzionalità supportata   | Funzionalità supportata   |
 | Windows Server 2008 R2, 2012 R2, 2016             | Funzionalità supportata   | Funzionalità supportata   |
 | [Canale semestrale di Windows Server][semi-annual] | Funzionalità supportata   | Funzionalità supportata   |
-| Ubuntu 14.04 e 16.04                           | Funzionalità supportata   | Funzionalità supportata   |
-| Ubuntu 18.04                                      |             | Funzionalità supportata   |
-| Ubuntu 18.10 (tramite pacchetto Snap)                   |             | Community   |
+| Ubuntu 16.04 e 18.04                            | Funzionalità supportata   | Funzionalità supportata   |
+| Ubuntu 18.10 (tramite pacchetto Snap)                   | Community   | Community   |
 | Debian 9                                          | Funzionalità supportata   | Funzionalità supportata   |
 | CentOS 7                                          | Funzionalità supportata   | Funzionalità supportata   |
 | Red Hat Enterprise Linux 7                        | Funzionalità supportata   | Funzionalità supportata   |
 | openSUSE 42.3                                     | Funzionalità supportata   | Funzionalità supportata   |
-| Fedora 28                                         |             | Funzionalità supportata   |
+| Fedora 28                                         | Funzionalità supportata   | Funzionalità supportata   |
 | macOS 10.12+                                      | Funzionalità supportata   | Funzionalità supportata   |
 | Arch                                              | Community   | Community   |
-| Raspbian                                          | Sperimentale| Community   |
+| Raspbian                                          | Community   | Community   |
 | Kali                                              | Community   | Community   |
 | AppImage (funziona su più piattaforme Linux)     | Community   | Community   |
 | [Pacchetto Snap](https://snapcraft.io/powershell)   | Vedere la nota    | Vedere la nota    |
 
 > [!NOTE]
-> I pacchetti Snap saranno sperimentali per un determinato periodo di tempo.
-> Successivamente, se come previsto Snap non introdurrà nuovi problemi di supporto, il supporto seguirà la distribuzione in cui è in esecuzione il pacchetto.
+> I pacchetti Snap sono supportati come la distribuzione su cui si esegue il pacchetto.
 
-## <a name="powershell-release-end-of-life"></a>PowerShell versione finale del ciclo di vita
+## <a name="powershell-release-end-of-life"></a>Fine vita di PowerShell
 
-In base [ciclo di vita di PowerShell Core](#lifecycle-of-powershell-core), la tabella seguente elenca le date quando vari versione verrà non più supportato.
+In base al [ciclo di vita di PowerShell Core](#lifecycle-of-powershell-core), la tabella seguente elenca le date in cui non saranno più supportate le varie versioni.
 
 | Versione | Fine vita                   |
 |---------|-------------------------------|
 | 6.0     | 13 febbraio 2019             |
-| 6.1     | 6 mesi dopo la 6.2 Release   |
+| 6.1     | 28 settembre 2019            |
+| 6.2     | 6 mesi dopo le versioni 6.3   |
 
-## <a name="platforms-which-are-out-of-support"></a>Piattaforme, non supportati
+## <a name="platforms-which-are-out-of-support"></a>Piattaforme non più supportate
 
-Quando una versione della piattaforma raggiunge la fine del ciclo di vita come definito dal proprietario della piattaforma, PowerShell Core cesserà anche supportare tale versione della piattaforma.
+Quando una versione di una piattaforma raggiunge la fine del ciclo di vita come definito dal proprietario della piattaforma, anche PowerShell Core interromperà il supporto per tale versione.
 I pacchetti rilasciati in precedenza rimarranno disponibili per i clienti che devono accedervi, ma non verranno più forniti il supporto formale e gli aggiornamenti di qualsiasi tipo.
 
-Pertanto, i proprietari di distribuzione è terminato il supporto per le seguenti versioni e non sono supportati.
+Pertanto, il supporto per le versioni seguenti è stato terminato dai proprietari della distribuzione e tali versioni non sono più supportate.
 
 | Sistema operativo       | Versione | Fine vita                                                                                 |
 |----------|---------|---------------------------------------------------------------------------------------------|
@@ -102,20 +109,21 @@ Pertanto, i proprietari di distribuzione è terminato il supporto per le seguent
 | Ubuntu   | 17.10   | [Luglio 2018](https://lists.ubuntu.com/archives/ubuntu-announce/2018-July/000232.html)        |
 | Debian   | 8       | [Giugno 2018](https://lists.debian.org/debian-security-announce/2018/msg00132.html)           |
 | Fedora   | 27      | [Novembre 2018](https://fedoramagazine.org/fedora-27-end-of-life/)                          |
+| Ubuntu   | 14.04   | [Aprile 2019](https://wiki.ubuntu.com/Releases)                                              |
 
 ## <a name="notes-on-licensing"></a>Note sulla licenza
 
 PowerShell Core viene rilasciato con la [licenza MIT][].
-Condizioni della presente licenza e senza un contratto di supporto a pagamento, gli utenti non possono superare [supporto della community][].
+In base a questa licenza e in assenza di un contratto di supporto a pagamento, il supporto per gli utenti è limitato al [supporto della community][].
 Con il supporto della community, Microsoft non garantisce velocità di risposta o correzioni.
 
 ## <a name="windows-powershell-module"></a>Modulo Windows PowerShell
 
-Supporto per PowerShell Core non include i moduli di prodotto, a meno che tali moduli supportano in modo esplicito PowerShell Core.
+Il supporto per PowerShell Core non include altri moduli del prodotto, a meno che questi non supportino in modo esplicito PowerShell Core.
 Ad esempio, l'uso del modulo `ActiveDirectory`, incluso in Windows Server, è uno scenario non supportato.
 
 Tuttavia, i moduli che non supportano in modo esplicito PowerShell Core possono essere compatibili in alcuni casi.
-Installando i [ `WindowsPSModulePath` ][] modulo, è possibile aggiungere il comando di Windows PowerShell `PSModulePath` a di PowerShell Core `PSModulePath`.
+Installando il modulo [`WindowsPSModulePath`][] è possibile aggiungere `PSModulePath` di Windows PowerShell a `PSModulePath` di PowerShell Core.
 
 Installare prima il modulo `WindowsPSModulePath` da PowerShell Gallery:
 
@@ -131,6 +139,10 @@ Dopo l'installazione di questo modulo, eseguire il cmdlet `Add-WindowsPSModulePa
 Add-WindowsPSModulePath
 ```
 
+## <a name="experimental-features"></a>Funzionalità sperimentali
+
+Le [funzionalità sperimentali][] sono limitate al [supporto della community](#community-support).
+
 [Premier]: https://www.microsoft.com/en-us/microsoftservices/support.aspx
 [enterprise-agreement]: https://www.microsoft.com/en-us/licensing/licensing-programs/enterprise.aspx
 [assurance]: https://www.microsoft.com/en-us/licensing/licensing-programs/software-assurance-default.aspx
@@ -143,3 +155,4 @@ Add-WindowsPSModulePath
 [semi-annual]: https://docs.microsoft.com/windows-server/get-started/semi-annual-channel-overview
 [licenza MIT]: https://github.com/PowerShell/PowerShell/blob/master/LICENSE.txt
 ["WindowsPSModulePath"]: https://www.powershellgallery.com/packages/WindowsPSModulePath/
+[Funzionalità sperimentali]: /powershell/module/microsoft.powershell.core/about/about_powershell_config?view=powershell-6#experimentalfeatures

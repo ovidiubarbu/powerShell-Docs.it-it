@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Windows PowerShell Programmer's Guide
 ms.assetid: f3aaf667-af84-4ea8-a5ad-d454d0d700b8
 caps.latest.revision: 9
-ms.openlocfilehash: 1f7b5b60b202f4de0cf3d44b65057f5edd41f2b0
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: 75425fbd38141fc82dd834835912c357ecfa6d2b
+ms.sourcegitcommit: 0ca836d1044e46d3a7dcbc69fa93d84f74848559
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56860047"
+ms.lasthandoff: 04/04/2019
+ms.locfileid: "58920391"
 ---
 # <a name="windows-powershell-programmer39s-guide"></a>Programmatore di Windows PowerShell&#39;Guida
 
@@ -57,7 +57,7 @@ Se si espone un archivio dati che l'utente dovrà accedere, si potrebbe essere n
 
 Windows PowerShell include powershell.exe l'applicazione host predefinito, ovvero un'applicazione console che interagisce con l'utente e che ospita il runtime di Windows PowerShell usando una finestra della console.
 
-Solo raramente è necessario scrivere la propria applicazione host per Windows PowerShell, anche se la personalizzazione è supportata. Un caso in cui un'applicazione personalizzata potrebbe essere necessario è quando si dispone di un requisito per un'interfaccia utente grafica che è più completa rispetto all'interfaccia fornita dall'applicazione host predefinito. Un'applicazione personalizzata è possibile anche quando si basa la relativa interfaccia grafica nella riga di comando. Per altre informazioni, vedere[come creare un'applicazione Host di Windows PowerShell](http://msdn.microsoft.com/en-us/d31355c9-a270-4b09-8f0c-35a7392a7d07).
+Solo raramente è necessario scrivere la propria applicazione host per Windows PowerShell, anche se la personalizzazione è supportata. Un caso in cui un'applicazione personalizzata potrebbe essere necessario è quando si dispone di un requisito per un'interfaccia utente grafica che è più completa rispetto all'interfaccia fornita dall'applicazione host predefinito. Un'applicazione personalizzata è possibile anche quando si basa la relativa interfaccia grafica nella riga di comando. Per altre informazioni, vedere [come creare un'applicazione Host di Windows PowerShell](http://msdn.microsoft.com/en-us/d31355c9-a270-4b09-8f0c-35a7392a7d07).
 
 ### <a name="windows-powershell-runtime"></a>Runtime di Windows PowerShell
 
@@ -99,10 +99,10 @@ Per altre informazioni su come iniziare a usare la shell di Windows PowerShell, 
 
 |Argomento|Definizione|
 |-----------|----------------|
-|[Come creare un Provider di Windows PowerShell](./how-to-create-a-windows-powershell-provider.md)|Questa sezione descrive come creare un provider di Windows PowerShell per Windows PowerShell.|
+|[Come creare un provider di Windows PowerShell](./how-to-create-a-windows-powershell-provider.md)|Questa sezione descrive come creare un provider di Windows PowerShell per Windows PowerShell.|
 |[Come creare un'applicazione Host di PowerShell di Windows](http://msdn.microsoft.com/en-us/d31355c9-a270-4b09-8f0c-35a7392a7d07)|In questa sezione viene descritto come scrivere un'applicazione host che consente di modificare uno spazio di esecuzione e come scrivere un'applicazione host che implementa il proprio host personalizzato.|
-|[Come creare uno Snap-in PowerShell di Windows](../cmdlet/how-to-create-a-windows-powershell-snap-in.md)|Questa sezione descrive come creare uno snap-in che consente di registrare tutti i cmdlet e provider in un assembly e come creare uno snap-in personalizzati.|
-|[Come creare una Shell di Console](./how-to-create-a-console-shell.md)|Questa sezione descrive come creare una shell di console che non è estendibile.|
+|[Come creare uno snap-in di Windows PowerShell](../cmdlet/how-to-create-a-windows-powershell-snap-in.md)|Questa sezione descrive come creare uno snap-in che consente di registrare tutti i cmdlet e provider in un assembly e come creare uno snap-in personalizzati.|
+|[Come creare una shell di console](./how-to-create-a-console-shell.md)|Questa sezione descrive come creare una shell di console che non è estendibile.|
 |[Concetti di Windows PowerShell](./windows-powershell-concepts.md)|In questa sezione contiene informazioni concettuali che consentiranno di comprendere Windows PowerShell dal punto di vista di uno sviluppatore.|
 
 ## <a name="see-also"></a>Vedere anche

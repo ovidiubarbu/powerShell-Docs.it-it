@@ -3,12 +3,12 @@ ms.date: 06/12/2017
 contributor: JKeithB
 keywords: gallery,powershell,cmdlet,psgallery
 title: Pubblicazione di feedback sui social media o nei commenti
-ms.openlocfilehash: a27a2fc7cf54835cb53b11382c20d1354345a5a3
-ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
+ms.openlocfilehash: 95e5db22b94151c3974189c30f1d4e580b47eeb5
+ms.sourcegitcommit: f268dce5b5e72be669be0c6634b8db11369bbae2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58055003"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58623892"
 ---
 # <a name="providing-feedback-via-social-media-or-comments"></a>Pubblicazione di feedback sui social media o nei commenti
 
@@ -29,6 +29,10 @@ PowerShell Gallery verifica tutte le condivisioni di un dato pacchetto sui socia
 Poiché tale indicazione visualizza solo il numero di volte in cui un pacchetto è stato condiviso, verrà interpretata dagli altri utenti come il numero di "like" del pacchetto.
 
 ## <a name="comments"></a>Commenti
+
+> [!IMPORTANT]
+> L'aggiunta di commenti Livefyre viene offerta da un fornitore di terze parti e non è più supportata.
+> L'aggiunta di commenti Livefyre non sarà più disponibile in PowerShell Gallery a partire dal 05/01/2019. 
 
 PowerShell Gallery usa il servizio LiveFyre per consentire agli utenti di inviare commenti sui pacchetti.
 Gli utenti che vogliono inviare consigli o commenti possono usare questa funzionalità per offrire commenti e suggerimenti visibili a chiunque visiti la pagina del pacchetto.

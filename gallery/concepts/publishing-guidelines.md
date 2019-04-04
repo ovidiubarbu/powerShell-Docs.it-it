@@ -4,12 +4,12 @@ contributor: JKeithB
 keywords: gallery,powershell,cmdlet,psgallery
 description: Linee guida per gli autori
 title: Linee guida e procedure consigliate per la pubblicazione in PowerShell Gallery
-ms.openlocfilehash: 25c359c7acbe7430762a275d8cc4a28f527ec57a
-ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
+ms.openlocfilehash: 1cd0140cc208949e13d23331b23a58ffc374430b
+ms.sourcegitcommit: f268dce5b5e72be669be0c6634b8db11369bbae2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58056499"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58623909"
 ---
 # <a name="powershellgallery-publishing-guidelines-and-best-practices"></a>Linee guida e procedure consigliate per la pubblicazione in PowerShell Gallery
 
@@ -145,6 +145,9 @@ Usare i tag seguenti per indicare agli utenti quali pacchetti funzioneranno con 
 - Windows : i pacchetti compatibili con il sistema operativo Windows
 - Linux : i pacchetti compatibili con i sistemi operativi Linux
 - MacOS : i pacchetti compatibili con i sistemi operativi Mac
+
+L'assegnazione di tag al pacchetto con le piattaforme compatibili consentirà di includerlo nei filtri di ricerca della Gallery nel riquadro sinistro dei risultati della ricerca. Se si ospita il pacchetto in GitHub, quando si contrassegna il pacchetto è anche possibile sfruttare le [etichette di compatibilità di PowerShell Gallery](https://img.shields.io/powershellgallery/p/:packageName.svg) 
+![etichetta di compatibilità](https://img.shields.io/powershellgallery/p/CosmosDB.svg).  
 
 ## <a name="include-tests"></a>Includere test
 

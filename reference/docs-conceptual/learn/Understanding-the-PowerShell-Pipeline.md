@@ -3,12 +3,12 @@ ms.date: 08/23/2018
 keywords: powershell,cmdlet
 title: Informazioni sulle pipeline di PowerShell
 ms.assetid: 6be50926-7943-4ef7-9499-4490d72a63fb
-ms.openlocfilehash: fc7c7f57bdce458185a0f5bdb8bc1fbbd81d0d61
-ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
-ms.translationtype: MTE95
+ms.openlocfilehash: 05ab98b7261f4d41ade1788a924193eccda6318c
+ms.sourcegitcommit: f268dce5b5e72be669be0c6634b8db11369bbae2
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53401218"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58623960"
 ---
 # <a name="understanding-pipelines"></a>Informazioni sulle pipeline
 
@@ -63,6 +63,18 @@ La divisione in pagine riduce anche l'utilizzo della CPU perché i trasferimenti
 
 È possibile notare la differenza con Gestione attività Windows per monitorare l'uso della CPU e della memoria da parte di PowerShell. Eseguire questo comando: `Get-ChildItem C:\Windows -Recurse`. Confrontare l'utilizzo della CPU e della memoria con questo comando: `Get-ChildItem C:\Windows -Recurse | Out-Host -Paging`.
 
+> [!NOTE]
+> Il parametro **Paging** non è supportato da tutti gli host di PowerShell. Ad esempio, quando si tenta di usare il parametro **Paging** in PowerShell ISE, viene visualizzato l'errore seguente:
+>
+> ```Output
+> out-lineoutput : The method or operation is not implemented.
+> At line:1 char:1
+> + Get-ChildItem C:\Windows -Recurse | Out-Host -Paging
+> + ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+>     + CategoryInfo          : NotSpecified: (:) [out-lineoutput], NotImplementedException
+>     + FullyQualifiedErrorId : System.NotImplementedException,Microsoft.PowerShell.Commands.OutLineOutputCommand
+> ```
+
 ## <a name="objects-in-the-pipeline"></a>Oggetti nella pipeline
 
 Quando si esegue un cmdlet in PowerShell, viene visualizzato output di testo perché è necessario rappresentare gli oggetti come testo in una finestra della console. L'output di testo può non visualizzare tutte le proprietà dell'oggetto restituito.
@@ -82,7 +94,7 @@ L'output di testo è un riepilogo delle informazioni e non una rappresentazione 
 Quando l'output viene inviato tramite pipe al cmdlet `Get-Member`, si ottengono informazioni sull'oggetto restituito da `Get-Location`.
 
 ```powershell
-PS> Get-Location | Get-Member
+Get-Location | Get-Member
 ```
 
 ```Output

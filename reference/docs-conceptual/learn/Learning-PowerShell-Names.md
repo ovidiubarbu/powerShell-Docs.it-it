@@ -1,18 +1,18 @@
 ---
 ms.date: 08/24/2018
 keywords: powershell,cmdlet
-title: Imparare i nomi dei comandi di PowerShell
+title: Apprendimento dei nomi dei comandi di PowerShell
 ms.assetid: b4d0fd22-8298-4ee6-82ae-9b6f2907c986
-ms.openlocfilehash: 3f8ef2648709c4bb5d2eacf30fe9d8fb4f032c13
-ms.sourcegitcommit: 9df29dfc637191b62ca591893c251c1e02d4eb4c
-ms.translationtype: MTE95
+ms.openlocfilehash: 8d50ca03f98ed4ca8f9c09c83ae57afbf0d7888d
+ms.sourcegitcommit: f268dce5b5e72be669be0c6634b8db11369bbae2
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54012467"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58623722"
 ---
-# <a name="learning-powershell-command-names"></a>Imparare i nomi dei comandi di PowerShell
+# <a name="learning-powershell-command-names"></a>Apprendimento dei nomi dei comandi di PowerShell
 
-L'apprendimento dei nomi dei comandi e dei parametri richiede un notevole investimento di tempo con la maggior parte delle interfacce della riga di comando. Il problema è l'assenza di modelli generali. La memorizzazione delle è l'unico modo per apprendere i comandi e parametri che è necessario usare regolarmente.
+L'apprendimento dei nomi dei comandi e dei parametri richiede un notevole investimento di tempo con la maggior parte delle interfacce della riga di comando. Il problema è l'assenza di modelli generali. La memorizzazione è l'unico modo per apprendere i comandi e i parametri usati più di frequente.
 
 Quando si usa un nuovo comando o parametro, non è sempre possibile usare gli elementi già noti. È necessario trovare e apprendere un nuovo nome. Normalmente, le interfacce della riga di comando iniziano con un piccolo set di strumenti e quindi crescono attraverso aggiunte incrementali. Per questo motivo, è facile comprendere come non vi sia una struttura standard.
 Questo approccio sembra logico per i nomi di comando, poiché ogni comando è uno strumento separato. PowerShell usa un metodo migliore per gestire i nomi di comando.
@@ -25,7 +25,7 @@ Inoltre, questi comandi prevedono specifiche irregolari per i parametri. Non è 
 Per elencare le attività in esecuzione in DC01, usare il parametro **/S** e il nome del computer senza barre rovesciate. Ad esempio, `tasklist /S DC01`
 
 > [!NOTE]
-> Prima di PowerShell v6, `sc` era un alias per il cmdlet `Set-Content`. Per eseguire il comando **sc.exe**, è necessario includere l'estensione del file.
+> Prima di PowerShell v6, `sc` era un alias per il cmdlet `Set-Content`. Pertanto, per eseguire il comando **sc.exe** in una versione di PowerShell precedente alla versione 6, è necessario includere il nome completo del file **sc.exe** inclusa l'estensione **exe**.
 
 I servizi e i processi sono esempi di elementi gestibili in un computer che hanno cicli di vita ben definiti. Puoi avviare o arrestare i servizi e i processi oppure ottenere un elenco di tutti i servizi e i processi attualmente in esecuzione. Anche se vi sono importanti distinzioni di natura tecnica, le operazioni eseguite su servizi e processi sono concettualmente identiche. Inoltre, anche le scelte adottate per personalizzare un'operazione specificando parametri possono essere concettualmente simili.
 
