@@ -12,12 +12,12 @@ helpviewer_keywords:
 - cmdlets [PowerShell SDK], verb names
 ms.assetid: 2d4e58a9-05bc-437c-86b9-d8d55cba7d48
 caps.latest.revision: 36
-ms.openlocfilehash: d8a0561d6fbb4447a691c434e0518e3e16ce41e7
-ms.sourcegitcommit: 6ae5b50a4b3ffcd649de1525c3ce6f15d3669082
+ms.openlocfilehash: 4475b3f5e15826efbe8bab867011985cd7e2e1ae
+ms.sourcegitcommit: 806cf87488b80800b9f50a8af286e8379519a034
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56863667"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59293351"
 ---
 # <a name="approved-verbs-for-powershell-commands"></a>Verbi approvati per i comandi di PowerShell
 
@@ -94,7 +94,7 @@ La tabella seguente elenca la maggior parte dei verbi definiti.
 |[Uscita](/dotnet/api/System.Management.Automation.VerbsCommon.Exit) (ex)|Imposta l'ambiente corrente o il contesto nel contesto degli ultimi file usati. Ad esempio, il `Exit-PSSession` cmdlet inserisce l'utente della sessione che è stato usato per avviare la sessione interattiva. Questo verbo viene abbinato `Enter`.|Per questa azione, non usare verbi ad esempio Pop o Out.|
 |[Trovare](/dotnet/api/System.Management.Automation.VerbsCommon.Find) (fd)|Cerca un oggetto in un contenitore è sconosciuto, impliciti, facoltativo o specificato.||
 |[Formato](/dotnet/api/System.Management.Automation.VerbsCommon.Format) (f)|Dispone gli oggetti in un formato specificato o layout.||
-|[Ottenere](/dotnet/api/System.Management.Automation.VerbsCommon.Get) (g)|Specifica un'azione che consente di recuperare una risorsa. Questo verbo viene abbinato `Set`.|Per questa azione, non usare verbi ad esempio lettura, Open, Cat, tipo, Dir, ottenere, Dump, acquisizione, esaminare, trova o Cerca questa azione.|
+|[Ottenere](/dotnet/api/System.Management.Automation.VerbsCommon.Get) (g)|Specifica un'azione che consente di recuperare una risorsa. Questo verbo viene abbinato `Set`.|Per questa azione, non usare verbi ad esempio lettura, Open, Cat, tipo, Dir, ottenere, Dump, acquisizione, esaminare, trovare o ricerca.|
 |[Nascondi](/dotnet/api/System.Management.Automation.VerbsCommon.Hide) (h)|Effettua una risorsa non rilevabili. Ad esempio, un cmdlet il cui nome include il verbo Nascondi può nascondere un servizio da un utente. Questo verbo viene abbinato `Show`.|Per questa azione, non utilizzare un verbo, ad esempio blocco.|
 |[Join](/dotnet/api/System.Management.Automation.VerbsCommon.Join) (j)|Combina le risorse in una risorsa. Ad esempio, il `Join-Path` cmdlet combina un percorso con uno dei relativi percorsi figlio per creare un unico percorso. Questo verbo viene abbinato `Split`.|Per questa azione, non usare verbi come combinare, Unite, Connect o associare.|
 |[Blocco](/dotnet/api/System.Management.Automation.VerbsCommon.Lock) (lk)|Consente di proteggere una risorsa. Questo verbo viene abbinato `Unlock`.|Per questa azione, non usare verbi ad esempio limitare o sicura.|
@@ -149,7 +149,7 @@ La tabella seguente elenca la maggior parte dei verbi definiti.
 |[ConvertFrom](/dotnet/api/System.Management.Automation.VerbsData.ConvertFrom) (cf)|Converte un tipo primario di input (il sostantivo cmdlet indica l'input) in uno o più tipi di output supportati.|Per questa azione, non usare verbi ad esempio l'esportazione, Output o Out.|
 |[ConvertTo](/dotnet/api/System.Management.Automation.VerbsData.ConvertTo) (ct)|Converte da uno o più tipi di input a un tipo di output primario (il sostantivo cmdlet indica il tipo di output).|Per questa azione, non usare verbi ad esempio l'importazione, Input, o In.|
 |[Smontare](/dotnet/api/System.Management.Automation.VerbsData.Dismount) (dm)|Scollega un'entità denominata da un percorso. Questo verbo viene abbinato `Mount`.|Per questa azione, non usare verbi ad esempio Smonta o Scollega.|
-|[Modifica](/dotnet/api/System.Management.Automation.VerbsData.Edit) (ed)|Modifica dati esistenti aggiungendo o rimuovendo contenuto.|Per questa azione, non usare verbi ad esempio modifica, aggiornamento o modifica per questa azione.|
+|[Modifica](/dotnet/api/System.Management.Automation.VerbsData.Edit) (ed)|Modifica dati esistenti aggiungendo o rimuovendo contenuto.|Per questa azione, non usare verbi ad esempio modifica, aggiornamento o modifica.|
 |[Espandere](/dotnet/api/System.Management.Automation.VerbsData.Expand) (en)|Consente di ripristinare i dati di una risorsa che è stata compressa allo stato originale. Questo verbo viene abbinato `Compress`.|Per questa azione, non usare verbi come esploso o.|
 |[Esportare](/dotnet/api/System.Management.Automation.VerbsData.Export) (ep)|Incapsula l'input principale in un archivio dati permanente, ad esempio un file o in un formato di interscambio. Questo verbo viene abbinato `Import`.|Per questa azione, non usare verbi quali Backup o di estrazione.|
 |[Gruppo](/dotnet/api/System.Management.Automation.VerbsData.Group) (criteri di gruppo)|Organizza o associa una o più risorse.|Per questa azione, non usare verbi ad esempio aggregazione, Disponi, associazione, o mettere in correlazione.|
@@ -251,6 +251,6 @@ PowerShell Usa il [System.Management.Automation.VerbsOther](/dotnet/api/System.M
 
 [Dichiarazione di cmdlet](./cmdlet-class-declaration.md)
 
-[Guida per programmatori di Windows PowerShell](../prog-guide/windows-powershell-programmer-s-guide.md)
+[Manuale del programmatore di Windows PowerShell](../prog-guide/windows-powershell-programmer-s-guide.md)
 
 [Windows PowerShell Shell SDK](../windows-powershell-reference.md)
