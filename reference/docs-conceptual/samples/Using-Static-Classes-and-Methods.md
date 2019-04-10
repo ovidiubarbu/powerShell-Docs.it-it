@@ -3,14 +3,15 @@ ms.date: 06/05/2017
 keywords: powershell,cmdlet
 title: Uso di classi e metodi statici
 ms.assetid: 418ad766-afa6-4b8c-9a44-471889af7fd9
-ms.openlocfilehash: 0f2b02c3a40365ad0335118b057a4e548c9f6535
-ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
-ms.translationtype: MTE95
+ms.openlocfilehash: e4caff63a1ec7295b6fe450c2915baf0cc7e31af
+ms.sourcegitcommit: 806cf87488b80800b9f50a8af286e8379519a034
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53401921"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59293113"
 ---
 # <a name="using-static-classes-and-methods"></a>Uso di classi e metodi statici
+
 Non tutte le classi .NET Framework possono essere create usando **New-Object**. Ad esempio, se si prova a creare un oggetto **System.Environment** o **System.Math** con **New-Object**, verranno visualizzati i messaggi di errore seguenti:
 
 ```
@@ -29,10 +30,12 @@ At line:1 char:11
 
 Questi errori si verificano perché non è possibile creare un nuovo oggetto da queste classi. Queste classi sono librerie di riferimento di metodi e proprietà che non cambiano stato. Non devono essere create, ma solo usate. I metodi e le classi di questo tipo sono denominate *classi statiche*, perché non vengono create, eliminate o modificate. Per chiarire il concetto verranno forniti esempi che usano le classi statiche.
 
-### <a name="getting-environment-data-with-systemenvironment"></a>Recupero di dati dell'ambiente con System.Environment
+## <a name="getting-environment-data-with-systemenvironment"></a>Recupero di dati dell'ambiente con System.Environment
+
 In genere, il primo passaggio quando si lavora con un oggetto in Windows PowerShell consiste nell'usare Get-Member per scoprire quali membri contiene. Con le classi statiche, il processo è leggermente diverso perché la classe non è realmente un oggetto.
 
-#### <a name="referring-to-the-static-systemenvironment-class"></a>Riferimento alla classe statica System.Environment
+### <a name="referring-to-the-static-systemenvironment-class"></a>Riferimento alla classe statica System.Environment
+
 Si può fare riferimento a una classe statica racchiudendo il nome della classe tra parentesi quadre. Ad esempio, si può fare riferimento a **System.Environment** digitando il nome tra parentesi quadre. In questo modo vengono visualizzate alcune informazioni di tipo generico:
 
 ```
@@ -89,7 +92,7 @@ TickCount                               ExitCode
 
 A questo punto è possibile selezionare le proprietà da visualizzare da System.Environment.
 
-#### <a name="displaying-static-properties-of-systemenvironment"></a>Visualizzazione delle proprietà statiche di System. Environment
+### <a name="displaying-static-properties-of-systemenvironment"></a>Visualizzazione delle proprietà statiche di System. Environment
 
 Anche le proprietà di System.Environment sono statiche e devono essere specificate in modo diverso rispetto alle proprietà normali. Usiamo **::** per indicare a Windows PowerShell che intendiamo usare un metodo o una proprietà statica. Per visualizzare il comando usato per avviare Windows PowerShell, controlliamo la proprietà **CommandLine** digitando:
 
@@ -115,7 +118,7 @@ PS> [System.Environment]::HasShutdownStarted
 False
 ```
 
-### <a name="doing-math-with-systemmath"></a>Eseguire operazioni matematiche con System.Math
+## <a name="doing-math-with-systemmath"></a>Eseguire operazioni matematiche con System.Math
 
 La classe statica System.Math è utile per l'esecuzione di operazioni matematiche. I membri importanti di **System.Math** sono per lo più metodi, che è possibile visualizzare usando **Get-Member**.
 

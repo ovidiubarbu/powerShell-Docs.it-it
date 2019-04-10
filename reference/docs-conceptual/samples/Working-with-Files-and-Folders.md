@@ -3,18 +3,18 @@ ms.date: 06/05/2017
 keywords: powershell,cmdlet
 title: Utilizzo di file e cartelle
 ms.assetid: c0ceb96b-e708-45f3-803b-d1f61a48f4c1
-ms.openlocfilehash: a8d57a1c269d95e692db6c3f1ae10df49e305e4e
-ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
-ms.translationtype: MTE95
+ms.openlocfilehash: 393e886a4945222198d9b81019250c5d5b905ad3
+ms.sourcegitcommit: 806cf87488b80800b9f50a8af286e8379519a034
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53401278"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59293221"
 ---
 # <a name="working-with-files-and-folders"></a>Utilizzo di file e cartelle
 
 Gli spostamenti nelle unità di Windows PowerShell e la modifica degli elementi in tali unità è simile alla modifica di file e cartelle nelle unità disco fisiche di Windows. Questa sezione illustra come gestire attività specifiche di manipolazione di file e cartelle usando PowerShell.
 
-### <a name="listing-all-the-files-and-folders-within-a-folder"></a>Elenco di tutti i file e le cartelle all'interno di una cartella
+## <a name="listing-all-the-files-and-folders-within-a-folder"></a>Elenco di tutti i file e le cartelle all'interno di una cartella
 
 È possibile usare **Get-ChildItem** per ottenere tutti gli elementi direttamente all'interno di una cartella. Aggiungere il parametro facoltativo **Force** per visualizzare elementi nascosti o di sistema. Ad esempio, questo comando visualizza il contenuto diretto dell'unità C di Windows PowerShell, che corrisponde all'unità fisica di Windows C:
 
@@ -36,7 +36,7 @@ Il comando seguente consente di trovare tutti i file eseguibili all'interno dell
 Get-ChildItem -Path $env:ProgramFiles -Recurse -Include *.exe | Where-Object -FilterScript {($_.LastWriteTime -gt '2005-10-01') -and ($_.Length -ge 1mb) -and ($_.Length -le 10mb)}
 ```
 
-### <a name="copying-files-and-folders"></a>Copia di file e cartelle
+## <a name="copying-files-and-folders"></a>Copia di file e cartelle
 
 La copia viene eseguita con **Copy-Item**. Il comando seguente esegue il backup di C:\\boot.ini in C:\\boot.bak:
 
@@ -70,7 +70,7 @@ Per eseguire copie nel file system, è comunque possibile usare altri strumenti.
 (New-Object -ComObject Scripting.FileSystemObject).CopyFile('C:\boot.ini', 'C:\boot.bak')
 ```
 
-### <a name="creating-files-and-folders"></a>Creazione di file e cartelle
+## <a name="creating-files-and-folders"></a>Creazione di file e cartelle
 
 La creazione di nuovi elementi funziona allo stesso modo in tutti i provider di Windows PowerShell. Se un provider di Windows PowerShell include più di un tipo di elemento, ad esempio, il provider FileSystem di Windows PowerShell distingue tra file e directory, è necessario specificare il tipo di elemento.
 
@@ -86,7 +86,7 @@ Questo comando crea un nuovo file vuoto C:\\temp\\New Folder\\file.txt
 New-Item -Path 'C:\temp\New Folder\file.txt' -ItemType File
 ```
 
-### <a name="removing-all-files-and-folders-within-a-folder"></a>Rimozione di tutti i file e le cartelle all'interno di una cartella
+## <a name="removing-all-files-and-folders-within-a-folder"></a>Rimozione di tutti i file e le cartelle all'interno di una cartella
 
 È possibile rimuovere gli elementi contenuti tramite **Remove-Item**, ma verrà richiesto di confermare la rimozione, se l'elemento contiene altri elementi. Ad esempio, se si tenta di eliminare la cartella C:\\temp\\DeleteMe che contiene altri elementi, Windows PowerShell richiede una conferma prima di eliminare la cartella:
 
@@ -107,7 +107,7 @@ Se si preferisce evitare la richiesta di conferma per ogni elemento di contenuto
 Remove-Item -Path C:\temp\DeleteMe -Recurse
 ```
 
-### <a name="mapping-a-local-folder-as-a-windows-accessible-drive"></a>Mapping di una cartella locale come unità accessibile di Windows
+## <a name="mapping-a-local-folder-as-a-windows-accessible-drive"></a>Mapping di una cartella locale come unità accessibile di Windows
 
 È anche possibile mappare una cartella locale, usando il comando **subst**. Il comando seguente crea un'unità locale P: con radice nella directory Programmi locale:
 
@@ -117,7 +117,7 @@ subst p: $env:programfiles
 
 Come per le unità di rete, le unità mappate all'interno di Windows PowerShell con **subst** diventano immediatamente visibili nella shell di Windows PowerShell.
 
-### <a name="reading-a-text-file-into-an-array"></a>Lettura di un file di testo in una matrice
+## <a name="reading-a-text-file-into-an-array"></a>Lettura di un file di testo in una matrice
 
 Uno dei formati di archiviazione più comuni per i dati di testo è un file con righe separate considerate come elementi di dati distinti. Il cmdlet **Get-Content** può essere usato per leggere un intero file in un unico passaggio, come illustrato di seguito:
 

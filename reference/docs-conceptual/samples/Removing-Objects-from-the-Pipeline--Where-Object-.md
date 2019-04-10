@@ -3,12 +3,12 @@ ms.date: 06/05/2017
 keywords: powershell,cmdlet
 title: Rimozione di oggetti dalla pipeline Where Object
 ms.assetid: 01df8b22-2d22-4e2c-a18d-c004cd3cc284
-ms.openlocfilehash: c060b93a3823be26ad6c7757acc633bb4fc2fcfa
-ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
-ms.translationtype: MTE95
+ms.openlocfilehash: 1f7d064c7bf2dd551ea96b29762fbccad8174084
+ms.sourcegitcommit: 806cf87488b80800b9f50a8af286e8379519a034
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53401957"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59293147"
 ---
 # <a name="removing-objects-from-the-pipeline-where-object"></a>Rimozione di oggetti dalla pipeline (Where-Object)
 
@@ -16,7 +16,7 @@ In Windows PowerShell spesso si generano e si passano più oggetti a una pipelin
 
 Windows PowerShell include un cmdlet `Where-Object` che consente di testare ogni oggetto nella pipeline e passarlo lungo la pipeline solo se soddisfa una specifica condizione di test. Gli oggetti che non superano il test vengono rimossi dalla pipeline. La condizione di test viene specificata sotto forma di valore del parametro `Where-Object` **FilterScript**.
 
-### <a name="performing-simple-tests-with-where-object"></a>Esecuzione di test semplici con Where-Object
+## <a name="performing-simple-tests-with-where-object"></a>Esecuzione di test semplici con Where-Object
 
 Il valore di **FilterScript** è un *blocco di script*, uno o più comandi di Windows PowerShell racchiusi tra parentesi graffe {}, che restituisce true o false. Questi blocchi di script possono essere molto semplici, ma per la loro creazione è richiesta familiarità con un altro concetto di Windows PowerShell, gli operatori di confronto. Un operatore di confronto mette a confronto gli elementi visualizzati alle sue due estremità. Gli operatori di confronto iniziano con un carattere "-" e sono seguiti da un nome. Gli operatori di confronto di base possono essere usati con qualsiasi tipo di oggetto. Quelli più avanzati potrebbero funzionare solo su testo o array.
 
@@ -46,7 +46,7 @@ PS> 1,2,3,4 | Where-Object -FilterScript {$_ -lt 3}
 2
 ```
 
-### <a name="filtering-based-on-object-properties"></a>Filtro in base alle proprietà dell'oggetto
+## <a name="filtering-based-on-object-properties"></a>Filtro in base alle proprietà dell'oggetto
 
 Dal momento che `$_` fa riferimento all'oggetto della pipeline corrente, è possibile accedere alle relative proprietà per i test.
 

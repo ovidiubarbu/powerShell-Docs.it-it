@@ -3,18 +3,18 @@ ms.date: 06/05/2017
 keywords: powershell,cmdlet
 title: Utilizzo delle stampanti
 ms.assetid: 4f29ead3-f83b-4706-ac3e-f2154ff38dc5
-ms.openlocfilehash: 5638629fdf79371c8eff9ee9194b642034250fff
-ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
-ms.translationtype: MTE95
+ms.openlocfilehash: 77ebb26369b6a40e9c8c7bbbc52347d614cbf083
+ms.sourcegitcommit: 806cf87488b80800b9f50a8af286e8379519a034
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53401968"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59292994"
 ---
 # <a name="working-with-printers"></a>Utilizzo delle stampanti
 
 È possibile usare Windows PowerShell per gestire le stampanti tramite WMI e l'oggetto COM WScript.Network da WSH. Verranno usati entrambi gli strumenti per illustrare le attività specifiche.
 
-### <a name="listing-printer-connections"></a>Elenco delle connessioni a stampanti
+## <a name="listing-printer-connections"></a>Elenco delle connessioni a stampanti
 
 Il modo più semplice per elencare le stampanti installate in un computer consiste nell'usare la classe WMI **Win32_Printer**:
 
@@ -30,7 +30,7 @@ Get-WmiObject -Class Win32_Printer -ComputerName
 
 Poiché questo comando restituisce una semplice raccolta di stringhe di nomi di porta e nomi di dispositivo stampante senza alcuna etichetta distintiva, non è facile da interpretare.
 
-### <a name="adding-a-network-printer"></a>Aggiunta di una stampante di rete
+## <a name="adding-a-network-printer"></a>Aggiunta di una stampante di rete
 
 Per aggiungere una nuova stampante di rete, usare **WScript.Network**:
 
@@ -38,7 +38,7 @@ Per aggiungere una nuova stampante di rete, usare **WScript.Network**:
 (New-Object -ComObject WScript.Network).AddWindowsPrinterConnection("\\Printserver01\Xerox5")
 ```
 
-### <a name="setting-a-default-printer"></a>Impostazione di una stampante predefinita
+## <a name="setting-a-default-printer"></a>Impostazione di una stampante predefinita
 
 Per usare WMI per impostare la stampante predefinita, individuare la stampante nella raccolta **Win32_Printer** e quindi richiamare il metodo **SetDefaultPrinter**:
 
@@ -52,7 +52,7 @@ Per usare WMI per impostare la stampante predefinita, individuare la stampante n
 (New-Object -ComObject WScript.Network).SetDefaultPrinter('HP LaserJet 5Si')
 ```
 
-### <a name="removing-a-printer-connection"></a>Rimozione di una connessione della stampante
+## <a name="removing-a-printer-connection"></a>Rimozione di una connessione della stampante
 
 Per rimuovere una connessione alla stampante, usare il metodo **WScript.Network RemovePrinterConnection**:
 

@@ -3,18 +3,18 @@ ms.date: 06/05/2017
 keywords: powershell,cmdlet
 title: Utilizzo delle chiavi del Registro di sistema
 ms.assetid: 91bfaecd-8684-48b4-ad86-065dfe6dc90a
-ms.openlocfilehash: a9d08f2f6b5803980dec45a4e266ad66879c8c8d
-ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
-ms.translationtype: MTE95
+ms.openlocfilehash: e7b497ec2fccf9ba3934439a9c1e9be3cf70a705
+ms.sourcegitcommit: 806cf87488b80800b9f50a8af286e8379519a034
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53403478"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59293198"
 ---
 # <a name="working-with-registry-keys"></a>Utilizzo delle chiavi del Registro di sistema
 
 Dato che le chiavi del Registro di sistema sono elementi nelle unità di Windows PowerShell, il loro utilizzo è molto simile a quello di file e cartelle. Una differenza fondamentale è che ogni elemento in un'unità di Windows PowerShell basata sul Registro di sistema è un contenitore, come una cartella in un'unità del file system. Tuttavia, le voci del Registro di sistema e i relativi valori associati sono proprietà degli elementi e non elementi distinti.
 
-### <a name="listing-all-subkeys-of-a-registry-key"></a>Elenco di tutte le sottochiavi di una chiave del Registro di sistema
+## <a name="listing-all-subkeys-of-a-registry-key"></a>Elenco di tutte le sottochiavi di una chiave del Registro di sistema
 
 È possibile usare **Get-ChildItem** per visualizzare tutti gli elementi direttamente all'interno di una chiave del Registro di sistema. Aggiungere il parametro facoltativo **Force** per visualizzare elementi nascosti o di sistema. Questo comando, ad esempio, visualizza gli elementi direttamente all'interno dell'unità di Windows PowerShell HKCU:, che corrisponde all'hive del Registro di sistema HKEY_CURRENT_USER:
 
@@ -58,7 +58,7 @@ Get-ChildItem -Path hkcu:\ -Recurse
 Get-ChildItem -Path HKCU:\Software -Recurse | Where-Object -FilterScript {($_.SubKeyCount -le 1) -and ($_.ValueCount -eq 4) }
 ```
 
-### <a name="copying-keys"></a>Copia di chiavi
+## <a name="copying-keys"></a>Copia di chiavi
 
 La copia viene eseguita con **Copy-Item**. Il comando seguente copia HKLM:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion e tutte le relative proprietà in HKCU:\\, creando una nuova chiave denominata "CurrentVersion":
 
@@ -74,7 +74,7 @@ Copy-Item -Path 'HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion' -Destination h
 
 Per eseguire copie nel file system, è comunque possibile continuare a usare altri strumenti già disponibili. È possibile usare dall'interno di Windows PowerShell qualsiasi strumento di modifica del Registro di sistema (tra cui reg.exe, regini.exe e regedit.exe) e gli oggetti COM che supportano la modifica del Registro di sistema (come WScript.Shell e la classe WMI StdRegProv).
 
-### <a name="creating-keys"></a>Creazione di chiavi
+## <a name="creating-keys"></a>Creazione di chiavi
 
 La creazione di nuove chiavi nel Registro di sistema è più semplice rispetto alla creazione di un nuovo elemento in un file system. Dato che tutte le chiavi del Registro di sistema sono contenitori, non è necessario specificare il tipo di elemento, ma è sufficiente indicare un percorso esplicito, ad esempio:
 
@@ -88,7 +88,7 @@ Per specificare una chiave, è anche possibile usare un percorso basato su provi
 New-Item -Path Registry::HKCU_DeleteMe
 ```
 
-### <a name="deleting-keys"></a>Eliminazione di chiavi
+## <a name="deleting-keys"></a>Eliminazione di chiavi
 
 L'eliminazione di elementi è un'attività fondamentalmente identica per tutti i provider. I comandi seguenti consentono di rimuovere elementi in modo invisibile all'utente:
 
@@ -97,7 +97,7 @@ Remove-Item -Path hkcu:\Software_DeleteMe
 Remove-Item -Path 'hkcu:\key with spaces in the name'
 ```
 
-### <a name="removing-all-keys-under-a-specific-key"></a>Rimozione di tutte le chiavi in una chiave specifica
+## <a name="removing-all-keys-under-a-specific-key"></a>Rimozione di tutte le chiavi in una chiave specifica
 
 È possibile rimuovere gli elementi contenuti tramite **Remove-Item**, ma verrà richiesto di confermare la rimozione, se l'elemento contiene altri elementi. Ad esempio, se si tenta di eliminare la sottochiave HKCU:\\CurrentVersion creata, verrà visualizzato il messaggio seguente:
 

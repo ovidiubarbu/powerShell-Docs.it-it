@@ -3,12 +3,12 @@ ms.date: 06/05/2017
 keywords: powershell,cmdlet
 title: Gestione del percorso corrente
 ms.assetid: a9f9e7a7-3ea8-47d3-bbb4-6e437f6d4a4a
-ms.openlocfilehash: d1ebc9507a45841e6d4d8219e45c002990e1328c
-ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
-ms.translationtype: MTE95
+ms.openlocfilehash: f5e0653b2c3bbc9d2526c7a1c2ff88a8a6641695
+ms.sourcegitcommit: 806cf87488b80800b9f50a8af286e8379519a034
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53401770"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59293186"
 ---
 # <a name="managing-current-location"></a>Gestione del percorso corrente
 
@@ -16,7 +16,7 @@ Nei sistemi di cartelle in Esplora file è in genere presente un percorso di lav
 
 Windows PowerShell usa il sostantivo **Location** per fare riferimento alla directory di lavoro e implementa una famiglia di cmdlet per esaminare e manipolare questo percorso.
 
-### <a name="getting-your-current-location-get-location"></a>Recupero del percorso corrente (Get-Location)
+## <a name="getting-your-current-location-get-location"></a>Recupero del percorso corrente (Get-Location)
 
 Per determinare il percorso della directory corrente, immettere il comando **Get-Location**:
 
@@ -30,7 +30,7 @@ C:\Documents and Settings\PowerUser
 > [!NOTE]
 > Il cmdlet Get-Location è simile al comando **pwd** della shell BASH. Il cmdlet Set-Location è simile al comando **cd** di Cmd.exe.
 
-### <a name="setting-your-current-location-set-location"></a>Impostazione del percorso corrente (Set-Location)
+## <a name="setting-your-current-location-set-location"></a>Impostazione del percorso corrente (Set-Location)
 
 Il comando **Get-Location** viene usato con il comando **Set-Location**. Il comando **Set-Location** consente di specificare il percorso della directory corrente.
 
@@ -96,7 +96,7 @@ chdir -Path .. -PassThru
 sl -Path HKLM:\SOFTWARE -PassThru
 ```
 
-### <a name="saving-and-recalling-recent-locations-push-location-and-pop-location"></a>Salvataggio e richiamo dei percorsi recenti (Push-Location e Pop-Location)
+## <a name="saving-and-recalling-recent-locations-push-location-and-pop-location"></a>Salvataggio e richiamo dei percorsi recenti (Push-Location e Pop-Location)
 
 Quando si cambia percorso, risulta utile tenere traccia del percorso precedente e avere la possibilità di tornarci. Il cmdlet **Push-Location** di Windows PowerShell crea una cronologia ordinata ("stack") dei percorsi di directory visitati ed è possibile risalire in questa cronologia usando il cmdlet complementare **Pop-Location**.
 
