@@ -1,12 +1,12 @@
 ---
 ms.date: 3/18/2019
 title: Creazione di query Get-WinEvent con FilterHashtable
-ms.openlocfilehash: fae01cc8be5c1805e2aae008e1f21ed387efa325
-ms.sourcegitcommit: 396509cd0d415acc306b68758b6f833406e26bf5
+ms.openlocfilehash: 28ba3c99a297944003a28eaba7de34b77d9df536
+ms.sourcegitcommit: 806cf87488b80800b9f50a8af286e8379519a034
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58320456"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59293283"
 ---
 # <a name="creating-get-winevent-queries-with-filterhashtable"></a>Creazione di query Get-WinEvent con FilterHashtable
 
@@ -29,12 +29,12 @@ Get-WinEvent -FilterHashtable @{
 }
 ```
 
-### <a name="blog-posts-about-enumeration"></a>Post di blog sull'enumerazione
+## <a name="blog-posts-about-enumeration"></a>Post di blog sull'enumerazione
 
 Questo articolo presenta informazioni su come usare i valori enumerati in una tabella hash. Per altre informazioni sull'enumerazione, leggere questi post del blog **Scripting Guy**. Per creare una funzione che restituisce i valori enumerati, vedere [Enumerations and Values](https://devblogs.microsoft.com/scripting/hey-scripting-guy-weekend-scripter-enumerations-and-values) (Enumerazioni e valori).
 Per altre informazioni, vedere la [serie di post del blog Scripting Guy sull'enumerazione](https://devblogs.microsoft.com/scripting/?s=about+enumeration).
 
-### <a name="hash-table-keyvalue-pairs"></a>Coppie chiave/valore della tabella di hash
+## <a name="hash-table-keyvalue-pairs"></a>Coppie chiave/valore della tabella di hash
 
 Per creare query efficienti, usare il cmdlet `Get-WinEvent` con il parametro **FilterHashtable**.
 **FilterHashtable** accetta una tabella hash come filtro per ottenere informazioni specifiche dai registri eventi di Windows. Una tabella hash usa coppie **chiave/valore**. Per altre informazioni sulle tabelle hash, vedere [about_Hash_Tables](/powershell/module/microsoft.powershell.core/about/about_hash_tables).
@@ -62,7 +62,7 @@ Nella tabella seguente vengono visualizzati i nomi delle chiavi, i tipi di dati 
 | Dati         | `<String[]>`       | No  |
 | *            | `<String[]>`       | No  |
 
-### <a name="building-a-query-with-a-hash-table"></a>Creazione di una query con una tabella hash
+## <a name="building-a-query-with-a-hash-table"></a>Creazione di una query con una tabella hash
 
 Per verificare i risultati e risolvere i problemi, è utile comporre la tabella hash con una coppia **chiave/valore** alla volta. La query ottiene i dati dal log **Application**. La tabella hash è equivalente a `Get-WinEvent –LogName Application`.
 
@@ -89,7 +89,7 @@ Get-WinEvent -FilterHashtable @{
 
 Se la query deve ottenere dati da registri eventi archiviati, usare la chiave **Path**. Il valore **Path** specifica il percorso completo del file di log. Per altre informazioni, vedere il post del blog **Scripting Guy** [Use PowerShell to Parse Saved Event Logs for Errors](https://devblogs.microsoft.com/scripting/use-powershell-to-parse-saved-event-logs-for-errors) (Usare PowerShell per analizzare i registri eventi salvati per individuare gli errori).
 
-### <a name="using-enumerated-values-in-a-hash-table"></a>Uso dei valori enumerati in una tabella hash
+## <a name="using-enumerated-values-in-a-hash-table"></a>Uso dei valori enumerati in una tabella hash
 
 La chiave successiva nella tabella hash è **Keywords**. Il tipo di dati **Keywords** è una matrice del tipo valore `[long]` che contiene un numero elevato. Usare il comando seguente per trovare il valore massimo di `[long]`:
 
@@ -156,7 +156,7 @@ Get-WinEvent -FilterHashtable @{
 }
 ```
 
-#### <a name="keywords-static-property-value-optional"></a>Valore della proprietà statica Keywords (facoltativo)
+### <a name="keywords-static-property-value-optional"></a>Valore della proprietà statica Keywords (facoltativo)
 
 La chiave **Keywords** viene enumerata, ma è possibile usare un nome di proprietà statica nella query per la tabella hash.
 Invece di usare la stringa restituita, il nome della proprietà deve essere convertito in un valore con la proprietà **Value_**.
@@ -172,7 +172,7 @@ Get-WinEvent -FilterHashtable @{
 }
 ```
 
-### <a name="filtering-by-event-id"></a>Filtro per ID evento
+## <a name="filtering-by-event-id"></a>Filtro per ID evento
 
 Per ottenere dati più specifici, i risultati della query vengono filtrati in base all'**ID evento**. Per fare riferimento all'**ID evento** nella tabella hash si usano la chiave **ID** e un **ID evento** specifico come valore. Il **Visualizzatore eventi di Windows** visualizza l'**ID evento**. In questo esempio viene usato l'**ID evento 1023**.
 
@@ -187,7 +187,7 @@ Get-WinEvent -FilterHashtable @{
 }
 ```
 
-### <a name="filtering-by-level"></a>Filtro per livello
+## <a name="filtering-by-level"></a>Filtro per livello
 
 Per affinare ulteriormente i risultati e includere solo gli eventi che sono errori, usare la chiave **Level**.
 **Visualizzatore eventi di Windows** visualizza i valori di **Level** come valori stringa, ma sono valori enumerati. Nella tabella hash, se si usa la chiave **Level** con un valore stringa viene visualizzato un messaggio di errore.
@@ -236,7 +236,7 @@ Get-WinEvent -FilterHashtable @{
 }
 ```
 
-#### <a name="level-static-property-in-enumeration-optional"></a>Proprietà statica Level nell'enumerazione (facoltativo)
+### <a name="level-static-property-in-enumeration-optional"></a>Proprietà statica Level nell'enumerazione (facoltativo)
 
 La chiave **Level** viene enumerata, ma è possibile usare un nome di proprietà statica nella query per la tabella hash.
 Invece di usare la stringa restituita, il nome della proprietà deve essere convertito in un valore con la proprietà **Value_**.

@@ -2,12 +2,12 @@
 title: Novità di PowerShell Core 6.1
 description: Nuove funzionalità e modifiche rilasciate in PowerShell Core 6.1
 ms.date: 09/13/2018
-ms.openlocfilehash: 1b41368bee92850e3593ebf4f5b8a469c4282d98
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
-ms.translationtype: MTE95
+ms.openlocfilehash: fe1e892d4a13a7758f5405867fdd7488c059f5cc
+ms.sourcegitcommit: 806cf87488b80800b9f50a8af286e8379519a034
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55682319"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59293317"
 ---
 # <a name="whats-new-in-powershell-core-61"></a>Novità di PowerShell Core 6.1
 
@@ -67,7 +67,7 @@ Measure-Command { 1..100000 | % {Get-Random -Minimum 1 -Maximum 10000} | Sort-Ob
 | Tempo (sec)   | 12,170                 | 8,493               | 7,08                |
 | Accelerazione (%) | N/D                    | 30,2%               | 16,6%               |
 
-`Import-Csv` è stato accelerato notevolmente anche dopo una regressione da Windows PowerShell.
+`Import-Csv` è stato inoltre accelerato notevolmente dopo una regressione da Windows PowerShell.
 L'esempio seguente usa un CSV di prova con 26.616 righe e sei colonne:
 
 ```powershell
@@ -516,3 +516,10 @@ Visual Basic veniva usato raramente con `Add-Type`. Questa funzionalità è stat
 ### <a name="cleaned-up-uses-of-commandtypesworkflow-and-workflowinfocleaned"></a>Pulizia di `CommandTypes.Workflow` e `WorkflowInfoCleaned`
 
 Per altre informazioni su queste modifiche, vedere [PR #6708](https://github.com/PowerShell/PowerShell/pull/6708).
+
+### <a name="group-object-now-sorts-the-groups"></a>Group-Object ordina ora i gruppi
+
+Come parte del miglioramento delle prestazioni, `Group-Object` ora restituisce un elenco ordinato dei gruppi.
+Anche se è consigliabile non fare affidamento sull'ordine, questa modifica potrebbe causare problemi se si volesse il primo gruppo. È stato deciso che valeva la pena introdurre questo miglioramento delle prestazioni perché l'impatto dell'eventuale dipendenza dal comportamento precedente è basso.
+
+Per altre informazioni su questa modifica, vedere [Problema n. 7409](https://github.com/PowerShell/PowerShell/issues/7409).

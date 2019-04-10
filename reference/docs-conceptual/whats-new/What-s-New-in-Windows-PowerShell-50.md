@@ -2,12 +2,12 @@
 ms.date: 06/05/2017
 keywords: powershell,cmdlet
 title: Novità di Windows PowerShell 5.0
-ms.openlocfilehash: a21e6af9f23ac8bb3ddf84dbfa67a67f3ff93b24
-ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
+ms.openlocfilehash: b2cb729948d4b53c5ea9a536dbeda04c7cb50997
+ms.sourcegitcommit: 9194e603ac242ae733839eb773e4af7360fdd044
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58055105"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59363531"
 ---
 # <a name="whats-new-in-windows-powershell-50"></a>Novità di Windows PowerShell 5.0
 
@@ -210,7 +210,7 @@ Windows PowerShell 4.0 viene installato per impostazione predefinita in Windows 
 
 Windows PowerShell 4.0 include le nuove funzionalità seguenti.
 
-### <a name="new-features-in-windows-powershell"></a>Nuove funzionalità di Windows PowerShell
+### <a name="a-namenew-features-in-windows-powershell-1-new-features-in-windows-powershell"></a><a name="new-features-in-windows-powershell-1" />Nuove funzionalità di Windows PowerShell
 
 - **Windows PowerShell Desired State Configuration** (DSC) è un nuovo sistema di gestione di Windows PowerShell 4.0 che consente di distribuire e gestire dati di configurazione per i servizi software e per l'ambiente in cui vengono eseguiti. Per altre informazioni, vedere [Introduzione a Windows PowerShell DSC (Desired State Configuration)](https://technet.microsoft.com/library/c134aa32-b085-4656-9a89-955d8ff768d0).
 - **Save-Help** consente ora di salvare la Guida per i moduli installati in computer remoti. È possibile usare Save-Help per scaricare la Guida sui moduli da un client connesso a Internet (in cui non sono necessariamente installati tutti i moduli per cui si vogliono informazioni) e quindi copiare la Guida salvata in una cartella condivisa remota o in un computer remoto privo di accesso a Internet.
@@ -230,7 +230,7 @@ Windows PowerShell 4.0 include le nuove funzionalità seguenti.
 - È stato aggiunto il nuovo cmdlet **Get-FileHash**, che restituisce l'hash di un file specificato in uno dei diversi formati disponibili.
 - In Windows PowerShell 4.0, se un modulo usa la chiave **DefaultCommandPrefix** nel manifesto o se l'utente importa un modulo con il parametro **Prefix**, la proprietà **ExportedCommands** del modulo mostra i comandi nel modulo con il prefisso. I nomi dei comandi eseguiti usando la sintassi qualificata di modulo ModuleName\\CommandName devono includere il prefisso.
 - Il valore di **$PSVersionTable.PSVersion** è stato aggiornato alla versione 4.0.
-- Il comportamento dell'operatore **Where()** è cambiato. L'accettazione di un'espressione stringa nel formato `"Property -CompareOperator Value"` in `Collection.Where('property -match name')` non è più supportata. Tuttavia, l'operatore **Where()** accetta espressioni stringa nel formato di un blocco di script. Questa funzionalità è ancora supportata.
+- Il comportamento dell'operatore **Where()** è cambiato. `Collection.Where('property -match name')` L'accettazione di un'espressione stringa nel formato `"Property -CompareOperator Value"` non è più supportata. Tuttavia, l'operatore **Where()** accetta espressioni stringa nel formato di un blocco di script. Questa funzionalità è ancora supportata.
 
 ### <a name="new-features-in-windows-powershell-integrated-scripting-environment-ise"></a>Nuove funzionalità di Windows PowerShell ISE (Integrated Scripting Environment)
 
@@ -353,7 +353,7 @@ Windows PowerShell è basato su Common Language Runtime 4.0. Gli autori di cmdle
 
 ### <a name="support-for-windows-preinstallation-environment"></a>Supporto per l'Ambiente preinstallazione di Windows
 
-Windows PowerShell 3.0 è un componente facoltativo di Ambiente preinstallazione di Windows (Windows PE) 4.0 per Windows 8. Windows PE è un sistema operativo minimale che avvia un computer privo di sistema operativo e lo prepara per l'installazione di Windows. Può essere usato per partizionare e formattare unità disco rigido, copiare immagini del disco in un computer e avviare l'installazione di Windows da una condivisione di rete. Windows PowerShell 3.0 può essere usato in Windows PE per gestire scenari di distribuzione, diagnostica e ripristino.
+Windows PowerShell 3.0 è un componente facoltativo di Ambiente preinstallazione di Windows (Windows PE) 4.0 per Windows 8. Windows PE è un sistema operativo minimale che consente di avviare un computer privo di sistema operativo e lo prepara per l'installazione di Windows. Può essere usato per partizionare e formattare unità disco rigido, copiare immagini del disco in un computer e avviare l'installazione di Windows da una condivisione di rete. Windows PowerShell 3.0 può essere usato in Windows PE per gestire scenari di distribuzione, diagnostica e ripristino.
 
 ### <a name="disconnected-sessions"></a>Sessioni disconnesse
 
