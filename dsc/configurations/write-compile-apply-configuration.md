@@ -2,12 +2,12 @@
 ms.date: 12/12/2018
 keywords: dsc,powershell,configurazione,servizio,impostazione
 title: Scrivere, compilare e applicare una configurazione
-ms.openlocfilehash: c884af9d92ac375457d6eb75d815ae9a9159e273
-ms.sourcegitcommit: 5990f04b8042ef2d8e571bec6d5b051e64c9921c
+ms.openlocfilehash: 947308efa165543571801c88a922daf44fa88be0
+ms.sourcegitcommit: 3f6002e7109373eda31cc65fc84d2600447cb7e9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2019
-ms.locfileid: "57795420"
+ms.lasthandoff: 04/11/2019
+ms.locfileid: "59506819"
 ---
 > Si applica a: Windows PowerShell 4.0, Windows PowerShell 5.0
 
@@ -61,12 +61,12 @@ Per eseguire la configurazione, è necessario *eseguire tramite l'operatore '.'*
 Per altre informazioni, vedere [about_Scripts](/powershell/module/microsoft.powershell.core/about/about_scripts?view=powershell-6#script-scope-and-dot-sourcing).
 
 <!-- markdownlint-disable MD038 -->
-*Eseguire tramite l'operatore '.'* lo script "HelloWorld.ps1" digitando nel percorso in cui è archiviato, dopo `. ` (punto, spazio). È quindi possibile eseguire la configurazione chiamandola come una funzione.
+*Usare il dotsourcing* per lo script "HelloWorld.ps1" digitando il percorso in cui è archiviato dopo `. ` (punto, spazio). È quindi possibile eseguire la configurazione chiamandola come una funzione.
 <!-- markdownlint-enable MD038 -->
 
 ```powershell
-. C:\Scripts\WebsiteTest.ps1
-HelloWolrd
+. C:\Scripts\HelloWorld.ps1
+HelloWorld
 ```
 
 Verrà generato l'output seguente:
@@ -90,7 +90,7 @@ Gestione configurazione locale si occupa di chiamare le risorse DSC per applicar
 Usare il codice seguente per eseguire il cmdlet `Start-DSCConfiguration`. Specificare il percorso della directory in cui è archiviato il file "localhost.mof" nel parametro `-Path`. Il cmdlet `Start-DSCConfiguration` ricerca nella directory specificata i file "\<nomecomputer\>.mof". Il cmdlet `Start-DSCConfiguration` tenta di applicare ogni file con estensione "mof" trovato al nome computer specificato dal nome file ("hostlocale", "server01", "dc-02" e così via).
 
 > [!NOTE]
-> Se il parametro `-Wait` non è specificato, `Start-DSCConfiguration` crea un processo in background per eseguire l'operazione. La specifica del parametro `-Verbose` consente di controllare l'output **dettagliato** dell'operazione. `-Wait` e `-Verbose` sono entrambi parametri facoltativi.
+> Se il parametro `-Wait` non è specificato, `Start-DSCConfiguration` crea un processo in background per eseguire l'operazione. La specifica del parametro `-Verbose` consente di controllare l'output **dettagliato** dell'operazione. `-Wait`e `-Verbose` sono entrambi parametri facoltativi.
 
 ```powershell
 Start-DscConfiguration -Path C:\Scripts\HelloWorld -Verbose -Wait

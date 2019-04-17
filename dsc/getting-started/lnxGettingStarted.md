@@ -2,12 +2,12 @@
 ms.date: 06/12/2017
 keywords: dsc,powershell,configurazione,installazione
 title: Introduzione a DSC (Desired State Configuration) per Linux
-ms.openlocfilehash: 69f087434455aae8e97ea07c79c52e493412d134
-ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
-ms.translationtype: MTE95
+ms.openlocfilehash: a18b226d4b2d8b8e1ba8b4168ec6ad8f73c73c42
+ms.sourcegitcommit: 3f6002e7109373eda31cc65fc84d2600447cb7e9
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53401387"
+ms.lasthandoff: 04/11/2019
+ms.locfileid: "59506836"
 ---
 # <a name="get-started-with-desired-state-configuration-dsc-for-linux"></a>Introduzione a DSC (Desired State Configuration) per Linux
 
@@ -41,7 +41,7 @@ Prima di installare DSC per Linux, è necessario installare [OMI (Open Managemen
 
 ### <a name="installing-omi"></a>Installazione di OMI
 
-DSC (Desired State Configuration) per Linux richiede il server CIM OMI (Open Management Infrastructure), versione 1.0.8.1 o successive. OMI può essere scaricato da The Open Group: [Open Management Infrastructure (OMI)](https://github.com/Microsoft/omi).
+DSC (Desired State Configuration) per Linux richiede il server CIM OMI (Open Management Infrastructure), versione 1.0.8.1 o successive. È possibile scaricare OMI da The Open Group: [Open Management Infrastructure (OMI)](https://github.com/Microsoft/omi).
 
 Per installare OMI, installare il pacchetto appropriato per il sistema Linux (RPM o DEB), la versione OpenSSL (ssl_098 o ssl_100) e l'architettura (x64/x86). I pacchetti RPM sono appropriati per CentOS, Red Hat Enterprise Linux, SUSE Linux Enterprise Server e Oracle Linux. I pacchetti DEB sono appropriati per Debian GNU/Linux e Ubuntu Server. I pacchetti ssl_098 sono appropriati per i computer in cui è installato OpenSSL 0.9.8, mentre i pacchetti ssl_100 sono appropriati per i computer in cui è installato OpenSSL 1.0.
 
@@ -115,25 +115,25 @@ Il codice seguente illustra come creare una sessione CIMSession per DSC per Linu
 
 ```powershell
 $Node = "ostc-dsc-01"
-$Credential = Get-Credential -UserName:"root" -Message:"Enter Password:"
+$Credential = Get-Credential -UserName "root" -Message "Enter Password:"
 
 #Ignore SSL certificate validation
-#$opt = New-CimSessionOption -UseSsl:$true -SkipCACheck:$true -SkipCNCheck:$true -SkipRevocationCheck:$true
+#$opt = New-CimSessionOption -UseSsl $true -SkipCACheck $true -SkipCNCheck $true -SkipRevocationCheck $true
 
 #Options for a trusted SSL certificate
-$opt = New-CimSessionOption -UseSsl:$true
-$Sess=New-CimSession -Credential:$credential -ComputerName:$Node -Port:5986 -Authentication:basic -SessionOption:$opt -OperationTimeoutSec:90
+$opt = New-CimSessionOption -UseSsl $true
+$Sess=New-CimSession -Credential $credential -ComputerName $Node -Port 5986 -Authentication basic -SessionOption $opt -OperationTimeoutSec 90
 ```
 
 > [!NOTE]
 > Per la modalità "Push", le credenziali dell'utente devono corrispondere all'utente ROOT nel computer Linux.
 > DSC per Linux supporta solo le connessioni SSL/TLS. Il cmdlet `New-CimSession` deve essere usato con il parametro -UseSSL impostato su $true.
 > Il certificato SSL usato da OMI (per DSC) è specificato nel file: `/opt/omi/etc/omiserver.conf` con le proprietà: pemfile e keyfile.
-> Se il certificato non è considerato attendibile dal computer Windows in cui si esegue il cmdlet [New-CimSession](/powershell/module/CimCmdlets/New-CimSession), è possibile scegliere di ignorare la convalida del certificato con le opzioni di CIMSession: `-SkipCACheck:$true -SkipCNCheck:$true -SkipRevocationCheck:$true`
+> Se il certificato non è considerato attendibile dal computer Windows in cui si esegue il cmdlet [New-CimSession](/powershell/module/CimCmdlets/New-CimSession), è possibile scegliere di ignorare la convalida del certificato con le opzioni di CIMSession: `-SkipCACheck $true -SkipCNCheck $true -SkipRevocationCheck $true`
 
 Eseguire il comando seguente per effettuare il push della configurazione DSC nel nodo Linux.
 
-`Start-DscConfiguration -Path:"C:\temp" -CimSession:$Sess -Wait -Verbose`
+`Start-DscConfiguration -Path:"C:\temp" -CimSession $Sess -Wait -Verbose`
 
 ### <a name="distribute-the-configuration-with-a-pull-server"></a>Distribuire la configurazione con un server di pull
 
