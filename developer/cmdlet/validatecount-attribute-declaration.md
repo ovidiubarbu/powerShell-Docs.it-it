@@ -12,12 +12,12 @@ helpviewer_keywords:
 - ValidateCount attribute
 ms.assetid: 516af1ef-2c2e-408d-84bc-865f5bccf761
 caps.latest.revision: 11
-ms.openlocfilehash: 4e0be34b6f7a56dcf02a4381de4d2a5d08db14df
-ms.sourcegitcommit: 5990f04b8042ef2d8e571bec6d5b051e64c9921c
-ms.translationtype: MT
+ms.openlocfilehash: ffc45f6b80a2b7ed22f27d083d042b1de7f353f6
+ms.sourcegitcommit: f4bd4e116e22c8b5bfcb61680a7c42e58b4da93e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2019
-ms.locfileid: "57794442"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59983899"
 ---
 # <a name="validatecount-attribute-declaration"></a>Dichiarazione dell'attributo ValidateCount
 
@@ -31,28 +31,34 @@ L'attributo ValidateCount specifica il numero minimo e massimo di argomenti è c
 
 #### <a name="parameters"></a>Parametri
 
-`MinLength` ([System.Int32](/dotnet/api/System.Int32)) richiesto. Specifica il numero minimo di argomenti.
+`MinLength` ([System.Int32][]) richiesto. Specifica il numero minimo di argomenti.
 
-`MaxLength`([System.Int32](/dotnet/api/System.Int32)) richiesto. Specifica il numero massimo di argomenti.
+`MaxLength`([System.Int32][]) richiesto. Specifica il numero massimo di argomenti.
 
 ## <a name="remarks"></a>Osservazioni
 
-- Per altre informazioni su come dichiarare questo attributo, vedere [come dichiarare le regole di convalida Input](http://msdn.microsoft.com/en-us/544c2100-62ba-4be4-b2a2-cc0d4e4fc45b).
+- Per altre informazioni su come dichiarare questo attributo, vedere [come convalidare un numero di argomenti][].
 
 - Quando questo attributo non viene richiamato, il parametro di cmdlet corrispondente può avere qualsiasi numero di argomenti.
 
 - Il runtime di Windows PowerShell genera un errore nelle condizioni seguenti:
 
-    - Il `MinLength` e `MaxLength` parametri dell'attributo non sono di tipo [System.Int32](/dotnet/api/System.Int32).
+    - Il `MinLength` e `MaxLength` parametri dell'attributo non sono di tipo [System.Int32][].
 
     - Il valore della `MaxLength` parametro di attributo è minore del valore del `MinLength` parametro di attributo.
 
-- L'attributo ValidateCount è definito per il [System.Management.Automation.Validatecount](/dotnet/api/System.Management.Automation.ValidateCount) classe.
+- L'attributo ValidateCount è definito per il [System.Management.Automation.ValidateCountAttribute][] classe.
 
 ## <a name="see-also"></a>Vedere anche
 
-[System.Management.Automation.Validatecount](/dotnet/api/System.Management.Automation.ValidateCount)
+[System.Management.Automation.ValidateCountAttribute][]
 
-[Come dichiarare le regole di convalida dell'Input](http://msdn.microsoft.com/en-us/544c2100-62ba-4be4-b2a2-cc0d4e4fc45b)
+[Come convalidare un numero di argomenti][]
 
-[Scrittura di un cmdlet di Windows PowerShell](./writing-a-windows-powershell-cmdlet.md)
+[Scrittura di un cmdlet di Windows PowerShell][]
+
+[Come convalidare un numero di argomenti]: how-to-validate-an-argument-count.md
+[Scrittura di un cmdlet di Windows PowerShell]: writing-a-windows-powershell-cmdlet.md
+
+[System.Int32]: /dotnet/api/System.Int32
+[System.Management.Automation.ValidateCountAttribute]: /dotnet/api/System.Management.Automation.ValidateCountAttribute
