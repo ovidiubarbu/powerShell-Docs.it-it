@@ -9,18 +9,18 @@ ms.topic: article
 ms.assetid: 16d18f81-c93d-4ddb-9613-03c24faed631
 caps.latest.revision: 4
 ms.openlocfilehash: 627454d029bdc97031e612a988ef27d6980c7723
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56861247"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62083145"
 ---
-# <a name="writing-help-for-windows-powershell-snap-ins"></a><span data-ttu-id="df7d0-102">Scrittura di una Guida per gli snap-in di Windows PowerShell</span><span class="sxs-lookup"><span data-stu-id="df7d0-102">Writing Help for Windows PowerShell Snap-ins</span></span>
+# <a name="writing-help-for-windows-powershell-snap-ins"></a><span data-ttu-id="70665-102">Scrittura di una Guida per gli snap-in di Windows PowerShell</span><span class="sxs-lookup"><span data-stu-id="70665-102">Writing Help for Windows PowerShell Snap-ins</span></span>
 
-<span data-ttu-id="df7d0-103">Inserire l'introduzione qui.</span><span class="sxs-lookup"><span data-stu-id="df7d0-103">Insert introduction here.</span></span>
+<span data-ttu-id="70665-103">Inserire l'introduzione qui.</span><span class="sxs-lookup"><span data-stu-id="70665-103">Insert introduction here.</span></span>
 
-## <a name="section-heading"></a><span data-ttu-id="df7d0-104">Intestazione della sezione</span><span class="sxs-lookup"><span data-stu-id="df7d0-104">Section Heading</span></span>
+## <a name="section-heading"></a><span data-ttu-id="70665-104">Intestazione della sezione</span><span class="sxs-lookup"><span data-stu-id="70665-104">Section Heading</span></span>
 
- <span data-ttu-id="df7d0-105">Inserire il corpo della sezione qui.</span><span class="sxs-lookup"><span data-stu-id="df7d0-105">Insert section body here.</span></span>
+ <span data-ttu-id="70665-105">Inserire qui il corpo della sezione.</span><span class="sxs-lookup"><span data-stu-id="70665-105">Insert section body here.</span></span>
 
-### <a name="subsection-heading"></a><span data-ttu-id="df7d0-106">Intestazione della sottosezione</span><span class="sxs-lookup"><span data-stu-id="df7d0-106">Subsection Heading</span></span>
+### <a name="subsection-heading"></a><span data-ttu-id="70665-106">Intestazione della sottosezione</span><span class="sxs-lookup"><span data-stu-id="70665-106">Subsection Heading</span></span>
