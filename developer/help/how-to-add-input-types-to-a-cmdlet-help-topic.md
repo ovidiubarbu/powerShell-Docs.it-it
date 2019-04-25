@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: 432798e4-5d69-46b1-9517-ff09bffaa4be
 caps.latest.revision: 7
 ms.openlocfilehash: f213605dda0132051d983f8608515325e815c455
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56860807"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62083434"
 ---
 # <a name="how-to-add-input-types-to-a-cmdlet-help-topic"></a>Come aggiungere i tipi di input a un argomento della Guida sui cmdlet
 
