@@ -2,21 +2,21 @@
 ms.date: 06/12/2017
 keywords: wmf,powershell,installazione
 ms.openlocfilehash: 3acd266a75bc61ffe4bce467cfb804ac7865c629
-ms.sourcegitcommit: c3f1a83b59484651119630f3089aa51b6e7d4c3c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/26/2018
-ms.locfileid: "39267923"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62057248"
 ---
-# <a name="creating-and-connecting-to-a-jea-endpoint"></a><span data-ttu-id="dd279-102">Creazione e connessione a un endpoint JEA</span><span class="sxs-lookup"><span data-stu-id="dd279-102">Creating and Connecting to a JEA Endpoint</span></span>
+# <a name="creating-and-connecting-to-a-jea-endpoint"></a><span data-ttu-id="4ad48-102">Creazione e connessione a un endpoint JEA</span><span class="sxs-lookup"><span data-stu-id="4ad48-102">Creating and Connecting to a JEA Endpoint</span></span>
 
-<span data-ttu-id="dd279-103">Per creare un endpoint JEA, è necessario creare e registrare un file di configurazione di sessione di PowerShell appositamente configurato, che può essere generato con il cmdlet **New-PSSessionConfigurationFile**.</span><span class="sxs-lookup"><span data-stu-id="dd279-103">To create a JEA endpoint, you need to create and register a specially-configured PowerShell Session Configuration file, which can be generated with the **New-PSSessionConfigurationFile** cmdlet.</span></span>
+<span data-ttu-id="4ad48-103">Per creare un endpoint JEA, è necessario creare e registrare un file di configurazione di sessione di PowerShell appositamente configurato, che può essere generato con il cmdlet **New-PSSessionConfigurationFile**.</span><span class="sxs-lookup"><span data-stu-id="4ad48-103">To create a JEA endpoint, you need to create and register a specially-configured PowerShell Session Configuration file, which can be generated with the **New-PSSessionConfigurationFile** cmdlet.</span></span>
 
 ```powershell
 New-PSSessionConfigurationFile -SessionType RestrictedRemoteServer -TranscriptDirectory "C:\ProgramData\JEATranscripts" -RunAsVirtualAccount -RoleDefinitions @{ 'CONTOSO\NonAdmin_Operators' = @{ RoleCapabilities = 'Maintenance' }} -Path "$env:ProgramData\JEAConfiguration\Demo.pssc"
 ```
 
-<span data-ttu-id="dd279-104">Questo comando creerà un file di configurazione di sessione simile al seguente:</span><span class="sxs-lookup"><span data-stu-id="dd279-104">This will create a session configuration file that looks like this:</span></span>
+<span data-ttu-id="4ad48-104">Questo comando creerà un file di configurazione di sessione simile al seguente:</span><span class="sxs-lookup"><span data-stu-id="4ad48-104">This will create a session configuration file that looks like this:</span></span>
 
 ```powershell
 @{
@@ -53,21 +53,21 @@ New-PSSessionConfigurationFile -SessionType RestrictedRemoteServer -TranscriptDi
 }
 ```
 
-<span data-ttu-id="dd279-105">Quando si crea un endpoint JEA, è necessario impostare i seguenti parametri del comando (e le chiavi corrispondenti nel file):</span><span class="sxs-lookup"><span data-stu-id="dd279-105">When creating a JEA endpoint, the following parameters of the command (and corresponding keys in the file) must be set:</span></span>
+<span data-ttu-id="4ad48-105">Quando si crea un endpoint JEA, è necessario impostare i seguenti parametri del comando (e le chiavi corrispondenti nel file):</span><span class="sxs-lookup"><span data-stu-id="4ad48-105">When creating a JEA endpoint, the following parameters of the command (and corresponding keys in the file) must be set:</span></span>
 
-1. <span data-ttu-id="dd279-106">SessionType su RestrictedRemoteServer</span><span class="sxs-lookup"><span data-stu-id="dd279-106">SessionType to RestrictedRemoteServer</span></span>
-2. <span data-ttu-id="dd279-107">RunAsVirtualAccount su **$true**</span><span class="sxs-lookup"><span data-stu-id="dd279-107">RunAsVirtualAccount to **$true**</span></span>
-3. <span data-ttu-id="dd279-108">TranscriptPath per la directory in cui verranno salvate le trascrizioni "Over The Shoulder" dopo ogni sessione</span><span class="sxs-lookup"><span data-stu-id="dd279-108">TranscriptPath to the directory where "over the shoulder" transcripts will be saved after each session</span></span>
-4. <span data-ttu-id="dd279-109">RoleDefinitions su una tabella hash che definisce quali gruppi hanno accesso a quali "capacità del ruolo".</span><span class="sxs-lookup"><span data-stu-id="dd279-109">RoleDefinitions to a hashtable that defines which groups have access to which "Role Capabilities."</span></span> <span data-ttu-id="dd279-110">Questo campo definisce **chi** può fare **cosa** su questo endpoint.</span><span class="sxs-lookup"><span data-stu-id="dd279-110">This field defines **who** can do **what** on this endpoint.</span></span> <span data-ttu-id="dd279-111">Le capacità del ruolo sono file speciali che verranno spiegati più avanti.</span><span class="sxs-lookup"><span data-stu-id="dd279-111">Role Capabilities are special files that will be explained shortly.</span></span>
+1. <span data-ttu-id="4ad48-106">SessionType su RestrictedRemoteServer</span><span class="sxs-lookup"><span data-stu-id="4ad48-106">SessionType to RestrictedRemoteServer</span></span>
+2. <span data-ttu-id="4ad48-107">RunAsVirtualAccount su **$true**</span><span class="sxs-lookup"><span data-stu-id="4ad48-107">RunAsVirtualAccount to **$true**</span></span>
+3. <span data-ttu-id="4ad48-108">TranscriptPath per la directory in cui verranno salvate le trascrizioni "Over The Shoulder" dopo ogni sessione</span><span class="sxs-lookup"><span data-stu-id="4ad48-108">TranscriptPath to the directory where "over the shoulder" transcripts will be saved after each session</span></span>
+4. <span data-ttu-id="4ad48-109">RoleDefinitions su una tabella hash che definisce quali gruppi hanno accesso a quali "capacità del ruolo".</span><span class="sxs-lookup"><span data-stu-id="4ad48-109">RoleDefinitions to a hashtable that defines which groups have access to which "Role Capabilities."</span></span> <span data-ttu-id="4ad48-110">Questo campo definisce **chi** può fare **cosa** su questo endpoint.</span><span class="sxs-lookup"><span data-stu-id="4ad48-110">This field defines **who** can do **what** on this endpoint.</span></span> <span data-ttu-id="4ad48-111">Le capacità del ruolo sono file speciali che verranno spiegati più avanti.</span><span class="sxs-lookup"><span data-stu-id="4ad48-111">Role Capabilities are special files that will be explained shortly.</span></span>
 
-<span data-ttu-id="dd279-112">Il campo RoleDefinitions definisce quali gruppi hanno avuto accesso a quali capacità del ruolo.</span><span class="sxs-lookup"><span data-stu-id="dd279-112">The RoleDefinitions field defines which groups had access to which Role Capabilities.</span></span> <span data-ttu-id="dd279-113">Con capacità del ruolo si intende un file che definisce un set di capacità che verranno esposte per gli utenti che si connettono.</span><span class="sxs-lookup"><span data-stu-id="dd279-113">A Role Capability is a file that defines a set of capabilities that will be exposed to connecting users.</span></span>
-<span data-ttu-id="dd279-114">È possibile creare capacità del ruolo con il comando **New PSRoleCapabilityFile**.</span><span class="sxs-lookup"><span data-stu-id="dd279-114">You can create Role Capabilities with the **New-PSRoleCapabilityFile** command.</span></span>
+<span data-ttu-id="4ad48-112">Il campo RoleDefinitions definisce quali gruppi hanno avuto accesso a quali capacità del ruolo.</span><span class="sxs-lookup"><span data-stu-id="4ad48-112">The RoleDefinitions field defines which groups had access to which Role Capabilities.</span></span> <span data-ttu-id="4ad48-113">Con capacità del ruolo si intende un file che definisce un set di capacità che verranno esposte per gli utenti che si connettono.</span><span class="sxs-lookup"><span data-stu-id="4ad48-113">A Role Capability is a file that defines a set of capabilities that will be exposed to connecting users.</span></span>
+<span data-ttu-id="4ad48-114">È possibile creare capacità del ruolo con il comando **New PSRoleCapabilityFile**.</span><span class="sxs-lookup"><span data-stu-id="4ad48-114">You can create Role Capabilities with the **New-PSRoleCapabilityFile** command.</span></span>
 
 ```powershell
 New-PSRoleCapabilityFile -Path "$env:ProgramFiles\WindowsPowerShell\Modules\DemoModule\RoleCapabilities\Maintenance.psrc"
 ```
 
-<span data-ttu-id="dd279-115">Verrà generato un file di capacità del ruolo modello simile al seguente:</span><span class="sxs-lookup"><span data-stu-id="dd279-115">This will generate a template role capability that looks like this:</span></span>
+<span data-ttu-id="4ad48-115">Verrà generato un file di capacità del ruolo modello simile al seguente:</span><span class="sxs-lookup"><span data-stu-id="4ad48-115">This will generate a template role capability that looks like this:</span></span>
 
 ```powershell
 @{
@@ -131,23 +131,23 @@ New-PSRoleCapabilityFile -Path "$env:ProgramFiles\WindowsPowerShell\Modules\Demo
 }
 ```
 
-<span data-ttu-id="dd279-116">Per poterle usare in una configurazione di sessione JEA, le capacità del ruolo devono essere salvate come modulo di PowerShell valido in una directory denominata "RoleCapabilities".</span><span class="sxs-lookup"><span data-stu-id="dd279-116">To be used by a JEA session configuration, Role Capabilities must be saved as a valid PowerShell module in a directory named "RoleCapabilities".</span></span> <span data-ttu-id="dd279-117">Per un modulo possono esistere più file di capacità del ruolo, se necessario.</span><span class="sxs-lookup"><span data-stu-id="dd279-117">A module may have multiple role capability files, if desired.</span></span>
+<span data-ttu-id="4ad48-116">Per poterle usare in una configurazione di sessione JEA, le capacità del ruolo devono essere salvate come modulo di PowerShell valido in una directory denominata "RoleCapabilities".</span><span class="sxs-lookup"><span data-stu-id="4ad48-116">To be used by a JEA session configuration, Role Capabilities must be saved as a valid PowerShell module in a directory named "RoleCapabilities".</span></span> <span data-ttu-id="4ad48-117">Per un modulo possono esistere più file di capacità del ruolo, se necessario.</span><span class="sxs-lookup"><span data-stu-id="4ad48-117">A module may have multiple role capability files, if desired.</span></span>
 
-<span data-ttu-id="dd279-118">Per iniziare a configurare i cmdlet, le funzioni, gli alias e gli script a cui può accedere un utente durante la connessione a una sessione JEA, aggiungere regole personalizzate nel file delle capacità del ruolo, come indicato nei modelli impostati come commento.</span><span class="sxs-lookup"><span data-stu-id="dd279-118">To start configuring which cmdlets, functions, aliases, and scripts a user may access when connecting to a JEA session, add your own rules to the Role Capability file following the commented out templates.</span></span> <span data-ttu-id="dd279-119">Per informazioni più approfondite su come è possibile configurare le capacità del ruolo, vedere la [guida all'esperienza](http://aka.ms/JEA) completa.</span><span class="sxs-lookup"><span data-stu-id="dd279-119">For a deeper look into how you can configure Role Capabilities, check out the full [experience guide](http://aka.ms/JEA).</span></span>
+<span data-ttu-id="4ad48-118">Per iniziare a configurare i cmdlet, le funzioni, gli alias e gli script a cui può accedere un utente durante la connessione a una sessione JEA, aggiungere regole personalizzate nel file delle capacità del ruolo, come indicato nei modelli impostati come commento.</span><span class="sxs-lookup"><span data-stu-id="4ad48-118">To start configuring which cmdlets, functions, aliases, and scripts a user may access when connecting to a JEA session, add your own rules to the Role Capability file following the commented out templates.</span></span> <span data-ttu-id="4ad48-119">Per informazioni più approfondite su come è possibile configurare le capacità del ruolo, vedere la [guida all'esperienza](http://aka.ms/JEA) completa.</span><span class="sxs-lookup"><span data-stu-id="4ad48-119">For a deeper look into how you can configure Role Capabilities, check out the full [experience guide](http://aka.ms/JEA).</span></span>
 
-<span data-ttu-id="dd279-120">Infine, dopo aver completato la personalizzazione della configurazione di sessione e delle capacità del ruolo correlate, registrare questa configurazione di sessione e creare l'endpoint eseguendo `Register-PSSessionConfiguration`.</span><span class="sxs-lookup"><span data-stu-id="dd279-120">Finally, once you have finished customizing your session configuration and related Role Capabilities, register this session configuration and create the endpoint by running `Register-PSSessionConfiguration`.</span></span>
+<span data-ttu-id="4ad48-120">Infine, dopo aver completato la personalizzazione della configurazione di sessione e delle capacità del ruolo correlate, registrare questa configurazione di sessione e creare l'endpoint eseguendo `Register-PSSessionConfiguration`.</span><span class="sxs-lookup"><span data-stu-id="4ad48-120">Finally, once you have finished customizing your session configuration and related Role Capabilities, register this session configuration and create the endpoint by running `Register-PSSessionConfiguration`.</span></span>
 
 ```powershell
 Register-PSSessionConfiguration -Name Maintenance -Path "C:\ProgramData\JEAConfiguration\Demo.pssc"
 ```
 
-## <a name="connect-to-a-jea-endpoint"></a><span data-ttu-id="dd279-121">Connettersi a un Endpoint JEA</span><span class="sxs-lookup"><span data-stu-id="dd279-121">Connect to a JEA Endpoint</span></span>
+## <a name="connect-to-a-jea-endpoint"></a><span data-ttu-id="4ad48-121">Connettersi a un Endpoint JEA</span><span class="sxs-lookup"><span data-stu-id="4ad48-121">Connect to a JEA Endpoint</span></span>
 
-<span data-ttu-id="dd279-122">La connessione a un Endpoint JEA funziona nello stesso modo della connessione a qualsiasi altro endpoint di PowerShell.</span><span class="sxs-lookup"><span data-stu-id="dd279-122">Connecting to a JEA Endpoint works the same way connecting to any other PowerShell endpoint works.</span></span>
-<span data-ttu-id="dd279-123">È sufficiente specificare il nome dell'endpoint JEA come parametro "ConfigurationName" per **New-PSSession**, **Invoke-Command** o **Enter-PSSession**.</span><span class="sxs-lookup"><span data-stu-id="dd279-123">You simply have to give your JEA endpoint name as the "ConfigurationName" parameter for **New-PSSession**, **Invoke-Command**, or **Enter-PSSession**.</span></span>
+<span data-ttu-id="4ad48-122">La connessione a un Endpoint JEA funziona nello stesso modo della connessione a qualsiasi altro endpoint di PowerShell.</span><span class="sxs-lookup"><span data-stu-id="4ad48-122">Connecting to a JEA Endpoint works the same way connecting to any other PowerShell endpoint works.</span></span>
+<span data-ttu-id="4ad48-123">È sufficiente specificare il nome dell'endpoint JEA come parametro "ConfigurationName" per **New-PSSession**, **Invoke-Command** o **Enter-PSSession**.</span><span class="sxs-lookup"><span data-stu-id="4ad48-123">You simply have to give your JEA endpoint name as the "ConfigurationName" parameter for **New-PSSession**, **Invoke-Command**, or **Enter-PSSession**.</span></span>
 
 ```powershell
 Enter-PSSession -ConfigurationName Maintenance -ComputerName localhost
 ```
 
-<span data-ttu-id="dd279-124">Dopo essersi connessi alla sessione JEA, sarà consentita solo l'esecuzione dei comandi inclusi tra le capacità del ruolo a cui si ha accesso.</span><span class="sxs-lookup"><span data-stu-id="dd279-124">Once you have connected to the JEA session, you will be limited to running the commands whitelisted in the Role Capabilities that you have access to.</span></span> <span data-ttu-id="dd279-125">Se si tenta di eseguire qualsiasi comando non consentito per il ruolo, si verificherà un errore.</span><span class="sxs-lookup"><span data-stu-id="dd279-125">If you try to run any command not allowed for your role, you will encounter an error.</span></span>
+<span data-ttu-id="4ad48-124">Dopo essersi connessi alla sessione JEA, sarà consentita solo l'esecuzione dei comandi inclusi tra le capacità del ruolo a cui si ha accesso.</span><span class="sxs-lookup"><span data-stu-id="4ad48-124">Once you have connected to the JEA session, you will be limited to running the commands whitelisted in the Role Capabilities that you have access to.</span></span> <span data-ttu-id="4ad48-125">Se si tenta di eseguire qualsiasi comando non consentito per il ruolo, si verificherà un errore.</span><span class="sxs-lookup"><span data-stu-id="4ad48-125">If you try to run any command not allowed for your role, you will encounter an error.</span></span>

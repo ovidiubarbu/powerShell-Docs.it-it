@@ -4,15 +4,15 @@ keywords: powershell,cmdlet
 title: Uso di classi e metodi statici
 ms.assetid: 418ad766-afa6-4b8c-9a44-471889af7fd9
 ms.openlocfilehash: e4caff63a1ec7295b6fe450c2915baf0cc7e31af
-ms.sourcegitcommit: 806cf87488b80800b9f50a8af286e8379519a034
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59293113"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62086015"
 ---
-# <a name="using-static-classes-and-methods"></a><span data-ttu-id="8ae2e-103">Uso di classi e metodi statici</span><span class="sxs-lookup"><span data-stu-id="8ae2e-103">Using Static Classes and Methods</span></span>
+# <a name="using-static-classes-and-methods"></a><span data-ttu-id="bdaea-103">Uso di classi e metodi statici</span><span class="sxs-lookup"><span data-stu-id="bdaea-103">Using Static Classes and Methods</span></span>
 
-<span data-ttu-id="8ae2e-104">Non tutte le classi .NET Framework possono essere create usando **New-Object**.</span><span class="sxs-lookup"><span data-stu-id="8ae2e-104">Not all .NET Framework classes can be created by using **New-Object**.</span></span> <span data-ttu-id="8ae2e-105">Ad esempio, se si prova a creare un oggetto **System.Environment** o **System.Math** con **New-Object**, verranno visualizzati i messaggi di errore seguenti:</span><span class="sxs-lookup"><span data-stu-id="8ae2e-105">For example, if you try to create a **System.Environment** or a **System.Math** object with **New-Object**, you will get the following error messages:</span></span>
+<span data-ttu-id="bdaea-104">Non tutte le classi .NET Framework possono essere create usando **New-Object**.</span><span class="sxs-lookup"><span data-stu-id="bdaea-104">Not all .NET Framework classes can be created by using **New-Object**.</span></span> <span data-ttu-id="bdaea-105">Ad esempio, se si prova a creare un oggetto **System.Environment** o **System.Math** con **New-Object**, verranno visualizzati i messaggi di errore seguenti:</span><span class="sxs-lookup"><span data-stu-id="bdaea-105">For example, if you try to create a **System.Environment** or a **System.Math** object with **New-Object**, you will get the following error messages:</span></span>
 
 ```
 PS> New-Object System.Environment
@@ -28,15 +28,15 @@ At line:1 char:11
 + New-Object  <<<< System.Math
 ```
 
-<span data-ttu-id="8ae2e-106">Questi errori si verificano perché non è possibile creare un nuovo oggetto da queste classi.</span><span class="sxs-lookup"><span data-stu-id="8ae2e-106">These errors occur because there is no way to create a new object from these classes.</span></span> <span data-ttu-id="8ae2e-107">Queste classi sono librerie di riferimento di metodi e proprietà che non cambiano stato.</span><span class="sxs-lookup"><span data-stu-id="8ae2e-107">These classes are reference libraries of methods and properties that do not change state.</span></span> <span data-ttu-id="8ae2e-108">Non devono essere create, ma solo usate.</span><span class="sxs-lookup"><span data-stu-id="8ae2e-108">You don't need to create them, you simply use them.</span></span> <span data-ttu-id="8ae2e-109">I metodi e le classi di questo tipo sono denominate *classi statiche*, perché non vengono create, eliminate o modificate.</span><span class="sxs-lookup"><span data-stu-id="8ae2e-109">Classes and methods such as these are called *static classes* because they are not created, destroyed, or changed.</span></span> <span data-ttu-id="8ae2e-110">Per chiarire il concetto verranno forniti esempi che usano le classi statiche.</span><span class="sxs-lookup"><span data-stu-id="8ae2e-110">To make this clear we will provide examples that use static classes.</span></span>
+<span data-ttu-id="bdaea-106">Questi errori si verificano perché non è possibile creare un nuovo oggetto da queste classi.</span><span class="sxs-lookup"><span data-stu-id="bdaea-106">These errors occur because there is no way to create a new object from these classes.</span></span> <span data-ttu-id="bdaea-107">Queste classi sono librerie di riferimento di metodi e proprietà che non cambiano stato.</span><span class="sxs-lookup"><span data-stu-id="bdaea-107">These classes are reference libraries of methods and properties that do not change state.</span></span> <span data-ttu-id="bdaea-108">Non devono essere create, ma solo usate.</span><span class="sxs-lookup"><span data-stu-id="bdaea-108">You don't need to create them, you simply use them.</span></span> <span data-ttu-id="bdaea-109">I metodi e le classi di questo tipo sono denominate *classi statiche*, perché non vengono create, eliminate o modificate.</span><span class="sxs-lookup"><span data-stu-id="bdaea-109">Classes and methods such as these are called *static classes* because they are not created, destroyed, or changed.</span></span> <span data-ttu-id="bdaea-110">Per chiarire il concetto verranno forniti esempi che usano le classi statiche.</span><span class="sxs-lookup"><span data-stu-id="bdaea-110">To make this clear we will provide examples that use static classes.</span></span>
 
-## <a name="getting-environment-data-with-systemenvironment"></a><span data-ttu-id="8ae2e-111">Recupero di dati dell'ambiente con System.Environment</span><span class="sxs-lookup"><span data-stu-id="8ae2e-111">Getting Environment Data with System.Environment</span></span>
+## <a name="getting-environment-data-with-systemenvironment"></a><span data-ttu-id="bdaea-111">Recupero di dati dell'ambiente con System.Environment</span><span class="sxs-lookup"><span data-stu-id="bdaea-111">Getting Environment Data with System.Environment</span></span>
 
-<span data-ttu-id="8ae2e-112">In genere, il primo passaggio quando si lavora con un oggetto in Windows PowerShell consiste nell'usare Get-Member per scoprire quali membri contiene.</span><span class="sxs-lookup"><span data-stu-id="8ae2e-112">Usually, the first step in working with an object in Windows PowerShell is to use Get-Member to find out what members it contains.</span></span> <span data-ttu-id="8ae2e-113">Con le classi statiche, il processo è leggermente diverso perché la classe non è realmente un oggetto.</span><span class="sxs-lookup"><span data-stu-id="8ae2e-113">With static classes, the process is a little different because the actual class is not an object.</span></span>
+<span data-ttu-id="bdaea-112">In genere, il primo passaggio quando si lavora con un oggetto in Windows PowerShell consiste nell'usare Get-Member per scoprire quali membri contiene.</span><span class="sxs-lookup"><span data-stu-id="bdaea-112">Usually, the first step in working with an object in Windows PowerShell is to use Get-Member to find out what members it contains.</span></span> <span data-ttu-id="bdaea-113">Con le classi statiche, il processo è leggermente diverso perché la classe non è realmente un oggetto.</span><span class="sxs-lookup"><span data-stu-id="bdaea-113">With static classes, the process is a little different because the actual class is not an object.</span></span>
 
-### <a name="referring-to-the-static-systemenvironment-class"></a><span data-ttu-id="8ae2e-114">Riferimento alla classe statica System.Environment</span><span class="sxs-lookup"><span data-stu-id="8ae2e-114">Referring to the Static System.Environment Class</span></span>
+### <a name="referring-to-the-static-systemenvironment-class"></a><span data-ttu-id="bdaea-114">Riferimento alla classe statica System.Environment</span><span class="sxs-lookup"><span data-stu-id="bdaea-114">Referring to the Static System.Environment Class</span></span>
 
-<span data-ttu-id="8ae2e-115">Si può fare riferimento a una classe statica racchiudendo il nome della classe tra parentesi quadre.</span><span class="sxs-lookup"><span data-stu-id="8ae2e-115">You can refer to a static class by surrounding the class name with square brackets.</span></span> <span data-ttu-id="8ae2e-116">Ad esempio, si può fare riferimento a **System.Environment** digitando il nome tra parentesi quadre.</span><span class="sxs-lookup"><span data-stu-id="8ae2e-116">For example, you can refer to **System.Environment** by typing the name within brackets.</span></span> <span data-ttu-id="8ae2e-117">In questo modo vengono visualizzate alcune informazioni di tipo generico:</span><span class="sxs-lookup"><span data-stu-id="8ae2e-117">Doing so displays some generic type information:</span></span>
+<span data-ttu-id="bdaea-115">Si può fare riferimento a una classe statica racchiudendo il nome della classe tra parentesi quadre.</span><span class="sxs-lookup"><span data-stu-id="bdaea-115">You can refer to a static class by surrounding the class name with square brackets.</span></span> <span data-ttu-id="bdaea-116">Ad esempio, si può fare riferimento a **System.Environment** digitando il nome tra parentesi quadre.</span><span class="sxs-lookup"><span data-stu-id="bdaea-116">For example, you can refer to **System.Environment** by typing the name within brackets.</span></span> <span data-ttu-id="bdaea-117">In questo modo vengono visualizzate alcune informazioni di tipo generico:</span><span class="sxs-lookup"><span data-stu-id="bdaea-117">Doing so displays some generic type information:</span></span>
 
 ```
 PS> [System.Environment]
@@ -47,11 +47,11 @@ True     False    Environment                              System.Object
 ```
 
 > [!NOTE]
-> <span data-ttu-id="8ae2e-118">Come accennato in precedenza, Windows PowerShell antepone automaticamente '**System.**'</span><span class="sxs-lookup"><span data-stu-id="8ae2e-118">As we mentioned previously, Windows PowerShell automatically prepends '**System.**'</span></span> <span data-ttu-id="8ae2e-119">ai nomi di tipo quando si usa **New-Object**.</span><span class="sxs-lookup"><span data-stu-id="8ae2e-119">to type names when you use **New-Object**.</span></span> <span data-ttu-id="8ae2e-120">Lo stesso avviene quando si usa un nome di tipo tra parentesi quadre, quindi è possibile specificare **\[System.Environment]** come **\[Environment]**.</span><span class="sxs-lookup"><span data-stu-id="8ae2e-120">The same thing happens when using a bracketed type name, so you can specify **\[System.Environment]** as **\[Environment]**.</span></span>
+> <span data-ttu-id="bdaea-118">Come accennato in precedenza, Windows PowerShell antepone automaticamente '**System.**'</span><span class="sxs-lookup"><span data-stu-id="bdaea-118">As we mentioned previously, Windows PowerShell automatically prepends '**System.**'</span></span> <span data-ttu-id="bdaea-119">ai nomi di tipo quando si usa **New-Object**.</span><span class="sxs-lookup"><span data-stu-id="bdaea-119">to type names when you use **New-Object**.</span></span> <span data-ttu-id="bdaea-120">Lo stesso avviene quando si usa un nome di tipo tra parentesi quadre, quindi è possibile specificare **\[System.Environment]** come **\[Environment]**.</span><span class="sxs-lookup"><span data-stu-id="bdaea-120">The same thing happens when using a bracketed type name, so you can specify **\[System.Environment]** as **\[Environment]**.</span></span>
 
-<span data-ttu-id="8ae2e-121">La classe **System.Environment** contiene informazioni generali sull'ambiente di lavoro per il processo corrente, che quando si lavora in Windows PowerShell è powershell.exe.</span><span class="sxs-lookup"><span data-stu-id="8ae2e-121">The **System.Environment** class contains general information about the working environment for the current process, which is powershell.exe when working within Windows PowerShell.</span></span>
+<span data-ttu-id="bdaea-121">La classe **System.Environment** contiene informazioni generali sull'ambiente di lavoro per il processo corrente, che quando si lavora in Windows PowerShell è powershell.exe.</span><span class="sxs-lookup"><span data-stu-id="bdaea-121">The **System.Environment** class contains general information about the working environment for the current process, which is powershell.exe when working within Windows PowerShell.</span></span>
 
-<span data-ttu-id="8ae2e-122">Se si prova a visualizzare i dettagli di questa classe digitando **\[System.Environment] | Get-Member**, il tipo di oggetto restituito è **System.RuntimeType**, non **System.Environment**:</span><span class="sxs-lookup"><span data-stu-id="8ae2e-122">If you try to view details of this class by typing **\[System.Environment] | Get-Member**, the object type is reported as being **System.RuntimeType** , not **System.Environment**:</span></span>
+<span data-ttu-id="bdaea-122">Se si prova a visualizzare i dettagli di questa classe digitando **\[System.Environment] | Get-Member**, il tipo di oggetto restituito è **System.RuntimeType**, non **System.Environment**:</span><span class="sxs-lookup"><span data-stu-id="bdaea-122">If you try to view details of this class by typing **\[System.Environment] | Get-Member**, the object type is reported as being **System.RuntimeType** , not **System.Environment**:</span></span>
 
 ```
 PS> [System.Environment] | Get-Member
@@ -59,7 +59,7 @@ PS> [System.Environment] | Get-Member
    TypeName: System.RuntimeType
 ```
 
-<span data-ttu-id="8ae2e-123">Per visualizzare i membri statici con Get-Member, specificare il parametro **Static**:</span><span class="sxs-lookup"><span data-stu-id="8ae2e-123">To view static members with Get-Member, specify the **Static** parameter:</span></span>
+<span data-ttu-id="bdaea-123">Per visualizzare i membri statici con Get-Member, specificare il parametro **Static**:</span><span class="sxs-lookup"><span data-stu-id="bdaea-123">To view static members with Get-Member, specify the **Static** parameter:</span></span>
 
 ```
 PS> [System.Environment] | Get-Member -Static
@@ -90,18 +90,18 @@ WorkingSet                 Property   static System.Int64 WorkingSet {get;}
 TickCount                               ExitCode
 ```
 
-<span data-ttu-id="8ae2e-124">A questo punto è possibile selezionare le proprietà da visualizzare da System.Environment.</span><span class="sxs-lookup"><span data-stu-id="8ae2e-124">We can now select properties to view from System.Environment.</span></span>
+<span data-ttu-id="bdaea-124">A questo punto è possibile selezionare le proprietà da visualizzare da System.Environment.</span><span class="sxs-lookup"><span data-stu-id="bdaea-124">We can now select properties to view from System.Environment.</span></span>
 
-### <a name="displaying-static-properties-of-systemenvironment"></a><span data-ttu-id="8ae2e-125">Visualizzazione delle proprietà statiche di System. Environment</span><span class="sxs-lookup"><span data-stu-id="8ae2e-125">Displaying Static Properties of System.Environment</span></span>
+### <a name="displaying-static-properties-of-systemenvironment"></a><span data-ttu-id="bdaea-125">Visualizzazione delle proprietà statiche di System. Environment</span><span class="sxs-lookup"><span data-stu-id="bdaea-125">Displaying Static Properties of System.Environment</span></span>
 
-<span data-ttu-id="8ae2e-126">Anche le proprietà di System.Environment sono statiche e devono essere specificate in modo diverso rispetto alle proprietà normali.</span><span class="sxs-lookup"><span data-stu-id="8ae2e-126">The properties of System.Environment are also static, and must be specified in a different way than normal properties.</span></span> <span data-ttu-id="8ae2e-127">Usiamo **::** per indicare a Windows PowerShell che intendiamo usare un metodo o una proprietà statica.</span><span class="sxs-lookup"><span data-stu-id="8ae2e-127">We use **::** to indicate to Windows PowerShell that we want to work with a static method or property.</span></span> <span data-ttu-id="8ae2e-128">Per visualizzare il comando usato per avviare Windows PowerShell, controlliamo la proprietà **CommandLine** digitando:</span><span class="sxs-lookup"><span data-stu-id="8ae2e-128">To see the command that was used to launch Windows PowerShell, we check the **CommandLine** property by typing:</span></span>
+<span data-ttu-id="bdaea-126">Anche le proprietà di System.Environment sono statiche e devono essere specificate in modo diverso rispetto alle proprietà normali.</span><span class="sxs-lookup"><span data-stu-id="bdaea-126">The properties of System.Environment are also static, and must be specified in a different way than normal properties.</span></span> <span data-ttu-id="bdaea-127">Usiamo **::** per indicare a Windows PowerShell che intendiamo usare un metodo o una proprietà statica.</span><span class="sxs-lookup"><span data-stu-id="bdaea-127">We use **::** to indicate to Windows PowerShell that we want to work with a static method or property.</span></span> <span data-ttu-id="bdaea-128">Per visualizzare il comando usato per avviare Windows PowerShell, controlliamo la proprietà **CommandLine** digitando:</span><span class="sxs-lookup"><span data-stu-id="bdaea-128">To see the command that was used to launch Windows PowerShell, we check the **CommandLine** property by typing:</span></span>
 
 ```
 PS> [System.Environment]::Commandline
 "C:\Program Files\Windows PowerShell\v1.0\powershell.exe"
 ```
 
-<span data-ttu-id="8ae2e-129">Per controllare la versione del sistema operativo, visualizzare la proprietà OSVersion digitando:</span><span class="sxs-lookup"><span data-stu-id="8ae2e-129">To check the operating system version, display the OSVersion property by typing:</span></span>
+<span data-ttu-id="bdaea-129">Per controllare la versione del sistema operativo, visualizzare la proprietà OSVersion digitando:</span><span class="sxs-lookup"><span data-stu-id="bdaea-129">To check the operating system version, display the OSVersion property by typing:</span></span>
 
 ```
 PS> [System.Environment]::OSVersion
@@ -111,21 +111,21 @@ PS> [System.Environment]::OSVersion
             Win32NT Service Pack 2      5.1.2600.131072     Microsoft Windows...
 ```
 
-<span data-ttu-id="8ae2e-130">Si può controllare se il computer sta eseguendo l'arresto visualizzando la proprietà **HasShutdownStarted**:</span><span class="sxs-lookup"><span data-stu-id="8ae2e-130">We can check whether the computer is in the process of shutting down by displaying the **HasShutdownStarted** property:</span></span>
+<span data-ttu-id="bdaea-130">Si può controllare se il computer sta eseguendo l'arresto visualizzando la proprietà **HasShutdownStarted**:</span><span class="sxs-lookup"><span data-stu-id="bdaea-130">We can check whether the computer is in the process of shutting down by displaying the **HasShutdownStarted** property:</span></span>
 
 ```
 PS> [System.Environment]::HasShutdownStarted
 False
 ```
 
-## <a name="doing-math-with-systemmath"></a><span data-ttu-id="8ae2e-131">Eseguire operazioni matematiche con System.Math</span><span class="sxs-lookup"><span data-stu-id="8ae2e-131">Doing Math with System.Math</span></span>
+## <a name="doing-math-with-systemmath"></a><span data-ttu-id="bdaea-131">Eseguire operazioni matematiche con System.Math</span><span class="sxs-lookup"><span data-stu-id="bdaea-131">Doing Math with System.Math</span></span>
 
-<span data-ttu-id="8ae2e-132">La classe statica System.Math è utile per l'esecuzione di operazioni matematiche.</span><span class="sxs-lookup"><span data-stu-id="8ae2e-132">The System.Math static class is useful for performing some mathematical operations.</span></span> <span data-ttu-id="8ae2e-133">I membri importanti di **System.Math** sono per lo più metodi, che è possibile visualizzare usando **Get-Member**.</span><span class="sxs-lookup"><span data-stu-id="8ae2e-133">The important members of **System.Math** are mostly methods, which we can display by using **Get-Member**.</span></span>
+<span data-ttu-id="bdaea-132">La classe statica System.Math è utile per l'esecuzione di operazioni matematiche.</span><span class="sxs-lookup"><span data-stu-id="bdaea-132">The System.Math static class is useful for performing some mathematical operations.</span></span> <span data-ttu-id="bdaea-133">I membri importanti di **System.Math** sono per lo più metodi, che è possibile visualizzare usando **Get-Member**.</span><span class="sxs-lookup"><span data-stu-id="bdaea-133">The important members of **System.Math** are mostly methods, which we can display by using **Get-Member**.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="8ae2e-134">System.Math ha diversi metodi con lo stesso nome, che si distinguono in base al tipo dei relativi parametri.</span><span class="sxs-lookup"><span data-stu-id="8ae2e-134">System.Math has several methods with the same name, but they are distinguished by the type of their parameters.</span></span>
+> <span data-ttu-id="bdaea-134">System.Math ha diversi metodi con lo stesso nome, che si distinguono in base al tipo dei relativi parametri.</span><span class="sxs-lookup"><span data-stu-id="bdaea-134">System.Math has several methods with the same name, but they are distinguished by the type of their parameters.</span></span>
 
-<span data-ttu-id="8ae2e-135">Digitare il comando seguente per elencare i metodi della classe **System.Math**.</span><span class="sxs-lookup"><span data-stu-id="8ae2e-135">Type the following command to list the methods of the **System.Math** class.</span></span>
+<span data-ttu-id="bdaea-135">Digitare il comando seguente per elencare i metodi della classe **System.Math**.</span><span class="sxs-lookup"><span data-stu-id="bdaea-135">Type the following command to list the methods of the **System.Math** class.</span></span>
 
 ```
 PS> [System.Math] | Get-Member -Static -MemberType Methods
@@ -164,7 +164,7 @@ Tanh            Method     static System.Double Tanh(Double value)
 Truncate        Method     static System.Decimal Truncate(Decimal d), static...
 ```
 
-<span data-ttu-id="8ae2e-136">Il comando visualizza diversi metodi matematici.</span><span class="sxs-lookup"><span data-stu-id="8ae2e-136">This displays several mathematical methods.</span></span> <span data-ttu-id="8ae2e-137">Ecco un elenco di comandi che illustra il funzionamento di alcuni metodi comuni:</span><span class="sxs-lookup"><span data-stu-id="8ae2e-137">Here is a list of commands that demonstrate how some of the common methods work:</span></span>
+<span data-ttu-id="bdaea-136">Il comando visualizza diversi metodi matematici.</span><span class="sxs-lookup"><span data-stu-id="bdaea-136">This displays several mathematical methods.</span></span> <span data-ttu-id="bdaea-137">Ecco un elenco di comandi che illustra il funzionamento di alcuni metodi comuni:</span><span class="sxs-lookup"><span data-stu-id="bdaea-137">Here is a list of commands that demonstrate how some of the common methods work:</span></span>
 
 ```
 PS> [System.Math]::Sqrt(9)
