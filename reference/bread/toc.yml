@@ -2,9 +2,9 @@
   tocHref: /powershell/
   topicHref: /powershell
   items:
-    - name: Esecuzione script
+    - name: Scripting
       tocHref: /powershell/scripting/
       topicHref: /powershell/scripting/index
-    - name: Esecuzione script
+    - name: Scripting
       tocHref: /powershell/module/
       topicHref: /powershell/scripting/index
