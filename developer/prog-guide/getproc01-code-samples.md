@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: f85487d6-ef50-40b9-b60d-8bb65506627e
 caps.latest.revision: 6
 ms.openlocfilehash: 6d47fbc6b41d87cb830683ea412826275083b8a3
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56858737"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62081768"
 ---
 # <a name="getproc01-code-samples"></a>Codici di esempio di GetProc01
 
@@ -21,7 +21,7 @@ Ecco gli esempi di codice per il cmdlet di esempio GetProc01. Si tratta di basic
 
 Per il codice di esempio completo, vedere gli argomenti seguenti.
 
-|Language|Argomento|
+|Linguaggio|Argomento|
 |--------------|-----------|
 |C#|[GetProc01 (C#) esempi di codice](./getproc01-csharp-sample-code.md)|
 |VB.NET|[GetProc01 codice di esempio (VB.NET)](./getproc01-vb-net-sample-code.md)|
