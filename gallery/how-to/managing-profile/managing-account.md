@@ -4,11 +4,11 @@ contributor: JKeithB
 keywords: gallery,powershell,cmdlet,psgallery
 title: Impostazioni dell'account di PowerShell Gallery
 ms.openlocfilehash: ebe784ec5aae5ff3a4d444d12a168ef38aaef65f
-ms.sourcegitcommit: 98b7cfd8ad5718efa8e320526ca76c3cc4141d78
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50002787"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62084530"
 ---
 # <a name="powershell-gallery-account-settings"></a>Impostazioni dell'account di PowerShell Gallery
 
@@ -39,7 +39,7 @@ PowerShell Gallery offre le seguenti opzioni di notifica:
 ![Modifica dell'indirizzo di posta elettronica](../../Images/PSGallery_AccountEmailOptions.png)
 
 Come indicato nella pagina, le notifiche critiche inviate da PowerShell Gallery non possono essere disabilitate.
-Tali attività sono:
+Ad esempio:
 
 - Notifiche relative alla sicurezza
 - Notifiche relative alla gestione dell'account dagli amministratori di PowerShell Gallery

@@ -4,11 +4,11 @@ keywords: powershell,cmdlet
 title: Guida introduttiva a Windows PowerShell
 ms.assetid: b0e2ad92-875f-421d-b612-f624e644aa69
 ms.openlocfilehash: 8a158427d319e43ec011898fe4e1826d48d5b951
-ms.sourcegitcommit: 221b7daab7f597f8b2e4864cf9b5d9dda9b9879b
-ms.translationtype: MTE95
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52320840"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62086579"
 ---
 # <a name="getting-started-with-windows-powershell"></a>Guida introduttiva a Windows PowerShell
 Windows PowerShell è una shell da riga di comando di Windows progettata appositamente per gli amministratori di sistema. Windows PowerShell include un prompt interattivo e un ambiente di scripting che può essere usato in modo indipendente o in combinazione.

@@ -3,11 +3,11 @@ title: Installazione di PowerShell Core in Linux
 description: Informazioni sull'installazione di PowerShell Core in varie distribuzioni Linux
 ms.date: 08/06/2018
 ms.openlocfilehash: 06194550f4e73f9dd38f8cdc25f6c7f698cafce2
-ms.sourcegitcommit: 806cf87488b80800b9f50a8af286e8379519a034
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59293334"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62086562"
 ---
 # <a name="installing-powershell-core-on-linux"></a>Installazione di PowerShell Core in Linux
 
@@ -75,8 +75,7 @@ A questo punto, è sufficiente usare `sudo apt-get upgrade powershell` per aggio
 
 ### <a name="installation-via-direct-download---ubuntu-1404"></a>Ubuntu 14.04: installazione tramite download diretto
 
-Scaricare il pacchetto Debian
-`powershell_6.2.0-1.ubuntu.14.04_amd64.deb`
+Scaricare il pacchetto Debian `powershell_6.2.0-1.ubuntu.14.04_amd64.deb`
 dalla pagina delle [versioni][] nel computer Ubuntu.
 
 A questo punto eseguire quanto segue nel terminale:
@@ -124,8 +123,7 @@ Dopo essersi registrati una volta come utente con privilegi avanzati nel reposit
 
 ### <a name="installation-via-direct-download---ubuntu-1604"></a>Installazione tramite download diretto - Ubuntu 16.04
 
-Scaricare il pacchetto Debian
-`powershell_6.2.0-1.ubuntu.16.04_amd64.deb`
+Scaricare il pacchetto Debian `powershell_6.2.0-1.ubuntu.16.04_amd64.deb`
 dalla pagina delle [versioni][] nel computer Ubuntu.
 
 A questo punto eseguire quanto segue nel terminale:
@@ -176,8 +174,7 @@ Dopo essersi registrati una volta come utente con privilegi avanzati nel reposit
 
 ### <a name="installation-via-direct-download---ubuntu-1804"></a>Ubuntu 18.04: installazione tramite download diretto
 
-Scaricare il pacchetto Debian
-`powershell_6.2.0-1.ubuntu.18.04_amd64.deb`
+Scaricare il pacchetto Debian `powershell_6.2.0-1.ubuntu.18.04_amd64.deb`
 dalla pagina delle [versioni][] nel computer Ubuntu.
 
 A questo punto eseguire quanto segue nel terminale:
@@ -266,8 +263,7 @@ Dopo essersi registrati una volta come utente con privilegi avanzati nel reposit
 
 ### <a name="installation-via-direct-download---debian-9"></a>Debian 9: installazione tramite download diretto
 
-Scaricare il pacchetto Debian
-`powershell_6.2.0-1.debian.9_amd64.deb`
+Scaricare il pacchetto Debian `powershell_6.2.0-1.debian.9_amd64.deb`
 dalla pagina delle [versioni][] nel computer Debian.
 
 A questo punto eseguire quanto segue nel terminale:
@@ -307,8 +303,7 @@ Dopo essersi registrati una volta come utente con privilegi avanzati nel reposit
 
 ### <a name="installation-via-direct-download---centos-7"></a>CentOS 7: installazione tramite download diretto
 
-Usando [CentOS 7][], scaricare il pacchetto RPM
-`powershell-6.2.0-1.rhel.7.x86_64.rpm`
+Usando [CentOS 7][], scaricare il pacchetto RPM `powershell-6.2.0-1.rhel.7.x86_64.rpm`
 dalla pagina delle [versioni][] nel computer CentOS.
 
 A questo punto eseguire quanto segue nel terminale:
@@ -352,8 +347,7 @@ Dopo essersi registrati una volta come utente con privilegi avanzati nel reposit
 
 ### <a name="installation-via-direct-download---red-hat-enterprise-linux-rhel-7"></a>Red Hat Enterprise Linux (RHEL) 7: installazione tramite download diretto
 
-Scaricare il pacchetto RPM
-`powershell-6.2.0-1.rhel.7.x86_64.rpm`
+Scaricare il pacchetto RPM `powershell-6.2.0-1.rhel.7.x86_64.rpm`
 dalla pagina delle [versioni][] nel computer Red Hat Enterprise Linux.
 
 A questo punto eseguire quanto segue nel terminale:
@@ -463,8 +457,7 @@ pwsh
 
 ### <a name="installation-via-direct-download---fedora-27-fedora-28"></a>Installazione tramite download diretto - Fedora 27, Fedora 28
 
-Scaricare il pacchetto RPM
-`powershell-6.2.0-1.rhel.7.x86_64.rpm`
+Scaricare il pacchetto RPM `powershell-6.2.0-1.rhel.7.x86_64.rpm`
 dalla pagina delle [versioni][] nel computer Fedora.
 
 A questo punto eseguire quanto segue nel terminale:
@@ -687,7 +680,7 @@ sudo rm -rf /usr/bin/pwsh /opt/microsoft/powershell
 
 ## <a name="paths"></a>Percorsi
 
-* `$PSHOME` è impostata su `/opt/microsoft/powershell/6.2.0/`
+* `$PSHOME` è `/opt/microsoft/powershell/6.2.0/`
 * I profili utente vengono letti da `~/.config/powershell/profile.ps1`
 * I profili predefiniti vengono letti da `$PSHOME/profile.ps1`
 * I moduli utente vengono letti da `~/.local/share/powershell/Modules`

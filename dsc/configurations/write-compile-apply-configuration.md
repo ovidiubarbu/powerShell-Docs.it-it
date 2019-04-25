@@ -3,11 +3,11 @@ ms.date: 12/12/2018
 keywords: dsc,powershell,configurazione,servizio,impostazione
 title: Scrivere, compilare e applicare una configurazione
 ms.openlocfilehash: 947308efa165543571801c88a922daf44fa88be0
-ms.sourcegitcommit: 3f6002e7109373eda31cc65fc84d2600447cb7e9
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/11/2019
-ms.locfileid: "59506819"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62080017"
 ---
 > Si applica a: Windows PowerShell 4.0, Windows PowerShell 5.0
 
@@ -90,7 +90,7 @@ Gestione configurazione locale si occupa di chiamare le risorse DSC per applicar
 Usare il codice seguente per eseguire il cmdlet `Start-DSCConfiguration`. Specificare il percorso della directory in cui è archiviato il file "localhost.mof" nel parametro `-Path`. Il cmdlet `Start-DSCConfiguration` ricerca nella directory specificata i file "\<nomecomputer\>.mof". Il cmdlet `Start-DSCConfiguration` tenta di applicare ogni file con estensione "mof" trovato al nome computer specificato dal nome file ("hostlocale", "server01", "dc-02" e così via).
 
 > [!NOTE]
-> Se il parametro `-Wait` non è specificato, `Start-DSCConfiguration` crea un processo in background per eseguire l'operazione. La specifica del parametro `-Verbose` consente di controllare l'output **dettagliato** dell'operazione. `-Wait`e `-Verbose` sono entrambi parametri facoltativi.
+> Se il parametro `-Wait` non è specificato, `Start-DSCConfiguration` crea un processo in background per eseguire l'operazione. La specifica del parametro `-Verbose` consente di controllare l'output **dettagliato** dell'operazione. `-Wait` e `-Verbose` sono entrambi parametri facoltativi.
 
 ```powershell
 Start-DscConfiguration -Path C:\Scripts\HelloWorld -Verbose -Wait
