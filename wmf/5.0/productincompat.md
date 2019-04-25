@@ -1,12 +1,12 @@
 ---
 ms.date: 06/12/2017
 keywords: wmf,powershell,installazione
-ms.openlocfilehash: 271f26cf97035e50165e3e6777c00867c7f3ac31
-ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
+ms.openlocfilehash: f411bfde063615d6ba7c01b8ed50e0b5b9ae6d70
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/16/2018
-ms.locfileid: "34186756"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62085151"
 ---
 # <a name="product-compatibility-status"></a>Stato di compatibilità del prodotto
 

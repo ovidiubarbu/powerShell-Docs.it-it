@@ -1,12 +1,12 @@
 ---
 ms.date: 06/12/2017
 keywords: wmf,powershell,installazione
-ms.openlocfilehash: 802196d821303fcf2d3e87784ca2064c386f882e
-ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
+ms.openlocfilehash: cc859d68491c817d641cc598513efb3208db0619
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34221821"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62085389"
 ---
 # <a name="separation-of-configuration-resource-and-report-repositories"></a>Separazione dei repository per configurazioni, risorse e report
 

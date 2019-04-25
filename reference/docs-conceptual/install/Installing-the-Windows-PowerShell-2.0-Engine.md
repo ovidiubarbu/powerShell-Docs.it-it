@@ -4,11 +4,11 @@ keywords: powershell,cmdlet
 title: Installazione del motore di Windows PowerShell 2.0
 ms.assetid: 82928f2b-f96a-4ae6-a0d0-6e7b181da308
 ms.openlocfilehash: b625b61b4e191402074f57ea2e942f800dbbcd53
-ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
-ms.translationtype: MTE95
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53401632"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62058319"
 ---
 # <a name="installing-the-windows-powershell-20-engine"></a>Installazione del motore di Windows PowerShell 2.0
 Questo argomento illustra come installare il motore di Windows PowerShell 2.0.

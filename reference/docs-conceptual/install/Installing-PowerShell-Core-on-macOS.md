@@ -3,11 +3,11 @@ title: Installazione di PowerShell Core in macOS
 description: Informazioni sull'installazione di PowerShell Core in macOS
 ms.date: 12/12/2018
 ms.openlocfilehash: 7db8ca0cb6d13db8ce7f11b4a4b03b7d3f9b6feb
-ms.sourcegitcommit: 806cf87488b80800b9f50a8af286e8379519a034
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59293402"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62086460"
 ---
 # <a name="installing-powershell-core-on-macos"></a>Installazione di PowerShell Core in macOS
 
@@ -84,8 +84,7 @@ brew cask upgrade powershell-preview
 
 ## <a name="installation-via-direct-download"></a>Installazione tramite download diretto
 
-Scaricare il pacchetto PKG
-`powershell-6.2.0-osx-x64.pkg`
+Scaricare il pacchetto PKG `powershell-6.2.0-osx-x64.pkg`
 dalla pagina delle [versioni][] nel computer macOS.
 
 È possibile fare doppio clic sul file e seguire le istruzioni oppure eseguire l'installazione dal terminale:
@@ -175,7 +174,7 @@ Per rimuovere i percorsi aggiuntivi di PowerShell, vedere la sezione [Percorsi](
 
 ## <a name="paths"></a>Percorsi
 
-* `$PSHOME` è impostata su `/usr/local/microsoft/powershell/6.2.0/`
+* `$PSHOME` è `/usr/local/microsoft/powershell/6.2.0/`
 * I profili utente vengono letti da `~/.config/powershell/profile.ps1`
 * I profili predefiniti vengono letti da `$PSHOME/profile.ps1`
 * I moduli utente vengono letti da `~/.local/share/powershell/Modules`

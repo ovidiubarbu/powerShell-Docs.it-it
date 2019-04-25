@@ -3,11 +3,11 @@ ms.date: 12/12/2018
 keywords: dsc,powershell,configurazione,installazione
 title: Configurare un client di pull usando ID configurazione in PowerShell 5.0 e versioni successive
 ms.openlocfilehash: 14db98d240bc87aca3ee985db08c14b7c65d8bb8
-ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58055717"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62079490"
 ---
 # <a name="set-up-a-pull-client-using-configuration-ids-in-powershell-50-and-later"></a>Configurare un client di pull usando ID configurazione in PowerShell 5.0 e versioni successive
 

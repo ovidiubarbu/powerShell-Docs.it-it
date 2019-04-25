@@ -4,22 +4,22 @@ ms.topic: conceptual
 keywords: wmf,powershell,installazione
 title: Nuovi scenari e funzionalità in WMF 5.1
 ms.openlocfilehash: b00069aad7422f86d1462a62a6c4bc8a91e46705
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
-ms.translationtype: MTE95
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55681679"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62085461"
 ---
 # <a name="new-scenarios-and-features-in-wmf-51"></a>Nuovi scenari e funzionalità in WMF 5.1
 
-> Nota: queste informazioni sono provvisorie e soggette a modifiche.
+> Nota: Queste informazioni sono provvisorie e soggette a modifiche.
 
 ## <a name="powershell-editions"></a>Edizioni di PowerShell
 
-A partire dalla versione 5.1, PowerShell è disponibile in diverse edizioni che indicano diversi set di funzionalità e compatibilità della piattaforma.
+A partire dalla versione 5.1, PowerShell è disponibile in diverse edizioni che indicano vari set di funzionalità e compatibilità della piattaforma.
 
-- **Desktop Edition:** è basata su .NET Framework e fornisce compatibilità con script e moduli destinati a versioni di PowerShell che eseguono edizioni footprint complete di Windows, ad esempio Server Core e Windows Desktop.
-- **Core Edition:** è basata su .NET Core e fornisce compatibilità con script e moduli destinati a versioni di PowerShell che eseguono edizioni footprint ridotte di Windows, ad esempio Nano Server e Windows IoT.
+- **Desktop Edition:** si basa su .NET Framework e garantisce compatibilità con script e moduli destinati a versioni di PowerShell eseguiti in edizioni di Windows con footprint completo, ad esempio Server Core e Windows Desktop.
+- **Core Edition:** si basa su .NET Core e garantisce compatibilità con script e moduli destinati a versioni di PowerShell eseguiti in edizioni di Windows con footprint ridotto, ad esempio Nano Server e Windows IoT.
 
 **Altre informazioni sull'uso delle edizioni di PowerShell**
 

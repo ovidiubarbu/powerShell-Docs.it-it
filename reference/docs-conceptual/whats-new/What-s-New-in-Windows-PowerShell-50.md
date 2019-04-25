@@ -3,11 +3,11 @@ ms.date: 06/05/2017
 keywords: powershell,cmdlet
 title: Novità di Windows PowerShell 5.0
 ms.openlocfilehash: b2cb729948d4b53c5ea9a536dbeda04c7cb50997
-ms.sourcegitcommit: 9194e603ac242ae733839eb773e4af7360fdd044
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59363531"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62085950"
 ---
 # <a name="whats-new-in-windows-powershell-50"></a>Novità di Windows PowerShell 5.0
 
@@ -230,7 +230,7 @@ Windows PowerShell 4.0 include le nuove funzionalità seguenti.
 - È stato aggiunto il nuovo cmdlet **Get-FileHash**, che restituisce l'hash di un file specificato in uno dei diversi formati disponibili.
 - In Windows PowerShell 4.0, se un modulo usa la chiave **DefaultCommandPrefix** nel manifesto o se l'utente importa un modulo con il parametro **Prefix**, la proprietà **ExportedCommands** del modulo mostra i comandi nel modulo con il prefisso. I nomi dei comandi eseguiti usando la sintassi qualificata di modulo ModuleName\\CommandName devono includere il prefisso.
 - Il valore di **$PSVersionTable.PSVersion** è stato aggiornato alla versione 4.0.
-- Il comportamento dell'operatore **Where()** è cambiato. `Collection.Where('property -match name')` L'accettazione di un'espressione stringa nel formato `"Property -CompareOperator Value"` non è più supportata. Tuttavia, l'operatore **Where()** accetta espressioni stringa nel formato di un blocco di script. Questa funzionalità è ancora supportata.
+- Il comportamento dell'operatore **Where()** è cambiato. L'accettazione di un'espressione stringa nel formato `"Property -CompareOperator Value"` in `Collection.Where('property -match name')` non è più supportata. Tuttavia, l'operatore **Where()** accetta espressioni stringa nel formato di un blocco di script. Questa funzionalità è ancora supportata.
 
 ### <a name="new-features-in-windows-powershell-integrated-scripting-environment-ise"></a>Nuove funzionalità di Windows PowerShell ISE (Integrated Scripting Environment)
 

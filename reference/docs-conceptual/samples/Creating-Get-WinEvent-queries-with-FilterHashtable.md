@@ -2,11 +2,11 @@
 ms.date: 3/18/2019
 title: Creazione di query Get-WinEvent con FilterHashtable
 ms.openlocfilehash: 28ba3c99a297944003a28eaba7de34b77d9df536
-ms.sourcegitcommit: 806cf87488b80800b9f50a8af286e8379519a034
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59293283"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62058814"
 ---
 # <a name="creating-get-winevent-queries-with-filterhashtable"></a>Creazione di query Get-WinEvent con FilterHashtable
 

@@ -4,11 +4,11 @@ keywords: powershell,cmdlet
 title: Utilizzo di file e cartelle
 ms.assetid: c0ceb96b-e708-45f3-803b-d1f61a48f4c1
 ms.openlocfilehash: 393e886a4945222198d9b81019250c5d5b905ad3
-ms.sourcegitcommit: 806cf87488b80800b9f50a8af286e8379519a034
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59293221"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62058931"
 ---
 # <a name="working-with-files-and-folders"></a>Utilizzo di file e cartelle
 
