@@ -1,17 +1,17 @@
 ---
 ms.date: 06/12/2017
 keywords: wmf,powershell,installazione
-ms.openlocfilehash: 7667aebb6545ae8dde5d94baee4a663f1d26c167
-ms.sourcegitcommit: 54534635eedacf531d8d6344019dc16a50b8b441
+ms.openlocfilehash: 3c1fcf94174b99490b19963662ef1ccdf6cebfec
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34219583"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62085069"
 ---
-# <a name="powershell-script-discovery-install-and-management-with-powershellget"></a><span data-ttu-id="574ea-102">Individuazione, installazione e gestione di script di PowerShell con PowerShellGet</span><span class="sxs-lookup"><span data-stu-id="574ea-102">PowerShell Script Discovery, Install and Management with PowerShellGet</span></span>
+# <a name="powershell-script-discovery-install-and-management-with-powershellget"></a><span data-ttu-id="46c21-102">Individuazione, installazione e gestione di script di PowerShell con PowerShellGet</span><span class="sxs-lookup"><span data-stu-id="46c21-102">PowerShell Script Discovery, Install and Management with PowerShellGet</span></span>
 
-<span data-ttu-id="574ea-103">La funzionalità per la condivisione di script di PowerShell è stata aggiunta a PowerShellGet nella versione WMF 5.0 RTM.</span><span class="sxs-lookup"><span data-stu-id="574ea-103">PowerShell Script sharing feature got added to the PowerShellGet in the WMF 5.0 RTM release.</span></span>
-<span data-ttu-id="574ea-104">I nuovi cmdlet seguente sono stati aggiunti al modulo PowerShellGet per supportare gli script di PowerShell.</span><span class="sxs-lookup"><span data-stu-id="574ea-104">The following new cmdlets are added to the PowerShellGet module for supporting the PowerShell Scripts.</span></span>
+<span data-ttu-id="46c21-103">La funzionalità per la condivisione di script di PowerShell è stata aggiunta a PowerShellGet nella versione WMF 5.0 RTM.</span><span class="sxs-lookup"><span data-stu-id="46c21-103">PowerShell Script sharing feature got added to the PowerShellGet in the WMF 5.0 RTM release.</span></span>
+<span data-ttu-id="46c21-104">I nuovi cmdlet seguente sono stati aggiunti al modulo PowerShellGet per supportare gli script di PowerShell.</span><span class="sxs-lookup"><span data-stu-id="46c21-104">The following new cmdlets are added to the PowerShellGet module for supporting the PowerShell Scripts.</span></span>
 ```powershell
 PS C:\\windows\\system32&gt; Get-Command \*script\* -Module PowerShellGet | Sort-Object -Property Noun, Verb
 CommandType Name Version Source
@@ -38,7 +38,7 @@ Function Update-ScriptFileInfo 1.0.0.1 PowerShellGet
 -   **Test-ScriptFileInfo** cmdlet lets you to validate and get the script file metadata.
 ```
 
-<span data-ttu-id="574ea-105">Sintassi dei cmdlet per la condivisione degli script:</span><span class="sxs-lookup"><span data-stu-id="574ea-105">Syntax of script sharing Cmdlets:</span></span>
+<span data-ttu-id="46c21-105">Sintassi dei cmdlet per la condivisione degli script:</span><span class="sxs-lookup"><span data-stu-id="46c21-105">Syntax of script sharing Cmdlets:</span></span>
 ```powershell
 **New-ScriptFileInfo** \[-Path\] &lt;string&gt; -Description &lt;string&gt; \[-Version &lt;version&gt;\] \[-Author &lt;string&gt;\] \[-Guid &lt;guid&gt;\] \[-CompanyName &lt;string&gt;\] \[-Copyright &lt;string&gt;\] \[-RequiredModules &lt;Object\[\]&gt;\] \[-ExternalModuleDependencies &lt;string\[\]&gt;\] \[-RequiredScripts &lt;string\[\]&gt;\] \[-ExternalScriptDependencies &lt;string\[\]&gt;\] \[-Tags &lt;string\[\]&gt;\] \[-ProjectUri &lt;uri&gt;\] \[-LicenseUri &lt;uri&gt;\] \[-IconUri &lt;uri&gt;\] \[-ReleaseNotes &lt;string\[\]&gt;\] \[-PassThru\] \[-Force\] \[-WhatIf\] \[-Confirm\] \[&lt;CommonParameters&gt;\]
 
