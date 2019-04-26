@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: 17352fc4-ba83-4f04-86bc-f591765d85a8
 caps.latest.revision: 18
 ms.openlocfilehash: fa9eda3ea1028c27dbfb3eb04747af3b817c1a81
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56862627"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62083638"
 ---
 # <a name="wideitem-element-for-widecontrol-format"></a>Elemento WideItem per WideControl (formato)
 
@@ -31,9 +31,9 @@ Elemento (formato) elemento ViewDefinitions (formato) visualizzazione elemento (
 </WideItem>
 ```
 
-## <a name="attributes-and-elements"></a>Attributi ed elementi
+## <a name="attributes-and-elements"></a>Elementi e attributi
 
-Le sezioni seguenti descrivono gli attributi e gli elementi figlio dell'elemento padre del `WideItem` elemento. L'elemento `FormatString` è facoltativo. Tuttavia, è necessario specificare una `PropertyName` o `ScriptBlock` elemento, ma è possibile specificare entrambi.
+Le sezioni seguenti descrivono gli attributi e gli elementi figlio dell'elemento padre del `WideItem` elemento. Il `FormatString` elemento è facoltativo. Tuttavia, è necessario specificare una `PropertyName` o `ScriptBlock` elemento, ma è possibile specificare entrambi.
 
 ### <a name="attributes"></a>Attributes
 

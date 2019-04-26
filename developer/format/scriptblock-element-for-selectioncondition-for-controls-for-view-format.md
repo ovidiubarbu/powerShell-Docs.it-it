@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: 08512496-5682-4539-ab56-0c5394ce1f01
 caps.latest.revision: 6
 ms.openlocfilehash: 0137886437f01518f396613c564517e7910e657a
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56861837"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62064391"
 ---
 # <a name="scriptblock-element-for-selectioncondition-for-controls-for-view-format"></a>Elemento ScriptBlock per SelectionCondition per Controls per View (formato)
 
@@ -27,7 +27,7 @@ Elemento (formato) elemento ViewDefinitions (formato) visualizzazione elemento (
 <ScriptBlock>ScriptToEvaluate</ScriptBlock>
 ```
 
-## <a name="attributes-and-elements"></a>Attributi ed elementi
+## <a name="attributes-and-elements"></a>Elementi e attributi
 
 Le sezioni seguenti descrivono gli attributi e gli elementi figlio dell'elemento padre del `ScriptBlock` elemento.
 

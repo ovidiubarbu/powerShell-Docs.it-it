@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: e1a13100-41a4-4847-9f07-458c85783505
 caps.latest.revision: 6
 ms.openlocfilehash: 925ef86e61801f5a66f89dd25e0756f00dd35155
-ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58054782"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62065581"
 ---
 # <a name="frame-element-for-customitem-for-customcontrol-for-view-format"></a>Elemento Frame per CustomItem per CustomControl per View (formato)
 
@@ -33,7 +33,7 @@ Elemento (formato) elemento ViewDefinitions (formato) visualizzazione elemento (
 </Frame>
 ```
 
-## <a name="attributes-and-elements"></a>Attributi ed elementi
+## <a name="attributes-and-elements"></a>Elementi e attributi
 
 Le sezioni seguenti descrivono gli attributi e gli elementi figlio dell'elemento padre del `Frame` elemento.
 

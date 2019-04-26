@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: 3d91d0e6-bf18-4587-b651-db66849e5df5
 caps.latest.revision: 6
 ms.openlocfilehash: 326880834cd82ab826aadc409cd7a8f21cd36824
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56860957"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62064646"
 ---
 # <a name="propertyname-element-for-wideitem-for-widecontrol-format"></a>Elemento PropertyName per WideItem per WideControl (formato)
 
@@ -27,7 +27,7 @@ Elemento (formato) elemento ViewDefinitions (formato) visualizzazione elemento (
 <PropertyName>.NetTypeProperty</PropertyName>
 ```
 
-## <a name="attributes-and-elements"></a>Attributi ed elementi
+## <a name="attributes-and-elements"></a>Elementi e attributi
 
 Le sezioni seguenti descrivono gli attributi, elementi figlio ed elemento padre dell'elemento di `PropertyName` elemento.
 

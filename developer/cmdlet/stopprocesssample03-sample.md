@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: 31298f1b-8b76-4637-8406-863f5ad27e53
 caps.latest.revision: 8
 ms.openlocfilehash: 91b56a78f878e0d9c0fc11e4b882399bdfb108ac
-ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58058896"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62067284"
 ---
 # <a name="stopprocesssample03-sample"></a>Esempio di StopProcessSample03
 
@@ -51,7 +51,7 @@ In questo esempio viene illustrato come scrivere un cmdlet i cui parametri sono 
 
 Questo esempio richiede Windows PowerShell 2.0.
 
-## <a name="demonstrates"></a>Illustra
+## <a name="demonstrates"></a>Di seguito viene illustrato
 
 In questo esempio viene illustrato quanto segue.
 

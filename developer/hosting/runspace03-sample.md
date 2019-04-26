@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: 31df99d7-6954-4fdc-b6f5-06ecba094f43
 caps.latest.revision: 8
 ms.openlocfilehash: 39495f7813aecf5d0210866fc11f94557fdb0cd9
-ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58058998"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62082618"
 ---
 # <a name="runspace03-sample"></a>Esempio di Runspace03
 
@@ -23,7 +23,7 @@ Questo esempio viene illustrato come usare il [System.Management.Automation.Powe
 
 Questo esempio richiede Windows PowerShell 2.0.
 
-## <a name="demonstrates"></a>Illustra
+## <a name="demonstrates"></a>Di seguito viene illustrato
 
 In questo esempio viene illustrato quanto segue.
 

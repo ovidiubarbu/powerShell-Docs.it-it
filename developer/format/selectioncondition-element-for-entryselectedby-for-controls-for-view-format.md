@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: 2623407e-fa10-4d27-a804-204f6d50ef22
 caps.latest.revision: 6
 ms.openlocfilehash: ea15e647a9dd7a7064718a0c536c4a3178d62d95
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56858017"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62064234"
 ---
 # <a name="selectioncondition-element-for-entryselectedby-for-controls-for-view-format"></a>Elemento SelectionCondition per EntrySelectedBy per Controls per View (formato)
 
@@ -32,7 +32,7 @@ Elemento (formato) elemento ViewDefinitions (formato) visualizzazione elemento (
 </SelectionCondition>
 ```
 
-## <a name="attributes-and-elements"></a>Attributi ed elementi
+## <a name="attributes-and-elements"></a>Elementi e attributi
 
 Le sezioni seguenti descrivono gli attributi e gli elementi figlio dell'elemento padre del `SelectionCondition` elemento.
 

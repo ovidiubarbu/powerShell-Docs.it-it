@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: ad8ab181-c559-492e-a0cf-299e381fdcc3
 caps.latest.revision: 6
 ms.openlocfilehash: ce25789bdfc2679372ca9e42f99dcc6a30ae2def
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56860927"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62064904"
 ---
 # <a name="propertyname-element-for-itemseclectioncondition-for-controls-for-configuration-format"></a>Elemento PropertyName per ItemSelectionCondition per Controls per Configuration (formato)
 
@@ -27,7 +27,7 @@ Configurazione (formato) i controlli elemento di configurazione (formato) elemen
 <PropertyName>.NetTypeProperty</PropertyName>
 ```
 
-## <a name="attributes-and-elements"></a>Attributi ed elementi
+## <a name="attributes-and-elements"></a>Elementi e attributi
 
 Le sezioni seguenti descrivono gli attributi e gli elementi figlio dell'elemento padre del `PropertyName` elemento.
 

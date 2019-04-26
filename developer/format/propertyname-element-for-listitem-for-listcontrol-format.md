@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: 01ae8cbe-acdc-4043-bd6e-1118a5691a55
 caps.latest.revision: 12
 ms.openlocfilehash: 405184f7bdbf1955f1df7766bf2723c244dcc27f
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56855737"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62064918"
 ---
 # <a name="propertyname-element-for-listitem-for-listcontrol-format"></a>Elemento PropertyName per ListItem per ListControl (formato)
 
@@ -27,7 +27,7 @@ Elemento (formato) elemento ViewDefinitions (formato) visualizzazione elemento (
 <PropertyName>.NetTypeProperty</PropertyName>
 ```
 
-## <a name="attributes-and-elements"></a>Attributi ed elementi
+## <a name="attributes-and-elements"></a>Elementi e attributi
 
 Le sezioni seguenti descrivono gli attributi e gli elementi figlio dell'elemento padre del `PropertyName` elemento.
 

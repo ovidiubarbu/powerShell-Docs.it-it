@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: def37479-7b6e-40cf-bc81-0f7cbc651b31
 caps.latest.revision: 11
 ms.openlocfilehash: 6dbaef5886a0600bd9fe96dbc8d21f00a674dfcf
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56857087"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62066924"
 ---
 # <a name="autosize-element-for-widecontrol-format"></a>Elemento AutoSize per WideControl (formato)
 
@@ -27,7 +27,7 @@ Elemento (formato) elemento ViewDefinitions (formato) visualizzazione elemento (
 <AutoSize/>
 ```
 
-## <a name="attributes-and-elements"></a>Attributi ed elementi
+## <a name="attributes-and-elements"></a>Elementi e attributi
 
 Le sezioni seguenti descrivono gli attributi e gli elementi figlio dell'elemento padre del `AutoSize` elemento.
 

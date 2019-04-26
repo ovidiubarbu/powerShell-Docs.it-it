@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: f9fa2b6f-b99a-42de-9779-44e9cb583f71
 caps.latest.revision: 15
 ms.openlocfilehash: bd44fcf4878c858afe81fb071ce72f627ac465dc
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56856877"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62075410"
 ---
 # <a name="tableheaders-element-format"></a>Elemento TableHeaders (formato)
 
@@ -30,7 +30,7 @@ Elemento ViewDefinitions (formato) visualizzazione elemento (formato) elemento T
 
 ```
 
-## <a name="attributes-and-elements"></a>Attributi ed elementi
+## <a name="attributes-and-elements"></a>Elementi e attributi
 
 Le sezioni seguenti descrivono gli attributi, elementi figlio e gli elementi padre del `TableHeaders` elemento. Deve esistere un elemento figlio per ogni proprietà dell'oggetto che deve essere visualizzato. Le informazioni di intestazione di colonna viene visualizzate nell'ordine che sono specificati gli elementi figlio.
 

@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: 7196f039-2f6a-41fd-b252-5b1623ebb9f9
 caps.latest.revision: 11
 ms.openlocfilehash: 09183a538c179f19347c3f1ed45b4ad38c2ca451
-ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58054510"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62065751"
 ---
 # <a name="label-element-for-tablecolumnheader-for-tablecontrol-format"></a>Elemento Label per TableColumnHeader per TableControl (formato)
 
@@ -28,7 +28,7 @@ Configurazione elemento (formato) elemento ViewDefinitions (formato) visualizzaz
 
 ```
 
-## <a name="attributes-and-elements"></a>Attributi ed elementi
+## <a name="attributes-and-elements"></a>Elementi e attributi
 
 Le sezioni seguenti descrivono gli attributi e gli elementi figlio dell'elemento padre del `Label` elemento. È consentita solo un'etichetta per ogni colonna.
 

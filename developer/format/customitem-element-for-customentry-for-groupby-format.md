@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: f7c517aa-24f5-41ae-b82d-cb0fac81a245
 caps.latest.revision: 7
 ms.openlocfilehash: 2d821f5e3bc8d0f81ef8a8a040c6f9bcb1658bee
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56856927"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62066398"
 ---
 # <a name="customitem-element-for-customentry-for-groupby-format"></a>Elemento CustomItem per CustomEntry per GroupBy (formato)
 
@@ -32,7 +32,7 @@ Elemento di GroupBy elemento (formato) per la visualizzazione elemento ViewDefin
 </CustomItem>
 ```
 
-## <a name="attributes-and-elements"></a>Attributi ed elementi
+## <a name="attributes-and-elements"></a>Elementi e attributi
 
 Le sezioni seguenti descrivono gli attributi e gli elementi figlio dell'elemento padre del `CustomItem` elemento.
 

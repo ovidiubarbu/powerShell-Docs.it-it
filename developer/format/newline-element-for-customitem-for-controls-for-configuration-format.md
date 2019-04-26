@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: 57fcd7ba-44bb-403f-9747-5b429ccb70d0
 caps.latest.revision: 6
 ms.openlocfilehash: 58b6b6be0191ae3feec3d40b85a0de3699870902
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56856377"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62065094"
 ---
 # <a name="newline-element-for-customitem-for-controls-for-configuration-format"></a>Elemento NewLine per CustomItem per Controls per Configuration (formato)
 
@@ -27,7 +27,7 @@ Configurazione (formato) i controlli elemento di configurazione (formato) elemen
 <NewLine/>
 ```
 
-## <a name="attributes-and-elements"></a>Attributi ed elementi
+## <a name="attributes-and-elements"></a>Elementi e attributi
 
 Le sezioni seguenti descrivono gli attributi e gli elementi figlio dell'elemento padre del `NewLine` elemento.
 

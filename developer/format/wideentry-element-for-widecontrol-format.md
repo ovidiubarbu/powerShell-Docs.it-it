@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: 014763cb-7716-4931-899c-8375b5d7a3dd
 caps.latest.revision: 15
 ms.openlocfilehash: d1d13b5c3436871053353814293d9163ea13c7fb
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56856527"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62083672"
 ---
 # <a name="wideentry-element-for-widecontrol-format"></a>Elemento WideEntry per WideControl (formato)
 
@@ -30,7 +30,7 @@ Elemento (formato) elemento ViewDefinitions (formato) visualizzazione elemento (
 </WideEntry>
 ```
 
-## <a name="attributes-and-elements"></a>Attributi ed elementi
+## <a name="attributes-and-elements"></a>Elementi e attributi
 
 Le sezioni seguenti descrivono gli attributi e gli elementi figlio dell'elemento padre del `WideEntry` elemento. È necessario specificare un singolo `WideItem` elemento figlio.
 

@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: 30abae8f-c7f7-479d-ad85-19e07ddef204
 caps.latest.revision: 10
 ms.openlocfilehash: 81eca4f66f0057074612f2d60482b45adc36357b
-ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58059219"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62066295"
 ---
 # <a name="entryselectedby-element-for-customentry-for-controls-for-configuration-format"></a>Elemento EntrySelectedBy per CustomEntry per Controls per Configuration (formato)
 
@@ -31,7 +31,7 @@ Configurazione (formato) i controlli elemento di configurazione (formato) elemen
 </EntrySelectedBy>
 ```
 
-## <a name="attributes-and-elements"></a>Attributi ed elementi
+## <a name="attributes-and-elements"></a>Elementi e attributi
 
 Le sezioni seguenti descrivono gli attributi e gli elementi figlio dell'elemento padre del `EntrySelectedBy` elemento.
 

@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: 92492a7e-257d-47d3-b119-89df3c5545e8
 caps.latest.revision: 9
 ms.openlocfilehash: 89ad17257ebac56105a93672317a149515e80d32
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56861067"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62082516"
 ---
 # <a name="windows-powershell02-sample"></a>Esempio di Windows PowerShell02
 
@@ -23,7 +23,7 @@ Questo esempio viene illustrato come eseguire i comandi in modo asincrono utiliz
 
 - Questo esempio richiede Windows PowerShell 2.0.
 
-## <a name="demonstrates"></a>Illustra
+## <a name="demonstrates"></a>Di seguito viene illustrato
 
 In questo esempio viene illustrato quanto segue:
 

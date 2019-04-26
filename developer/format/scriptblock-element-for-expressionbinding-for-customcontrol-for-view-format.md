@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: d52d020c-3271-40d5-b4bb-7a5ef0caec8f
 caps.latest.revision: 6
 ms.openlocfilehash: 9f5f188b006c5dfac1d04ef4d5aa5606935db9be
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56859487"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62064527"
 ---
 # <a name="scriptblock-element-for-expressionbinding-for-customcontrol-for-view-format"></a>Elemento ScriptBlock per ExpressionBinding per CustomControl per View (formato)
 
@@ -27,7 +27,7 @@ Elemento di CustomControl elemento (formato) per la visualizzazione elemento Vie
 <ScriptBlock>ScriptToEvaluate</ScriptBlock>
 ```
 
-## <a name="attributes-and-elements"></a>Attributi ed elementi
+## <a name="attributes-and-elements"></a>Elementi e attributi
 
 Le sezioni seguenti descrivono gli attributi e gli elementi figlio dell'elemento padre del `ScriptBlock` elemento.
 

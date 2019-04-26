@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: d46df0cb-50b7-4b81-82ba-37186a7b7a7f
 caps.latest.revision: 28
 ms.openlocfilehash: 296c63d0c774a0bf56e90dbaa32f2c221d4c3dbd
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56856327"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62066822"
 ---
 # <a name="configuration-element-format"></a>Elemento Configuration (formato)
 
@@ -33,7 +33,7 @@ Elemento di configurazione
 
 ```
 
-## <a name="attributes-and-elements"></a>Attributi ed elementi
+## <a name="attributes-and-elements"></a>Elementi e attributi
 
 Le sezioni seguenti descrivono gli attributi e gli elementi figlio dell'elemento padre del `Configuration` elemento. Questo elemento deve essere l'elemento radice per ogni file di formattazione e questo elemento deve contenere almeno un elemento figlio.
 

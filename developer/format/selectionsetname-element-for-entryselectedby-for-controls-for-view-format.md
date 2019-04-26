@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: b594a064-746f-4900-99e4-7be7bf5aa5a2
 caps.latest.revision: 7
 ms.openlocfilehash: d540c99707f4e0796b2d408f2161a9208257ab32
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56860997"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62075648"
 ---
 # <a name="selectionsetname-element-for-entryselectedby-for-controls-for-view-format"></a>Elemento SelectionSetName per EntrySelectedBy per Controls per View (formato)
 
@@ -28,7 +28,7 @@ Elemento (formato) elemento ViewDefinitions (formato) visualizzazione elemento (
 
 ```
 
-## <a name="attributes-and-elements"></a>Attributi ed elementi
+## <a name="attributes-and-elements"></a>Elementi e attributi
 
 Le sezioni seguenti descrivono gli attributi e gli elementi figlio dell'elemento padre del `SelectionSetName` elemento.
 

@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: fc48a417-2083-46d4-ac38-16c12e65b6b9
 caps.latest.revision: 7
 ms.openlocfilehash: e08037d5d051d3be51e90193c7e87cc2e738f78a
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56860967"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62064697"
 ---
 # <a name="propertyname-element-for-selectioncondition-for-customcontrol-for-view-format"></a>Elemento PropertyName per SelectionCondition per CustomControl per View (formato)
 
@@ -27,7 +27,7 @@ Elemento di CustomControl elemento (formato) per la visualizzazione elemento Vie
 <PropertyName>.NetTypeProperty</PropertyName>
 ```
 
-## <a name="attributes-and-elements"></a>Attributi ed elementi
+## <a name="attributes-and-elements"></a>Elementi e attributi
 
 Le sezioni seguenti descrivono gli attributi e gli elementi figlio dell'elemento padre del `PropertyName` elemento.
 

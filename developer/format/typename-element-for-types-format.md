@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: 0595b99e-b438-4240-b47b-555cf0316f33
 caps.latest.revision: 15
 ms.openlocfilehash: bd5baa03c2050b2c3bbe1d7697c253d923175d39
-ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58057927"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62083791"
 ---
 # <a name="typename-element-for-types-format"></a>Elemento TypeName per Types (formato)
 
@@ -27,7 +27,7 @@ Configurazione (formato) elemento SelectionSets (formato) SelectionSet elemento 
 <TypeName>Nameof.NetType</Name>
 ```
 
-## <a name="attributes-and-elements"></a>Attributi ed elementi
+## <a name="attributes-and-elements"></a>Elementi e attributi
 
 Le sezioni seguenti descrivono gli attributi e gli elementi figlio dell'elemento padre del `TypeName` elemento. Almeno un `TypeName` elemento deve essere incluso nel set di selezione.
 

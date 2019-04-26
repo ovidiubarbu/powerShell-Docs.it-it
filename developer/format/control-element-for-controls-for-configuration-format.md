@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: bddf7ffa-04d3-4354-90b9-5e714e096260
 caps.latest.revision: 13
 ms.openlocfilehash: 26fe417c9ca60dda22bdc23d9d339d40135a0c9b
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56858887"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62066794"
 ---
 # <a name="control-element-for-controls-for-configuration-format"></a>Elemento Control per Controls per Configuration (formato)
 
@@ -30,7 +30,7 @@ Configurazione (formato) i controlli elemento di configurazione (formato) elemen
 </Control>
 ```
 
-## <a name="attributes-and-elements"></a>Attributi ed elementi
+## <a name="attributes-and-elements"></a>Elementi e attributi
 
 Le sezioni seguenti descrivono gli attributi, elementi figlio e l'elemento padre per il `Control` elemento. È necessario specificare solo uno di ogni elemento figlio.
 

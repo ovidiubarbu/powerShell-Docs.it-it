@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: ebbac73a-1c99-4388-9f47-703cd024dc6d
 caps.latest.revision: 18
 ms.openlocfilehash: a9356635d60d5f8c5d4dec4ec8b7d0aea2b037dd
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56853567"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62063777"
 ---
 # <a name="selectionsets-element-format"></a>Elemento SelectionSet (formato)
 
@@ -29,7 +29,7 @@ Formato elemento SelectionSets elemento di configurazione
 </SelectionSets>
 ```
 
-## <a name="attributes-and-elements"></a>Attributi ed elementi
+## <a name="attributes-and-elements"></a>Elementi e attributi
 
 Le sezioni seguenti descrivono gli attributi, elementi figlio ed elemento padre dell'elemento di `SelectionSets` elemento. Ogni elemento figlio definisce un set di oggetti che possono fare riferimento il nome del set. L'ordine degli elementi figlio non è significativo.
 

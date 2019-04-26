@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: 1cdcf66e-96a5-47b5-9269-b4330bde29f2
 caps.latest.revision: 6
 ms.openlocfilehash: 08db1f2d89c3fe6c1e9a5a522de3071425042c3f
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56855617"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62065833"
 ---
 # <a name="firstlinehanging-element-for-frame-for-groupby-format"></a>Elemento FirstLineHanging per Frame per GroupBy (formato)
 
@@ -27,7 +27,7 @@ Elemento di GroupBy elemento (formato) per la visualizzazione elemento ViewDefin
 <FirstLineHanging>NumberOfCharactersToShift</FirstLineHanging>
 ```
 
-## <a name="attributes-and-elements"></a>Attributi ed elementi
+## <a name="attributes-and-elements"></a>Elementi e attributi
 
 Le sezioni seguenti descrivono l'elemento padre di attributi e gli elementi figlio di `FirstLineHanging` elemento.
 

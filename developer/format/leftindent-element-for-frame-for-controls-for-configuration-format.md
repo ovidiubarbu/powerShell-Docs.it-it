@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: b97ee165-f1bd-4360-8ff0-7a1bb54adcd5
 caps.latest.revision: 7
 ms.openlocfilehash: e48fb31e96041bea6ab0c91061b9f48e6a4c76ab
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56858067"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62065649"
 ---
 # <a name="leftindent-element-for-frame-for-controls-for-configuration-format"></a>Elemento LeftIndent per Frame per Controls per Configuration (formato)
 
@@ -27,7 +27,7 @@ Configurazione (formato) i controlli elemento di configurazione (formato) elemen
 <LeftIndent>CharactersToShift</LeftIndent>
 ```
 
-## <a name="attributes-and-elements"></a>Attributi ed elementi
+## <a name="attributes-and-elements"></a>Elementi e attributi
 
 Le sezioni seguenti descrivono l'elemento padre di attributi e gli elementi figlio di `LeftIndent` elemento.
 

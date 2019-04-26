@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: c1e05821-6aec-437b-84a5-218a5727f88b
 caps.latest.revision: 10
 ms.openlocfilehash: 8a5b84b6a461e9fc340a5981578d95ca2ac6b9f7
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56855647"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62066329"
 ---
 # <a name="defining-conditions-for-displaying-data"></a>Definizione delle condizioni per la visualizzazione dei dati
 

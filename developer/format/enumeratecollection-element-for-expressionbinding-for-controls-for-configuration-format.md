@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: d5027c99-9f88-4c59-87ce-8793ef1d2fe3
 caps.latest.revision: 6
 ms.openlocfilehash: 09c893500d1a340c01c0c5254f5f4fbbed7264bf
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56858147"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62066108"
 ---
 # <a name="enumeratecollection-element-for-expressionbinding-for-controls-for-configuration-format"></a>Elemento EnumerateCollection per ExpressionBinding per Controls per Configuration (formato)
 
@@ -27,7 +27,7 @@ Configurazione (formato) i controlli elemento di configurazione (formato) elemen
 <EnumerateCollection/>
 ```
 
-## <a name="attributes-and-elements"></a>Attributi ed elementi
+## <a name="attributes-and-elements"></a>Elementi e attributi
 
 Le sezioni seguenti descrivono gli attributi e gli elementi figlio dell'elemento padre del `EnumerateCollection` elemento.
 

@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: b3d80a7d-3797-4c46-ae74-ae5cda79b24f
 caps.latest.revision: 8
 ms.openlocfilehash: efb20c3f2077547e6eb3cb28240512b444f9c481
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56859537"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62066244"
 ---
 # <a name="entryselectedby-element-for-customentry-for-controls-for-view-format"></a>Elemento EntrySelectedBy per CustomEntry per Controls per View (formato)
 
@@ -31,7 +31,7 @@ Elemento (formato) elemento ViewDefinitions (formato) visualizzazione elemento (
 </EntrySelectedBy>
 ```
 
-## <a name="attributes-and-elements"></a>Attributi ed elementi
+## <a name="attributes-and-elements"></a>Elementi e attributi
 
 Le sezioni seguenti descrivono l'elemento padre di attributi e gli elementi figlio di `EntrySelectedBy` elemento. È necessario specificare almeno un tipo, set di selezione o condizione di selezione per una definizione. Non è definito alcun limite massimo al numero di elementi figlio che è possibile usare.
 

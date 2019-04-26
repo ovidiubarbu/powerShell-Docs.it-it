@@ -9,17 +9,17 @@ ms.topic: article
 ms.assetid: 46dc0657-110f-4367-8bb6-a95dca2c5016
 caps.latest.revision: 8
 ms.openlocfilehash: f020f023f9a379ff8a610edb7d5dcfe207170394
-ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58055547"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62080986"
 ---
 # <a name="accessdbprovidersample06"></a>AccessDBProviderSample06
 
 Questo esempio illustra come sovrascrivere i metodi per supportare le chiamate per il `Clear-Content`, `Get-Content`, e `Set-Content` cmdlet. Questi metodi devono essere implementati quando l'utente deve gestire il contenuto degli elementi nell'archivio dati. La classe provider in questo esempio deriva dal [System.Management.Automation.Provider.Navigationcmdletprovider](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider) classe che implementa il [ System.Management.Automation.Provider.Icontentcmdletprovider](/dotnet/api/System.Management.Automation.Provider.IContentCmdletProvider) interfaccia.
 
-## <a name="demonstrates"></a>Illustra
+## <a name="demonstrates"></a>Di seguito viene illustrato
 
 > [!IMPORTANT]
 > Classe del provider verrà probabilmente derivare da una delle seguenti classi e possibilmente implementare altre interfacce del provider:

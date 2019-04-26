@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: ac3c0a25-f2ca-4e28-b3dc-9cb06a76d92a
 caps.latest.revision: 11
 ms.openlocfilehash: 7804155bffeb1f0df8339f797bf59f8def56a3fc
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56861817"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62066448"
 ---
 # <a name="customentry-element-for-customentries-for-customcontrol-for-view-format"></a>Elemento CustomEntry per CustomEntries per CustomControl per View (formato)
 
@@ -30,7 +30,7 @@ Elemento (formato) elemento ViewDefinitions (formato) visualizzazione elemento (
 </CustomEntry>
 ```
 
-## <a name="attributes-and-elements"></a>Attributi ed elementi
+## <a name="attributes-and-elements"></a>Elementi e attributi
 
 Le sezioni seguenti descrivono gli attributi e gli elementi figlio dell'elemento padre del `CustomEntry` elemento. È necessario specificare gli elementi visualizzati dalla definizione.
 

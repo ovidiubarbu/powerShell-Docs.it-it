@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: ba3b4d9b-2b8c-4a3a-8887-6c606eb9d490
 caps.latest.revision: 10
 ms.openlocfilehash: 48011950ed64e78a84292762f2c7779003dc59fd
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56860987"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62064663"
 ---
 # <a name="propertyname-element-for-selectioncondition-for-entryselectedby-for-tablerowentry-format"></a>Elemento PropertyName per SelectionCondition per EntrySelectedBy per TableRowEntry (formato)
 
@@ -27,7 +27,7 @@ Elemento (formato) elemento ViewDefinitions (formato) visualizzazione elemento (
 <PropertyName>.NetTypeProperty</PropertyName>
 ```
 
-## <a name="attributes-and-elements"></a>Attributi ed elementi
+## <a name="attributes-and-elements"></a>Elementi e attributi
 
 Le sezioni seguenti descrivono gli attributi e gli elementi figlio dell'elemento padre del `PropertyName` elemento.
 

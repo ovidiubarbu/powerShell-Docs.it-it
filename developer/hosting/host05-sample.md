@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: 0a49e3c4-6a1b-404c-aefc-134e5ce3d108
 caps.latest.revision: 11
 ms.openlocfilehash: 98271f5f439d10b6d29fd0a6422b5b9b4ab55716
-ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58056380"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62082907"
 ---
 # <a name="host05-sample"></a>Esempio di Host05
 
@@ -25,7 +25,7 @@ In questo esempio viene illustrato come compilare un'applicazione host basata su
 
 - Questa applicazione deve essere eseguita con privilegi elevati (Esegui come amministratore).
 
-## <a name="demonstrates"></a>Illustra
+## <a name="demonstrates"></a>Di seguito viene illustrato
 
 - Creazione di un host personalizzato cui classi derivano dal [System.Management.Automation.Host.PSHost](/dotnet/api/System.Management.Automation.Host.PSHost) (classe), il [System.Management.Automation.Host.Pshostuserinterface](/dotnet/api/System.Management.Automation.Host.PSHostUserInterface) classe e il [System.Management.Automation.Host.Pshostrawuserinterface](/dotnet/api/System.Management.Automation.Host.PSHostRawUserInterface) classe.
 

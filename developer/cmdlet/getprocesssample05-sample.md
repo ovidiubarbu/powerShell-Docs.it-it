@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: 6aebd53f-0610-4959-88b2-42339588c859
 caps.latest.revision: 6
 ms.openlocfilehash: ad4300937c10652b677346a62c42fa4f6e8513cf
-ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58055997"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62068012"
 ---
 # <a name="getprocesssample05-sample"></a>Esempio di GetProcessSample05
 
@@ -53,7 +53,7 @@ In questo esempio viene illustrata una versione completa del cmdlet Get-Process.
 
 Questo esempio richiede Windows PowerShell 2.0.
 
-## <a name="demonstrates"></a>Illustra
+## <a name="demonstrates"></a>Di seguito viene illustrato
 
 In questo esempio viene illustrato quanto segue.
 
