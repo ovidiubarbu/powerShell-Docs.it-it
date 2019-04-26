@@ -9,28 +9,28 @@ ms.topic: article
 ms.assetid: 64e85b53-5aeb-4d6c-903c-af4ab62f11c1
 caps.latest.revision: 7
 ms.openlocfilehash: 462cd7bd486a5924bb2bc43e0ac8d1558e30e657
-ms.sourcegitcommit: 5990f04b8042ef2d8e571bec6d5b051e64c9921c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2019
-ms.locfileid: "57794808"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62082397"
 ---
-# <a name="how-to-name-a-helpinfo-xml-file"></a><span data-ttu-id="d4b6d-102">Come assegnare un nome a un file XML HelpInfo</span><span class="sxs-lookup"><span data-stu-id="d4b6d-102">How to Name a HelpInfo XML File</span></span>
+# <a name="how-to-name-a-helpinfo-xml-file"></a><span data-ttu-id="bf99f-102">Come assegnare un nome a un file XML HelpInfo</span><span class="sxs-lookup"><span data-stu-id="bf99f-102">How to Name a HelpInfo XML File</span></span>
 
-<span data-ttu-id="d4b6d-103">Questo argomento viene illustrato il formato richiesto per i file di informazioni della Guida aggiornabile, comunemente noti come file XML HelpInfo.</span><span class="sxs-lookup"><span data-stu-id="d4b6d-103">This topic explains the required name format for the Updatable Help Information files, commonly known as HelpInfo XML files.</span></span>
+<span data-ttu-id="bf99f-103">Questo argomento viene illustrato il formato richiesto per i file di informazioni della Guida aggiornabile, comunemente noti come file XML HelpInfo.</span><span class="sxs-lookup"><span data-stu-id="bf99f-103">This topic explains the required name format for the Updatable Help Information files, commonly known as HelpInfo XML files.</span></span>
 
-## <a name="how-to-name-a-helpinfo-xml-file"></a><span data-ttu-id="d4b6d-104">Come assegnare un nome a un file XML HelpInfo</span><span class="sxs-lookup"><span data-stu-id="d4b6d-104">How to Name a HelpInfo XML File</span></span>
+## <a name="how-to-name-a-helpinfo-xml-file"></a><span data-ttu-id="bf99f-104">Come assegnare un nome a un file XML HelpInfo</span><span class="sxs-lookup"><span data-stu-id="bf99f-104">How to Name a HelpInfo XML File</span></span>
 
-<span data-ttu-id="d4b6d-105">Un file XML HelpInfo deve avere un nome con il formato seguente.</span><span class="sxs-lookup"><span data-stu-id="d4b6d-105">A HelpInfo XML file must have a name with the following format.</span></span>
+<span data-ttu-id="bf99f-105">Un file XML HelpInfo deve avere un nome con il formato seguente.</span><span class="sxs-lookup"><span data-stu-id="bf99f-105">A HelpInfo XML file must have a name with the following format.</span></span>
 
 `<ModuleName>_<ModuleGUID>_HelpInfo.xml`
 
-<span data-ttu-id="d4b6d-106">Gli elementi del nome sono come indicato di seguito.</span><span class="sxs-lookup"><span data-stu-id="d4b6d-106">The elements of the name are as follows.</span></span>
+<span data-ttu-id="bf99f-106">Gli elementi del nome sono come indicato di seguito.</span><span class="sxs-lookup"><span data-stu-id="bf99f-106">The elements of the name are as follows.</span></span>
 
-<span data-ttu-id="d4b6d-107">ModuleName il valore del **nome** proprietà delle **ModuleInfo** oggetto a cui il [Get-Module](/powershell/module/Microsoft.PowerShell.Core/Get-Module) cmdlet restituisce.</span><span class="sxs-lookup"><span data-stu-id="d4b6d-107">ModuleName The value of the **Name** property of the **ModuleInfo** object that the [Get-Module](/powershell/module/Microsoft.PowerShell.Core/Get-Module) cmdlet returns.</span></span>
+<span data-ttu-id="bf99f-107">ModuleName il valore del **nome** proprietà delle **ModuleInfo** oggetto a cui il [Get-Module](/powershell/module/Microsoft.PowerShell.Core/Get-Module) cmdlet restituisce.</span><span class="sxs-lookup"><span data-stu-id="bf99f-107">ModuleName The value of the **Name** property of the **ModuleInfo** object that the [Get-Module](/powershell/module/Microsoft.PowerShell.Core/Get-Module) cmdlet returns.</span></span>
 
-<span data-ttu-id="d4b6d-108">ModuleGUID il valore della **GUID** chiave nel manifesto del modulo.</span><span class="sxs-lookup"><span data-stu-id="d4b6d-108">ModuleGUID The value of the **GUID** key in the module manifest.</span></span>
+<span data-ttu-id="bf99f-108">ModuleGUID il valore della **GUID** chiave nel manifesto del modulo.</span><span class="sxs-lookup"><span data-stu-id="bf99f-108">ModuleGUID The value of the **GUID** key in the module manifest.</span></span>
 
-<span data-ttu-id="d4b6d-109">Ad esempio, se il nome del modulo è "TestModule" e il GUID del modulo è 9cabb9ad-f2ac-4914-a46b-bfc1bebf07f9, il nome del file XML HelpInfo per il modulo sarà:</span><span class="sxs-lookup"><span data-stu-id="d4b6d-109">For example, if the module name is "TestModule" and the module GUID is 9cabb9ad-f2ac-4914-a46b-bfc1bebf07f9, the name of the HelpInfo XML file for the module would be:</span></span>
+<span data-ttu-id="bf99f-109">Ad esempio, se il nome del modulo è "TestModule" e il GUID del modulo è 9cabb9ad-f2ac-4914-a46b-bfc1bebf07f9, il nome del file XML HelpInfo per il modulo sarà:</span><span class="sxs-lookup"><span data-stu-id="bf99f-109">For example, if the module name is "TestModule" and the module GUID is 9cabb9ad-f2ac-4914-a46b-bfc1bebf07f9, the name of the HelpInfo XML file for the module would be:</span></span>
 
 `TestModule_9cabb9ad-f2ac-4914-a46b-bfc1bebf07f9_HelpInfo.xml`

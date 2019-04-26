@@ -9,19 +9,19 @@ ms.topic: article
 ms.assetid: 93d27173-9ae4-46e5-bb78-90525915cd70
 caps.latest.revision: 9
 ms.openlocfilehash: bc1e58c00ca8419f9204076f0a46050281e704db
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56856837"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62066142"
 ---
-# <a name="enumerableexpansion-element-format"></a><span data-ttu-id="35254-102">Elemento EnumerableExpansion (formato)</span><span class="sxs-lookup"><span data-stu-id="35254-102">EnumerableExpansion Element (Format)</span></span>
+# <a name="enumerableexpansion-element-format"></a><span data-ttu-id="3cd6c-102">Elemento EnumerableExpansion (formato)</span><span class="sxs-lookup"><span data-stu-id="3cd6c-102">EnumerableExpansion Element (Format)</span></span>
 
-<span data-ttu-id="35254-103">Definisce una raccolta .NET come specifica gli oggetti vengono espansi quando vengono visualizzati in una vista.</span><span class="sxs-lookup"><span data-stu-id="35254-103">Defines how specific .NET collection objects are expanded when they are displayed in a view.</span></span>
+<span data-ttu-id="3cd6c-103">Definisce una raccolta .NET come specifica gli oggetti vengono espansi quando vengono visualizzati in una vista.</span><span class="sxs-lookup"><span data-stu-id="3cd6c-103">Defines how specific .NET collection objects are expanded when they are displayed in a view.</span></span>
 
-<span data-ttu-id="35254-104">Configurazione (formato) elemento DefaultSettings (formato) elemento EnumerableExpansions (formato) EnumerableExpansion elemento (formato)</span><span class="sxs-lookup"><span data-stu-id="35254-104">Configuration Element (Format) DefaultSettings Element (Format) EnumerableExpansions Element (Format) EnumerableExpansion Element (Format)</span></span>
+<span data-ttu-id="3cd6c-104">Configurazione (formato) elemento DefaultSettings (formato) elemento EnumerableExpansions (formato) EnumerableExpansion elemento (formato)</span><span class="sxs-lookup"><span data-stu-id="3cd6c-104">Configuration Element (Format) DefaultSettings Element (Format) EnumerableExpansions Element (Format) EnumerableExpansion Element (Format)</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="35254-105">Sintassi</span><span class="sxs-lookup"><span data-stu-id="35254-105">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="3cd6c-105">Sintassi</span><span class="sxs-lookup"><span data-stu-id="3cd6c-105">Syntax</span></span>
 
 ```xml
 <EnumerableExpansion>
@@ -30,33 +30,33 @@ ms.locfileid: "56856837"
 </EnumerableExpansion>
 ```
 
-## <a name="attributes-and-elements"></a><span data-ttu-id="35254-106">Attributi ed elementi</span><span class="sxs-lookup"><span data-stu-id="35254-106">Attributes and Elements</span></span>
+## <a name="attributes-and-elements"></a><span data-ttu-id="3cd6c-106">Elementi e attributi</span><span class="sxs-lookup"><span data-stu-id="3cd6c-106">Attributes and Elements</span></span>
 
-<span data-ttu-id="35254-107">Le sezioni seguenti descrivono gli attributi e gli elementi figlio dell'elemento padre del `EnumerableExpansion` elemento.</span><span class="sxs-lookup"><span data-stu-id="35254-107">The following sections describe attributes, child elements, and the parent element of the `EnumerableExpansion` element.</span></span>
+<span data-ttu-id="3cd6c-107">Le sezioni seguenti descrivono gli attributi e gli elementi figlio dell'elemento padre del `EnumerableExpansion` elemento.</span><span class="sxs-lookup"><span data-stu-id="3cd6c-107">The following sections describe attributes, child elements, and the parent element of the `EnumerableExpansion` element.</span></span>
 
-### <a name="attributes"></a><span data-ttu-id="35254-108">Attributes</span><span class="sxs-lookup"><span data-stu-id="35254-108">Attributes</span></span>
+### <a name="attributes"></a><span data-ttu-id="3cd6c-108">Attributes</span><span class="sxs-lookup"><span data-stu-id="3cd6c-108">Attributes</span></span>
 
-<span data-ttu-id="35254-109">Nessuna.</span><span class="sxs-lookup"><span data-stu-id="35254-109">None.</span></span>
+<span data-ttu-id="3cd6c-109">Nessuna.</span><span class="sxs-lookup"><span data-stu-id="3cd6c-109">None.</span></span>
 
-### <a name="child-elements"></a><span data-ttu-id="35254-110">Elementi figlio</span><span class="sxs-lookup"><span data-stu-id="35254-110">Child Elements</span></span>
+### <a name="child-elements"></a><span data-ttu-id="3cd6c-110">Elementi figlio</span><span class="sxs-lookup"><span data-stu-id="3cd6c-110">Child Elements</span></span>
 
-|<span data-ttu-id="35254-111">Elemento</span><span class="sxs-lookup"><span data-stu-id="35254-111">Element</span></span>|<span data-ttu-id="35254-112">Description</span><span class="sxs-lookup"><span data-stu-id="35254-112">Description</span></span>|
+|<span data-ttu-id="3cd6c-111">Elemento</span><span class="sxs-lookup"><span data-stu-id="3cd6c-111">Element</span></span>|<span data-ttu-id="3cd6c-112">Description</span><span class="sxs-lookup"><span data-stu-id="3cd6c-112">Description</span></span>|
 |-------------|-----------------|
-|[<span data-ttu-id="35254-113">Elemento EntrySelectedBy per EnumerableExpansion (formato)</span><span class="sxs-lookup"><span data-stu-id="35254-113">EntrySelectedBy Element for EnumerableExpansion (Format)</span></span>](./entryselectedby-element-for-enumerableexpansion-format.md)|<span data-ttu-id="35254-114">Elemento facoltativo.</span><span class="sxs-lookup"><span data-stu-id="35254-114">Optional element.</span></span><br /><br /> <span data-ttu-id="35254-115">Definisce quali oggetti della raccolta .NET vengono espanse per questa definizione.</span><span class="sxs-lookup"><span data-stu-id="35254-115">Defines which .NET collection objects are expanded by this definition.</span></span>|
-|[<span data-ttu-id="35254-116">Espandere l'elemento (formato)</span><span class="sxs-lookup"><span data-stu-id="35254-116">Expand Element (Format)</span></span>](./expand-element-format.md)|<span data-ttu-id="35254-117">Specifica come viene espanso l'oggetto raccolta per questa definizione.</span><span class="sxs-lookup"><span data-stu-id="35254-117">Specifies how the collection object is expanded for this definition.</span></span>|
+|[<span data-ttu-id="3cd6c-113">Elemento EntrySelectedBy per EnumerableExpansion (formato)</span><span class="sxs-lookup"><span data-stu-id="3cd6c-113">EntrySelectedBy Element for EnumerableExpansion (Format)</span></span>](./entryselectedby-element-for-enumerableexpansion-format.md)|<span data-ttu-id="3cd6c-114">Elemento facoltativo.</span><span class="sxs-lookup"><span data-stu-id="3cd6c-114">Optional element.</span></span><br /><br /> <span data-ttu-id="3cd6c-115">Definisce quali oggetti della raccolta .NET vengono espanse per questa definizione.</span><span class="sxs-lookup"><span data-stu-id="3cd6c-115">Defines which .NET collection objects are expanded by this definition.</span></span>|
+|[<span data-ttu-id="3cd6c-116">Espandere l'elemento (formato)</span><span class="sxs-lookup"><span data-stu-id="3cd6c-116">Expand Element (Format)</span></span>](./expand-element-format.md)|<span data-ttu-id="3cd6c-117">Specifica come viene espanso l'oggetto raccolta per questa definizione.</span><span class="sxs-lookup"><span data-stu-id="3cd6c-117">Specifies how the collection object is expanded for this definition.</span></span>|
 
-### <a name="parent-elements"></a><span data-ttu-id="35254-118">Elementi padre</span><span class="sxs-lookup"><span data-stu-id="35254-118">Parent Elements</span></span>
+### <a name="parent-elements"></a><span data-ttu-id="3cd6c-118">Elementi padre</span><span class="sxs-lookup"><span data-stu-id="3cd6c-118">Parent Elements</span></span>
 
-|<span data-ttu-id="35254-119">Elemento</span><span class="sxs-lookup"><span data-stu-id="35254-119">Element</span></span>|<span data-ttu-id="35254-120">Description</span><span class="sxs-lookup"><span data-stu-id="35254-120">Description</span></span>|
+|<span data-ttu-id="3cd6c-119">Elemento</span><span class="sxs-lookup"><span data-stu-id="3cd6c-119">Element</span></span>|<span data-ttu-id="3cd6c-120">Description</span><span class="sxs-lookup"><span data-stu-id="3cd6c-120">Description</span></span>|
 |-------------|-----------------|
-|[<span data-ttu-id="35254-121">Elemento EnumerableExpansions (formato)</span><span class="sxs-lookup"><span data-stu-id="35254-121">EnumerableExpansions Element (Format)</span></span>](./enumerableexpansions-element-format.md)|<span data-ttu-id="35254-122">Definisce i diversi modi di tale raccolta .NET gli oggetti vengono espansi quando vengono visualizzati in una vista.</span><span class="sxs-lookup"><span data-stu-id="35254-122">Defines the different ways that .NET collection objects are expanded when they are displayed in a view.</span></span>|
+|[<span data-ttu-id="3cd6c-121">Elemento EnumerableExpansions (formato)</span><span class="sxs-lookup"><span data-stu-id="3cd6c-121">EnumerableExpansions Element (Format)</span></span>](./enumerableexpansions-element-format.md)|<span data-ttu-id="3cd6c-122">Definisce i diversi modi di tale raccolta .NET gli oggetti vengono espansi quando vengono visualizzati in una vista.</span><span class="sxs-lookup"><span data-stu-id="3cd6c-122">Defines the different ways that .NET collection objects are expanded when they are displayed in a view.</span></span>|
 
-## <a name="remarks"></a><span data-ttu-id="35254-123">Osservazioni</span><span class="sxs-lookup"><span data-stu-id="35254-123">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="3cd6c-123">Osservazioni</span><span class="sxs-lookup"><span data-stu-id="3cd6c-123">Remarks</span></span>
 
-<span data-ttu-id="35254-124">Questo elemento viene usato per definire come vengono visualizzati gli oggetti raccolta e gli oggetti nella raccolta.</span><span class="sxs-lookup"><span data-stu-id="35254-124">This element is used to define how collection objects and the objects in the collection are displayed.</span></span> <span data-ttu-id="35254-125">In questo caso, un oggetto raccolta fa riferimento a qualsiasi oggetto che supporta il **System.Collections.ICollection** interfaccia.</span><span class="sxs-lookup"><span data-stu-id="35254-125">In this case, a collection object refers to any object that supports the  **System.Collections.ICollection** interface.</span></span>
+<span data-ttu-id="3cd6c-124">Questo elemento viene usato per definire come vengono visualizzati gli oggetti raccolta e gli oggetti nella raccolta.</span><span class="sxs-lookup"><span data-stu-id="3cd6c-124">This element is used to define how collection objects and the objects in the collection are displayed.</span></span> <span data-ttu-id="3cd6c-125">In questo caso, un oggetto raccolta fa riferimento a qualsiasi oggetto che supporta il **System.Collections.ICollection** interfaccia.</span><span class="sxs-lookup"><span data-stu-id="3cd6c-125">In this case, a collection object refers to any object that supports the  **System.Collections.ICollection** interface.</span></span>
 
-<span data-ttu-id="35254-126">Il comportamento predefinito è per visualizzare solo le proprietà degli oggetti nella raccolta.</span><span class="sxs-lookup"><span data-stu-id="35254-126">The default behavior is to display only the properties of the objects in the collection.</span></span>
+<span data-ttu-id="3cd6c-126">Il comportamento predefinito è per visualizzare solo le proprietà degli oggetti nella raccolta.</span><span class="sxs-lookup"><span data-stu-id="3cd6c-126">The default behavior is to display only the properties of the objects in the collection.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="35254-127">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="35254-127">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="3cd6c-127">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="3cd6c-127">See Also</span></span>
 
-[<span data-ttu-id="35254-128">La scrittura di un File di formattazione di PowerShell</span><span class="sxs-lookup"><span data-stu-id="35254-128">Writing a PowerShell Formatting File</span></span>](./writing-a-powershell-formatting-file.md)
+[<span data-ttu-id="3cd6c-128">La scrittura di un File di formattazione di PowerShell</span><span class="sxs-lookup"><span data-stu-id="3cd6c-128">Writing a PowerShell Formatting File</span></span>](./writing-a-powershell-formatting-file.md)
