@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: e082c2e3-12ce-4032-9caf-bf6b2e0dcf81
 caps.latest.revision: 23
-ms.openlocfilehash: eaa927ec90df6053843f5c942357fed4c7dee966
-ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
+ms.openlocfilehash: 93a8c11099a9883127bca87422e1acaebfd2c093
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58059491"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62082297"
 ---
 # <a name="how-to-write-a-powershell-module-manifest"></a>Come scrivere un manifesto del modulo di PowerShell
 
@@ -71,7 +71,7 @@ Nella tabella seguente vengono descritti gli elementi che è possibile avere in 
 |ModuleVersion<br /><br /> Tipo: string|1.0|Numero di versione di questo modulo. La stringa deve essere in grado di convertire in [Version]. Vale a dire, ' &. &. #. #. #'. `Import-Module` verrà caricato il primo modulo consente di trovare nel **$psModulePath** che corrisponde al nome e dispone di almeno così elevati come un ModuleVersion, come il `-MinimumVersion` parametro. Per importare una versione specifica, usare il`-RequiredVersion` parametro, invece.<br /><br /> Esempio: `ModuleVersion = '1.0'`|
 |GUID<br /><br /> Tipo: string|GUID generato automaticamente|ID usato per identificare in modo univoco questo modulo. Si noti che non è attualmente possibile importare un modulo da GUID.<br /><br /> Esempio: `GUID = 'cfc45206-1e49-459d-a8ad-5b571ef94857'`|
 |Autore<br /><br /> Tipo: string|Nessuno|Autore di questo modulo.<br /><br /> Esempio: `Author = 'AuthorNameHere'`|
-|CompanyName*<br /><br /> Tipo: string|Unknown|Società o fornitore di questo modulo.<br /><br /> Esempio: `CompanyName = 'Fabrikam'`|
+|CompanyName<br /><br /> Tipo: string|Unknown|Società o fornitore di questo modulo.<br /><br /> Esempio: `CompanyName = 'Fabrikam'`|
 |Copyright<br /><br /> Tipo: string|(c) [currentYear] [creare]. Tutti i diritti sono riservati.|Dichiarazione di copyright per il modulo.<br /><br /> Esempio: `Copyright = '2016 AuthorName. All rights reserved.'`|
 |Description<br /><br /> Tipo: string|' '|Descrizione delle funzionalità fornite da questo modulo.<br /><br /> Esempio: `Description = 'This is a description of a module.'`|
 |PowerShellVersion<br /><br /> Tipo: string|' '|Versione minima del motore di Windows PowerShell richiesto da questo modulo. Valori validi correnti sono 1.0, 2.0, 3.0, 4.0 e 5.0.<br /><br /> Esempio: `PowerShellVersion = '5.0'`|
@@ -80,7 +80,7 @@ Nella tabella seguente vengono descritti gli elementi che è possibile avere in 
 |DotNetFrameworkVersion<br /><br /> Tipo: string|' '|Versione minima di Microsoft .NET Framework richiesta da questo modulo.<br /><br /> Esempio: `DotNetFrameworkVersion = '3.5'`|
 |CLRVersion<br /><br /> Tipo: string|' '|Versione minima di common language runtime (CLR) richiesto da questo modulo.<br /><br /> Esempio: `CLRVersion = '3.5'`|
 |ProcessorArchitecture<br /><br /> Tipo: string|' '|Architettura del processore (None, X86, Amd64) richiesto da questo modulo. I valori validi sono x86, AMD64, IA64 e Nessuno (sconosciuto o non specificato).<br /><br /> Esempio: `ProcessorArchitecture = 'x86'`|
-|RequiredModules<br /><br /> Type: [string[]]|@()|Moduli che devono essere importati nell'ambiente globale prima di importare questo modulo. Verranno caricati tutti i moduli elencati a meno che non sono già stati caricati. (Ad esempio, alcuni moduli potrebbero già essere caricati da un modulo diverso.). È anche possibile specificare una versione specifica per caricare utilizzando `RequiredVersion` anziché `ModuleVersion`. Quando si usa `ModuleVersion` caricherà la versione più recente disponibile con almeno la versione specificata.<br /><br /> Esempio: `RequiredModules = @(@{ModuleName="myDependentModule", ModuleVersion="2.0",Guid="cfc45206-1e49-459d-a8ad-5b571ef94857"})`<br /><br /> Esempio: `RequiredModules = @(@{ModuleName="myDependentModule", RequiredVersion="1.5",Guid="cfc45206-1e49-459d-a8ad-5b571ef94857"})`|
+|RequiredModules<br /><br /> Type: [string[]]|@()|Moduli che devono essere importati nell'ambiente globale prima di importare questo modulo. Verranno caricati tutti i moduli elencati a meno che non sono già stati caricati. (Ad esempio, alcuni moduli potrebbero già essere caricati da un modulo diverso.). È anche possibile specificare una versione specifica per caricare utilizzando `RequiredVersion` anziché `ModuleVersion`. Quando si usa `ModuleVersion` caricherà la versione più recente disponibile con almeno la versione specificata.<br /><br /> Esempio: `RequiredModules = @(@{ModuleName="myDependentModule"; ModuleVersion="2.0"; Guid="cfc45206-1e49-459d-a8ad-5b571ef94857"})`<br /><br /> Esempio: `RequiredModules = @(@{ModuleName="myDependentModule"; RequiredVersion="1.5"; Guid="cfc45206-1e49-459d-a8ad-5b571ef94857"})`|
 |RequiredAssemblies<br /><br /> Type: [string[]]|@()|Assembly che devono essere caricati prima di importare questo modulo.<br /><br /> Si noti che a differenza di RequiredModules, PowerShell per caricare il RequiredAssemblies se non sono già caricati.|
 |ScriptsToProcess<br /><br /> Type: [string[]]|@()|File di script (con estensione ps1) che vengono eseguiti nello stato sessione del chiamante quando viene importato il modulo. Potrebbe trattarsi di sessione globale dello stato o, per i moduli annidati, lo stato della sessione di un altro modulo. È possibile utilizzare questi script per preparare un ambiente esattamente come è possibile usare uno script di accesso.<br /><br /> Questi script vengono eseguiti prima di uno qualsiasi dei moduli elencati nel manifesto vengono caricato.|
 |TypesToProcess<br /><br /> Tipo: [oggetto []]|@()|Tipo di file (con estensione PS1XML) da caricare durante l'importazione di questo modulo.|
