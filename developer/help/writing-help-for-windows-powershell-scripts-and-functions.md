@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: 859a6e22-75b1-43d4-ba62-62c107803b37
 caps.latest.revision: 7
 ms.openlocfilehash: 98a3f61ff4fa2367f69357173d4e8e14288ff429
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56857477"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62083111"
 ---
 # <a name="writing-help-for-powershell-scripts-and-functions"></a>Guida alla scrittura per le funzioni e script di PowerShell
 
@@ -39,7 +39,7 @@ Per associare lo script o funzione con il file XML, usare il `ExternalHelp` comm
 
 Quando il `ExternalHelp` commentare la parola chiave è presente, ha la precedenza su Guida basata sui commenti, anche quando `Get-Help` non è stato trovato un file della Guida che corrisponde al valore della `ExternalHelp` (parola chiave).
 
-### <a name="online-help"></a>Guida
+### <a name="online-help"></a>Guida in linea
 È possibile inviare argomenti della Guida su Internet e quindi indirizzare `Get-Help` per visualizzare la Guida.
 Per altre informazioni su come scrivere argomenti della Guida basata sui commenti, vedere [supporto della Guida Online](../module/supporting-online-help.md).
 

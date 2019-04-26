@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: 29840c10-2b30-4bb1-a8a0-ddf84d19c2d0
 caps.latest.revision: 18
 ms.openlocfilehash: c5ec80350c7707ccd41112ab5e1952e5dc198cca
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56862087"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62083706"
 ---
 # <a name="viewdefinitions-element-format"></a>Elemento ViewDefinitions (formato)
 
@@ -30,7 +30,7 @@ Elemento di configurazione elemento (formato) ViewDefinitions (formato XML)
 </ViewDefinitions>
 ```
 
-## <a name="attributes-and-elements"></a>Attributi ed elementi
+## <a name="attributes-and-elements"></a>Elementi e attributi
 
 Le sezioni seguenti descrivono gli attributi, elementi figlio ed elemento padre dell'elemento di `ViewDefinitions` elemento. Non sono previsti limiti al numero di visualizzazioni che possono essere definite in un file di formattazione e possono essere aggiunti in qualsiasi ordine.
 

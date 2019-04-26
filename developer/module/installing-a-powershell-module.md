@@ -9,17 +9,17 @@ ms.topic: article
 ms.assetid: fb82827e-fdb7-4cbf-b3d4-093e72b3ff0e
 caps.latest.revision: 28
 ms.openlocfilehash: 7c2bfca50de4645676eafc01bbf23d9797e8b758
-ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58059780"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62082193"
 ---
 # <a name="installing-a-powershell-module"></a>Installazione di un modulo di PowerShell
 
 Dopo aver creato il modulo di PowerShell, è opportuno installare il modulo in un sistema, in modo che può essere utilizzata o da altri. In generale, si tratta semplicemente di Sto copiando il modulo (Internet Explorer, psm1, o l'assieme binario, il manifesto del modulo e tutti gli altri file associati) in una directory in tale computer. Per un progetto molto piccolo, potrebbe essere semplice come copiare e incollare i file con Windows Explorer in un singolo computer remoto. Tuttavia, per soluzioni di maggiori dimensioni si consiglia di usare un processo di installazione più sofisticato. Indipendentemente dal modo in cui viene visualizzato un modulo di sistema, PowerShell può utilizzare una serie di tecniche che permettono agli utenti di trovare e usare i moduli. (Per altre informazioni, vedere [importazione di un modulo di PowerShell](./importing-a-powershell-module.md).) Pertanto, il problema principale per l'installazione consiste nel garantire che PowerShell sarà in grado di trovare il modulo.
 
-Questo argomento include le sezioni seguenti:
+In questo argomento contiene le sezioni seguenti:
 
 - Regole per l'installazione dei moduli
 

@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: 53442bb1-74a3-49f9-9150-3bc3081a7565
 caps.latest.revision: 6
 ms.openlocfilehash: 27de41c88e224f7610c10a764e51524016ecc8cb
-ms.sourcegitcommit: 5990f04b8042ef2d8e571bec6d5b051e64c9921c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2019
-ms.locfileid: "57794825"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62065275"
 ---
 # <a name="list-view-labels"></a>Visualizzazione elenco (etichette)
 
@@ -30,7 +30,7 @@ In questo esempio viene illustrato come implementare una visualizzazione elenco 
    > [!WARNING]
    > Questo file di formattazione definita la visualizzazione di un oggetto che è già definita da un file di formattazione di Windows PowerShell. È necessario usare il `prependPath` parametro quando si esegue il cmdlet, e non è possibile caricare questo tipo di formattazione del file come modulo.
 
-## <a name="demonstrates"></a>Illustra
+## <a name="demonstrates"></a>Di seguito viene illustrato
 
 Questo file di formattazione illustra gli elementi XML seguenti:
 

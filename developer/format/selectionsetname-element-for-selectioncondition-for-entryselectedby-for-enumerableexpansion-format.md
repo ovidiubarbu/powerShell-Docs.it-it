@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: 7b7af0b2-68e6-43c3-adcc-7c58007fced8
 caps.latest.revision: 13
 ms.openlocfilehash: 6f7c8d9af3c1c2fbda0208148b0088161701fdbe
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56861217"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62063861"
 ---
 # <a name="selectionsetname-element-for-selectioncondition-for-entryselectedby-for-enumerableexpansion-format"></a>Elemento SelectionSetName per SelectionCondition per EntrySelectedBy per EnumerableExpansion (formato)
 
@@ -27,7 +27,7 @@ Configurazione elemento elemento DefaultSettings (formato) elemento EnumerableEx
 <SelectionSetName>NameofSelectionSet</SelectionSetName>
 ```
 
-## <a name="attributes-and-elements"></a>Attributi ed elementi
+## <a name="attributes-and-elements"></a>Elementi e attributi
 
 Le sezioni seguenti descrivono l'elemento padre di attributi e gli elementi figlio di `SelectionSetName` elemento.
 

@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: 05b088de-fac3-4a01-9eea-3d96ab755c4b
 caps.latest.revision: 6
 ms.openlocfilehash: b08569a91caa903fa9267d0121f8fd41b33c1e31
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56859517"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62081717"
 ---
 # <a name="runspace01-code-samples"></a>Codici di esempio di Runspace01
 
@@ -21,7 +21,7 @@ Ecco gli esempi di codice per lo spazio di esecuzione descritto in [creazione di
 
 Per il codice di esempio completo, vedere gli argomenti seguenti.
 
-|Language|Argomento|
+|Linguaggio|Argomento|
 |--------------|-----------|
 |C#|[Runspace01 (C#) esempio di codice](./runspace01-csharp-code-sample.md)|
 |VB.NET|[Runspace01 (VB.NET), codice di esempio](./runspace01-vb-net-code-sample.md)|

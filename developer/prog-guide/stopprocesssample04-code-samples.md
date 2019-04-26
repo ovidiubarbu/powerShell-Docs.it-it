@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: dc68af2b-f622-47c4-964f-b07f3d5bdf14
 caps.latest.revision: 5
 ms.openlocfilehash: 367fecfe5417e0e4cc41b076bac6fefbe185624f
-ms.sourcegitcommit: 69abc5ad16e5dd29ddfb1853e266a4bfd1d59d59
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57429651"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62081190"
 ---
 # <a name="stopprocesssample04-code-samples"></a>Codici di esempio di StopProcessSample04
 
@@ -26,7 +26,7 @@ Ecco gli esempi di codice per il cmdlet di esempio StopProc00. Questo è il `Sto
 
 Per il codice di esempio completo, vedere gli argomenti seguenti.
 
-|Language|Argomento|
+|Linguaggio|Argomento|
 |--------------|-----------|
 |C#|[StopProc04 (C#) esempi di codice](./stopprocesssample04-csharp-sample-code.md)|
 |VB.NET|[StopProc04 codice di esempio (VB.NET)](./stopprocesssample04-vb-net-sample-code.md)|

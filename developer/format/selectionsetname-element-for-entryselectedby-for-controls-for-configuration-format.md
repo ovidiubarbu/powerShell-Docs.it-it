@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: 42143d1e-7cda-4c4a-b568-fa1951bb9417
 caps.latest.revision: 6
 ms.openlocfilehash: 9060ee54d6f88c7f910b16cf5c9b87f37844b736
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56860907"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62063997"
 ---
 # <a name="selectionsetname-element-for-entryselectedby-for-controls-for-configuration-format"></a>Elemento SelectionSetName per EntrySelectedBy per Controls per Configuration (formato)
 
@@ -28,7 +28,7 @@ Configurazione (formato) i controlli elemento di configurazione (formato) elemen
 
 ```
 
-## <a name="attributes-and-elements"></a>Attributi ed elementi
+## <a name="attributes-and-elements"></a>Elementi e attributi
 
 Le sezioni seguenti descrivono gli attributi e gli elementi figlio dell'elemento padre del `SelectionSetName` elemento.
 

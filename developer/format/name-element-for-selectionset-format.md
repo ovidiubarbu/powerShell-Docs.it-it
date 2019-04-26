@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: 914917f7-0efc-4d1f-88bd-de714bedd98f
 caps.latest.revision: 15
 ms.openlocfilehash: 29dbdbd335511e4ca2706a625541554825838f23
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56858167"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62065156"
 ---
 # <a name="name-element-for-selectionset-format"></a>Elemento Name per SelectionSet (formato)
 
@@ -27,7 +27,7 @@ Nome elemento di configurazione elemento (formato) elemento SelectionSets (forma
 <Name>Name of selection set</Name>
 ```
 
-## <a name="attributes-and-elements"></a>Attributi ed elementi
+## <a name="attributes-and-elements"></a>Elementi e attributi
 
 Le sezioni seguenti descrivono gli attributi, elementi figlio ed elemento padre dell'elemento di `Name` elemento.
 

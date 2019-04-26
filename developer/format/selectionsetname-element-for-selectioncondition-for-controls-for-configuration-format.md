@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: 7dcaeadb-4e79-47a0-96e2-8952af26abbe
 caps.latest.revision: 7
 ms.openlocfilehash: 5db35a8094ea2bb966c8d6a96802c72f64c05c17
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56858137"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62064023"
 ---
 # <a name="selectionsetname-element-for-selectioncondition-for-controls-for-configuration-format"></a>Elemento SelectionSetName per SelectionCondition per Controls per Configuration (formato)
 
@@ -27,7 +27,7 @@ Configurazione (formato) i controlli elemento dell'elemento di controllo di conf
 <SelectionSetName>NameofSelectionSet</SelectionSetName>
 ```
 
-## <a name="attributes-and-elements"></a>Attributi ed elementi
+## <a name="attributes-and-elements"></a>Elementi e attributi
 
 Le sezioni seguenti descrivono gli attributi e gli elementi figlio dell'elemento padre del `SelectionSetName` elemento.
 

@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: b7a9f086-b1ca-4400-9be7-9ec1ec8880f3
 caps.latest.revision: 11
 ms.openlocfilehash: f20679e3392b99a049c075f24c7712262bab08e1
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56854117"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62063993"
 ---
 # <a name="selectioncondition-element-for-entryselectedby-for-widecontrol-format"></a>Elemento SelectionCondition per EntrySelectedBy per WideControl (formato)
 
@@ -32,7 +32,7 @@ Elemento (formato) elemento ViewDefinitions (formato) visualizzazione elemento (
 </SelectionCondition>
 ```
 
-## <a name="attributes-and-elements"></a>Attributi ed elementi
+## <a name="attributes-and-elements"></a>Elementi e attributi
 
 Le sezioni seguenti descrivono gli attributi e gli elementi figlio dell'elemento padre del `SelectionCondition` elemento. È necessario specificare un unico `PropertyName` o `ScriptBlock` elemento. Il `SelectionSetName` e `TypeName` gli elementi sono facoltativi. È possibile specificare uno dei entrambi gli elementi.
 

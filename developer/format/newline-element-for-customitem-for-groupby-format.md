@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: 8e37477e-cf2c-4ebd-85d1-eb923e2f4eea
 caps.latest.revision: 6
 ms.openlocfilehash: 790abbccad2c9e57d64e444b7b04d805decd4ed6
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56860067"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62065173"
 ---
 # <a name="newline-element-for-customitem-for-groupby-format"></a>Elemento NewLine per CustomItem per GroupBy (formato)
 
@@ -27,7 +27,7 @@ Elemento di GroupBy elemento (formato) per la visualizzazione elemento ViewDefin
 <NewLine/>
 ```
 
-## <a name="attributes-and-elements"></a>Attributi ed elementi
+## <a name="attributes-and-elements"></a>Elementi e attributi
 
 Le sezioni seguenti descrivono gli attributi e gli elementi figlio dell'elemento padre del `NewLine` elemento.
 

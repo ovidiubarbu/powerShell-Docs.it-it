@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: 1fca30b1-13fe-48a2-b0dd-979c161177a6
 caps.latest.revision: 14
 ms.openlocfilehash: 9a4b7c842c6222fa2e9f1c14f37f45d7a5158107
-ms.sourcegitcommit: c581c4c8036edf55147e7bce4b00c860da6c5a8b
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56863697"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62082841"
 ---
 # <a name="host01-sample"></a>Esempio di Host01
 
@@ -25,7 +25,7 @@ Questo esempio viene illustrato come implementare un'applicazione host che usa u
 
  Questo esempio richiede Windows PowerShell 2.0.
 
-## <a name="demonstrates"></a>Illustra
+## <a name="demonstrates"></a>Di seguito viene illustrato
 
 - Creazione di una classe host personalizzato che deriva dal [System.Management.Automation.Host.PSHost](/dotnet/api/System.Management.Automation.Host.PSHost) classe.
 

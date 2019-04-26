@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: 33c7345c-b808-4c1e-bd54-cb870b407432
 caps.latest.revision: 14
 ms.openlocfilehash: 0f7216d4dcc0380bceb47ea7c15b3d4a7e5ceeb2
-ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58059695"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62084029"
 ---
 # <a name="typename-element-for-entryselectedby-for-listcontrol-format"></a>Elemento TypeName per EntrySelectedBy per ListControl (formato)
 
@@ -27,7 +27,7 @@ Elemento (formato) elemento ViewDefinitions (formato) visualizzazione elemento (
 <TypeName>Nameof.NetType</TypeName>
 ```
 
-## <a name="attributes-and-elements"></a>Attributi ed elementi
+## <a name="attributes-and-elements"></a>Elementi e attributi
 
 Le sezioni seguenti descrivono gli attributi e gli elementi figlio dell'elemento padre del `TypeName` elemento.
 

@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: d9d92a9e-c680-46ca-962e-e82452726953
 caps.latest.revision: 10
 ms.openlocfilehash: 1d72ce5b18e89bd81c7f81b27f4b8c60bed99764
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56857667"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62066737"
 ---
 # <a name="customcontrol-element-for-control-for-controls-for-configuration-format"></a>Elemento CustomControl per Control per Controls per Configuration (formato)
 
@@ -29,7 +29,7 @@ Configurazione (formato) i controlli elemento di configurazione (formato) elemen
 </CustomControl>
 ```
 
-## <a name="attributes-and-elements"></a>Attributi ed elementi
+## <a name="attributes-and-elements"></a>Elementi e attributi
 
 Le sezioni seguenti descrivono gli attributi e gli elementi figlio dell'elemento padre del `CustomControl` elemento. Questo elemento deve contenere almeno un elemento figlio. Non è definito alcun limite massimo al numero di elementi figlio che possono essere specificati.
 

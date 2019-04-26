@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: c6649d07-4762-4602-9b4b-d9e2e9e63312
 caps.latest.revision: 13
 ms.openlocfilehash: 531ff447f8407a737131a38351d7e4c6e7da90fb
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56855137"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62065944"
 ---
 # <a name="expressionbinding-element-for-customitem-for-controls-for-configuration-format"></a>Elemento ExpressionBinding per CustomItem per Controls per Configuration (formato)
 
@@ -34,7 +34,7 @@ Configurazione (formato) i controlli elemento di configurazione (formato) elemen
 </ExpressionBinding>
 ```
 
-## <a name="attributes-and-elements"></a>Attributi ed elementi
+## <a name="attributes-and-elements"></a>Elementi e attributi
 
 Le sezioni seguenti descrivono gli attributi e gli elementi figlio dell'elemento padre del `ExpressionBinding` elemento.
 

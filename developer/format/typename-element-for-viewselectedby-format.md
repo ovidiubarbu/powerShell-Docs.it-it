@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: 0ad807a9-d7d8-4e96-b799-9c6a7677cc2d
 caps.latest.revision: 12
 ms.openlocfilehash: e2028c479103cc414295dc24a0f9bb69190bfc66
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56857897"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62083757"
 ---
 # <a name="typename-element-for-viewselectedby-format"></a>Elemento TypeName per ViewSelectedBy (formato)
 
@@ -27,7 +27,7 @@ Elemento (formato) elemento ViewDefinitions (formato) visualizzazione elemento (
 <TypeName>FullyQualifiedTypeName</TypeName>
 ```
 
-## <a name="attributes-and-elements"></a>Attributi ed elementi
+## <a name="attributes-and-elements"></a>Elementi e attributi
 
 Le sezioni seguenti descrivono gli attributi, elementi figlio e gli elementi padre del `TypeName` elemento.
 

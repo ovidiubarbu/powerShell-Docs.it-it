@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: b7bed607-369b-4507-87fa-f6011c2f1970
 caps.latest.revision: 9
 ms.openlocfilehash: 2ce146df05ef876d9c17f560628ebac2c39e57bf
-ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58059202"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62067264"
 ---
 # <a name="stopprocesssample01-sample"></a>Esempio di StopProcessSample01
 
@@ -51,7 +51,7 @@ Questo esempio viene illustrato come scrivere un cmdlet che richiede il feedback
 
 Questo esempio richiede Windows PowerShell 2.0.
 
-## <a name="demonstrates"></a>Illustra
+## <a name="demonstrates"></a>Di seguito viene illustrato
 
 In questo esempio viene illustrato quanto segue.
 

@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: 2f489720-11f6-4019-940e-07f423d4278d
 caps.latest.revision: 6
 ms.openlocfilehash: c5b2d971fe1590116f96b024ae8769334768acf2
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56856347"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62065989"
 ---
 # <a name="firstlineindent-element-for-frame-for-controls-for-configuration-format"></a>Elemento FirstLineIndent per Frame per Controls per Configuration (formato)
 
@@ -27,7 +27,7 @@ Configurazione (formato) i controlli elemento di configurazione (formato) elemen
 <FirstLineIndent>NumberOfCharactersToShift</FirstLineIndent>
 ```
 
-## <a name="attributes-and-elements"></a>Attributi ed elementi
+## <a name="attributes-and-elements"></a>Elementi e attributi
 
 Le sezioni seguenti descrivono l'elemento padre di attributi e gli elementi figlio di `FirstLineIndent` elemento.
 

@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: 9dfba86f-29b2-473c-9e98-9d679176acce
 caps.latest.revision: 11
 ms.openlocfilehash: 497485a388d1cdc834ecc1d1079b0714a7d7f9db
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56859807"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62066473"
 ---
 # <a name="customentry-element-for-customcontrol-for-controls-for-configuration-format"></a>Elemento CustomEntry per CustomControl per Controls per Configuration (formato)
 
@@ -31,7 +31,7 @@ Configurazione (formato) i controlli elemento di configurazione (formato) elemen
 
 ```
 
-## <a name="attributes-and-elements"></a>Attributi ed elementi
+## <a name="attributes-and-elements"></a>Elementi e attributi
 
 Le sezioni seguenti descrivono gli attributi e gli elementi figlio dell'elemento padre del `CustomEntry` elemento. È necessario specificare gli elementi visualizzati dalla definizione.
 

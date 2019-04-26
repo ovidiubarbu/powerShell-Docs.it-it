@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: ea821e8b-4d65-4263-b7e4-6aeca9f534c2
 caps.latest.revision: 9
 ms.openlocfilehash: b44ced75bbaac7c0744f347bdc97f87365b8fe39
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56860437"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62066618"
 ---
 # <a name="customcontrolname-element-for-expressionbinding-for-customcontrol-for-view-format"></a>Elemento CustomControlName per ExpressionBinding per CustomControl per View (formato)
 
@@ -27,7 +27,7 @@ Elemento di CustomControl elemento (formato) per la visualizzazione elemento Vie
 <CustomControlName>NameofCustomControl</CustomControlName>
 ```
 
-## <a name="attributes-and-elements"></a>Attributi ed elementi
+## <a name="attributes-and-elements"></a>Elementi e attributi
 
 Le sezioni seguenti descrivono gli attributi e gli elementi figlio dell'elemento padre del `CustomControlName` elemento.
 

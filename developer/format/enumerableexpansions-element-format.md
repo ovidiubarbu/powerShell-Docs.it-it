@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: 50c33892-2ade-44c2-906c-81e5f5ca21f2
 caps.latest.revision: 9
 ms.openlocfilehash: 1ecbda8a3b623757517019105e3b1ee46ccbb55c
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56860257"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62066091"
 ---
 # <a name="enumerableexpansions-element-format"></a>Elemento EnumerableExpansions (formato)
 
@@ -29,7 +29,7 @@ Configurazione (formato) elemento DefaultSettings (formato) EnumerableExpansions
 </EnumerableExpansions>
 ```
 
-## <a name="attributes-and-elements"></a>Attributi ed elementi
+## <a name="attributes-and-elements"></a>Elementi e attributi
 
 Le sezioni seguenti descrivono gli attributi e gli elementi figlio dell'elemento padre del `EnumerableExpansions` elemento. Non sono previsti limiti al numero di elementi figlio che è possibile usare.
 

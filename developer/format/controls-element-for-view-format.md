@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: 3bd82666-447f-40fe-bd87-c8b182522f4f
 caps.latest.revision: 14
 ms.openlocfilehash: 477b8b54c8edd2fa0e6939041d04322d861197c9
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56853667"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62066802"
 ---
 # <a name="controls-element-for-view-format"></a>Elemento Controls per View (formato)
 
@@ -29,7 +29,7 @@ Elemento di visualizzazione configurazione elemento (formato) elemento ViewDefin
 </Controls>
 ```
 
-## <a name="attributes-and-elements"></a>Attributi ed elementi
+## <a name="attributes-and-elements"></a>Elementi e attributi
 
 Le sezioni seguenti descrivono gli attributi, elementi figlio e gli elementi padre del `Controls` elemento. Questo elemento deve contenere almeno un elemento figlio. Non esiste alcun numero massimo di elementi figlio, non è né il relativo ordine significativo.
 
