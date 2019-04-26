@@ -8,20 +8,20 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 868194a2-17e9-4184-bc36-c04a33f26494
 caps.latest.revision: 4
-ms.openlocfilehash: dbccaf5b8e48a1c4d924bc0ec4ea09b25e10adf0
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.openlocfilehash: 30e98bfcf06b1720005a73ee8294aeba7e1ae066
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56857967"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62083502"
 ---
-# <a name="examples-of-comment-based-help"></a><span data-ttu-id="8e8f9-102">Esempi della Guida basata sui commenti</span><span class="sxs-lookup"><span data-stu-id="8e8f9-102">Examples of Comment-Based Help</span></span>
+# <a name="examples-of-comment-based-help"></a><span data-ttu-id="ab663-102">Esempi della Guida basata sui commenti</span><span class="sxs-lookup"><span data-stu-id="ab663-102">Examples of Comment-Based Help</span></span>
 
-<span data-ttu-id="8e8f9-103">In questo argomento include l'esempio che illustrano come usare la Guida basata su commenti per funzioni e script.</span><span class="sxs-lookup"><span data-stu-id="8e8f9-103">This topic includes example that demonstrate how to use comment-based help for scripts and functions.</span></span>
+<span data-ttu-id="ab663-103">In questo argomento include l'esempio che illustrano come usare la Guida basata su commenti per funzioni e script.</span><span class="sxs-lookup"><span data-stu-id="ab663-103">This topic includes example that demonstrate how to use comment-based help for scripts and functions.</span></span>
 
-## <a name="example-1-comment-based-help-for-a-function"></a><span data-ttu-id="8e8f9-104">Esempio 1: Guida basata su commenti per una funzione</span><span class="sxs-lookup"><span data-stu-id="8e8f9-104">Example 1: Comment-Based Help for a Function</span></span>
+## <a name="example-1-comment-based-help-for-a-function"></a><span data-ttu-id="ab663-104">Esempio 1: Guida basata su commenti per una funzione</span><span class="sxs-lookup"><span data-stu-id="ab663-104">Example 1: Comment-Based Help for a Function</span></span>
 
- <span data-ttu-id="8e8f9-105">La funzione di esempio seguente include la Guida basata sui commenti.</span><span class="sxs-lookup"><span data-stu-id="8e8f9-105">The following sample function includes comment-based Help.</span></span>
+ <span data-ttu-id="ab663-105">La funzione di esempio seguente include la Guida basata sui commenti.</span><span class="sxs-lookup"><span data-stu-id="ab663-105">The following sample function includes comment-based Help.</span></span>
 
 ```powershell
 function Add-Extension
@@ -71,7 +71,7 @@ function Add-Extension
 }
 ```
 
-<span data-ttu-id="8e8f9-106">L'output seguente mostra i risultati di un comando Get-Help che consente di visualizzare la Guida per la funzione Aggiungi estensione.</span><span class="sxs-lookup"><span data-stu-id="8e8f9-106">The following output shows the results of a Get-Help command that displays the help for the Add-Extension function.</span></span>
+<span data-ttu-id="ab663-106">L'output seguente mostra i risultati di un comando Get-Help che consente di visualizzare la Guida per la funzione Aggiungi estensione.</span><span class="sxs-lookup"><span data-stu-id="ab663-106">The following output shows the results of a Get-Help command that displays the help for the Add-Extension function.</span></span>
 
 ```powershell
 C:\PS> get-help add-extension -full
@@ -141,11 +141,11 @@ C:\PS> get-help add-extension -full
             Set-Item
 ```
 
-## <a name="example-2-comment-based-help-for-a-script"></a><span data-ttu-id="8e8f9-107">Esempio 2: Guida basata su commenti per uno Script</span><span class="sxs-lookup"><span data-stu-id="8e8f9-107">Example 2: Comment-Based Help for a Script</span></span>
+## <a name="example-2-comment-based-help-for-a-script"></a><span data-ttu-id="ab663-107">Esempio 2: Guida basata su commenti per uno Script</span><span class="sxs-lookup"><span data-stu-id="ab663-107">Example 2: Comment-Based Help for a Script</span></span>
 
-<span data-ttu-id="8e8f9-108">La funzione di esempio seguente include la Guida basata sui commenti.</span><span class="sxs-lookup"><span data-stu-id="8e8f9-108">The following sample function includes comment-based Help.</span></span>
+<span data-ttu-id="ab663-108">La funzione di esempio seguente include la Guida basata sui commenti.</span><span class="sxs-lookup"><span data-stu-id="ab663-108">The following sample function includes comment-based Help.</span></span>
 
-<span data-ttu-id="8e8f9-109">Si noti che le righe vuote tra la chiusura **#>** e il `Param` istruzione.</span><span class="sxs-lookup"><span data-stu-id="8e8f9-109">Notice the blank lines between the closing **#>** and the `Param` statement.</span></span> <span data-ttu-id="8e8f9-110">In uno script che non ha un `Param` istruzione, deve esserci almeno due righe vuote tra il commento finale dell'argomento della Guida e la prima dichiarazione di funzione.</span><span class="sxs-lookup"><span data-stu-id="8e8f9-110">In a script that does not have a `Param` statement, there must be at least two blank lines between the final comment in the Help topic and the first function declaration.</span></span> <span data-ttu-id="8e8f9-111">Senza queste righe vuote, Get-Help associa l'argomento della Guida con la funzione, anziché lo script.</span><span class="sxs-lookup"><span data-stu-id="8e8f9-111">Without these blank lines, Get-Help associates the Help topic with the function, instead of the script.</span></span>
+<span data-ttu-id="ab663-109">Si noti che le righe vuote tra la chiusura **#>** e il `Param` istruzione.</span><span class="sxs-lookup"><span data-stu-id="ab663-109">Notice the blank lines between the closing **#>** and the `Param` statement.</span></span> <span data-ttu-id="ab663-110">In uno script che non ha un `Param` istruzione, deve esserci almeno due righe vuote tra il commento finale dell'argomento della Guida e la prima dichiarazione di funzione.</span><span class="sxs-lookup"><span data-stu-id="ab663-110">In a script that does not have a `Param` statement, there must be at least two blank lines between the final comment in the Help topic and the first function declaration.</span></span> <span data-ttu-id="ab663-111">Senza queste righe vuote, Get-Help associa l'argomento della Guida con la funzione, anziché lo script.</span><span class="sxs-lookup"><span data-stu-id="ab663-111">Without these blank lines, Get-Help associates the Help topic with the function, instead of the script.</span></span>
 
 ```powershell
 <#
@@ -185,7 +185,7 @@ param ([string]$InputPath, [string]$OutPutPath)
 function Get-Data { }
 ```
 
-<span data-ttu-id="8e8f9-112">Il comando seguente ottiene lo script Help.</span><span class="sxs-lookup"><span data-stu-id="8e8f9-112">The following command gets the script Help.</span></span> <span data-ttu-id="8e8f9-113">Poiché lo script non è n una directory in cui è elencata nella variabile di ambiente Path, il comando Get-Help che ottiene lo script Help deve specificare il percorso dello script.</span><span class="sxs-lookup"><span data-stu-id="8e8f9-113">Because the script is not n a directory that is listed in the Path environment variable, the Get-Help command that gets the script Help must specify the script path.</span></span>
+<span data-ttu-id="ab663-112">Il comando seguente ottiene lo script Help.</span><span class="sxs-lookup"><span data-stu-id="ab663-112">The following command gets the script Help.</span></span> <span data-ttu-id="ab663-113">Poiché lo script non è n una directory in cui è elencata nella variabile di ambiente Path, il comando Get-Help che ottiene lo script Help deve specificare il percorso dello script.</span><span class="sxs-lookup"><span data-stu-id="ab663-113">Because the script is not n a directory that is listed in the Path environment variable, the Get-Help command that gets the script Help must specify the script path.</span></span>
 
 ```powershell
 C:\PS> get-help c:\ps-test\update-month.ps1 -full
@@ -255,9 +255,9 @@ C:\PS> get-help c:\ps-test\update-month.ps1 -full
             RELATED LINKS
 ```
 
-## <a name="example-3-parameter-descriptions-in-a-param-statement"></a><span data-ttu-id="8e8f9-114">Esempio 3: Descrizioni dei parametri in un'istruzione Param</span><span class="sxs-lookup"><span data-stu-id="8e8f9-114">Example 3: Parameter Descriptions in a Param Statement</span></span>
+## <a name="example-3-parameter-descriptions-in-a-param-statement"></a><span data-ttu-id="ab663-114">Esempio 3: Descrizioni dei parametri in un'istruzione Param</span><span class="sxs-lookup"><span data-stu-id="ab663-114">Example 3: Parameter Descriptions in a Param Statement</span></span>
 
-<span data-ttu-id="8e8f9-115">In questo esempio mostra come inserire parameterdescriptions nel `Param` istruzione di una funzione o script.</span><span class="sxs-lookup"><span data-stu-id="8e8f9-115">This example show how to insert parameterdescriptions in the `Param` statement of a function or script.</span></span> <span data-ttu-id="8e8f9-116">Questo formato è particolarmente utile quando le descrizioni dei parametri sono brevi.</span><span class="sxs-lookup"><span data-stu-id="8e8f9-116">This format is most useful when the parameter descriptions are brief.</span></span>
+<span data-ttu-id="ab663-115">In questo esempio mostra come inserire parameterdescriptions nel `Param` istruzione di una funzione o script.</span><span class="sxs-lookup"><span data-stu-id="ab663-115">This example show how to insert parameterdescriptions in the `Param` statement of a function or script.</span></span> <span data-ttu-id="ab663-116">Questo formato è particolarmente utile quando le descrizioni dei parametri sono brevi.</span><span class="sxs-lookup"><span data-stu-id="ab663-116">This format is most useful when the parameter descriptions are brief.</span></span>
 
 ```powershell
 function Add-Extension
@@ -282,11 +282,11 @@ function Add-Extension
     #>
 ```
 
-<span data-ttu-id="8e8f9-117">I risultati sono gli stessi dei risultati, ad esempio 1.</span><span class="sxs-lookup"><span data-stu-id="8e8f9-117">The results are the same as the results for Example 1.</span></span> <span data-ttu-id="8e8f9-118">Get-Help interpreta le descrizioni dei parametri come se si sono accompagnati dal `.Parameter` (parola chiave).</span><span class="sxs-lookup"><span data-stu-id="8e8f9-118">Get-Help interprets the parameter descriptions as though they were accompanied by the `.Parameter` keyword.</span></span>
+<span data-ttu-id="ab663-117">I risultati sono gli stessi dei risultati, ad esempio 1.</span><span class="sxs-lookup"><span data-stu-id="ab663-117">The results are the same as the results for Example 1.</span></span> <span data-ttu-id="ab663-118">Get-Help interpreta le descrizioni dei parametri come se si sono accompagnati dal `.Parameter` (parola chiave).</span><span class="sxs-lookup"><span data-stu-id="ab663-118">Get-Help interprets the parameter descriptions as though they were accompanied by the `.Parameter` keyword.</span></span>
 
-## <a name="example-4--redirecting-to-an-xml-file"></a><span data-ttu-id="8e8f9-119">Esempio 4:  Il reindirizzamento a un File XML</span><span class="sxs-lookup"><span data-stu-id="8e8f9-119">Example 4:  Redirecting to an XML File</span></span>
+## <a name="example-4--redirecting-to-an-xml-file"></a><span data-ttu-id="ab663-119">Esempio 4:  Il reindirizzamento a un File XML</span><span class="sxs-lookup"><span data-stu-id="ab663-119">Example 4:  Redirecting to an XML File</span></span>
 
-<span data-ttu-id="8e8f9-120">È possibile scrivere argomenti della Guida basati su XML per le funzioni e script.</span><span class="sxs-lookup"><span data-stu-id="8e8f9-120">You can write XML-based Help topics for functions and scripts.</span></span> <span data-ttu-id="8e8f9-121">Anche se la Guida basata sui commenti è più facile da implementare, Guida basata su XML è necessaria se si desidera maggiore controllo sul contenuto della Guida o se tradurre gli argomenti della Guida in più lingue. Nell'esempio seguente mostra le prime righe dello script di aggiornamento Month.ps1.</span><span class="sxs-lookup"><span data-stu-id="8e8f9-121">Although comment-based Help is easier to implement, XML-based Help is required if you want more precise control over Help content or if you are translating Help topics into multiple languages.The following example shows the first few lines of the Update-Month.ps1 script.</span></span> <span data-ttu-id="8e8f9-122">Lo script Usa i `.ExternalHelp` (parola chiave) per specificare il percorso a un argomento basato su XML per lo script.</span><span class="sxs-lookup"><span data-stu-id="8e8f9-122">The script uses the `.ExternalHelp` keyword to specify the path to an XML-based Help topic for the script.</span></span>
+<span data-ttu-id="ab663-120">È possibile scrivere argomenti della Guida basati su XML per le funzioni e script.</span><span class="sxs-lookup"><span data-stu-id="ab663-120">You can write XML-based Help topics for functions and scripts.</span></span> <span data-ttu-id="ab663-121">Anche se la Guida basata sui commenti è più facile da implementare, Guida basata su XML è necessaria se si desidera maggiore controllo sul contenuto della Guida o se tradurre gli argomenti della Guida in più lingue. Nell'esempio seguente mostra le prime righe dello script di aggiornamento Month.ps1.</span><span class="sxs-lookup"><span data-stu-id="ab663-121">Although comment-based Help is easier to implement, XML-based Help is required if you want more precise control over Help content or if you are translating Help topics into multiple languages.The following example shows the first few lines of the Update-Month.ps1 script.</span></span> <span data-ttu-id="ab663-122">Lo script Usa i `.ExternalHelp` (parola chiave) per specificare il percorso a un argomento basato su XML per lo script.</span><span class="sxs-lookup"><span data-stu-id="ab663-122">The script uses the `.ExternalHelp` keyword to specify the path to an XML-based Help topic for the script.</span></span>
 
 ```powershell
 #  .ExternalHelp C:\MyScripts\Update-Month-Help.xml
@@ -296,7 +296,7 @@ function Add-Extension
     function Get-Data { }
 ```
 
-<span data-ttu-id="8e8f9-123">L'esempio seguente illustra l'uso del `.ExternalHelp` parola chiave in una funzione.</span><span class="sxs-lookup"><span data-stu-id="8e8f9-123">The following example shows the use of the `.ExternalHelp` keyword in a function.</span></span>
+<span data-ttu-id="ab663-123">L'esempio seguente illustra l'uso del `.ExternalHelp` parola chiave in una funzione.</span><span class="sxs-lookup"><span data-stu-id="ab663-123">The following example shows the use of the `.ExternalHelp` keyword in a function.</span></span>
 
 ```powershell
 function Add-Extension
@@ -309,9 +309,9 @@ function Add-Extension
 }
 ```
 
-## <a name="example-5--redirecting-to-a-different-help-topic"></a><span data-ttu-id="8e8f9-124">Esempio 5:  Il reindirizzamento a un altro argomento della Guida</span><span class="sxs-lookup"><span data-stu-id="8e8f9-124">Example 5:  Redirecting to a Different Help Topic</span></span>
+## <a name="example-5--redirecting-to-a-different-help-topic"></a><span data-ttu-id="ab663-124">Esempio 5:  Il reindirizzamento a un altro argomento della Guida</span><span class="sxs-lookup"><span data-stu-id="ab663-124">Example 5:  Redirecting to a Different Help Topic</span></span>
 
-<span data-ttu-id="8e8f9-125">Il codice seguente è tratto dall'inizio del predefiniti `Help` (funzione) in Windows PowerShell, che visualizza una schermata del testo della Guida alla volta.</span><span class="sxs-lookup"><span data-stu-id="8e8f9-125">The following code is an excerpt from the beginning of the built-in `Help` function in Windows PowerShell, which displays one screen of Help text at a time.</span></span> <span data-ttu-id="8e8f9-126">Poiché l'argomento della Guida per il cmdlet Get-Help viene descritta la funzione di Guida in linea, la funzione Help Usa la `.ForwardHelpTargetName` e `.ForwardHelpCategory` parole chiave per reindirizzare l'utente all'argomento della Guida del cmdlet Get-Help.</span><span class="sxs-lookup"><span data-stu-id="8e8f9-126">Because the Help topic for the Get-Help cmdlet describes the Help function, the Help function uses the `.ForwardHelpTargetName` and `.ForwardHelpCategory` keywords to redirect the user to the Get-Help cmdlet Help topic.</span></span>
+<span data-ttu-id="ab663-125">Il codice seguente è tratto dall'inizio del predefiniti `Help` (funzione) in Windows PowerShell, che visualizza una schermata del testo della Guida alla volta.</span><span class="sxs-lookup"><span data-stu-id="ab663-125">The following code is an excerpt from the beginning of the built-in `Help` function in Windows PowerShell, which displays one screen of Help text at a time.</span></span> <span data-ttu-id="ab663-126">Poiché l'argomento della Guida per il cmdlet Get-Help viene descritta la funzione di Guida in linea, la funzione Help Usa la `.ForwardHelpTargetName` e `.ForwardHelpCategory` parole chiave per reindirizzare l'utente all'argomento della Guida del cmdlet Get-Help.</span><span class="sxs-lookup"><span data-stu-id="ab663-126">Because the Help topic for the Get-Help cmdlet describes the Help function, the Help function uses the `.ForwardHelpTargetName` and `.ForwardHelpCategory` keywords to redirect the user to the Get-Help cmdlet Help topic.</span></span>
 
 ```powershell
 function help
@@ -329,7 +329,7 @@ function help
     ...
 ```
 
-<span data-ttu-id="8e8f9-127">Il comando seguente usa questa funzionalità.</span><span class="sxs-lookup"><span data-stu-id="8e8f9-127">The following command uses this feature.</span></span> <span data-ttu-id="8e8f9-128">Quando un utente digita un comando Get-Help per la funzione Help, Get-Help Visualizza l'argomento della Guida per il cmdlet Get-Help.</span><span class="sxs-lookup"><span data-stu-id="8e8f9-128">When a user types a Get-Help command for the Help function, Get-Help displays the Help topic for the Get-Help cmdlet.</span></span>
+<span data-ttu-id="ab663-127">Il comando seguente usa questa funzionalità.</span><span class="sxs-lookup"><span data-stu-id="ab663-127">The following command uses this feature.</span></span> <span data-ttu-id="ab663-128">Quando un utente digita un comando Get-Help per la funzione Help, Get-Help Visualizza l'argomento della Guida per il cmdlet Get-Help.</span><span class="sxs-lookup"><span data-stu-id="ab663-128">When a user types a Get-Help command for the Help function, Get-Help displays the Help topic for the Get-Help cmdlet.</span></span>
 
 ```powershell
 C:\PS> get-help help

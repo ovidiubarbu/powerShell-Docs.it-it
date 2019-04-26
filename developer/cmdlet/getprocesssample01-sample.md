@@ -9,45 +9,45 @@ ms.topic: article
 ms.assetid: 7b48bf80-cbf0-4cb1-8d5b-3b8d06196598
 caps.latest.revision: 10
 ms.openlocfilehash: 00190c7350cb0f1cfc5c389b56e48e9397480446
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "56859837"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62068063"
 ---
-# <a name="getprocesssample01-sample"></a><span data-ttu-id="e5f91-102">Esempio di GetProcessSample01</span><span class="sxs-lookup"><span data-stu-id="e5f91-102">GetProcessSample01 Sample</span></span>
+# <a name="getprocesssample01-sample"></a><span data-ttu-id="fbff6-102">Esempio di GetProcessSample01</span><span class="sxs-lookup"><span data-stu-id="fbff6-102">GetProcessSample01 Sample</span></span>
 
-<span data-ttu-id="e5f91-103">Questo esempio viene illustrato come implementare un cmdlet che recupera i processi nel computer locale.</span><span class="sxs-lookup"><span data-stu-id="e5f91-103">This sample shows how to implement a cmdlet that retrieves the processes on the local computer.</span></span> <span data-ttu-id="e5f91-104">Questo cmdlet è una versione semplificata del `Get-Process` cmdlet fornito da Windows PowerShell 2.0.</span><span class="sxs-lookup"><span data-stu-id="e5f91-104">This cmdlet is a simplified version of the `Get-Process` cmdlet that is provided by Windows PowerShell 2.0.</span></span>
+<span data-ttu-id="fbff6-103">Questo esempio viene illustrato come implementare un cmdlet che recupera i processi nel computer locale.</span><span class="sxs-lookup"><span data-stu-id="fbff6-103">This sample shows how to implement a cmdlet that retrieves the processes on the local computer.</span></span> <span data-ttu-id="fbff6-104">Questo cmdlet è una versione semplificata del `Get-Process` cmdlet fornito da Windows PowerShell 2.0.</span><span class="sxs-lookup"><span data-stu-id="fbff6-104">This cmdlet is a simplified version of the `Get-Process` cmdlet that is provided by Windows PowerShell 2.0.</span></span>
 
-## <a name="how-to-build-the-sample-by-using-visual-studio"></a><span data-ttu-id="e5f91-105">Come compilare l'esempio mediante Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="e5f91-105">How to build the sample by using Visual Studio.</span></span>
+## <a name="how-to-build-the-sample-by-using-visual-studio"></a><span data-ttu-id="fbff6-105">Come compilare l'esempio mediante Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="fbff6-105">How to build the sample by using Visual Studio.</span></span>
 
-1. <span data-ttu-id="e5f91-106">Con Windows PowerShell 2.0 SDK installato, passare alla cartella GetProcessSample01.</span><span class="sxs-lookup"><span data-stu-id="e5f91-106">With the Windows PowerShell 2.0 SDK installed, navigate to the GetProcessSample01 folder.</span></span> <span data-ttu-id="e5f91-107">Il percorso predefinito è C:\Program Files (x86) \Microsoft SDKs\Windows\v7.0\Samples\sysmgmt\WindowsPowerShell\csharp\GetProcessSample01.</span><span class="sxs-lookup"><span data-stu-id="e5f91-107">The default location is C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0\Samples\sysmgmt\WindowsPowerShell\csharp\GetProcessSample01.</span></span>
+1. <span data-ttu-id="fbff6-106">Con Windows PowerShell 2.0 SDK installato, passare alla cartella GetProcessSample01.</span><span class="sxs-lookup"><span data-stu-id="fbff6-106">With the Windows PowerShell 2.0 SDK installed, navigate to the GetProcessSample01 folder.</span></span> <span data-ttu-id="fbff6-107">Il percorso predefinito è C:\Program Files (x86) \Microsoft SDKs\Windows\v7.0\Samples\sysmgmt\WindowsPowerShell\csharp\GetProcessSample01.</span><span class="sxs-lookup"><span data-stu-id="fbff6-107">The default location is C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0\Samples\sysmgmt\WindowsPowerShell\csharp\GetProcessSample01.</span></span>
 
-2. <span data-ttu-id="e5f91-108">Fare doppio clic sull'icona per il file di soluzione (sln).</span><span class="sxs-lookup"><span data-stu-id="e5f91-108">Double-click the icon for the solution (.sln) file.</span></span> <span data-ttu-id="e5f91-109">Verrà aperto il progetto di esempio in Microsoft Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="e5f91-109">This opens the sample project in Microsoft Visual Studio.</span></span>
+2. <span data-ttu-id="fbff6-108">Fare doppio clic sull'icona per il file di soluzione (sln).</span><span class="sxs-lookup"><span data-stu-id="fbff6-108">Double-click the icon for the solution (.sln) file.</span></span> <span data-ttu-id="fbff6-109">Verrà aperto il progetto di esempio in Microsoft Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="fbff6-109">This opens the sample project in Microsoft Visual Studio.</span></span>
 
-3. <span data-ttu-id="e5f91-110">Nel **compilare** dal menu **Compila soluzione**.</span><span class="sxs-lookup"><span data-stu-id="e5f91-110">In the **Build** menu, select **Build Solution**.</span></span>
+3. <span data-ttu-id="fbff6-110">Nel **compilare** dal menu **Compila soluzione**.</span><span class="sxs-lookup"><span data-stu-id="fbff6-110">In the **Build** menu, select **Build Solution**.</span></span>
 
-  <span data-ttu-id="e5f91-111">La libreria per il codice di esempio verrà compilata nelle cartelle \bin o \bin\Debug. predefinito.</span><span class="sxs-lookup"><span data-stu-id="e5f91-111">The library for the sample will be built in the default \bin or \bin\debug folders.</span></span>
+  <span data-ttu-id="fbff6-111">La libreria per il codice di esempio verrà compilata nelle cartelle \bin o \bin\Debug. predefinito.</span><span class="sxs-lookup"><span data-stu-id="fbff6-111">The library for the sample will be built in the default \bin or \bin\debug folders.</span></span>
 
-### <a name="how-to-run-the-sample"></a><span data-ttu-id="e5f91-112">Come eseguire il codice di esempio</span><span class="sxs-lookup"><span data-stu-id="e5f91-112">How to run the sample</span></span>
+### <a name="how-to-run-the-sample"></a><span data-ttu-id="fbff6-112">Come eseguire il codice di esempio</span><span class="sxs-lookup"><span data-stu-id="fbff6-112">How to run the sample</span></span>
 
-1. <span data-ttu-id="e5f91-113">Aprire una finestra del prompt dei comandi.</span><span class="sxs-lookup"><span data-stu-id="e5f91-113">Open a Command Prompt window.</span></span>
+1. <span data-ttu-id="fbff6-113">Aprire una finestra del prompt dei comandi.</span><span class="sxs-lookup"><span data-stu-id="fbff6-113">Open a Command Prompt window.</span></span>
 
-2. <span data-ttu-id="e5f91-114">Passare alla directory contenente il file con estensione DLL di esempio.</span><span class="sxs-lookup"><span data-stu-id="e5f91-114">Navigate to the directory containing the sample .dll file.</span></span>
+2. <span data-ttu-id="fbff6-114">Passare alla directory contenente il file con estensione DLL di esempio.</span><span class="sxs-lookup"><span data-stu-id="fbff6-114">Navigate to the directory containing the sample .dll file.</span></span>
 
-3. <span data-ttu-id="e5f91-115">Eseguire installutil "GetProcessSample01.dll".</span><span class="sxs-lookup"><span data-stu-id="e5f91-115">Run installutil "GetProcessSample01.dll".</span></span>
+3. <span data-ttu-id="fbff6-115">Eseguire installutil "GetProcessSample01.dll".</span><span class="sxs-lookup"><span data-stu-id="fbff6-115">Run installutil "GetProcessSample01.dll".</span></span>
 
-4. <span data-ttu-id="e5f91-116">Avviare Windows PowerShell.</span><span class="sxs-lookup"><span data-stu-id="e5f91-116">Start Windows PowerShell.</span></span>
+4. <span data-ttu-id="fbff6-116">Avviare Windows PowerShell.</span><span class="sxs-lookup"><span data-stu-id="fbff6-116">Start Windows PowerShell.</span></span>
 
-5. <span data-ttu-id="e5f91-117">Eseguire il comando seguente per aggiungere lo snap-in alla shell.</span><span class="sxs-lookup"><span data-stu-id="e5f91-117">Run the following command to add the snap-in to the shell.</span></span>
+5. <span data-ttu-id="fbff6-117">Eseguire il comando seguente per aggiungere lo snap-in alla shell.</span><span class="sxs-lookup"><span data-stu-id="fbff6-117">Run the following command to add the snap-in to the shell.</span></span>
 
    `Add-PSSnapin GetProcPSSnapIn01`
 
-6. <span data-ttu-id="e5f91-118">Immettere il comando seguente per eseguire il cmdlet.</span><span class="sxs-lookup"><span data-stu-id="e5f91-118">Enter the following command to run the cmdlet.</span></span> `get-proc`
+6. <span data-ttu-id="fbff6-118">Immettere il comando seguente per eseguire il cmdlet.</span><span class="sxs-lookup"><span data-stu-id="fbff6-118">Enter the following command to run the cmdlet.</span></span> `get-proc`
 
    `get-proc`
 
-   <span data-ttu-id="e5f91-119">Questo è un esempio di output risultante dalla attenendosi alla procedura seguente.</span><span class="sxs-lookup"><span data-stu-id="e5f91-119">This is a sample output that results from following these steps.</span></span>
+   <span data-ttu-id="fbff6-119">Questo è un esempio di output risultante dalla attenendosi alla procedura seguente.</span><span class="sxs-lookup"><span data-stu-id="fbff6-119">This is a sample output that results from following these steps.</span></span>
 
    ```output
    Id              Name            State      HasMoreData     Location             Command
@@ -64,23 +64,23 @@ ms.locfileid: "56859837"
    A file was created in the TEMP directory
    ```
 
-## <a name="requirements"></a><span data-ttu-id="e5f91-120">Requisiti</span><span class="sxs-lookup"><span data-stu-id="e5f91-120">Requirements</span></span>
+## <a name="requirements"></a><span data-ttu-id="fbff6-120">Requisiti</span><span class="sxs-lookup"><span data-stu-id="fbff6-120">Requirements</span></span>
 
-<span data-ttu-id="e5f91-121">In questo esempio richiede Windows PowerShell 1.0 o versione successiva.</span><span class="sxs-lookup"><span data-stu-id="e5f91-121">This sample requires Windows PowerShell 1.0 or later.</span></span>
+<span data-ttu-id="fbff6-121">In questo esempio richiede Windows PowerShell 1.0 o versione successiva.</span><span class="sxs-lookup"><span data-stu-id="fbff6-121">This sample requires Windows PowerShell 1.0 or later.</span></span>
 
-## <a name="demonstrates"></a><span data-ttu-id="e5f91-122">Illustra</span><span class="sxs-lookup"><span data-stu-id="e5f91-122">Demonstrates</span></span>
+## <a name="demonstrates"></a><span data-ttu-id="fbff6-122">Di seguito viene illustrato</span><span class="sxs-lookup"><span data-stu-id="fbff6-122">Demonstrates</span></span>
 
-<span data-ttu-id="e5f91-123">In questo esempio viene illustrato quanto segue.</span><span class="sxs-lookup"><span data-stu-id="e5f91-123">This sample demonstrates the following.</span></span>
+<span data-ttu-id="fbff6-123">In questo esempio viene illustrato quanto segue.</span><span class="sxs-lookup"><span data-stu-id="fbff6-123">This sample demonstrates the following.</span></span>
 
-- <span data-ttu-id="e5f91-124">Creazione di un cmdlet di esempio di base.</span><span class="sxs-lookup"><span data-stu-id="e5f91-124">Creating a basic sample cmdlet.</span></span>
+- <span data-ttu-id="fbff6-124">Creazione di un cmdlet di esempio di base.</span><span class="sxs-lookup"><span data-stu-id="fbff6-124">Creating a basic sample cmdlet.</span></span>
 
-- <span data-ttu-id="e5f91-125">Definizione di una classe cmdlet utilizzando l'attributo Cmdlet.</span><span class="sxs-lookup"><span data-stu-id="e5f91-125">Defining a cmdlet class by using the Cmdlet attribute.</span></span>
+- <span data-ttu-id="fbff6-125">Definizione di una classe cmdlet utilizzando l'attributo Cmdlet.</span><span class="sxs-lookup"><span data-stu-id="fbff6-125">Defining a cmdlet class by using the Cmdlet attribute.</span></span>
 
-- <span data-ttu-id="e5f91-126">Creazione di uno snap-in che funziona con Windows PowerShell 1.0 e 2.0 di Windows PowerShell.</span><span class="sxs-lookup"><span data-stu-id="e5f91-126">Creating a snap-in that works with both Windows PowerShell 1.0 and Windows PowerShell 2.0.</span></span> <span data-ttu-id="e5f91-127">Gli esempi successivi usano moduli anziché gli snap-in, pertanto richiedono Windows PowerShell 2.0.</span><span class="sxs-lookup"><span data-stu-id="e5f91-127">Subsequent samples use modules instead of snap-ins so they require Windows PowerShell 2.0.</span></span>
+- <span data-ttu-id="fbff6-126">Creazione di uno snap-in che funziona con Windows PowerShell 1.0 e 2.0 di Windows PowerShell.</span><span class="sxs-lookup"><span data-stu-id="fbff6-126">Creating a snap-in that works with both Windows PowerShell 1.0 and Windows PowerShell 2.0.</span></span> <span data-ttu-id="fbff6-127">Gli esempi successivi usano moduli anziché gli snap-in, pertanto richiedono Windows PowerShell 2.0.</span><span class="sxs-lookup"><span data-stu-id="fbff6-127">Subsequent samples use modules instead of snap-ins so they require Windows PowerShell 2.0.</span></span>
 
-## <a name="example"></a><span data-ttu-id="e5f91-128">Esempio</span><span class="sxs-lookup"><span data-stu-id="e5f91-128">Example</span></span>
+## <a name="example"></a><span data-ttu-id="fbff6-128">Esempio</span><span class="sxs-lookup"><span data-stu-id="fbff6-128">Example</span></span>
 
-<span data-ttu-id="e5f91-129">Questo esempio viene illustrato come creare un semplice cmdlet e il relativo snap-in.</span><span class="sxs-lookup"><span data-stu-id="e5f91-129">This sample shows how to create a simple cmdlet and its snap-in.</span></span>
+<span data-ttu-id="fbff6-129">Questo esempio viene illustrato come creare un semplice cmdlet e il relativo snap-in.</span><span class="sxs-lookup"><span data-stu-id="fbff6-129">This sample shows how to create a simple cmdlet and its snap-in.</span></span>
 
 ```csharp
 using System;
@@ -192,6 +192,6 @@ namespace Microsoft.Samples.PowerShell.Commands
 }
 ```
 
-## <a name="see-also"></a><span data-ttu-id="e5f91-130">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="e5f91-130">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="fbff6-130">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="fbff6-130">See Also</span></span>
 
-[<span data-ttu-id="e5f91-131">Scrittura di un cmdlet di Windows PowerShell</span><span class="sxs-lookup"><span data-stu-id="e5f91-131">Writing a Windows PowerShell Cmdlet</span></span>](./writing-a-windows-powershell-cmdlet.md)
+[<span data-ttu-id="fbff6-131">Scrittura di un cmdlet di Windows PowerShell</span><span class="sxs-lookup"><span data-stu-id="fbff6-131">Writing a Windows PowerShell Cmdlet</span></span>](./writing-a-windows-powershell-cmdlet.md)
