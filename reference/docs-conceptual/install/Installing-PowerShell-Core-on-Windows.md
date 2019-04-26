@@ -3,11 +3,11 @@ title: Installazione di PowerShell Core in Windows
 description: Informazioni sull'installazione di PowerShell Core in Windows
 ms.date: 08/06/2018
 ms.openlocfilehash: 910ee5a653fc1703bfddaf6367225f3b654d600f
-ms.sourcegitcommit: 806cf87488b80800b9f50a8af286e8379519a034
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59293011"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62058030"
 ---
 # <a name="installing-powershell-core-on-windows"></a>Installazione di PowerShell Core in Windows
 
@@ -24,7 +24,7 @@ Per abilitare la comunicazione remota di PowerShell tramite WS-Management, è ne
 
 Per installare PowerShell in un client Windows o Windows Server (funziona in Windows 7 SP1, Server 2008 R2 e versioni successive), scaricare il pacchetto MSI dalla pagina [releases][] di GitHub. Scorrere verso il basso fino alla sezione **Assets** della versione da installare. È possibile che la sezione Assets sia compressa, quindi potrebbe essere necessario fare clic per espanderla.
 
-Il file MSI è simile al seguente - `PowerShell-<version>-win-<os-arch>.msi`
+Il file MSI è simile al seguente `PowerShell-<version>-win-<os-arch>.msi`
 <!-- TODO: should be updated to point to the Download Center as well -->
 
 Dopo averlo scaricato, fare doppio clic sul programma di installazione e seguire i prompt.
