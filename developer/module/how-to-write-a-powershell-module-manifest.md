@@ -10,7 +10,7 @@ ms.assetid: e082c2e3-12ce-4032-9caf-bf6b2e0dcf81
 caps.latest.revision: 23
 ms.openlocfilehash: 93a8c11099a9883127bca87422e1acaebfd2c093
 ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "62082297"
