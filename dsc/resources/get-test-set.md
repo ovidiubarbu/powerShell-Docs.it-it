@@ -3,11 +3,11 @@ ms.date: 12/12/2018
 keywords: dsc,powershell,configurazione,installazione
 title: Get-Test-Set
 ms.openlocfilehash: 6d059518a49926bc5fb56e37e7d3d4d2c66bddec
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
-ms.translationtype: MTE95
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55682202"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62076600"
 ---
 # <a name="get-test-set"></a>Get-Test-Set
 
@@ -15,9 +15,9 @@ ms.locfileid: "55682202"
 
 ![Ottenere, testare e impostare](/media/get-test-set.png)
 
-PowerShell Desired State Configuration è costruito intorno a un **ottenere**, **Test**, e **impostare** processo. DSC [risorse](resources.md) ognuno contiene metodi per completare ciascuna di queste operazioni. In un [Configuration](../configurations/configurations.md), è definire blocchi risorsa per riempire le chiavi che diventano i parametri per una risorsa **ottenere**, **Test**, e **impostata** metodi.
+La configurazione dello stato desiderato di PowerShell è costruita su un processo **Get**, **Test** e **Set**. Le [risorse](resources.md) DSC contengono ciascuna i metodi per completare ognuna di queste operazioni. In una [Configurazione](../configurations/configurations.md) vengono definiti blocchi di risorse in cui inserire chiavi che diventano i parametri per i metodi **Get**, **Test** e **Set** di una risorsa.
 
-Si tratta la sintassi per un **servizio** blocco di risorse. Il **servizio** risorse configura i servizi di Windows.
+Questa è la sintassi per un blocco di risorse **Service**. La risorsa **Service** configura i servizi di Windows.
 
 ```syntax
 Service [String] #ResourceName
@@ -37,7 +37,7 @@ Service [String] #ResourceName
 }
 ```
 
-Il **ottenere**, **Test**, e **impostare** metodi del **servizio** risorse avranno blocchi dei parametri che accettano questi valori.
+I metodi **Get**, **Test** end **Set** della risorsa **Service** avranno blocchi di parametri che accettano questi valori.
 
 ```powershell
     param
@@ -86,9 +86,9 @@ Il **ottenere**, **Test**, e **impostare** metodi del **servizio** risorse avran
 ```
 
 > [!NOTE]
-> Determina la lingua e il metodo utilizzato per definire la risorsa come la **ottenere**, **Test**, e **impostare** verranno definiti i metodi.
+> Il linguaggio e il metodo usati per definire la risorsa determinano come definire i metodi **Get**, **Test** e **Set**.
 
-Poiché il **servizio** risorsa ha solo una chiave necessaria (`Name`), una **servizio** risorsa di blocco potrebbe essere semplice come questa:
+Poiché la risorsa **Service** ha solo una chiave necessaria (`Name`), un blocco di risorse **Service** può essere semplice come il seguente:
 
 ```powershell
 Configuration TestConfig
@@ -121,15 +121,15 @@ ModuleVersion = "1.0";
 };
 ```
 
-Quando applicata, la [Gestione configurazione locale](../managing-nodes/metaConfig.md) leggerà il valore "Spooler" dal file "MOF" e passarlo al `-Name` parametri del **ottenere**, **Test**, e **impostata** metodi per l'istanza "MyService" delle **servizio** risorsa.
+Quando applicata, la [Gestione configurazione locale](../managing-nodes/metaConfig.md) (LCM) leggerà il valore "Spooler" dal file "MOF" e lo passerà al parametro `-Name` dei metodi **Get**, **Test** e **Set** per l'istanza "MyService" della risorsa **Service**.
 
 ## <a name="get"></a>Get
 
-Il **ottenere** metodo di una risorsa, recupera lo stato della risorsa perché è configurata nel nodo di destinazione. Questo stato viene restituito come un [hashtable](/powershell/module/microsoft.powershell.core/about/about_hash_tables). Le chiavi del **hashtable** saranno i valori configurabili, o parametri, accetta la risorsa.
+Il metodo **Get** di una risorsa recupera lo stato della risorsa così come è configurata nel nodo di destinazione. Questo stato viene restituito come [TabellaHash](/powershell/module/microsoft.powershell.core/about/about_hash_tables). Le chiavi della **TabellaHash** saranno i valori configurabili, o parametri, accettati dalla risorsa.
 
-Il **ottenere** metodo esegue il mapping direttamente alle [Get-DSCConfiguration](/powershell/module/psdesiredstateconfiguration/get-dscconfiguration) cmdlet. Quando si chiama `Get-DSCConfiguration`, le esecuzioni di Gestione configurazione locale le **ottenere** (metodo) di ogni risorsa nella configurazione attualmente applicata. Gestione configurazione locale Usa i valori di chiave archiviati nel file "MOF" come parametri per ogni istanza di risorsa corrispondente.
+Il metodo **Get** esegue il mapping direttamente sul cmdlet [Get-DSCConfiguration](/powershell/module/psdesiredstateconfiguration/get-dscconfiguration). Quando si richiama `Get-DSCConfiguration`, la gestione configurazione locale (LCM) esegue il metodo **Get** di ciascuna risorsa nella configurazione attualmente applicata. Gestione configurazione locale (LCM) usa i valori di chiave archiviati come parametri nel file "MOF" per ogni istanza di risorsa corrispondente.
 
-Si tratta di output di esempio da un **servizio** risorse che consente di configurare il servizio "Spooler".
+Questo è l'output di esempio di una risorsa **Service** che configura il servizio "Spooler".
 
 ```output
 ConfigurationName    : Test
@@ -155,7 +155,7 @@ PSComputerName       :
 CimClassName         : MSFT_ServiceResource
 ```
 
-L'output mostra le proprietà del valore corrente può essere configurato per il **servizio** risorsa.
+L'output mostra le proprietà del valore correnti configurabili dalla risorsa **Service**.
 
 ```syntax
 Service [String] #ResourceName
@@ -177,10 +177,10 @@ Service [String] #ResourceName
 
 ## <a name="test"></a>Test
 
-Il **Test** metodo di una risorsa determina se il nodo di destinazione è attualmente compatibile con la risorsa *stato desiderato*. Il **Test** metodo restituisce `$True` o `$False` solo per indicare se il nodo è conforme.
-Quando si chiama [Test-DSCConfiguration](/powershell/module/psdesiredstateconfiguration/Test-DSCConfiguration), le chiamate di Gestione configurazione locale le **Test** (metodo) di ogni risorsa nella configurazione attualmente applicata. Gestione configurazione locale Usa i valori di chiave archiviati nel file "MOF" come parametri per ogni istanza di risorsa corrispondente.
+Il metodo **Test** di una risorsa determina se il nodo di destinazione è attualmente conforme con lo *stato desiderato* della risorsa. Il metodo **Test** restituisce `$True` o `$False` solo per indicare se il nodo è conforme.
+Quando si richiama [Test-DSCConfiguration](/powershell/module/psdesiredstateconfiguration/Test-DSCConfiguration) la gestione configurazione locale (LCM) richiama il metodo **Test** di tutte le risorse nella configurazione attualmente applicata. Gestione configurazione locale (LCM) usa i valori di chiave archiviati come parametri nel file "MOF" per ogni istanza di risorsa corrispondente.
 
-Se il risultato di qualsiasi risorsa singole **Test** viene `$False`, `Test-DSCConfiguration` restituisce `$False` che indica che il nodo non è conforme. Se tutte le risorse **Test** metodi restituiscono `$True`, `Test-DSCConfiguration` restituisce `$True` per indicare che il nodo è conforme.
+Se il risultato di qualsiasi **Test** di una singola risorsa è `$False`, `Test-DSCConfiguration` restituisce `$False` che indica che il nodo non è conforme. Se tutte i metodi **Test** della risorsa restituiscono `$True`, `Test-DSCConfiguration` restituisce `$True` per indicare che il nodo è conforme.
 
 ```powershell
 Test-DSCConfiguration
@@ -190,7 +190,7 @@ Test-DSCConfiguration
 True
 ```
 
-A partire da PowerShell 5.0, il `-Detailed` è stato aggiunto il parametro. Che specifica `-Detailed` provoca `Test-DSCConfiguration` per restituire un oggetto che contiene le raccolte di risultati per le risorse conformi e non conformi.
+A partire da PowerShell 5.0, è stato aggiunto il parametro `-Detailed`. Se si specifica `-Detailed`, `Test-DSCConfiguration` restituisce un oggetto che contiene le raccolte dei risultati relativi alle risorse conformi e non conformi.
 
 ```powershell
 Test-DSCConfiguration -Detailed
@@ -206,9 +206,9 @@ Per altre informazioni, vedere [Test-DSCConfiguration](/powershell/module/psdesi
 
 ## <a name="set"></a>Imposta
 
-Il **impostata** metodo di una risorsa tenta di forzare il nodo per diventare conformi con la risorsa *stato desiderato*. Il **impostata** metodo deve essere **idempotente**, che significa che **impostare** potrebbe essere eseguito più volte e otterrà sempre lo stesso risultato senza errori.  Quando si esegue [Start-DSCConfiguration](/powershell/module/psdesiredstateconfiguration/Start-DSCConfiguration), i cicli di Gestione configurazione locale tramite ogni risorsa nella configurazione attualmente applicata. Gestione configurazione locale recupera i valori di chiave per l'istanza corrente di risorse dal file "MOF" e li usa come parametri per il **Test** (metodo). Se il **Test** metodo restituisce `$True`, il nodo è conforme con la risorsa corrente e il **impostare** metodo è stato ignorato. Se il **Test** restituisce `$False`, il nodo è non conforme.  Gestione configurazione locale passa la risorsa di valori di chiave dell'istanza come parametri per la risorsa **impostare** metodo, il ripristino del nodo per la conformità.
+Il metodo **Set** di una risorsa tenta di forzare il nodo affinché diventi conforme con lo *stato desiderato* della risorsa. Il metodo **Set** deve essere **idempotente**, che significa che **Set** potrebbe essere eseguito più volte e otterrà sempre lo stesso risultato senza errori.  Quando si esegue [Test-DSCConfiguration](/powershell/module/psdesiredstateconfiguration/Start-DSCConfiguration) la gestione configurazione locale (LCM) passa da una risorsa all'altra nella configurazione attualmente applicata. La gestione configurazione locale recupera i valori di chiave per l'istanza corrente delle risorse dal file "MOF" e li usa come parametri per il metodo **Test**. Se il metodo **Test** restituisce `$True`, il nodo è conforme con la risorsa corrente e il metodo **Set** viene ignorato. Se **Test** restituisce `$False`, il nodo non è conforme.  La gestione configurazione locale (LCM) passa i valori di chiave dell'istanza della risorsa come parametri al metodo **Set** ripristinando la conformità del nodo.
 
-Specificando il `-Verbose` e `-Wait` i parametri, è possibile controllare lo stato di avanzamento del `Start-DSCConfiguration` cmdlet. In questo esempio, il nodo è già conforme. Il `Verbose` output indica che il **impostare** metodo è stato ignorato.
+Specificando i parametri `-Verbose` e `-Wait`, è possibile controllare lo stato di avanzamento del cmdlet `Start-DSCConfiguration`. In questo esempio, il nodo è già conforme. L'output `Verbose` indica che il metodo **Set** è stato ignorato.
 
 ```
 PS> Start-DSCConfiguration -Verbose -Wait -UseExisting

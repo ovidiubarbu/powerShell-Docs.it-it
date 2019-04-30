@@ -1,19 +1,19 @@
 ---
 ms.date: 12/12/2018
-keywords: DSC, powershell, resource, raccolta, il programma di installazione
+keywords: dsc,powershell,risorsa,raccolta,configurazione
 title: Aggiungere parametri a una configurazione
 ms.openlocfilehash: 15213404f0cdd6416baf1f83af91b8f5279cc97f
-ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
-ms.translationtype: MTE95
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53401429"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62080257"
 ---
 # <a name="add-parameters-to-a-configuration"></a>Aggiungere parametri a una configurazione
 
-Ad esempio le funzioni [configurazioni](configurations.md) può essere parametrizzata per consentire più dinamiche configurazioni basate sull'input dell'utente. I passaggi sono simili a quelle descritte nel [le funzioni con parametri](/powershell/module/microsoft.powershell.core/about/about_functions).
+Così come le Funzioni, le [Configurazioni](configurations.md) possono essere parametrizzate per consentire configurazioni più dinamiche basate sull'input dell'utente. I passaggi sono simili a quelli descritti nelle [funzioni con parametri](/powershell/module/microsoft.powershell.core/about/about_functions).
 
-In questo esempio inizia con una configurazione di base che consente di configurare il servizio "Spooler" in "Esecuzione".
+Questo esempio inizia con una configurazione di base che configura il servizio "Spooler" in "Esecuzione".
 
 ```powershell
 Configuration TestConfig
@@ -34,19 +34,19 @@ Configuration TestConfig
 
 ## <a name="built-in-configuration-parameters"></a>Parametri di configurazione predefiniti
 
-A differenza di una funzione, tuttavia, il [CmdletBinding](/powershell/module/microsoft.powershell.core/about/about_functions_cmdletbindingattribute) attributo non aggiunge alcuna funzionalità. Oltre a [parametri comuni](/powershell/module/microsoft.powershell.core/about/about_commonparameters), configurazioni anche possono usare quanto segue compilata nei parametri, senza che sia necessario definirli.
+Diversamente da una funzione, tuttavia, l'attributo [CmdletBinding](/powershell/module/microsoft.powershell.core/about/about_functions_cmdletbindingattribute) non aggiunge alcuna funzionalità. Oltre ai [parametri comuni](/powershell/module/microsoft.powershell.core/about/about_commonparameters), le configurazioni possono anche usare i seguenti parametri predefiniti, senza che sia necessario definirli.
 
 |Parametro  |Description  |
 |---------|---------|
-|`-InstanceName`|Utilizzato nella definizione [configurazioni composito](compositeconfigs.md)|
-|`-DependsOn`|Utilizzato nella definizione [configurazioni composito](compositeconfigs.md)|
-|`-PSDSCRunAsCredential`|Utilizzato nella definizione [configurazioni composito](compositeconfigs.md)|
-|`-ConfigurationData`|Consente di passare in strutturato [i dati di configurazione](configData.md) per l'uso nella configurazione.|
-|`-OutputPath`|Consente di specificare dove il "\<computername\>MOF" file verrà compilate|
+|`-InstanceName`|Usato nella definizione delle [configurazioni composite](compositeconfigs.md)|
+|`-DependsOn`|Usato nella definizione delle [configurazioni composite](compositeconfigs.md)|
+|`-PSDSCRunAsCredential`|Usato nella definizione delle [configurazioni composite](compositeconfigs.md)|
+|`-ConfigurationData`|Usato per passare i [ dati di configurazione](configData.md) strutturati per l'uso nella configurazione.|
+|`-OutputPath`|Usato per specificare dove verrà compilato il file "\<computername\>.mof"|
 
-## <a name="adding-your-own-parameters-to-configurations"></a>Aggiungere i propri parametri alle configurazioni
+## <a name="adding-your-own-parameters-to-configurations"></a>Aggiungere parametri definiti dall'utente alle configurazioni
 
-Oltre ai parametri predefiniti, è anche possibile aggiungere i propri parametri alle configurazioni. Il blocco dei parametri viene indirizzato direttamente all'interno della dichiarazione di configurazione, proprio come una funzione. Un blocco del parametro di configurazione deve essere di fuori di qualsiasi **nodo** dichiarazioni e versioni successive qualsiasi *importare* istruzioni. Quando si aggiungono parametri, è possibile apportare le configurazioni più affidabile e dinamica.
+Oltre ai parametri predefiniti, è anche possibile aggiungere alle configurazioni parametri definiti dall'utente. Il blocco dei parametri viene indirizzato direttamente alla dichiarazione di configurazione, proprio come una funzione. Un blocco di parametri di configurazione deve trovarsi all'esterno delle dichiarazioni di **nodo** e al di sopra delle istruzioni di *importazione*. Aggiungendo i parametri, è possibile rendere le configurazioni maggiormente solide e dinamiche.
 
 ```powershell
 Configuration TestConfig
@@ -59,7 +59,7 @@ Configuration TestConfig
 
 ### <a name="add-a-computername-parameter"></a>Aggiungere un parametro ComputerName
 
-Il primo parametro è possibile aggiungere è un `-Computername` parametro affinché sia possibile compilare dinamicamente un file "con estensione MOF" per qualsiasi `-Computername` si passa alla propria configurazione. Ad esempio funzioni, è inoltre possibile definire un valore predefinito, nel caso in cui l'utente non supera un valore per `-ComputerName`
+Il primo parametro che è possibile aggiungere è un parametro `-Computername` per compilare dinamicamente un file "MOF" per qualsiasi parametro `-Computername` passato alla configurazione. Come per le funzioni, è anche possibile definire un valore predefinito, nel caso in cui l'utente non passi un valore per `-ComputerName`
 
 ```powershell
 param
@@ -69,7 +69,7 @@ param
 )
 ```
 
-All'interno della configurazione, è quindi possibile specificare il `-ComputerName` parametro quando si definisce il blocco del nodo.
+All'interno della configurazione, è quindi possibile specificare il parametro `-ComputerName` quando si definisce il blocco Node.
 
 ```powershell
 Node $ComputerName
@@ -78,17 +78,17 @@ Node $ComputerName
 }
 ```
 
-### <a name="calling-your-configuration-with-parameters"></a>Chiamare la configurazione con parametri
+### <a name="calling-your-configuration-with-parameters"></a>Chiamare la configurazione con i parametri
 
-Dopo aver aggiunto i parametri per la configurazione, è possibile usarli come si farebbe con un cmdlet.
+Dopo aver aggiunto i parametri alla configurazione, è possibile usarli così come si farebbe con un cmdlet.
 
 ```powershell
 TestConfig -ComputerName "server01"
 ```
 
-### <a name="compiling-multiple-mof-files"></a>La compilazione di più file con estensione MOF
+### <a name="compiling-multiple-mof-files"></a>Compilazione di più file MOF
 
-Il blocco del nodo può anche accettare un elenco delimitato da virgole di nomi di computer e genererà file "MOF" per ciascuno. È possibile eseguire l'esempio seguente per generare i file "MOF" per tutti i computer passati al `-ComputerName` parametro.
+Il blocco Node può anche accettare un elenco delimitato da virgole di nomi computer e genererà file "MOF" per ciascuno di essi. È possibile eseguire l'esempio seguente per generare i file "MOF" per tutti i computer passati al parametro `-ComputerName`.
 
 ```powershell
 Configuration TestConfig
@@ -117,7 +117,7 @@ TestConfig -ComputerName "server01", "server02", "server03"
 
 ## <a name="advanced-parameters-in-configurations"></a>Parametri avanzati nelle configurazioni
 
-Oltre a un `-ComputerName` parametro, è possibile aggiungere parametri per il nome del servizio e lo stato. L'esempio seguente aggiunge un blocco di parametri con un `-ServiceName` parametro e lo usa per definire in modo dinamico il **servizio** blocco di risorse. Aggiunge anche un `-State` parametro per definire in modo dinamico il **stato** nel **servizio** blocco di risorse.
+Oltre a un parametro `-ComputerName`, è possibile aggiungere parametri per il nome e lo stato del servizio. L'esempio seguente aggiunge un blocco di parametri con un parametro `-ServiceName` e lo usa per definire in modo dinamico il blocco di risorse **Service**. Aggiunge anche un parametro `-State` per definire in modo dinamico **State** nel blocco di risorse **Service**.
 
 ```powershell
 Configuration TestConfig
@@ -149,18 +149,18 @@ Configuration TestConfig
 ```
 
 > [!NOTE]
-> In più scenari advacned, potrebbe essere più utile per spostare i dati dinamici in un structured [i dati di configurazione](configData.md).
+> In scenari più avanzati, potrebbe essere più utile spostare i dati dinamici in [dati di configurazione](configData.md) strutturati.
 
-Nell'esempio di configurazione ora accetta una dinamica `$ServiceName`, ma se non è specificato, la compilazione genera un errore. È possibile aggiungere valore predefinito è simile all'esempio.
+La configurazione di esempio usa qui un valore dinamico `$ServiceName`, ma se non ne è specificato uno la compilazione genera un errore. È possibile aggiungere un valore predefinito simile a questo esempio.
 
 ```powershell
 [String]
 $ServiceName="Spooler"
 ```
 
-In questo caso, tuttavia, è più opportuno forzare semplicemente all'utente di specificare un valore per il `$ServiceName` parametro. Il `parameter` attributo consente di aggiungere ulteriore convalida e la pipeline supportano ai parametri di configurazione.
+In questa istanza, tuttavia, è più opportuno forzare semplicemente l'utente a specificare un valore per il parametro `$ServiceName`. L'attributo `parameter` consente di aggiungere ulteriore supporto di convalida e pipeline ai parametri di configurazione.
 
-Di sopra di qualsiasi dichiarazione di parametro, aggiungere il `parameter` blocco di attributi come nell'esempio seguente.
+Di sopra di qualsiasi dichiarazione di parametro, aggiungere il blocco di attributi `parameter` come nell'esempio seguente.
 
 ```powershell
 [parameter()]
@@ -168,7 +168,7 @@ Di sopra di qualsiasi dichiarazione di parametro, aggiungere il `parameter` bloc
 $ServiceName
 ```
 
-È possibile specificare argomenti a ogni `parameter` attributo, per controllare gli aspetti del parametro definito. Nell'esempio seguente viene eseguita la `$ServiceName` una **obbligatorio** parametro.
+È possibile specificare argomenti per ogni attributo `parameter` per controllare gli aspetti del parametro definito. L'esempio seguente rende `$ServiceName` un parametro **obbligatorio**.
 
 ```powershell
 [parameter(Mandatory)]
@@ -176,7 +176,7 @@ $ServiceName
 $ServiceName
 ```
 
-Per il `$State` parametro, siamo lieti di impedire all'utente di specificare i valori di fuori di un set predefinito (come in esecuzione, arrestato) il `ValidationSet*`attributo impedirebbe l'utente che specifica i valori di fuori di un set predefinito (ad esempio, in esecuzione, Arrestato). L'esempio seguente aggiunge il `ValidationSet` dell'attributo di `$State` parametro. Poiché non vogliamo rendere la `$State` parametro **obbligatorio**, è necessario aggiungere un valore predefinito per tale.
+Per il parametro `$State`, sarebbe opportuno impedire all'utente di specificare valori di fuori di un set predefinito (come Running, Stopped). L'attributo `ValidationSet*`impedisce all'utente di specificare valori di fuori di un set predefinito (come Running, Stopped). L'esempio seguente aggiunge l'attributo `ValidationSet` al parametro `$State`. Poiché non si desidera rendere il parametro `$State` **obbligatorio**, è necessario aggiungere per esso un valore predefinito.
 
 ```powershell
 [ValidateSet("Running", "Stopped")]
@@ -185,13 +185,13 @@ $State="Running"
 ```
 
 > [!NOTE]
-> Non è necessario specificare una `parameter` attributo quando si usa un `validation` attributo.
+> Non è necessario specificare un attributo `parameter` quando si usa un attributo `validation`.
 
-Altre informazioni, vedere la `parameter` e gli attributi di convalida nel [about_Functions_Advanced_Parameters](/powershell/module/microsoft.powershell.core/about/about_Functions_Advanced_Parameters.md).
+Sono disponibili altre informazioni su `parameter` e sugli attributi di convalida nelle [informazioni sui parametri delle funzioni avanzate](/powershell/module/microsoft.powershell.core/about/about_Functions_Advanced_Parameters.md).
 
 ## <a name="fully-parameterized-configuration"></a>Configurazione completa con parametri
 
-È ora disponibile una configurazione con parametri che impone all'utente di specificare una `-InstanceName`, `-ServiceName`e convalida il `-State` parametro.
+È ora disponibile una configurazione con parametri che forza l'utente a specificare `-InstanceName`, `-ServiceName` e che convalida il parametro `-State`.
 
 ```powershell
 Configuration TestConfig
@@ -227,6 +227,6 @@ Configuration TestConfig
 ## <a name="see-also"></a>Vedere anche
 
 - [Scrivere informazioni della Guida per le configurazioni DSC](configHelp.md)
-- [Configurazione dinamica](flow-control-in-configurations.md)
-- [Usare i dati di configurazione nelle configurazioni](configData.md)
-- [Dati di configurazione e dell'ambiente separato](separatingEnvData.md)
+- [Istruzioni condizionali e cicli nelle configurazioni](flow-control-in-configurations.md)
+- [Uso dei dati di configurazione in DSC](configData.md)
+- [Separazione dei dati di configurazione e dell'ambiente](separatingEnvData.md)
