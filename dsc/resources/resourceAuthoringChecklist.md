@@ -3,11 +3,11 @@ ms.date: 06/12/2017
 keywords: dsc,powershell,configurazione,installazione
 title: Elenco di controllo per la creazione di risorse
 ms.openlocfilehash: 7b1a096bba1b729c096b6689178ee022e12e4634
-ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
-ms.translationtype: MTE95
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53401561"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62076583"
 ---
 # <a name="resource-authoring-checklist"></a>Elenco di controllo per la creazione di risorse
 
@@ -210,11 +210,11 @@ Creazione di esempi di qualità che consentono ad altri utenti di capirne l'uso.
 
 Per essere utili, i messaggi di errore devono essere:
 
-- Non esiste: Il problema principale con messaggi di errore è che sono spesso non esistono, pertanto, assicurarsi che siano presenti.
-- Facile da comprendere: Codici di errore leggibile e non incomprensibile risorse umane
-- Preciso Descrive che cos'è esattamente il problema
-- Costruttivi: Consigli per la risoluzione del problema
-- : Non incolpare l'utente o farlo sentire incapace
+- Presenti: il problema principale con i messaggi di errore è che spesso non esistono, quindi assicurarsi che ci siano.
+- Facile da capire: messaggi leggibili evitando oscuri codici di errore
+- Precisi: descrivere esattamente il problema
+- Costruttivi: suggerire come risolvere il problema
+- Cortesi: non incolpare l'utente o farlo sentire a disagio
 
 Assicurarsi di verificare gli errori negli scenari end-to-end (con `Start-DscConfiguration`), in quanto potrebbero essere diversi da quelli restituiti quando si eseguono direttamente le funzioni della risorsa.
 
@@ -222,7 +222,7 @@ Assicurarsi di verificare gli errori negli scenari end-to-end (con `Start-DscCon
 
 Assicurarsi che i log generati dalla risorsa siano facili da comprendere e offrano informazioni utili all'utente. Le risorse dovrebbero offrire come output tutte le informazioni che potrebbero essere utili all'utente, ma non sempre la disponibilità di più log è un vantaggio. È consigliabile evitare la ridondanza e output di dati senza valore aggiunto, in modo da non costringere gli utenti a scorrere centinaia di voci di log per trovare quello che cercano. Naturalmente, anche l'assenza di log non è una soluzione accettabile per questo problema.
 
-Durante il test, è necessario analizzare anche i log dettagliati e di debug (eseguendo `Start-DscConfiguration` con le opzioni `–Verbose` e `–Debug` in modo appropriato), oltre ai log ETW. Per visualizzare i log ETW di DSC, nel Visualizzatore eventi e aprire la cartella seguente: Le applicazioni e servizi - Microsoft - Windows - Desired State Configuration.  Per impostazione predefinita è abilitato il canale operativo, ma assicurarsi di abilitare i canali analitico e debug prima di eseguire la configurazione.
+Durante il test, è necessario analizzare anche i log dettagliati e di debug (eseguendo `Start-DscConfiguration` con le opzioni `–Verbose` e `–Debug` in modo appropriato), oltre ai log ETW. Per visualizzare i log ETW di DSC, passare al Visualizzatore eventi e aprire la cartella seguente: Applicazioni e servizi - Microsoft - Windows - Desired State Configuration.  Per impostazione predefinita è abilitato il canale operativo, ma assicurarsi di abilitare i canali analitico e debug prima di eseguire la configurazione.
 Per abilitare i canali Analitico/Debug, è possibile eseguire lo script riportato di seguito:
 
 ```powershell
@@ -283,7 +283,7 @@ Le funzioni **Get/Set/Test-TargetResource** dovrebbero essere eseguite automatic
 
 Questo elenco di controllo contiene gli elementi che è importante testare e/o che vengono spesso dimenticati. Ci sono molti test, principalmente funzionali, specifici della risorsa da testare e che non sono menzionati in questo articolo. Non dimenticarsi dei test case negativi.
 
-## <a name="best-practice-resource-module-contains-tests-folder-with-resourcedesignertestsps1-script"></a>Procedura consigliata Il modulo della risorsa contiene una cartella di test con lo script ResourceDesignerTests.ps1
+## <a name="best-practice-resource-module-contains-tests-folder-with-resourcedesignertestsps1-script"></a>Procedura consigliata: il modulo della risorsa contiene una cartella Test con lo script ResourceDesignerTests.ps1
 
 È buona norma creare una cartella "Test" all'interno del modulo della risorsa, creare il file `ResourceDesignerTests.ps1` e aggiungere i test con **Test-xDscResource** e **Test-xDscSchema** per tutte le risorse nel modulo specificato.
 In questo modo è possibile convalidare rapidamente gli schemi di tutte le risorse da moduli specifici ed eseguire test di integrità prima della pubblicazione.
@@ -294,7 +294,7 @@ Test-xDscResource ..\DSCResources\MSFT_xRemoteFile
 Test-xDscSchema ..\DSCResources\MSFT_xRemoteFile\MSFT_xRemoteFile.schema.mof
 ```
 
-## <a name="best-practice-resource-folder-contains-resource-designer-script-for-generating-schema"></a>Procedura consigliata Cartella della risorsa contiene uno script di progettazione risorse per la generazione dello schema
+## <a name="best-practice-resource-folder-contains-resource-designer-script-for-generating-schema"></a>Procedura consigliata: la cartella della risorsa contiene uno script di progettazione della risorsa per la generazione dello schema
 
 Ogni risorsa dovrebbe contenere uno script di progettazione della risorsa che genera uno schema MOF della risorsa. Questo file deve essere inserito `<ResourceName>\ResourceDesignerScripts` e denominato `<ResourceName>Schema.ps1`. Per la risorsa xRemoteFile questo file deve essere denominato `GenerateXRemoteFileSchema.ps1` e contenere:
 
@@ -310,7 +310,7 @@ $CertificateThumbprint = New-xDscResourceProperty -Name CertificateThumbprint -T
 New-xDscResource -Name MSFT_xRemoteFile -Property @($DestinationPath, $Uri, $Headers, $UserAgent, $Ensure, $Credential, $CertificateThumbprint) -ModuleName xPSDesiredStateConfiguration2 -FriendlyName xRemoteFile
 ```
 
-## <a name="best-practice-resource-supports--whatif"></a>Procedura consigliata Risorsa supporta - WhatIf
+## <a name="best-practice-resource-supports--whatif"></a>Procedura consigliata: la risorsa supporta - WhatIf
 
 Se la risorsa esegue operazioni "pericolose", è consigliabile implementare la funzionalità `-WhatIf`. Verificare poi che l'output di `-WhatIf` descriva correttamente le operazioni che verrebbero eseguite se il comando venisse eseguito senza l'opzione `-WhatIf`.
 Verificare anche che le operazioni non vengono eseguite, ovvero non vengano apportate modifiche allo stato del nodo, quando è presente l'opzione `–WhatIf`.

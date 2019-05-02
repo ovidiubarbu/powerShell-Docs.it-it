@@ -4,22 +4,22 @@ contributor: JKeithB
 keywords: gallery,powershell,cmdlet,psgallery
 title: Sintassi di ricerca di PowerShell Gallery
 ms.openlocfilehash: aabcaa1f1b5b641ab5033c9ba2e358477c84a23b
-ms.sourcegitcommit: e24525046dd37166b9d83eeecdc534726316f429
-ms.translationtype: MTE95
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/01/2018
-ms.locfileid: "52742857"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62084301"
 ---
 # <a name="gallery-search-syntax"></a>Sintassi di ricerca di PowerShell Gallery
 
-È possibile cercare la PowerShell Gallery usando il [sito web della raccolta di PowerShell](https://www.powershellgallery.com/).
-Sito web di PowerShell Gallery offre searchbox un testo in cui è possibile usare parole, frasi ed espressioni di parole chiave per restringere i risultati della ricerca.
+È possibile eseguire una ricerca in PowerShell Gallery tramite il [sito Web di PowerShell Gallery](https://www.powershellgallery.com/).
+Il sito Web di PowerShell Gallery offre una casella di ricerca di testo in cui è possibile usare parole, frasi ed espressioni con parole chiave per restringere i risultati della ricerca.
 
 ## <a name="search-by-keywords"></a>Ricerca per parole chiave
 
     dsc azure sql
 
-Ricerca tenta di trovare documenti rilevanti che contengono tutte le parole 3 chiave e restituire documenti corrispondenti.
+La funzionalità di ricerca tenta di trovare i documenti rilevanti che contengono tutte e 3 le parole chiave e restituisce i documenti corrispondenti.
 
 ## <a name="search-using-phrases-and-keywords"></a>Ricerca per frasi e parole chiave
 
@@ -40,7 +40,7 @@ Qual è la differenza tra ID e Title? ID è il nome usato nella console. Title �
 
     ID:PSReadline
     
-Trova tutti i pacchetti con un ID contenente "PSReadline".
+trova i pacchetti con ID contenente "PSReadline".
 
     Id:"AzureRM.Profile"
 
@@ -50,7 +50,7 @@ Il filtro 'Id' è una corrispondenza della sottostringa, quindi se si cerca:
 
     Id:"azure"
 
-In questo modo i risultati che includono azurerm. Profile ' e 'Storage'.
+Si ottengono risultati che includono AzureRM.Profile' e 'Azure.Storage'.
 
 È possibile cercare anche più parole chiave in un singolo campo. 
 

@@ -3,11 +3,11 @@ ms.date: 06/12/2017
 keywords: dsc,powershell,configurazione,installazione
 title: Informazioni sul ruolo di DSC in una pipeline CI/CD
 ms.openlocfilehash: 7aec414b3d8e61d1daa1ce796184ac34dbbb43ce
-ms.sourcegitcommit: c581c4c8036edf55147e7bce4b00c860da6c5a8b
-ms.translationtype: MTE95
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56803379"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62079829"
 ---
 # <a name="understanding-dscs-role-in-a-cicd-pipeline"></a>Informazioni sul ruolo di DSC in una pipeline CI/CD
 
@@ -118,4 +118,4 @@ Questo comportamento è da progettazione.
 Ogni nuova versione della configurazione deve includere un riferimento statico a una versione specifica di ogni risorsa e deve essere convalidata dai test prima di raggiungere i nodi del server di produzione.
 Il processo di test e rilascio delle modifiche dal controllo del codice sorgente consente di creare un ambiente sicuro per il rilascio delle modifiche in batch di piccole dimensioni ma frequenti.
 
-Per altre informazioni sull'uso di pipeline di versione per gestire l'infrastruttura di base, vedere il white paper sul [modello di pipeline di versione](../further-reading/whitepapers.md).
+Per altre informazioni sull'uso di pipeline di versione per gestire l'infrastruttura di base, vedere il white paper: [The Release Pipeline Model](../further-reading/whitepapers.md) (Il modello della pipeline di versione).

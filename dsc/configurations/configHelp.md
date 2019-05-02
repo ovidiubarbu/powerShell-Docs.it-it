@@ -3,25 +3,25 @@ ms.date: 12/12/2018
 keywords: dsc,powershell,configurazione,installazione
 title: Guida alla scrittura per le configurazioni DSC
 ms.openlocfilehash: 498ec0f594ed3229e097903c4ea2ae34d3da03a2
-ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
-ms.translationtype: MTE95
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53401681"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62080184"
 ---
 # <a name="writing-help-for-dsc-configurations"></a>Guida alla scrittura per le configurazioni DSC
 
 >Si applica a: Windows PowerShell 5.0
 
-È possibile usare la Guida basata sui commenti nelle configurazioni DSC. Gli utenti possono accedere alla Guida chiamando la **Configuration** con `-?`, oppure utilizzando la [Get-Help](/powershell/module/Microsoft.PowerShell.Core/Get-Help) cmdlet. Posizionare la Guida basata sui commenti direttamente sopra il `Configuration` (parola chiave).
-È possibile inserire in linea guida parametro con il blocco di commento, immediatamente sopra la dichiarazione di parametro o entrambi come nell'esempio seguente.
+È possibile usare la Guida basata sui commenti nelle configurazioni DSC. Gli utenti possono accedere alla Guida chiamando **Configuration** con `-?` oppure usando il cmdlet [Get-Help](/powershell/module/Microsoft.PowerShell.Core/Get-Help). Posizionare la Guida basata sui commenti direttamente sopra la parola chiave `Configuration`.
+È possibile inserire la Guida per i parametri in linea con il blocco di commento, subito sopra la dichiarazione del parametro o entrambi come nell'esempio seguente.
 
 Per altre informazioni sulla Guida basata sui commenti di PowerShell, vedere [about_Comment_Based_Help](/powershell/module/microsoft.powershell.core/about/about_comment_based_help).
 
 > [!NOTE]
-> Gli ambienti di sviluppo di PowerShell, come VSCode e ISE, hanno anche frammenti di codice per consentire all'utente di inserire automaticamente i modelli di blocchi di commento.
+> Gli ambienti di sviluppo di PowerShell, come VSCode e ISE, includono anche frammenti di codice che consentono di inserire automaticamente modelli di blocchi di commento.
 
-L'esempio seguente mostra uno script che contiene una configurazione e una Guida basata su commenti per tale configurazione. In questo esempio mostra una configurazione con parametri. Per altre informazioni sull'utilizzo dei parametri nelle configurazioni, vedere [Aggiungi parametri alle configurazioni](add-parameters-to-a-configuration.md).
+L'esempio seguente mostra uno script che contiene una configurazione e una Guida basata su commenti per tale configurazione. Questo esempio mostra una configurazione con parametri. Per altre informazioni sull'uso dei parametri nelle configurazioni, vedere [Aggiungere parametri a una configurazione](add-parameters-to-a-configuration.md).
 
 ```powershell
 <#
@@ -77,7 +77,7 @@ configuration HelpSample1
 
 ## <a name="viewing-configuration-help"></a>Visualizzazione della Guida di configurazione
 
-Per visualizzare la Guida per una configurazione, usare il `Get-Help` cmdlet con il nome della funzione oppure digitare il nome della funzione seguito da `-?`. Ecco l'output della configurazione precedente passata a `Get-Help`.
+Per visualizzare la Guida per una configurazione, usare il cmdlet `Get-Help` con il nome della funzione oppure digitare il nome della funzione seguito da `-?`. Di seguito viene riportato l'output della configurazione precedente passata a `Get-Help`.
 
 ```powershell
 Get-Help HelpSample1 -Detailed
@@ -157,7 +157,7 @@ REMARKS
 ```
 
 > [!NOTE]
-> Campi di sintassi e gli attributi di parametro vengono generati automaticamente per l'utente mediante PowerShell.
+> Gli attributi per i campi e i parametri della sintassi vengono generati automaticamente da PowerShell.
 
 ## <a name="see-also"></a>Vedere anche
 

@@ -3,11 +3,11 @@ ms.date: 06/12/2017
 keywords: dsc,powershell,configurazione,installazione
 title: Metodo GetConfiguration della classe MSFT_DSCLocalConfigurationManager
 ms.openlocfilehash: ae31ac30c152c96707b764ddaf00c924806afcfc
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
-ms.translationtype: MTE95
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55681829"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62078654"
 ---
 # <a name="getconfiguration-method-of-the-msftdsclocalconfigurationmanager-class"></a>Metodo GetConfiguration della classe MSFT_DSCLocalConfigurationManager
 

@@ -3,11 +3,11 @@ ms.date: 06/12/2017
 keywords: dsc,powershell,configurazione,installazione
 title: Uso dei dati di configurazione
 ms.openlocfilehash: f2d25b9ced805fb4c91378ebfe840104eb6ce52a
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
-ms.translationtype: MTE95
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55677842"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62080221"
 ---
 # <a name="using-configuration-data-in-dsc"></a>Uso dei dati di configurazione in DSC
 
@@ -185,11 +185,11 @@ MyDscConfiguration -ConfigurationData .\MyData.psd1
 
 ## <a name="using-configurationdata-variables-in-a-configuration"></a>Uso delle variabili ConfigurationData in una configurazione
 
-DSC offre le seguenti variabili speciali che possono essere utilizzate in uno script di configurazione:
+DSC offre le variabili speciali seguenti che possono essere usate in uno script di configurazione:
 
 - **$AllNodes** si riferisce all'intera raccolta di nodi definita in **ConfigurationData**. È possibile filtrare la raccolta **AllNodes** usando **.Where()** e **.Foreach()**.
 - **ConfigurationData** fa riferimento all'intera tabella hash che viene passata come parametro durante la compilazione di una configurazione.
-- **MyTypeName** contiene il [configuration](configurations.md) la variabile viene usata nel nome. Ad esempio, nella configurazione `MyDscConfiguration`, il `$MyTypeName` avrà un valore di `MyDscConfiguration`.
+- **MyTypeName** contiene il nome della [configurazione](configurations.md) in cui viene usata la variabile. Ad esempio, nella configurazione `MyDscConfiguration`, il valore di `$MyTypeName` sarà `MyDscConfiguration`.
 - **Node** fa riferimento a una particolare voce della raccolta **AllNodes** dopo che viene filtrato usando **.Where()** o **.Foreach()**.
   - Sono disponibili altre informazioni su questi metodi in [about_arrays](/powershell/reference/3.0/Microsoft.PowerShell.Core/About/about_Arrays.md)
 

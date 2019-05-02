@@ -3,11 +3,11 @@ ms.date: 06/12/2017
 keywords: dsc,powershell,configurazione,installazione
 title: Chiamata diretta dei metodi delle risorse DSC
 ms.openlocfilehash: cf237f638593706e5959e2bcc0d851b0e55baf0e
-ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
-ms.translationtype: MTE95
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53401231"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62079626"
 ---
 # <a name="calling-dsc-resource-methods-directly"></a>Chiamata diretta dei metodi delle risorse DSC
 
@@ -49,7 +49,7 @@ $result = Invoke-DscResource -Name File -Method Get -Property @{
 $result.ItemValue | fl
 ```
 
->**Nota:** Non è possibile chiamare direttamente i metodi di risorse composite. Chiamare invece i metodi delle risorse sottostanti che costituiscono la risorsa composita.
+>**Nota:** la chiamata diretta di metodi di risorse composite non è supportata. Chiamare invece i metodi delle risorse sottostanti che costituiscono la risorsa composita.
 
 ## <a name="see-also"></a>Vedere anche
 - [Scrittura di una risorsa DSC personalizzata con MOF](../resources/authoringResourceMOF.md)

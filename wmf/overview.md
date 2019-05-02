@@ -1,13 +1,13 @@
 ---
-ms.date: 06/12/2018
+ms.date: 04/19/2019
 keywords: wmf,powershell,installazione
 title: Windows Management Framework (WMF)
-ms.openlocfilehash: f279f975527dc198dd9b47ca1dc4258f54fafef5
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
-ms.translationtype: MTE95
+ms.openlocfilehash: 6d25b4025bbc86f6be0e5c74db9f1fbe6705d816
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55677848"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62055446"
 ---
 # <a name="windows-management-framework"></a>Windows Management Framework
 
@@ -35,26 +35,30 @@ Per informazioni sui vari miglioramenti in PowerShell e altri componenti di una 
 
 ## <a name="wmf-availability-across-windows-operating-systems"></a>Disponibilità di WMF tra i sistemi operativi Windows
 
-|Versione del sistema operativo  |[WMF 5.1][] |[WMF 5.0][] |[WMF 4.0][] |[WMF 3.0][]  |[WMF 2.0][] |
-|--------------------------|------------|------------|------------|-------------|------------|
-|Windows Server 2019       |Incluso|            |            |             |            |
-|Windows Server 2016       |Incluso|            |            |             |            |
-|Windows 10                |Incluso|Incluso|            |             |            |
-|Windows Server 2012 R2    |Sì         |Sì         |Incluso|             |            |
-|Windows 8.1               |Sì         |Sì         |Incluso|             |            |
-|Windows Server 2012       |Sì         |Sì         |Sì         |Incluso |            |
-|Windows 8                 |            |            |            |Incluso |            |
-|Windows Server 2008 R2 SP1|Sì         |Sì         |Sì         |Sì          |Incluso|
-|Windows 7 SP1             |Sì         |Sì         |Sì         |Sì          |Incluso|
-|Windows Server 2008 SP2   |            |            |            |Sì          |Sì         |
-|Windows Vista             |            |            |            |             |Sì         |
-|Windows Server 2003       |            |            |            |             |Sì         |
-|Windows XP                |            |            |            |Sì          |            |
+|        Versione del sistema operativo         | [WMF 5.1][]  | WMF 5.0<br>*Supporto scaduto* | [WMF 4.0][]  | [WMF 3.0][]  | [WMF 2.0][]  |
+| --------------------------------------- | ------------ | --------------------------- | ------------ | ------------ | ------------ |
+| Windows Server 2019                     | Incluso |                             |              |              |              |
+| Windows Server 2016                     | Incluso |                             |              |              |              |
+| Windows 10                              | Incluso | Incluso                |              |              |              |
+| Windows Server 2012 R2                  | Sì          | Sì                         | Incluso |              |              |
+| Windows 8.1                             | Sì          | Sì                         | Incluso |              |              |
+| Windows Server 2012                     | Sì          | Sì                         | Sì          | Incluso |              |
+| Windows 8<br>*Supporto scaduto*           |              |                             |              | Incluso |              |
+| Windows Server 2008 R2 SP1              | Sì          | Sì                         | Sì          | Sì          | Incluso |
+| Windows 7 SP1                           | Sì          | Sì                         | Sì          | Sì          | Incluso |
+| Windows Server 2008 SP2                 |              |                             |              | Sì          | Sì          |
+| Windows Vista<br>*Supporto scaduto*       |              |                             |              |              | Sì          |
+| Windows Server 2003<br>*Supporto scaduto* |              |                             |              |              | Sì          |
+| Windows XP<br>*Supporto scaduto*          |              |                             |              | Sì          | Sì          |
 
-**"Incluso"**: le funzionalità della versione specificata di WMF sono state rilasciate nella versione indicata di Windows client o di Windows Server.
+- **Incluso**: le funzionalità della versione specificata di WMF sono state rilasciate nella versione indicata di Windows Client o di Windows Server.
+- **Supporto scaduto**: questi prodotti non sono più supportati da Microsoft. È necessario eseguire l'aggiornamento a una nuova versione supportata. Per altre informazioni, vedere la pagina [Criteri relativi al ciclo di vita Microsoft][].
 
+> [!NOTE]
+> Il programma di installazione di WMF 5.0 non è più disponibile o supportato. È stato sostituito da WMF 5.1.
+
+[Criteri relativi al ciclo di vita Microsoft]: https://support.microsoft.com/lifecycle
 [WMF 5.1]: https://aka.ms/wmf51download
-[WMF 5.0]: https://aka.ms/wmf5download
 [WMF 4.0]: https://aka.ms/wmf4download
 [WMF 3.0]: https://aka.ms/wmf3download
 [WMF 2.0]: https://aka.ms/wmf2download

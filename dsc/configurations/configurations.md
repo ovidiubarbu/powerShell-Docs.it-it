@@ -3,11 +3,11 @@ ms.date: 12/12/2018
 keywords: dsc,powershell,configurazione,installazione
 title: Configurazioni DSC
 ms.openlocfilehash: 6af27f442de3080facd65892c713c989d0e388c5
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
-ms.translationtype: MTE95
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55677787"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62080176"
 ---
 # <a name="dsc-configurations"></a>Configurazioni DSC
 
@@ -32,7 +32,7 @@ Configuration MyDscConfiguration {
 MyDscConfiguration
 ```
 
-Salvare lo script come un `.ps1` file.
+Salvare lo script come file `.ps1`.
 
 ## <a name="configuration-syntax"></a>Sintassi di configurazione
 
@@ -73,13 +73,13 @@ Configuration MyDscConfiguration
 MyDscConfiguration
 ```
 
-Il **nodo** blocco può accettare anche più nomi di computer. Nell'esempio precedente, è possibile usare la `-ComputerName` parametro o un elenco di pass delimitati da virgole di computer direttamente per il **nodo** blocco.
+Il blocco **Node** può accettare anche più nomi di computer. Nell'esempio precedente è possibile usare il parametro `-ComputerName` o passare un elenco di computer delimitato da virgole direttamente al blocco **Node**.
 
 ```powershell
 MyDscConfiguration -ComputerName "localhost", "Server01"
 ```
 
-Quando si specifica un elenco di computer per il **nodo** blocco all'interno di una configurazione, è necessario usare la notazione di matrice.
+Quando si specifica un elenco di computer per il blocco **Node** dall'interno di una configurazione, è necessario usare la notazione con matrice.
 
 ```powershell
 Configuration MyDscConfiguration
@@ -119,7 +119,7 @@ Quando si chiama la configurazione, si verificano gli scenari seguenti:
 - Risoluzione di tutte le variabili
 - Creazione di una cartella nella directory corrente con lo stesso nome della configurazione.
 - Creazione di un file denominato _NomeNodo_.mof nella nuova directory, dove _NomeNodo_ è il nome del nodo di destinazione della configurazione.
-  Se è presente più di un nodo, verrà creato un file MOF per ogni nodo.
+  In presenza di più nodi, verrà creato un file MOF per ognuno.
 
 > [!NOTE]
 > Il file MOF contiene tutte le informazioni di configurazione per il nodo di destinazione. Per questo motivo, è importante garantirne la sicurezza.
@@ -161,17 +161,17 @@ Oggi DSC include 12 risorse come parte del modulo PSDesiredStateConfiguration.
 È possibile usare il cmdlet [Get-DscResource](/powershell/module/PSDesiredStateConfiguration/Get-DscResource) per determinare le risorse installate nel sistema e disponibili per l'uso da parte di Gestione configurazione locale.
 Dopo che i moduli vengono inseriti in `$env:PSModulePath` e sono riconosciuti correttamente da [Get-DscResource](/powershell/module/PSDesiredStateConfiguration/Get-DscResource), devono comunque essere caricati nella configurazione.
 
-**Import-DscResource** è una parola chiave dinamica che può essere riconosciuta solo all'interno di un **Configuration** blocco, non è un cmdlet.
+**Import-DscResource** è una parola chiave dinamica che può essere riconosciuta solo all'interno di un blocco **Configuration** e non è un cmdlet.
 **Import-DscResource** supporta due parametri:
 
 - **ModuleName** corrisponde al modo consigliato di usare **Import-DscResource**. Questo parametro accetta il nome del modulo che contiene le risorse da importare, nonché una matrice di stringhe di nomi di modulo.
 - **Name** è il nome della risorsa da importare. Non si tratta del nome descrittivo restituito come "Name" da [Get-DscResource](/powershell/module/PSDesiredStateConfiguration/Get-DscResource), ma del nome di classe usato per definire lo schema della risorsa (restituito come **ResourceType** da [Get-DscResource](/powershell/module/PSDesiredStateConfiguration/Get-DscResource)).
 
-Per altre informazioni sull'uso `Import-DSCResource`, vedere [usando Import-DSCResource](import-dscresource.md)
+Per altre informazioni sull'uso di `Import-DSCResource`, vedere [Uso di Import-DSCResource](import-dscresource.md)
 
-## <a name="powershell-v4-and-v5-differences"></a>Differenze di PowerShell v4 e v5
+## <a name="powershell-v4-and-v5-differences"></a>Differenze tra PowerShell v4 e v5
 
-Ci sono differenze in cui le risorse DSC devono essere archiviati in PowerShell 4.0. Per altre informazioni, vedere [posizione risorsa](import-dscresource.md#resource-location).
+Esistono alcune differenze per la posizione di archiviazione delle risorse DSC in PowerShell 4.0. Per altre informazioni, vedere [Posizione delle risorse](import-dscresource.md#resource-location).
 
 ## <a name="see-also"></a>Vedere anche
 

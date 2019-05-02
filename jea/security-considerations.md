@@ -3,11 +3,11 @@ ms.date: 06/12/2017
 keywords: jea,powershell,sicurezza
 title: Considerazioni sulla sicurezza in JEA
 ms.openlocfilehash: 9526e141517601ae3b6d6932cd3536fdf49aa9a6
-ms.sourcegitcommit: 10c347a8c3dcbf8962295601834f5ba85342a87b
-ms.translationtype: MTE95
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55887600"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62084777"
 ---
 # <a name="jea-security-considerations"></a>Considerazioni sulla sicurezza in JEA
 
@@ -127,7 +127,7 @@ Ad esempio, prendere in considerazione la voce relativa alla funzionalità di ru
 ```
 
 Questa funzionalità di ruolo consente agli utenti di eseguire qualsiasi cmdlet di PowerShell con il termine "Process" dal modulo Microsoft.PowerShell.Management.
-Gli utenti potrebbe essere necessario accedere a specifici cmdlet, ad esempio `Get-Process` comprendere quali applicazioni sono in esecuzione nel sistema e `Stop-Process` necessario terminare tutte le applicazioni che non rispondono.
+Gli utenti possono aver bisogno di accedere a specifici cmdlet, ad esempio `Get-Process` per identificare le applicazioni in esecuzione nel sistema e `Stop-Process` per terminare qualsiasi applicazione che non risponde.
 Questa voce consente anche il cmdlet `Start-Process`, che può essere usato per avviare un programma arbitrario con autorizzazioni complete di amministratore.
 Il programma non deve essere installato localmente nel sistema, per cui un utente malintenzionato potrebbe avviare un programma in una condivisione di file che offre privilegi di amministratore locale all'utente che si connette, eseguire malware e così via.
 

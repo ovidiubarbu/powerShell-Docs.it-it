@@ -3,11 +3,11 @@ ms.date: 06/05/2017
 keywords: powershell,cmdlet
 title: Altre risorse di formazione per PowerShell
 ms.openlocfilehash: 5e81801df99a55a358d1d1405bdc79f882aae92f
-ms.sourcegitcommit: 9df29dfc637191b62ca591893c251c1e02d4eb4c
-ms.translationtype: MTE95
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54012552"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62058387"
 ---
 # <a name="more-powershell-learning"></a>Altre risorse di formazione per PowerShell
 
@@ -31,7 +31,7 @@ Oltre alla Guida disponibile dalla riga di comando, le risorse seguenti offrono 
 
 ### <a name="channel-9-videos"></a>Video di Channel 9
 
-Channel 9 è la piattaforma di pubblicazione di video. Sono disponibili centinaia di video su PowerShell. [Ricerca per "PowerShell"](https://channel9.msdn.com/Search?term=PowerShell&sortBy=top-rated) per vedere i video sono disponibili.
+Channel 9 è la piattaforma di pubblicazione video di Microsoft. Sono disponibili centinaia di video su PowerShell. [Cercare "PowerShell"](https://channel9.msdn.com/Search?term=PowerShell&sortBy=top-rated) per vedere i video disponibili.
 
 ## <a name="resources-for-windows-powershell-developers"></a>Risorse per sviluppatori di Windows PowerShell
 

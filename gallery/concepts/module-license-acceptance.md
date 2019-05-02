@@ -4,11 +4,11 @@ schema: 2.0.0
 keywords: powershell
 title: Moduli per cui è richiesta l'accettazione della licenza
 ms.openlocfilehash: 369e32d5278a2e1bf1d3f2ae67f670c524b9f878
-ms.sourcegitcommit: 98b7cfd8ad5718efa8e320526ca76c3cc4141d78
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50002668"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62075223"
 ---
 # <a name="modules-requiring-license-acceptance"></a>Moduli per cui è richiesta l'accettazione della licenza
 
@@ -28,7 +28,7 @@ I moduli che prevedono la richiesta di accettazione della licenza da parte degli
 ## <a name="impact-on-installsaveupdate-module"></a>Impatto sui cmdlet Install/Save/Update-Module
 
 - I cmdlet Install/Save/Update supporteranno il nuovo parametro -AcceptLicense, che specifica un comportamento corrispondente alla presa in visione e accettazione della licenza da parte dell'utente.
-- Se RequiredLicenseAcceptance è True e il parametro -AcceptLicense: non viene specificato, all'utente verrà mostrato il file license.txt e richiesto se &quot;accetta le condizioni di licenza (Yes/No/YesToAll/NoToAll)&quot;.
+- Se RequiredLicenseAcceptance è True e il parametro -AcceptLicense: non viene specificato, all'utente verrà mostrato il file license.txt e la richiesta: &quot;Si accettano le condizioni di licenza (Yes/No/YesToAll/NoToAll)&quot;.
   - Se la licenza viene accettata
     - **Save-Module:** il modulo verrà copiato nel sistema dell'utente
     - **Install-Module:** il modulo verrà copiato nel sistema dell'utente nella cartella appropriata, in base all'ambito

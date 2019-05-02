@@ -3,15 +3,15 @@ ms.date: 08/23/2017
 keywords: powershell,cmdlet
 title: disinstallare accesso web windows powershell
 ms.openlocfilehash: 22c874d766445dccedd8494097daf16c30fa66ff
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
-ms.translationtype: MTE95
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55682509"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62058152"
 ---
 # <a name="uninstall-windows-powershell-web-access"></a>Disinstallare Accesso Web Windows PowerShell
 
-Ultimo aggiornamento: 24 giugno 2013
+Aggiornamento: 24 giugno 2013
 
 Si applica a: Windows Server 2012 R2, Windows Server 2012
 
@@ -33,7 +33,7 @@ Le procedure in questa sezione consentono di installare sia:
 
 usando i cmdlet di Windows PowerShell.
 
-### <a name="step-1-delete-the-web-application-using-cmdlets"></a>Passaggio 1: Eliminare l'applicazione web usando i cmdlet
+### <a name="step-1-delete-the-web-application-using-cmdlets"></a>Passaggio 1: Eliminare l'applicazione Web usando i cmdlet
 
 1. Per aprire una sessione di Windows PowerShell, eseguire una di queste operazioni.
 
@@ -52,7 +52,7 @@ usando i cmdlet di Windows PowerShell.
 
         `Uninstall-PswaWebApplication -DeleteTestCertificate`
 
-### <a name="step-2-uninstall-windows-powershell-web-access-using-cmdlets"></a>Passaggio 2: Disinstallare accesso Web di Windows PowerShell usando i cmdlet
+### <a name="step-2-uninstall-windows-powershell-web-access-using-cmdlets"></a>Passaggio 2: Disinstallare Accesso Web Windows PowerShell usando i cmdlet
 
 1. Per aprire una sessione di Windows PowerShell con diritti utente elevati, eseguire una di queste operazioni. Se è presente una sessione aperta, continuare con il passaggio successivo.
 
@@ -76,7 +76,7 @@ usando i cmdlet di Windows PowerShell.
 
 Le procedure in questa sezione consentono di disinstallare l'applicazione Web Accesso Web Windows PowerShell e la funzionalità Accesso Web Windows PowerShell usando la Rimozione guidata ruoli e funzionalità in Server Manager e la console Gestione IIS.
 
-### <a name="step-1-delete-the-web-application-using-iis-manager"></a>Passaggio 1: Eliminare l'applicazione web tramite Gestione IIS
+### <a name="step-1-delete-the-web-application-using-iis-manager"></a>Passaggio 1: Eliminare l'applicazione Web usando Gestione IIS
 
 
 1. Aprire la console Gestione IIS eseguendo una delle operazioni seguenti. Se è già aperta, continuare con il passaggio successivo.
@@ -101,7 +101,7 @@ Le procedure in questa sezione consentono di disinstallare l'applicazione Web Ac
 >
 > Se è stato creato un certificato autofirmato o si utilizza un certificato di prova e si desidera rimuoverlo, eliminare il certificato in Gestione IIS.
 
-### <a name="step-2-uninstall-windows-powershell-web-access-using-the-remove-roles-and-features-wizard"></a>Passaggio 2: Disinstallare accesso Web di Windows PowerShell tramite la rimozione guidata ruoli e funzionalità
+### <a name="step-2-uninstall-windows-powershell-web-access-using-the-remove-roles-and-features-wizard"></a>Passaggio 2: Disinstallare Accesso Web Windows PowerShell usando Rimozione guidata ruoli e funzionalità
 
 1. Se Server Manager è già aperto, andare al passaggio successivo. Se Server Manager non è aperto, aprirlo in uno dei modi seguenti.
 

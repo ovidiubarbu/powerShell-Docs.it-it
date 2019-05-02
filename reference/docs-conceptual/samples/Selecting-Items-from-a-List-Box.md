@@ -4,11 +4,11 @@ keywords: powershell,cmdlet
 title: Selezione di elementi di una casella di riepilogo
 ms.assetid: 327c7cc5-21d0-4ace-b151-aa1491d1d3c2
 ms.openlocfilehash: e3d52839409a2fd58fbdc924a2b92d96fbecee53
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
-ms.translationtype: MTE95
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55682749"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62086069"
 ---
 # <a name="selecting-items-from-a-list-box"></a>Selezione di elementi di una casella di riepilogo
 
@@ -179,6 +179,6 @@ if ($result -eq [System.Windows.Forms.DialogResult]::OK)
 
 ## <a name="see-also"></a>Vedere anche
 
-- Blog Hey Scripting Guy:[Perché questi esempi di GUI di PowerShell non funzionano?](https://go.microsoft.com/fwlink/?LinkId=506644)
+- [Hey Scripting Guy:  Perché questi esempi di GUI di PowerShell non funzionano?](https://go.microsoft.com/fwlink/?LinkId=506644)
 - [GitHub: WinFormsExampleUpdates di Dave Wyatt](https://github.com/dlwyatt/WinFormsExampleUpdates)
-- [Suggerimento della settimana su Windows PowerShell: Selezione di elementi di una casella di riepilogo](https://technet.microsoft.com/library/ff730949.aspx)
+- [Windows PowerShell Tip of the Week:  Selecting Items from a List Box](https://technet.microsoft.com/library/ff730949.aspx) (Suggerimento della settimana per Windows PowerShell: Selezione di elementi in una casella di riepilogo)

@@ -3,11 +3,11 @@ ms.date: 06/12/2017
 keywords: dsc,powershell,configurazione,installazione
 title: Risorsa ServiceSet DSC
 ms.openlocfilehash: 5694c2abc5c0caf0098670b629af464b35125583
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
-ms.translationtype: MTE95
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55680722"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62076835"
 ---
 # <a name="dsc-serviceset-resource"></a>Risorsa ServiceSet DSC
 
@@ -38,9 +38,9 @@ Service [string] #ResourceName
 |  Proprietà  |  Description   |
 |---|---|
 | Nome| Indica i nomi del servizio. A volte questo nome è diverso da quelli visualizzati. È possibile ottenere un elenco dei servizi e del rispettivo stato corrente usando il cmdlet [Get-Service](https://technet.microsoft.com/library/hh849804.aspx).|
-| StartupType| Indica il tipo di avvio per il servizio. I valori consentiti per questa proprietà sono: **Automatic**, **disabilitato**, e **manuale**|
-| BuiltInAccount| Indica l'account di accesso da usare per il servizio. I valori consentiti per questa proprietà sono: **LocalService**, **LocalSystem**, e **NetworkService**.|
-| State| Indica lo stato che si vuole specificare per il servizio. **Arrestata** oppure **esecuzione**.|
+| StartupType| Indica il tipo di avvio per il servizio. I valori consentiti per questa proprietà sono: **Automatic**, **Disabled** e **Manual**|
+| BuiltInAccount| Indica l'account di accesso da usare per il servizio. I valori consentiti per questa proprietà sono: **LocalService**, **LocalSystem** e **NetworkService**.|
+| State| Indica lo stato che si vuole specificare per i servizi: **Stopped** o **Running**.|
 | Ensure| Indica se i servizi sono presenti nel sistema. Impostare questa proprietà su **Absent** per specificare che i servizi non esistono. Se la proprietà è impostata su **Present** (valore predefinito), specifica che i servizio di destinazione esistono.|
 | Credential| Indica le credenziali per l'account in cui verrà eseguita la risorsa del servizio. Questa proprietà e la proprietà **BuiltinAccount** non possono essere usate insieme.|
 | DependsOn| Indica che prima di configurare la risorsa è necessario eseguire la configurazione di un'altra risorsa. Ad esempio, se l'ID del blocco script di configurazione della risorsa che si vuole eseguire per primo è *ResourceName* e il tipo è *ResourceType*, la sintassi per usare questa proprietà è `DependsOn = "[ResourceType]ResourceName"`.|

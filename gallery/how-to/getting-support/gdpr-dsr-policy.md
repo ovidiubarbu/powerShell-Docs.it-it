@@ -4,11 +4,11 @@ contributor: JKeithB
 keywords: raccolta,powershell,psgallery,GDPR
 title: Conformità al regolamento GDPR di PowerShell Gallery
 ms.openlocfilehash: fb1191d8a1cd12d5994e41238c384eb504d0c261
-ms.sourcegitcommit: 98b7cfd8ad5718efa8e320526ca76c3cc4141d78
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50002651"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62084233"
 ---
 # <a name="powershell-gallery-gdpr-compliance"></a>Conformità al regolamento GDPR di PowerShell Gallery
 
@@ -53,8 +53,8 @@ Per i messaggi di posta elettronica inviati da o a PowerShell Gallery sono previ
 In bse ai criteri i messaggi di posta elettronica vengono eliminati dopo 90 giorni.
 
 È possibile richiedere copie di tutti i messaggi di posta elettronica scambiati tra l'indirizzo di posta elettronica dell'utente e PowerShell Gallery nei 90 giorni precedenti.
-Per richiedere questa corrispondenza inviare un messaggio di posta elettronica all'indirizzo [cgadmin@microsoft.com](mailto:cgadmin@microsoft.com), con il titolo: "DSR Request for emails relating to this account" (Richiesta DSR per i messaggi di posta elettronica relativi a questo account).
-Nel corpo del messaggio specificare le informazioni richieste, ad esempio: Please send all emails sent to or received from this email address. (Si prega di inviare tutti i messaggi di posta elettronica inviati o ricevuti da questo indirizzo di posta elettronica.) Entro 7 giorni lavorativi si riceveranno tutti i messaggi che includono l'indirizzo di posta elettronica risalenti a un massimo di 90 giorni dalla data della richiesta.
+Per richiedere questa corrispondenza, inviare un messaggio di posta elettronica a [cgadmin@microsoft.com](mailto:cgadmin@microsoft.com), con il titolo: "DSR Request for emails relating to this account" (Richiesta DSR per i messaggi di posta elettronica relativi a questo account).
+Nel corpo del messaggio indicare le informazioni richieste, ad esempio: Please send all emails sent to or received from this email address (Inviare tutti i messaggi di posta elettronica inviati o ricevuti da questo indirizzo di posta elettronica). Entro 7 giorni lavorativi si riceveranno tutti i messaggi che includono l'indirizzo di posta elettronica risalenti a un massimo di 90 giorni dalla data della richiesta.
 
 ### <a name="powershell-gallery-account-information"></a>Informazioni sull'account PowerShell Gallery
 

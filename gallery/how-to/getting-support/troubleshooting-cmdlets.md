@@ -4,15 +4,15 @@ contributor: manikb
 keywords: raccolta,powershell,cmdlet,psget
 title: Risoluzione dei problemi relativi a cmdlet
 ms.openlocfilehash: f5cd9c0cc23fef5891bf02c10b6541ab0f9d418a
-ms.sourcegitcommit: 98b7cfd8ad5718efa8e320526ca76c3cc4141d78
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50002463"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62084182"
 ---
 # <a name="troubleshooting-cmdlets"></a>Risoluzione dei problemi relativi a cmdlet
 
-## <a name="how-to-resolve-warning-package-your-package-name-failed-to-download-issue"></a>Come risolvere il problema segnalato da un messaggio di tipo "AVVISO: Impossibile scaricare il pacchetto 'nome pacchetto'"
+## <a name="how-to-resolve-warning-package-your-package-name-failed-to-download-issue"></a>Come risolvere il problema "AVVISO: Impossibile scaricare il pacchetto 'nome pacchetto'"
 
 È stato segnalato che `Install-Module` o `Update-Module` talvolta causa errori in alcuni computer.
 In base alle ricerche effettuate, il problema ha probabilmente a che fare con la connessione di rete.

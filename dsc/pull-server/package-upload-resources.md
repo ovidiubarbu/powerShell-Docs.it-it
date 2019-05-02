@@ -1,59 +1,59 @@
 ---
 ms.date: 12/12/2018
 keywords: dsc,powershell,configurazione,installazione
-title: Pacchetti di caricamento delle risorse a un Server di Pull
+title: Creare un pacchetto e caricare le risorse in un server di pull
 ms.openlocfilehash: 29a62f96393a53c9e7da57a5e51732dcb0937194
-ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
-ms.translationtype: MTE95
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53401237"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62079578"
 ---
-# <a name="package-and-upload-resources-to-a-pull-server"></a>Pacchetti di caricamento delle risorse a un Server di Pull
+# <a name="package-and-upload-resources-to-a-pull-server"></a>Creare un pacchetto e caricare le risorse in un server di pull
 
-Le sezioni seguenti presuppongono che già stato impostato in un Server di Pull. Se non è stato configurato il Server di Pull, è possibile usare le guide seguenti:
+Le sezioni seguenti presuppongono che sia già stato configurato un server di pull. Per configurare un server di pull, è possibile usare le guide seguenti:
 
 - [Configurare un server di pull SMB DSC](pullServerSmb.md)
 - [Configurare un server di pull HTTP DSC](pullServer.md)
 
-Ogni nodo di destinazione può essere configurato per scaricare le configurazioni, risorse e anche segnalare lo stato. Questo articolo illustrerà come caricare risorse in modo che siano disponibili per essere scaricato e configurare i client per scaricare automaticamente le risorse. Quando il nodo riceve una configurazione assegnata, attraverso **Pull** oppure **Push** (v5), scarica automaticamente le risorse richieste dalla configurazione dal percorso specificato in Gestione configurazione locale.
+Ogni nodo di destinazione può essere configurato in modo che possa scaricare configurazioni e risorse e persino segnalare il proprio stato. Questo articolo illustra come caricare risorse in modo che siano disponibili per essere scaricate e come configurare i client per scaricare automaticamente le risorse. Quando il nodo riceve una configurazione assegnata, attraverso **Pull** o **Push** (v5), scarica automaticamente le risorse richieste dalla configurazione dal percorso specificato in Gestione configurazione locale (LCM).
 
-## <a name="package-resource-modules"></a>Moduli delle risorse del pacchetto
+## <a name="package-resource-modules"></a>Creare il pacchetto dei moduli delle risorse
 
-Ogni risorsa disponibile per un client di scaricare deve essere archiviato in un file "ZIP". L'esempio seguente verrà illustra i passaggi necessari usando il [xPSDesiredStateConfiguration](https://www.powershellgallery.com/packages/xPSDesiredStateConfiguration/8.4.0.0) risorsa.
+Ogni risorsa disponibile per il download da un client deve essere archiviata in un file "ZIP". L'esempio seguente illustra i passaggi necessari usando la risorsa [xPSDesiredStateConfiguration](https://www.powershellgallery.com/packages/xPSDesiredStateConfiguration/8.4.0.0).
 
 > [!NOTE]
-> Se si dispone di tutti i client che usano PowerShell 4.0, si sarà necessario flaten la struttura di cartelle di risorse e rimuovere eventuali cartelle della versione. Per altre informazioni, vedere [più versioni di risorse](../configurations/import-dscresource.md#multiple-resource-versions).
+> Per eventuali client che usano PowerShell 4.0, sarà necessario appiattire la struttura di cartelle delle risorse e rimuovere eventuali cartelle della versione. Per altre informazioni, vedere [Più versioni di risorse](../configurations/import-dscresource.md#multiple-resource-versions).
 
-È possibile comprimere la directory delle risorse usando qualsiasi utilità, script o metodo che si preferisce. In Windows, è possibile *destro* nella directory "xPSDesiredStateConfiguration" e selezionare "Invia a", quindi "Cartella compressa".
+È possibile comprimere la directory delle risorse usando qualsiasi utilità, script o metodo che si preferisce. In Windows, è possibile *fare clic con il pulsante destro del mouse* sulla directory "xPSDesiredStateConfiguration" e scegliere "Invia a", quindi "Cartella compressa".
 
 ![Fare clic con il pulsante destro del mouse](../media/right-click.gif)
 
-### <a name="naming-the-resource-archive"></a>L'archivio di risorse di denominazione
+### <a name="naming-the-resource-archive"></a>Assegnazione di un nome all'archivio delle risorse
 
-L'archivio di risorse deve essere denominato con il formato seguente:
+L'archivio delle risorse deve essere denominato con il formato seguente:
 
 ```
 {ModuleName}_{Version}.zip
 ```
 
-Nell'esempio precedente, "xPSDesiredStateConfiguration.zip" deve essere rinominato "xPSDesiredStateConfiguration_8.4.4.0.zip".
+Nell'esempio precedente, "xPSDesiredStateConfiguration.zip" dovrebbe essere rinominato "xPSDesiredStateConfiguration_8.4.4.0.zip".
 
 ### <a name="create-checksums"></a>Creare i valori di checksum
 
-Dopo aver compresso ed rinominato il modulo di risorse, è necessario creare un **CheckSum**.  Il **CheckSum** viene usato, da Gestione configurazione locale nel client, per determinare se la risorsa è stata modificata e deve essere scaricato nuovamente. È possibile creare un **CheckSum** con il [New-DSCCheckSum](/powershell/module/PSDesiredStateConfiguration/New-DSCCheckSum) cmdlet come mostrato nell'esempio seguente.
+Dopo aver compresso e rinominato il modulo delle risorse, è necessario creare un **CheckSum**.  Il **CheckSum** viene usato da Gestione configurazione locale nel client per determinare se la risorsa è stata modificata e deve essere scaricata nuovamente. È possibile creare un **CheckSum** con il cmdlet [New-DSCCheckSum](/powershell/module/PSDesiredStateConfiguration/New-DSCCheckSum), come mostrato nell'esempio seguente.
 
 ```powershell
 New-DscChecksum -Path .\xPSDesiredStateConfiguration_8.4.4.0.zip
 ```
 
-Non verrà visualizzato alcun output, ma si noterà ora un "xPSDesiredStateConfiguration_8.4.4.0.zip.checksum". È anche possibile eseguire `New-DSCCheckSum` in una directory di file usando il `-Path` parametro. Se esiste già un checksum, è possibile applicarlo a essere ricreate con la `-Force` parametro.
+Non verrà visualizzato alcun output, ma dovrebbe essere ora disponibile "xPSDesiredStateConfiguration_8.4.4.0.zip.checksum". È anche possibile eseguire `New-DSCCheckSum` in una directory di file usando il parametro `-Path`. Se esiste già un checksum, è possibile forzare la nuova creazione con il parametro `-Force`.
 
 ### <a name="where-to-store-resource-archives"></a>Posizione in cui archiviare gli archivi di risorse
 
-#### <a name="on-a-dsc-http-pull-server"></a>In un Server di Pull HTTP DSC
+#### <a name="on-a-dsc-http-pull-server"></a>In un server di pull HTTP DSC
 
-Quando si configura il Server di Pull HTTP, come illustrato in [configurare un Server di Pull DSC HTTP](pullServer.md), si specificano directory per il **ModulePath** e **ConfigurationPath** chiavi. Il **ConfigurationPath** chiave indica dove devono essere archiviati i file "MOF". Il **ModulePath** indica dove devono essere archiviati tutti i moduli risorsa DSC.
+Quando si configura il server di pull HTTP, come illustrato in [Configurare un server di pull HTTP DSC](pullServer.md), si specificano le directory per le chiavi **ModulePath** e **ConfigurationPath**. La chiave **ConfigurationPath** indica dove devono essere archiviati eventuali file "MOF". La chiave **ModulePath** indica dove devono essere archiviati eventuali moduli di risorse DSC.
 
 ```powershell
     xDscWebService PSDSCPullServer
@@ -68,7 +68,7 @@ Quando si configura il Server di Pull HTTP, come illustrato in [configurare un S
 
 #### <a name="on-an-smb-share"></a>In una condivisione SMB
 
-Se è stata specificata una **ResourceRepositoryShare**, quando configurare il Client di Pull, archiviare gli archivi e checksum nel **SourcePath** nella directory di **ResourceRepositoryShare** blocco.
+Se è stata specificata una **ResourceRepositoryShare** durante la configurazione del client di pull, archiviare gli archivi e i checksum nella directory **SourcePath** dal blocco **ResourceRepositoryShare**.
 
 ```powershell
 ConfigurationRepositoryShare SMBPullServer
@@ -82,7 +82,7 @@ ResourceRepositoryShare SMBResourceServer
 }
 ```
 
-Se è stata specificata solo una **ConfigurationRepositoryShare**, quando configurare il Client di Pull, archiviare gli archivi e checksum nel **SourcePath** nella directory di  **ConfigurationRepositoryShare** blocco.
+Se è stata specificata solo una **ConfigurationRepositoryShare** durante la configurazione del client di pull, archiviare gli archivi e i checksum nella directory **SourcePath** dal blocco **ConfigurationRepositoryShare**.
 
 ```powershell
 ConfigurationRepositoryShare SMBPullServer
@@ -93,7 +93,7 @@ ConfigurationRepositoryShare SMBPullServer
 
 #### <a name="updating-resources"></a>Aggiornamento delle risorse
 
-È possibile forzare un nodo per aggiornare le relative risorse modificando il numero di versione nel nome dell'archivio, o creando un nuovo checksum. Il Client di Pull deve ricercare le versioni più recenti delle risorse necessarie, nonché aggiornato i valori di checksum, quando viene aggiornata la gestione configurazione locale.
+È possibile forzare un nodo ad aggiornare le relative risorse modificando il numero di versione nel nome dell'archivio o creando un nuovo checksum. Il client di pull controllerà se sono disponibili versioni più recenti delle risorse necessarie, nonché checksum aggiornati, quando viene aggiornata l'istanza corrispondente di Gestione configurazione locale.
 
 ## <a name="see-also"></a>Vedere anche
 

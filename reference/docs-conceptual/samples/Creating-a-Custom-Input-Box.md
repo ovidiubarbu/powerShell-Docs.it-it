@@ -4,11 +4,11 @@ keywords: powershell,cmdlet
 title: Creazione di una casella di input personalizzata
 ms.assetid: 0b12e56c-299f-40ee-afbf-d30d23ed2565
 ms.openlocfilehash: 2d04ad6df65cdb4ff13d136dea47bbba6a01f3a2
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
-ms.translationtype: MTE95
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55681909"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62086290"
 ---
 # <a name="creating-a-custom-input-box"></a>Creazione di una casella di input personalizzata
 
@@ -159,6 +159,6 @@ if ($result -eq [System.Windows.Forms.DialogResult]::OK)
 
 ## <a name="see-also"></a>Vedere anche
 
-- Blog Hey Scripting Guy:[Perché questi esempi di GUI di PowerShell non funzionano?](https://go.microsoft.com/fwlink/?LinkId=506644)
+- [Hey Scripting Guy:  Perché questi esempi di GUI di PowerShell non funzionano?](https://go.microsoft.com/fwlink/?LinkId=506644)
 - [GitHub: WinFormsExampleUpdates di Dave Wyatt](https://github.com/dlwyatt/WinFormsExampleUpdates)
-- [Suggerimento della settimana su Windows PowerShell: Creazione di una casella di input personalizzata](https://technet.microsoft.com/library/ff730941.aspx)
+- [Windows PowerShell Tip of the Week:  Creating a Custom Input Box](https://technet.microsoft.com/library/ff730941.aspx) (Suggerimento della settimana per Windows PowerShell: Creazione di una casella di input personalizzata)

@@ -4,11 +4,11 @@ keywords: powershell,cmdlet
 title: Guida alla riga di comando PowerShell.exe
 ms.assetid: 1ab7b93b-6785-42c6-a1c9-35ff686a958f
 ms.openlocfilehash: 0a11ebb11d29adf5853c232b3aa10bc72f92bf0c
-ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
-ms.translationtype: MTE95
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53401357"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62058514"
 ---
 # <a name="powershellexe-command-line-help"></a>Guida della riga di comando PowerShell.exe
 
@@ -51,10 +51,10 @@ Imposta i criteri di esecuzione predefiniti per la sessione corrente e li salva 
 
 Esegue lo script specificato nell'ambito locale ("dot sourcing" ), in modo che le funzioni e le variabili create dallo script siano disponibili nella sessione corrente. Immettere il percorso del file di script ed eventuali parametri. **File** deve essere l'ultimo parametro nel comando. Tutti i valori digitati dopo il parametro **-File** vengono interpretati come percorso del file script e i parametri passati a tale script.
 
-I parametri passati allo script vengono passati come stringhe letterali, dopo l'interpretazione da parte della shell corrente. Ad esempio, se si trovano in cmd.exe e si desidera passare un valore di variabile di ambiente, utilizzare la sintassi cmd.exe: `powershell.exe -File .\test.ps1 -TestParam %windir%`
+I parametri passati allo script vengono passati come stringhe letterali, dopo l'interpretazione da parte della shell corrente. Ad esempio, all'interno di cmd.exe se si vuole passare un valore di variabile di ambiente, si usa la sintassi di cmd.exe: `powershell.exe -File .\test.ps1 -TestParam %windir%`
 
-Al contrario, in esecuzione `powershell.exe -File .\test.ps1 -TestParam $env:windir` nei risultati cmd.exe nello script di ricevere la stringa letterale `$env:windir` perché non ha significato speciale shell cmd.exe corrente.
-Il `$env:windir` stile del riferimento alla variabile di ambiente _possibile_ utilizzabile all'interno di un `-Command` parametro, poiché non esiste verrà interpretato come codice di PowerShell.
+Al contrario, se si esegue `powershell.exe -File .\test.ps1 -TestParam $env:windir` in cmd.exe, lo script riceve la stringa letterale `$env:windir` perché non ha un significato speciale per la shell cmd.exe corrente.
+Lo stile `$env:windir` per i riferimenti alla variabile di ambiente _può_ essere usato all'interno di un parametro `-Command`, perché in tale posizione verrebbe interpretato come codice di PowerShell.
 
 ### <a name="-inputformat-text--xml"></a>\-InputFormat {Text | XML}
 
@@ -107,26 +107,26 @@ Imposta lo stile della finestra per la sessione. I valori validi sono Normal, Mi
 ### <a name="-command"></a>-Command
 
 Esegue i comandi specificati (e gli eventuali parametri) come se fossero stati digitati al prompt dei comandi di PowerShell.
-Dopo l'esecuzione, PowerShell viene chiuso, a meno che il **NoExit** parametro è specificato.
+Dopo l'esecuzione, PowerShell viene chiuso a meno che non venga specificato il parametro **NoExit**.
 Qualsiasi testo dopo `-Command` viene inviato come singola riga di comando a PowerShell.
 Questo approccio è diverso dal modo in cui `-File` gestisce i parametri inviati a uno script.
 
 Il valore di `-Command` può essere "-", una stringa o un blocco di script.
-I risultati del comando vengono restituiti alla shell padre come oggetti XML deserializzati, gli oggetti non attivi.
+I risultati del comando vengono restituiti alla shell padre come oggetti XML deserializzati e non come oggetti attivi.
 
 Se il valore di `-Command` è "-", il testo del comando viene letto dall'input standard.
 
-Quando il valore di `-Command` è una stringa **comandi** _necessario_ essere l'ultimo parametro specificato perché i caratteri digitati dopo il comando vengono interpretati come argomenti del comando.
+Se il valore di `-Command` è una stringa, **Command** _deve_ essere l'ultimo parametro specificato, perché i caratteri digitati dopo il comando vengono interpretati come argomenti del comando.
 
-Il **comandi** parametro accetta solo un blocco di script per l'esecuzione quando in grado di riconoscere il valore passato a `-Command` come tipo di blocco di script.
-Si tratta _solo_ possibili durante l'esecuzione PowerShell.exe da un altro host di PowerShell.
-Il parametro ScriptBlock tipo può essere contenuto nella variabile, restituito da un'espressione o analizzati da PowerShell esistente ospitare come un blocco di script letterale racchiuso tra parentesi graffe `{}`prima che venga passato a PowerShell.exe.
+Il parametro **Command** accetta solo un blocco di script per l'esecuzione quando è in grado di riconoscere il valore passato a `-Command` come tipo ScriptBlock.
+Ciò è possibile _solo_ durante l'esecuzione PowerShell.exe da un altro host di PowerShell.
+Il tipo ScriptBlock può essere contenuto in una variabile esistente, restituito da un'espressione o analizzato dall'host di PowerShell come un blocco di script letterale racchiuso tra parentesi graffe `{}`, prima che venga passato a PowerShell.exe.
 
-Cmd.exe, non include alcun equivalente di un blocco di script (o tipo di blocco di script), pertanto il valore passato a **comandi** verranno _sempre_ sia una stringa.
-È possibile scrivere un blocco di script all'interno della stringa, ma anziché in esecuzione questo si comporta esattamente come se venisse digitato, al prompt di PowerShell tipico, stampa il contenuto dello script Prenditi nuovamente all'utente.
+In cmd.exe non è disponibile un elemento simile a un blocco di script (o il tipo ScriptBlock), quindi il valore passato a **Command** sarà _sempre_ una stringa.
+È possibile scrivere un blocco di script all'interno della stringa, ma anziché essere eseguito, si comporterà esattamente come se fosse stato digitato a un prompt tipico di PowerShell, ovvero verrà stampato il contenuto del blocco di script.
 
-Una stringa passata a `-Command` verrà comunque eseguito come PowerShell, in modo che le parentesi graffe blocco di script spesso non sono necessarie in primo luogo durante l'esecuzione da cmd.exe.
-Per eseguire un blocco di script inline definito all'interno di una stringa, il [operatore di chiamata](/powershell/module/microsoft.powershell.core/about/about_operators#call-operator-) `&` consente di:
+Anche una stringa passata a `-Command` verrà comunque eseguita come PowerShell, quindi le parentesi graffe per il blocco di script spesso non sono necessarie per l'esecuzione da cmd.exe.
+Per eseguire un blocco di script inline definito all'interno di una stringa, è possibile usare l'[operatore di chiamata](/powershell/module/microsoft.powershell.core/about/about_operators#call-operator-) `&`:
 
 ```console
 "& {<command>}"
@@ -137,7 +137,7 @@ Per eseguire un blocco di script inline definito all'interno di una stringa, il 
 Mostra la sintassi di powershell.exe. Se si digita un comando PowerShell.exe in PowerShell, anteporre ai parametri del comando un trattino (-) e non una barra (/). In Cmd.exe è possibile usare sia il trattino che la barra.
 
 > [!NOTE]
-> Nota sulla risoluzione dei problemi: In PowerShell 2.0 l'avvio di alcuni programmi nella console di Windows PowerShell un errore con LastExitCode uguale a 0xc0000142.
+> Nota relativa alla risoluzione dei problemi: in PowerShell 2.0 l'avvio di alcuni programmi nella console di Windows PowerShell genera un errore con LastExitCode di 0xc0000142.
 
 ## <a name="examples"></a>ESEMPI
 

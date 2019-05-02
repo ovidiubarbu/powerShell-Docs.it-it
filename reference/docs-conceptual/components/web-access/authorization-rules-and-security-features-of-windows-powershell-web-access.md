@@ -3,15 +3,15 @@ ms.date: 06/27/2017
 keywords: powershell,cmdlet
 title: Regole di autorizzazione e funzionalità di sicurezza di Accesso Web Windows PowerShell
 ms.openlocfilehash: c426b8cfb10829241ba244a5d840c91e1de9f66e
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
-ms.translationtype: MTE95
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55681262"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62058421"
 ---
 # <a name="authorization-rules-and-security-features-of-windows-powershell-web-access"></a>Regole di autorizzazione e funzionalità di sicurezza di Accesso Web Windows PowerShell
 
-Ultimo aggiornamento: 24 giugno 2013
+Aggiornamento: 24 giugno 2013
 
 Si applica a: Windows Server 2012 R2, Windows Server 2012
 
@@ -139,7 +139,7 @@ L'unico carattere jolly supportato dai cmdlet di Accesso Web Windows PowerShell 
    Remove-PswaAuthorizationRule -ID <rule ID>
    ```
 
-   In alternativa, se non si conosce l'ID ma si conosce il nome descrittivo della regola da rimuovere, è possibile ottenere il nome della regola e inviarlo tramite pipe al cmdlet `Remove-PswaAuthorizationRule` per rimuovere la regola, come mostrato nell'esempio seguente:
+   In alternativa, se non si conosce l'ID ma si conosce il nome descrittivo della regola da rimuovere, è possibile ottenere il nome della regola e inviarlo tramite pipe al cmdlet `Remove-PswaAuthorizationRule` per rimuovere la regola, come illustrato nell'esempio seguente:
 
    ```
    Get-PswaAuthorizationRule `
@@ -147,7 +147,7 @@ L'unico carattere jolly supportato dai cmdlet di Accesso Web Windows PowerShell 
    ```
 
 > [!NOTE]
-> Non viene richiesto se si vuole eliminare la regola di autorizzazione specificata, perché l'eliminazione avviene infatti quando si premere **INVIO**. Verificare con attenzione la regola di autorizzazione da rimuovere prima di eseguire il cmdlet `Remove-PswaAuthorizationRule`.
+> Non viene richiesto se si vuole eliminare la regola di autorizzazione specificata, perché l'eliminazione avviene infatti quando si premere **INVIO**. Assicurarsi di voler rimuovere la regola di autorizzazione prima di eseguire il cmdlet `Remove-PswaAuthorizationRule`.
 
 #### <a name="other-authorization-rule-scenario-examples"></a>Altri scenari di esempio per le regole di autorizzazione
 
@@ -156,7 +156,7 @@ Per ogni sessione di Windows PowerShell viene usata una configurazione di sessio
 - Un amministratore crea un endpoint, denominato **EndpointPswa** e basato su uno spazio di esecuzione con restrizioni, quindi crea la regola `*,*,PswaEndpoint` e distribuisce l'endpoint agli altri computer. La regola consente a tutti gli utenti di accedere a tutti i computer con endpoint **EndpointPswa**.
   Se questa è l'unica regola di autorizzazione definita nel set di regole, i computer che non dispongono di tale endpoint non sono accessibili.
 
-- L'amministratore ha creato un endpoint basato su uno spazio di esecuzione con restrizioni denominato **EndpointPswa** e vuole limitare l'accesso a utenti specifici. L'amministratore crea un gruppo di utenti denominato **SupportoLivello1** e definisce la regola **SupportoLivello1,\*,EndpointPswa**. La regola concede agli utenti del gruppo **SupportoLivello1** l'accesso a tutti i computer che dispongono della configurazione **EndpointPswa**. Analogamente, è possibile impostare l'accesso con restrizioni per un insieme di computer specifico.
+- L'amministratore ha creato un endpoint basato su uno spazio di esecuzione con restrizioni denominato **EndpointPswa** e vuole limitare l'accesso a utenti specifici. L'amministratore crea un gruppo di utenti denominato **Level1Support** e definisce la regola seguente: **Level1Support,\*,PswaEndpoint**. La regola concede agli utenti del gruppo **SupportoLivello1** l'accesso a tutti i computer che dispongono della configurazione **EndpointPswa**. Analogamente, è possibile impostare l'accesso con restrizioni per un insieme di computer specifico.
 
 - Alcuni amministratori forniscono maggiori diritti di accesso a determinati utenti, ad esempio creando i due gruppi di utenti **Amministratori** e **SupportoBase**. L'amministratore crea anche un endpoint basato su uno spazio di esecuzione con restrizioni denominato **EndpointPswa** e definisce le due regole seguenti: **Amministratori,\*,\*** e **SupportoBase,\*,EndpointPswa**. La prima regola fornisce l'accesso a tutti i computer a tutti gli utenti del gruppo **Amministratori**, mentre la seconda consente a tutti gli utenti del gruppo **SupportoBase** di accedere solo ai computer con **EndpointPswa**.
 

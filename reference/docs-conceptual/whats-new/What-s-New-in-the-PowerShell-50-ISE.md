@@ -4,11 +4,11 @@ keywords: powershell,cmdlet
 title: Novità di PowerShell 5.0 ISE
 ms.assetid: 38648d47-7c27-4b37-a40e-ad29948519c2
 ms.openlocfilehash: 2d953bc4553de7720c590304d29750b84a1ef3b2
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
-ms.translationtype: MTE95
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55682342"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62058183"
 ---
 # <a name="what39s-new-in-the-windows-powershell-ise"></a>Novità di Windows PowerShell ISE
 Questo argomento illustra le funzionalità nuove e aggiornate introdotte nelle versioni di Windows PowerShell Integrated Scripting Environment (ISE).
@@ -147,11 +147,11 @@ Windows PowerShell ISE 2.0 ha riquadri separati per comandi e output.
 
 Se si avvia Windows PowerShell ISE dalla riga di comando digitando **Powershell_ise.exe**, è possibile aggiungere le nuove opzioni da riga di comando seguenti.
 
-- *-NoProfile*: Avvia Windows PowerShell ISE senza eseguire **$profile**
+- *-NoProfile*: avvia Windows PowerShell ISE senza eseguire **$profile**.
 
-- *-Help*: visualizza una finestra della Guida
+- *-Help*: visualizza una finestra della Guida.
 
-- *-mta*: Avvia Windows PowerShell ISE in modalità apartment a thread multipli. La modalità operativa predefinita per Windows PowerShell ISE è apartment a thread singolo o *-sta*.
+- *-mta*: avvia Windows PowerShell ISE in modalità apartment a thread multipli. La modalità operativa predefinita per Windows PowerShell ISE è apartment a thread singolo o *-sta*.
 
 **Valore aggiunto da queste modifiche**
 
@@ -176,7 +176,7 @@ Altre funzionalità di modifica di Windows PowerShell ISE includono:
 
 - **Visualizzazione degli errori di analisi** Gli errori di analisi sono indicati da sottolineature rosse. Quando si passa il mouse su un errore indicato, il testo della descrizione comando visualizza il problema rilevato nel codice.
 
-- **Zoom** È possibile impostare la percentuale di zoom del contenuto della console con il dispositivo di scorrimento zoom, nell'angolo inferiore destro della finestra di Windows PowerShell ISE, oppure inserendo il comando **$psise.options.Zoom** nel riquadro della console.
+- **Zoom** È possibile impostare la percentuale di zoom del contenuto della console con il dispositivo di scorrimento zoom, nell'angolo inferiore destro della finestra di Windows PowerShell ISE, oppure immettendo il comando **$psise.options.Zoom** nel riquadro della console.
 
 - **Operazioni di copia e incolla di testo formattato** Con la copia negli Appunti in Windows PowerShell ISE vengono mantenute le informazioni relative a tipo di carattere, dimensioni e colore della selezione originale.
 

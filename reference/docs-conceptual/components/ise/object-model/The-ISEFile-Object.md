@@ -4,11 +4,11 @@ keywords: powershell,cmdlet
 title: Oggetto ISEFile
 ms.assetid: 1c6d91f3-c556-42a2-a017-79b6b7b4b7db
 ms.openlocfilehash: 24549720b8bc35435882533b0eb138de432ede65
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
-ms.translationtype: MTE95
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55678148"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62057554"
 ---
 # <a name="the-isefile-object"></a>Oggetto ISEFile
 
@@ -26,7 +26,7 @@ Salva il file su disco.
 
 ### <a name="exceptions"></a>Eccezioni
 
-- **System.IO.IOException**: non è stato possibile salvare il file.
+- **System.IO.IOException**: Impossibile salvare il file.
 
 ```powershell
 # Save the file using the default encoding (UTF8)
@@ -52,9 +52,9 @@ Salva il file con il nome file e la codifica specificati.
 
 ### <a name="exceptions"></a>Eccezioni
 
-- **System.ArgumentNullException**: Il **filename** parametro è null.
-- **System.ArgumentException**: Il **filename** parametro è vuoto.
-- **System.IO.IOException**: non è stato possibile salvare il file.
+- **System.ArgumentNullException**: Il parametro **nomefile** è Null.
+- **System.ArgumentException**: Il parametro **nomefile** è vuoto.
+- **System.IO.IOException**: Impossibile salvare il file.
 
 ```powershell
 # Save the file with a full path and name.

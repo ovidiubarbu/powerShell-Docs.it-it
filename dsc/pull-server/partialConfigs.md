@@ -3,15 +3,15 @@ ms.date: 06/12/2017
 keywords: dsc,powershell,configurazione,installazione
 title: Configurazioni parziali di PowerShell DSC (Desired State Configuration)
 ms.openlocfilehash: b2b17e35597707eb97ecdcea9dda4466deeab0cb
-ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
-ms.translationtype: MTE95
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53401555"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62079524"
 ---
 # <a name="powershell-desired-state-configuration-partial-configurations"></a>Configurazioni parziali di PowerShell DSC (Desired State Configuration)
 
-Si applica a: Windows PowerShell 5.0 e versioni successive._
+_Si applica a: Windows PowerShell 5.0 e versioni successive._
 
 In PowerShell 5.0, DSC (Desired State Configuration) consente di distribuire le configurazioni in frammenti e da più origini. Gestione configurazione locale nel nodo di destinazione riunisce i frammenti prima di applicarli come singola configurazione. Questa funzionalità consente di condividere il controllo della configurazione tra team o singoli utenti. Ad esempio, se due o più team di sviluppatori collaborano a un servizio, ogni team potrebbe voler creare configurazioni per gestire la propria parte del servizio. È possibile effettuare il pull di ognuna di queste configurazioni da server di pull diversi e aggiungere le configurazioni in fasi diverse del processo di sviluppo. Le configurazioni parziali consentono inoltre a persone o team diversi di controllare aspetti diversi della configurazione dei nodi senza la necessità di coordinare le modifiche di un singolo documento di configurazione. Un team, ad esempio, potrebbe essere responsabile della distribuzione di una VM e un sistema operativo, mentre un altro team potrebbe distribuire altri servizi e applicazioni in tale VM. Con le configurazioni parziali, ogni team può creare la sua configurazione, senza che alcuna di esse sia inutilmente complessa.
 
@@ -375,6 +375,6 @@ SharePointConfig
 
 ## <a name="see-also"></a>Vedere anche
 
-[Server di pull Windows PowerShell DSC (Desired Configuration Pull)](pullServer.md)
+[Server di pull Windows PowerShell DSC (Desired State Configuration)](pullServer.md)
 
 [Configurazione di Gestione configurazione locale](../managing-nodes/metaConfig.md)

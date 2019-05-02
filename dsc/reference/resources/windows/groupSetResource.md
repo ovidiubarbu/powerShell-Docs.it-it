@@ -4,11 +4,11 @@ keywords: dsc,powershell,configurazione,installazione
 description: Fornisce un meccanismo per gestire i gruppi locali nel nodo di destinazione.
 title: Risorsa GroupSet DSC
 ms.openlocfilehash: afe4c4d33ac5620c411481e93d76a1f90c26deb9
-ms.sourcegitcommit: e04292a9c10de9a8391d529b7f7aa3753b362dbe
-ms.translationtype: MTE95
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54047712"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62077178"
 ---
 # <a name="dsc-groupset-resource"></a>Risorsa GroupSet DSC
 
@@ -44,7 +44,7 @@ Group [string] #ResourceName
 | MembersToInclude| Usare questa proprietà per aggiungere membri all'appartenenza al gruppo esistente. Il valore di questa proprietà è una matrice di stringhe del formato *Dominio*\\*Nome utente*. Se si imposta questa proprietà in una configurazione, non usare la proprietà **Members**. In caso contrario, verrà generato un errore.|
 | DependsOn | Indica che prima di configurare la risorsa è necessario eseguire la configurazione di un'altra risorsa. Ad esempio, se l'ID del blocco script di configurazione della risorsa che si vuole eseguire per primo è __ResourceName__ e il tipo è __ResourceType__, la sintassi per usare questa proprietà è `DependsOn = "[ResourceType]ResourceName"``.|
 
-## <a name="example-1-ensuring-groups-are-present"></a>Esempio 1: I gruppi di garantire che siano presenti
+## <a name="example-1-ensuring-groups-are-present"></a>Esempio 1: Verifica che i gruppi siano presenti
 
 L'esempio seguente illustra come assicurarsi che siano presenti due gruppi denominati "myGroup" e "myOtherGroup".
 

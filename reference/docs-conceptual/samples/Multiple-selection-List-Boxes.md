@@ -4,11 +4,11 @@ keywords: powershell,cmdlet
 title: Caselle di riepilogo a selezione multipla
 ms.assetid: f74cd5d9-da57-4802-b614-0b194a7bc8f8
 ms.openlocfilehash: a762145dc197ec7e1424b2fbdcef5e7380d13803
-ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
-ms.translationtype: MTE95
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53401423"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62057959"
 ---
 # <a name="multiple-selection-list-boxes"></a>Caselle di riepilogo a selezione multipla
 
@@ -183,6 +183,6 @@ if ($result -eq [System.Windows.Forms.DialogResult]::OK)
 
 ## <a name="see-also"></a>Vedere anche
 
--   Blog Hey Scripting Guy:[  Perché questi esempi di GUI di PowerShell non funzionano?](https://go.microsoft.com/fwlink/?LinkId=506644)
-- [GitHub Di Wyatt Dave](https://github.com/dlwyatt/WinFormsExampleUpdates)
-- [Windows PowerShell Tip of the Week:  Caselle di riepilogo a selezione multipla - e altro ancora.](https://technet.microsoft.com/library/ff730950.aspx)
+- [Hey Scripting Guy:  Perché questi esempi di GUI di PowerShell non funzionano?](https://go.microsoft.com/fwlink/?LinkId=506644)
+- [GitHub: WinFormsExampleUpdates di Dave Wyatt](https://github.com/dlwyatt/WinFormsExampleUpdates)
+- [Windows PowerShell Tip of the Week:  Multi-Select List Boxes - And More!](https://technet.microsoft.com/library/ff730950.aspx) (Suggerimento della settimana per Windows PowerShell: Caselle di riepilogo a selezione multipla - e altro ancora)

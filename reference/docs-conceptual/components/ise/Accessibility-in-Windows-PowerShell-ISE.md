@@ -4,11 +4,11 @@ keywords: powershell,cmdlet
 title: Accessibilità in Windows PowerShell ISE
 ms.assetid: a078f9d1-dd6b-4323-b16d-0622cd993aa8
 ms.openlocfilehash: 78a001dbe43a0b005d10a817e05e4cc7a72f5bd0
-ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
-ms.translationtype: MTE95
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53401410"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62058455"
 ---
 # <a name="accessibility-in-windows-powershell-ise"></a>Accessibilità in Windows PowerShell ISE
 
@@ -85,8 +85,8 @@ Eseguire una delle operazioni seguenti:
 |**Esegui**|F5|
 |**Esegui selezione**|F8|
 |**Arresta esecuzione**|CTRL+INTERR È possibile usare CTRL+C quando il contesto non è ambiguo (in assenza di testo selezionato).|
-|**TAB** (passaggio allo script successivo)|CTRL + TAB **Nota:** Pressione di TAB per passare allo script successivo funziona solo quando è aperta una sola scheda di PowerShell o quando sono aperte più schede di PowerShell, ma lo stato attivo si trova nel riquadro di Script.|
-|**TAB** (passaggio allo script precedente)|CTRL + MAIUSC + TAB **Nota:** Scheda allo script precedente funziona quando aperta solo una scheda di PowerShell, o se sono aperte più schede di PowerShell e lo stato attivo si trova nel riquadro di Script.|
+|**TAB** (passaggio allo script successivo)|CTRL+TAB **Nota:** la pressione di TAB per passare allo script successivo funziona solo quando è aperta una sola scheda di PowerShell o quando sono aperte più schede di PowerShell, ma lo stato attivo si trova nel riquadro di script.|
+|**TAB** (passaggio allo script precedente)|CTRL+MAIUSC+TAB**Nota:** la pressione di TAB per passare allo script precedente funziona quando è aperta una sola scheda di PowerShell o quando sono aperte più schede di PowerShell e lo stato attivo si trova nel riquadro di script.|
 
 ## <a name="keyboard-shortcuts-for-customizing-the-view"></a>Tasti di scelta rapida per la personalizzazione della visualizzazione
 

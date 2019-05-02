@@ -3,11 +3,11 @@ title: Novità di PowerShell Core 6.0
 description: Nuove funzionalità e modifiche rilasciate in PowerShell Core 6.0
 ms.date: 08/06/2018
 ms.openlocfilehash: 83c104d838db9d86fe1d485e92245a9c8f2d2057
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
-ms.translationtype: MTE95
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55680819"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62059016"
 ---
 # <a name="whats-new-in-powershell-core-60"></a>Novità di PowerShell Core 6.0
 
@@ -236,7 +236,7 @@ Per altre informazioni sui processi di PowerShell, vedere [about_Jobs](https://m
   - `PSEdition`: questa opzione è impostata su `Core` in PowerShell Core e su `Desktop` in Windows PowerShell
   - `GitCommitId`: questo è l'ID commit Git del ramo o tag Git in cui è stato compilato PowerShell.
     Per le compilazioni rilasciate corrisponde probabilmente a `PSVersion`.
-  - `OS`: stringa di versione del sistema operativo restituita da`[System.Runtime.InteropServices.RuntimeInformation]::OSDescription`
+  - `OS`: stringa di versione del sistema operativo restituita da `[System.Runtime.InteropServices.RuntimeInformation]::OSDescription`
   - `Platform`: valore restituito da `[System.Environment]::OSVersion.Platform`, impostato su `Win32NT` in Windows, `Unix` in macOS e `Unix` in Linux.
 - Rimossa la proprietà `BuildVersion` da `$PSVersionTable`.
   Questa proprietà è strettamente legata alla versione build di Windows.
@@ -274,7 +274,7 @@ Per altre informazioni sui processi di PowerShell, vedere [about_Jobs](https://m
 - Aggiunta l'opzione `-SkipHeaderValidation` ai cmdlet Web per supportare l'aggiunta di intestazioni senza convalidare il valore dell'intestazione. (#4085)
 - Possibilità di evitare la convalida del certificato HTTPS del server da parte dei cmdlet Web, se necessario.
 - Aggiunti i parametri di autenticazione ai cmdlet Web. (#5052) (grazie [@markekraus](https://github.com/markekraus))
-  - Aggiungere `-Authentication` che sono disponibili tre opzioni: Basic, OAuth e Bearer.
+  - Aggiunta di `-Authentication` che include tre opzioni: Basic, OAuth e Bearer.
   - Aggiunta di `-Token` per ottenere il token di connessione per le opzioni OAuth e Bearer.
   - Aggiunta di `-AllowUnencryptedAuthentication` per ignorare l'autenticazione specificata per qualsiasi schema di trasporto diverso da HTTPS.
 - Aggiunta di `-ResponseHeadersVariable` a `Invoke-RestMethod` per abilitare l'acquisizione delle intestazioni di risposta. (#4888) (grazie [@markekraus](https://github.com/markekraus))

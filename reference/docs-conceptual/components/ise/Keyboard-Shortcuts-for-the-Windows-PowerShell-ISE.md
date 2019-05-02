@@ -4,11 +4,11 @@ keywords: powershell,cmdlet
 title: Tasti di scelta rapida per Windows PowerShell ISE
 ms.assetid: 8328b946-0f02-4ef4-ac28-2743a1b4043b
 ms.openlocfilehash: 1abae849ce599b586357fd2a8db46c608932bd4e
-ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
-ms.translationtype: MTE95
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53401212"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62086834"
 ---
 # <a name="keyboard-shortcuts-for-the-windows-powershell-ise"></a>Tasti di scelta rapida per Windows PowerShell ISE
 
@@ -20,7 +20,7 @@ Usare i tasti di scelta rapida seguenti per eseguire azioni in Windows PowerShel
 
 |Azione|Tasti di scelta rapida|Posizione|
 |----------|----------------------|----------|
-|**?**|F1|Riquadro di script **importanti:** È possibile specificare che la Guida F1 provenga dalla libreria TechNet sul web o dalla Guida scaricata (vedere Update-Help). Per selezionare, fare clic su **Strumenti**, **Opzioni** e quindi nella scheda **Impostazioni generali** impostare o deselezionare **Usa contenuto della Guida locale anziché contenuto online.**|
+|**?**|F1|Riquadro di script **Importante:** è possibile specificare che la Guida F1 proviene dalla libreria TechNet sul Web o dalla Guida scaricata (vedere Update-Help). Per selezionare, fare clic su **Strumenti**, **Opzioni** e quindi nella scheda **Impostazioni generali** impostare o deselezionare **Usa contenuto della Guida locale anziché contenuto online.**|
 |**Copia**|CTRL+C|Riquadro di script, riquadro dei comandi, riquadro di output|
 |**Taglia**|CTRL+X|Riquadro di script, riquadro dei comandi|
 |**Espandi o comprimi struttura**|CTRL+M|Riquadro di script|
@@ -47,8 +47,8 @@ Usare i tasti di scelta rapida seguenti per eseguire azioni in Windows PowerShel
 |**Esegui**|F5|
 |**Esegui selezione**|F8|
 |**Arresta esecuzione**|CTRL+INTERR È possibile usare CTRL+C quando il contesto non è ambiguo (in assenza di testo selezionato).|
-|**TAB** (passaggio allo script successivo)|CTRL + TAB **Nota:** Pressione di TAB per passare allo script successivo funziona solo quando è aperta una sola scheda di Windows PowerShell o quando sono aperte più schede di Windows PowerShell, ma lo stato attivo si trova nel riquadro di Script.|
-|**TAB** (passaggio allo script precedente)|CTRL + MAIUSC + TAB **Nota:** Scheda allo script precedente funziona quando è aperta solo una scheda di Windows PowerShell, o se sono aperte più schede di Windows PowerShell e lo stato attivo si trova nel riquadro di Script.|
+|**TAB** (passaggio allo script successivo)|CTRL+TAB **Nota:** la pressione di TAB per passare allo script successivo funziona solo quando è aperta una sola scheda di Windows PowerShell o quando sono aperte più schede di Windows PowerShell, ma lo stato attivo si trova nel riquadro di script.|
+|**TAB** (passaggio allo script precedente)|CTRL+MAIUSC+TAB**Nota:** la pressione di TAB per passare allo script precedente funziona quando è aperta una sola scheda di Windows PowerShell o quando sono aperte più schede di Windows PowerShell e lo stato attivo si trova nel riquadro di script.|
 
 ## <a name="keyboard-shortcuts-for-customizing-the-view"></a>Tasti di scelta rapida per la personalizzazione della visualizzazione
 
@@ -120,4 +120,4 @@ Usare i tasti di scelta rapida seguenti per eseguire azioni in Windows PowerShel
 
 ## <a name="see-also"></a>Vedere anche
 
-- [PowerShell Magazine: L'elenco completo dei tasti di scelta rapida di Windows PowerShell ISE](https://www.powershellmagazine.com/2013/01/29/the-complete-list-of-powershell-ise-3-0-keyboard-shortcuts/)
+- [PowerShell Magazine: The Complete List of Windows PowerShell ISE Keyboard Shortcuts](https://www.powershellmagazine.com/2013/01/29/the-complete-list-of-powershell-ise-3-0-keyboard-shortcuts/) (Elenco completo dei tasti di scelta rapida di Windows PowerShell ISE)

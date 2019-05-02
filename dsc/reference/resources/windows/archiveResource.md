@@ -3,11 +3,11 @@ ms.date: 06/12/2017
 keywords: dsc,powershell,configurazione,installazione
 title: Risorsa Archive DSC
 ms.openlocfilehash: d5ccd242d000a0907c6768f30923764be6bf20a3
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
-ms.translationtype: MTE95
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55682682"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62077552"
 ---
 # <a name="dsc-archive-resource"></a>Risorsa Archive DSC
 
@@ -35,7 +35,7 @@ Archive [string] #ResourceName
 |---|---|
 | Destination| Indica il percorso in cui si vuole specificare di estrarre il contenuto dell'archivio.|
 | Path| Specifica il percorso di origine del file di archivio.|
-| __Checksum__| Definisce il tipo da usare per determinare se due file sono uguali. Se la proprietà __Checksum__ non è specificata, per il confronto viene usato solo il nome del file o della directory. I valori validi includono: SHA-1, SHA-256, SHA-512, createdDate, modifiedDate e none (predefinito). Se si specifica __Checksum__ senza __Validate__, la configurazione non riesce.|
+| __Checksum__| Definisce il tipo da usare per determinare se due file sono uguali. Se la proprietà __Checksum__ non è specificata, per il confronto viene usato solo il nome del file o della directory. I valori validi includono: SHA-1, SHA-256, SHA-512, createdDate, modifiedDate, none (predefinito). Se si specifica __Checksum__ senza __Validate__, la configurazione non riesce.|
 | Ensure| Determina se verificare l'esistenza del contenuto dell'archivio in __Destination__. Impostare questa proprietà su __Present__ per specificare che il contenuto esiste. Impostarla su __Absent__ per specificare che il contenuto non esiste. Il valore predefinito è __Present__.|
 | DependsOn | Indica che prima di configurare la risorsa è necessario eseguire la configurazione di un'altra risorsa. Ad esempio, se l'ID del blocco script di configurazione della risorsa che si vuole eseguire per primo è ResourceName e il tipo è __ResourceType__, la sintassi per usare questa proprietà è `DependsOn = "[ResourceType]ResourceName"`.|
 | Validate| Usa la proprietà Checksum per determinare se l'archivio corrisponde alla firma. Se si specifica Checksum senza Validate, la configurazione non riesce. Se si specifica Validate senza Checksum, per impostazione predefinita viene usato un checksum SHA-256.|

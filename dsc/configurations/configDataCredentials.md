@@ -3,11 +3,11 @@ ms.date: 06/12/2017
 keywords: dsc,powershell,configurazione,installazione
 title: Opzioni delle credenziali nei dati di configurazione
 ms.openlocfilehash: 2a326e45bbbad7bd2362b66b88bf61b98df7b02e
-ms.sourcegitcommit: 6ae5b50a4b3ffcd649de1525c3ce6f15d3669082
-ms.translationtype: MTE95
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/18/2019
-ms.locfileid: "55681232"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62080153"
 ---
 # <a name="credentials-options-in-configuration-data"></a>Opzioni delle credenziali nei dati di configurazione
 
@@ -25,7 +25,7 @@ Per eliminare questi messaggi di errore e di avviso, usare le parole chiave dei 
 > [!NOTE]
 > L'archiviazione o la trasmissione di password di testo normale non crittografata in genere non è protetta. È consigliabile proteggere le credenziali tramite le tecniche illustrate più avanti in questo argomento.
 > Il servizio Automation DSC di Azure consente di gestire centralmente le credenziali da compilare nelle configurazioni e archiviare in modo sicuro.
-> Per informazioni, vedere [Compilazione di configurazioni in Azure Automation DSC/Asset credenziali](/azure/automation/automation-dsc-compile#credential-assets)
+> Per informazioni, vedere: [Compilazione di configurazioni DSC/Asset credenziali](/azure/automation/automation-dsc-compile#credential-assets)
 
 ## <a name="handling-credentials-in-dsc"></a>Gestione delle credenziali in DSC
 
@@ -137,7 +137,7 @@ Questo esempio include due problemi:
 1. Un errore indica che le password di testo semplice non sono consigliate
 2. Un avviso sconsiglia l'uso di una credenziale di dominio
 
-Il flag **PSDSCAllowPlainTextPassword** e **PSDSCAllowDomainUser** annullare l'errore e avviso per informare l'utente dei rischi coinvolti.
+I flag **PSDSCAllowPlainTextPassword** e **PSDSCAllowDomainUser** eliminano l'errore e l'avviso che informano l'utente dei rischi coinvolti.
 
 ## <a name="psdscallowplaintextpassword"></a>PSDSCAllowPlainTextPassword
 
@@ -181,7 +181,7 @@ DomainCredentialExample -ConfigurationData $cd
 
 ### <a name="localhostmof"></a>localhost.mof
 
-Il **PSDSCAllowPlainTextPassword** flag richiede che l'utente accettare il rischio che l'archiviazione delle password in testo normale in un file MOF. Nel file MOF generato, anche se un **PSCredential** oggetto contenente un **SecureString** è stata usata, le password vengono comunque visualizzati come testo normale. Questa è l'unica volta che vengono esposte le credenziali. Ottenere l'accesso a chiunque di accedere all'account amministratore in questo modo di file MOF.
+Il flag **PSDSCAllowPlainTextPassword** richiede che l'utente accetti il rischio correlato all'archiviazione delle password in testo normale in un file MOF. Nel file MOF generato, anche se è stato usato un oggetto **PSCredential** contenente una **SecureString**, le password vengono comunque visualizzate come testo normale. Questa è l'unica volta in cui vengono esposte le credenziali. Chiunque riesce ad accedere a questo file MOF ottiene l'accesso anche all'account amministratore.
 
 ```
 /*
@@ -216,16 +216,16 @@ ModuleVersion = "1.0";
 };
 ```
 
-### <a name="credentials-in-transit-and-at-rest"></a>Credenziali in transito e inattivi
+### <a name="credentials-in-transit-and-at-rest"></a>Credenziali in transito e inattive
 
-- Il **PSDscAllowPlainTextPassword** flag consente la compilazione del file MOF che contengono le password in testo non crittografato.
-  Adottare le precauzioni quando si archiviano i file MOF che contiene le password come testo non crittografato.
-- Quando il file MOF viene recapitato a un nodo nello **Push** modalità, WinRM consente di crittografare la comunicazione per proteggere la password come testo non crittografato, a meno che non si ignora l'impostazione predefinita con la **AllowUnencrypted** parametro.
-  - Il file MOF con un certificato di crittografia protegge il file MOF inattivi prima che sia stato applicato a un nodo.
-- Nelle **Pull** modalità, è possibile configurare il server di pull Windows per usare HTTPS per crittografare il traffico tramite il protocollo specificato in Internet Information Server. Per altre informazioni, vedere gli articoli [configurazione di un client di pull DSC](../pull-server/pullclient.md) e [i file MOF di sicurezza con certificati](../pull-server/secureMOF.md).
-  - Nel [configurazione dello stato di automazione di Azure](https://docs.microsoft.com/en-us/azure/automation/automation-dsc-overview) service, Pull il traffico viene sempre crittografato.
-- Nel nodo, i file MOF vengono crittografati a riposo che iniziano in PowerShell 5.0.
-  - In PowerShell 4.0 MOF file non sono crittografati quando sono inattivi, a meno che non sono crittografate con un certificato quando il push o pull per il nodo.
+- Il flag **PSDscAllowPlainTextPassword** consente la compilazione di file MOF che contengono password come testo non crittografato.
+  Adottare le necessarie precauzioni quando si archiviano file MOF che contengono password come testo non crittografato.
+- Quando il file MOF viene recapitato a un nodo in modalità **push**, WinRM crittografa la comunicazione per proteggere la password come testo non crittografato, a meno che non si ignori l'impostazione predefinita con il parametro **AllowUnencrypted**.
+  - La crittografia del file MOF con un certificato protegge il file MOF nello stato inattivo prima dell'applicazione a un nodo.
+- Nella modalità **pull** è possibile configurare il server di pull Windows per usare HTTPS per crittografare il traffico tramite il protocollo specificato in Internet Information Server. Per altre informazioni, vedere gli articoli [Configurazione di un client di pull DSC](../pull-server/pullclient.md) e [Protezione del file MOF con certificati](../pull-server/secureMOF.md).
+  - Nel servizio di [configurazione dello stato di Automazione di Azure](https://docs.microsoft.com/en-us/azure/automation/automation-dsc-overview), il traffico pull viene sempre crittografato.
+- Nel nodo i file MOF vengono crittografati nello stato inattivo a partire da PowerShell 5.0.
+  - In PowerShell 4.0 i file MOF non vengono decrittografati nello stato inattivo a meno che non vengano crittografati con un certificato quando ne viene eseguito il push o pull sul nodo.
 
 **Microsoft consiglia di evitare password di testo semplice, che possono provocare rischi significativi per la sicurezza.**
 

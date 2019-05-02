@@ -4,20 +4,20 @@ keywords: powershell,cmdlet
 title: Decodificare un comando PowerShell da un processo in esecuzione
 author: randomnote1
 ms.openlocfilehash: a0602070a8c5b60ce0bb09e227690f48d970a868
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
-ms.translationtype: MTE95
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55680762"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62086239"
 ---
 # <a name="decode-a-powershell-command-from-a-running-process"></a>Decodificare un comando PowerShell da un processo in esecuzione
 
-In alcuni casi, potrebbe essere un processo in esecuzione che sta utilizzando una grande quantità di risorse di PowerShell.
-Questo processo potrebbe essere in esecuzione nel contesto di un [utilità di pianificazione][] processo o un' [SQL Server Agent][] processo. In cui sono presenti più processi di PowerShell in esecuzione, può essere difficile sapere quale processo rappresenta il problema. Questo articolo illustra come decodificare un blocco di script che è attualmente in esecuzione un processo di PowerShell.
+In alcuni casi, potrebbe essere in esecuzione un processo di PowerShell che usa una grande quantità di risorse.
+Questo processo potrebbe essere in esecuzione nel contesto di un processo dell'[Utilità di pianificazione][] o di un processo di [SQL Server Agent][]. In presenza di più processi di PowerShell in esecuzione, può essere difficile sapere quale processo rappresenta il problema. Questo articolo illustra come decodificare un blocco di script eseguito da un processo di PowerShell.
 
 ## <a name="create-a-long-running-process"></a>Creare un processo a esecuzione prolungata
 
-Per illustrare questo scenario, aprire una nuova finestra di PowerShell ed eseguire il codice seguente. Esegue un comando di PowerShell che restituisce un numero al minuto per 10 minuti.
+Per una dimostrazione di questo scenario, aprire una nuova finestra di PowerShell ed eseguire il codice seguente. Viene eseguito un comando di PowerShell che restituisce un numero al minuto per 10 minuti.
 
 ```powershell
 powershell.exe -Command {
@@ -33,9 +33,9 @@ powershell.exe -Command {
 
 ## <a name="view-the-process"></a>Visualizzare il processo
 
-Il corpo del comando che PowerShell è in esecuzione viene archiviato nel **CommandLine** proprietà delle [Win32_Process][] classe. Se il comando è un' [codificato comando][], il **CommandLine** proprietà contiene la stringa "EncodedCommand". Utilizzando queste informazioni, il comando codificato può essere deoffuscato tramite la procedura seguente.
+Il corpo del comando eseguito da PowerShell viene archiviato nella proprietà **CommandLine** della classe [Win32_Process][]. Se il comando è un [comando codificato][], la proprietà **CommandLine** contiene la stringa "EncodedCommand". È possibile usare queste informazioni per deoffuscare il comando codificato tramite la procedura seguente.
 
-Avviare PowerShell come amministratore. È fondamentale che PowerShell sia in esecuzione come amministratore, in caso contrario, viene restituito alcun risultato quando si eseguono i processi in esecuzione di query.
+Avviare PowerShell come amministratore. È fondamentale che PowerShell sia in esecuzione come amministratore. In caso contrario non viene restituito alcun risultato per le query sui processi in esecuzione.
 
 Eseguire il comando seguente per ottenere tutti i processi di PowerShell con un comando codificato:
 
@@ -58,7 +58,7 @@ $commandDetails = $powerShellProcesses | Select-Object -Property ProcessId,
 }
 ```
 
-Ora il comando codificato può essere decodificato. Il frammento di codice seguente scorre l'oggetto di dettagli del comando, decodifica il comando con codificato e aggiunge il comando decodificato all'oggetto per un'analisi più approfondita.
+Ora il comando codificato può essere decodificato. Il frammento di codice seguente scorre l'oggetto dei dettagli del comando, decodifica il comando codificato e aggiunge il comando decodificato all'oggetto per un'analisi più approfondita.
 
 ```powershell
 $commandDetails | ForEach-Object -Process {
@@ -79,7 +79,7 @@ $commandDetails | ForEach-Object -Process {
 $commandDetails[0]
 ```
 
-A questo punto è possibile esaminare il comando decodificato selezionando la proprietà command decodificato.
+A questo punto è possibile esaminare il comando decodificato selezionando la proprietà del comando decodificato.
 
 ```output
 ProcessId      : 8752
@@ -107,4 +107,4 @@ DecodedCommand :
 [Utilità di pianificazione]: /windows/desktop/TaskSchd/task-scheduler-start-page
 [SQL Server Agent]: /sql/ssms/agent/sql-server-agent
 [Win32_Process]: /windows/desktop/CIMWin32Prov/win32-process
-[codificato comando]: /powershell/scripting/core-powershell/console/powershell.exe-command-line-help#-encodedcommand-
+[Comando codificato]: /powershell/scripting/core-powershell/console/powershell.exe-command-line-help#-encodedcommand-

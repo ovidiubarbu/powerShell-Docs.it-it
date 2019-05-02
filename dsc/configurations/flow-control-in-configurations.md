@@ -3,22 +3,22 @@ ms.date: 12/12/2018
 keywords: dsc,powershell,configurazione,installazione
 title: Istruzioni condizionali e cicli nelle configurazioni
 ms.openlocfilehash: 0073d94d28afbb45bb635442129a6cddde4c805a
-ms.sourcegitcommit: 00ff76d7d9414fe585c04740b739b9cf14d711e1
-ms.translationtype: MTE95
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53401249"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62080136"
 ---
 # <a name="conditional-statements-and-loops-in-configurations"></a>Istruzioni condizionali e cicli nelle configurazioni
 
-È possibile rendere il [configurazioni](configurations.md) più dinamico mediante parole chiave di controllo del flusso di PowerShell. Questo articolo illustrerà come è possibile usare le istruzioni condizionali e cicli per rendere più dinamico delle configurazioni. Combinazione condizionali e cicli con [parametri](add-parameters-to-a-configuration.md) e [i dati di configurazione](configData.md) consente maggiore flessibilità e controllo durante la compilazione delle configurazioni.
+È possibile rendere le [configurazioni](configurations.md) più dinamiche mediante le parole chiave di controllo del flusso di PowerShell. Questo articolo illustrerà come è possibile usare le istruzioni condizionali e i cicli per rendere più dinamiche le configurazioni. La combinazione di istruzioni condizionali e cicli con [parametri](add-parameters-to-a-configuration.md) e [dati di configurazione](configData.md) consente di ottenere maggiori flessibilità e controllo durante la compilazione delle configurazioni.
 
-Proprio come una funzione o un blocco di Script, è possibile usare qualsiasi linguaggio di PowerShell all'interno di una configurazione. Le istruzioni usate verranno valutate solo quando si chiama la configurazione di compilare un file "con estensione MOF". Gli esempi seguenti mostrano gli scenari semplici per illustrare i concetti. Istruzioni condizionali sono i cicli vengono usati più spesso con i parametri e i dati di configurazione.
+Proprio come una funzione o un blocco di script, è possibile usare qualsiasi elemento del linguaggio di PowerShell all'interno di una configurazione. Le istruzioni usate verranno valutate solo quando si chiama la configurazione per compilare un file "MOF". Gli esempi seguenti mostrano alcuni scenari semplici per una dimostrazione dei concetti. Le istruzioni condizionali e i cicli vengono usati più spesso con i parametri e i dati di configurazione.
 
-In questo semplice esempio, il **servizio** blocco di risorse recupera lo stato corrente di un servizio in fase di compilazione per generare un file "con estensione MOF" che mantiene lo stato corrente.
+In questo semplice esempio, il blocco di risorse **Service** recupera lo stato corrente di un servizio in fase di compilazione per generare un file "MOF" che mantiene lo stato corrente.
 
 > [!NOTE]
-> Utilizzo di blocchi di risorsa dinamici emergeranno l'efficacia di Intellisense. Il parser di PowerShell non è possibile determinare se i valori specificati sono accettabili fino a quando non viene compilata la configurazione.
+> L'uso di blocchi di risorse dinamici comprometterà l'efficacia di Intellisense. Il parser di PowerShell non è in grado di determinare se i valori specificati sono accettabili fino a quando non viene compilata la configurazione.
 
 ```powershell
 Configuration ServiceState
@@ -37,7 +37,7 @@ Configuration ServiceState
 }
 ```
 
-Inoltre, è possibile creare un **Service** bloccare risorse per ogni servizio nel computer corrente, usando un `foreach` ciclo.
+Si potrebbe anche creare un blocco di risorse **Service** per ogni servizio nel computer corrente usando un ciclo `foreach`.
 
 ```powershell
 Configuration ServiceState
@@ -59,7 +59,7 @@ Configuration ServiceState
 }
 ```
 
-È possibile anche creare configurazioni per i computer che sono online, usando una semplice `if` istruzione.
+È anche possibile creare configurazioni solo per i computer online, usando una semplice istruzione `if`.
 
 ```powershell
 Configuration ServiceState
@@ -85,7 +85,7 @@ Configuration ServiceState
 ```
 
 > [!NOTE]
-> La risorsa dinamica consente di bloccare nel riferimento negli esempi precedenti il computer corrente. In questa istanza, che sarebbe il computer si modifica la configurazione su, non il nodo di destinazione.
+> I blocchi di risorse dinamici negli esempi precedenti fanno riferimento al computer corrente. In questa istanza, si tratterebbe del computer in cui viene creata la configurazione e non del nodo di destinazione.
 
 <!---
 Mention Get-DSCConfigurationFromSystem
@@ -93,19 +93,19 @@ Mention Get-DSCConfigurationFromSystem
 
 ## <a name="summary"></a>Riepilogo
 
-In breve, è possibile usare qualsiasi linguaggio di PowerShell all'interno di una configurazione.
+In breve, è possibile usare qualsiasi elemento del linguaggio di PowerShell all'interno di una configurazione,
 
-Sono incluse operazioni come:
+inclusi elementi come i seguenti:
 
 - Oggetti personalizzati
 - Tabelle hash
 - Modifica di stringhe
 - Comunicazione remota
-- CIM e WMI
+- WMI e CIM
 - Oggetti di Active Directory
 - altro...
 
-Qualsiasi codice di PowerShell definito in una configurazione verrà valutata una fase di compilazione, ma è anche possibile inserire codice nello script che contiene la configurazione. Verrà eseguito qualsiasi codice all'esterno del blocco di configurazione quando si importa la configurazione.
+Qualsiasi codice di PowerShell definito in una configurazione verrà valutato in fase di compilazione, ma è anche possibile inserire codice nello script che contiene la configurazione. Qualsiasi codice all'esterno del blocco di configurazione verrà eseguito quando si importa la configurazione.
 
 ## <a name="see-also"></a>Vedere anche
 

@@ -3,11 +3,11 @@ title: Uso di Visual Studio Code per sviluppare PowerShell
 description: Uso di Visual Studio Code per sviluppare PowerShell
 ms.date: 08/06/2018
 ms.openlocfilehash: 1e9b9d811a39656327af2810bd6dc8aaf3fde3a4
-ms.sourcegitcommit: ce46e5098786e19d521b4bf948ff62d2b90bc53e
-ms.translationtype: MTE95
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57251388"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62086735"
 ---
 # <a name="using-visual-studio-code-for-powershell-development"></a>Uso di Visual Studio Code per sviluppare PowerShell
 
@@ -66,21 +66,21 @@ Per uscire da Visual Studio Code, **File->Esci**.
 
 ### <a name="installing-the-powershell-extension-on-restricted-systems"></a>Installare l'estensione di PowerShell in sistemi con restrizioni
 
-Alcuni sistemi vengono configurati in modo che richiede tutte le firme di codice da controllare e quindi richiede servizi Editor PowerShell manualmente da approvare per l'esecuzione nel sistema.
-Un aggiornamento di criteri di gruppo che modifica i criteri di esecuzione è una causa probabile se è stata installata l'estensione di PowerShell, ma raggiungono un errore, ad esempio:
+Alcuni sistemi vengono configurati in modo da richiedere il controllo di tutte le firme di codice e pertanto è richiesta l'approvazione manuale dei servizi dell'editor di PowerShell per poterli eseguire nel sistema.
+Un aggiornamento di Criteri di gruppo che modifica i criteri di esecuzione è una causa probabile se è stata installata l'estensione di PowerShell, ma viene generato un errore simile al seguente:
 
 ```
 Language server startup failed.
 ```
 
-Per approvare manualmente i servizi Editor PowerShell e quindi l'estensione di PowerShell per Visual Studio code aprire un messaggio di richiesta e l'esecuzione di PowerShell:
+Per approvare manualmente i servizi dell'editor di PowerShell e quindi l'estensione di PowerShell per Visual Studio Code, aprire un prompt di PowerShell ed eseguire:
 
 ```powershell
 Import-Module $HOME\.vscode\extensions\ms-vscode.powershell*\modules\PowerShellEditorServices\PowerShellEditorServices.psd1
 ```
 
-Viene richiesto con "Si vuole eseguire il software server di pubblicazione non attendibili?"
-Tipo `R` per eseguire il file. Quindi, aprire Visual Studio Code e verificare che l'estensione di PowerShell funzioni correttamente. Se continuano a verificarsi problemi di Guida introduttiva, segnalarlo sul [GitHub](https://github.com/PowerShell/vscode-powershell/issues).
+Viene visualizzata la richiesta "Eseguire software di questo autore non attendibile?"
+Digitare `R` per eseguire il file. Aprire quindi Visual Studio Code e verificare che l'estensione di PowerShell funzioni correttamente. Se i problemi persistono, segnalarlo su [GitHub](https://github.com/PowerShell/vscode-powershell/issues).
 
 #### <a name="using-a-specific-installed-version-of-powershell"></a>Uso di una versione specifica di PowerShell
 
@@ -122,7 +122,7 @@ Per Visual Studio Code, è consigliabile usare le impostazioni di configurazione
 }
 ```
 
-Se non si vuole queste impostazioni interessano tutti i tipi di file, Visual Studio code consente inoltre alle configurazioni per ogni lingua. Creare un'impostazione specifica del linguaggio inserendo le impostazioni in un `[<language-name>]` campo. Ad esempio:
+Se si vuole evitare che queste impostazioni influiscano su tutti i tipi di file, VS Code consente anche di definire configurazioni diverse in base al linguaggio. Per creare un'impostazione specifica del linguaggio, inserire le impostazioni in un campo `[<language-name>]`. Ad esempio:
 
 ```json
 "[powershell]": {
@@ -131,13 +131,13 @@ Se non si vuole queste impostazioni interessano tutti i tipi di file, Visual Stu
 }
 ```
 
-Per altre informazioni sul file codifica in Visual Studio Code, vedere [informazioni sulla codifica file](understanding-file-encoding.md).
+Per altre informazioni sulla codifica dei file in Visual Studio Code, vedere [Informazioni sulla codifica di file](understanding-file-encoding.md).
 
 ## <a name="debugging-with-visual-studio-code"></a>Debug con Visual Studio Code
 
 ### <a name="no-workspace-debugging"></a>Debug senza area di lavoro
 
-A partire dalla versione 1.9 di Visual Studio Code, è possibile eseguire il debug degli script di PowerShell senza dover aprire la cartella contenente lo script in questione. Aprire il file di script di PowerShell con **File -> Apri File...** , impostare un punto di interruzione su una riga (premere F9) e quindi premere F5 per avviare il debug. Verrà visualizzato il riquadro delle azioni di debug che consente di interrompere il debugger, eseguire le istruzioni, riprendere e arrestare il debug.
+A partire dalla versione 1.9 di Visual Studio Code, è possibile eseguire il debug degli script di PowerShell senza dover aprire la cartella contenente lo script in questione. Aprire il file di script di PowerShell tramite **File->Apri File**, impostare un punto di interruzione su una riga (premere F9) e quindi premere F5 per avviare il debug. Verrà visualizzato il riquadro delle azioni di debug che consente di interrompere il debugger, eseguire le istruzioni, riprendere e arrestare il debug.
 
 ### <a name="workspace-debugging"></a>Debug dell'area di lavoro
 
@@ -194,7 +194,7 @@ Seguire questi passaggi per creare il file di configurazione di debug:
 
   Rappresenta gli scenari di debug comuni.
   Tuttavia quando si apre il file nell'editor, viene visualizzato il pulsante **Aggiungi configurazione...**.
-  Premere questo pulsante per aggiungere altre configurazioni di debug per PowerShell. Una configurazione utile da aggiungere è **PowerShell: avvia Script**.
+  Premere questo pulsante per aggiungere altre configurazioni di debug per PowerShell. Una configurazione utile da aggiungere è **PowerShell: avvia script**.
   Con questa configurazione, è possibile scegliere un file specifico con gli argomenti facoltativi che devono essere avviati ogni volta che si preme F5, a prescindere dal file attivo nell'editor.
 
   Una volta stabilita la configurazione di debug, è possibile selezionare la configurazione da usare durante una sessione di debug selezionandone una dal menu a discesa relativo alla configurazione nella visualizzazione della barra degli strumenti **Debug**.

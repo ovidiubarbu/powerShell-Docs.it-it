@@ -4,11 +4,11 @@ keywords: powershell,cmdlet
 title: Gestione delle voci del Registro di sistema
 ms.assetid: fd254570-27ac-4cc9-81d4-011afd29b7dc
 ms.openlocfilehash: 667d17d0d62745a27ffef5f1912336b72f74c2a9
-ms.sourcegitcommit: 806cf87488b80800b9f50a8af286e8379519a034
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59293079"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62086035"
 ---
 # <a name="working-with-registry-entries"></a>Gestione delle voci del Registro di sistema
 

@@ -3,11 +3,11 @@ ms.date: 12/12/2018
 keywords: dsc,powershell,configurazione,installazione
 title: Risorse DSC
 ms.openlocfilehash: 1f77b5e6630a2e3de6e1d1a05638f94d2df039ae
-ms.sourcegitcommit: b6871f21bd666f9cd71dd336bb3f844cf472b56c
-ms.translationtype: MTE95
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55681012"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62076637"
 ---
 # <a name="dsc-resources"></a>Risorse DSC
 
@@ -17,22 +17,22 @@ Le risorse DSC (Desired State Configuration) forniscono i blocchi predefiniti pe
 
 Una risorsa può modellare un elemento generico come un file o uno specifico come un'impostazione del server IIS.  I gruppi di tali risorse sono combinati in un modulo DSC, che organizza tutti i file necessari in una struttura portatile che include i metadati che permettono di identificare il modo in cui si intende usare le risorse.
 
-Ogni risorsa dispone di un * dello schema che determina la sintassi necessaria per usare la risorsa in un [configurazione](../configurations/configurations.md). Schema di una risorsa può essere definito nel modo seguente:
+Ogni risorsa dispone di uno *schema che determina la sintassi necessaria per usare la risorsa in una [configurazione](../configurations/configurations.md). Lo schema di una risorsa può essere definito nei modi seguenti:
 
-- **'MOF'** file: Definiscono la maggior parte delle risorse loro *schema* in un "MOF' del file, usando [Managed Object Format](/windows/desktop/wmisdk/managed-object-format--mof-).
-- **«\<Nome della risorsa\>. schema.psm1'** file: [Risorse composite](../configurations/compositeConfigs.md) definire loro *schema* in un '<ResourceName>. schema.psm1' file utilizzando un [blocco del parametro](/powershell/module/microsoft.powershell.core/about/about_functions?view=powershell-6#functions-with-parameters).
-- **«\<Nome della risorsa\>psm1 '** file: Classe di definiscono risorse DSC basate su loro *schema* nella definizione della classe. Elementi sintattici sono contrassegnati come proprietà della classe. Per altre informazioni, vedere [about_Classes](/powershell/module/psdesiredstateconfiguration/about/about_classes_and_dsc).
+- File **'Schema.Mof'**: la maggior parte delle risorse definisce lo *schema* in un file 'schema.mof' con [Managed Object Format](/windows/desktop/wmisdk/managed-object-format--mof-).
+- File **'\<Nome risorsa\>.schema.psm1'**: le [risorse composite](../configurations/compositeConfigs.md) definiscono lo *schema* in un file '<ResourceName>.schema.psm1' file con un [blocco di parametri](/powershell/module/microsoft.powershell.core/about/about_functions?view=powershell-6#functions-with-parameters).
+- File **'\<Nome risorsa\>.psm1'**: le risorse DSC basate su classe definiscono lo *schema* nella definizione della classe. Gli elementi della sintassi sono contrassegnati come proprietà della classe. Per altre informazioni, vedere [about_Classes](/powershell/module/psdesiredstateconfiguration/about/about_classes_and_dsc).
 
-Per recuperare la sintassi per una risorsa DSC, usare il [Get-DSCResource](/powershell/module/PSDesiredStateConfiguration/Get-DscResource) cmdlet con il `-Syntax` parametro. Questo utilizzo è simile all'uso [Get-Command](/powershell/module/microsoft.powershell.core/get-command) con il `-Syntax` parametro per ottenere una sintassi del cmdlet. L'output che viene visualizzato verrà visualizzato il modello usato per un blocco di risorsa per la risorsa specificata.
+Per recuperare la sintassi per una risorsa DSC, usare il cmdlet [Get-DSCResource](/powershell/module/PSDesiredStateConfiguration/Get-DscResource) con il parametro `-Syntax`. Questo utilizzo è simile all'uso di [Get-Command](/powershell/module/microsoft.powershell.core/get-command) con il parametro `-Syntax` per ottenere la sintassi del cmdlet. L'output visualizzato indicherà il modello usato per un blocco di risorse per la risorsa specificata.
 
 ```powershell
 Get-DscResource -Syntax Service
 ```
 
-L'output visualizzato dovrebbe essere simile all'output seguente, sebbene la sintassi di questa risorsa potrebbe cambiare in futuro. Ad esempio di sintassi del cmdlet, il *chiavi* visto racchiusa tra parentesi quadre, sono facoltativi. I tipi di specificano il tipo di dati prevede che ogni chiave.
+L'output visualizzato dovrebbe essere simile all'output seguente, anche se la sintassi di questa risorsa potrebbe cambiare in futuro. Come nella sintassi dei cmdlet, le *chiavi* racchiuse tra parentesi quadre sono facoltative. I tipi specificano il tipo di dati previsto da ogni chiave.
 
 > [!NOTE]
-> Il **assicurarsi che** chiave è facoltativa poiché l'impostazione predefinita è "Present".
+> La chiave **Ensure** è facoltativa perché l'impostazione predefinita è "Present".
 
 ```output
 Service [String] #ResourceName
@@ -52,10 +52,10 @@ Service [String] #ResourceName
 }
 ```
 
-All'interno di una configurazione, un **Service** blocco di risorse simile alla seguente al **assicurarsi che** che esegue il servizio Spooler.
+All'interno di una configurazione, un blocco di risorse **Service** potrebbe avere questo aspetto per assicurare (**Ensure**) che il servizio spooler sia in esecuzione.
 
 > [!NOTE]
-> Prima di usare una risorsa in una configurazione, è necessario importarlo utilizzando [Import-DSCResource](../configurations/import-dscresource.md).
+> Prima di usare una risorsa in una configurazione, è necessario importarla tramite [Import-DSCResource](../configurations/import-dscresource.md).
 
 ```powershell
 Configuration TestConfig
@@ -74,7 +74,7 @@ Configuration TestConfig
 }
 ```
 
-Le configurazioni possono contenere più istanze dello stesso tipo di risorsa. Ogni istanza deve essere denominato in modo univoco. Nell'esempio seguente, una seconda **servizio** blocco di risorse viene aggiunto alla configurazione del servizio "DHCP".
+Le configurazioni possono contenere più istanze dello stesso tipo di risorsa. Ogni istanza deve essere denominata in modo univoco. Nell'esempio seguente viene aggiunto un secondo blocco di risorse **Service** per configurare il servizio "DHCP".
 
 ```powershell
 Configuration TestConfig
@@ -101,13 +101,13 @@ Configuration TestConfig
 ```
 
 > [!NOTE]
-> A partire da PowerShell 5.0, intellisense è stato aggiunto per DSC. Questa nuova funzionalità consente di usare \<della scheda\> e \<Ctrl + barra spaziatrice\> a completamento automatico i nomi delle chiavi.
+> A partire da PowerShell 5.0, è stato aggiunto IntelliSense per DSC. Questa nuova funzionalità consente di usare \<TAB\> e \<CTRL+BARRA SPAZIATRICE\> per il completamento automatico dei nomi delle chiavi.
 
-![Completamento tramite tasto Tab di risorse](../media/resource-tabcompletion.png)
+![Completamento tramite TAB delle risorse](../media/resource-tabcompletion.png)
 
 ## <a name="built-in-resources"></a>Risorse predefinite
 
-Oltre alle risorse della community, esistono risorse predefinite per Windows, le risorse per Linux e risorse per la dipendenza tra nodi. È possibile usare i passaggi precedenti per determinare la sintassi di queste risorse e come usarli. Le pagine che servono queste risorse sono state archiviate nel **riferimento**.
+Oltre alle risorse della community, esistono risorse predefinite per Windows, risorse per Linux e risorse per la dipendenza tra nodi. È possibile usare i passaggi precedenti per determinare la sintassi di queste risorse e come usarle. Le pagine relative a queste risorse sono archiviate in **Riferimento**.
 
 Risorse predefinite di Windows
 
@@ -128,10 +128,10 @@ Risorse predefinite di Windows
 * [Risorsa WindowsFeatureSet](../reference/resources/windows/windowsFeatureSetResource.md)
 * [Risorsa WindowsOptionalFeature](../reference/resources/windows/windowsOptionalFeatureResource.md)
 * [Risorsa WindowsOptionalFeatureSet](../reference/resources/windows/windowsOptionalFeatureSetResource.md)
-* [WindowsPackageCabResource Resource](../reference/resources/windows/windowsPackageCabResource.md)
+* [Risorsa WindowsPackageCabResource](../reference/resources/windows/windowsPackageCabResource.md)
 * [Risorsa WindowsProcess](../reference/resources/windows/windowsProcessResource.md)
 
-[Dipendenze tra nodi](../configurations/crossNodeDependencies.md) risorse
+Risorse [dipendenza tra nodi](../configurations/crossNodeDependencies.md)
 
 * [Risorsa WaitForAll](../reference/resources/windows/waitForAllResource.md)
 * [Risorsa WaitForSome](../reference/resources/windows/waitForSomeResource.md)
@@ -144,13 +144,13 @@ Risorse di gestione pacchetti
 
 Risorse di Linux
 
-* [Risorsa Linux Archive](../reference/resources/linux/lnxArchiveResource.md)
+* [Risorsa Archive Linux](../reference/resources/linux/lnxArchiveResource.md)
 * [Risorsa Environment Linux](../reference/resources/linux/lnxEnvironmentResource.md)
 * [Risorsa FileLine Linux](../reference/resources/linux/lnxFileLineResource.md)
 * [Risorsa File Linux](../reference/resources/linux/lnxFileResource.md)
-* [Risorsa del gruppo Linux](../reference/resources/linux/lnxGroupResource.md)
-* [Risorse pacchetto Linux](../reference/resources/linux/lnxPackageResource.md)
-* [Risorsa di Script di Linux](../reference/resources/linux/lnxScriptResource.md)
-* [Risorsa del servizio di Linux](../reference/resources/linux/lnxServiceResource.md)
+* [Risorsa Group Linux](../reference/resources/linux/lnxGroupResource.md)
+* [Risorsa Package Linux](../reference/resources/linux/lnxPackageResource.md)
+* [Risorsa Script Linux](../reference/resources/linux/lnxScriptResource.md)
+* [Risorsa Service Linux](../reference/resources/linux/lnxServiceResource.md)
 * [Risorsa SshAuthorizedKeys Linux](../reference/resources/linux/lnxSshAuthorizedKeysResource.md)
-* [Risorsa utente Linux](../reference/resources/linux/lnxUserResource.md)
+* [Risorsa User Linux](../reference/resources/linux/lnxUserResource.md)

@@ -2,12 +2,12 @@
 title: Novità di PowerShell Core 6.1
 description: Nuove funzionalità e modifiche rilasciate in PowerShell Core 6.1
 ms.date: 09/13/2018
-ms.openlocfilehash: fe1e892d4a13a7758f5405867fdd7488c059f5cc
-ms.sourcegitcommit: 806cf87488b80800b9f50a8af286e8379519a034
+ms.openlocfilehash: 3d836a24b494df9c7f6ebe994386e2a0297521fa
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59293317"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62086139"
 ---
 # <a name="whats-new-in-powershell-core-61"></a>Novità di PowerShell Core 6.1
 
@@ -67,7 +67,7 @@ Measure-Command { 1..100000 | % {Get-Random -Minimum 1 -Maximum 10000} | Sort-Ob
 | Tempo (sec)   | 12,170                 | 8,493               | 7,08                |
 | Accelerazione (%) | N/D                    | 30,2%               | 16,6%               |
 
-`Import-Csv` è stato inoltre accelerato notevolmente dopo una regressione da Windows PowerShell.
+`Import-Csv` è stato accelerato notevolmente anche dopo una regressione da Windows PowerShell.
 L'esempio seguente usa un CSV di prova con 26.616 righe e sei colonne:
 
 ```powershell
@@ -179,8 +179,9 @@ Per altre informazioni sul funzionamento di questi cmdlet, consultare [questo do
 
 ## <a name="experimental-feature-flags"></a>Flag di funzionalità sperimentali
 
-I flag delle funzionalità sperimentali consentono agli utenti di attivare le funzionalità che non sono state finalizzate.
-Le funzionalità sperimentali non sono supportate e possono contenere bug.
+È stato abilitato il supporto per le [funzionalità sperimentali][]. Ciò consente agli sviluppatori di PowerShell di offrire nuove funzionalità e ottenere commenti e suggerimenti prima di completare la progettazione. In questo modo si evita l'introduzione di modifiche che causano un'interruzione con l'evolversi della progettazione.
+
+Usare `Get-ExperimentalFeature` per ottenere un elenco delle funzionalità sperimentali disponibili. È possibile abilitare o disabilitare queste funzionalità con `Enable-ExperimentalFeature` e `Disable-ExperimentalFeature`.
 
 Altre informazioni su questa funzionalità sono disponibili in [PowerShell RFC0029](https://github.com/PowerShell/PowerShell-RFC/blob/master/5-Final/RFC0029-Support-Experimental-Features.md).
 
@@ -523,3 +524,6 @@ Come parte del miglioramento delle prestazioni, `Group-Object` ora restituisce u
 Anche se è consigliabile non fare affidamento sull'ordine, questa modifica potrebbe causare problemi se si volesse il primo gruppo. È stato deciso che valeva la pena introdurre questo miglioramento delle prestazioni perché l'impatto dell'eventuale dipendenza dal comportamento precedente è basso.
 
 Per altre informazioni su questa modifica, vedere [Problema n. 7409](https://github.com/PowerShell/PowerShell/issues/7409).
+
+<!-- URL references -->
+[Funzionalità sperimentali]: /powershell/module/Microsoft.PowerShell.Core/About/about_Experimental_Features

@@ -3,11 +3,11 @@ ms.date: 06/12/2017
 keywords: dsc,powershell,configurazione,installazione
 title: Risorsa nxFile DSC per Linux
 ms.openlocfilehash: 80969ba2ea6247fcd616a301d951403a840c851d
-ms.sourcegitcommit: e04292a9c10de9a8391d529b7f7aa3753b362dbe
-ms.translationtype: MTE95
+ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54047890"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62078028"
 ---
 # <a name="dsc-for-linux-nxfile-resource"></a>Risorsa nxFile DSC per Linux
 
@@ -45,7 +45,7 @@ nxFile <string> #ResourceName
 | Tipo| Specifica se la risorsa configurata è una directory o un file. Impostare questa proprietà su "directory" per indicare che la risorsa è una directory. Impostarla su "file" per indicare che la risorsa è un file. Il valore predefinito è "file".|
 | Contents| Specifica il contenuto di un file, ad esempio una determinata stringa.|
 | Checksum| Definisce il tipo da usare per determinare se due file sono uguali. Se la proprietà **Checksum** non è specificata, per il confronto viene usato solo il nome del file o della directory. I valori sono: "ctime", "mtime" e "md5".|
-| Recurse| Indica se le sottodirectory sono incluse. Impostare questa proprietà su **$true** per indicare che le sottodirectory devono essere incluse. Il valore predefinito è **$false**. **Nota:** Questa proprietà è valida solo quando la **tipo** è impostata su directory.|
+| Recurse| Indica se le sottodirectory sono incluse. Impostare questa proprietà su **$true** per indicare che le sottodirectory devono essere incluse. Il valore predefinito è **$false**. **Nota:** questa proprietà è valida solo quando la proprietà **Type** è impostata su directory.|
 | Force| Determinate operazioni sui file, ad esempio quando si sovrascrive un file o si elimina una directory non vuota, generano un errore. Usando la proprietà **Force**, tali errori vengono ignorati. Il valore predefinito è **$false**.|
 | Links| Specifica il comportamento desiderato per i collegamenti simbolici. Impostare questa proprietà su "follow" per seguire i collegamenti simbolici e agire sulla destinazione dei collegamenti (ad esempio, copiare il file invece del collegamento). Impostare questa proprietà su "manage" per agire sul collegamento (ad esempio, copiare il collegamento stesso). Impostare questa proprietà su "ignore" per ignorare i collegamenti simbolici.|
 | Group| Nome del **gruppo** proprietario del file o della directory.|
@@ -98,7 +98,7 @@ nxFile resolvConf
 ```
 
 
-Passaggio 3: Usare una funzione di PowerShell per sostituire le interruzioni di riga con caratteri di interruzione di riga Linux Windows.
+Passaggio 3: usare una funzione di PowerShell per sostituire le interruzioni di riga di Windows con caratteri di interruzione di riga di Linux.
 
 ```
 Function LinuxString($inputStr){
