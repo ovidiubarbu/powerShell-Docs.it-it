@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: e082c2e3-12ce-4032-9caf-bf6b2e0dcf81
 caps.latest.revision: 23
 ms.openlocfilehash: 93a8c11099a9883127bca87422e1acaebfd2c093
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
-ms.translationtype: HT
+ms.sourcegitcommit: 00cf9a99972ce40db7c25b9a3fc6152dec6bddb6
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62082297"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64670286"
 ---
 # <a name="how-to-write-a-powershell-module-manifest"></a>Come scrivere un manifesto del modulo di PowerShell
 
@@ -71,7 +71,7 @@ Nella tabella seguente vengono descritti gli elementi che è possibile avere in 
 |ModuleVersion<br /><br /> Tipo: string|1.0|Numero di versione di questo modulo. La stringa deve essere in grado di convertire in [Version]. Vale a dire, ' &. &. #. #. #'. `Import-Module` verrà caricato il primo modulo consente di trovare nel **$psModulePath** che corrisponde al nome e dispone di almeno così elevati come un ModuleVersion, come il `-MinimumVersion` parametro. Per importare una versione specifica, usare il`-RequiredVersion` parametro, invece.<br /><br /> Esempio: `ModuleVersion = '1.0'`|
 |GUID<br /><br /> Tipo: string|GUID generato automaticamente|ID usato per identificare in modo univoco questo modulo. Si noti che non è attualmente possibile importare un modulo da GUID.<br /><br /> Esempio: `GUID = 'cfc45206-1e49-459d-a8ad-5b571ef94857'`|
 |Autore<br /><br /> Tipo: string|Nessuno|Autore di questo modulo.<br /><br /> Esempio: `Author = 'AuthorNameHere'`|
-|CompanyName<br /><br /> Tipo: string|Unknown|Società o fornitore di questo modulo.<br /><br /> Esempio: `CompanyName = 'Fabrikam'`|
+|CompanyName*<br /><br /> Tipo: string|Unknown|Società o fornitore di questo modulo.<br /><br /> Esempio: `CompanyName = 'Fabrikam'`|
 |Copyright<br /><br /> Tipo: string|(c) [currentYear] [creare]. Tutti i diritti sono riservati.|Dichiarazione di copyright per il modulo.<br /><br /> Esempio: `Copyright = '2016 AuthorName. All rights reserved.'`|
 |Description<br /><br /> Tipo: string|' '|Descrizione delle funzionalità fornite da questo modulo.<br /><br /> Esempio: `Description = 'This is a description of a module.'`|
 |PowerShellVersion<br /><br /> Tipo: string|' '|Versione minima del motore di Windows PowerShell richiesto da questo modulo. Valori validi correnti sono 1.0, 2.0, 3.0, 4.0 e 5.0.<br /><br /> Esempio: `PowerShellVersion = '5.0'`|

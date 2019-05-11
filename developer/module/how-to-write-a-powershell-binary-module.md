@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: eb4e72e6-24c4-42b6-b7b9-a62585c17f26
 caps.latest.revision: 15
-ms.openlocfilehash: 9ddb3bc172c66314603d2be4df5192a76c92e05d
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: ed614de125f78cbcf8411cc334baf3c95933dd47
+ms.sourcegitcommit: 58fb23c854f5a8b40ad1f952d3323aeeccac7a24
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62082227"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65229327"
 ---
 # <a name="how-to-write-a-powershell-binary-module"></a>Come scrivere un modulo binario di PowerShell
 
@@ -29,7 +29,10 @@ La procedura seguente viene descritto come creare e installare un modulo binario
 
 2. Se necessario, creare il resto della soluzione: (altri cmdlet, i file XML e così via) e vengono descritte con un manifesto del modulo.
 
-   Oltre a descrivere gli assembly di cmdlet nella soluzione, è possibile descrivere un manifesto del modulo come si desidera che il modulo esportati e importati, i cmdlet che verranno esposto e quali file aggiuntivi diventeranno il modulo. Come indicato in precedenza, tuttavia, un cmdlet binario, ad esempio un modulo con un impegno aggiuntivo può gestire con PowerShell. Di conseguenza, un manifesto del modulo è utile principalmente per la combinazione di più file in un singolo pacchetto o per il controllo in modo esplicito di pubblicazione per un determinato assembly. Per altre informazioni, vedere [come scrivere un manifesto del modulo PowerShell](http://msdn.microsoft.com/en-us/abe4c24b-e64e-4a61-81d5-18c4fceba0b6).
+   Oltre a descrivere gli assembly di cmdlet nella soluzione, è possibile descrivere un manifesto del modulo come si desidera che il modulo esportati e importati, i cmdlet che verranno esposto e quali file aggiuntivi diventeranno il modulo.
+   Come indicato in precedenza, tuttavia, un cmdlet binario, ad esempio un modulo con un impegno aggiuntivo può gestire con PowerShell.
+   Di conseguenza, un manifesto del modulo è utile principalmente per la combinazione di più file in un singolo pacchetto o per il controllo in modo esplicito di pubblicazione per un determinato assembly.
+   Per altre informazioni, vedere [come scrivere un manifesto del modulo PowerShell](how-to-write-a-powershell-module-manifest.md).
 
    Il codice seguente è un'operazione estremamente semplice C# blocco di codice che contiene tre cmdlet nello stesso file che può essere utilizzato come un modulo.
 
@@ -82,7 +85,9 @@ La procedura seguente viene descritto come creare e installare un modulo binario
 
 Cmdlet e provider presenti negli assembly snap-in può essere caricato come moduli binari. Quando l'assembly snap-in vengono caricati come moduli binari, i cmdlet e provider nello snap-in sono disponibili all'utente, ma la classe di snap-nell'assembly viene ignorata e lo snap-in non è registrato. Di conseguenza, i cmdlet di snap-in di Windows PowerShell non è possibile rilevare lo snap-in anche con i cmdlet e provider disponibili nella sessione.
 
-Inoltre, qualsiasi formattazione o tipi di file che fanno riferimento lo snap-in non è possibile importare come parte di un modulo binario. Per importare i file di formattazione e tipi è necessario creare un manifesto del modulo. Vedere [come scrivere un manifesto del modulo di PowerShell](http://msdn.microsoft.com/en-us/abe4c24b-e64e-4a61-81d5-18c4fceba0b6).
+Inoltre, qualsiasi formattazione o tipi di file che fanno riferimento lo snap-in non è possibile importare come parte di un modulo binario.
+Per importare i file di formattazione e tipi è necessario creare un manifesto del modulo.
+Vedere [come scrivere un manifesto del modulo di PowerShell](how-to-write-a-powershell-module-manifest.md).
 
 ## <a name="see-also"></a>Vedere anche
 
