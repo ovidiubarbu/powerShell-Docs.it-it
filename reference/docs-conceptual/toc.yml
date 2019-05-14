@@ -68,7 +68,7 @@
   items:
     - name: Console
       items:
-        - name: Guida alla riga di comando PowerShell.exe
+        - name: Opzioni della riga di comando di PowerShell
           href: components/console/powershell.exe-command-line-help.md
         - name: Uso dell'espansione tramite TAB
           href: components/console/using-tab-expansion.md
