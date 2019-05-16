@@ -2,12 +2,12 @@
 ms.date: 10/30/2018
 keywords: dsc,powershell,configurazione,installazione
 title: Risoluzione dei problemi relativi a DSC
-ms.openlocfilehash: 5ee1b68f4f769426fea3c8e10738c3bb6ef94480
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 2a0d2138f30573b9ae6cf52d8b106a05f1193407
+ms.sourcegitcommit: 58fb23c854f5a8b40ad1f952d3323aeeccac7a24
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62076549"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65229530"
 ---
 # <a name="troubleshooting-dsc"></a>Risoluzione dei problemi relativi a DSC
 
@@ -627,6 +627,21 @@ onlyProperty                            PSComputerName
 ------------                            --------------
 14                                      localhost
 ```
+
+## <a name="dsc-returns-unexpected-response-code-internalservererror-when-registering-with-windows-pull-server"></a>DSC restituisce un errore di tipo "restituito un codice di risposta non previsto InternalServerError" durante la registrazione con il server di pull Windows
+
+Quando si applica una metaconfigurazione a un server per registrarlo con un'istanza del server di pull Windows, potrebbero verificarsi l'errore seguente.
+
+```PowerShell
+Registration of the Dsc Agent with the server https://<serverfqdn>:8080/PSDSCPullServer.svc failed. The underlying error is: The attempt to register Dsc Agent with AgentId <ID> with the server 
+https://<serverfqdn>:8080/PSDSCPullServer.svc/Nodes(AgentId='<ID>') returned unexpected response code InternalServerError. .
+    + CategoryInfo          : InvalidResult: (root/Microsoft/...gurationManager:String) [], CimException
+    + FullyQualifiedErrorId : RegisterDscAgentUnsuccessful,Microsoft.PowerShell.DesiredStateConfiguration.Commands.RegisterDscAgentCommand
+    + PSComputerName        : <computername>
+```
+
+Questo problema può verificarsi quando al certificato usato nel server per crittografare il traffico è assegnato un nome comune (CN) diverso da quello del nome DNS usato dal nodo per risolvere l'URL.
+Aggiornare l'istanza del server di pull Windows in modo che usi un certificato con il nome corretto.
 
 ## <a name="see-also"></a>Vedere anche
 
