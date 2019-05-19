@@ -13,12 +13,12 @@ helpviewer_keywords:
 - confirm impact [PowerShell Programmer's Guide]
 ms.assetid: 59be4120-1700-4d92-a308-ef4a32ccf11a
 caps.latest.revision: 8
-ms.openlocfilehash: bbe9f0213754d1cc47e0fd9a7a898bde916c0636
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: a4fa9ce52855928679a2425f24f2e49a68030c63
+ms.sourcegitcommit: 01b81317029b28dd9b61d167045fd31f1ec7bc06
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62068440"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65854910"
 ---
 # <a name="creating-a-cmdlet-that-modifies-the-system"></a>Creazione di un cmdlet che modifica il sistema
 
@@ -42,28 +42,6 @@ L'atto di "modifica il sistema" si riferisce a tutti i cmdlet che potenzialmente
 ## <a name="the-stopproc-cmdlet"></a>Il StopProc Cmdlet
 
 Questo argomento viene descritto un cmdlet Stop-Process che tenta di arrestare i processi che vengono recuperati usando il cmdlet Get-Proc (descritto nella [la creazione del primo Cmdlet](./creating-a-cmdlet-without-parameters.md)).
-
-Gli argomenti in questa sezione includono quanto segue:
-
-- [Che definisce il Cmdlet](#Defining-the-Cmdlet)
-
-- [Definizione dei parametri per la modifica di sistema](#Defining-Parameters-for-System-Modification)
-
-- [Si esegue l'override di un metodo di elaborazione dell'Input](#Overriding-an-Input-Processing-Method)
-
-- [La chiamata al metodo ShouldProcess](#Calling-the-ShouldProcess-Method)
-
-- [La chiamata al metodo ShouldContinue](#Calling-the-ShouldContinue-Method)
-
-- [Arresto l'elaborazione dell'Input](#Stopping-Input-Processing)
-
-- [Esempio di codice](#Code-Sample)
-
-- [Definizione di tipi di oggetto e formattazione](#Defining-Object-Types-and-Formatting)
-
-- [Creazione di Cmdlet](#Building-the-Cmdlet)
-
-- [Il Cmdlet di test](#Testing-the-Cmdlet)
 
 ## <a name="defining-the-cmdlet"></a>Che definisce il Cmdlet
 

@@ -11,34 +11,18 @@ helpviewer_keywords:
 - parameters [PowerShell Programmer's Guide], pipeline input
 ms.assetid: 09bf70a9-7c76-4ffe-b3f0-a1d5f10a0931
 caps.latest.revision: 8
-ms.openlocfilehash: bd52dc8aee7975d0899083a5c2f595b17690dc33
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: def0ac2ff98575beb29c3c2a7d91a5a5c53e648e
+ms.sourcegitcommit: 01b81317029b28dd9b61d167045fd31f1ec7bc06
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62068760"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65854989"
 ---
 # <a name="adding-parameters-that-process-pipeline-input"></a>Aggiunta di parametri che elaborano gli input della pipeline
 
 Un'origine di input per un cmdlet è un oggetto nella pipeline proveniente da un cmdlet a monte. In questa sezione viene descritto come aggiungere un parametro al cmdlet Get-Proc (descritto nella [la creazione del primo Cmdlet](./creating-a-cmdlet-without-parameters.md)) in modo che il cmdlet può elaborare gli oggetti pipeline.
 
 Questo cmdlet Get-Process Usa un `Name` parametro che accetta l'input da un oggetto della pipeline, recupera le informazioni sul processo dal computer locale in base ai nomi specificati e quindi Visualizza le informazioni sui processi nella riga di comando.
-
-Gli argomenti in questa sezione includono quanto segue:
-
-- [La definizione di classe del Cmdlet](#Defining-the-Cmdlet-Class)
-
-- [La definizione di Input dalla Pipeline](#Defining-Input-from-the-Pipeline)
-
-- [Si esegue l'override di un metodo di elaborazione dell'Input](#Overriding-an-Input-Processing-Method)
-
-- [Esempio di codice](#Code-Sample)
-
-- [Definizione di tipi di oggetto e formattazione](#Defining-Object-Types-and-Formatting)
-
-- [Creazione di Cmdlet](#Building-the-Cmdlet)
-
-- [Il Cmdlet di test](#Testing-the-Cmdlet)
 
 ## <a name="defining-the-cmdlet-class"></a>La definizione di classe del Cmdlet
 

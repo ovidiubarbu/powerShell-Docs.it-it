@@ -11,12 +11,12 @@ helpviewer_keywords:
 - providers [PowerShell Programmer's Guide], content provider
 ms.assetid: 3da88ff9-c4c7-4ace-aa24-0a29c8cfa060
 caps.latest.revision: 6
-ms.openlocfilehash: 35c68a2b0f8c9bd1ed4fc54c41aa427ddd75907c
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: d7e237514b4db4bce3366836d3b6e0cd340bf107
+ms.sourcegitcommit: 01b81317029b28dd9b61d167045fd31f1ec7bc06
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62081921"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65855013"
 ---
 # <a name="creating-a-windows-powershell-content-provider"></a>Creazione di un provider di contenuti di Windows PowerShell
 
@@ -28,36 +28,6 @@ Questo argomento descrive come creare un provider di Windows PowerShell che cons
 > Sono disponibili in file di origine scaricato il  **\<esempi di PowerShell >** directory.
 >
 > Per altre informazioni sulle altre implementazioni del provider di Windows PowerShell, vedere [la progettazione del Provider di Windows PowerShell](./designing-your-windows-powershell-provider.md).
-
-Nell'elenco seguente contiene le sezioni in questo argomento. Se non si ha familiarità con la scrittura di un provider di contenuti di Windows PowerShell, leggere le sezioni riportate nell'ordine in cui appaiono. Tuttavia, se si ha familiarità con la scrittura di un provider di contenuti di Windows PowerShell, passare direttamente alle informazioni necessarie.
-
-- [Definizione della classe di Provider di Windows PowerShell contenuto](#Define-the-Windows-PowerShell-Content-Provider-Class)
-
-- [Definizione funzionalità di Base](#Define-Functionality-of-Base-Class)
-
-- [Implementazione di un lettore di contenuti](#Implementing-a-Content-Reader)
-
-- [Implementazione di un agente di scrittura del contenuto](#Implementing-a-Content-Writer)
-
-- [Il recupero del lettore di contenuti](#Retrieving-the-Content-Reader)
-
-- [Associare i parametri dinamici al `Get-Content` Cmdlet](#Attaching-Dynamic-Parameters-to-the-Get-Content-Cmdlet)
-
-- [Il recupero del Writer del contenuto](#Retrieving-the-Content-Writer)
-
-- [Associazione di parametri dinamici al Add_Content e `Set-Content` cmdlet](#Attaching-Dynamic-Parameters-to-the-Add-Content-and-Set-Content-Cmdlets)
-
-- [La cancellazione del contenuto](#Clearing-Content)
-
-- [Associare i parametri dinamici al `Clear-Content` Cmdlet](#Attaching-Dynamic-Parameters-to-the-Clear-Content-Cmdlet)
-
-- [Esempio di codice](#Code-Sample)
-
-- [Definizione di tipi di oggetto e formattazione](#defining-object-types-and-formatting)
-
-- [Creazione del provider di Windows PowerShell](#Building-the-Windows-PowerShell-Provider)
-
-- [Test di un provider Windows PowerShell](#Testing-the-Windows-PowerShell-Provider)
 
 ## <a name="define-the-windows-powershell-content-provider-class"></a>Definire la classe di Provider di Windows PowerShell contenuto
 

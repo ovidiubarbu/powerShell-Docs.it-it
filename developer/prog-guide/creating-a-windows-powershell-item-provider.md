@@ -11,12 +11,12 @@ helpviewer_keywords:
 - providers [PowerShell Programmer's Guide], item provider
 ms.assetid: a5a304ce-fc99-4a5b-a779-de7d85e031fe
 caps.latest.revision: 6
-ms.openlocfilehash: f2c9e10f0dc392399cf062500b7f28b3d1c07f6e
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 6f91fd53d41dd72c99f8fbc7bc7b863322d88787
+ms.sourcegitcommit: 01b81317029b28dd9b61d167045fd31f1ec7bc06
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62081870"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65855045"
 ---
 # <a name="creating-a-windows-powershell-item-provider"></a>Creazione di un provider di elementi di Windows PowerShell
 
@@ -30,44 +30,6 @@ Questo argomento descrive come creare un provider di Windows PowerShell che cons
 > Per altre informazioni sulle altre implementazioni del provider di Windows PowerShell, vedere [la progettazione del Provider di Windows PowerShell](./designing-your-windows-powershell-provider.md).
 
 Il provider di elementi di Windows PowerShell descritto in questo argomento Ottiene gli elementi di dati da un database di Access. In questo caso, un "elemento" è una tabella del database di Access o una riga in una tabella.
-
-Nell'elenco seguente contiene le sezioni in questo argomento. Se non si ha familiarità con la scrittura di un provider di Windows PowerShell, leggere le sezioni riportate nell'ordine in cui appaiono. Tuttavia, se si ha familiarità con la scrittura di un provider di Windows PowerShell, passare direttamente alle informazioni che è necessario:
-
-- [Definizione della classe di Provider di Windows PowerShell elemento](#Defining-the-Windows-PowerShell-Item-Provider-Class)
-
-- [Definizione funzionalità di Base](#Defining-Base-Functionality)
-
-- [Verifica la validità di percorso](#Checking-for-Path-Validity)
-
-- [Determinare se esiste un elemento](#Determining-if-an-Item-Exists)
-
-- [Associare i parametri dinamici al `Test-Path` Cmdlet](#Attaching-Dynamic-Parameters-to-the-Test-Path-Cmdlet)
-
-- [Il recupero di un elemento](#Retrieving-an-Item)
-
-- [Associare i parametri dinamici al `Get-Item` Cmdlet](#Attaching-Dynamic-Parameters-to-the-Get-Item-Cmdlet)
-
-- [Impostazione di un elemento](#Setting-an-Item)
-
-- [Associare i parametri dinamici al `Set-Item` Cmdlet](#Retrieving-Dynamic-Parameters-for-SetItem)
-
-- [La cancellazione di un elemento](#Clearing-an-Item)
-
-- [Associare i parametri dinamici per il Cmdlet Clear-Item](#Retrieve-Dynamic-Parameters-for-ClearItem)
-
-- [Esecuzione di un'azione predefinita per un elemento](#Performing-a-Default-Action-for-an-Item)
-
-- [Recupero dei parametri dinamici per InvokeDefaultAction](#Retrieve-Dynamic-Parameters-for-InvokeDefaultAction)
-
-- [Implementazione di classi e metodi di supporto](#Implementing-Helper-Methods-and-Classes)
-
-- [Esempio di codice](#Code-Sample)
-
-- [Definizione di tipi di oggetto e formattazione](#Defining-Object-Types-and-Formatting)
-
-- [Creazione del Provider di Windows PowerShell](#Building-the-Windows-PowerShell-provider)
-
-- [Test di un Provider Windows PowerShell](#Testing-the-Windows-PowerShell-provider)
 
 ## <a name="defining-the-windows-powershell-item-provider-class"></a>Definizione della classe di Provider di Windows PowerShell elemento
 
@@ -223,7 +185,7 @@ Questo provider di elementi non implementa questo metodo. Tuttavia, il codice se
 
 ## <a name="implementing-helper-methods-and-classes"></a>Implementazione di classi e metodi di supporto
 
-Questo provider di elementi implementa diversi metodi helper e le classi utilizzate da parte del pubblico eseguire l'override di metodi definiti da Windows PowerShell. Il codice per questi metodi helper e le classi vengono visualizzati nei [esempio di codice](#Code-Sample) sezione.
+Questo provider di elementi implementa diversi metodi helper e le classi utilizzate da parte del pubblico eseguire l'override di metodi definiti da Windows PowerShell. Il codice per questi metodi helper e le classi vengono visualizzati nei [esempio di codice](#code-sample) sezione.
 
 ### <a name="normalizepath-method"></a>Metodo NormalizePath
 

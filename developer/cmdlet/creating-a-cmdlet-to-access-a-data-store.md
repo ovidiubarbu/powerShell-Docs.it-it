@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: ea15e00e-20dc-4209-9e97-9ffd763e5d97
 caps.latest.revision: 8
-ms.openlocfilehash: 28d55874960f9a64b986204411d38319ef1d0da7
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 8d7ba9d122e90b80f6009b6dc8e8e3bb07331e4a
+ms.sourcegitcommit: 01b81317029b28dd9b61d167045fd31f1ec7bc06
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62068352"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65854840"
 ---
 # <a name="creating-a-cmdlet-to-access-a-data-store"></a>Creazione di un cmdlet per accedere a un archivio dati
 
@@ -22,24 +22,6 @@ In questa sezione viene descritto come creare un cmdlet che accede ai dati archi
 Il cmdlet Select-Str descritto di seguito possa individuare e selezionare le stringhe in un file o un oggetto. Gli schemi utilizzati per identificare la stringa possono essere specificati in modo esplicito tramite il `Path` parametri del cmdlet o in modo implicito tramite il `Script` parametro.
 
 Il cmdlet è progettato per utilizzare qualsiasi provider di Windows PowerShell che deriva da [System.Management.Automation.Provider.Icontentcmdletprovider](/dotnet/api/System.Management.Automation.Provider.IContentCmdletProvider). Ad esempio, il cmdlet è possibile specificare il provider FileSystem o il provider Variable fornita da Windows PowerShell. Per altre informazioni aboutWindows provider PowerShell, vedere [provider di progettazione di Windows PowerShell](../prog-guide/designing-your-windows-powershell-provider.md).
-
-Gli argomenti in questa sezione includono quanto segue:
-
-- [La definizione di classe del Cmdlet](#Defining-the-Cmdlet-Class)
-
-- [Definizione dei parametri per l'accesso ai dati](#Declaring-the-Path-Parameter)
-
-- [Si esegue l'override di metodi di elaborazione dell'Input](#Overriding-Input-Processing-Methods)
-
-- [L'accesso al contenuto](#Accessing-Content)
-
-- [Esempio di codice](#Code-Sample)
-
-- [Definizione di tipi di oggetto e formattazione](#Declaring-Search-Support-Parameters)
-
-- [Creazione di Cmdlet](#Building-the-Cmdlet)
-
-- [Il Cmdlet di test](#Testing-the-Cmdlet)
 
 ## <a name="defining-the-cmdlet-class"></a>La definizione di classe del Cmdlet
 
@@ -397,7 +379,7 @@ Questo cmdlet Select-Str di esempio Usa la [System.Management.Automation.Provide
 
 ## <a name="code-sample"></a>Esempio di codice
 
-Il codice seguente illustra l'implementazione di questa versione di questo cmdlet Select-Str. Si noti che questo codice include la classe cmdlet e metodi privati utilizzati dal cmdlet Windows PowerShell snap-in di codice consente di registrare i cmdlet. Per altre informazioni sulla registrazione dei cmdlet, vedere [compilazione di Cmdlet](#Building-the-Cmdlet).
+Il codice seguente illustra l'implementazione di questa versione di questo cmdlet Select-Str. Si noti che questo codice include la classe cmdlet e metodi privati utilizzati dal cmdlet Windows PowerShell snap-in di codice consente di registrare i cmdlet. Per altre informazioni sulla registrazione dei cmdlet, vedere [compilazione di Cmdlet](#building-the-cmdlet).
 
 ```csharp
 //

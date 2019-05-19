@@ -31,12 +31,12 @@ helpviewer_keywords:
 - user notifications
 ms.assetid: 14c13acb-f0b7-4613-bc7d-c361d14da1a2
 caps.latest.revision: 8
-ms.openlocfilehash: 5b3a5f5d5d02c7d5a3c1d622ec1a3740739c694f
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 138c6a43937e72fffaa2a09243e500e9822e6111
+ms.sourcegitcommit: 01b81317029b28dd9b61d167045fd31f1ec7bc06
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62068777"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65854929"
 ---
 # <a name="adding-user-messages-to-your-cmdlet"></a>Aggiunta di messaggi utente al cmdlet
 
@@ -51,32 +51,6 @@ I cmdlet possono scrivere diversi tipi di messaggi che possono essere visualizza
 - Report stato di avanzamento dei messaggi che contengono informazioni sulla quantità di lavoro il cmdlet è stata completata durante l'esecuzione di un'operazione che richiede molto tempo.
 
 Non sono previsti limiti al numero di messaggi che può scrivere cmdlet o il tipo di messaggi che il cmdlet scrive. Ogni messaggio viene scritto eseguendo una chiamata specifica da entro il metodo del cmdlet di elaborazione dell'input.
-
-## <a name="the-stopproc-cmdlet"></a>Il StopProc Cmdlet
-
-Gli argomenti in questa sezione includono quanto segue:
-
-- [Che definisce il Cmdlet](#Defining-the-Cmdlet)
-
-- [Definizione dei parametri per la modifica di sistema](#Defining-Parameters-for-System-Modification)
-
-- [Si esegue l'override di un metodo di elaborazione dell'Input](#Overriding-an-Input-Processing-Method)
-
-- [La scrittura di un messaggio dettagliato](#Writing-a-Verbose-Message)
-
-- [La scrittura di un messaggio di Debug](#Writing-a-Debug-Message)
-
-- [La scrittura di un messaggio di avviso](#Writing-a-Warning-Message)
-
-- [Scrittura di un messaggio di stato di avanzamento](#Writing-a-Progress-Message)
-
-- [Esempio di codice](#Code-Sample)
-
-- [Definire i tipi di oggetto e la formattazione](#Define-Object-Types-and-Formatting)
-
-- [Creazione di Cmdlet](#Building-the-Cmdlet)
-
-- [Il Cmdlet di test](#Testing-the-Cmdlet)
 
 ## <a name="defining-the-cmdlet"></a>Che definisce il Cmdlet
 

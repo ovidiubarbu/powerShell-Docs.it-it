@@ -11,12 +11,12 @@ helpviewer_keywords:
 - providers [PowerShell Programmer's Guide], base provider
 ms.assetid: 11eeea41-15c8-47ad-9016-0f4b72573305
 caps.latest.revision: 7
-ms.openlocfilehash: 19cc3817016d96e1412a5f3506e9d694ba55b48d
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 5ebc22067b20f0e1d35d31d5f33e599f50cb7564
+ms.sourcegitcommit: 01b81317029b28dd9b61d167045fd31f1ec7bc06
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62082074"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65855073"
 ---
 # <a name="creating-a-basic-windows-powershell-provider"></a>Creazione di un provider di Windows PowerShell di base
 
@@ -26,22 +26,6 @@ Come accennato in precedenza, il provider di base descritto in questo caso imple
 
 > [!NOTE]
 > È possibile trovare un esempio di questo provider nel file AccessDBSampleProvider01.cs fornito da Windows PowerShell.
-
-Le sezioni in questo argomento includono quanto segue:
-
-- [Definizione della classe di Provider PowerShell per Windows](#Defining-the-Windows-PowerShell-Provider-Class)
-
-- [La definizione di informazioni sullo stato specifico del Provider](#Defining-Provider-Specific-State-Information)
-
-- [L'inizializzazione del Provider](#Initializing-the-Provider)
-
-- [Parametri dinamici di inizio](#Start-Dynamic-Parameters)
-
-- [Annullamento dell'inizializzazione del Provider](#Uninitializing-the-Provider)
-
-- [Esempio di codice](#Code-Sample)
-
-- [Test di un Provider Windows PowerShell](#Testing-the-Windows-PowerShell-Provider)
 
 ## <a name="defining-the-windows-powershell-provider-class"></a>Definizione della classe di Provider PowerShell per Windows
 
@@ -77,7 +61,7 @@ Questo provider di base non esegue l'override di questo metodo. Tuttavia, il cod
 
 <!-- TODO!!!: review snippet reference  [!CODE [Msh_samplesaccessdbprov01#accessdbprov01ProviderStart](Msh_samplesaccessdbprov01#accessdbprov01ProviderStart)]  -->
 
-Il provider può mantenere lo stato di informazioni specifiche del provider come descritto in [stato dei dati specifici del Provider definizione](#Defining-Provider-Specific-State-Information). In questo caso, deve eseguire l'override dell'implementazione di [System.Management.Automation.Provider.Cmdletprovider.Start*](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Start) metodo per restituire un'istanza della classe derivata.
+Il provider può mantenere lo stato di informazioni specifiche del provider come descritto in [stato dei dati specifici del Provider definizione](#defining-provider-specific-state-information). In questo caso, deve eseguire l'override dell'implementazione di [System.Management.Automation.Provider.Cmdletprovider.Start*](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Start) metodo per restituire un'istanza della classe derivata.
 
 ## <a name="start-dynamic-parameters"></a>Parametri dinamici di inizio
 

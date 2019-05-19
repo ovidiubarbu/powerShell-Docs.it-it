@@ -11,12 +11,12 @@ helpviewer_keywords:
 - providers [PowerShell Programmer's Guide], navigation provider
 ms.assetid: 8bd3224d-ca6f-4640-9464-cb4d9f4e13b1
 caps.latest.revision: 5
-ms.openlocfilehash: 40454f880b57d5b3a8a8ded21c8c97aebba027fe
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 5f7a61e261399d3d2abe62fe4523e8c9895d5ad4
+ms.sourcegitcommit: 01b81317029b28dd9b61d167045fd31f1ec7bc06
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62081853"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65855164"
 ---
 # <a name="creating-a-windows-powershell-navigation-provider"></a>Creazione di un provider di navigazione di Windows PowerShell
 
@@ -33,34 +33,6 @@ Il provider descritto di seguito consente l'handle dell'utente un database di Ac
 
 > [!CAUTION]
 > Tenere presente che questa progettazione si presuppone che un database con un campo con l'ID del nome e che il tipo del campo è LongInteger.
-
-Nell'elenco seguente include le sezioni in questo argomento. Se non si ha familiarità con la scrittura di un provider di navigazione di Windows PowerShell, leggere queste informazioni nell'ordine in cui viene visualizzato. Tuttavia, se si ha familiarità con la scrittura di un provider di navigazione di Windows PowerShell, passare direttamente alle informazioni necessarie.
-
-- [Definizione di una classe di Provider di navigazione di PS](#Define-the-Windows-PowerShell-provider)
-
-- [Definizione funzionalità di Base](#Defining-Base-Functionality)
-
-- [Creazione di un percorso di PS](#Creating-a-Windows-PowerShell-Path)
-
-- [Recupero del percorso dell'elemento padre](#Retrieving-the-Parent-Path)
-
-- [Impossibile recuperare il nome di percorso figlio](#Retrieve-the-Child-Path-Name)
-
-- [Determinare se un elemento è un contenitore](#Determining-if-an-Item-is-a-Container)
-
-- [Spostamento di un elemento](#Moving-an-Item)
-
-- [Associare i parametri dinamici al `Move-Item` Cmdlet](#Attaching-Dynamic-Parameters-to-the-Move-Item-Cmdlet)
-
-- [Normalizzazione di un percorso relativo](#Normalizing-a-Relative-Path)
-
-- [Esempio di codice](#Code-Sample)
-
-- [Definizione di tipi di oggetto e formattazione](#Defining-Object-Types-and-Formatting)
-
-- [Creazione del Provider di Windows PowerShell](#Building-the-Windows-PowerShell-provider)
-
-- [Test di un Provider Windows PowerShell](#Testing-the-Windows-PowerShell-provider)
 
 ## <a name="define-the-windows-powershell-provider"></a>Definire il provider di Windows PowerShell
 

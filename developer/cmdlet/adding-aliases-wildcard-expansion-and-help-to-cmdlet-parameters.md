@@ -8,40 +8,18 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 931ccace-c565-4a98-8dcc-df00f86394b1
 caps.latest.revision: 8
-ms.openlocfilehash: db664e589f625855b5a33a02c522d6b238ad2810
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 946b71e4480a47ac6ccd6930be445d7efb4fb62d
+ms.sourcegitcommit: 01b81317029b28dd9b61d167045fd31f1ec7bc06
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62075257"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65854900"
 ---
 # <a name="adding-aliases-wildcard-expansion-and-help-to-cmdlet-parameters"></a>Aggiunta di alias, espansione di caratteri jolly e guida per i parametri del cmdlet
 
 In questa sezione viene descritto come aggiungere gli alias, espansione di caratteri jolly, e i messaggi della Guida per i parametri del cmdlet Stop-Process (descritto nella [creazione di un Cmdlet che modifichi il sistema](./creating-a-cmdlet-that-modifies-the-system.md)).
 
 Questo cmdlet Stop-Process tenta di arrestare i processi che vengono recuperati usando il cmdlet Get-Proc (descritto nella [la creazione del primo Cmdlet](./creating-a-cmdlet-without-parameters.md)).
-
-Gli argomenti in questa sezione includono quanto segue:
-
-- [Che definisce il Cmdlet](#Defining-the-Cmdlet)
-
-- [Definizione dei parametri per la modifica di sistema](#Defining-Parameters-for-System-Modification)
-
-- [La definizione di un Alias del parametro](#Defining-a-Parameter-Alias)
-
-- [Creazione di una Guida per i parametri](#Creating-Help-for-Parameters)
-
-- [Si esegue l'override di un metodo di elaborazione dell'Input](#Overriding-an-Input-Processing-Method)
-
-- [Supporto di espansione di caratteri jolly](#Supporting-Wildcard-Expansion)
-
-- [Esempio di codice](#Defining-a-Parameter-Alias)
-
-- [Definizione di tipi di oggetto e formattazione](#Define-Object-Types-and-Formatting)
-
-- [Creazione di Cmdlet](#Building-the-Cmdlet)
-
-- [Il Cmdlet di test](#Testing-the-Cmdlet)
 
 ## <a name="defining-the-cmdlet"></a>Che definisce il Cmdlet
 

@@ -8,24 +8,14 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: d0c6d03f-1c1a-43d8-928e-e3290e90e0bc
 caps.latest.revision: 5
-ms.openlocfilehash: 2e9dbc9ff8f9507f2008cd6e114ba6fec36b10bf
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 0210b5ed3104777541692a0e78e7d3b16f9c8256
+ms.sourcegitcommit: 01b81317029b28dd9b61d167045fd31f1ec7bc06
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62083383"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65855142"
 ---
 # <a name="how-to-add-syntax-to-a-cmdlet-help-topic"></a>Come aggiungere la sintassi a un argomento della Guida sui cmdlet
-
-- [Attributi dei parametri](#Parameter-Attributes)
-
-- [Attributi del valore di parametro](#Parameter-Value-Attributes)
-
-- [Informazioni sulla sintassi di raccolta](#Gathering-Syntax-Information)
-
-- [Il diagramma della sintassi XML di codifica](#Coding-the-Syntax-Diagram-XML)
-
-## <a name="things-to-know-about-the-syntax-diagram-in-cmdlet-help"></a>Aspetti da considerare il diagramma della sintassi nella Guida del Cmdlet
 
 Prima di avviare il codice XML per il diagramma della sintassi nel file della Guida cmdlet del codice, leggere questa sezione per ottenere un quadro preciso del tipo di dati che è necessario specificare, ad esempio gli attributi di parametro e la modalità di visualizzazione che i dati nel diagramma della sintassi...
 
@@ -166,7 +156,7 @@ In genere, sono necessari i valori dei parametri sono segnaposto e i valori dei 
 
 ## <a name="coding-the-syntax-diagram-xml"></a>Il diagramma della sintassi XML di codifica
 
-Il nodo di sintassi del XML inizia immediatamente dopo il nodo di description, che termina con il \</maml:description > tag. Per informazioni sulla raccolta dei dati utilizzati nel diagramma della sintassi, vedere [informazioni sulla sintassi di raccolta](#Gathering-Syntax-Information).
+Il nodo di sintassi del XML inizia immediatamente dopo il nodo di description, che termina con il \</maml:description > tag. Per informazioni sulla raccolta dei dati utilizzati nel diagramma della sintassi, vedere [informazioni sulla sintassi di raccolta](#gathering-syntax-information).
 
 ### <a name="adding-a-syntax-node"></a>Aggiunta di un nodo di sintassi
 
@@ -210,7 +200,7 @@ L'esempio seguente include un nodo di sintassi che dispone di nodi di elemento d
 
 Ogni parametro aggiunto al nodo di elemento di sintassi viene specificato all'interno di una coppia di \<: parametro del comando > tag. Necessaria una coppia di \<: parametro del comando > tag per ogni parametro incluso nel set di parametri, fatta eccezione per i parametri comuni fornite da Windows PowerShell.
 
-Gli attributi dell'apertura \<: parametro del comando > tag determinano il modo in cui il parametro viene visualizzato nel diagramma della sintassi. Per informazioni sugli attributi di parametro, vedere [attributi di parametro](#Parameter-Attributes).
+Gli attributi dell'apertura \<: parametro del comando > tag determinano il modo in cui il parametro viene visualizzato nel diagramma della sintassi. Per informazioni sugli attributi di parametro, vedere [attributi di parametro](#parameter-attributes).
 
 > [!NOTE]
 > Il \<: parametro del comando > tag supporta un elemento figlio \<maml:description > il cui contenuto non viene mai visualizzato. Le descrizioni dei parametri vengono specificati nel nodo parametro del codice XML. Per evitare le incoerenze tra le informazioni nell'elemento di sintassi bodes e il nodo di parametro, omettere il (\<maml:description > o lasciarlo vuoto.

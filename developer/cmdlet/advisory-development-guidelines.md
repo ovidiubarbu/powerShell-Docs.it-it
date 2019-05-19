@@ -8,42 +8,16 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 79c9bcbc-a2eb-4253-a4b8-65ba54ce8d01
 caps.latest.revision: 9
-ms.openlocfilehash: 871a74a084da3c7ec36767b7195461e0e7290cb9
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 980b488800587e31286e2ca2ece924e07f8af3f3
+ms.sourcegitcommit: 01b81317029b28dd9b61d167045fd31f1ec7bc06
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62068794"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65854871"
 ---
 # <a name="advisory-development-guidelines"></a>Linee guida sullo sviluppo consigliate
 
 Questa sezione vengono descritte le linee guida che è opportuno considerare per garantire una buona esperienza di sviluppo e utenti. In alcuni casi si potrebbero applicare e in alcuni casi si potrebbe non.
-
-## <a name="design-guidelines"></a>Linee guida di progettazione
-
-- [Supporta un parametro InputObject (AD01)](./advisory-development-guidelines.md#AD01)
-
-- [Supporto per il parametro Force (AD02)](./advisory-development-guidelines.md#AD02)
-
-- [Gestire le credenziali tramite Windows PowerShell (AD03)](./advisory-development-guidelines.md#AD03)
-
-- [Supporta i parametri di codifica (AD04)](./advisory-development-guidelines.md#AD04)
-
-- [I cmdlet di prova devono restituire un valore booleano (AD05)](./advisory-development-guidelines.md#AD05)
-
-## <a name="code-guidelines"></a>Linee guida dei codici
-
-- [Seguire le convenzioni di denominazione classe Cmdlet (AC01)](./advisory-development-guidelines.md#AC01)
-
-- [Se nessun Input della Pipeline esegue l'Override del metodo BeginProcessing (AC02)](./advisory-development-guidelines.md#AC02)
-
-- [Per gestire le richieste di arresto, l'Override del metodo di StopProcessing (AC03)](./advisory-development-guidelines.md#AC03)
-
-- [Implementare l'interfaccia IDisposable (AC04)](./advisory-development-guidelines.md#AC04)
-
-- [Usare i tipi di parametro di facile integrazione con la serializzazione (AC05)](./advisory-development-guidelines.md#AC05)
-
-- [Utilizzare SecureString per i dati sensibili (AC06)](./advisory-development-guidelines.md#AC06)
 
 ## <a name="design-guidelines"></a>Linee guida di progettazione
 
