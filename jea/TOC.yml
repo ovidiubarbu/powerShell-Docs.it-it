@@ -1,18 +1,16 @@
 - name: Panoramica
   href: overview.md
-- name: Distribuire JEA
-  items:
-    - name: Prerequisiti
-      href: prerequisites.md
-    - name: Capacità del ruolo
-      href: role-capabilities.md
-    - name: Configurazioni della sessione
-      href: session-configurations.md
-    - name: Registrazione di JEA
-      href: register-jea.md
-    - name: Uso di JEA
-      href: using-jea.md
-    - name: Considerazioni sulla sicurezza
-      href: security-considerations.md
-    - name: Controllare e creare report in JEA
-      href: audit-and-report.md
+- name: Prerequisiti
+  href: prerequisites.md
+- name: Capacità del ruolo
+  href: role-capabilities.md
+- name: Configurazioni della sessione
+  href: session-configurations.md
+- name: Registrazione di JEA
+  href: register-jea.md
+- name: Uso di JEA
+  href: using-jea.md
+- name: Considerazioni sulla sicurezza
+  href: security-considerations.md
+- name: Controllare e creare report in JEA
+  href: audit-and-report.md
