@@ -3,12 +3,12 @@ ms.date: 08/23/2018
 keywords: powershell,cmdlet
 title: Informazioni sulle pipeline di PowerShell
 ms.assetid: 6be50926-7943-4ef7-9499-4490d72a63fb
-ms.openlocfilehash: 05ab98b7261f4d41ade1788a924193eccda6318c
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 10e09fbe8de83eba2473f8f042657f7c80473fbd
+ms.sourcegitcommit: 01b81317029b28dd9b61d167045fd31f1ec7bc06
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62086443"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65854338"
 ---
 # <a name="understanding-pipelines"></a>Informazioni sulle pipeline
 
@@ -61,7 +61,10 @@ d-----        8/23/2018   5:07 PM                catroot2
 
 La divisione in pagine riduce anche l'utilizzo della CPU perché i trasferimenti vengono elaborati nel cmdlet `Out-Host` quando è pronta per la visualizzazione una pagina completa. I cmdlet precedenti nella pipeline sospendono l'esecuzione finché non è disponibile la pagina di output successiva.
 
-È possibile notare la differenza con Gestione attività Windows per monitorare l'uso della CPU e della memoria da parte di PowerShell. Eseguire questo comando: `Get-ChildItem C:\Windows -Recurse`. Confrontare l'utilizzo della CPU e della memoria con questo comando: `Get-ChildItem C:\Windows -Recurse | Out-Host -Paging`.
+È possibile visualizzare l'impatto del piping sull'utilizzo della CPU e della memoria in Gestione attività Windows confrontando i comandi seguenti:
+
+- `Get-ChildItem C:\Windows -Recurse`
+- `Get-ChildItem C:\Windows -Recurse | Out-Host -Paging`
 
 > [!NOTE]
 > Il parametro **Paging** non è supportato da tutti gli host di PowerShell. Ad esempio, quando si tenta di usare il parametro **Paging** in PowerShell ISE, viene visualizzato l'errore seguente:
