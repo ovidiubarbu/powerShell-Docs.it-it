@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: d4e38235-9987-4347-afd2-0f7d1dc8f64a
 caps.latest.revision: 19
-ms.openlocfilehash: 77d328bc1cb8cb42d5a10f107a149c05ab270ce3
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: cff50d415c4c90182fa1cf015a5a5ba84d4d613a
+ms.sourcegitcommit: bc42c9166857147a1ecf9924b718d4a48eb901e3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62082108"
+ms.lasthandoff: 06/03/2019
+ms.locfileid: "66470780"
 ---
 # <a name="understanding-a-windows-powershell-module"></a>Informazioni su un modulo di Windows PowerShell
 
@@ -55,7 +55,7 @@ Oggetto *modulo del manifesto* è un modulo che usa un file manifesto per descri
 
 ### <a name="dynamic-modules"></a>Moduli dinamici
 
-Oggetto *modulo dinamico* è un modulo non è stato caricato da o salvato in un file. Al contrario, vengono creati in modo dinamico da uno script, usando il [New-Module](/powershell/module/Microsoft.PowerShell.Core/New-Module) cmdlet. Questo tipo di modulo consente uno script creare un modulo su richiesta che non devono essere caricati o salvati in un archivio permanente. Per sua natura, un modulo dinamico deve essere di breve durata e pertanto non è possibile accedervi tramite il `Get-Module` cmdlet. Analogamente, in genere non richiedono manifesti dei moduli, né si è probabilmente necessario permanente cartelle per archiviare i relativi assembly correlato.
+Oggetto *modulo dinamico* è un modulo non caricato da o salvato in un file. Al contrario, vengono creati in modo dinamico da uno script, usando il [New-Module](/powershell/module/Microsoft.PowerShell.Core/New-Module) cmdlet. Questo tipo di modulo consente uno script creare un modulo su richiesta che non devono essere caricati o salvati in un archivio permanente. Per sua natura, un modulo dinamico deve essere di breve durata e pertanto non è possibile accedervi tramite il `Get-Module` cmdlet. Analogamente, in genere non richiedono manifesti dei moduli, né si è probabilmente necessario permanente cartelle per archiviare i relativi assembly correlato.
 
 ## <a name="module-manifests"></a>Manifesti dei moduli
 
