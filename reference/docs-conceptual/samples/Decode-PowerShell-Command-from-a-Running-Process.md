@@ -3,12 +3,12 @@ ms.date: 11/13/2018
 keywords: powershell,cmdlet
 title: Decodificare un comando PowerShell da un processo in esecuzione
 author: randomnote1
-ms.openlocfilehash: a0602070a8c5b60ce0bb09e227690f48d970a868
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: a6c01d8edf67aba6c47350a97cc0ceec4801ad29
+ms.sourcegitcommit: bc42c9166857147a1ecf9924b718d4a48eb901e3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62086239"
+ms.lasthandoff: 06/03/2019
+ms.locfileid: "66470975"
 ---
 # <a name="decode-a-powershell-command-from-a-running-process"></a>Decodificare un comando PowerShell da un processo in esecuzione
 
@@ -33,7 +33,7 @@ powershell.exe -Command {
 
 ## <a name="view-the-process"></a>Visualizzare il processo
 
-Il corpo del comando eseguito da PowerShell viene archiviato nella proprietà **CommandLine** della classe [Win32_Process][]. Se il comando è un [comando codificato][], la proprietà **CommandLine** contiene la stringa "EncodedCommand". È possibile usare queste informazioni per deoffuscare il comando codificato tramite la procedura seguente.
+Il corpo del comando eseguito da PowerShell viene archiviato nella proprietà **CommandLine** della classe [Win32_Process][]. Se il comando è un comando codificato, la proprietà **CommandLine** contiene la stringa "EncodedCommand". È possibile usare queste informazioni per deoffuscare il comando codificato tramite la procedura seguente.
 
 Avviare PowerShell come amministratore. È fondamentale che PowerShell sia in esecuzione come amministratore. In caso contrario non viene restituito alcun risultato per le query sui processi in esecuzione.
 
@@ -107,4 +107,3 @@ DecodedCommand :
 [Utilità di pianificazione]: /windows/desktop/TaskSchd/task-scheduler-start-page
 [SQL Server Agent]: /sql/ssms/agent/sql-server-agent
 [Win32_Process]: /windows/desktop/CIMWin32Prov/win32-process
-[Comando codificato]: /powershell/scripting/core-powershell/console/powershell.exe-command-line-help#-encodedcommand-

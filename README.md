@@ -1,17 +1,24 @@
 ---
-ms.openlocfilehash: 6e36e6599e36218ce2a925dceda7aa0ee6811057
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 84b29953f09eb62eb30f52d84b087eb4f1f90eed
+ms.sourcegitcommit: bc42c9166857147a1ecf9924b718d4a48eb901e3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62068825"
+ms.lasthandoff: 06/03/2019
+ms.locfileid: "66470652"
 ---
 # <a name="microsoft-open-source-code-of-conduct"></a>Codice di condotta Microsoft Open Source
 
 Per questo progetto è stato adottato [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/) (Codice di condotta Microsoft Open Source).
 Per altre informazioni, vedere [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) (Domande frequenti sul codice di condotta) oppure contattare [opencode@microsoft.com](mailto:opencode@microsoft.com) per eventuali domande o commenti.
 
-[![Stato della compilazione](https://ci.appveyor.com/api/projects/status/onshefxnc4g4pv87/branch/staging?svg=true)](https://ci.appveyor.com/project/PowerShell/powershell-docs/branch/staging)
+[live-badge]: https://powershell.visualstudio.com/PowerShell-Docs/_apis/build/status/PowerShell-Docs-CI?branchName=live
+[staging-badge]: https://powershell.visualstudio.com/PowerShell-Docs/_apis/build/status/PowerShell-Docs-CI?branchName=staging
+
+## <a name="build-status"></a>Stato della compilazione
+
+| Ramo attivo | Ramo di staging |
+|:------------|:---------------|
+| [![live-badge][]][live-badge] | [![staging-badge][]][staging-badge]
 
 ## <a name="powershell-documentation"></a>Documentazione di PowerShell
 
