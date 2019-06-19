@@ -2,13 +2,12 @@
 ms.date: 06/05/2017
 keywords: powershell,cmdlet
 title: Uso di file, cartelle e chiavi del Registro di sistema
-ms.assetid: e6cf87aa-b5f8-48d5-a75a-7cb7ecb482dc
-ms.openlocfilehash: cd20cc50b573435ba80b52b51e164e60625dc1b6
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 0c8716c384827d0816e2847ff81232c14638681b
+ms.sourcegitcommit: a6f13c16a535acea279c0ddeca72f1f0d8a8ce4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62086007"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67030751"
 ---
 # <a name="working-with-files-folders-and-registry-keys"></a>Gestione di file, cartelle e chiavi del Registro di sistema
 
@@ -128,7 +127,7 @@ Get-ChildItem -Path C:\Windows\[xz]*
 
 Si supponga ad esempio di voler trovare la DLL Windows Time Service nella cartella System32 e che non si ricordi il nome della DLL, ma solo che inizia con "W" e che contiene "32".
 
-Con un'espressione come **w\&#42;32\&#42;.dll** sarà possibile trovare tutte le DLL che soddisfano le condizioni, ma i risultati potrebbero restituire anche le DLL di compatibilità di Windows per Windows 95 e Windows a 16 bit che includono "95" o "16" nei relativi nomi. È possibile omettere i file i cui nomi contengono questi numeri usando il parametro **Exclude** con il modello **\&#42;\[9516]\&#42;**:
+Con un'espressione come **w\&#42;32\&#42;.dll** sarà possibile trovare tutte le DLL che soddisfano le condizioni, ma i risultati potrebbero restituire anche le DLL di compatibilità di Windows per Windows 95 e Windows a 16 bit che includono "95" o "16" nei relativi nomi. È possibile omettere i file i cui nomi contengono questi numeri usando il parametro **Exclude** con il modello **\&#42;\[9516]\&#42;** :
 
 ```
 PS> Get-ChildItem -Path C:\WINDOWS\System32\w*32*.dll -Exclude *[9516]*

@@ -2,13 +2,12 @@
 ms.date: 06/05/2017
 keywords: powershell,cmdlet
 title: Gestione del percorso corrente
-ms.assetid: a9f9e7a7-3ea8-47d3-bbb4-6e437f6d4a4a
-ms.openlocfilehash: f5e0653b2c3bbc9d2526c7a1c2ff88a8a6641695
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 42ab56759dec882d140f813c8614e578957722b3
+ms.sourcegitcommit: a6f13c16a535acea279c0ddeca72f1f0d8a8ce4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62086256"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67030193"
 ---
 # <a name="managing-current-location"></a>Gestione del percorso corrente
 
@@ -50,9 +49,9 @@ C:\WINDOWS
 
 Il parametro **-PassThru** può essere usato con molti comandi Set in Windows PowerShell per restituire informazioni sul risultato nei casi in cui non ci sia un output predefinito.
 
-È possibile specificare percorsi relativi al percorso corrente con la stessa procedura richiesta dalla maggior parte delle shell di comandi di UNIX e Windows. Nella notazione standard dei percorsi relativi un punto (**.**) rappresenta la cartella corrente e un doppio punto (**..**) rappresenta la directory padre del percorso corrente.
+È possibile specificare percorsi relativi al percorso corrente con la stessa procedura richiesta dalla maggior parte delle shell di comandi di UNIX e Windows. Nella notazione standard dei percorsi relativi un punto ( **.** ) rappresenta la cartella corrente e un doppio punto ( **..** ) rappresenta la directory padre del percorso corrente.
 
-Ad esempio, nel percorso della cartella **C:\\Windows** un punto (**.**) rappresenta **C:\\Windows** e un doppio punto (**..**) rappresenta **C:**. Per passare dal percorso corrente alla radice dell'unità C:, digitare:
+Ad esempio, nel percorso della cartella **C:\\Windows** un punto ( **.** ) rappresenta **C:\\Windows** e un doppio punto ( **..** ) rappresenta **C:** . Per passare dal percorso corrente alla radice dell'unità C:, digitare:
 
 ```
 PS> Set-Location -Path .. -PassThru
@@ -62,7 +61,7 @@ Path
 C:\
 ```
 
-La stessa tecnica funziona nelle unità di Windows PowerShell diverse dalle unità di file system, ad esempio **HKLM:**. Per impostare il percorso sulla chiave \\Software nel Registro di sistema, digitare:
+La stessa tecnica funziona nelle unità di Windows PowerShell diverse dalle unità di file system, ad esempio **HKLM:** . Per impostare il percorso sulla chiave \\Software nel Registro di sistema, digitare:
 
 ```
 PS> Set-Location -Path HKLM:\SOFTWARE -PassThru
@@ -168,7 +167,7 @@ o
 Push-Location \\FS01\Public
 ```
 
-È possibile usare i comandi **Push-Location** e **Set-Location** per passare a una delle unità disponibili. Ad esempio, se si ha un'unità CD-ROM locale con la lettera di unità D che contiene un CD dati, è possibile passare all'unità CD immettendo il comando **Set-Location D:**.
+È possibile usare i comandi **Push-Location** e **Set-Location** per passare a una delle unità disponibili. Ad esempio, se si ha un'unità CD-ROM locale con la lettera di unità D che contiene un CD dati, è possibile passare all'unità CD immettendo il comando **Set-Location D:** .
 
 Se l'unità è vuota, verrà visualizzato il messaggio di errore seguente:
 

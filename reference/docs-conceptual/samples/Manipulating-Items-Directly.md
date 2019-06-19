@@ -2,13 +2,12 @@
 ms.date: 06/05/2017
 keywords: powershell,cmdlet
 title: Manipolazione diretta di elementi
-ms.assetid: 8cbd4867-917d-41ea-9ff0-b8e765509735
-ms.openlocfilehash: 4caa7d2e0eecff9783556062d8503fe10e616fe5
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 50aed569cf6b876297abe3cf1544eba70f6279ce
+ms.sourcegitcommit: a6f13c16a535acea279c0ddeca72f1f0d8a8ce4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62086222"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67030134"
 ---
 # <a name="manipulating-items-directly"></a>Manipolazione diretta di elementi
 
@@ -73,7 +72,7 @@ SKC  VC Name                           Property
   0   0 _Test                          {}
 ```
 
-Quando si digita un percorso del Registro di sistema, assicurarsi di includere i due punti (**:**) nei nomi delle unità di Windows PowerShell, HKLM: e HKCU:. Senza i due punti, Windows PowerShell non riconosce il nome dell'unità nel percorso.
+Quando si digita un percorso del Registro di sistema, assicurarsi di includere i due punti ( **:** ) nei nomi delle unità di Windows PowerShell, HKLM: e HKCU:. Senza i due punti, Windows PowerShell non riconosce il nome dell'unità nel percorso.
 
 ## <a name="why-registry-values-are-not-items"></a>Perché i valori del Registro di sistema non sono elementi
 
@@ -93,7 +92,7 @@ SKC  VC Name                           Property
   3   0 OptionalComponents             {}
 ```
 
-Anche se sarebbe comodo trattare le voci del Registro di sistema come elementi, non è possibile specificare un percorso di una voce in modo da assicurarsi che sia univoco. La notazione del percorso non distingue la sottochiave del Registro di sistema denominata **Run** dalla voce del Registro di sistema **(Default)** nella sottochiave **Run**. Si noti anche che, poiché i nomi delle voci del Registro di sistema possono contenere il carattere barra rovesciata (**\\**), se le voci fossero elementi non si potrebbe usare la notazione del percorso per distinguere una voce del Registro di sistema denominata **Windows\\CurrentVersion\\Run** dalla sottochiave situata in tale percorso.
+Anche se sarebbe comodo trattare le voci del Registro di sistema come elementi, non è possibile specificare un percorso di una voce in modo da assicurarsi che sia univoco. La notazione del percorso non distingue la sottochiave del Registro di sistema denominata **Run** dalla voce del Registro di sistema **(Default)** nella sottochiave **Run**. Si noti anche che, poiché i nomi delle voci del Registro di sistema possono contenere il carattere barra rovesciata ( **\\** ), se le voci fossero elementi non si potrebbe usare la notazione del percorso per distinguere una voce del Registro di sistema denominata **Windows\\CurrentVersion\\Run** dalla sottochiave situata in tale percorso.
 
 ## <a name="renaming-existing-items-rename-item"></a>Ridenominazione di elementi esistenti (Rename-Item)
 

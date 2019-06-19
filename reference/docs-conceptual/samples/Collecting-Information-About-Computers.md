@@ -2,13 +2,12 @@
 ms.date: 06/05/2017
 keywords: powershell,cmdlet
 title: Raccolta di informazioni sui computer
-ms.assetid: 9e7b6a2d-34f7-4731-a92c-8b3382eb51bb
-ms.openlocfilehash: d837684108656e17ebf26189bd4841c5de01051c
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 5dc8fcc5f12fdf9e3fc8151d3e50b8b660262c62
+ms.sourcegitcommit: a6f13c16a535acea279c0ddeca72f1f0d8a8ce4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62058336"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67030841"
 ---
 # <a name="collecting-information-about-computers"></a>Raccolta di informazioni sui computer
 
@@ -18,7 +17,7 @@ WMI gestisce inoltre i dati come oggetti inclusi in raccolte di uno o più eleme
 Dato che anche Windows PowerShell funziona con oggetti e usa una pipeline che consente di gestire uno o più oggetti nello stesso modo, l'accesso WMI generico consente di eseguire alcune attività avanzate con un impegno minimo.
 
 Gli esempi seguenti illustrano come raccogliere informazioni specifiche tramite `Get-CimInstance` per un computer arbitrario.
-Viene specificato il parametro **ComputerName** con il valore punto (**.**), che rappresenta il computer locale.
+Viene specificato il parametro **ComputerName** con il valore punto ( **.** ), che rappresenta il computer locale.
 È possibile specificare un nome o indirizzo IP associato a qualsiasi computer raggiungibile tramite WMI.
 Per recuperare informazioni sul computer locale, è possibile omettere il parametro **ComputerName**.
 

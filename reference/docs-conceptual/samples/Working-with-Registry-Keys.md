@@ -2,13 +2,12 @@
 ms.date: 06/05/2017
 keywords: powershell,cmdlet
 title: Utilizzo delle chiavi del Registro di sistema
-ms.assetid: 91bfaecd-8684-48b4-ad86-065dfe6dc90a
-ms.openlocfilehash: e7b497ec2fccf9ba3934439a9c1e9be3cf70a705
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 18daeaea2ee8917a709fef421d2b316f46bf7f4c
+ms.sourcegitcommit: a6f13c16a535acea279c0ddeca72f1f0d8a8ce4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62058863"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67030649"
 ---
 # <a name="working-with-registry-keys"></a>Utilizzo delle chiavi del Registro di sistema
 
@@ -36,7 +35,7 @@ SKC  VC Name                           Property
 
 Si tratta delle chiavi di primo livello visibili in HKEY_CURRENT_USER nell'editor del Registro di sistema (Regedit.exe).
 
-È possibile specificare questo percorso del Registro di sistema anche specificando il nome del provider del Registro di sistema, seguito da "**::**". Il nome completo del provider del Registro di sistema è **Microsoft.PowerShell.Core\\Registry**, ma può essere abbreviato semplicemente in **Registry**. I comandi seguenti consentono di elencare il contenuto direttamente in HKCU:
+È possibile specificare questo percorso del Registro di sistema anche specificando il nome del provider del Registro di sistema, seguito da " **::** ". Il nome completo del provider del Registro di sistema è **Microsoft.PowerShell.Core\\Registry**, ma può essere abbreviato semplicemente in **Registry**. I comandi seguenti consentono di elencare il contenuto direttamente in HKCU:
 
 ```powershell
 Get-ChildItem -Path Registry::HKEY_CURRENT_USER
