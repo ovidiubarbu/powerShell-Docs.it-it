@@ -8,27 +8,32 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 5ae707db-52e0-408c-87fa-b35c42eaaab1
 caps.latest.revision: 5
-ms.openlocfilehash: 3a7c47487b632d00643fce0aa082e0dc9a9bb626
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 9140d03e046def2fbbcc2a842b9ea1b9e1fa2985
+ms.sourcegitcommit: 13f24786ed39ca1c07eff2b73a1974c366e31cb8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62082992"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67263845"
 ---
 # <a name="creating-an-initialsessionstate"></a>Creazione di un InitialSessionState
 
-I comandi di Windows PowerShell eseguiti in uno spazio di esecuzione. Per ospitare Windows PowerShell nell'applicazione, è necessario creare un [System.Management.Automation.Runspaces.Runspace](/dotnet/api/System.Management.Automation.Runspaces.Runspace) oggetto. Ogni spazio di esecuzione ha un [System.Management.Automation.Runspaces.Initialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) oggetto associato. Il [System.Management.Automation.Runspaces.Initialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) specifica le caratteristiche di spazio di esecuzione, ad esempio quali moduli, variabili e comandi sono disponibili per tale spazio di esecuzione.
+I comandi di PowerShell eseguiti in uno spazio di esecuzione.
+Per ospitare PowerShell nell'applicazione, è necessario creare un [System.Management.Automation.Runspaces.Runspace](/dotnet/api/System.Management.Automation.Runspaces.Runspace) oggetto.
+Ogni spazio di esecuzione ha un [System.Management.Automation.Runspaces.InitialSessionState](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) oggetto associato.
+Il InitialSessionState specifica le caratteristiche di spazio di esecuzione, ad esempio quali moduli, variabili e comandi sono disponibili per tale spazio di esecuzione.
 
 ## <a name="create-a-default-initialsessionstate"></a>Creare un valore predefinito InitialSessionState
 
- Il [System.Management.Automation.Runspaces.Initialsessionstate.Createdefault*](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState.CreateDefault)e [System.Management.Automation.Runspaces.Initialsessionstate.Createdefault2*](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState.CreateDefault2) metodi possono essere usati Per creare [System.Management.Automation.Runspaces.Initialsessionstate](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) oggetti. [System.Management.Automation.Runspaces.Initialsessionstate.Createdefault*](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState.CreateDefault) crea un InitialSessionState con tutti i comandi predefiniti caricato, mentre [ System.Management.Automation.Runspaces.Initialsessionstate.Createdefault2*](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState.CreateDefault2) carica solo i comandi necessari all'host di Windows PowerShell (i comandi dal modulo Microsoft.PowerShell.Core.
+Il [CreateDefault](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState.CreateDefault) e [CreateDefault2](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState.CreateDefault2) metodi del **InitialSessionState** classe può essere utilizzata per creare un **InitialSessionState**oggetto.
+Il **CreateDefault** metodo crea un' **InitialSessionState** con tutti i comandi predefiniti caricati, mentre il **CreateDefault2** metodo carica solo i comandi necessario per host PowerShell (i comandi dal modulo Microsoft.PowerShell.Core).
 
- Se si desidera limitare ulteriormente i comandi disponibili nell'applicazione host è necessario creare uno spazio di esecuzione vincolato. Per informazioni, vedere Creazione di uno spazio di esecuzione vincolato.
+Se si desidera limitare ulteriormente i comandi disponibili nell'applicazione host è necessario creare uno spazio di esecuzione vincolato.
+Per informazioni, vedere [creazione di uno spazio di esecuzione vincolato](creating-a-constrained-runspace.md).
 
- Il codice seguente viene illustrato come creare un InitialSessionState, assegnarla a uno spazio di esecuzione, aggiungere comandi alla pipeline in tale spazio di esecuzione e richiamare i comandi. Per altre informazioni sull'aggiunta e la chiamata dei comandi, vedere Aggiunta e la chiamata di comandi.
+Il codice seguente viene illustrato come creare un **InitialSessionState**, assegnarla a uno spazio di esecuzione, aggiungere comandi alla pipeline in tale spazio di esecuzione e richiamare i comandi.
+Per altre informazioni sull'aggiunta e la chiamata dei comandi, vedere [aggiunta e la chiamata di comandi](adding-and-invoking-commands.md).
 
 ```csharp
-
 namespace SampleHost
 {
   using System;
@@ -60,9 +65,9 @@ namespace SampleHost
       Runspace rs = RunspaceFactory.CreateRunspace(iss);
       rs.Open();
 
-      // Call the PowerShell.Create() method to create the PowerShell
-      // object,and then specify the runspace and commands to the pipeline.
-      // and  create the command pipeline.
+      // Call the PowerShell.Create() method to create the PowerShell object,
+      // and then specify the runspace and commands to the pipeline.
+      // and create the command pipeline.
       PowerShell ps = PowerShell.Create();
       ps.Runspace = rs;
       ps.AddCommand("Get-Variable");
@@ -73,15 +78,15 @@ namespace SampleHost
 
       // Call the PowerShell.Invoke() method to run
       // the pipeline synchronously.
-        foreach (PSObject result in ps.Invoke())
-        {
-          Console.WriteLine("{0,-20}{1}",
-                  result.Members["Name"].Value,
-                  result.Members["Value"].Value);
-        } // End foreach.
+      foreach (PSObject result in ps.Invoke())
+      {
+        Console.WriteLine("{0,-20}{1}",
+            result.Members["Name"].Value,
+            result.Members["Value"].Value);
+      } // End foreach.
 
-        // Close the runspace to free resources.
-        rs.Close();
+      // Close the runspace to free resources.
+      rs.Close();
 
     } // End Main.
   } // End SampleHost.
@@ -90,4 +95,6 @@ namespace SampleHost
 
 ## <a name="see-also"></a>Vedere anche
 
- [Creazione di uno spazio di esecuzione vincolata](./creating-a-constrained-runspace.md)
+[Creazione di uno spazio di esecuzione vincolata](creating-a-constrained-runspace.md)
+
+[Aggiunta e la chiamata dei comandi](adding-and-invoking-commands.md)

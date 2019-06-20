@@ -1,36 +1,48 @@
 ---
 title: Concetti di Windows PowerShell | Microsoft Docs
 ms.custom: ''
-ms.date: 09/13/2016
+ms.date: 6/12/2019
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 3dd5608e-50b6-4c6a-aee3-dde0e86032bc
 caps.latest.revision: 7
-ms.openlocfilehash: c4b13518ad6452a39ca49e897e1d3e353818d332
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 4410b1f9c80afefd5479fa68154f9947b805edcf
+ms.sourcegitcommit: 13f24786ed39ca1c07eff2b73a1974c366e31cb8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62081037"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67263856"
 ---
 # <a name="windows-powershell-concepts"></a>Concetti di Windows PowerShell
 
-In questa sezione contiene informazioni concettuali che consentiranno di comprendere Windows PowerShell dal punto di vista di uno sviluppatore.
+In questa sezione contiene informazioni concettuali che consentiranno di comprendere PowerShell dal punto di vista dello sviluppatore.
 
 |Nome dell'argomento|Description|
 |----------------|-----------------|
-|[Provider di Windows PowerShell](http://msdn.microsoft.com/en-us/a65c5c75-1131-4ade-90d3-a613dbe620e9)|Archivia una discussione sui provider di Windows PowerShell che consentono di accedere ai dati.|
-|[Snap-in di Windows PowerShell](http://msdn.microsoft.com/en-us/20e081a9-522c-48bf-9f21-faaf8cca2e82)|Un meccanismo per la registrazione dei cmdlet e provider. (Vedere anche [scrittura di un modulo di Windows PowerShell](../module/writing-a-windows-powershell-module.md).)|
-|[Runtime di Windows PowerShell](http://msdn.microsoft.com/en-us/949f06e8-0224-4cd3-bbad-a0cebbb5dec8)|L'istanza corrente di spazio di esecuzione di Windows PowerShell.|
-|[Spazi di esecuzione di Windows PowerShell](http://msdn.microsoft.com/en-us/a1582cfe-f06d-4aff-adc6-71f49a860ce9)|Gli ambienti operativi in cui vengono elaborati i comandi.|
-|[Spazi dei nomi di Windows PowerShell](http://msdn.microsoft.com/en-us/04bd2841-e90c-47d2-8a1f-3aeb3df35176)|Panoramica di spazi dei nomi API di Windows PowerShell.|
-|[Guida di Windows PowerShell](http://msdn.microsoft.com/en-us/097b7c1c-a056-4b36-9c86-65b2ee702fc7)|Una discussione sulla scrittura di Guida dei cmdlet.|
-|[Richiesta di conferma](../cmdlet/requesting-confirmation-from-cmdlets.md)|Una discussione su come i cmdlet e provider di richiedere commenti e suggerimenti da parte dell'utente prima di un'azione viene eseguita.|
-|[Concetti di oggetti PowerShell di Windows](http://msdn.microsoft.com/en-us/a1449178-b6fd-4ca8-a5e1-d747c2c54181)|Come Windows PowerShell gestisce oggetti.|
-|[Windows PowerShell Extended Type System (ETS)](http://msdn.microsoft.com/en-us/12700631-be23-4e6b-9bf0-81ea0d166353)|Estensione a livello di programmazione di oggetti.|
+|[about_Objects](/powershell/module/microsoft.powershell.core/about/about_objects)|Descrizione di oggetti PowerShell. Per altre informazioni, vedere [sulla creazione di oggetti](/powershell/module/microsoft.powershell.core/about/about_object_creation)|
+|[Creazione di spazi di esecuzione](../hosting/creating-runspaces.md)|Gli ambienti operativi in cui vengono elaborati i comandi. Per altre informazioni, vedere [Runspace classe](/dotnet/api/system.management.automation.runspaces.runspace).|
+|[Estensione di oggetti di Output](../cmdlet/extending-output-objects.md)|Come estendere gli oggetti PowerShell. Per altre informazioni, vedere [sulle Types.ps1xml](/powershell/module/microsoft.powershell.core/about/about_types.ps1xml)|
+|[La registrazione di cmdlet](../cmdlet/registering-cmdlets.md)|Esecuzione di moduli e snap-in disponibili in PowerShell. Per altre informazioni, vedere [moduli e Snap-in](../cmdlet/modules-and-snap-ins.md).|
+|[Richiesta di conferma dal cmdlet](../cmdlet/requesting-confirmation-from-cmdlets.md)|Come i cmdlet e provider di richiedere commenti e suggerimenti da parte dell'utente prima di eseguire un'azione.|
+|[Classe RuntimeDefinedParameter](/dotnet/api/system.management.automation.runtimedefinedparameter)|Dichiarazioni di parametri di runtime.|
+|[Automation Namespace](/dotnet/api/System.Management.Automation)|Panoramica di spazi dei nomi API di PowerShell.|
+|[Cenni preliminari sul Provider PowerShell di Windows](../provider/windows-powershell-provider-overview.md)|Panoramica sui provider di PowerShell che consentono di accedere ai dati Archivia.|
+|[La scrittura Guida per i cmdlet di PowerShell](../help/writing-help-for-windows-powershell-cmdlets.md)|Come scrivere la Guida dei cmdlet PowerShell.|
 
 ## <a name="see-also"></a>Vedere anche
 
-[Guida per programmatori di Windows PowerShell](./windows-powershell-programmer-s-guide.md)
+[Classe di PowerShell](/dotnet/api/system.management.automation.powershell)
+
+[Riferimento all'API di PowerShell Core](/dotnet/api/?view=pscore-6.2.0)
+
+[Guida per programmatori di Windows PowerShell](windows-powershell-programmer-s-guide.md)
+
+[Scrittura della Guida per i moduli di Windows PowerShell](../module/writing-help-for-windows-powershell-modules.md)
+
+[Scrittura di un Provider di Windows Powershell](../provider/writing-a-windows-powershell-provider.md)
+
+[Riferimento all'API di Windows PowerShell](/dotnet/api/?view=powershellsdk-1.1.0)
+
+[Windows PowerShell Reference](../windows-powershell-reference.md) (Guida di riferimento di PowerShell)

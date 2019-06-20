@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: a82aba91-71af-447d-b9ef-b6b6ac7d9de4
 caps.latest.revision: 19
-ms.openlocfilehash: d1abdca9ecbb5ab0a13593072e6dcb0d647b0b14
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 743efcf23174a9521925c5c19dd670979bc0c523
+ms.sourcegitcommit: 13f24786ed39ca1c07eff2b73a1974c366e31cb8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62066992"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67263823"
 ---
 # <a name="writing-a-windows-powershell-cmdlet"></a>Scrittura di un cmdlet di Windows PowerShell
 
@@ -27,7 +27,7 @@ ms.locfileid: "62066992"
 
 [Esempi di codice per Cmdlet](./examples-of-cmdlet-code.md) in questa sezione contiene codice di esempio che è possibile utilizzare per iniziare a scrivere cmdlet personalizzati.
 
-[Esempi di Output del Cmdlet di formattazione](https://msdn.microsoft.com/en-us/65829249-124d-47d0-9bf3-8e397dc55855) in questa sezione contiene esempi che illustrano come formattare l'output del cmdlet.
+[La scrittura di file di formattazione per l'Output del Cmdlet](../format/writing-a-powershell-formatting-file.md) in questa sezione viene descritto come creare i file di formattazione. File di formattazione definiscono la modalità di visualizzazione oggetti dalla riga di comando PowerShell.
 
 [Esercitazioni per la scrittura di cmdlet](./tutorials-for-writing-cmdlets.md) in questa sezione è incluse esercitazioni che è possibile usare per apprendere i concetti fondamentali alla base del codice del cmdlet.
 
