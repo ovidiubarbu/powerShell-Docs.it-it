@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: ab90ec96-77f5-42e3-9c7e-2f4156ec207f
 caps.latest.revision: 6
-ms.openlocfilehash: af8a151070d26ffe236800076115c964f625e572
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 534a6c9a43326c8a01b2181c7a799286fa4d3997
+ms.sourcegitcommit: f60fa420bdc81db174e6168d3aeb11371e483162
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62083536"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67301538"
 ---
 # <a name="comment-based-help-keywords"></a>Parole chiave della Guida basata sui commenti
 
@@ -23,7 +23,7 @@ In questo argomento elenca e descrive le parole chiave della Guida basata sui co
 
 Di seguito sono valide parole chiave della Guida basata sui commenti. Essi sono elencati nell'ordine in cui vengono in genere visualizzati in un argomento della Guida in linea con l'uso previsto. Queste parole chiave possono essere visualizzati in qualsiasi ordine nella Guida basata sui commenti e non sono tra maiuscole e minuscole.
 
-Si noti che il `.ExternalHelp` parola chiave ha la precedenza su tutte le altre parole chiave della Guida basata sui commenti. Quando `.ExternalHelp` è presente, il [Microsoft.PowerShell.Commands.Get-Help](/dotnet/api/Microsoft.PowerShell.Commands.Get-Help) cmdlet non visualizza la Guida basata sui commenti, anche quando non riesce a trovare un file della Guida che corrisponde al valore della parola chiave.
+Si noti che il `.ExternalHelp` parola chiave ha la precedenza su tutte le altre parole chiave della Guida basata sui commenti. Quando `.ExternalHelp` è presente, il [Microsoft.PowerShell.Commands.GetHelpCommand](/dotnet/api/Microsoft.PowerShell.Commands.gethelpcommand) cmdlet non visualizza la Guida basata sui commenti, anche quando non riesce a trovare un file della Guida che corrisponde al valore della parola chiave.
 
 `.Synopsis` Una breve descrizione della funzione o script. Questa parola chiave può essere utilizzata solo una volta in ogni argomento.
 
@@ -61,9 +61,9 @@ Il `.Link` contenuto (parola chiave) può anche includere un identificatore URI 
 
 `.ExternalHelp` `<XML Help File>` Specifica il percorso e/o nome di un file della Guida basata su XML per lo script o funzione.
 
-Il `.ExternalHelp` parola chiave indica la [Microsoft.PowerShell.Commands.Get-Help](/dotnet/api/Microsoft.PowerShell.Commands.Get-Help) per ottenere assistenza per la funzione o script in un file basato su XML. Il **. ExternalHelp** parola chiave è obbligatoria quando si usa un file della Guida basati su XML per una funzione o script. In caso contrario, `Get-Help` non troverà un file della Guida per la funzione o script.
+Il `.ExternalHelp` parola chiave indica la [Microsoft.PowerShell.Commands.GetHelpCommand](/dotnet/api/Microsoft.PowerShell.Commands.gethelpcommand) per ottenere assistenza per la funzione o script in un file basato su XML. Il **. ExternalHelp** parola chiave è obbligatoria quando si usa un file della Guida basati su XML per una funzione o script. In caso contrario, `Get-Help` non troverà un file della Guida per la funzione o script.
 
-Il `.ExternalHelp` parola chiave ha la precedenza su tutte le altre parole chiave della Guida basata sui commenti. Quando `.ExternalHelp` è presente, il [Microsoft.PowerShell.Commands.Get-Help](/dotnet/api/Microsoft.PowerShell.Commands.Get-Help) cmdlet non visualizza la Guida basata sui commenti, anche quando non riesce a trovare un file della Guida che corrisponde al valore della parola chiave.
+Il `.ExternalHelp` parola chiave ha la precedenza su tutte le altre parole chiave della Guida basata sui commenti. Quando `.ExternalHelp` è presente, il [Microsoft.PowerShell.Commands.GetHelpCommand](/dotnet/api/Microsoft.PowerShell.Commands.gethelpcommand) cmdlet non visualizza la Guida basata sui commenti, anche quando non riesce a trovare un file della Guida che corrisponde al valore della parola chiave.
 
 Quando la funzione venga esportata da un modulo di script, il valore di `.ExternalHelp` deve essere un nome di file senza percorso. `Get-Help` Cerca il file in una sottodirectory specifiche delle impostazioni locali della directory del modulo. Non sono previsti requisiti per il nome del file, ma una procedura consigliata consiste nell'usare il formato del nome file seguente: `<ScriptModule>.psm1-help.xml`.
 
