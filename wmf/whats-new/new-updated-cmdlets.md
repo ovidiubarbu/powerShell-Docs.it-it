@@ -2,12 +2,12 @@
 ms.date: 06/12/2017
 keywords: wmf,powershell,installazione
 title: Cmdlet nuovi e aggiornati
-ms.openlocfilehash: 9ec31c89c0bc4b111b40e2d4725fa0782a573204
-ms.sourcegitcommit: 01b81317029b28dd9b61d167045fd31f1ec7bc06
+ms.openlocfilehash: ffd5db2d4fc9bf8f67ef5e352633ad3209f72c87
+ms.sourcegitcommit: f60fa420bdc81db174e6168d3aeb11371e483162
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65855546"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67298661"
 ---
 # <a name="new-and-updated-cmdlets"></a>Cmdlet nuovi e aggiornati
 
@@ -39,7 +39,7 @@ Per altre informazioni, vedere:
 
 ## <a name="cryptographic-message-syntax-cms-cmdlets"></a>Cmdlet CMS (Cryptographic Message Syntax)
 
-I cmdlet CMS (Cryptographic Message Syntax) supportano la crittografia e la decrittografia del contenuto con il formato standard IETF per la protezione crittografica dei messaggi, come documentato in [RFC5652](https://tools.ietf.org/html/rfc5652).
+I cmdlet CMS (Cryptographic Message Syntax) supportano la crittografia e la decrittografia del contenuto con il formato standard IETF per la protezione crittografica dei messaggi, come documentato in [RFC5652](https://tools.ietf.org/html/rfc5652.html).
 
 Lo standard di crittografia CMS implementa la crittografia a chiave pubblica, in cui la chiave usata per crittografare il contenuto (*chiave pubblica*) e la chiave usata per decrittografare il contenuto (*chiave privata*) sono separate.
 
@@ -47,9 +47,9 @@ La chiave pubblica può essere condivisa liberamente e non contiene dati sensibi
 
 Per ulteriori informazioni, vedere:
 
-- [Get-CmsMessage](/powershell/module/Microsoft.PowerShell.Security/Get-CmsMessage.md)
-- [Protect-CmsMessage](/powershell/module/Microsoft.PowerShell.Security/Protect-CmsMessage.md)
-- [Unprotect-CmsMessage](/powershell/module/Microsoft.PowerShell.Security/rotect-CmsMessage.md)
+- [Get-CmsMessage](/powershell/module/Microsoft.PowerShell.Security/Get-CmsMessage)
+- [Protect-CmsMessage](/powershell/module/Microsoft.PowerShell.Security/Protect-CmsMessage)
+- [Unprotect-CmsMessage](/powershell/module/Microsoft.PowerShell.Security/unprotect-CmsMessage)
 
 I certificati richiedono un identificatore univoco di utilizzo delle chiavi (EKU) per identificarli come certificati di crittografia dei dati in PowerShell, ad esempio identificatori per la firma del codice o per la posta crittografata. Per visualizzare i certificati di crittografia dei documenti nel provider di certificati, è possibile usare il parametro dinamico **DocumentEncryptionCert** di `Get-ChildItem`:
 
@@ -145,6 +145,7 @@ Per `Out-File`, `Add-Content` e `Set-Content` è ora disponibile una nuova opzio
 "a single " | Add-Content -Path Example.txt -NoNewline
 "sentence." | Add-Content -Path Example.txt -NoNewline
 Get-Content .\Example.txt
+```
 
 ```Output
 This is a single sentence.
@@ -285,7 +286,7 @@ Il modulo ODataUtils consente la generazione di cmdlet di PowerShell da endpoint
 - Filtro sul lato server tramite il parametro -Select
 - Supporto delle intestazioni di richieste Web
 
-I cmdlet proxy generati dal cmdlet `Export-ODataEndPointProxy` forniscono informazioni aggiuntive dall'endpoint OData sul lato server sul flusso di informazioni.
+I cmdlet proxy generati dal cmdlet `Export-ODataEndPointProxy` forniscono informazioni aggiuntive dall'endpoint OData sul lato server sul flusso di **informazioni**.
 
 ```powershell
 Import-Module Microsoft.PowerShell.ODataUtils -Force
