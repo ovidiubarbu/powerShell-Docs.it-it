@@ -2,12 +2,12 @@
 ms.date: 06/12/2017
 keywords: dsc,powershell,configurazione,installazione
 title: Creazione di una pipeline di integrazione continua e distribuzione continua con DSC
-ms.openlocfilehash: 012057a32ccf85b0d15e76a332cadda4b226180a
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 2d049cd640f0df9b018a88ad106e59dbeed7bcee
+ms.sourcegitcommit: f60fa420bdc81db174e6168d3aeb11371e483162
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62076476"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67301504"
 ---
 # <a name="building-a-continuous-integration-and-continuous-deployment-pipeline-with-dsc"></a>Creazione di una pipeline di integrazione continua e distribuzione continua con DSC
 
@@ -22,10 +22,10 @@ Una pipeline CI/CD automatizzata consente di aggiornare il software in modo più
 
 Per usare questo esempio, è necessario avere familiarità con quanto segue:
 
-- Concetti di CI/CD. Informazioni di riferimento utili sono disponibili in [The Release Pipeline Model](http://aka.ms/thereleasepipelinemodelpdf) (Modello di pipeline di versione).
+- Concetti di CI/CD. Informazioni di riferimento utili sono disponibili in [The Release Pipeline Model](https://aka.ms/thereleasepipelinemodelpdf) (Modello di pipeline di versione).
 - Controllo del codice sorgente tramite [Git](https://git-scm.com/)
 - Framework di test [Pester](https://github.com/pester/Pester)
-- [Team Foundation Server](https://www.visualstudio.com/tfs/)
+- [Team Foundation Server](https://visualstudio.microsoft.com/tfs/)
 
 ## <a name="what-you-will-need"></a>Materiale necessario
 
@@ -44,7 +44,7 @@ Il computer client deve essere un computer Windows dotato dei componenti seguent
 ### <a name="tfssrv1"></a>TFSSrv1
 
 Computer che ospita il server TFS in cui verranno definite la compilazione e la versione.
-In questo computer deve essere installato [Team Foundation Server 2017](https://www.visualstudio.com/tfs/).
+In questo computer deve essere installato [Team Foundation Server 2017](https://visualstudio.microsoft.com/tfs/).
 
 ### <a name="buildagent"></a>BuildAgent
 
@@ -157,7 +157,7 @@ Node $AllNodes.Where{$_.Role -eq 'DNSServer'}.NodeName
 
 Questa trova tutti i nodi definiti con il ruolo `DNSServer` nei [dati di configurazione](../configurations/configData.md), creati tramite lo script `DevEnv.ps1`.
 
-Sono disponibili altre informazioni sul metodo `Where` in [about_arrays](/powershell/reference/3.0/Microsoft.PowerShell.Core/About/about_Arrays.md)
+Sono disponibili altre informazioni sul metodo `Where` in [about_arrays](/powershell/module/microsoft.powershell.core/about/about_arrays)
 
 L'uso di dati di configurazione per definire i nodi è importante quando si esegue l'integrazione continua. È probabile infatti che le informazioni sui nodi siano diverse da un ambiente all'altro e l'uso di dati di configurazione consente di apportare facilmente modifiche a tali informazioni senza modificare il codice di configurazione.
 
@@ -319,7 +319,7 @@ Gli script dei test di integrazione usano una combinazione della sintassi di [Pe
 
 Dopo aver caricato il codice in TFS e averne osservato il funzionamento, è possibile definire la compilazione.
 
-In questo esempio verranno trattati solo i passaggi di compilazione da aggiungere alla compilazione stessa. Per istruzioni su come creare una definizione di compilazione in TFS, vedere [Create your first build and release](/azure/devops/pipelines/get-started-designer) (Creare la prima compilazione e la prima versione).
+In questo esempio verranno trattati solo i passaggi di compilazione da aggiungere alla compilazione stessa. Per istruzioni su come creare una definizione di compilazione in TFS, vedere [Create your first build and release](/azure/devops/pipelines/create-first-pipeline) (Creare la prima compilazione e la prima versione).
 
 Creare una nuova definizione di compilazione (selezionare il modello **vuoto**) denominato "InfraDNS".
 Aggiungere alla definizione di compilazione i passaggi seguenti:
@@ -388,7 +388,7 @@ Verrà ora creata una definizione di versione, in modo che il progetto venga dis
 
 A tale scopo, aggiungere una nuova definizione di versione associata alla definizione di compilazione `InfraDNS` creata in precedenza.
 Assicurarsi di selezionare **Distribuzione continua**, in modo che venga attivata una nuova versione ogni volta che viene completata una nuova compilazione
-([Che cosa sono le pipeline di versione?](/azure/devops/pipelines/release/what-is-release-management)). Configurare indicato di seguito:
+([Che cosa sono le pipeline di versione?](/azure/devops/pipelines/release/)). Configurare indicato di seguito:
 
 Aggiungere alla definizione di versione i passaggi seguenti:
 
