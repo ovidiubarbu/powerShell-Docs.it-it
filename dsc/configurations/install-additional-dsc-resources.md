@@ -11,7 +11,7 @@ ms.locfileid: "62080082"
 ---
 # <a name="install-additional-dsc-resources"></a>Installare risorse DSC aggiuntive
 
-PowerShell include varie risorse fornite con il prodotto per la Configurazione dello stato desiderato (DSC). Il modulo **PSDesiredStateConfiguration** contiene tutte le risorse DSC OOB disponibili nell'istanza specifica di PowerShell.
+PowerShell include varie risorse predefinite per Desired State Configuration (DSC). Il modulo **PSDesiredStateConfiguration** contiene tutte le risorse DSC predefinite disponibili nell'istanza specifica di PowerShell.
 
 Questo è un elenco delle risorse OOB incluse in PowerShell 4.0 e una descrizione delle funzionalità della risorsa.
 

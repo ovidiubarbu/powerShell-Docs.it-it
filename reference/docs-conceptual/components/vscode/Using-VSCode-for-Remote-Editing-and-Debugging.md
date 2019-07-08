@@ -17,15 +17,15 @@ Questa funzionalità è disponibile anche nell'estensione di PowerShell per VSCo
 
 ## <a name="prerequisites"></a>Prerequisiti
 
-Questa guida presuppone che si disponga di quanto segue:
+Questa guida presuppone che si disponga di:
 
 - Una risorsa remota ( ad esempio una macchina virtuale o un contenitore) a cui si ha accesso
-- PowerShell in esecuzione su di essi e il computer host
+- PowerShell in esecuzione nella risorsa remota e nel computer host
 - VSCode e l'estensione di PowerShell per VSCode
 
 Questa funzionalità funziona in Windows PowerShell e PowerShell Core.
 
-Questa funzionalità funziona anche quando ci si connette a un computer remoto tramite Gestione remota Windows, PowerShell Direct o SSH. Se si desidera usare SSH, ma si usa Windows, verificare la [versione Win32 di SSH](https://github.com/PowerShell/Win32-OpenSSH).
+Questa funzionalità funziona anche quando ci si connette a un computer remoto tramite WinRM, PowerShell Direct o SSH. Se si desidera usare SSH, ma si usa Windows, considerare la [versione Win32 di SSH](https://github.com/PowerShell/Win32-OpenSSH).
 
 > [!IMPORTANT]
 > I comandi `Open-EditorFile` e `psedit` funzionano solo nella **console integrata di PowerShell** creata dall'estensione di PowerShell per VSCode.
@@ -36,7 +36,7 @@ Questi esempi illustrano le operazioni di modifica e debug remoti da un MacBook 
 
 ### <a name="local-file-editing-with-open-editorfile"></a>Modifica dei file locali con Open-EditorFile
 
-Con l'estensione di PowerShell per VSCode avviata e la console integrata di PowerShell aperta, è possibile digitare `Open-EditorFile foo.ps1` o `psedit foo.ps1` per aprire il file locale foo.ps1 si direttamente nell'editor.
+Con l'estensione di PowerShell per VSCode avviata e la console integrata di PowerShell aperta, è possibile digitare `Open-EditorFile foo.ps1` o `psedit foo.ps1` per aprire il file locale foo.ps1 direttamente nell'editor.
 
 ![Open-EditorFile foo.ps1 funziona localmente](images/Using-VSCode-for-Remote-Editing-and-Debugging/1-open-local-file.png)
 
@@ -57,7 +57,7 @@ Durante il debug, è possibile interagire con la console di debug, verificare le
 
 ### <a name="remote-file-editing-with-open-editorfile"></a>Modifica dei file remoti con Open-EditorFile
 
-A questo punto passiamo alla modifica e debug dei file remoti. I passaggi sono quasi gli stessi, occorre solo fare prima di tutto una cosa: avviare la sessione di PowerShell nel server remoto.
+È ora possibile passare alla modifica e al debug dei file remoti. I passaggi sono quasi gli stessi, occorre solo fare prima di tutto una cosa: avviare la sessione di PowerShell nel server remoto.
 
 È disponibile un cmdlet per eseguire questa operazione. È denominato `Enter-PSSession`.
 
