@@ -41,7 +41,7 @@ Con l'estensione di PowerShell per VSCode avviata e la console integrata di Powe
 ![Open-EditorFile foo.ps1 funziona localmente](images/Using-VSCode-for-Remote-Editing-and-Debugging/1-open-local-file.png)
 
 >[!NOTE]
-> Il file `foo.ps1` deve esistere già.
+> Il file `foo.ps1` deve essere già presente.
 
 Da qui, è possibile:
 
