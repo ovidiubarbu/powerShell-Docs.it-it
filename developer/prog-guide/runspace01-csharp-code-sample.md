@@ -8,16 +8,16 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: d59f8b7c-e800-4633-aa5b-74d4c57e2706
 caps.latest.revision: 6
-ms.openlocfilehash: 59320365c4a35c3d71af10273eb21b1ce01e5c0c
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: ab067485d70523a16493eb57170615ab300eaa98
+ms.sourcegitcommit: 46bebe692689ebedfe65ff2c828fe666b443198d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62081462"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67735045"
 ---
 # <a name="runspace01-c-code-sample"></a>Codice di esempio di Runspace01 (C#)
 
-Ecco gli esempi di codice per lo spazio di esecuzione descritto in [creazione di un'applicazione Console che avvia un comando specificato](http://msdn.microsoft.com/en-us/793a6570-a072-4799-840b-172f28ce620e). A tale scopo, l'applicazione richiama uno spazio di esecuzione e quindi richiama un comando. Si noti che questa applicazione non specifica le informazioni di configurazione dello spazio di esecuzione, né e in modo esplicito crea una pipeline. Il comando che viene richiamato il `Get-Process` cmdlet.
+Ecco gli esempi di codice per lo spazio di esecuzione descritto in [creazione di un'applicazione Console che avvia un comando specificato](/dotnet/csharp/programming-guide/inside-a-program/hello-world-your-first-program). A tale scopo, l'applicazione richiama uno spazio di esecuzione e quindi richiama un comando. Si noti che questa applicazione non specifica le informazioni di configurazione dello spazio di esecuzione, né e in modo esplicito crea una pipeline. Il comando che viene richiamato il `Get-Process` cmdlet.
 
 > [!NOTE]
 > È possibile scaricare il C# file di origine (runspace01.cs) per questo spazio di esecuzione usando il Microsoft Windows Software Development Kit per Windows Vista e i componenti di Runtime di Microsoft .NET Framework 3.0. Per istruzioni sul download, vedere [come installare Windows PowerShell e il Download di Windows PowerShell SDK](/powershell/developer/installing-the-windows-powershell-sdk).

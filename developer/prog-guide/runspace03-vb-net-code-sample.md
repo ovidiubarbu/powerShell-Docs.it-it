@@ -8,16 +8,16 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 3611d66b-19da-4477-ac05-2e5e68312f51
 caps.latest.revision: 6
-ms.openlocfilehash: 432105db021bd19f467f6a275b3ea9038fa82d5b
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 6c625c325e491135af3e5c8d58eead62e89ccb4a
+ms.sourcegitcommit: 46bebe692689ebedfe65ff2c828fe666b443198d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62081394"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67734991"
 ---
 # <a name="runspace03-vbnet-code-sample"></a>Codice di esempio di Runspace03 (VB.NET)
 
-Ecco il codice sorgente Visual Basic.NET per l'applicazione console descritto in [creazione di un'applicazione Console che avvia uno Script specificato](http://msdn.microsoft.com/en-us/a93e6006-36db-4bcc-b9da-c5bebf4ffd68). Questo esempio Usa la [System.Management.Automation.Runspaceinvoke](/dotnet/api/System.Management.Automation.RunspaceInvoke) classe per eseguire uno script che recupera Elabora informazioni per un elenco di nomi di processo, passata allo script. Mostra come passare oggetti di input a uno script e come recuperare gli oggetti di errore, nonché gli oggetti di output.
+Ecco il codice sorgente Visual Basic.NET per l'applicazione console descritto in [creazione di un'applicazione Console che avvia uno Script specificato](fd). Questo esempio Usa la [System.Management.Automation.Runspaceinvoke](/dotnet/api/System.Management.Automation.RunspaceInvoke) classe per eseguire uno script che recupera Elabora informazioni per un elenco di nomi di processo, passata allo script. Mostra come passare oggetti di input a uno script e come recuperare gli oggetti di errore, nonché gli oggetti di output.
 
 > [!NOTE]
 > È possibile scaricare il file di origine VB.NET (runspace03.vb) per questo esempio utilizzando il Windows Software Development Kit per Windows Vista e i componenti di Runtime di Microsoft .NET Framework 3.0. Per istruzioni sul download, vedere [come installare Windows PowerShell e il Download di Windows PowerShell SDK](/powershell/developer/installing-the-windows-powershell-sdk).

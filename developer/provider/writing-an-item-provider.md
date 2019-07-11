@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 606c880c-6cf1-4ea6-8730-dbf137bfabff
 caps.latest.revision: 5
-ms.openlocfilehash: 9285a2f0e673de8b86084157423512bdeeda109d
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 12d2cb8c40c9fd6278bb964a6259d03167536195
+ms.sourcegitcommit: 46bebe692689ebedfe65ff2c828fe666b443198d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62080816"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67734708"
 ---
 # <a name="writing-an-item-provider"></a>Scrittura di un provider di elementi
 
@@ -25,7 +25,7 @@ Per altre informazioni sui provider di Windows PowerShell, vedere [Cenni prelimi
 
 ## <a name="implementing-item-methods"></a>Implementazione dei metodi di elemento
 
-Il [System.Management.Automation.Provider.Itemcmdletprovider](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider) classe espone diversi metodi che possono essere usati per accedere e modificare gli elementi in un archivio dati. Per un elenco completo di questi metodi, vedere [ItemCmdletProvider metodi](http://msdn.microsoft.com/library/system.management.automation.provider.itemcmdletprovider_methods\(v=vs.85\).aspx). In questo esempio verrà implementato quattro di questi metodi. [System.Management.Automation.Provider.Itemcmdletprovider.Getitem*](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.GetItem) Ottiene un elemento in un percorso specificato. [System.Management.Automation.Provider.Itemcmdletprovider.Setitem*](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.SetItem) imposta il valore dell'elemento specificato. [System.Management.Automation.Provider.Itemcmdletprovider.Itemexists*](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.ItemExists) verifica l'esistenza di un elemento nel percorso specificato. [System.Management.Automation.Provider.Itemcmdletprovider.Isvalidpath*](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.IsValidPath) controlla un percorso per verificare se viene eseguito il mapping a una posizione nell'archivio dati.
+Il [System.Management.Automation.Provider.Itemcmdletprovider](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider) classe espone diversi metodi che possono essere usati per accedere e modificare gli elementi in un archivio dati. Per un elenco completo di questi metodi, vedere [ItemCmdletProvider metodi](/dotnet/api/system.management.automation.provider.itemcmdletprovider?view=pscore-6.2.0#methods). In questo esempio verrà implementato quattro di questi metodi. [System.Management.Automation.Provider.Itemcmdletprovider.Getitem*](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.GetItem) Ottiene un elemento in un percorso specificato. [System.Management.Automation.Provider.Itemcmdletprovider.Setitem*](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.SetItem) imposta il valore dell'elemento specificato. [System.Management.Automation.Provider.Itemcmdletprovider.Itemexists*](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.ItemExists) verifica l'esistenza di un elemento nel percorso specificato. [System.Management.Automation.Provider.Itemcmdletprovider.Isvalidpath*](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.IsValidPath) controlla un percorso per verificare se viene eseguito il mapping a una posizione nell'archivio dati.
 
 > [!NOTE]
 > Questo argomento si basa sulle informazioni presenti [avvio rapido di Provider di Windows PowerShell](./windows-powershell-provider-quickstart.md). In questo argomento non comprende le nozioni di base di come configurare un progetto di provider, o come implementare i metodi ereditati dal [System.Management.Automation.Provider.Drivecmdletprovider](/dotnet/api/System.Management.Automation.Provider.DriveCmdletProvider) classe che creare e rimuovere le unità.
@@ -46,7 +46,7 @@ Dichiarare il provider di derivare dal [System.Management.Automation.Provider.It
 
 ### <a name="implementing-getitem"></a>Implementazione GetItem
 
-Il [System.Management.Automation.Provider.Itemcmdletprovider.Getitem*](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.GetItem) viene chiamato dal motore di PowerShell quando un utente chiama il [Microsoft.PowerShell.Commands.Get-elemento](/dotnet/api/Microsoft.PowerShell.Commands.Get-Item) cmdlet di provider. Il metodo restituisce l'elemento nel percorso specificato. Nell'esempio del database l'accesso, il metodo controlla se l'elemento è l'unità, una tabella nel database o una riga nel database. Il metodo invia l'elemento al motore di PowerShell chiamando il [System.Management.Automation.Provider.Cmdletprovider.Writeitemobject*](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.WriteItemObject) (metodo).
+Il [System.Management.Automation.Provider.Itemcmdletprovider.Getitem*](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.GetItem) viene chiamato dal motore di PowerShell quando un utente chiama il [Microsoft.PowerShell.Commands.GetItemCommand](/dotnet/api/Microsoft.PowerShell.Commands.getitemcommand) cmdlet il provider. Il metodo restituisce l'elemento nel percorso specificato. Nell'esempio del database l'accesso, il metodo controlla se l'elemento è l'unità, una tabella nel database o una riga nel database. Il metodo invia l'elemento al motore di PowerShell chiamando il [System.Management.Automation.Provider.Cmdletprovider.Writeitemobject*](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.WriteItemObject) (metodo).
 
 ```csharp
 protected override void GetItem(string path)
@@ -85,9 +85,9 @@ protected override void GetItem(string path)
 
 ### <a name="implementing-setitem"></a>Implementazione SetItem
 
-Il [System.Management.Automation.Provider.Itemcmdletprovider.Setitem*](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.SetItem) metodo viene chiamato per il motore chiama PowerShell quando un utente chiama il [Microsoft.PowerShell.Commands.Set-Item](/dotnet/api/Microsoft.PowerShell.Commands.Set-Item) cmdlet . Imposta il valore dell'elemento nel percorso specificato.
+Il [System.Management.Automation.Provider.Itemcmdletprovider.Setitem*](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.SetItem) metodo viene chiamato per il motore chiama PowerShell quando un utente chiama il [Microsoft.PowerShell.Commands.SetItemCommand](/dotnet/api/Microsoft.PowerShell.Commands.setitemcommand) cmdlet. Imposta il valore dell'elemento nel percorso specificato.
 
-Nell'esempio del database di Access, è opportuno impostare il valore di un elemento solo se tale elemento è una riga, in modo che il metodo genera un'eccezione [NotSupportedException](http://msdn.microsoft.com/library/system.notsupportedexception\(v=vs.110\).aspx) quando l'elemento non è una riga.
+Nell'esempio del database di Access, è opportuno impostare il valore di un elemento solo se tale elemento è una riga, in modo che il metodo genera un'eccezione [NotSupportedException](/dotnet/api/system.notsupportedexception?view=netframework-4.8) quando l'elemento non è una riga.
 
 ```csharp
 protected override void SetItem(string path, object values)
@@ -145,7 +145,7 @@ protected override void SetItem(string path, object values)
 
 ### <a name="implementing-itemexists"></a>Implementazione ItemExists
 
-Il [System.Management.Automation.Provider.Itemcmdletprovider.Itemexists*](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.ItemExists) metodo viene chiamato dal motore di PowerShell quando un utente chiama il [Microsoft.PowerShell.Commands.Test-Path](/dotnet/api/Microsoft.PowerShell.Commands.Test-Path) cmdlet. Il metodo determina se è presente un elemento nel percorso specificato. Se l'elemento esiste, il metodo passa al motore di PowerShell chiamando [System.Management.Automation.Provider.Cmdletprovider.Writeitemobject*](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.WriteItemObject).
+Il [System.Management.Automation.Provider.Itemcmdletprovider.Itemexists*](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.ItemExists) metodo viene chiamato dal motore di PowerShell quando un utente chiama il [Microsoft.PowerShell.Commands.TestPathCommand](/dotnet/api/Microsoft.PowerShell.Commands.Testpathcommand) cmdlet. Il metodo determina se è presente un elemento nel percorso specificato. Se l'elemento esiste, il metodo passa al motore di PowerShell chiamando [System.Management.Automation.Provider.Cmdletprovider.Writeitemobject*](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.WriteItemObject).
 
 ```csharp
 protected override bool ItemExists(string path)

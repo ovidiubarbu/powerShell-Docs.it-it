@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 98bcfda0-6ee2-46f5-bbc7-5fab8b780d6a
 caps.latest.revision: 5
-ms.openlocfilehash: f449c17e4c373c42f8a1d96fa9075940111c65bc
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: edb4d9944a527391983e068ddf07f4fac415c3f9
+ms.sourcegitcommit: 46bebe692689ebedfe65ff2c828fe666b443198d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62080867"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67734737"
 ---
 # <a name="writing-a-navigation-provider"></a>Scrittura di un provider di navigazione
 
@@ -25,7 +25,7 @@ Per altre informazioni sui provider di Windows PowerShell, vedere [Cenni prelimi
 
 ## <a name="implementing-navigation-methods"></a>Implementazione dei metodi di navigazione
 
-Il [System.Management.Automation.Provider.Navigationcmdletprovider](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider) classe implementa metodi che supportano i contenitori nidificati, i percorsi relativi e spostamento di elementi. Per un elenco completo di questi metodi, vedere [NavigationCmdletProvider metodi](http://msdn.microsoft.com/library/system.management.automation.provider.navigationcmdletprovider_methods\(v=vs.85\).aspx).
+Il [System.Management.Automation.Provider.Navigationcmdletprovider](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider) classe implementa metodi che supportano i contenitori nidificati, i percorsi relativi e spostamento di elementi. Per un elenco completo di questi metodi, vedere [NavigationCmdletProvider metodi](/dotnet/api/system.management.automation.provider.navigationcmdletprovider?view=pscore-6.2.0#methods).
 
 > [!NOTE]
 > Questo argomento si basa sulle informazioni presenti [avvio rapido di Provider di Windows PowerShell](./windows-powershell-provider-quickstart.md). In questo argomento non comprende le nozioni di base di come configurare un progetto di provider, o come implementare i metodi ereditati dal [System.Management.Automation.Provider.Drivecmdletprovider](/dotnet/api/System.Management.Automation.Provider.DriveCmdletProvider) classe che creare e rimuovere le unità. In questo argomento non illustra anche come implementare i metodi esposti dal [System.Management.Automation.Provider.Itemcmdletprovider](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider) o [System.Management.Automation.Provider.Containercmdletprovider](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider) classi. Per un esempio che illustra come implementare i cmdlet item, vedere [scrittura di un elemento provider](./writing-an-item-provider.md). Per un esempio che illustra come implementare i cmdlet di contenitore, vedere [scrittura di un provider di contenitore](./writing-a-container-provider.md).
@@ -132,7 +132,7 @@ protected override string GetParentPath(string path, string root)
 
 ### <a name="implementing-makepath"></a>Implementazione MakePath
 
-Il [System.Management.Automation.Provider.Navigationcmdletprovider.Makepath*](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.MakePath) metodo viene aggiunto un percorso padre specificato e un percorso figlio specificato per creare un percorso di provider interne (per tipi di informazioni sul percorso i provider possono supportare, vedere [Cenni preliminari sul Provider di Windows PowerShell](./windows-powershell-provider-overview.md). Il motore di PowerShell chiama questo metodo quando un utente chiama il [Microsoft.PowerShell.Commands.Join-Path](/dotnet/api/Microsoft.PowerShell.Commands.Join-Path) cmdlet.
+Il [System.Management.Automation.Provider.Navigationcmdletprovider.Makepath*](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.MakePath) metodo viene aggiunto un percorso padre specificato e un percorso figlio specificato per creare un percorso di provider interne (per tipi di informazioni sul percorso i provider possono supportare, vedere [Cenni preliminari sul Provider di Windows PowerShell](./windows-powershell-provider-overview.md). Il motore di PowerShell chiama questo metodo quando un utente chiama il [Microsoft.PowerShell.Commands.JoinPathCommand](/dotnet/api/Microsoft.PowerShell.Commands.joinpathcommand) cmdlet.
 
 ```csharp
 protected override string MakePath(string parent, string child)
@@ -221,7 +221,7 @@ protected override string NormalizeRelativePath(string path,
 
 ### <a name="implementing-moveitem"></a>Implementazione MoveItem
 
-Il [System.Management.Automation.Provider.Navigationcmdletprovider.Moveitem*](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.MoveItem) metodo sposta un elemento dal percorso specificato nel percorso di destinazione specificato. Il motore di PowerShell chiama questo metodo quando un utente chiama il [Microsoft.PowerShell.Commands.Move-Item](/dotnet/api/Microsoft.PowerShell.Commands.Move-Item) cmdlet.
+Il [System.Management.Automation.Provider.Navigationcmdletprovider.Moveitem*](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.MoveItem) metodo sposta un elemento dal percorso specificato nel percorso di destinazione specificato. Il motore di PowerShell chiama questo metodo quando un utente chiama il [Microsoft.PowerShell.Commands.MoveItemCommand](/dotnet/api/Microsoft.PowerShell.Commands.moveitemcommand) cmdlet.
 
 ```csharp
 protected override void MoveItem(string path, string destination)

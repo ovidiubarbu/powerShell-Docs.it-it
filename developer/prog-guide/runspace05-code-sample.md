@@ -8,16 +8,16 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 9688cd69-07ea-4ea0-8822-0a4850bcf86c
 caps.latest.revision: 7
-ms.openlocfilehash: b16ee45383059c52ce3433699c6b8d2120992431
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: abf19d848f6150d005c63bb0fc2ffbe1de405e2a
+ms.sourcegitcommit: 46bebe692689ebedfe65ff2c828fe666b443198d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62081343"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67734965"
 ---
 # <a name="runspace05-code-sample"></a>Codice di esempio di Runspace05
 
-Ecco il codice sorgente dell'esempio Runspace05 descritto nella [configurazione di un RunspaceConfiguration usando spazio di esecuzione](http://msdn.microsoft.com/en-us/42681d19-2d05-4975-befd-afb1990e79b2). In questo esempio viene illustrato come creare le informazioni di configurazione dello spazio di esecuzione, creare uno spazio di esecuzione, creare una pipeline con un singolo comando e quindi eseguire la pipeline. Il comando che viene eseguito è il `Get-Process` cmdlet.
+Ecco il codice sorgente dell'esempio Runspace05 descritto nella [configurazione di un RunspaceConfiguration usando spazio di esecuzione](https://msdn.microsoft.com/en-us/42681d19-2d05-4975-befd-afb1990e79b2). In questo esempio viene illustrato come creare le informazioni di configurazione dello spazio di esecuzione, creare uno spazio di esecuzione, creare una pipeline con un singolo comando e quindi eseguire la pipeline. Il comando che viene eseguito è il `Get-Process` cmdlet.
 
 > [!NOTE]
 > È possibile scaricare il C# file di origine (runspace05.cs) tramite il Microsoft Windows Software Development Kit per Windows Vista e i componenti di Runtime di Microsoft .NET Framework 3.0. Per istruzioni sul download, vedere [come installare Windows PowerShell e il Download di Windows PowerShell SDK](/powershell/developer/installing-the-windows-powershell-sdk).

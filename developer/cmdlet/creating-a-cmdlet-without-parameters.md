@@ -11,12 +11,12 @@ helpviewer_keywords:
 - cmdlets [PowerShell Programmers Guide], basic cmdlet
 ms.assetid: 54236ef3-82db-45f8-9114-1ecb7ff65d3e
 caps.latest.revision: 8
-ms.openlocfilehash: 7f10acf59dedbb4af17bc5250e8624282ba22656
-ms.sourcegitcommit: 01b81317029b28dd9b61d167045fd31f1ec7bc06
+ms.openlocfilehash: 2685215f41c96955fc662d5eee27fc0e7a31da83
+ms.sourcegitcommit: 46bebe692689ebedfe65ff2c828fe666b443198d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65854974"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67733960"
 ---
 # <a name="creating-a-cmdlet-without-parameters"></a>Creazione di un cmdlet senza parametri
 
@@ -71,7 +71,7 @@ Windows PowerShell Usa il [Microsoft.PowerShell.Commands](/dotnet/api/Microsoft.
 
 ## <a name="overriding-an-input-processing-method"></a>Si esegue l'override di un metodo di elaborazione dell'Input
 
-Il [System.Management.Automation.Cmdlet](/dotnet/api/System.Management.Automation.Cmdlet) classe fornisce tre metodi di elaborazione di input principale, almeno uno dei quali è necessario eseguire l'override del cmdlet. Per altre informazioni sul modo in cui Windows PowerShell elabora i record, vedere [modalità di funzionamento di Windows PowerShell](https://msdn.microsoft.com/en-us/ced30e23-10af-4700-8933-49873bd84d58).
+Il [System.Management.Automation.Cmdlet](/dotnet/api/System.Management.Automation.Cmdlet) classe fornisce tre metodi di elaborazione di input principale, almeno uno dei quali è necessario eseguire l'override del cmdlet. Per altre informazioni sul modo in cui Windows PowerShell elabora i record, vedere [modalità di funzionamento di Windows PowerShell](/previous-versions//ms714658(v=vs.85)).
 
 Per tutti i tipi di input, il runtime di Windows PowerShell viene chiamato [System.Management.Automation.Cmdlet.BeginProcessing](/dotnet/api/System.Management.Automation.Cmdlet.BeginProcessing) per abilitare l'elaborazione. Se il cmdlet deve eseguire alcune pre-elaborazione o il programma di installazione, è possibile eseguire questa operazione eseguendo l'override di questo metodo.
 
@@ -135,11 +135,11 @@ Per l'intero C# esempi di codice, vedere [esempio GetProcessSample01](./getproce
 
 ## <a name="defining-object-types-and-formatting"></a>Definizione di tipi di oggetto e formattazione
 
-Windows PowerShell passa informazioni tra i cmdlet con gli oggetti .NET. Di conseguenza, potrebbe essere necessario definire un proprio tipo di un cmdlet o il cmdlet potrebbe essere necessario estendere un tipo esistente fornito da un altro cmdlet. Per altre informazioni sulla definizione di nuovi tipi o estendere i tipi esistenti, vedere [estendendo i tipi di oggetto e formattazione](https://msdn.microsoft.com/en-us/da976d91-a3d6-44e8-affa-466b1e2bd351).
+Windows PowerShell passa informazioni tra i cmdlet con gli oggetti .NET. Di conseguenza, potrebbe essere necessario definire un proprio tipo di un cmdlet o il cmdlet potrebbe essere necessario estendere un tipo esistente fornito da un altro cmdlet. Per altre informazioni sulla definizione di nuovi tipi o estendere i tipi esistenti, vedere [estendendo i tipi di oggetto e formattazione](/previous-versions//ms714665(v=vs.85)).
 
 ## <a name="building-the-cmdlet"></a>Creazione di Cmdlet
 
-Dopo l'implementazione di un cmdlet, è necessario registrarlo con Windows PowerShell tramite uno snap-in Windows PowerShell. Per altre informazioni sulla registrazione dei cmdlet, vedere [come registrare i cmdlet, provider e applicazioni Host](https://msdn.microsoft.com/en-us/a41e9054-29c8-40ab-bf2b-8ce4e7ec1c8c).
+Dopo l'implementazione di un cmdlet, è necessario registrarlo con Windows PowerShell tramite uno snap-in Windows PowerShell. Per altre informazioni sulla registrazione dei cmdlet, vedere [come registrare i cmdlet, provider e applicazioni Host](/previous-versions//ms714644(v=vs.85)).
 
 ## <a name="testing-the-cmdlet"></a>Il Cmdlet di test
 
@@ -260,13 +260,13 @@ Quando il cmdlet è stato registrato con Windows PowerShell, è possibile testar
 
 [Creazione di un Cmdlet per elaborare l'Input della Pipeline](./adding-parameters-that-process-pipeline-input.md)
 
-[Come creare un Cmdlet di Windows PowerShell](https://msdn.microsoft.com/en-us/0d721742-c849-4d0d-964f-78ddd9cd258c)
+[Come creare un Cmdlet di Windows PowerShell](/powershell/developer/cmdlet/writing-a-windows-powershell-cmdlet)
 
-[Estensione di tipi di oggetto e la formattazione](https://msdn.microsoft.com/en-us/da976d91-a3d6-44e8-affa-466b1e2bd351)
+[Estensione di tipi di oggetto e la formattazione](/previous-versions//ms714665(v=vs.85))
 
-[Funzionamento di Windows PowerShell](https://msdn.microsoft.com/en-us/ced30e23-10af-4700-8933-49873bd84d58)
+[Funzionamento di Windows PowerShell](/previous-versions//ms714658(v=vs.85))
 
-[Come registrare i cmdlet, provider e applicazioni Host](https://msdn.microsoft.com/en-us/a41e9054-29c8-40ab-bf2b-8ce4e7ec1c8c)
+[Come registrare i cmdlet, provider e applicazioni Host](/previous-versions//ms714644(v=vs.85))
 
 [Windows PowerShell Reference](../windows-powershell-reference.md) (Guida di riferimento di PowerShell)
 

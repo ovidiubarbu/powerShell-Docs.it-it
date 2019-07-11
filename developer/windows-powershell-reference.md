@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Windows PowerShell SDK
 ms.assetid: cbba4879-bcac-484a-9906-4bbe2cd1eb33
 caps.latest.revision: 11
-ms.openlocfilehash: 86595ebaac32318a4e3b9a3c4b295c73fb2e1c75
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 48b2b2b9ab2a39cf185ed54bcfa99d46562e13b6
+ms.sourcegitcommit: 46bebe692689ebedfe65ff2c828fe666b443198d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62080499"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67733744"
 ---
 # <a name="windows-powershell-reference"></a>Guida di riferimento di Windows PowerShell
 
@@ -53,4 +53,4 @@ Oltre a SDK di Windows PowerShell, le risorse seguenti forniscono altre informaz
 
 [System.Management.Automation.Internal](/dotnet/api/System.Management.Automation.Internal) questo spazio dei nomi contiene le classi di base utilizzate da altre classi dello spazio dei nomi. Ad esempio, il [System.Management.Automation.Internal.Cmdletmetadataattribute](/dotnet/api/System.Management.Automation.Internal.CmdletMetadataAttribute) classe è la classe base per il [System.Management.Automation.CmdletAttribute](/dotnet/api/System.Management.Automation.CmdletAttribute) classe.
 
-[System.Management.Automation.Runspaces](/dotnet/api/System.Management.Automation.Runspaces) questo spazio dei nomi contiene le classi, enumerazioni e le interfacce utilizzate per creare uno spazio di esecuzione di Windows PowerShell. In questo contesto, lo spazio di esecuzione di Windows PowerShell è il contesto in cui una o più pipeline di Windows PowerShell richiamano i cmdlet. Vale a dire, i cmdlet funzionano all'interno del contesto di uno spazio di esecuzione di Windows PowerShell. Per altre informazioni aboutWindows spazi di esecuzione di PowerShell, vedere [spazi di esecuzione di Windows PowerShell](http://msdn.microsoft.com/en-us/a1582cfe-f06d-4aff-adc6-71f49a860ce9).
+[System.Management.Automation.Runspaces](/dotnet/api/System.Management.Automation.Runspaces) questo spazio dei nomi contiene le classi, enumerazioni e le interfacce utilizzate per creare uno spazio di esecuzione di Windows PowerShell. In questo contesto, lo spazio di esecuzione di Windows PowerShell è il contesto in cui una o più pipeline di Windows PowerShell richiamano i cmdlet. Vale a dire, i cmdlet funzionano all'interno del contesto di uno spazio di esecuzione di Windows PowerShell. Per altre informazioni aboutWindows spazi di esecuzione di PowerShell, vedere [spazi di esecuzione di Windows PowerShell](https://msdn.microsoft.com/en-us/a1582cfe-f06d-4aff-adc6-71f49a860ce9).

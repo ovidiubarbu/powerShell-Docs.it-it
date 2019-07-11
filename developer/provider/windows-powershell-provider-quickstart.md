@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 3e879ba7-c334-460b-94a1-3e9b63d3d8de
 caps.latest.revision: 5
-ms.openlocfilehash: 151b7125afe1b0d386467a0e5f89225716857ac2
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 949c0d63b1e5bca1bfe670362df4297c29e98fcc
+ms.sourcegitcommit: 46bebe692689ebedfe65ff2c828fe666b443198d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62080884"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67734852"
 ---
 # <a name="windows-powershell-provider-quickstart"></a>Guida introduttiva del provider di Windows PowerShell
 
@@ -67,7 +67,7 @@ namespace Microsoft.Samples.PowerShell.Providers
 
 ### <a name="implementing-newdrive"></a>Implementazione NewDrive
 
-Il [System.Management.Automation.Provider.Drivecmdletprovider.Newdrive*](/dotnet/api/System.Management.Automation.Provider.DriveCmdletProvider.NewDrive) metodo viene chiamato dal motore di Windows PowerShell quando un utente chiama il [Microsoft.PowerShell.Commands.New-PSDrive](/dotnet/api/Microsoft.PowerShell.Commands.New-PSDrive)che specifica il nome del provider di cmdlet. Il parametro PSDriveInfo viene passato dal motore di Windows PowerShell e il metodo restituisce la nuova unità al motore di Windows PowerShell. Questo metodo deve essere dichiarato all'interno della classe creata in precedenza.
+Il [System.Management.Automation.Provider.Drivecmdletprovider.Newdrive*](/dotnet/api/System.Management.Automation.Provider.DriveCmdletProvider.NewDrive) metodo viene chiamato dal motore di Windows PowerShell quando un utente chiama il [Microsoft.PowerShell.Commands.NewPSDriveCommand](/dotnet/api/Microsoft.PowerShell.Commands.Newpsdrivecommand) che specifica il nome del provider di cmdlet. Il parametro PSDriveInfo viene passato dal motore di Windows PowerShell e il metodo restituisce la nuova unità al motore di Windows PowerShell. Questo metodo deve essere dichiarato all'interno della classe creata in precedenza.
 
 Il metodo controlla prima di tutto per assicurarsi che l'oggetto unità sia alla radice dell'unità che sono stati passati esiste, restituendo `null` se una di esse non li supportano. Un costruttore della classe interna AccessDBPSDriveInfo viene quindi utilizzato per creare una nuova unità e rappresenta una connessione al database di Access, l'unità.
 
@@ -147,7 +147,7 @@ internal class AccessDBPSDriveInfo : PSDriveInfo
 
 ### <a name="implementing-removedrive"></a>Implementazione RemoveDrive
 
-Il [System.Management.Automation.Provider.Drivecmdletprovider.Removedrive*](/dotnet/api/System.Management.Automation.Provider.DriveCmdletProvider.RemoveDrive) metodo viene chiamato dal motore di Windows PowerShell quando un utente chiama il [Microsoft.PowerShell.Commands.Remove-PSDrive](/dotnet/api/Microsoft.PowerShell.Commands.Remove-PSDrive) cmdlet. Il metodo di questo provider si chiude la connessione al database di Access.
+Il [System.Management.Automation.Provider.Drivecmdletprovider.Removedrive*](/dotnet/api/System.Management.Automation.Provider.DriveCmdletProvider.RemoveDrive) metodo viene chiamato dal motore di Windows PowerShell quando un utente chiama il [Microsoft.PowerShell.Commands.RemovePSDriveCommand ](/dotnet/api/Microsoft.PowerShell.Commands.removepsdrivecommand) cmdlet. Il metodo di questo provider si chiude la connessione al database di Access.
 
 ```csharp
 protected override PSDriveInfo RemoveDrive(PSDriveInfo drive)

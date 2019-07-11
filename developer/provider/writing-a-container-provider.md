@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 524fd900-c0fe-4d13-87f2-14903a8fd5a4
 caps.latest.revision: 5
-ms.openlocfilehash: bf0a73267b3cad1f50d983ebed53318ec98180e0
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 48ab9102e8f1b17b3b533cc3b0aa1dacef0e2076
+ms.sourcegitcommit: 46bebe692689ebedfe65ff2c828fe666b443198d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62080850"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67734838"
 ---
 # <a name="writing-a-container-provider"></a>Scrittura di un provider di contenitore
 
@@ -25,7 +25,7 @@ Per altre informazioni sui provider di Windows PowerShell, vedere [Cenni prelimi
 
 ## <a name="implementing-container-methods"></a>Implementazione dei metodi di contenitore
 
-Il [System.Management.Automation.Provider.Containercmdletprovider](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider) classe implementa i metodi che supportano i contenitori e creare, copiare e rimuovono elementi. Per un elenco completo di questi metodi, vedere [ContainerCmdletProvider metodi](http://msdn.microsoft.com/library/system.management.automation.provider.containercmdletprovider_methods\(v=vs.85\).aspx).
+Il [System.Management.Automation.Provider.Containercmdletprovider](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider) classe implementa i metodi che supportano i contenitori e creare, copiare e rimuovono elementi. Per un elenco completo di questi metodi, vedere [System.Management.Automation.Provider.ContainerCmdletProvider](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider?view=pscore-6.2.0#methods).
 
 > [!NOTE]
 > Questo argomento si basa sulle informazioni presenti [avvio rapido di Provider di Windows PowerShell](./windows-powershell-provider-quickstart.md). In questo argomento non comprende le nozioni di base di come configurare un progetto di provider, o come implementare i metodi ereditati dal [System.Management.Automation.Provider.Drivecmdletprovider](/dotnet/api/System.Management.Automation.Provider.DriveCmdletProvider) classe che creare e rimuovere le unità. In questo argomento non illustra anche come implementare i metodi esposti dal [System.Management.Automation.Provider.Itemcmdletprovider](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider) classe. Per un esempio che illustra come implementare i cmdlet item, vedere [scrittura di un elemento provider](./writing-an-item-provider.md).
@@ -44,7 +44,7 @@ Dichiarare il provider di derivare dal [System.Management.Automation.Provider.Co
 
 ### <a name="implementing-getchilditems"></a>Implementazione GetChildItems
 
-Il motore di PowerShell chiama il [System.Management.Automation.Provider.Containercmdletprovider.Getchilditems*](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.GetChildItems) metodo quando un utente chiama il [Microsoft.PowerShell.Commands.Get Childitem](/dotnet/api/Microsoft.PowerShell.Commands.Get-ChildItem) cmdlet. Questo metodo ottiene gli elementi che sono figli dell'elemento nel percorso specificato.
+Il motore di PowerShell chiama il [System.Management.Automation.Provider.Containercmdletprovider.Getchilditems*](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.GetChildItems) metodo quando un utente chiama il [Microsoft.PowerShell.Commands.GetChildItemCommand](/dotnet/api/Microsoft.PowerShell.Commands.Getchilditemcommand) cmdlet. Questo metodo ottiene gli elementi che sono figli dell'elemento nel percorso specificato.
 
 Nell'esempio del database l'accesso, il comportamento dei [System.Management.Automation.Provider.Containercmdletprovider.Getchilditems*](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.GetChildItems) metodo dipende dal tipo dell'elemento specificato. Se l'elemento è l'unità, quindi gli elementi figlio sono le tabelle e il metodo restituisce il set di tabelle dal database. Se l'elemento specificato è una tabella, gli elementi figlio sono le righe della tabella. Se l'elemento è una riga, quindi non ha elementi figlio e il metodo restituisce solo tale riga. Tutti gli elementi figlio vengono inviati nuovamente al motore di PowerShell per il [System.Management.Automation.Provider.Cmdletprovider.Writeitemobject*](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.WriteItemObject) (metodo).
 
@@ -155,7 +155,7 @@ protected override void GetChildNames(string path,
 
 ### <a name="implementing-newitem"></a>Implementazione NewItem
 
-Il [System.Management.Automation.Provider.Containercmdletprovider.Newitem*](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.NewItem) metodo crea un nuovo elemento del tipo specificato nel percorso specificato. Il motore di PowerShell chiama questo metodo quando un utente chiama il [Microsoft.PowerShell.Commands.New-Item](/dotnet/api/Microsoft.PowerShell.Commands.New-Item) cmdlet.
+Il [System.Management.Automation.Provider.Containercmdletprovider.Newitem*](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.NewItem) metodo crea un nuovo elemento del tipo specificato nel percorso specificato. Il motore di PowerShell chiama questo metodo quando un utente chiama il [Microsoft.PowerShell.Commands.NewItemCommand](/dotnet/api/Microsoft.PowerShell.Commands.newitemcommand) cmdlet.
 
 In questo esempio, il metodo implementa la logica per stabilire che il percorso e il tipo di corrispondenza. Vale a dire solo una tabella può essere creata direttamente sotto l'unità (database) e può essere creata solo una riga in una tabella. Se il percorso specificato e il tipo di elemento non corrispondono in questo modo, il metodo genera un'eccezione.
 
@@ -333,7 +333,7 @@ protected override void NewItem(string path, string type,
 
 ### <a name="implementing-copyitem"></a>Implementazione di CopyItem
 
-Il [System.Management.Automation.Provider.ContainerCmdletProvider.CopyItem](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.CopyItem) copia l'elemento specificato nel percorso specificato. Il motore di PowerShell chiama questo metodo quando un utente chiama il [Microsoft.PowerShell.Commands.Copy-Item](/dotnet/api/Microsoft.PowerShell.Commands.Copy-Item) cmdlet. Questo metodo può anche essere ricorsiva, la copia di tutti gli elementi figlio degli elementi oltre l'elemento stesso.
+Il [System.Management.Automation.Provider.ContainerCmdletProvider.CopyItem](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.CopyItem) copia l'elemento specificato nel percorso specificato. Il motore di PowerShell chiama questo metodo quando un utente chiama il [Microsoft.PowerShell.Commands.CopyItemCommand](/dotnet/api/Microsoft.PowerShell.Commands.copyitemcommand) cmdlet. Questo metodo può anche essere ricorsiva, la copia di tutti gli elementi figlio degli elementi oltre l'elemento stesso.
 
 In modo simile al [System.Management.Automation.Provider.Containercmdletprovider.Newitem*](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.NewItem) (metodo), questo metodo esegue la logica per assicurarsi che l'elemento specificato è del tipo corretto per il percorso in cui vengono copiato. Ad esempio, se il percorso di destinazione è una tabella, l'elemento da copiare deve essere una riga.
 
@@ -466,7 +466,7 @@ protected override void CopyItem(string path, string copyPath, bool recurse)
 
 ### <a name="implementing-removeitem"></a>Implementazione RemoveItem
 
-Il [System.Management.Automation.Provider.Containercmdletprovider.Removeitem*](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.RemoveItem) metodo rimuove l'elemento nel percorso specificato. Il motore di PowerShell chiama questo metodo quando un utente chiama il [Microsoft.PowerShell.Commands.Remove-Item](/dotnet/api/Microsoft.PowerShell.Commands.Remove-Item) cmdlet.
+Il [System.Management.Automation.Provider.Containercmdletprovider.Removeitem*](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider.RemoveItem) metodo rimuove l'elemento nel percorso specificato. Il motore di PowerShell chiama questo metodo quando un utente chiama il [Microsoft.PowerShell.Commands.RemoveItemCommand](/dotnet/api/Microsoft.PowerShell.Commands.removeitemcommand) cmdlet.
 
 ```csharp
 protected override void RemoveItem(string path, bool recurse)
