@@ -2,19 +2,19 @@
 ms.date: 06/12/2017
 keywords: dsc,powershell,configurazione,installazione
 title: Procedure consigliate per i server di pull
-ms.openlocfilehash: fe483a487f85f2e4edb0928fccfe98746ae11231
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: a3c4ca039b1e061a9246848bef6aeecebcd89011
+ms.sourcegitcommit: 46bebe692689ebedfe65ff2c828fe666b443198d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62079201"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67727204"
 ---
 # <a name="pull-server-best-practices"></a>Procedure consigliate per i server di pull
 
 Si applica a: Windows PowerShell 4.0, Windows PowerShell 5.0
 
 > [!IMPORTANT]
-> Il server di pull (funzionalità di Windows *servizio DSC*) è un componente supportato di Windows Server, tuttavia non si prevede di offrire nuove caratteristiche o funzionalità. È consigliabile avviare la transizione dei client gestiti ad [Automation DSC per Azure](/azure/automation/automation-dsc-getting-started) (include funzionalità superiori al server di pull in Windows Server) o a una delle soluzioni della community riportate [qui](pullserver.md#community-solutions-for-pull-service).
+> Il server di pull (funzionalità di Windows *servizio DSC*) è un componente supportato di Windows Server, tuttavia non si prevede di offrire nuove caratteristiche o funzionalità. È consigliabile avviare la transizione dei client gestiti ad [Automation DSC per Azure](/azure/automation/automation-dsc-getting-started) (include funzionalità superiori al server di pull in Windows Server) o a una delle soluzioni della community riportate [qui](/powershell/dsc/pull-server/pullserver#community-solutions-for-pull-service).
 
 Riepilogo: questo documento illustra processi ed estendibilità per supportare i tecnici che preparano la soluzione. I dettagli inclusi offrono procedure consigliate identificate dai clienti e validate dal team del prodotto per garantire che le indicazioni siano stabili e valide per il futuro.
 
@@ -50,9 +50,9 @@ Windows PowerShell offre un set di estensioni del linguaggio per la configurazio
 Un server di pull offre un servizio centralizzato per archiviare le configurazioni che saranno accessibili per i nodi di destinazione.
 
 Il ruolo del server di pull può essere distribuito come istanza del server Web o come condivisione di file SMB. La funzionalità del server Web include un'interfaccia OData e può facoltativamente includere funzionalità per i nodi di destinazione per restituire la conferma di un esito positivo o negativo quando vengono applicate le configurazioni. Questa funzionalità è utile in ambienti in cui è presente un numero elevato di nodi di destinazione.
-Dopo la configurazione di un nodo di destinazione (noto anche come client) verso il server di pull, vengono scaricati e applicati i dati della configurazione più recente e gli script necessari. Questa operazione può essere eseguita come distribuzione singola o come processo ripetuto. Ciò rende il server di pull un'importante risorsa per la gestione di modifiche su larga scala. Per altre informazioni, vedere [Windows PowerShell Desired State Configuration Pull Servers](/powershell/dsc/pullServer) (Server di pull per la configurazione dello stato desiderato tramite Windows PowerShell) e
+Dopo la configurazione di un nodo di destinazione (noto anche come client) verso il server di pull, vengono scaricati e applicati i dati della configurazione più recente e gli script necessari. Questa operazione può essere eseguita come distribuzione singola o come processo ripetuto. Ciò rende il server di pull un'importante risorsa per la gestione di modifiche su larga scala. Per altre informazioni, vedere [Windows PowerShell Desired State Configuration Pull Servers](/powershell/dsc/pullServer/pullserver) (Server di pull per la configurazione dello stato desiderato tramite Windows PowerShell) e
 
-[Push and Pull Configuration Modes](/powershell/dsc/pullServer) (Modalità di configurazione push e pull).
+[Push and Pull Configuration Modes](/powershell/dsc/pullServer/pullserver) (Modalità di configurazione push e pull).
 
 ## <a name="configuration-planning"></a>Pianificazione della configurazione
 

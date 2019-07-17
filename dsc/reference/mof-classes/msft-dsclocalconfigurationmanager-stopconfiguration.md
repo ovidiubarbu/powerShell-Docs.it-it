@@ -1,15 +1,15 @@
 ---
 ms.date: 06/12/2017
 keywords: dsc,powershell,configurazione,installazione
-title: Metodo StopConfiguration della classe MSFT_DSCLocalConfigurationManager
-ms.openlocfilehash: 1cd887d205967c3d282143df4e6199027639230e
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+title: Metodo StopConfiguration
+ms.openlocfilehash: e1de175032a3bddf11af218bc4a15bdbe554a9d5
+ms.sourcegitcommit: 46bebe692689ebedfe65ff2c828fe666b443198d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62078243"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67726995"
 ---
-# <a name="stopconfiguration-method-of-the-msftdsclocalconfigurationmanager-class"></a>Metodo StopConfiguration della classe MSFT_DSCLocalConfigurationManager
+# <a name="stopconfiguration-method"></a>Metodo StopConfiguration
 
 Arresta la modifica della configurazione in corso.
 

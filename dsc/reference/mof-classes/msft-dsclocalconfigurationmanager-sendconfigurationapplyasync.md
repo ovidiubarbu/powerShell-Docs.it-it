@@ -1,15 +1,15 @@
 ---
 ms.date: 06/12/2017
 keywords: dsc,powershell,configurazione,installazione
-title: Metodo SendConfigurationApplyAsync della classe MSFT_DSCLocalConfigurationManager
-ms.openlocfilehash: b028079cf826719967858f50e357b441ba8f9d79
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+title: Metodo SendConfigurationApplyAsync
+ms.openlocfilehash: c0e6dc9418757ee719e848fa8e7006dd73d91ad8
+ms.sourcegitcommit: 46bebe692689ebedfe65ff2c828fe666b443198d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62078278"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67734311"
 ---
-# <a name="sendconfigurationapplyasync-method-of-the-msftdsclocalconfigurationmanager-class"></a>Metodo SendConfigurationApplyAsync della classe MSFT_DSCLocalConfigurationManager
+# <a name="sendconfigurationapplyasync-method"></a>Metodo SendConfigurationApplyAsync
 
 Invia il documento di configurazione in modo asicrono al nodo gestito e usa l'agente di configurazione per applicare la configurazione.
 

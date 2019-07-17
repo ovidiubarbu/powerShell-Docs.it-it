@@ -1,15 +1,15 @@
 ---
 ms.date: 06/12/2017
 keywords: dsc,powershell,configurazione,installazione
-title: Metodo RemoveConfiguration della classe MSFT_DSCLocalConfigurationManager
-ms.openlocfilehash: 03555cc73da1272bdebebc3d93b26aaf8fabc18e
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+title: Metodo RemoveConfiguration
+ms.openlocfilehash: aacbed96beb960d7e0d449423a4de9a27f0a287e
+ms.sourcegitcommit: 46bebe692689ebedfe65ff2c828fe666b443198d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62078691"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67734392"
 ---
-# <a name="removeconfiguration-method-of-the-msftdsclocalconfigurationmanager-class"></a>Metodo RemoveConfiguration della classe MSFT_DSCLocalConfigurationManager
+# <a name="removeconfiguration-method"></a>Metodo RemoveConfiguration
 
 Rimuove i file di configurazione.
 

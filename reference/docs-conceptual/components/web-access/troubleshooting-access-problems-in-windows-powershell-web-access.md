@@ -2,12 +2,12 @@
 ms.date: 08/23/2017
 keywords: powershell,cmdlet
 title: risoluzione dei problemi di accesso in accesso web windows powershell
-ms.openlocfilehash: 314e4a8098988111739705d55b68ff5ed2f5eff3
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 66e913504cf0c34f8d9ab18b088fb06173aca24c
+ms.sourcegitcommit: 46bebe692689ebedfe65ff2c828fe666b443198d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62086596"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67733860"
 ---
 # <a name="troubleshooting-access-problems-in-windows-powershell-web-access"></a>Risoluzione dei problemi di accesso in Accesso Web Windows PowerShell
 
@@ -35,7 +35,7 @@ Il problema può essere dovuto a uno dei motivi seguenti.
 
   Verificare che tale funzione sia abilitata nel computer a cui l'utente sta tentando di connettersi.
 
-  Per altre informazioni, vedere [How to Configure Your Computer for Remoting](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_remote_requirements#how-to-configure-your-computer-for-remoting) (Come configurare il computer per la comunicazione remota).
+  Per altre informazioni, vedere [How to Configure Your Computer for Remoting](/powershell/module/microsoft.powershell.core/about/about_remote_requirements#how-to-configure-your-computer-for-remoting) (Come configurare il computer per la comunicazione remota).
 
 ## <a name="internal-server-error"></a>Errore interno del server
 

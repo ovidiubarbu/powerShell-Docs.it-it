@@ -3,12 +3,12 @@ description: Informazioni sulla cronologia delle versioni per l'estensione DSC (
 ms.date: 06/21/2018
 keywords: dsc, powershell, azure, estensione
 title: Cronologia delle versioni dell'estensione DSC di Azure
-ms.openlocfilehash: 2c076e3beccc15e99af2327820916d7a4d28da68
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 6d821e53e9206d99425e8c83f6d90986c7c28b63
+ms.sourcegitcommit: 46bebe692689ebedfe65ff2c828fe666b443198d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62079745"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67734653"
 ---
 # <a name="azure-desired-state-configuration-extension-version-history"></a>Cronologia delle versioni dell'estensione DSC (Desired State Configuration) di Azure
 
@@ -164,7 +164,7 @@ Questo articolo contiene informazioni su ogni versione dell'estensione VM DSC di
 - **Ambiente:** Azure
 - **Note:** questa versione usa DSC nella versione inclusa in Windows Server 2016 Technical Preview, per gli altri sistemi operativi Windows installa [Windows Management Framework 5.0 RTM](https://blogs.msdn.microsoft.com/powershell/2015/12/16/windows-management-framework-wmf-5-0-rtm-is-now-available/) (l'installazione di WMF richiede il riavvio).
 - **Nuove funzionalità:**
-  - Supporto per l'anteprima di WMF 5.1. La prima volta questa versione è stata pubblicata come aggiornamento facoltativo ed era necessario specificare Wmfversion = ' 5.1PP' nei modelli di Resource Manager per installare l'anteprima di WMF 5.1. Wmfversion = 'latest' installa ancora [WMF 5.0 RTM](https://blogs.msdn.microsoft.com/powershell/2015/12/16/windows-management-framework-wmf-5-0-rtm-is-now-available/). Per altre informazioni sull'anteprima di WMF 5.1, vedere [questo blog]( https://blogs.msdn.microsoft.com/powershell/2016/07/16/announcing-windows-management-framework-wmf-5-1-preview/).
+  - Supporto per l'anteprima di WMF 5.1. La prima volta questa versione è stata pubblicata come aggiornamento facoltativo ed era necessario specificare Wmfversion = ' 5.1PP' nei modelli di Resource Manager per installare l'anteprima di WMF 5.1. Wmfversion = 'latest' installa ancora [WMF 5.0 RTM](https://blogs.msdn.microsoft.com/powershell/2015/12/16/windows-management-framework-wmf-5-0-rtm-is-now-available/). Per altre informazioni sull'anteprima di WMF 5.1, vedere [questo blog](https://blogs.msdn.microsoft.com/powershell/2016/07/16/announcing-windows-management-framework-wmf-5-1-preview/).
   - Aggiunti altre correzioni e miglioramenti secondari.
 
 ### <a name="version--219"></a>Versione 2.19

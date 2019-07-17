@@ -1,15 +1,15 @@
 ---
 ms.date: 06/12/2017
 keywords: dsc,powershell,configurazione,installazione
-title: Metodo TestConfiguration della classe MSFT_DSCLocalConfigurationManager
-ms.openlocfilehash: d746832b01310f43a7aae33dd0fa70c0928bb3e0
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+title: Metodo TestConfiguration
+ms.openlocfilehash: 384134212e3b29b63dc045aee4b708c87c970302
+ms.sourcegitcommit: 46bebe692689ebedfe65ff2c828fe666b443198d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62078079"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67726953"
 ---
-# <a name="testconfiguration-method-of-the-msftdsclocalconfigurationmanager-class"></a>Metodo TestConfiguration della classe MSFT_DSCLocalConfigurationManager
+# <a name="testconfiguration-method"></a>Metodo TestConfiguration
 
 Consente di inviare il documento di configurazione al nodo gestito e verificare la configurazione corrente sulla base del documento.
 

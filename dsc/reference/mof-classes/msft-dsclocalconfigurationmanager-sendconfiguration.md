@@ -1,15 +1,15 @@
 ---
 ms.date: 06/12/2017
 keywords: dsc,powershell,configurazione,installazione
-title: Metodo SendConfiguration della classe MSFT_DSCLocalConfigurationManager
-ms.openlocfilehash: 3529bc56ecba19ed0fbbf070a4e86d0692824d39
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+title: Metodo SendConfiguration
+ms.openlocfilehash: 4feba090bc58844659c2329a304dd9805255564f
+ms.sourcegitcommit: 46bebe692689ebedfe65ff2c828fe666b443198d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62078385"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67734318"
 ---
-# <a name="sendconfiguration-method-of-the-msftdsclocalconfigurationmanager-class"></a>Metodo SendConfiguration della classe MSFT_DSCLocalConfigurationManager
+# <a name="sendconfiguration-method"></a>Metodo SendConfiguration
 
 Invia il documento di configurazione al nodo gestito e lo salva come modifica in sospeso.
 
