@@ -1,19 +1,19 @@
 ---
 ms.date: 06/12/2017
 keywords: dsc,powershell,configurazione,installazione
-title: Metodo GetConfigurationResultOutput della classe MSFT_DSCLocalConfigurationManager
-ms.openlocfilehash: ea572a4a66befd4e4b8d83e2957632b1b5ed7d93
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+title: Metodo GetConfigurationResultOutput
+ms.openlocfilehash: 480e710ce1a208253f0e664474c3e9bab296066a
+ms.sourcegitcommit: 46bebe692689ebedfe65ff2c828fe666b443198d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62078646"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67727124"
 ---
-# <a name="getconfigurationresultoutput-method-of-the-msftdsclocalconfigurationmanager-class"></a><span data-ttu-id="e2277-103">Metodo GetConfigurationResultOutput della classe MSFT_DSCLocalConfigurationManager</span><span class="sxs-lookup"><span data-stu-id="e2277-103">GetConfigurationResultOutput method of the MSFT_DSCLocalConfigurationManager class</span></span>
+# <a name="getconfigurationresultoutput-method"></a><span data-ttu-id="5d35d-103">Metodo GetConfigurationResultOutput</span><span class="sxs-lookup"><span data-stu-id="5d35d-103">GetConfigurationResultOutput method</span></span>
 
-<span data-ttu-id="e2277-104">Recupera l'output dell'agente di configurazione associato a un processo specifico.</span><span class="sxs-lookup"><span data-stu-id="e2277-104">Gets the Configuration Agent output associated with a specific job.</span></span>
+<span data-ttu-id="5d35d-104">Recupera l'output dell'agente di configurazione associato a un processo specifico.</span><span class="sxs-lookup"><span data-stu-id="5d35d-104">Gets the Configuration Agent output associated with a specific job.</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="e2277-105">Sintassi</span><span class="sxs-lookup"><span data-stu-id="e2277-105">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="5d35d-105">Sintassi</span><span class="sxs-lookup"><span data-stu-id="5d35d-105">Syntax</span></span>
 
 ```mof
 uint32 GetConfigurationResultOutput(
@@ -23,28 +23,28 @@ uint32 GetConfigurationResultOutput(
 );
 ```
 
-## <a name="parameters"></a><span data-ttu-id="e2277-106">Parametri</span><span class="sxs-lookup"><span data-stu-id="e2277-106">Parameters</span></span>
+## <a name="parameters"></a><span data-ttu-id="5d35d-106">Parametri</span><span class="sxs-lookup"><span data-stu-id="5d35d-106">Parameters</span></span>
 
-<span data-ttu-id="e2277-107">*jobId* \[in\] ID del processo per cui ottenere i dati di output.</span><span class="sxs-lookup"><span data-stu-id="e2277-107">*jobId* \[in\] The ID of the job for which to get output data.</span></span>
+<span data-ttu-id="5d35d-107">*jobId* \[in\] ID del processo per cui ottenere i dati di output.</span><span class="sxs-lookup"><span data-stu-id="5d35d-107">*jobId* \[in\] The ID of the job for which to get output data.</span></span>
 
-<span data-ttu-id="e2277-108">*resumeOutputBookmark* \[in\] Specifica che l'output deve essere la continuazione di un segnalibro precedente.</span><span class="sxs-lookup"><span data-stu-id="e2277-108">*resumeOutputBookmark* \[in\] Specifies that the output should be a continuation from a previous bookmark.</span></span>
+<span data-ttu-id="5d35d-108">*resumeOutputBookmark* \[in\] Specifica che l'output deve essere la continuazione di un segnalibro precedente.</span><span class="sxs-lookup"><span data-stu-id="5d35d-108">*resumeOutputBookmark* \[in\] Specifies that the output should be a continuation from a previous bookmark.</span></span>
 
-<span data-ttu-id="e2277-109">*output* \[out\] Output per il processo specificato.</span><span class="sxs-lookup"><span data-stu-id="e2277-109">*output* \[out\] The output for the specified job.</span></span>
+<span data-ttu-id="5d35d-109">*output* \[out\] Output per il processo specificato.</span><span class="sxs-lookup"><span data-stu-id="5d35d-109">*output* \[out\] The output for the specified job.</span></span>
 
-## <a name="return-value"></a><span data-ttu-id="e2277-110">Valore restituito</span><span class="sxs-lookup"><span data-stu-id="e2277-110">Return value</span></span>
+## <a name="return-value"></a><span data-ttu-id="5d35d-110">Valore restituito</span><span class="sxs-lookup"><span data-stu-id="5d35d-110">Return value</span></span>
 
-<span data-ttu-id="e2277-111">In caso di esito positivo, il valore restituisce zero, altrimenti, restituisce un codice di errore.</span><span class="sxs-lookup"><span data-stu-id="e2277-111">Returns zero on success; otherwise returns an error code.</span></span>
+<span data-ttu-id="5d35d-111">In caso di esito positivo, il valore restituisce zero, altrimenti, restituisce un codice di errore.</span><span class="sxs-lookup"><span data-stu-id="5d35d-111">Returns zero on success; otherwise returns an error code.</span></span>
 
-## <a name="remarks"></a><span data-ttu-id="e2277-112">Osservazioni</span><span class="sxs-lookup"><span data-stu-id="e2277-112">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="5d35d-112">Osservazioni</span><span class="sxs-lookup"><span data-stu-id="5d35d-112">Remarks</span></span>
 
-<span data-ttu-id="e2277-113">Si tratta di un metodo statico.</span><span class="sxs-lookup"><span data-stu-id="e2277-113">This is a static method.</span></span>
+<span data-ttu-id="5d35d-113">Si tratta di un metodo statico.</span><span class="sxs-lookup"><span data-stu-id="5d35d-113">This is a static method.</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="e2277-114">Requisiti</span><span class="sxs-lookup"><span data-stu-id="e2277-114">Requirements</span></span>
+## <a name="requirements"></a><span data-ttu-id="5d35d-114">Requisiti</span><span class="sxs-lookup"><span data-stu-id="5d35d-114">Requirements</span></span>
 
-<span data-ttu-id="e2277-115">**MOF:** DscCore.mof</span><span class="sxs-lookup"><span data-stu-id="e2277-115">**MOF:** DscCore.mof</span></span>
+<span data-ttu-id="5d35d-115">**MOF:** DscCore.mof</span><span class="sxs-lookup"><span data-stu-id="5d35d-115">**MOF:** DscCore.mof</span></span>
 
-<span data-ttu-id="e2277-116">**Spazio dei nomi**: Root\Microsoft\Windows\DesiredStateConfiguration</span><span class="sxs-lookup"><span data-stu-id="e2277-116">**Namespace**: Root\Microsoft\Windows\DesiredStateConfiguration</span></span>
+<span data-ttu-id="5d35d-116">**Spazio dei nomi**: Root\Microsoft\Windows\DesiredStateConfiguration</span><span class="sxs-lookup"><span data-stu-id="5d35d-116">**Namespace**: Root\Microsoft\Windows\DesiredStateConfiguration</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="e2277-117">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="e2277-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="5d35d-117">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="5d35d-117">See also</span></span>
 
-[<span data-ttu-id="e2277-118">**MSFT_DSCLocalConfigurationManager**</span><span class="sxs-lookup"><span data-stu-id="e2277-118">**MSFT_DSCLocalConfigurationManager**</span></span>](msft-dsclocalconfigurationmanager.md)
+[<span data-ttu-id="5d35d-118">**MSFT_DSCLocalConfigurationManager**</span><span class="sxs-lookup"><span data-stu-id="5d35d-118">**MSFT_DSCLocalConfigurationManager**</span></span>](msft-dsclocalconfigurationmanager.md)
