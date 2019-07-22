@@ -2,12 +2,12 @@
 title: Novità di PowerShell Core 6.0
 description: Nuove funzionalità e modifiche rilasciate in PowerShell Core 6.0
 ms.date: 08/06/2018
-ms.openlocfilehash: 83c104d838db9d86fe1d485e92245a9c8f2d2057
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: e1218a38398f4d86829cf2b4ba6a3a882675eaab
+ms.sourcegitcommit: 09f02ccef56ef30e7a9ca901f8d3713724960c68
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62059016"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67843927"
 ---
 # <a name="whats-new-in-powershell-core-60"></a>Novità di PowerShell Core 6.0
 
@@ -159,7 +159,7 @@ Add-WindowsPSModulePath
 
 PowerShell Core aggiunge il supporto per i contenitori Docker per tutte le principali piattaforme supportate, incluse più distribuzioni di Linux, Windows Server Core e Nano Server.
 
-Per un elenco completo, consultare i tag su [ `microsoft/powershell` nell'hub Docker][docker-hub].
+Per un elenco completo, consultare i tag su [`microsoft/powershell` nell'hub Docker][docker-hub].
 Per altre informazioni su Docker e PowerShell Core, vedere [Docker][] su GitHub.
 
 ## <a name="ssh-based-powershell-remoting"></a>Comunicazione remota di PowerShell basata su SSH
@@ -295,9 +295,10 @@ Per altre informazioni sui processi di PowerShell, vedere [about_Jobs](https://m
 
 ### <a name="csv-cmdlets"></a>Cmdlet CSV
 
+- `Import-Csv` supporta ora il formato di file registro esteso W3C (n. 2482) (grazie [@iSazonov](https://github.com/iSazonov))
 - Aggiunto il supporto `PSTypeName` per `Import-Csv` e `ConvertFrom-Csv`. (#5389) (grazie [@markekraus](https://github.com/markekraus))
 - Ora `Import-Csv` supporta `CR`, `LF` e `CRLF` come delimitatori di riga. (#5363) (grazie [@iSazonov](https://github.com/iSazonov))
-- `-NoTypeInformation` ora è il valore predefinito per `Export-Csv` e `ConvertTo-Csv`. (#5164) (grazie [@markekraus](https://github.com/markekraus))
+- `-NoTypeInformation` ora è il valore predefinito per `Export-Csv` e `ConvertTo-Csv`. (n. 5164) (grazie [@markekraus](https://github.com/markekraus))
 
 ### <a name="service-cmdlets"></a>Cmdlet di servizio
 
@@ -346,7 +347,7 @@ Per altre informazioni sui processi di PowerShell, vedere [about_Jobs](https://m
 ## <a name="breaking-changes"></a>Modifiche di primaria importanza
 
 È stato introdotto un numero di modifiche di rilievo in PowerShell Core 6.0.
-Per informazioni dettagliate, vedere l'articolo sulle [modifiche di primaria importanza in PowerShell Core 6.0][breaking-changes].
+Per informazioni dettagliate sulle modifiche, vedere [Modifiche di rilievo in PowerShell Core 6.0][breaking-changes].
 
 ## <a name="debugging"></a>Debug
 
@@ -375,8 +376,8 @@ Per un elenco completo delle correzioni e delle modifiche, consultare il [log de
 
 Se si vuole rifiutare esplicitamente questa telemetria, è sufficiente creare la variabile di ambiente `POWERSHELL_TELEMETRY_OPTOUT` con uno dei valori seguenti: `true`, `1` o `yes`.
 La creazione della variabile consente di ignorare tutta la telemetria anche prima della prima esecuzione di PowerShell.
-Si prevede inoltre di esporre i dati di telemetria e le informazioni dettagliate ottenute dalla telemetria nel [dashboard della community][community-dashboard].
-Altre informazioni sull'uso di questi dati sono disponibili in questo [post di blog][telemetry-blog].
+I dati di telemetria e le informazioni dettagliate ottenute dalla telemetria verranno pubblicati nel [dashboard della community][community-dashboard].
+Per altre informazioni sull'uso di questi dati, vedere questo [post di blog][telemetry-blog].
 
 [github]: https://github.com/PowerShell/PowerShell
 [.NET Core 2.0]: https://docs.microsoft.com/dotnet/core/

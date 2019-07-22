@@ -2,19 +2,19 @@
 title: Uso di Visual Studio Code per sviluppare PowerShell
 description: Uso di Visual Studio Code per sviluppare PowerShell
 ms.date: 08/06/2018
-ms.openlocfilehash: 5badffd49252e0d72ae2c20d3147ad4b1e92d5ed
-ms.sourcegitcommit: cf1a281cce9f7239c440c90f8b2798d32a13778d
+ms.openlocfilehash: 6a0da6e060693dc7cfc08d40fd658414dc23d660
+ms.sourcegitcommit: 46bebe692689ebedfe65ff2c828fe666b443198d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65882565"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67733882"
 ---
 # <a name="using-visual-studio-code-for-powershell-development"></a>Uso di Visual Studio Code per sviluppare PowerShell
 
-Oltre a [PowerShell ISE][ise], PowerShell è ben supportata anche in Visual Studio Code.
+Oltre a [PowerShell ISE][ise], PowerShell è supportato correttamente anche in Visual Studio Code.
 ISE non è supportata in PowerShell Core, mentre Visual Studio Core è supportato per PowerShell Core in tutte le piattaforme (Windows, macOS e Linux)
 
-È possibile usare Visual Studio Code con la versione 5 di PowerShell in Windows con Windows 10 o installando [Windows Management Framework 5.0 RTM](https://www.microsoft.com/en-us/download/details.aspx?id=50395) per sistemi operativi Windows inferiori (ad esempio, Windows 8.1 e così via).
+È possibile usare Visual Studio Code con la versione 5 di PowerShell in Windows con Windows 10 o installando [Windows Management Framework 5.0 RTM](https://devblogs.microsoft.com/powershell/windows-management-framework-wmf-5-0-rtm-is-now-available-via-the-microsoft-update-catalog/) per sistemi operativi Windows inferiori (ad esempio, Windows 8.1 e così via).
 
 Prima di procedere con l'avvio, verificare che PowerShell sia presente nel sistema.
 Per carichi di lavoro moderni in Windows, macOS e Linux, vedere:
@@ -238,7 +238,7 @@ Seguire questi passaggi per creare il file di configurazione di debug:
   ```
 
   Rappresenta gli scenari di debug comuni.
-  Tuttavia quando si apre il file nell'editor, viene visualizzato il pulsante **Aggiungi configurazione...**.
+  Tuttavia quando si apre il file nell'editor, viene visualizzato il pulsante **Aggiungi configurazione...** .
   Premere questo pulsante per aggiungere altre configurazioni di debug per PowerShell. Una configurazione utile da aggiungere è **PowerShell: avvia script**.
   Con questa configurazione, è possibile scegliere un file specifico con gli argomenti facoltativi che devono essere avviati ogni volta che si preme F5, a prescindere dal file attivo nell'editor.
 
@@ -253,8 +253,8 @@ Esistono alcuni blog che possono risultare utili per iniziare subito con l'esten
 - [Introduzione allo sviluppo di PowerShell in Visual Studio Code][getting-started]
 - [Funzionalità di modifica di Visual Studio Code per lo sviluppo di PowerShell - Parte 1 ][editing-part1]
 - [Funzionalità di modifica di Visual Studio Code per lo sviluppo di PowerShell - Parte 2 ][editing-part2]
-- [Debug di script di PowerShell in Visual Studio Code – Parte 1][debugging-part1]
-- [Debug di script di PowerShell in Visual Studio Code – Parte 2][debugging-part2]
+- [Debug di script di PowerShell in Visual Studio Code - Parte 1][debugging-part1]
+- [Debug di script di PowerShell in Visual Studio Code - Parte 2][debugging-part2]
 
 [ise]: ../ise/Introducing-the-Windows-PowerShell-ISE.md
 [install-pscore-linux]:  ../../setup/Installing-PowerShell-Core-on-Linux.md

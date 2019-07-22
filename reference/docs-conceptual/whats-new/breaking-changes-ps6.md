@@ -2,12 +2,12 @@
 ms.date: 05/17/2018
 keywords: powershell,core
 title: Modifiche di rilievo in PowerShell Core 6.0
-ms.openlocfilehash: d25cf07baa11040af57f330feede44635c00c551
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 186e55c1ac46ce3fc172df18995f8c15d9eeb8eb
+ms.sourcegitcommit: 09f02ccef56ef30e7a9ca901f8d3713724960c68
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62085933"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67843949"
 ---
 # <a name="breaking-changes-for-powershell-60"></a>Modifiche di rilievo in PowerShell Core 6.0
 
@@ -15,7 +15,7 @@ ms.locfileid: "62085933"
 
 ### <a name="powershell-workflow"></a>Flusso di lavoro PowerShell
 
-[Flusso di lavoro PowerShell][workflow] è una funzionalità di Windows PowerShell basata su [Windows Workflow Foundation (WF)][workflow-foundation] che consente di creare runbook affidabili per le attività di lunga durata o parallelizzate.
+Il [flusso di lavoro PowerShell][workflow] is a feature in Windows PowerShell that builds on top of [Windows Workflow Foundation (WF)][workflow-foundation] consente la creazione di runbook affidabili per attività di lunga durata o eseguite in parallelo.
 
 A causa della mancanza di supporto per Windows Workflow Foundation in .NET Core, Flusso di lavoro PowerShell non continuerà a essere supportato in PowerShell Core.
 
@@ -26,7 +26,7 @@ In futuro, è prevista l'abilitazione di parallelismo/concorrenza nativi nel lin
 
 ### <a name="custom-snap-ins"></a>Snap-in personalizzati
 
-Gli [snap-in di PowerShell][snapin] sono predecessori dei moduli di PowerShell, che non sono stati adottati diffusamente nella community di PowerShell.
+Gli [snap-in PowerShell][snapin] sono predecessori dei moduli PowerShell che non sono stati adottati diffusamente nella community di PowerShell.
 
 A causa della complessità di supportare gli snap-in e dello scarso utilizzo nella community, gli snap-in personalizzati non sono più supportati in PowerShell Core.
 
@@ -113,9 +113,13 @@ In precedenza, specificando `-Verbose` o `-Debug` veniva eseguito l'override del
 
 Quando un'API restituisce solo `null`, Invoke-RestMethod serializza questo valore come stringa `"null"` anziché come `$null`. Questa modifica consente di correggere la logica in `Invoke-RestMethod` per serializzare correttamente un singolo valore letterale valido JSON `null` come `$null`.
 
-### <a name="remove--computername-from--computer-cmdlets-5277httpsgithubcompowershellpowershellissues5277"></a>Rimozione di `-ComputerName` dai cmdlet `*-Computer` [#5277](https://github.com/PowerShell/PowerShell/issues/5277)
+### <a name="remove--protocol-from--computer-cmdlets-5277httpsgithubcompowershellpowershellissues5277"></a>Rimozione di `-Protocol` dai cmdlet `*-Computer` [#5277](https://github.com/PowerShell/PowerShell/issues/5277)
 
-A causa di problemi con la comunicazione remota RPC in CoreFX (in particolare nelle piattaforme non Windows) e per garantire un'esperienza coerente di comunicazione remota in PowerShell, il parametro `-ComputerName` è stato rimosso dai cmdlet `\*-Computer`. Usare invece `Invoke-Command` come modo per eseguire i cmdlet in remoto.
+A causa di problemi con la comunicazione remota RPC in CoreFX (in particolare nelle piattaforme non Windows) e per garantire un'esperienza coerente di comunicazione remota in PowerShell, il parametro `-Protocol` è stato rimosso dai cmdlet `\*-Computer`. DCOM non è più supportato per la comunicazione remota. I cmdlet seguenti supportano solo la comunicazione remota WS-Management:
+
+- Rename-Computer
+- Restart-Computer
+- Stop-Computer
 
 ### <a name="remove--computername-from--service-cmdlets-5090httpsgithubcompowershellpowershellissues5094"></a>Rimuovere `-ComputerName` dai cmdlet `*-Service` [#5090](https://github.com/PowerShell/PowerShell/issues/5094)
 
@@ -159,7 +163,7 @@ Le funzionalità seguenti sono state rimosse e non sono supportate in PowerShell
 
 ### <a name="removed-runspaceconfiguration-support-4942httpsgithubcompowershellpowershellissues4942"></a>Rimuovere il supporto di `RunspaceConfiguration` [#4942](https://github.com/PowerShell/PowerShell/issues/4942)
 
-In precedenza, per la creazione di uno spazio di esecuzione di PowerShell a livello di codice con l'API era possibile usare la classe legacy [`RunspaceConfiguration`][runspaceconfig] o la più recente [`InitialSessionState`][iss]. Con questa modifica viene rimosso il supporto per `RunspaceConfiguration` ed è ora supportata solo la classe `InitialSessionState`.
+In precedenza, per la creazione di uno spazio di esecuzione di PowerShell a livello di codice con l'API era possibile usare la classe legacy [`RunspaceConfiguration`][runspaceconfig] or the newer [`InitialSessionState`][iss]. Con questa modifica viene rimosso il supporto per `RunspaceConfiguration` ed è ora supportata solo la classe `InitialSessionState`.
 
 [runspaceconfig]: https://docs.microsoft.com/dotnet/api/system.management.automation.runspaces.runspaceconfiguration
 [iss]: https://docs.microsoft.com/dotnet/api/system.management.automation.runspaces.initialsessionstate

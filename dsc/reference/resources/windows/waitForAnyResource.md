@@ -2,12 +2,12 @@
 ms.date: 06/12/2017
 keywords: dsc,powershell,configurazione,installazione
 title: Risorsa WaitForAny DSC
-ms.openlocfilehash: 55869f665837b422c006f4cfb3e91366fac60362
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: d15acb3fb34d571eca56ed496eaa9a04b2551ff0
+ms.sourcegitcommit: 46bebe692689ebedfe65ff2c828fe666b443198d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62076827"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67726849"
 ---
 # <a name="dsc-waitforany-resource"></a>Risorsa WaitForAny DSC
 
@@ -17,6 +17,9 @@ La risorsa DSC **WaitForAny** può essere usata all'interno di un blocco del nod
 
 La risorsa ha esito positivo se la risorsa specificata dalla proprietà **ResourceName** è nello stato desiderato in tutti i nodi di destinazione definiti nella proprietà **NodeName**.
 
+> [!NOTE]
+> La risorsa **WaitForAny** usa Gestione remota Windows per controllare lo stato degli altri nodi.
+> Per altre informazioni sulla porta e sui requisiti di sicurezza per Gestione remota Windows, vedere [Considerazioni sulla sicurezza della comunicazione remota di PowerShell](/powershell/scripting/learn/remoting/winrmsecurity?view=powershell-6).
 
 ## <a name="syntax"></a>Sintassi
 

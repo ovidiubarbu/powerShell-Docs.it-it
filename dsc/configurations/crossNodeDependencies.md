@@ -2,12 +2,12 @@
 ms.date: 12/12/2018
 keywords: dsc,powershell,configurazione,installazione
 title: Specifica delle dipendenze tra nodi
-ms.openlocfilehash: 1bdfbd9f8a94809d6bf410eff525e1c877fb6aad
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 62e553d894897ae1908745c2788b7b7b9cbe50ff
+ms.sourcegitcommit: 46bebe692689ebedfe65ff2c828fe666b443198d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62080204"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67734679"
 ---
 # <a name="specifying-cross-node-dependencies"></a>Specifica delle dipendenze tra nodi
 
@@ -55,14 +55,22 @@ WaitForSome [String] #ResourceName
 
 Tutte le risorse **WaitForXXXX** condividono le chiavi di sintassi seguenti.
 
-|  Proprietà |  Descrizione | | RetryIntervalSec | Numero di secondi prima di riprovare. Il valore minimo è 1.| | RetryCount | Numero massimo di tentativi.| | ThrottleLimit | Numero di computer da connettere contemporaneamente. Il valore predefinito è `New-CimSession`.| | DependsOn | Indica che prima di configurare la risorsa è necessario eseguire la configurazione di un'altra risorsa. Per altre informazioni, vedere [DependsOn](resource-depends-on.md)| | PsDscRunAsCredential | Vedere [Usare credenziali con risorse DSC](./runAsUser.md) |
-
+|Proprietà|  Description   |
+|---------|---------------------|
+| RetryIntervalSec| Il numero di secondi prima di riprovare. Il valore minimo è 1.|
+| RetryCount| Il numero massimo di tentativi.|
+| ThrottleLimit| Numero di computer da connettere contemporaneamente. Il valore predefinito è `New-CimSession`.|
+| DependsOn | Indica che prima di configurare la risorsa è necessario eseguire la configurazione di un'altra risorsa. Per altre informazioni, vedere [DependsOn](resource-depends-on.md)|
+| PsDscRunAsCredential | Vedere [Esecuzione di DSC con le credenziali dell'utente](./runAsUser.md) |
 
 ## <a name="using-waitforxxxx-resources"></a>Uso delle risorse WaitForXXXX
 
-Ogni risorsa **WaitForXXXX** attende il completamento delle risorse specificate sul nodo specificato. Altre risorse nella stessa configurazione possono quindi *dipendere* dalla risorsa **WaitForXXXX** tramite la chiave **DependsOn**.
+Ogni risorsa **WaitForXXXX** attende il completamento delle risorse specificate sul nodo specificato.
+Altre risorse nella stessa configurazione possono quindi *dipendere* dalla risorsa **WaitForXXXX** tramite la chiave **DependsOn**.
 
 Nella configurazione seguente, ad esempio, il nodo di destinazione è in attesa del completamento della risorsa **xADDomain** nel nodo **MyDC** con un numero massimo di 30 tentativi, a intervalli di 15 secondi, prima che il nodo di destinazione possa essere aggiunto al dominio.
+
+Per impostazione predefinita, le risorse **WaitForXXX** eseguono un solo tentativo prima dell'esito negativo. Sebbene non sia obbligatorio, è consigliabile specificare **RetryCount** e **RetryIntervalSec**.
 
 ```powershell
 Configuration JoinDomain
@@ -111,7 +119,9 @@ Configuration JoinDomain
 
 Quando si compila la configurazione vengono generati due file "MOF". Applicare entrambi i file "MOF" ai nodi di destinazione usando il cmdlet [Start-DSCConfiguration](/powershell/module/psdesiredstateconfiguration/start-dscconfiguration)
 
->**Nota:** per impostazione predefinita, le risorse WaitForXXX eseguono un solo tentativo prima dell'esito negativo. Sebbene non sia obbligatorio, è consigliabile specificare **RetryCount** e **RetryIntervalSec**.
+> [!NOTE]
+> Le risorse **WaitForXXX** usano Gestione remota Windows per controllare lo stato degli altri nodi.
+> Per altre informazioni sulla porta e sui requisiti di sicurezza per Gestione remota Windows, vedere [Considerazioni sulla sicurezza della comunicazione remota di PowerShell](/powershell/scripting/learn/remoting/winrmsecurity?view=powershell-6).
 
 ## <a name="see-also"></a>Vedere anche
 
