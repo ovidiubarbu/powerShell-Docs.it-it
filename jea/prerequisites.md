@@ -1,116 +1,109 @@
 ---
-ms.date: 06/12/2017
+ms.date: 07/10/2019
 keywords: jea,powershell,sicurezza
 title: Prerequisiti di JEA
-ms.openlocfilehash: acc16c0c7eec357b621c0706a66b8752ae5578cd
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 8fca5c068412e86acfdb8bed400699f721b76191
+ms.sourcegitcommit: 46bebe692689ebedfe65ff2c828fe666b443198d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62084845"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67734284"
 ---
-# <a name="prerequisites"></a><span data-ttu-id="666c0-103">Prerequisiti</span><span class="sxs-lookup"><span data-stu-id="666c0-103">Prerequisites</span></span>
+# <a name="prerequisites"></a><span data-ttu-id="14d73-103">Prerequisiti</span><span class="sxs-lookup"><span data-stu-id="14d73-103">Prerequisites</span></span>
 
-> <span data-ttu-id="666c0-104">Si applica a: Windows PowerShell 5.0</span><span class="sxs-lookup"><span data-stu-id="666c0-104">Applies to: Windows PowerShell 5.0</span></span>
+<span data-ttu-id="14d73-104">Just Enough Administration (JEA) è una funzionalità inclusa in PowerShell 5.0 e versioni successive.</span><span class="sxs-lookup"><span data-stu-id="14d73-104">Just Enough Administration is a feature included in PowerShell 5.0 and higher.</span></span> <span data-ttu-id="14d73-105">Questo articolo descrive i prerequisiti che devono essere soddisfatti per poter usare JEA.</span><span class="sxs-lookup"><span data-stu-id="14d73-105">This article describes the prerequisites that must be satisfied to start using JEA.</span></span>
 
-<span data-ttu-id="666c0-105">Just Enough Administration (JEA) è una funzionalità inclusa in Windows PowerShell 5.0 e versione successiva.</span><span class="sxs-lookup"><span data-stu-id="666c0-105">Just Enough Administration is a feature included with Windows PowerShell 5.0 and higher.</span></span>
-<span data-ttu-id="666c0-106">Questo argomento illustra i prerequisiti che devono essere soddisfatti per poter usare JEA.</span><span class="sxs-lookup"><span data-stu-id="666c0-106">This topic describes the prerequisites that must be satisfied in order to start using JEA.</span></span>
 
-## <a name="install-jea"></a><span data-ttu-id="666c0-107">Installare JEA</span><span class="sxs-lookup"><span data-stu-id="666c0-107">Install JEA</span></span>
+## <a name="check-which-version-of-powershell-is-installed"></a><span data-ttu-id="14d73-106">Controllare quale versione di PowerShell è installata</span><span class="sxs-lookup"><span data-stu-id="14d73-106">Check which version of PowerShell is installed</span></span>
 
-<span data-ttu-id="666c0-108">JEA è disponibile in Windows PowerShell 5.0 e versione successiva, ma per una funzionalità completa, è consigliabile installare la versione più recente di PowerShell disponibile per il sistema.</span><span class="sxs-lookup"><span data-stu-id="666c0-108">JEA is available with Windows PowerShell 5.0 and higher, but for full functionality it is recommended that you install the latest version of PowerShell available for your system.</span></span>
-<span data-ttu-id="666c0-109">La tabella seguente illustra la disponibilità di JEA in Windows Server:</span><span class="sxs-lookup"><span data-stu-id="666c0-109">The following table describes JEA's availability on Windows Server:</span></span>
-
-<span data-ttu-id="666c0-110">Sistema operativo server</span><span class="sxs-lookup"><span data-stu-id="666c0-110">Server Operating System</span></span>   | <span data-ttu-id="666c0-111">Disponibilità di JEA</span><span class="sxs-lookup"><span data-stu-id="666c0-111">JEA Availability</span></span>
---------------------------|--------------------------------
-<span data-ttu-id="666c0-112">Windows Server 2016</span><span class="sxs-lookup"><span data-stu-id="666c0-112">Windows Server 2016</span></span>       | <span data-ttu-id="666c0-113">Preinstallato</span><span class="sxs-lookup"><span data-stu-id="666c0-113">Preinstalled</span></span>
-<span data-ttu-id="666c0-114">Windows Server 2012 R2</span><span class="sxs-lookup"><span data-stu-id="666c0-114">Windows Server 2012 R2</span></span>    | <span data-ttu-id="666c0-115">Funzionalità completa con WMF 5.1</span><span class="sxs-lookup"><span data-stu-id="666c0-115">Full functionality with WMF 5.1</span></span>
-<span data-ttu-id="666c0-116">Windows Server 2012</span><span class="sxs-lookup"><span data-stu-id="666c0-116">Windows Server 2012</span></span>       | <span data-ttu-id="666c0-117">Funzionalità completa con WMF 5.1</span><span class="sxs-lookup"><span data-stu-id="666c0-117">Full functionality with WMF 5.1</span></span>
-<span data-ttu-id="666c0-118">Windows Server 2008 R2</span><span class="sxs-lookup"><span data-stu-id="666c0-118">Windows Server 2008 R2</span></span>    | <span data-ttu-id="666c0-119">Funzionalità limitata<sup>1</sup> con WMF 5.1</span><span class="sxs-lookup"><span data-stu-id="666c0-119">Reduced functionality<sup>1</sup> with WMF 5.1</span></span>
-
-<span data-ttu-id="666c0-120">È anche possibile usare JEA nel computer di casa o di lavoro:</span><span class="sxs-lookup"><span data-stu-id="666c0-120">You can also use JEA on your home or work computer:</span></span>
-
-<span data-ttu-id="666c0-121">Sistema operativo client</span><span class="sxs-lookup"><span data-stu-id="666c0-121">Client Operating System</span></span>   | <span data-ttu-id="666c0-122">Disponibilità di JEA</span><span class="sxs-lookup"><span data-stu-id="666c0-122">JEA Availability</span></span>
---------------------------|-----------------------------------------------------
-<span data-ttu-id="666c0-123">Windows 10 1607+</span><span class="sxs-lookup"><span data-stu-id="666c0-123">Windows 10 1607+</span></span>          | <span data-ttu-id="666c0-124">Preinstallato</span><span class="sxs-lookup"><span data-stu-id="666c0-124">Preinstalled</span></span>
-<span data-ttu-id="666c0-125">Windows 10 1603, 1511</span><span class="sxs-lookup"><span data-stu-id="666c0-125">Windows 10 1603, 1511</span></span>     | <span data-ttu-id="666c0-126">Preinstallato, con funzionalità limitata<sup>2</sup></span><span class="sxs-lookup"><span data-stu-id="666c0-126">Preinstalled, with reduced functionality<sup>2</sup></span></span>
-<span data-ttu-id="666c0-127">Windows 10 1507</span><span class="sxs-lookup"><span data-stu-id="666c0-127">Windows 10 1507</span></span>           | <span data-ttu-id="666c0-128">Non disponibile</span><span class="sxs-lookup"><span data-stu-id="666c0-128">Not available</span></span>
-<span data-ttu-id="666c0-129">Windows 8, 8.1</span><span class="sxs-lookup"><span data-stu-id="666c0-129">Windows 8, 8.1</span></span>            | <span data-ttu-id="666c0-130">Funzionalità completa con WMF 5.1</span><span class="sxs-lookup"><span data-stu-id="666c0-130">Full functionality with WMF 5.1</span></span>
-<span data-ttu-id="666c0-131">Windows 7</span><span class="sxs-lookup"><span data-stu-id="666c0-131">Windows 7</span></span>                 | <span data-ttu-id="666c0-132">Funzionalità limitata<sup>1</sup> con WMF 5.1</span><span class="sxs-lookup"><span data-stu-id="666c0-132">Reduced functionality<sup>1</sup> with WMF 5.1</span></span>
-
-<span data-ttu-id="666c0-133"><sup>1</sup> JEA non può essere configurato per l'uso dell'account del servizio gestito del gruppo in Windows Server 2008 R2 o Windows 7.</span><span class="sxs-lookup"><span data-stu-id="666c0-133"><sup>1</sup> JEA cannot be configured to use group managed service accounts on Windows Server 2008 R2 or Windows 7.</span></span>
-<span data-ttu-id="666c0-134">*Sono* supportati gli account virtuali e le altre funzionalità JEA.</span><span class="sxs-lookup"><span data-stu-id="666c0-134">Virtual accounts and other JEA features *are* supported.</span></span>
-
-<span data-ttu-id="666c0-135"><sup>2</sup> Le versioni 1511 e 1603 di Windows 10 non supportano le funzionalità JEA seguenti: esecuzione come account del servizio gestito del gruppo, regole di accesso condizionale in configurazioni di sessione, unità utente e concessione dell'accesso agli account utente locali.</span><span class="sxs-lookup"><span data-stu-id="666c0-135"><sup>2</sup> Windows 10 versions 1511 and 1603 do not support the following JEA features: running as a group managed service account, conditional access rules in session configurations, the user drive, and granting access to local user accounts.</span></span>
-<span data-ttu-id="666c0-136">Per ottenere supporto per queste funzionalità, aggiornare Windows alla versione 1607 (Aggiornamento dell'anniversario) o versione successiva.</span><span class="sxs-lookup"><span data-stu-id="666c0-136">To get support for these features, update Windows to version 1607 (Anniversary Update) or higher.</span></span>
-
-### <a name="check-which-version-of-powershell-is-installed"></a><span data-ttu-id="666c0-137">Controllare quale versione di PowerShell è installata</span><span class="sxs-lookup"><span data-stu-id="666c0-137">Check which version of PowerShell is installed</span></span>
-
-<span data-ttu-id="666c0-138">Per controllare quale versione di PowerShell è installata nel sistema, verificare la variabile `$PSVersionTable` in un prompt dei comandi di Windows PowerShell.</span><span class="sxs-lookup"><span data-stu-id="666c0-138">To check which version of PowerShell is installed on your system, check the `$PSVersionTable` variable in a Windows PowerShell prompt.</span></span>
+<span data-ttu-id="14d73-107">Per controllare quale versione di PowerShell è installata nel sistema, verificare la variabile `$PSVersionTable` in un prompt dei comandi di Windows PowerShell.</span><span class="sxs-lookup"><span data-stu-id="14d73-107">To check which version of PowerShell is installed on your system, check the `$PSVersionTable` variable in a Windows PowerShell prompt.</span></span>
 
 ```powershell
 $PSVersionTable.PSVersion
 ```
 
-```output
+```Output
 Major  Minor  Build  Revision
 -----  -----  -----  --------
 5      1      14393  1000
 ```
 
-<span data-ttu-id="666c0-139">È possibile usare JEA se la versione *principale* è uguale o maggiore di **5**.</span><span class="sxs-lookup"><span data-stu-id="666c0-139">You are ready to use JEA if the *Major* version is equal to or greater than **5**.</span></span>
-<span data-ttu-id="666c0-140">Per prestazioni ottimali e per l'accesso a tutte le funzionalità più recenti, è consigliabile eseguire l'aggiornamento alla versione di PowerShell **5.1**, quando possibile.</span><span class="sxs-lookup"><span data-stu-id="666c0-140">For the best experience, and to have access to all the latest features, it is recommended that you upgrade to PowerShell version **5.1** when possible.</span></span>
+<span data-ttu-id="14d73-108">JEA è disponibile in PowerShell 5.0 e versioni successive.</span><span class="sxs-lookup"><span data-stu-id="14d73-108">JEA is available with PowerShell 5.0 and higher.</span></span> <span data-ttu-id="14d73-109">Per una funzionalità completa, è consigliabile installare la versione più recente di PowerShell disponibile per il sistema.</span><span class="sxs-lookup"><span data-stu-id="14d73-109">For full functionality, it's recommended that you install the latest version of PowerShell available for your system.</span></span> <span data-ttu-id="14d73-110">La tabella seguente illustra la disponibilità di JEA in Windows Server:</span><span class="sxs-lookup"><span data-stu-id="14d73-110">The following table describes JEA's availability on Windows Server:</span></span>
 
-### <a name="install-windows-management-framework"></a><span data-ttu-id="666c0-141">Installare Windows Management Framework</span><span class="sxs-lookup"><span data-stu-id="666c0-141">Install Windows Management Framework</span></span>
+| <span data-ttu-id="14d73-111">Sistema operativo server</span><span class="sxs-lookup"><span data-stu-id="14d73-111">Server Operating System</span></span> |                <span data-ttu-id="14d73-112">Disponibilità di JEA</span><span class="sxs-lookup"><span data-stu-id="14d73-112">JEA Availability</span></span>                |
+| ----------------------- | ---------------------------------------------- |
+| <span data-ttu-id="14d73-113">Windows Server 2016+</span><span class="sxs-lookup"><span data-stu-id="14d73-113">Windows Server 2016+</span></span>    | <span data-ttu-id="14d73-114">Preinstallato</span><span class="sxs-lookup"><span data-stu-id="14d73-114">Preinstalled</span></span>                                   |
+| <span data-ttu-id="14d73-115">Windows Server 2012 R2</span><span class="sxs-lookup"><span data-stu-id="14d73-115">Windows Server 2012 R2</span></span>  | <span data-ttu-id="14d73-116">Funzionalità completa con WMF 5.1</span><span class="sxs-lookup"><span data-stu-id="14d73-116">Full functionality with WMF 5.1</span></span>                |
+| <span data-ttu-id="14d73-117">Windows Server 2012</span><span class="sxs-lookup"><span data-stu-id="14d73-117">Windows Server 2012</span></span>     | <span data-ttu-id="14d73-118">Funzionalità completa con WMF 5.1</span><span class="sxs-lookup"><span data-stu-id="14d73-118">Full functionality with WMF 5.1</span></span>                |
+| <span data-ttu-id="14d73-119">Windows Server 2008 R2</span><span class="sxs-lookup"><span data-stu-id="14d73-119">Windows Server 2008 R2</span></span>  | <span data-ttu-id="14d73-120">Funzionalità limitata<sup>1</sup> con WMF 5.1</span><span class="sxs-lookup"><span data-stu-id="14d73-120">Reduced functionality<sup>1</sup> with WMF 5.1</span></span> |
 
-<span data-ttu-id="666c0-142">Se si esegue una versione precedente di PowerShell, è necessario aggiornare il sistema con la versione più recente di Windows Management Framework (WMF).</span><span class="sxs-lookup"><span data-stu-id="666c0-142">If you are running an older version of PowerShell, you will need to update your system with the latest Windows Management Framework (WMF) update.</span></span>
-<span data-ttu-id="666c0-143">Nell'[Area download Microsoft](https://blogs.msdn.microsoft.com/powershell/2016/02/24/windows-management-framework-wmf-5-0-rtm-packages-has-been-republished/) sono disponibili i pacchetti di aggiornamento e un collegamento alle note sulla versione più recente di WMF.</span><span class="sxs-lookup"><span data-stu-id="666c0-143">Update packages and a link to the latest WMF release notes are available in the [Download Center](https://blogs.msdn.microsoft.com/powershell/2016/02/24/windows-management-framework-wmf-5-0-rtm-packages-has-been-republished/).</span></span>
+<span data-ttu-id="14d73-121">È anche possibile usare JEA nel computer di casa o di lavoro:</span><span class="sxs-lookup"><span data-stu-id="14d73-121">You can also use JEA on your home or work computer:</span></span>
 
-<span data-ttu-id="666c0-144">È consigliabile testare la compatibilità del carico di lavoro con WMF prima di aggiornare tutti i server.</span><span class="sxs-lookup"><span data-stu-id="666c0-144">It is strongly recommended that you test your workload's compatibility with WMF before upgrading all of your servers.</span></span>
+| <span data-ttu-id="14d73-122">Sistema operativo client</span><span class="sxs-lookup"><span data-stu-id="14d73-122">Client Operating System</span></span> |                   <span data-ttu-id="14d73-123">Disponibilità di JEA</span><span class="sxs-lookup"><span data-stu-id="14d73-123">JEA Availability</span></span>                   |
+| ----------------------- | ---------------------------------------------------- |
+| <span data-ttu-id="14d73-124">Windows 10 1607+</span><span class="sxs-lookup"><span data-stu-id="14d73-124">Windows 10 1607+</span></span>        | <span data-ttu-id="14d73-125">Preinstallato</span><span class="sxs-lookup"><span data-stu-id="14d73-125">Preinstalled</span></span>                                         |
+| <span data-ttu-id="14d73-126">Windows 10 1603, 1511</span><span class="sxs-lookup"><span data-stu-id="14d73-126">Windows 10 1603, 1511</span></span>   | <span data-ttu-id="14d73-127">Preinstallato, con funzionalità limitata<sup>2</sup></span><span class="sxs-lookup"><span data-stu-id="14d73-127">Preinstalled, with reduced functionality<sup>2</sup></span></span> |
+| <span data-ttu-id="14d73-128">Windows 10 1507</span><span class="sxs-lookup"><span data-stu-id="14d73-128">Windows 10 1507</span></span>         | <span data-ttu-id="14d73-129">Non disponibile</span><span class="sxs-lookup"><span data-stu-id="14d73-129">Not available</span></span>                                        |
+| <span data-ttu-id="14d73-130">Windows 8, 8.1</span><span class="sxs-lookup"><span data-stu-id="14d73-130">Windows 8, 8.1</span></span>          | <span data-ttu-id="14d73-131">Funzionalità completa con WMF 5.1</span><span class="sxs-lookup"><span data-stu-id="14d73-131">Full functionality with WMF 5.1</span></span>                      |
+| <span data-ttu-id="14d73-132">Windows 7</span><span class="sxs-lookup"><span data-stu-id="14d73-132">Windows 7</span></span>               | <span data-ttu-id="14d73-133">Funzionalità limitata<sup>1</sup> con WMF 5.1</span><span class="sxs-lookup"><span data-stu-id="14d73-133">Reduced functionality<sup>1</sup> with WMF 5.1</span></span>       |
 
-<span data-ttu-id="666c0-145">Gli utenti di Windows 10 devono installare gli aggiornamenti delle funzionalità più recenti per ottenere la versione corrente di Windows PowerShell.</span><span class="sxs-lookup"><span data-stu-id="666c0-145">Windows 10 users should install the latest feature updates to obtain the current version of Windows PowerShell.</span></span>
+- <span data-ttu-id="14d73-134"><sup>1</sup> JEA non può essere configurato per l'uso di account del servizio gestito del gruppo in Windows Server 2008 R2 o Windows 7.</span><span class="sxs-lookup"><span data-stu-id="14d73-134"><sup>1</sup> JEA can't be configured to use group-managed service accounts on Windows Server 2008 R2 or Windows 7.</span></span> <span data-ttu-id="14d73-135">*Sono* supportati gli account virtuali e le altre funzionalità JEA.</span><span class="sxs-lookup"><span data-stu-id="14d73-135">Virtual accounts and other JEA features *are* supported.</span></span>
 
-## <a name="enable-powershell-remoting"></a><span data-ttu-id="666c0-146">Comunicazione remota di PowerShell</span><span class="sxs-lookup"><span data-stu-id="666c0-146">Enable PowerShell Remoting</span></span>
+- <span data-ttu-id="14d73-136"><sup>2</sup> Le funzionalità JEA seguenti non sono supportate nelle versioni di Windows 10 1511 e 1603:</span><span class="sxs-lookup"><span data-stu-id="14d73-136"><sup>2</sup> The following JEA features aren't supported on Windows 10 versions 1511 and 1603:</span></span>
 
-<span data-ttu-id="666c0-147">La comunicazione remota di PowerShell costituisce la base su cui viene compilato JEA.</span><span class="sxs-lookup"><span data-stu-id="666c0-147">PowerShell Remoting provides the foundation on which JEA is built.</span></span>
-<span data-ttu-id="666c0-148">È quindi necessario assicurarsi che la comunicazione remota di PowerShell sia abilitata e [adeguatamente protetta](/powershell/scripting/setup/winrmsecurity) nel sistema prima di poter usare JEA.</span><span class="sxs-lookup"><span data-stu-id="666c0-148">It is therefore necessary to ensure PowerShell Remoting is enabled and [properly secured](/powershell/scripting/setup/winrmsecurity) on your system before you can use JEA.</span></span>
+  - <span data-ttu-id="14d73-137">Esecuzione di un account del servizio gestito del gruppo</span><span class="sxs-lookup"><span data-stu-id="14d73-137">Running as a group-managed service account</span></span>
+  - <span data-ttu-id="14d73-138">Regole di accesso condizionale in configurazioni di sessione</span><span class="sxs-lookup"><span data-stu-id="14d73-138">Conditional access rules in session configurations</span></span>
+  - <span data-ttu-id="14d73-139">Unità utente</span><span class="sxs-lookup"><span data-stu-id="14d73-139">The user drive</span></span>
+  - <span data-ttu-id="14d73-140">Concessione dell'accesso agli account utente locali</span><span class="sxs-lookup"><span data-stu-id="14d73-140">Granting access to local user accounts</span></span>
 
-<span data-ttu-id="666c0-149">La comunicazione remota di PowerShell è abilitata per impostazione predefinita su Windows Server 2012, 2012 R2 e 2016.</span><span class="sxs-lookup"><span data-stu-id="666c0-149">PowerShell Remoting is enabled by default on Windows Server 2012, 2012 R2, and 2016.</span></span>
-<span data-ttu-id="666c0-150">È possibile abilitare la comunicazione remota di PowerShell eseguendo il comando seguente in una finestra di PowerShell con privilegi elevati.</span><span class="sxs-lookup"><span data-stu-id="666c0-150">You can enable PowerShell Remoting by running the following command in an elevated PowerShell window.</span></span>
+  <span data-ttu-id="14d73-141">Per ottenere supporto per queste funzionalità, aggiornare Windows alla versione 1607 (Aggiornamento dell'anniversario) o versione successiva.</span><span class="sxs-lookup"><span data-stu-id="14d73-141">To get support for these features, update Windows to version 1607 (Anniversary Update) or higher.</span></span>
+
+### <a name="install-windows-management-framework"></a><span data-ttu-id="14d73-142">Installare Windows Management Framework</span><span class="sxs-lookup"><span data-stu-id="14d73-142">Install Windows Management Framework</span></span>
+
+<span data-ttu-id="14d73-143">Se si esegue una versione precedente di PowerShell, può essere necessario aggiornare il sistema con la versione più recente di Windows Management Framework (WMF).</span><span class="sxs-lookup"><span data-stu-id="14d73-143">If you're running an older version of PowerShell, you may need to update your system with the latest Windows Management Framework (WMF) update.</span></span> <span data-ttu-id="14d73-144">Per altre informazioni, vedere la [documentazione di WMF](/powershell/wmf/overview).</span><span class="sxs-lookup"><span data-stu-id="14d73-144">For more information, see the [WMF documentation](/powershell/wmf/overview).</span></span>
+
+<span data-ttu-id="14d73-145">È consigliabile testare la compatibilità del carico di lavoro con WMF prima di aggiornare tutti i server.</span><span class="sxs-lookup"><span data-stu-id="14d73-145">It's recommended that you test your workload's compatibility with WMF before upgrading all of your servers.</span></span>
+
+<span data-ttu-id="14d73-146">Gli utenti di Windows 10 devono installare gli aggiornamenti delle funzionalità più recenti per ottenere la versione corrente di Windows PowerShell.</span><span class="sxs-lookup"><span data-stu-id="14d73-146">Windows 10 users should install the latest feature updates to obtain the current version of Windows PowerShell.</span></span>
+
+## <a name="enable-powershell-remoting"></a><span data-ttu-id="14d73-147">Comunicazione remota di PowerShell</span><span class="sxs-lookup"><span data-stu-id="14d73-147">Enable PowerShell Remoting</span></span>
+
+<span data-ttu-id="14d73-148">La comunicazione remota di PowerShell costituisce la base su cui viene compilato JEA.</span><span class="sxs-lookup"><span data-stu-id="14d73-148">PowerShell Remoting provides the foundation on which JEA is built.</span></span> <span data-ttu-id="14d73-149">È necessario assicurarsi che la comunicazione remota di PowerShell sia abilitata e adeguatamente protetta prima di usare JEA.</span><span class="sxs-lookup"><span data-stu-id="14d73-149">It's necessary to ensure PowerShell Remoting is enabled and properly secured before you can use JEA.</span></span> <span data-ttu-id="14d73-150">Per altre informazioni, vedere [Sicurezza di Gestione remota Windows](/powershell/scripting/learn/remoting/winrmsecurity).</span><span class="sxs-lookup"><span data-stu-id="14d73-150">For more information, see [WinRM Security](/powershell/scripting/learn/remoting/winrmsecurity).</span></span>
+
+<span data-ttu-id="14d73-151">La comunicazione remota di PowerShell è abilitata per impostazione predefinita su Windows Server 2012, 2012 R2 e 2016.</span><span class="sxs-lookup"><span data-stu-id="14d73-151">PowerShell Remoting is enabled by default on Windows Server 2012, 2012 R2, and 2016.</span></span> <span data-ttu-id="14d73-152">È possibile abilitare la comunicazione remota di PowerShell eseguendo il comando seguente in una finestra di PowerShell con privilegi elevati.</span><span class="sxs-lookup"><span data-stu-id="14d73-152">You can enable PowerShell Remoting by running the following command in an elevated PowerShell window.</span></span>
 
 ```powershell
 Enable-PSRemoting
 ```
 
-## <a name="enable-powershell-module-and-script-block-logging-optional"></a><span data-ttu-id="666c0-151">Abilitare la registrazione del blocco di script e del modulo di PowerShell (facoltativo)</span><span class="sxs-lookup"><span data-stu-id="666c0-151">Enable PowerShell module and script block logging (optional)</span></span>
+## <a name="enable-powershell-module-and-script-block-logging-optional"></a><span data-ttu-id="14d73-153">Abilitare la registrazione del blocco di script e del modulo di PowerShell (facoltativo)</span><span class="sxs-lookup"><span data-stu-id="14d73-153">Enable PowerShell module and script block logging (optional)</span></span>
 
-<span data-ttu-id="666c0-152">La procedura seguente consente di registrare tutte le azioni di PowerShell nel sistema.</span><span class="sxs-lookup"><span data-stu-id="666c0-152">The following steps enable logging for all PowerShell actions on your system.</span></span>
-<span data-ttu-id="666c0-153">Non è necessaria la registrazione del modulo di PowerShell per JEA, tuttavia è consigliabile che sia attivata per assicurarsi che i comandi eseguiti dagli utenti siano registrati in una posizione centrale.</span><span class="sxs-lookup"><span data-stu-id="666c0-153">PowerShell Module Logging is not required for JEA, however it is strongly recommended that you turn it on to ensure the commands users run are logged in a central location.</span></span>
+<span data-ttu-id="14d73-154">La procedura seguente consente di registrare tutte le azioni di PowerShell nel sistema.</span><span class="sxs-lookup"><span data-stu-id="14d73-154">The following steps enable logging for all PowerShell actions on your system.</span></span> <span data-ttu-id="14d73-155">Sebbene non sia necessaria la registrazione del modulo di PowerShell per JEA, è consigliabile attivare la registrazione per assicurarsi che i comandi eseguiti dagli utenti siano registrati in una posizione centrale.</span><span class="sxs-lookup"><span data-stu-id="14d73-155">PowerShell Module Logging isn't required for JEA, however it's recommended you turn on logging to ensure the commands users run are logged in a central location.</span></span>
 
-<span data-ttu-id="666c0-154">È possibile configurare i criteri di registrazione del modulo di PowerShell tramite i criteri di gruppo.</span><span class="sxs-lookup"><span data-stu-id="666c0-154">You can configure the PowerShell Module Logging policy using Group Policy.</span></span>
+<span data-ttu-id="14d73-156">È possibile configurare i criteri di registrazione del modulo di PowerShell tramite i criteri di gruppo.</span><span class="sxs-lookup"><span data-stu-id="14d73-156">You can configure the PowerShell Module Logging policy using Group Policy.</span></span>
 
-1. <span data-ttu-id="666c0-155">Aprire l'Editor Criteri di gruppo locali in una workstation o un oggetto Criteri di gruppo nella Console Gestione Criteri di gruppo in un Controller di dominio Active Directory</span><span class="sxs-lookup"><span data-stu-id="666c0-155">Open the Local Group Policy Editor on a workstation or a Group Policy Object in the Group Policy Management Console on an Active Directory Domain Controller</span></span>
-2. <span data-ttu-id="666c0-156">Passare a **Configurazione computer\\Modelli amministrativi\\Componenti di Windows\\Windows PowerShell**</span><span class="sxs-lookup"><span data-stu-id="666c0-156">Navigate to **Computer Configuration\\Administrative Templates\\Windows Components\\Windows PowerShell**</span></span>
-3. <span data-ttu-id="666c0-157">Fare doppio clic su **Attiva registrazione moduli**</span><span class="sxs-lookup"><span data-stu-id="666c0-157">Double click on **Turn on Module Logging**</span></span>
-4. <span data-ttu-id="666c0-158">Fare clic su **Abilitato**</span><span class="sxs-lookup"><span data-stu-id="666c0-158">Click **Enabled**</span></span>
-5. <span data-ttu-id="666c0-159">Nella sezione Opzioni fare clic su **Mostra** accanto a Nomi moduli</span><span class="sxs-lookup"><span data-stu-id="666c0-159">In the Options section, click on **Show** next to Module Names</span></span>
-6. <span data-ttu-id="666c0-160">Digitare `\*` nella finestra popup.</span><span class="sxs-lookup"><span data-stu-id="666c0-160">Type `\*` in the pop up window.</span></span> <span data-ttu-id="666c0-161">Questa operazione indica a PowerShell di registrare i comandi da tutti i moduli.</span><span class="sxs-lookup"><span data-stu-id="666c0-161">This instructs PowerShell to log commands from all modules.</span></span>
-7. <span data-ttu-id="666c0-162">Fare clic su **OK** per impostare i criteri</span><span class="sxs-lookup"><span data-stu-id="666c0-162">Click **OK** to set the policy</span></span>
-8. <span data-ttu-id="666c0-163">Fare doppio clic su **Attiva registrazione blocco script di PowerShell**</span><span class="sxs-lookup"><span data-stu-id="666c0-163">Double click on **Turn on PowerShell Script Block Logging**</span></span>
-9. <span data-ttu-id="666c0-164">Fare clic su **Abilitato**</span><span class="sxs-lookup"><span data-stu-id="666c0-164">Click **Enabled**</span></span>
-10. <span data-ttu-id="666c0-165">Fare clic su **OK** per impostare i criteri</span><span class="sxs-lookup"><span data-stu-id="666c0-165">Click **OK** to set the policy</span></span>
-11. <span data-ttu-id="666c0-166">(Solo in computer aggiunti a un dominio) Eseguire `gpupdate` o attendere che i Criteri di gruppo elaborino i criteri aggiornati e applichino le impostazioni</span><span class="sxs-lookup"><span data-stu-id="666c0-166">(On domain-joined machines only) Run `gpupdate` or wait for Group Policy to process the updated policy and apply the settings</span></span>
+1. <span data-ttu-id="14d73-157">Aprire l'Editor Criteri di gruppo locali in una workstation o un oggetto Criteri di gruppo nella Console Gestione Criteri di gruppo in un Controller di dominio Active Directory</span><span class="sxs-lookup"><span data-stu-id="14d73-157">Open the Local Group Policy Editor on a workstation or a Group Policy Object in the Group Policy Management Console on an Active Directory Domain Controller</span></span>
+2. <span data-ttu-id="14d73-158">Passare a **Configurazione computer\\Modelli amministrativi\\Componenti di Windows\\Windows PowerShell**</span><span class="sxs-lookup"><span data-stu-id="14d73-158">Navigate to **Computer Configuration\\Administrative Templates\\Windows Components\\Windows PowerShell**</span></span>
+3. <span data-ttu-id="14d73-159">Fare doppio clic su **Attiva registrazione moduli**</span><span class="sxs-lookup"><span data-stu-id="14d73-159">Double-click on **Turn on Module Logging**</span></span>
+4. <span data-ttu-id="14d73-160">Fare clic su **Abilitato**</span><span class="sxs-lookup"><span data-stu-id="14d73-160">Click **Enabled**</span></span>
+5. <span data-ttu-id="14d73-161">Nella sezione Opzioni fare clic su **Mostra** accanto a Nomi moduli</span><span class="sxs-lookup"><span data-stu-id="14d73-161">In the Options section, click on **Show** next to Module Names</span></span>
+6. <span data-ttu-id="14d73-162">Digitare `*` nella finestra popup per registrare i comandi di tutti i moduli.</span><span class="sxs-lookup"><span data-stu-id="14d73-162">Type `*` in the pop-up window to log commands from all modules.</span></span>
+7. <span data-ttu-id="14d73-163">Fare clic su **OK** per impostare i criteri</span><span class="sxs-lookup"><span data-stu-id="14d73-163">Click **OK** to set the policy</span></span>
+8. <span data-ttu-id="14d73-164">Fare doppio clic su **Attiva registrazione blocco script di PowerShell**</span><span class="sxs-lookup"><span data-stu-id="14d73-164">Double-click on **Turn on PowerShell Script Block Logging**</span></span>
+9. <span data-ttu-id="14d73-165">Fare clic su **Abilitato**</span><span class="sxs-lookup"><span data-stu-id="14d73-165">Click **Enabled**</span></span>
+10. <span data-ttu-id="14d73-166">Fare clic su **OK** per impostare i criteri</span><span class="sxs-lookup"><span data-stu-id="14d73-166">Click **OK** to set the policy</span></span>
+11. <span data-ttu-id="14d73-167">(Solo in computer aggiunti a un dominio) Eseguire `gpupdate` o attendere che i Criteri di gruppo elaborino i criteri aggiornati e applichino le impostazioni</span><span class="sxs-lookup"><span data-stu-id="14d73-167">(On domain-joined machines only) Run `gpupdate` or wait for Group Policy to process the updated policy and apply the settings</span></span>
 
-<span data-ttu-id="666c0-167">È anche possibile abilitare la trascrizione di PowerShell a livello di sistema con i criteri di gruppo.</span><span class="sxs-lookup"><span data-stu-id="666c0-167">You can also enable system-wide PowerShell transcription through Group Policy.</span></span>
+<span data-ttu-id="14d73-168">È anche possibile abilitare la trascrizione di PowerShell a livello di sistema con i criteri di gruppo.</span><span class="sxs-lookup"><span data-stu-id="14d73-168">You can also enable system-wide PowerShell transcription through Group Policy.</span></span>
 
-## <a name="next-steps"></a><span data-ttu-id="666c0-168">Passaggi successivi</span><span class="sxs-lookup"><span data-stu-id="666c0-168">Next steps</span></span>
+## <a name="next-steps"></a><span data-ttu-id="14d73-169">Passaggi successivi</span><span class="sxs-lookup"><span data-stu-id="14d73-169">Next steps</span></span>
 
-[<span data-ttu-id="666c0-169">Creare un file delle funzionalità del ruolo</span><span class="sxs-lookup"><span data-stu-id="666c0-169">Create a role capability file</span></span>](role-capabilities.md)
+[<span data-ttu-id="14d73-170">Creare un file delle funzionalità del ruolo</span><span class="sxs-lookup"><span data-stu-id="14d73-170">Create a role capability file</span></span>](role-capabilities.md)
 
-[<span data-ttu-id="666c0-170">Creare un file di configurazione sessione</span><span class="sxs-lookup"><span data-stu-id="666c0-170">Create a session configuration file</span></span>](session-configurations.md)
+[<span data-ttu-id="14d73-171">Creare un file di configurazione sessione</span><span class="sxs-lookup"><span data-stu-id="14d73-171">Create a session configuration file</span></span>](session-configurations.md)
 
-## <a name="see-also"></a><span data-ttu-id="666c0-171">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="666c0-171">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="14d73-172">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="14d73-172">See also</span></span>
 
-<span data-ttu-id="666c0-172">[Additional information about PowerShell Remoting and WinRM security](/powershell/scripting/setup/winrmsecurity) (Altre informazioni sulla comunicazione remota di PowerShell e sulla sicurezza di WinRM)</span><span class="sxs-lookup"><span data-stu-id="666c0-172">[Additional information about PowerShell Remoting and WinRM security](/powershell/scripting/setup/winrmsecurity)</span></span>
+[<span data-ttu-id="14d73-173">Sicurezza di Gestione remota Windows</span><span class="sxs-lookup"><span data-stu-id="14d73-173">WinRM Security</span></span>](/powershell/scripting/learn/remoting/winrmsecurity)
 
-[<span data-ttu-id="666c0-173">Post di blog sulla sicurezza di *PowerShell ♥ the Blue Team*</span><span class="sxs-lookup"><span data-stu-id="666c0-173">*PowerShell ♥ the Blue Team* blog post on security</span></span>](https://blogs.msdn.microsoft.com/powershell/2015/06/09/powershell-the-blue-team/)
+[<span data-ttu-id="14d73-174">PowerShell ♥ the Blue Team</span><span class="sxs-lookup"><span data-stu-id="14d73-174">PowerShell ♥ the Blue Team</span></span>](https://devblogs.microsoft.com/powershell/powershell-the-blue-team/)
