@@ -2,12 +2,12 @@
 ms.date: 06/12/2017
 keywords: dsc,powershell,configurazione,installazione
 title: Risorsa nxScript DSC per Linux
-ms.openlocfilehash: 339968512ab1c16c4c3785a3a19b00c3fbbf9ea1
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 0ad0530f1de7b86ff48c4eb1f79870f6682894a1
+ms.sourcegitcommit: 118eb294d5a84a772e6449d42a9d9324e18ef6b9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62077824"
+ms.lasthandoff: 07/22/2019
+ms.locfileid: "68372155"
 ---
 # <a name="dsc-for-linux-nxscript-resource"></a>Risorsa nxScript DSC per Linux
 
@@ -32,9 +32,9 @@ nxScript <string> #ResourceName
 
 |  Proprietà |  Description |
 |---|---|
-| GetScript| Fornisce uno script eseguito quando si richiama il cmdlet [Get-DscConfiguration](https://technet.microsoft.com/en-us/library/dn521625.aspx). Lo script deve iniziare con una sequenza di caratteri shebang, ad esempio #!/bin/bash.|
-| SetScript| Fornisce uno script. Quando si richiama il cmdlet [Start-DscConfiguration](https://technet.microsoft.com/en-us/library/dn521623.aspx), viene eseguito per primo il blocco **TestScript**. Se il blocco **TestScript** restituisce un codice di uscita diverso da 0, il blocco **SetScript** viene eseguito. Se **TestScript** restituisce un codice di uscita uguale a 0, il blocco **SetScript** non viene eseguito. Lo script deve iniziare con una sequenza di caratteri shebang, ad esempio `#!/bin/bash`.|
-| TestScript| Fornisce uno script. Quando si richiama il cmdlet [Start-DscConfiguration](https://technet.microsoft.com/en-us/library/dn521623.aspx), questo script viene eseguito. Se restituisce un codice di uscita diverso da 0, il blocco SetScript viene eseguito. Se restituisce un codice di uscita uguale a 0, il blocco **SetScript** non viene eseguito. **TestScript** viene eseguito anche quando si richiama il cmdlet [Test-DscConfiguration](https://technet.microsoft.com/en-us/library/dn407382.aspx). In questo caso, tuttavia, il blocco **SetScript** non viene eseguito, indipendentemente dal codice di uscita restituito da **TestScript**. **TestScript** deve restituire un codice di uscita uguale a 0 se l'effettiva configurazione corrisponde alla configurazione dello stato desiderato corrente e un codice di uscita diverso da 0 in caso contrario. La configurazione dello stato desiderato corrente è l'ultima configurazione applicata al nodo che usa DSC. Lo script deve iniziare con una sequenza di caratteri shebang, ad esempio 1#!/bin/bash.1|
+| GetScript| Fornisce uno script per restituire lo stato corrente del computer.  Questo script viene eseguito quando si richiama lo script [GetDscConfiguration.py](https://github.com/Microsoft/PowerShell-DSC-for-Linux#performing-dsc-operations-from-the-linux-computer). Lo script deve iniziare con una sequenza di caratteri shebang, ad esempio #!/bin/bash.|
+| SetScript| Fornisce uno script che attiva lo stato corretto per il computer. Quando si richiama lo script [StartDscConfiguration.py](https://github.com/Microsoft/PowerShell-DSC-for-Linux#performing-dsc-operations-from-the-linux-computer), viene eseguito per primo **TestScript**. Se il blocco **TestScript** restituisce un codice di uscita diverso da 0, il blocco **SetScript** viene eseguito. Se **TestScript** restituisce un codice di uscita uguale a 0, il blocco **SetScript** non viene eseguito. Lo script deve iniziare con una sequenza di caratteri shebang, ad esempio `#!/bin/bash`.|
+| TestScript| Fornisce uno script che valuta se il nodo si trova attualmente nello stato corretto. Quando si richiama lo script [StartDscConfiguration.py](https://github.com/Microsoft/PowerShell-DSC-for-Linux#performing-dsc-operations-from-the-linux-computer), questo script viene eseguito. Se restituisce un codice di uscita diverso da 0, il blocco SetScript viene eseguito. Se restituisce un codice di uscita uguale a 0, il blocco **SetScript** non viene eseguito. **TestScript** viene eseguito anche quando si richiama lo script [TestDscConfiguration](https://github.com/Microsoft/PowerShell-DSC-for-Linux#performing-dsc-operations-from-the-linux-computer). In questo caso, tuttavia, il blocco **SetScript** non viene eseguito, indipendentemente dal codice di uscita restituito da **TestScript**. **TestScript** deve includere contenuto e restituire un codice di uscita uguale a 0 se la configurazione effettiva corrisponde alla configurazione dello stato desiderato corrente e un codice di uscita diverso da 0 in caso contrario. La configurazione dello stato desiderato corrente è l'ultima configurazione applicata al nodo che usa DSC. Lo script deve iniziare con una sequenza di caratteri shebang, ad esempio 1#!/bin/bash.1|
 | User| Utente per l'esecuzione dello script.|
 | Group| Gruppo per l'esecuzione dello script.|
 | DependsOn | Indica che prima di configurare la risorsa è necessario eseguire la configurazione di un'altra risorsa. Ad esempio, se il valore di **ID** del blocco script di configurazione della risorsa che si vuole eseguire per primo è **ResourceName** e il tipo è **ResourceType**, la sintassi per usare questa proprietà è `DependsOn = "[ResourceType]ResourceName"`.|
