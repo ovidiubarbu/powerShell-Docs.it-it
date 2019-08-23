@@ -1,5 +1,5 @@
 ---
-title: I parametri di cmdlet dinamica | Microsoft Docs
+title: Parametri dinamici dei cmdlet | Microsoft Docs
 ms.custom: ''
 ms.date: 09/13/2016
 ms.reviewer: ''
@@ -8,44 +8,44 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 8ae2196d-d6c8-4101-8805-4190d293af51
 caps.latest.revision: 13
-ms.openlocfilehash: 2fc73b6ef5a862fafb7a3c8fe3da19ac71bafc05
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 19d31f6b619dff23e7e35bb53d2397f4f41eb728
+ms.sourcegitcommit: 5a004064f33acc0145ccd414535763e95f998c89
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62068539"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69986242"
 ---
-# <a name="cmdlet-dynamic-parameters"></a>Parametri dinamici dei cmdlet
+# <a name="cmdlet-dynamic-parameters"></a>Parametri dinamici cmdlet
 
-I cmdlet possono definire i parametri disponibili per l'utente in condizioni speciali, ad esempio quando l'argomento di un altro parametro è un valore specifico. Questi parametri vengono aggiunti in fase di esecuzione e sono dette *parametri dinamici* poiché essi vengono aggiunti solo quando sono necessari. Ad esempio, è possibile progettare un cmdlet che aggiunge diversi parametri solo quando viene specificato un parametro di commutatore specifico.
+I cmdlet possono definire parametri disponibili per l'utente in condizioni speciali, ad esempio quando l'argomento di un altro parametro è un valore specifico. Questi parametri vengono aggiunti in fase di esecuzione e vengono definiti parametri dinamici perché vengono aggiunti solo quando necessario. È ad esempio possibile progettare un cmdlet che aggiunge diversi parametri solo quando viene specificato un parametro di opzione specifico.
 
 > [!NOTE]
-> I provider e le funzioni di Windows PowerShell possono anche definire i parametri dinamici.
+> I provider e le funzioni di PowerShell possono anche definire parametri dinamici.
 
-## <a name="dynamic-parameters-in-windows-powershell-cmdlets"></a>Parametri dinamici nei cmdlet di Windows PowerShell
+## <a name="dynamic-parameters-in-powershell-cmdlets"></a>Parametri dinamici nei cmdlet di PowerShell
 
-Windows PowerShell Usa i parametri dinamici in molti dei cmdlet relativi provider. Ad esempio, il `Get-Item` e `Get-ChildItem` cmdlet di aggiungere un `CodeSigningCert` parametro in fase di esecuzione quando il `Path` parametro del cmdlet specifica il percorso di provider di certificati. Se il `Path` parametri del cmdlet consente di specificare un percorso per un provider diverso, il `CodeSigningCert` parametro non è disponibile.
+PowerShell usa parametri dinamici in diversi cmdlet del provider. Ad esempio, i `Get-Item` cmdlet `Get-ChildItem` e aggiungono un parametro **CodeSigningCert** in fase di esecuzione quando il parametro **path** specifica il percorso del provider di **certificati** . Se il parametro **path** specifica un percorso per un provider diverso, il parametro **CodeSigningCert** non è disponibile.
 
-Gli esempi seguenti illustrano come il `CodeSigningCert` parametro viene aggiunto in fase di esecuzione quando il `Get-Item` cmdlet viene eseguito.
+Negli esempi seguenti viene illustrato il modo in cui il parametro **CodeSigningCert** viene `Get-Item` aggiunto in fase di esecuzione quando viene eseguito.
 
-Nel primo esempio, il runtime di Windows PowerShell è stato aggiunto il parametro e il cmdlet ha esito positivo.
+In questo esempio, il runtime di PowerShell ha aggiunto il parametro e il cmdlet ha esito positivo.
 
 ```powershell
-Get-Item -Path cert:\CurrentUser -codesigningcert
+Get-Item -Path cert:\CurrentUser -CodeSigningCert
 ```
 
-```output
+```Output
 Location   : CurrentUser
 StoreNames : {SmartCardRoot, UserDS, AuthRoot, CA...}
 ```
 
-Nel secondo esempio, viene specificata un'unità file System e viene restituito un errore. Il messaggio di errore indica che il `CodeSigningCert` parametro nebyla nalezena.
+In questo esempio viene specificata un'unità **filesystem** e viene restituito un errore. Il messaggio di errore indica che il parametro **CodeSigningCert** non è stato trovato.
 
 ```powershell
-Get-Item -Path C:\ -codesigningcert
+Get-Item -Path C:\ -CodeSigningCert
 ```
 
-```output
+```Output
 Get-Item : A parameter cannot be found that matches parameter name 'codesigningcert'.
 At line:1 char:37
 +  get-item -path C:\ -codesigningcert <<<<
@@ -54,19 +54,25 @@ At line:1 char:37
     FullyQualifiedErrorId : NamedParameterNotFound,Microsoft.PowerShell.Commands.GetItemCommand
 ```
 
-## <a name="support-for-dynamic-parameters"></a>Supporto per i parametri dinamici
+## <a name="support-for-dynamic-parameters"></a>Supporto per parametri dinamici
 
-Per supportare i parametri dinamici, il codice del cmdlet è necessario includere gli elementi seguenti.
+Per supportare i parametri dinamici, è necessario includere nel codice del cmdlet gli elementi seguenti.
 
-[System.Management.Automation.Idynamicparameters](/dotnet/api/System.Management.Automation.IDynamicParameters) questa interfaccia fornisce il metodo che recupera i parametri dinamici.
+### <a name="interface"></a>Interfaccia
 
-Esempio:
+[System. Management. Automation. IDynamicParameters](/dotnet/api/System.Management.Automation.IDynamicParameters).
+Questa interfaccia fornisce il metodo che recupera i parametri dinamici.
+
+Ad esempio:
 
 `public class SendGreetingCommand : Cmdlet, IDynamicParameters`
 
-[System.Management.Automation.Idynamicparameters.Getdynamicparameters*](/dotnet/api/System.Management.Automation.IDynamicParameters.GetDynamicParameters) questo metodo recupera l'oggetto che contiene le definizioni dei parametri dinamici.
+### <a name="method"></a>Metodo
 
-Esempio:
+[System. Management. Automation. IDynamicParameters. GetDynamicParameters](/dotnet/api/System.Management.Automation.IDynamicParameters.GetDynamicParameters).
+Questo metodo recupera l'oggetto che contiene le definizioni dei parametri dinamici.
+
+Ad esempio:
 
 ```csharp
  public object GetDynamicParameters()
@@ -81,9 +87,11 @@ Esempio:
 private SendGreetingCommandDynamicParameters context;
 ```
 
-Classe di parametri dinamici questa classe definisce i parametri da aggiungere. Questa classe deve includere un attributo di parametro per ogni parametro e qualsiasi Alias e convalida gli attributi facoltativi che sono necessari per il cmdlet.
+### <a name="class"></a>Classe
 
-Esempio:
+Classe che definisce i parametri dinamici da aggiungere. Questa classe deve includere un attributo di **parametro** per ogni parametro e gli eventuali attributi facoltativi di **convalida** e **alias** richiesti dal cmdlet.
+
+Ad esempio:
 
 ```csharp
 public class SendGreetingCommandDynamicParameters
@@ -99,13 +107,13 @@ public class SendGreetingCommandDynamicParameters
 }
 ```
 
-Per un esempio completo di cmdlet che supporta i parametri dinamici, vedere [come dichiarare i parametri dinamici](./how-to-declare-dynamic-parameters.md).
+Per un esempio completo di un cmdlet che supporta i parametri dinamici, vedere [come dichiarare i parametri dinamici](./how-to-declare-dynamic-parameters.md).
 
 ## <a name="see-also"></a>Vedere anche
 
-[System.Management.Automation.Idynamicparameters](/dotnet/api/System.Management.Automation.IDynamicParameters)
+[System. Management. Automation. IDynamicParameters](/dotnet/api/System.Management.Automation.IDynamicParameters)
 
-[System.Management.Automation.Idynamicparameters.Getdynamicparameters*](/dotnet/api/System.Management.Automation.IDynamicParameters.GetDynamicParameters)
+[System. Management. Automation. IDynamicParameters. GetDynamicParameters](/dotnet/api/System.Management.Automation.IDynamicParameters.GetDynamicParameters)
 
 [Come dichiarare i parametri dinamici](./how-to-declare-dynamic-parameters.md)
 
