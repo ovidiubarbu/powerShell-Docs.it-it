@@ -2,12 +2,12 @@
 ms.date: 03/04/2019
 keywords: dsc,powershell,configurazione,installazione
 title: Servizio di pull DSC
-ms.openlocfilehash: 3cb2ca09111100f39589072a0d8e7010f9188efb
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 865eae5813e0c7b656a4158f0b1350e60f1e3291
+ms.sourcegitcommit: 5a004064f33acc0145ccd414535763e95f998c89
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62079405"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69986536"
 ---
 # <a name="desired-state-configuration-pull-service"></a>Servizio di pull DSC (Desired State Configuration)
 
@@ -228,12 +228,12 @@ Questi file devono avere un formato specifico per consentire la corretta elabora
 
 Ogni modulo di risorse deve essere compresso e denominato in base alla convenzione seguente `{Module Name}_{Module Version}.zip`.
 
-Ad esempio, un modulo denominato xWebAdminstration con versione 3.1.2.0 verrebbe denominato `xWebAdministration_3.2.1.0.zip`.
+Ad esempio, un modulo denominato xWebAdminstration con versione 3.1.2.0 verrebbe denominato `xWebAdministration_3.1.2.0.zip`.
 Ogni versione di un modulo deve essere contenuta in un unico file ZIP.
 Dato che esiste solo un'unica versione di una risorsa in ogni file ZIP, non è supportato il formato di modulo aggiunto in WMF 5.0 che supporta più versioni del modulo in una singola directory.
 Ciò significa che prima di creare un pacchetto per i moduli di risorse DSC da usare con il server di pull è necessario apportare una piccola modifica alla struttura di directory.
 Il formato predefinito dei moduli contenenti risorse DSC in WMF 5.0 è `{Module Folder}\{Module Version}\DscResources\{DSC Resource Folder}\`.
-Prima di creare il pacchetto per il server di pull, rimuovere la cartella **{Versione modulo}**, in modo che il percorso diventi `{Module Folder}\DscResources\{DSC Resource Folder}\`.
+Prima di creare il pacchetto per il server di pull, rimuovere la cartella **{Versione modulo}** , in modo che il percorso diventi `{Module Folder}\DscResources\{DSC Resource Folder}\`.
 Con questa modifica, comprimere la cartella come descritto in precedenza e posizionare i file ZIP nella cartella **ModulePath**.
 
 Usare `New-DscChecksum {module zip file}` per creare un file di checksum per il modulo appena aggiunto.
