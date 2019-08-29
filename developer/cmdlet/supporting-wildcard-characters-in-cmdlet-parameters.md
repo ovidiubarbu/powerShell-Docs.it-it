@@ -1,70 +1,80 @@
 ---
-title: Supporto di caratteri jolly in parametri del Cmdlet | Microsoft Docs
+title: Supporto di caratteri jolly nei parametri dei cmdlet
 ms.custom: ''
-ms.date: 09/13/2016
+ms.date: 08/26/2019
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords:
-- wildcards [PowerShell Programmer's Guide]
-- parameters [PowerShell Programmer's Guide], wildcards
-ms.assetid: 9b26e1e9-9350-4a5a-aad5-ddcece658d93
-caps.latest.revision: 12
-ms.openlocfilehash: 6c762d3889bc4b649252390625525db4735f4c1d
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 19644c5bc186a5554d6b134a67fc7c4d7aa7b64c
+ms.sourcegitcommit: a02ccbeaa17c0e513d6c4a21b877c88ac7725458
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62067400"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70104456"
 ---
 # <a name="supporting-wildcard-characters-in-cmdlet-parameters"></a>Supporto di caratteri jolly nei parametri dei cmdlet
 
-Spesso, è necessario progettare un cmdlet per l'esecuzione in un gruppo di risorse e non su una singola risorsa. Un cmdlet, ad esempio, potrebbe essere necessario individuare tutti i file in un archivio dati che hanno lo stesso nome o l'estensione. Quando si progetta un cmdlet che verrà eseguito con un gruppo di risorse, è necessario fornire supporto per i caratteri jolly.
+Spesso è necessario progettare un cmdlet per l'esecuzione su un gruppo di risorse invece che su una singola risorsa. Ad esempio, un cmdlet potrebbe dover individuare tutti i file in un archivio dati con lo stesso nome o l'estensione. Quando si progetta un cmdlet che verrà eseguito su un gruppo di risorse, è necessario fornire supporto per i caratteri jolly.
 
 > [!NOTE]
-> Utilizzo di caratteri jolly è talvolta detta *glob*.
+> L'uso di caratteri jolly viene talvolta indicato come *glob*.
 
-## <a name="windows-powershell-cmdlets-that-use-wildcards"></a>Cmdlet di PowerShell di Windows che usano caratteri jolly
+## <a name="windows-powershell-cmdlets-that-use-wildcards"></a>Cmdlet di Windows PowerShell che usano caratteri jolly
 
- Molti cmdlet di Windows PowerShell supporta i caratteri jolly per i valori dei parametri. Ad esempio, quasi ogni cmdlet che ha un `Name` o `Path` parametro supporta i caratteri jolly per questi parametri. (Anche se la maggior parte dei cmdlet che hanno una `Path` parametro anche avere un `LiteralPath` parametro che non supporta caratteri jolly.) Il comando seguente viene illustrato come un carattere jolly viene utilizzato per restituire tutti i cmdlet nella sessione corrente il cui nome contiene il verbo Get.
+ Molti cmdlet di Windows PowerShell supportano i caratteri jolly per i valori dei parametri. Ad esempio, quasi tutti i cmdlet con un `Name` parametro `Path` o supportano i caratteri jolly per questi parametri. Sebbene la maggior parte dei cmdlet con un `Path` parametro includa anche `LiteralPath` un parametro che non supporta caratteri jolly. Il seguente comando Mostra come viene usato un carattere jolly per restituire tutti i cmdlet della sessione corrente il cui nome contiene il verbo Get.
 
- **PS > get-command get -\***
+ `Get-Command get-*`
 
 ## <a name="supported-wildcard-characters"></a>Caratteri jolly supportati
 
 Windows PowerShell supporta i caratteri jolly seguenti.
 
-|carattere jolly|Description|Esempio|Corrispondenza|Non corrisponde|
-|------------------------|-----------------|-------------|-------------|--------------------|
-|*|Corrisponde a zero o più caratteri, iniziando in corrispondenza della posizione specificata|a*|A, ag, Apple||
-|?|Corrispondenze di caratteri nella posizione specificata|?n|Un, in, in|è stato eseguito|
-|[ ]|Corrisponde a un intervallo di caratteri|[a-l] ook|libro, cook, aspetto|ha impiegato|
-|[ ]|Corrisponde ai caratteri specificati|ook [bc]|libro, cook|aspetto|
+| Jolly |                             Descrizione                             |  Esempio   |     Corrispondenza      | Non corrisponde a |
+| -------- | ------------------------------------------------------------------- | ---------- | ---------------- | -------------- |
+| *        | Trova la corrispondenza di zero o più caratteri, a partire dalla posizione specificata | `a*`       | A, AG, Apple     |                |
+| ?        | Corrisponde a qualsiasi carattere nella posizione specificata                     | `?n`       | Un, in, on       | corse            |
+| [ ]      | Corrisponde a un intervallo di caratteri                                       | `[a-l]ook` | libro, cuoco, aspetto | Nook, ha preso     |
+| [ ]      | Corrisponde ai caratteri specificati                                    | `[bn]ook`  | libro, Nook       | cuoco, aspetto     |
 
-Quando si progettano i cmdlet che supportano caratteri jolly, consentono alle combinazioni di caratteri jolly. Ad esempio, il comando seguente usa il `Get-ChildItem` cmdlet per recuperare tutti i file. txt che si trovano nella cartella c:\Techdocs e che iniziano con le lettere "a" tramite "l."
+Quando si progettano i cmdlet che supportano caratteri jolly, consentire combinazioni di caratteri jolly. Ad esempio, il comando seguente usa il `Get-ChildItem` cmdlet per recuperare tutti i file con estensione txt presenti nella cartella c:\techdocs e che iniziano con le lettere "a" e "l".
 
-**get-childitem c:\techdocs\\[a-l]\*. txt**
+`Get-ChildItem c:\techdocs\[a-l]\*.txt`
 
-Il comando precedente Usa il carattere jolly intervallo **[a-l]** per specificare che il nome del file deve iniziare con i caratteri "a" tramite "l." Il comando Usa quindi il * carattere jolly come segnaposto per qualsiasi carattere compreso tra la prima lettera del nome file e l'estensione. txt.
+Il comando precedente utilizza il carattere jolly `[a-l]` di intervallo per specificare che il nome file deve iniziare con i caratteri "a" e "l" e `*` utilizza il carattere jolly come segnaposto per qualsiasi carattere tra la prima lettera del nome file e estensione **. txt** .
 
-L'esempio seguente usa un modello con caratteri jolly di intervallo che esclude la lettera "d", ma include tutte le altre lettere da "a" a "f."
+Nell'esempio seguente viene usato un modello di carattere jolly di intervallo che esclude la lettera "d", ma include tutte le altre lettere da "a" a "f".
 
-**get-childitem c:\techdocs\\[a-cef]\*. txt**
+`Get-ChildItem c:\techdocs\[a-cef]\*.txt`
 
-## <a name="handling-literal-characters-in-wildcard-patterns"></a>Gestire i caratteri letterali nei modelli con caratteri jolly
+## <a name="handling-literal-characters-in-wildcard-patterns"></a>Gestione dei caratteri letterali nei modelli con caratteri jolly
 
-Se il modello con caratteri jolly specificato contiene caratteri letterali, usare il carattere di apice inverso (') come carattere di escape. Quando si specificano caratteri letterali a livello di codice, usare un apice inverso singolo. Quando si specificano caratteri letterali al prompt dei comandi, usare due apici. Ad esempio, il modello seguente contiene due parentesi quadre che devono essere considerati letteralmente.
+Se il modello con caratteri jolly specificato contiene caratteri letterali che non devono essere interprettedti come caratteri jolly, usare il carattere`` ` ``di apice inverso () come carattere di escape. Quando si specificano caratteri letterali int l'API di PowerShell, usare un singolo apice inverso. Quando si specificano caratteri letterali al prompt dei comandi di PowerShell, usare due apice inverso.
 
-"John Smith \`[*']" (specificato a livello di codice)
+Il modello seguente, ad esempio, contiene due parentesi quadre che devono essere eseguite letteralmente.
 
-"John Smith \` \`[*\`']" (specificato al prompt dei comandi)
+Quando usato nell'API PowerShell, usare:
 
-Questo modello corrisponde a "John Smith [Marketing]" o "John Smith [sviluppo per]".
+- "John Smith \`[*']"
 
-## <a name="cmdlet-output-and-wildcard-characters"></a>Output del cmdlet e i caratteri jolly
+Quando viene usato dal prompt dei comandi di PowerShell:
 
-Quando i parametri del cmdlet supportano i caratteri jolly, un'operazione di cmdlet genera di norma un output di tipo matrice. In alcuni casi, è opportuno non supporta una matrice di output perché l'utente può usare solo un singolo elemento alla volta. Ad esempio, il `Set-Location` cmdlet supportano una matrice di output perché l'utente imposta solo un'unica posizione. In questo caso, il cmdlet supporta ancora i caratteri jolly, ma lo forza la risoluzione in un'unica posizione.
+- "John Smith \` \`[*\`']"
+
+Questo modello corrisponde a "John Smith [marketing]" o "John Smith [development]". Ad esempio:
+
+```
+PS> "John Smith [Marketing]" -like "John Smith ``[*``]"
+True
+
+PS> "John Smith [Development]" -like "John Smith ``[*``]"
+True
+```
+
+## <a name="cmdlet-output-and-wildcard-characters"></a>Output del cmdlet e caratteri jolly
+
+Quando i parametri del cmdlet supportano i caratteri jolly, l'operazione genera in genere un output di matrice.
+In alcuni casi non è consigliabile supportare un output di matrice perché l'utente potrebbe usare un solo elemento. Ad esempio, il `Set-Location` cmdlet non supporta l'output della matrice perché l'utente imposta una sola posizione. In questo caso, il cmdlet supporta ancora caratteri jolly, ma forza la risoluzione in un'unica posizione.
 
 ## <a name="see-also"></a>Vedere anche
 
