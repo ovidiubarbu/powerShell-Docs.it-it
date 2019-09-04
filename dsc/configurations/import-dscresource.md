@@ -2,12 +2,12 @@
 ms.date: 12/12/2018
 keywords: dsc,powershell,configurazione,installazione
 title: Uso di Import-DSCResource
-ms.openlocfilehash: ee0b2f0469c6507c8f0148138198597a9e57cdd7
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: e1c2c06d756a70c2de516f330e3123235ce740ba
+ms.sourcegitcommit: 02eed65c526ef19cf952c2129f280bb5615bf0c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62080102"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70215413"
 ---
 # <a name="using-import-dscresource"></a>Uso di Import-DSCResource
 
@@ -78,7 +78,7 @@ Questo utilizzo offre i vantaggi seguenti:
 
 Quando si crea la configurazione DSC in ISE, PowerShell fornisce IntelliSense per le risorse e le proprietà delle risorse. Le definizioni delle risorse nel percorso del modulo `$pshome` vengono caricate automaticamente. Quando si importano risorse con la parola chiave `Import-DSCResource`, le definizioni di risorse specificate vengono aggiunte e IntelliSense viene espanso per includere lo schema della risorsa importata.
 
-![Risorsa IntelliSense](/media/resource-intellisense.png)
+![Risorsa IntelliSense](../media/resource-intellisense.png)
 
 > [!NOTE]
 > A partire da PowerShell 5.0 è stato aggiunto il completamento tramite TAB a ISE per le risorse DSC e le relative proprietà. Per altre informazioni, vedere [Risorse](../resources/resources.md).
@@ -137,11 +137,11 @@ L'installazione e l'utilizzo di più versioni di risorse affiancate non sono sup
 
 Nell'immagine seguente sono installare due versioni del modulo **xPSDesiredStateConfiguration**.
 
-![Più versioni di risorse corrette](/media/multiple-resource-versions-broken.md)
+![Più versioni di risorse corrette](../media/multiple-resource-versions-broken.png)
 
 Copiare il contenuto della versione del modulo desiderata nel livello superiore della directory del modulo.
 
-![Più versioni di risorse corrette](/media/multiple-resource-versions-fixed.md)
+![Più versioni di risorse corrette](../media/multiple-resource-versions-fixed.png)
 
 ### <a name="resource-location"></a>Posizione risorsa
 
