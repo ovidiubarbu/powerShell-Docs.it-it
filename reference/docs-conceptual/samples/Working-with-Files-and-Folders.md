@@ -2,12 +2,12 @@
 ms.date: 06/05/2017
 keywords: powershell,cmdlet
 title: Utilizzo di file e cartelle
-ms.openlocfilehash: 0f7cb233918b59475417ec49b611ecc25a94ebe1
-ms.sourcegitcommit: a6f13c16a535acea279c0ddeca72f1f0d8a8ce4c
+ms.openlocfilehash: 743e261d2f5e8bfa39f2731fca7fea6e5678c711
+ms.sourcegitcommit: 02eed65c526ef19cf952c2129f280bb5615bf0c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67030697"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70215526"
 ---
 # <a name="working-with-files-and-folders"></a>Utilizzo di file e cartelle
 
@@ -106,15 +106,17 @@ Se si preferisce evitare la richiesta di conferma per ogni elemento di contenuto
 Remove-Item -Path C:\temp\DeleteMe -Recurse
 ```
 
-## <a name="mapping-a-local-folder-as-a-windows-accessible-drive"></a>Mapping di una cartella locale come unità accessibile di Windows
+## <a name="mapping-a-local-folder-as-a-drive"></a>Mapping di una cartella locale come unità
 
-È anche possibile mappare una cartella locale, usando il comando **subst**. Il comando seguente crea un'unità locale P: con radice nella directory Programmi locale:
+È anche possibile mappare una cartella locale usando il comando **New-PSDrive**. Il comando seguente crea un'unità locale P: con radice nella directory Programmi locale, visibile solo dalla sessione di PowerShell:
 
 ```powershell
-subst p: $env:programfiles
+New-PSDrive -Name P -Root $env:ProgramFiles -PSProvider FileSystem
 ```
 
-Come per le unità di rete, le unità mappate all'interno di Windows PowerShell con **subst** diventano immediatamente visibili nella shell di Windows PowerShell.
+Come per le unità di rete, le unità mappate all'interno di Windows PowerShell diventano immediatamente visibili nella shell di Windows PowerShell.
+Per creare un'unità mappata visibile da Esplora file è necessario il parametro **-Persist**. Tuttavia con Persist è possibile usare solo percorsi remoti.
+
 
 ## <a name="reading-a-text-file-into-an-array"></a>Lettura di un file di testo in una matrice
 
