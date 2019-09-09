@@ -9,33 +9,33 @@ ms.topic: article
 ms.assetid: 302f00ef-e145-4668-a26a-03bc96ef4b8f
 caps.latest.revision: 10
 ms.openlocfilehash: 9cc6933858f4f37e4fa8b3bbe9afb69a73c68572
-ms.sourcegitcommit: caac7d098a448232304c9d6728e7340ec7517a71
+ms.sourcegitcommit: ffcc1c55f5b3adc063353cb75f2a2183acc2234a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58059644"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70737586"
 ---
 # <a name="remoterunspace01-sample"></a>Esempio di RemoteRunspace01
 
-Questo esempio viene illustrato come creare uno spazio di esecuzione remota che consente di stabilire una connessione remota.
+Questo esempio illustra come creare un spazio remoto usato per stabilire una connessione remota.
 
 ## <a name="requirements"></a>Requisiti
 
- Questo esempio richiede Windows PowerShell 2.0.
+ Questo esempio richiede Windows PowerShell 2,0.
 
-## <a name="demonstrates"></a>Illustra
+## <a name="demonstrates"></a>Dimostrazione
 
-- Creazione di un [System.Management.Automation.Runspaces.Wsmanconnectioninfo](/dotnet/api/System.Management.Automation.Runspaces.WSManConnectionInfo) oggetto.
+- Creazione di un oggetto [System. Management. Automation. Runspaces. WSManConnectionInfo](/dotnet/api/System.Management.Automation.Runspaces.WSManConnectionInfo) .
 
-- Impostando il [System.Management.Automation.Runspaces.Runspaceconnectioninfo.Operationtimeout*](/dotnet/api/System.Management.Automation.Runspaces.RunspaceConnectionInfo.OperationTimeout) e [System.Management.Automation.Runspaces.Runspaceconnectioninfo.Opentimeout*](/dotnet/api/System.Management.Automation.Runspaces.RunspaceConnectionInfo.OpenTimeout) proprietà del [System.Management.Automation.Runspaces.Wsmanconnectioninfo](/dotnet/api/System.Management.Automation.Runspaces.WSManConnectionInfo) oggetto.
+- Impostazione delle proprietà [System. Management. Automation. Runspaces. RunspaceConnectionInfo. OperationTimeout *](/dotnet/api/System.Management.Automation.Runspaces.RunspaceConnectionInfo.OperationTimeout) e [System. Management. Automation. Runspaces. RunspaceConnectionInfo. OpenTimeout *](/dotnet/api/System.Management.Automation.Runspaces.RunspaceConnectionInfo.OpenTimeout) del [ Oggetto System. Management. Automation. Runspaces. WSManConnectionInfo](/dotnet/api/System.Management.Automation.Runspaces.WSManConnectionInfo) .
 
-- Creazione di uno spazio di esecuzione remota che utilizza il [System.Management.Automation.Runspaces.Wsmanconnectioninfo](/dotnet/api/System.Management.Automation.Runspaces.WSManConnectionInfo) oggetto per stabilire la connessione remota.
+- Creazione di un spazio remoto che usa l'oggetto [System. Management. Automation. Runspaces. WSManConnectionInfo](/dotnet/api/System.Management.Automation.Runspaces.WSManConnectionInfo) per stabilire la connessione remota.
 
-- Chiudere lo spazio di esecuzione remota per rilasciare la connessione remota.
+- Chiusura della spazio remota per rilasciare la connessione remota.
 
 ## <a name="example"></a>Esempio
 
-In questo esempio definisce una connessione remota e quindi Usa le informazioni di connessione per stabilire una connessione remota.
+Questo esempio definisce una connessione remota e quindi utilizza tali informazioni di connessione per stabilire una connessione remota.
 
 ```csharp
 namespace Microsoft.Samples.PowerShell.Runspaces
