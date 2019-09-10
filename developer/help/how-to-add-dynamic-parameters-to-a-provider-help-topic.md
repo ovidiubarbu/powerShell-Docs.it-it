@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: e20e5ad6-a6e6-4a63-9d42-1ac54214f748
 caps.latest.revision: 5
-ms.openlocfilehash: cc4877242a16a9caa99564aeaae985f85e38791e
-ms.sourcegitcommit: ffcc1c55f5b3adc063353cb75f2a2183acc2234a
+ms.openlocfilehash: 59839e9b8b6f2a56f2f1a9c755f2f1a85deb34aa
+ms.sourcegitcommit: 00083f07b13c73b86936e7d7307397df27c63c04
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70737592"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70848110"
 ---
 # <a name="how-to-add-dynamic-parameters-to-a-provider-help-topic"></a>Come aggiungere parametri dinamici a un argomento della Guida dei provider
 
@@ -23,7 +23,7 @@ I *parametri dinamici* sono parametri di un cmdlet o di una funzione disponibili
 
 I parametri dinamici documentati in un argomento della guida del provider sono i parametri dinamici aggiunti dal provider al cmdlet o alla funzione quando si utilizza il cmdlet o la funzione nell'unità del provider.
 
-I parametri dinamici possono anche essere documentati nella Guida personalizzata dei cmdlet per un provider. Quando si scrivono sia la guida del provider che la guida personalizzata sui cmdlet per un provider, includere la documentazione relativa ai parametri dinamici in entrambi i documenti. Per ulteriori informazioni sulla guida personalizzata dei cmdlet, vedere la pagina relativa alla [scrittura della Guida dei cmdlet personalizzati di Windows PowerShell per i provider](./writing-custom-cmdlet-help-for-windows-powershell-providers.md).
+I parametri dinamici possono anche essere documentati nella Guida personalizzata dei cmdlet per un provider. Quando si scrivono sia la guida del provider che la guida personalizzata sui cmdlet per un provider, includere la documentazione relativa ai parametri dinamici in entrambi i documenti.
 
 Se un provider non implementa parametri dinamici, l'argomento della guida del provider contiene un elemento `DynamicParameters` vuoto.
 
@@ -112,7 +112,7 @@ Se un provider non implementa parametri dinamici, l'argomento della guida del pr
 
    La tabella seguente elenca e descrive l' `PossibleValues` elemento e i relativi elementi figlio.
 
-   |Nome dell'elemento|Descrizione|
+   |Nome dell'elemento|DESCRIZIONE|
    |------------------|-----------------|
    |PossibleValues|Questo elemento è un contenitore. I relativi elementi figlio sono descritti di seguito. Aggiungere un `PossibleValues` elemento a ogni argomento della guida del provider. L'elemento può essere vuoto.|
    |PossibleValue|Questo elemento è un contenitore. I relativi elementi figlio sono descritti di seguito. Aggiungere un `PossibleValue` elemento per ogni valore del parametro dinamico.|
