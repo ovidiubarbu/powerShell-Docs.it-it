@@ -887,39 +887,13 @@
         - name: Scrittura della Guida per i cmdlet di Windows PowerShell
           href: ./help/writing-help-for-windows-powershell-cmdlets.md
         - name: Scrittura della Guida per i provider di Windows PowerShell
-          href: ./help/writing-help-for-windows-powershell-providers.md
           items:
-            - name: Come creare un argomento della Guida dei provider
-              href: ./help/how-to-create-a-provider-help-topic.md
-            - name: Come aggiungere il nome del provider
-              href: ./help/how-to-add-the-provider-name.md
-            - name: Come aggiungere le unità del provider
-              href: ./help/how-to-add-the-provider-drives.md
-            - name: Come aggiungere il riepilogo sul provider
-              href: ./help/how-to-add-the-provider-synopsis.md
-            - name: Come aggiungere una descrizione del provider
-              href: ./help/how-to-add-a-provider-description.md
-            - name: Come aggiungere le funzionalità
-              href: ./help/how-to-add-capabilities.md
-            - name: Come aggiungere attività a un argomento della Guida dei provider
-              href: ./help/how-to-add-tasks-to-a-provider-help-topic.md
             - name: Come aggiungere parametri dinamici a un argomento della Guida dei provider
               href: ./help/how-to-add-dynamic-parameters-to-a-provider-help-topic.md
-            - name: Come aggiungere note a un argomento della Guida dei provider
-              href: ./help/how-to-add-notes-to-a-provider-help-topic.md
             - name: Come aggiungere una sezione Vedere anche a un argomento della Guida dei provider
               href: ./help/how-to-add-a-see-also-section-to-a-provider-help-topic.md
         - name: Scrittura di una Guida degli script e delle funzioni di Windows PowerShell
           href: ./help/writing-help-for-windows-powershell-scripts-and-functions.md
-          items:
-            - name: Scrittura di argomenti della Guida basati su XML per gli script e le funzioni
-              href: ./help/writing-xml-based-help-topics-for-scripts-and-functions.md
-        - name: Scrittura di una Guida per gli snap-in di Windows PowerShell
-          href: ./help/writing-help-for-windows-powershell-snap-ins.md
-        - name: Scrittura di una Guida dei cmdlet personalizzata per i provider di Windows PowerShell
-          href: ./help/writing-custom-cmdlet-help-for-windows-powershell-providers.md
-        - name: Scrittura di una Guida con informazioni su Windows PowerShell
-          href: ./help/writing-windows-powershell-about-help.md
         - name: Scrittura di argomenti della Guida basata sui commenti
           href: ./help/writing-comment-based-help-topics.md
           items:
@@ -936,7 +910,6 @@
             - name: Esempi della Guida basata sui commenti
               href: ./help/examples-of-comment-based-help.md
         - name: Scrittura di argomenti della Guida basata su XML per i comandi
-          href: ./help/writing-xml-based-help-topics-for-commands.md
           items:
             - name: Come creare il file della Guida sui cmdlet
               href: ./help/how-to-create-the-cmdlet-help-file.md
