@@ -2,12 +2,12 @@
 ms.date: 12/12/2018
 keywords: dsc,powershell,risorsa,raccolta,configurazione
 title: Aggiungere parametri a una configurazione
-ms.openlocfilehash: 514bb4cf82b7adbe4cd3d3e34d5464f574cb2206
-ms.sourcegitcommit: f60fa420bdc81db174e6168d3aeb11371e483162
+ms.openlocfilehash: 72e6c15593d11ed39d7fe8ea79f794089f410cf8
+ms.sourcegitcommit: d1ba596f9e0d4df9565601a70687a126d535c917
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67301522"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70386322"
 ---
 # <a name="add-parameters-to-a-configuration"></a>Aggiungere parametri a una configurazione
 
@@ -18,7 +18,7 @@ Questo esempio inizia con una configurazione di base che configura il servizio "
 ```powershell
 Configuration TestConfig
 {
-    # It is best practice to implicitly import any required resources or modules.
+    # It is best practice to explicitly import any required resources or modules.
     Import-DSCResource -Module PSDesiredStateConfiguration
 
     Node localhost
@@ -99,7 +99,7 @@ Configuration TestConfig
         $ComputerName="localhost"
     )
 
-    # It is best practice to implicitly import any required resources or modules.
+    # It is best practice to explicitly import any required resources or modules.
     Import-DSCResource -Module PSDesiredStateConfiguration
 
     Node $ComputerName
@@ -134,7 +134,7 @@ Configuration TestConfig
         $ComputerName="localhost"
     )
 
-    # It is best practice to implicitly import any required resources or modules.
+    # It is best practice to explicitly import any required resources or modules.
     Import-DSCResource -Module PSDesiredStateConfiguration
 
     Node $ComputerName
@@ -210,7 +210,7 @@ Configuration TestConfig
         $ComputerName="localhost",
     )
 
-    # It is best practice to implicitly import any required resources or modules.
+    # It is best practice to explicitly import any required resources or modules.
     Import-DSCResource -Module PSDesiredStateConfiguration
 
     Node localhost
