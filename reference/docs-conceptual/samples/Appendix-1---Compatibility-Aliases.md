@@ -1,36 +1,54 @@
 ---
-ms.date: 06/05/2017
+ms.date: 09/09/2019
 keywords: powershell,cmdlet
 title: Appendice 1 Alias per la compatibilità
-ms.openlocfilehash: 553b9f01d6b5e3f4e04f1a75c25979b54dc205da
-ms.sourcegitcommit: a6f13c16a535acea279c0ddeca72f1f0d8a8ce4c
+ms.openlocfilehash: 2351fdf23711fe1417f7e3fc3cca5b642d5a59fc
+ms.sourcegitcommit: 00083f07b13c73b86936e7d7307397df27c63c04
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67030338"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70848169"
 ---
 # <a name="appendix-1---compatibility-aliases"></a>Appendice 1 - Alias per la compatibilità
 
-Windows PowerShell include diversi alias di transizione che consentono agli utenti di UNIX e di Cmd di usare i nomi di comandi familiari in Windows PowerShell. Gli alias più comuni sono indicati nella tabella seguente, insieme al comando di Windows PowerShell corrispondente all'alias e all'alias di Windows PowerShell standard, se esistente.
+PowerShell include diversi alias che consentono agli utenti di **UNIX** e **cmd.exe** di usare comandi con cui hanno dimestichezza.
+I comandi sono riportati nella tabella seguente con i relativi cmdlet e alias di PowerShell:
 
-È possibile trovare il comando di Windows PowerShell a cui punta qualsiasi alias dall'interno di Windows PowerShell tramite il cmdlet Get-Alias. Ad esempio, digitare **get-alias cls**.
-
-```
-CommandType     Name                            Definition
------------     ----                            ----------
-Alias           cls                             Clear-Host
-```
-
-|Comando CMD|Comando UNIX|Comando PS|Alias PS|
+|Comando cmd.exe|Comando UNIX|Cmdlet di PowerShell|Alias di PowerShell|
 |---------------|----------------|--------------|------------|
-|**dir**|**ls**|**Get-ChildItem**|**gci**|
-|**cls**|**clear**|**Clear-Host** (funzione)|**cls**|
-|**del, erase, rmdir**|**rm**|**Remove-Item**|**ri**|
-|**copy**|**cp**|**Copy-Item**|**ci**|
-|**move**|**mv**|**Move-Item**|**mi**|
-|**rename**|**mv**|**Rename-Item**|**rni**|
-|**type**|**cat**|**Get-Content**|**gc**|
-|**cd**|**cd**|**Set-Location**|**sl**|
-|**md**|**mkdir**|**New-Item**|**ni**|
-|**pushd**|**pushd**|**Push-Location**|**pushd**|
-|**popd**|**popd**|**Pop-Location**|**popd**|
+|**cls**|**clear**|`Clear-Host` (funzione)|`cls`|
+|**copy**|**cp**|`Copy-Item`|`cpi`|
+|**dir**|**ls**|`Get-ChildItem`|`gci`|
+|**type**|**cat**|`Get-Content`|`gc`|
+|**move**|**mv**|`Move-Item`|`mi`|
+|**md**|**mkdir**|`New-Item`|`ni`|
+|**pushd**|**pushd**|`Push-Location`|`pushd`|
+|**popd**|**popd**|`Pop-Location`|`popd`|
+|**del**, **erase**, **rd**, **rmdir**|**rm**|`Remove-Item`|`ri`|
+|**ren**|**mv**|`Rename-Item`|`rni`|
+|**cd**, **chdir**|**cd**|`Set-Location`|`sl`|
+
+Per trovare gli alias di PowerShell, usare il cmdlet [Get-Alias](/powershell/module/Microsoft.PowerShell.Utility/Get-Alias). Per visualizzare gli alias di un cmdlet, usare il parametro **Definition** e specificare il nome del cmdlet.
+Oppure, per trovare il nome del cmdlet di un alias, usare il parametro **Name** e specificare l'alias.
+
+```powershell
+Get-Alias -Definition Get-ChildItem
+```
+
+```Output
+CommandType     Name
+-----------     ----
+Alias           dir -> Get-ChildItem
+Alias           gci -> Get-ChildItem
+Alias           ls -> Get-ChildItem
+```
+
+```powershell
+Get-Alias -Name gci
+```
+
+```Output
+CommandType     Name
+-----------     ----
+Alias           gci -> Get-ChildItem
+```

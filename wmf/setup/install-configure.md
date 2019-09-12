@@ -4,12 +4,12 @@ ms.topic: conceptual
 keywords: wmf,powershell,installazione
 contributor: keithb
 title: Installare e configurare WMF 5.1
-ms.openlocfilehash: cb223844c2a214846e7206bcb476fac9154fda4b
-ms.sourcegitcommit: 01b81317029b28dd9b61d167045fd31f1ec7bc06
+ms.openlocfilehash: 241f52be011e1afc87d25c9a934db0c1e0361b76
+ms.sourcegitcommit: 00083f07b13c73b86936e7d7307397df27c63c04
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65855406"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70848138"
 ---
 # <a name="install-and-configure-wmf-51"></a>Installare e configurare WMF 5.1
 
@@ -45,29 +45,29 @@ Scaricare il pacchetto WMF 5.1 per il sistema operativo e l'architettura in cui 
 > [!NOTE]
 > Le istruzioni di installazione per Windows Server 2008 R2 e Windows 7 sono cambiate e sono diverse dalle istruzioni per gli altri pacchetti. Le istruzioni di installazione per Windows Server 2012 R2, Windows Server 2012 e Windows 8.1 sono riportate di seguito.
 
-### <a name="installing-wmf-51-on-windows-server-2008-r2-and-windows-7"></a>Installazione di WMF 5.1 in Windows Server 2008 R2 e Windows 7
-
-1. Passare alla cartella in cui è stato scaricato il file ZIP.
-
-2. Fare clic con il pulsante destro del mouse sul file ZIP e scegliere "Estrai tutto". Il file ZIP contiene 2 file: un file MSU e il file di script Install-WMF5.1.PS1. Dopo aver decompresso il file ZIP, è possibile copiare il contenuto in qualsiasi computer che esegue Windows 7 o Windows Server 2008 R2.
-
-3. Dopo aver estratto il contenuto del file ZIP, aprire PowerShell come amministratore e quindi passare alla cartella con il contenuto del file ZIP.
-
-4. Eseguire lo script Install-Wmf5.1.ps1 in tale cartella e seguire le istruzioni. Questo script verifica i prerequisiti nel computer locale e installa WMF 5.1 se i prerequisiti sono soddisfatti. I prerequisiti sono elencati di seguito.
-
-   Lo script Install-WMF5.1.ps1 accetta i parametri seguenti per semplificare l'automazione dell'installazione in Windows Server 2008 R2 e Windows 7:
-
-   - AcceptEula: Se si include questo parametro, il contratto di licenza con l'utente finale viene accettato automaticamente e non verrà visualizzato.
-   - AllowRestart: Questo parametro può essere usato solo se si specifica AcceptEula. Se si include questo parametro ed è necessario un riavvio dopo l'installazione di WMF 5.1, il riavvio verrà eseguito senza chiedere conferma subito dopo il completamento dell'installazione.
-
 ### <a name="wmf-51-prerequisites-for-windows-server-2008-r2-sp1-and-windows-7-sp1"></a>Prerequisiti di WMF 5.1 per Windows Server 2008 R2 SP1 e Windows 7 SP1
 
 Per l'installazione di WMF 5.1 in Windows Server 2008 R2 SP1 o Windows 7 SP1 esistono i prerequisiti seguenti:
 
 - Installazione del Service Pack più recente.
-- WMF 3.0 **non deve** essere installato. L'installazione di WMF 5.1 su WMF 3.0 causerà la perdita di PSModulePath e ciò può causare errori per altre applicazioni. Prima di installare WMF 5.1, è necessario disinstallare WMF 3.0 o salvare PSModulePath e quindi ripristinarlo manualmente al termine dell'installazione di WMF 5.1.
+- WMF 3.0 **non deve** essere installato. L'installazione di WMF 5.1 su WMF 3.0 causerà la perdita di **PSModulePath** (`$env:PSModulePath`) e ciò può causare errori in altre applicazioni. Prima di installare WMF 5.1, è necessario disinstallare WMF 3.0 o salvare **PSModulePath** e quindi ripristinarlo manualmente al termine dell'installazione di WMF 5.1.
 - WMF 5.1 richiede almeno [.NET Framework 4.5.2](https://www.microsoft.com/download/details.aspx?id=42642).
   È possibile installare Microsoft .NET Framework 4.5.2 seguendo le istruzioni disponibili nel percorso di download.
+
+### <a name="installing-wmf-51-on-windows-server-2008-r2-and-windows-7"></a>Installazione di WMF 5.1 in Windows Server 2008 R2 e Windows 7
+
+1. Passare alla cartella in cui è stato scaricato il file ZIP.
+
+2. Fare clic con il pulsante destro del mouse sul file ZIP e scegliere **Estrai tutto**. Il file ZIP contiene due file: un file MSU e il file di script `Install-WMF5.1.ps1`. Dopo aver decompresso il file ZIP, è possibile copiare il contenuto in qualsiasi computer che esegue Windows 7 o Windows Server 2008 R2.
+
+3. Dopo aver estratto il contenuto del file ZIP, aprire PowerShell come amministratore e quindi passare alla cartella con il contenuto del file ZIP.
+
+4. Eseguire lo script `Install-WMF5.1.ps1` in tale cartella e seguire le istruzioni. Questo script verifica i prerequisiti nel computer locale e installa WMF 5.1 se i prerequisiti sono soddisfatti. I prerequisiti sono elencati di seguito.
+
+   `Install-WMF5.1.ps1` accetta i parametri seguenti per semplificare l'automazione dell'installazione in Windows Server 2008 R2 e Windows 7:
+
+   - **AcceptEula**: Se si include questo parametro, il contratto di licenza con l'utente finale viene accettato automaticamente e non verrà visualizzato.
+   - **AllowRestart**: Questo parametro può essere usato solo se si specifica AcceptEula. Se si include questo parametro ed è necessario un riavvio dopo l'installazione di WMF 5.1, il riavvio verrà eseguito senza chiedere conferma subito dopo il completamento dell'installazione.
 
 ## <a name="winrm-dependency"></a>Dipendenza da WinRM
 

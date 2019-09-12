@@ -3,18 +3,18 @@ ms.date: 06/12/2017
 ms.topic: conceptual
 keywords: wmf,powershell,installazione
 title: Note sulla versione per WMF 5.x
-ms.openlocfilehash: 8bdc423234cf0b104b72b1bee1de35e50783d8a4
-ms.sourcegitcommit: 01b81317029b28dd9b61d167045fd31f1ec7bc06
+ms.openlocfilehash: 8924240a4bbedcd34bc68b7cacdd23189a3716d6
+ms.sourcegitcommit: 00083f07b13c73b86936e7d7307397df27c63c04
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65855766"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70848147"
 ---
 # <a name="windows-management-framework-wmf-5x-release-notes"></a>Note sulla versione di Windows Management Framework (WMF) 5.x
 
 ## <a name="wmf-50-changes"></a>Modifiche di WMF 5.0
 
-- In PowerShell 5.0 è stato aggiunto un nuovo flusso di informazioni strutturato
+- In PowerShell 5.0 è stato aggiunto un nuovo flusso di **informazioni** strutturato
 - I miglioramenti di DSC includono quattro nuove risorse DSC:
   - WindowsFeatureSet
   - WindowsOptionalFeatureSet
@@ -41,6 +41,9 @@ WMF 5.1 include i componenti PowerShell, WMI, WinRM e Registrazione inventario s
 - Miglioramenti del debug per le classi DSC e PowerShell
 - Miglioramenti relativi alla sicurezza, incluso quando si usano i cmdlet PowerShellGet e quando si applicano i moduli firmati da catalogo provenienti dal server di pull
 - Risposte ad alcune richieste o problemi segnalati da utenti
+
+> [!IMPORTANT]
+> Prima di installare WMF 5.1 in Windows Server 2008 o Windows 7, verificare che WMF 3.0 non sia installato. Per altre informazioni, vedere [Prerequisiti di WMF 5.1 per Windows Server 2008 R2 SP1 e Windows 7 SP1](../setup/install-configure.md#wmf-51-prerequisites-for-windows-server-2008-r2-sp1-and-windows-7-sp1).
 
 ## <a name="powershell-editions"></a>Edizioni di PowerShell
 
@@ -90,6 +93,7 @@ In precedenza, non era possibile specificare una versione particolare del modulo
 In WMF 5.1:
 
 - È possibile usare il [costruttore ModuleSpecification (Hashtable)](/dotnet/api/microsoft.powershell.commands.modulespecification.-ctor?view=powershellsdk-1.1.0#Microsoft_PowerShell_Commands_ModuleSpecification__ctor_System_Collections_Hashtable_).
+
   Questa tabella hash ha lo stesso formato di `Get-Module -FullyQualifiedName`.
 
   **Esempio:** `using module @{ModuleName = 'PSReadLine'; RequiredVersion = '1.1'}`
