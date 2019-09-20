@@ -1,5 +1,5 @@
 ---
-title: Creazione di spazi di esecuzione remota | Microsoft Docs
+title: Creazione di Runspaces Remote | Microsoft Docs
 ms.custom: ''
 ms.date: 09/12/2016
 ms.reviewer: ''
@@ -8,30 +8,30 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 057a666f-731b-423d-9d80-7be6b1836244
 caps.latest.revision: 5
-ms.openlocfilehash: f6cc69df8afe64cea867f5d7f9a7d45753a54d6f
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: c97b0dfc12d96f99c53383d3578579f1988efd52
+ms.sourcegitcommit: 0a6b562a497860caadba754c75a83215315d37a1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62082975"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71143543"
 ---
 # <a name="creating-remote-runspaces"></a>Creazione di spazi di esecuzione remoti
 
-Windows PowerShell comandi che accettano un `ComputerName` parametro può essere eseguito in qualsiasi computer che esegue Windows PowerShell. Per eseguire i comandi che non accettano un `ComputerName` parametro, è possibile utilizzare WS-Management per configurare uno spazio di esecuzione che si connette a un computer specifico ed eseguire i comandi in tale computer.
+I comandi di PowerShell che accettano un parametro **ComputerName** possono essere eseguiti in qualsiasi computer che esegue PowerShell. Per eseguire i comandi che non accettano un parametro **ComputerName** , è possibile usare WS-Management per configurare un spazio che si connette a un computer specifico ed eseguire comandi su tale computer.
 
-## <a name="using-a-wsmanconnection-to-create-a-remote-runspace"></a>Uso di un WSManConnection per creare uno spazio di esecuzione remota
+## <a name="using-a-wsmanconnection-to-create-a-remote-runspace"></a>Uso di un WSManConnection per creare una spazio remota
 
- Per creare uno spazio di esecuzione che si connette a un computer remoto, è necessario creare un [System.Management.Automation.Runspaces.Wsmanconnectioninfo](/dotnet/api/System.Management.Automation.Runspaces.WSManConnectionInfo) oggetto. Si specifica l'endpoint di destinazione per la connessione, impostando il [System.Management.Automation.Runspaces.Wsmanconnectioninfo.Connectionuri*](/dotnet/api/System.Management.Automation.Runspaces.WSManConnectionInfo.ConnectionUri) proprietà dell'oggetto. Quindi creare uno spazio di esecuzione, chiamare il [System.Management.Automation.Runspaces.Runspacefactory.Createrunspace*](/dotnet/api/System.Management.Automation.Runspaces.RunspaceFactory.CreateRunspace) metodo, specificando il [System.Management.Automation.Runspaces.Wsmanconnectioninfo ](/dotnet/api/System.Management.Automation.Runspaces.WSManConnectionInfo) dell'oggetto come il `connectionInfo` parametro.
+ Per creare un spazio che si connette a un computer remoto, creare un oggetto [System. Management. Automation. Runspaces. WSManConnectionInfo](/dotnet/api/System.Management.Automation.Runspaces.WSManConnectionInfo) . Specificare l'endpoint di destinazione per la connessione impostando la proprietà [System. Management. Automation. Runspaces. WSManConnectionInfo. ConnectionURI](/dotnet/api/System.Management.Automation.Runspaces.WSManConnectionInfo.ConnectionUri) dell'oggetto. Si crea quindi un spazio chiamando il metodo [System. Management. Automation. Runspaces. RunspaceFactory. CreateRunspace](/dotnet/api/System.Management.Automation.Runspaces.RunspaceFactory.CreateRunspace) , specificando l' `connectionInfo` oggetto [System. Management. Automation. Runspaces. WSManConnectionInfo](/dotnet/api/System.Management.Automation.Runspaces.WSManConnectionInfo) come parametro.
 
- Nell'esempio seguente viene illustrato come creare uno spazio di esecuzione che si connette a un computer remoto. Nell'esempio `RemoteComputerUri` viene usato come segnaposto per l'URI effettivo di un computer remoto.
+ Nell'esempio seguente viene illustrato come creare un spazio che si connette a un computer remoto. Nell'esempio, `RemoteComputerUri` viene usato come segnaposto per l'URI effettivo di un computer remoto.
 
 ```csharp
 namespace Samples
 {
   using System;
   using System.Collections.ObjectModel;
-  using System.Management.Automation;            // Windows PowerShell namespace.
-  using System.Management.Automation.Runspaces;  // Windows PowerShell namespace.
+  using System.Management.Automation;            // PowerShell namespace.
+  using System.Management.Automation.Runspaces;  // PowerShell namespace.
 
   /// <summary>
   /// This class contains the Main entry point for this host application.
@@ -48,10 +48,11 @@ namespace Samples
       // Create a WSManConnectionInfo object using the default constructor
       // to connect to the "localHost". The WSManConnectionInfo object can
       // also be used to specify connections to remote computers.
-      WSManConnectionInfo connectionInfo = new WSManConnectionInfo();
+      Uri RemoteComputerUri = new uri("http://Server01:5985/WSMAN");
+      WSManConnectionInfo connectionInfo = new WSManConnectionInfo(RemoteComputerUri);
 
       // Set the OperationTimeout property and OpenTimeout properties.
-      // The OperationTimeout property is used to tell Windows PowerShell
+      // The OperationTimeout property is used to tell PowerShell
       // how long to wait (in milliseconds) before timing out for an
       // operation. The OpenTimeout property is used to tell Windows
       // PowerShell how long to wait (in milliseconds) before timing out
