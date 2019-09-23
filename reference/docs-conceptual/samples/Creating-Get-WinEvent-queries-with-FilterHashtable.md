@@ -1,12 +1,12 @@
 ---
-ms.date: 03/18/2019
+ms.date: 09/13/2019
 title: Creazione di query Get-WinEvent con FilterHashtable
-ms.openlocfilehash: 2f598fceb570f189bee776b6ed572b11a6938f64
-ms.sourcegitcommit: bc42c9166857147a1ecf9924b718d4a48eb901e3
+ms.openlocfilehash: 1bf321c09c20736de36eb896fabced31cfdfbd75
+ms.sourcegitcommit: 0a6b562a497860caadba754c75a83215315d37a1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/03/2019
-ms.locfileid: "66471026"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71143666"
 ---
 # <a name="creating-get-winevent-queries-with-filterhashtable"></a>Creazione di query Get-WinEvent con FilterHashtable
 
@@ -16,9 +16,11 @@ Questo articolo è un estratto del post di blog originale e spiega come usare il
 
 Quando si lavora con registri eventi di grandi dimensioni, non è efficace inviare gli oggetti nella pipeline a un comando `Where-Object`. Prima di PowerShell 6, il cmdlet `Get-EventLog` rappresentava un'altra opzione per ottenere i dati di log. Ad esempio, i comandi seguenti non sono efficienti per filtrare i log **Microsoft-Windows-Defrag**:
 
-`Get-EventLog -LogName Application | Where-Object Source -Match defrag`
+```powershell
+Get-EventLog -LogName Application | Where-Object Source -Match defrag
 
-`Get-WinEvent -LogName Application | Where-Object { $_.ProviderName -Match 'defrag' }`
+Get-WinEvent -LogName Application | Where-Object { $_.ProviderName -Match 'defrag' }
+```
 
 Il comando seguente usa una tabella hash che migliora le prestazioni:
 
@@ -48,19 +50,35 @@ Le coppie **chiave/valore** accettate sono riportate nella tabella seguente e so
 
 Nella tabella seguente vengono visualizzati i nomi delle chiavi, i tipi di dati e viene indicato se i caratteri jolly sono consentiti per un valore di dati.
 
-| Nome chiave     | Tipo di dati del valore    | Caratteri jolly accettati? |
-|------------- | ------------------ | ---------------------------- |
-| LogName      | `<String[]>`       | Sì |
-| ProviderName | `<String[]>`       | Sì |
-| Path         | `<String[]>`       | No  |
-| Parole chiave     | `<Long[]>`         | No  |
-| ID           | `<Int32[]>`        | No  |
-| Livello        | `<Int32[]>`        | No  |
-| StartTime    | `<DateTime>`       | No  |
-| EndTime      | `<DateTime>`       | No  |
-| UserID       | `<SID>`            | No  |
-| Dati         | `<String[]>`       | No  |
-| *            | `<String[]>`       | No  |
+|    Nome chiave    | Tipo di dati del valore | Caratteri jolly accettati? |
+| -------------- | --------------- | ---------------------------- |
+| LogName        | `<String[]>`    | Sì                          |
+| ProviderName   | `<String[]>`    | Sì                          |
+| Path           | `<String[]>`    | No                           |
+| Parole chiave       | `<Long[]>`      | No                           |
+| ID             | `<Int32[]>`     | No                           |
+| Livello          | `<Int32[]>`     | No                           |
+| StartTime      | `<DateTime>`    | No                           |
+| EndTime        | `<DateTime>`    | No                           |
+| UserID         | `<SID>`         | No                           |
+| Dati           | `<String[]>`    | No                           |
+| \<named-data\> | `<String[]>`    | No                           |
+
+La chiave \<named-data\> rappresenta un campo dati dell'evento denominato. Ad esempio, l'evento 1008 Perflib può contenere i dati dell'evento seguenti:
+
+```xml
+<EventData>
+  <Data Name="Service">BITS</Data>
+  <Data Name="Library">C:\Windows\System32\bitsperf.dll</Data>
+  <Data Name="Win32Error">2</Data>
+</EventData>
+```
+
+È possibile eseguire una query per questi eventi usando il comando seguente:
+
+```powershell
+Get-WinEvent -FilterHashtable @{LogName='Application'; 'Service'='Bits'}
+```
 
 ## <a name="building-a-query-with-a-hash-table"></a>Creazione di una query con una tabella hash
 
