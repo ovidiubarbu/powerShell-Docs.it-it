@@ -68,7 +68,7 @@ Esistono due possibili soluzioni al problema in base alla versione di Windows Se
      Publish-SilData
      ```
 
-  4. Eliminare i file nella directory \Windows\System32\Logfiles\SIL\
+  4. Eliminare i file nella directory \Windows\System32\Logfiles\SIL\\
 
      ```powershell
      Remove-Item -Recurse $env:SystemRoot\System32\Logfiles\SIL\
