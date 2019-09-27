@@ -1,5 +1,5 @@
 ---
-title: Come creare un Provider PowerShell per Windows | Microsoft Docs
+title: Come creare un provider di Windows PowerShell | Microsoft Docs
 ms.custom: ''
 ms.date: 09/13/2016
 ms.reviewer: ''
@@ -12,59 +12,59 @@ helpviewer_keywords:
 - Windows PowerShell Programmer's Guide, providers
 ms.assetid: 863e48e9-7206-4c6a-a59a-2ab2d30396bc
 caps.latest.revision: 5
-ms.openlocfilehash: 06910f32752668f13400f9be0767a2179133df04
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: ffbf8028ba2b52e77d8e22c061baa9b8b67f6da3
+ms.sourcegitcommit: 4a2cf30351620a58ba95ff5d76b247e601907589
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62081751"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71323083"
 ---
 # <a name="how-to-create-a-windows-powershell-provider"></a>Come creare un provider di Windows PowerShell
 
-Questa sezione descrive come creare un provider di Windows PowerShell. Un provider di Windows PowerShell può essere considerato in due modi. All'utente, il provider rappresenta un set di dati archiviati. Ad esempio, i dati archiviati possono essere la Metabase di Internet Information Services (IIS), il Registro di sistema di Microsoft Windows, il file system di Windows, Active Directory e la variabile e alias dati archiviati da Windows PowerShell.
+In questa sezione viene descritto come compilare un provider di Windows PowerShell. Un provider di Windows PowerShell può essere considerato in due modi. Per l'utente, il provider rappresenta un set di dati archiviati. Ad esempio, i dati archiviati possono essere la metabase Internet Information Services (IIS), il registro di sistema di Microsoft Windows, i file system Windows, Active Directory e la variabile e i dati alias archiviati da Windows PowerShell.
 
-Agli sviluppatori, il provider di Windows PowerShell è l'interfaccia tra l'utente e i dati che l'utente deve accedere. Da questa prospettiva, ogni tipo di provider descritte in questa sezione supporta un set di specifiche classi di base e interfacce che consentono al runtime di Windows PowerShell di esporre alcuni cmdlet per l'utente in un modo comune.
+Per lo sviluppatore, il provider di Windows PowerShell è l'interfaccia tra l'utente e i dati a cui l'utente deve accedere. Da questo punto di vista, ogni tipo di provider descritto in questa sezione supporta un set di classi di base e interfacce specifiche che consentono al runtime di Windows PowerShell di esporre determinati cmdlet all'utente in modo comune.
 
-## <a name="providers-provided-by-windows-powershell"></a>Provider di Windows PowerShell
+## <a name="providers-provided-by-windows-powershell"></a>Provider forniti da Windows PowerShell
 
-Windows PowerShell sono disponibili diversi provider (ad esempio il provider FileSystem, provider del Registro di sistema e provider Alias) che consentono di accedere ad archivi dati noti. Per altre informazioni sui provider forniti da Windows PowerShell, usare il comando seguente per accedere alla Guida in linea:
+Windows PowerShell offre diversi provider, ad esempio il provider FileSystem, il provider del registro di sistema e il provider di alias, usati per accedere agli archivi dati noti. Per ulteriori informazioni sui provider forniti da Windows PowerShell, utilizzare il comando seguente per accedere alla Guida in linea:
 
 **PS > get-help about_providers**
 
-## <a name="accessing-the-stored-data-using-windows-powershell-paths"></a>L'accesso ai dati archiviati mediante i percorsi di Windows PowerShell
+## <a name="accessing-the-stored-data-using-windows-powershell-paths"></a>Accesso ai dati archiviati usando i percorsi di Windows PowerShell
 
-Provider di Windows PowerShell sono accessibili per il runtime di Windows PowerShell e comandi a livello di codice tramite l'uso di percorsi di Windows PowerShell. La maggior parte dei casi, questi percorsi vengono utilizzati per accedere direttamente ai dati tramite il provider. Tuttavia, alcuni percorsi possono essere risolti ai percorsi del provider interne che consentono un cmdlet per usare application programming interface (API) non Windows PowerShell per accedere ai dati. Per altre informazioni sul funzionamento di provider di Windows PowerShell all'interno di Windows PowerShell, vedere [modalità di funzionamento di Windows PowerShell](http://msdn.microsoft.com/en-us/ced30e23-10af-4700-8933-49873bd84d58).
+I provider di Windows PowerShell sono accessibili al runtime di Windows PowerShell e ai comandi a livello di codice tramite l'uso dei percorsi di Windows PowerShell. Nella maggior parte dei casi, questi percorsi vengono utilizzati per accedere direttamente ai dati tramite il provider. Tuttavia, è possibile risolvere alcuni percorsi in percorsi interni del provider che consentono a un cmdlet di usare le API (Application Programming Interface) non Windows PowerShell per accedere ai dati. Per ulteriori informazioni sul funzionamento dei provider di Windows PowerShell in Windows PowerShell, vedere funzionamento di [Windows PowerShell](https://msdn.microsoft.com/en-us/ced30e23-10af-4700-8933-49873bd84d58).
 
-## <a name="exposing-provider-cmdlets-using-windows-powershell-drives"></a>Unità di esporre i cmdlet del Provider usando Windows PowerShell
+## <a name="exposing-provider-cmdlets-using-windows-powershell-drives"></a>Esposizione di cmdlet del provider con le unità di Windows PowerShell
 
-Un provider di Windows PowerShell espone i relativi cmdlet supportati tramite unità virtuali di Windows PowerShell. Windows PowerShell applica le regole seguenti per un'unità di Windows PowerShell:
+Un provider di Windows PowerShell espone i relativi cmdlet supportati tramite le unità virtuali di Windows PowerShell. Windows PowerShell applica le seguenti regole per un'unità di Windows PowerShell:
 
-- Il nome di un'unità può essere qualsiasi sequenza di caratteri alfanumerico.
+- Il nome di un'unità può essere qualsiasi sequenza alfanumerica.
 
-- Un'unità può essere specificata in qualsiasi momento valido in un percorso, detta "radice".
+- Un'unità può essere specificata in qualsiasi punto valido in un percorso, denominato "radice".
 
-- Un'unità può essere implementata per tutti i dati archiviati, non solo nel file system.
+- Un'unità può essere implementata per tutti i dati archiviati, non solo per i file system.
 
-- Ogni unità consente di mantenere il proprio percorso di lavoro corrente, consentendo all'utente di mantenere contesto quando lo spostamento tra le unità.
+- Ogni unità mantiene il proprio percorso di lavoro corrente, consentendo all'utente di mantenere il contesto durante lo spostamento tra le unità.
 
-## <a name="in-this-section"></a>Contenuto della sezione
+## <a name="in-this-section"></a>In questa sezione
 
-La tabella seguente Elenca argomenti che includono esempi di codice che compilano a vicenda. Iniziando con il secondo argomento, il provider di Windows PowerShell di base può essere inizializzato e non inizializzati dal runtime di Windows PowerShell, l'argomento successivo aggiunge funzionalità per l'accesso ai dati, l'argomento successivo aggiunge funzionalità per la modifica dei dati ( gli elementi di dati archiviati), e così via.
+Nella tabella seguente sono elencati gli argomenti che includono esempi di codice che si compilano tra loro. A partire dal secondo argomento, il provider di base di Windows PowerShell può essere inizializzato e non inizializzato dal runtime di Windows PowerShell. l'argomento successivo aggiunge la funzionalità per l'accesso ai dati. l'argomento successivo aggiunge la funzionalità per la modifica dei dati ( gli elementi nei dati archiviati) e così via.
 
 |Argomento|Definizione|
 |-----------|----------------|
-|[Progettazione del Provider di Windows PowerShell](./designing-your-windows-powershell-provider.md)|In questo argomento vengono illustrati i fattori da considerare prima di implementare un provider di Windows PowerShell. Sono riepilogate le classi di base di provider di Windows PowerShell e le interfacce che vengono usate.|
-|[Creazione di un Provider PowerShell di Windows di base](./creating-a-basic-windows-powershell-provider.md)|In questo argomento viene illustrato come creare un provider di Windows PowerShell che consente al runtime di Windows PowerShell inizializzare e annullare l'inizializzazione del provider.|
-|[Creazione di un Provider di unità di PowerShell di Windows](./creating-a-windows-powershell-drive-provider.md)|In questo argomento viene illustrato come creare un provider di Windows PowerShell che consente all'utente di accedere a un archivio dati tramite un'unità di Windows PowerShell.|
-|[Creazione di un Provider Windows PowerShell](./creating-a-windows-powershell-item-provider.md)|In questo argomento viene illustrato come creare un provider di Windows PowerShell che consente all'utente di modificare gli elementi in un archivio dati.|
-|[Creazione di un Provider di contenitore di Windows PowerShell](./creating-a-windows-powershell-container-provider.md)|In questo argomento viene illustrato come creare un provider di Windows PowerShell che consente all'utente di usare gli archivi dati multilivello.|
-|[Creazione di un Provider di navigazione di Windows PowerShell](./creating-a-windows-powershell-navigation-provider.md)|In questo argomento viene illustrato come creare un provider di Windows PowerShell che consente all'utente di esplorare gli elementi di un archivio dati in modo gerarchico.|
-|[Creazione di un Provider di contenuto di PowerShell di Windows](./creating-a-windows-powershell-content-provider.md)|In questo argomento viene illustrato come creare un provider di Windows PowerShell che consente all'utente di modificare il contenuto degli elementi in un archivio dati.|
-|[Creazione di un Provider di proprietà di PowerShell di Windows](./creating-a-windows-powershell-property-provider.md)|In questo argomento viene illustrato come creare un provider di Windows PowerShell che consente all'utente di modificare le proprietà degli elementi in un archivio dati.|
+|[Progettazione del provider di Windows PowerShell](./designing-your-windows-powershell-provider.md)|In questo argomento vengono illustrati gli aspetti da considerare prima di implementare un provider di Windows PowerShell. Riepiloga le classi e le interfacce di base del provider di Windows PowerShell utilizzate.|
+|[Creazione di un provider di Windows PowerShell di base](./creating-a-basic-windows-powershell-provider.md)|In questo argomento viene illustrato come creare un provider di Windows PowerShell che consente al runtime di Windows PowerShell di inizializzare e annullare l'inizializzazione del provider.|
+|[Creazione di un provider di unità di Windows PowerShell](./creating-a-windows-powershell-drive-provider.md)|In questo argomento viene illustrato come creare un provider di Windows PowerShell che consente all'utente di accedere a un archivio dati tramite un'unità di Windows PowerShell.|
+|[Creazione di un provider di elementi di Windows PowerShell](./creating-a-windows-powershell-item-provider.md)|In questo argomento viene illustrato come creare un provider di Windows PowerShell che consente all'utente di modificare gli elementi in un archivio dati.|
+|[Creazione di un provider di contenitori di Windows PowerShell](./creating-a-windows-powershell-container-provider.md)|In questo argomento viene illustrato come creare un provider di Windows PowerShell che consente all'utente di lavorare sugli archivi dati multistrato.|
+|[Creazione di un provider di navigazione di Windows PowerShell](./creating-a-windows-powershell-navigation-provider.md)|In questo argomento viene illustrato come creare un provider di Windows PowerShell che consente all'utente di spostarsi tra gli elementi di un archivio dati in modo gerarchico.|
+|[Creazione di un provider di contenuti Windows PowerShell](./creating-a-windows-powershell-content-provider.md)|In questo argomento viene illustrato come creare un provider di Windows PowerShell che consente all'utente di modificare il contenuto degli elementi in un archivio dati.|
+|[Creazione di un provider di proprietà di Windows PowerShell](./creating-a-windows-powershell-property-provider.md)|In questo argomento viene illustrato come creare un provider di Windows PowerShell che consente all'utente di modificare le proprietà degli elementi in un archivio dati.|
 
 ## <a name="see-also"></a>Vedere anche
 
-[Funzionamento di Windows PowerShell](http://msdn.microsoft.com/en-us/ced30e23-10af-4700-8933-49873bd84d58)
+[Funzionamento di Windows PowerShell](https://msdn.microsoft.com/en-us/ced30e23-10af-4700-8933-49873bd84d58)
 
 [Windows PowerShell SDK](../windows-powershell-reference.md)
 

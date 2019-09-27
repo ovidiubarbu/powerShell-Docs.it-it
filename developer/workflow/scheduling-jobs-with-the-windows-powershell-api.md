@@ -1,5 +1,5 @@
 ---
-title: Pianificazione dei processi con l'API di Windows PowerShell | Microsoft Docs
+title: Pianificazione di processi con l'API di Windows PowerShell | Microsoft Docs
 ms.custom: ''
 ms.date: 09/12/2016
 ms.reviewer: ''
@@ -8,24 +8,24 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 64718f8e-de60-4fb7-894d-2975b5257ff6
 caps.latest.revision: 4
-ms.openlocfilehash: 8e1d2feff0665f169966f7d5e99540088e66bdfb
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: bdced961d91088dd75be347b7b74b22467c8c9be
+ms.sourcegitcommit: 4a2cf30351620a58ba95ff5d76b247e601907589
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62080357"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71322951"
 ---
 # <a name="scheduling-jobs-with-the-powershell-api"></a>Pianificazione dei processi con l'API di PowerShell
 
-È possibile usare gli oggetti esposti dalle **Microsoft.PowerShell.ScheduledJob** dello spazio dei nomi per le operazioni seguenti:
+È possibile usare gli oggetti esposti dallo spazio dei nomi **Microsoft. PowerShell. ScheduledJob** per eseguire le operazioni seguenti:
 
 - Creare un processo pianificato.
 - Definire quando viene eseguito il processo.
-- Ottiene i risultati sul processo completato.
+- Ottenere i risultati del processo completato.
 
 ## <a name="triggering-the-job"></a>Attivazione del processo
 
-Specifica il primo passaggio nella creazione di un processo pianificato quando il processo da eseguire. Eseguire questa operazione creando e configurando un **Microsoft.PowerShell.ScheduledJob.ScheduledJobTrigger** oggetto. Il codice seguente crea un trigger che consente di pianificare un processo per eseguire una sola volta in futuro di 20 secondi.
+Il primo passaggio nella creazione di un processo pianificato consiste nel specificare quando eseguire il processo. A tale scopo, creare e configurare un oggetto **Microsoft. PowerShell. ScheduledJob. ScheduledJobTrigger** . Il codice seguente crea un trigger che pianifica un processo da eseguire una sola volta 20 secondi in futuro.
 
 ```csharp
 ScheduledJobTrigger jobTrigger = ScheduledJobTrigger.CreateOnceTrigger(
@@ -38,20 +38,20 @@ ScheduledJobTrigger jobTrigger = ScheduledJobTrigger.CreateOnceTrigger(
 
 ```
 
-## <a name="defining-the-job"></a>La definizione del processo
+## <a name="defining-the-job"></a>Definizione del processo
 
-Per definire un processo di PowerShell, la creazione di un dizionario di parametri. Sono supportati i seguenti parametri:
+Si definisce un processo di PowerShell creando un dizionario dei parametri. Sono supportati i seguenti parametri:
 
-|Nome parametro|Description|
+|Nome parametro|Descrizione|
 |--------------------|-----------------|
 |**Name**|Il nome del processo.|
-|**ScriptBock**|Un blocco di script di PowerShell che specifica ciò che non è il processo.|
-|**FilePath**|Percorso di un file che contiene un blocco di script di PowerShell per specificare cosa il processo.|
-|**InitializationScript**|Un blocco di script di PowerShell che consente di inizializzare il processo.|
-|**ArgumentList**|Una matrice di oggetti che specificano argomenti eseguita dal processo.|
+|**ScriptBock**|Un blocco di script di PowerShell che specifica la funzione del processo.|
+|**FilePath**|Percorso di un file che contiene un blocco di script di PowerShell per specificare il processo.|
+|**InitializationScript**|Un blocco di script di PowerShell che inizializza il processo.|
+|**ArgumentList**|Matrice di oggetti che specificano gli argomenti accettati dal processo.|
 |**RunAs32**|Valore booleano che specifica se eseguire il processo in un processo a 32 bit.|
 
-Il codice seguente crea un oggetto dizionario di parametro e imposta il **Name** e **ScriptBlock** parametri.
+Il codice seguente crea un oggetto dizionario dei parametri e imposta il **nome** e i parametri **scriptblock** .
 
 ```csharp
 string schedJobDefName = "MySampleSchedJob";
@@ -64,9 +64,9 @@ string schedJobDefName = "MySampleSchedJob";
 
 ```
 
-## <a name="creating-the-invocation-and-job-definition-objects"></a>Creazione di chiamata e il processo di oggetti di definizione
+## <a name="creating-the-invocation-and-job-definition-objects"></a>Creazione degli oggetti chiamata e definizione processo
 
-È quindi possibile creare `ScheduledJobInvocationInfo` e `ScheduledJobDefinition` oggetti per l'esecuzione del processo, come illustrato nell'esempio seguente:
+È quindi possibile `ScheduledJobInvocationInfo` creare `ScheduledJobDefinition` oggetti e per eseguire il processo come illustrato nell'esempio seguente:
 
 ```csharp
 ScheduledJobInvocationInfo jobInvocationInfo = new ScheduledJobInvocationInfo(
@@ -82,9 +82,9 @@ ScheduledJobInvocationInfo jobInvocationInfo = new ScheduledJobInvocationInfo(
 
 ```
 
-## <a name="registering-the-job-with-the-task-scheduler"></a>La registrazione del processo con l'utilità di pianificazione
+## <a name="registering-the-job-with-the-task-scheduler"></a>Registrazione del processo con l'utilità di pianificazione
 
-Il codice seguente registra il processo con il [utilità di pianificazione di Windows](http://go.microsoft.com/fwlink/?LinkId=251817).
+Il codice seguente registra il processo con [Windows utilità di pianificazione](https://go.microsoft.com/fwlink/?LinkId=251817).
 
 ```csharp
 schedJobDefinition.Register();
@@ -95,7 +95,7 @@ schedJobDefinition.Register();
 
 ## <a name="complete-code-example"></a>Esempio di codice completo
 
-Di seguito è riportato l'esempio di codice completo da cui sono stati eseguiti i frammenti di codice precedente.
+Di seguito è riportato l'esempio di codice completo da cui sono stati creati i frammenti precedenti.
 
 ```csharp
 using System;

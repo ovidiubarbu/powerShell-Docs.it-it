@@ -1,5 +1,5 @@
 ---
-title: Creazione di un Provider di contenuto di PowerShell di Windows | Microsoft Docs
+title: Creazione di un provider di contenuti Windows PowerShell | Microsoft Docs
 ms.custom: ''
 ms.date: 09/13/2016
 ms.reviewer: ''
@@ -11,63 +11,63 @@ helpviewer_keywords:
 - providers [PowerShell Programmer's Guide], content provider
 ms.assetid: 3da88ff9-c4c7-4ace-aa24-0a29c8cfa060
 caps.latest.revision: 6
-ms.openlocfilehash: d7e237514b4db4bce3366836d3b6e0cd340bf107
-ms.sourcegitcommit: 01b81317029b28dd9b61d167045fd31f1ec7bc06
+ms.openlocfilehash: a897ba29835e6f04ccacf3c4d7d8a1d43cedb91e
+ms.sourcegitcommit: 4a2cf30351620a58ba95ff5d76b247e601907589
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65855013"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71323204"
 ---
 # <a name="creating-a-windows-powershell-content-provider"></a>Creazione di un provider di contenuti di Windows PowerShell
 
-Questo argomento descrive come creare un provider di Windows PowerShell che consente all'utente di modificare il contenuto degli elementi in un archivio dati. Di conseguenza, un provider che consente di modificare il contenuto degli elementi viene considerato un provider di contenuti di Windows PowerShell.
+In questo argomento viene descritto come creare un provider di Windows PowerShell che consente all'utente di modificare il contenuto degli elementi in un archivio dati. Di conseguenza, un provider che può manipolare il contenuto degli elementi viene definito provider di contenuti Windows PowerShell.
 
 > [!NOTE]
-> È possibile scaricare il C# file di origine (AccessDBSampleProvider06.cs) per questo provider tramite il Microsoft Windows Software Development Kit per Windows Vista e i componenti di Runtime di .NET Framework 3.0. Per istruzioni sul download, vedere [come installare Windows PowerShell e il Download di Windows PowerShell SDK](/powershell/developer/installing-the-windows-powershell-sdk).
+> È possibile scaricare il C# file di origine (AccessDBSampleProvider06.cs) per questo provider utilizzando Microsoft Windows Software Development Kit per Windows Vista e i componenti di Runtime di .NET Framework 3,0. Per istruzioni sul download, vedere [come installare Windows PowerShell e scaricare Windows PowerShell SDK](/powershell/developer/installing-the-windows-powershell-sdk).
 >
-> Sono disponibili in file di origine scaricato il  **\<esempi di PowerShell >** directory.
+> I file di origine scaricati sono disponibili nell'  **\<>** directory degli esempi di PowerShell.
 >
-> Per altre informazioni sulle altre implementazioni del provider di Windows PowerShell, vedere [la progettazione del Provider di Windows PowerShell](./designing-your-windows-powershell-provider.md).
+> Per ulteriori informazioni sulle altre implementazioni del provider di Windows PowerShell, vedere [progettazione del provider di Windows PowerShell](./designing-your-windows-powershell-provider.md).
 
-## <a name="define-the-windows-powershell-content-provider-class"></a>Definire la classe di Provider di Windows PowerShell contenuto
+## <a name="define-the-windows-powershell-content-provider-class"></a>Definire la classe del provider di contenuti Windows PowerShell
 
-Un provider di contenuti di Windows PowerShell è necessario creare una classe .NET che supporta il [System.Management.Automation.Provider.Icontentcmdletprovider](/dotnet/api/System.Management.Automation.Provider.IContentCmdletProvider) interfaccia. Ecco la definizione di classe per il provider dell'elemento descritto in questa sezione.
+Un provider di contenuti Windows PowerShell deve creare una classe .NET che supporta l'interfaccia [System. Management. Automation. provider. Icontentcmdletprovider](/dotnet/api/System.Management.Automation.Provider.IContentCmdletProvider) . Di seguito è riportata la definizione della classe per il provider di elementi descritto in questa sezione.
 
 [!code-csharp[AccessDBProviderSample06.cs](../../powershell-sdk-samples/SDK-2.0/csharp/AccessDBProviderSample06/AccessDBProviderSample06.cs#L32-L33 "AccessDBProviderSample06.cs")]
 
-Si noti che in questa definizione di classe il [System.Management.Automation.Provider.Cmdletproviderattribute](/dotnet/api/System.Management.Automation.Provider.CmdletProviderAttribute) attributo include due parametri. Il primo parametro specifica un nome descrittivo per il provider usato da Windows PowerShell. Il secondo parametro specifica le funzionalità specifiche di Windows PowerShell che il provider espone al runtime di Windows PowerShell durante l'elaborazione del comando. Per questo provider, non sono disponibili funzionalità specifiche di Windows PowerShell aggiunti.
+Si noti che in questa definizione di classe l'attributo [System. Management. Automation. provider. CmdletProviderAttribute](/dotnet/api/System.Management.Automation.Provider.CmdletProviderAttribute) include due parametri. Il primo parametro specifica un nome descrittivo per il provider utilizzato da Windows PowerShell. Il secondo parametro specifica le funzionalità specifiche di Windows PowerShell che il provider espone al runtime di Windows PowerShell durante l'elaborazione del comando. Per questo provider non sono state aggiunte funzionalità specifiche di Windows PowerShell.
 
-## <a name="define-functionality-of-base-class"></a>Definire le funzionalità della classe di Base
+## <a name="define-functionality-of-base-class"></a>Definire la funzionalità della classe di base
 
-Come descritto in [Provider di progettazione di Windows PowerShell](./designing-your-windows-powershell-provider.md), il [System.Management.Automation.Provider.Navigationcmdletprovider](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider) classe deriva da molte altre classi fornite funzionalità del provider diversa. Un provider di contenuti di Windows PowerShell, pertanto, in genere definisce tutte le funzionalità fornite da tali classi.
+Come descritto in [progettazione del provider di Windows PowerShell](./designing-your-windows-powershell-provider.md), la classe [System. Management. Automation. provider. Navigationcmdletprovider](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider) deriva da diverse altre classi che forniscono funzionalità diverse del provider. Un provider di contenuti Windows PowerShell, pertanto, definisce in genere tutte le funzionalità fornite da tali classi.
 
-Per altre informazioni su come implementare la funzionalità per l'aggiunta di informazioni di inizializzazione specifiche della sessione e per il rilascio delle risorse usate dal provider, vedere [creazione di un PowerShell Provider di Windows base](./creating-a-basic-windows-powershell-provider.md). Tuttavia, la maggior parte dei provider, inclusi il provider descritto in questo caso, è possibile usare l'implementazione predefinita di questa funzionalità fornita da Windows PowerShell.
+Per ulteriori informazioni su come implementare la funzionalità per l'aggiunta di informazioni di inizializzazione specifiche della sessione e per il rilascio di risorse utilizzate dal provider, vedere [creazione di un provider di Windows PowerShell di base](./creating-a-basic-windows-powershell-provider.md). Tuttavia, la maggior parte dei provider, incluso il provider qui descritto, può utilizzare l'implementazione predefinita di questa funzionalità fornita da Windows PowerShell.
 
-Per accedere all'archivio dati, il provider deve implementare i metodi del [System.Management.Automation.Provider.Drivecmdletprovider](/dotnet/api/System.Management.Automation.Provider.DriveCmdletProvider) classe di base. Per altre informazioni sull'implementazione di questi metodi, vedere [creazione di un Provider di unità di Windows PowerShell](./creating-a-windows-powershell-drive-provider.md).
+Per accedere all'archivio dati, il provider deve implementare i metodi della classe di base [System. Management. Automation. provider. Drivecmdletprovider](/dotnet/api/System.Management.Automation.Provider.DriveCmdletProvider) . Per ulteriori informazioni sull'implementazione di questi metodi, vedere [creazione di un provider di unità di Windows PowerShell](./creating-a-windows-powershell-drive-provider.md).
 
-Per modificare gli elementi di un archivio dati, ad esempio il recupero, impostazione e cancellare elementi, il provider deve implementare i metodi forniti dal [System.Management.Automation.Provider.Itemcmdletprovider](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider) classe di base. Per altre informazioni sull'implementazione di questi metodi, vedere [creazione di un Provider di Windows PowerShell](./creating-a-windows-powershell-item-provider.md).
+Per modificare gli elementi di un archivio dati, ad esempio per ottenere, impostare e cancellare elementi, il provider deve implementare i metodi forniti dalla classe di base [System. Management. Automation. provider. Itemcmdletprovider](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider) . Per ulteriori informazioni sull'implementazione di questi metodi, vedere [creazione di un provider di elementi di Windows PowerShell](./creating-a-windows-powershell-item-provider.md).
 
-Per usare gli archivi dati a più livelli, il provider deve implementare i metodi forniti dal [System.Management.Automation.Provider.Containercmdletprovider](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider) classe di base. Per altre informazioni sull'implementazione di questi metodi, vedere [creazione di un Provider di contenitore di Windows PowerShell](./creating-a-windows-powershell-container-provider.md).
+Per lavorare su archivi dati a più livelli, il provider deve implementare i metodi forniti dalla classe di base [System. Management. Automation. provider. Containercmdletprovider](/dotnet/api/System.Management.Automation.Provider.ContainerCmdletProvider) . Per ulteriori informazioni sull'implementazione di questi metodi, vedere [creazione di un provider di contenitori di Windows PowerShell](./creating-a-windows-powershell-container-provider.md).
 
-Per supportare i comandi ricorsiva, contenitori nidificati e i percorsi relativi, il provider deve implementare il [System.Management.Automation.Provider.Navigationcmdletprovider](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider) classe di base. Questo provider di contenuti di Windows PowerShell possono inoltre consente di collegare [System.Management.Automation.Provider.Icontentcmdletprovider](/dotnet/api/System.Management.Automation.Provider.IContentCmdletProvider) interfaccia di [ System.Management.Automation.Provider.Navigationcmdletprovider](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider) classe di base e pertanto deve implementare i metodi forniti da tale classe. Per altre informazioni, vedere l'implementazione di questi metodi, vedere [implementare un Provider di navigazione Windows PowerShell](./creating-a-windows-powershell-navigation-provider.md).
+Per supportare i comandi ricorsivi, i contenitori annidati e i percorsi relativi, il provider deve implementare la classe di base [System. Management. Automation. provider. Navigationcmdletprovider](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider) . Questo provider di contenuti di Windows PowerShell, inoltre, può collegare l'interfaccia [System. Management. Automation. provider. Icontentcmdletprovider](/dotnet/api/System.Management.Automation.Provider.IContentCmdletProvider) alla classe di base [System. Management. Automation. provider. Navigationcmdletprovider](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider) e deve quindi implementare i metodi forniti da tale classe. Per ulteriori informazioni, vedere Implementazione di questi metodi, vedere [implementare un provider di Windows PowerShell per la navigazione](./creating-a-windows-powershell-navigation-provider.md).
 
 ## <a name="implementing-a-content-reader"></a>Implementazione di un lettore di contenuti
 
-Per leggere il contenuto da un elemento, un provider deve implementa una classe di lettore di contenuti che deriva da [System.Management.Automation.Provider.Icontentreader](/dotnet/api/System.Management.Automation.Provider.IContentReader). Il lettore di contenuti per questo provider consente l'accesso al contenuto di una riga in una tabella dati. Definisce la classe reader contenuto un **Read** metodo che recupera i dati della riga indicata e restituisce un elenco che rappresenta i dati, un **Seek** metodo che si sposta il lettore di contenuti, un  **Chiusura** metodo chiude il lettore di contenuti, e una **Dispose** (metodo).
+Per leggere il contenuto da un elemento, un provider deve implementare una classe di lettura contenuto che deriva da [System. Management. Automation. provider. Icontentreader](/dotnet/api/System.Management.Automation.Provider.IContentReader). Il lettore di contenuto per questo provider consente l'accesso al contenuto di una riga in una tabella di dati. La classe Content Reader definisce un metodo **Read** che recupera i dati dalla riga indicata e restituisce un elenco che rappresenta tali dati, un metodo **Seek** che sposta il lettore di contenuto, un metodo **Close** che chiude il lettore di contenuto e un  **Metodo Dispose** .
 
 [!code-csharp[AccessDBProviderSample06.cs](../../powershell-sdk-samples/SDK-2.0/csharp/AccessDBProviderSample06/AccessDBProviderSample06.cs#L2115-L2241 "AccessDBProviderSample06.cs")]
 
-## <a name="implementing-a-content-writer"></a>Implementazione di un agente di scrittura del contenuto
+## <a name="implementing-a-content-writer"></a>Implementazione di un writer di contenuto
 
-Per scrivere contenuto in un elemento, un provider deve implementare un contenuto writer classe deriva da [System.Management.Automation.Provider.Icontentwriter](/dotnet/api/System.Management.Automation.Provider.IContentWriter). Definisce la classe di writer contenuto un **scrivere** metodo che scrive il contenuto della riga specificata, un **Seek** metodo verrà spostato nel writer di contenuto, una **Chiudi** (metodo) che chiude il writer di contenuto e un **Dispose** (metodo).
+Per scrivere contenuto in un elemento, un provider deve implementare una classe del writer del contenuto deriva da [System. Management. Automation. provider. Icontentwriter](/dotnet/api/System.Management.Automation.Provider.IContentWriter). La classe Content Writer definisce un metodo **Write** che scrive il contenuto della riga specificato, un metodo **Seek** che sposta il writer del contenuto, un metodo **Close** che chiude il writer del contenuto e un metodo **Dispose** .
 
 [!code-csharp[AccessDBProviderSample06.cs](../../powershell-sdk-samples/SDK-2.0/csharp/AccessDBProviderSample06/AccessDBProviderSample06.cs#L2250-L2394 "AccessDBProviderSample06.cs")]
 
-## <a name="retrieving-the-content-reader"></a>Il recupero del lettore di contenuti
+## <a name="retrieving-the-content-reader"></a>Recupero del lettore di contenuto
 
-Per ottenere contenuto da un elemento, il provider deve implementare il [System.Management.Automation.Provider.Icontentcmdletprovider.Getcontentreader*](/dotnet/api/System.Management.Automation.Provider.IContentCmdletProvider.GetContentReader) per supportare il `Get-Content` cmdlet. Questo metodo restituisce il lettore di contenuti per l'elemento situato nel percorso specificato. L'oggetto lettore può quindi essere aperto per la lettura del contenuto.
+Per ottenere contenuto da un elemento, il provider deve implementare [System. Management. Automation. provider. Icontentcmdletprovider. GetContentReader *](/dotnet/api/System.Management.Automation.Provider.IContentCmdletProvider.GetContentReader) per supportare il `Get-Content` cmdlet. Questo metodo restituisce il lettore di contenuto per l'elemento che si trova nel percorso specificato. L'oggetto Reader può quindi essere aperto per leggere il contenuto.
 
-Ecco l'implementazione di [System.Management.Automation.Provider.Icontentcmdletprovider.Getcontentreader*](/dotnet/api/System.Management.Automation.Provider.IContentCmdletProvider.GetContentReader) per questo metodo per questo provider.
+Di seguito è illustrata l'implementazione di [System. Management. Automation. provider. Icontentcmdletprovider. GetContentReader *](/dotnet/api/System.Management.Automation.Provider.IContentCmdletProvider.GetContentReader) per questo metodo per questo provider.
 
 ```csharp
 public IContentReader GetContentReader(string path)
@@ -92,19 +92,19 @@ public IContentReader GetContentReader(string path)
 
 [!code-csharp[AccessDBProviderSample06.cs](../../powershell-sdk-samples/SDK-2.0/csharp/AccessDBProviderSample06/AccessDBProviderSample06.cs#L1829-L1846 "AccessDBProviderSample06.cs")]
 
-#### <a name="things-to-remember-about-implementing-getcontentreader"></a>Aspetti da ricordare sull'implementazione GetContentReader
+#### <a name="things-to-remember-about-implementing-getcontentreader"></a>Aspetti da ricordare sull'implementazione di GetContentReader
 
-Le condizioni seguenti possono applicare a un'implementazione di [System.Management.Automation.Provider.Icontentcmdletprovider.Getcontentreader*](/dotnet/api/System.Management.Automation.Provider.IContentCmdletProvider.GetContentReader):
+Le condizioni seguenti possono essere valide per un'implementazione di [System. Management. Automation. provider. Icontentcmdletprovider. GetContentReader *](/dotnet/api/System.Management.Automation.Provider.IContentCmdletProvider.GetContentReader):
 
-- Quando si definisce la classe del provider, un provider di contenuti di Windows PowerShell potrebbe dichiarare funzionalità del provider di ExpandWildcards, filtro, inclusione o esclusione, dal [System.Management.Automation.Provider.Providercapabilities](/dotnet/api/System.Management.Automation.Provider.ProviderCapabilities)enumerazione. In questi casi, l'implementazione del [System.Management.Automation.Provider.Icontentcmdletprovider.Getcontentreader*](/dotnet/api/System.Management.Automation.Provider.IContentCmdletProvider.GetContentReader) metodo è necessario assicurarsi che il percorso passato al metodo soddisfi i requisiti dell'oggetto specificato funzionalità. A tale scopo, il metodo deve accedere alla proprietà appropriata, ad esempio, il [System.Management.Automation.Provider.Cmdletprovider.Exclude*](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Exclude) e [ System.Management.Automation.Provider.Cmdletprovider.Include*](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Include) proprietà.
+- Quando si definisce la classe provider, un provider di contenuti di Windows PowerShell può dichiarare le funzionalità del provider di ExpandWildcards, Filter, include o Exclude dall'enumerazione [System. Management. Automation. provider. ProviderCapabilities](/dotnet/api/System.Management.Automation.Provider.ProviderCapabilities) . In questi casi, l'implementazione del metodo [System. Management. Automation. provider. Icontentcmdletprovider. GetContentReader *](/dotnet/api/System.Management.Automation.Provider.IContentCmdletProvider.GetContentReader) deve garantire che il percorso passato al metodo soddisfi i requisiti delle funzionalità specificate. A tale scopo, il metodo deve accedere alla proprietà appropriata, ad esempio, le proprietà [System. Management. Automation. provider. CmdletProvider. Exclude *](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Exclude) e [System. Management. Automation. provider. CmdletProvider. include *](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Include) .
 
-- Per impostazione predefinita, gli override di questo metodo non devono recuperare un lettore per gli oggetti che sono nascosti all'utente, a meno che il [System.Management.Automation.Provider.Cmdletprovider.Force*](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Force) è impostata su `true`. Deve essere scritto un errore se il percorso rappresenta un elemento è nascosto da parte dell'utente e [System.Management.Automation.Provider.Cmdletprovider.Force*](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Force) è impostata su `false`.
+- Per impostazione predefinita, le sostituzioni di questo metodo non devono recuperare un Reader per gli oggetti nascosti all'utente, a meno che la proprietà [System. Management. Automation. provider. CmdletProvider. Force *](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Force) non sia impostata su `true`. È necessario scrivere un errore se il percorso rappresenta un elemento nascosto dall'utente e [System. Management. Automation. provider. CmdletProvider. Force *](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Force) è impostato su `false`.
 
-## <a name="attaching-dynamic-parameters-to-the-get-content-cmdlet"></a>Associare i parametri dinamici per il Cmdlet Get-Content
+## <a name="attaching-dynamic-parameters-to-the-get-content-cmdlet"></a>Associazione di parametri dinamici al cmdlet Get-Content
 
-Il `Get-Content` cmdlet potrebbero richiedere parametri aggiuntivi che vengono specificati in modo dinamico in fase di esecuzione. Per fornire i parametri dinamici, il provider di contenuti di Windows PowerShell deve implementare il [System.Management.Automation.Provider.Icontentcmdletprovider.Getcontentreaderdynamicparameters*](/dotnet/api/System.Management.Automation.Provider.IContentCmdletProvider.GetContentReaderDynamicParameters) (metodo). Questo metodo recupera i parametri dinamici per l'elemento nel percorso indicato e restituisce un oggetto che dispone di proprietà e campi con analisi degli attributi simili a una classe cmdlet o una [ System.Management.Automation.Runtimedefinedparameterdictionary](/dotnet/api/System.Management.Automation.RuntimeDefinedParameterDictionary) oggetto. Il runtime di Windows PowerShell Usa l'oggetto restituito per aggiungere parametri al cmdlet.
+Il `Get-Content` cmdlet potrebbe richiedere parametri aggiuntivi specificati dinamicamente in fase di esecuzione. Per fornire questi parametri dinamici, il provider di contenuti di Windows PowerShell deve implementare il metodo [System. Management. Automation. provider. Icontentcmdletprovider. Getcontentreaderdynamicparameters *](/dotnet/api/System.Management.Automation.Provider.IContentCmdletProvider.GetContentReaderDynamicParameters) . Questo metodo recupera i parametri dinamici per l'elemento in corrispondenza del percorso indicato e restituisce un oggetto con proprietà e campi con attributi di analisi simili a una classe di cmdlet o a [System. Management. Automation. RuntimeDefinedParameterDictionary](/dotnet/api/System.Management.Automation.RuntimeDefinedParameterDictionary) oggetto. Il runtime di Windows PowerShell usa l'oggetto restituito per aggiungere i parametri al cmdlet.
 
-Questo provider di contenitore di Windows PowerShell non implementa questo metodo. Tuttavia, il codice seguente è l'implementazione predefinita di questo metodo.
+Questo provider di contenitori di Windows PowerShell non implementa questo metodo. Tuttavia, il codice seguente è l'implementazione predefinita di questo metodo.
 
 ```csharp
 public object GetContentReaderDynamicParameters(string path)
@@ -115,11 +115,11 @@ public object GetContentReaderDynamicParameters(string path)
 
 [!code-csharp[AccessDBProviderSample06.cs](../../powershell-sdk-samples/SDK-2.0/csharp/AccessDBProviderSample06/AccessDBProviderSample06.cs#L1853-L1856 "AccessDBProviderSample06.cs")]
 
-## <a name="retrieving-the-content-writer"></a>Il recupero del Writer del contenuto
+## <a name="retrieving-the-content-writer"></a>Recupero del writer di contenuto
 
-Per scrivere contenuto in un elemento, il provider deve implementare il [System.Management.Automation.Provider.Icontentcmdletprovider.Getcontentwriter*](/dotnet/api/System.Management.Automation.Provider.IContentCmdletProvider.GetContentWriter) per supportare le `Set-Content` e `Add-Content` cmdlet. Questo metodo restituisce il writer di contenuto per l'elemento situato nel percorso specificato.
+Per scrivere contenuto in un elemento, il provider deve implementare [System. Management. Automation. provider. Icontentcmdletprovider. Getcontentwriter *](/dotnet/api/System.Management.Automation.Provider.IContentCmdletProvider.GetContentWriter) per supportare i `Set-Content` cmdlet e. `Add-Content` Questo metodo restituisce il writer di contenuto per l'elemento che si trova nel percorso specificato.
 
-Ecco l'implementazione di [System.Management.Automation.Provider.Icontentcmdletprovider.Getcontentwriter*](/dotnet/api/System.Management.Automation.Provider.IContentCmdletProvider.GetContentWriter) per questo metodo.
+Di seguito è illustrata l'implementazione di [System. Management. Automation. provider. Icontentcmdletprovider. Getcontentwriter *](/dotnet/api/System.Management.Automation.Provider.IContentCmdletProvider.GetContentWriter) per questo metodo.
 
 ```csharp
 public IContentWriter GetContentWriter(string path)
@@ -144,47 +144,47 @@ public IContentWriter GetContentWriter(string path)
 
 [!code-csharp[AccessDBProviderSample06.cs](../../powershell-sdk-samples/SDK-2.0/csharp/AccessDBProviderSample06/AccessDBProviderSample06.cs#L1863-L1880 "AccessDBProviderSample06.cs")]
 
-#### <a name="things-to-remember-about-implementing-getcontentwriter"></a>Aspetti da ricordare sull'implementazione GetContentWriter
+#### <a name="things-to-remember-about-implementing-getcontentwriter"></a>Aspetti da ricordare sull'implementazione di GetContentWriter
 
-Le condizioni seguenti possono si applicano all'implementazione di [System.Management.Automation.Provider.Icontentcmdletprovider.Getcontentwriter*](/dotnet/api/System.Management.Automation.Provider.IContentCmdletProvider.GetContentWriter):
+Per l'implementazione di [System. Management. Automation. provider. Icontentcmdletprovider. Getcontentwriter *](/dotnet/api/System.Management.Automation.Provider.IContentCmdletProvider.GetContentWriter)è possibile che si verifichino le condizioni seguenti:
 
-- Quando si definisce la classe del provider, un provider di contenuti di Windows PowerShell potrebbe dichiarare funzionalità del provider di ExpandWildcards, filtro, inclusione o esclusione, dal [System.Management.Automation.Provider.Providercapabilities](/dotnet/api/System.Management.Automation.Provider.ProviderCapabilities)enumerazione. In questi casi, l'implementazione del [System.Management.Automation.Provider.Icontentcmdletprovider.Getcontentwriter*](/dotnet/api/System.Management.Automation.Provider.IContentCmdletProvider.GetContentWriter) metodo è necessario assicurarsi che il percorso passato al metodo soddisfi i requisiti dell'oggetto specificato funzionalità. A tale scopo, il metodo deve accedere alla proprietà appropriata, ad esempio, il [System.Management.Automation.Provider.Cmdletprovider.Exclude*](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Exclude) e [ System.Management.Automation.Provider.Cmdletprovider.Include*](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Include) proprietà.
+- Quando si definisce la classe provider, un provider di contenuti di Windows PowerShell può dichiarare le funzionalità del provider di ExpandWildcards, Filter, include o Exclude dall'enumerazione [System. Management. Automation. provider. ProviderCapabilities](/dotnet/api/System.Management.Automation.Provider.ProviderCapabilities) . In questi casi, l'implementazione del metodo [System. Management. Automation. provider. Icontentcmdletprovider. Getcontentwriter *](/dotnet/api/System.Management.Automation.Provider.IContentCmdletProvider.GetContentWriter) deve garantire che il percorso passato al metodo soddisfi i requisiti delle funzionalità specificate. A tale scopo, il metodo deve accedere alla proprietà appropriata, ad esempio, le proprietà [System. Management. Automation. provider. CmdletProvider. Exclude *](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Exclude) e [System. Management. Automation. provider. CmdletProvider. include *](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Include) .
 
-- Per impostazione predefinita, gli override di questo metodo non devono recuperare un agente di scrittura per gli oggetti che sono nascosti all'utente, a meno che il [System.Management.Automation.Provider.Cmdletprovider.Force*](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Force) è impostata su `true`. Deve essere scritto un errore se il percorso rappresenta un elemento è nascosto da parte dell'utente e [System.Management.Automation.Provider.Cmdletprovider.Force*](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Force) è impostata su `false`.
+- Per impostazione predefinita, le sostituzioni di questo metodo non devono recuperare un writer per gli oggetti che sono nascosti all'utente a meno che la proprietà [System. Management. Automation. provider. CmdletProvider. Force *](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Force) non sia impostata su `true`. È necessario scrivere un errore se il percorso rappresenta un elemento nascosto dall'utente e [System. Management. Automation. provider. CmdletProvider. Force *](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Force) è impostato su `false`.
 
-## <a name="attaching-dynamic-parameters-to-the-add-content-and-set-content-cmdlets"></a>Associare i parametri dinamici per i cmdlet Add-Content e Set-Content
+## <a name="attaching-dynamic-parameters-to-the-add-content-and-set-content-cmdlets"></a>Associazione di parametri dinamici ai cmdlet Add-Content e set-content
 
-Il `Add-Content` e `Set-Content` cmdlet potrebbero richiedere parametri dinamici aggiuntivi che vengono aggiunti a un runtime. Per fornire i parametri dinamici, il provider di contenuti di Windows PowerShell deve implementare il [System.Management.Automation.Provider.Icontentcmdletprovider.Getcontentwriterdynamicparameters*](/dotnet/api/System.Management.Automation.Provider.IContentCmdletProvider.GetContentWriterDynamicParameters) gestire queste (metodo) parametri. Questo metodo recupera i parametri dinamici per l'elemento nel percorso indicato e restituisce un oggetto che dispone di proprietà e campi con analisi degli attributi simili a una classe cmdlet o una [ System.Management.Automation.Runtimedefinedparameterdictionary](/dotnet/api/System.Management.Automation.RuntimeDefinedParameterDictionary) oggetto. Il runtime di Windows PowerShell Usa l'oggetto restituito per aggiungere parametri ai cmdlet.
+I `Add-Content` cmdlet `Set-Content` e possono richiedere parametri dinamici aggiuntivi che aggiungono un Runtime. Per fornire questi parametri dinamici, il provider di contenuti di Windows PowerShell deve implementare il metodo [System. Management. Automation. provider. Icontentcmdletprovider. Getcontentwriterdynamicparameters *](/dotnet/api/System.Management.Automation.Provider.IContentCmdletProvider.GetContentWriterDynamicParameters) per gestire questi parametri. Questo metodo recupera i parametri dinamici per l'elemento in corrispondenza del percorso indicato e restituisce un oggetto con proprietà e campi con attributi di analisi simili a una classe di cmdlet o a [System. Management. Automation. RuntimeDefinedParameterDictionary](/dotnet/api/System.Management.Automation.RuntimeDefinedParameterDictionary) oggetto. Il runtime di Windows PowerShell usa l'oggetto restituito per aggiungere i parametri ai cmdlet.
 
-Questo provider di contenitore di Windows PowerShell non implementa questo metodo. Tuttavia, il codice seguente è l'implementazione predefinita di questo metodo.
+Questo provider di contenitori di Windows PowerShell non implementa questo metodo. Tuttavia, il codice seguente è l'implementazione predefinita di questo metodo.
 
 [!code-csharp[AccessDBProviderSample06.cs](../../powershell-sdk-samples/SDK-2.0/csharp/AccessDBProviderSample06/AccessDBProviderSample06.cs#L1887-L1890 "AccessDBProviderSample06.cs")]
 
-## <a name="clearing-content"></a>La cancellazione del contenuto
+## <a name="clearing-content"></a>Cancellazione di contenuto
 
-Implementa il provider di contenuti di [System.Management.Automation.Provider.Icontentcmdletprovider.Clearcontent*](/dotnet/api/System.Management.Automation.Provider.IContentCmdletProvider.ClearContent) metodo supportare il `Clear-Content` cmdlet. Questo metodo rimuove il contenuto dell'elemento nel percorso specificato, ma lascia intatto l'elemento.
+Il provider di contenuti implementa il metodo [System. Management. Automation. provider. Icontentcmdletprovider. ClearContent *](/dotnet/api/System.Management.Automation.Provider.IContentCmdletProvider.ClearContent) per supportare il `Clear-Content` cmdlet. Questo metodo rimuove il contenuto dell'elemento nel percorso specificato, ma lascia intatto l'elemento.
 
-Ecco l'implementazione del [System.Management.Automation.Provider.Icontentcmdletprovider.Clearcontent*](/dotnet/api/System.Management.Automation.Provider.IContentCmdletProvider.ClearContent) metodo per questo provider.
+Di seguito è illustrata l'implementazione del metodo [System. Management. Automation. provider. Icontentcmdletprovider. ClearContent *](/dotnet/api/System.Management.Automation.Provider.IContentCmdletProvider.ClearContent) per questo provider.
 
 [!code-csharp[AccessDBProviderSample06.cs](../../powershell-sdk-samples/SDK-2.0/csharp/AccessDBProviderSample06/AccessDBProviderSample06.cs#L1775-L1812 "AccessDBProviderSample06.cs")]
 
-#### <a name="things-to-remember-about-implementing-clearcontent"></a>Aspetti da ricordare sull'implementazione ClearContent
+#### <a name="things-to-remember-about-implementing-clearcontent"></a>Aspetti da ricordare sull'implementazione di ClearContent
 
-Le condizioni seguenti possono applicare a un'implementazione di [System.Management.Automation.Provider.Icontentcmdletprovider.Clearcontent*](/dotnet/api/System.Management.Automation.Provider.IContentCmdletProvider.ClearContent):
+Le condizioni seguenti possono essere valide per un'implementazione di [System. Management. Automation. provider. Icontentcmdletprovider. ClearContent *](/dotnet/api/System.Management.Automation.Provider.IContentCmdletProvider.ClearContent):
 
-- Quando si definisce la classe del provider, un provider di contenuti di Windows PowerShell potrebbe dichiarare funzionalità del provider di ExpandWildcards, filtro, inclusione o esclusione, dal [System.Management.Automation.Provider.Providercapabilities](/dotnet/api/System.Management.Automation.Provider.ProviderCapabilities)enumerazione. In questi casi, l'implementazione del [System.Management.Automation.Provider.Icontentcmdletprovider.Clearcontent*](/dotnet/api/System.Management.Automation.Provider.IContentCmdletProvider.ClearContent) metodo è necessario assicurarsi che il percorso passato al metodo soddisfi i requisiti dell'oggetto specificato funzionalità. A tale scopo, il metodo deve accedere alla proprietà appropriata, ad esempio, il [System.Management.Automation.Provider.Cmdletprovider.Exclude*](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Exclude) e [ System.Management.Automation.Provider.Cmdletprovider.Include*](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Include) proprietà.
+- Quando si definisce la classe provider, un provider di contenuti di Windows PowerShell può dichiarare le funzionalità del provider di ExpandWildcards, Filter, include o Exclude dall'enumerazione [System. Management. Automation. provider. ProviderCapabilities](/dotnet/api/System.Management.Automation.Provider.ProviderCapabilities) . In questi casi, l'implementazione del metodo [System. Management. Automation. provider. Icontentcmdletprovider. ClearContent *](/dotnet/api/System.Management.Automation.Provider.IContentCmdletProvider.ClearContent) deve garantire che il percorso passato al metodo soddisfi i requisiti delle funzionalità specificate. A tale scopo, il metodo deve accedere alla proprietà appropriata, ad esempio, le proprietà [System. Management. Automation. provider. CmdletProvider. Exclude *](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Exclude) e [System. Management. Automation. provider. CmdletProvider. include *](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Include) .
 
-- Per impostazione predefinita, gli override di questo metodo non cancellare il contenuto degli oggetti che sono nascosti all'utente, a meno che il [System.Management.Automation.Provider.Cmdletprovider.Force*](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Force) è impostata su `true`. Deve essere scritto un errore se il percorso rappresenta un elemento è nascosto da parte dell'utente e [System.Management.Automation.Provider.Cmdletprovider.Force*](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Force) è impostata su `false`.
+- Per impostazione predefinita, le sostituzioni di questo metodo non devono cancellare il contenuto degli oggetti nascosti all'utente, a meno che la proprietà [System. Management. Automation. provider. CmdletProvider. Force *](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Force) non `true`sia impostata su. È necessario scrivere un errore se il percorso rappresenta un elemento nascosto dall'utente e [System. Management. Automation. provider. CmdletProvider. Force *](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Force) è impostato su `false`.
 
-- L'implementazione del [System.Management.Automation.Provider.Icontentcmdletprovider.Clearcontent*](/dotnet/api/System.Management.Automation.Provider.IContentCmdletProvider.ClearContent) metodo deve chiamare [System.Management.Automation.Provider.Cmdletprovider.ShouldProcess](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess) e verificare il valore restituito corrispondente prima di apportare modifiche all'archivio dati. Questo metodo viene utilizzato per confermare l'esecuzione di un'operazione quando viene apportata una modifica all'archivio dati, ad esempio la cancellazione del contenuto. Il [System.Management.Automation.Provider.Cmdletprovider.ShouldProcess](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess) metodo invia il nome della risorsa da modificare per l'utente, con il runtime di Windows PowerShell gestisce tutte le impostazioni della riga di comando o delle preferenze variabili per determinare che cosa deve essere visualizzata.
+- L'implementazione del metodo [System. Management. Automation. provider. Icontentcmdletprovider. ClearContent *](/dotnet/api/System.Management.Automation.Provider.IContentCmdletProvider.ClearContent) deve chiamare [System. Management. Automation. provider. CmdletProvider. ShouldProcess](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess) e verificare il relativo valore restituito prima di apportare modifiche all'archivio dati. Questo metodo viene usato per confermare l'esecuzione di un'operazione quando viene apportata una modifica all'archivio dati, ad esempio la cancellazione di contenuto. Il metodo [System. Management. Automation. provider. CmdletProvider. ShouldProcess](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess) invia il nome della risorsa da modificare all'utente, con il runtime di Windows PowerShell che gestisce le impostazioni della riga di comando o le variabili di preferenza in determinazione degli elementi da visualizzare.
 
-  Dopo la chiamata a [System.Management.Automation.Provider.Cmdletprovider.ShouldProcess](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess) restituisce `true`, il [System.Management.Automation.Provider.Icontentcmdletprovider.Clearcontent*](/dotnet/api/System.Management.Automation.Provider.IContentCmdletProvider.ClearContent) metodo deve chiamare il [System.Management.Automation.Provider.Cmdletprovider.ShouldContinue](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldContinue) (metodo). Questo metodo invia un messaggio all'utente per consentire il feedback verificare se l'operazione deve proseguire. La chiamata a [System.Management.Automation.Provider.Cmdletprovider.ShouldContinue](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldContinue) consente un controllo aggiuntivo per le modifiche del sistema potenzialmente pericolose.
+  Dopo che la chiamata a [System. Management. Automation. provider. CmdletProvider. ShouldProcess](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess) restituisce `true`, il metodo [System. Management. Automation. provider. Icontentcmdletprovider. ClearContent *](/dotnet/api/System.Management.Automation.Provider.IContentCmdletProvider.ClearContent) deve chiamare il [Metodo Metodo System. Management. Automation. provider. CmdletProvider. ShouldContinue](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldContinue) . Questo metodo invia un messaggio all'utente per consentire il feedback per verificare se l'operazione deve essere continuata. La chiamata a [System. Management. Automation. provider. CmdletProvider. ShouldContinue](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldContinue) consente un ulteriore controllo della presenza di modifiche di sistema potenzialmente pericolose.
 
-## <a name="attaching-dynamic-parameters-to-the-clear-content-cmdlet"></a>Associare i parametri dinamici per il Cmdlet Clear-Content
+## <a name="attaching-dynamic-parameters-to-the-clear-content-cmdlet"></a>Associazione di parametri dinamici al cmdlet Clear-Content
 
-Il `Clear-Content` cmdlet potrebbero richiedere parametri dinamici aggiuntivi che vengono aggiunti in fase di esecuzione. Per fornire i parametri dinamici, il provider di contenuti di Windows PowerShell deve implementare il [System.Management.Automation.Provider.Icontentcmdletprovider.Clearcontentdynamicparameters*](/dotnet/api/System.Management.Automation.Provider.IContentCmdletProvider.ClearContentDynamicParameters) gestire queste (metodo) parametri. Questo metodo recupera i parametri per l'elemento nel percorso indicato. Questo metodo recupera i parametri dinamici per l'elemento nel percorso indicato e restituisce un oggetto che dispone di proprietà e campi con analisi degli attributi simili a una classe cmdlet o una [ System.Management.Automation.Runtimedefinedparameterdictionary](/dotnet/api/System.Management.Automation.RuntimeDefinedParameterDictionary) oggetto. Il runtime di Windows PowerShell Usa l'oggetto restituito per aggiungere parametri al cmdlet.
+Il `Clear-Content` cmdlet potrebbe richiedere parametri dinamici aggiuntivi aggiunti in fase di esecuzione. Per fornire questi parametri dinamici, il provider di contenuti di Windows PowerShell deve implementare il metodo [System. Management. Automation. provider. Icontentcmdletprovider. Clearcontentdynamicparameters *](/dotnet/api/System.Management.Automation.Provider.IContentCmdletProvider.ClearContentDynamicParameters) per gestire questi parametri. Questo metodo recupera i parametri per l'elemento in corrispondenza del percorso indicato. Questo metodo recupera i parametri dinamici per l'elemento in corrispondenza del percorso indicato e restituisce un oggetto con proprietà e campi con attributi di analisi simili a una classe di cmdlet o a [System. Management. Automation. RuntimeDefinedParameterDictionary](/dotnet/api/System.Management.Automation.RuntimeDefinedParameterDictionary) oggetto. Il runtime di Windows PowerShell usa l'oggetto restituito per aggiungere i parametri al cmdlet.
 
-Questo provider di contenitore di Windows PowerShell non implementa questo metodo. Tuttavia, il codice seguente è l'implementazione predefinita di questo metodo.
+Questo provider di contenitori di Windows PowerShell non implementa questo metodo. Tuttavia, il codice seguente è l'implementazione predefinita di questo metodo.
 
 ```csharp
 public object ClearContentDynamicParameters(string path)
@@ -199,19 +199,19 @@ public object ClearContentDynamicParameters(string path)
 
 Per il codice di esempio completo, vedere [esempio di codice AccessDbProviderSample06](./accessdbprovidersample06-code-sample.md).
 
-## <a name="defining-object-types-and-formatting"></a>Definizione di tipi di oggetto e formattazione
+## <a name="defining-object-types-and-formatting"></a>Definizione di tipi di oggetti e formattazione
 
-Durante la scrittura di un provider, potrebbe essere necessario aggiungere i membri per gli oggetti esistenti o definire nuovi oggetti. Quando questa operazione, è necessario creare un file di tipi che è possibile usare Windows PowerShell per identificare i membri dell'oggetto e un file di formato che definisce la modalità di visualizzazione dell'oggetto. Per altre informazioni, vedere [estendendo i tipi di oggetto e formattazione](http://msdn.microsoft.com/en-us/da976d91-a3d6-44e8-affa-466b1e2bd351).
+Quando si scrive un provider, potrebbe essere necessario aggiungere membri a oggetti esistenti o definire nuovi oggetti. Al termine di questa operazione, è necessario creare un file di tipi che Windows PowerShell può utilizzare per identificare i membri dell'oggetto e un file di formato che definisce la modalità di visualizzazione dell'oggetto. Per ulteriori informazioni, vedere [estensione di tipi di oggetti e formattazione](https://msdn.microsoft.com/en-us/da976d91-a3d6-44e8-affa-466b1e2bd351).
 
-## <a name="building-the-windows-powershell-provider"></a>Creazione del Provider di Windows PowerShell
+## <a name="building-the-windows-powershell-provider"></a>Compilazione del provider di Windows PowerShell
 
-Visualizzare [come registrare i cmdlet, provider e ospitare applicazioni](http://msdn.microsoft.com/en-us/a41e9054-29c8-40ab-bf2b-8ce4e7ec1c8c).
+Vedere [come registrare i cmdlet, i provider e le applicazioni host](https://msdn.microsoft.com/en-us/a41e9054-29c8-40ab-bf2b-8ce4e7ec1c8c).
 
-## <a name="testing-the-windows-powershell-provider"></a>Test di un Provider Windows PowerShell
+## <a name="testing-the-windows-powershell-provider"></a>Test del provider di Windows PowerShell
 
-Quando il provider di Windows PowerShell è stato registrato con Windows PowerShell, è possibile eseguirne il test eseguendo il cmdlet supportati nella riga di comando. Ad esempio, testare il provider di contenuti di esempio.
+Quando il provider di Windows PowerShell è stato registrato con Windows PowerShell, è possibile testarlo eseguendo i cmdlet supportati dalla riga di comando. Ad esempio, testare il provider di contenuti di esempio.
 
-Usare la `Get-Content` cmdlet per recuperare il contenuto dell'elemento specificato nella tabella di database nel percorso specificato per il `Path` parametro. Il `ReadCount` parametro specifica il numero di elementi per il lettore di contenuti definito da leggere (valore predefinito 1). Con la seguente voce del comando, il cmdlet recupera due righe (elementi) dalla tabella e viene visualizzato il relativo contenuto. Si noti che l'output di esempio seguente usa un database di Access fittizio.
+Usare il `Get-Content` cmdlet per recuperare il contenuto dell'elemento specificato nella tabella di database nel percorso specificato `Path` dal parametro. Il `ReadCount` parametro specifica il numero di elementi per il lettore di contenuto definito da leggere (valore predefinito 1). Con la voce di comando seguente, il cmdlet recupera due righe (elementi) dalla tabella e ne Visualizza il contenuto. Si noti che l'output di esempio seguente usa un database di Access fittizio.
 
 ```powershell
 Get-Content -Path mydb:\Customers -ReadCount 2
@@ -248,13 +248,13 @@ Country   : USA
 
 [Creazione di provider di Windows PowerShell](./how-to-create-a-windows-powershell-provider.md)
 
-[Provider di progettazione di Windows PowerShell](./designing-your-windows-powershell-provider.md)
+[Progettare il provider di Windows PowerShell](./designing-your-windows-powershell-provider.md)
 
-[Estensione di tipi di oggetto e la formattazione](http://msdn.microsoft.com/en-us/da976d91-a3d6-44e8-affa-466b1e2bd351)
+[Estensione di tipi di oggetti e formattazione](https://msdn.microsoft.com/en-us/da976d91-a3d6-44e8-affa-466b1e2bd351)
 
-[Implementare un provider di navigazione Windows PowerShell](./creating-a-windows-powershell-navigation-provider.md)
+[Implementare un provider di Windows PowerShell per la navigazione](./creating-a-windows-powershell-navigation-provider.md)
 
-[Come registrare i cmdlet, provider e applicazioni Host](http://msdn.microsoft.com/en-us/a41e9054-29c8-40ab-bf2b-8ce4e7ec1c8c)
+[Come registrare cmdlet, provider e applicazioni host](https://msdn.microsoft.com/en-us/a41e9054-29c8-40ab-bf2b-8ce4e7ec1c8c)
 
 [Windows PowerShell SDK](../windows-powershell-reference.md)
 

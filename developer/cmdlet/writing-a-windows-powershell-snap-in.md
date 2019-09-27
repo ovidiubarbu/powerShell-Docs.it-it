@@ -1,5 +1,5 @@
 ---
-title: La scrittura di uno Snap-in PowerShell di Windows | Microsoft Docs
+title: Scrittura di uno snap-in di Windows PowerShell | Microsoft Docs
 ms.custom: ''
 ms.date: 09/13/2016
 ms.reviewer: ''
@@ -10,50 +10,50 @@ helpviewer_keywords:
 - snap-ins [PowerShell SDK], PSSnapin example
 ms.assetid: 875024f4-e02b-4416-80b9-af5e5b50aad6
 caps.latest.revision: 7
-ms.openlocfilehash: 0c99f4bcfe5e2d34d31714dc85a53b5e8abe0925
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 465ab9e8fa29716ce0f46ad0dcf01d0ddd615bcd
+ms.sourcegitcommit: 4a2cf30351620a58ba95ff5d76b247e601907589
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62066958"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71322947"
 ---
 # <a name="writing-a-windows-powershell-snap-in"></a>Scrittura di uno snap-in di Windows PowerShell
 
-In questo esempio viene illustrato come scrivere uno snap-in Windows PowerShell che può essere utilizzato per registrare tutti i cmdlet e provider Windows PowerShell in un assembly.
+Questo esempio illustra come scrivere uno snap-in di Windows PowerShell che può essere usato per registrare tutti i cmdlet e i provider di Windows PowerShell in un assembly.
 
-Con questo tipo di snap-in, non si seleziona quali cmdlet e provider che si desidera registrare. Per scrivere uno snap-in che modo è possibile selezionare quello registrato, vedere [scrivere uno Snap-in PowerShell di Windows personalizzate](./writing-a-custom-windows-powershell-snap-in.md).
+Con questo tipo di snap-in non è possibile selezionare i cmdlet e i provider che si desidera registrare. Per scrivere uno snap-in che consente di selezionare quello registrato, vedere scrittura di [uno snap-in di Windows PowerShell personalizzato](./writing-a-custom-windows-powershell-snap-in.md).
 
 ### <a name="writing-a-windows-powershell-snap-in"></a>Scrittura di uno snap-in di Windows PowerShell
 
 1. Aggiungere l'attributo RunInstallerAttribute.
 
-2. Creare una classe pubblica che deriva dal [System.Management.Automation.PSSnapIn](/dotnet/api/System.Management.Automation.PSSnapIn) classe.
+2. Creare una classe pubblica che deriva dalla classe [System. Management. Automation. pssnapin](/dotnet/api/System.Management.Automation.PSSnapIn) .
 
     In questo esempio, il nome della classe è "GetProcPSSnapIn01".
 
-3. Aggiungere una proprietà pubblica per il nome dello snap-in (obbligatorio). Quando si rinomina gli snap-in, non usare uno qualsiasi dei seguenti caratteri: #. , ( ) { } [ ] & - /\ $ ; : " ' \< > ; ? @ ` *
+3. Aggiungere una proprietà pubblica per il nome dello snap-in (obbligatorio). Quando si assegnano nomi agli snap-in, non usare i caratteri seguenti: #. , () {} [] &-/\ $; : "' \< >;? @ ` *
 
     In questo esempio, il nome dello snap-in è "GetProcPSSnapIn01".
 
-4. Aggiungere una proprietà pubblica del fornitore dello snap-in (obbligatorio).
+4. Aggiungere una proprietà pubblica per il fornitore dello snap-in (obbligatorio).
 
     In questo esempio, il fornitore è "Microsoft".
 
-5. Aggiungere una proprietà pubblica per la risorsa di fornitore dello snap-in (facoltativo).
+5. Aggiungere una proprietà pubblica per la risorsa fornitore dello snap-in (facoltativo).
 
-    In questo esempio, la risorsa di fornitore è "GetProcPSSnapIn01, Microsoft".
+    In questo esempio, la risorsa fornitore è "GetProcPSSnapIn01, Microsoft".
 
 6. Aggiungere una proprietà pubblica per la descrizione dello snap-in (obbligatorio).
 
-    In questo esempio, la descrizione è "This is uno snap-in Windows PowerShell che registra il cmdlet get-Process".
+    In questo esempio, la descrizione è "questo è uno snap-in di Windows PowerShell che registra il cmdlet Get-proc".
 
-7. Aggiungere una proprietà pubblica per la risorsa di descrizione dello snap-in (facoltativo).
+7. Aggiungere una proprietà pubblica per la risorsa Description dello snap-in (facoltativo).
 
-    In questo esempio, la risorsa di fornitore è "GetProcPSSnapIn01, questo è uno snap-in Windows PowerShell che registra il cmdlet get-Process".
+    In questo esempio, la risorsa fornitore è "GetProcPSSnapIn01, questo è uno snap-in di Windows PowerShell che registra il cmdlet Get-proc".
 
 ## <a name="example"></a>Esempio
 
-In questo esempio viene illustrato come scrivere uno snap-in Windows PowerShell che può essere utilizzato per registrare il cmdlet Get-Process nella shell di Windows PowerShell. Tenere presente che in questo esempio, l'assembly completo conterrà solo la GetProcPSSnapIn01 snap-in di classe e la classe del cmdlet Get-Process.
+Questo esempio illustra come scrivere uno snap-in di Windows PowerShell che può essere usato per registrare il cmdlet Get-proc nella shell di Windows PowerShell. Tenere presente che in questo esempio l'assembly completo conterrà solo la classe di snap-in GetProcPSSnapIn01 e la classe del cmdlet Get-proc.
 
 ```csharp
 [RunInstaller(true)]
@@ -128,6 +128,6 @@ public class GetProcPSSnapIn01 : PSSnapIn
 
 ## <a name="see-also"></a>Vedere anche
 
-[Come registrare i cmdlet, provider e applicazioni Host](http://msdn.microsoft.com/en-us/a41e9054-29c8-40ab-bf2b-8ce4e7ec1c8c)
+[Come registrare cmdlet, provider e applicazioni host](https://msdn.microsoft.com/en-us/a41e9054-29c8-40ab-bf2b-8ce4e7ec1c8c)
 
-[Windows PowerShell Shell SDK](../windows-powershell-reference.md)
+[SDK della shell di Windows PowerShell](../windows-powershell-reference.md)
