@@ -2,12 +2,12 @@
 ms.date: 04/11/2018
 keywords: dsc,powershell,configurazione,installazione
 title: Configurazione di un server di pull SMB DSC
-ms.openlocfilehash: 9d087a08861b2f4683e81efd1e25f857b8b75e07
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 25705d9ae06b3ce8daa352142cc0b84793ab6359
+ms.sourcegitcommit: 4a2cf30351620a58ba95ff5d76b247e601907589
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62079286"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71324868"
 ---
 # <a name="setting-up-a-dsc-smb-pull-server"></a>Configurazione di un server di pull SMB DSC
 
@@ -164,8 +164,8 @@ Per altre informazioni sulla configurazione di Gestione configurazione locale, v
 > È **necessario** specificare **ConfigurationID** nel blocco **Impostazioni** di una metaconfigurazione per un server di pull SMB, anche se si esegue solo il pull di risorse.
 
 ```powershell
-$secpasswd = ConvertTo-SecureString “Pass1Word” -AsPlainText -Force
-$mycreds = New-Object System.Management.Automation.PSCredential (“TestUser”, $secpasswd)
+$secpasswd = ConvertTo-SecureString "Pass1Word" -AsPlainText -Force
+$mycreds = New-Object System.Management.Automation.PSCredential ("TestUser", $secpasswd)
 
 [DSCLocalConfigurationManager()]
 configuration SmbCredTest

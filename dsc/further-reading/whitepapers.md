@@ -2,12 +2,12 @@
 ms.date: 06/12/2017
 keywords: dsc,powershell,configurazione,installazione
 title: White paper
-ms.openlocfilehash: 645378802e1ab592857e442db5bc86ac33817e5e
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: d89f5410786e2b2889946cd8171d34667701b8b7
+ms.sourcegitcommit: 4a2cf30351620a58ba95ff5d76b247e601907589
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62079762"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71322903"
 ---
 # <a name="whitepapers"></a>White paper
 
@@ -16,4 +16,4 @@ I seguenti white paper sono stati pubblicati per fornire informazioni aggiuntive
 ## <a name="the-release-pipeline-model"></a>Il modello della pipeline di tipo Versione
 L'applicazione dei modelli e delle procedure delle tecniche usate dagli sviluppatori alle operazioni può offrire vantaggi. In particolare, una soluzione completamente automatizzata in cui l'infrastruttura viene gestita come codice e tutte le modifiche vengono convalidate in modo automatico prima di raggiungere la produzione. Si tratta di un cambiamento del processo riconosciuto dagli innovatori del settore. Per le organizzazioni che già usano questi processi, dovrebbe essere chiaro come sfruttare la piattaforma Microsoft. Per le organizzazioni che non hanno familiarità con l'argomento, dovrebbe essere chiaro come adattare questo processo all'ambiente e il suo valore nella cultura aziendale. Questo documento illustra i componenti di una pipeline di tipo Versione per la configurazione come codice, il valore aggiunto per le operazioni e le soluzioni usate quando si progetta una nuova architettura per la pipeline di tipo Versione.
 
-**[Scarica il PDF](http://aka.ms/thereleasepipelinemodelpdf)**
+**[Scarica il PDF](https://aka.ms/thereleasepipelinemodelpdf)**

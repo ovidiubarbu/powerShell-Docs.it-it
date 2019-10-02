@@ -2,12 +2,12 @@
 ms.date: 06/05/2017
 keywords: powershell,cmdlet
 title: Novità di Windows PowerShell 5.0
-ms.openlocfilehash: b2cb729948d4b53c5ea9a536dbeda04c7cb50997
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: d86c9c947c521e0aee261a8a0335f1557b0d5a34
+ms.sourcegitcommit: 4a2cf30351620a58ba95ff5d76b247e601907589
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62085950"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71325128"
 ---
 # <a name="whats-new-in-windows-powershell-50"></a>Novità di Windows PowerShell 5.0
 
@@ -181,7 +181,7 @@ Molti aggiornamenti e miglioramenti per Windows PowerShell Desired State Configu
 
 ### <a name="new-features-in-windows-powershell-ise"></a>Nuove funzionalità di Windows PowerShell ISE
 
-- È ora possibile modificare script e file remoti di Windows PowerShell in una copia locale di Windows PowerShell ISE eseguendo Enter-PSSession per avviare una sessione remota nel computer in cui sono archiviati i file da modificare e quindi eseguendo **PSEdit \<percorso e nome file nel computer remoto\>**. Questa funzionalità semplifica la modifica dei file di Windows PowerShell archiviati nell'opzione di installazione Server Core di Windows Server, in cui non è possibile eseguire Windows PowerShell ISE.
+- È ora possibile modificare script e file remoti di Windows PowerShell in una copia locale di Windows PowerShell ISE eseguendo Enter-PSSession per avviare una sessione remota nel computer in cui sono archiviati i file da modificare e quindi eseguendo **PSEdit \<percorso e nome file nel computer remoto\>** . Questa funzionalità semplifica la modifica dei file di Windows PowerShell archiviati nell'opzione di installazione Server Core di Windows Server, in cui non è possibile eseguire Windows PowerShell ISE.
 - Il cmdlet Start-Transcript è ora supportato in Windows PowerShell ISE.
 - È ora possibile eseguire il debug di script remoti in Windows PowerShell ISE.
 - Il nuovo comando di menu **Interrompi tutto** (CTRL+B) consente di interrompere l'esecuzione nel debugger sia per script in esecuzione in locale che in remoto.
@@ -217,7 +217,7 @@ Windows PowerShell 4.0 include le nuove funzionalità seguenti.
 - Il debugger di Windows PowerShell è stato migliorato per consentire il debug dei flussi di lavoro di Windows PowerShell oltre che degli script in esecuzione in computer remoti. Il debug dei flussi di lavoro di Windows PowerShell può ora essere eseguito a livello di script dalla riga di comando di Windows PowerShell o da Windows PowerShell ISE. È ora possibile eseguire il debug degli script di Windows PowerShell e dei relativi flussi di lavoro con le sessioni remote. Le sessioni di debug remoto vengono conservate quando le sessioni remote di Windows PowerShell vengono disconnesse e in seguito riconnesse.
 - Il parametro **RunNow** di **Register-ScheduledJob** e **Set-ScheduledJob** elimina la necessità di impostare una data e un'ora di inizio immediate per i processi tramite il parametro **Trigger**.
 - **Invoke-RestMethod** e **Invoke-WebRequest** consentono ora di impostare tutte le intestazioni con il parametro Headers. Anche se esiste da sempre, questo è uno dei numerosi parametri per i cmdlet Web che generavano eccezioni o errori.
-- **Get-Module** include il nuovo parametro **FullyQualifiedName** di tipo **ModuleSpecification\[]**. Il parametro **FullyQualifiedName** di Get-Module consente ora di specificare un modulo tramite il relativo nome, la versione e, facoltativamente, il GUID.
+- **Get-Module** include il nuovo parametro **FullyQualifiedName** di tipo **ModuleSpecification\[]** . Il parametro **FullyQualifiedName** di Get-Module consente ora di specificare un modulo tramite il relativo nome, la versione e, facoltativamente, il GUID.
 - L'impostazione predefinita dei criteri di esecuzione in Windows Server 2012 R2 è **RemoteSigned**. In Windows 8.1 l'impostazione predefinita non viene modificata.
 - A partire da Windows PowerShell 4.0, è supportata la chiamata al metodo con i nomi di metodo dinamici. È possibile usare una variabile per archiviare il nome di un metodo e quindi richiamarlo dinamicamente con una chiamata alla variabile.
 - I processi asincroni del flusso di lavoro non vengono più eliminati una volta trascorso il periodo di timeout specificato dal parametro comune del flusso di lavoro **PSElapsedTimeoutSec**.
@@ -407,7 +407,7 @@ La funzionalità **Get-Help -Online** in Windows PowerShell 3.0 è ora ancora pi
 
 ```
 PS C:\>(Get-Command Get-ScheduledJob).HelpUri
-http://go.microsoft.com/fwlink/?LinkID=223923
+https://go.microsoft.com/fwlink/?LinkID=223923
 ```
 
 A partire da Windows PowerShell 3.0, gli autori dei cmdlet scritti in C# possono popolare la proprietà **HelpUri** creando un attributo **HelpUri** nella classe del cmdlet. Gli autori di funzioni avanzate possono definire una proprietà **HelpUri** nell'attributo **CmdletBinding**. Il valore della proprietà **HelpUri** deve iniziare con "http" o "https".

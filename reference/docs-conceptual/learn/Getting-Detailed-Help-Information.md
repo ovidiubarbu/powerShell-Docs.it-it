@@ -2,12 +2,12 @@
 ms.date: 08/27/2018
 keywords: powershell,cmdlet
 title: Ottenere informazioni dettagliate della Guida
-ms.openlocfilehash: 3f52de8c9963618c154b119d5f4859a92d61fbda
-ms.sourcegitcommit: a6f13c16a535acea279c0ddeca72f1f0d8a8ce4c
+ms.openlocfilehash: 033a8962ca438b49c10fafa2852c87d19868b4d9
+ms.sourcegitcommit: 4a2cf30351620a58ba95ff5d76b247e601907589
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67030394"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71325197"
 ---
 # <a name="getting-detailed-help-information"></a>Ottenere informazioni dettagliate della Guida
 
@@ -168,7 +168,7 @@ Get-Help Add-Computer
 Di seguito viene mostrata la prima riga della sezione Collegamenti correlati dell'articolo.
 
 ```Output
-Online version: http://go.microsoft.com/fwlink/?LinkId=821564
+Online version: https://go.microsoft.com/fwlink/?LinkId=821564
 ```
 
 Per informazioni su come offrire supporto online per gli articoli della Guida personalizzati, vedere [about_Comment_Based_Help](/powershell/module/microsoft.powershell.core/about/about_comment_based_help).

@@ -2,12 +2,12 @@
 ms.date: 06/12/2017
 keywords: dsc,powershell,configurazione,installazione
 title: Opzioni delle credenziali nei dati di configurazione
-ms.openlocfilehash: 2a326e45bbbad7bd2362b66b88bf61b98df7b02e
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 660c3643f7eb2e9ccb91bd992747fb9d5da0ccdb
+ms.sourcegitcommit: 4a2cf30351620a58ba95ff5d76b247e601907589
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62080153"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71323292"
 ---
 # <a name="credentials-options-in-configuration-data"></a>Opzioni delle credenziali nei dati di configurazione
 
@@ -143,7 +143,7 @@ I flag **PSDSCAllowPlainTextPassword** e **PSDSCAllowDomainUser** eliminano l'er
 
 Il primo messaggio di errore contiene un URL con la documentazione.
 Il collegamento descrive come crittografare le password usando una struttura [ConfigurationData](./configData.md) e un certificato.
-Per altre informazioni sui certificati e su DSC, [leggere questo post](http://aka.ms/certs4dsc).
+Per altre informazioni sui certificati e su DSC, [leggere questo post](https://aka.ms/certs4dsc).
 
 Per forzare una password di testo semplice, la risorsa richiede la presenza della parola chiave `PsDscAllowPlainTextPassword` nella sezione dei dati di configurazione, nel modo seguente:
 
