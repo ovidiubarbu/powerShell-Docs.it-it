@@ -2,12 +2,12 @@
 title: Installazione di PowerShell Core in macOS
 description: Informazioni sull'installazione di PowerShell Core in macOS
 ms.date: 12/12/2018
-ms.openlocfilehash: 70f5d64aa8a697a9011d07fbcb2bb821463827e1
-ms.sourcegitcommit: 58fb23c854f5a8b40ad1f952d3323aeeccac7a24
+ms.openlocfilehash: a53cb5b7e159635dac45fb9ca3df28e86dffc653
+ms.sourcegitcommit: 4a2cf30351620a58ba95ff5d76b247e601907589
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65229730"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71325271"
 ---
 # <a name="installing-powershell-core-on-macos"></a>Installazione di PowerShell Core in macOS
 
@@ -18,7 +18,7 @@ Dopo aver installato il pacchetto, eseguire `pwsh` da un terminale.
 ## <a name="about-brew"></a>Informazioni su Brew
 
 [Homebrew][brew] è la soluzione di gestione pacchetti più diffusa per macOS.
-Se il comando `brew` non viene trovato, è necessario installare Homebrew seguendo [le istruzioni][brew].
+Se il comando `brew` non viene trovato, è necessario installare Homebrew seguendo [le istruzioni specifiche][brew].
 In alternativa, è possibile installare PowerShell tramite [download diretto](#installation-via-direct-download) o da [archivi di file binari](#binary-archives).
 
 ## <a name="installation-of-latest-stable-release-via-homebrew-on-macos-1012-or-higher"></a>Installazione della versione stabile più recente con Homebrew in macOS 10.12 o versione successiva
@@ -47,7 +47,7 @@ brew cask upgrade powershell
 > [!NOTE]
 > I comandi precedenti possono essere chiamati dall'interno di un host PowerShell (pwsh), ma in tal caso è necessario uscire da PowerShell e riavviare la shell per completare l'aggiornamento e aggiornare i valori visualizzati in `$PSVersionTable`.
 
-[brew]: http://brew.sh/
+[brew]: https://brew.sh/
 
 ## <a name="installation-of-latest-preview-release-via-homebrew-on-macos-1012-or-higher"></a>Installazione della versione di anteprima più recente con Homebrew in macOS 10.12 o versione successiva
 
