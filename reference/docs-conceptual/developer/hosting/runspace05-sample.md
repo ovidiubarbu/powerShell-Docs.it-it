@@ -1,0 +1,132 @@
+---
+title: Esempio Runspace05 | Microsoft Docs
+ms.custom: ''
+ms.date: 09/13/2016
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
+ms.topic: article
+ms.assetid: 1685cfc4-b32c-4bed-b221-e0c4482db955
+caps.latest.revision: 9
+ms.openlocfilehash: eb227b5fa5e91f59b6fc99981ff5affca1cf63fd
+ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72360880"
+---
+# <a name="runspace05-sample"></a>Esempio di Runspace05
+
+In questo esempio viene illustrato come aggiungere uno snap-in a un oggetto [System. Management. Automation. Runspaces. InitialSessionState](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) , in modo che il cmdlet dello snap-in sia disponibile quando viene aperto il spazio. Lo snap-in fornisce un cmdlet Get-proc (definito dall' [esempio GetProcessSample01](../cmdlet/getprocesssample01-sample.md)) che viene eseguito in modo sincrono tramite un oggetto [System. Management. Automation. PowerShell](/dotnet/api/system.management.automation.powershell) .
+
+## <a name="requirements"></a>Requisiti
+
+Questo esempio richiede Windows PowerShell 2,0.
+
+## <a name="demonstrates"></a>Dimostra
+
+In questo esempio vengono illustrate le operazioni seguenti.
+
+- Creazione di un oggetto [System. Management. Automation. Runspaces. InitialSessionState](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) .
+
+- Aggiunta dello snap-in all'oggetto [System. Management. Automation. Runspaces. InitialSessionState](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) .
+
+- Creazione di un oggetto [System. Management. Automation. Runspaces. spazio](/dotnet/api/System.Management.Automation.Runspaces.Runspace) che usa l'oggetto [System. Management. Automation. Runspaces. InitialSessionState](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) .
+
+- Creazione di un oggetto [System. Management. Automation. PowerShell](/dotnet/api/system.management.automation.powershell) che usa spazio.
+
+- Aggiunta del cmdlet Get-proc dello snap-in alla pipeline dell'oggetto [System. Management. Automation. PowerShell](/dotnet/api/system.management.automation.powershell) .
+
+- Esecuzione del comando in modo sincrono.
+
+- Estrazione delle proprietà dagli oggetti [System. Management. Automation. PSObject](/dotnet/api/System.Management.Automation.PSObject) restituiti dal comando.
+
+## <a name="example"></a>Esempio
+
+Questo esempio crea un spazio che usa un oggetto [System. Management. Automation. Runspaces. InitialSessionState](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState) per definire gli elementi disponibili quando viene aperto il spazio. In questo esempio, uno snap-in che definisce un cmdlet Get-proc viene aggiunto allo stato della sessione iniziale.
+
+```csharp
+namespace Microsoft.Samples.PowerShell.Runspaces
+{
+  using System;
+  using System.Collections.ObjectModel;
+  using System.Management.Automation;
+  using System.Management.Automation.Runspaces;
+  using PowerShell = System.Management.Automation.PowerShell;
+
+  /// <summary>
+  /// This class contains the Main entry point for this host application.
+  /// </summary>
+  internal class Runspace05
+  {
+    /// <summary>
+    /// This sample shows how to define an initial session state that is
+    /// used when creating a runspace. The sample invokes a command from
+    /// a Windows PowerShell snap-in that is present in the console file.
+    /// </summary>
+    /// <param name="args">The parameter is not used.</param>
+    /// <remarks>
+    /// This sample assumes that user has coppied the GetProcessSample01.dll
+    /// that is produced by the GetProcessSample01 sample to the current
+    /// directory.
+    /// This sample demonstrates the following:
+    /// 1. Creating a default initial session state.
+    /// 2. Adding a snap-in to the initial session state.
+    /// 3. Creating a runspace that uses the initial session state.
+    /// 4. Creating a PowerShell object that uses the runspace.
+    /// 5. Adding the snap-in's get-proc cmdlet to the PowerShell object.
+    /// 6. Using PSObject objects to extract and display properties from
+    ///    the objects returned by the cmdlet.
+    /// </remarks>
+    private static void Main(string[] args)
+    {
+      // Create the default initial session state. The default initial
+      // session state contains all the elements provided by Windows
+      // PowerShell.
+      InitialSessionState iss = InitialSessionState.CreateDefault();
+      PSSnapInException warning;
+      iss.ImportPSSnapIn("GetProcPSSnapIn01", out warning);
+
+      // Create a runspace. Notice that no PSHost object is supplied to the
+      // CreateRunspace method so the default host is used. See the Host
+      // samples for more information on creating your own custom host.
+      using (Runspace myRunSpace = RunspaceFactory.CreateRunspace(iss))
+      {
+        myRunSpace.Open();
+
+        // Create a PowerShell object.
+        using (PowerShell powershell = PowerShell.Create())
+        {
+          // Add the snap-in cmdlet and specify the runspace.
+          powershell.AddCommand("GetProcPSSnapIn01\\get-proc");
+          powershell.Runspace = myRunSpace;
+
+          // Run the cmdlet synchronously.
+          Collection<PSObject> results = powershell.Invoke();
+
+          Console.WriteLine("Process              HandleCount");
+          Console.WriteLine("--------------------------------");
+
+          // Display the results.
+          foreach (PSObject result in results)
+          {
+            Console.WriteLine(
+                              "{0,-20} {1}",
+                              result.Members["ProcessName"].Value,
+                              result.Members["HandleCount"].Value);
+          }
+        }
+
+        // Close the runspace to release any resources.
+        myRunSpace.Close();
+      }
+      System.Console.WriteLine("Hit any key to exit...");
+      System.Console.ReadKey();
+    }
+  }
+}
+```
+
+## <a name="see-also"></a>Vedere anche
+
+[Scrittura di un'applicazione host di Windows PowerShell](./writing-a-windows-powershell-host-application.md)
