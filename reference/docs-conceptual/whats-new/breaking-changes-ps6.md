@@ -2,12 +2,12 @@
 ms.date: 05/17/2018
 keywords: powershell,core
 title: Modifiche di rilievo in PowerShell Core 6.0
-ms.openlocfilehash: 186e55c1ac46ce3fc172df18995f8c15d9eeb8eb
-ms.sourcegitcommit: 118eb294d5a84a772e6449d42a9d9324e18ef6b9
+ms.openlocfilehash: df716fc3ad48d640ddefcfd87da445eaf104cfbe
+ms.sourcegitcommit: e1027805385081c2e6f9250f9cd1167a45f035b0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "67843949"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72561266"
 ---
 # <a name="breaking-changes-for-powershell-60"></a>Modifiche di rilievo in PowerShell Core 6.0
 
@@ -20,6 +20,8 @@ ms.locfileid: "67843949"
 A causa della mancanza di supporto per Windows Workflow Foundation in .NET Core, Flusso di lavoro PowerShell non continuerà a essere supportato in PowerShell Core.
 
 In futuro, è prevista l'abilitazione di parallelismo/concorrenza nativi nel linguaggio di PowerShell senza la necessità di Flusso di lavoro PowerShell.
+
+Se è necessario usare i checkpoint per riprendere uno script dopo il riavvio del sistema operativo, è consigliabile usare il componente Utilità di pianificazione per eseguire uno script all'avvio del sistema operativo, ma lo script deve mantenere il proprio stato, ad esempio con il salvataggio permanente in un file.
 
 [workflow]: https://docs.microsoft.com/powershell/scripting/core-powershell/workflows-guide
 [workflow-foundation]: https://docs.microsoft.com/dotnet/framework/windows-workflow-foundation/

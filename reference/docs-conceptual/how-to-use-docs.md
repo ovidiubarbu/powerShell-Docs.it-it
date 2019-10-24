@@ -1,13 +1,13 @@
 ---
-ms.date: 09/25/2019
+ms.date: 10/20/2019
 keywords: powershell,cmdlet
 title: Come usare la documentazione di PowerShell
-ms.openlocfilehash: 9e3d5828d6bdb4ef14701994f146354a041efaea
-ms.sourcegitcommit: a80bb79b85deab8ae3c21de56d1ee432fdd92628
+ms.openlocfilehash: 80f72bb89b3bb82ee7c4d16b8969395f02d7d4ca
+ms.sourcegitcommit: ac1ccdd826f112a11db09af9c628cae013f947ab
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72281642"
+ms.lasthandoff: 10/20/2019
+ms.locfileid: "72676151"
 ---
 # <a name="how-to-use-the-powershell-documentation"></a>Come usare la documentazione di PowerShell
 
@@ -16,17 +16,16 @@ Benvenuti nella documentazione online di PowerShell. Questo sito contiene inform
 - PowerShell 7 (anteprima)
 - PowerShell 6
 - PowerShell 5.1
-- PowerShell 5.0
-- PowerShell 4.0
-- PowerShell 3.0
 
-## <a name="selecting-your-version"></a>Selezione della versione
+## <a name="finding-articles-and-selecting-a-version"></a>Ricerca di articoli e selezione di una versione
+
+Esistono due modi per cercare contenuto in Docs. Il modo più semplice consiste nell'usare la casella di filtro sotto il selettore di versione. È sufficiente immettere una parola che compare nel titolo di un articolo. Nella pagina viene visualizzato un elenco di articoli corrispondenti. È anche possibile selezionare l'opzione per eseguire la ricerca nell'intero sito da tale elenco.
 
 Per impostazione predefinita, il sito visualizza la documentazione per la versione rilasciata più recente di PowerShell. Alcuni cmdlet funzionano in modo diverso nelle varie versioni di PowerShell. Assicurarsi di visualizzare la documentazione per la versione di PowerShell in uso.
 
 Usare il selettore di versione nella parte superiore della pagina per selezionare la versione di PowerShell desiderata.
 
-![Selettore di versione](images/how-to-use-docs/picker-vall.gif)
+![Selettore di versione](images/how-to-use-docs/version-search.gif)
 
 È possibile verificare la versione di PowerShell in uso esaminando il valore `$PSversionTable.PSVersion`. L'esempio seguente si riferisce all'output per Windows PowerShell v5.1.
 
@@ -39,9 +38,3 @@ Major  Minor  Build  Revision
 -----  -----  -----  --------
 5      1      18362  145
 ```
-
-## <a name="searching-for-articles"></a>Ricerca di articoli
-
-Esistono due modi per cercare contenuto in Docs. Il modo più semplice consiste nell'usare la casella di filtro sotto il selettore di versione. È sufficiente immettere una parola che compare nel titolo di un articolo. Nella pagina viene visualizzato un elenco di articoli corrispondenti. È anche possibile selezionare l'opzione per eseguire la ricerca nell'intero sito da tale elenco.
-
-![Casella di filtro](images/how-to-use-docs/filter-search.gif)
