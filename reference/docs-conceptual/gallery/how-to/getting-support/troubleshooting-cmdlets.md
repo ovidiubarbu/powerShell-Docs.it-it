@@ -29,5 +29,5 @@ I cmdlet di installazione e aggiornamento richiedono l'accesso a Internet per co
 - oneget.org
 - go.microsoft.com
 - az818661.vo.msecnd.net
-- www.powershellgallery.com
+- [www.powershellgallery.com](www.powershellgallery.com)
 - devopsgallerystorage.blob.core.windows.net
