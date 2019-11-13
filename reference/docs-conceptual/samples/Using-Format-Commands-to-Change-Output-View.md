@@ -1,241 +1,261 @@
 ---
-ms.date: 06/05/2017
+ms.date: 10/22/2019
 keywords: powershell,cmdlet
 title: Uso dei comandi Format per modificare la visualizzazione dell'output
-ms.openlocfilehash: a1712dade1e7508c0c4a004685bd1bb04a126f74
-ms.sourcegitcommit: a6f13c16a535acea279c0ddeca72f1f0d8a8ce4c
+ms.openlocfilehash: 9d9854362b5150a99bdd0c02518599840c1fd42d
+ms.sourcegitcommit: 36e4c79afda2ce11febd93951e143687245f0b50
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67030067"
+ms.lasthandoff: 11/02/2019
+ms.locfileid: "73444425"
 ---
-# <a name="using-format-commands-to-change-output-view"></a><span data-ttu-id="36e29-103">Uso dei comandi Format per modificare la visualizzazione dell'output</span><span class="sxs-lookup"><span data-stu-id="36e29-103">Using Format Commands to Change Output View</span></span>
+# <a name="using-format-commands-to-change-output-view"></a><span data-ttu-id="9fa6a-103">Uso dei comandi Format per modificare la visualizzazione dell'output</span><span class="sxs-lookup"><span data-stu-id="9fa6a-103">Using Format Commands to Change Output View</span></span>
 
-<span data-ttu-id="36e29-104">Windows PowerShell include un set di cmdlet che consentono di controllare le proprietà visualizzate per oggetti specifici.</span><span class="sxs-lookup"><span data-stu-id="36e29-104">Windows PowerShell has a set of cmdlets that allow you to control which properties are displayed for particular objects.</span></span> <span data-ttu-id="36e29-105">I nomi di tutti i cmdlet iniziano con il verbo **Format**.</span><span class="sxs-lookup"><span data-stu-id="36e29-105">The names of all the cmdlets begin with the verb **Format**.</span></span> <span data-ttu-id="36e29-106">Consentono di selezionare una o più proprietà da visualizzare.</span><span class="sxs-lookup"><span data-stu-id="36e29-106">They let you select one or more properties to show.</span></span>
+<span data-ttu-id="9fa6a-104">PowerShell include un set di cmdlet che consentono di controllare la visualizzazione delle proprietà per oggetti specifici.</span><span class="sxs-lookup"><span data-stu-id="9fa6a-104">PowerShell has a set of cmdlets that allow you to control how properties are displayed for particular objects.</span></span> <span data-ttu-id="9fa6a-105">I nomi di tutti i cmdlet iniziano con il verbo `Format`.</span><span class="sxs-lookup"><span data-stu-id="9fa6a-105">The names of all the cmdlets begin with the verb `Format`.</span></span> <span data-ttu-id="9fa6a-106">Consentono di selezionare le proprietà da visualizzare.</span><span class="sxs-lookup"><span data-stu-id="9fa6a-106">They let you select which properties you want to show.</span></span>
 
-<span data-ttu-id="36e29-107">I cmdlet **Format** sono **Format-Wide**, **Format-List**, **Format-Table** e **Format-Custom**.</span><span class="sxs-lookup"><span data-stu-id="36e29-107">The **Format** cmdlets are **Format-Wide**, **Format-List**, **Format-Table**, and **Format-Custom**.</span></span> <span data-ttu-id="36e29-108">Questo Manuale dell'utente illustra solo i cmdlet **Format-Wide**, **Format-List** e **Format-Table**.</span><span class="sxs-lookup"><span data-stu-id="36e29-108">We will only describe the **Format-Wide**, **Format-List**, and **Format-Table** cmdlets in this user's guide.</span></span>
-
-<span data-ttu-id="36e29-109">Ogni cmdlet Format ha proprietà predefinite che verranno usate se non si specificano proprietà specifiche da visualizzare.</span><span class="sxs-lookup"><span data-stu-id="36e29-109">Each format cmdlet has default properties that will be used if you do not specify specific properties to display.</span></span> <span data-ttu-id="36e29-110">Tutti i cmdlet usano inoltre lo stesso nome di parametro, **Property**, per specificare le proprietà da visualizzare.</span><span class="sxs-lookup"><span data-stu-id="36e29-110">Each cmdlet also uses the same parameter name, **Property**, to specify which properties you want to display.</span></span> <span data-ttu-id="36e29-111">Dal momento che **Format-Wide** indica solo una singola proprietà, il relativo parametro **Property** accetta solo un valore, ma i parametri della proprietà di **Format-List** e **Format-Table** accetteranno un elenco di nomi di proprietà.</span><span class="sxs-lookup"><span data-stu-id="36e29-111">Because **Format-Wide** only shows a single property, its **Property** parameter only takes a single value, but the property parameters of **Format-List** and **Format-Table** will accept a list of property names.</span></span>
-
-<span data-ttu-id="36e29-112">Se si usa il comando **Get-Process -Name powershell** con due istanze di Windows PowerShell in esecuzione, si otterrà un output simile al seguente:</span><span class="sxs-lookup"><span data-stu-id="36e29-112">If you use the command **Get-Process -Name powershell** with two instances of Windows PowerShell running, you get output that looks like this:</span></span>
-
-```output
-Handles  NPM(K)    PM(K)      WS(K) VM(M)   CPU(s)     Id ProcessName
--------  ------    -----      ----- -----   ------     -- -----------
-    995       9    30308      27996   152     2.73   2760 powershell
-    331       9    23284      29084   143     1.06   3448 powershell
+```powershell
+Get-Command -Verb Format -Module Microsoft.PowerShell.Utility
 ```
 
-<span data-ttu-id="36e29-113">Nel resto di questa sezione verrà illustrato come usare i cmdlet **Format** per modificare il modo in cui viene visualizzato l'output di questo comando.</span><span class="sxs-lookup"><span data-stu-id="36e29-113">In the rest of this section, we will explore how to use **Format** cmdlets to change the way the output of this command is displayed.</span></span>
+```Output
+CommandType     Name               Version    Source
+-----------     ----               -------    ------
+Cmdlet          Format-Custom      6.1.0.0    Microsoft.PowerShell.Utility
+Cmdlet          Format-Hex         6.1.0.0    Microsoft.PowerShell.Utility
+Cmdlet          Format-List        6.1.0.0    Microsoft.PowerShell.Utility
+Cmdlet          Format-Table       6.1.0.0    Microsoft.PowerShell.Utility
+Cmdlet          Format-Wide        6.1.0.0    Microsoft.PowerShell.Utility
+```
 
-## <a name="using-format-wide-for-single-item-output"></a><span data-ttu-id="36e29-114">Uso di Format-Wide per output a elemento singolo</span><span class="sxs-lookup"><span data-stu-id="36e29-114">Using Format-Wide for Single-Item Output</span></span>
+<span data-ttu-id="9fa6a-107">Questo articolo descrive i cmdlet `Format-Wide`, `Format-List` e `Format-Table`.</span><span class="sxs-lookup"><span data-stu-id="9fa6a-107">This article describes the `Format-Wide`, `Format-List`, and `Format-Table` cmdlets.</span></span>
 
-<span data-ttu-id="36e29-115">Per impostazione predefinita, il cmdlet `Format-Wide` visualizza solo la proprietà predefinita di un oggetto.</span><span class="sxs-lookup"><span data-stu-id="36e29-115">The `Format-Wide` cmdlet, by default, displays only the default property of an object.</span></span>
-<span data-ttu-id="36e29-116">Le informazioni associate a ogni oggetto sono visualizzate in una singola colonna:</span><span class="sxs-lookup"><span data-stu-id="36e29-116">The information associated with each object is displayed in a single column:</span></span>
+<span data-ttu-id="9fa6a-108">Tutti i tipi di oggetto in PowerShell includono proprietà predefinite che vengono usate quando non sono specificate le proprietà da visualizzare.</span><span class="sxs-lookup"><span data-stu-id="9fa6a-108">Each object type in PowerShell has default properties that are used when you don't specify which properties to display.</span></span> <span data-ttu-id="9fa6a-109">Tutti i cmdlet usano anche lo stesso parametro **Property** per specificare le proprietà da visualizzare.</span><span class="sxs-lookup"><span data-stu-id="9fa6a-109">Each cmdlet also uses the same **Property** parameter to specify which properties you want to display.</span></span> <span data-ttu-id="9fa6a-110">Poiché `Format-Wide` visualizza solo una singola proprietà, il relativo parametro **Property** accetta un solo valore, ma i parametri della proprietà di `Format-List` e `Format-Table` accettano un elenco di nomi di proprietà.</span><span class="sxs-lookup"><span data-stu-id="9fa6a-110">Because `Format-Wide` only shows a single property, its **Property** parameter only takes a single value, but the property parameters of `Format-List` and `Format-Table` accept a list of property names.</span></span>
+
+<span data-ttu-id="9fa6a-111">In questo esempio l'output predefinito del cmdlet `Get-Process` indica che sono in esecuzione due istanze di Internet Explorer.</span><span class="sxs-lookup"><span data-stu-id="9fa6a-111">In this example, the default output of `Get-Process` cmdlet shows that we have two instances of Internet Explorer running.</span></span>
+
+```powershell
+Get-Process -Name iexplore
+```
+
+<span data-ttu-id="9fa6a-112">Il formato predefinito per gli oggetti **Process** visualizza le proprietà indicate di seguito:</span><span class="sxs-lookup"><span data-stu-id="9fa6a-112">The default format for **Process** objects displays the properties shown here:</span></span>
+
+```Output
+ NPM(K)    PM(M)      WS(M)     CPU(s)      Id  SI ProcessName
+ ------    -----      -----     ------      --  -- -----------
+     32    25.52      10.25      13.11   12808   1 iexplore
+     52    11.46      26.46       3.55   21748   1 iexplore
+```
+
+## <a name="using-format-wide-for-single-item-output"></a><span data-ttu-id="9fa6a-113">Uso di Format-Wide per output a elemento singolo</span><span class="sxs-lookup"><span data-stu-id="9fa6a-113">Using Format-Wide for Single-Item Output</span></span>
+
+<span data-ttu-id="9fa6a-114">Per impostazione predefinita, il cmdlet `Format-Wide` visualizza solo la proprietà predefinita di un oggetto.</span><span class="sxs-lookup"><span data-stu-id="9fa6a-114">The `Format-Wide` cmdlet, by default, displays only the default property of an object.</span></span> <span data-ttu-id="9fa6a-115">Le informazioni associate a ogni oggetto sono visualizzate in una singola colonna:</span><span class="sxs-lookup"><span data-stu-id="9fa6a-115">The information associated with each object is displayed in a single column:</span></span>
 
 ```powershell
 Get-Command -Verb Format | Format-Wide
 ```
 
-```output
-Format-Custom                          Format-Hex
-Format-List                            Format-Table
+```Output
+Format-Custom          Format-Hex
+Format-List            Format-Table
 Format-Wide
 ```
 
-<span data-ttu-id="36e29-117">È inoltre possibile specificare una proprietà non predefinita:</span><span class="sxs-lookup"><span data-stu-id="36e29-117">You can also specify a non-default property:</span></span>
+<span data-ttu-id="9fa6a-116">È inoltre possibile specificare una proprietà non predefinita:</span><span class="sxs-lookup"><span data-stu-id="9fa6a-116">You can also specify a non-default property:</span></span>
 
 ```powershell
 Get-Command -Verb Format | Format-Wide -Property Noun
 ```
 
-```output
-Custom                                 Hex
-List                                   Table
+```Output
+Custom                 Hex
+List                   Table
 Wide
 ```
 
-### <a name="controlling-format-wide-display-with-column"></a><span data-ttu-id="36e29-118">Controllo della visualizzazione di Format-Wide con il parametro Column</span><span class="sxs-lookup"><span data-stu-id="36e29-118">Controlling Format-Wide Display with Column</span></span>
+### <a name="controlling-format-wide-display-with-column"></a><span data-ttu-id="9fa6a-117">Controllo della visualizzazione di Format-Wide con il parametro Column</span><span class="sxs-lookup"><span data-stu-id="9fa6a-117">Controlling Format-Wide Display with Column</span></span>
 
-<span data-ttu-id="36e29-119">Con il cmdlet `Format-Wide` è possibile visualizzare unicamente una sola proprietà alla volta.</span><span class="sxs-lookup"><span data-stu-id="36e29-119">With the `Format-Wide` cmdlet, you can only display a single property at a time.</span></span>
-<span data-ttu-id="36e29-120">Questa funzionalità risulta utile per la visualizzazione di elenchi semplici che mostrano un solo elemento per riga.</span><span class="sxs-lookup"><span data-stu-id="36e29-120">This makes it useful for displaying simple lists that show only one element per line.</span></span>
-<span data-ttu-id="36e29-121">Per ottenere un elenco semplice, impostare il valore del parametro **Column** su 1 digitando:</span><span class="sxs-lookup"><span data-stu-id="36e29-121">To get a simple listing, set the value of the **Column** parameter to 1 by typing:</span></span>
+<span data-ttu-id="9fa6a-118">Con il cmdlet `Format-Wide` è possibile visualizzare unicamente una sola proprietà alla volta.</span><span class="sxs-lookup"><span data-stu-id="9fa6a-118">With the `Format-Wide` cmdlet, you can only display a single property at a time.</span></span> <span data-ttu-id="9fa6a-119">È utile per la visualizzazione di elenchi di grandi dimensioni in più colonne.</span><span class="sxs-lookup"><span data-stu-id="9fa6a-119">This makes it useful for displaying large lists in multiple columns.</span></span>
 
 ```powershell
-Get-Command -Verb Format | Format-Wide -Property Noun -Column 1
+Get-Command -Verb Format | Format-Wide -Property Noun -Column 3
 ```
 
-```output
-Custom
-Hex
-List
-Table
-Wide
-```
-
-## <a name="using-format-list-for-a-list-view"></a><span data-ttu-id="36e29-122">Uso di Format-List per una visualizzazione elenco</span><span class="sxs-lookup"><span data-stu-id="36e29-122">Using Format-List for a List View</span></span>
-
-<span data-ttu-id="36e29-123">Il cmdlet **Format-List** visualizza un oggetto sotto forma di elenco, con ogni proprietà denominata e visualizzata in una riga distinta:</span><span class="sxs-lookup"><span data-stu-id="36e29-123">The **Format-List** cmdlet displays an object in the form of a listing, with each property labeled and displayed on a separate line:</span></span>
+```Output
+Custom                 Hex                  List
+Table                  Wide
 
 ```
-PS> Get-Process -Name powershell | Format-List
 
-Id      : 2760
-Handles : 1242
-CPU     : 3.03125
-Name    : powershell
+## <a name="using-format-list-for-a-list-view"></a><span data-ttu-id="9fa6a-120">Uso di Format-List per una visualizzazione elenco</span><span class="sxs-lookup"><span data-stu-id="9fa6a-120">Using Format-List for a List View</span></span>
 
-Id      : 3448
-Handles : 328
-CPU     : 1.0625
-Name    : powershell
-```
-
-<span data-ttu-id="36e29-124">È possibile specificare il numero di proprietà che si vuole:</span><span class="sxs-lookup"><span data-stu-id="36e29-124">You can specify as many properties as you want:</span></span>
-
-```
-PS> Get-Process -Name powershell | Format-List -Property ProcessName,FileVersion
-,StartTime,Id
-
-ProcessName : powershell
-FileVersion : 1.0.9567.1
-StartTime   : 2006-05-24 13:42:00
-Id          : 2760
-
-ProcessName : powershell
-FileVersion : 1.0.9567.1
-StartTime   : 2006-05-24 13:54:28
-Id          : 3448
-```
-
-### <a name="getting-detailed-information-by-using-format-list-with-wildcards"></a><span data-ttu-id="36e29-125">Ottenere informazioni dettagliate usando Format-List con i caratteri jolly</span><span class="sxs-lookup"><span data-stu-id="36e29-125">Getting Detailed Information by Using Format-List with Wildcards</span></span>
-
-<span data-ttu-id="36e29-126">Il cmdlet **Format-List** consente di usare un carattere jolly come valore del relativo parametro **Property**.</span><span class="sxs-lookup"><span data-stu-id="36e29-126">The **Format-List** cmdlet lets you use a wildcard as the value of its **Property** parameter.</span></span> <span data-ttu-id="36e29-127">In questo modo si possono visualizzare informazioni dettagliate.</span><span class="sxs-lookup"><span data-stu-id="36e29-127">This lets you display detailed information.</span></span> <span data-ttu-id="36e29-128">Gli oggetti includono spesso più informazioni di quelle richieste, motivo per cui per impostazione predefinita Windows PowerShell non mostra tutti i valori della proprietà.</span><span class="sxs-lookup"><span data-stu-id="36e29-128">Often, objects include more information than you need, which is why Windows PowerShell does not show all property values by default.</span></span> <span data-ttu-id="36e29-129">Per visualizzare tutte le proprietà di un oggetto, usare il comando **Format-List -Property \&#42;**.</span><span class="sxs-lookup"><span data-stu-id="36e29-129">To show all of properties of an object, use the **Format-List -Property \&#42;** command.</span></span> <span data-ttu-id="36e29-130">Il comando seguente genera oltre 60 righe di output per un unico processo:</span><span class="sxs-lookup"><span data-stu-id="36e29-130">The following command generates over 60 lines of output for a single process:</span></span>
+<span data-ttu-id="9fa6a-121">Il cmdlet `Format-List` visualizza un oggetto sotto forma di elenco. Ogni proprietà ha un'etichetta ed è visualizzata in una riga distinta:</span><span class="sxs-lookup"><span data-stu-id="9fa6a-121">The `Format-List` cmdlet displays an object in the form of a listing, with each property labeled and displayed on a separate line:</span></span>
 
 ```powershell
-Get-Process -Name powershell | Format-List -Property *
+Get-Process -Name iexplore | Format-List
 ```
 
-<span data-ttu-id="36e29-131">Anche se il comando **Format-List** è utile per la visualizzazione dei dettagli, se si vuole una panoramica dell'output che includa molti elementi, spesso una visualizzazione semplificata in formato tabulare è più utile.</span><span class="sxs-lookup"><span data-stu-id="36e29-131">Although the **Format-List** command is useful for showing detail, if you want an overview of output that includes many items, a simpler tabular view is often more useful.</span></span>
+```Output
+Id      : 12808
+Handles : 578
+CPU     : 13.140625
+SI      : 1
+Name    : iexplore
 
-## <a name="using-format-table-for-tabular-output"></a><span data-ttu-id="36e29-132">Uso di Format-Table per output in formato tabulare</span><span class="sxs-lookup"><span data-stu-id="36e29-132">Using Format-Table for Tabular Output</span></span>
-
-<span data-ttu-id="36e29-133">Se si usa il cmdlet **Format-Table** senza nomi di proprietà specificati per formattare l'output del comando **Get-Process**, si ottiene esattamente lo stesso output di quando non si esegue alcuna formattazione.</span><span class="sxs-lookup"><span data-stu-id="36e29-133">If you use the **Format-Table** cmdlet with no property names specified to format the output of the **Get-Process** command, you get exactly the same output as you do without performing any formatting.</span></span> <span data-ttu-id="36e29-134">Il motivo è che i processi sono in genere visualizzati in formato tabulare, come quasi tutti gli oggetti di Windows PowerShell.</span><span class="sxs-lookup"><span data-stu-id="36e29-134">The reason is that processes are usually displayed in a tabular format, as are most Windows PowerShell objects.</span></span>
-
-```
-PS> Get-Process -Name powershell | Format-Table
-
-Handles  NPM(K)    PM(K)      WS(K) VM(M)   CPU(s)     Id ProcessName
--------  ------    -----      ----- -----   ------     -- -----------
-   1488       9    31568      29460   152     3.53   2760 powershell
-    332       9    23140        632   141     1.06   3448 powershell
-```
-
-### <a name="improving-format-table-output-autosize"></a><span data-ttu-id="36e29-135">Ottimizzazione dell'output di Format-Table (AutoSize)</span><span class="sxs-lookup"><span data-stu-id="36e29-135">Improving Format-Table Output (AutoSize)</span></span>
-
-<span data-ttu-id="36e29-136">Anche se una visualizzazione tabulare è utile per mostrare molte informazioni da mettere a confronto, potrebbe essere difficile interpretarle se lo schermo è troppo ridotto rispetto ai dati.</span><span class="sxs-lookup"><span data-stu-id="36e29-136">Although a tabular view is useful for displaying a lot of comparable information, it may be difficult to interpret if the display is too narrow for the data.</span></span> <span data-ttu-id="36e29-137">Se ad esempio si prova a visualizzare il percorso, l'ID, il nome e la società di un processo, si otterrà un output troncato per la colonna della società e del percorso del processo:</span><span class="sxs-lookup"><span data-stu-id="36e29-137">For example, if you try to display process path, ID, name, and company, you get truncated output for the process path and the company column:</span></span>
-
-```
-PS> Get-Process -Name powershell | Format-Table -Property Path,Name,Id,Company
-
-Path                Name                                 Id Company
-----                ----                                 -- -------
-C:\Program Files... powershell                         2836 Microsoft Corpor...
+Id      : 21748
+Handles : 641
+CPU     : 3.59375
+SI      : 1
+Name    : iexplore
 ```
 
-<span data-ttu-id="36e29-138">Se si specifica il parametro **AutoSize** quando si esegue il comando **Format-Table**, Windows PowerShell calcolerà la larghezza delle colonne in base ai dati effettivi da visualizzare.</span><span class="sxs-lookup"><span data-stu-id="36e29-138">If you specify the **AutoSize** parameter when you run the **Format-Table** command, Windows PowerShell will calculate column widths based on the actual data you are going to display.</span></span> <span data-ttu-id="36e29-139">In questo modo la colonna **Path** risulta leggibile, ma la colonna della società rimane troncata:</span><span class="sxs-lookup"><span data-stu-id="36e29-139">This makes the **Path** column readable, but the company column remains truncated:</span></span>
+<span data-ttu-id="9fa6a-122">È possibile specificare il numero di proprietà che si vuole:</span><span class="sxs-lookup"><span data-stu-id="9fa6a-122">You can specify as many properties as you want:</span></span>
 
-```
-PS> Get-Process -Name powershell | Format-Table -Property Path,Name,Id,Company -
-AutoSize
-
-Path                                                    Name         Id Company
-----                                                    ----         -- -------
-C:\Program Files\Windows PowerShell\v1.0\powershell.exe powershell 2836 Micr...
+```powershell
+Get-Process -Name iexplore | Format-List -Property ProcessName,FileVersion,StartTime,Id
 ```
 
-<span data-ttu-id="36e29-140">Il cmdlet **Format-Table** potrebbe comunque troncare i dati, ma solo alla fine della schermata.</span><span class="sxs-lookup"><span data-stu-id="36e29-140">The **Format-Table** cmdlet might still truncate data, but it will only do so at the end of the screen.</span></span> <span data-ttu-id="36e29-141">Per tutte le proprietà, fatta eccezione per l'ultima visualizzata, viene assegnato tutto lo spazio richiesto per la corretta visualizzazione degli elementi di dati più lunghi.</span><span class="sxs-lookup"><span data-stu-id="36e29-141">Properties, other than the last one displayed, are given as much size as they need for their longest data element to display correctly.</span></span> <span data-ttu-id="36e29-142">Si può notare che il nome della società è visibile ma il percorso risulta troncato se si invertono le posizioni di **Path** e **Company** nell'elenco dei valori di **Property**:</span><span class="sxs-lookup"><span data-stu-id="36e29-142">You can see that company name is visible but path is truncated if you swap the locations of **Path** and **Company** in the **Property** value list:</span></span>
+```Output
+ProcessName : iexplore
+FileVersion : 11.00.18362.1 (WinBuild.160101.0800)
+StartTime   : 10/22/2019 11:23:58 AM
+Id          : 12808
 
-```
-PS> Get-Process -Name powershell | Format-Table -Property Company,Name,Id,Path -
-AutoSize
-
-Company               Name         Id Path
--------               ----         -- ----
-Microsoft Corporation powershell 2836 C:\Program Files\Windows PowerShell\v1...
-```
-
-<span data-ttu-id="36e29-143">Il comando **Format-Table** presuppone che quanto più una proprietà sia vicina all'inizio dell'elenco dei valori, tanto più sia importante.</span><span class="sxs-lookup"><span data-stu-id="36e29-143">The **Format-Table** command assumes that the nearer a property is to the beginning of the property list, the more important it is.</span></span> <span data-ttu-id="36e29-144">Per questo motivo, tenta di visualizzare interamente le proprietà più vicino all'inizio dell'elenco.</span><span class="sxs-lookup"><span data-stu-id="36e29-144">So it attempts to display the properties nearest the beginning completely.</span></span> <span data-ttu-id="36e29-145">Se il comando **Format-Table** non è in grado di visualizzare tutte le proprietà, alcune colonne saranno rimosse dalla visualizzazione e apparirà un avviso.</span><span class="sxs-lookup"><span data-stu-id="36e29-145">If the **Format-Table** command cannot display all the properties, it will remove some columns from the display and provide a warning.</span></span> <span data-ttu-id="36e29-146">È possibile osservare questo comportamento specificando **Name** come ultima proprietà dell'elenco:</span><span class="sxs-lookup"><span data-stu-id="36e29-146">You can see this behavior if you make **Name** the last property in the list:</span></span>
-
-```
-PS> Get-Process -Name powershell | Format-Table -Property Company,Path,Id,Name -
-AutoSize
-
-WARNING: column "Name" does not fit into the display and was removed.
-
-Company               Path                                                    I
-                                                                              d
--------               ----                                                    -
-Microsoft Corporation C:\Program Files\Windows PowerShell\v1.0\powershell.exe 6
+ProcessName : iexplore
+FileVersion : 11.00.18362.1 (WinBuild.160101.0800)
+StartTime   : 10/22/2019 11:23:57 AM
+Id          : 21748
 ```
 
-<span data-ttu-id="36e29-147">Nell'output precedente la colonna ID viene troncata per essere adattata alle dimensioni dell'elenco e le intestazioni di colonna sono impilate.</span><span class="sxs-lookup"><span data-stu-id="36e29-147">In the output above, the ID column is truncated to make it fit into the listing, and the column headings are stacked up.</span></span> <span data-ttu-id="36e29-148">Il ridimensionamento automatico delle colonne non comporta sempre i risultati sperati.</span><span class="sxs-lookup"><span data-stu-id="36e29-148">Automatically resizing the columns does not always do what you want.</span></span>
+### <a name="getting-detailed-information-by-using-format-list-with-wildcards"></a><span data-ttu-id="9fa6a-123">Ottenere informazioni dettagliate usando Format-List con i caratteri jolly</span><span class="sxs-lookup"><span data-stu-id="9fa6a-123">Getting Detailed Information by Using Format-List with Wildcards</span></span>
 
-### <a name="wrapping-format-table-output-in-columns-wrap"></a><span data-ttu-id="36e29-149">Ritorno a capo automatico dell'output di Format-Table nelle colonne (Wrap)</span><span class="sxs-lookup"><span data-stu-id="36e29-149">Wrapping Format-Table Output in Columns (Wrap)</span></span>
+<span data-ttu-id="9fa6a-124">Il cmdlet `Format-List` consente di usare un carattere jolly come valore del rispettivo parametro **Property**.</span><span class="sxs-lookup"><span data-stu-id="9fa6a-124">The `Format-List` cmdlet lets you use a wildcard as the value of its **Property** parameter.</span></span> <span data-ttu-id="9fa6a-125">In questo modo si possono visualizzare informazioni dettagliate.</span><span class="sxs-lookup"><span data-stu-id="9fa6a-125">This lets you display detailed information.</span></span> <span data-ttu-id="9fa6a-126">Gli oggetti includono spesso più informazioni di quelle necessarie, motivo per cui per impostazione predefinita PowerShell non visualizza tutti i valori della proprietà.</span><span class="sxs-lookup"><span data-stu-id="9fa6a-126">Often, objects include more information than you need, which is why PowerShell doesn't show all property values by default.</span></span> <span data-ttu-id="9fa6a-127">Per visualizzare tutte le proprietà di un oggetto, usare il comando **Format-List -Property \&#42;** .</span><span class="sxs-lookup"><span data-stu-id="9fa6a-127">To show all of properties of an object, use the **Format-List -Property \&#42;** command.</span></span> <span data-ttu-id="9fa6a-128">Il comando seguente genera oltre 60 righe di output per un unico processo:</span><span class="sxs-lookup"><span data-stu-id="9fa6a-128">The following command generates over 60 lines of output for a single process:</span></span>
 
-<span data-ttu-id="36e29-150">È possibile forzare il ritorno a capo automatico dei dati più lunghi di **Format-Table** nella relative colonne visualizzate usando il parametro **Wrap**.</span><span class="sxs-lookup"><span data-stu-id="36e29-150">You can force lengthy **Format-Table** data to wrap within its display column by using the **Wrap** parameter.</span></span> <span data-ttu-id="36e29-151">Con il solo parametro **Wrap**, tuttavia, l'operazione non produrrà necessariamente i risultati previsti, dal momento che verranno usate le impostazioni predefinite se non si specifica anche **AutoSize**:</span><span class="sxs-lookup"><span data-stu-id="36e29-151">Using the **Wrap** parameter alone will not necessarily do what you expect, since it uses default settings if you do not also specify **AutoSize**:</span></span>
-
-```
-PS> Get-Process -Name powershell | Format-Table -Wrap -Property Name,Id,Company,
-Path
-
-Name                                 Id Company             Path
-----                                 -- -------             ----
-powershell                         2836 Microsoft Corporati C:\Program Files\Wi
-                                        on                  ndows PowerShell\v1
-                                                            .0\powershell.exe
+```powershell
+Get-Process -Name iexplore | Format-List -Property *
 ```
 
-<span data-ttu-id="36e29-152">Un vantaggio dell'uso del solo parametro **Wrap** è che non rallenta molto l'elaborazione.</span><span class="sxs-lookup"><span data-stu-id="36e29-152">An advantage of using the **Wrap** parameter by itself is that it does not slow down processing very much.</span></span> <span data-ttu-id="36e29-153">Se si esegue un elenco di file ricorsivo di un sistema di directory di grandi dimensioni, potrebbe richiedere molto tempo e usare una grande quantità di memoria prima di visualizzare i primi elementi dell'output se si usa **AutoSize**.</span><span class="sxs-lookup"><span data-stu-id="36e29-153">If you perform a recursive file listing of a large directory system, it might take a very long time and use a lot of memory before displaying the first output items if you use **AutoSize**.</span></span>
+<span data-ttu-id="9fa6a-129">Anche se il comando `Format-List` è utile per la visualizzazione dei dettagli, se si vuole una panoramica dell'output che includa molti elementi, è spesso più utile una visualizzazione semplificata in formato tabulare.</span><span class="sxs-lookup"><span data-stu-id="9fa6a-129">Although the `Format-List` command is useful for showing detail, if you want an overview of output that includes many items, a simpler tabular view is often more useful.</span></span>
 
-<span data-ttu-id="36e29-154">Se si non teme il carico del sistema, **AutoSize** produce buoni risultati con il parametro **Wrap**.</span><span class="sxs-lookup"><span data-stu-id="36e29-154">If you are not concerned about system load, then **AutoSize** works well with the **Wrap** parameter.</span></span> <span data-ttu-id="36e29-155">Alle colonne iniziali è sempre assegnato lo spazio necessario per visualizzare gli elementi su una riga, proprio come quando si specifica **AutoSize** senza il parametro **Wrap**.</span><span class="sxs-lookup"><span data-stu-id="36e29-155">The initial columns are always allotted as much width as they need to display items on one line, just as when you specify **AutoSize** without the **Wrap** parameter.</span></span> <span data-ttu-id="36e29-156">L'unica differenza è che la colonna finale verrà mandata a capo se necessario:</span><span class="sxs-lookup"><span data-stu-id="36e29-156">The only difference is that the final column will be wrapped if necessary:</span></span>
+## <a name="using-format-table-for-tabular-output"></a><span data-ttu-id="9fa6a-130">Uso di Format-Table per output in formato tabulare</span><span class="sxs-lookup"><span data-stu-id="9fa6a-130">Using Format-Table for Tabular Output</span></span>
 
-```
-PS> Get-Process -Name powershell | Format-Table -Wrap -AutoSize -Property Name,I
-d,Company,Path
+<span data-ttu-id="9fa6a-131">Se si usa il cmdlet `Format-Table` senza nomi di proprietà specificati per formattare l'output del comando `Get-Process`, si ottiene esattamente lo stesso output di quando non si usa un cmdlet `Format`.</span><span class="sxs-lookup"><span data-stu-id="9fa6a-131">If you use the `Format-Table` cmdlet with no property names specified to format the output of the `Get-Process` command, you get exactly the same output as you do without a `Format` cmdlet.</span></span> <span data-ttu-id="9fa6a-132">Per impostazione predefinita, PowerShell visualizza gli oggetti **Process** in un formato tabulare.</span><span class="sxs-lookup"><span data-stu-id="9fa6a-132">By default, PowerShell displays **Process** objects in a tabular format.</span></span>
 
-Name         Id Company               Path
-----         -- -------               ----
-powershell 2836 Microsoft Corporation C:\Program Files\Windows PowerShell\v1.0\
-                                      powershell.exe
+```powershell
+Get-Service -Name win* | Format-Table
 ```
 
-<span data-ttu-id="36e29-157">Alcune colonne potrebbero non essere visualizzate se si specificano per prime le colonne più larghe, pertanto è consigliabile specificare per primi gli elementi di dati più piccoli.</span><span class="sxs-lookup"><span data-stu-id="36e29-157">Some columns might not be displayed if you specify the widest columns first, so it is safest to specify the smallest data elements first.</span></span> <span data-ttu-id="36e29-158">Nell'esempio seguente viene specificato per primo l'elemento del percorso estremamente lungo, ma anche con il ritorno a capo automatico la colonna finale **Name** viene persa:</span><span class="sxs-lookup"><span data-stu-id="36e29-158">In the following example, we specify the extremely wide path element first, and even with wrapping, we still lose the final **Name** column:</span></span>
-
-```
-PS> Get-Process -Name powershell | Format-Table -Wrap -AutoSize -Property Path,I
-d,Company,Name
-
-WARNING: column "Name" does not fit into the display and was removed.
-
-Path                                                      Id Company
-----                                                      -- -------
-C:\Program Files\Windows PowerShell\v1.0\powershell.exe 2836 Microsoft Corporat
-                                                             ion
+```Output
+Status   Name               DisplayName
+------   ----               -----------
+Running  WinDefend          Windows Defender Antivirus Service
+Running  WinHttpAutoProx... WinHTTP Web Proxy Auto-Discovery Se...
+Running  Winmgmt            Windows Management Instrumentation
+Running  WinRM              Windows Remote Management (WS-Manag...
 ```
 
-### <a name="organizing-table-output--groupby"></a><span data-ttu-id="36e29-159">Organizzazione dell'output di tabella (-GroupBy)</span><span class="sxs-lookup"><span data-stu-id="36e29-159">Organizing Table Output (-GroupBy)</span></span>
+### <a name="improving-format-table-output-autosize"></a><span data-ttu-id="9fa6a-133">Ottimizzazione dell'output di Format-Table (AutoSize)</span><span class="sxs-lookup"><span data-stu-id="9fa6a-133">Improving Format-Table Output (AutoSize)</span></span>
 
-<span data-ttu-id="36e29-160">Un altro parametro utile per il controllo dell'output in formato tabulare è **GroupBy**.</span><span class="sxs-lookup"><span data-stu-id="36e29-160">Another useful parameter for tabular output control is **GroupBy**.</span></span> <span data-ttu-id="36e29-161">Specialmente gli elenchi in formato tabulare più lunghi possono essere difficili da confrontare.</span><span class="sxs-lookup"><span data-stu-id="36e29-161">Longer tabular listings in particular may be hard to compare.</span></span> <span data-ttu-id="36e29-162">Il parametro **GroupBy** raggruppa l'output in base al valore di una proprietà.</span><span class="sxs-lookup"><span data-stu-id="36e29-162">The **GroupBy** parameter groups output based on a property value.</span></span> <span data-ttu-id="36e29-163">È ad esempio possibile raggruppare i processi per società per un controllo più semplice, omettendo il valore della società nell'elenco delle proprietà:</span><span class="sxs-lookup"><span data-stu-id="36e29-163">For example, we can group processes by company for easier inspection, omitting the company value from the property listing:</span></span>
+<span data-ttu-id="9fa6a-134">Una visualizzazione tabulare è utile per visualizzare molte informazioni, ma potrebbe essere di difficile interpretazione se la schermata è troppo ristretta per contenere i dati.</span><span class="sxs-lookup"><span data-stu-id="9fa6a-134">Although a tabular view is useful for displaying lots of information, it may be difficult to interpret if the display is too narrow for the data.</span></span> <span data-ttu-id="9fa6a-135">Nell'esempio precedente l'output è troncato.</span><span class="sxs-lookup"><span data-stu-id="9fa6a-135">In the previous example, the output is truncated.</span></span> <span data-ttu-id="9fa6a-136">Se si specifica il parametro **AutoSize** quando si esegue il comando `Format-Table`, PowerShell calcola la larghezza delle colonne in base ai dati effettivi da visualizzare.</span><span class="sxs-lookup"><span data-stu-id="9fa6a-136">If you specify the **AutoSize** parameter when you run the `Format-Table` command, PowerShell calculates column widths based on the actual data displayed.</span></span> <span data-ttu-id="9fa6a-137">In questo modo le colonne risultano leggibili.</span><span class="sxs-lookup"><span data-stu-id="9fa6a-137">This makes the columns readable.</span></span>
 
+```powershell
+Get-Service -Name win* | Format-Table -AutoSize
 ```
-PS> Get-Process -Name powershell | Format-Table -Wrap -AutoSize -Property Name,I
-d,Path -GroupBy Company
 
-   Company: Microsoft Corporation
+```Output
+Status  Name                DisplayName
+------  ----                -----------
+Running WinDefend           Windows Defender Antivirus Service
+Running WinHttpAutoProxySvc WinHTTP Web Proxy Auto-Discovery Service
+Running Winmgmt             Windows Management Instrumentation
+Running WinRM               Windows Remote Management (WS-Management)
+```
 
-Name         Id Path
-----         -- ----
-powershell 1956 C:\Program Files\Windows PowerShell\v1.0\powershell.exe
-powershell 2656 C:\Program Files\Windows PowerShell\v1.0\powershell.exe
+<span data-ttu-id="9fa6a-138">Il cmdlet `Format-Table` potrebbe comunque troncare i dati, ma solo alla fine della schermata.</span><span class="sxs-lookup"><span data-stu-id="9fa6a-138">The `Format-Table` cmdlet might still truncate data, but it only truncates at the end of the screen.</span></span> <span data-ttu-id="9fa6a-139">Per tutte le proprietà, fatta eccezione per l'ultima visualizzata, viene assegnato tutto lo spazio richiesto per la corretta visualizzazione degli elementi di dati più lunghi.</span><span class="sxs-lookup"><span data-stu-id="9fa6a-139">Properties, other than the last one displayed, are given as much size as they need for their longest data element to display correctly.</span></span>
+
+```powershell
+Get-Service -Name win* | Format-Table -Property Name,Status,StartType,DisplayName,DependentServices -AutoSize
+```
+
+```Output
+Name                 Status StartType DisplayName                               DependentServi
+                                                                                ces
+----                 ------ --------- -----------                               --------------
+WinDefend           Running Automatic Windows Defender Antivirus Service        {}
+WinHttpAutoProxySvc Running    Manual WinHTTP Web Proxy Auto-Discovery Service  {NcaSvc, iphl…
+Winmgmt             Running Automatic Windows Management Instrumentation        {vmms, TPHKLO…
+WinRM               Running Automatic Windows Remote Management (WS-Management) {}
+```
+
+<span data-ttu-id="9fa6a-140">Il comando `Format-Table` presuppone che le proprietà siano elencate in ordine di importanza.</span><span class="sxs-lookup"><span data-stu-id="9fa6a-140">The `Format-Table` command assumes that properties are listed in order of importance.</span></span> <span data-ttu-id="9fa6a-141">Per questo motivo, tenta di visualizzare interamente le proprietà in prossimità dell'inizio dell'elenco.</span><span class="sxs-lookup"><span data-stu-id="9fa6a-141">So it attempts to fully display the properties nearest the beginning.</span></span> <span data-ttu-id="9fa6a-142">Se il comando `Format-Table` non visualizza tutte le proprietà, rimuove alcune colonne dalla visualizzazione.</span><span class="sxs-lookup"><span data-stu-id="9fa6a-142">If the `Format-Table` command can't display all the properties, it removes some columns from the display.</span></span> <span data-ttu-id="9fa6a-143">Questo comportamento è illustrato nell'esempio precedente della proprietà **DependentServices**.</span><span class="sxs-lookup"><span data-stu-id="9fa6a-143">You can see this behavior in the **DependentServices** property previous example.</span></span>
+
+### <a name="wrapping-format-table-output-in-columns-wrap"></a><span data-ttu-id="9fa6a-144">Ritorno a capo automatico dell'output di Format-Table nelle colonne (Wrap)</span><span class="sxs-lookup"><span data-stu-id="9fa6a-144">Wrapping Format-Table Output in Columns (Wrap)</span></span>
+
+<span data-ttu-id="9fa6a-145">È possibile forzare il ritorno a capo automatico dei dati più lunghi di `Format-Table` nella rispettiva colonna visualizzata usando il parametro **Wrap**.</span><span class="sxs-lookup"><span data-stu-id="9fa6a-145">You can force lengthy `Format-Table` data to wrap within its display column by using the **Wrap** parameter.</span></span> <span data-ttu-id="9fa6a-146">È possibile che con il parametro**Wrap** non si ottengano i risultati previsti, dal momento che il parametro usa le impostazioni predefinite se non è specificato anche **AutoSize**:</span><span class="sxs-lookup"><span data-stu-id="9fa6a-146">Using the **Wrap** parameter may not do what you expect, since it uses default settings if you don't also specify **AutoSize**:</span></span>
+
+```powershell
+Get-Service -Name win* | Format-Table -Property Name,Status,StartType,DisplayName,DependentServices -Wrap
+```
+
+```Output
+Name                 Status StartType DisplayName                               DependentServi
+                                                                                ces
+----                 ------ --------- -----------                               --------------
+WinDefend           Running Automatic Windows Defender Antivirus Service        {}
+WinHttpAutoProxySvc Running    Manual WinHTTP Web Proxy Auto-Discovery Service  {NcaSvc,
+                                                                                iphlpsvc}
+Winmgmt             Running Automatic Windows Management Instrumentation        {vmms,
+                                                                                TPHKLOAD,
+                                                                                SUService,
+                                                                                smstsmgr…}
+WinRM               Running Automatic Windows Remote Management (WS-Management) {}
+```
+
+<span data-ttu-id="9fa6a-147">L'uso del solo parametro **Wrap** non rallenta molto l'elaborazione.</span><span class="sxs-lookup"><span data-stu-id="9fa6a-147">Using the **Wrap** parameter by itself doesn't slow down processing very much.</span></span> <span data-ttu-id="9fa6a-148">L'uso di **AutoSize** per formattare un elenco di file ricorsivi di una struttura di directory di grandi dimensioni potrebbe tuttavia richiedere molto tempo e usare una grande quantità di memoria prima di visualizzare i primi elementi dell'output.</span><span class="sxs-lookup"><span data-stu-id="9fa6a-148">However, using **AutoSize** to format a recursive file listing of a large directory structure can take a long time and use lots of memory before displaying the first output items.</span></span>
+
+<span data-ttu-id="9fa6a-149">Se non si teme il carico del sistema, **AutoSize** produce buoni risultati con il parametro **Wrap**.</span><span class="sxs-lookup"><span data-stu-id="9fa6a-149">If you aren't concerned about system load, then **AutoSize** works well with the **Wrap** parameter.</span></span>
+<span data-ttu-id="9fa6a-150">Le colonne iniziali usano la larghezza necessaria per visualizzare gli elementi in una sola riga, ma se è necessario viene applicato il ritorno a capo automatico nell'ultima colonna.</span><span class="sxs-lookup"><span data-stu-id="9fa6a-150">The initial columns still use as much width as needed to display items on one line, but the final column is wrapped, if necessary.</span></span>
+
+> [!NOTE]
+> <span data-ttu-id="9fa6a-151">Alcune colonne potrebbero non essere visualizzate quando si specificano per prime le colonne più larghe.</span><span class="sxs-lookup"><span data-stu-id="9fa6a-151">Some columns may not be displayed when you specify the widest columns first.</span></span> <span data-ttu-id="9fa6a-152">Per ottenere risultati ottimali, specificare prima gli elementi di dati più piccoli.</span><span class="sxs-lookup"><span data-stu-id="9fa6a-152">For best results, specify the smallest data elements first.</span></span>
+
+<span data-ttu-id="9fa6a-153">Nell'esempio seguente vengono specificate prima le proprietà più larghe.</span><span class="sxs-lookup"><span data-stu-id="9fa6a-153">In the following example, we specify the widest properties first.</span></span>
+
+```powershell
+Get-Process -Name iexplore | Format-Table -Wrap -AutoSize -Property FileVersion,Path,Name,Id
+```
+
+<span data-ttu-id="9fa6a-154">Nonostante il ritorno a capo automatico, l'ultima colonna **Id** viene omessa:</span><span class="sxs-lookup"><span data-stu-id="9fa6a-154">Even with wrapping, the final **Id** column is omitted:</span></span>
+
+```Output
+FileVersion                          Path                                                  Nam
+                                                                                           e
+-----------                          ----                                                  ---
+11.00.18362.1 (WinBuild.160101.0800) C:\Program Files (x86)\Internet Explorer\IEXPLORE.EXE iex
+                                                                                           plo
+                                                                                           re
+11.00.18362.1 (WinBuild.160101.0800) C:\Program Files\Internet Explorer\iexplore.exe       iex
+                                                                                           plo
+                                                                                           re
+```
+
+### <a name="organizing-table-output--groupby"></a><span data-ttu-id="9fa6a-155">Organizzazione dell'output di tabella (-GroupBy)</span><span class="sxs-lookup"><span data-stu-id="9fa6a-155">Organizing Table Output (-GroupBy)</span></span>
+
+<span data-ttu-id="9fa6a-156">Un altro parametro utile per il controllo dell'output in formato tabulare è **GroupBy**.</span><span class="sxs-lookup"><span data-stu-id="9fa6a-156">Another useful parameter for tabular output control is **GroupBy**.</span></span> <span data-ttu-id="9fa6a-157">Specialmente gli elenchi in formato tabulare più lunghi possono essere difficili da confrontare.</span><span class="sxs-lookup"><span data-stu-id="9fa6a-157">Longer tabular listings in particular may be hard to compare.</span></span> <span data-ttu-id="9fa6a-158">Il parametro **GroupBy** raggruppa l'output in base al valore di una proprietà.</span><span class="sxs-lookup"><span data-stu-id="9fa6a-158">The **GroupBy** parameter groups output based on a property value.</span></span> <span data-ttu-id="9fa6a-159">È ad esempio possibile raggruppare i servizi per **StartType** per un'analisi più semplice, omettendo il valore **StartType** nell'elenco delle proprietà:</span><span class="sxs-lookup"><span data-stu-id="9fa6a-159">For example, we can group services by **StartType** for easier inspection, omitting the **StartType** value from the property listing:</span></span>
+
+```powershell
+Get-Service -Name win* | Sort-Object StartType | Format-Table -GroupBy StartType
+```
+
+```Output
+   StartType: Automatic
+Status   Name               DisplayName
+------   ----               -----------
+Running  WinDefend          Windows Defender Antivirus Service
+Running  Winmgmt            Windows Management Instrumentation
+Running  WinRM              Windows Remote Management (WS-Managem…
+
+   StartType: Manual
+Status   Name               DisplayName
+------   ----               -----------
+Running  WinHttpAutoProxyS… WinHTTP Web Proxy Auto-Discovery Serv…
 ```
