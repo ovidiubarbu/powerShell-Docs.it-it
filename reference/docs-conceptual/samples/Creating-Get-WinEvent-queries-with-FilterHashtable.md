@@ -1,12 +1,12 @@
 ---
 ms.date: 09/13/2019
 title: Creazione di query Get-WinEvent con FilterHashtable
-ms.openlocfilehash: 1bf321c09c20736de36eb896fabced31cfdfbd75
-ms.sourcegitcommit: 0a6b562a497860caadba754c75a83215315d37a1
+ms.openlocfilehash: 35d18dc894d90e698b38395b79ff4cf395515909
+ms.sourcegitcommit: 36e4c79afda2ce11febd93951e143687245f0b50
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71143666"
+ms.lasthandoff: 11/02/2019
+ms.locfileid: "73444387"
 ---
 # <a name="creating-get-winevent-queries-with-filterhashtable"></a>Creazione di query Get-WinEvent con FilterHashtable
 
@@ -36,16 +36,16 @@ Get-WinEvent -FilterHashtable @{
 Questo articolo presenta informazioni su come usare i valori enumerati in una tabella hash. Per altre informazioni sull'enumerazione, leggere questi post del blog **Scripting Guy**. Per creare una funzione che restituisce i valori enumerati, vedere [Enumerations and Values](https://devblogs.microsoft.com/scripting/hey-scripting-guy-weekend-scripter-enumerations-and-values) (Enumerazioni e valori).
 Per altre informazioni, vedere la [serie di post del blog Scripting Guy sull'enumerazione](https://devblogs.microsoft.com/scripting/?s=about+enumeration).
 
-## <a name="hash-table-keyvalue-pairs"></a>Coppie chiave/valore della tabella di hash
+## <a name="hash-table-key-value-pairs"></a>Coppie chiave-valore della tabella hash
 
 Per creare query efficienti, usare il cmdlet `Get-WinEvent` con il parametro **FilterHashtable**.
-**FilterHashtable** accetta una tabella hash come filtro per ottenere informazioni specifiche dai registri eventi di Windows. Una tabella hash usa coppie **chiave/valore**. Per altre informazioni sulle tabelle hash, vedere [about_Hash_Tables](/powershell/module/microsoft.powershell.core/about/about_hash_tables).
+**FilterHashtable** accetta una tabella hash come filtro per ottenere informazioni specifiche dai registri eventi di Windows. Una tabella hash usa coppie **chiave-valore**. Per altre informazioni sulle tabelle hash, vedere [about_Hash_Tables](/powershell/module/microsoft.powershell.core/about/about_hash_tables).
 
-Se le coppie **chiave/valore** sono sulla stessa riga, devono essere separate da un punto e virgola. Se ogni coppia **chiave/valore** è su una riga separata, non è necessario il punto e virgola. Ad esempio, in questo articolo le coppie **chiave/valore** sono posizionate su righe separate e non vengono usati punti e virgola.
+Se le coppie **chiave-valore** sono sulla stessa riga, devono essere separate da un punto e virgola. Se ogni coppia **chiave-valore** è su una riga separata, il punto e virgola non è necessario. In questo articolo ad esempio le coppie **chiave-valore** sono posizionate su righe separate e non vengono usati punti e virgola.
 
-Questo esempio usa varie coppie **chiave/valore** del parametro **FilterHashtable**. La query completa include **LogName**, **ProviderName**, **Keywords**, **ID** e **Level**.
+Questo esempio usa varie coppie **chiave-valore** del parametro **FilterHashtable**. La query completa include **LogName**, **ProviderName**, **Keywords**, **ID** e **Level**.
 
-Le coppie **chiave/valore** accettate sono riportate nella tabella seguente e sono incluse nella documentazione per il parametro [Get-WinEvent](/powershell/module/microsoft.powershell.diagnostics/Get-WinEvent)
+Le coppie **chiave-valore** accettate sono riportate nella tabella seguente e sono incluse nella documentazione per il parametro [Get-WinEvent](/powershell/module/microsoft.powershell.diagnostics/Get-WinEvent)
 **FilterHashtable**.
 
 Nella tabella seguente vengono visualizzati i nomi delle chiavi, i tipi di dati e viene indicato se i caratteri jolly sono consentiti per un valore di dati.
@@ -62,9 +62,9 @@ Nella tabella seguente vengono visualizzati i nomi delle chiavi, i tipi di dati 
 | EndTime        | `<DateTime>`    | No                           |
 | UserID         | `<SID>`         | No                           |
 | Dati           | `<String[]>`    | No                           |
-| \<named-data\> | `<String[]>`    | No                           |
+| `<named-data>` | `<String[]>`    | No                           |
 
-La chiave \<named-data\> rappresenta un campo dati dell'evento denominato. Ad esempio, l'evento 1008 Perflib può contenere i dati dell'evento seguenti:
+La chiave `<named-data>` rappresenta un campo dati dell'evento denominato. Ad esempio, l'evento 1008 Perflib può contenere i dati dell'evento seguenti:
 
 ```xml
 <EventData>
@@ -80,11 +80,14 @@ La chiave \<named-data\> rappresenta un campo dati dell'evento denominato. Ad es
 Get-WinEvent -FilterHashtable @{LogName='Application'; 'Service'='Bits'}
 ```
 
+> [!NOTE]
+> In PowerShell 6 è stata aggiunta la possibilità di eseguire una query per `<named-data>`.
+
 ## <a name="building-a-query-with-a-hash-table"></a>Creazione di una query con una tabella hash
 
-Per verificare i risultati e risolvere i problemi, è utile comporre la tabella hash con una coppia **chiave/valore** alla volta. La query ottiene i dati dal log **Application**. La tabella hash è equivalente a `Get-WinEvent –LogName Application`.
+Per verificare i risultati e risolvere i problemi, è utile creare la tabella hash con una coppia **chiave-valore** alla volta. La query ottiene i dati dal log **Application**. La tabella hash è equivalente a `Get-WinEvent –LogName Application`.
 
-Per iniziare, creare la query `Get-WinEvent`. Usare la coppia **chiave/valore** del parametro **FilterHashtable** con la chiave **LogName** e il valore **Application**.
+Per iniziare, creare la query `Get-WinEvent`. Usare la coppia **chiave-valore** del parametro **FilterHashtable** con la chiave **LogName** e il valore **Application**.
 
 ```powershell
 Get-WinEvent -FilterHashtable @{
@@ -96,7 +99,7 @@ Continuare a comporre la tabella hash con la chiave **ProviderName**. **Provider
 
 ![Immagine delle origini di Visualizzatore eventi di Windows.](./media/creating-get-winEvent-queries-with-filterhashtable/providername.png)
 
-Aggiornare la tabella hash e includere la coppia **chiave/valore** con la chiave **ProviderName e il valore **.NET Runtime**.
+Aggiornare la tabella hash e includere la coppia **chiave-valore** con la chiave **ProviderName e il valore **.NET Runtime**.
 
 ```powershell
 Get-WinEvent -FilterHashtable @{
@@ -148,7 +151,7 @@ WdiContext       Property   static System.Diagnostics.Eventing.Reader.StandardEv
 WdiDiagnostic    Property   static System.Diagnostics.Eventing.Reader.StandardEventKey…
 ```
 
-I valori enumerati sono documentati in **.NET Framework**. Per altre informazioni, vedere [Enumerazione StandardEventKeywords](https://docs.microsoft.com/en-us/dotnet/api/system.diagnostics.eventing.reader.standardeventkeywords?redirectedfrom=MSDN&view=netframework-4.7.2).
+I valori enumerati sono documentati in **.NET Framework**. Per altre informazioni, vedere [Enumerazione StandardEventKeywords](/dotnet/api/system.diagnostics.eventing.reader.standardeventkeywords?redirectedfrom=MSDN&view=netframework-4.7.2).
 
 I nomi e i valori enumerati per **Keywords** sono i seguenti:
 
@@ -164,7 +167,7 @@ I nomi e i valori enumerati per **Keywords** sono i seguenti:
 | ResponseTime     | 281474976710656   |
 | Nessuno             | 0                 |
 
-Aggiornare la tabella hash e includere la coppia **chiave/valore** con la chiave **Keywords** e il valore di enumerazione **EventLogClassic** **36028797018963968** .
+Aggiornare la tabella hash e includere la coppia **chiave-valore** con la chiave **Keywords** e il valore di enumerazione **EventLogClassic** **36028797018963968**.
 
 ```powershell
 Get-WinEvent -FilterHashtable @{
@@ -194,7 +197,7 @@ Get-WinEvent -FilterHashtable @{
 
 Per ottenere dati più specifici, i risultati della query vengono filtrati in base all'**ID evento**. Per fare riferimento all'**ID evento** nella tabella hash si usano la chiave **ID** e un **ID evento** specifico come valore. Il **Visualizzatore eventi di Windows** visualizza l'**ID evento**. In questo esempio viene usato l'**ID evento 1023**.
 
-Aggiornare la tabella hash e includere la coppia **chiave/valore** con la chiave **ID** e il valore **1023**.
+Aggiornare la tabella hash e includere la coppia **chiave-valore** con la chiave **ID** e il valore **1023**.
 
 ```powershell
 Get-WinEvent -FilterHashtable @{
@@ -229,7 +232,7 @@ Verbose       Property   static System.Diagnostics.Eventing.Reader.StandardEvent
 Warning       Property   static System.Diagnostics.Eventing.Reader.StandardEventLevel Warning {get;}
 ```
 
-I valori enumerati sono documentati in **.NET Framework**. Per altre informazioni, vedere [Enumerazione StandardEventLevel](https://docs.microsoft.com/en-us/dotnet/api/system.diagnostics.eventing.reader.standardeventlevel?redirectedfrom=MSDN&view=netframework-4.7.2).
+I valori enumerati sono documentati in **.NET Framework**. Per altre informazioni, vedere [Enumerazione StandardEventLevel](/dotnet/api/system.diagnostics.eventing.reader.standardeventlevel?redirectedfrom=MSDN&view=netframework-4.7.2).
 
 I nomi e i valori enumerati per la chiave **Level** sono i seguenti:
 

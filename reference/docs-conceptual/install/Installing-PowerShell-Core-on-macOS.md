@@ -2,18 +2,25 @@
 title: Installazione di PowerShell Core in macOS
 description: Informazioni sull'installazione di PowerShell Core in macOS
 ms.date: 12/12/2018
-ms.openlocfilehash: a53cb5b7e159635dac45fb9ca3df28e86dffc653
-ms.sourcegitcommit: 4a2cf30351620a58ba95ff5d76b247e601907589
+ms.openlocfilehash: ad1306e99261e8e6e2fd49d3199d863929c31e92
+ms.sourcegitcommit: 36e4c79afda2ce11febd93951e143687245f0b50
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71325271"
+ms.lasthandoff: 11/02/2019
+ms.locfileid: "73444432"
 ---
 # <a name="installing-powershell-core-on-macos"></a>Installazione di PowerShell Core in macOS
 
 PowerShell Core supporta macOS 10.12 e versioni successive.
 Tutti i pacchetti sono disponibili nella pagina delle [versioni][] di GitHub.
 Dopo aver installato il pacchetto, eseguire `pwsh` da un terminale.
+
+> [!TIP]
+> Se [.NET Core SDK](/dotnet/core/sdk) è già installato, è facile installare PowerShell come [strumento globale .NET](/dotnet/core/tools/global-tools).
+>
+> ```
+> dotnet tool install --global PowerShell
+> ```
 
 ## <a name="about-brew"></a>Informazioni su Brew
 
