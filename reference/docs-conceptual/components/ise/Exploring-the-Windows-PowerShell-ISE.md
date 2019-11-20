@@ -2,12 +2,12 @@
 ms.date: 06/05/2017
 keywords: powershell,cmdlet
 title: Esplorazione di Windows PowerShell ISE
-ms.openlocfilehash: 8c47e236e2e345a887fc3af281e429f440e176ff
-ms.sourcegitcommit: a6f13c16a535acea279c0ddeca72f1f0d8a8ce4c
+ms.openlocfilehash: 7949b690cda73148f07922985b1fc30fe1e8b2d0
+ms.sourcegitcommit: a6e54a305fdeb6482321c77da8066d2f991c93e1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67031039"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74117449"
 ---
 # <a name="exploring-the-windows-powershell-ise"></a>Esplorazione di Windows PowerShell ISE
 
@@ -18,7 +18,7 @@ ms.locfileid: "67031039"
 
 ## <a name="menu-bar"></a>Barra dei menu
 
-La barra dei menu contiene i menu **File**, **Modifica**, **Visualizza**, **Strumenti**, **Debug**, **Componenti aggiuntivi** e **?** . I pulsanti dei menu consentono di eseguire attività relative alla scrittura e all'esecuzione di script, nonché all'esecuzione di comandi in Windows PowerShell ISE. Nella barra dei menu può essere anche inserito uno [strumento aggiuntivo](../../core-powershell/ise/The-ISEAddOnTool-Object.md) eseguendo script che usano la [Gerarchia del modello a oggetti ISE](../../core-powershell/ise/The-ISE-Object-Model-Hierarchy.md).
+La barra dei menu contiene i menu **File**, **Modifica**, **Visualizza**, **Strumenti**, **Debug**, **Componenti aggiuntivi** e **?** . I pulsanti dei menu consentono di eseguire attività relative alla scrittura e all'esecuzione di script, nonché all'esecuzione di comandi in Windows PowerShell ISE. Nella barra dei menu può essere anche inserito uno [strumento aggiuntivo](object-model/The-ISEAddOnTool-Object.md) eseguendo script che usano la [Gerarchia del modello a oggetti ISE](object-model/The-ISE-Object-Model-Hierarchy.md).
 
 > [!NOTE]
 > In Windows PowerShell ISE 2.0 i menu **Strumenti** e **Componenti aggiuntivi** non sono disponibili.
@@ -83,4 +83,4 @@ La Guida di Windows PowerShell ISE è disponibile sul Web nella libreria TechNet
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Introduzione a Windows PowerShell ISE](../../core-powershell/ise/Introducing-the-Windows-PowerShell-ISE.md)
+- [Introduzione a Windows PowerShell ISE](Introducing-the-Windows-PowerShell-ISE.md)
