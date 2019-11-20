@@ -2,12 +2,12 @@
 title: Informazioni sulla codifica di file in VSCode e PowerShell
 description: Configurare la codifica di file in VS Code e PowerShell
 ms.date: 02/28/2019
-ms.openlocfilehash: 6a00e45b3700f72f78e2fbcdf6e317f3a17b53c0
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 3283e1262c8eb26906429ecf195cfa0b122b330f
+ms.sourcegitcommit: a6e54a305fdeb6482321c77da8066d2f991c93e1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62058438"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74117417"
 ---
 # <a name="understanding-file-encoding-in-vscode-and-powershell"></a>Informazioni sulla codifica di file in VSCode e PowerShell
 
@@ -15,7 +15,7 @@ Quando si usa VS Code per creare e modificare gli script di PowerShell, è impor
 
 ## <a name="what-is-file-encoding-and-why-is-it-important"></a>Che cos'è la codifica dei file e perché è importante?
 
-VS Code gestisce l'interfaccia tra una persona che immette stringhe di caratteri in un buffer e i blocchi di lettura/scrittura di byte nel File system. Quando VS Code salva un file, usa un codifica di testo per eseguire l'operazione.
+VS Code gestisce l'interfaccia tra una persona che immette stringhe di caratteri in un buffer e i blocchi di lettura/scrittura di byte nel File system. Durante il salvataggio di un file da parte di VS Code, viene usata una codifica del testo per definire i byte in cui viene convertito ogni carattere.
 
 Analogamente, quando PowerShell esegue uno script deve convertire i byte di un file in caratteri per ricostruire il file in un programma di PowerShell. Poiché VS Code scrive il file e PowerShell legge il file, devono usare lo stesso sistema di codifica. Il processo di analisi di uno script di PowerShell script è: *byte* -> *caratteri* -> *token* -> *albero sintattico astratto* -> *esecuzione*.
 
@@ -27,9 +27,10 @@ I problemi di codifica si verificano se la codifica di VS Code o il file di scri
 
 I problemi di codifica si verificano con maggiore probabilità quando si usano caratteri non del [set di caratteri ASCII a 7 bit](https://ascii.cl/). Ad esempio:
 
+- Caratteri non letterali estesi, ad esempio la lineetta (`—`), lo spazio unificatore (` `) o le virgolette inglesi aperte (`“`)
 - Caratteri latini accentati (`É`, `ü`)
 - Caratteri non latini, ad esempio cirillico (`Д`, `Ц`)
-- Cinese Han (`脚`, `本`)
+- Caratteri CJK (`本`, `화`, `が`)
 
 I motivi comuni per i problemi di codifica sono:
 

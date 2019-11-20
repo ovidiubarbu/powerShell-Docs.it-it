@@ -2,12 +2,12 @@
 title: Come replicare l'esperienza di ISE in Visual Studio Code
 description: Come replicare l'esperienza di ISE in Visual Studio Code
 ms.date: 08/06/2018
-ms.openlocfilehash: 983da850c13d72bcdc7b2d33970c6e9e06b3d869
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: d5542e9a3a48b1ae64356309be669418edf6c79e
+ms.sourcegitcommit: a6e54a305fdeb6482321c77da8066d2f991c93e1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62058523"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74117457"
 ---
 # <a name="how-to-replicate-the-ise-experience-in-visual-studio-code"></a>Come replicare l'esperienza di ISE in Visual Studio Code
 
@@ -27,12 +27,29 @@ Questo documento cerca di elencare impostazioni che è possibile configurare in 
 
 È possibile [configurare le proprie associazioni di chiave personalizzate](https://code.visualstudio.com/docs/getstarted/keybindings#_custom-keybindings-for-refactorings) in anche VSCode.
 
+## <a name="simplified-ise-like-ui"></a>Interfaccia utente di tipo ISE semplificata
+
+Se si vuole semplificare l'interfaccia utente di Visual Studio Code e renderla più simile all'interfaccia utente ISE, applicare le due impostazioni seguenti:
+
+```json
+"workbench.activityBar.visible": false,
+"debug.openDebug": "neverOpen",
+```
+
+Verranno nascoste le sezioni sottostanti della barra attività e della barra laterale di debug all'interno della casella rossa:
+
+![la sezione evidenziata include la barra attività e la barra laterale di debug](images/How-To-Replicate-the-ISE-Experience-In-VSCode/1-highlighted-sidebar.png)
+
+Il risultato finale è simile al seguente:
+
+![Visualizzazione semplificata di VS Code](images/How-To-Replicate-the-ISE-Experience-In-VSCode/2-simplified-ui.png)
+
 ## <a name="tab-completion"></a>Completamento tramite TAB
 
 Per abilitare più completamento tramite TAB di tipo ISE, aggiungere questa impostazione:
 
 ```json
-"editor.tabCompletion": "on"
+"editor.tabCompletion": "on",
 ```
 
 > [!NOTE]
@@ -64,7 +81,7 @@ Per arrestare la console integrata all'avvio, impostare:
 Per creare file nuovi/senza titolo, registrarli come PowerShell per impostazione predefinita:
 
 ```json
-"files.defaultLanguage": "powershell"
+"files.defaultLanguage": "powershell",
 ```
 
 ## <a name="color-scheme"></a>Combinazione di colori
@@ -77,7 +94,7 @@ Nell'elenco a discesa selezionare `PowerShell ISE`.
 È possibile impostare questo tema nelle impostazioni con:
 
 ```json
-"workbench.colorTheme": "PowerShell ISE"
+"workbench.colorTheme": "PowerShell ISE",
 ```
 
 ## <a name="powershell-command-explorer"></a>PowerShell Command Explorer
