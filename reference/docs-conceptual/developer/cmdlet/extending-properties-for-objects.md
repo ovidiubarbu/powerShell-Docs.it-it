@@ -20,7 +20,7 @@ ms.locfileid: "72364450"
 Quando si estendono .NET Framework oggetti, è possibile aggiungere gli oggetti proprietà alias, proprietà del codice, nota proprietà, proprietà script e set di proprietà. Il codice XML che definisce queste proprietà è descritto nelle sezioni seguenti.
 
 > [!NOTE]
-> Gli esempi nelle sezioni seguenti si riportano dal file di tipi `Types.ps1xml` predefinito nella directory di installazione di PowerShell (`$PSHOME`). Per ulteriori informazioni, vedere [About types. ps1xml](/powershell/module/microsoft.powershell.core/about/about_types.ps1xml).
+> Gli esempi nelle sezioni seguenti descrivono il file dei tipi di `Types.ps1xml` predefiniti nella directory di installazione di PowerShell (`$PSHOME`). Per ulteriori informazioni, vedere [About types. ps1xml](/powershell/module/microsoft.powershell.core/about/about_types.ps1xml).
 
 ## <a name="alias-properties"></a>Proprietà alias
 
@@ -65,7 +65,7 @@ Nell'esempio seguente viene aggiunta la proprietà **mode** al tipo [System. io.
 
 Una proprietà nota definisce una proprietà con un valore statico.
 
-Nell'esempio seguente, la proprietà **status** , il cui valore è sempre **Success**, viene aggiunta al tipo [System. io. DirectoryInfo](/dotnet/api/System.IO.DirectoryInfo) . L'elemento [NoteProperty](/dotnet/api/system.management.automation.psnoteproperty) definisce la proprietà estesa come proprietà di nota. L'elemento [Name](/dotnet/api/system.management.automation.psmemberinfo.name) specifica il nome della proprietà estesa. L'elemento [value](/dotnet/api/system.management.automation.psnoteproperty.value) specifica il valore statico della proprietà estesa. L'elemento `NoteProperty` può essere aggiunto anche ai membri dell'elemento [risultanti](/dotnet/api/system.management.automation.psmemberset) .
+Nell'esempio seguente, la proprietà **status** , il cui valore è sempre **Success**, viene aggiunta al tipo [System. io. DirectoryInfo](/dotnet/api/System.IO.DirectoryInfo) . L'elemento [NoteProperty](/dotnet/api/system.management.automation.psnoteproperty) definisce la proprietà estesa come proprietà di nota. L'elemento [Name](/dotnet/api/system.management.automation.psmemberinfo.name) specifica il nome della proprietà estesa. L'elemento [value](/dotnet/api/system.management.automation.psnoteproperty.value) specifica il valore statico della proprietà estesa. È inoltre possibile aggiungere l'elemento `NoteProperty` ai membri dell'elemento [risultanti](/dotnet/api/system.management.automation.psmemberset) .
 
 ```xml
 <Type>
@@ -102,10 +102,10 @@ Nell'esempio seguente, la proprietà **VERSIONINFO** viene aggiunta al tipo [Sys
 ## <a name="property-sets"></a>Set di proprietà
 
 Un set di proprietà definisce un gruppo di proprietà estese a cui è possibile fare riferimento tramite il nome del set.
-Il parametro della proprietà [Format-Table](/powershell/module/Microsoft.PowerShell.Utility/Format-Table)
- , ad esempio, può specificare un set di proprietà specifico da visualizzare. Quando si specifica un set di proprietà, vengono visualizzate solo le proprietà che appartengono al set.
+Il parametro [Format-Table](/powershell/module/Microsoft.PowerShell.Utility/Format-Table)
+**Property** , ad esempio, può specificare un set di proprietà specifico da visualizzare. Quando si specifica un set di proprietà, vengono visualizzate solo le proprietà che appartengono al set.
 
-Non esiste alcuna restrizione al numero di set di proprietà che possono essere definiti per un oggetto. Tuttavia, i set di proprietà utilizzati per definire le proprietà di visualizzazione predefinite di un oggetto devono essere specificati all'interno del set di membri **PSStandardMembers** . Nel file di tipi `Types.ps1xml` i nomi predefiniti dei set di proprietà includono **DefaultDisplayProperty**, **DefaultDisplayPropertySet**e **DefaultKeyPropertySet**. Eventuali set di proprietà aggiuntivi aggiunti al set di membri **PSStandardMembers** vengono ignorati.
+Non esiste alcuna restrizione al numero di set di proprietà che possono essere definiti per un oggetto. Tuttavia, i set di proprietà utilizzati per definire le proprietà di visualizzazione predefinite di un oggetto devono essere specificati all'interno del set di membri **PSStandardMembers** . Nel file dei tipi di `Types.ps1xml`, i nomi predefiniti dei set di proprietà includono **DefaultDisplayProperty**, **DefaultDisplayPropertySet**e **DefaultKeyPropertySet**. Eventuali set di proprietà aggiuntivi aggiunti al set di membri **PSStandardMembers** vengono ignorati.
 
 Nell'esempio seguente, il set di proprietà **DefaultDisplayPropertySet** viene aggiunto al set di membri **PSStandardMembers** del tipo [System. ServiceProcess. ServiceController](/dotnet/api/System.ServiceProcess.ServiceController) . L'elemento [PropertySet](/dotnet/api/system.management.automation.pspropertyset) definisce il gruppo di proprietà. L'elemento [Name](/dotnet/api/system.management.automation.psmemberinfo.name) specifica il nome del set di proprietà. L'elemento [ReferencedProperties](/dotnet/api/system.management.automation.pspropertyset.referencedpropertynames) specifica le proprietà del set. È anche possibile aggiungere l'elemento `PropertySet` ai membri dell'elemento [Type](/dotnet/api/system.management.automation.pstypename) .
 

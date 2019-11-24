@@ -49,7 +49,7 @@ Questa sezione descrive le linee guida da seguire quando si scrivono i cmdlet. S
 
 I sostantivi utilizzati nella denominazione dei cmdlet devono essere molto specifici, in modo che l'utente possa individuare i cmdlet. Prefisso sostantivi generici come "Server" con una versione abbreviata del nome del prodotto. Se, ad esempio, un sostantivo fa riferimento a un server in cui è in esecuzione un'istanza di Microsoft SQL Server, utilizzare un sostantivo come "SQLServer". La combinazione di sostantivi specifici e l'elenco breve dei verbi approvati consentono all'utente di individuare e prevedere rapidamente le funzionalità evitando la duplicazione tra i nomi dei cmdlet.
 
-Per migliorare l'esperienza utente, il sostantivo scelto per il nome di un cmdlet deve essere singolare. Usare, ad esempio, il nome `Get-Process` anziché **Get-processes**. È consigliabile seguire questa regola per tutti i nomi di cmdlet, anche quando è probabile che un cmdlet agisca su più di un elemento.
+Per migliorare l'esperienza utente, il sostantivo scelto per il nome di un cmdlet deve essere singolare. Ad esempio, usare il nome `Get-Process` anziché **Get-processes**. È consigliabile seguire questa regola per tutti i nomi di cmdlet, anche quando è probabile che un cmdlet agisca su più di un elemento.
 
 ### <a name="use-pascal-case-for-cmdlet-names-sd02"></a>Usa il caso Pascal per i nomi di cmdlet (SD02)
 
@@ -57,11 +57,11 @@ Usare il caso Pascal per i nomi dei parametri. In altre parole, capitalizzare la
 
 ### <a name="parameter-design-guidelines-sd03"></a>Linee guida per la progettazione di parametri (SD03)
 
-Un cmdlet richiede parametri che ricevono i dati su cui deve operare e parametri che indicano le informazioni utilizzate per determinare le caratteristiche dell'operazione. Ad esempio, un cmdlet può avere un parametro `Name` che riceve i dati dalla pipeline e il cmdlet potrebbe avere un parametro `Force` per indicare che il cmdlet può essere forzato a eseguire l'operazione. Non esiste alcun limite al numero di parametri che un cmdlet può definire.
+Un cmdlet richiede parametri che ricevono i dati su cui deve operare e parametri che indicano le informazioni utilizzate per determinare le caratteristiche dell'operazione. Ad esempio, un cmdlet potrebbe avere un `Name` parametro che riceve i dati dalla pipeline e il cmdlet potrebbe avere un `Force` parametro per indicare che il cmdlet può essere forzato a eseguire l'operazione. Non esiste alcun limite al numero di parametri che un cmdlet può definire.
 
 #### <a name="use-standard-parameter-names"></a>Usa nomi di parametro standard
 
-Il cmdlet deve usare nomi di parametro standard in modo che l'utente possa determinare rapidamente cosa significa un determinato parametro. Se è necessario un nome più specifico, usare un nome di parametro standard e quindi specificare un nome più specifico come alias. Ad esempio, il cmdlet `Get-Service` ha un parametro con un nome generico (`Name`) e un alias più specifico (`ServiceName`). Entrambi i termini possono essere utilizzati per specificare il parametro.
+Il cmdlet deve usare nomi di parametro standard in modo che l'utente possa determinare rapidamente cosa significa un determinato parametro. Se è necessario un nome più specifico, usare un nome di parametro standard e quindi specificare un nome più specifico come alias. Ad esempio, il cmdlet `Get-Service` dispone di un parametro con un nome generico (`Name`) e un alias più specifico (`ServiceName`). Entrambi i termini possono essere utilizzati per specificare il parametro.
 
 Per ulteriori informazioni sui nomi dei parametri e sui relativi tipi di dati, vedere il [nome del parametro del cmdlet e le linee guida sulle funzionalità](./standard-cmdlet-parameter-names-and-types.md).
 
@@ -97,13 +97,13 @@ I parametri devono essere definiti come tipi di .NET Framework per offrire una m
 
 #### <a name="use-consistent-parameter-types"></a>Usare tipi di parametri coerenti
 
-Quando lo stesso parametro viene usato da più cmdlet, usare sempre lo stesso tipo di parametro.  Se, ad esempio, il parametro `Process` è un tipo [System. Int16](/dotnet/api/System.Int16) per un cmdlet, non fare in modo che il parametro `Process` per un altro cmdlet sia un tipo [System. UInt16](/dotnet/api/System.UInt16) .
+Quando lo stesso parametro viene usato da più cmdlet, usare sempre lo stesso tipo di parametro.  Se, ad esempio, il `Process` parametro è un tipo [System. Int16](/dotnet/api/System.Int16) per un cmdlet, non rendere il `Process` parametro per un altro cmdlet un tipo [System. UInt16](/dotnet/api/System.UInt16) .
 
 #### <a name="parameters-that-take-true-and-false"></a>Parametri che accettano true e false
 
-Se il parametro accetta solo `true` e `false`, definire il parametro come Type [System. Management. Automation. SwitchParameter](/dotnet/api/System.Management.Automation.SwitchParameter). Un parametro switch viene trattato come `true` quando viene specificato in un comando. Se il parametro non è incluso in un comando, Windows PowerShell considera il valore del parametro come `false`. Non definire parametri booleani.
+Se il parametro accetta solo `true` e `false`, definire il parametro come Type [System. Management. Automation. SwitchParameter](/dotnet/api/System.Management.Automation.SwitchParameter). Un parametro switch viene trattato come `true` quando viene specificato in un comando. Se il parametro non è incluso in un comando, Windows PowerShell prende in considerazione il valore del parametro da `false`. Non definire parametri booleani.
 
-Se il parametro deve distinguere tra 3 valori: $true, $false e "Unspecified", definire un parametro di tipo Nullable @ no__t-0bool >.  La necessità di un terzo valore "non specificato" si verifica in genere quando il cmdlet può modificare una proprietà booleana di un oggetto. In questo caso "Unspecified" indica di non modificare il valore corrente della proprietà.
+Se il parametro deve distinguere tra 3 valori: $true, $false e "Unspecified", definire un parametro di tipo Nullable\<bool >.  La necessità di un terzo valore "non specificato" si verifica in genere quando il cmdlet può modificare una proprietà booleana di un oggetto. In questo caso "Unspecified" indica di non modificare il valore corrente della proprietà.
 
 #### <a name="support-arrays-for-parameters"></a>Supportare matrici per i parametri
 
@@ -111,7 +111,7 @@ Spesso gli utenti devono eseguire la stessa operazione su più argomenti. Per qu
 
 #### <a name="support-the-passthru-parameter"></a>Supporto del parametro PassThru
 
-Per impostazione predefinita, molti cmdlet che modificano il sistema, ad esempio il cmdlet [Stop-Process](/powershell/module/Microsoft.PowerShell.Management/Stop-Process) , fungono da "sink" per gli oggetti e non restituiscono alcun risultato. Questo cmdlet deve implementare il parametro `PassThru` per forzare il cmdlet alla restituzione di un oggetto. Quando viene specificato il parametro `PassThru`, il cmdlet restituisce un oggetto tramite una chiamata al metodo [System. Management. Automation. cmdlet. WriteObject](/dotnet/api/System.Management.Automation.Cmdlet.WriteObject) . Ad esempio, il comando seguente interrompe il processo Calc e passa il processo risultante alla pipeline.
+Per impostazione predefinita, molti cmdlet che modificano il sistema, ad esempio il cmdlet [Stop-Process](/powershell/module/Microsoft.PowerShell.Management/Stop-Process) , fungono da "sink" per gli oggetti e non restituiscono alcun risultato. Questo cmdlet deve implementare il parametro `PassThru` per forzare la restituzione di un oggetto da parte del cmdlet. Quando viene specificato il parametro `PassThru`, il cmdlet restituisce un oggetto tramite una chiamata al metodo [System. Management. Automation. cmdlet. WriteObject](/dotnet/api/System.Management.Automation.Cmdlet.WriteObject) . Ad esempio, il comando seguente interrompe il processo Calc e passa il processo risultante alla pipeline.
 
 ```powershell
 Stop-Process calc -passthru
@@ -139,7 +139,7 @@ Un cmdlet deve chiamare il metodo [System. Management. Automation. cmdlet. Write
 
 Un cmdlet deve chiamare il metodo [System. Management. Automation. cmdlet. WriteVerbose](/dotnet/api/System.Management.Automation.Cmdlet.WriteVerbose) quando l'utente richiede alcuni dettagli sulle operazioni svolte dal cmdlet. Un cmdlet, ad esempio, deve chiamare queste informazioni se l'autore del cmdlet ritiene che esistano scenari che potrebbero richiedere ulteriori informazioni sulle operazioni svolte dal cmdlet.
 
-Il cmdlet deve chiamare il metodo [System. Management. Automation. cmdlet. WriteDebug](/dotnet/api/System.Management.Automation.Cmdlet.WriteDebug) quando uno sviluppatore o un tecnico del supporto del prodotto deve comprendere cosa ha danneggiato l'operazione del cmdlet. Non è necessario che il cmdlet chiami il metodo [System. Management. Automation. cmdlet. WriteDebug](/dotnet/api/System.Management.Automation.Cmdlet.WriteDebug) nello stesso codice che chiama il metodo [System. Management. Automation. cmdlet. WriteVerbose](/dotnet/api/System.Management.Automation.Cmdlet.WriteVerbose) perché il parametro `Debug` presenta entrambi set di informazioni.
+Il cmdlet deve chiamare il metodo [System. Management. Automation. cmdlet. WriteDebug](/dotnet/api/System.Management.Automation.Cmdlet.WriteDebug) quando uno sviluppatore o un tecnico del supporto del prodotto deve comprendere cosa ha danneggiato l'operazione del cmdlet. Non è necessario che il cmdlet chiami il metodo [System. Management. Automation. cmdlet. WriteDebug](/dotnet/api/System.Management.Automation.Cmdlet.WriteDebug) nello stesso codice che chiama il metodo [System. Management. Automation. cmdlet. WriteVerbose](/dotnet/api/System.Management.Automation.Cmdlet.WriteVerbose) perché il parametro `Debug` presenta entrambi i set di informazioni.
 
 #### <a name="support-writeprogress-for-operations-that-take-a-long-time"></a>Supporto di WriteProgress per operazioni che importano molto tempo
 
@@ -170,9 +170,9 @@ Definire un parametro dichiarando una proprietà pubblica della classe cmdlet de
 
 Il percorso di Windows PowerShell è il meccanismo per normalizzare l'accesso agli spazi dei nomi. Quando si assegna un percorso di Windows PowerShell a un parametro nel cmdlet, l'utente può definire un'unità personalizzata che funge da collegamento a un percorso specifico. Quando un utente designa tale unità, i dati archiviati, ad esempio i dati nel registro di sistema, possono essere usati in modo coerente.
 
-Se il cmdlet consente all'utente di specificare un file o un'origine dati, deve definire un parametro di tipo [System. String](/dotnet/api/System.String). Se è supportata più di un'unità, il tipo deve essere una matrice. Il nome del parametro deve essere `Path`, con un alias di `PSPath`. Inoltre, il parametro `Path` deve supportare i caratteri jolly. Se non è necessario il supporto per i caratteri jolly, definire un parametro `LiteralPath`.
+Se il cmdlet consente all'utente di specificare un file o un'origine dati, deve definire un parametro di tipo [System. String](/dotnet/api/System.String). Se è supportata più di un'unità, il tipo deve essere una matrice. Il nome del parametro deve essere `Path`, con un alias di `PSPath`. Inoltre, il parametro `Path` deve supportare caratteri jolly. Se non è necessario il supporto per i caratteri jolly, definire un parametro `LiteralPath`.
 
-Se i dati letti o scritti dal cmdlet devono essere un file, il cmdlet deve accettare l'input del percorso di Windows PowerShell e il cmdlet deve usare la proprietà [System. Management. Automation. SessionState. Path](/dotnet/api/System.Management.Automation.SessionState.Path) per tradurre i percorsi di Windows PowerShell in percorsi riconosciuti dal file system. I meccanismi specifici includono i metodi seguenti:
+Se i dati letti o scritti dal cmdlet devono essere un file, il cmdlet deve accettare l'input del percorso di Windows PowerShell e il cmdlet deve usare la proprietà [System. Management. Automation. SessionState. Path](/dotnet/api/System.Management.Automation.SessionState.Path) per tradurre i percorsi di Windows PowerShell in percorsi riconosciuti dal file System. I meccanismi specifici includono i metodi seguenti:
 
 - [System. Management. Automation. PSCmdlet. GetResolvedProviderPathFromPSPath](/dotnet/api/System.Management.Automation.PSCmdlet.GetResolvedProviderPathFromPSPath)
 
@@ -182,11 +182,11 @@ Se i dati letti o scritti dal cmdlet devono essere un file, il cmdlet deve accet
 
 - [System. Management. Automation. PathIntrinsics. GetUnresolvedProviderPathFromPSPath](/dotnet/api/System.Management.Automation.PathIntrinsics.GetUnresolvedProviderPathFromPSPath)
 
-Se i dati letti o scritti dal cmdlet sono solo un set di stringhe anziché un file, il cmdlet deve usare le informazioni sul contenuto del provider (membro `Content`) per la lettura e la scrittura. Queste informazioni vengono ottenute dalla proprietà [System. Management. Automation. provider. CmdletProvider. InvokeProvider](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.InvokeProvider) . Questi meccanismi consentono ad altri archivi dati di partecipare alla lettura e alla scrittura dei dati.
+Se i dati letti o scritti dal cmdlet sono solo un set di stringhe anziché un file, il cmdlet deve utilizzare le informazioni sul contenuto del provider (`Content` membro) per la lettura e la scrittura. Queste informazioni vengono ottenute dalla proprietà [System. Management. Automation. provider. CmdletProvider. InvokeProvider](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.InvokeProvider) . Questi meccanismi consentono ad altri archivi dati di partecipare alla lettura e alla scrittura dei dati.
 
 #### <a name="support-wildcard-characters"></a>Supporto di caratteri jolly
 
-Se possibile, un cmdlet deve supportare i caratteri jolly. Il supporto per i caratteri jolly si verifica in molte posizioni in un cmdlet, specialmente quando un parametro accetta una stringa per identificare un oggetto da un set di oggetti. Ad esempio, il cmdlet di esempio **Stop-proc** dell' [esercitazione StopProc](./stopproc-tutorial.md) definisce un parametro `Name` per gestire le stringhe che rappresentano i nomi dei processi. Questo parametro supporta i caratteri jolly in modo che l'utente possa specificare facilmente i processi da arrestare.
+Se possibile, un cmdlet deve supportare i caratteri jolly. Il supporto per i caratteri jolly si verifica in molte posizioni in un cmdlet, specialmente quando un parametro accetta una stringa per identificare un oggetto da un set di oggetti. Ad esempio, il cmdlet **Stop-proc** di esempio dell' [esercitazione StopProc](./stopproc-tutorial.md) definisce un parametro `Name` per gestire le stringhe che rappresentano i nomi dei processi. Questo parametro supporta i caratteri jolly in modo che l'utente possa specificare facilmente i processi da arrestare.
 
 Quando è disponibile il supporto per i caratteri jolly, un'operazione di cmdlet in genere produce una matrice. In alcuni casi, non ha senso supportare una matrice perché l'utente potrebbe usare un solo elemento alla volta. Il cmdlet [set-location](/powershell/module/Microsoft.PowerShell.Management/Set-Location) , ad esempio, non deve supportare una matrice perché l'utente sta impostando una sola posizione. In questo caso, il cmdlet supporta ancora caratteri jolly, ma forza la risoluzione in un'unica posizione.
 
@@ -206,7 +206,7 @@ Se si progetta un oggetto per un cmdlet, verificare che i relativi membri siano 
 
 Gli oggetti .NET Framework preesistenti restituiti dai cmdlet spesso non dispongono di membri importanti o pratici necessari per lo sviluppatore o l'utente di script. Questi membri mancanti possono essere particolarmente importanti per la visualizzazione e per creare i nomi dei membri corretti in modo che l'oggetto possa essere passato correttamente alla pipeline. Creare un file types. ps1xml personalizzato per documentare questi membri obbligatori. Quando si crea questo file, è consigliabile usare la convenzione di denominazione seguente: *< Your_Product_Name >* . Types. ps1xml.
 
-Ad esempio, è possibile aggiungere una proprietà di script `Mode` al tipo [System. io. FileInfo](/dotnet/api/System.IO.FileInfo) per visualizzare più chiaramente gli attributi di un file. Inoltre, è possibile aggiungere una proprietà alias `Count` al tipo [System. Array](/dotnet/api/System.Array) per consentire l'uso coerente del nome di tale proprietà (anziché `Length`).
+Ad esempio, è possibile aggiungere una proprietà script `Mode` al tipo [System. io. FileInfo](/dotnet/api/System.IO.FileInfo) per visualizzare più chiaramente gli attributi di un file. Inoltre, è possibile aggiungere una proprietà alias `Count` al tipo [System. Array](/dotnet/api/System.Array) per consentire l'uso coerente del nome di tale proprietà (anziché `Length`).
 
 ##### <a name="implement-the-icomparable-interface"></a>Implementare l'interfaccia IComparable
 
@@ -214,7 +214,7 @@ Implementare un'interfaccia [System. IComparable](/dotnet/api/System.IComparable
 
 ##### <a name="update-display-information"></a>Aggiornare le informazioni di visualizzazione
 
-Se la visualizzazione di un oggetto non fornisce i risultati previsti, creare un *> \<YourProductName*personalizzato. File format. ps1xml per l'oggetto.
+Se la visualizzazione di un oggetto non fornisce i risultati previsti, creare una\<personalizzata *> YourProductName*. File format. ps1xml per l'oggetto.
 
 ### <a name="support-well-defined-pipeline-input-sc02"></a>Supporto per input della pipeline ben definito (SC02)
 
@@ -226,7 +226,7 @@ Implementare un cmdlet presumendo che venga chiamato dal centro di una pipeline,
 
 In ogni set di parametri per un cmdlet, includere almeno un parametro che supporta l'input dalla pipeline. Il supporto per l'input della pipeline consente all'utente di recuperare dati o oggetti, di inviarli al set di parametri corretto e di passare i risultati direttamente a un cmdlet.
 
-Un parametro accetta input dalla pipeline se l'attributo del **parametro** include la parola chiave `ValueFromPipeline`, l'attributo della parola chiave `ValueFromPipelineByPropertyName` o entrambe le parole chiave nella relativa dichiarazione. Se nessuno dei parametri in un set di parametri supporta le parole chiave `ValueFromPipeline` o `ValueFromPipelineByPropertyName`, il cmdlet non può essere inserito in maniera significativa dopo un altro cmdlet perché ignorerà qualsiasi input della pipeline.
+Un parametro accetta input dalla pipeline se l'attributo del **parametro** include la parola chiave `ValueFromPipeline`, l'attributo della parola chiave `ValueFromPipelineByPropertyName` o entrambe le parole chiave nella relativa dichiarazione. Se nessuno dei parametri in un set di parametri supporta le parole chiave `ValueFromPipeline` o `ValueFromPipelineByPropertyName`, il cmdlet non può essere inserito in maniera significativa dopo un altro cmdlet, perché ignorerà qualsiasi input della pipeline.
 
 #### <a name="support-the-processrecord-method"></a>Supporto del metodo ProcessRecord
 

@@ -23,7 +23,7 @@ Nelle procedure riportate di seguito viene descritto come creare un flusso di la
 
 ### <a name="setting-up-the-project"></a>Impostazione del progetto
 
-1. Seguire la procedura descritta in [aggiunta di attività di Windows PowerShell alla casella degli strumenti di Visual Studio](./adding-windows-powershell-activities-to-the-visual-studio-toolbox.md) per creare un progetto di flusso di lavoro e aggiungere le attività da [Microsoft. PowerShell. Activities](/dotnet/api/Microsoft.PowerShell.Activities) e [Microsoft. PowerShell. Management. Activities. ](/dotnet/api/Microsoft.PowerShell.Management.Activities)assembly nella casella degli strumenti.
+1. Per creare un progetto flusso di lavoro e aggiungere le attività dagli assembly [Microsoft. PowerShell. Activities](/dotnet/api/Microsoft.PowerShell.Activities) e [Microsoft. PowerShell. Management. Activities](/dotnet/api/Microsoft.PowerShell.Management.Activities) alla casella degli strumenti, seguire la procedura descritta in [aggiunta di attività di Windows PowerShell alla casella degli strumenti di Visual Studio](./adding-windows-powershell-activities-to-the-visual-studio-toolbox.md) .
 
 2. Aggiungere System. Management. Automation, Microsoft. PowerShell. Activities, System. Management, Microsoft. PowerShell. Management. Activities e Microsoft. PowerShell. Commands. Management come al progetto come assembly di riferimento.
 
@@ -45,7 +45,7 @@ Nelle procedure riportate di seguito viene descritto come creare un flusso di la
 
 8. Modificare le proprietà dell'attività **GetWmiObject** come indicato di seguito.
 
-   |Proprietà|Value|
+   |Proprietà|Valore|
    |--------------|-----------|
    |**Classe**|"Win32_ComputerSystem"|
    |**PSComputerName**|comp|
@@ -55,7 +55,7 @@ Nelle procedure riportate di seguito viene descritto come creare un flusso di la
 
 10. Modificare le proprietà dell'attività **AddComputer** come indicato di seguito.
 
-    |Proprietà|Value|
+    |Proprietà|Valore|
     |--------------|-----------|
     |**ComputerName**|comp|
     |**DomainCredential**|DomainCred|
@@ -64,7 +64,7 @@ Nelle procedure riportate di seguito viene descritto come creare un flusso di la
 
 12. Modificare le proprietà dell'attività **RestartComputer** come indicato di seguito.
 
-    |Proprietà|Value|
+    |Proprietà|Valore|
     |--------------|-----------|
     |**ComputerName**|comp|
     |**Credenziali**|MachineCred|
@@ -77,4 +77,5 @@ Nelle procedure riportate di seguito viene descritto come creare un flusso di la
 
     Una volta completate le procedure, la finestra di progettazione del flusso di lavoro avrà un aspetto simile al seguente.
 
-    XAML ![JoinDomain in Progettazione flussi di lavoro @ no__t-1![JoinDomain XAML in Workflow Designer](../media/joindomainworkflow.png "JoinDomainWorkflow")
+    ![XAML JoinDomain in Progettazione flussi di lavoro](../media/joindomainworkflow.png)
+    ![XAML JoinDomain in Progettazione flussi di lavoro](../media/joindomainworkflow.png "JoinDomainWorkflow")

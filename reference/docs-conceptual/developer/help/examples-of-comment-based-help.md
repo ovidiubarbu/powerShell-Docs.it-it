@@ -145,7 +145,7 @@ C:\PS> get-help add-extension -full
 
 La funzione di esempio seguente include la guida basata su commenti.
 
-Si notino le righe vuote tra il @no__t di chiusura **-1** e l'istruzione `Param`. In uno script che non include un'istruzione `Param`, deve essere presente almeno due righe vuote tra il commento finale nell'argomento della guida e la prima dichiarazione di funzione. Senza queste righe vuote, Get-Help associa l'argomento della Guida alla funzione, invece dello script.
+Si notino le righe vuote tra il **#>** di chiusura e l'istruzione `Param`. In uno script che non include un'istruzione `Param`, è necessario che esistano almeno due righe vuote tra il commento finale nell'argomento della guida e la prima dichiarazione di funzione. Senza queste righe vuote, Get-Help associa l'argomento della Guida alla funzione, invece dello script.
 
 ```powershell
 <#
@@ -282,7 +282,7 @@ function Add-Extension
     #>
 ```
 
-I risultati corrispondono ai risultati dell'esempio 1. Get-Help interpreta le descrizioni dei parametri come se fossero accompagnate dalla parola chiave `.Parameter`.
+I risultati corrispondono ai risultati dell'esempio 1. Get-Help interpreta le descrizioni dei parametri come se fossero accompagnati dalla parola chiave `.Parameter`.
 
 ## <a name="example-4--redirecting-to-an-xml-file"></a>Esempio 4: Reindirizzamento a un file XML
 

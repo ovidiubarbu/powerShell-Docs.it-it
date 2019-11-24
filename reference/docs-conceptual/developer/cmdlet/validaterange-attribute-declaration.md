@@ -41,9 +41,9 @@ L'attributo ValidateRange specifica i valori minimo e massimo (intervallo) per l
 
 - Il runtime di Windows PowerShell genera un errore di convalida nelle condizioni seguenti:
 
-    - Quando il valore dell'argomento è inferiore al limite di @no__t 0 o maggiore del limite di `MaxRange`.
+    - Quando il valore dell'argomento è minore del limite `MinRange` o maggiore del limite di `MaxRange`.
 
-    - Quando l'argomento non è dello stesso tipo del `MinRange` e dei parametri `MaxRange`.
+    - Quando l'argomento non è dello stesso tipo del `MinRange` e dei parametri di `MaxRange`.
 
 - L'attributo ValidateRange è definito dalla classe [System. Management. Automation. Validaterangeattribute](/dotnet/api/System.Management.Automation.ValidateRangeAttribute) .
 

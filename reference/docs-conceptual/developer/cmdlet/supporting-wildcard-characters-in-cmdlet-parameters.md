@@ -22,7 +22,7 @@ Spesso è necessario progettare un cmdlet per l'esecuzione su un gruppo di risor
 
 ## <a name="windows-powershell-cmdlets-that-use-wildcards"></a>Cmdlet di Windows PowerShell che usano caratteri jolly
 
- Molti cmdlet di Windows PowerShell supportano i caratteri jolly per i valori dei parametri. Ad esempio, quasi tutti i cmdlet con un parametro `Name` o `Path` supportano i caratteri jolly per questi parametri. Sebbene la maggior parte dei cmdlet con un parametro `Path` disponga anche di un parametro `LiteralPath` che non supporta caratteri jolly. Il seguente comando Mostra come viene usato un carattere jolly per restituire tutti i cmdlet della sessione corrente il cui nome contiene il verbo Get.
+ Molti cmdlet di Windows PowerShell supportano i caratteri jolly per i valori dei parametri. Ad esempio, quasi tutti i cmdlet con un parametro `Name` o `Path` supportano i caratteri jolly per questi parametri. Sebbene la maggior parte dei cmdlet con un parametro di `Path` disponga anche di un parametro di `LiteralPath` che non supporta caratteri jolly. Il seguente comando Mostra come viene usato un carattere jolly per restituire tutti i cmdlet della sessione corrente il cui nome contiene il verbo Get.
 
  `Get-Command get-*`
 
@@ -30,7 +30,7 @@ Spesso è necessario progettare un cmdlet per l'esecuzione su un gruppo di risor
 
 Windows PowerShell supporta i caratteri jolly seguenti.
 
-| Jolly |                             Description                             |  Esempio   |     Corrispondenza      | Non corrisponde a |
+| Jolly |                             Descrizione                             |  Esempio   |     Corrispondenza      | Non corrisponde a |
 | -------- | ------------------------------------------------------------------- | ---------- | ---------------- | -------------- |
 | *        | Trova la corrispondenza di zero o più caratteri, a partire dalla posizione specificata | `a*`       | A, AG, Apple     |                |
 | ?        | Corrisponde a qualsiasi carattere nella posizione specificata                     | `?n`       | Un, in, on       | corse            |
@@ -41,7 +41,7 @@ Quando si progettano i cmdlet che supportano caratteri jolly, consentire combina
 
 `Get-ChildItem c:\techdocs\[a-l]\*.txt`
 
-Il comando precedente utilizza il carattere jolly di intervallo `[a-l]` per specificare che il nome del file deve iniziare con i caratteri "a" e "l" e utilizza il carattere jolly `*` come segnaposto per qualsiasi carattere tra la prima lettera del nome file e il file con **estensione txt.** estensione.
+Il comando precedente utilizza il carattere jolly di intervallo `[a-l]` per specificare che il nome file deve iniziare con i caratteri "a" e "l" e utilizza il carattere jolly `*` come segnaposto per qualsiasi carattere tra la prima lettera del nome file e l'estensione **txt** .
 
 Nell'esempio seguente viene usato un modello di carattere jolly di intervallo che esclude la lettera "d", ma include tutte le altre lettere da "a" a "f".
 
@@ -55,11 +55,11 @@ Il modello seguente, ad esempio, contiene due parentesi quadre che devono essere
 
 Quando usato nell'API PowerShell, usare:
 
-- "John Smith \` [*']"
+- "John Smith \`[*']"
 
 Quando viene usato dal prompt dei comandi di PowerShell:
 
-- "John Smith \` @ no__t-1 [* \`']"
+- "John Smith \`\`[*\`']"
 
 Questo modello corrisponde a "John Smith [marketing]" o "John Smith [development]". Ad esempio:
 
