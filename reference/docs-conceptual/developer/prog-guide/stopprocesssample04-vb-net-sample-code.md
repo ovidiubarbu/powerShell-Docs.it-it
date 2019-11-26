@@ -1,5 +1,5 @@
 ---
-title: StopProcessSample04 (VB.NET) Sample Code | Microsoft Docs
+title: Codice di esempio StopProcessSample04 (VB.NET) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/13/2016
 ms.reviewer: ''
@@ -17,12 +17,12 @@ ms.locfileid: "74417816"
 ---
 # <a name="stopprocesssample04-vbnet-sample-code"></a>Codice di esempio di StopProcessSample04 (VB.NET)
 
-Here is the complete VB.NET sample code for the StopProc04 sample cmdlet. This is the code for the `Stop-Process` cmdlet described in [Adding Parameter Sets to a Cmdlet](../cmdlet/adding-parameter-sets-to-a-cmdlet.md). The `Stop-Process` cmdlet is designed to stop processes that are retrieved using the Get-Proc cmdlet (described in [Creating Your First Cmdlet](../cmdlet/creating-a-cmdlet-without-parameters.md)).
+Ecco il codice di esempio VB.NET completo per il cmdlet di esempio StopProc04. Questo è il codice per il cmdlet `Stop-Process` descritto in [aggiunta di set di parametri a un cmdlet](../cmdlet/adding-parameter-sets-to-a-cmdlet.md). Il cmdlet `Stop-Process` è progettato per arrestare i processi recuperati tramite il cmdlet Get-proc, descritto in [creazione del primo cmdlet](../cmdlet/creating-a-cmdlet-without-parameters.md).
 
 > [!NOTE]
-> You can download the VB.NET (stopprocesssample04.vb) source file for this Stop-Proc cmdlet using the Microsoft Windows Software Development Kit for Windows Vista and .NET Framework 3.0 Runtime Components. For download instructions, see [How to Install Windows PowerShell and Download the Windows PowerShell SDK](/powershell/scripting/developer/installing-the-windows-powershell-sdk).
+> È possibile scaricare il file di origine VB.NET (stopprocesssample04. vb) per questo cmdlet Stop-proc utilizzando Microsoft Windows Software Development Kit per i componenti di runtime di Windows Vista e .NET Framework 3,0. Per istruzioni sul download, vedere [come installare Windows PowerShell e scaricare Windows PowerShell SDK](/powershell/scripting/developer/installing-the-windows-powershell-sdk).
 >
-> The downloaded source files are available in the **\<PowerShell Samples>** directory.
+> I file di origine scaricati sono disponibili nella directory **\<PowerShell samples >** .
 
 ```vb
 Imports System
@@ -479,6 +479,6 @@ End Namespace
 
 ## <a name="see-also"></a>Vedere anche
 
-[Windows PowerShell Programmer's Guide](./windows-powershell-programmer-s-guide.md)
+[Guida per programmatori di Windows PowerShell](./windows-powershell-programmer-s-guide.md)
 
 [Windows PowerShell SDK](../windows-powershell-reference.md)
