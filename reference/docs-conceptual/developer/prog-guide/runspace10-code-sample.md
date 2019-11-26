@@ -1,5 +1,5 @@
 ---
-title: RunSpace10 Code Sample | Microsoft Docs
+title: Esempio di codice RunSpace10 | Microsoft Docs
 ms.custom: ''
 ms.date: 09/13/2016
 ms.reviewer: ''
@@ -15,21 +15,21 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74417860"
 ---
-# <a name="runspace10-code-sample"></a><span data-ttu-id="f22b9-102">Codice di esempio di Runspace10</span><span class="sxs-lookup"><span data-stu-id="f22b9-102">RunSpace10 Code Sample</span></span>
+# <a name="runspace10-code-sample"></a><span data-ttu-id="4962c-102">Codice di esempio di Runspace10</span><span class="sxs-lookup"><span data-stu-id="4962c-102">RunSpace10 Code Sample</span></span>
 
-<span data-ttu-id="f22b9-103">Here is the source code for the Runspace10 sample.</span><span class="sxs-lookup"><span data-stu-id="f22b9-103">Here is the source code for the Runspace10 sample.</span></span> <span data-ttu-id="f22b9-104">This sample application adds a cmdlet to [System.Management.Automation.Runspaces.Runspaceconfiguration](/dotnet/api/System.Management.Automation.Runspaces.RunspaceConfiguration) and then uses the modified configuration information to create the runspace.</span><span class="sxs-lookup"><span data-stu-id="f22b9-104">This sample application adds a cmdlet to [System.Management.Automation.Runspaces.Runspaceconfiguration](/dotnet/api/System.Management.Automation.Runspaces.RunspaceConfiguration) and then uses the modified configuration information to create the runspace.</span></span>
+<span data-ttu-id="4962c-103">Ecco il codice sorgente per l'esempio Runspace10.</span><span class="sxs-lookup"><span data-stu-id="4962c-103">Here is the source code for the Runspace10 sample.</span></span> <span data-ttu-id="4962c-104">Questa applicazione di esempio aggiunge un cmdlet a [System. Management. Automation. Runspaces. RunspaceConfiguration](/dotnet/api/System.Management.Automation.Runspaces.RunspaceConfiguration) e quindi usa le informazioni di configurazione modificate per creare il spazio.</span><span class="sxs-lookup"><span data-stu-id="4962c-104">This sample application adds a cmdlet to [System.Management.Automation.Runspaces.Runspaceconfiguration](/dotnet/api/System.Management.Automation.Runspaces.RunspaceConfiguration) and then uses the modified configuration information to create the runspace.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="f22b9-105">You can download the C# source file (runspace10.cs) by using the Windows Software Development Kit for Windows Vista and Microsoft .NET Framework 3.0 Runtime Components.</span><span class="sxs-lookup"><span data-stu-id="f22b9-105">You can download the C# source file (runspace10.cs) by using the Windows Software Development Kit for Windows Vista and Microsoft .NET Framework 3.0 Runtime Components.</span></span> <span data-ttu-id="f22b9-106">For download instructions, see [How to Install Windows PowerShell and Download the Windows PowerShell SDK](/powershell/scripting/developer/installing-the-windows-powershell-sdk).</span><span class="sxs-lookup"><span data-stu-id="f22b9-106">For download instructions, see [How to Install Windows PowerShell and Download the Windows PowerShell SDK](/powershell/scripting/developer/installing-the-windows-powershell-sdk).</span></span>
+> <span data-ttu-id="4962c-105">È possibile scaricare il C# file di origine (runspace10.cs) utilizzando Windows Software Development Kit per i componenti di runtime di Windows Vista e Microsoft .NET Framework 3,0.</span><span class="sxs-lookup"><span data-stu-id="4962c-105">You can download the C# source file (runspace10.cs) by using the Windows Software Development Kit for Windows Vista and Microsoft .NET Framework 3.0 Runtime Components.</span></span> <span data-ttu-id="4962c-106">Per istruzioni sul download, vedere [come installare Windows PowerShell e scaricare Windows PowerShell SDK](/powershell/scripting/developer/installing-the-windows-powershell-sdk).</span><span class="sxs-lookup"><span data-stu-id="4962c-106">For download instructions, see [How to Install Windows PowerShell and Download the Windows PowerShell SDK](/powershell/scripting/developer/installing-the-windows-powershell-sdk).</span></span>
 >
-> <span data-ttu-id="f22b9-107">The downloaded source files are available in the **\<PowerShell Samples>** directory.</span><span class="sxs-lookup"><span data-stu-id="f22b9-107">The downloaded source files are available in the **\<PowerShell Samples>** directory.</span></span>
+> <span data-ttu-id="4962c-107">I file di origine scaricati sono disponibili nella directory **\<PowerShell samples >** .</span><span class="sxs-lookup"><span data-stu-id="4962c-107">The downloaded source files are available in the **\<PowerShell Samples>** directory.</span></span>
 
-## <a name="code-sample"></a><span data-ttu-id="f22b9-108">Code Sample</span><span class="sxs-lookup"><span data-stu-id="f22b9-108">Code Sample</span></span>
+## <a name="code-sample"></a><span data-ttu-id="4962c-108">Esempio di codice</span><span class="sxs-lookup"><span data-stu-id="4962c-108">Code Sample</span></span>
 
 [!code-csharp[Runspace10.cs](../../../../powershell-sdk-samples/SDK-2.0/csharp/Runspace10/Runspace10.cs#L11-L118 "Runspace10.cs")]
 
-## <a name="see-also"></a><span data-ttu-id="f22b9-109">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="f22b9-109">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="4962c-109">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="4962c-109">See Also</span></span>
 
-[<span data-ttu-id="f22b9-110">Windows PowerShell Programmer's Guide</span><span class="sxs-lookup"><span data-stu-id="f22b9-110">Windows PowerShell Programmer's Guide</span></span>](./windows-powershell-programmer-s-guide.md)
+[<span data-ttu-id="4962c-110">Guida per programmatori di Windows PowerShell</span><span class="sxs-lookup"><span data-stu-id="4962c-110">Windows PowerShell Programmer's Guide</span></span>](./windows-powershell-programmer-s-guide.md)
 
-[<span data-ttu-id="f22b9-111">Windows PowerShell SDK</span><span class="sxs-lookup"><span data-stu-id="f22b9-111">Windows PowerShell SDK</span></span>](../windows-powershell-reference.md)
+[<span data-ttu-id="4962c-111">Windows PowerShell SDK</span><span class="sxs-lookup"><span data-stu-id="4962c-111">Windows PowerShell SDK</span></span>](../windows-powershell-reference.md)

@@ -1,5 +1,5 @@
 ---
-title: RunSpace04  (VB.NET) Code Sample | Microsoft Docs
+title: Esempio di codice RunSpace04 (VB.NET) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/13/2016
 ms.reviewer: ''
@@ -15,16 +15,16 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74417957"
 ---
-# <a name="runspace04--vbnet-code-sample"></a><span data-ttu-id="bcd23-102">Codice di esempio di Runspace04 (VB.NET)</span><span class="sxs-lookup"><span data-stu-id="bcd23-102">RunSpace04  (VB.NET) Code Sample</span></span>
+# <a name="runspace04--vbnet-code-sample"></a><span data-ttu-id="bba80-102">Codice di esempio di Runspace04 (VB.NET)</span><span class="sxs-lookup"><span data-stu-id="bba80-102">RunSpace04  (VB.NET) Code Sample</span></span>
 
-<span data-ttu-id="bcd23-103">Here is the VB.NET source code for the Runspace04 sample.</span><span class="sxs-lookup"><span data-stu-id="bcd23-103">Here is the VB.NET source code for the Runspace04 sample.</span></span> <span data-ttu-id="bcd23-104">This sample uses the [System.Management.Automation.Runspaceinvoke](/dotnet/api/System.Management.Automation.RunspaceInvoke) class to execute a script that generates a terminating error.</span><span class="sxs-lookup"><span data-stu-id="bcd23-104">This sample uses the [System.Management.Automation.Runspaceinvoke](/dotnet/api/System.Management.Automation.RunspaceInvoke) class to execute a script that generates a terminating error.</span></span> <span data-ttu-id="bcd23-105">The host application is responsible for catching the error and interpreting the error record.</span><span class="sxs-lookup"><span data-stu-id="bcd23-105">The host application is responsible for catching the error and interpreting the error record.</span></span>
+<span data-ttu-id="bba80-103">Ecco il codice sorgente VB.NET per l'esempio Runspace04.</span><span class="sxs-lookup"><span data-stu-id="bba80-103">Here is the VB.NET source code for the Runspace04 sample.</span></span> <span data-ttu-id="bba80-104">Questo esempio usa la classe [System. Management. Automation. Runspaceinvoke](/dotnet/api/System.Management.Automation.RunspaceInvoke) per eseguire uno script che genera un errore di terminazione.</span><span class="sxs-lookup"><span data-stu-id="bba80-104">This sample uses the [System.Management.Automation.Runspaceinvoke](/dotnet/api/System.Management.Automation.RunspaceInvoke) class to execute a script that generates a terminating error.</span></span> <span data-ttu-id="bba80-105">L'applicazione host è responsabile di intercettare l'errore e di interpretare il record di errore.</span><span class="sxs-lookup"><span data-stu-id="bba80-105">The host application is responsible for catching the error and interpreting the error record.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="bcd23-106">You can download the VB.NET source file (runspace02.vb) for this sample by using the Windows Software Development Kit for Windows Vista and Microsoft .NET Framework 3.0 Runtime Components.</span><span class="sxs-lookup"><span data-stu-id="bcd23-106">You can download the VB.NET source file (runspace02.vb) for this sample by using the Windows Software Development Kit for Windows Vista and Microsoft .NET Framework 3.0 Runtime Components.</span></span> <span data-ttu-id="bcd23-107">For download instructions, see [How to Install Windows PowerShell and Download the Windows PowerShell SDK](/powershell/scripting/developer/installing-the-windows-powershell-sdk).</span><span class="sxs-lookup"><span data-stu-id="bcd23-107">For download instructions, see [How to Install Windows PowerShell and Download the Windows PowerShell SDK](/powershell/scripting/developer/installing-the-windows-powershell-sdk).</span></span>
+> <span data-ttu-id="bba80-106">È possibile scaricare il file di origine VB.NET (runspace02. vb) per questo esempio utilizzando Windows Software Development Kit per i componenti di runtime di Windows Vista e Microsoft .NET Framework 3,0.</span><span class="sxs-lookup"><span data-stu-id="bba80-106">You can download the VB.NET source file (runspace02.vb) for this sample by using the Windows Software Development Kit for Windows Vista and Microsoft .NET Framework 3.0 Runtime Components.</span></span> <span data-ttu-id="bba80-107">Per istruzioni sul download, vedere [come installare Windows PowerShell e scaricare Windows PowerShell SDK](/powershell/scripting/developer/installing-the-windows-powershell-sdk).</span><span class="sxs-lookup"><span data-stu-id="bba80-107">For download instructions, see [How to Install Windows PowerShell and Download the Windows PowerShell SDK](/powershell/scripting/developer/installing-the-windows-powershell-sdk).</span></span>
 >
-> <span data-ttu-id="bcd23-108">The downloaded source files are available in the **\<PowerShell Samples>** directory.</span><span class="sxs-lookup"><span data-stu-id="bcd23-108">The downloaded source files are available in the **\<PowerShell Samples>** directory.</span></span>
+> <span data-ttu-id="bba80-108">I file di origine scaricati sono disponibili nella directory **\<PowerShell samples >** .</span><span class="sxs-lookup"><span data-stu-id="bba80-108">The downloaded source files are available in the **\<PowerShell Samples>** directory.</span></span>
 
-## <a name="code-sample"></a><span data-ttu-id="bcd23-109">Code Sample</span><span class="sxs-lookup"><span data-stu-id="bcd23-109">Code Sample</span></span>
+## <a name="code-sample"></a><span data-ttu-id="bba80-109">Esempio di codice</span><span class="sxs-lookup"><span data-stu-id="bba80-109">Code Sample</span></span>
 
 ```vb
 Imports System
@@ -115,8 +115,8 @@ End Namespace
 
 <!-- TODO!!!: [!code-csharp[Runspace04.vb](../../powershell-sdk-samples/SDK-2.0/vb/Runspace01/Runspace04.vb#L09-L92 "Runspace04.vb")] -->
 
-## <a name="see-also"></a><span data-ttu-id="bcd23-110">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="bcd23-110">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="bba80-110">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="bba80-110">See Also</span></span>
 
-[<span data-ttu-id="bcd23-111">Windows PowerShell Programmer's Guide</span><span class="sxs-lookup"><span data-stu-id="bcd23-111">Windows PowerShell Programmer's Guide</span></span>](./windows-powershell-programmer-s-guide.md)
+[<span data-ttu-id="bba80-111">Guida per programmatori di Windows PowerShell</span><span class="sxs-lookup"><span data-stu-id="bba80-111">Windows PowerShell Programmer's Guide</span></span>](./windows-powershell-programmer-s-guide.md)
 
-[<span data-ttu-id="bcd23-112">Windows PowerShell SDK</span><span class="sxs-lookup"><span data-stu-id="bcd23-112">Windows PowerShell SDK</span></span>](../windows-powershell-reference.md)
+[<span data-ttu-id="bba80-112">Windows PowerShell SDK</span><span class="sxs-lookup"><span data-stu-id="bba80-112">Windows PowerShell SDK</span></span>](../windows-powershell-reference.md)
