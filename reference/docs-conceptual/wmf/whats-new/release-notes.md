@@ -3,12 +3,12 @@ ms.date: 06/12/2017
 ms.topic: conceptual
 keywords: wmf,powershell,installazione
 title: Note sulla versione per WMF 5.x
-ms.openlocfilehash: 8924240a4bbedcd34bc68b7cacdd23189a3716d6
-ms.sourcegitcommit: 0a6b562a497860caadba754c75a83215315d37a1
+ms.openlocfilehash: 3fc712dbcbe184c60ae248b260c8f6800f111fdd
+ms.sourcegitcommit: d43f66071f1f33b350d34fa1f46f3a35910c5d24
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71147581"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74416510"
 ---
 # <a name="windows-management-framework-wmf-5x-release-notes"></a>Note sulla versione di Windows Management Framework (WMF) 5.x
 
@@ -56,8 +56,8 @@ A partire dalla versione 5.1, PowerShell è disponibile in diverse edizioni che 
 
 - [Determinare l'edizione di PowerShell in esecuzione con $PSVersionTable](/powershell/module/microsoft.powershell.core/about/about_automatic_variables)
 - [Filtrare i risultati di Get-Module in base a CompatiblePSEditions con il parametro PSEdition](/powershell/module/microsoft.powershell.core/get-module)
-- [Impedire l'esecuzione di script a meno che non vengano eseguiti in un'edizione compatibile di PowerShell](/powershell/gallery/concepts/script-psedition-support)
-- [Dichiarare la compatibilità di un modulo con versioni specifiche di PowerShell](/powershell/gallery/concepts/module-psedition-support)
+- [Impedire l'esecuzione di script a meno che non vengano eseguiti in un'edizione compatibile di PowerShell](/powershell/scripting/gallery/concepts/script-psedition-support)
+- [Dichiarare la compatibilità di un modulo con versioni specifiche di PowerShell](/powershell/scripting/gallery/concepts/module-psedition-support)
 
 ## <a name="module-analysis-cache"></a>Modulo Analysis Cache
 

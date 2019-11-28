@@ -2,12 +2,12 @@
 ms.date: 12/12/2018
 keywords: dsc,powershell,configurazione,installazione
 title: Uso di Import-DSCResource
-ms.openlocfilehash: f6c1260bac7d4c545f5a6bc4c098ca90ebb186b5
-ms.sourcegitcommit: 18985d07ef024378c8590dc7a983099ff9225672
+ms.openlocfilehash: 4bc269ab1dd4696298b4f33f7661473aae869eba
+ms.sourcegitcommit: d43f66071f1f33b350d34fa1f46f3a35910c5d24
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71954058"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74417416"
 ---
 # <a name="using-import-dscresource"></a>Uso di Import-DSCResource
 
@@ -147,7 +147,7 @@ Copiare il contenuto della versione del modulo desiderata nel livello superiore 
 
 ### <a name="resource-location"></a>Posizione risorsa
 
-Durante la creazione e la compilazione di configurazioni, le risorse possono essere archiviate in qualsiasi directory specificata mediante [PSModulePath](/powershell/developer/module/modifying-the-psmodulepath-installation-path). In PowerShell 4.0, Gestione configurazione locale richiede che tutti i moduli delle risorse DSC siano archiviati in "Programmi\WindowsPowerShell\Modules" o `$pshome\Modules`. A partire da PowerShell 5.0, questo requisito è stato rimosso e i moduli delle risorse possono essere archiviati in qualsiasi directory specificata mediante `PSModulePath`.
+Durante la creazione e la compilazione di configurazioni, le risorse possono essere archiviate in qualsiasi directory specificata mediante [PSModulePath](/powershell/scripting/developer/module/modifying-the-psmodulepath-installation-path). In PowerShell 4.0, Gestione configurazione locale richiede che tutti i moduli delle risorse DSC siano archiviati in "Programmi\WindowsPowerShell\Modules" o `$pshome\Modules`. A partire da PowerShell 5.0, questo requisito è stato rimosso e i moduli delle risorse possono essere archiviati in qualsiasi directory specificata mediante `PSModulePath`.
 
 ### <a name="moduleversion-added"></a>Aggiunta di ModuleVersion
 

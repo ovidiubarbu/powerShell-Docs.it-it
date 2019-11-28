@@ -3,12 +3,12 @@ ms.date: 06/09/2017
 schema: 2.0.0
 keywords: powershell
 title: Valori del manifesto dei pacchetti con effetti sull'interfaccia utente di PowerShell Gallery
-ms.openlocfilehash: cedf81df8de29c54ef559a800d654305029491ec
-ms.sourcegitcommit: 4a2cf30351620a58ba95ff5d76b247e601907589
+ms.openlocfilehash: 9e37fec879f2f5cbe3926c7dbc946389425d856a
+ms.sourcegitcommit: d43f66071f1f33b350d34fa1f46f3a35910c5d24
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71328132"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74417056"
 ---
 # <a name="package-manifest-values-that-impact-the-powershell-gallery-ui"></a>Valori del manifesto dei pacchetti con effetti sull'interfaccia utente di PowerShell Gallery
 
@@ -37,7 +37,7 @@ La tabella seguente illustra gli elementi dell'interfaccia utente della pagina d
 | **Functions** | Queste informazioni vengono specificate nel manifesto del modulo tramite FunctionsToExport. Si noti che la procedura consigliata prevede di elencare gli elementi in modo esplicito, invece di usare il carattere jolly "*", perché consentirà di migliorare le prestazioni di caricamento del modulo per gli utenti. | Sì | No |
 | **Risorse DSC** | Per i moduli che verranno usati in PowerShell versione 5.0 e versioni successive, queste informazioni vengono specificate nel manifesto tramite DscResourcesToExport. Se il modulo deve essere usato in PowerShell 4, è sconsigliabile usare DSCResourcesToExport perché non è una chiave di manifesto supportata. (DSC non era disponibile prima di PowerShell 4.) | Sì | No |
 | **Flussi di lavoro** | I flussi di lavoro vengono pubblicati in PowerShell Gallery come script e identificati come flussi di lavoro nel codice (vedere [Connect-AzureVM](https://www.powershellgallery.com/packages/Connect-AzureVM/1.0/Content/Connect-AzureVM.ps1) per un esempio). Queste informazioni non sono controllate dal manifesto. | No | No |
-| **Funzionalità di ruolo** | Queste informazioni verranno presentate quando il modulo pubblicato in PowerShell Gallery contiene uno o più file di funzionalità di ruolo (con estensione psrc), usati da JEA. Vedere la documentazione di JEA per altri dettagli sulle [funzionalità di ruolo](/powershell/jea/role-capabilities). | Sì | No |
+| **Funzionalità di ruolo** | Queste informazioni verranno presentate quando il modulo pubblicato in PowerShell Gallery contiene uno o più file di funzionalità di ruolo (con estensione psrc), usati da JEA. Vedere la documentazione di JEA per altri dettagli sulle [funzionalità di ruolo](/powershell/scripting/learn/remoting/jea/role-capabilities). | Sì | No |
 | **Edizioni di PowerShell** | Queste informazioni vengono specificate nel manifesto di uno script o del modulo. Per i moduli progettati per essere usati con PowerShell 5.0 e versioni precedenti, queste informazioni sono controllate tramite tag. Per l'edizione Desktop usare il tag PSEdition_Desktop e per l'edizione Core usare il tag PSEdition_Core. Per i moduli che verranno usati solo in PowerShell 5.1 e versioni successive, è disponibile la chiave CompatiblePSEditions nel manifesto principale. Per altri dettagli, vedere le funzionalità per le edizioni di PowerShell nella [documentazione di PowerShellGet](module-psedition-support.md). | Sì | Sì |
 | **Dipendenze** | Le dipendenze sono i moduli in PowerShell Gallery dichiarati nel modulo come RequiredModules o nel manifesto di script come #Requires –Module (nome). | Sì | Sì |
 | **Versione minima di PowerShell** | Queste informazioni possono essere specificate in un manifesto del modulo come PowerShellVersion | Sì | No |

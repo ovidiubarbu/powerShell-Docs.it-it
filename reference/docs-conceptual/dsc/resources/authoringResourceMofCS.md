@@ -2,18 +2,18 @@
 ms.date: 06/12/2017
 keywords: dsc,powershell,configurazione,installazione
 title: Creazione di una risorsa DSC in C#
-ms.openlocfilehash: 6f2bb4d411237f13e2735c2e5f630b4f40dc6842
-ms.sourcegitcommit: 18985d07ef024378c8590dc7a983099ff9225672
+ms.openlocfilehash: a19559c225dd91eceed397df91dd584a577cd7d4
+ms.sourcegitcommit: d43f66071f1f33b350d34fa1f46f3a35910c5d24
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71954318"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74417690"
 ---
 # <a name="authoring-a-dsc-resource-in-c"></a>Creazione di una risorsa DSC in C\#
 
 > Si applica a: Windows PowerShell 4.0, Windows PowerShell 5.0
 
-In genere, una risorsa personalizzata di Windows PowerShell DSC (Desired State Configuration) viene implementata in uno script di PowerShell. È tuttavia anche possibile implementare la funzionalità di una risorsa DSC personalizzata scrivendo cmdlet in C#. Per informazioni introduttive sulla scrittura di cmdlet in C#, vedere [Scrittura di un cmdlet di Windows PowerShell](/powershell/developer/windows-powershell).
+In genere, una risorsa personalizzata di Windows PowerShell DSC (Desired State Configuration) viene implementata in uno script di PowerShell. È tuttavia anche possibile implementare la funzionalità di una risorsa DSC personalizzata scrivendo cmdlet in C#. Per informazioni introduttive sulla scrittura di cmdlet in C#, vedere [Scrittura di un cmdlet di Windows PowerShell](/powershell/scripting/developer/windows-powershell).
 
 A parte l'implementazione della risorsa in C# come cmdlet, i processi di creazione dello schema MOF, creazione della struttura di cartelle, importazione e uso della risorsa DSC personalizzata sono uguali a quelli descritti in [Scrittura di una risorsa DSC personalizzata con MOF](authoringResourceMOF.md).
 
@@ -281,4 +281,4 @@ $env: psmodulepath (folder)
 #### <a name="concepts"></a>Concetti
 [Scrittura di una risorsa DSC personalizzata con MOF](authoringResourceMOF.md)
 #### <a name="other-resources"></a>Risorse aggiuntive
-[Scrittura di un cmdlet di Windows PowerShell](/powershell/developer/windows-powershell)
+[Scrittura di un cmdlet di Windows PowerShell](/powershell/scripting/developer/windows-powershell)

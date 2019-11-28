@@ -2,12 +2,12 @@
 ms.date: 08/27/2018
 keywords: powershell,cmdlet
 title: Ottenere informazioni dettagliate della Guida
-ms.openlocfilehash: 033a8962ca438b49c10fafa2852c87d19868b4d9
-ms.sourcegitcommit: 4a2cf30351620a58ba95ff5d76b247e601907589
+ms.openlocfilehash: e722eb8a0ca13e3d2de864314775a0a9fa578390
+ms.sourcegitcommit: d43f66071f1f33b350d34fa1f46f3a35910c5d24
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71325197"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74417666"
 ---
 # <a name="getting-detailed-help-information"></a>Ottenere informazioni dettagliate della Guida
 
@@ -79,7 +79,7 @@ Ad esempio, per visualizzare solo gli esempi dell'articolo della Guida per il cm
 Get-Help Get-ChildItem -Examples
 ```
 
-Per informazioni su come scrivere articoli della Guida per i cmdlet personalizzati, vedere [How to Write Cmdlet Help](/powershell/developer/help/writing-help-for-windows-powershell-cmdlets) (Come scrivere articoli della Guida sui cmdlet).
+Per informazioni su come scrivere articoli della Guida per i cmdlet personalizzati, vedere [How to Write Cmdlet Help](/powershell/scripting/developer/help/writing-help-for-windows-powershell-cmdlets) (Come scrivere articoli della Guida sui cmdlet).
 
 ## <a name="getting-conceptual-help"></a>Ottenere informazioni della Guida di carattere concettuale
 

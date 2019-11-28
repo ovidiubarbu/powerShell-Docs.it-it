@@ -2,12 +2,12 @@
 ms.date: 12/14/2018
 keywords: powershell,cmdlet
 title: Scrittura di moduli portabili
-ms.openlocfilehash: 237f6aaea0ed019c54d04a8477d7a456edf00910
-ms.sourcegitcommit: bc42c9166857147a1ecf9924b718d4a48eb901e3
+ms.openlocfilehash: 7871f524495c1ce5283b30696a24185d427edebf
+ms.sourcegitcommit: d43f66071f1f33b350d34fa1f46f3a35910c5d24
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/03/2019
-ms.locfileid: "66470989"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74417635"
 ---
 # <a name="portable-modules"></a>Moduli portabili
 
@@ -17,7 +17,7 @@ Windows PowerShell è scritto per [.NET Framework][], mentre PowerShell Core è 
 
 ### <a name="porting-a-pssnapin"></a>Porting di uno snap-in PowerShell (PSSnapIn)
 
-Gli [snap-in](/powershell/developer/cmdlet/modules-and-snap-ins) PowerShell non sono supportati in PowerShell Core. Tuttavia, è semplice convertire uno snap-in a un modulo PowerShell. In genere, il codice di registrazione PSSnapIn si trova in un singolo file di origine di una classe derivata da [PSSnapIn][].
+Gli [snap-in](/powershell/scripting/developer/cmdlet/modules-and-snap-ins) PowerShell non sono supportati in PowerShell Core. Tuttavia, è semplice convertire uno snap-in a un modulo PowerShell. In genere, il codice di registrazione PSSnapIn si trova in un singolo file di origine di una classe derivata da [PSSnapIn][].
 Rimuovere il file di origine dalla compilazione; non è più necessario.
 
 Usare [New-ModuleManifest][] per creare un nuovo manifesto del modulo che rimuove la necessità del codice di registrazione PSSnapIn. Alcuni valori di **PSSnapIn** (ad esempio, **Description**) possono essere riutilizzati nel manifesto del modulo.
@@ -266,4 +266,4 @@ Esempio:
 [PowerShell Standard 5.1]: https://www.nuget.org/packages/PowerShellStandard.Library/5.1.0
 [PowerShell Gallery]: https://www.powershellgallery.com
 [.NET Portability Analyzer]: https://github.com/Microsoft/dotnet-apiport
-[CompatiblePSEditions]: /powershell/gallery/concepts/module-psedition-support
+[CompatiblePSEditions]: /powershell/scripting/gallery/concepts/module-psedition-support
