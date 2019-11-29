@@ -1,15 +1,15 @@
 ---
-ms.date: 05/17/2018
+ms.date: 11/15/2019
 keywords: powershell,core
 title: Modifiche di rilievo in PowerShell Core 6.0
-ms.openlocfilehash: df716fc3ad48d640ddefcfd87da445eaf104cfbe
-ms.sourcegitcommit: e1027805385081c2e6f9250f9cd1167a45f035b0
+ms.openlocfilehash: a1dac42bcda8e1258a99ef281691a9d4c5986b53
+ms.sourcegitcommit: d43f66071f1f33b350d34fa1f46f3a35910c5d24
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72561266"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74417550"
 ---
-# <a name="breaking-changes-for-powershell-60"></a>Modifiche di rilievo in PowerShell Core 6.0
+# <a name="breaking-changes-for-powershell-6x"></a>Modifiche di rilievo in PowerShell Core 6.x
 
 ## <a name="features-no-longer-available-in-powershell-core"></a>Funzionalità non più disponibili in PowerShell Core
 
@@ -23,7 +23,7 @@ In futuro, è prevista l'abilitazione di parallelismo/concorrenza nativi nel lin
 
 Se è necessario usare i checkpoint per riprendere uno script dopo il riavvio del sistema operativo, è consigliabile usare il componente Utilità di pianificazione per eseguire uno script all'avvio del sistema operativo, ma lo script deve mantenere il proprio stato, ad esempio con il salvataggio permanente in un file.
 
-[workflow]: https://docs.microsoft.com/powershell/scripting/core-powershell/workflows-guide
+[workflow]: /powershell/scripting/components/workflows-guide
 [workflow-foundation]: https://docs.microsoft.com/dotnet/framework/windows-workflow-foundation/
 
 ### <a name="custom-snap-ins"></a>Snap-in personalizzati
@@ -291,3 +291,4 @@ L'API .NET sottostante dei cmdlet Web è stato modificata in `System.Net.Http.Ht
 - Non è attualmente disponibile l'autenticazione basata su certificati in macOS.
 - L'uso di `-Credential` su un URI `http://` genererà un errore. Usare un URI `https://` oppure specificare il parametro `-AllowUnencryptedAuthentication` per eliminare l'errore.
 - `-MaximumRedirection` genera ora un errore fatale quando i tentativi di reindirizzamento superano il limite specificato anziché restituire i risultati dell'ultimo reindirizzamento.
+- In PowerShell 6.2 è stata apportata una modifica all'impostazione predefinita della codifica UTF-8 per le risposte JSON. Quando non viene specificato un set di caratteri per una risposta JSON la codifica predefinita deve essere UTF-8, in base alla specifica RFC 8259.

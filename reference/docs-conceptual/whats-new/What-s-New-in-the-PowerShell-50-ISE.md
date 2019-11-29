@@ -2,16 +2,22 @@
 ms.date: 09/06/2019
 keywords: powershell,cmdlet
 title: Novità di PowerShell 5.0 ISE
-ms.openlocfilehash: f687c409a1a4b0e6b872863e9f132f7cf5baff20
-ms.sourcegitcommit: a6e54a305fdeb6482321c77da8066d2f991c93e1
+ms.openlocfilehash: 8f15e99c5a6ae33aeae9bd33eb0cf58fb27e3b90
+ms.sourcegitcommit: d43f66071f1f33b350d34fa1f46f3a35910c5d24
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2019
-ms.locfileid: "74117507"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74416636"
 ---
 # <a name="whats-new-in-the-windows-powershell-50-ise"></a>Novità di Windows PowerShell 5.0 ISE
 
-Questo argomento illustra le funzionalità nuove e aggiornate introdotte nelle versioni di Windows PowerShell Integrated Scripting Environment (ISE).
+Questo argomento illustra le funzionalità nuove e aggiornate introdotte nella versione 5.0 di Windows PowerShell Integrated Scripting Environment (ISE).
+
+> [!NOTE]
+> Le funzionalità di PowerShell ISE non vengono più sviluppate in modo attivo. Questo componente distribuito con Windows continua a essere supportato per la sicurezza e per le correzioni a priorità elevata.
+> Attualmente non è prevista la rimozione di ISE da Windows.
+>
+> Non è previsto il supporto per l'ambiente ISE in PowerShell v6 e versioni successive. Gli utenti che vogliono sostituire ISE possono usare [Visual Studio Code](https://code.visualstudio.com/) con l'[estensione PowerShell](https://marketplace.visualstudio.com/items?itemName=ms-vscode.PowerShell).
 
 ## <a name="feature-description"></a>Descrizione delle funzionalità
 

@@ -2,12 +2,12 @@
 ms.date: 08/14/2018
 keywords: powershell,cmdlet
 title: Introduzione a Windows PowerShell ISE
-ms.openlocfilehash: 729c8535dbcfcd2c51070b8beac5d328375f36ae
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.openlocfilehash: 1723c11f38966cfffec9a6b3e4cb7b2304f19e7a
+ms.sourcegitcommit: d43f66071f1f33b350d34fa1f46f3a35910c5d24
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62057424"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74416281"
 ---
 # <a name="the-windows-powershell-ise"></a>Windows PowerShell ISE
 
@@ -15,16 +15,21 @@ Windows PowerShell Integrated Scripting Environment (ISE) è un'applicazione hos
 
 ## <a name="support"></a>Supporto
 
-L'ambiente ISE è stato introdotto con Windows PowerShell V2 ed è stato riprogettato con PowerShell V3. L'ISE è supportato in tutte le versioni supportate di Windows PowerShell fino a Windows PowerShell V5.1, inclusa. L'ISE è tuttavia in modalità di manutenzione ed è probabile che non vengano aggiunte nuove funzionalità.
-Inoltre, non è previsto alcun supporto per l'ambiente ISE con PowerShell v6 e versioni successive. Gli utenti che vogliono usare uno strumento grafico per gestire gli script e altri aspetti di PowerShell, possono prendere in considerazione [Visual Studio Code](https://code.visualstudio.com/).
+L'ambiente ISE è stato introdotto con Windows PowerShell V2 ed è stato riprogettato con PowerShell V3. L'ISE è supportato in tutte le versioni supportate di Windows PowerShell fino a Windows PowerShell V5.1, inclusa.
+
+> [!NOTE]
+> Le funzionalità di PowerShell ISE non vengono più sviluppate in modo attivo. Questo componente distribuito con Windows continua a essere supportato per la sicurezza e per le correzioni a priorità elevata.
+> Attualmente non è prevista la rimozione di ISE da Windows.
+>
+> Non è previsto il supporto per l'ambiente ISE in PowerShell v6 e versioni successive. Gli utenti che vogliono sostituire ISE possono usare [Visual Studio Code](https://code.visualstudio.com/) con l'[estensione PowerShell](https://marketplace.visualstudio.com/items?itemName=ms-vscode.PowerShell).
 
 ## <a name="key-features"></a>Funzionalità principali
 
 Le funzionalità principali in Windows PowerShell ISE includono:
 
-- Modifica su più righe: per inserire una riga vuota sotto la riga corrente nel riquadro comandi, premere MAIUSC+INVIO.
-- Esecuzione selettiva: per eseguire parte di uno script, selezionare il testo da eseguire e quindi fare clic sul pulsante **Esegui script**. Oppure premere F5.
-- Guida sensibile al contesto: digitare **Invoke-Item** e quindi premere F1. Il file della Guida viene aperto in corrispondenza dell'articolo relativo al cmdlet **Invoke-Item**.
+- Modifica su più righe: per inserire una riga vuota sotto la riga corrente nel riquadro comandi, premere <kbd>MAIUSC</kbd>+<kbd>INVIO</kbd>.
+- Esecuzione selettiva: per eseguire parte di uno script, selezionare il testo da eseguire e quindi fare clic sul pulsante **Esegui script**. Oppure premere <kbd>F5</kbd>.
+- Guida sensibile al contesto: Digitare `Invoke-Item` e quindi premere <kbd>F1</kbd>. Il file della Guida viene aperto in corrispondenza dell'articolo relativo al cmdlet `Invoke-Item`.
 
 Windows PowerShell ISE consente di personalizzarne l'aspetto in vari modi. Include anche lo script del proprio profilo Windows PowerShell.
 
@@ -35,4 +40,4 @@ In alternativa, è possibile digitare `powershell_ise.exe` in qualsiasi shell di
 
 ## <a name="to-get-help-in-the-windows-powershell-ise"></a>Per visualizzare la Guida in Windows PowerShell ISE
 
-Nel menu **?** fare clic su **Guida di Windows PowerShell**. Oppure premere F1. Si apre un file che descrive Windows PowerShell ISE e Windows PowerShell, con tutti gli argomenti disponibili tramite il cmdlet Get-Help.
+Nel menu **?** fare clic su **Guida di Windows PowerShell**. Oppure premere <kbd>F1</kbd>. Si apre un file che descrive Windows PowerShell ISE e Windows PowerShell, con tutti gli argomenti della Guida disponibili tramite il cmdlet `Get-Help`.

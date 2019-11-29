@@ -1,13 +1,13 @@
 ---
-ms.date: 10/22/2019
+ms.date: 11/22/2019
 keywords: powershell,cmdlet
 title: Uso dei comandi Format per modificare la visualizzazione dell'output
-ms.openlocfilehash: 9d9854362b5150a99bdd0c02518599840c1fd42d
-ms.sourcegitcommit: 36e4c79afda2ce11febd93951e143687245f0b50
+ms.openlocfilehash: f270d5ec5efe5caf506d6a8a45285990996f6ae6
+ms.sourcegitcommit: d43f66071f1f33b350d34fa1f46f3a35910c5d24
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/02/2019
-ms.locfileid: "73444425"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74417600"
 ---
 # <a name="using-format-commands-to-change-output-view"></a>Uso dei comandi Format per modificare la visualizzazione dell'output
 
@@ -128,7 +128,7 @@ Id          : 21748
 
 ### <a name="getting-detailed-information-by-using-format-list-with-wildcards"></a>Ottenere informazioni dettagliate usando Format-List con i caratteri jolly
 
-Il cmdlet `Format-List` consente di usare un carattere jolly come valore del rispettivo parametro **Property**. In questo modo si possono visualizzare informazioni dettagliate. Gli oggetti includono spesso più informazioni di quelle necessarie, motivo per cui per impostazione predefinita PowerShell non visualizza tutti i valori della proprietà. Per visualizzare tutte le proprietà di un oggetto, usare il comando **Format-List -Property \&#42;** . Il comando seguente genera oltre 60 righe di output per un unico processo:
+Il cmdlet `Format-List` consente di usare un carattere jolly come valore del rispettivo parametro **Property**. In questo modo si possono visualizzare informazioni dettagliate. Gli oggetti includono spesso più informazioni di quelle necessarie, motivo per cui per impostazione predefinita PowerShell non visualizza tutti i valori della proprietà. Per visualizzare tutte le proprietà di un oggetto, usare il comando `Format-List -Property *`. Il comando seguente genera oltre 60 righe di output per un unico processo:
 
 ```powershell
 Get-Process -Name iexplore | Format-List -Property *
