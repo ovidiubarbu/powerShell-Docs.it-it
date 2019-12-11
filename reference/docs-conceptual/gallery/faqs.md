@@ -4,10 +4,10 @@ contributor: JKeithB
 keywords: gallery,powershell,cmdlet,psgallery
 title: Domande frequenti su PowerShell Gallery
 ms.openlocfilehash: bcbb36a9ec60d88d1ef56fd270f0ae1862d5ca6b
-ms.sourcegitcommit: 4a2cf30351620a58ba95ff5d76b247e601907589
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/27/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "71328052"
 ---
 # <a name="frequently-asked-questions"></a>Domande frequenti
@@ -63,7 +63,7 @@ Queste informazioni vengono lette nell'ambito del processo di pubblicazione dal 
 Tutti i moduli pubblicati nella raccolta devono includere manifesti dei moduli.
 Tutti i moduli che includono le informazioni seguenti nei propri manifesti possono essere pubblicati nella raccolta:
 
-- Versione
+- Version
 - Description
 - Autore
 - URI per le condizioni di licenza del modulo, come parte della sezione **PrivateData** del manifesto o nel parametro **LicenseUri** del cmdlet [Publish-Module][].

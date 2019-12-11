@@ -4,10 +4,10 @@ ms.topic: conceptual
 keywords: wmf,powershell,installazione
 title: Note sulla versione per WMF 5.x
 ms.openlocfilehash: 3fc712dbcbe184c60ae248b260c8f6800f111fdd
-ms.sourcegitcommit: d43f66071f1f33b350d34fa1f46f3a35910c5d24
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "74416510"
 ---
 # <a name="windows-management-framework-wmf-5x-release-notes"></a>Note sulla versione di Windows Management Framework (WMF) 5.x

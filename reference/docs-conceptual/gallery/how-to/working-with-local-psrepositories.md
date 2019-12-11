@@ -4,10 +4,10 @@ contributor: JKeithB
 keywords: raccolta,powershell,cmdlet,psgallery, psget
 title: Uso dei repository PowerShell locali
 ms.openlocfilehash: 94824ea584c097838b24c6f2cd02407b6147a781
-ms.sourcegitcommit: 4a2cf30351620a58ba95ff5d76b247e601907589
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/27/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "71327992"
 ---
 # <a name="working-with-local-powershellget-repositories"></a>Uso dei repository PowerShellGet locali

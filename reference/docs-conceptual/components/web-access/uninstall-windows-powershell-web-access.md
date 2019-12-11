@@ -3,10 +3,10 @@ ms.date: 08/23/2017
 keywords: powershell,cmdlet
 title: disinstallare accesso web windows powershell
 ms.openlocfilehash: 22c874d766445dccedd8494097daf16c30fa66ff
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "62058152"
 ---
 # <a name="uninstall-windows-powershell-web-access"></a>Disinstallare Accesso Web Windows PowerShell
@@ -58,7 +58,7 @@ usando i cmdlet di Windows PowerShell.
 
     -   Nel desktop di Windows fare clic con il pulsante destro del mouse su **Windows PowerShell** nella barra delle applicazioni e scegliere **Esegui come amministratore**.
 
-    -   Nella schermata **Start** di Windows fare clic con il pulsante destro del mouse su **Windows PowerShell** e quindi scegliere **Esegui come amministratore**.
+    -   Nella schermata **Start** di Windows fare clic con il pulsante destro del mouse su **Windows PowerShell**e quindi scegliere **Esegui come amministratore**.
 
 1. Digitare il codice seguente e premere **INVIO**, dove *nome_computer* rappresenta un server remoto da cui si vuole rimuovere Accesso Web Windows PowerShell. Il parametro `-Restart` riavvia automaticamente i server di destinazione, se richiesto dalla procedura di rimozione.
 
@@ -81,9 +81,9 @@ Le procedure in questa sezione consentono di disinstallare l'applicazione Web Ac
 
 1. Aprire la console Gestione IIS eseguendo una delle operazioni seguenti. Se è già aperta, continuare con il passaggio successivo.
 
-    -   Nel desktop di Windows avviare Server Manager facendo clic su **Server Manager** nella barra delle applicazioni di Windows. Nel menu **Strumenti** di Server Manager fare clic su **Gestione Internet Information Services (IIS)**.
+    -   Nel desktop di Windows avviare Server Manager facendo clic su **Server Manager** nella barra delle applicazioni di Windows. Nel menu **Strumenti** di Server Manager fare clic su **Gestione Internet Information Services (IIS)** .
 
-    -   Nella schermata **Start** di Windows digitare una parte qualsiasi del nome **Gestione Internet Information Services (IIS)**. Fare clic sul collegamento quando viene visualizzato nell'elenco dei risultati **App**.
+    -   Nella schermata **Start** di Windows digitare una parte qualsiasi del nome **Gestione Internet Information Services (IIS)** . Fare clic sul collegamento quando viene visualizzato nell'elenco dei risultati **App**.
 
 1. Nel riquadro dell'albero di Gestione IIS selezionare il sito Web che esegue l'applicazione Web Accesso Web Windows PowerShell.
 
@@ -111,11 +111,11 @@ Le procedure in questa sezione consentono di disinstallare l'applicazione Web Ac
 
 1. Scegliere **Rimuovi ruoli e funzionalità** dal menu **Gestisci**.
 
-1. Nella pagina **Selezione server di destinazione** selezionare il server o il disco rigido virtuale offline da cui si vuole rimuovere la funzionalità. Per selezionare un disco rigido virtuale offline, selezionare innanzitutto il server in cui montare il disco rigido virtuale, quindi selezionare il file del disco rigido virtuale. Dopo aver selezionato il server di destinazione, fare clic su **Avanti**.
+1. Nella pagina **Selezione server di destinazione** selezionare il server o il disco rigido virtuale offline da cui si desidera rimuovere la funzionalità. Per selezionare un disco rigido virtuale offline, selezionare innanzitutto il server in cui montare il disco rigido virtuale, quindi selezionare il file del disco rigido virtuale. Dopo aver selezionato il server di destinazione, fare clic su **Avanti**.
 
-1. Fare di nuovo clic su **Avanti** per ignorare la pagina **Rimuovi funzionalità**.
+1. Fare di nuovo clic su **Avanti** per ignorare la pagina **Rimuovi funzionalità** .
 
-1. Deselezionare la casella di controllo **Accesso Web Windows PowerShell** e fare clic su **Avanti**.
+1. Deselezionare la casella di controllo **Accesso Web Windows PowerShell**e fare clic su **Avanti**.
 
 1. Nella pagina **Conferma selezioni per la rimozione** fare clic su **Rimuovi**.
 

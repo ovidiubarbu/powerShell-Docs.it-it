@@ -3,10 +3,10 @@ ms.date: 08/14/2018
 keywords: powershell,cmdlet
 title: Esecuzione di comandi remoti
 ms.openlocfilehash: d6609deafd8dec4f34a8412439d87dacd20d46f1
-ms.sourcegitcommit: a6f13c16a535acea279c0ddeca72f1f0d8a8ce4c
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/12/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "67030325"
 ---
 # <a name="running-remote-commands"></a>Esecuzione di comandi remoti
@@ -17,8 +17,8 @@ PowerShell Core supporta WMI, WS-Management e la comunicazione remota SSH. RPC n
 
 Per altre informazioni sulla comunicazione remota in PowerShell Core, vedere gli articoli seguenti:
 
-- [SSH Remoting in PowerShell Core][ssh-remoting] (Comunicazione remota SSH in PowerShell Core)
-- [WSMan Remoting in PowerShell Core][wsman-remoting] (Comunicazione remota WS-Management in PowerShell Core)
+- [Comunicazione remota di PowerShell su SSH][ssh-remoting]
+- [Comunicazione remota di WS-Management in PowerShell Core][wsman-remoting]
 
 ## <a name="windows-powershell-remoting-without-configuration"></a>Comunicazione remota di Windows PowerShell senza configurazione
 

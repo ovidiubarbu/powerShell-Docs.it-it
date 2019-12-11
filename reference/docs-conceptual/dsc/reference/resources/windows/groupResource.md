@@ -3,10 +3,10 @@ ms.date: 09/20/2019
 keywords: dsc,powershell,configurazione,installazione
 title: Risorsa Group DSC
 ms.openlocfilehash: 695a914683c6daff44dd2a6c94b6353acf881030
-ms.sourcegitcommit: 18985d07ef024378c8590dc7a983099ff9225672
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/04/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "71954658"
 ---
 # <a name="dsc-group-resource"></a>Risorsa Group DSC
@@ -39,7 +39,7 @@ Group [string] #ResourceName
 |GroupName |Il nome del gruppo per cui si vuole specificare un determinato stato. |
 |Credential |Le credenziali necessarie per accedere a risorse remote. per aggiungere tutti gli account non locali al gruppo, questo account deve avere le autorizzazioni di Active Directory appropriate. In caso contrario, quando la configurazione viene eseguita nel nodo di destinazione, si verifica un errore.
 |Description |La descrizione dell'attività. |
-|Members |Usare questa proprietà per sostituire l'appartenenza al gruppo corrente con i membri specificati. Il valore di questa proprietà è una matrice di stringhe nel formato `Domain\UserName`. Se si imposta questa proprietà in una configurazione, non usare la proprietà **MembersToExclude** o **MembersToInclude**. Questa operazione genera un errore. |
+|Membri |Usare questa proprietà per sostituire l'appartenenza al gruppo corrente con i membri specificati. Il valore di questa proprietà è una matrice di stringhe nel formato `Domain\UserName`. Se si imposta questa proprietà in una configurazione, non usare la proprietà **MembersToExclude** o **MembersToInclude**. Questa operazione genera un errore. |
 |MembersToExclude |Usare questa proprietà per rimuovere membri dall'appartenenza al gruppo esistente. Il valore di questa proprietà è una matrice di stringhe nel formato `Domain\UserName`. Se si imposta questa proprietà in una configurazione, non usare la proprietà **Members**. Questa operazione genera un errore. |
 |MembersToInclude |Usare questa proprietà per aggiungere membri all'appartenenza al gruppo esistente. Il valore di questa proprietà è una matrice di stringhe nel formato `Domain\UserName`. Se si imposta questa proprietà in una configurazione, non usare la proprietà **Members**. In caso contrario, verrà generato un errore. |
 

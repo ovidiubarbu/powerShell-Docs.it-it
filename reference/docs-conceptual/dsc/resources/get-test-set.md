@@ -3,10 +3,10 @@ ms.date: 12/12/2018
 keywords: dsc,powershell,configurazione,installazione
 title: Get-Test-Set
 ms.openlocfilehash: 42c1df6df2fbf65cbbb8407db613cac2e5b81cfb
-ms.sourcegitcommit: 18985d07ef024378c8590dc7a983099ff9225672
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/04/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "71954288"
 ---
 # <a name="get-test-set"></a>Get-Test-Set
@@ -123,7 +123,7 @@ ModuleVersion = "1.0";
 
 Quando applicata, [Gestione configurazione locale](../managing-nodes/metaConfig.md) leggerà il valore "Spooler" dal file "MOF" e lo passerà al parametro `-Name` dei metodi **Get**, **Test** e **Set** per l'istanza "MyService" della risorsa **Service**.
 
-## <a name="get"></a>Get
+## <a name="get"></a>Ottenere
 
 Il metodo **Get** di una risorsa recupera lo stato della risorsa così come è configurata nel nodo di destinazione. Questo stato viene restituito come [TabellaHash](/powershell/module/microsoft.powershell.core/about/about_hash_tables). Le chiavi della **TabellaHash** saranno i valori configurabili, o parametri, accettati dalla risorsa.
 

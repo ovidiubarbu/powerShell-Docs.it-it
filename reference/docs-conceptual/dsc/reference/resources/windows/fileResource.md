@@ -3,10 +3,10 @@ ms.date: 09/20/2019
 keywords: dsc,powershell,configurazione,installazione
 title: Risorsa File DSC
 ms.openlocfilehash: 4c6945d4cdcbc64ac6d52db563823efe8fd0247e
-ms.sourcegitcommit: 18985d07ef024378c8590dc7a983099ff9225672
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/04/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "71954678"
 ---
 # <a name="dsc-file-resource"></a>Risorsa File DSC
@@ -41,14 +41,14 @@ File [string] #ResourceName
 |Proprietà |Description |
 |---|---|
 |DestinationPath |Il percorso, nel nodo di destinazione, per il quale ci si vuole assicurare che sia **Present** o **Absent** con **Ensure**. |
-|Attributes |Lo stato desiderato degli attributi per il file o la directory di destinazione. I valori validi sono _Archive_, _Hidden_, _ReadOnly_ e _System_. |
+|Attributi |Lo stato desiderato degli attributi per il file o la directory di destinazione. I valori validi sono _Archive_, _Hidden_, _ReadOnly_ e _System_. |
 |Checksum |Il tipo di checksum da usare per determinare se due file sono uguali. I valori validi includono: **SHA-1**, **SHA-256**, **SHA-512**, **createdDate**, **modifiedDate**. |
-|Contents |Valido solo se usato con **Type** **File**. Indica il contenuto per il quale ci si vuole assicurare (**Ensure**) che sia **Present** o **Absent** nel file di destinazione. |
+|Contenuti |Valido solo se usato con **Type** **File**. Indica il contenuto per il quale ci si vuole assicurare (**Ensure**) che sia **Present** o **Absent** nel file di destinazione. |
 |Credential |Le credenziali necessarie per accedere alle risorse, ad esempio i file di origine. |
 |Force |Esegue l'override di operazioni di accesso che genererebbero un errore, ad esempio quando si sovrascrive un file o si elimina una directory non vuota. Il valore predefinito è `$false`. |
 |Recurse |Valido solo se usato con **Type** **Directory**. Esegue in modo ricorsivo l'operazione di stato per tutte le sottodirectory. Il valore predefinito è `$false`. |
 |SourcePath |Il percorso da cui copiare la risorsa file o cartella. |
-|Tipo |Il tipo di risorsa configurata. I valori validi sono **Directory** e **File**. Il valore predefinito è **File**. |
+|Type |Il tipo di risorsa configurata. I valori validi sono **Directory** e **File**. Il valore predefinito è **File**. |
 |MatchSource |Determina se la risorsa deve monitorare i nuovi file aggiunti alla directory di origine dopo la copia iniziale. Un valore di `$true` indica che, dopo la copia iniziale, i nuovi file di origine devono essere copiati nella destinazione. Se impostato su `$false`, la risorsa memorizza nella cache il contenuto della directory di origine e ignora eventuali file aggiunti dopo la copia iniziale. Il valore predefinito è `$false`. |
 
 > [!WARNING]

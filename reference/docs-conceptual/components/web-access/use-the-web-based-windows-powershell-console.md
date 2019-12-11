@@ -3,10 +3,10 @@ ms.date: 08/23/2017
 keywords: powershell,cmdlet
 title: usare la console di windows powershell basata sul web
 ms.openlocfilehash: 2bb9c6ef486ef32012a15f9890997cf2fa6a3a0b
-ms.sourcegitcommit: e7445ba8203da304286c591ff513900ad1c244a4
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "62086650"
 ---
 # <a name="use-the-web-based-windows-powershell-console"></a>Usare la console di Windows PowerShell basata sul Web
@@ -53,7 +53,7 @@ Per usare la console di Accesso Web Windows PowerShell basata sul Web, i browser
 
 - Consentire i cookie dal sito Web del gateway di Accesso Web Windows PowerShell.
 - Sia in grado di aprire e leggere le pagine HTTPS.
-- Aprire ed eseguire siti Web che usano JavaScript.
+- Sia in grado di aprire ed eseguire siti Web che utilizzano JavaScript.
 
 ## <a name="signing-in-to-windows-powershell-web-access"></a>Connessione ad Accesso Web Windows PowerShell
 
@@ -110,7 +110,7 @@ Una qualsiasi delle operazioni seguenti causa la disconnessione dell'utente da u
 
 - Disattivare il dispositivo client in cui è in esecuzione il browser o disconnettersi dalla rete.
 
-- Esecuzione del comando **Esci** nella console Web. Questo comando non funziona se la configurazione della sessione a cui si è connessi è configurata per supportare la modalità [NoLanguage](https://msdn.microsoft.com/library/windows/desktop/system.management.automation.pslanguagemode.aspx) o si trova in uno spazio di esecuzione con restrizioni.
+- Eseguire il comando **Esci** nella console Web. Questo comando non funziona se la configurazione della sessione a cui si è connessi è configurata per supportare la modalità [NoLanguage](https://msdn.microsoft.com/library/windows/desktop/system.management.automation.pslanguagemode.aspx) o si trova in uno spazio di esecuzione con restrizioni.
 
 Per accedere di nuovo, riaprire la pagina Web di Accesso Web Windows PowerShell ed eseguire l'accesso con la procedura descritta in [Connessione ad Accesso Web Windows PowerShell](#signing-in-to-windows-powershell-web-access) in questo argomento.
 
@@ -169,7 +169,7 @@ ALT+F7 | Cancella l'elenco della cronologia dei comandi.
 
     Se si prova a creare una nuova sessione o a usarla con Accesso Web Windows PowerShell, si potrebbe riscontrare una limitazione al doppio hop, ovvero la connessione a un secondo computer dalla prima connessione. Accesso Web Windows PowerShell usa uno spazio di esecuzione remoto e attualmente **PowerShell.exe** non consente di stabilire una connessione remota a un secondo computer da uno spazio di esecuzione remoto. Se si prova a connettersi a un secondo computer remoto da una connessione esistente usando il cmdlet **Enter-PSSession**, potrebbero essere generati diversi errori, ad esempio un messaggio simile a "Non è possibile ottenere risorse di rete".
 
-    Per evitare errori relativi al doppio hop, l'amministratore deve configurare l'autenticazione CredSSP nell'ambiente di rete dell'organizzazione. Per altre informazioni sulla configurazione dell'autenticazione CredSSP, vedere il blog relativo a [CredSSP per la comunicazione remota con un secondo hop](https://blogs.msdn.com/b/powershell/archive/2008/06/05/credssp-for-second-hop-remoting-part-i-domain-account.aspx) nel sito Web Microsoft. È anche possibile fornire credenziali esplicite quando si vuole gestire un secondo computer remoto. È improbabile che le credenziali implicite consentano il secondo hop.
+    Per evitare errori relativi al doppio hop, l'amministratore deve configurare l'autenticazione CredSSP nell'ambiente di rete dell'organizzazione. Per altre informazioni sulla configurazione dell'autenticazione CredSSP, vedere il blog relativo a [CredSSP per la comunicazione remota con un secondo hop](https://blogs.msdn.com/b/powershell/archive/2008/06/05/credssp-for-second-hop-remoting-part-i-domain-account.aspx) sul sito Web Microsoft. È anche possibile fornire credenziali esplicite quando si vuole gestire un secondo computer remoto. È improbabile che le credenziali implicite consentano il secondo hop.
 
 - Comunicazione remota
 
@@ -177,7 +177,7 @@ ALT+F7 | Cancella l'elenco della cronologia dei comandi.
 
 - Completamento tramite TAB
 
-    Il completamento tramite tasto TAB non funziona in una configurazione di sessione con uno spazio di esecuzione con restrizioni o in modalità **NoLanguage**. Anche se gli amministratori possono configurare una sessione per supportare il completamento tramite tasto TAB, è sconsigliato per motivi di sicurezza, perché può esporre le informazioni seguenti a utenti non autorizzati.
+    Il completamento tramite tasto TAB non funziona in una configurazione di sessione con uno spazio di esecuzione con restrizioni o in modalità **NoLanguage** . Anche se gli amministratori possono configurare una sessione per supportare il completamento tramite tasto TAB, è sconsigliato per motivi di sicurezza, perché può esporre le informazioni seguenti a utenti non autorizzati.
 
     - Percorsi interni del file system
 
@@ -205,7 +205,7 @@ ALT+F7 | Cancella l'elenco della cronologia dei comandi.
 
 - Ridimensionamento della console.
 
-    La finestra della console di **PowerShell.exe** può essere ridimensionata nei tre modi seguenti.
+    La sezione **PowerShell.exe** può essere ridimensionata nei tre modi seguenti.
 
     - Trascinare e adattare le dimensioni della finestra della console con il mouse.
 
