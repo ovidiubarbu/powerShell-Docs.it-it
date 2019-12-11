@@ -3,10 +3,10 @@ ms.date: 06/12/2017
 keywords: dsc,powershell,configurazione,installazione
 title: Uso di DSC in Nano Server
 ms.openlocfilehash: fb826455c21833ae4c8dc2ecd731ffce6bf7eaba
-ms.sourcegitcommit: 18985d07ef024378c8590dc7a983099ff9225672
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/04/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "71953858"
 ---
 # <a name="using-dsc-on-nano-server"></a>Uso di DSC in Nano Server

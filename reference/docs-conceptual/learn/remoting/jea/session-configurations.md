@@ -3,10 +3,10 @@ ms.date: 07/10/2019
 keywords: jea,powershell,sicurezza
 title: Configurazioni della sessione JEA
 ms.openlocfilehash: 650d0d11ef13605847d0822249e29e3491180629
-ms.sourcegitcommit: e894ed833cef57967cdaf002f8c883f66864e836
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "70017732"
 ---
 # <a name="jea-session-configurations"></a>Configurazioni della sessione JEA

@@ -3,10 +3,10 @@ ms.date: 07/10/2019
 keywords: jea,powershell,sicurezza
 title: Considerazioni sulla sicurezza in JEA
 ms.openlocfilehash: befc24fec368c4f6d60477daf63bf17e9431133e
-ms.sourcegitcommit: e894ed833cef57967cdaf002f8c883f66864e836
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "70017772"
 ---
 # <a name="jea-security-considerations"></a>Considerazioni sulla sicurezza in JEA

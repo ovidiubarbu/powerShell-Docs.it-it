@@ -3,10 +3,10 @@ ms.date: 06/12/2017
 keywords: dsc,powershell,configurazione,installazione
 title: Configurare un client di pull usando nomi di configurazione in PowerShell 5.0 e versioni successive
 ms.openlocfilehash: d591e2a757130ccecaf4eaf9f363f607fca82b93
-ms.sourcegitcommit: 18985d07ef024378c8590dc7a983099ff9225672
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/04/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "71953628"
 ---
 # <a name="set-up-a-pull-client-using-configuration-names-in-powershell-50-and-later"></a>Configurare un client di pull usando nomi di configurazione in PowerShell 5.0 e versioni successive

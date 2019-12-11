@@ -4,10 +4,10 @@ ms.topic: conceptual
 keywords: wmf,powershell,installazione
 title: Miglioramenti del motore di PowerShell in WMF 5.1
 ms.openlocfilehash: a0af702832c0a90c994650e25918ecacdc33fc4b
-ms.sourcegitcommit: 0a6b562a497860caadba754c75a83215315d37a1
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/19/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "71147651"
 ---
 # <a name="powershell-engine-improvements"></a>Miglioramenti apportati al motore di PowerShell

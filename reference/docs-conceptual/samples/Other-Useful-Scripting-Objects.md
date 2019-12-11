@@ -3,10 +3,10 @@ ms.date: 06/05/2017
 keywords: powershell,cmdlet
 title: Altri oggetti di scripting utili
 ms.openlocfilehash: 4f236246714b0608658bbd535851489912430336
-ms.sourcegitcommit: 4a2cf30351620a58ba95ff5d76b247e601907589
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/27/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "71325151"
 ---
 # <a name="other-useful-scripting-objects"></a>Altri oggetti di scripting utili
