@@ -3,20 +3,20 @@ ms.date: 06/05/2017
 keywords: powershell,cmdlet
 title: Ordinamento degli oggetti
 ms.openlocfilehash: ed78e7e333f3468781c9cd96df2194fbdfebe753
-ms.sourcegitcommit: a6f13c16a535acea279c0ddeca72f1f0d8a8ce4c
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/12/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "67030778"
 ---
-# <a name="sorting-objects"></a><span data-ttu-id="eacd3-103">Ordinamento degli oggetti</span><span class="sxs-lookup"><span data-stu-id="eacd3-103">Sorting Objects</span></span>
+# <a name="sorting-objects"></a><span data-ttu-id="bced7-103">Ordinamento degli oggetti</span><span class="sxs-lookup"><span data-stu-id="bced7-103">Sorting Objects</span></span>
 
-<span data-ttu-id="eacd3-104">È possibile organizzare i dati visualizzati per semplificarne l'analisi usando il cmdlet `Sort-Object`.</span><span class="sxs-lookup"><span data-stu-id="eacd3-104">We can organize displayed data to make it easier to scan by using the `Sort-Object` cmdlet.</span></span> <span data-ttu-id="eacd3-105">`Sort-Object` acquisisce il nome di una o più proprietà in base a cui ordinare i dati e li restituisce ordinati in base ai valori di tali proprietà.</span><span class="sxs-lookup"><span data-stu-id="eacd3-105">`Sort-Object` takes the name of one or more properties to sort on, and returns data sorted by the values of those properties.</span></span>
+<span data-ttu-id="bced7-104">È possibile organizzare i dati visualizzati per semplificarne l'analisi usando il cmdlet `Sort-Object`.</span><span class="sxs-lookup"><span data-stu-id="bced7-104">We can organize displayed data to make it easier to scan by using the `Sort-Object` cmdlet.</span></span> <span data-ttu-id="bced7-105">`Sort-Object` acquisisce il nome di una o più proprietà in base a cui ordinare i dati e li restituisce ordinati in base ai valori di tali proprietà.</span><span class="sxs-lookup"><span data-stu-id="bced7-105">`Sort-Object` takes the name of one or more properties to sort on, and returns data sorted by the values of those properties.</span></span>
 
-## <a name="basic-sorting"></a><span data-ttu-id="eacd3-106">Ordinamento di base</span><span class="sxs-lookup"><span data-stu-id="eacd3-106">Basic sorting</span></span>
+## <a name="basic-sorting"></a><span data-ttu-id="bced7-106">Ordinamento di base</span><span class="sxs-lookup"><span data-stu-id="bced7-106">Basic sorting</span></span>
 
-<span data-ttu-id="eacd3-107">Si consideri l'esigenza di elencare le sottodirectory e i file nella directory corrente.</span><span class="sxs-lookup"><span data-stu-id="eacd3-107">Consider the problem of listing subdirectories and files in the current directory.</span></span>
-<span data-ttu-id="eacd3-108">Se si vuole ordinare in base a **LastWriteTime** e poi in base a **Name**, è possibile digitare:</span><span class="sxs-lookup"><span data-stu-id="eacd3-108">If we want to sort by **LastWriteTime** and then by **Name**, we can do it by typing:</span></span>
+<span data-ttu-id="bced7-107">Si consideri l'esigenza di elencare le sottodirectory e i file nella directory corrente.</span><span class="sxs-lookup"><span data-stu-id="bced7-107">Consider the problem of listing subdirectories and files in the current directory.</span></span>
+<span data-ttu-id="bced7-108">Se si vuole ordinare in base a **LastWriteTime** e poi in base a **Name**, è possibile digitare:</span><span class="sxs-lookup"><span data-stu-id="bced7-108">If we want to sort by **LastWriteTime** and then by **Name**, we can do it by typing:</span></span>
 
 ```powershell
 Get-ChildItem |
@@ -39,7 +39,7 @@ LastWriteTime          Name
 ...
 ```
 
-<span data-ttu-id="eacd3-109">È anche possibile ordinare gli oggetti in ordine inverso, specificando il parametro **Descending**.</span><span class="sxs-lookup"><span data-stu-id="eacd3-109">You can also sort the objects in reverse order by specifying the **Descending** switch parameter.</span></span>
+<span data-ttu-id="bced7-109">È anche possibile ordinare gli oggetti in ordine inverso, specificando il parametro **Descending**.</span><span class="sxs-lookup"><span data-stu-id="bced7-109">You can also sort the objects in reverse order by specifying the **Descending** switch parameter.</span></span>
 
 ```powershell
 Get-ChildItem |
@@ -64,14 +64,14 @@ LastWriteTime          Name
 11/6/2017 10:10:11 AM  .localization-config
 ```
 
-## <a name="using-hash-tables"></a><span data-ttu-id="eacd3-110">Uso di tabelle hash</span><span class="sxs-lookup"><span data-stu-id="eacd3-110">Using hash tables</span></span>
+## <a name="using-hash-tables"></a><span data-ttu-id="bced7-110">Uso di tabelle hash</span><span class="sxs-lookup"><span data-stu-id="bced7-110">Using hash tables</span></span>
 
-<span data-ttu-id="eacd3-111">È possibile ordinare diversamente proprietà diverse usando le tabelle hash in una matrice.</span><span class="sxs-lookup"><span data-stu-id="eacd3-111">You can sort different properties in different orders by using hash tables in an array.</span></span>
-<span data-ttu-id="eacd3-112">Ogni tabella hash usa una chiave **Expression** per specificare il nome della proprietà e una chiave **Ascending** o **Descending** per specificare l'ordinamento `$true` o `$false`.</span><span class="sxs-lookup"><span data-stu-id="eacd3-112">Each hash table uses an **Expression** key to specify the property name as string and an **Ascending** or **Descending** key to specify the sort order by `$true` or `$false`.</span></span>
-<span data-ttu-id="eacd3-113">La chiave **Expression** è obbligatoria.</span><span class="sxs-lookup"><span data-stu-id="eacd3-113">The **Expression** key is mandatory.</span></span>
-<span data-ttu-id="eacd3-114">La chiave **Ascending** o **Descending** è facoltativa.</span><span class="sxs-lookup"><span data-stu-id="eacd3-114">The **Ascending** or **Descending** key is optional.</span></span>
+<span data-ttu-id="bced7-111">È possibile ordinare diversamente proprietà diverse usando le tabelle hash in una matrice.</span><span class="sxs-lookup"><span data-stu-id="bced7-111">You can sort different properties in different orders by using hash tables in an array.</span></span>
+<span data-ttu-id="bced7-112">Ogni tabella hash usa una chiave **Expression** per specificare il nome della proprietà e una chiave **Ascending** o **Descending** per specificare l'ordinamento `$true` o `$false`.</span><span class="sxs-lookup"><span data-stu-id="bced7-112">Each hash table uses an **Expression** key to specify the property name as string and an **Ascending** or **Descending** key to specify the sort order by `$true` or `$false`.</span></span>
+<span data-ttu-id="bced7-113">La chiave **Expression** è obbligatoria.</span><span class="sxs-lookup"><span data-stu-id="bced7-113">The **Expression** key is mandatory.</span></span>
+<span data-ttu-id="bced7-114">La chiave **Ascending** o **Descending** è facoltativa.</span><span class="sxs-lookup"><span data-stu-id="bced7-114">The **Ascending** or **Descending** key is optional.</span></span>
 
-<span data-ttu-id="eacd3-115">Nell'esempio seguente gli oggetti vengono ordinati in base a **LastWriteTime** (in ordine decrescente) e in base a **Name** (in ordine crescente).</span><span class="sxs-lookup"><span data-stu-id="eacd3-115">The following example sorts objects in descending **LastWriteTime** order and ascending **Name** order.</span></span>
+<span data-ttu-id="bced7-115">Nell'esempio seguente gli oggetti vengono ordinati in base a **LastWriteTime** (in ordine decrescente) e in base a **Name** (in ordine crescente).</span><span class="sxs-lookup"><span data-stu-id="bced7-115">The following example sorts objects in descending **LastWriteTime** order and ascending **Name** order.</span></span>
 
 ```powershell
 Get-ChildItem |
@@ -91,10 +91,10 @@ LastWriteTime          Name
 ...
 ```
 
-<span data-ttu-id="eacd3-116">È anche possibile impostare un blocco di script sulla chiave **Expression**.</span><span class="sxs-lookup"><span data-stu-id="eacd3-116">You can also set a scriptblock to the **Expression** key.</span></span>
-<span data-ttu-id="eacd3-117">Quando si esegue il cmdlet `Sort-Object` viene eseguito il blocco di script e il risultato viene usato per l'ordinamento.</span><span class="sxs-lookup"><span data-stu-id="eacd3-117">When running the `Sort-Object` cmdlet, the scriptblock is executed and the result is used for sorting.</span></span>
+<span data-ttu-id="bced7-116">È anche possibile impostare un blocco di script sulla chiave **Expression**.</span><span class="sxs-lookup"><span data-stu-id="bced7-116">You can also set a scriptblock to the **Expression** key.</span></span>
+<span data-ttu-id="bced7-117">Quando si esegue il cmdlet `Sort-Object` viene eseguito il blocco di script e il risultato viene usato per l'ordinamento.</span><span class="sxs-lookup"><span data-stu-id="bced7-117">When running the `Sort-Object` cmdlet, the scriptblock is executed and the result is used for sorting.</span></span>
 
-<span data-ttu-id="eacd3-118">L'esempio seguente dispone gli oggetti in ordine decrescente in base all'intervallo di tempo intercorso tra **CreationTime** e **LastWriteTime**.</span><span class="sxs-lookup"><span data-stu-id="eacd3-118">The following example sorts objects in descending order by the time span between **CreationTime** and **LastWriteTime**.</span></span>
+<span data-ttu-id="bced7-118">L'esempio seguente dispone gli oggetti in ordine decrescente in base all'intervallo di tempo intercorso tra **CreationTime** e **LastWriteTime**.</span><span class="sxs-lookup"><span data-stu-id="bced7-118">The following example sorts objects in descending order by the time span between **CreationTime** and **LastWriteTime**.</span></span>
 
 ```powershell
 Get-ChildItem |
@@ -116,29 +116,29 @@ LastWriteTime          CreationTime
 ...
 ```
 
-## <a name="tips"></a><span data-ttu-id="eacd3-119">Suggerimenti</span><span class="sxs-lookup"><span data-stu-id="eacd3-119">Tips</span></span>
+## <a name="tips"></a><span data-ttu-id="bced7-119">Suggerimenti</span><span class="sxs-lookup"><span data-stu-id="bced7-119">Tips</span></span>
 
-<span data-ttu-id="eacd3-120">È possibile omettere il nome del parametro **Property** come indicato di seguito:</span><span class="sxs-lookup"><span data-stu-id="eacd3-120">You can omit the **Property** parameter name as following:</span></span>
+<span data-ttu-id="bced7-120">È possibile omettere il nome del parametro **Property** come indicato di seguito:</span><span class="sxs-lookup"><span data-stu-id="bced7-120">You can omit the **Property** parameter name as following:</span></span>
 
 ```powershell
 Sort-Object LastWriteTime, Name
 ```
 
-<span data-ttu-id="eacd3-121">È anche possibile fare riferimento a `Sort-Object` tramite il relativo alias predefinito, `sort`:</span><span class="sxs-lookup"><span data-stu-id="eacd3-121">Besides, you can refer to `Sort-Object` by its built-in alias, `sort`:</span></span>
+<span data-ttu-id="bced7-121">È anche possibile fare riferimento a `Sort-Object` tramite il relativo alias predefinito, `sort`:</span><span class="sxs-lookup"><span data-stu-id="bced7-121">Besides, you can refer to `Sort-Object` by its built-in alias, `sort`:</span></span>
 
 ```powershell
 sort LastWriteTime, Name
 ```
 
-<span data-ttu-id="eacd3-122">Le chiavi nelle tabelle hash per l'ordinamento possono essere abbreviate come segue:</span><span class="sxs-lookup"><span data-stu-id="eacd3-122">The keys in the hash tables for sorting can be abbreviated as following:</span></span>
+<span data-ttu-id="bced7-122">Le chiavi nelle tabelle hash per l'ordinamento possono essere abbreviate come segue:</span><span class="sxs-lookup"><span data-stu-id="bced7-122">The keys in the hash tables for sorting can be abbreviated as following:</span></span>
 
 ```powershell
 Sort-Object @{ e = 'LastWriteTime'; d = $true }, @{ e = 'Name'; a = $true }
 ```
 
-<span data-ttu-id="eacd3-123">In questo esempio **e** rappresenta **Expression**, **d** indica **Descending** e **a** **Ascending**.</span><span class="sxs-lookup"><span data-stu-id="eacd3-123">In this example, the **e** stands for **Expression**, the **d** stands for **Descending**, and the **a** stands for **Ascending**.</span></span>
+<span data-ttu-id="bced7-123">In questo esempio **e** rappresenta **Expression**, **d** indica **Descending** e **a** **Ascending**.</span><span class="sxs-lookup"><span data-stu-id="bced7-123">In this example, the **e** stands for **Expression**, the **d** stands for **Descending**, and the **a** stands for **Ascending**.</span></span>
 
-<span data-ttu-id="eacd3-124">Per migliorare la leggibilità, è possibile inserire le tabelle hash in una variabile separata:</span><span class="sxs-lookup"><span data-stu-id="eacd3-124">To improve readability, you can place the hash tables into a separate variable:</span></span>
+<span data-ttu-id="bced7-124">Per migliorare la leggibilità, è possibile inserire le tabelle hash in una variabile separata:</span><span class="sxs-lookup"><span data-stu-id="bced7-124">To improve readability, you can place the hash tables into a separate variable:</span></span>
 
 ```powershell
 $order = @(
