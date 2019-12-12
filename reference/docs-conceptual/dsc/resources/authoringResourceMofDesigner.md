@@ -3,10 +3,10 @@ ms.date: 06/12/2017
 keywords: dsc,powershell,configurazione,installazione
 title: Uso dello strumento di progettazione risorse
 ms.openlocfilehash: 4f678f4586c75c830bf876b891fe4784aa3b4e95
-ms.sourcegitcommit: 18985d07ef024378c8590dc7a983099ff9225672
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/04/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "71952858"
 ---
 # <a name="using-the-resource-designer-tool"></a>Uso dello strumento di progettazione risorse
@@ -17,7 +17,7 @@ Lo strumento di progettazione risorse è un set di cmdlet esposti dal modulo **x
 In questo argomento verrà creata una risorsa DSC che gestisce gli utenti di Active Directory.
 Usare il cmdlet [Install-Module](/powershell/module/PowershellGet/Install-Module) per installare il modulo **xDscResourceDesigner**.
 
->**Nota**: Il cmdlet Install-Module è incluso nel modulo **PowerShellGet**, disponibile in PowerShell 5.0. È possibile scaricare il modulo **PowerShellGet** per PowerShell 3.0 e 4.0 dalla pagina dell'[anteprima dei moduli PackageManagement di PowerShell](https://www.microsoft.com/en-us/download/details.aspx?id=49186).
+>**Nota**: Il cmdlet **Install-Module** è incluso nel modulo **PowerShellGet**, disponibile in PowerShell 5.0. È possibile scaricare il modulo **PowerShellGet** per PowerShell 3.0 e 4.0 dalla pagina dell'[anteprima dei moduli PackageManagement di PowerShell](https://www.microsoft.com/en-us/download/details.aspx?id=49186).
 
 ## <a name="creating-resource-properties"></a>Creazione delle proprietà della risorsa
 La prima cosa da fare è stabilire le proprietà che la risorsa dovrà esporre. In questo esempio verrà definito un utente di Active Directory con le proprietà seguenti.
