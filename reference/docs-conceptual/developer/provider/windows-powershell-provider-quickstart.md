@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 3e879ba7-c334-460b-94a1-3e9b63d3d8de
 caps.latest.revision: 5
 ms.openlocfilehash: 949c0d63b1e5bca1bfe670362df4297c29e98fcc
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72359920"
 ---
 # <a name="windows-powershell-provider-quickstart"></a>Guida introduttiva del provider di Windows PowerShell
@@ -21,7 +21,7 @@ In questo argomento viene illustrato come creare un provider di Windows PowerShe
 
 ## <a name="writing-a-basic-provider"></a>Scrittura di un provider di base
 
-La funzionalità di base di un provider di Windows PowerShell consiste nel creare e rimuovere unità. In questo esempio vengono implementati i metodi [System. Management. Automation. provider. Drivecmdletprovider. nuovaunità *](/dotnet/api/System.Management.Automation.Provider.DriveCmdletProvider.NewDrive) e [System. Management. Automation. provider. Drivecmdletprovider. Removedrive *](/dotnet/api/System.Management.Automation.Provider.DriveCmdletProvider.RemoveDrive) del [ Classe System. Management. Automation. provider. Drivecmdletprovider](/dotnet/api/System.Management.Automation.Provider.DriveCmdletProvider) . Si vedrà anche come dichiarare una classe di provider.
+La funzionalità di base di un provider di Windows PowerShell consiste nel creare e rimuovere unità. In questo esempio vengono implementati i metodi [System. Management. Automation. provider. Drivecmdletprovider. nuovaunità *](/dotnet/api/System.Management.Automation.Provider.DriveCmdletProvider.NewDrive) e [System. Management. Automation. provider. Drivecmdletprovider. Removedrive *](/dotnet/api/System.Management.Automation.Provider.DriveCmdletProvider.RemoveDrive) della classe [System. Management. Automation. provider. Drivecmdletprovider](/dotnet/api/System.Management.Automation.Provider.DriveCmdletProvider) . Si vedrà anche come dichiarare una classe di provider.
 
 Quando si scrive un provider, è possibile specificare unità predefinite che vengono create automaticamente quando il provider è disponibile. Si definisce anche un metodo per creare nuove unità che usano tale provider.
 
@@ -35,7 +35,7 @@ In Visual Studio creare un progetto libreria di classi denominato AccessDBProvid
 
 1. Aggiungere l'assembly System. Management. Automation come riferimento al progetto.
 
-2. Fare clic su **progetto > proprietà AccessDBProviderSample > debug**. In **Avvia progetto**, fare clic su **Avvia programma esterno**e passare al file eseguibile di Windows PowerShell (in genere c:\windows\system32\windowspowershell\ V1.0\\.powershell.exe).
+2. Fare clic su **progetto > proprietà AccessDBProviderSample > debug**. In **Avvia progetto**, fare clic su **Avvia programma esterno**e passare al file eseguibile di Windows PowerShell (in genere c:\Windows\system32\WindowsPowerShell\v1.0\\. PowerShell. exe).
 
 3. In **Opzioni di avvio**immettere quanto segue nella casella **argomenti della riga di comando** : `-noexit -command "[reflection.assembly]::loadFrom(AccessDBProviderSample.dll' ) | import-module"`
 
@@ -43,7 +43,7 @@ In Visual Studio creare un progetto libreria di classi denominato AccessDBProvid
 
 Il provider deriva dalla classe [System. Management. Automation. provider. Drivecmdletprovider](/dotnet/api/System.Management.Automation.Provider.DriveCmdletProvider) . La maggior parte dei provider che forniscono funzionalità reali (accesso e manipolazione di elementi, spostamento nell'archivio dati e recupero e impostazione del contenuto degli elementi) derivano dalla classe [System. Management. Automation. provider. Navigationcmdletprovider](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider) .
 
-Oltre a specificare che la classe deriva da [System. Management. Automation. provider. Drivecmdletprovider](/dotnet/api/System.Management.Automation.Provider.DriveCmdletProvider), è necessario decorarla con [System. Management. Automation. provider. CmdletProviderAttribute](/dotnet/api/System.Management.Automation.Provider.CmdletProviderAttribute) come illustrato nell'esempio .
+Oltre a specificare che la classe deriva da [System. Management. Automation. provider. Drivecmdletprovider](/dotnet/api/System.Management.Automation.Provider.DriveCmdletProvider), è necessario decorarla con [System. Management. Automation. provider. CmdletProviderAttribute](/dotnet/api/System.Management.Automation.Provider.CmdletProviderAttribute) come illustrato nell'esempio.
 
 ```csharp
 namespace Microsoft.Samples.PowerShell.Providers

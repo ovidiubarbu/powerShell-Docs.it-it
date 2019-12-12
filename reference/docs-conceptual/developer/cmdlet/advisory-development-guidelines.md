@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 79c9bcbc-a2eb-4253-a4b8-65ba54ce8d01
 caps.latest.revision: 9
 ms.openlocfilehash: 980b488800587e31286e2ca2ece924e07f8af3f3
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72370040"
 ---
 # <a name="advisory-development-guidelines"></a>Linee guida sullo sviluppo consigliate
@@ -59,7 +59,7 @@ Normalmente si definisce la classe per un cmdlet in uno spazio dei nomi .NET Fra
 
 #### <a name="name-the-cmdlet-class-to-match-the-cmdlet-name"></a>Denominare la classe cmdlet in modo che corrisponda al nome del cmdlet
 
-Quando si rinomina la classe .NET Framework che implementa un cmdlet, denominare la classe " *\<verbo > **\<sostantivo*** >\<comando >", in cui si sostituisce il *verbo\<* > e\<i segnaposto > *sostantivo* con il verbo e il sostantivo utilizzati per il nome del cmdlet. Il cmdlet [Get-Process](/powershell/module/Microsoft.PowerShell.Management/Get-Process) , ad esempio, viene implementato da una classe denominata `GetProcessCommand`.
+Quando si rinomina la classe .NET Framework che implementa un cmdlet, denominare la classe " *\<verbo > **\<sostantivo*** \<comando >", in cui si sostituisce il *verbo\<* > e\<i segnaposto > *sostantivo* con il verbo e il sostantivo utilizzati per il nome del cmdlet. Il cmdlet [Get-Process](/powershell/module/Microsoft.PowerShell.Management/Get-Process) , ad esempio, viene implementato da una classe denominata `GetProcessCommand`.
 
 ### <a name="if-no-pipeline-input-override-the-beginprocessing-method-ac02"></a>Se nessun input della pipeline esegue l'override del metodo BeginProcessing (AC02)
 
@@ -107,7 +107,7 @@ Tipi di rehydratable predefiniti:
 
 Altri tipi:
 
-- SecureString
+- StringaSicura
 
 - Contenitori (elenchi e dizionari del tipo precedente)
 

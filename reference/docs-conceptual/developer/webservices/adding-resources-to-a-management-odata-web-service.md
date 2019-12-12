@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: e620bf6d-76be-47b0-a7a8-f43418f30c60
 caps.latest.revision: 6
 ms.openlocfilehash: b81a32b867795ae51c3f5308c2f82c31ed2747fa
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72359820"
 ---
 # <a name="adding-resources-to-a-management-odata-web-service"></a>Aggiunta di risorse a un servizio Web OData di gestione
@@ -49,19 +49,19 @@ Il primo passaggio consiste nell'importare lo schema dall'endpoint OData di gest
 
 2. Verificare che il **computer locale** sia selezionato e fare clic su **Avanti**.
 
-3. Assicurarsi che sia selezionata l'opzione moduli di Windows PowerShell installati e selezionare Hyper-V dall'elenco a discesa. fare clic su **Avanti**. Fare clic su **Avanti**.
+3. Assicurarsi che sia selezionata l'opzione moduli di Windows PowerShell installati e selezionare Hyper-V dall'elenco a discesa. Fare clic su **Avanti**. Fare clic su **Avanti**.
 
 4. Nell'elenco **nome cmdlet** selezionare **VM**. Fare clic su **Avanti**.
 
-5. Per questo esempio, vengono associati solo i comandi Get ed Delete con i cmdlet. Deselezionare le caselle di controllo **Crea** e **Aggiorna** e verificare che le caselle di controllo **Ottieni** ed **Elimina** siano selezionate. Verificare che sia selezionato il cmdlet `Get-VM` per **Get**e che il cmdlet `Remove-VM` sia selezionato per l' **eliminazione**.
+5. Per questo esempio, vengono associati solo i comandi Get ed Delete con i cmdlet. Deselezionare le caselle di controllo **Crea** e **Aggiorna** e verificare che le caselle di controllo **Ottieni** ed **Elimina** siano selezionate. Verificare che il cmdlet `Get-VM` sia selezionato per **Get**e che il cmdlet `Remove-VM` sia selezionato per l' **eliminazione**.
 
-6. Poiché i metadati per i cmdlet della macchina virtuale non specificano un tipo di output, sarà necessario eseguire il cmdlet per specificare il tipo di output. Selezionare **Fornisci tipo di output** e fare clic su **Esegui cmdlet**. Verrà visualizzata la finestra di dialogo **Esegui cmdlet** . Fare clic su **Esegui**. La casella **tipo CLR** viene popolata con il tipo `VirtualMachine`. Fare clic su **OK**, quindi su **Avanti**.
+6. Poiché i metadati per i cmdlet della macchina virtuale non specificano un tipo di output, sarà necessario eseguire il cmdlet per specificare il tipo di output. Selezionare **Fornisci tipo di output** e fare clic su **Esegui cmdlet**. Verrà visualizzata la finestra di dialogo **Esegui cmdlet** . Fare clic su **Esegui**. La casella **tipo CLR** viene popolata con il tipo di `VirtualMachine`. Fare clic su **OK**, quindi su **Avanti**.
 
 7. Per impostazione predefinita, vengono selezionate tutte le proprietà dell'oggetto VirtualMachine. È possibile deselezionare tutte le proprietà che non si desidera includere come parte dei dati restituiti quando si richiede questa risorsa dal servizio Web. Fare clic su **Avanti**.
 
 8. È necessario selezionare almeno una proprietà da utilizzare come chiave. Selezionare **nome** nell'elenco e fare clic su **Avanti**.
 
-9. La finestra successiva consente di eseguire il mapping delle proprietà della risorsa OData di gestione alle proprietà dei cmdlet sottostanti. Per impostazione predefinita, la procedura guidata esegue il mapping delle proprietà con nomi identici. Ad esempio, la proprietà `ComputerName` della risorsa viene mappata alla proprietà `ComputerName` dei cmdlet.  In questo modo è possibile specificare la proprietà `ComputerName` in una richiesta al servizio Web e fare in modo che il valore specificato venga passato al cmdlet `Get-VM`. per impostazione predefinita, viene inoltre eseguito il mapping di `Id` e `Name`.
+9. La finestra successiva consente di eseguire il mapping delle proprietà della risorsa OData di gestione alle proprietà dei cmdlet sottostanti. Per impostazione predefinita, la procedura guidata esegue il mapping delle proprietà con nomi identici. Ad esempio, la proprietà `ComputerName` della risorsa viene mappata alla proprietà `ComputerName` dei cmdlet.  In questo modo è possibile specificare la proprietà `ComputerName` in una richiesta al servizio Web e fare in modo che il valore specificato venga passato al cmdlet `Get-VM`. per impostazione predefinita vengono inoltre mappati `Id` e `Name`.
 
    10. Fare clic su **Avanti**, quindi su **fine**.
 
@@ -77,4 +77,4 @@ Il primo passaggio consiste nell'importare lo schema dall'endpoint OData di gest
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-Prima di accedere alla nuova risorsa VM dal servizio Web di gestione OData, è necessario aggiornare il file RbacConfiguration. XML per consentire l'accesso al modulo di Windows PowerShell Hyper-V, come descritto in [configurazione dell'autorizzazione basata sui ruoli](./configuring-role-based-authorization.md). Inoltre, sarà possibile è necessario riavviare il servizio Web.
+Prima di accedere alla nuova risorsa VM dal servizio Web di gestione OData, è necessario aggiornare il file RbacConfiguration. XML per consentire l'accesso al modulo di Windows PowerShell per Hyper-V, come descritto in [configurazione dell'autorizzazione basata sui ruoli](./configuring-role-based-authorization.md). Inoltre, sarà necessario riavviare il servizio Web.

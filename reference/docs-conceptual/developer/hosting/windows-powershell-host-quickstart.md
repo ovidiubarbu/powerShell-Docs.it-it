@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 5a134b81-bd0c-4e1c-a2f0-9acbe852745a
 caps.latest.revision: 9
 ms.openlocfilehash: 390eb2d0153c65967d8c0711c852aa6e13fe4660
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72360820"
 ---
 # <a name="windows-powershell-host-quickstart"></a>Guida introduttiva dell'host di Windows PowerShell
@@ -91,7 +91,7 @@ PowerShell.Create().AddCommand("Get-Process")
 ### <a name="addstatement"></a>AddStatement
 
 È possibile simulare la suddivisione in batch usando il metodo [System. Management. Automation. PowerShell. AddStatement](/dotnet/api/System.Management.Automation.PowerShell.AddStatement) , che aggiunge un'altra istruzione alla fine della pipeline.
-Il codice seguente ottiene un elenco di processi in esecuzione con il nome `PowerShell` e quindi ottiene l'elenco dei servizi in esecuzione.
+Il codice seguente ottiene un elenco di processi in esecuzione con il nome `PowerShell`e quindi ottiene l'elenco dei servizi in esecuzione.
 
 ```csharp
 PowerShell ps = PowerShell.Create();

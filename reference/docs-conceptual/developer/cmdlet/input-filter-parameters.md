@@ -9,17 +9,17 @@ ms.topic: article
 ms.assetid: e45929d1-bbb4-4dc6-892f-f9eacdb1c84c
 caps.latest.revision: 8
 ms.openlocfilehash: 553878c34e74129f9876cca25a5393cb0d53445a
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72364390"
 ---
 # <a name="input-filter-parameters"></a>Parametri di filtro degli input
 
-Un cmdlet può definire i parametri `Filter`, `Include` e `Exclude` che filtrano il set di oggetti di input interessati dal cmdlet.
+Un cmdlet può definire i parametri `Filter`, `Include`e `Exclude` che filtrano il set di oggetti di input interessati dal cmdlet.
 
-In genere, il set di oggetti di input viene specificato da un parametro `InputObject`, `Path` o `Name`. Ad esempio, un cmdlet può avere un parametro `Path` che accetta più percorsi utilizzando caratteri jolly e ogni percorso punta a un oggetto di input. Insieme, i parametri `Filter`, `Include` e `Exclude` qualificano ulteriormente i percorsi utilizzati dal cmdlet ogni volta che viene richiamato.
+In genere, il set di oggetti di input viene specificato da un parametro `InputObject`, `Path`o `Name`. Ad esempio, un cmdlet può avere un `Path` parametro che accetta più percorsi utilizzando caratteri jolly e ogni percorso punta a un oggetto di input. Insieme, i parametri `Filter`, `Include`e `Exclude` qualificano ulteriormente i percorsi utilizzati dal cmdlet ogni volta che viene richiamato.
 
 ## <a name="include-and-exclude-parameters"></a>Includi ed Escludi parametri
 
@@ -27,7 +27,7 @@ I parametri `Include` e `Exclude` identificano gli oggetti inclusi o esclusi dal
 
 ## <a name="filter-parameter"></a>Parametro Filter
 
-Il parametro `Filter` specifica un filtro non espresso nel linguaggio con caratteri jolly standard. È ad esempio possibile passare al cmdlet i filtri ADSI (Active Directory Service Interfaces) o SQL tramite il relativo parametro `Filter`. Nei cmdlet forniti da Windows PowerShell questi filtri sono specificati dai provider di Windows PowerShell che usano il cmdlet per accedere a un archivio dati. Ogni provider definisce in genere il proprio filtro.
+Il parametro `Filter` specifica un filtro non espresso nel linguaggio con caratteri jolly standard. È possibile, ad esempio, che i filtri ADSI (Active Directory Service Interfaces) o SQL vengano passati al cmdlet tramite il relativo parametro `Filter`. Nei cmdlet forniti da Windows PowerShell questi filtri sono specificati dai provider di Windows PowerShell che usano il cmdlet per accedere a un archivio dati. Ogni provider definisce in genere il proprio filtro.
 
 ## <a name="filtering-if-no-set-of-input-objects-is-specified"></a>Filtro se non è specificato alcun set di oggetti di input
 

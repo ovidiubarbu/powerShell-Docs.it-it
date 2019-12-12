@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 918f381c-43e6-4594-a468-a40bfa8a16d6
 caps.latest.revision: 7
 ms.openlocfilehash: 3c94d8e98f179286112a417230fce659dc0b614c
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72362810"
 ---
 # <a name="list-view-basic"></a>Visualizzazione elenco (base)
@@ -30,7 +30,7 @@ Questo esempio illustra come implementare una visualizzazione elenco di base in 
    > [!WARNING]
    > Questo file di formattazione definisce la visualizzazione di un oggetto già definito da un file di formattazione di Windows PowerShell. Quando si esegue il cmdlet, è necessario utilizzare il parametro `prependPath` e non è possibile caricare il file di formattazione come modulo.
 
-## <a name="demonstrates"></a>Dimostra
+## <a name="demonstrates"></a>Illustra
 
 In questo file di formattazione vengono illustrati gli elementi XML seguenti:
 

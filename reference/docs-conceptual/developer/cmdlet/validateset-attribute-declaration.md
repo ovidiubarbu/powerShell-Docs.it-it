@@ -13,10 +13,10 @@ helpviewer_keywords:
 ms.assetid: 4a6f97ab-45b2-4f3d-84d4-30acf8e074d0
 caps.latest.revision: 12
 ms.openlocfilehash: b036f39cd01ffe4b4ce7db9627cb6da0d5327190
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72364280"
 ---
 # <a name="validateset-attribute-declaration"></a>Dichiarazione dell'attributo ValidateSet
@@ -41,7 +41,7 @@ Quando si specifica questo attributo, il runtime di Windows PowerShell determina
 [ValidateSetAttribute("Steve","Mary")]
 ```
 
-`IgnoreCase` ([System. Boolean](/dotnet/api/System.Boolean)) parametro denominato facoltativo. Il valore predefinito di `true` indica che la distinzione tra maiuscole e minuscole viene ignorata. Il valore `false` rende il cmdlet con distinzione tra maiuscole e minuscole.
+`IgnoreCase` ([System. Boolean](/dotnet/api/System.Boolean)) parametro denominato facoltativo. Il valore predefinito di `true` indica che il case viene ignorato. Il valore `false` rende il cmdlet con distinzione tra maiuscole e minuscole.
 
 ## <a name="remarks"></a>Osservazioni
 

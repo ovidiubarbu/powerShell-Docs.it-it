@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 17352fc4-ba83-4f04-86bc-f591765d85a8
 caps.latest.revision: 18
 ms.openlocfilehash: fa9eda3ea1028c27dbfb3eb04747af3b817c1a81
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72361400"
 ---
 # <a name="wideitem-element-for-widecontrol-format"></a>Elemento WideItem per WideControl (formato)
@@ -59,7 +59,7 @@ Per ulteriori informazioni sui componenti di una visualizzazione estesa, vedere 
 
 ## <a name="example"></a>Esempio
 
-Nell'esempio seguente viene illustrato un elemento `WideEntry` che definisce un singolo elemento `WideItem`. L'elemento `WideItem` definisce la proprietà o lo script il cui valore viene visualizzato nella visualizzazione.
+Nell'esempio seguente viene illustrato un elemento `WideEntry` che definisce un singolo elemento di `WideItem`. L'elemento `WideItem` definisce la proprietà o lo script il cui valore viene visualizzato nella visualizzazione.
 
 ```xml
 <WideEntry>

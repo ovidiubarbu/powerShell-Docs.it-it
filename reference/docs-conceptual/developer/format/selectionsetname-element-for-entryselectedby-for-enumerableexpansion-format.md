@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 936d09f2-2c48-49e8-ab2d-0c8729199a2e
 caps.latest.revision: 8
 ms.openlocfilehash: 8ba8931ea5e34f610878351396cad42023393ad6
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72368330"
 ---
 # <a name="selectionsetname-element-for-entryselectedby-for-enumerableexpansion-format"></a>Elemento SelectionSetName per EntrySelectedBy per EnumerableExpansion (formato)
@@ -46,7 +46,7 @@ Nessuna.
 |-------------|-----------------|
 |[Elemento EntrySelectedBy per EnumerableExpansion (Format)](./entryselectedby-element-for-enumerableexpansion-format.md)|Definisce gli oggetti della raccolta .NET espansi da questa definizione.|
 
-## <a name="text-value"></a>Valore di testo
+## <a name="text-value"></a>Valore testo
 
 Consente di specificare il nome del set di selezione.
 

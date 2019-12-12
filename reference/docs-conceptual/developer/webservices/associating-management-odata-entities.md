@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 947a3add-3593-400d-8144-8b44c8adbe5e
 caps.latest.revision: 5
 ms.openlocfilehash: 44b718e024eb98ac562edb50076287a31f5edc6b
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72359810"
 ---
 # <a name="associating-management-odata-entities"></a>Associazione delle entità OData di gestione
@@ -94,7 +94,7 @@ Esistono tre casi diversi da considerare quando si esegue il mapping di un'assoc
 
 - Se la proprietà di navigazione è presente nell'oggetto sottostante. .NET Framework tipo e tale proprietà contiene chiavi esterne, non è necessario alcun mapping esplicito.
 
-- Se la proprietà di navigazione non esiste nel tipo di .NET Framework sottostante, è necessario specificare un cmdlet che recuperi l'elenco di chiavi delle istanze associate. A tale scopo, aggiungere un elemento `Association` annidato sotto l'elemento `CmdletImplementation`, dopo gli elementi che definiscono il `cmdlets` per gli altri comandi CRUD.
+- Se la proprietà di navigazione non esiste nel tipo di .NET Framework sottostante, è necessario specificare un cmdlet che recuperi l'elenco di chiavi delle istanze associate. A tale scopo, aggiungere un elemento `Association` annidato sotto l'elemento `CmdletImplementation`, seguendo gli elementi che definiscono la `cmdlets` per gli altri comandi CRUD.
 
   ```xml
   Class Name=" Category">

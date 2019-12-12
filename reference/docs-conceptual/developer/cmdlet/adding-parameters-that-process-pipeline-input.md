@@ -12,17 +12,17 @@ helpviewer_keywords:
 ms.assetid: 09bf70a9-7c76-4ffe-b3f0-a1d5f10a0931
 caps.latest.revision: 8
 ms.openlocfilehash: 9ecb73a4138a5853fa5fb378874da2d81c5dbdba
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72364600"
 ---
 # <a name="adding-parameters-that-process-pipeline-input"></a>Aggiunta di parametri che elaborano gli input della pipeline
 
 Un'origine di input per un cmdlet è un oggetto nella pipeline che ha origine da un cmdlet upstream. Questa sezione descrive come aggiungere un parametro al cmdlet Get-proc, descritto in [creazione del primo cmdlet](./creating-a-cmdlet-without-parameters.md), in modo che il cmdlet possa elaborare gli oggetti pipeline.
 
-Questo cmdlet Get-proc usa un parametro `Name` che accetta l'input da un oggetto pipeline, recupera le informazioni sul processo dal computer locale in base ai nomi forniti, quindi Visualizza le informazioni sui processi nella riga di comando.
+Questo cmdlet Get-proc usa un parametro `Name` che accetta l'input da un oggetto pipeline, recupera le informazioni sul processo dal computer locale in base ai nomi forniti e quindi Visualizza le informazioni sui processi nella riga di comando.
 
 ## <a name="defining-the-cmdlet-class"></a>Definizione della classe cmdlet
 
@@ -43,7 +43,7 @@ Public Class GetProcCommand
 
 ## <a name="defining-input-from-the-pipeline"></a>Definizione dell'input dalla pipeline
 
-Questa sezione descrive come definire l'input dalla pipeline per un cmdlet. Questo cmdlet Get-proc definisce una proprietà che rappresenta il parametro `Name`, come descritto in [aggiunta di parametri che elaborano l'input della riga di comando](./adding-parameters-that-process-command-line-input.md). Per informazioni generali sulla dichiarazione dei parametri, vedere questo argomento.
+Questa sezione descrive come definire l'input dalla pipeline per un cmdlet. Questo cmdlet Get-proc definisce una proprietà che rappresenta il parametro `Name` come descritto in [aggiunta di parametri che elaborano l'input della riga di comando](./adding-parameters-that-process-command-line-input.md). Per informazioni generali sulla dichiarazione dei parametri, vedere questo argomento.
 
 Tuttavia, quando un cmdlet deve elaborare l'input della pipeline, i parametri devono essere associati ai valori di input dal runtime di Windows PowerShell. A tale scopo, è necessario aggiungere la parola chiave `ValueFromPipeline` o aggiungere la parola chiave `ValueFromPipelineByProperty` alla dichiarazione dell'attributo [System. Management. Automation. ParameterAttribute](/dotnet/api/System.Management.Automation.ParameterAttribute) . Specificare la parola chiave `ValueFromPipeline` se il cmdlet accede all'oggetto di input completo. Specificare il `ValueFromPipelineByProperty` se il cmdlet accede solo a una proprietà dell'oggetto.
 
@@ -68,7 +68,7 @@ End Property
 
 <!-- TODO!!!: review snippet reference  [!CODE [Msh_samplesgetproc03#GetProc03VBNameParameter](Msh_samplesgetproc03#GetProc03VBNameParameter)]  -->
 
-La dichiarazione precedente imposta la parola chiave `ValueFromPipeline` su `true`, in modo che il runtime di Windows PowerShell associ il parametro all'oggetto in arrivo se l'oggetto è dello stesso tipo del parametro o se può essere assegnato allo stesso tipo. Anche la parola chiave `ValueFromPipelineByPropertyName` è impostata su `true`, in modo che il runtime di Windows PowerShell controllerà l'oggetto in ingresso per una proprietà `Name`. Se l'oggetto in ingresso dispone di tale proprietà, il runtime eseguirà il binding del parametro `Name` alla proprietà `Name` dell'oggetto in ingresso.
+La dichiarazione precedente imposta la parola chiave `ValueFromPipeline` su `true`, in modo che il runtime di Windows PowerShell associ il parametro all'oggetto in arrivo se l'oggetto è dello stesso tipo del parametro o se può essere assegnato allo stesso tipo. La parola chiave `ValueFromPipelineByPropertyName` viene inoltre impostata su `true`, in modo che il runtime di Windows PowerShell controllerà l'oggetto in ingresso per una proprietà `Name`. Se l'oggetto in ingresso ha tale proprietà, il runtime eseguirà il binding del parametro `Name` alla proprietà `Name` dell'oggetto in ingresso.
 
 > [!NOTE]
 > L'impostazione della parola chiave dell'attributo `ValueFromPipeline` per un parametro ha la precedenza sull'impostazione per la parola chiave `ValueFromPipelineByPropertyName`.
@@ -124,7 +124,7 @@ Protected Overrides Sub ProcessRecord()
 End Sub 'ProcessRecord
 ```
 
-## <a name="code-sample"></a>Esempio di codice
+## <a name="code-sample"></a>Codice di esempio
 
 Per il codice C# di esempio completo, vedere l' [esempio GetProcessSample03](./getprocesssample03-sample.md).
 
@@ -146,7 +146,7 @@ Quando il cmdlet è stato registrato con Windows PowerShell, testarlo eseguendol
     PS> type ProcessNames | get-proc
     ```
 
-Viene visualizzato l'output seguente.
+Viene visualizzato l'output seguente:
 
     ```
     Handles  NPM(K)  PM(K)   WS(K)  VS(M)  CPU(s)    Id  ProcessName
@@ -163,7 +163,7 @@ Viene visualizzato l'output seguente.
     PS> get-process iexplore | get-proc
     ```
 
-Viene visualizzato l'output seguente.
+Viene visualizzato l'output seguente:
 
     ```
     Handles  NPM(K)  PM(K)   WS(K)  VS(M)  CPU(s)    Id  ProcessName

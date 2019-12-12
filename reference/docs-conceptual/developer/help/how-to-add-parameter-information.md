@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: cf6c1442-60aa-477a-8f30-ab02b1b11039
 caps.latest.revision: 7
 ms.openlocfilehash: d4a5fc934a41b00f89862674e44e4540680674f7
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72361230"
 ---
 # <a name="how-to-add-parameter-information"></a>Come aggiungere le informazioni sui parametri
@@ -157,7 +157,7 @@ Il contenuto della sezione PARAMETERS deve essere coerente con il contenuto dell
 
 Ecco alcuni aspetti da ricordare quando si aggiungono parametri.
 
-- Gli attributi del parametro non vengono visualizzati in tutte le visualizzazioni dell'argomento della guida del cmdlet. Tuttavia, vengono visualizzati in una tabella che segue la descrizione del parametro quando l'utente chiede la vista completa (Get-Help \<cmdletname >-Full) o Parameter (Get-Help \<cmdletname >-Parameter) dell'argomento.
+- Gli attributi del parametro non vengono visualizzati in tutte le visualizzazioni dell'argomento della guida del cmdlet. Tuttavia, vengono visualizzati in una tabella che segue la descrizione del parametro quando l'utente chiede la vista completa (Get-Help \<CmdletName >-Full) o Parameter (Get-Help \<CmdletName >-Parameter) dell'argomento.
 
 - La descrizione del parametro è una delle parti più importanti di un argomento della guida del cmdlet. La descrizione deve essere breve, nonché approfondita. Tenere inoltre presente che se la descrizione del parametro diventa troppo lungo, ad esempio quando due parametri interagiscono tra loro, è possibile aggiungere altro contenuto nella sezione Note dell'argomento della guida del cmdlet.
 
@@ -171,11 +171,11 @@ Ecco alcuni aspetti da ricordare quando si aggiungono parametri.
 
 Il valore predefinito del parametro è il valore utilizzato se il parametro non è specificato nella riga di comando. Si noti che il valore predefinito è facoltativo e non è necessario per alcuni parametri, ad esempio i parametri obbligatori. Tuttavia, è necessario specificare un valore predefinito per la maggior parte dei parametri facoltativi.
 
-Il valore predefinito consente all'utente di comprendere l'effetto di non utilizzare il parametro. Descrivere il valore predefinito in modo specifico, ad esempio "directory corrente" o "directory di installazione di Windows PowerShell ($pshome)" per un percorso facoltativo. È anche possibile scrivere una frase che descrive il valore predefinito, ad esempio la frase seguente usata per il parametro `PassThru`: "se PassThru non è specificato, il cmdlet non passa gli oggetti nella pipeline".  Inoltre, poiché il valore viene visualizzato in senso opposto al nome del campo "**valore predefinito**", non è necessario includere il termine "valore predefinito" nella voce.
+Il valore predefinito consente all'utente di comprendere l'effetto di non utilizzare il parametro. Descrivere il valore predefinito in modo specifico, ad esempio "directory corrente" o "directory di installazione di Windows PowerShell ($pshome)" per un percorso facoltativo. È anche possibile scrivere una frase che descrive il valore predefinito, ad esempio la frase seguente usata per il parametro `PassThru`: "se PassThru non è specificato, il cmdlet non passa gli oggetti alla pipeline."  Inoltre, poiché il valore viene visualizzato in senso opposto al nome del campo "**valore predefinito**", non è necessario includere il termine "valore predefinito" nella voce.
 
-Il valore predefinito del parametro non viene visualizzato in tutte le visualizzazioni dell'argomento della guida del cmdlet. Viene tuttavia visualizzato in una tabella, insieme agli attributi dei parametri, dopo la descrizione del parametro quando l'utente chiede la vista completa (Get-Help \<cmdletname >-Full) o Parameter (Get-Help \<cmdletname >-Parameter) dell'argomento.
+Il valore predefinito del parametro non viene visualizzato in tutte le visualizzazioni dell'argomento della guida del cmdlet. Viene tuttavia visualizzato in una tabella, insieme agli attributi dei parametri, dopo la descrizione del parametro quando l'utente chiede la visualizzazione completa (Get-Help \<CmdletName >-Full) o Parameter (Get-Help \<CmdletName >-Parameter) dell'argomento.
 
-Nel codice XML seguente viene illustrata una coppia di tag `<dev:defaultValue>` aggiunti al nodo `<command:parameter>`. Si noti che il valore predefinito segue immediatamente dopo il tag di chiusura `</command:parameterValue>` (quando viene specificato il valore del parametro) o il tag di chiusura `</maml:description>` della descrizione del parametro. nome.
+Nel codice XML seguente viene illustrata una coppia di tag `<dev:defaultValue>` aggiunti al nodo `<command:parameter>`. Si noti che il valore predefinito segue immediatamente dopo il tag di chiusura `</command:parameterValue>` (quando viene specificato il valore del parametro) o il tag di chiusura `</maml:description>` della descrizione del parametro. name.
 
 ```xml
 <command:parameters>
@@ -197,7 +197,7 @@ Aggiungere valori per i tipi enumerati
 
 Se il parametro ha più valori o valori di un tipo enumerato, è possibile usare un nodo facoltativo \<dev: possibleValues >. Questo nodo consente di specificare un nome e una descrizione per più valori.
 
-Tenere presente che le descrizioni dei valori enumerati non vengono visualizzate in nessuna delle visualizzazioni Guida predefinite visualizzate dal cmdlet `Get-Help`, mentre altri visualizzatori della guida possono visualizzare questo contenuto nelle visualizzazioni.
+Tenere presente che le descrizioni dei valori enumerati non vengono visualizzate in nessuna delle visualizzazioni della guida predefinite visualizzate dal cmdlet `Get-Help`, ma gli altri visualizzatori della guida possono visualizzare questo contenuto nelle visualizzazioni.
 
 Nel codice XML seguente viene illustrato un nodo `<dev:possibleValues>` con due valori specificati.
 

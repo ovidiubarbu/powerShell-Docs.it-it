@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: af128d87-24f3-4e33-9457-6f8678993236
 caps.latest.revision: 6
 ms.openlocfilehash: b9b66adb9c36977859c9516dc132f99be424d12b
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72362210"
 ---
 # <a name="rightindent-element-for-frame-for-controls-for-view-format"></a>Elemento RightIndent per Frame per Controls per View (formato)
@@ -45,7 +45,7 @@ Nessuna.
 |-------------|-----------------|
 |[Elemento frame per CustomItem per i controlli per la visualizzazione (Format)](./frame-element-for-customitem-for-controls-for-view-format.md)|Definisce la modalità di visualizzazione dei dati, ad esempio lo spostamento dei dati verso sinistra o verso destra.|
 
-## <a name="text-value"></a>Valore di testo
+## <a name="text-value"></a>Valore testo
 
 Specificare il numero di caratteri che si desidera spostare i dati a destra.
 

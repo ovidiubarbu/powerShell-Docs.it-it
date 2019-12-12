@@ -9,17 +9,17 @@ ms.topic: article
 ms.assetid: 9bd9d599-faa7-4154-ac36-1f35ccf8e320
 caps.latest.revision: 7
 ms.openlocfilehash: 5ad28cfbc73628ba818e42b87128d8f4ad273bda
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72366610"
 ---
 # <a name="runspace02-vbnet-code-sample"></a>Codice di esempio di Runspace02 (VB.NET)
 
 Ecco il codice sorgente VB.NET per l'esempio Runspace02. Questo esempio usa la classe [System. Management. Automation. Runspaceinvoke](/dotnet/api/System.Management.Automation.RunspaceInvoke) per eseguire il cmdlet `Get-Process` in modo sincrono. Windows Forms e data binding vengono quindi utilizzati per visualizzare i risultati in un controllo DataGridView.
 
-## <a name="code-sample"></a>Esempio di codice
+## <a name="code-sample"></a>Codice di esempio
 
 ```vb
 Imports System

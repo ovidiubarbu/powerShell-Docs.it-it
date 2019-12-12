@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: ac6f7aaa-d0cc-4c7b-a341-85e736174579
 caps.latest.revision: 21
 ms.openlocfilehash: 437b3d6bb62fdd3a74f3392ec71df360c01a1974
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72363720"
 ---
 # <a name="format-schema-xml-reference"></a>Guida di riferimento XML dello schema di formattazione
@@ -275,21 +275,21 @@ Negli argomenti di questa sezione vengono descritti gli elementi XML utilizzati 
 
 [Elemento ScriptBlock per ListItem (Format)](./scriptblock-element-for-listitem-for-listcontrol-format.md) Specifica lo script il cui valore viene visualizzato nella riga dell'elenco.
 
-[Elemento ScriptBlock per SelectionCondition per i controlli per la configurazione (Format)](./scriptblock-element-for-selectioncondition-for-controls-for-configuration-format.md) Specifica lo script che attiva la condizione. Quando questo script viene valutato `true`, la condizione viene soddisfatta e viene usata la definizione. Questo elemento viene usato quando si definisce un controllo comune che può essere usato da tutte le visualizzazioni nel file di formattazione.
+[Elemento ScriptBlock per SelectionCondition per i controlli per la configurazione (Format)](./scriptblock-element-for-selectioncondition-for-controls-for-configuration-format.md) Specifica lo script che attiva la condizione. Quando questo script viene valutato `true`, la condizione viene soddisfatta e viene utilizzata la definizione. Questo elemento viene usato quando si definisce un controllo comune che può essere usato da tutte le visualizzazioni nel file di formattazione.
 
-[Elemento ScriptBlock per SelectionCondition per i controlli per la visualizzazione (Format)](./scriptblock-element-for-selectioncondition-for-controls-for-view-format.md) Specifica lo script che attiva la condizione. Quando questo script viene valutato `true`, la condizione viene soddisfatta e viene usata la definizione. Questo elemento viene utilizzato per la definizione di controlli che possono essere utilizzati da una visualizzazione.
+[Elemento ScriptBlock per SelectionCondition per i controlli per la visualizzazione (Format)](./scriptblock-element-for-selectioncondition-for-controls-for-view-format.md) Specifica lo script che attiva la condizione. Quando questo script viene valutato `true`, la condizione viene soddisfatta e viene utilizzata la definizione. Questo elemento viene utilizzato per la definizione di controlli che possono essere utilizzati da una visualizzazione.
 
-[Elemento ScriptBlock per SelectionCondition per CustomControl per View (Format)](./scriptblock-element-for-selectioncondition-for-customcontrol-for-view-format.md) Specifica lo script che attiva la condizione. Quando questo script viene valutato `true`, la condizione viene soddisfatta e viene usata la definizione. Questo elemento viene utilizzato quando si definisce una visualizzazione controlli personalizzata.
+[Elemento ScriptBlock per SelectionCondition per CustomControl per View (Format)](./scriptblock-element-for-selectioncondition-for-customcontrol-for-view-format.md) Specifica lo script che attiva la condizione. Quando questo script viene valutato `true`, la condizione viene soddisfatta e viene utilizzata la definizione. Questo elemento viene utilizzato quando si definisce una visualizzazione controlli personalizzata.
 
 [Elemento ScriptBlock per SelectionCondition per EntrySelectedBy per EnumerableExpansion (Format)](./scriptblock-element-for-selectioncondition-for-entryselectedby-for-enumerableexpansion-format.md) Specifica lo script che attiva la condizione.
 
-[Elemento ScriptBlock per SelectionCondition per GroupBy (Format)](./scriptblock-element-for-selectioncondition-for-entryselectedby-for-groupby-format.md) Specifica lo script che attiva la condizione. Quando questo script viene valutato `true`, la condizione viene soddisfatta e viene usata la definizione. Questo elemento viene utilizzato quando si definisce la modalità di visualizzazione di un nuovo gruppo di oggetti.
+[Elemento ScriptBlock per SelectionCondition per GroupBy (Format)](./scriptblock-element-for-selectioncondition-for-entryselectedby-for-groupby-format.md) Specifica lo script che attiva la condizione. Quando questo script viene valutato `true`, la condizione viene soddisfatta e viene utilizzata la definizione. Questo elemento viene utilizzato quando si definisce la modalità di visualizzazione di un nuovo gruppo di oggetti.
 
 [Elemento ScriptBlock per SelectionCondition per EntrySelectedBy per ListEntry (Format)](./scriptblock-element-for-selectioncondition-for-entryselectedby-for-listcontrol-format.md) Specifica lo script che attiva la condizione. Quando questo script viene valutato `true`, la condizione viene soddisfatta e viene utilizzata la voce dell'elenco.
 
 [Elemento ScriptBlock per SelectionCondition per EntrySelectedBy per TableRowEntry (Format)](./scriptblock-element-for-selectioncondition-for-entryselectedby-for-tablecontrol-format.md) Specifica il blocco di script che attiva la condizione. Quando questo script viene valutato `true`, la condizione viene soddisfatta e viene utilizzata la voce della tabella.
 
-[Elemento ScriptBlock per SelectionCondition per EntrySelectedBy per WideEntry (Format)](./scriptblock-element-for-selectioncondition-for-entryselectedby-for-widecontrol-format.md) Specifica lo script che attiva la condizione. Quando questo script viene valutato `true`, la condizione viene soddisfatta e viene usata la definizione di voce estesa.
+[Elemento ScriptBlock per SelectionCondition per EntrySelectedBy per WideEntry (Format)](./scriptblock-element-for-selectioncondition-for-entryselectedby-for-widecontrol-format.md) Specifica lo script che attiva la condizione. Quando questo script viene valutato `true`, la condizione viene soddisfatta e viene utilizzata la definizione di voce estesa.
 
 [Elemento ScriptBlock per TableColumnItem (Format)](./scriptblock-element-for-tablecolumnitem-for-tablecontrol-format.md) Specifica lo script il cui valore viene visualizzato nella colonna della riga.
 

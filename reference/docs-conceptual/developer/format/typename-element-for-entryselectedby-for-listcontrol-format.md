@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 33c7345c-b808-4c1e-bd54-cb870b407432
 caps.latest.revision: 14
 ms.openlocfilehash: 0f7216d4dcc0380bceb47ea7c15b3d4a7e5ceeb2
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72361660"
 ---
 # <a name="typename-element-for-entryselectedby-for-listcontrol-format"></a>Elemento TypeName per EntrySelectedBy per ListControl (formato)
@@ -45,7 +45,7 @@ Nessuna.
 |-------------|-----------------|
 |[Elemento EntrySelectedBy per ListEntry (Format)](./entryselectedby-element-for-listentry-for-listcontrol-format.md)|Definisce i tipi .NET che utilizzano questa voce di elenco o la condizione che deve esistere affinché questa voce venga utilizzata.|
 
-## <a name="text-value"></a>Valore di testo
+## <a name="text-value"></a>Valore testo
 
 Specificare il nome completo del tipo .NET, ad esempio `System.IO.DirectoryInfo`.
 

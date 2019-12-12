@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: b99d53fc-0af9-426b-82ce-09955e031d4b
 caps.latest.revision: 13
 ms.openlocfilehash: 0fa4a5f804586c51ae6a36121f9aab041b0989cc
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72365880"
 ---
 # <a name="cmdlet-samples"></a>Esempi di cmdlet
@@ -31,7 +31,7 @@ Questa sezione descrive il codice di esempio fornito in Windows PowerShell 2,0 S
 
 [Esempio GetProcessSample05](./getprocesssample05-sample.md) Questo esempio mostra una versione completa del cmdlet Get-proc.
 
-[Esempio StopProcessSample01](./stopprocesssample01-sample.md) In questo esempio viene illustrato come scrivere un cmdlet che richiede feedback da parte dell'utente prima di tentare di arrestare un processo e come implementare un parametro `PassThru` che indica che l'utente desidera che il cmdlet restituisca un oggetto.
+[Esempio StopProcessSample01](./stopprocesssample01-sample.md) In questo esempio viene illustrato come scrivere un cmdlet che richiede feedback da parte dell'utente prima di tentare di arrestare un processo e come implementare un `PassThru` parametro che indica che l'utente desidera che il cmdlet restituisca un oggetto.
 
 [Esempio StopProcessSample02](./stopprocesssample02-sample.md) In questo esempio viene illustrato come scrivere un cmdlet che scrive messaggi di debug, dettagliati e di avviso durante l'arresto dei processi nel computer locale.
 

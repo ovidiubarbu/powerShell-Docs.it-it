@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 3204599c-7159-47aa-82ec-4a476f461027
 caps.latest.revision: 7
 ms.openlocfilehash: 5c5707d1c533e0498c6794b60f4499e530e25813
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72360660"
 ---
 # <a name="supporting-online-help"></a>Supporto per la Guida in linea
@@ -27,7 +27,7 @@ Con l'avvento della Guida aggiornabile di Windows PowerShell 3,0, la guida onlin
 
 ## <a name="how-get-help--online-works"></a>Come funziona get-help-online
 
-Per consentire agli utenti di trovare gli argomenti della guida online per i comandi, il comando `Get-Help` ha un parametro online che apre la versione online dell'argomento della Guida per un comando nel browser Internet predefinito dell'utente.
+Per consentire agli utenti di trovare gli argomenti della guida online per i comandi, il comando `Get-Help` dispone di un parametro online che apre la versione online dell'argomento della Guida per un comando nel browser Internet predefinito dell'utente.
 
 Ad esempio, il comando seguente consente di aprire l'argomento della Guida in linea per il cmdlet `Invoke-Command`.
 
@@ -41,7 +41,7 @@ Per implementare `Get-Help`-online, il cmdlet `Get-Help` Cerca un Uniform Resour
 
 - Proprietà HelpUri di qualsiasi comando. La proprietà HelpUri è accessibile anche quando l'argomento della Guida per il comando non è installato nel computer dell'utente. Questa funzionalità è stata introdotta in Windows PowerShell 3,0.
 
-  `Get-Help` cerca un URI nella prima voce della sezione collegamenti correlati prima di ottenere il valore della proprietà HelpUri. Se il valore della proprietà non è corretto o è stato modificato, è possibile eseguirne l'override immettendo un valore diverso nel primo collegamento correlato. Tuttavia, il primo collegamento correlato funziona solo quando gli argomenti della guida vengono installati nel computer dell'utente.
+  `Get-Help` Cerca un URI nella prima voce della sezione collegamenti correlati prima di ottenere il valore della proprietà HelpUri. Se il valore della proprietà non è corretto o è stato modificato, è possibile eseguirne l'override immettendo un valore diverso nel primo collegamento correlato. Tuttavia, il primo collegamento correlato funziona solo quando gli argomenti della guida vengono installati nel computer dell'utente.
 
 ## <a name="adding-a-uri-to-the-first-related-link-of-a-command-help-topic"></a>Aggiunta di un URI al primo collegamento correlato di un argomento della guida del comando
 
@@ -73,7 +73,7 @@ In questa sezione viene illustrato come aggiungere la proprietà HelpUri ai coma
 
 Per i cmdlet scritti in C#, aggiungere un attributo **HelpUri** alla classe cmdlet. Il valore dell'attributo deve essere un URI che inizia con "http" o "https".
 
-Il codice seguente illustra l'attributo HelpUri della classe di cmdlet `Get-History`.
+Il codice seguente illustra l'attributo HelpUri della classe del cmdlet `Get-History`.
 
 ```
 [Cmdlet(VerbsCommon.Get, "History", HelpUri = "http://go.microsoft.com/fwlink/?LinkID=001122")]

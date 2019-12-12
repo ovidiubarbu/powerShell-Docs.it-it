@@ -11,10 +11,10 @@ helpviewer_keywords:
 ms.assetid: 11d20319-cc40-4227-b810-4af33372b182
 caps.latest.revision: 10
 ms.openlocfilehash: 962d2ba9fd892c297a633276b9ac07a5fa75ea87
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72366810"
 ---
 # <a name="designing-your-windows-powershell-provider"></a>Progettazione del provider di Windows PowerShell
@@ -33,15 +33,15 @@ Per consentire all'utente di accedere ai dati che si trovano in un'unità fisica
 
 ### <a name="defining-a-provider-qualified-path"></a>Definizione di un percorso qualificato dal provider
 
-Per consentire al runtime di Windows PowerShell di inizializzare e annullare l'inizializzazione del provider, il provider di Windows PowerShell deve supportare un percorso qualificato dal provider. Ad esempio, FileSystem:: \\ \ uncshare\abc\bar è il percorso qualificato dal provider per il provider FileSystem fornito da Windows PowerShell.
+Per consentire al runtime di Windows PowerShell di inizializzare e annullare l'inizializzazione del provider, il provider di Windows PowerShell deve supportare un percorso qualificato dal provider. Ad esempio, FileSystem::\\\uncshare\abc\bar è il percorso qualificato dal provider per il provider FileSystem fornito da Windows PowerShell.
 
 ### <a name="defining-a-provider-direct-path"></a>Definizione di un percorso diretto del provider
 
-Per consentire l'accesso remoto al provider di Windows PowerShell, deve supportare un percorso diretto del provider da passare direttamente al provider di Windows PowerShell per il percorso corrente. Ad esempio, il provider del registro di sistema di Windows PowerShell può usare \\ \ server\regkeypath come percorso diretto del provider.
+Per consentire l'accesso remoto al provider di Windows PowerShell, deve supportare un percorso diretto del provider da passare direttamente al provider di Windows PowerShell per il percorso corrente. Ad esempio, il provider del registro di sistema di Windows PowerShell può usare \\\server\regkeypath come percorso diretto del provider.
 
 ### <a name="defining-a-provider-internal-path"></a>Definizione di un percorso interno del provider
 
-Per consentire al cmdlet del provider di accedere ai dati usando le API (Application Programming Interface) non Windows PowerShell, il provider di Windows PowerShell deve supportare un percorso interno del provider. Questo percorso è indicato dopo "::" nel percorso qualificato dal provider. Ad esempio, il percorso interno del provider per il provider FileSystem di Windows PowerShell è \\ \ uncshare\abc\bar.
+Per consentire al cmdlet del provider di accedere ai dati usando le API (Application Programming Interface) non Windows PowerShell, il provider di Windows PowerShell deve supportare un percorso interno del provider. Questo percorso è indicato dopo "::" nel percorso qualificato dal provider. Ad esempio, il percorso interno del provider per il provider FileSystem di Windows PowerShell è \\\uncshare\abc\bar.
 
 ## <a name="changing-stored-data"></a>Modifica dei dati archiviati
 
@@ -53,7 +53,7 @@ Windows PowerShell offre una serie di classi di base che è possibile usare per 
 
 Ogni classe base del provider di Windows PowerShell rende disponibile un set di cmdlet. In questa sezione vengono descritti i cmdlet di, ma non vengono descritti i relativi parametri.
 
-Utilizzando lo stato della sessione, il runtime di Windows PowerShell rende disponibili diversi cmdlet Location per determinati provider di Windows PowerShell, ad esempio i cmdlet `Get-Location`, `Set-Location`, `Pop-Location` e `Push-Location`. Per ottenere informazioni su questi cmdlet Location, è possibile usare il cmdlet `Get-Help`.
+Utilizzando lo stato della sessione, il runtime di Windows PowerShell rende disponibili diversi cmdlet Location per determinati provider di Windows PowerShell, ad esempio i cmdlet `Get-Location`, `Set-Location`, `Pop-Location`e `Push-Location`. È possibile utilizzare il cmdlet `Get-Help` per ottenere informazioni su questi cmdlet Location.
 
 ### <a name="cmdletprovider-base-class"></a>Classe di base CmdletProvider
 
@@ -84,7 +84,7 @@ La classe [System. Management. Automation. provider. Itemcmdletprovider](/dotnet
 |`Invoke-Item`|Richiama l'azione predefinita per l'elemento nel percorso specificato.|
 |`Set-Item`|Imposta un elemento in corrispondenza della posizione specificata con il valore indicato. Questo cmdlet non passa un oggetto di output attraverso la pipeline, a meno che non sia specificato il parametro `PassThru`.|
 |`Resolve-Path`|Risolve i caratteri jolly per un percorso di Windows PowerShell e le informazioni sul percorso dei flussi.|
-|`Test-Path`|Verifica il percorso specificato e restituisce `true` se esiste e `false` in caso contrario. Questo cmdlet viene implementato per supportare il parametro `IsContainer` per il metodo [System. Management. Automation. provider. CmdletProvider. Writeitemobject *](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.WriteItemObject) .|
+|`Test-Path`|Verifica il percorso specificato e restituisce `true` se esiste e `false` in caso contrario. Questo cmdlet viene implementato per supportare il `IsContainer` parametro per il metodo [System. Management. Automation. provider. CmdletProvider. Writeitemobject *](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.WriteItemObject) .|
 
 ### <a name="containercmdletprovider-base-class"></a>Classe di base ContainerCmdletProvider
 
@@ -109,7 +109,7 @@ La classe [System. Management. Automation. provider. Navigationcmdletprovider](/
 |Combina-percorso|Combina due percorsi in un singolo percorso, usando un delimitatore specifico del provider tra i percorsi. Questo cmdlet trasmette le stringhe.|
 |`Move-Item`|Sposta gli elementi nel percorso specificato. Questo cmdlet non passa un oggetto di output attraverso la pipeline, a meno che non sia specificato il parametro `PassThru`.|
 
-Un cmdlet correlato è il cmdlet parse-path di base fornito da Windows PowerShell. Questo cmdlet può essere utilizzato per analizzare un percorso di Windows PowerShell per supportare il parametro `Parent`. Trasmette la stringa del percorso padre.
+Un cmdlet correlato è il cmdlet parse-path di base fornito da Windows PowerShell. Questo cmdlet può essere usato per analizzare un percorso di Windows PowerShell per supportare il parametro `Parent`. Trasmette la stringa del percorso padre.
 
 ## <a name="select-provider-interfaces-to-support"></a>Selezionare le interfacce del provider da supportare
 
@@ -141,7 +141,7 @@ L'interfaccia [System. Management. Automation. provider. Ipropertycmdletprovider
 
 ### <a name="idynamicpropertycmdletprovider"></a>IDynamicPropertyCmdletProvider
 
-L'interfaccia [System. Management. Automation. provider. Idynamicpropertycmdletprovider](/dotnet/api/System.Management.Automation.Provider.IDynamicPropertyCmdletProvider) , derivata da [System. Management. Automation. provider. Ipropertycmdletprovider](/dotnet/api/System.Management.Automation.Provider.IPropertyCmdletProvider), definisce un provider che specifica i parametri dinamici per il relativo cmdlet supportati. Questo tipo di provider gestisce le operazioni per le quali è possibile definire le proprietà in fase di esecuzione, ad esempio una nuova operazione della proprietà. Queste operazioni non sono possibili per gli elementi con proprietà definite in modo statico. Nella tabella seguente sono elencati i cmdlet esposti da questa interfaccia.
+L'interfaccia [System. Management. Automation. provider. Idynamicpropertycmdletprovider](/dotnet/api/System.Management.Automation.Provider.IDynamicPropertyCmdletProvider) , derivata da [System. Management. Automation. provider. Ipropertycmdletprovider](/dotnet/api/System.Management.Automation.Provider.IPropertyCmdletProvider), definisce un provider che specifica i parametri dinamici per i cmdlet supportati. Questo tipo di provider gestisce le operazioni per le quali è possibile definire le proprietà in fase di esecuzione, ad esempio una nuova operazione della proprietà. Queste operazioni non sono possibili per gli elementi con proprietà definite in modo statico. Nella tabella seguente sono elencati i cmdlet esposti da questa interfaccia.
 
 |Cmdlet|Definizione|
 |------------|----------------|

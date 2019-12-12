@@ -11,10 +11,10 @@ helpviewer_keywords:
 ms.assetid: a6131db4-fd6e-45f1-bd47-17e7174afd56
 caps.latest.revision: 8
 ms.openlocfilehash: c9c0b9a7a587e856efc82b4d277cee373e3f8b38
-ms.sourcegitcommit: d43f66071f1f33b350d34fa1f46f3a35910c5d24
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "74416318"
 ---
 # <a name="adding-parameter-sets-to-a-cmdlet"></a>Aggiunta dei set di parametri a un cmdlet
@@ -211,7 +211,7 @@ End Sub 'ProcessRecord ' ProcessRecord
 
 I metodi di supporto chiamati dall'istruzione SELECT non sono descritti qui, ma è possibile visualizzarne l'implementazione nell'esempio di codice completo nella sezione successiva.
 
-## <a name="code-sample"></a>Esempio di codice
+## <a name="code-sample"></a>Codice di esempio
 
 Per il codice C# di esempio completo, vedere l' [esempio StopProcessSample04](./stopprocesssample04-sample.md).
 

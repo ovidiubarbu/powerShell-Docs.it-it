@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 9abb63b8-6d02-4e24-9c0e-2d15a04e9051
 caps.latest.revision: 8
 ms.openlocfilehash: 7a36f548a3eccdf2c9cad04a8bfe28bf4e8d6dfd
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72367940"
 ---
 # <a name="wide-view-basic"></a>Visualizzazione più ampia (base)
@@ -30,7 +30,7 @@ In questo esempio viene illustrato come implementare una visualizzazione di base
    > [!WARNING]
    > Questo file di formattazione definisce la visualizzazione di un oggetto già definito da un file di formattazione di Windows PowerShell. Quando si esegue il cmdlet, è necessario utilizzare il parametro `prependPath` e non è possibile caricare il file di formattazione come modulo.
 
-## <a name="demonstrates"></a>Dimostra
+## <a name="demonstrates"></a>Illustra
 
 In questo file di formattazione vengono illustrati gli elementi XML seguenti:
 

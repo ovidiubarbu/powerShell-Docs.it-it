@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: f2a1531a-a92a-4606-9d54-c5df80d34f33
 caps.latest.revision: 8
 ms.openlocfilehash: a4426abec96cd922360aeef8c157b4e9f41a15b9
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72364610"
 ---
 # <a name="adding-non-terminating-error-reporting-to-your-cmdlet"></a>Aggiunta di segnalazioni di errori non irreversibili al cmdlet
@@ -47,7 +47,7 @@ Public Class GetProcCommand
     Inherits Cmdlet
 ```
 
-## <a name="defining-parameters"></a>Definizione di parametri
+## <a name="defining-parameters"></a>Definizione dei parametri
 
 Se necessario, il cmdlet deve definire i parametri per l'elaborazione dell'input.
 Questo cmdlet Get-proc definisce un parametro del **nome** come descritto in [aggiunta di parametri che elaborano l'input della riga di comando](adding-parameters-that-process-command-line-input.md).
@@ -191,7 +191,7 @@ Se si definisce il parametro `ErrorAction`, il cmdlet presenta le opzioni utente
 Il cmdlet consente di salvare errori non fatali in una variabile utilizzando il parametro `ErrorVariable`, che non è influenzato dall'impostazione di `ErrorAction`.
 Gli errori possono essere aggiunti a una variabile di errore esistente aggiungendo un segno più (+) all'inizio del nome della variabile.
 
-## <a name="code-sample"></a>Esempio di codice
+## <a name="code-sample"></a>Codice di esempio
 
 Per il codice C# di esempio completo, vedere l' [esempio GetProcessSample04](./getprocesssample04-sample.md).
 
@@ -217,7 +217,7 @@ Testiamo il cmdlet Get-proc di esempio per verificare se viene segnalato un erro
     PS> get-proc -name test
     ```
 
-Viene visualizzato l'output seguente.
+Viene visualizzato l'output seguente:
 
     ```
     get-proc : Operation is not valid due to the current state of the object.

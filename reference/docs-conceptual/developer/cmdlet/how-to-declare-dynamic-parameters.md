@@ -9,15 +9,15 @@ ms.topic: article
 ms.assetid: db04f1df-def5-4456-8869-336024cda723
 caps.latest.revision: 8
 ms.openlocfilehash: a9c530cdc66302eb6b3d9d2b284eeb486c3b2ba9
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72364420"
 ---
 # <a name="how-to-declare-dynamic-parameters"></a>Come dichiarare i parametri dinamici
 
-Questo esempio illustra come definire i parametri dinamici che vengono aggiunti al cmdlet in fase di esecuzione. In questo esempio, il parametro `Department` viene aggiunto al cmdlet ogni volta che l'utente specifica il parametro dell'opzione `Employee`. Per altre informazioni sui parametri dinamici, vedere [parametri dinamici dei cmdlet](./cmdlet-dynamic-parameters.md).
+Questo esempio illustra come definire i parametri dinamici che vengono aggiunti al cmdlet in fase di esecuzione. In questo esempio, il parametro `Department` viene aggiunto al cmdlet ogni volta che l'utente specifica il parametro dell'opzione di `Employee`. Per altre informazioni sui parametri dinamici, vedere [parametri dinamici dei cmdlet](./cmdlet-dynamic-parameters.md).
 
 ## <a name="to-define-dynamic-parameters"></a>Per definire i parametri dinamici
 

@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 30bb1382-8c6b-4371-82e6-baf427fa0781
 caps.latest.revision: 6
 ms.openlocfilehash: cec8c5d76bded321ec1d6a1cd0409d7c88863c03
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72368080"
 ---
 # <a name="typename-element-for-entryselectedby-for-controls-for-configuration-format"></a>Elemento TypeName per EntrySelectedBy per Controls per Configuration (formato)
@@ -46,7 +46,7 @@ Nessuna.
 |-------------|-----------------|
 |[Elemento EntrySelectedBy per CustomEntry per i controlli per la configurazione (Format)](./entryselectedby-element-for-customentry-for-controls-for-configuration-format.md)|Definisce i tipi .NET che utilizzano questa definizione di controllo o la condizione che deve esistere affinché questa definizione venga utilizzata.|
 
-## <a name="text-value"></a>Valore di testo
+## <a name="text-value"></a>Valore testo
 
 Specificare il nome completo del tipo .NET, ad esempio `System.IO.DirectoryInfo`.
 

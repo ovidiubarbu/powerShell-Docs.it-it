@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 39388197-4ff9-4889-aa32-526011afa1f6
 caps.latest.revision: 6
 ms.openlocfilehash: e95ec550a7815a76a8bd7f9526dfa405a9644360
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72367950"
 ---
 # <a name="wide-view-groupby"></a>Visualizzazione più ampia (GroupBy)
@@ -30,7 +30,7 @@ Questo esempio illustra come implementare una visualizzazione estesa che Visuali
    > [!WARNING]
    > Questo file di formattazione definisce la visualizzazione di un oggetto già definito da un file di formattazione di Windows PowerShell. Quando si esegue il cmdlet, è necessario utilizzare il parametro `prependPath` e non è possibile caricare il file di formattazione come modulo.
 
-## <a name="demonstrates"></a>Dimostra
+## <a name="demonstrates"></a>Illustra
 
 In questo file di formattazione vengono illustrati gli elementi XML seguenti:
 

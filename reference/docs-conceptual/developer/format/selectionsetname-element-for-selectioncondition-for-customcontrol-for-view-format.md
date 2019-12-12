@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: a52b05a9-762e-4f1c-ad57-9d1710149722
 caps.latest.revision: 10
 ms.openlocfilehash: 25d46665ca5df3ddf49af5718d513b84c77988c8
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72368270"
 ---
 # <a name="selectionsetname-element-for-selectioncondition-for-customcontrol-for-view-format"></a>Elemento SelectionSetName per SelectionCondition per CustomControl per View (formato)
@@ -45,7 +45,7 @@ Nessuna.
 |-------------|-----------------|
 |[Elemento SelectionCondition per EntrySelectedBy per CustomControl per View (Format)](./selectioncondition-element-for-entryselectedby-for-customcontrol-format.md)|Definisce una condizione che deve esistere per la definizione del controllo da utilizzare.|
 
-## <a name="text-value"></a>Valore di testo
+## <a name="text-value"></a>Valore testo
 
 Consente di specificare il nome del set di selezione.
 

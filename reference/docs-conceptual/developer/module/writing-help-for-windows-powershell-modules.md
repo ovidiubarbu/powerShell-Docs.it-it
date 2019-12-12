@@ -9,15 +9,15 @@ ms.topic: article
 ms.assetid: f2b58fa5-01bc-426c-a043-5c700d6578e9
 caps.latest.revision: 16
 ms.openlocfilehash: 443bf5f693d2ab161668de25a1097347826cb5c2
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72360560"
 ---
 # <a name="writing-help-for-windows-powershell-modules"></a>Scrittura della Guida per i moduli di Windows PowerShell
 
-I moduli di Windows PowerShell possono includere argomenti della guida sul modulo e sui membri del modulo, ad esempio cmdlet, provider, funzioni e script. Il cmdlet `Get-Help` Visualizza gli argomenti della Guida relativi ai moduli nello stesso formato in cui viene visualizzata la guida per altri elementi di Windows PowerShell e gli utenti usano i comandi standard `Get-Help` per ottenere gli argomenti della guida.
+I moduli di Windows PowerShell possono includere argomenti della guida sul modulo e sui membri del modulo, ad esempio cmdlet, provider, funzioni e script. Il cmdlet `Get-Help` Visualizza gli argomenti della Guida relativi ai moduli nello stesso formato in cui viene visualizzata la guida per altri elementi di Windows PowerShell e gli utenti usano i comandi di `Get-Help` standard per ottenere gli argomenti della guida.
 
 Questo documento illustra il formato e la posizione corretta degli argomenti della guida sui moduli e suggerisce le linee guida per il contenuto della guida del modulo.
 
@@ -58,7 +58,7 @@ Un modulo può includere i seguenti tipi di guida.
 
 ## <a name="placement-of-module-help"></a>Posizione della guida del modulo
 
-Il cmdlet `Get-Help` cerca i file degli argomenti della guida del modulo in sottodirectory specifiche della lingua della directory del modulo.
+Il cmdlet `Get-Help` Cerca i file degli argomenti della Guida relativi ai moduli in sottodirectory specifiche della lingua della directory del modulo.
 
 Il diagramma della struttura di directory seguente, ad esempio, Mostra il percorso degli argomenti della Guida per il modulo SampleModule.
 
@@ -81,9 +81,9 @@ Il diagramma della struttura di directory seguente, ad esempio, Mostra il percor
 
 ## <a name="getting-module-help"></a>Recupero della guida del modulo
 
-Quando un utente importa un modulo in una sessione, gli argomenti della Guida per il modulo vengono importati nella sessione insieme al modulo. È possibile elencare i file di argomenti della guida nel valore della chiave FileList nel manifesto del modulo, ma gli argomenti della guida non sono interessati dal cmdlet `Export-ModuleMember`.
+Quando un utente importa un modulo in una sessione, gli argomenti della Guida per il modulo vengono importati nella sessione insieme al modulo. È possibile elencare i file degli argomenti della guida nel valore della chiave FileList nel manifesto del modulo, ma gli argomenti della guida non sono interessati dal cmdlet `Export-ModuleMember`.
 
-È possibile fornire argomenti della guida sui moduli in lingue diverse. Il cmdlet `Get-Help` Visualizza automaticamente gli argomenti della guida sui moduli nella lingua specificata per l'utente corrente nell'elemento Opzioni internazionali e della lingua nel pannello di controllo. In Windows Vista e nelle versioni successive di Windows, `Get-Help` cerca gli argomenti della Guida in sottodirectory specifiche della lingua della directory dei moduli in base agli standard di fallback della lingua stabiliti per Windows.
+È possibile fornire argomenti della guida sui moduli in lingue diverse. Il cmdlet `Get-Help` Visualizza automaticamente gli argomenti della guida sui moduli nella lingua specificata per l'utente corrente nell'elemento Opzioni internazionali e della lingua nel pannello di controllo. In Windows Vista e nelle versioni successive di Windows `Get-Help` cerca gli argomenti della Guida in sottodirectory specifiche della lingua della directory dei moduli in base agli standard di fallback della lingua stabiliti per Windows.
 
 A partire da Windows PowerShell 3,0, l'esecuzione di un comando `Get-Help` per un cmdlet o una funzione attiva l'importazione automatica del modulo. Il cmdlet `Get-Help` Visualizza immediatamente il contenuto degli argomenti della guida nel modulo.
 

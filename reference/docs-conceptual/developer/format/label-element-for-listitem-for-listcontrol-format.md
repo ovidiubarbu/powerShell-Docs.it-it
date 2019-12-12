@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: c693ff46-d1ad-4dc7-93ac-41ff2fc6c103
 caps.latest.revision: 9
 ms.openlocfilehash: c1293d5a1f942704ac01388c66bd9009fd340e82
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72362890"
 ---
 # <a name="label-element-for-listitem-for-listcontrol-format"></a>Elemento Label per ListItem per ListControl (formato)
@@ -45,7 +45,7 @@ Nessuna.
 |-------------|-----------------|
 |[Elemento ListItem per ListItems per ListControl (Format)](./listitem-element-for-listitems-for-listcontrol-format.md)|Definisce la proprietà o lo script il cui valore viene visualizzato in una riga della visualizzazione elenco.|
 
-## <a name="text-value"></a>Valore di testo
+## <a name="text-value"></a>Valore testo
 
 Consente di specificare l'etichetta da visualizzare a sinistra della proprietà o del valore dello script.
 

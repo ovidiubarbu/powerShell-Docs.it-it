@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 00dbb5ee-93d4-4914-a082-ef4d8b236b5c
 caps.latest.revision: 16
 ms.openlocfilehash: 596212f2e64401a751cf3dca0ee7d60b80912c00
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72368850"
 ---
 # <a name="defining-selection-sets"></a>Definizione di set di selezione
@@ -35,11 +35,11 @@ I set di selezione vengono definiti come parte dei dati comuni che possono esser
 
 È possibile fare riferimento a un set di selezione nei modi seguenti:
 
-- Ogni visualizzazione dispone di un elemento `ViewSelectedBy` che definisce quali oggetti vengono visualizzati tramite la visualizzazione. L'elemento `ViewSelectedBy` ha un elemento figlio `SelectionSetName` che specifica il set di selezione usato da tutte le definizioni della visualizzazione. Non esiste alcuna restrizione al numero di set di selezione a cui è possibile fare riferimento da una vista.
+- Ogni visualizzazione dispone di un elemento `ViewSelectedBy` che definisce quali oggetti vengono visualizzati tramite la visualizzazione. L'elemento `ViewSelectedBy` dispone di un elemento `SelectionSetName` figlio che specifica il set di selezione usato da tutte le definizioni della visualizzazione. Non esiste alcuna restrizione al numero di set di selezione a cui è possibile fare riferimento da una vista.
 
-- In ogni definizione di una vista o di un controllo, l'elemento `EntrySelectedBy` definisce quali oggetti vengono visualizzati tramite tale definizione. Una vista o un controllo ha in genere una sola definizione, quindi gli oggetti vengono definiti dall'elemento `ViewSelectedBy`. L'elemento `EntrySelectedBy` della definizione dispone di un elemento figlio `SelectionSetName` che specifica il set di selezione. Se si specifica il set di selezione per una definizione, non è possibile specificare gli altri elementi figlio dell'elemento `EntrySelectedBy`.
+- In ogni definizione di una vista o di un controllo, l'elemento `EntrySelectedBy` definisce quali oggetti vengono visualizzati tramite tale definizione. Una vista o un controllo ha in genere una sola definizione, quindi gli oggetti vengono definiti dall'elemento `ViewSelectedBy`. L'elemento `EntrySelectedBy` della definizione dispone di un elemento `SelectionSetName` figlio che specifica il set di selezione. Se si specifica il set di selezione per una definizione, non è possibile specificare gli altri elementi figlio dell'elemento `EntrySelectedBy`.
 
-- In ogni definizione di una vista o di un controllo, è possibile usare l'elemento `SelectionCondition` per specificare una condizione per quando viene usata la definizione. L'elemento `SelectionCondition` ha un elemento figlio `SelectionSetName` che specifica il set di selezione che attiva la condizione. La condizione viene attivata quando viene visualizzato uno degli oggetti definiti nel set di selezione. Per ulteriori informazioni sull'impostazione di queste condizioni, vedere [definizione di condizioni per la visualizzazione dei dati](./defining-conditions-for-displaying-data.md).
+- In ogni definizione di una vista o di un controllo, l'elemento `SelectionCondition` può essere utilizzato per specificare una condizione per quando viene utilizzata la definizione. L'elemento `SelectionCondition` dispone di un elemento `SelectionSetName` figlio che specifica il set di selezione che attiva la condizione. La condizione viene attivata quando viene visualizzato uno degli oggetti definiti nel set di selezione. Per ulteriori informazioni sull'impostazione di queste condizioni, vedere [definizione di condizioni per la visualizzazione dei dati](./defining-conditions-for-displaying-data.md).
 
 ## <a name="selection-set-example"></a>Esempio di set di selezione
 

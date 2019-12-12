@@ -3,10 +3,10 @@ title: Pianificazione dei processi con l'API di Windows PowerShell
 ms.date: 09/13/2016
 ms.topic: article
 ms.openlocfilehash: 4e1d4ed6bffd858b92bf29b1dc6d8503454fafda
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72359830"
 ---
 # <a name="scheduling-jobs-with-the-windows-powershell-api"></a>Pianificazione dei processi con l'API di Windows PowerShell
@@ -54,7 +54,7 @@ jobDefParameters.Add("ScriptBlock", scriptBlock);  // A scriptblock or script Fi
 
 ## <a name="creating-the-invocation-and-job-definition-objects"></a>Creazione degli oggetti chiamata e definizione processo
 
-Si creeranno quindi oggetti ScheduledJobInvocationInfo e ScheduledJobDefinition per eseguire il processo. Il codice seguente illustra questo problema.
+Si creeranno quindi oggetti ScheduledJobInvocationInfo e ScheduledJobDefinition per eseguire il processo. Questo concetto è illustrato nel codice riportato di seguito.
 
 ```csharp
 ScheduledJobInvocationInfo jobInvocationInfo = new ScheduledJobInvocationInfo(

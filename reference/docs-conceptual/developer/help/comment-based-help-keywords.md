@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: ab90ec96-77f5-42e3-9c7e-2f4156ec207f
 caps.latest.revision: 6
 ms.openlocfilehash: 534a6c9a43326c8a01b2181c7a799286fa4d3997
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72361360"
 ---
 # <a name="comment-based-help-keywords"></a>Parole chiave della Guida basata sui commenti
@@ -27,13 +27,13 @@ Si noti che la parola chiave `.ExternalHelp` ha la precedenza su tutte le altre 
 
 `.Synopsis` una breve descrizione della funzione o dello script. Questa parola chiave può essere utilizzata solo una volta in ogni argomento.
 
-`.Description` Descrizione dettagliata della funzione o dello script. Questa parola chiave può essere utilizzata solo una volta in ogni argomento.
+`.Description` una descrizione dettagliata della funzione o dello script. Questa parola chiave può essere utilizzata solo una volta in ogni argomento.
 
-`.Parameter` *\<Parameter-Name >* la descrizione di un parametro. È possibile includere una parola chiave `.Parameter` per ogni parametro nella funzione o nello script.
+`.Parameter` *\<nome-parametro >* la descrizione di un parametro. È possibile includere una parola chiave `.Parameter` per ogni parametro nella funzione o nello script.
 
 Le parole chiave `.Parameter` possono essere visualizzate in qualsiasi ordine nel blocco di commento, ma l'ordine in cui i parametri vengono visualizzati nell'istruzione `Param` o nella dichiarazione di funzione determina l'ordine in cui i parametri vengono visualizzati nell'argomento della guida. Per modificare l'ordine dei parametri nell'argomento della guida, modificare l'ordine dei parametri nell'istruzione `Param` o nella dichiarazione di funzione.
 
-È anche possibile specificare una descrizione del parametro inserendo un commento nell'istruzione `Param` immediatamente prima del nome della variabile del parametro. Se si usa sia un commento di istruzione `Param` che una parola chiave `.Parameter`, viene usata la descrizione associata alla parola chiave `.Parameter` e il commento dell'istruzione `Param` viene ignorato.
+È anche possibile specificare una descrizione del parametro inserendo un commento nell'istruzione `Param` immediatamente prima del nome della variabile del parametro. Se si usano sia un commento di istruzione `Param` che una parola chiave `.Parameter`, viene usata la descrizione associata alla parola chiave `.Parameter` e il commento dell'istruzione `Param` viene ignorato.
 
 `.Example` un comando di esempio che utilizza la funzione o lo script, seguito facoltativamente dall'output di esempio e da una descrizione. Ripetere questa parola chiave per ogni esempio.
 
@@ -57,7 +57,7 @@ Il contenuto della parola chiave `.Link` può includere anche un Uniform Resourc
 
 `.ForwardHelpCategory` `<Category>` specifica la categoria della Guida dell'elemento in ForwardHelpTargetName. I valori validi sono alias, cmdlet, fileguida, funzione, provider, generale, domande frequenti, glossario, ScriptCommand, ExternalScript, filtro o tutti. Usare questa parola chiave per evitare conflitti quando sono presenti comandi con lo stesso nome.
 
-`.RemoteHelpRunspace` `<PSSession-variable>` specifica una sessione che contiene l'argomento della guida. Immettere una variabile che contiene una sessione PSSession. Questa parola chiave viene usata dal cmdlet `Export-PSSession` per trovare gli argomenti della Guida per i comandi esportati.
+`.RemoteHelpRunspace` `<PSSession-variable>` specifica una sessione che contiene l'argomento della guida. Immettere una variabile che contiene una sessione PSSession. Questa parola chiave viene utilizzata dal cmdlet `Export-PSSession` per trovare gli argomenti della Guida per i comandi esportati.
 
 `.ExternalHelp` `<XML Help File>` specifica il percorso e/o il nome di un file della guida basato su XML per la funzione o lo script.
 
@@ -65,8 +65,8 @@ La parola chiave `.ExternalHelp` indica al cmdlet [Microsoft. PowerShell. Comman
 
 La parola chiave `.ExternalHelp` ha la precedenza su tutte le altre parole chiave della guida basate su commenti. Quando `.ExternalHelp` è presente, il cmdlet [Microsoft. PowerShell. Commands. GetHelpCommand](/dotnet/api/Microsoft.PowerShell.Commands.gethelpcommand) non Visualizza la guida basata sui commenti, anche quando non è in grado di trovare un file della guida che corrisponda al valore della parola chiave.
 
-Quando la funzione viene esportata da un modulo di script, il valore di `.ExternalHelp` deve essere un nome di file senza percorso. `Get-Help` cerca il file in una sottodirectory specifica delle impostazioni locali della directory del modulo. Non sono previsti requisiti per il nome file, ma è consigliabile usare il formato di nome file seguente: `<ScriptModule>.psm1-help.xml`.
+Quando la funzione viene esportata da un modulo di script, il valore di `.ExternalHelp` deve essere un nome di file senza percorso. `Get-Help` Cerca il file in una sottodirectory specifica delle impostazioni locali della directory del modulo. Non sono previsti requisiti per il nome file, ma è consigliabile usare il formato di nome file seguente: `<ScriptModule>.psm1-help.xml`.
 
-Quando la funzione non è associata a un modulo, includere un percorso e un nome file nel valore di **.** Parola chiave ExternalHelp. Se il percorso specificato del file XML contiene sottodirectory specifiche delle impostazioni cultura dell'interfaccia utente, `Get-Help` Cerca in modo ricorsivo le sottodirectory di un file XML con il nome dello script o della funzione in base agli standard di fallback della lingua stabiliti per Windows , analogamente a quanto accade per tutti gli argomenti della Guida basati su XML.
+Quando la funzione non è associata a un modulo, includere un percorso e un nome file nel valore di **.** Parola chiave ExternalHelp. Se il percorso specificato del file XML contiene sottodirectory specifiche delle impostazioni cultura dell'interfaccia utente, `Get-Help` Cerca in modo ricorsivo le sottodirectory di un file XML con il nome dello script o della funzione in base agli standard di fallback della lingua stabiliti per Windows, proprio come per tutti gli argomenti della Guida basati su XML.
 
 Per ulteriori informazioni sul formato di file della guida basato su XML per i cmdlet, vedere [scrittura della Guida dei cmdlet di Windows PowerShell](./writing-help-for-windows-powershell-cmdlets.md).

@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 213ca1a4-e9fe-4969-b7d0-2fca070c6142
 caps.latest.revision: 10
 ms.openlocfilehash: 594c06367baedd1f9bfdbfff9f0e072d579b4099
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72369380"
 ---
 # <a name="stopprocesssample02-sample"></a>Esempio di StopProcessSample02
@@ -27,11 +27,11 @@ In questo esempio viene illustrato come scrivere un cmdlet che scrive messaggi d
 
 2. Fare doppio clic sull'icona del file di soluzione (con estensione sln). Verrà aperto il progetto di esempio in Microsoft Visual Studio.
 
-3. Scegliere **Compila soluzione**dal menu **Compila** .
+3. Scegliere **Compila soluzione** dal menu **Compila**.
 
     La libreria per l'esempio verrà compilata nelle cartelle \bin o \bin\Debug predefinite.
 
-### <a name="how-to-run-the-sample"></a>Come eseguire l'esempio
+### <a name="how-to-run-the-sample"></a>Per eseguire l'esempio
 
 1. Creare la cartella dei moduli seguente:
 
@@ -53,7 +53,7 @@ In questo esempio viene illustrato come scrivere un cmdlet che scrive messaggi d
 
 Questo esempio richiede Windows PowerShell 2,0.
 
-## <a name="demonstrates"></a>Dimostra
+## <a name="demonstrates"></a>Illustra
 
 In questo esempio vengono illustrate le operazioni seguenti.
 
@@ -69,7 +69,7 @@ In questo esempio vengono illustrate le operazioni seguenti.
 
 ## <a name="example"></a>Esempio
 
-Questo esempio illustra come scrivere messaggi di debug, dettagliati e di avviso usando i metodi `WriteDebug`, `WriteVerbose` e `WriteWarning`.
+In questo esempio viene illustrato come scrivere messaggi di debug, dettagliati e di avviso utilizzando i metodi `WriteDebug`, `WriteVerbose`e `WriteWarning`.
 
 ```csharp
 using System;

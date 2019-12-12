@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 7630bb63-ef39-4abd-b795-8000f984c1e5
 caps.latest.revision: 9
 ms.openlocfilehash: 6352169cffbb8a8bf59a42f79979f5003c150fa4
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72360980"
 ---
 # <a name="runspace02-sample"></a>Esempio di Runspace02
@@ -23,7 +23,7 @@ Questo esempio illustra come usare la classe [System. Management. Automation. Po
 
 Questo esempio richiede Windows PowerShell 2,0.
 
-## <a name="demonstrates"></a>Dimostra
+## <a name="demonstrates"></a>Illustra
 
 In questo esempio vengono illustrate le operazioni seguenti.
 

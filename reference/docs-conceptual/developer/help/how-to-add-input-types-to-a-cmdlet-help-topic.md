@@ -9,21 +9,21 @@ ms.topic: article
 ms.assetid: 432798e4-5d69-46b1-9517-ff09bffaa4be
 caps.latest.revision: 7
 ms.openlocfilehash: f213605dda0132051d983f8608515325e815c455
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72361240"
 ---
 # <a name="how-to-add-input-types-to-a-cmdlet-help-topic"></a>Come aggiungere i tipi di input a un argomento della Guida sui cmdlet
 
 Questa sezione descrive come aggiungere una sezione INPUTs a un argomento della Guida di Windows PowerShell® cmdlet. La sezione INPUTs elenca le classi .NET di oggetti accettati dal cmdlet come input dalla pipeline, in base al valore o al nome della proprietà.
 
-Non esiste alcun limite al numero di classi che è possibile aggiungere a una sezione di input. I tipi di input sono racchiusi in un nodo \<command: inputTypes >, in cui ogni classe è racchiusa in un elemento \<command: inputType >.
+Non esiste alcun limite al numero di classi che è possibile aggiungere a una sezione di input. I tipi di input sono racchiusi in un \<comando: inputTypes > nodo, con ogni classe racchiusa in un \<comando: inputType > elemento.
 
-Lo schema include due elementi \<maml: Description > in ogni elemento \<command: inputType >. Tuttavia, il cmdlet `Get-Help` Visualizza solo il contenuto dell'elemento \<command: inputType >/\<maml: Description >).
+Lo schema include due elementi \<maml: Description > in ogni \<comando: inputType > elemento. Tuttavia, il cmdlet `Get-Help` Visualizza solo il contenuto dell'elemento \<Command: inputType >/\<maml: Description >).
 
-A partire da Windows PowerShell 3,0, il cmdlet `Get-Help` Visualizza il contenuto dell'elemento > \<maml: URI. Questo elemento consente di indirizzare gli utenti ad argomenti che descrivono la classe .NET.
+A partire da Windows PowerShell 3,0, il cmdlet `Get-Help` Visualizza il contenuto dell'elemento > di \<maml: URI. Questo elemento consente di indirizzare gli utenti ad argomenti che descrivono la classe .NET.
 
 Il codice XML seguente mostra il nodo di > \<maml: inputTypes.
 

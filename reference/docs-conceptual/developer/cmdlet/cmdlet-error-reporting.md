@@ -15,10 +15,10 @@ helpviewer_keywords:
 ms.assetid: 0b014035-52ea-44cb-ab38-bbe463c5465a
 caps.latest.revision: 8
 ms.openlocfilehash: 5dfec318438ca139518c596011ac5e56445738ea
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72365920"
 ---
 # <a name="cmdlet-error-reporting"></a>Segnalazione errori cmdlet
@@ -43,7 +43,7 @@ Le linee guida seguenti possono essere utilizzate per determinare se una condizi
 
 ## <a name="reporting-nonterminating-errors"></a>Segnalazione di errori non fatali
 
-La creazione di report di un errore non fatale dovrebbe essere sempre eseguita nell'implementazione del cmdlet del metodo [System. Management. Automation. cmdlet. BeginProcessing](/dotnet/api/System.Management.Automation.Cmdlet.BeginProcessing) , il metodo [System. Management. Automation. cmdlet. ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) o metodo [System. Management. Automation. cmdlet. EndProcessing](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing) . Questi tipi di errori vengono segnalati chiamando il metodo [System. Management. Automation. cmdlet. WriteError](/dotnet/api/System.Management.Automation.Cmdlet.WriteError) che a sua volta invia un record di errore al flusso di errore.
+La creazione di report di un errore non fatale dovrebbe essere sempre eseguita nell'implementazione del cmdlet del metodo [System. Management. Automation. cmdlet. BeginProcessing](/dotnet/api/System.Management.Automation.Cmdlet.BeginProcessing) , il metodo [System. Management. Automation. cmdlet. ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) o il metodo [System. Management. Automation. cmdlet. EndProcessing](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing) . Questi tipi di errori vengono segnalati chiamando il metodo [System. Management. Automation. cmdlet. WriteError](/dotnet/api/System.Management.Automation.Cmdlet.WriteError) che a sua volta invia un record di errore al flusso di errore.
 
 ## <a name="reporting-terminating-errors"></a>Segnalazione degli errori di terminazione
 
@@ -82,7 +82,7 @@ Le categorie di errore vengono utilizzate per raggruppare gli errori dell'utente
 
 Per una descrizione delle categorie di errore disponibili, vedere l'enumerazione [System. Management. Automation. ErrorCategory](/dotnet/api/System.Management.Automation.ErrorCategory) . In generale, è consigliabile evitare di usare **NOERROR**, **UndefinedError**e **errore generico** quando possibile.
 
-Gli utenti possono visualizzare gli errori in base alla categoria quando impostano `$ErrorView` in **CategoryView**.
+Gli utenti possono visualizzare gli errori in base alla categoria quando impostano `$ErrorView` a **CategoryView**.
 
 ## <a name="see-also"></a>Vedere anche
 

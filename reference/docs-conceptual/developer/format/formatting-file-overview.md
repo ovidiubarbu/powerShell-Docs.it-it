@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: fe888fee-1fe9-459f-9d62-35732c19a7f8
 caps.latest.revision: 13
 ms.openlocfilehash: d418cff70c1197aa3c331eed909f49198da139e9
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72363690"
 ---
 # <a name="formatting-file-overview"></a>Panoramica dei file di formattazione
@@ -50,7 +50,7 @@ Visualizzazione personalizzata consente di visualizzare una visualizzazione pers
 
 Negli esempi XML seguenti vengono illustrati i componenti XML di base di una vista. I singoli elementi XML variano a seconda della visualizzazione che si desidera creare, ma i componenti di base delle visualizzazioni sono tutti uguali.
 
-Per iniziare, ogni visualizzazione dispone di un elemento `Name` che specifica un nome descrittivo utilizzato per fare riferimento alla vista. elemento `ViewSelectedBy` che definisce quali oggetti .NET vengono visualizzati dalla vista e un elemento *Control* che definisce la visualizzazione.
+Per iniziare, ogni visualizzazione dispone di un elemento `Name` che specifica un nome descrittivo utilizzato per fare riferimento alla vista. elemento `ViewSelectedBy` che definisce quali oggetti .NET vengono visualizzati dalla visualizzazione e un elemento *Control* che definisce la visualizzazione.
 
 ```xml
 <ViewDefinitions>
@@ -116,7 +116,7 @@ Come illustrato negli esempi precedenti, il file di formattazione può contenere
 
 ## <a name="example-of-a-table-view"></a>Esempio di una vista tabella
 
-Nell'esempio seguente vengono illustrati i tag XML utilizzati per definire una vista tabella contenente due colonne. L'elemento [ViewDefinitions](./viewdefinitions-element-format.md) è l'elemento contenitore per tutte le visualizzazioni definite nel file di formattazione. L'elemento [View](./view-element-format.md) definisce la tabella, l'elenco, la larghezza o la visualizzazione personalizzata specifica. All'interno di ogni elemento di [visualizzazione](./view-element-format.md) , l'elemento [Name](./name-element-for-view-format.md) specifica il nome della vista, l'elemento [ViewSelectedBy](./viewselectedby-element-format.md) definisce gli oggetti che usano la visualizzazione e i diversi elementi di controllo (ad esempio, l'elemento `TableControl` illustrato di seguito esempio) definire il tipo della visualizzazione.
+Nell'esempio seguente vengono illustrati i tag XML utilizzati per definire una vista tabella contenente due colonne. L'elemento [ViewDefinitions](./viewdefinitions-element-format.md) è l'elemento contenitore per tutte le visualizzazioni definite nel file di formattazione. L'elemento [View](./view-element-format.md) definisce la tabella, l'elenco, la larghezza o la visualizzazione personalizzata specifica. All'interno di ogni elemento di [visualizzazione](./view-element-format.md) , l'elemento [Name](./name-element-for-view-format.md) specifica il nome della vista, l'elemento [ViewSelectedBy](./viewselectedby-element-format.md) definisce gli oggetti che utilizzano la visualizzazione e i diversi elementi del controllo, ad esempio l'elemento `TableControl` illustrato nell'esempio seguente, definiscono il tipo della visualizzazione.
 
 ```xml
 <ViewDefinitions>

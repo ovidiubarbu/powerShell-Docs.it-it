@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: f33ff3e9-213c-44aa-92ab-09450e65c676
 caps.latest.revision: 11
 ms.openlocfilehash: 3b14007384cca0d0cfa35655aee437adf73b1ff0
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72364450"
 ---
 # <a name="extending-properties-for-objects"></a>Estensione delle proprietà per gli oggetti
@@ -61,7 +61,7 @@ Nell'esempio seguente viene aggiunta la proprietà **mode** al tipo [System. io.
 </Type>
 ```
 
-## <a name="note-properties"></a>Note (proprietà)
+## <a name="note-properties"></a>Proprietà nota
 
 Una proprietà nota definisce una proprietà con un valore statico.
 

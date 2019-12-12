@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 6602730d-3892-4656-80c7-7bca2d14337f
 caps.latest.revision: 14
 ms.openlocfilehash: f5781c0c03aca41d01a44598a9a8c00d6d21d2fd
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72369310"
 ---
 # <a name="types-of-cmdlet-parameters"></a>Tipi di parametri del cmdlet
@@ -52,7 +52,7 @@ private string userName;
 
 I parametri posizionali e denominati accettano argomenti singoli o più argomenti separati da virgole. Sono consentiti più argomenti solo se il parametro accetta una raccolta, ad esempio una matrice di stringhe. È possibile combinare parametri posizionali e denominati nello stesso cmdlet. In questo caso, il sistema recupera prima gli argomenti denominati, quindi tenta di eseguire il mapping degli argomenti senza nome rimanenti ai parametri posizionali.
 
-I comandi seguenti illustrano i diversi modi in cui è possibile specificare un solo argomento e più argomenti per i parametri del cmdlet `Get-Command`. Si noti che negli ultimi due esempi non è necessario specificare **-Name** perché il parametro `Name` è definito come parametro posizionale.
+I comandi seguenti illustrano i diversi modi in cui è possibile specificare argomenti singoli e multipli per i parametri del cmdlet `Get-Command`. Si noti che negli ultimi due esempi non è necessario specificare **-Name** perché il parametro `Name` è definito come parametro posizionale.
 
 ```powershell
 Get-Command -Name get-service
@@ -65,7 +65,7 @@ Get-Command get-service,set-service
 
 È anche possibile definire i parametri dei cmdlet come parametri obbligatori o facoltativi. È necessario specificare un parametro obbligatorio prima che il runtime di Windows PowerShell richiami il cmdlet.  Per impostazione predefinita, i parametri sono definiti come facoltativi.
 
-Per definire un parametro obbligatorio, aggiungere la parola chiave `Mandatory` nella dichiarazione dell'attributo del parametro e impostarla su `true`, come illustrato nella dichiarazione di parametro seguente.
+Per definire un parametro obbligatorio, aggiungere la parola chiave `Mandatory` nella dichiarazione dell'attributo Parameter e impostarla su `true`, come illustrato nella dichiarazione di parametro seguente.
 
 ```csharp
 [Parameter(Position = 0, Mandatory = true)]
@@ -93,7 +93,7 @@ private string userName;
 
 Windows PowerShell fornisce un tipo [System. Management. Automation. SwitchParameter](/dotnet/api/System.Management.Automation.SwitchParameter) che consente di definire un parametro il cui valore viene impostato automaticamente su `false` se il parametro non viene specificato quando viene chiamato il cmdlet. Quando possibile, usare parametri switch al posto di parametri booleani.
 
-Si consideri l'esempio seguente. Per impostazione predefinita, diversi cmdlet di Windows PowerShell non passano un oggetto di output alla pipeline. Tuttavia, questi cmdlet hanno un parametro di opzione `PassThru` che sostituisce il comportamento predefinito. Se il parametro `PassThru` viene specificato quando vengono chiamati questi cmdlet, il cmdlet restituisce un oggetto di output alla pipeline.
+Si consideri l'esempio seguente. Per impostazione predefinita, diversi cmdlet di Windows PowerShell non passano un oggetto di output alla pipeline. Tuttavia, questi cmdlet hanno un `PassThru` parametro switch che sostituisce il comportamento predefinito. Se il parametro `PassThru` viene specificato al momento della chiamata di questi cmdlet, il cmdlet restituisce un oggetto di output alla pipeline.
 
 Se è necessario che il parametro abbia un valore predefinito di `true` quando il parametro non è specificato nella chiamata, provare a invertire il senso del parametro. Per esempio, anziché impostare l'attributo del parametro su un valore booleano di `true`, dichiarare la proprietà come tipo [System. Management. Automation. SwitchParameter](/dotnet/api/System.Management.Automation.SwitchParameter) , quindi impostare il valore predefinito del parametro su `false`.
 

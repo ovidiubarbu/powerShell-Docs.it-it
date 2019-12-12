@@ -12,10 +12,10 @@ helpviewer_keywords:
 ms.assetid: 54236ef3-82db-45f8-9114-1ecb7ff65d3e
 caps.latest.revision: 8
 ms.openlocfilehash: af41c2c9855310d047404114a07b27180a7aa8fc
-ms.sourcegitcommit: d43f66071f1f33b350d34fa1f46f3a35910c5d24
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "74415663"
 ---
 # <a name="creating-a-cmdlet-without-parameters"></a>Creazione di un cmdlet senza parametri
@@ -129,7 +129,7 @@ End Sub 'ProcessRecord
 
 Ad esempio, [System. Management. Automation. cmdlet. EndProcessing](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing) potrebbe non essere chiamato se il cmdlet viene annullato a metà o se si verifica un errore di terminazione in qualsiasi parte del cmdlet. Pertanto, un cmdlet che richiede la pulizia degli oggetti deve implementare il modello [System. IDisposable](/dotnet/api/System.IDisposable) completo, incluso il finalizzatore, in modo che il runtime possa chiamare sia [System. Management. Automation. cmdlet. EndProcessing](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing) e [System. IDisposable. Dispose *](/dotnet/api/System.IDisposable.Dispose) al termine dell'elaborazione.
 
-## <a name="code-sample"></a>Esempio di codice
+## <a name="code-sample"></a>Codice di esempio
 
 Per il codice C# di esempio completo, vedere l' [esempio GetProcessSample01](./getprocesssample01-sample.md).
 
@@ -151,7 +151,7 @@ Quando il cmdlet è stato registrato con Windows PowerShell, è possibile testar
     get-proc
     ```
 
-    Viene visualizzato l'output seguente.
+    Viene visualizzato l'output seguente:
 
     ```output
     Handles  NPM(K)  PM(K)  WS(K)  VS(M)  CPU(s)  Id   ProcessName
@@ -175,7 +175,7 @@ Quando il cmdlet è stato registrato con Windows PowerShell, è possibile testar
     $p.length
     ```
 
-    Viene visualizzato l'output seguente.
+    Viene visualizzato l'output seguente:
 
     ```output
     63
@@ -187,7 +187,7 @@ Quando il cmdlet è stato registrato con Windows PowerShell, è possibile testar
     $p[6]
     ```
 
-    Viene visualizzato l'output seguente.
+    Viene visualizzato l'output seguente:
 
     ```output
     Handles  NPM(K)  PM(K)  WS(K)  VS(M)  CPU(s)  Id    ProcessName
@@ -201,7 +201,7 @@ Quando il cmdlet è stato registrato con Windows PowerShell, è possibile testar
     $p[6].starttime
     ```
 
-    Viene visualizzato l'output seguente.
+    Viene visualizzato l'output seguente:
 
     ```output
     Tuesday, July 26, 2005 9:34:15 AM
@@ -221,7 +221,7 @@ Quando il cmdlet è stato registrato con Windows PowerShell, è possibile testar
     $p | Where-Object {$_.HandleCount -gt 500 } | Sort-Object HandleCount
     ```
 
-    Viene visualizzato l'output seguente.
+    Viene visualizzato l'output seguente:
 
     ```output
     Handles  NPM(K)  PM(K)  WS(K)  VS(M)  CPU(s)  Id   ProcessName
@@ -243,7 +243,7 @@ Quando il cmdlet è stato registrato con Windows PowerShell, è possibile testar
         TypeName: System.Diagnostics.Process
     ```
 
-    Viene visualizzato l'output seguente.
+    Viene visualizzato l'output seguente:
 
     ```output
     Name                     MemberType Definition

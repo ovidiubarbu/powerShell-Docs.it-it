@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: ec63f4f9-8858-4529-8646-ffbbc278f83e
 caps.latest.revision: 7
 ms.openlocfilehash: 694c5baaa5e90a772257276ba139d90acf7ec0e3
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72363090"
 ---
 # <a name="firstlineindent-element-for-frame-for-controls-for-view-format"></a>Elemento FirstLineIndent per Frame per Controls per View (formato)
@@ -45,7 +45,7 @@ Nessuna.
 |-------------|-----------------|
 |[Elemento frame per CustomItem per i controlli per la visualizzazione (Format)](./frame-element-for-customitem-for-controls-for-view-format.md)|Definisce la modalità di visualizzazione dei dati, ad esempio lo spostamento dei dati verso sinistra o verso destra.|
 
-## <a name="text-value"></a>Valore di testo
+## <a name="text-value"></a>Valore testo
 
 Consente di specificare il numero di caratteri che si desidera spostare nella prima riga dei dati.
 

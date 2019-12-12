@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 72f272db-455f-44db-9ab4-6475390a83c4
 caps.latest.revision: 6
 ms.openlocfilehash: 907ee7d070e5ac02464dc58eb32504cb0721f663
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72365150"
 ---
 # <a name="leftindent-element-for-frame-for-groupby-format"></a>Elemento LeftIndent per Frame per GroupBy (formato)
@@ -45,7 +45,7 @@ Nessuna.
 |-------------|-----------------|
 |[Elemento frame per CustomItem per GroupBy (Format)](./frame-element-for-customitem-for-groupby-format.md)|Definisce la modalità di visualizzazione dei dati, ad esempio lo spostamento dei dati verso sinistra o verso destra.|
 
-## <a name="text-value"></a>Valore di testo
+## <a name="text-value"></a>Valore testo
 
 Specificare il numero di caratteri che si desidera spostare i dati a sinistra.
 

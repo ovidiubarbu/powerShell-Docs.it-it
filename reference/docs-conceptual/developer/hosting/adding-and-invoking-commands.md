@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 62be8432-28c1-4ca2-bcdb-d0350163fa8c
 caps.latest.revision: 5
 ms.openlocfilehash: f776f13fe743a3f5f67de0d94883e3f754040ffc
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72367640"
 ---
 # <a name="adding-and-invoking-commands"></a>Aggiunta e richiamo dei comandi
@@ -79,7 +79,7 @@ PowerShell.Create().AddCommand("Get-Process")
 
 ### <a name="addstatement"></a>AddStatement
 
- È possibile simulare la suddivisione in batch usando il metodo [System. Management. Automation. PowerShell. AddStatement *](/dotnet/api/System.Management.Automation.PowerShell.AddStatement) , che aggiunge un'altra istruzione alla fine della pipeline. il codice seguente ottiene un elenco di processi in esecuzione con il nome `PowerShell`, quindi Ottiene l'elenco dei servizi in esecuzione.
+ È possibile simulare la suddivisione in batch usando il metodo [System. Management. Automation. PowerShell. AddStatement *](/dotnet/api/System.Management.Automation.PowerShell.AddStatement) , che aggiunge un'altra istruzione alla fine della pipeline. il codice seguente ottiene un elenco di processi in esecuzione con il nome `PowerShell`e quindi ottiene l'elenco dei servizi in esecuzione.
 
 ```csharp
 PowerShell ps = PowerShell.Create();
@@ -138,7 +138,7 @@ namespace HostPS1e
 
 ### <a name="invoking-a-pipeline-asynchronously"></a>Richiamo di una pipeline in modo asincrono
 
- Si richiama una pipeline in modo asincrono chiamando un overload di [System. Management. Automation. PowerShell. BeginInvoke *](/dotnet/api/System.Management.Automation.PowerShell.BeginInvoke) per creare un oggetto [IAsyncResult](https://msdn.microsoft.com/library/system.iasyncresult\(v=vs.110\).aspx) e quindi chiamando [System. Management. Automation. PowerShell. EndInvoke *](/dotnet/api/System.Management.Automation.PowerShell.EndInvoke) metodo.
+ Per richiamare una pipeline in modo asincrono, chiamare un overload di [System. Management. Automation. PowerShell. BeginInvoke *](/dotnet/api/System.Management.Automation.PowerShell.BeginInvoke) per creare un oggetto [IAsyncResult](https://msdn.microsoft.com/library/system.iasyncresult\(v=vs.110\).aspx) e quindi chiamare il metodo [System. Management. Automation. PowerShell. EndInvoke *](/dotnet/api/System.Management.Automation.PowerShell.EndInvoke) .
 
  Nell'esempio seguente viene illustrato come richiamare una pipeline in modo asincrono.
 

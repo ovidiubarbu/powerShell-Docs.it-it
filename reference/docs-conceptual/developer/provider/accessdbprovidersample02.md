@@ -9,17 +9,17 @@ ms.topic: article
 ms.assetid: aaf9351e-157f-4d48-8b8f-1fd64855b682
 caps.latest.revision: 10
 ms.openlocfilehash: d291e401bbf3da998735ebb00f1eb35521f9a19c
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72366370"
 ---
 # <a name="accessdbprovidersample02"></a>AccessDBProviderSample02
 
-Questo esempio illustra come sovrascrivere i metodi [System. Management. Automation. provider. Drivecmdletprovider. nuovaunità *](/dotnet/api/System.Management.Automation.Provider.DriveCmdletProvider.NewDrive) e [System. Management. Automation. provider. Drivecmdletprovider. Removedrive *](/dotnet/api/System.Management.Automation.Provider.DriveCmdletProvider.RemoveDrive) per supportare le chiamate al `New-PSDrive` e i cmdlet `Remove-PSDrive`. La classe del provider in questo esempio deriva dalla classe [System. Management. Automation. provider. Drivecmdletprovider](/dotnet/api/System.Management.Automation.Provider.DriveCmdletProvider) .
+Questo esempio illustra come sovrascrivere i metodi [System. Management. Automation. provider. Drivecmdletprovider. nuovaunità *](/dotnet/api/System.Management.Automation.Provider.DriveCmdletProvider.NewDrive) e [System. Management. Automation. provider. Drivecmdletprovider. Removedrive *](/dotnet/api/System.Management.Automation.Provider.DriveCmdletProvider.RemoveDrive) per supportare le chiamate ai cmdlet `New-PSDrive` e `Remove-PSDrive`. La classe del provider in questo esempio deriva dalla classe [System. Management. Automation. provider. Drivecmdletprovider](/dotnet/api/System.Management.Automation.Provider.DriveCmdletProvider) .
 
-## <a name="demonstrates"></a>Dimostra
+## <a name="demonstrates"></a>Illustra
 
 > [!IMPORTANT]
 > È probabile che la classe del provider derivi da una delle classi seguenti e possa implementare altre interfacce del provider:
@@ -30,7 +30,7 @@ Questo esempio illustra come sovrascrivere i metodi [System. Management. Automat
 >
 > Per ulteriori informazioni sulla scelta della classe del provider da derivare da in base alle funzionalità del provider, vedere [progettazione del provider di Windows PowerShell](./provider-types.md).
 
-In questo esempio vengono illustrate le operazioni seguenti:
+In questo esempio viene illustrato quanto segue:
 
 - Dichiarazione dell'attributo `CmdletProvider`.
 

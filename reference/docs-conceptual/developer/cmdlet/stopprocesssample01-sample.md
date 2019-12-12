@@ -9,15 +9,15 @@ ms.topic: article
 ms.assetid: b7bed607-369b-4507-87fa-f6011c2f1970
 caps.latest.revision: 9
 ms.openlocfilehash: 2ce146df05ef876d9c17f560628ebac2c39e57bf
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72365300"
 ---
 # <a name="stopprocesssample01-sample"></a>Esempio di StopProcessSample01
 
-In questo esempio viene illustrato come scrivere un cmdlet che richiede feedback da parte dell'utente prima di tentare di arrestare un processo e come implementare un parametro `PassThru` che indica che l'utente desidera che il cmdlet restituisca un oggetto. Questo cmdlet è simile al cmdlet `Stop-Process` fornito da Windows PowerShell 2,0.
+In questo esempio viene illustrato come scrivere un cmdlet che richiede feedback da parte dell'utente prima di tentare di arrestare un processo e come implementare un `PassThru` parametro che indica che l'utente desidera che il cmdlet restituisca un oggetto. Questo cmdlet è simile al cmdlet `Stop-Process` fornito da Windows PowerShell 2,0.
 
 ### <a name="how-to-build-the-sample-by-using-visual-studio"></a>Come compilare l'esempio usando Visual Studio.
 
@@ -25,11 +25,11 @@ In questo esempio viene illustrato come scrivere un cmdlet che richiede feedback
 
 2. Fare doppio clic sull'icona del file di soluzione (con estensione sln). Verrà aperto il progetto di esempio in Microsoft Visual Studio.
 
-3. Scegliere **Compila soluzione**dal menu **Compila** .
+3. Scegliere **Compila soluzione** dal menu **Compila**.
 
     La libreria per l'esempio verrà compilata nelle cartelle \bin o \bin\Debug predefinite.
 
-### <a name="how-to-run-the-sample"></a>Come eseguire l'esempio
+### <a name="how-to-run-the-sample"></a>Per eseguire l'esempio
 
 1. Creare la cartella dei moduli seguente:
 
@@ -51,7 +51,7 @@ In questo esempio viene illustrato come scrivere un cmdlet che richiede feedback
 
 Questo esempio richiede Windows PowerShell 2,0.
 
-## <a name="demonstrates"></a>Dimostra
+## <a name="demonstrates"></a>Illustra
 
 In questo esempio vengono illustrate le operazioni seguenti.
 
@@ -65,7 +65,7 @@ In questo esempio vengono illustrate le operazioni seguenti.
 
 ## <a name="example"></a>Esempio
 
-In questo esempio viene illustrato come implementare un parametro `PassThru` che indica che l'utente desidera che il cmdlet restituisca un oggetto e come richiedere il feedback dell'utente tramite chiamate ai metodi `ShouldProcess` e `ShouldContinue`.
+In questo esempio viene illustrato come implementare un `PassThru` parametro che indica che l'utente desidera che il cmdlet restituisca un oggetto e come richiedere il feedback dell'utente tramite chiamate ai metodi `ShouldProcess` e `ShouldContinue`.
 
 ```csharp
 using System;

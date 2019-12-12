@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 8c7a40ca-1786-46f0-bab5-6ce229daa7ee
 caps.latest.revision: 14
 ms.openlocfilehash: 25d24063501196d44e0f806a55bb699c82f771ce
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72368980"
 ---
 # <a name="creating-a-list-view"></a>Creazione di una visualizzazione elenco
@@ -274,7 +274,7 @@ Per specificare un modello di formato, è possibile utilizzare gli elementi XML 
 
 - L'elemento [scriptblock](./scriptblock-element-for-listitem-for-listcontrol-format.md) (non mostrato) specifica lo script il cui valore viene visualizzato dalla visualizzazione. È necessario specificare uno script o una proprietà, ma non è possibile specificarli entrambi.
 
-Nell'esempio seguente viene chiamato il metodo `ToString` per formattare il valore dello script. Gli script possono chiamare qualsiasi metodo di un oggetto. Pertanto, se un oggetto dispone di un metodo, ad esempio `ToString`, con parametri di formattazione, lo script può chiamare tale metodo per formattare il valore di output dello script.
+Nell'esempio seguente viene chiamato il metodo `ToString` per formattare il valore dello script. Gli script possono chiamare qualsiasi metodo di un oggetto. Pertanto, se un oggetto dispone di un metodo, ad esempio `ToString`, che dispone di parametri di formattazione, lo script può chiamare tale metodo per formattare il valore di output dello script.
 
 ```xml
 <ListItem>
@@ -285,7 +285,7 @@ Nell'esempio seguente viene chiamato il metodo `ToString` per formattare il valo
 </ListItem>
 ```
 
-È possibile utilizzare l'elemento XML seguente per chiamare il metodo `ToString`:
+Per chiamare il metodo `ToString` è possibile utilizzare l'elemento XML seguente:
 
 - L'elemento [ListItem](./listitem-element-for-listitems-for-listcontrol-format.md) specifica i dati visualizzati dalla visualizzazione.
 

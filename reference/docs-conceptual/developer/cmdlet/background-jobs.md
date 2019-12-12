@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: a0ef5ac9-8254-4832-ace8-84b356c10f08
 caps.latest.revision: 13
 ms.openlocfilehash: ff4fe159eedc47fc69f4d783cd90d2b0e888c0d5
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72363560"
 ---
 # <a name="background-jobs"></a>Processi in background
@@ -51,7 +51,7 @@ Per un esempio di codice, vedere [come supportare i processi](./how-to-support-j
 
 Le API seguenti sono fornite da Windows PowerShell per gestire i processi in background.
 
-[System. Management. Automation. job](/dotnet/api/System.Management.Automation.Job) deriva oggetti processo personalizzati. Si tratta di una classe astratta.
+[System. Management. Automation. job](/dotnet/api/System.Management.Automation.Job) deriva oggetti processo personalizzati. Questa è una classe astratta.
 
 [System. Management. Automation. Jobrepository](/dotnet/api/System.Management.Automation.JobRepository) gestisce e fornisce informazioni sui processi in background attivi correnti.
 

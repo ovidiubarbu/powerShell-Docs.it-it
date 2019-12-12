@@ -11,10 +11,10 @@ helpviewer_keywords:
 ms.assetid: b0bb8172-c9fa-454b-9f1b-57c3fe60671b
 caps.latest.revision: 12
 ms.openlocfilehash: a28c8d3df19bc72bf338d6abc4e02768c5097209
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72369870"
 ---
 # <a name="cmdlet-input-processing-methods"></a>Metodi di elaborazione degli input dei cmdlet
@@ -63,7 +63,7 @@ Ad esempio, il cmdlet potrebbe dover pulire le variabili oggetto dopo che è sta
 
 Quando PowerShell elabora una pipeline di comandi, PowerShell chiama questo metodo una volta per ogni istanza del cmdlet nella pipeline.
 Tuttavia, è importante ricordare che il runtime di PowerShell non chiamerà il metodo EndProcessing se il cmdlet viene annullato a metà durante l'elaborazione dell'input o se si verifica un errore di terminazione in qualsiasi parte del cmdlet.
-Per questo motivo, un cmdlet che richiede la pulizia degli oggetti deve implementare il modello [System. IDisposable](/dotnet/api/System.IDisposable) completo, incluso un finalizzatore, in modo che il runtime possa chiamare i metodi EndProcessing e [System. IDisposable. Dispose](/dotnet/api/System.IDisposable.Dispose) alla fine di elaborazione.
+Per questo motivo, un cmdlet che richiede la pulizia degli oggetti deve implementare il modello [System. IDisposable](/dotnet/api/System.IDisposable) completo, incluso un finalizzatore, in modo che il runtime possa chiamare i metodi EndProcessing e [System. IDisposable. Dispose](/dotnet/api/System.IDisposable.Dispose) alla fine dell'elaborazione.
 Per altre informazioni su come PowerShell richiama la pipeline di comandi, vedere [ciclo](/previous-versions/ms714429(v=vs.85))di vita dell'elaborazione dei cmdlet.
 
 Nel codice seguente viene illustrata un'implementazione del metodo EndProcessing.
@@ -86,6 +86,6 @@ protected override void EndProcessing()
 
 [Esercitazione su SelectStr](selectstr-tutorial.md)
 
-[System. IDisposable](/dotnet/api/System.IDisposable)
+[System.IDisposable](/dotnet/api/System.IDisposable)
 
 [SDK della shell di Windows PowerShell](../windows-powershell-reference.md)

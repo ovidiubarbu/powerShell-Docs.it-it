@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: c92a6d3d-8d34-4a76-bdc3-dea923d9858e
 caps.latest.revision: 17
 ms.openlocfilehash: e24d40746da91f60aaf2af655ddcadc88ab6a4db
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72361000"
 ---
 # <a name="runspace-samples"></a>Esempi di spazi di esecuzione
@@ -42,7 +42,7 @@ Questa sezione include codice di esempio che illustra come usare tipi diversi di
 
  [Esempio Runspace09](./runspace09-sample.md) Questo esempio illustra come aggiungere uno script alla pipeline di un oggetto [System. Management. Automation. PowerShell](/dotnet/api/system.management.automation.powershell) e come eseguire lo script in modo asincrono. Gli eventi vengono usati per gestire l'output dello script.
 
- [Esempio Runspace10](./runspace10-sample.md) Questo esempio illustra come creare uno stato di sessione iniziale predefinito, come aggiungere un cmdlet a [System. Management. Automation. Runspaces. InitialSessionState](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState), come creare un spazio che usa lo stato della sessione iniziale e come eseguire il comando usando Oggetto [System. Management. Automation. PowerShell](/dotnet/api/system.management.automation.powershell) .
+ [Esempio Runspace10](./runspace10-sample.md) Questo esempio illustra come creare uno stato di sessione iniziale predefinito, come aggiungere un cmdlet a [System. Management. Automation. Runspaces. InitialSessionState](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState), come creare un spazio che usa lo stato della sessione iniziale e come eseguire il comando usando un oggetto [System. Management. Automation. PowerShell](/dotnet/api/system.management.automation.powershell) .
 
  [Esempio Runspace11](./runspace11-sample.md) Viene illustrato come usare la classe [System. Management. Automation. ProxyCommand](/dotnet/api/System.Management.Automation.ProxyCommand) per creare un comando proxy che chiama un cmdlet esistente, ma limita il set di parametri disponibili. Il comando proxy viene quindi aggiunto a uno stato sessione iniziale usato per creare uno spazio di esecuzione vincolato. Ciò significa che l'utente può accedere alla funzionalità del cmdlet solo tramite il comando proxy.
 

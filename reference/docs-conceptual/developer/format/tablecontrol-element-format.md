@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 1550b068-dfbc-4ae0-9aa1-72c9a680ec59
 caps.latest.revision: 15
 ms.openlocfilehash: 3942c008e026b0b99db3c77af4a0152b50fffc4e
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72368200"
 ---
 # <a name="tablecontrol-element-format"></a>Elemento TableControl (formato)
@@ -62,7 +62,7 @@ Per ulteriori informazioni sui componenti di una vista tabella, vedere [creazion
 
 ## <a name="example"></a>Esempio
 
-Questo esempio mostra un elemento `TableControl` usato per visualizzare le proprietà dell'oggetto [System. ServiceProcess. ServiceController](/dotnet/api/System.ServiceProcess.ServiceController) .
+Questo esempio illustra un elemento `TableControl` usato per visualizzare le proprietà dell'oggetto [System. ServiceProcess. ServiceController](/dotnet/api/System.ServiceProcess.ServiceController) .
 
 ```xml
 <View>

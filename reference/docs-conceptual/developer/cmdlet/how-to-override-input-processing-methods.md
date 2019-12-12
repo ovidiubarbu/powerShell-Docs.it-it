@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 1a1ad921-5816-4937-acf1-ed4760fae740
 caps.latest.revision: 8
 ms.openlocfilehash: cfee55576518cf9ce38501192872ce94054f5213
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72364470"
 ---
 # <a name="how-to-override-input-processing-methods"></a>Come sostituire i metodi di elaborazione degli input
@@ -29,7 +29,7 @@ In questi esempi viene illustrato come sovrascrivere i metodi di elaborazione de
 
 - Dichiarare un override protetto del metodo [System. Management. Automation. cmdlet. BeginProcessing](/dotnet/api/System.Management.Automation.Cmdlet.BeginProcessing) .
 
-La classe seguente stampa un messaggio di esempio. Per usare questa classe, modificare il verbo e il sostantivo nell'attributo cmdlet, modificare il nome della classe in modo che corrisponda al nuovo verbo e al sostantivo, quindi aggiungere la funzionalità richiesta all'override di [System. Management. Automation. cmdlet. BeginProcessing](/dotnet/api/System.Management.Automation.Cmdlet.BeginProcessing) Metodo.
+La classe seguente stampa un messaggio di esempio. Per usare questa classe, modificare il verbo e il sostantivo nell'attributo cmdlet, modificare il nome della classe in modo che corrisponda al nuovo verbo e al sostantivo, quindi aggiungere la funzionalità richiesta all'override del metodo [System. Management. Automation. cmdlet. BeginProcessing](/dotnet/api/System.Management.Automation.Cmdlet.BeginProcessing) .
 
 ```csharp
 [Cmdlet(VerbsDiagnostic.Test, "BeginProcessingClass")]

@@ -11,10 +11,10 @@ applies_to:
 ms.assetid: acabdb93-c41a-4b8d-acbe-45cdab91e198
 caps.latest.revision: 10
 ms.openlocfilehash: 3562804157ebdfca561445a8671d726b55cc4efd
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72367260"
 ---
 # <a name="file-types-permitted-in-an-updatable-help-cab-file"></a>Tipi di file consentiti in un file CAB della Guida aggiornabile
@@ -35,4 +35,4 @@ Per garantire la sicurezza dei file della Guida scaricati da Internet, un file C
 
 - Argomenti della Guida basati su testo, ad esempio informazioni sugli argomenti.
 
-[Update-Help](/powershell/module/Microsoft.PowerShell.Core/Update-Help) verifica il contenuto dei CAB quando DECOMPRIME il CAB. Se `Update-Help` individua tipi di file non conformi in un file CAB della Guida aggiornabile, viene generato un errore di terminazione e l'operazione viene arrestata. Non installa i file della guida dal file CAB, neanche quelli dei tipi di file conformi.
+[Update-Help](/powershell/module/Microsoft.PowerShell.Core/Update-Help) verifica il contenuto dei CAB quando DECOMPRIME il CAB. Se `Update-Help` trova tipi di file non conformi in un file CAB della Guida aggiornabile, viene generato un errore di terminazione e l'operazione viene arrestata. Non installa i file della guida dal file CAB, neanche quelli dei tipi di file conformi.

@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 73fb11ee-0ebd-477a-ac36-acdfbb32e70d
 caps.latest.revision: 7
 ms.openlocfilehash: bd0cb69770817ec215ddb1862a43a838baddefcf
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72364030"
 ---
 # <a name="customitem-element-for-customentry-for-controls-for-configuration-format"></a>Elemento CustomItem per CustomEntry per Controls per Configuration (formato)
@@ -34,7 +34,7 @@ Elemento di configurazione (Format) controlla l'elemento dell'elemento di contro
 
 ## <a name="attributes-and-elements"></a>Attributi ed elementi
 
-Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e l'elemento padre dell'elemento `CustomItem`. Per ulteriori informazioni, vedere la sezione Osservazioni.
+Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e l'elemento padre dell'elemento `CustomItem`. Per altre informazioni, vedere la sezione Osservazioni.
 
 ### <a name="attributes"></a>Attributi
 
@@ -59,7 +59,7 @@ Nessuna.
 
 Quando si specificano gli elementi figlio dell'elemento `CustomItem`, tenere presente quanto segue:
 
-- Gli elementi figlio devono essere aggiunti nella sequenza seguente: `ExpressionBinding`, `NewLine`, `Text` e `Frame`.
+- Gli elementi figlio devono essere aggiunti nella sequenza seguente: `ExpressionBinding`, `NewLine`, `Text`e `Frame`.
 
 - Non esiste un limite massimo per il numero di sequenze che è possibile specificare.
 

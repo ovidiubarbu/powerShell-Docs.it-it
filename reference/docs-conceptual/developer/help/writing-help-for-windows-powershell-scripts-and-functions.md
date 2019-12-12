@@ -9,16 +9,16 @@ ms.topic: article
 ms.assetid: 859a6e22-75b1-43d4-ba62-62c107803b37
 caps.latest.revision: 7
 ms.openlocfilehash: af989fb2eeba6b68f2e3e6506f3f60d5be6f7d8a
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72367720"
 ---
 # <a name="writing-help-for-powershell-scripts-and-functions"></a>Scrittura della Guida per le funzioni e gli script di PowerShell
 
 Gli script e le funzioni di PowerShell devono essere documentati in modo completo ogni volta che vengono condivisi con altri utenti.
-Il cmdlet `Get-Help` Visualizza gli argomenti della Guida per gli script e le funzioni nello stesso formato in cui viene visualizzata la guida per i cmdlet di e tutti i parametri `Get-Help` funzionano sugli argomenti della Guida relativi agli script e alle funzioni.
+Il cmdlet `Get-Help` Visualizza gli argomenti della Guida per gli script e le funzioni nello stesso formato in cui viene visualizzata la guida per i cmdlet di e tutti i parametri di `Get-Help` funzionano sugli argomenti della Guida relativi a script e funzioni.
 
 Gli script di PowerShell possono includere un argomento della guida sugli script e gli argomenti della guida su ogni funzione nello script.
 Le funzioni condivise indipendentemente dagli script possono includere argomenti della guida.
@@ -30,16 +30,16 @@ Questo documento illustra il formato e la posizione corretta degli argomenti del
 ### <a name="comment-based-help"></a>Guida basata su Commenti
 L'argomento della guida che descrive uno script o una funzione può essere implementato come un set di commenti nello script o nella funzione.
 Quando si scrive la guida basata su commenti per uno script e per le funzioni in uno script, prestare particolare attenzione alle regole per l'inserimento della Guida basata su commenti.
-La selezione host determina se il cmdlet `Get-Help` associa l'argomento della Guida allo script o a una funzione.
+La selezione host determina se il cmdlet `Get-Help` associa l'argomento della guida con lo script o una funzione.
 Per ulteriori informazioni sulla scrittura degli argomenti della Guida basati su commenti, vedere [about_Comment_Based_Help](/powershell/module/microsoft.powershell.core/about/about_comment_based_help).
 
 ### <a name="xml-based-command-help"></a>Guida per i comandi basati su XML
 L'argomento della guida che descrive uno script o una funzione può essere implementato in un file XML che utilizza lo schema della guida del comando.
-Per associare lo script o la funzione al file XML, usare la parola chiave del commento `ExternalHelp` seguita dal percorso e dal nome del file XML.
+Per associare lo script o la funzione al file XML, usare la parola chiave `ExternalHelp` comment seguita dal percorso e dal nome del file XML.
 
-Quando la parola chiave del commento `ExternalHelp` è presente, ha la precedenza sulla guida basata su commenti, anche quando `Get-Help` non è in grado di trovare un file della guida che corrisponda al valore della parola chiave `ExternalHelp`.
+Quando la parola chiave `ExternalHelp` comment è presente, ha la precedenza sulla guida basata su commenti, anche quando `Get-Help` non riesce a trovare un file della guida che corrisponda al valore della parola chiave `ExternalHelp`.
 
-### <a name="online-help"></a>Guida in linea
+### <a name="online-help"></a>Guida
 È possibile pubblicare gli argomenti della guida su Internet e quindi indirizzare `Get-Help` per aprire gli argomenti.
 Per ulteriori informazioni sulla scrittura degli argomenti della Guida basati su commenti, vedere Supporto per la [Guida online](../module/supporting-online-help.md).
 
@@ -66,7 +66,7 @@ Non esiste un metodo stabilito per la scrittura di argomenti concettuali ("about
 
 - In un argomento della guida della funzione ricordare agli utenti che la funzione esiste solo nella sessione corrente e, per usarla in altre sessioni, è necessario aggiungerla o aggiungerla a un profilo di PowerShell.
 
-- `Get-Help` Visualizza l'argomento della Guida relativo a uno script o a una funzione solo quando il file di script e i file degli argomenti della guida vengono salvati nei percorsi corretti. Non è pertanto utile includere le istruzioni per l'installazione di PowerShell o il salvataggio o l'installazione dello script o della funzione in un argomento della Guida relativo a uno script o una funzione. Al contrario, includere le istruzioni di installazione nel documento utilizzato per distribuire lo script o la funzione.
+- `Get-Help` Visualizza l'argomento della Guida per uno script o una funzione solo quando il file di script e i file degli argomenti della guida vengono salvati nei percorsi corretti. Non è pertanto utile includere le istruzioni per l'installazione di PowerShell o il salvataggio o l'installazione dello script o della funzione in un argomento della Guida relativo a uno script o una funzione. Al contrario, includere le istruzioni di installazione nel documento utilizzato per distribuire lo script o la funzione.
 
 ## <a name="see-also"></a>Vedere anche
 

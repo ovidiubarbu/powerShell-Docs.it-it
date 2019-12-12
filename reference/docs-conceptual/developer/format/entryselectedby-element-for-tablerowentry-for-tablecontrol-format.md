@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 49623fcf-1238-4d20-a7ce-238d47d9d565
 caps.latest.revision: 15
 ms.openlocfilehash: 9302bfed0324773cb98d698acdcf608f34ee19c1
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72363340"
 ---
 # <a name="entryselectedby-element-for-tablerowentry--for-tablecontrol-format"></a>Elemento EntrySelectedBy per TableRowEntry per TableControl (formato)
@@ -63,7 +63,7 @@ Per ulteriori informazioni sui componenti di una vista tabella, vedere [creazion
 
 ## <a name="example"></a>Esempio
 
-Nell'esempio seguente viene illustrato un elemento `TableRowEntry` utilizzato per visualizzare le proprietà dell'oggetto [System. Diagnostics. Process](/dotnet/api/System.Diagnostics.Process) .
+Nell'esempio seguente viene illustrato un elemento `TableRowEntry` usato per visualizzare le proprietà dell'oggetto [System. Diagnostics. Process](/dotnet/api/System.Diagnostics.Process) .
 
 ```xml
 <TableRowEntry>

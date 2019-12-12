@@ -13,10 +13,10 @@ helpviewer_keywords:
 ms.assetid: 2b446841-6616-4720-9ff8-50801d7576ed
 caps.latest.revision: 6
 ms.openlocfilehash: 2e3d97e224b06bdf36ac0bc1237911e029ea762d
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72366830"
 ---
 # <a name="creating-a-windows-powershell-drive-provider"></a>Creazione di un provider di unità di Windows PowerShell
@@ -31,7 +31,7 @@ Il provider di unità deve definire una classe .NET che deriva dalla classe di b
 
 [!code-csharp[AccessDBProviderSample02.cs](../../../../powershell-sdk-samples/SDK-2.0/csharp/AccessDBProviderSample02/AccessDBProviderSample02.cs#L29-L30 "AccessDBProviderSample02.cs")]
 
-Si noti che in questo esempio l'attributo [System. Management. Automation. provider. CmdletProviderAttribute](/dotnet/api/System.Management.Automation.Provider.CmdletProviderAttribute) specifica un nome descrittivo per il provider e le funzionalità specifiche di Windows PowerShell esposte dal provider per le finestre Runtime di PowerShell durante l'elaborazione del comando. I valori possibili per le funzionalità del provider sono definiti dall'enumerazione [System. Management. Automation. provider. ProviderCapabilities](/dotnet/api/System.Management.Automation.Provider.ProviderCapabilities) . Questo provider di unità non supporta nessuna di queste funzionalità.
+Si noti che in questo esempio l'attributo [System. Management. Automation. provider. CmdletProviderAttribute](/dotnet/api/System.Management.Automation.Provider.CmdletProviderAttribute) specifica un nome descrittivo per il provider e le funzionalità specifiche di Windows PowerShell che il provider espone al runtime di Windows PowerShell durante l'elaborazione del comando. I valori possibili per le funzionalità del provider sono definiti dall'enumerazione [System. Management. Automation. provider. ProviderCapabilities](/dotnet/api/System.Management.Automation.Provider.ProviderCapabilities) . Questo provider di unità non supporta nessuna di queste funzionalità.
 
 ## <a name="defining-base-functionality"></a>Definizione della funzionalità di base
 
@@ -95,9 +95,9 @@ Questo provider di unità non esegue l'override del metodo [System. Management. 
 
 #### <a name="things-to-remember-about-implementing-initializedefaultdrives"></a>Aspetti da ricordare sull'implementazione di InitializeDefaultDrives
 
-Tutti i provider di unità devono montare un'unità radice per aiutare l'utente a individuarlo. L'unità radice potrebbe elencare le posizioni che funge da radice per altre unità montate. Ad esempio, il provider Active Directory potrebbe creare un'unità in cui sono elencati i contesti di denominazione trovati negli attributi `namingContext` sull'ambiente di sistema distribuito radice (DSE). Ciò consente agli utenti di individuare i punti di montaggio per altre unità.
+Tutti i provider di unità devono montare un'unità radice per aiutare l'utente a individuarlo. L'unità radice potrebbe elencare le posizioni che funge da radice per altre unità montate. Ad esempio, il provider di Active Directory potrebbe creare un'unità in cui sono elencati i contesti di denominazione trovati negli attributi di `namingContext` sull'ambiente di sistema distribuito radice (DSE). Ciò consente agli utenti di individuare i punti di montaggio per altre unità.
 
-## <a name="code-sample"></a>Esempio di codice
+## <a name="code-sample"></a>Codice di esempio
 
 Per il codice di esempio completo, vedere [esempio di codice AccessDbProviderSample02](./accessdbprovidersample02-code-sample.md).
 

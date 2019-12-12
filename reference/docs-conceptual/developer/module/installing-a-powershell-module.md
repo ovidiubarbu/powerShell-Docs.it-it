@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: fb82827e-fdb7-4cbf-b3d4-093e72b3ff0e
 caps.latest.revision: 28
 ms.openlocfilehash: 60ac4bf9089232a9fa879e835e32da53422489fd
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72367070"
 ---
 # <a name="installing-a-powershell-module"></a>Installazione di un modulo di PowerShell
@@ -62,7 +62,7 @@ Per impostazione predefinita, il valore della variabile di ambiente **PSModulePa
   ```
 
   > [!IMPORTANT]
-  > Una volta aggiunto il percorso di **PSModulePath**, è necessario trasmettere un messaggio di ambiente sulla modifica. La trasmissione della modifica consente ad altre applicazioni, ad esempio la shell, di prelevare la modifica. Per trasmettere la modifica, fare in modo che il codice di installazione del prodotto invii un messaggio **WM_SETTINGCHANGE** con `lParam` impostato sulla stringa "Environment". Assicurarsi di inviare il messaggio dopo l'aggiornamento del codice di installazione del modulo **PSModulePath**.
+  > Una volta aggiunto il percorso di **PSModulePath**, è necessario trasmettere un messaggio di ambiente sulla modifica. La trasmissione della modifica consente ad altre applicazioni, ad esempio la shell, di prelevare la modifica. Per trasmettere la modifica, fare in modo che il codice di installazione del prodotto invii un messaggio di **WM_SETTINGCHANGE** con `lParam` impostato sulla stringa "Environment". Assicurarsi di inviare il messaggio dopo l'aggiornamento del codice di installazione del modulo **PSModulePath**.
 
 ### <a name="use-the-correct-module-directory-name"></a>Usa il nome di directory del modulo corretto
 
@@ -185,7 +185,7 @@ Per installare più versioni dello stesso modulo, attenersi alla procedura ripor
 2. Creare un manifesto del modulo per ogni versione del modulo. Nel valore della chiave **ModuleVersion** nel manifesto, immettere il numero di versione del modulo. Salvare il file manifesto (con estensione psd1) nella directory specifica della versione per il modulo.
 3. Aggiungere il percorso della cartella radice del modulo al valore della variabile di ambiente **PSModulePath** , come illustrato negli esempi seguenti.
 
-Per importare una versione specifica del modulo, l'utente finale può usare i parametri `MinimumVersion` o `RequiredVersion` del cmdlet [Import-Module](/powershell/module/Microsoft.PowerShell.Core/Import-Module) .
+Per importare una versione specifica del modulo, l'utente finale può usare il `MinimumVersion` o `RequiredVersion` parametri del cmdlet [Import-Module](/powershell/module/Microsoft.PowerShell.Core/Import-Module) .
 
 Se, ad esempio, il modulo Fabrikam è disponibile nelle versioni 8,0 e 9,0, la struttura di directory del modulo Fabrikam potrebbe essere simile alla seguente.
 
@@ -210,7 +210,7 @@ $p += ";C:\Program Files\Fabrikam\Fabrikam8;C:\Program Files\Fabrikam\Fabrikam9"
 [Environment]::SetEnvironmentVariable("PSModulePath",$p)
 ```
 
-Una volta completati questi passaggi, il parametro **ListAvailable** del cmdlet [Get-Module](/powershell/module/Microsoft.PowerShell.Core/Get-Module) ottiene entrambi i moduli fabrikam. Per importare un particolare modulo, usare i parametri `MinimumVersion` o `RequiredVersion` del cmdlet [Import-Module](/powershell/module/Microsoft.PowerShell.Core/Import-Module) .
+Una volta completati questi passaggi, il parametro **ListAvailable** del cmdlet [Get-Module](/powershell/module/Microsoft.PowerShell.Core/Get-Module) ottiene entrambi i moduli fabrikam. Per importare un modulo specifico, usare il `MinimumVersion` o `RequiredVersion` parametri del cmdlet [Import-Module](/powershell/module/Microsoft.PowerShell.Core/Import-Module) .
 
 Se entrambi i moduli vengono importati nella stessa sessione e i moduli contengono cmdlet con gli stessi nomi, i cmdlet importati per ultimi sono validi nella sessione.
 
@@ -228,7 +228,7 @@ Microsoft.PowerShell.Utility\Get-Date
 
 Per evitare conflitti di nomi, gli autori di moduli possono usare la chiave **DefaultCommandPrefix** nel manifesto del modulo per specificare un prefisso sostantivo per tutti i comandi esportati dal modulo.
 
-Gli utenti possono usare il parametro **Prefix** del cmdlet `Import-Module` per usare un prefisso alternativo. Il valore del parametro **Prefix** ha la precedenza sul valore della chiave **DefaultCommandPrefix** .
+Gli utenti possono utilizzare il parametro **Prefix** del cmdlet `Import-Module` per utilizzare un prefisso alternativo. Il valore del parametro **Prefix** ha la precedenza sul valore della chiave **DefaultCommandPrefix** .
 
 ## <a name="see-also"></a>Vedere anche
 

@@ -11,10 +11,10 @@ helpviewer_keywords:
 ms.assetid: f3aaf667-af84-4ea8-a5ad-d454d0d700b8
 caps.latest.revision: 9
 ms.openlocfilehash: f8cbaf464345b8f2b693e72f3dbe781a47605b28
-ms.sourcegitcommit: d43f66071f1f33b350d34fa1f46f3a35910c5d24
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "74417781"
 ---
 # <a name="windows-powershell-programmer39s-guide"></a>Guida per programmatori&#39;di Windows PowerShell
@@ -39,7 +39,7 @@ Windows PowerShell definisce diversi tipi di comandi che è possibile usare in f
 
 Oltre ai comandi, Windows PowerShell supporta diversi provider di Windows PowerShell personalizzabili che rendono disponibili set di cmdlet specifici. La shell funziona all'interno dell'applicazione host fornita da Windows PowerShell (Windows PowerShell. exe), ma è ugualmente accessibile da un'applicazione host personalizzata che è possibile sviluppare per soddisfare requisiti specifici. Per ulteriori informazioni, vedere funzionamento di [Windows PowerShell](/previous-versions//ms714658(v=vs.85)).
 
-### <a name="windows-powershell-cmdlets"></a>Cmdlet di Windows PowerShell
+### <a name="windows-powershell-cmdlets"></a>Cmdlet Windows PowerShell
 
 Un cmdlet è un comando leggero usato nell'ambiente Windows PowerShell. Il runtime di Windows PowerShell richiama questi cmdlet all'interno del contesto degli script di automazione forniti dalla riga di comando e il runtime di Windows PowerShell li richiama anche a livello di codice tramite le API di Windows PowerShell.
 

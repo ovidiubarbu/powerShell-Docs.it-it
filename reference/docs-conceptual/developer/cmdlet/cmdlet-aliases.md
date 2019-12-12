@@ -9,17 +9,17 @@ ms.topic: article
 ms.assetid: d0d70864-33fb-49ce-8054-c41ba19fd554
 caps.latest.revision: 11
 ms.openlocfilehash: 32f45702cc0d28e6652ef61ebdbe085291013408
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72369980"
 ---
 # <a name="cmdlet-aliases"></a>Alias dei cmdlet
 
 È possibile utilizzare gli alias dei cmdlet per migliorare l'esperienza utente del cmdlet. È possibile aggiungere alias ai cmdlet usati di frequente per ridurre la digitazione e semplificare il completamento rapido delle attività. È possibile includere alias predefiniti nei cmdlet oppure gli utenti possono definire i propri alias personalizzati.
 
-Il cmdlet [Get-Command](/powershell/module/microsoft.powershell.core/get-command) dispone ad esempio di un alias `gcm` incorporato. È anche possibile usare alias per aggiungere nomi di comando da altri linguaggi, in modo che gli utenti non debbano apprendere nuovi comandi.
+Il cmdlet [Get-Command](/powershell/module/microsoft.powershell.core/get-command) dispone ad esempio di un alias di `gcm` incorporato. È anche possibile usare alias per aggiungere nomi di comando da altri linguaggi, in modo che gli utenti non debbano apprendere nuovi comandi.
 
 ## <a name="alias-guidelines"></a>Linee guida per gli alias
 

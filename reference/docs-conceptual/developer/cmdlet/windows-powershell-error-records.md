@@ -14,10 +14,10 @@ helpviewer_keywords:
 ms.assetid: bdd66fea-eb63-4bb6-9cbe-9a799e5e0db5
 caps.latest.revision: 9
 ms.openlocfilehash: 5412d88b690a1f5f1ef387416e3bf9da3a32c95d
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72369110"
 ---
 # <a name="windows-powershell-error-records"></a>Record degli errori di Windows PowerShell
@@ -88,7 +88,7 @@ Quando si sviluppa un record di errore per un cmdlet, il messaggio di errore pre
 
 Il messaggio di sostituzione viene fornito da un oggetto [System. Management. Automation. ErrorDetails](/dotnet/api/System.Management.Automation.ErrorDetails) . Usare uno dei costruttori seguenti di questo oggetto perché forniscono informazioni di localizzazione aggiuntive che possono essere usate da Windows PowerShell.
 
-- [ErrorDetails (cmdlet, String, String, Object [])](/dotnet/api/system.management.automation.errordetails.-ctor?view=pscore-6.2.0#System_Management_Automation_ErrorDetails__ctor_System_Management_Automation_Cmdlet_System_String_System_String_System_Object___): usare questo costruttore se la stringa del modello è una stringa di risorsa nello stesso assembly in cui è implementato il cmdlet o se si vuole caricare la stringa del modello tramite un override del [cmdlet Metodo System. Management. Automation. cmdlet. GetResourceString](/dotnet/api/System.Management.Automation.Cmdlet.GetResourceString) .
+- [ErrorDetails (cmdlet, String, String, Object [])](/dotnet/api/system.management.automation.errordetails.-ctor?view=pscore-6.2.0#System_Management_Automation_ErrorDetails__ctor_System_Management_Automation_Cmdlet_System_String_System_String_System_Object___): usare questo costruttore se la stringa del modello è una stringa di risorsa nello stesso assembly in cui è implementato il cmdlet o se si vuole caricare la stringa del modello tramite un override del metodo [System. Management. Automation. cmdlet. GetResourceString](/dotnet/api/System.Management.Automation.Cmdlet.GetResourceString) .
 
 - [ErrorDetails (assembly, String, String, Object [])](/dotnet/api/system.management.automation.errordetails.-ctor?view=pscore-6.2.0#System_Management_Automation_ErrorDetails__ctor_System_Reflection_Assembly_System_String_System_String_System_Object___): usare questo costruttore se la stringa del modello si trova in un altro assembly e non viene caricata tramite un override di [System. Management. Automation. cmdlet. GetResourceString](/dotnet/api/System.Management.Automation.Cmdlet.GetResourceString).
 

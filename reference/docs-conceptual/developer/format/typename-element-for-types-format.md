@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 0595b99e-b438-4240-b47b-555cf0316f33
 caps.latest.revision: 15
 ms.openlocfilehash: bd5baa03c2050b2c3bbe1d7697c253d923175d39
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72368030"
 ---
 # <a name="typename-element-for-types-format"></a>Elemento TypeName per Types (formato)
@@ -45,7 +45,7 @@ Nessuna.
 |-------------|-----------------|
 |[Elemento types (Format)](./types-element-for-selectionset-format.md)|Definisce gli oggetti .NET presenti nel set di selezione.|
 
-## <a name="text-value"></a>Valore di testo
+## <a name="text-value"></a>Valore testo
 
 Specificare il nome completo per il tipo .NET.
 
@@ -53,7 +53,7 @@ Specificare il nome completo per il tipo .NET.
 
 È possibile utilizzare i set di selezione quando si dispone di un set di oggetti correlati a cui si desidera fare riferimento utilizzando un solo nome, ad esempio un set di oggetti correlati tramite ereditarietà. Quando si definiscono le visualizzazioni, è possibile specificare il set di oggetti utilizzando il nome del set di selezione anziché elencare tutti gli oggetti all'interno di ogni visualizzazione.
 
-I set di selezione comuni vengono specificati in base al relativo nome quando si definiscono le visualizzazioni del file di formattazione. In questi casi, l'elemento figlio `SelectionSetName` dell'elemento `ViewSelectedBy` per la vista specifica il set. Tuttavia, voci diverse di una vista possono anche specificare un set di selezione che si applica solo a tale voce della visualizzazione. Per ulteriori informazioni sui set di selezione, vedere [definizione di set di oggetti](./defining-selection-sets.md).
+I set di selezione comuni vengono specificati in base al relativo nome quando si definiscono le visualizzazioni del file di formattazione. In questi casi, il `SelectionSetName` elemento figlio dell'elemento `ViewSelectedBy` per la vista specifica il set. Tuttavia, voci diverse di una vista possono anche specificare un set di selezione che si applica solo a tale voce della visualizzazione. Per ulteriori informazioni sui set di selezione, vedere [definizione di set di oggetti](./defining-selection-sets.md).
 
 ## <a name="example"></a>Esempio
 

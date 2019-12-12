@@ -9,15 +9,15 @@ ms.topic: article
 ms.assetid: 08512496-5682-4539-ab56-0c5394ce1f01
 caps.latest.revision: 6
 ms.openlocfilehash: 0137886437f01518f396613c564517e7910e657a
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72364800"
 ---
 # <a name="scriptblock-element-for-selectioncondition-for-controls-for-view-format"></a>Elemento ScriptBlock per SelectionCondition per Controls per View (formato)
 
-Specifica lo script che attiva la condizione. Quando questo script viene valutato `true`, la condizione viene soddisfatta e viene usata la definizione. Questo elemento viene utilizzato per la definizione di controlli che possono essere utilizzati da una visualizzazione.
+Specifica lo script che attiva la condizione. Quando questo script viene valutato `true`, la condizione viene soddisfatta e viene utilizzata la definizione. Questo elemento viene utilizzato per la definizione di controlli che possono essere utilizzati da una visualizzazione.
 
 Elemento di configurazione (Format) elemento ViewDefinitions (Format) elemento di visualizzazione (Format) controlli elemento (Format) elemento di controllo per i controlli per la visualizzazione (formato) elemento CustomControl per il controllo per i controlli per la visualizzazione (formato) elemento CustomEntries per CustomControl per i controlli per la visualizzazione (formato) elemento CustomEntry per CustomEntries per i controlli per la visualizzazione (formato) EntrySelectedBy elemento per CustomEntry per i controlli per la visualizzazione (formato) SelectionCondition elemento per EntrySelectedBy per i controlli per la visualizzazione ( Format) elemento ScriptBlock per SelectionCondition per i controlli per la visualizzazione (Format)
 
@@ -45,7 +45,7 @@ Nessuna.
 |-------------|-----------------|
 |[Elemento SelectionCondition per EntrySelectedBy per i controlli per la visualizzazione (Format)](./selectioncondition-element-for-entryselectedby-for-controls-for-view-format.md)|Definisce una condizione che deve esistere per la definizione del controllo da utilizzare.|
 
-## <a name="text-value"></a>Valore di testo
+## <a name="text-value"></a>Valore testo
 
 Specificare lo script che viene valutato.
 

@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: d569c623-2277-49e3-933e-c26262b91cd5
 caps.latest.revision: 6
 ms.openlocfilehash: 69cd113c444b4e3c5dceabcdfddb439cd1376f6b
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72364740"
 ---
 # <a name="selectionsetname-element-for-entryselectedby-for-groupby-format"></a>Elemento SelectionSetName per EntrySelectedBy per GroupBy (formato)
@@ -45,7 +45,7 @@ Nessuna.
 |-------------|-----------------|
 |[Elemento EntrySelectedBy per CustomEntry per GroupBy (Format)](./entryselectedby-element-for-customentry-for-groupby-format.md)|Definisce i tipi .NET che utilizzano questa voce personalizzata o la condizione che deve esistere affinché questa voce venga utilizzata.|
 
-## <a name="text-value"></a>Valore di testo
+## <a name="text-value"></a>Valore testo
 
 Consente di specificare il nome del set di selezione.
 

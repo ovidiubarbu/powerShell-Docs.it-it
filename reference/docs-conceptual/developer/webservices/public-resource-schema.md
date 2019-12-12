@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: e67298ee-a773-4402-8afb-d97ad0e030e5
 caps.latest.revision: 4
 ms.openlocfilehash: c7e20ff0f36e8cab2d414ff2e5924b3359ad9c60
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72366270"
 ---
 # <a name="public-resource-schema"></a>Schema delle risorse pubbliche
@@ -40,7 +40,7 @@ Ogni nome di proprietà è preceduto da un tipo di dati. I tipi di dati di quest
 
 Il qualificatore `Key` indica che una proprietà viene utilizzata per identificare in modo univoco un'istanza di risorsa. Una risorsa può avere più di una chiave.
 
-Il qualificatore `Required` indica che la proprietà è obbligatoria. Se una proprietà è contrassegnata con il qualificatore `Key`, viene considerata obbligatoria e il qualificatore `Required` non è necessario.
+Il qualificatore `Required` indica che la proprietà è obbligatoria. Se una proprietà è contrassegnata con il qualificatore `Key`, viene considerata obbligatoria e il qualificatore di `Required` non è necessario.
 
 ### <a name="complex-data-types"></a>Tipi di dati complessi
 
@@ -55,7 +55,7 @@ class PswsTest_ProcessModule
 };
 ```
 
-Per dichiarare una proprietà di entità come tipo complesso, dichiararla come tipo `string` con il qualificatore `EmbeddedInstance`, incluso il nome del tipo complesso. Nell'esempio seguente viene illustrata la dichiarazione di una proprietà del tipo `PswsTest_ProcessModule` dichiarata nell'esempio precedente.
+Per dichiarare una proprietà di entità come tipo complesso, dichiararla come tipo di `string` con il qualificatore `EmbeddedInstance`, incluso il nome del tipo complesso. Nell'esempio seguente viene illustrata la dichiarazione di una proprietà del tipo `PswsTest_ProcessModule` dichiarato nell'esempio precedente.
 
 ```csharp
 [Required, EmbeddedInstance("PswsTest_ProcessModule")] String Modules[];

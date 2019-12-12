@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 1f405afb-70b5-4fe0-9986-bc07401d93fd
 caps.latest.revision: 23
 ms.openlocfilehash: 862f942facafff6cea66c4f8f1040772c6a62ec3
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72363410"
 ---
 # <a name="creating-a-table-view"></a>Creazione di una visualizzazione tabella
@@ -232,7 +232,7 @@ Per specificare un modello di formato, è possibile utilizzare gli elementi XML 
 
 - L'elemento [FormatString](./label-element-for-listitem-for-listcontrol-format.md) specifica un modello di formato che definisce come viene visualizzato il valore della proprietà o dello script.
 
-Nell'esempio seguente viene chiamato il metodo `ToString` per formattare il valore dello script. Gli script possono chiamare qualsiasi metodo di un oggetto. Pertanto, se un oggetto dispone di un metodo, ad esempio `ToString`, con parametri di formattazione, lo script può chiamare tale metodo per formattare il valore di output dello script.
+Nell'esempio seguente viene chiamato il metodo `ToString` per formattare il valore dello script. Gli script possono chiamare qualsiasi metodo di un oggetto. Pertanto, se un oggetto dispone di un metodo, ad esempio `ToString`, che dispone di parametri di formattazione, lo script può chiamare tale metodo per formattare il valore di output dello script.
 
 ```xml
 <ListItem>
@@ -243,7 +243,7 @@ Nell'esempio seguente viene chiamato il metodo `ToString` per formattare il valo
 </ListItem>
 ```
 
-È possibile utilizzare l'elemento XML seguente per chiamare il metodo `ToString`:
+Per chiamare il metodo `ToString` è possibile utilizzare l'elemento XML seguente:
 
 - L'elemento [TableColumnItem](./tablecolumnitem-element-for-tablecolumnitems-for-tablecontrol-format.md) definisce la proprietà o lo script il cui valore viene visualizzato nella colonna della riga. Un elemento [TableColumnItem](./tablecolumnitem-element-for-tablecolumnitems-for-tablecontrol-format.md) è obbligatorio per ogni colonna della riga. La prima voce viene visualizzata nella prima colonna, nella seconda voce della seconda colonna e così via.
 

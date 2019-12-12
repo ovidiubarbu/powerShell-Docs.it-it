@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 2d4303c5-b451-4ccb-9831-b17a17ceac20
 caps.latest.revision: 16
 ms.openlocfilehash: 651de5d3bc2619f20438f3951ac5a8c4b0bf46d4
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72368950"
 ---
 # <a name="creating-a-wide-view"></a>Creazione di una visualizzazione più ampia
@@ -239,7 +239,7 @@ Per specificare un modello di formato, è possibile utilizzare gli elementi XML 
 
 - L'elemento [scriptblock](./scriptblock-element-for-wideitem-for-widecontrol-format.md) (non mostrato) specifica lo script il cui valore viene visualizzato dalla visualizzazione. È necessario specificare uno script o una proprietà, ma non è possibile specificarli entrambi.
 
-Nell'esempio seguente viene chiamato il metodo `ToString` per formattare il valore dello script. Gli script possono chiamare qualsiasi metodo di un oggetto. Pertanto, se un oggetto dispone di un metodo, ad esempio `ToString`, con parametri di formattazione, lo script può chiamare tale metodo per formattare il valore di output dello script.
+Nell'esempio seguente viene chiamato il metodo `ToString` per formattare il valore dello script. Gli script possono chiamare qualsiasi metodo di un oggetto. Pertanto, se un oggetto dispone di un metodo, ad esempio `ToString`, che dispone di parametri di formattazione, lo script può chiamare tale metodo per formattare il valore di output dello script.
 
 ```xml
 <WideItem>
@@ -250,7 +250,7 @@ Nell'esempio seguente viene chiamato il metodo `ToString` per formattare il valo
 </WideItem>
 ```
 
-È possibile utilizzare l'elemento XML seguente per chiamare il metodo `ToString`:
+Per chiamare il metodo `ToString` è possibile utilizzare l'elemento XML seguente:
 
 - L'elemento [WideItem](./wideitem-element-for-widecontrol-format.md) specifica i dati visualizzati dalla visualizzazione.
 

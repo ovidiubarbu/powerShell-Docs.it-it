@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: a13a429c-a31b-4e29-828c-c0c0917b5415
 caps.latest.revision: 11
 ms.openlocfilehash: baea89e4b259611dfa45b6bcf94fa0bf2df6b9de
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72368410"
 ---
 # <a name="selectionsetname-element-for-selectioncondition-for-entryselectedby-for-wideentry-format"></a>Elemento SelectionSetName per SelectionCondition per EntrySelectedBy per WideEntry (formato)
@@ -45,7 +45,7 @@ Nessuna.
 |-------------|-----------------|
 |[Elemento SelectionCondition per EntrySelectedBy per WideEntry (Format)](./selectioncondition-element-for-entryselectedby-for-widecontrol-format.md)|Definisce la condizione che deve esistere affinché questa definizione venga utilizzata.|
 
-## <a name="text-value"></a>Valore di testo
+## <a name="text-value"></a>Valore testo
 
 Consente di specificare il nome del set di selezione.
 

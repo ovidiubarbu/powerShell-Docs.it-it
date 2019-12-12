@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 5eac452c-eae2-4193-b4da-0b618bef3677
 caps.latest.revision: 9
 ms.openlocfilehash: d732bce1af446090c3e5741eebeba737f86c7ca8
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72369660"
 ---
 # <a name="how-to-support-jobs"></a>Come supportare i processi
@@ -21,7 +21,7 @@ Questo esempio illustra come supportare i processi quando si scrivono i cmdlet. 
 
 ## <a name="to-support-jobs"></a>Per supportare i processi
 
-1. Definire un parametro di opzione `AsJob` in modo che l'utente possa decidere se eseguire il cmdlet come un processo.
+1. Definire un parametro switch `AsJob` in modo che l'utente possa decidere se eseguire il cmdlet come processo.
 
     Nell'esempio seguente viene illustrata una dichiarazione di parametro AsJob.
 

@@ -9,17 +9,17 @@ ms.topic: article
 ms.assetid: a26661f2-a63c-4ca7-ad3e-dcb4d32ce5a1
 caps.latest.revision: 8
 ms.openlocfilehash: d7d6d3b377a0089bcf96d0ea46e866321441b537
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72359970"
 ---
 # <a name="accessdbprovidersample05"></a>AccessDBProviderSample05
 
 Questo esempio illustra come sovrascrivere i metodi del contenitore per supportare le chiamate ai cmdlet `Move-Item` e `Join-Path`. Questi metodi devono essere implementati quando l'utente deve spostare elementi all'interno di un contenitore e se l'archivio dati contiene contenitori annidati. La classe del provider in questo esempio deriva dalla classe [System. Management. Automation. provider. Navigationcmdletprovider](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider) .
 
-## <a name="demonstrates"></a>Dimostra
+## <a name="demonstrates"></a>Illustra
 
 > [!IMPORTANT]
 > È probabile che la classe del provider derivi da una delle classi seguenti e possa implementare altre interfacce del provider:
@@ -30,7 +30,7 @@ Questo esempio illustra come sovrascrivere i metodi del contenitore per supporta
 >
 > Per ulteriori informazioni sulla scelta della classe del provider da derivare da in base alle funzionalità del provider, vedere [progettazione del provider di Windows PowerShell](./provider-types.md).
 
-In questo esempio vengono illustrate le operazioni seguenti:
+In questo esempio viene illustrato quanto segue:
 
 - Dichiarazione dell'attributo `CmdletProvider`.
 

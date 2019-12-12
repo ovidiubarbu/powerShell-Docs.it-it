@@ -13,10 +13,10 @@ helpviewer_keywords:
 ms.assetid: 08433d0b-169b-42c8-9335-2881d9034698
 caps.latest.revision: 13
 ms.openlocfilehash: 81b1ed95669f51ba554f6f99031d098e239f02e0
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72365360"
 ---
 # <a name="parameter-attribute-declaration"></a>Dichiarazione dell'attributo Parameter
@@ -34,7 +34,7 @@ L'attributo Parameter identifica una proprietà pubblica della classe cmdlet com
 
 `Mandatory` ([System. Boolean](/dotnet/api/System.Boolean)) parametro denominato facoltativo. `True` indica che il parametro del cmdlet è obbligatorio. Se non viene fornito un parametro obbligatorio quando viene richiamato il cmdlet, Windows PowerShell richiede all'utente un valore di parametro. Il valore predefinito è `false`.
 
-`ParameterSetName` ([System. String](/dotnet/api/System.String)) parametro denominato facoltativo. Specifica il set di parametri a cui appartiene il parametro del cmdlet. Se non viene specificato alcun set di parametri, il parametro appartiene a tutti i set di parametri.
+parametro denominato facoltativo `ParameterSetName` ([System. String](/dotnet/api/System.String)). Specifica il set di parametri a cui appartiene il parametro del cmdlet. Se non viene specificato alcun set di parametri, il parametro appartiene a tutti i set di parametri.
 
 `Position` ([System. Int32](/dotnet/api/System.Int32)) parametro denominato facoltativo. Specifica la posizione del parametro all'interno di un comando di Windows PowerShell.
 
@@ -44,11 +44,11 @@ L'attributo Parameter identifica una proprietà pubblica della classe cmdlet com
 
 `ValueFromRemainingArguments` ([System. Boolean](/dotnet/api/System.Boolean)) parametro denominato facoltativo. `True` indica che il parametro del cmdlet accetta tutti gli argomenti rimanenti passati al cmdlet. Il valore predefinito è `false`.
 
-parametro denominato facoltativo `HelpMessage`. Specifica una breve descrizione del parametro. Windows PowerShell Visualizza questo messaggio quando viene eseguito un cmdlet e non viene specificato un parametro obbligatorio.
+`HelpMessage` parametro denominato facoltativo. Specifica una breve descrizione del parametro. Windows PowerShell Visualizza questo messaggio quando viene eseguito un cmdlet e non viene specificato un parametro obbligatorio.
 
-parametro denominato facoltativo `HelpMessageBaseName`. Specifica la posizione in cui risiedono gli identificatori di risorsa. Questo parametro, ad esempio, può specificare un assembly di risorse che contiene i messaggi della guida che si desidera localizzare.
+`HelpMessageBaseName` parametro denominato facoltativo. Specifica la posizione in cui risiedono gli identificatori di risorsa. Questo parametro, ad esempio, può specificare un assembly di risorse che contiene i messaggi della guida che si desidera localizzare.
 
-parametro denominato facoltativo `HelpMessageResourceId`. Specifica l'identificatore di risorsa per un messaggio della guida.
+`HelpMessageResourceId` parametro denominato facoltativo. Specifica l'identificatore di risorsa per un messaggio della guida.
 
 ## <a name="remarks"></a>Osservazioni
 
@@ -60,7 +60,7 @@ parametro denominato facoltativo `HelpMessageResourceId`. Specifica l'identifica
 
 - Quando si specificano parametri posizionali, limitare il numero di parametri posizionali in un parametro impostato su un valore minore di 5. E, i parametri posizionali non devono essere contigui. Le posizioni 5, 100 e 250 funzionano allo stesso modo delle posizioni 0, 1 e 2.
 
-- Quando non viene specificata la parola chiave `Position`, il relativo nome deve essere usato come riferimento al parametro del cmdlet.
+- Quando la parola chiave `Position` non è specificata, il relativo nome deve essere usato come riferimento al parametro del cmdlet.
 
 - Quando si usano i set di parametri, tenere presente quanto segue:
 

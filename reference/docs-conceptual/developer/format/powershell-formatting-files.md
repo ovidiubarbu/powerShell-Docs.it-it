@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 5d4c8f84-ebd2-4405-bb10-cfc5400d4ad6
 caps.latest.revision: 6
 ms.openlocfilehash: 3ec127d5ff60754de5d7f1ac73f2965524228b9c
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72365010"
 ---
 # <a name="windows-powershell-formatting-files"></a>File di formattazione di Windows PowerShell
@@ -23,7 +23,7 @@ Windows PowerShell fornisce diversi file di formattazione (format. ps1xml) che s
 
 `DotNetTypes.Format.ps1xml` definisce la visualizzazione di oggetti .NET diversi, ad esempio gli oggetti CultureInfo, FileVersionInfo e EventLogEntry.
 
-`FileSystem.Format.ps1xml` definisce la visualizzazione di oggetti file system, ad esempio oggetti di file e directory.
+`FileSystem.Format.ps1xml` definisce la visualizzazione di oggetti file system, ad esempio oggetti file e directory.
 
 `Help.Format.ps1xml` definisce le diverse visualizzazioni utilizzate dal cmdlet [Get-Help](/powershell/module/Microsoft.PowerShell.Core/Get-Help) , ad esempio le visualizzazioni dettagliate, complete, dei parametri e di esempio.
 

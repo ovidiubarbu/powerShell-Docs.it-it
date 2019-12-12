@@ -9,17 +9,17 @@ ms.topic: article
 ms.assetid: 9e576199-49c7-4355-9686-f9ed40c64a5f
 caps.latest.revision: 10
 ms.openlocfilehash: aa67bb605f90c1ea40323b4583766069ff1226fb
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72359990"
 ---
 # <a name="accessdbprovidersample03"></a>AccessDBProviderSample03
 
-Questo esempio illustra come sovrascrivere i metodi [System. Management. Automation. provider. Itemcmdletprovider. GetItem *](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.GetItem) e [System. Management. Automation. provider. Itemcmdletprovider. SetItem *](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.SetItem) per supportare le chiamate al `Get-Item` e @no__ cmdlet t-3. La classe del provider in questo esempio deriva dalla classe [System. Management. Automation. provider. Itemcmdletprovider](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider) .
+Questo esempio illustra come sovrascrivere i metodi [System. Management. Automation. provider. Itemcmdletprovider. GetItem *](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.GetItem) e [System. Management. Automation. provider. Itemcmdletprovider. SetItem *](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.SetItem) per supportare le chiamate ai cmdlet `Get-Item` e `Set-Item`. La classe del provider in questo esempio deriva dalla classe [System. Management. Automation. provider. Itemcmdletprovider](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider) .
 
-## <a name="demonstrates"></a>Dimostra
+## <a name="demonstrates"></a>Illustra
 
 > [!IMPORTANT]
 > È probabile che la classe del provider derivi da una delle classi seguenti e possa implementare altre interfacce del provider:
@@ -30,7 +30,7 @@ Questo esempio illustra come sovrascrivere i metodi [System. Management. Automat
 >
 > Per ulteriori informazioni sulla scelta della classe del provider da derivare da in base alle funzionalità del provider, vedere [progettazione del provider di Windows PowerShell](./provider-types.md).
 
-In questo esempio vengono illustrate le operazioni seguenti:
+In questo esempio viene illustrato quanto segue:
 
 - Dichiarazione dell'attributo `CmdletProvider`.
 

@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 85d27545-8097-4010-9947-6d8b3ce2eac0
 caps.latest.revision: 15
 ms.openlocfilehash: 71c1c181058c5646c817b90d9832976a78c6c7de
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72369830"
 ---
 # <a name="custom-formatting-files"></a>File di formattazione personalizzati
@@ -40,7 +40,7 @@ Visualizzazione personalizzata consente di visualizzare una visualizzazione pers
 
 ## <a name="view-xml-elements"></a>Visualizzazione di elementi XML
 
-Nell'esempio seguente vengono illustrati i tag XML utilizzati per definire una vista tabella contenente due colonne. L'elemento [ViewDefinitions](../format/viewdefinitions-element-format.md) è l'elemento contenitore per tutte le visualizzazioni definite nel file di formattazione. L'elemento [View](../format/view-element-format.md) definisce la tabella, l'elenco, la larghezza o la visualizzazione personalizzata specifica. All'interno di ogni visualizzazione, l'elemento [Name](../format/name-element-for-view-format.md) specifica il nome della vista, l'elemento [ViewSelectedBy](../format/viewselectedby-element-format.md) definisce gli oggetti che usano la visualizzazione e i diversi elementi di controllo (ad esempio, l'elemento `TableControl`) definiscono il formato della visualizzazione.
+Nell'esempio seguente vengono illustrati i tag XML utilizzati per definire una vista tabella contenente due colonne. L'elemento [ViewDefinitions](../format/viewdefinitions-element-format.md) è l'elemento contenitore per tutte le visualizzazioni definite nel file di formattazione. L'elemento [View](../format/view-element-format.md) definisce la tabella, l'elenco, la larghezza o la visualizzazione personalizzata specifica. All'interno di ogni visualizzazione, l'elemento [Name](../format/name-element-for-view-format.md) specifica il nome della vista, l'elemento [ViewSelectedBy](../format/viewselectedby-element-format.md) definisce gli oggetti che utilizzano la visualizzazione e i diversi elementi del controllo, ad esempio l'elemento `TableControl`, definiscono il formato della visualizzazione.
 
 ```xml
 ViewDefinitions

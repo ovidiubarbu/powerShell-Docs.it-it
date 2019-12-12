@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: e00e8f36-76f2-49a0-9b02-3a2a7fceb2dd
 caps.latest.revision: 8
 ms.openlocfilehash: 6534e9dbfbe0dedf60dadd6467cff9ad9b447ba4
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72362030"
 ---
 # <a name="scriptblock-element-for-wideitem-for-widecontrol-format"></a>Elemento ScriptBlock per WideItem per WideControl (formato)
@@ -45,7 +45,7 @@ Nessuna.
 |-------------|-----------------|
 |[Elemento WideItem (Format)](./wideitem-element-for-widecontrol-format.md)|Definisce la proprietà o il blocco di script il cui valore viene visualizzato nella visualizzazione estesa.|
 
-## <a name="text-value"></a>Valore di testo
+## <a name="text-value"></a>Valore testo
 
 Specificare lo script di cui viene visualizzato il valore.
 
@@ -55,7 +55,7 @@ Per ulteriori informazioni sui componenti di una visualizzazione estesa, vedere 
 
 ## <a name="example"></a>Esempio
 
-Questo esempio mostra un elemento `WideItem` che definisce uno script il cui valore viene visualizzato nella vista.
+In questo esempio viene illustrato un elemento `WideItem` che definisce uno script il cui valore viene visualizzato nella vista.
 
 ```xml
 <WideItem>

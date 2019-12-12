@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 39acce45-5144-43ba-894d-a4ce782fa67d
 caps.latest.revision: 13
 ms.openlocfilehash: f89f0009972d5237d71cb8f0d1c53cd0ae614b67
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72361410"
 ---
 # <a name="writing-a-powershell-formatting-file"></a>Scrittura di un file di formattazione di PowerShell
@@ -21,7 +21,7 @@ ms.locfileid: "72361410"
 
 ## <a name="in-this-section"></a>Contenuto della sezione
 
-[Cenni preliminari sul file di formattazione](./formatting-file-overview.md) Viene descritto il tipo di file di formato e i componenti generali di un file di formattazione, incluse le funzionalità comuni che è possibile definire nel file, i diversi tipi di visualizzazioni di formato che è possibile definire per gli oggetti .NET e un esempio semplificato del codice XML utilizzato per definire una tabella v IEW.
+[Cenni preliminari sul file di formattazione](./formatting-file-overview.md) Viene descritto il tipo di file di formato e i componenti generali di un file di formattazione, incluse le funzionalità comuni che è possibile definire nel file, i diversi tipi di visualizzazioni di formato che è possibile definire per gli oggetti .NET e un esempio semplificato del codice XML utilizzato per definire una vista tabella.
 
 [Concetti relativi ai file di formattazione](./formatting-file-concepts.md) Include informazioni che potrebbero essere necessarie per la creazione di file di formattazione personalizzati, ad esempio i diversi tipi di viste che è possibile definire e i componenti speciali di tali visualizzazioni.
 

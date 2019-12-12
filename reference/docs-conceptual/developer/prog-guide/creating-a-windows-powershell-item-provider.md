@@ -12,10 +12,10 @@ helpviewer_keywords:
 ms.assetid: a5a304ce-fc99-4a5b-a779-de7d85e031fe
 caps.latest.revision: 6
 ms.openlocfilehash: ad42b8de867f468e832380ab6a22a39b6d27d3c6
-ms.sourcegitcommit: d43f66071f1f33b350d34fa1f46f3a35910c5d24
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "74417495"
 ---
 # <a name="creating-a-windows-powershell-item-provider"></a>Creazione di un provider di elementi di Windows PowerShell
@@ -219,7 +219,7 @@ Questo provider di elementi definisce la classe helper DatabaseRowInfo che rappr
 
 Il provider di esempio definisce un metodo DatabaseRowInfo. GetRows per restituire una raccolta di oggetti informazioni sulla riga per la tabella specificata. Questo metodo include un blocco try/catch per intercettare le eccezioni. Eventuali errori non comporteranno alcuna informazione sulle righe.
 
-## <a name="code-sample"></a>Esempio di codice
+## <a name="code-sample"></a>Codice di esempio
 
 Per il codice di esempio completo, vedere [esempio di codice AccessDbProviderSample03](./accessdbprovidersample03-code-sample.md).
 

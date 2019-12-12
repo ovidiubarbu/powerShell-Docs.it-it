@@ -32,10 +32,10 @@ helpviewer_keywords:
 ms.assetid: 14c13acb-f0b7-4613-bc7d-c361d14da1a2
 caps.latest.revision: 8
 ms.openlocfilehash: 9079f40e75dae86c22fd8b4f8a45d501c6125498
-ms.sourcegitcommit: d43f66071f1f33b350d34fa1f46f3a35910c5d24
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "74416034"
 ---
 # <a name="adding-user-messages-to-your-cmdlet"></a>Aggiunta di messaggi utente al cmdlet
@@ -206,7 +206,7 @@ pr.RecordType = ProgressRecordType.Completed;
 WriteProgress(pr);
 ```
 
-## <a name="code-sample"></a>Esempio di codice
+## <a name="code-sample"></a>Codice di esempio
 
 Per il codice C# di esempio completo, vedere l' [esempio StopProcessSample02](./stopprocesssample02-sample.md).
 
@@ -228,7 +228,7 @@ Quando il cmdlet è stato registrato con Windows PowerShell, è possibile testar
     PS> stop-proc -Name notepad -Verbose -Debug
     ```
 
-Viene visualizzato l'output seguente.
+Viene visualizzato l'output seguente:
 
     ```
     VERBOSE: Attempting to stop process " notepad ".

@@ -11,10 +11,10 @@ helpviewer_keywords:
 ms.assetid: 6c24dd44-a8ec-421d-ac86-90912e1a8cc6
 caps.latest.revision: 5
 ms.openlocfilehash: 7166881bd1403ea8c81ec2928321f6b93e3ac58d
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72360270"
 ---
 # <a name="how-to-create-a-console-shell"></a>Come creare una shell di console
@@ -66,7 +66,7 @@ Ecco una breve descrizione dei parametri di make-Shell.
 |-Resource resourceFile. txt|Il file con estensione txt contenente le risorse della guida e del banner per la Shell. La prima risorsa è denominata ShellHelp e contiene il testo visualizzato se la shell viene richiamata con il parametro `help`. La seconda risorsa è denominata ShellBanner e contiene il testo e le informazioni sul copyright visualizzate quando la shell viene avviata in modalità interattiva.<br /><br /> Se questo parametro non viene fornito o se queste risorse non sono presenti, vengono usate una guida generica e un banner.|
 |-cscflags cscFlags|Flag che devono essere passati al C# compilatore (CSC. exe). Questi vengono passati senza modifiche. Se questo parametro include spazi, deve essere racchiuso tra virgolette doppie.|
 |-?<br /><br /> -Guida in linea|Visualizza il messaggio di copyright e le opzioni della riga di comando di make-Shell.|
-|-Verbose|Visualizza informazioni dettagliate durante la creazione della shell.|
+|-verbose|Visualizza informazioni dettagliate durante la creazione della shell.|
 
 ## <a name="see-also"></a>Vedere anche
 

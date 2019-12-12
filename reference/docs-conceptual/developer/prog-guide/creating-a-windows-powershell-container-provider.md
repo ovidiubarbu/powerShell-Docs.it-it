@@ -12,10 +12,10 @@ helpviewer_keywords:
 ms.assetid: a7926647-0d18-45b2-967e-b31f92004bc4
 caps.latest.revision: 5
 ms.openlocfilehash: fcb03d4021f00837095ce703beb0d841233391d6
-ms.sourcegitcommit: d43f66071f1f33b350d34fa1f46f3a35910c5d24
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "74416220"
 ---
 # <a name="creating-a-windows-powershell-container-provider"></a>Creazione di un provider di contenitori di Windows PowerShell
@@ -370,7 +370,7 @@ Questo provider non implementa questo metodo. Tuttavia, il codice seguente è l'
 
 <!-- TODO!!!: review snippet reference  [!CODE [Msh_samplestestcmdlets#testprovidercopyitemdynamicparameters](Msh_samplestestcmdlets#testprovidercopyitemdynamicparameters)]  -->
 
-## <a name="code-sample"></a>Esempio di codice
+## <a name="code-sample"></a>Codice di esempio
 
 Per il codice di esempio completo, vedere [esempio di codice AccessDbProviderSample04](./accessdbprovidersample04-code-sample.md).
 
@@ -388,7 +388,7 @@ Quando il provider di Windows PowerShell è stato registrato con Windows PowerSh
    Get-ChildItem mydb:customers
    ```
 
-   Viene visualizzato l'output seguente.
+   Viene visualizzato l'output seguente:
 
    ```output
    PSPath        : AccessDB::customers
@@ -407,7 +407,7 @@ Quando il provider di Windows PowerShell è stato registrato con Windows PowerSh
    (Get-ChildItem mydb:customers).data
    ```
 
-   Viene visualizzato l'output seguente.
+   Viene visualizzato l'output seguente:
 
    ```output
    TABLE_CAT   : c:\PS\northwind
@@ -423,7 +423,7 @@ Quando il provider di Windows PowerShell è stato registrato con Windows PowerSh
    Get-Item mydb:\customers\0
    ```
 
-   Viene visualizzato l'output seguente.
+   Viene visualizzato l'output seguente:
 
    ```output
    PSPath        : AccessDB::customers\0
@@ -440,7 +440,7 @@ Quando il provider di Windows PowerShell è stato registrato con Windows PowerSh
    (Get-Item mydb:\customers\0).data
    ```
 
-   Viene visualizzato l'output seguente.
+   Viene visualizzato l'output seguente:
 
    ```output
    CustomerID   : 1234
@@ -469,7 +469,7 @@ Quando il provider di Windows PowerShell è stato registrato con Windows PowerSh
    PS mydb:\Customers> (Get-Item 3).data
    ```
 
-   Viene visualizzato l'output seguente.
+   Viene visualizzato l'output seguente:
 
    ```output
    ID        : 3

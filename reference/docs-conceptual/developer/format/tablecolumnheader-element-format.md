@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 49ff3062-6396-4aa8-919b-3fd3ac60899a
 caps.latest.revision: 19
 ms.openlocfilehash: d3ad7fa563def17d43ce4dc64d155b65b650521f
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72361850"
 ---
 # <a name="tablecolumnheader-element-format"></a>Elemento TableColumnHeader (formato)
@@ -57,7 +57,7 @@ Nessuna.
 
 Specificare un'intestazione per ogni colonna della tabella. Le colonne vengono visualizzate nell'ordine in cui sono definiti gli elementi `TableColumnHeader`.
 
-Una tabella deve avere lo stesso numero di elementi `TableColumnHeader` come elementi `TableRowEntry`. L'intestazione di colonna definisce il modo in cui viene visualizzato il testo nella parte superiore della tabella. Le voci di riga definiscono quali dati vengono visualizzati nelle righe della tabella.
+Una tabella deve avere lo stesso numero di elementi `TableColumnHeader` `TableRowEntry` elementi. L'intestazione di colonna definisce il modo in cui viene visualizzato il testo nella parte superiore della tabella. Le voci di riga definiscono quali dati vengono visualizzati nelle righe della tabella.
 
 Per ulteriori informazioni sui componenti di una vista tabella, vedere [visualizzazione tabella](./creating-a-table-view.md).
 

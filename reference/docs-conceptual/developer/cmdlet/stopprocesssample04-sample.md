@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: ac4903f5-fd40-4f1c-b1d1-18923c16ce45
 caps.latest.revision: 8
 ms.openlocfilehash: 26e882dad839af43945f84d4cdd6cda7bdb2d587
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72369360"
 ---
 # <a name="stopprocesssample04-sample"></a>Esempio di StopProcessSample04
@@ -25,11 +25,11 @@ In questo esempio viene illustrato come scrivere un cmdlet che dichiara set di p
 
 2. Fare doppio clic sull'icona del file di soluzione (con estensione sln). Verrà aperto il progetto di esempio in Microsoft Visual Studio.
 
-3. Scegliere **Compila soluzione**dal menu **Compila** .
+3. Scegliere **Compila soluzione** dal menu **Compila**.
 
     La libreria per l'esempio verrà compilata nelle cartelle \bin o \bin\Debug predefinite.
 
-### <a name="how-to-run-the-sample"></a>Come eseguire l'esempio
+### <a name="how-to-run-the-sample"></a>Per eseguire l'esempio
 
 1. Creare la cartella dei moduli seguente:
 
@@ -51,7 +51,7 @@ In questo esempio viene illustrato come scrivere un cmdlet che dichiara set di p
 
 Questo esempio richiede Windows PowerShell 2,0.
 
-## <a name="demonstrates"></a>Dimostra
+## <a name="demonstrates"></a>Illustra
 
 In questo esempio vengono illustrate le operazioni seguenti.
 

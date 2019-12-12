@@ -3,10 +3,10 @@ title: Installazione di Windows PowerShell SDK
 ms.date: 09/13/2016
 ms.topic: article
 ms.openlocfilehash: e7ca38377b3e6533eec1a70027f6de1a9fb3091b
-ms.sourcegitcommit: 36e4c79afda2ce11febd93951e143687245f0b50
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/02/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "73444500"
 ---
 # <a name="installing-the-windows-powershell-sdk"></a>Installazione di Windows PowerShell SDK
@@ -72,9 +72,9 @@ SDKs\Windows\v7.0\Samples\sysmgmt\WindowsPowerShell\`. La sezione seguente ripor
 
 #### <a name="hosting-application-samples"></a>Esempi di applicazioni di hosting
 
-- Runspace01: Mostra come usare la classe PowerShell per eseguire in modo sincrono il cmdlet `Get-Process`.
+- Runspace01: Mostra come usare la classe PowerShell per eseguire il cmdlet `Get-Process` in modo sincrono.
 Il cmdlet `Get-Process` restituisce gli oggetti processo per ogni processo in esecuzione nel computer locale.
-- Runspace02: Mostra come usare la classe PowerShell per eseguire in modo sincrono i cmdlet `Get-Process` e `Sort-Object`. Il cmdlet `Get-Process` restituisce gli oggetti processo per ogni processo in esecuzione nel computer locale e il `Sort-Object` Ordina gli oggetti in base alla relativa proprietà ID. I risultati di questi comandi vengono visualizzati usando un controllo DataGridView.
+- Runspace02: Mostra come usare la classe PowerShell per eseguire i cmdlet di `Get-Process` e `Sort-Object` in modo sincrono. Il cmdlet `Get-Process` restituisce gli oggetti processo per ogni processo in esecuzione nel computer locale e l'`Sort-Object` Ordina gli oggetti in base alla relativa proprietà ID. I risultati di questi comandi vengono visualizzati usando un controllo DataGridView.
 - Runspace03: Mostra come usare la classe PowerShell per eseguire uno script in modo sincrono e come gestire errori non fatali. Lo script riceve un elenco di nomi di processo e quindi recupera tali processi. I risultati dello script, compresi gli errori non fatali che si sono generati durante l'esecuzione dello script, vengono visualizzati in una finestra della console.
 - Runspace04: Mostra come usare la classe PowerShell per eseguire i comandi e come intercettare gli errori fatali generati quando si eseguono i comandi. Vengono eseguiti due comandi e all'ultimo viene passato un argomento di parametro non valido. Di conseguenza, non viene restituito alcun oggetto e viene generato un errore non fatale.
 - Runspace05: Mostra come aggiungere uno snap-in a un oggetto InitialSessionState in modo che il cmdlet dello snap-in sia disponibile quando viene aperto il spazio. Lo snap-in fornisce un cmdlet Get-proc (definito dall'esempio GetProcessSample01) che viene eseguito in modo sincrono tramite un oggetto PowerShell.
@@ -90,7 +90,7 @@ Il cmdlet `Get-Process` restituisce gli oggetti processo per ogni processo in es
 #### <a name="host-samples"></a>Esempi di host
 
 - Host01: Mostra come implementare un'applicazione host che usa un host personalizzato. In questo esempio viene creato un spazio che usa l'host personalizzato e quindi viene usata l'API di PowerShell per eseguire uno script che chiama "Exit". L'applicazione host esamina l'output dello script e stampa i risultati.
-- Host02: Mostra come scrivere un'applicazione host che usa il runtime di Windows PowerShell insieme a un'implementazione host personalizzata. L'applicazione host imposta le impostazioni cultura dell'host su tedesco, esegue il cmdlet `Get-Process` e Visualizza i risultati come verrebbero visualizzati usando pwrsh. exe e quindi stampa i dati e l'ora correnti in tedesco.
+- Host02: Mostra come scrivere un'applicazione host che usa il runtime di Windows PowerShell insieme a un'implementazione host personalizzata. L'applicazione host imposta le impostazioni cultura dell'host su tedesco, esegue il cmdlet `Get-Process` e Visualizza i risultati così come verrebbero visualizzati usando pwrsh. exe e quindi stampa i dati e l'ora correnti in tedesco.
 - Host03: Mostra come creare un'applicazione host basata su console interattiva che legge i comandi dalla riga di comando, esegue i comandi e quindi Visualizza i risultati nella console.
 - Host04: Mostra come creare un'applicazione host basata su console interattiva che legge i comandi dalla riga di comando, esegue i comandi e quindi Visualizza i risultati nella console. L'applicazione host supporta anche la visualizzazione di messaggi di richiesta che consentono all'utente di specificare più opzioni.
 - Host05: Mostra come creare un'applicazione host basata su console interattiva che legge i comandi dalla riga di comando, esegue i comandi e quindi Visualizza i risultati nella console. Questa applicazione host supporta inoltre le chiamate a computer remoti utilizzando i cmdlet `Enter-PsSession` e `Exit-PsSession`.
@@ -104,8 +104,8 @@ Il cmdlet `Get-Process` restituisce gli oggetti processo per ogni processo in es
 
 - AccessDBProviderSample03: Mostra come sovrascrivere i metodi GetItem e SetItem per supportare le chiamate ai cmdlet `Get-Item` e `Set-Item`. La classe del provider in questo esempio deriva dalla classe ItemCmdletProvider.
 
-- AccessDBProviderSample04: Mostra come sovrascrivere i metodi del contenitore per supportare le chiamate ai cmdlet `Copy-Item`, `Get-ChildItem`, `New-Item` e `Remove-Item`. Questi metodi devono essere implementati quando l'archivio dati contiene elementi che sono contenitori. Un contenitore è un gruppo di elementi figlio all'interno di un elemento padre comune. La classe del provider in questo esempio deriva dalla classe ItemCmdletProvider.
+- AccessDBProviderSample04: Mostra come sovrascrivere i metodi del contenitore per supportare le chiamate ai cmdlet `Copy-Item`, `Get-ChildItem`, `New-Item`e `Remove-Item`. Questi metodi devono essere implementati quando l'archivio dati contiene elementi che sono contenitori. Un contenitore è un gruppo di elementi figlio all'interno di un elemento padre comune. La classe del provider in questo esempio deriva dalla classe ItemCmdletProvider.
 
 - AccessDBProviderSample05: Mostra come sovrascrivere i metodi del contenitore per supportare le chiamate ai cmdlet `Move-Item` e `Join-Path`. Questi metodi devono essere implementati quando l'utente deve spostare elementi all'interno di un contenitore e se l'archivio dati contiene contenitori annidati. La classe del provider in questo esempio deriva dalla classe NavigationCmdletProvider.
 
-- AccessDBProviderSample06: Mostra come sovrascrivere i metodi di contenuto per supportare le chiamate ai cmdlet `Clear-Content`, `Get-Content` e `Set-Content`. Questi metodi devono essere implementati quando l'utente deve gestire il contenuto degli elementi nell'archivio dati. La classe del provider in questo esempio deriva dalla classe NavigationCmdletProvider e implementa l'interfaccia IContentCmdletProvider.
+- AccessDBProviderSample06: Mostra come sovrascrivere i metodi di contenuto per supportare le chiamate ai cmdlet `Clear-Content`, `Get-Content`e `Set-Content`. Questi metodi devono essere implementati quando l'utente deve gestire il contenuto degli elementi nell'archivio dati. La classe del provider in questo esempio deriva dalla classe NavigationCmdletProvider e implementa l'interfaccia IContentCmdletProvider.

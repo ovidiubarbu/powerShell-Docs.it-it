@@ -7,10 +7,10 @@ ms.suite: ''
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.openlocfilehash: 19644c5bc186a5554d6b134a67fc7c4d7aa7b64c
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72365310"
 ---
 # <a name="supporting-wildcard-characters-in-cmdlet-parameters"></a>Supporto di caratteri jolly nei parametri dei cmdlet
@@ -30,7 +30,7 @@ Spesso è necessario progettare un cmdlet per l'esecuzione su un gruppo di risor
 
 Windows PowerShell supporta i caratteri jolly seguenti.
 
-| Jolly |                             Descrizione                             |  Esempio   |     Corrispondenza      | Non corrisponde a |
+| Carattere jolly |                             Description                             |  Esempio   |     Corrispondenza      | Non corrisponde a |
 | -------- | ------------------------------------------------------------------- | ---------- | ---------------- | -------------- |
 | *        | Trova la corrispondenza di zero o più caratteri, a partire dalla posizione specificata | `a*`       | A, AG, Apple     |                |
 | ?        | Corrisponde a qualsiasi carattere nella posizione specificata                     | `?n`       | Un, in, on       | corse            |

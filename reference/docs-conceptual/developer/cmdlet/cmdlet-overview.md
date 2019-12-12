@@ -12,10 +12,10 @@ helpviewer_keywords:
 ms.assetid: 0aa32589-4447-4ead-a5dd-a3be99113140
 caps.latest.revision: 21
 ms.openlocfilehash: 14200aed2fb94c37c8b8af29650f602945e7ac1c
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72365890"
 ---
 # <a name="cmdlet-overview"></a>Informazioni generali sui cmdlet
@@ -51,7 +51,7 @@ I cmdlet possono avere parametri obbligatori, denominati, posizionali e *Switch*
 I parametri switch consentono di definire i parametri che vengono valutati solo se i parametri sono specificati nella chiamata.
 Per ulteriori informazioni sui diversi tipi di parametri, vedere [parametri dei cmdlet](cmdlet-parameters.md).
 
-### <a name="parameter-set"></a>Set di parametri
+### <a name="parameter-set"></a>Parameter Set
 
 Gruppo di parametri utilizzabili nello stesso comando per eseguire un'azione specifica.
 Un cmdlet può avere più set di parametri, ma ogni set di parametri deve avere almeno un parametro univoco.
@@ -67,7 +67,7 @@ Per altre informazioni sui parametri dinamici, vedere [parametri dinamici dei cm
 ### <a name="input-processing-method"></a>Metodo di elaborazione dell'input
 
 Metodo utilizzabile da un cmdlet per elaborare i record ricevuti come input.
-I metodi di elaborazione dell'input includono il metodo [System. Management. Automation. cmdlet. BeginProcessing](/dotnet/api/System.Management.Automation.Cmdlet.BeginProcessing) , il metodo [System. Management. Automation. cmdlet. ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) , [ System. Management. Automation. cmdlet. EndProcessing](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing) e il metodo [System. Management. Automation. cmdlet. StopProcessing](/dotnet/api/System.Management.Automation.Cmdlet.StopProcessing) . Quando si implementa un cmdlet, è necessario eseguire l'override di almeno uno dei [System. Management. Automation. cmdlet. BeginProcessing](/dotnet/api/System.Management.Automation.Cmdlet.BeginProcessing), [System. Management. Automation. cmdlet. ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord)e [ Metodi System. Management. Automation. cmdlet. EndProcessing](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing) .
+I metodi di elaborazione dell'input includono il metodo [System. Management. Automation. cmdlet. BeginProcessing](/dotnet/api/System.Management.Automation.Cmdlet.BeginProcessing) , il metodo [System. Management. Automation. cmdlet. ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) , il metodo [System. Management. Automation. cmdlet. EndProcessing](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing) e il metodo [System. Management. Automation. cmdlet. StopProcessing](/dotnet/api/System.Management.Automation.Cmdlet.StopProcessing) . Quando si implementa un cmdlet, è necessario eseguire l'override di almeno uno dei metodi [System. Management. Automation. cmdlet. BeginProcessing](/dotnet/api/System.Management.Automation.Cmdlet.BeginProcessing), [System. Management. Automation. cmdlet. ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord)e [System. Management. Automation. cmdlet. EndProcessing](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing) .
 In genere, il metodo [System. Management. Automation. cmdlet. ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) è il metodo di cui è stato eseguito l'override perché viene chiamato per ogni record elaborato dal cmdlet.
 Al contrario, il metodo [System. Management. Automation. cmdlet. BeginProcessing](/dotnet/api/System.Management.Automation.Cmdlet.BeginProcessing) e il metodo [System. Management. Automation. cmdlet. EndProcessing](/dotnet/api/System.Management.Automation.Cmdlet.EndProcessing) vengono chiamati una volta per eseguire la pre-elaborazione o la post-elaborazione dei record.
 Per ulteriori informazioni su questi metodi, vedere [input processing methods](cmdlet-input-processing-methods.md).
@@ -75,7 +75,7 @@ Per ulteriori informazioni su questi metodi, vedere [input processing methods](c
 ### <a name="shouldprocess-feature"></a>Funzionalità ShouldProcess
 
 PowerShell consente di creare cmdlet che richiedono all'utente di inviare commenti e suggerimenti prima che il cmdlet modifichi il sistema.
-Per usare questa funzionalità, il cmdlet deve dichiarare che supporta la funzionalità ShouldProcess quando si dichiara l'attributo del cmdlet e il cmdlet deve chiamare [System. Management. Automation. cmdlet. ShouldProcess](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) e [ Metodi System. Management. Automation. cmdlet. ShouldContinue](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue) dall'interno di un metodo di elaborazione dell'input.
+Per usare questa funzionalità, il cmdlet deve dichiarare che supporta la funzionalità ShouldProcess quando si dichiara l'attributo del cmdlet e il cmdlet deve chiamare i metodi [System. Management. Automation. cmdlet. ShouldProcess](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) e [System. Management. Automation. cmdlet. ShouldContinue](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue) dall'interno di un metodo di elaborazione dell'input.
 Per ulteriori informazioni su come supportare la funzionalità ShouldProcess, vedere [richiesta di conferma](requesting-confirmation-from-cmdlets.md).
 
 ### <a name="transaction"></a>Transazione
@@ -104,7 +104,7 @@ I cmdlet di sono diversi da quelli di altri ambienti della shell dei comandi nei
 
 Windows PowerShell supporta i cmdlet derivati dalle due classi di base seguenti.
 
-- La maggior parte dei cmdlet si basa su .NET Framework classi che derivano dalla classe di base [System. Management. Automation. cmdlet](/dotnet/api/System.Management.Automation.Cmdlet) . La derivazione da questa classe consente a un cmdlet di usare il set minimo di dipendenze nel runtime di Windows PowerShell. Questa operazione presenta due vantaggi. Il primo vantaggio è costituito dal fatto che gli oggetti cmdlet sono più piccoli ed è meno probabile che vengano modificati dal runtime di Windows PowerShell. Il secondo vantaggio è che, se necessario, è possibile creare direttamente un'istanza dell'oggetto cmdlet e richiamarla direttamente anziché richiamarla tramite il runtime di Windows PowerShell.
+- La maggior parte dei cmdlet si basa su .NET Framework classi che derivano dalla classe di base [System. Management. Automation. cmdlet](/dotnet/api/System.Management.Automation.Cmdlet) . La derivazione da questa classe consente a un cmdlet di usare il set minimo di dipendenze nel runtime di Windows PowerShell. Questo approccio presenta due vantaggi. Il primo vantaggio è costituito dal fatto che gli oggetti cmdlet sono più piccoli ed è meno probabile che vengano modificati dal runtime di Windows PowerShell. Il secondo vantaggio è che, se necessario, è possibile creare direttamente un'istanza dell'oggetto cmdlet e richiamarla direttamente anziché richiamarla tramite il runtime di Windows PowerShell.
 
 - I cmdlet più complessi sono basati su .NET Framework classi che derivano dalla classe di base [System. Management. Automation. PSCmdlet](/dotnet/api/System.Management.Automation.PSCmdlet) . La derivazione da questa classe offre un accesso molto maggiore al runtime di Windows PowerShell. Questo accesso consente al cmdlet di chiamare gli script, accedere ai provider e accedere allo stato della sessione corrente. Per accedere allo stato della sessione corrente, è possibile ottenere e impostare le variabili e le preferenze di sessione. Tuttavia, la derivazione da questa classe aumenta le dimensioni dell'oggetto cmdlet e significa che il cmdlet è strettamente associato alla versione corrente del runtime di Windows PowerShell.
 

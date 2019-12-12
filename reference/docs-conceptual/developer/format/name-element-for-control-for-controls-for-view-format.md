@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 26437467-d578-4e8d-8cdd-17dfe644957a
 caps.latest.revision: 7
 ms.openlocfilehash: 7e24aa60f7abae5768707d2527826c452b709002
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72365100"
 ---
 # <a name="name-element-for-control-for-controls-for-view-format"></a>Elemento Name per Control per Controls per View (formato)
@@ -45,7 +45,7 @@ Nessuna.
 |-------------|-----------------|
 |[Elemento Control per Controls per View (Format)](./control-element-for-controls-for-view-format.md)|Definisce un controllo che può essere utilizzato dalla visualizzazione e dal nome utilizzato per fare riferimento al controllo.|
 
-## <a name="text-value"></a>Valore di testo
+## <a name="text-value"></a>Valore testo
 
 Specificare il nome utilizzato per fare riferimento al controllo.
 

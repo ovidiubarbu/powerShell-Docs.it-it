@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 5ae707db-52e0-408c-87fa-b35c42eaaab1
 caps.latest.revision: 5
 ms.openlocfilehash: 9140d03e046def2fbbcc2a842b9ea1b9e1fa2985
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72367620"
 ---
 # <a name="creating-an-initialsessionstate"></a>Creazione di un InitialSessionState
@@ -25,7 +25,7 @@ InitialSessionState specifica le caratteristiche di spazio, ad esempio i comandi
 ## <a name="create-a-default-initialsessionstate"></a>Creare un InitialSessionState predefinito
 
 Per creare un oggetto **InitialSessionState** , è possibile usare i metodi [CreateDefault](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState.CreateDefault) e [CreateDefault2](/dotnet/api/System.Management.Automation.Runspaces.InitialSessionState.CreateDefault2) della classe **InitialSessionState** .
-Il metodo **CreateDefault** crea un **InitialSessionState** con tutti i comandi incorporati caricati, mentre il metodo **CreateDefault2** carica solo i comandi necessari per ospitare PowerShell (i comandi del Modulo Microsoft. PowerShell. Core).
+Il metodo **CreateDefault** crea un **InitialSessionState** con tutti i comandi incorporati caricati, mentre il metodo **CreateDefault2** carica solo i comandi necessari per ospitare PowerShell (i comandi del modulo Microsoft. PowerShell. Core).
 
 Se si desidera limitare ulteriormente i comandi disponibili nell'applicazione host, è necessario creare un spazio vincolato.
 Per informazioni, vedere [creazione di un spazio vincolato](creating-a-constrained-runspace.md).

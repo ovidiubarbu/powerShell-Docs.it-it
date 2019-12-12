@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 3a31010d-1db9-44ae-a7f3-6ed32cb641cb
 caps.latest.revision: 16
 ms.openlocfilehash: 097d20cb6a04635124d1f96823248df6095ca1af
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72362640"
 ---
 # <a name="name-element-for-view-format"></a>Elemento Name per View (formato)
@@ -45,7 +45,7 @@ Nessuna.
 |-------------|-----------------|
 |[Elemento View (Format)](./view-element-format.md)|Definisce una vista utilizzata per visualizzare i membri di uno o più oggetti .NET.|
 
-## <a name="text-value"></a>Valore di testo
+## <a name="text-value"></a>Valore testo
 
 Specificare un nome descrittivo univoco per la visualizzazione. Questo nome può includere un riferimento al tipo di visualizzazione, ad esempio una vista tabella o una visualizzazione elenco, che l'oggetto o il set di oggetti utilizza la vista, il comando che restituisce gli oggetti o una combinazione di questi.
 
@@ -55,7 +55,7 @@ Per ulteriori informazioni sui diversi tipi di viste, vedere gli argomenti segue
 
 ## <a name="example"></a>Esempio
 
-Nell'esempio seguente viene illustrato un elemento `View` che definisce una vista tabella per l'oggetto [System. ServiceProcess. ServiceController](/dotnet/api/System.ServiceProcess.ServiceController) . Il nome della vista è "Service".
+Nell'esempio seguente viene illustrato un elemento `View` che definisce una visualizzazione tabella per l'oggetto [System. ServiceProcess. ServiceController](/dotnet/api/System.ServiceProcess.ServiceController) . Il nome della vista è "Service".
 
 ```xml
 <View>

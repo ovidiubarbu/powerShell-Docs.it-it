@@ -13,10 +13,10 @@ helpviewer_keywords:
 ms.assetid: 2d4e58a9-05bc-437c-86b9-d8d55cba7d48
 caps.latest.revision: 36
 ms.openlocfilehash: 4475b3f5e15826efbe8bab867011985cd7e2e1ae
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72370030"
 ---
 # <a name="approved-verbs-for-powershell-commands"></a>Verbi approvati per i comandi di PowerShell
@@ -86,12 +86,12 @@ La tabella seguente elenca la maggior parte dei verbi definiti.
 
 |Verbo (alias)|Azione|Commenti|
 |--------------------|------------|--------------|
-|[Aggiungi](/dotnet/api/System.Management.Automation.VerbsCommon.Add) (a)|Aggiunge una risorsa a un contenitore o connette un elemento a un altro elemento. Il cmdlet `Add-Content`, ad esempio, aggiunge contenuto a un file. Questo verbo è associato a `Remove`.|Per questa azione, non usare verbi come Append, allegate, concatenate o INSERT.|
-|[Cancella](/dotnet/api/System.Management.Automation.VerbsCommon.Clear) (cl)|Rimuove tutte le risorse da un contenitore, ma non elimina il contenitore. Il cmdlet `Clear-Content`, ad esempio, rimuove il contenuto di un file, ma non elimina il file.|Per questa azione, non usare verbi come Flush, erase, release, UNMARK, annullato o Annulla.|
+|[Aggiungi](/dotnet/api/System.Management.Automation.VerbsCommon.Add) (a)|Aggiunge una risorsa a un contenitore o connette un elemento a un altro elemento. Ad esempio, il cmdlet `Add-Content` aggiunge contenuto a un file. Questo verbo è associato a `Remove`.|Per questa azione, non usare verbi come Append, allegate, concatenate o INSERT.|
+|[Cancella](/dotnet/api/System.Management.Automation.VerbsCommon.Clear) (cl)|Rimuove tutte le risorse da un contenitore, ma non elimina il contenitore. Ad esempio, il cmdlet `Clear-Content` rimuove il contenuto di un file ma non elimina il file.|Per questa azione, non usare verbi come Flush, erase, release, UNMARK, annullato o Annulla.|
 |[Chiudi](/dotnet/api/System.Management.Automation.VerbsCommon.Close) (CS)|Modifica lo stato di una risorsa per renderla inaccessibile, non disponibile o inutilizzabile. Questo verbo è associato a `Open.`||
 |[Copia](/dotnet/api/System.Management.Automation.VerbsCommon.Copy) (CP)|Copia una risorsa in un altro nome o in un altro contenitore. Ad esempio, il cmdlet `Copy-Item` usato per accedere ai dati archiviati copia un elemento da una posizione nell'archivio dati in un'altra posizione.|Per questa azione, non usare verbi come duplicato, clonazione, replica o sincronizzazione.|
 |[Immetti](/dotnet/api/System.Management.Automation.VerbsCommon.Enter) (et)|Specifica un'azione che consente all'utente di spostarsi in una risorsa. Ad esempio, il cmdlet `Enter-PSSession` inserisce l'utente in una sessione interattiva. Questo verbo è associato a `Exit`.|Per questa azione, non usare verbi come push o into.|
-|[Esci](/dotnet/api/System.Management.Automation.VerbsCommon.Exit) (ex)|Imposta l'ambiente o il contesto corrente sul contesto utilizzato più di recente. Ad esempio, il cmdlet `Exit-PSSession` inserisce l'utente nella sessione usata per avviare la sessione interattiva. Questo verbo è associato a `Enter`.|Per questa azione, non usare verbi come pop o out.|
+|[Esci](/dotnet/api/System.Management.Automation.VerbsCommon.Exit) (ex)|Imposta l'ambiente o il contesto corrente sul contesto utilizzato più di recente. Ad esempio, il cmdlet `Exit-PSSession` inserisce l'utente nella sessione utilizzata per avviare la sessione interattiva. Questo verbo è associato a `Enter`.|Per questa azione, non usare verbi come pop o out.|
 |[Trova](/dotnet/api/System.Management.Automation.VerbsCommon.Find) (FD)|Cerca un oggetto in un contenitore sconosciuto, implicito, facoltativo o specificato.||
 |[Formato](/dotnet/api/System.Management.Automation.VerbsCommon.Format) (f)|Dispone gli oggetti in un form o un layout specificato.||
 |[Get](/dotnet/api/System.Management.Automation.VerbsCommon.Get) (g)|Specifica un'azione che recupera una risorsa. Questo verbo è associato a `Set`.|Per questa azione, non usare verbi come Read, Open, cat, Type, dir, ottenere, dump, Acquire, examine, Find o search.|
@@ -99,21 +99,21 @@ La tabella seguente elenca la maggior parte dei verbi definiti.
 |[Join](/dotnet/api/System.Management.Automation.VerbsCommon.Join) (j)|Combina le risorse in un'unica risorsa. Ad esempio, il cmdlet `Join-Path` combina un percorso con uno dei percorsi figlio per creare un singolo percorso. Questo verbo è associato a `Split`.|Per questa azione, non usare i verbi, ad esempio combinare, unire, connettere o associare.|
 |[Blocco](/dotnet/api/System.Management.Automation.VerbsCommon.Lock) (LK)|Protegge una risorsa. Questo verbo è associato a `Unlock`.|Per questa azione, non usare i verbi, ad esempio Restrict o Secure.|
 |[Sposta](/dotnet/api/System.Management.Automation.VerbsCommon.Move) (m)|Sposta una risorsa da una posizione a un'altra. Ad esempio, il cmdlet `Move-Item` sposta un elemento da una posizione nell'archivio dati in un'altra posizione.|Per questa azione, non usare verbi come trasferimento, nome o migrazione.|
-|[Nuovo](/dotnet/api/System.Management.Automation.VerbsCommon.New) (n)|Crea una risorsa. Il verbo `Set` può essere usato anche quando si crea una risorsa che include dati, ad esempio il cmdlet `Set-Variable`.|Per questa azione, non usare verbi come create, generate, Build, make o allocate.|
+|[Nuovo](/dotnet/api/System.Management.Automation.VerbsCommon.New) (n)|Crea una risorsa. Il verbo `Set` può essere utilizzato anche quando si crea una risorsa che include dati, ad esempio il cmdlet `Set-Variable`.|Per questa azione, non usare verbi come create, generate, Build, make o allocate.|
 |[Apri](/dotnet/api/System.Management.Automation.VerbsCommon.Open) (op)|Modifica lo stato di una risorsa per renderla accessibile, disponibile o utilizzabile. Questo verbo è associato a `Close`.||
 |[Ottimizza](/dotnet/api/System.Management.Automation.VerbsCommon.Optimize) (OM)|Aumenta l'efficacia di una risorsa.||
 |[Pop](/dotnet/api/System.Management.Automation.VerbsCommon.Pop) (pop)|Rimuove un elemento dall'inizio di uno stack. Ad esempio, il cmdlet `Pop-Location` imposta il percorso corrente sul percorso di cui è stato effettuato il push più di recente nello stack.||
-|[Push](/dotnet/api/System.Management.Automation.VerbsCommon.Push) (unità di elaborazione)|Aggiunge un elemento all'inizio di uno stack. Ad esempio, il cmdlet `Push-Location` inserisce il percorso corrente nello stack.||
+|[Push](/dotnet/api/System.Management.Automation.VerbsCommon.Push) (unità di elaborazione)|Aggiunge un elemento all'inizio di uno stack. Ad esempio, il cmdlet `Push-Location` effettua il push del percorso corrente nello stack.||
 |[Ripeti](/dotnet/api/System.Management.Automation.VerbsCommon.Redo) (re)|Reimposta una risorsa sullo stato che è stato annullato.||
 |[Rimuovi](/dotnet/api/System.Management.Automation.VerbsCommon.Remove) (r)|Elimina una risorsa da un contenitore. Ad esempio, il cmdlet `Remove-Variable` Elimina una variabile e il relativo valore. Questo verbo è associato a `Add`.|Per questa azione, non usare verbi come Clear, Cut, Dispose, scarto o Erase.|
 |[Rinomina](/dotnet/api/System.Management.Automation.VerbsCommon.Rename) (RN)|Modifica il nome di una risorsa. Ad esempio, il cmdlet `Rename-Item`, utilizzato per accedere ai dati archiviati, modifica il nome di un elemento nell'archivio dati.|Per questa azione, non usare un verbo, ad esempio Change.|
 |[Reimposta](/dotnet/api/System.Management.Automation.VerbsCommon.Reset) (RS)|Consente di ripristinare lo stato originale di una risorsa.||
 |[Cerca](/dotnet/api/System.Management.Automation.VerbsCommon.Search) (SR)|Crea un riferimento a una risorsa in un contenitore.|Per questa azione, non usare verbi come Find o locate.|
 |[Select](/dotnet/api/System.Management.Automation.VerbsCommon.Select) (SC)|Individua una risorsa in un contenitore. Ad esempio, il cmdlet `Select-String` trova il testo in stringhe e file.|Per questa azione, non usare verbi come Find o locate.|
-|[Set](/dotnet/api/System.Management.Automation.VerbsCommon.Set) /i|Sostituisce i dati in una risorsa esistente o crea una risorsa che contiene alcuni dati. Il cmdlet `Set-Date`, ad esempio, modifica l'ora di sistema nel computer locale. Per creare una risorsa, è anche possibile usare il verbo `New`. Questo verbo è associato a `Get`.|Per questa azione, non usare verbi quali Write, reset, Assign o Configure.|
+|[Set](/dotnet/api/System.Management.Automation.VerbsCommon.Set) /i|Sostituisce i dati in una risorsa esistente o crea una risorsa che contiene alcuni dati. Ad esempio, il cmdlet `Set-Date` modifica l'ora di sistema nel computer locale. Per creare una risorsa, è anche possibile usare il verbo `New`. Questo verbo è associato a `Get`.|Per questa azione, non usare verbi quali Write, reset, Assign o Configure.|
 |[Mostra](/dotnet/api/System.Management.Automation.VerbsCommon.Show) (SH)|Rende visibile una risorsa all'utente. Questo verbo è associato a `Hide`.|Per questa azione, non usare verbi come la visualizzazione o la produzione.|
 |[Ignora](/dotnet/api/System.Management.Automation.VerbsCommon.Skip) (SK)|Ignora una o più risorse o punti in una sequenza.|Per questa azione, non usare un verbo, ad esempio bypass o Jump.|
-|[Divisione](/dotnet/api/System.Management.Automation.VerbsCommon.Split) (SL)|Separa le parti di una risorsa. Il cmdlet `Split-Path`, ad esempio, restituisce parti diverse di un percorso. Questo verbo è associato a `Join`.|Per questa azione, non usare un verbo come separato.|
+|[Divisione](/dotnet/api/System.Management.Automation.VerbsCommon.Split) (SL)|Separa le parti di una risorsa. Ad esempio, il cmdlet `Split-Path` restituisce parti diverse di un percorso. Questo verbo è associato a `Join`.|Per questa azione, non usare un verbo come separato.|
 |[Passaggio](/dotnet/api/System.Management.Automation.VerbsCommon.Step) (St)|Passa al punto o alla risorsa successiva in una sequenza.||
 |[Switch](/dotnet/api/System.Management.Automation.VerbsCommon.Switch) (SW)|Specifica un'azione che si alterna tra due risorse, ad esempio per passare da una posizione all'altra, responsabilità o Stati.||
 |[Annulla (annullamento](/dotnet/api/System.Management.Automation.VerbsCommon.Undo) )|Imposta una risorsa sullo stato precedente.||
@@ -195,7 +195,7 @@ La tabella seguente elenca la maggior parte dei verbi definiti.
 |[Conferma](/dotnet/api/System.Management.Automation.VerbsLifecycle.Confirm) (CN)|Conferma, verifica o convalida lo stato di una risorsa o di un processo.|Per questa azione, non usare verbi come riconoscimento, accettazione, certificazione, convalida o verifica.|
 |[Nega](/dotnet/api/System.Management.Automation.VerbsLifecycle.Deny) (DN)|Rifiuta, oggetti, blocchi o si oppone allo stato di una risorsa o di un processo.|Per questa azione, non usare verbi come Block, Object, Reject o Reject.|
 |[Distribuzione](/dotnet/api/System.Management.Automation.VerbsLifecycle.Deploy) (DP)|Invia un'applicazione, un sito Web o una soluzione a una destinazione remota [s] in modo che un utente di tale soluzione possa accedervi dopo il completamento della distribuzione|Questo verbo è stato aggiunto in PowerShell V6|
-|[Disabilita](/dotnet/api/System.Management.Automation.VerbsLifecycle.Disable) (d)|Configura una risorsa in uno stato non disponibile o inattivo. Ad esempio, il cmdlet `Disable-PSBreakpoint` rende un punto di interruzione inattivo. Questo verbo è associato a `Enable`.|Per questa azione, non usare verbi come Halt o Hide.|
+|[Disabilita](/dotnet/api/System.Management.Automation.VerbsLifecycle.Disable) (d)|Configura una risorsa in uno stato non disponibile o inattivo. Ad esempio, il cmdlet `Disable-PSBreakpoint` rende inattivo un punto di interruzione. Questo verbo è associato a `Enable`.|Per questa azione, non usare verbi come Halt o Hide.|
 |[Abilita](/dotnet/api/System.Management.Automation.VerbsLifecycle.Enable) (e)|Configura una risorsa in uno stato disponibile o attivo. Ad esempio, il cmdlet `Enable-PSBreakpoint` rende attivo un punto di interruzione. Questo verbo è associato a `Disable`.|Per questa azione, non usare verbi come Start o Begin.|
 |[Installa](/dotnet/api/System.Management.Automation.VerbsLifecycle.Install) (is)|Inserisce una risorsa in un percorso e, facoltativamente, la Inizializza. Questo verbo è associato a `Uninstall`.|Per questa azione, non usare un verbo di utilizzo quale il programma di installazione.|
 |[Richiama](/dotnet/api/System.Management.Automation.VerbsLifecycle.Invoke) (i)|Esegue un'azione, ad esempio l'esecuzione di un comando o di un metodo.|Per questa azione, non usare verbi come Run o Start.|

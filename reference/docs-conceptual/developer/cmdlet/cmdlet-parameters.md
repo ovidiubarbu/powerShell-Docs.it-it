@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 3f1cca5f-5b95-4bce-94a6-a22db1aefd47
 caps.latest.revision: 23
 ms.openlocfilehash: 914a10907bcf980eed8d7e2f819c382fe6b341ad
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72365930"
 ---
 # <a name="cmdlet-parameters"></a>Parametri dei cmdlet
 
-I parametri del cmdlet forniscono il meccanismo che consente a un cmdlet di accettare l'input. I parametri possono accettare input direttamente dalla riga di comando o da oggetti passati al cmdlet tramite la pipeline, gli argomenti (noti anche come *valori*) di questi parametri possono specificare l'input accettato dal cmdlet, il modo in cui il cmdlet deve eseguire la propria azioni e i dati restituiti dal cmdlet alla pipeline.
+I parametri del cmdlet forniscono il meccanismo che consente a un cmdlet di accettare l'input. I parametri possono accettare input direttamente dalla riga di comando o da oggetti passati al cmdlet tramite la pipeline, gli argomenti (noti anche come *valori*) di questi parametri possono specificare l'input accettato dal cmdlet, il modo in cui il cmdlet deve eseguire le proprie azioni e i dati restituiti dal cmdlet alla pipeline.
 
 ## <a name="in-this-section"></a>Contenuto della sezione
 
@@ -47,7 +47,7 @@ I parametri del cmdlet forniscono il meccanismo che consente a un cmdlet di acce
 
 [Convalida dell'input del parametro](./validating-parameter-input.md) Descrive in che modo Windows PowerShell convalida gli argomenti passati ai parametri del cmdlet.
 
-[Parametri del filtro di input](./input-filter-parameters.md) Vengono illustrati i parametri `Filter`, `Include` e `Exclude` che filtrano il set di oggetti di input interessati dal cmdlet.
+[Parametri del filtro di input](./input-filter-parameters.md) Vengono illustrati i parametri `Filter`, `Include`e `Exclude` che filtrano il set di oggetti di input interessati dal cmdlet.
 
 ## <a name="related-sections"></a>Sezioni correlate
 

@@ -9,15 +9,15 @@ ms.topic: article
 ms.assetid: 7c9096a1-46fa-48ea-9b8a-a583484b9d68
 caps.latest.revision: 13
 ms.openlocfilehash: 6545e71ea18d10621ee9c203e70f64dece460ef5
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72369590"
 ---
 # <a name="parameter-aliases"></a>Alias dei parametri
 
-I parametri dei cmdlet possono anche avere alias. È possibile utilizzare gli alias anziché i nomi dei parametri quando si digita o si specifica il parametro in un comando.
+I parametri cmdlet possono avere anche degli alias. È possibile utilizzare gli alias anziché i nomi dei parametri quando si digita o si specifica il parametro in un comando.
 
 ## <a name="benefits-of-using-aliases"></a>Vantaggi dell'utilizzo degli alias
 

@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 47af9d57-bd63-4596-816a-0b717418476b
 caps.latest.revision: 10
 ms.openlocfilehash: a2e4c4d42566d5a52006924eab02295c37cf3159
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72361280"
 ---
 # <a name="how-to-add-a-cmdlet-description"></a>Come aggiungere una descrizione del cmdlet
@@ -30,7 +30,7 @@ In questa sezione viene descritto come aggiungere contenuto che viene visualizza
 
 - Includere informazioni sui modi in cui gli utenti possono utilizzare il cmdlet, oltre agli utilizzi più evidenti. Ad esempio, è possibile usare l'oggetto recuperato dal cmdlet `Get-Host` per modificare il colore del testo nella finestra di comando di Windows PowerShell.
 
-  Esempio: "il cmdlet `Get-Acl` Ottiene gli oggetti che rappresentano il descrittore di sicurezza di un file o di una risorsa. Il descrittore di sicurezza contiene gli elenchi di controllo di accesso della risorsa. L'ACL specifica le autorizzazioni che gli utenti e i gruppi di utenti devono accedere alla risorsa ".
+  Esempio: "il cmdlet `Get-Acl` ottiene gli oggetti che rappresentano il descrittore di sicurezza di un file o di una risorsa. Il descrittore di sicurezza contiene gli elenchi di controllo di accesso della risorsa. L'ACL specifica le autorizzazioni che gli utenti e i gruppi di utenti devono accedere alla risorsa ".
 
 - La descrizione dettagliata dovrebbe descrivere il cmdlet, ma non deve descrivere i concetti usati dal cmdlet. Inserire le definizioni dei concetti in note aggiuntive.
 

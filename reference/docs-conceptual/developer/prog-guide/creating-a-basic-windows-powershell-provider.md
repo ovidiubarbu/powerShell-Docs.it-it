@@ -12,10 +12,10 @@ helpviewer_keywords:
 ms.assetid: 11eeea41-15c8-47ad-9016-0f4b72573305
 caps.latest.revision: 7
 ms.openlocfilehash: e825581b96f0f33893b38f9f6499dd46a7bf38eb
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72360520"
 ---
 # <a name="creating-a-basic-windows-powershell-provider"></a>Creazione di un provider di Windows PowerShell di base
@@ -31,7 +31,7 @@ Come indicato in precedenza, il provider di base descritto di seguito implementa
 
 Il primo passaggio nella creazione di un provider di Windows PowerShell consiste nel definirne la classe .NET. Questo provider di base definisce una classe denominata `AccessDBProvider` che deriva dalla classe di base [System. Management. Automation. provider. CmdletProvider](/dotnet/api/System.Management.Automation.Provider.CmdletProvider) .
 
-Si consiglia di inserire le classi del provider in uno spazio dei nomi `Providers` dello spazio dei nomi dell'API, ad esempio, xxx. PowerShell. Providers. Questo provider usa lo spazio dei nomi `Microsoft.Samples.PowerShell.Provider`, in cui vengono eseguiti tutti gli esempi del provider di Windows PowerShell.
+È consigliabile inserire le classi del provider in uno spazio dei nomi `Providers` dello spazio dei nomi dell'API, ad esempio, xxx. PowerShell. Providers. Questo provider usa lo spazio dei nomi `Microsoft.Samples.PowerShell.Provider`, in cui vengono eseguiti tutti gli esempi del provider di Windows PowerShell.
 
 > [!NOTE]
 > La classe per un provider di Windows PowerShell deve essere contrassegnata in modo esplicito come Public. Per impostazione predefinita, le classi non contrassegnate come pubbliche saranno interne e non verranno trovate dal runtime di Windows PowerShell.
@@ -55,7 +55,7 @@ Un provider di Windows PowerShell è inoltre in grado di mantenere lo stato basa
 
 ## <a name="initializing-the-provider"></a>Inizializzazione del provider
 
-Per inizializzare il provider, il runtime di Windows PowerShell chiama il metodo [System. Management. Automation. provider. CmdletProvider. Start *](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Start) all'avvio di Windows PowerShell. Nella maggior parte dei casi, il provider può usare l'implementazione predefinita di questo metodo, che restituisce semplicemente l'oggetto [System. Management. Automation. ProviderInfo restituito da](/dotnet/api/System.Management.Automation.ProviderInfo) che descrive il provider. Tuttavia, nel caso in cui si desideri aggiungere ulteriori informazioni di inizializzazione, è necessario implementare il metodo [System. Management. Automation. provider. CmdletProvider. Start *](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Start) che restituisce una versione modificata del [ Oggetto System. Management. Automation. ProviderInfo restituito da](/dotnet/api/System.Management.Automation.ProviderInfo) passato al provider. In generale, questo metodo deve restituire l'oggetto [System. Management. Automation. ProviderInfo restituito da](/dotnet/api/System.Management.Automation.ProviderInfo) fornito o un oggetto [System. Management. Automation. ProviderInfo restituito da](/dotnet/api/System.Management.Automation.ProviderInfo) modificato che contiene altre informazioni di inizializzazione.
+Per inizializzare il provider, il runtime di Windows PowerShell chiama il metodo [System. Management. Automation. provider. CmdletProvider. Start *](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Start) all'avvio di Windows PowerShell. Nella maggior parte dei casi, il provider può usare l'implementazione predefinita di questo metodo, che restituisce semplicemente l'oggetto [System. Management. Automation. ProviderInfo restituito da](/dotnet/api/System.Management.Automation.ProviderInfo) che descrive il provider. Tuttavia, nel caso in cui si desideri aggiungere ulteriori informazioni di inizializzazione, è necessario implementare il metodo [System. Management. Automation. provider. CmdletProvider. Start *](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Start) che restituisce una versione modificata dell'oggetto [System. Management. Automation. ProviderInfo restituito da](/dotnet/api/System.Management.Automation.ProviderInfo) passato al provider. In generale, questo metodo deve restituire l'oggetto [System. Management. Automation. ProviderInfo restituito da](/dotnet/api/System.Management.Automation.ProviderInfo) fornito o un oggetto [System. Management. Automation. ProviderInfo restituito da](/dotnet/api/System.Management.Automation.ProviderInfo) modificato che contiene altre informazioni di inizializzazione.
 
 Questo provider di base non esegue l'override di questo metodo. Tuttavia, nel codice seguente viene illustrata l'implementazione predefinita di questo metodo:
 
@@ -65,7 +65,7 @@ Il provider può mantenere lo stato delle informazioni specifiche del provider, 
 
 ## <a name="start-dynamic-parameters"></a>Avvia parametri dinamici
 
-L'implementazione del provider del metodo [System. Management. Automation. provider. CmdletProvider. Start *](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Start) potrebbe richiedere parametri aggiuntivi. In questo caso, il provider deve eseguire l'override del metodo [System. Management. Automation. provider. CmdletProvider. Startdynamicparameters *](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.StartDynamicParameters) e restituire un oggetto con proprietà e campi con attributi di analisi simili a una classe di cmdlet o a [ Oggetto System. Management. Automation. RuntimeDefinedParameterDictionary](/dotnet/api/System.Management.Automation.RuntimeDefinedParameterDictionary) .
+L'implementazione del provider del metodo [System. Management. Automation. provider. CmdletProvider. Start *](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Start) potrebbe richiedere parametri aggiuntivi. In questo caso, il provider deve eseguire l'override del metodo [System. Management. Automation. provider. CmdletProvider. Startdynamicparameters *](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.StartDynamicParameters) e restituire un oggetto con proprietà e campi con attributi di analisi simili a una classe di cmdlet o a un oggetto [System. Management. Automation. RuntimeDefinedParameterDictionary](/dotnet/api/System.Management.Automation.RuntimeDefinedParameterDictionary) .
 
 Questo provider di base non esegue l'override di questo metodo. Tuttavia, nel codice seguente viene illustrata l'implementazione predefinita di questo metodo:
 
@@ -79,13 +79,13 @@ Questo provider di base non esegue l'override di questo metodo. Tuttavia, nel co
 
 <!-- TODO!!!: review snippet reference  [!CODE [Msh_samplesaccessdbprov01#accessdbprov01ProviderStop](Msh_samplesaccessdbprov01#accessdbprov01ProviderStop)]  -->
 
-## <a name="code-sample"></a>Esempio di codice
+## <a name="code-sample"></a>Codice di esempio
 
 Per il codice di esempio completo, vedere [esempio di codice AccessDbProviderSample01](./accessdbprovidersample01-code-sample.md).
 
 ## <a name="testing-the-windows-powershell-provider"></a>Test del provider di Windows PowerShell
 
-Dopo aver registrato il provider di Windows PowerShell con Windows PowerShell, è possibile testarlo eseguendo i cmdlet supportati nella riga di comando. Per questo provider di base, eseguire la nuova shell e usare il cmdlet `Get-PSProvider` per recuperare l'elenco di provider e verificare che sia presente il provider AccessDb.
+Dopo aver registrato il provider di Windows PowerShell con Windows PowerShell, è possibile testarlo eseguendo i cmdlet supportati nella riga di comando. Per questo provider di base, eseguire la nuova shell e utilizzare il cmdlet `Get-PSProvider` per recuperare l'elenco di provider e verificare che sia presente il provider AccessDb.
 
 ```powershell
 Get-PSProvider

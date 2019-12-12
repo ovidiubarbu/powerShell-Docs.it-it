@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 98bcfda0-6ee2-46f5-bbc7-5fab8b780d6a
 caps.latest.revision: 5
 ms.openlocfilehash: edb4d9944a527391983e068ddf07f4fac415c3f9
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72359870"
 ---
 # <a name="writing-a-navigation-provider"></a>Scrittura di un provider di navigazione
@@ -132,7 +132,7 @@ protected override string GetParentPath(string path, string root)
 
 ### <a name="implementing-makepath"></a>Implementazione di MakePath
 
-Il metodo [System. Management. Automation. provider. Navigationcmdletprovider. makepath *](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.MakePath) unisce un percorso padre specificato e un percorso figlio specificato per creare un percorso interno del provider. per informazioni sui tipi di percorso che i provider sono in grado di supportare, vedere [Panoramica del provider di Windows PowerShell](./windows-powershell-provider-overview.md). Il motore di PowerShell chiama questo metodo quando un utente chiama il cmdlet [Microsoft. PowerShell. Commands. JoinPathCommand](/dotnet/api/Microsoft.PowerShell.Commands.joinpathcommand) .
+Il metodo [System. Management. Automation. provider. Navigationcmdletprovider. makepath *](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.MakePath) unisce un percorso padre specificato e un percorso figlio specificato per creare un percorso interno del provider. per informazioni sui tipi di percorso che i provider sono in grado di supportare, vedere [Cenni preliminari sul provider di Windows PowerShell](./windows-powershell-provider-overview.md). Il motore di PowerShell chiama questo metodo quando un utente chiama il cmdlet [Microsoft. PowerShell. Commands. JoinPathCommand](/dotnet/api/Microsoft.PowerShell.Commands.joinpathcommand) .
 
 ```csharp
 protected override string MakePath(string parent, string child)
@@ -191,7 +191,7 @@ protected override string MakePath(string parent, string child)
 
 ### <a name="implementing-normalizerelativepath"></a>Implementazione di NormalizeRelativePath
 
-Il metodo [System. Management. Automation. provider. Navigationcmdletprovider. Normalizerelativepath *](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.NormalizeRelativePath) accetta i parametri `path` e `basepath` e restituisce un percorso normalizzato equivalente al parametro `path` e relativo a `basepath` parametro.
+Il metodo [System. Management. Automation. provider. Navigationcmdletprovider. Normalizerelativepath *](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.NormalizeRelativePath) accetta `path` e `basepath` parametri e restituisce un percorso normalizzato equivalente al parametro `path` e relativo al parametro `basepath`.
 
 ```csharp
 protected override string NormalizeRelativePath(string path,

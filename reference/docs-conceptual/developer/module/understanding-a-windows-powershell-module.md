@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: d4e38235-9987-4347-afd2-0f7d1dc8f64a
 caps.latest.revision: 19
 ms.openlocfilehash: b42ba6b2bf42a74213eb78f2db22e16de7e90583
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72360640"
 ---
 # <a name="understanding-a-windows-powershell-module"></a>Informazioni su un modulo di Windows PowerShell
@@ -51,7 +51,7 @@ Come per i moduli di script, è possibile includere un file manifesto per descri
 
 ### <a name="manifest-modules"></a>Moduli manifesto
 
-Un *modulo manifesto* è un modulo che usa un file manifesto per descrivere tutti i relativi componenti, ma non ha alcun tipo di assembly o script di base. Formalmente, un modulo manifesto lascia vuoto l'elemento `ModuleToProcess` o `RootModule` del manifesto. Tuttavia, è comunque possibile usare le altre funzionalità di un modulo, ad esempio la possibilità di caricare gli assembly dipendenti o eseguire automaticamente determinati script di pre-elaborazione. È anche possibile usare un modulo manifesto come modo pratico per creare un pacchetto di risorse che altri moduli utilizzeranno, ad esempio moduli, assembly, tipi o formati annidati. Per ulteriori informazioni, vedere [come scrivere un manifesto del modulo PowerShell](./how-to-write-a-powershell-module-manifest.md).
+Un *modulo manifesto* è un modulo che usa un file manifesto per descrivere tutti i relativi componenti, ma non ha alcun tipo di assembly o script di base. Formalmente, un modulo manifesto lascia vuoto il `ModuleToProcess` o `RootModule` elemento del manifesto. Tuttavia, è comunque possibile usare le altre funzionalità di un modulo, ad esempio la possibilità di caricare gli assembly dipendenti o eseguire automaticamente determinati script di pre-elaborazione. È anche possibile usare un modulo manifesto come modo pratico per creare un pacchetto di risorse che altri moduli utilizzeranno, ad esempio moduli, assembly, tipi o formati annidati. Per ulteriori informazioni, vedere [come scrivere un manifesto del modulo PowerShell](./how-to-write-a-powershell-module-manifest.md).
 
 ### <a name="dynamic-modules"></a>Moduli dinamici
 
@@ -91,7 +91,7 @@ Indipendentemente dal fatto che il percorso della cartella venga definito *base*
 
 - I moduli dinamici creati dal cmdlet `New-Module` possono essere denominati usando il parametro `Name` del cmdlet.
 
-- I moduli importati dagli oggetti assembly tramite il comando **`Import-Module`-assembly** vengono denominati in base alla sintassi seguente: `"dynamic_code_module_" + assembly.GetName()`.
+- I moduli importati dagli oggetti assembly tramite il comando **`Import-Module` assembly** vengono denominati in base alla sintassi seguente: `"dynamic_code_module_" + assembly.GetName()`.
 
   Per altre informazioni, vedere [installazione di un modulo di PowerShell](./installing-a-powershell-module.md) e [modifica del percorso di installazione di PSModulePath](./modifying-the-psmodulepath-installation-path.md).
 

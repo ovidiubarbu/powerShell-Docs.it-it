@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 014763cb-7716-4931-899c-8375b5d7a3dd
 caps.latest.revision: 15
 ms.openlocfilehash: d1d13b5c3436871053353814293d9163ea13c7fb
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72367900"
 ---
 # <a name="wideentry-element-for-widecontrol-format"></a>Elemento WideEntry per WideControl (formato)
@@ -32,7 +32,7 @@ Elemento Configuration (Format) elemento ViewDefinitions (Format) elemento View 
 
 ## <a name="attributes-and-elements"></a>Attributi ed elementi
 
-Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e l'elemento padre dell'elemento `WideEntry`. È necessario specificare un singolo elemento figlio `WideItem`.
+Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e l'elemento padre dell'elemento `WideEntry`. È necessario specificare un singolo elemento `WideItem` figlio.
 
 ### <a name="attributes"></a>Attributi
 
@@ -57,7 +57,7 @@ Una visualizzazione estesa è un formato di elenco che consente di visualizzare 
 
 ## <a name="example"></a>Esempio
 
-Nell'esempio seguente viene illustrato un elemento `WideEntry` che definisce un singolo elemento `WideItem`. L'elemento `WideItem` definisce la proprietà il cui valore viene visualizzato nella visualizzazione.
+Nell'esempio seguente viene illustrato un elemento `WideEntry` che definisce un singolo elemento di `WideItem`. L'elemento `WideItem` definisce la proprietà il cui valore viene visualizzato nella visualizzazione.
 
 ```xml
 <WideEntries>

@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 8ae2196d-d6c8-4101-8805-4190d293af51
 caps.latest.revision: 13
 ms.openlocfilehash: 19d31f6b619dff23e7e35bb53d2397f4f41eb728
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72369880"
 ---
 # <a name="cmdlet-dynamic-parameters"></a>Parametri dinamici cmdlet
@@ -26,7 +26,7 @@ I cmdlet possono definire parametri disponibili per l'utente in condizioni speci
 
 PowerShell usa parametri dinamici in diversi cmdlet del provider. I cmdlet `Get-Item` e `Get-ChildItem`, ad esempio, aggiungono un parametro **CodeSigningCert** in fase di esecuzione quando il parametro **path** specifica il percorso del provider di **certificati** . Se il parametro **path** specifica un percorso per un provider diverso, il parametro **CodeSigningCert** non è disponibile.
 
-Negli esempi seguenti viene illustrato il modo in cui il parametro **CodeSigningCert** viene aggiunto in fase di esecuzione quando viene eseguito `Get-Item`.
+Negli esempi seguenti viene illustrato il modo in cui il parametro **CodeSigningCert** viene aggiunto in fase di esecuzione quando `Get-Item` viene eseguito.
 
 In questo esempio, il runtime di PowerShell ha aggiunto il parametro e il cmdlet ha esito positivo.
 

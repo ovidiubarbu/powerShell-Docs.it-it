@@ -9,17 +9,17 @@ ms.topic: article
 ms.assetid: 2a65b964-5bc6-4ade-a66b-b6afa7351ce7
 caps.latest.revision: 9
 ms.openlocfilehash: 32ebf2531237bfd1042310ccc4155193a58401fd
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72365420"
 ---
 # <a name="interpreting-errorrecord-objects"></a>Interpretazione degli oggetti ErrorRecord
 
 Nella maggior parte dei casi, un oggetto [System. Management. Automation. ErrorRecord](/dotnet/api/System.Management.Automation.ErrorRecord) rappresenta un errore non fatale generato da un comando o uno script. Gli errori di terminazione possono inoltre specificare le informazioni aggiuntive in un ErrorRecord tramite l'interfaccia [System. Management. Automation. Icontainserrorrecord](/dotnet/api/System.Management.Automation.IContainsErrorRecord) .
 
-Se si vuole scrivere un gestore di errori nello script o in un host per gestire errori specifici che si verificano durante l'esecuzione di comandi o script, è necessario interpretare l'oggetto [System. Management. Automation. ErrorRecord](/dotnet/api/System.Management.Automation.ErrorRecord) per determinare se rappresenta la classe di errore che si desidera gestire.
+Se si vuole scrivere un gestore di errori nello script o in un host per gestire errori specifici che si verificano durante l'esecuzione di comandi o script, è necessario interpretare l'oggetto [System. Management. Automation. ErrorRecord](/dotnet/api/System.Management.Automation.ErrorRecord) per determinare se rappresenta la classe di errore che si vuole gestire.
 
 Quando un cmdlet rileva un errore di terminazione o non fatale, deve creare un record di errore in cui viene descritta la condizione di errore. L'applicazione host deve esaminare i record degli errori ed eseguire qualsiasi azione che ridurrà l'errore. L'applicazione host deve inoltre esaminare i record di errore per gli errori non fatali che non sono riusciti a elaborare un record, ma sono stati in grado di continuare ed esaminare i record degli errori per terminare gli errori che hanno causato l'arresto della pipeline.
 
@@ -52,7 +52,7 @@ Il cmdlet può specificare le categorie CloseError, OpenError, InvalidType, Read
 
 L'eccezione inclusa nel record di errore viene fornita dal cmdlet ed è possibile accedervi tramite la proprietà [System. Management. Automation. ErrorRecord. Exception *](/dotnet/api/System.Management.Automation.ErrorRecord.Exception) dell'oggetto [System. Management. Automation. ErrorRecord](/dotnet/api/System.Management.Automation.ErrorRecord) .
 
-Le applicazioni host possono utilizzare la parola chiave `is` per indicare che l'eccezione è di una classe specifica o di una classe derivata. È preferibile creare un ramo per il tipo di eccezione, come illustrato nell'esempio seguente.
+Le applicazioni host possono usare la parola chiave `is` per verificare che l'eccezione sia di una classe specifica o di una classe derivata. È preferibile creare un ramo per il tipo di eccezione, come illustrato nell'esempio seguente.
 
 `if (MyNonTerminatingError.Exception is AccessDeniedException)`
 

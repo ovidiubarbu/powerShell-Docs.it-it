@@ -9,15 +9,15 @@ ms.topic: article
 ms.assetid: 3e83c9d9-6d06-4247-94d9-e3bfd4013b11
 caps.latest.revision: 4
 ms.openlocfilehash: a806d012097d107b6cc35710b9a93f2b27dd1ace
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72359800"
 ---
 # <a name="authoring-the-xml-schema-file-for-a-management-odata-web-service"></a>Creazione del file di schema XML per un servizio Web OData di gestione
 
-Dopo aver definito le risorse che verranno esposte dal servizio Web (vedere [la pagina relativa alla creazione del file di schema MOF per un servizio Web OData di gestione](./authoring-the-mof-schema-file-for-a-management-odata-web-service.md)), è possibile eseguire il mapping di tali risorse ai cmdlet di Windows PowerShell sottostanti che implementano le operazioni supportate per ogni creazione di un file XML conforme allo [schema di mapping delle risorse](./resource-mapping-schema.md). Il file XML specifica inoltre gli URL utilizzati dal client per accedere alle risorse.
+Dopo aver definito le risorse che verranno esposte dal servizio Web (vedere la pagina relativa alla creazione [del file di schema MOF per un servizio Web OData di gestione](./authoring-the-mof-schema-file-for-a-management-odata-web-service.md)), è possibile eseguire il mapping di tali risorse ai cmdlet di Windows PowerShell sottostanti che implementano le operazioni supportate per ogni risorsa creando un file XML conforme allo [schema di mapping delle risorse](./resource-mapping-schema.md). Il file XML specifica inoltre gli URL utilizzati dal client per accedere alle risorse.
 
 ## <a name="mappng-resources-to-urls"></a>Mappng risorse agli URL
 

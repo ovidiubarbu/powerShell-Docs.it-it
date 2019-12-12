@@ -9,15 +9,15 @@ ms.topic: article
 ms.assetid: 481f557d-3344-4d33-b2da-4736a0165181
 caps.latest.revision: 7
 ms.openlocfilehash: fa4cd8a724793e71b615c84a5c5a833aa92c93fc
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72364570"
 ---
 # <a name="getprocesssample02-sample"></a>Esempio di GetProcessSample02
 
-In questo esempio viene illustrato come scrivere un cmdlet che recupera i processi nel computer locale. Fornisce un parametro `Name` che può essere usato per specificare i processi da recuperare. Questo cmdlet è una versione semplificata del cmdlet `Get-Process` fornito da Windows PowerShell 2,0.
+In questo esempio viene illustrato come scrivere un cmdlet che recupera i processi nel computer locale. Fornisce un `Name` parametro che può essere usato per specificare i processi da recuperare. Questo cmdlet è una versione semplificata del cmdlet `Get-Process` fornito da Windows PowerShell 2,0.
 
 ## <a name="how-to-build-the-sample-using-visual-studio"></a>Come compilare l'esempio con Visual Studio.
 
@@ -25,11 +25,11 @@ In questo esempio viene illustrato come scrivere un cmdlet che recupera i proces
 
 2. Fare doppio clic sull'icona del file di soluzione (con estensione sln). Verrà aperto il progetto di esempio in Visual Studio.
 
-3. Scegliere **Compila soluzione**dal menu **Compila** .
+3. Scegliere **Compila soluzione** dal menu **Compila**.
 
     La libreria per l'esempio verrà compilata nelle cartelle \bin o \bin\Debug predefinite.
 
-### <a name="how-to-run-the-sample"></a>Come eseguire l'esempio
+### <a name="how-to-run-the-sample"></a>Per eseguire l'esempio
 
 1. Creare la cartella dei moduli seguente:
 
@@ -51,7 +51,7 @@ In questo esempio viene illustrato come scrivere un cmdlet che recupera i proces
 
 Questo esempio richiede Windows PowerShell 2,0.
 
-## <a name="demonstrates"></a>Dimostra
+## <a name="demonstrates"></a>Illustra
 
 In questo esempio vengono illustrate le operazioni seguenti.
 

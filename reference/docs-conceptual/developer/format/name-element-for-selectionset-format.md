@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 914917f7-0efc-4d1f-88bd-de714bedd98f
 caps.latest.revision: 15
 ms.openlocfilehash: 29dbdbd335511e4ca2706a625541554825838f23
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72362670"
 ---
 # <a name="name-element-for-selectionset-format"></a>Elemento Name per SelectionSet (formato)
@@ -45,7 +45,7 @@ Nessuna.
 |-------------|-----------------|
 |[Elemento SelectionSet (Format)](./selectionset-element-format.md)|Definisce un singolo set di oggetti .NET a cui è possibile fare riferimento dal nome del set.|
 
-## <a name="text-value"></a>Valore di testo
+## <a name="text-value"></a>Valore testo
 
 Specificare il nome per fare riferimento al set di selezione. Non esistono restrizioni per quanto riguarda i caratteri che possono essere usati.
 
@@ -55,7 +55,7 @@ Il nome specificato qui viene usato nell'elemento `SelectionSetName`. Set di sel
 
 ## <a name="example"></a>Esempio
 
-Questo esempio mostra un elemento `SelectionSet` che definisce quattro tipi .NET. Il nome del set di selezione è "FileSystemTypes".
+Questo esempio illustra un elemento `SelectionSet` che definisce quattro tipi .NET. Il nome del set di selezione è "FileSystemTypes".
 
 ```xml
 <SelectionSets>

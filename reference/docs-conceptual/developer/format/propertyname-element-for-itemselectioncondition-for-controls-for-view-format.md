@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: ba3955bc-f3a1-4ef6-86ac-80ffc133ad1b
 caps.latest.revision: 6
 ms.openlocfilehash: 28ad31be4be7be20f1f43ea1b69ad5d294de86f6
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72362480"
 ---
 # <a name="propertyname-element-for-itemselectioncondition-for-controls-for-view-format"></a>Elemento PropertyName per ItemSelectionCondition per Controls per View (formato)
@@ -45,7 +45,7 @@ Nessuna.
 |-------------|-----------------|
 |[Elemento ItemSelectionCondition di Expression per i controlli per la visualizzazione (Format)](./itemselectioncondition-element-for-expressionbinding-for-controls-for-view-format.md)|Definisce la condizione che deve esistere per il controllo da utilizzare.|
 
-## <a name="text-value"></a>Valore di testo
+## <a name="text-value"></a>Valore testo
 
 Specificare il nome della proprietà .NET che attiva la condizione.
 

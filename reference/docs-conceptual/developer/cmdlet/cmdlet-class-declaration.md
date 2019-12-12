@@ -12,10 +12,10 @@ helpviewer_keywords:
 ms.assetid: 1fcc4c5e-0c75-496c-a712-5f844e310576
 caps.latest.revision: 14
 ms.openlocfilehash: 979025ad5c34ab73dcc23d0e38ffb9acc431f15a
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72363520"
 ---
 # <a name="cmdlet-class-declaration"></a>Dichiarazione della classe dei cmdlet
@@ -25,7 +25,7 @@ Una classe Microsoft .NET Framework viene dichiarata come cmdlet specificando l'
 > [!NOTE]
 > L'attributo **cmdlet** viene definito dalla classe [System. Management. Automation. CmdletAttribute](/dotnet/api/System.Management.Automation.CmdletAttribute) . Le proprietà di questa classe corrispondono ai parametri di dichiarazione usati quando si dichiara l'attributo.
 
-## <a name="nouns"></a>Nomi
+## <a name="nouns"></a>Sostantivi
 
 Il sostantivo del cmdlet specifica le risorse su cui agisce il cmdlet. Il sostantivo distingue i cmdlet da altri cmdlet.
 
@@ -45,7 +45,7 @@ L'attributo **cmdlet** consente inoltre di specificare che il cmdlet supporta al
 
 Per ulteriori informazioni sulla sintassi di dichiarazione utilizzata per specificare l'attributo **cmdlet** , vedere Dichiarazione dell' [attributo del cmdlet](./cmdlet-attribute-declaration.md).
 
-## <a name="cmdlet-class-definition"></a>Definizione della classe cmdlet
+## <a name="cmdlet-class-definition"></a>Definizione della classe Cmdlet
 
 Il codice seguente è la definizione di una classe di cmdlet GetProc. Si noti che viene utilizzata la combinazione di maiuscole e minuscole Pascal e che il nome della classe include il verbo e il sostantivo del cmdlet.
 
@@ -53,7 +53,7 @@ Il codice seguente è la definizione di una classe di cmdlet GetProc. Si noti ch
 
 ## <a name="pascal-casing"></a>Maiuscole e minuscole Pascal
 
-Quando si denominano i cmdlet, utilizzare la convenzione Pascal. I cmdlet `Get-Item` e `Get-ItemProperty`, ad esempio, mostrano il modo corretto per usare le maiuscole durante la denominazione dei cmdlet.
+Quando si denominano i cmdlet, utilizzare la convenzione Pascal. I cmdlet `Get-Item` e `Get-ItemProperty`, ad esempio, illustrano il modo corretto per usare le maiuscole durante la denominazione dei cmdlet.
 
 ## <a name="see-also"></a>Vedere anche
 

@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: f24f77d5-e224-4b62-b128-535e045d333e
 caps.latest.revision: 9
 ms.openlocfilehash: 19e96b612a8778d82cdbafb528a7ffeb01f15f99
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72369680"
 ---
 # <a name="how-to-request-confirmations"></a>Come richiedere conferme
@@ -49,7 +49,7 @@ Questo esempio illustra come chiamare i metodi [System. Management. Automation. 
 
 ## <a name="example"></a>Esempio
 
-Nell'esempio di codice seguente, i metodi [System. Management. Automation. cmdlet. ShouldProcess](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) e [System. Management. Automation. cmdlet. ShouldContinue](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue) vengono chiamati dall'interno dell'override della [Proprietà Metodo System. Management. Automation. cmdlet. ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) . È tuttavia possibile chiamare questi metodi anche dagli altri metodi di elaborazione degli input.
+Nell'esempio di codice seguente, i metodi [System. Management. Automation. cmdlet. ShouldProcess](/dotnet/api/System.Management.Automation.Cmdlet.ShouldProcess) e [System. Management. Automation. cmdlet. ShouldContinue](/dotnet/api/System.Management.Automation.Cmdlet.ShouldContinue) vengono chiamati dall'interno dell'override del metodo [System. Management. Automation. cmdlet. ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) . È tuttavia possibile chiamare questi metodi anche dagli altri metodi di elaborazione degli input.
 
 ```csharp
 protected override void ProcessRecord()

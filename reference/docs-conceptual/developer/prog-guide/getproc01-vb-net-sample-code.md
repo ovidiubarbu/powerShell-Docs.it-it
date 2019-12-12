@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 3ee87f67-6d2c-48cc-b300-3ae917c6dc88
 caps.latest.revision: 5
 ms.openlocfilehash: 80f145da8f4e2f3a39b1cdd533478b7fdc2f0a31
-ms.sourcegitcommit: d43f66071f1f33b350d34fa1f46f3a35910c5d24
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "74417437"
 ---
 # <a name="getproc01-vbnet-sample-code"></a>Codice di esempio di GetProc01 (VB.NET)
@@ -24,7 +24,7 @@ Nel codice seguente viene illustrata l'implementazione del cmdlet di esempio Get
 >
 > I file di origine scaricati sono disponibili nella directory **\<PowerShell samples >** .
 
-## <a name="code-sample"></a>Esempio di codice
+## <a name="code-sample"></a>Codice di esempio
 
 <!-- TODO!!!: review snippet reference  [!CODE [msh_samplesgetproc01#getproc01vball](msh_samplesgetproc01#getproc01vball)]  -->
 

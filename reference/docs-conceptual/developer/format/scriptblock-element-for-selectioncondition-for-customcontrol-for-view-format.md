@@ -9,15 +9,15 @@ ms.topic: article
 ms.assetid: 7031fa8b-3e2b-4ea8-89cb-95171f467b5a
 caps.latest.revision: 6
 ms.openlocfilehash: e55d1c5aa533005b258ecbbbf3ed9d55f852eab6
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72368640"
 ---
 # <a name="scriptblock-element-for-selectioncondition-for-customcontrol-for-view-format"></a>Elemento ScriptBlock per SelectionCondition per CustomControl per View (formato)
 
-Specifica lo script che attiva la condizione. Quando questo script viene valutato `true`, la condizione viene soddisfatta e viene usata la definizione. Questo elemento viene utilizzato quando si definisce una visualizzazione controlli personalizzata.
+Specifica lo script che attiva la condizione. Quando questo script viene valutato `true`, la condizione viene soddisfatta e viene utilizzata la definizione. Questo elemento viene utilizzato quando si definisce una visualizzazione controlli personalizzata.
 
 Elemento Configuration (Format) elemento ViewDefinitions (Format) elemento View (Format) elemento CustomControl per View (Format) elemento CustomEntries per CustomControl per la visualizzazione (Format) CustomEntry elemento per CustomEntries per CustomControl per la visualizzazione ( Format) elemento CustomItem per CustomEntry per CustomControl per la visualizzazione (Format) SelectionCondition elemento per EntrySelectedBy per CustomControl per la visualizzazione (Format) ScriptBlock elemento per SelectionCondition per CustomControl per View (Format)
 
@@ -45,7 +45,7 @@ Nessuna.
 |-------------|-----------------|
 |[Elemento SelectionCondition per EntrySelectedBy per CustomControl per View (Format)](./selectioncondition-element-for-entryselectedby-for-customcontrol-format.md)|Definisce una condizione che deve esistere per la definizione del controllo da utilizzare.|
 
-## <a name="text-value"></a>Valore di testo
+## <a name="text-value"></a>Valore testo
 
 Specificare lo script che viene valutato.
 

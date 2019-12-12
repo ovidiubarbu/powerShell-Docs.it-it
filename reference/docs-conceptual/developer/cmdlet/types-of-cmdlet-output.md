@@ -11,10 +11,10 @@ helpviewer_keywords:
 ms.assetid: 547e6695-e936-4cac-a90b-417d0dab393d
 caps.latest.revision: 12
 ms.openlocfilehash: 3efa98c7aa22fdaee8042bae99282aea0618ef5f
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72369290"
 ---
 # <a name="types-of-cmdlet-output"></a>Tipi di output del cmdlet
@@ -54,7 +54,7 @@ Per impostazione predefinita, i messaggi di debug non vengono visualizzati. È p
 
 I cmdlet possono visualizzare messaggi di avviso chiamando il metodo [System. Management. Automation. cmdlet. WriteWarning](/dotnet/api/System.Management.Automation.Cmdlet.WriteWarning) .
 
-Per impostazione predefinita, vengono visualizzati i messaggi di avviso. Tuttavia, è possibile configurare i messaggi di avviso utilizzando la variabile `$WarningPreference` oppure i parametri **verbose** e **debug** quando viene chiamato il cmdlet.
+Per impostazione predefinita, vengono visualizzati i messaggi di avviso. Tuttavia, è possibile configurare i messaggi di avviso utilizzando la variabile `$WarningPreference` o utilizzando i parametri **verbose** e **debug** quando viene chiamato il cmdlet.
 
 ## <a name="displaying-output"></a>Visualizzazione dell'output
 

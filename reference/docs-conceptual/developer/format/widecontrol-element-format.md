@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 715ea055-037b-46ad-b70f-87b3f5134403
 caps.latest.revision: 14
 ms.openlocfilehash: 2742be0389a1bf04af100a490a59c0d938165811
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72367990"
 ---
 # <a name="widecontrol-element-format"></a>Elemento WideControl (formato)
@@ -55,7 +55,7 @@ Nessuna.
 
 ## <a name="remarks"></a>Osservazioni
 
-Quando si definisce una visualizzazione estesa, è possibile aggiungere l'elemento `AutoSize` o il `ColumnNumber`, ma non è possibile aggiungerne entrambi.
+Quando si definisce una visualizzazione estesa, è possibile aggiungere l'elemento `AutoSize` o l'`ColumnNumber` ma non è possibile aggiungere entrambi.
 
 Nella maggior parte dei casi, è necessaria una sola definizione per ogni visualizzazione estesa, ma è possibile avere più definizioni se si vuole usare la stessa visualizzazione per visualizzare oggetti .NET diversi. In questi casi, è possibile specificare una definizione separata per ogni oggetto o set di oggetti.
 
@@ -63,7 +63,7 @@ Per ulteriori informazioni sui componenti di una visualizzazione estesa, vedere 
 
 ## <a name="example"></a>Esempio
 
-Nell'esempio seguente viene illustrato un elemento `WideControl` utilizzato per visualizzare una proprietà dell'oggetto [System. Diagnostics. Process](/dotnet/api/System.Diagnostics.Process) .
+Nell'esempio seguente viene illustrato un elemento `WideControl` usato per visualizzare una proprietà dell'oggetto [System. Diagnostics. Process](/dotnet/api/System.Diagnostics.Process) .
 
 ```xml
 <View>

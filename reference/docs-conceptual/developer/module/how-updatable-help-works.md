@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 7674636e-a0f2-4587-bfc5-dd3e6ce5489e
 caps.latest.revision: 6
 ms.openlocfilehash: 5b6ae54ee6c843996c875189b6ee553be5e4f614
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72367080"
 ---
 # <a name="how-updatable-help-works"></a>Come funziona la Guida aggiornabile
@@ -23,7 +23,7 @@ In questo argomento viene illustrato il modo in cui la guida aggiornabile elabor
 
 Nell'elenco seguente vengono descritte le azioni del cmdlet [Update-Help](/powershell/module/Microsoft.PowerShell.Core/Update-Help) quando un utente esegue un comando per aggiornare i file della Guida per un modulo in una particolare lingua dell'interfaccia utente.
 
-1. `Update-Help` Ottiene il file XML HelpInfo remoto dal percorso specificato dal valore della chiave **HelpInfoURI** nel manifesto del modulo e convalida il file rispetto allo schema. Per visualizzare lo schema, vedere [HELPINFO XML Schema](./helpinfo-xml-schema.md). Quindi `Update-Help` Cerca un file XML HelpInfo locale per il modulo nella directory del modulo nel computer dell'utente.
+1. `Update-Help` ottiene il file XML HelpInfo remoto dal percorso specificato dal valore della chiave **HelpInfoURI** nel manifesto del modulo e convalida il file rispetto allo schema. Per visualizzare lo schema, vedere [HELPINFO XML Schema](./helpinfo-xml-schema.md). Quindi `Update-Help` Cerca un file XML HelpInfo locale per il modulo nella directory del modulo nel computer dell'utente.
 
 2. `Update-Help` confronta il numero di versione dei file della Guida per le impostazioni cultura dell'interfaccia utente specificate nei file XML HelpInfo locali e remoti per il modulo. Se il numero di versione nel file remoto è maggiore del numero di versione nel file locale o se non è presente un file XML HelpInfo locale per il modulo, `Update-Help` prepara il download dei nuovi file della guida.
 
@@ -39,7 +39,7 @@ Nell'elenco seguente vengono descritte le azioni dei cmdlet [Save-Help](/powersh
 
 Il cmdlet `Save-Help` esegue le azioni seguenti in risposta a un comando per salvare i file della Guida per un modulo in una condivisione file specificata dal parametro **DestinationPath** .
 
-1. `Save-Help` Ottiene il file XML HelpInfo remoto dal percorso specificato dal valore della chiave **HelpInfoURI** nel manifesto del modulo e convalida il file rispetto allo schema. Per visualizzare lo schema, vedere [HELPINFO XML Schema](./helpinfo-xml-schema.md). Quindi `Save-Help` Cerca un file XML HelpInfo locale nella directory specificata dal parametro **DestinationPath** nel comando `Save-Help`.
+1. `Save-Help` ottiene il file XML HelpInfo remoto dal percorso specificato dal valore della chiave **HelpInfoURI** nel manifesto del modulo e convalida il file rispetto allo schema. Per visualizzare lo schema, vedere [HELPINFO XML Schema](./helpinfo-xml-schema.md). Quindi `Save-Help` Cerca un file XML HelpInfo locale nella directory specificata dal parametro **DestinationPath** nel comando `Save-Help`.
 
 2. `Save-Help` confronta il numero di versione dei file della Guida per le impostazioni cultura dell'interfaccia utente specificate nei file XML HelpInfo locali e remoti per il modulo. Se il numero di versione nel file remoto è maggiore del numero di versione nel file locale o se non è presente un file XML HelpInfo locale per il modulo nella directory **DestinationPath** , `Save-Help` prepara il download dei nuovi file della guida.
 
@@ -51,7 +51,7 @@ Il cmdlet `Save-Help` esegue le azioni seguenti in risposta a un comando per sal
 
    Il cmdlet `Update-Help` esegue le azioni seguenti in risposta a un comando per aggiornare i file della guida nel computer di un utente dai file in una condivisione file specificata dal parametro **SourcePath** .
 
-1. `Update-Help` Ottiene il file XML HelpInfo remoto dalla directory **SourcePath** Quindi Cerca un file XML HelpInfo locale nella directory del modulo sul computer dell'utente.
+1. `Update-Help` ottiene il file XML HelpInfo remoto dalla directory **SourcePath** Quindi Cerca un file XML HelpInfo locale nella directory del modulo sul computer dell'utente.
 
 2. `Update-Help` confronta il numero di versione dei file della Guida per le impostazioni cultura dell'interfaccia utente specificate nei file XML HelpInfo locali e remoti per il modulo. Se il numero di versione nel file remoto è maggiore del numero di versione nel file locale o se non è presente un file XML HelpInfo locale, `Update-Help` prepara l'installazione di nuovi file della guida.
 

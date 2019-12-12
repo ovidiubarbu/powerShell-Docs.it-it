@@ -8,18 +8,18 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: dc5ce5a2-50e9-4c88-abf1-ac148a8a6b7b
 caps.latest.revision: 15
-ms.openlocfilehash: 639d3a28dd2af09fcc498caedc5fe74c1493445d
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.openlocfilehash: 5957ea4c15cd3778bd09b67c4b97de0ef0cfdd2a
+ms.sourcegitcommit: 0e4c69d8b5cf71431592fe41da816dec9b70f1f9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72360670"
+ms.lasthandoff: 12/09/2019
+ms.locfileid: "74953841"
 ---
 # <a name="modifying-the-psmodulepath-installation-path"></a>Modifica del percorso di installazione di PSModulePath
 
-La variabile di ambiente `PSModulePath` archivia i percorsi delle posizioni dei moduli installati su disco. Windows PowerShell usa questa variabile per individuare i moduli quando l'utente non specifica il percorso completo di un modulo. I percorsi in questa variabile vengono cercati nell'ordine in cui sono visualizzati.
+La variabile di ambiente `PSModulePath` archivia i percorsi delle posizioni dei moduli installati su disco. PowerShell usa questa variabile per individuare i moduli quando l'utente non specifica il percorso completo di un modulo. I percorsi in questa variabile vengono cercati nell'ordine in cui sono visualizzati.
 
-All'avvio di Windows PowerShell, `PSModulePath` viene creato come variabile di ambiente di sistema con il valore predefinito seguente: `$home\Documents\WindowsPowerShell\Modules; $pshome\Modules`.
+All'avvio di PowerShell, `PSModulePath` viene creato come variabile di ambiente di sistema con il valore predefinito seguente: `$HOME\Documents\PowerShell\Modules; $PSHOME\Modules` o `$HOME\Documents\WindowsPowerShell\Modules; $PSHOME\Modules` per Windows PowerShell.
 
 ## <a name="to-view-the-psmodulepath-variable"></a>Per visualizzare la variabile PSModulePath
 
@@ -33,27 +33,25 @@ Per aggiungere percorsi a questa variabile, usare uno dei metodi seguenti:
 
 - Per aggiungere un valore temporaneo disponibile solo per la sessione corrente, eseguire il comando seguente dalla riga di comando:
 
-  `$env:PSModulePath = $env:PSModulePath + ";c:\ModulePath"`
+  `$env:PSModulePath = $env:PSModulePath + "$([System.IO.Path]::PathSeparator)$MyModulePath"`
 
-- Per aggiungere un valore permanente disponibile ogni volta che viene aperta una sessione, aggiungere il comando seguente a un profilo di Windows PowerShell:
+- Per aggiungere un valore permanente disponibile ogni volta che viene aperta una sessione, aggiungere il comando precedente a un file di profilo di PowerShell (`$PROFILE`) >
 
-  `$env:PSModulePath = $env:PSModulePath + ";c:\ModulePath"`
-
-  Per ulteriori informazioni sui profili, vedere [about_Profiles](/powershell/module/microsoft.powershell.core/about/about_profiles) nella libreria Microsoft TechNet.
+  Per altre informazioni sui profili, vedere [about_Profiles](/powershell/module/microsoft.powershell.core/about/about_profiles).
 
 - Per aggiungere una variabile persistente al registro di sistema, creare una nuova variabile di ambiente utente denominata `PSModulePath` usando l'editor delle variabili di ambiente nella finestra di dialogo **proprietà del sistema** .
 
-- Per aggiungere una variabile persistente usando uno script, usare il metodo **nell'SetEnvironmentVariable** nella classe Environment. Ad esempio, lo script seguente aggiunge il percorso "C:\Program Files\Fabrikam\Module al valore della variabile di ambiente PSModulePath per il computer. Per aggiungere il percorso alla variabile di ambiente PSModulePath utente, impostare la destinazione su "User".
+- Per aggiungere una variabile persistente usando uno script, usare il metodo .NET [nell'SetEnvironmentVariable](https://docs.microsoft.com/dotnet/api/system.environment.setenvironmentvariable) sulla classe [System. Environment](https://docs.microsoft.com/dotnet/api/system.environment) . Ad esempio, lo script seguente aggiunge il percorso `C:\Program Files\Fabrikam\Module` al valore della variabile di ambiente `PSModulePath` per il computer. Per aggiungere il percorso alla variabile di ambiente `PSModulePath` utente, impostare la destinazione su "User".
 
   ```powershell
   $CurrentValue = [Environment]::GetEnvironmentVariable("PSModulePath", "Machine")
-  [Environment]::SetEnvironmentVariable("PSModulePath", $CurrentValue + ";C:\Program Files\Fabrikam\Modules", "Machine")
+  [Environment]::SetEnvironmentVariable("PSModulePath", $CurrentValue + [System.IO.Path]::PathSeparator + "C:\Program Files\Fabrikam\Modules", "Machine")
 
   ```
 
 ## <a name="to-remove-locations-from-the-psmodulepath"></a>Per rimuovere i percorsi dal PSModulePath
 
-È possibile rimuovere i percorsi dalla variabile utilizzando metodi simili. ad esempio, `$env:PSModulePath = $env:PSModulePath -replace ";c:\\ModulePath"` rimuoverà il percorso **c:\ModulePath** dalla sessione corrente.
+È possibile rimuovere i percorsi dalla variabile utilizzando metodi simili. ad esempio, `$env:PSModulePath = $env:PSModulePath -replace "$([System.IO.Path]::PathSeparator)c:\\ModulePath"` eliminerà il percorso **c:\ModulePath** dalla sessione corrente.
 
 ## <a name="see-also"></a>Vedere anche
 

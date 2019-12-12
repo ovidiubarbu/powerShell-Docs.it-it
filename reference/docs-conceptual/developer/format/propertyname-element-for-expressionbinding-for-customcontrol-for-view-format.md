@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 1fa3b699-d36e-47a2-b671-a313ba091aaa
 caps.latest.revision: 6
 ms.openlocfilehash: edd8c4b39f56be6b8658db46050bcce33db9cebd
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72364980"
 ---
 # <a name="propertyname-element-for-expressionbinding-for-customcontrol-for-view-format"></a>Elemento PropertyName per ExpressionBinding per CustomControl per View (formato)
@@ -45,7 +45,7 @@ Nessuna.
 |-------------|-----------------|
 |[Elemento expressiongroup per CustomItem per CustomControl per View (Format)](./expressionbinding-element-for-customitem-for-customcontrol-for-view-format.md)|Definisce i dati visualizzati dal controllo.|
 
-## <a name="text-value"></a>Valore di testo
+## <a name="text-value"></a>Valore testo
 
 Specificare il nome della proprietà .NET il cui valore viene visualizzato dal controllo.
 

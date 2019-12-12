@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 7196f039-2f6a-41fd-b252-5b1623ebb9f9
 caps.latest.revision: 11
 ms.openlocfilehash: 09183a538c179f19347c3f1ed45b4ad38c2ca451
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72365170"
 ---
 # <a name="label-element-for-tablecolumnheader-for-tablecontrol-format"></a>Elemento Label per TableColumnHeader per TableControl (formato)
@@ -46,7 +46,7 @@ Nessuna.
 |-------------|-----------------|
 |[Elemento TableColumnHeader per TableHeaders per Table ((Format)](./tablecolumnheader-element-format.md)|Definisce un'etichetta, la larghezza e l'allineamento dei dati per una colonna della tabella.|
 
-## <a name="text-value"></a>Valore di testo
+## <a name="text-value"></a>Valore testo
 
 Consente di specificare il testo visualizzato nella parte superiore della colonna della tabella. Nessun carattere limitato per l'etichetta di colonna.
 
@@ -58,7 +58,7 @@ Per ulteriori informazioni sui componenti di una vista tabella, vedere [creazion
 
 ## <a name="example"></a>Esempio
 
-Questo esempio mostra un elemento `TableColumnHeader` la cui etichetta è "Column 1".
+In questo esempio viene illustrato un elemento `TableColumnHeader` la cui etichetta è "Column 1".
 
 ```xml
 <TableColumnHeader>

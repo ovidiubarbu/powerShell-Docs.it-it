@@ -11,10 +11,10 @@ helpviewer_keywords:
 ms.assetid: cbba4879-bcac-484a-9906-4bbe2cd1eb33
 caps.latest.revision: 11
 ms.openlocfilehash: 48b2b2b9ab2a39cf185ed54bcfa99d46562e13b6
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72366280"
 ---
 # <a name="windows-powershell-reference"></a>Guida di riferimento di Windows PowerShell
@@ -23,7 +23,7 @@ Windows PowerShell è un ambiente Microsoft .NET connesso al Framework progettat
 
 Windows PowerShell consente a un amministratore di sistema di automatizzare l'amministrazione delle risorse di sistema mediante l'esecuzione di comandi direttamente o tramite script.
 
-## <a name="developer-audience"></a>Destinatari degli sviluppatori
+## <a name="developer-audience"></a>Sviluppatori
 
 Il Software Development Kit (SDK) di Windows PowerShell viene scritto per gli sviluppatori di comandi che richiedono informazioni di riferimento sulle API fornite da Windows PowerShell. Gli sviluppatori di comandi usano Windows PowerShell per creare sia i comandi che i provider che estendono le attività che possono essere eseguite da Windows PowerShell.
 

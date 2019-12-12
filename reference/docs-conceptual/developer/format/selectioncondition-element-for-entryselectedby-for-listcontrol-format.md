@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 7649d5d0-2b56-49b5-a670-dde46caca343
 caps.latest.revision: 11
 ms.openlocfilehash: 7150b29ad84dfb587215ee3e64c356adbd5a6305
-ms.sourcegitcommit: d43f66071f1f33b350d34fa1f46f3a35910c5d24
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/23/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "74417547"
 ---
 # <a name="selectioncondition-element-for-entryselectedby-for-listcontrol-format"></a>Elemento SelectionCondition per EntrySelectedBy per ListControl (formato)
@@ -38,11 +38,11 @@ Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e l'
 
 ### <a name="attributes"></a>Attributi
 
-No.
+Nessuna.
 
 ### <a name="child-elements"></a>Elementi figlio
 
-|Elemento|Descrizione|
+|Elemento|Description|
 |-------------|-----------------|
 |[Elemento PropertyName per SelectionCondition per EntrySelectedBy per ListEntry (Format)](./propertyname-element-for-selectioncondition-for-entryselectedby-for-listcontrol-format.md)|Elemento facoltativo.<br /><br /> Specifica la proprietà .NET che attiva la condizione.|
 |[Elemento ScriptBlock per SelectionCondition per EntrySelectedBy per ListEntry (Format)](./scriptblock-element-for-selectioncondition-for-entryselectedby-for-listcontrol-format.md)|Elemento facoltativo.<br /><br /> Specifica lo script che attiva la condizione.|
@@ -51,11 +51,11 @@ No.
 
 ### <a name="parent-elements"></a>Elementi padre
 
-|Elemento|Descrizione|
+|Elemento|Description|
 |-------------|-----------------|
 |[Elemento EntrySelectedBy per TableRowEntry (Format)](./entryselectedby-element-for-tablerowentry-for-tablecontrol-format.md)|Definisce i tipi .NET che utilizzano questa voce di tabella o la condizione che deve esistere affinché questa voce venga utilizzata.|
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 lWhen si definisce una condizione di selezione, si applicano i requisiti seguenti:
 

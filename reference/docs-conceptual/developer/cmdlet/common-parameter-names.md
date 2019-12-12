@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 0db9f54c-4014-4450-9e81-c9f5fe562a0e
 caps.latest.revision: 12
 ms.openlocfilehash: c65deeda6b2ef1b52de55035dc606259a7f2d232
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72365740"
 ---
 # <a name="common-parameter-names"></a>Nomi dei parametri comuni
@@ -40,13 +40,13 @@ Questo parametro specifica l'azione che deve essere eseguita quando si verifica 
 
 ### <a name="errorvariable-alias-ev"></a>ErrorVariable (alias: EV)
 
-Tipo di dati: String
+Tipo di dati: stringa
 
 Questo parametro specifica la variabile in cui inserire gli oggetti quando si verifica un errore. Per accodare questa variabile, utilizzare +*VarName* anziché cancellare e impostare la variabile.
 
 ### <a name="outvariable-alias-ov"></a>OutVariable (alias: OV)
 
-Tipo di dati: String
+Tipo di dati: stringa
 
 Questo parametro specifica la variabile in cui inserire tutti gli oggetti di output generati dal cmdlet. Per accodare questa variabile, utilizzare +*VarName* anziché cancellare e impostare la variabile.
 
@@ -70,7 +70,7 @@ Questo parametro specifica l'azione che deve essere eseguita quando il cmdlet sc
 
 ### <a name="warningvariable-alias-wv"></a>WarningVariable (alias: WV)
 
-Tipo di dati: String
+Tipo di dati: stringa
 
 Questo parametro specifica la variabile in cui è possibile salvare i messaggi di avviso. Per accodare questa variabile, utilizzare +*VarName* anziché cancellare e impostare la variabile.
 

@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 697791b3-2135-4a39-b9d7-8566ed67acf2
 caps.latest.revision: 13
 ms.openlocfilehash: bb5d036e5658c365a4fafa2cac05c0bba9f87019
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72360700"
 ---
 # <a name="importing-a-powershell-module"></a>Importazione di un modulo di PowerShell
@@ -31,7 +31,7 @@ PowerShell 2,0 usa il cmdlet [Import-Module](/powershell/module/Microsoft.PowerS
 Import-Module myModule
 ```
 
-Supponendo che il modulo si trovasse nel `PSModulePath`, PowerShell caricherà il modulo nella memoria attiva. Se il modulo non si trovava in un percorso `PSModulePath`, era comunque possibile indicare in modo esplicito a PowerShell dove trovarlo:
+Supponendo che il modulo sia stato individuato nella `PSModulePath`, PowerShell caricherà il modulo nella memoria attiva. Se il modulo non si trovava in un percorso di `PSModulePath`, era comunque possibile indicare in modo esplicito a PowerShell dove trovarlo:
 
 ```powershell
 Import-Module -Name C:\myRandomDirectory\myModule -Verbose
@@ -41,7 +41,7 @@ Import-Module -Name C:\myRandomDirectory\myModule -Verbose
 
 ## <a name="implicitly-importing-a-module-powershell-30"></a>Importazione implicita di un modulo (PowerShell 3,0)
 
-A partire da Windows PowerShell 3,0, i moduli vengono importati automaticamente quando si usa un cmdlet o una funzione nel modulo in un comando. Questa funzionalità funziona in qualsiasi modulo di una directory inclusa nel valore della variabile di ambiente **PSModulePath** . Se il modulo non viene salvato in un percorso valido, è comunque possibile caricarli usando l'opzione di [Importazione-modulo](/powershell/module/Microsoft.PowerShell.Core/Import-Module) esplicita descritta in precedenza.
+A partire da Windows PowerShell 3.0, i moduli vengono importati automaticamente quando un cmdlet o una funzione nel modulo viene usato in un comando. Questa funzionalità funziona in qualsiasi modulo di una directory inclusa nel valore della variabile di ambiente **PSModulePath** . Se il modulo non viene salvato in un percorso valido, è comunque possibile caricarli usando l'opzione di [Importazione-modulo](/powershell/module/Microsoft.PowerShell.Core/Import-Module) esplicita descritta in precedenza.
 
 Le azioni seguenti attivano l'importazione automatica di un modulo, noto anche come "caricamento automatico del modulo".
 
@@ -51,7 +51,7 @@ Le azioni seguenti attivano l'importazione automatica di un modulo, noto anche c
 
 - Usare il cmdlet [Get-Help](/powershell/module/Microsoft.PowerShell.Core/Get-Help) per ottenere la guida per un cmdlet. Ad esempio, digitando `Get-Help Get-WinEvent` viene importato il modulo Microsoft. PowerShell. Diagnostics che contiene il cmdlet `Get-WinEvent`.
 
-Per supportare l'importazione automatica dei moduli, il cmdlet `Get-Command` Ottiene tutti i cmdlet e le funzioni in tutti i moduli installati, anche se il modulo non viene importato nella sessione. Per ulteriori informazioni, vedere l'argomento della Guida relativo al cmdlet [Get-Command](/powershell/module/Microsoft.PowerShell.Core/Get-Command) .
+Per supportare l'importazione automatica dei moduli, il cmdlet `Get-Command` ottiene tutti i cmdlet e le funzioni in tutti i moduli installati, anche se il modulo non viene importato nella sessione. Per ulteriori informazioni, vedere l'argomento della Guida relativo al cmdlet [Get-Command](/powershell/module/Microsoft.PowerShell.Core/Get-Command) .
 
 ## <a name="the-importing-process"></a>Processo di importazione
 
@@ -62,7 +62,7 @@ I metadati dei membri esportati da un modulo hanno una proprietà ModuleName. Qu
 > [!WARNING]
 > Se il nome di un membro esportato usa un verbo non approvato o se il nome del membro usa caratteri limitati, viene visualizzato un avviso quando viene eseguito il cmdlet [Import-Module](/powershell/module/Microsoft.PowerShell.Core/Import-Module) .
 
-Per impostazione predefinita, il cmdlet [Import-Module](/powershell/module/Microsoft.PowerShell.Core/Import-Module) non restituisce alcun oggetto alla pipeline. Tuttavia, il cmdlet supporta un parametro `PassThru` che può essere usato per restituire un oggetto [System. Management. Automation. PSModuleInfo](/dotnet/api/System.Management.Automation.PSModuleInfo) per ogni modulo importato. Per inviare l'output all'host, gli utenti devono eseguire il cmdlet [Write-Host](/powershell/module/Microsoft.PowerShell.Utility/Write-Host) .
+Per impostazione predefinita, il cmdlet [Import-Module](/powershell/module/Microsoft.PowerShell.Core/Import-Module) non restituisce alcun oggetto alla pipeline. Tuttavia, il cmdlet supporta un `PassThru` parametro che può essere usato per restituire un oggetto [System. Management. Automation. PSModuleInfo](/dotnet/api/System.Management.Automation.PSModuleInfo) per ogni modulo importato. Per inviare l'output all'host, gli utenti devono eseguire il cmdlet [Write-Host](/powershell/module/Microsoft.PowerShell.Utility/Write-Host) .
 
 ## <a name="restricting--the-members-that-are-imported"></a>Limitazione dei membri importati
 
@@ -70,9 +70,9 @@ Quando un modulo viene importato usando il cmdlet [Import-Module](/powershell/mo
 
 - `Function`: questo parametro limita le funzioni esportate. Se si usa un manifesto del modulo, vedere la chiave FunctionsToExport.
 
-- `Cmdlet`: questo parametro limita i cmdlet esportati. Se si usa un manifesto del modulo, vedere la chiave CmdletsToExport.
+- `Cmdlet`: questo parametro limita i cmdlet esportati (se si usa un manifesto del modulo, vedere la chiave CmdletsToExport).
 
-- `Variable`: questo parametro limita le variabili esportate. Se si usa un manifesto del modulo, vedere la chiave VariablesToExport.
+- `Variable`: questo parametro limita le variabili esportate (se si usa un manifesto del modulo, vedere la chiave VariablesToExport).
 
 - `Alias`: questo parametro limita gli alias esportati. Se si usa un manifesto del modulo, vedere la chiave AliasesToExport.
 

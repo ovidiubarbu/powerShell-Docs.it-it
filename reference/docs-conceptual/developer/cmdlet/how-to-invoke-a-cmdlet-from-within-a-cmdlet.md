@@ -9,15 +9,15 @@ ms.topic: article
 ms.assetid: efa4dc9c-ddee-46a3-978a-9dbb61e9bb6f
 caps.latest.revision: 12
 ms.openlocfilehash: 57543a88d04eb66c9d109249a99ddd272b02ef9d
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72365550"
 ---
 # <a name="how-to-invoke-a-cmdlet-from-within-a-cmdlet"></a>Come richiamare un cmdlet da un altro cmdlet
 
-In questo esempio viene illustrato come richiamare un cmdlet da un altro cmdlet, che consente di aggiungere la funzionalità del cmdlet richiamato al cmdlet che si sta sviluppando. In questo esempio viene richiamato il cmdlet `Get-Process` per ottenere i processi in esecuzione nel computer locale. La chiamata al cmdlet `Get-Process` equivale al comando seguente. Questo comando recupera tutti i processi i cui nomi iniziano con i caratteri "a" e "t".
+In questo esempio viene illustrato come richiamare un cmdlet da un altro cmdlet, che consente di aggiungere la funzionalità del cmdlet richiamato al cmdlet che si sta sviluppando. In questo esempio viene richiamato il cmdlet `Get-Process` per ottenere i processi in esecuzione nel computer locale. La chiamata al cmdlet `Get-Process` è equivalente al comando seguente. Questo comando recupera tutti i processi i cui nomi iniziano con i caratteri "a" e "t".
 
 ```powershell
 Get-Process -name [a-t]
@@ -55,7 +55,7 @@ Get-Process -name [a-t]
 
 ## <a name="example"></a>Esempio
 
-In questo esempio, il cmdlet `Get-Process` viene richiamato dall'interno del metodo [System. Management. Automation. cmdlet. BeginProcessing](/dotnet/api/System.Management.Automation.Cmdlet.BeginProcessing) di un cmdlet.
+In questo esempio il cmdlet `Get-Process` viene richiamato dall'interno del metodo [System. Management. Automation. cmdlet. BeginProcessing](/dotnet/api/System.Management.Automation.Cmdlet.BeginProcessing) di un cmdlet.
 
 ```csharp
 using System;

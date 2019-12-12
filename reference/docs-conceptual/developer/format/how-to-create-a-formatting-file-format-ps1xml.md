@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: eb568878-f63e-4561-98e2-16ee2ac7559d
 caps.latest.revision: 8
 ms.openlocfilehash: e97e9ddb1bf81ba66e5f3cedddd22e3a861ce228
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72363620"
 ---
 # <a name="how-to-create-a-formatting-file-formatps1xml"></a>Come creare un file di formattazione (con estensione format.ps1xml)
@@ -36,7 +36,7 @@ In questo argomento viene descritto come creare un file di formattazione (format
    </Configuration>
    ```
 
-   - I tag \<Configuration > \</> di configurazione definiscono il nodo `Configuration` radice. Tutti i tag XML aggiuntivi verranno racchiusi in questo nodo.
+   - I tag \<Configuration >\</configurazione > definiscono il nodo `Configuration` radice. Tutti i tag XML aggiuntivi verranno racchiusi in questo nodo.
 
    - I <ViewDefinitions></ViewDefinitions> Tag definiscono il nodo `ViewDefinitions`. Tutte le visualizzazioni vengono definite all'interno di questo nodo.
 

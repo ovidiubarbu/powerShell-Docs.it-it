@@ -9,17 +9,17 @@ ms.topic: article
 ms.assetid: d0c6d03f-1c1a-43d8-928e-e3290e90e0bc
 caps.latest.revision: 5
 ms.openlocfilehash: 0210b5ed3104777541692a0e78e7d3b16f9c8256
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72361210"
 ---
 # <a name="how-to-add-syntax-to-a-cmdlet-help-topic"></a>Come aggiungere la sintassi a un argomento della Guida sui cmdlet
 
 Prima di iniziare a scrivere il codice XML per il diagramma della sintassi nel file della guida del cmdlet, leggere questa sezione per ottenere un quadro chiaro del tipo di dati che è necessario fornire, ad esempio gli attributi dei parametri, e la modalità di visualizzazione dei dati nel diagramma della sintassi.
 
-### <a name="parameter-attributes"></a>Attributi parametro
+### <a name="parameter-attributes"></a>Attributi dei parametri
 
 - Obbligatoria
 
@@ -156,11 +156,11 @@ In genere, i valori dei parametri che sono segnaposto sono obbligatori e i valor
 
 ## <a name="coding-the-syntax-diagram-xml"></a>Codifica del diagramma di sintassi XML
 
-Il nodo della sintassi del codice XML inizia immediatamente dopo il nodo Description, che termina con il tag \</maml: Description >. Per informazioni sulla raccolta dei dati utilizzati nel diagramma della sintassi, vedere [raccolta di informazioni sulla sintassi](#gathering-syntax-information).
+Il nodo della sintassi del codice XML inizia subito dopo il nodo Description, che termina con il tag \</maml: Description >. Per informazioni sulla raccolta dei dati utilizzati nel diagramma della sintassi, vedere [raccolta di informazioni sulla sintassi](#gathering-syntax-information).
 
 ### <a name="adding-a-syntax-node"></a>Aggiunta di un nodo della sintassi
 
-Il diagramma della sintassi visualizzato nell'argomento della guida del cmdlet viene generato dai dati nel nodo Syntax del codice XML. Il nodo della sintassi è racchiuso in una coppia se \<command: Syntax > Tag. Con ogni set di parametri del cmdlet racchiuso in una coppia di \<command: syntaxitem > Tag. Non esiste alcun limite al numero di tag di > \<command: syntaxitem che è possibile aggiungere.
+Il diagramma della sintassi visualizzato nell'argomento della guida del cmdlet viene generato dai dati nel nodo Syntax del codice XML. Il nodo della sintassi è racchiuso in una coppia se \<comando: Syntax > Tags. Con ogni set di parametri del cmdlet racchiuso in una coppia di \<comando: syntaxitem > Tag. Non esiste alcun limite al numero di \<comando: syntaxitem > Tag che è possibile aggiungere.
 
 Nell'esempio seguente viene illustrato un nodo della sintassi con nodi di elementi della sintassi per due set di parametri.
 
@@ -181,7 +181,7 @@ Nell'esempio seguente viene illustrato un nodo della sintassi con nodi di elemen
 
 ### <a name="adding-the-cmdlet-name-to-the-parameter-set-data"></a>Aggiunta del nome del cmdlet ai dati del set di parametri
 
-Ogni set di parametri del cmdlet viene specificato in un nodo elemento della sintassi. Ogni nodo dell'elemento della sintassi inizia con una coppia di \<maml: nome > Tag che includono il nome del cmdlet.
+Ogni set di parametri del cmdlet viene specificato in un nodo elemento della sintassi. Ogni nodo dell'elemento della sintassi inizia con una coppia di \<maml: Name > Tag che includono il nome del cmdlet.
 
 Nell'esempio seguente viene incluso un nodo della sintassi con nodi di elementi della sintassi per due set di parametri.
 
@@ -198,12 +198,12 @@ Nell'esempio seguente viene incluso un nodo della sintassi con nodi di elementi 
 
 ### <a name="adding-parameters"></a>Aggiunta di parametri
 
-Ogni parametro aggiunto al nodo elemento della sintassi viene specificato in una coppia di tag \<command: Parameter >. È necessaria una coppia di tag \<command: Parameter > per ogni parametro incluso nel set di parametri, ad eccezione dei parametri comuni forniti da Windows PowerShell?.
+Ogni parametro aggiunto al nodo elemento sintassi viene specificato in una coppia di \<comando: parametro > Tag. È necessario disporre di una coppia di \<comando: parametro > Tag per ogni parametro incluso nel set di parametri, ad eccezione dei parametri comuni forniti da Windows PowerShell?.
 
-Gli attributi del tag di apertura \<command: Parameter > determinano il modo in cui il parametro viene visualizzato nel diagramma della sintassi. Per informazioni sugli attributi dei parametri, vedere [attributi dei parametri](#parameter-attributes).
+Gli attributi del comando di \<di apertura: parametro > Tag determinano il modo in cui il parametro viene visualizzato nel diagramma della sintassi. Per informazioni sugli attributi dei parametri, vedere [attributi dei parametri](#parameter-attributes).
 
 > [!NOTE]
-> Il tag \<command: Parameter > supporta un elemento figlio \<maml: Description > il cui contenuto non viene mai visualizzato. Le descrizioni dei parametri sono specificate nel nodo Parameter del codice XML. Per evitare incoerenze tra le informazioni nell'elemento di sintassi Bodes e il nodo del parametro, omettere il (\<maml: Description > o lasciarlo vuoto.
+> Il \<comando: parametro > Tag supporta un elemento figlio \<maml: Description > il cui contenuto non viene mai visualizzato. Le descrizioni dei parametri sono specificate nel nodo Parameter del codice XML. Per evitare incoerenze tra le informazioni nell'elemento di sintassi Bodes e il nodo del parametro, omettere il (\<maml: Description > o lasciarlo vuoto.
 
 Nell'esempio seguente viene incluso un nodo elemento della sintassi per un set di parametri con due parametri.
 
