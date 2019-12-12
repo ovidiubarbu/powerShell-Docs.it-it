@@ -9,33 +9,33 @@ ms.topic: article
 ms.assetid: 302f00ef-e145-4668-a26a-03bc96ef4b8f
 caps.latest.revision: 10
 ms.openlocfilehash: 9cc6933858f4f37e4fa8b3bbe9afb69a73c68572
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72361010"
 ---
-# <a name="remoterunspace01-sample"></a><span data-ttu-id="5fc62-102">Esempio di RemoteRunspace01</span><span class="sxs-lookup"><span data-stu-id="5fc62-102">RemoteRunspace01 Sample</span></span>
+# <a name="remoterunspace01-sample"></a><span data-ttu-id="ab571-102">Esempio di RemoteRunspace01</span><span class="sxs-lookup"><span data-stu-id="ab571-102">RemoteRunspace01 Sample</span></span>
 
-<span data-ttu-id="5fc62-103">Questo esempio illustra come creare un spazio remoto usato per stabilire una connessione remota.</span><span class="sxs-lookup"><span data-stu-id="5fc62-103">This sample shows how to create a remote runspace that is used to establish a remote connection.</span></span>
+<span data-ttu-id="ab571-103">Questo esempio illustra come creare un spazio remoto usato per stabilire una connessione remota.</span><span class="sxs-lookup"><span data-stu-id="ab571-103">This sample shows how to create a remote runspace that is used to establish a remote connection.</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="5fc62-104">Requisiti</span><span class="sxs-lookup"><span data-stu-id="5fc62-104">Requirements</span></span>
+## <a name="requirements"></a><span data-ttu-id="ab571-104">Requisiti</span><span class="sxs-lookup"><span data-stu-id="ab571-104">Requirements</span></span>
 
- <span data-ttu-id="5fc62-105">Questo esempio richiede Windows PowerShell 2,0.</span><span class="sxs-lookup"><span data-stu-id="5fc62-105">This sample requires Windows PowerShell 2.0.</span></span>
+ <span data-ttu-id="ab571-105">Questo esempio richiede Windows PowerShell 2,0.</span><span class="sxs-lookup"><span data-stu-id="ab571-105">This sample requires Windows PowerShell 2.0.</span></span>
 
-## <a name="demonstrates"></a><span data-ttu-id="5fc62-106">Dimostra</span><span class="sxs-lookup"><span data-stu-id="5fc62-106">Demonstrates</span></span>
+## <a name="demonstrates"></a><span data-ttu-id="ab571-106">Illustra</span><span class="sxs-lookup"><span data-stu-id="ab571-106">Demonstrates</span></span>
 
-- <span data-ttu-id="5fc62-107">Creazione di un oggetto [System. Management. Automation. Runspaces. WSManConnectionInfo](/dotnet/api/System.Management.Automation.Runspaces.WSManConnectionInfo) .</span><span class="sxs-lookup"><span data-stu-id="5fc62-107">Creating a [System.Management.Automation.Runspaces.Wsmanconnectioninfo](/dotnet/api/System.Management.Automation.Runspaces.WSManConnectionInfo) object.</span></span>
+- <span data-ttu-id="ab571-107">Creazione di un oggetto [System. Management. Automation. Runspaces. WSManConnectionInfo](/dotnet/api/System.Management.Automation.Runspaces.WSManConnectionInfo) .</span><span class="sxs-lookup"><span data-stu-id="ab571-107">Creating a [System.Management.Automation.Runspaces.Wsmanconnectioninfo](/dotnet/api/System.Management.Automation.Runspaces.WSManConnectionInfo) object.</span></span>
 
-- <span data-ttu-id="5fc62-108">Impostazione delle proprietà [System. Management. Automation. Runspaces. RunspaceConnectionInfo. OperationTimeout \*](/dotnet/api/System.Management.Automation.Runspaces.RunspaceConnectionInfo.OperationTimeout) e [System. Management. Automation. Runspaces. RunspaceConnectionInfo. OpenTimeout \*](/dotnet/api/System.Management.Automation.Runspaces.RunspaceConnectionInfo.OpenTimeout) del [ Oggetto System. Management. Automation. Runspaces. WSManConnectionInfo](/dotnet/api/System.Management.Automation.Runspaces.WSManConnectionInfo) .</span><span class="sxs-lookup"><span data-stu-id="5fc62-108">Setting the [System.Management.Automation.Runspaces.Runspaceconnectioninfo.Operationtimeout\*](/dotnet/api/System.Management.Automation.Runspaces.RunspaceConnectionInfo.OperationTimeout) and [System.Management.Automation.Runspaces.Runspaceconnectioninfo.Opentimeout\*](/dotnet/api/System.Management.Automation.Runspaces.RunspaceConnectionInfo.OpenTimeout) properties of the [System.Management.Automation.Runspaces.Wsmanconnectioninfo](/dotnet/api/System.Management.Automation.Runspaces.WSManConnectionInfo) object.</span></span>
+- <span data-ttu-id="ab571-108">Impostazione delle proprietà [System. Management. Automation. Runspaces. RunspaceConnectionInfo. OperationTimeout \*](/dotnet/api/System.Management.Automation.Runspaces.RunspaceConnectionInfo.OperationTimeout) e [System. Management. Automation. Runspaces. RunspaceConnectionInfo. OpenTimeout \*](/dotnet/api/System.Management.Automation.Runspaces.RunspaceConnectionInfo.OpenTimeout) dell'oggetto [System. Management. Automation. Runspaces. WSManConnectionInfo](/dotnet/api/System.Management.Automation.Runspaces.WSManConnectionInfo) .</span><span class="sxs-lookup"><span data-stu-id="ab571-108">Setting the [System.Management.Automation.Runspaces.Runspaceconnectioninfo.Operationtimeout\*](/dotnet/api/System.Management.Automation.Runspaces.RunspaceConnectionInfo.OperationTimeout) and [System.Management.Automation.Runspaces.Runspaceconnectioninfo.Opentimeout\*](/dotnet/api/System.Management.Automation.Runspaces.RunspaceConnectionInfo.OpenTimeout) properties of the [System.Management.Automation.Runspaces.Wsmanconnectioninfo](/dotnet/api/System.Management.Automation.Runspaces.WSManConnectionInfo) object.</span></span>
 
-- <span data-ttu-id="5fc62-109">Creazione di un spazio remoto che usa l'oggetto [System. Management. Automation. Runspaces. WSManConnectionInfo](/dotnet/api/System.Management.Automation.Runspaces.WSManConnectionInfo) per stabilire la connessione remota.</span><span class="sxs-lookup"><span data-stu-id="5fc62-109">Creating a remote runspace that uses the [System.Management.Automation.Runspaces.Wsmanconnectioninfo](/dotnet/api/System.Management.Automation.Runspaces.WSManConnectionInfo) object to establish the remote connection.</span></span>
+- <span data-ttu-id="ab571-109">Creazione di un spazio remoto che usa l'oggetto [System. Management. Automation. Runspaces. WSManConnectionInfo](/dotnet/api/System.Management.Automation.Runspaces.WSManConnectionInfo) per stabilire la connessione remota.</span><span class="sxs-lookup"><span data-stu-id="ab571-109">Creating a remote runspace that uses the [System.Management.Automation.Runspaces.Wsmanconnectioninfo](/dotnet/api/System.Management.Automation.Runspaces.WSManConnectionInfo) object to establish the remote connection.</span></span>
 
-- <span data-ttu-id="5fc62-110">Chiusura della spazio remota per rilasciare la connessione remota.</span><span class="sxs-lookup"><span data-stu-id="5fc62-110">Closing the remote runspace to release the remote connection.</span></span>
+- <span data-ttu-id="ab571-110">Chiusura della spazio remota per rilasciare la connessione remota.</span><span class="sxs-lookup"><span data-stu-id="ab571-110">Closing the remote runspace to release the remote connection.</span></span>
 
-## <a name="example"></a><span data-ttu-id="5fc62-111">Esempio</span><span class="sxs-lookup"><span data-stu-id="5fc62-111">Example</span></span>
+## <a name="example"></a><span data-ttu-id="ab571-111">Esempio</span><span class="sxs-lookup"><span data-stu-id="ab571-111">Example</span></span>
 
-<span data-ttu-id="5fc62-112">Questo esempio definisce una connessione remota e quindi utilizza tali informazioni di connessione per stabilire una connessione remota.</span><span class="sxs-lookup"><span data-stu-id="5fc62-112">This sample defines a remote connection and then uses that connection information to establish a remote connection.</span></span>
+<span data-ttu-id="ab571-112">Questo esempio definisce una connessione remota e quindi utilizza tali informazioni di connessione per stabilire una connessione remota.</span><span class="sxs-lookup"><span data-stu-id="ab571-112">This sample defines a remote connection and then uses that connection information to establish a remote connection.</span></span>
 
 ```csharp
 namespace Microsoft.Samples.PowerShell.Runspaces

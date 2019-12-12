@@ -9,41 +9,41 @@ ms.topic: article
 ms.assetid: a6a04f15-b5d8-475b-ac9c-e75c58ec8933
 caps.latest.revision: 8
 ms.openlocfilehash: 3cb370cd1bfe9ce7198980cc1c26fafb126d00a3
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72360900"
 ---
-# <a name="runspace04-sample"></a><span data-ttu-id="7aa09-102">Esempio di Runspace04</span><span class="sxs-lookup"><span data-stu-id="7aa09-102">Runspace04 Sample</span></span>
+# <a name="runspace04-sample"></a><span data-ttu-id="53078-102">Esempio di Runspace04</span><span class="sxs-lookup"><span data-stu-id="53078-102">Runspace04 Sample</span></span>
 
-<span data-ttu-id="7aa09-103">Questo esempio illustra come usare la classe [System. Management. Automation. PowerShell](/dotnet/api/system.management.automation.powershell) per eseguire i comandi e come intercettare gli errori di terminazione che vengono generati quando si eseguono i comandi.</span><span class="sxs-lookup"><span data-stu-id="7aa09-103">This sample shows how to use the [System.Management.Automation.Powershell](/dotnet/api/system.management.automation.powershell) class to run commands, and how to catch terminating errors that are thrown when running the commands.</span></span> <span data-ttu-id="7aa09-104">Vengono eseguiti due comandi e all'ultimo viene passato un argomento di parametro non valido.</span><span class="sxs-lookup"><span data-stu-id="7aa09-104">Two commands are run, and the last command is passed a parameter argument that is not valid.</span></span> <span data-ttu-id="7aa09-105">Di conseguenza, non viene restituito alcun oggetto e viene generato un errore non fatale.</span><span class="sxs-lookup"><span data-stu-id="7aa09-105">As a result, no objects are returned and a terminating error is thrown.</span></span>
+<span data-ttu-id="53078-103">Questo esempio illustra come usare la classe [System. Management. Automation. PowerShell](/dotnet/api/system.management.automation.powershell) per eseguire i comandi e come intercettare gli errori di terminazione che vengono generati quando si eseguono i comandi.</span><span class="sxs-lookup"><span data-stu-id="53078-103">This sample shows how to use the [System.Management.Automation.Powershell](/dotnet/api/system.management.automation.powershell) class to run commands, and how to catch terminating errors that are thrown when running the commands.</span></span> <span data-ttu-id="53078-104">Vengono eseguiti due comandi e all'ultimo viene passato un argomento di parametro non valido.</span><span class="sxs-lookup"><span data-stu-id="53078-104">Two commands are run, and the last command is passed a parameter argument that is not valid.</span></span> <span data-ttu-id="53078-105">Di conseguenza, non viene restituito alcun oggetto e viene generato un errore non fatale.</span><span class="sxs-lookup"><span data-stu-id="53078-105">As a result, no objects are returned and a terminating error is thrown.</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="7aa09-106">Requisiti</span><span class="sxs-lookup"><span data-stu-id="7aa09-106">Requirements</span></span>
+## <a name="requirements"></a><span data-ttu-id="53078-106">Requisiti</span><span class="sxs-lookup"><span data-stu-id="53078-106">Requirements</span></span>
 
-<span data-ttu-id="7aa09-107">Questo esempio richiede Windows PowerShell 2,0.</span><span class="sxs-lookup"><span data-stu-id="7aa09-107">This sample requires Windows PowerShell 2.0.</span></span>
+<span data-ttu-id="53078-107">Questo esempio richiede Windows PowerShell 2,0.</span><span class="sxs-lookup"><span data-stu-id="53078-107">This sample requires Windows PowerShell 2.0.</span></span>
 
-## <a name="demonstrates"></a><span data-ttu-id="7aa09-108">Dimostra</span><span class="sxs-lookup"><span data-stu-id="7aa09-108">Demonstrates</span></span>
+## <a name="demonstrates"></a><span data-ttu-id="53078-108">Illustra</span><span class="sxs-lookup"><span data-stu-id="53078-108">Demonstrates</span></span>
 
-<span data-ttu-id="7aa09-109">In questo esempio vengono illustrate le operazioni seguenti.</span><span class="sxs-lookup"><span data-stu-id="7aa09-109">This sample demonstrates the following.</span></span>
+<span data-ttu-id="53078-109">In questo esempio vengono illustrate le operazioni seguenti.</span><span class="sxs-lookup"><span data-stu-id="53078-109">This sample demonstrates the following.</span></span>
 
-- <span data-ttu-id="7aa09-110">Creazione di un oggetto [System. Management. Automation. PowerShell](/dotnet/api/system.management.automation.powershell) .</span><span class="sxs-lookup"><span data-stu-id="7aa09-110">Creating a [System.Management.Automation.Powershell](/dotnet/api/system.management.automation.powershell) object.</span></span>
+- <span data-ttu-id="53078-110">Creazione di un oggetto [System. Management. Automation. PowerShell](/dotnet/api/system.management.automation.powershell) .</span><span class="sxs-lookup"><span data-stu-id="53078-110">Creating a [System.Management.Automation.Powershell](/dotnet/api/system.management.automation.powershell) object.</span></span>
 
-- <span data-ttu-id="7aa09-111">Aggiunta di comandi alla pipeline dell'oggetto [System. Management. Automation. PowerShell](/dotnet/api/system.management.automation.powershell) .</span><span class="sxs-lookup"><span data-stu-id="7aa09-111">Adding commands to the pipeline of the [System.Management.Automation.Powershell](/dotnet/api/system.management.automation.powershell) object.</span></span>
+- <span data-ttu-id="53078-111">Aggiunta di comandi alla pipeline dell'oggetto [System. Management. Automation. PowerShell](/dotnet/api/system.management.automation.powershell) .</span><span class="sxs-lookup"><span data-stu-id="53078-111">Adding commands to the pipeline of the [System.Management.Automation.Powershell](/dotnet/api/system.management.automation.powershell) object.</span></span>
 
-- <span data-ttu-id="7aa09-112">Aggiunta di argomenti di parametro alla pipeline.</span><span class="sxs-lookup"><span data-stu-id="7aa09-112">Adding parameter arguments to the pipeline.</span></span>
+- <span data-ttu-id="53078-112">Aggiunta di argomenti di parametro alla pipeline.</span><span class="sxs-lookup"><span data-stu-id="53078-112">Adding parameter arguments to the pipeline.</span></span>
 
-- <span data-ttu-id="7aa09-113">Richiamo sincrono dei comandi.</span><span class="sxs-lookup"><span data-stu-id="7aa09-113">Invoking the commands synchronously.</span></span>
+- <span data-ttu-id="53078-113">Richiamo sincrono dei comandi.</span><span class="sxs-lookup"><span data-stu-id="53078-113">Invoking the commands synchronously.</span></span>
 
-- <span data-ttu-id="7aa09-114">Uso di oggetti [System. Management. Automation. PSObject](/dotnet/api/System.Management.Automation.PSObject) per estrarre e visualizzare le proprietà dagli oggetti restituiti dai comandi.</span><span class="sxs-lookup"><span data-stu-id="7aa09-114">Using [System.Management.Automation.PSObject](/dotnet/api/System.Management.Automation.PSObject) objects to extract and display properties from the objects returned by the commands.</span></span>
+- <span data-ttu-id="53078-114">Uso di oggetti [System. Management. Automation. PSObject](/dotnet/api/System.Management.Automation.PSObject) per estrarre e visualizzare le proprietà dagli oggetti restituiti dai comandi.</span><span class="sxs-lookup"><span data-stu-id="53078-114">Using [System.Management.Automation.PSObject](/dotnet/api/System.Management.Automation.PSObject) objects to extract and display properties from the objects returned by the commands.</span></span>
 
-- <span data-ttu-id="7aa09-115">Recupero e visualizzazione dei record di errore generati durante l'esecuzione dei comandi.</span><span class="sxs-lookup"><span data-stu-id="7aa09-115">Retrieving and displaying error records that were generated during the running of the commands.</span></span>
+- <span data-ttu-id="53078-115">Recupero e visualizzazione dei record di errore generati durante l'esecuzione dei comandi.</span><span class="sxs-lookup"><span data-stu-id="53078-115">Retrieving and displaying error records that were generated during the running of the commands.</span></span>
 
-- <span data-ttu-id="7aa09-116">Rilevamento e visualizzazione delle eccezioni di terminazione generate dai comandi.</span><span class="sxs-lookup"><span data-stu-id="7aa09-116">Catching and displaying terminating exceptions thrown by the commands.</span></span>
+- <span data-ttu-id="53078-116">Rilevamento e visualizzazione delle eccezioni di terminazione generate dai comandi.</span><span class="sxs-lookup"><span data-stu-id="53078-116">Catching and displaying terminating exceptions thrown by the commands.</span></span>
 
-## <a name="example"></a><span data-ttu-id="7aa09-117">Esempio</span><span class="sxs-lookup"><span data-stu-id="7aa09-117">Example</span></span>
+## <a name="example"></a><span data-ttu-id="53078-117">Esempio</span><span class="sxs-lookup"><span data-stu-id="53078-117">Example</span></span>
 
-<span data-ttu-id="7aa09-118">In questo esempio i comandi vengono eseguiti in modo sincrono nei spazio predefiniti forniti da Windows PowerShell.</span><span class="sxs-lookup"><span data-stu-id="7aa09-118">This sample runs commands synchronously in the default runspace provided by Windows PowerShell.</span></span> <span data-ttu-id="7aa09-119">L'ultimo comando genera un errore di terminazione perché un argomento parametro non valido viene passato al comando.</span><span class="sxs-lookup"><span data-stu-id="7aa09-119">The last command throws a terminating error because a parameter argument that is not valid is passed to the command.</span></span> <span data-ttu-id="7aa09-120">L'errore di terminazione viene intercettato e visualizzato.</span><span class="sxs-lookup"><span data-stu-id="7aa09-120">The terminating error is trapped and displayed.</span></span>
+<span data-ttu-id="53078-118">In questo esempio i comandi vengono eseguiti in modo sincrono nei spazio predefiniti forniti da Windows PowerShell.</span><span class="sxs-lookup"><span data-stu-id="53078-118">This sample runs commands synchronously in the default runspace provided by Windows PowerShell.</span></span> <span data-ttu-id="53078-119">L'ultimo comando genera un errore di terminazione perché un argomento parametro non valido viene passato al comando.</span><span class="sxs-lookup"><span data-stu-id="53078-119">The last command throws a terminating error because a parameter argument that is not valid is passed to the command.</span></span> <span data-ttu-id="53078-120">L'errore di terminazione viene intercettato e visualizzato.</span><span class="sxs-lookup"><span data-stu-id="53078-120">The terminating error is trapped and displayed.</span></span>
 
 ```csharp
 namespace Microsoft.Samples.PowerShell.Runspaces
@@ -123,6 +123,6 @@ namespace Microsoft.Samples.PowerShell.Runspaces
 }
 ```
 
-## <a name="see-also"></a><span data-ttu-id="7aa09-121">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="7aa09-121">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="53078-121">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="53078-121">See Also</span></span>
 
-[<span data-ttu-id="7aa09-122">Scrittura di un'applicazione host di Windows PowerShell</span><span class="sxs-lookup"><span data-stu-id="7aa09-122">Writing a Windows PowerShell Host Application</span></span>](./writing-a-windows-powershell-host-application.md)
+[<span data-ttu-id="53078-122">Scrittura di un'applicazione host di Windows PowerShell</span><span class="sxs-lookup"><span data-stu-id="53078-122">Writing a Windows PowerShell Host Application</span></span>](./writing-a-windows-powershell-host-application.md)

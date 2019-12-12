@@ -11,49 +11,49 @@ helpviewer_keywords:
 ms.assetid: 875024f4-e02b-4416-80b9-af5e5b50aad6
 caps.latest.revision: 7
 ms.openlocfilehash: 465ab9e8fa29716ce0f46ad0dcf01d0ddd615bcd
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72364230"
 ---
-# <a name="writing-a-windows-powershell-snap-in"></a><span data-ttu-id="5fefc-102">Scrittura di uno snap-in di Windows PowerShell</span><span class="sxs-lookup"><span data-stu-id="5fefc-102">Writing a Windows PowerShell Snap-in</span></span>
+# <a name="writing-a-windows-powershell-snap-in"></a><span data-ttu-id="ddf46-102">Scrittura di uno snap-in di Windows PowerShell</span><span class="sxs-lookup"><span data-stu-id="ddf46-102">Writing a Windows PowerShell Snap-in</span></span>
 
-<span data-ttu-id="5fefc-103">Questo esempio illustra come scrivere uno snap-in di Windows PowerShell che può essere usato per registrare tutti i cmdlet e i provider di Windows PowerShell in un assembly.</span><span class="sxs-lookup"><span data-stu-id="5fefc-103">This example shows how to write a Windows PowerShell snap-in that can be used to register all the cmdlets and Windows PowerShell providers in an assembly.</span></span>
+<span data-ttu-id="ddf46-103">Questo esempio illustra come scrivere uno snap-in di Windows PowerShell che può essere usato per registrare tutti i cmdlet e i provider di Windows PowerShell in un assembly.</span><span class="sxs-lookup"><span data-stu-id="ddf46-103">This example shows how to write a Windows PowerShell snap-in that can be used to register all the cmdlets and Windows PowerShell providers in an assembly.</span></span>
 
-<span data-ttu-id="5fefc-104">Con questo tipo di snap-in non è possibile selezionare i cmdlet e i provider che si desidera registrare.</span><span class="sxs-lookup"><span data-stu-id="5fefc-104">With this type of snap-in, you do not select which cmdlets and providers you want to register.</span></span> <span data-ttu-id="5fefc-105">Per scrivere uno snap-in che consente di selezionare quello registrato, vedere scrittura di [uno snap-in di Windows PowerShell personalizzato](./writing-a-custom-windows-powershell-snap-in.md).</span><span class="sxs-lookup"><span data-stu-id="5fefc-105">To write a snap-in that allows you to select what is registered, see [Writing a Custom Windows PowerShell Snap-in](./writing-a-custom-windows-powershell-snap-in.md).</span></span>
+<span data-ttu-id="ddf46-104">Con questo tipo di snap-in non è possibile selezionare i cmdlet e i provider che si desidera registrare.</span><span class="sxs-lookup"><span data-stu-id="ddf46-104">With this type of snap-in, you do not select which cmdlets and providers you want to register.</span></span> <span data-ttu-id="ddf46-105">Per scrivere uno snap-in che consente di selezionare quello registrato, vedere scrittura di [uno snap-in di Windows PowerShell personalizzato](./writing-a-custom-windows-powershell-snap-in.md).</span><span class="sxs-lookup"><span data-stu-id="ddf46-105">To write a snap-in that allows you to select what is registered, see [Writing a Custom Windows PowerShell Snap-in](./writing-a-custom-windows-powershell-snap-in.md).</span></span>
 
-### <a name="writing-a-windows-powershell-snap-in"></a><span data-ttu-id="5fefc-106">Scrittura di uno snap-in di Windows PowerShell</span><span class="sxs-lookup"><span data-stu-id="5fefc-106">Writing a Windows PowerShell Snap-in</span></span>
+### <a name="writing-a-windows-powershell-snap-in"></a><span data-ttu-id="ddf46-106">Scrittura di uno snap-in di Windows PowerShell</span><span class="sxs-lookup"><span data-stu-id="ddf46-106">Writing a Windows PowerShell Snap-in</span></span>
 
-1. <span data-ttu-id="5fefc-107">Aggiungere l'attributo RunInstallerAttribute.</span><span class="sxs-lookup"><span data-stu-id="5fefc-107">Add the RunInstallerAttribute attribute.</span></span>
+1. <span data-ttu-id="ddf46-107">Aggiungere l'attributo RunInstallerAttribute.</span><span class="sxs-lookup"><span data-stu-id="ddf46-107">Add the RunInstallerAttribute attribute.</span></span>
 
-2. <span data-ttu-id="5fefc-108">Creare una classe pubblica che deriva dalla classe [System. Management. Automation. pssnapin](/dotnet/api/System.Management.Automation.PSSnapIn) .</span><span class="sxs-lookup"><span data-stu-id="5fefc-108">Create a public class that derives from the [System.Management.Automation.PSSnapIn](/dotnet/api/System.Management.Automation.PSSnapIn) class.</span></span>
+2. <span data-ttu-id="ddf46-108">Creare una classe pubblica che deriva dalla classe [System. Management. Automation. pssnapin](/dotnet/api/System.Management.Automation.PSSnapIn) .</span><span class="sxs-lookup"><span data-stu-id="ddf46-108">Create a public class that derives from the [System.Management.Automation.PSSnapIn](/dotnet/api/System.Management.Automation.PSSnapIn) class.</span></span>
 
-    <span data-ttu-id="5fefc-109">In questo esempio, il nome della classe è "GetProcPSSnapIn01".</span><span class="sxs-lookup"><span data-stu-id="5fefc-109">In this example, the class name is "GetProcPSSnapIn01".</span></span>
+    <span data-ttu-id="ddf46-109">In questo esempio, il nome della classe è "GetProcPSSnapIn01".</span><span class="sxs-lookup"><span data-stu-id="ddf46-109">In this example, the class name is "GetProcPSSnapIn01".</span></span>
 
-3. <span data-ttu-id="5fefc-110">Aggiungere una proprietà pubblica per il nome dello snap-in (obbligatorio).</span><span class="sxs-lookup"><span data-stu-id="5fefc-110">Add a public property for the name of the snap-in (required).</span></span> <span data-ttu-id="5fefc-111">Quando si assegnano nomi agli snap-in, non usare i caratteri seguenti: #.</span><span class="sxs-lookup"><span data-stu-id="5fefc-111">When naming snap-ins, do not use any of the following characters: # .</span></span> <span data-ttu-id="5fefc-112">, () {} [] &-/\ $; : "' \< >;?</span><span class="sxs-lookup"><span data-stu-id="5fefc-112">, ( ) { } [ ] & - /\ $ ; : " ' \< > ; ?</span></span> <span data-ttu-id="5fefc-113">@ \` \*</span><span class="sxs-lookup"><span data-stu-id="5fefc-113">@ \` \*</span></span>
+3. <span data-ttu-id="ddf46-110">Aggiungere una proprietà pubblica per il nome dello snap-in (obbligatorio).</span><span class="sxs-lookup"><span data-stu-id="ddf46-110">Add a public property for the name of the snap-in (required).</span></span> <span data-ttu-id="ddf46-111">Quando si assegnano nomi agli snap-in, non usare i caratteri seguenti: #.</span><span class="sxs-lookup"><span data-stu-id="ddf46-111">When naming snap-ins, do not use any of the following characters: # .</span></span> <span data-ttu-id="ddf46-112">, () {} [] &-/\ $; : "' \< >;?</span><span class="sxs-lookup"><span data-stu-id="ddf46-112">, ( ) { } [ ] & - /\ $ ; : " ' \< > ; ?</span></span> <span data-ttu-id="ddf46-113">@ \` \*</span><span class="sxs-lookup"><span data-stu-id="ddf46-113">@ \` \*</span></span>
 
-    <span data-ttu-id="5fefc-114">In questo esempio, il nome dello snap-in è "GetProcPSSnapIn01".</span><span class="sxs-lookup"><span data-stu-id="5fefc-114">In this example, the name of the snap-in is "GetProcPSSnapIn01".</span></span>
+    <span data-ttu-id="ddf46-114">In questo esempio, il nome dello snap-in è "GetProcPSSnapIn01".</span><span class="sxs-lookup"><span data-stu-id="ddf46-114">In this example, the name of the snap-in is "GetProcPSSnapIn01".</span></span>
 
-4. <span data-ttu-id="5fefc-115">Aggiungere una proprietà pubblica per il fornitore dello snap-in (obbligatorio).</span><span class="sxs-lookup"><span data-stu-id="5fefc-115">Add a public property for the vendor of the snap-in (required).</span></span>
+4. <span data-ttu-id="ddf46-115">Aggiungere una proprietà pubblica per il fornitore dello snap-in (obbligatorio).</span><span class="sxs-lookup"><span data-stu-id="ddf46-115">Add a public property for the vendor of the snap-in (required).</span></span>
 
-    <span data-ttu-id="5fefc-116">In questo esempio, il fornitore è "Microsoft".</span><span class="sxs-lookup"><span data-stu-id="5fefc-116">In this example, the vendor is "Microsoft".</span></span>
+    <span data-ttu-id="ddf46-116">In questo esempio, il fornitore è "Microsoft".</span><span class="sxs-lookup"><span data-stu-id="ddf46-116">In this example, the vendor is "Microsoft".</span></span>
 
-5. <span data-ttu-id="5fefc-117">Aggiungere una proprietà pubblica per la risorsa fornitore dello snap-in (facoltativo).</span><span class="sxs-lookup"><span data-stu-id="5fefc-117">Add a public property for the vendor resource of the snap-in (optional).</span></span>
+5. <span data-ttu-id="ddf46-117">Aggiungere una proprietà pubblica per la risorsa fornitore dello snap-in (facoltativo).</span><span class="sxs-lookup"><span data-stu-id="ddf46-117">Add a public property for the vendor resource of the snap-in (optional).</span></span>
 
-    <span data-ttu-id="5fefc-118">In questo esempio, la risorsa fornitore è "GetProcPSSnapIn01, Microsoft".</span><span class="sxs-lookup"><span data-stu-id="5fefc-118">In this example, the vendor resource is "GetProcPSSnapIn01,Microsoft".</span></span>
+    <span data-ttu-id="ddf46-118">In questo esempio, la risorsa fornitore è "GetProcPSSnapIn01, Microsoft".</span><span class="sxs-lookup"><span data-stu-id="ddf46-118">In this example, the vendor resource is "GetProcPSSnapIn01,Microsoft".</span></span>
 
-6. <span data-ttu-id="5fefc-119">Aggiungere una proprietà pubblica per la descrizione dello snap-in (obbligatorio).</span><span class="sxs-lookup"><span data-stu-id="5fefc-119">Add a public property for the description of the snap-in (required).</span></span>
+6. <span data-ttu-id="ddf46-119">Aggiungere una proprietà pubblica per la descrizione dello snap-in (obbligatorio).</span><span class="sxs-lookup"><span data-stu-id="ddf46-119">Add a public property for the description of the snap-in (required).</span></span>
 
-    <span data-ttu-id="5fefc-120">In questo esempio, la descrizione è "questo è uno snap-in di Windows PowerShell che registra il cmdlet Get-proc".</span><span class="sxs-lookup"><span data-stu-id="5fefc-120">In this example, the description is "This is a Windows PowerShell snap-in that registers the get-proc cmdlet".</span></span>
+    <span data-ttu-id="ddf46-120">In questo esempio, la descrizione è "questo è uno snap-in di Windows PowerShell che registra il cmdlet Get-proc".</span><span class="sxs-lookup"><span data-stu-id="ddf46-120">In this example, the description is "This is a Windows PowerShell snap-in that registers the get-proc cmdlet".</span></span>
 
-7. <span data-ttu-id="5fefc-121">Aggiungere una proprietà pubblica per la risorsa Description dello snap-in (facoltativo).</span><span class="sxs-lookup"><span data-stu-id="5fefc-121">Add a public property for the description resource of the snap-in (optional).</span></span>
+7. <span data-ttu-id="ddf46-121">Aggiungere una proprietà pubblica per la risorsa Description dello snap-in (facoltativo).</span><span class="sxs-lookup"><span data-stu-id="ddf46-121">Add a public property for the description resource of the snap-in (optional).</span></span>
 
-    <span data-ttu-id="5fefc-122">In questo esempio, la risorsa fornitore è "GetProcPSSnapIn01, questo è uno snap-in di Windows PowerShell che registra il cmdlet Get-proc".</span><span class="sxs-lookup"><span data-stu-id="5fefc-122">In this example, the vendor resource is "GetProcPSSnapIn01,This is a Windows PowerShell snap-in that registers the get-proc cmdlet".</span></span>
+    <span data-ttu-id="ddf46-122">In questo esempio, la risorsa fornitore è "GetProcPSSnapIn01, questo è uno snap-in di Windows PowerShell che registra il cmdlet Get-proc".</span><span class="sxs-lookup"><span data-stu-id="ddf46-122">In this example, the vendor resource is "GetProcPSSnapIn01,This is a Windows PowerShell snap-in that registers the get-proc cmdlet".</span></span>
 
-## <a name="example"></a><span data-ttu-id="5fefc-123">Esempio</span><span class="sxs-lookup"><span data-stu-id="5fefc-123">Example</span></span>
+## <a name="example"></a><span data-ttu-id="ddf46-123">Esempio</span><span class="sxs-lookup"><span data-stu-id="ddf46-123">Example</span></span>
 
-<span data-ttu-id="5fefc-124">Questo esempio illustra come scrivere uno snap-in di Windows PowerShell che può essere usato per registrare il cmdlet Get-proc nella shell di Windows PowerShell.</span><span class="sxs-lookup"><span data-stu-id="5fefc-124">This example shows how to write a Windows PowerShell snap-in that can be used to register the Get-Proc cmdlet in the Windows PowerShell shell.</span></span> <span data-ttu-id="5fefc-125">Tenere presente che in questo esempio l'assembly completo conterrà solo la classe di snap-in GetProcPSSnapIn01 e la classe del cmdlet Get-proc.</span><span class="sxs-lookup"><span data-stu-id="5fefc-125">Be aware that in this example, the complete assembly would contain only the GetProcPSSnapIn01 snap-in class and the Get-Proc cmdlet class.</span></span>
+<span data-ttu-id="ddf46-124">Questo esempio illustra come scrivere uno snap-in di Windows PowerShell che può essere usato per registrare il cmdlet Get-proc nella shell di Windows PowerShell.</span><span class="sxs-lookup"><span data-stu-id="ddf46-124">This example shows how to write a Windows PowerShell snap-in that can be used to register the Get-Proc cmdlet in the Windows PowerShell shell.</span></span> <span data-ttu-id="ddf46-125">Tenere presente che in questo esempio l'assembly completo conterrà solo la classe di snap-in GetProcPSSnapIn01 e la classe del cmdlet Get-proc.</span><span class="sxs-lookup"><span data-stu-id="ddf46-125">Be aware that in this example, the complete assembly would contain only the GetProcPSSnapIn01 snap-in class and the Get-Proc cmdlet class.</span></span>
 
 ```csharp
 [RunInstaller(true)]
@@ -126,8 +126,8 @@ public class GetProcPSSnapIn01 : PSSnapIn
 }
 ```
 
-## <a name="see-also"></a><span data-ttu-id="5fefc-126">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="5fefc-126">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ddf46-126">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="ddf46-126">See Also</span></span>
 
-[<span data-ttu-id="5fefc-127">Come registrare cmdlet, provider e applicazioni host</span><span class="sxs-lookup"><span data-stu-id="5fefc-127">How to Register Cmdlets, Providers, and Host Applications</span></span>](https://msdn.microsoft.com/en-us/a41e9054-29c8-40ab-bf2b-8ce4e7ec1c8c)
+[<span data-ttu-id="ddf46-127">Come registrare cmdlet, provider e applicazioni host</span><span class="sxs-lookup"><span data-stu-id="ddf46-127">How to Register Cmdlets, Providers, and Host Applications</span></span>](https://msdn.microsoft.com/en-us/a41e9054-29c8-40ab-bf2b-8ce4e7ec1c8c)
 
-[<span data-ttu-id="5fefc-128">SDK della shell di Windows PowerShell</span><span class="sxs-lookup"><span data-stu-id="5fefc-128">Windows PowerShell Shell SDK</span></span>](../windows-powershell-reference.md)
+[<span data-ttu-id="ddf46-128">SDK della shell di Windows PowerShell</span><span class="sxs-lookup"><span data-stu-id="ddf46-128">Windows PowerShell Shell SDK</span></span>](../windows-powershell-reference.md)

@@ -13,42 +13,42 @@ helpviewer_keywords:
 ms.assetid: 1f8066e6-e5d3-4f4e-8948-a90af5dace82
 caps.latest.revision: 11
 ms.openlocfilehash: 155a406b9855c435041fe175ac7d983a4b4eb8b7
-ms.sourcegitcommit: 52a67bcd9d7bf3e8600ea4302d1fa8970ff9c998
+ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72369130"
 ---
-# <a name="validaterange-attribute-declaration"></a><span data-ttu-id="5b145-102">Dichiarazione dell'attributo ValidateRange</span><span class="sxs-lookup"><span data-stu-id="5b145-102">ValidateRange Attribute Declaration</span></span>
+# <a name="validaterange-attribute-declaration"></a><span data-ttu-id="6c5e3-102">Dichiarazione dell'attributo ValidateRange</span><span class="sxs-lookup"><span data-stu-id="6c5e3-102">ValidateRange Attribute Declaration</span></span>
 
-<span data-ttu-id="5b145-103">L'attributo ValidateRange specifica i valori minimo e massimo (intervallo) per l'argomento del parametro del cmdlet.</span><span class="sxs-lookup"><span data-stu-id="5b145-103">The ValidateRange attribute specifies the minimum and maximum values (the range) for the cmdlet parameter argument.</span></span> <span data-ttu-id="5b145-104">Questo attributo può essere usato anche dalle funzioni di Windows PowerShell.</span><span class="sxs-lookup"><span data-stu-id="5b145-104">This attribute can also be used by Windows PowerShell functions.</span></span>
+<span data-ttu-id="6c5e3-103">L'attributo ValidateRange specifica i valori minimo e massimo (intervallo) per l'argomento del parametro del cmdlet.</span><span class="sxs-lookup"><span data-stu-id="6c5e3-103">The ValidateRange attribute specifies the minimum and maximum values (the range) for the cmdlet parameter argument.</span></span> <span data-ttu-id="6c5e3-104">Questo attributo può essere usato anche dalle funzioni di Windows PowerShell.</span><span class="sxs-lookup"><span data-stu-id="6c5e3-104">This attribute can also be used by Windows PowerShell functions.</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="5b145-105">Sintassi</span><span class="sxs-lookup"><span data-stu-id="5b145-105">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="6c5e3-105">Sintassi</span><span class="sxs-lookup"><span data-stu-id="6c5e3-105">Syntax</span></span>
 
 ```csharp
 [ValidateRange(object minRange, object maxRange)]
 ```
 
-#### <a name="parameters"></a><span data-ttu-id="5b145-106">Parametri</span><span class="sxs-lookup"><span data-stu-id="5b145-106">Parameters</span></span>
+#### <a name="parameters"></a><span data-ttu-id="6c5e3-106">Parametri</span><span class="sxs-lookup"><span data-stu-id="6c5e3-106">Parameters</span></span>
 
-<span data-ttu-id="5b145-107">`MinRange` ([System. Object](/dotnet/api/system.object)) obbligatorio.</span><span class="sxs-lookup"><span data-stu-id="5b145-107">`MinRange` ([System.Object](/dotnet/api/system.object)) Required.</span></span> <span data-ttu-id="5b145-108">Specifica il valore minimo consentito.</span><span class="sxs-lookup"><span data-stu-id="5b145-108">Specifies the minimum value allowed.</span></span>
+<span data-ttu-id="6c5e3-107">`MinRange` ([System. Object](/dotnet/api/system.object)) obbligatorio.</span><span class="sxs-lookup"><span data-stu-id="6c5e3-107">`MinRange` ([System.Object](/dotnet/api/system.object)) Required.</span></span> <span data-ttu-id="6c5e3-108">Specifica il valore minimo consentito.</span><span class="sxs-lookup"><span data-stu-id="6c5e3-108">Specifies the minimum value allowed.</span></span>
 
-<span data-ttu-id="5b145-109">`MaxRange` ([System. Object](/dotnet/api/system.object)) obbligatorio.</span><span class="sxs-lookup"><span data-stu-id="5b145-109">`MaxRange` ([System.Object](/dotnet/api/system.object)) Required.</span></span> <span data-ttu-id="5b145-110">Specifica il valore massimo consentito.</span><span class="sxs-lookup"><span data-stu-id="5b145-110">Specifies the maximum value allowed.</span></span>
+<span data-ttu-id="6c5e3-109">`MaxRange` ([System. Object](/dotnet/api/system.object)) obbligatorio.</span><span class="sxs-lookup"><span data-stu-id="6c5e3-109">`MaxRange` ([System.Object](/dotnet/api/system.object)) Required.</span></span> <span data-ttu-id="6c5e3-110">Specifica il valore massimo consentito.</span><span class="sxs-lookup"><span data-stu-id="6c5e3-110">Specifies the maximum value allowed.</span></span>
 
-## <a name="remarks"></a><span data-ttu-id="5b145-111">Osservazioni</span><span class="sxs-lookup"><span data-stu-id="5b145-111">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="6c5e3-111">Osservazioni</span><span class="sxs-lookup"><span data-stu-id="6c5e3-111">Remarks</span></span>
 
-- <span data-ttu-id="5b145-112">Il runtime di Windows PowerShell genera un errore di costruzione quando il valore del parametro `MinRange` è maggiore del valore del parametro `MaxRange`.</span><span class="sxs-lookup"><span data-stu-id="5b145-112">The Windows PowerShell runtime throws a construction error when the value of the `MinRange` parameter is greater than the value of the `MaxRange` parameter.</span></span>
+- <span data-ttu-id="6c5e3-112">Il runtime di Windows PowerShell genera un errore di costruzione quando il valore del parametro `MinRange` è maggiore del valore del parametro `MaxRange`.</span><span class="sxs-lookup"><span data-stu-id="6c5e3-112">The Windows PowerShell runtime throws a construction error when the value of the `MinRange` parameter is greater than the value of the `MaxRange` parameter.</span></span>
 
-- <span data-ttu-id="5b145-113">Il runtime di Windows PowerShell genera un errore di convalida nelle condizioni seguenti:</span><span class="sxs-lookup"><span data-stu-id="5b145-113">The Windows PowerShell runtime throws a validation error under the following conditions:</span></span>
+- <span data-ttu-id="6c5e3-113">Il runtime di Windows PowerShell genera un errore di convalida nelle condizioni seguenti:</span><span class="sxs-lookup"><span data-stu-id="6c5e3-113">The Windows PowerShell runtime throws a validation error under the following conditions:</span></span>
 
-    - <span data-ttu-id="5b145-114">Quando il valore dell'argomento è minore del limite `MinRange` o maggiore del limite di `MaxRange`.</span><span class="sxs-lookup"><span data-stu-id="5b145-114">When the value of the argument is less than the `MinRange` limit or greater than the `MaxRange` limit.</span></span>
+    - <span data-ttu-id="6c5e3-114">Quando il valore dell'argomento è minore del limite `MinRange` o maggiore del limite di `MaxRange`.</span><span class="sxs-lookup"><span data-stu-id="6c5e3-114">When the value of the argument is less than the `MinRange` limit or greater than the `MaxRange` limit.</span></span>
 
-    - <span data-ttu-id="5b145-115">Quando l'argomento non è dello stesso tipo del `MinRange` e dei parametri di `MaxRange`.</span><span class="sxs-lookup"><span data-stu-id="5b145-115">When the argument is not of the same type as the `MinRange` and the `MaxRange` parameters.</span></span>
+    - <span data-ttu-id="6c5e3-115">Quando l'argomento non è dello stesso tipo del `MinRange` e dei parametri di `MaxRange`.</span><span class="sxs-lookup"><span data-stu-id="6c5e3-115">When the argument is not of the same type as the `MinRange` and the `MaxRange` parameters.</span></span>
 
-- <span data-ttu-id="5b145-116">L'attributo ValidateRange è definito dalla classe [System. Management. Automation. Validaterangeattribute](/dotnet/api/System.Management.Automation.ValidateRangeAttribute) .</span><span class="sxs-lookup"><span data-stu-id="5b145-116">The ValidateRange attribute is defined by the [System.Management.Automation.Validaterangeattribute](/dotnet/api/System.Management.Automation.ValidateRangeAttribute) class.</span></span>
+- <span data-ttu-id="6c5e3-116">L'attributo ValidateRange è definito dalla classe [System. Management. Automation. Validaterangeattribute](/dotnet/api/System.Management.Automation.ValidateRangeAttribute) .</span><span class="sxs-lookup"><span data-stu-id="6c5e3-116">The ValidateRange attribute is defined by the [System.Management.Automation.Validaterangeattribute](/dotnet/api/System.Management.Automation.ValidateRangeAttribute) class.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="5b145-117">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="5b145-117">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="6c5e3-117">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="6c5e3-117">See Also</span></span>
 
-[<span data-ttu-id="5b145-118">System. Management. Automation. Validaterangeattribute</span><span class="sxs-lookup"><span data-stu-id="5b145-118">System.Management.Automation.Validaterangeattribute</span></span>](/dotnet/api/System.Management.Automation.ValidateRangeAttribute)
+[<span data-ttu-id="6c5e3-118">System. Management. Automation. Validaterangeattribute</span><span class="sxs-lookup"><span data-stu-id="6c5e3-118">System.Management.Automation.Validaterangeattribute</span></span>](/dotnet/api/System.Management.Automation.ValidateRangeAttribute)
 
-[<span data-ttu-id="5b145-119">Scrittura di un cmdlet di Windows PowerShell</span><span class="sxs-lookup"><span data-stu-id="5b145-119">Writing a Windows PowerShell Cmdlet</span></span>](./writing-a-windows-powershell-cmdlet.md)
+[<span data-ttu-id="6c5e3-119">Scrittura di un cmdlet di Windows PowerShell</span><span class="sxs-lookup"><span data-stu-id="6c5e3-119">Writing a Windows PowerShell Cmdlet</span></span>](./writing-a-windows-powershell-cmdlet.md)
