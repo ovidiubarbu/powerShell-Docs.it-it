@@ -2,12 +2,12 @@
 ms.date: 10/11/2019
 keywords: dsc,powershell,configurazione,installazione
 title: Panoramica di DSC (Desired State Configuration) per decision maker
-ms.openlocfilehash: 271ec04035feb17e932acd0ac80f32213a4e018b
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: b6d483d105c2d3b9be7215be36397d452338c7f1
+ms.sourcegitcommit: 058a6e86eac1b27ca57a11687019df98709ed709
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72352129"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75737254"
 ---
 # <a name="desired-state-configuration-overview-for-decision-makers"></a>Panoramica di DSC (Desired State Configuration) per decision maker
 
@@ -31,7 +31,7 @@ Le configurazioni sono condivisibili tramite [PowerShell Gallery](https://powers
 
 ## <a name="dsc-and-devops"></a>DSC e DevOps
 
-La soluzione DSC è stata progettata tenendo in considerazione [DevOps](http://blogs.technet.com/b/ashleymcglone/archive/2015/11/20/devops-for-n00bs-ie-windows-people.aspx). Si tratta di una combinazione di persone, processi e strumenti che supportano la distribuzione e l'iterazione rapide, incentrate sull'offrire valore agli utenti finali, sia interni che esterni. Un'unica configurazione che definisce un ambiente significa che gli sviluppatori possono codificare i requisiti in una configurazione e verificare tale configurazione nel controllo del codice sorgente. I team operativi possono quindi distribuire il codice senza dover eseguire processi manuali soggetti a errori.
+La soluzione DSC è stata progettata tenendo in considerazione [DevOps](/archive/blogs/ashleymcglone/devops-for-n00bs-ie-windows-people-like-me). Si tratta di una combinazione di persone, processi e strumenti che supportano la distribuzione e l'iterazione rapide, incentrate sull'offrire valore agli utenti finali, sia interni che esterni. Un'unica configurazione che definisce un ambiente significa che gli sviluppatori possono codificare i requisiti in una configurazione e verificare tale configurazione nel controllo del codice sorgente. I team operativi possono quindi distribuire il codice senza dover eseguire processi manuali soggetti a errori.
 
 Le configurazioni sono [basate sui dati](../configurations/configData.md). I dati definiti consentono ai membri del team operativo di identificare e modificare facilmente gli ambienti, senza l'intervento di uno sviluppatore.
 
