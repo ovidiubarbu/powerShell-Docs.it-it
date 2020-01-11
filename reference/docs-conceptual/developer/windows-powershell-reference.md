@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Windows PowerShell SDK
 ms.assetid: cbba4879-bcac-484a-9906-4bbe2cd1eb33
 caps.latest.revision: 11
-ms.openlocfilehash: 48b2b2b9ab2a39cf185ed54bcfa99d46562e13b6
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: c00590df4d07e0f5ed9e93fd84a2780329753e39
+ms.sourcegitcommit: d97b200e7a49315ce6608cd619e3e2fd99193edd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72366280"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75870864"
 ---
 # <a name="windows-powershell-reference"></a>Guida di riferimento di Windows PowerShell
 
@@ -37,7 +37,8 @@ Oltre a Windows PowerShell SDK, le risorse seguenti forniscono altre informazion
 
 [Scrittura di un cmdlet di Windows PowerShell](./cmdlet/writing-a-windows-powershell-cmdlet.md) Fornisce esempi di codice e informazioni per i responsabili del programma che progettano i cmdlet e per gli sviluppatori che implementano il codice del cmdlet.
 
-[Blog del team di Windows PowerShell](https://blogs.msdn.microsoft.com/PowerShell/) La risorsa migliore per imparare e collaborare con altri utenti di Windows PowerShell. Leggere il Blog del team di Windows PowerShell e quindi aggiungere il forum degli utenti di Windows PowerShell (Microsoft. public. Windows. PowerShell). Utilizzare Windows Live Search per trovare altre risorse e Blog di Windows PowerShell. Quando si sviluppano le proprie competenze, è quindi possibile contribuire liberamente alle proprie idee.
+[Blog del team di Windows PowerShell](https://blogs.msdn.microsoft.com/PowerShell/) La risorsa migliore per imparare e collaborare con altri utenti di Windows PowerShell. Leggere il Blog del team di Windows PowerShell e quindi aggiungere il forum degli utenti di Windows PowerShell (Microsoft. public. Windows. PowerShell).
+Utilizzare Windows Live Search per trovare altre risorse e Blog di Windows PowerShell. Quando si sviluppano le proprie competenze, è quindi possibile contribuire liberamente alle proprie idee.
 
 [Browser modulo di PowerShell](/powershell/module/) Fornisce le versioni più recenti degli argomenti della guida della riga di comando.
 
@@ -53,4 +54,4 @@ Oltre a Windows PowerShell SDK, le risorse seguenti forniscono altre informazion
 
 [System. Management. Automation. Internal](/dotnet/api/System.Management.Automation.Internal) questo spazio dei nomi contiene le classi di base utilizzate da altre classi dello spazio dei nomi. Ad esempio, la classe [System. Management. Automation. Internal. Cmdletmetadataattribute](/dotnet/api/System.Management.Automation.Internal.CmdletMetadataAttribute) è la classe base per la classe [System. Management. Automation. CmdletAttribute](/dotnet/api/System.Management.Automation.CmdletAttribute) .
 
-[System. Management. Automation. Runspaces](/dotnet/api/System.Management.Automation.Runspaces) questo spazio dei nomi contiene le classi, le enumerazioni e le interfacce usate per creare un spazio di Windows PowerShell. In questo contesto, spazio di Windows PowerShell è il contesto in cui una o più pipeline di Windows PowerShell richiamano i cmdlet. Ovvero i cmdlet funzionano nel contesto di un spazio di Windows PowerShell. Per altre informazioni su aboutWindows PowerShell Runspaces, vedere la pagina relativa a [Windows PowerShell Runspaces](https://msdn.microsoft.com/en-us/a1582cfe-f06d-4aff-adc6-71f49a860ce9).
+[System. Management. Automation. Runspaces](/dotnet/api/System.Management.Automation.Runspaces) questo spazio dei nomi contiene le classi, le enumerazioni e le interfacce usate per creare un spazio di Windows PowerShell. In questo contesto, spazio di Windows PowerShell è il contesto in cui una o più pipeline di Windows PowerShell richiamano i cmdlet. Ovvero i cmdlet funzionano nel contesto di un spazio di Windows PowerShell. Per altre informazioni su aboutWindows PowerShell Runspaces, vedere la pagina relativa a [Windows PowerShell Runspaces](hosting/creating-runspaces.md).

@@ -8,16 +8,17 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 136e451f-767b-42e0-bd6f-6486693abd5e
 caps.latest.revision: 6
-ms.openlocfilehash: 122a40dea93d874a7c131774e3d1abb148bcd4fc
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 2f447fd0ce21c5bca8abe1fddb4e3c7025b70ef1
+ms.sourcegitcommit: d97b200e7a49315ce6608cd619e3e2fd99193edd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72360130"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75870583"
 ---
 # <a name="runspace09-code-sample"></a>Codice di esempio di Runspace09
 
-Ecco il codice sorgente per l'esempio Runspace09 descritto in [creazione di un'applicazione console che richiama una pipeline in modo asincrono](https://msdn.microsoft.com/en-us/198c1c94-2a06-457e-93ce-c0d910618e47). Questa applicazione di esempio crea e apre un spazio, crea e richiama in modo asincrono una pipeline, quindi usa gli eventi della pipeline per elaborare lo script in modo asincrono. Lo script eseguito da questa applicazione crea i numeri interi da 1 a 10 in intervalli di 0,5 secondi (500 ms).
+Ecco il codice sorgente per l'esempio Runspace09 descritto in [creazione di un'applicazione console che richiama una pipeline in modo asincrono](https://msdn.microsoft.com/198c1c94-2a06-457e-93ce-c0d910618e47).
+Questa applicazione di esempio crea e apre un spazio, crea e richiama in modo asincrono una pipeline, quindi usa gli eventi della pipeline per elaborare lo script in modo asincrono. Lo script eseguito da questa applicazione crea i numeri interi da 1 a 10 in intervalli di 0,5 secondi (500 ms).
 
 ## <a name="code-sample"></a>Codice di esempio
 

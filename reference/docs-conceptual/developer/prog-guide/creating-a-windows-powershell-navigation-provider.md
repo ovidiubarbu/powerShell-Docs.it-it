@@ -1,22 +1,14 @@
 ---
-title: Creazione di un provider di navigazione di Windows PowerShell | Microsoft Docs
-ms.custom: ''
+title: Creazione di un provider di navigazione di Windows PowerShell
 ms.date: 09/13/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords:
-- navigation providers [PowerShell Programmer's Guide]
-- providers [PowerShell Programmer's Guide], navigation provider
 ms.assetid: 8bd3224d-ca6f-4640-9464-cb4d9f4e13b1
-caps.latest.revision: 5
-ms.openlocfilehash: f73e732ca9416b906b3647c5090dfa04ad940484
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 96a9167019c047bb9c6e56362b2c1110ece553dd
+ms.sourcegitcommit: d97b200e7a49315ce6608cd619e3e2fd99193edd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74416191"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75870694"
 ---
 # <a name="creating-a-windows-powershell-navigation-provider"></a>Creazione di un provider di navigazione di Windows PowerShell
 
@@ -24,10 +16,7 @@ Questo argomento descrive come creare un provider di navigazione di Windows Powe
 
 > [!NOTE]
 > È possibile scaricare il C# file di origine (AccessDBSampleProvider05.cs) per questo provider utilizzando Microsoft Windows Software Development Kit per Windows Vista e i componenti di Runtime di .NET Framework 3,0. Per istruzioni sul download, vedere [come installare Windows PowerShell e scaricare Windows PowerShell SDK](/powershell/scripting/developer/installing-the-windows-powershell-sdk).
->
-> I file di origine scaricati sono disponibili nella directory **\<PowerShell samples >** .
->
-> Per ulteriori informazioni sulle altre implementazioni del provider di Windows PowerShell, vedere [progettazione del provider di Windows PowerShell](./designing-your-windows-powershell-provider.md).
+> I file di origine scaricati sono disponibili nella directory **\<PowerShell samples >** . Per ulteriori informazioni sulle altre implementazioni del provider di Windows PowerShell, vedere [progettazione del provider di Windows PowerShell](./designing-your-windows-powershell-provider.md).
 
 Il provider descritto di seguito consente all'utente di gestire un database di Access come unità in modo che l'utente possa accedere alle tabelle di dati del database. Quando si crea un provider di navigazione personalizzato, è possibile implementare metodi che possono rendere necessari i percorsi qualificati per l'esplorazione, normalizzare i percorsi relativi, spostare gli elementi dell'archivio dati, nonché metodi che ottengono i nomi figlio, ottengono il percorso padre di un elemento e testano per identificare se un elemento è un contenitore.
 
@@ -38,7 +27,8 @@ Il provider descritto di seguito consente all'utente di gestire un database di A
 
 Un provider di navigazione di Windows PowerShell deve creare una classe .NET che deriva dalla classe di base [System. Management. Automation. provider. Navigationcmdletprovider](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider) . Di seguito è riportata la definizione della classe per il provider di navigazione descritto in questa sezione.
 
-[!code-csharp[AccessDBProviderSample05.cs](../../../../powershell-sdk-samples/SDK-2.0/csharp/AccessDBProviderSample05/AccessDBProviderSample05.cs#L31-L32 "AccessDBProviderSample05.cs")]
+[!code-csharp[AccessDBProviderSample05.cs](../../../../powershell-sdk-samples/SDK-2.0/csharp/AccessDBProviderSample05/AccessDBProviderSample05.cs#L31-L32
+"AccessDBProviderSample05.cs")]
 
 Si noti che in questo provider l'attributo [System. Management. Automation. provider. CmdletProviderAttribute](/dotnet/api/System.Management.Automation.Provider.CmdletProviderAttribute) include due parametri. Il primo parametro specifica un nome descrittivo per il provider utilizzato da Windows PowerShell. Il secondo parametro specifica le funzionalità specifiche di Windows PowerShell che il provider espone al runtime di Windows PowerShell durante l'elaborazione del comando. Per questo provider non sono state aggiunte funzionalità specifiche di Windows PowerShell.
 
@@ -77,7 +67,8 @@ Per l'implementazione di [System. Management. Automation. provider. Navigationcm
 
 I provider di navigazione di Windows PowerShell implementano il metodo [System. Management. Automation. provider. Navigationcmdletprovider. GetParentPath *](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.GetParentPath) per recuperare la parte padre del percorso specifico del provider completo o parziale indicato. Il metodo rimuove la parte figlio del percorso e restituisce la parte del percorso padre. Il parametro `root` specifica il percorso completo della radice di un'unità. Questo parametro può essere null o vuoto se un'unità montata non è in uso per l'operazione di recupero. Se viene specificata una radice, il metodo deve restituire un percorso a un contenitore nella stessa struttura ad albero della radice.
 
-Il provider di navigazione di esempio non esegue l'override di questo metodo, ma usa l'implementazione predefinita. Accetta i percorsi che usano sia "/" che "\\" come separatori di percorso. Per prima cosa normalizza il percorso in modo che includa solo separatori "\\", quindi suddivide il percorso padre all'ultimo "\\" e restituisce il percorso padre.
+Il provider di navigazione di esempio non esegue l'override di questo metodo, ma usa l'implementazione predefinita.
+Accetta i percorsi che usano sia "/" che "\\" come separatori di percorso. Per prima cosa normalizza il percorso in modo che includa solo separatori "\\", quindi suddivide il percorso padre all'ultimo "\\" e restituisce il percorso padre.
 
 <!-- TODO!!!: review snippet reference  [!CODE [Msh_samplestestcmdlets#testprovidergetparentpath](Msh_samplestestcmdlets#testprovidergetparentpath)]  -->
 
@@ -126,7 +117,8 @@ La classe .NET del provider di navigazione potrebbe dichiarare le funzionalità 
 
 Per impostazione predefinita, le sostituzioni di questo metodo non devono spostare gli oggetti sugli oggetti esistenti a meno che la proprietà [System. Management. Automation. provider. CmdletProvider. Force *](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Force) non sia impostata su `true`. Ad esempio, il provider FileSystem non copierà c:\temp\abc.txt su un file c:\bar.txt esistente a meno che la proprietà [System. Management. Automation. provider. CmdletProvider. Force *](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Force) non sia impostata su `true`. Se il percorso specificato nel parametro `destination` esiste ed è un contenitore, la proprietà [System. Management. Automation. provider. CmdletProvider. Force *](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Force) non è obbligatoria. In questo caso, [System. Management. Automation. provider. Navigationcmdletprovider. MoveItem *](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.MoveItem) deve spostare l'elemento indicato dal parametro `path` nel contenitore indicato dal parametro `destination` come figlio.
 
-L'implementazione del metodo [System. Management. Automation. provider. Navigationcmdletprovider. MoveItem *](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.MoveItem) deve chiamare [System. Management. Automation. provider. CmdletProvider. ShouldProcess](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess) e verificare il relativo valore restituito prima di apportare eventuali modifiche all'archivio dati. Questo metodo viene usato per confermare l'esecuzione di un'operazione quando viene apportata una modifica allo stato del sistema, ad esempio l'eliminazione di file. [System. Management. Automation. provider. CmdletProvider. ShouldProcess](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess) invia il nome della risorsa da modificare all'utente, con il runtime di Windows PowerShell che prende in considerazione le impostazioni della riga di comando o le variabili di preferenza per determinare gli elementi da visualizzare all'utente.
+L'implementazione del metodo [System. Management. Automation. provider. Navigationcmdletprovider. MoveItem *](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.MoveItem) deve chiamare [System. Management. Automation. provider. CmdletProvider. ShouldProcess](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess) e verificare il relativo valore restituito prima di apportare eventuali modifiche all'archivio dati. Questo metodo viene usato per confermare l'esecuzione di un'operazione quando viene apportata una modifica allo stato del sistema, ad esempio l'eliminazione di file.
+[System. Management. Automation. provider. CmdletProvider. ShouldProcess](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess) invia il nome della risorsa da modificare all'utente, con il runtime di Windows PowerShell che prende in considerazione le impostazioni della riga di comando o le variabili di preferenza per determinare gli elementi da visualizzare all'utente.
 
 Dopo che la chiamata a [System. Management. Automation. provider. CmdletProvider. ShouldProcess](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess) restituisce `true`, il metodo [System. Management. Automation. provider. Navigationcmdletprovider. MoveItem *](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.MoveItem) deve chiamare il metodo [System. Management. Automation. provider. CmdletProvider. ShouldContinue](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldContinue) . Questo metodo invia un messaggio all'utente per consentire il feedback per indicare se l'operazione deve essere continuata. Il provider deve chiamare [System. Management. Automation. provider. CmdletProvider. ShouldContinue](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldContinue) come controllo aggiuntivo per le modifiche di sistema potenzialmente pericolose.
 
@@ -156,11 +148,11 @@ Per il codice di esempio completo, vedere [esempio di codice AccessDbProviderSam
 
 ## <a name="defining-object-types-and-formatting"></a>Definizione di tipi di oggetti e formattazione
 
-Un provider può aggiungere membri a oggetti esistenti o definire nuovi oggetti. Per ulteriori informazioni, vedere[estensione di tipi di oggetti e formattazione](https://msdn.microsoft.com/en-us/da976d91-a3d6-44e8-affa-466b1e2bd351).
+Un provider può aggiungere membri a oggetti esistenti o definire nuovi oggetti. Per ulteriori informazioni, vedere[estensione di tipi di oggetti e formattazione](/previous-versions/ms714665(v=vs.85)).
 
 ## <a name="building-the-windows-powershell-provider"></a>Compilazione del provider di Windows PowerShell
 
-Per ulteriori informazioni, vedere [come registrare i cmdlet, i provider e le applicazioni host](https://msdn.microsoft.com/en-us/a41e9054-29c8-40ab-bf2b-8ce4e7ec1c8c).
+Per ulteriori informazioni, vedere [come registrare i cmdlet, i provider e le applicazioni host](/previous-versions/ms714644(v=vs.85)).
 
 ## <a name="testing-the-windows-powershell-provider"></a>Test del provider di Windows PowerShell
 
@@ -178,7 +170,7 @@ Quando il provider di Windows PowerShell è stato registrato con Windows PowerSh
    Get-ChildItem | Format-Table rowcount,name -AutoSize
    ```
 
-   ```output
+   ```Output
    RowCount   Name
    --------   ----
         180   MSysAccessObjects
@@ -211,7 +203,7 @@ Quando il provider di Windows PowerShell è stato registrato con Windows PowerSh
    Get-Location
    ```
 
-   ```output
+   ```Output
    Path
    ----
    mydb:\Employees
@@ -223,7 +215,7 @@ Quando il provider di Windows PowerShell è stato registrato con Windows PowerSh
    Get-ChildItem | Format-Table rownumber,psiscontainer,data -AutoSize
    ```
 
-   ```output
+   ```Output
    RowNumber   PSIsContainer   Data
    ---------   --------------   ----
    0           False            System.Data.DataRow
@@ -243,7 +235,7 @@ Quando il provider di Windows PowerShell è stato registrato con Windows PowerSh
    Get-Item 0
    ```
 
-   ```output
+   ```Output
    PSPath        : AccessDB::C:\PS\Northwind.mdb\Employees\0
    PSParentPath  : AccessDB::C:\PS\Northwind.mdb\Employees
    PSChildName   : 0
@@ -260,7 +252,7 @@ Quando il provider di Windows PowerShell è stato registrato con Windows PowerSh
    (Get-Item 0).data
    ```
 
-   ```output
+   ```Output
    EmployeeID      : 1
    LastName        : Davis
    FirstName       : Sara
@@ -290,11 +282,11 @@ Quando il provider di Windows PowerShell è stato registrato con Windows PowerSh
 
 [Progettare il provider di Windows PowerShell](./designing-your-windows-powershell-provider.md)
 
-[Estensione di tipi di oggetti e formattazione](https://msdn.microsoft.com/en-us/da976d91-a3d6-44e8-affa-466b1e2bd351)
+[Estensione di tipi di oggetti e formattazione](/previous-versions/ms714665(v=vs.85))
 
 [Implementare un provider di Windows PowerShell per contenitori](./creating-a-windows-powershell-container-provider.md)
 
-[Come registrare cmdlet, provider e applicazioni host](https://msdn.microsoft.com/en-us/a41e9054-29c8-40ab-bf2b-8ce4e7ec1c8c)
+[Come registrare cmdlet, provider e applicazioni host](/previous-versions/ms714644(v=vs.85))
 
 [Guida per programmatori di Windows PowerShell](./windows-powershell-programmer-s-guide.md)
 

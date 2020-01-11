@@ -11,12 +11,12 @@ helpviewer_keywords:
 - providers [PowerShell Programmer's Guide], property provider
 ms.assetid: a6adca44-b94b-4103-9970-a9b414355e60
 caps.latest.revision: 5
-ms.openlocfilehash: 9197f5635528e0f52cd08adde1c6bd69467725e8
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: d6c84c3b23439cd3fd6205a2c1d480e0c063d09c
+ms.sourcegitcommit: d97b200e7a49315ce6608cd619e3e2fd99193edd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74417476"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75870677"
 ---
 # <a name="creating-a-windows-powershell-property-provider"></a>Creazione di un provider di proprietà di Windows PowerShell
 
@@ -24,10 +24,7 @@ In questo argomento viene descritto come creare un provider che consente all'ute
 
 > [!NOTE]
 > Windows PowerShell fornisce un file di modello che è possibile usare per sviluppare un provider di Windows PowerShell. Il file TemplateProvider.cs è disponibile in Microsoft Windows Software Development Kit per Windows Vista e .NET Framework 3,0 componenti di Runtime. Per istruzioni sul download, vedere [come installare Windows PowerShell e scaricare Windows PowerShell SDK](/powershell/scripting/developer/installing-the-windows-powershell-sdk).
->
-> Il modello scaricato è disponibile nella directory **\<PowerShell samples >** . È necessario creare una copia di questo file e utilizzare la copia per creare un nuovo provider di Windows PowerShell, rimuovendo tutte le funzionalità non necessarie.
->
-> Per ulteriori informazioni sulle altre implementazioni del provider di Windows PowerShell, vedere [progettazione del provider di Windows PowerShell](./designing-your-windows-powershell-provider.md).
+> Il modello scaricato è disponibile nella directory **\<PowerShell samples >** . È necessario creare una copia di questo file e utilizzare la copia per creare un nuovo provider di Windows PowerShell, rimuovendo tutte le funzionalità non necessarie. Per ulteriori informazioni sulle altre implementazioni del provider di Windows PowerShell, vedere [progettazione del provider di Windows PowerShell](./designing-your-windows-powershell-provider.md).
 
 > [!CAUTION]
 > I metodi del provider di proprietà devono scrivere tutti gli oggetti usando il metodo [System. Management. Automation. provider. CmdletProvider. Writepropertyobject *](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.WritePropertyObject) .
@@ -72,7 +69,8 @@ Di seguito è riportata l'implementazione predefinita di [System. Management. Au
 
 ## <a name="setting-properties"></a>Impostazione delle proprietà
 
-Per impostare le proprietà, il provider di proprietà di Windows PowerShell deve implementare il metodo [System. Management. Automation. provider. Ipropertycmdletprovider. SetProperty *](/dotnet/api/System.Management.Automation.Provider.IPropertyCmdletProvider.SetProperty) per supportare le chiamate dal cmdlet `Set-ItemProperty`. Questo metodo imposta una o più proprietà dell'elemento nel percorso specificato e sovrascrive le proprietà fornite come richiesto. [System. Management. Automation. provider. Ipropertycmdletprovider. SetProperty *](/dotnet/api/System.Management.Automation.Provider.IPropertyCmdletProvider.SetProperty) scrive anche un'istanza di un oggetto [System. Management. Automation. PSObject](/dotnet/api/System.Management.Automation.PSObject) che rappresenta un elenco di proprietà delle proprietà aggiornate.
+Per impostare le proprietà, il provider di proprietà di Windows PowerShell deve implementare il metodo [System. Management. Automation. provider. Ipropertycmdletprovider. SetProperty *](/dotnet/api/System.Management.Automation.Provider.IPropertyCmdletProvider.SetProperty) per supportare le chiamate dal cmdlet `Set-ItemProperty`. Questo metodo imposta una o più proprietà dell'elemento nel percorso specificato e sovrascrive le proprietà fornite come richiesto.
+[System. Management. Automation. provider. Ipropertycmdletprovider. SetProperty *](/dotnet/api/System.Management.Automation.Provider.IPropertyCmdletProvider.SetProperty) scrive anche un'istanza di un oggetto [System. Management. Automation. PSObject](/dotnet/api/System.Management.Automation.PSObject) che rappresenta un elenco di proprietà delle proprietà aggiornate.
 
 Di seguito è riportata l'implementazione predefinita di [System. Management. Automation. provider. Ipropertycmdletprovider. SetProperty *](/dotnet/api/System.Management.Automation.Provider.IPropertyCmdletProvider.SetProperty) dal file TemplateProvider.cs fornito da Windows PowerShell.
 
@@ -86,7 +84,8 @@ Per un'implementazione di [System. Management. Automation. provider. Ipropertycm
 
 - Per impostazione predefinita, le sostituzioni di questo metodo non devono recuperare un Reader per gli oggetti nascosti all'utente, a meno che la proprietà [System. Management. Automation. provider. CmdletProvider. Force *](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Force) non sia impostata su `true`. È necessario scrivere un errore se il percorso rappresenta un elemento nascosto dall'utente e [System. Management. Automation. provider. CmdletProvider. Force *](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Force) è impostato su `false`.
 
-- L'implementazione del metodo [System. Management. Automation. provider. Ipropertycmdletprovider. SetProperty *](/dotnet/api/System.Management.Automation.Provider.IPropertyCmdletProvider.SetProperty) deve chiamare [System. Management. Automation. provider. CmdletProvider. ShouldProcess](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess) e verificare il relativo valore restituito prima di apportare modifiche all'archivio dati. Questo metodo viene usato per confermare l'esecuzione di un'operazione quando viene apportata una modifica allo stato del sistema, ad esempio la ridenominazione dei file. [System. Management. Automation. provider. CmdletProvider. ShouldProcess](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess) invia il nome della risorsa da modificare all'utente, con il runtime di Windows PowerShell e gestendo le impostazioni della riga di comando o le variabili di preferenza per determinare gli elementi da visualizzare.
+- L'implementazione del metodo [System. Management. Automation. provider. Ipropertycmdletprovider. SetProperty *](/dotnet/api/System.Management.Automation.Provider.IPropertyCmdletProvider.SetProperty) deve chiamare [System. Management. Automation. provider. CmdletProvider. ShouldProcess](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess) e verificare il relativo valore restituito prima di apportare modifiche all'archivio dati. Questo metodo viene usato per confermare l'esecuzione di un'operazione quando viene apportata una modifica allo stato del sistema, ad esempio la ridenominazione dei file.
+  [System. Management. Automation. provider. CmdletProvider. ShouldProcess](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess) invia il nome della risorsa da modificare all'utente, con il runtime di Windows PowerShell e gestendo le impostazioni della riga di comando o le variabili di preferenza per determinare gli elementi da visualizzare.
 
   Dopo che la chiamata a [System. Management. Automation. provider. CmdletProvider. ShouldProcess](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess) restituisce `true`, se possono essere apportate modifiche di sistema potenzialmente pericolose, il metodo [System. Management. Automation. provider. Ipropertycmdletprovider. SetProperty *](/dotnet/api/System.Management.Automation.Provider.IPropertyCmdletProvider.SetProperty) deve chiamare il metodo [System. Management. Automation. provider. CmdletProvider. ShouldContinue](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldContinue) . Questo metodo invia un messaggio di conferma all'utente per consentire un ulteriore feedback per indicare che l'operazione deve essere continuata.
 
@@ -114,7 +113,8 @@ Per l'implementazione di [System. Management. Automation. provider. Ipropertycmd
 
 - Per impostazione predefinita, le sostituzioni di questo metodo non devono recuperare un Reader per gli oggetti nascosti all'utente, a meno che la proprietà [System. Management. Automation. provider. CmdletProvider. Force *](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Force) non sia impostata su `true`. È necessario scrivere un errore se il percorso rappresenta un elemento nascosto dall'utente e [System. Management. Automation. provider. CmdletProvider. Force *](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.Force) è impostato su `false`.
 
-- L'implementazione del metodo [System. Management. Automation. provider. Ipropertycmdletprovider. Clearproperty *](/dotnet/api/System.Management.Automation.Provider.IPropertyCmdletProvider.ClearProperty) deve chiamare [System. Management. Automation. provider. CmdletProvider. ShouldProcess](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess) e verificare il relativo valore restituito prima di apportare eventuali modifiche all'archivio dati. Questo metodo viene usato per confermare l'esecuzione di un'operazione prima che venga apportata una modifica allo stato del sistema, ad esempio la cancellazione di contenuto. [System. Management. Automation. provider. CmdletProvider. ShouldProcess](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess) invia il nome della risorsa da modificare all'utente, con il runtime di Windows PowerShell che prende in considerazione le impostazioni della riga di comando o le variabili di preferenza per determinare gli elementi da visualizzare.
+- L'implementazione del metodo [System. Management. Automation. provider. Ipropertycmdletprovider. Clearproperty *](/dotnet/api/System.Management.Automation.Provider.IPropertyCmdletProvider.ClearProperty) deve chiamare [System. Management. Automation. provider. CmdletProvider. ShouldProcess](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess) e verificare il relativo valore restituito prima di apportare eventuali modifiche all'archivio dati. Questo metodo viene usato per confermare l'esecuzione di un'operazione prima che venga apportata una modifica allo stato del sistema, ad esempio la cancellazione di contenuto.
+  [System. Management. Automation. provider. CmdletProvider. ShouldProcess](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess) invia il nome della risorsa da modificare all'utente, con il runtime di Windows PowerShell che prende in considerazione le impostazioni della riga di comando o le variabili di preferenza per determinare gli elementi da visualizzare.
 
   Dopo che la chiamata a [System. Management. Automation. provider. CmdletProvider. ShouldProcess](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldProcess) restituisce `true`, se possono essere apportate modifiche di sistema potenzialmente pericolose, il metodo [System. Management. Automation. provider. Ipropertycmdletprovider. Clearproperty *](/dotnet/api/System.Management.Automation.Provider.IPropertyCmdletProvider.ClearProperty) deve chiamare il metodo [System. Management. Automation. provider. CmdletProvider. ShouldContinue](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.ShouldContinue) . Questo metodo invia un messaggio di conferma all'utente per consentire un ulteriore feedback per indicare che l'operazione potenzialmente pericolosa deve continuare.
 
@@ -128,7 +128,7 @@ Di seguito è riportata l'implementazione predefinita di [System. Management. Au
 
 ## <a name="building-the-windows-powershell-provider"></a>Compilazione del provider di Windows PowerShell
 
-Vedere [come registrare i cmdlet, i provider e le applicazioni host](https://msdn.microsoft.com/en-us/a41e9054-29c8-40ab-bf2b-8ce4e7ec1c8c).
+Vedere [come registrare i cmdlet, i provider e le applicazioni host](https://msdn.microsoft.com/a41e9054-29c8-40ab-bf2b-8ce4e7ec1c8c).
 
 ## <a name="see-also"></a>Vedere anche
 
@@ -136,6 +136,6 @@ Vedere [come registrare i cmdlet, i provider e le applicazioni host](https://msd
 
 [Progettare il provider di Windows PowerShell](./designing-your-windows-powershell-provider.md)
 
-[Estensione di tipi di oggetti e formattazione](https://msdn.microsoft.com/en-us/da976d91-a3d6-44e8-affa-466b1e2bd351)
+[Estensione di tipi di oggetti e formattazione](https://msdn.microsoft.com/da976d91-a3d6-44e8-affa-466b1e2bd351)
 
-[Come registrare cmdlet, provider e applicazioni host](https://msdn.microsoft.com/en-us/a41e9054-29c8-40ab-bf2b-8ce4e7ec1c8c)
+[Come registrare cmdlet, provider e applicazioni host](https://msdn.microsoft.com/a41e9054-29c8-40ab-bf2b-8ce4e7ec1c8c)

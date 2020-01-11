@@ -11,12 +11,12 @@ helpviewer_keywords:
 - providers [PowerShell Programmer's Guide], item provider
 ms.assetid: a5a304ce-fc99-4a5b-a779-de7d85e031fe
 caps.latest.revision: 6
-ms.openlocfilehash: ad42b8de867f468e832380ab6a22a39b6d27d3c6
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: a64e49894ce5195cc177e97a7049740389b09456
+ms.sourcegitcommit: d97b200e7a49315ce6608cd619e3e2fd99193edd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74417495"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75870711"
 ---
 # <a name="creating-a-windows-powershell-item-provider"></a>Creazione di un provider di elementi di Windows PowerShell
 
@@ -24,10 +24,7 @@ In questo argomento viene descritto come creare un provider di Windows PowerShel
 
 > [!NOTE]
 > È possibile scaricare il C# file di origine (AccessDBSampleProvider03.cs) per questo provider utilizzando Microsoft Windows Software Development Kit per Windows Vista e i componenti di Runtime di .NET Framework 3,0. Per istruzioni sul download, vedere [come installare Windows PowerShell e scaricare Windows PowerShell SDK](/powershell/scripting/developer/installing-the-windows-powershell-sdk).
->
-> I file di origine scaricati sono disponibili nella directory **\<PowerShell samples >** .
->
-> Per ulteriori informazioni sulle altre implementazioni del provider di Windows PowerShell, vedere [progettazione del provider di Windows PowerShell](./designing-your-windows-powershell-provider.md).
+> I file di origine scaricati sono disponibili nella directory **\<PowerShell samples >** . Per ulteriori informazioni sulle altre implementazioni del provider di Windows PowerShell, vedere [progettazione del provider di Windows PowerShell](./designing-your-windows-powershell-provider.md).
 
 Il provider di elementi di Windows PowerShell descritto in questo argomento recupera gli elementi di dati da un database di Access. In questo caso, un "elemento" è una tabella nel database di Access o una riga in una tabella.
 
@@ -43,13 +40,15 @@ Si noti che in questa definizione di classe l'attributo [System. Management. Aut
 
 Come descritto in [progettazione del provider di Windows PowerShell](./designing-your-windows-powershell-provider.md), la classe [System. Management. Automation. provider. Drivecmdletprovider](/dotnet/api/System.Management.Automation.Provider.DriveCmdletProvider) deriva da diverse altre classi che forniscono funzionalità diverse del provider. Un provider di elementi di Windows PowerShell deve quindi definire tutte le funzionalità fornite da tali classi.
 
-Per ulteriori informazioni su come implementare la funzionalità per l'aggiunta di informazioni di inizializzazione specifiche della sessione e per il rilascio di risorse utilizzate dal provider, vedere [creazione di un provider di Windows PowerShell di base](./creating-a-basic-windows-powershell-provider.md). Tuttavia, la maggior parte dei provider, incluso il provider qui descritto, può utilizzare l'implementazione predefinita di questa funzionalità fornita da Windows PowerShell.
+Per ulteriori informazioni su come implementare la funzionalità per l'aggiunta di informazioni di inizializzazione specifiche della sessione e per il rilascio di risorse utilizzate dal provider, vedere [creazione di un provider di Windows PowerShell di base](./creating-a-basic-windows-powershell-provider.md).
+Tuttavia, la maggior parte dei provider, incluso il provider qui descritto, può utilizzare l'implementazione predefinita di questa funzionalità fornita da Windows PowerShell.
 
 Prima che il provider di elementi di Windows PowerShell possa modificare gli elementi nell'archivio, deve implementare i metodi della classe di base [System. Management. Automation. provider. Drivecmdletprovider](/dotnet/api/System.Management.Automation.Provider.DriveCmdletProvider) per accedere all'archivio dati. Per ulteriori informazioni sull'implementazione di questa classe, vedere [creazione di un provider di unità di Windows PowerShell](./creating-a-windows-powershell-drive-provider.md).
 
 ## <a name="checking-for-path-validity"></a>Verifica della validità del percorso
 
-Quando si cerca un elemento di dati, il runtime di Windows PowerShell fornisce un percorso di Windows PowerShell al provider, come definito nella sezione "concetti di PSPath" del [funzionamento di Windows PowerShell](https://msdn.microsoft.com/en-us/ced30e23-10af-4700-8933-49873bd84d58). Un provider di elementi di Windows PowerShell deve verificare la validità sintattica e semantica di qualsiasi percorso passato implementando il metodo [System. Management. Automation. provider. Itemcmdletprovider. IsValidPath *](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.IsValidPath) . Questo metodo restituisce `true` se il percorso è valido e `false` in caso contrario. Tenere presente che l'implementazione di questo metodo non deve verificare l'esistenza dell'elemento nel percorso, ma solo che il percorso sia sintatticamente e semanticamente corretto.
+Quando si cerca un elemento di dati, il runtime di Windows PowerShell fornisce un percorso di Windows PowerShell al provider, come definito nella sezione "concetti di PSPath" del [funzionamento di Windows PowerShell](/previous-versions/ms714658(v=vs.85)).
+Un provider di elementi di Windows PowerShell deve verificare la validità sintattica e semantica di qualsiasi percorso passato implementando il metodo [System. Management. Automation. provider. Itemcmdletprovider. IsValidPath *](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.IsValidPath) . Questo metodo restituisce `true` se il percorso è valido e `false` in caso contrario. Tenere presente che l'implementazione di questo metodo non deve verificare l'esistenza dell'elemento nel percorso, ma solo che il percorso sia sintatticamente e semanticamente corretto.
 
 Di seguito è illustrata l'implementazione del metodo [System. Management. Automation. provider. Itemcmdletprovider. IsValidPath *](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.IsValidPath) per questo provider. Si noti che questa implementazione chiama un metodo helper NormalizePath per convertire tutti i separatori del percorso in uno uniforme.
 
@@ -225,11 +224,11 @@ Per il codice di esempio completo, vedere [esempio di codice AccessDbProviderSam
 
 ## <a name="defining-object-types-and-formatting"></a>Definizione di tipi di oggetti e formattazione
 
-Quando si scrive un provider, potrebbe essere necessario aggiungere membri a oggetti esistenti o definire nuovi oggetti. Al termine, creare un file di tipi che Windows PowerShell può usare per identificare i membri dell'oggetto e un file di formato che definisce la modalità di visualizzazione dell'oggetto. Per ulteriori informazioni su, vedere [estensione di tipi di oggetti e formattazione](https://msdn.microsoft.com/en-us/da976d91-a3d6-44e8-affa-466b1e2bd351).
+Quando si scrive un provider, potrebbe essere necessario aggiungere membri a oggetti esistenti o definire nuovi oggetti. Al termine, creare un file di tipi che Windows PowerShell può usare per identificare i membri dell'oggetto e un file di formato che definisce la modalità di visualizzazione dell'oggetto. Per ulteriori informazioni su, vedere [estensione di tipi di oggetti e formattazione](/previous-versions/ms714665(v=vs.85)).
 
 ## <a name="building-the-windows-powershell-provider"></a>Compilazione del provider di Windows PowerShell
 
-Vedere [come registrare i cmdlet, i provider e le applicazioni host](https://msdn.microsoft.com/en-us/a41e9054-29c8-40ab-bf2b-8ce4e7ec1c8c).
+Vedere [come registrare i cmdlet, i provider e le applicazioni host](/previous-versions/ms714644(v=vs.85)).
 
 ## <a name="testing-the-windows-powershell-provider"></a>Test del provider di Windows PowerShell
 
@@ -245,12 +244,12 @@ Quando questo provider di elementi di Windows PowerShell viene registrato con Wi
 
 [Progettazione del provider di Windows PowerShell](./designing-your-windows-powershell-provider.md)
 
-[Estensione di tipi di oggetti e formattazione](https://msdn.microsoft.com/en-us/da976d91-a3d6-44e8-affa-466b1e2bd351)
+[Estensione di tipi di oggetti e formattazione](/previous-versions/ms714665(v=vs.85))
 
-[Funzionamento di Windows PowerShell](https://msdn.microsoft.com/en-us/ced30e23-10af-4700-8933-49873bd84d58)
+[Funzionamento di Windows PowerShell](/previous-versions/ms714658(v=vs.85))
 
 [Creazione di un provider di Windows PowerShell per contenitori](./creating-a-windows-powershell-container-provider.md)
 
 [Creazione di un provider di Windows PowerShell per unità](./creating-a-windows-powershell-drive-provider.md)
 
-[Come registrare cmdlet, provider e applicazioni host](https://msdn.microsoft.com/en-us/a41e9054-29c8-40ab-bf2b-8ce4e7ec1c8c)
+[Come registrare cmdlet, provider e applicazioni host](/previous-versions/ms714644(v=vs.85))
