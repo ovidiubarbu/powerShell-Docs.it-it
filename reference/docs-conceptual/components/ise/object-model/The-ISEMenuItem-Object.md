@@ -1,17 +1,18 @@
 ---
-ms.date: 06/05/2017
+ms.date: 12/31/2019
 keywords: powershell,cmdlet
 title: Oggetto ISEMenuItem
-ms.openlocfilehash: a513a3e9f2eb97f3955fa817faedbcbf4e0ed018
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: c3ffe6e8f0b28987543fe0a873c552292dc5158a
+ms.sourcegitcommit: 058a6e86eac1b27ca57a11687019df98709ed709
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "67028945"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75736982"
 ---
 # <a name="the-isemenuitem-object"></a>Oggetto ISEMenuItem
 
-Un oggetto **ISEMenuItem** è un'istanza della classe Microsoft.PowerShell.Host.ISE.ISEMenuItem. Tutti gli oggetti nel menu **Componenti aggiuntivi** sono istanze della classe **Microsoft.PowerShell.Host.ISE.ISEMenuItem**.
+Un oggetto **ISEMenuItem** è un'istanza della classe **Microsoft.PowerShell.Host.ISE.ISEMenuItem**.
+Tutti gli oggetti nel menu **Componenti aggiuntivi** sono istanze della classe **Microsoft.PowerShell.Host.ISE.ISEMenuItem**.
 
 ## <a name="properties"></a>Proprietà
 
@@ -44,7 +45,7 @@ $psISE.CurrentPowerShellTab.AddOnsMenu.Submenus[0].Action
 $psISE.CurrentPowerShellTab.AddOnsMenu.Submenus[0].Action.Invoke()
 ```
 
-### <a name="shortcut"></a>Collegamento
+### <a name="shortcut"></a>Tasto di scelta rapida
 
 Supportato in Windows PowerShell ISE 2.0 e versioni successive.
 

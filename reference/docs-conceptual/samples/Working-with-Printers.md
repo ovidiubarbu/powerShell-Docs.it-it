@@ -1,24 +1,24 @@
 ---
-ms.date: 06/05/2017
+ms.date: 12/23/2019
 keywords: powershell,cmdlet
 title: Utilizzo delle stampanti
-ms.openlocfilehash: 816388325cc3155f1dbd1bc15fc1736155216092
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 47c4f230d023ad93e2b65080feaa1dbfae803d08
+ms.sourcegitcommit: 058a6e86eac1b27ca57a11687019df98709ed709
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "67030669"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75736863"
 ---
-# <a name="working-with-printers"></a>Utilizzo delle stampanti
+# <a name="working-with-printers-in-windows"></a>Uso delle stampanti in Windows
 
-È possibile usare Windows PowerShell per gestire le stampanti tramite WMI e l'oggetto COM WScript.Network da WSH. Verranno usati entrambi gli strumenti per illustrare le attività specifiche.
+È possibile usare PowerShell per gestire le stampanti tramite WMI e l'oggetto COM **WScript.Network** di WSH. Verranno usati entrambi gli strumenti per illustrare le attività specifiche.
 
 ## <a name="listing-printer-connections"></a>Elenco delle connessioni a stampanti
 
 Il modo più semplice per elencare le stampanti installate in un computer consiste nell'usare la classe WMI **Win32_Printer**:
 
 ```powershell
-Get-WmiObject -Class Win32_Printer
+Get-CimInstance -Class Win32_Printer
 ```
 
 È anche possibile ottenere un elenco delle stampanti tramite l'oggetto COM **Wscript.Network** generalmente usato negli script WSH:
@@ -42,7 +42,7 @@ Per aggiungere una nuova stampante di rete, usare **WScript.Network**:
 Per usare WMI per impostare la stampante predefinita, individuare la stampante nella raccolta **Win32_Printer** e quindi richiamare il metodo **SetDefaultPrinter**:
 
 ```powershell
-(Get-WmiObject -ComputerName . -Class Win32_Printer -Filter "Name='HP LaserJet 5Si'").SetDefaultPrinter()
+(Get-CimInstance -Class Win32_Printer -Filter "Name='HP LaserJet 5Si'").SetDefaultPrinter()
 ```
 
 **WScript.Network** è un po' più semplice da usare, perché include un metodo **SetDefaultPrinter** che accetta solo il nome della stampante come argomento:

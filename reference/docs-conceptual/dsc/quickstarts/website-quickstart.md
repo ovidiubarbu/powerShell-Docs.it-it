@@ -2,16 +2,16 @@
 ms.date: 06/12/2017
 keywords: dsc,powershell,configurazione,installazione
 title: Avvio rapido - Creare un sito Web con DSC
-ms.openlocfilehash: d98607939ccd3cc5e660936d8c0a6d54fce7d65f
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 08ca25604998ce8c913ef8112b5342f2e0216b6e
+ms.sourcegitcommit: 1b88c280dd0799f225242608f0cbdab485357633
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "71955068"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75416122"
 ---
-> Si applica a: Windows PowerShell 4.0, Windows PowerShell 5.0
+# <a name="quickstart---create-a-website-with-desired-state-configuration-dsc"></a>Avvio rapido - Creare un sito Web con Desired State Configuration (DSC)
 
-# <a name="quickstart---create-a-website-with-dsc"></a>Avvio rapido - Creare un sito Web con DSC
+> Si applica a: Windows PowerShell 4.0, Windows PowerShell 5.0
 
 Questo esercizio illustra nei dettagli tutti i passaggi per creare e applicare una configurazione DSC (Desired State Configuration).
 L'esempio che verrà usato garantisce che in un server sia abilitata la funzionalità `Web-Server` (IIS) e che il contenuto di un semplice sito Web "Hello World" sia presente nella directory `inetpub\wwwroot` di tale server.
@@ -74,7 +74,7 @@ Salvare il file come `WebsiteTest.ps1`.
 
 Si può notare che assomiglia a una funzione di PowerShell con l'aggiunta della parola chiave **Configuration** usata prima del nome della funzione.
 
-Il blocco **Node** specifica il nodo di destinazione da configurare, in questo caso `localhost`.
+Il blocco **Node** specifica il nodo di destinazione da configurare. In questo caso, `localhost`.
 
 La configurazione chiama due [risorse](../resources/resources.md), **WindowsFeature** e **File**.
 Le risorse si occupano di assicurarsi che il nodo di destinazione sia nello stato definito dalla configurazione.
@@ -114,13 +114,16 @@ Ora che è disponibile il file MOF compilato, è possibile applicare la configur
 Il cmdlet `Start-DscConfiguration` indica a [Gestione configurazione locale](../managing-nodes/metaConfig.md), ovvero il motore di DSC, di applicare la configurazione.
 Gestione configurazione locale si occupa di chiamare le risorse DSC per applicare la configurazione.
 
+> [!NOTE]
+> Per consentire l'esecuzione di DSC, è necessario configurare Windows per la ricezione di comandi remoti di PowerShell, anche quando si esegue una configurazione `localhost`. Per configurare correttamente l'ambiente, è sufficiente eseguire `Set-WsManQuickConfig -Force` in un terminale di PowerShell con privilegi elevati.
+
 In una console di PowerShell passare alla stessa cartella in cui è stata salvata la configurazione ed eseguire il comando seguente:
 
 ```powershell
 Start-DscConfiguration .\WebsiteTest
 ```
 
-## <a name="test-the-configuration"></a>Verificare la configurazione
+## <a name="test-the-configuration"></a>Testare la configurazione
 
 È possibile chiamare il cmdlet [DscConfigurationStatus Get](/powershell/module/psdesiredstateconfiguration/get-dscconfigurationstatus) per verificare se la configurazione è stata applicata.
 

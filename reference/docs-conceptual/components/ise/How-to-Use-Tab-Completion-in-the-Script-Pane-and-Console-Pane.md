@@ -1,13 +1,13 @@
 ---
-ms.date: 06/05/2017
+ms.date: 01/02/2020
 keywords: powershell,cmdlet
 title: Come usare la funzionalità di completamento tramite TAB nel riquadro di script e nel riquadro della console
-ms.openlocfilehash: 9fcb85668673adb1de596660d37e56f6607a4064
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 07cf9ff75db8d33ed018542153bfcd7503035e40
+ms.sourcegitcommit: 058a6e86eac1b27ca57a11687019df98709ed709
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "67031005"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75737084"
 ---
 # <a name="how-to-use-tab-completion-in-the-script-pane-and-console-pane"></a>Come usare la funzionalità di completamento tramite TAB nel riquadro di script e nel riquadro della console
 
@@ -15,16 +15,16 @@ La funzionalità di completamento tramite tasto TAB offre supporto automatico du
 
 ## <a name="to-automatically-complete-a-command-entry"></a>Per completare automaticamente una voce di comando
 
-Nel riquadro dei comandi o nel riquadro di script digitare alcuni caratteri di un comando e quindi premere TAB per selezionare il testo di completamento desiderato. Se più elementi iniziano con il testo digitato originariamente, continuare a premere TAB fino a quando non verrà visualizzato l'elemento desiderato. La funzionalità di completamento tramite tasto TAB consente di digitare il nome di un cmdlet, il nome di un parametro, il nome di una variabile, il nome di una proprietà oggetto o il percorso di un file.
+Nel riquadro dei comandi o nel riquadro di script digitare alcuni caratteri di un comando e quindi premere <kbd>TAB</kbd> per selezionare il testo di completamento desiderato. Se più elementi iniziano con il testo digitato originariamente, continuare a premere <kbd>TAB</kbd> fino a quando non verrà visualizzato l'elemento desiderato. La funzionalità di completamento tramite tasto TAB consente di digitare il nome di un cmdlet, il nome di un parametro, il nome di una variabile, il nome di una proprietà oggetto o il percorso di un file.
 
 > [!NOTE]
-> Premendo il tasto TAB nel riquadro di script verrà automaticamente completato un comando solo durante la modifica dei file con estensione ps1, psd1 o psm1. La funzionalità di completamento tramite tasto TAB funziona in qualsiasi momento durante la digitazione nel riquadro dei comandi.
+> Premendo <kbd>TAB</kbd> nel riquadro di script verrà automaticamente completato un comando solo durante la modifica dei file con estensione `.ps1`, `.psd1` o `.psm1`. La funzionalità di completamento tramite tasto TAB funziona in qualsiasi momento durante la digitazione nel riquadro dei comandi.
 
 ## <a name="to-automatically-complete-a-cmdlet-parameter-entry"></a>Per completare automaticamente una voce di parametro cmdlet
 
-Nel riquadro dei comandi o nel riquadro di script digitare un cmdlet seguito da un trattino e quindi premere TAB.
+Nel riquadro dei comandi o nel riquadro di script digitare un cmdlet seguito da un trattino e quindi premere <kbd>TAB</kbd>.
 
-Ad esempio, digitare `Get-Process -` e quindi premere più volte TAB per visualizzare ognuno dei parametri per il cmdlet.
+Ad esempio digitare `Get-Process -` e quindi premere più volte <kbd>TAB</kbd> per visualizzare ognuno dei parametri per il cmdlet.
 
 ## <a name="see-also"></a>Vedere anche
 

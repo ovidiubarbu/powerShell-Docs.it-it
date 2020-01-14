@@ -1,13 +1,13 @@
 ---
-ms.date: 11/15/2019
+ms.date: 12/18/2019
 keywords: powershell,core
 title: Modifiche di rilievo in PowerShell Core 6.0
-ms.openlocfilehash: a1dac42bcda8e1258a99ef281691a9d4c5986b53
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: dfbbeb5e5bb3d43959ce144afffc5b10193f8b30
+ms.sourcegitcommit: 1b88c280dd0799f225242608f0cbdab485357633
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74417550"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75415700"
 ---
 # <a name="breaking-changes-for-powershell-6x"></a>Modifiche di rilievo in PowerShell Core 6.x
 
@@ -17,7 +17,7 @@ ms.locfileid: "74417550"
 
 [Flusso di lavoro PowerShell][workflow] è una funzionalità di Windows PowerShell basata su [Windows Workflow Foundation (WF)][workflow-foundation] che consente di creare runbook affidabili per le attività di lunga durata o parallelizzate.
 
-A causa della mancanza di supporto per Windows Workflow Foundation in .NET Core, Flusso di lavoro PowerShell non continuerà a essere supportato in PowerShell Core.
+Dal momento che Windows Workflow Foundation non è supportato in .NET Core, il flusso di lavoro di PowerShell non è supportato in PowerShell Core.
 
 In futuro, è prevista l'abilitazione di parallelismo/concorrenza nativi nel linguaggio di PowerShell senza la necessità di Flusso di lavoro PowerShell.
 
@@ -63,6 +63,10 @@ In alternativa, viene consigliato l'uso dei cmdlet CIM (noti anche come WMI vers
 ### <a name="microsoftpowershelllocalaccounts"></a>Microsoft.PowerShell.LocalAccounts
 
 A causa dell'uso di API non supportate, `Microsoft.PowerShell.LocalAccounts` è stato rimosso da PowerShell Core finché non viene trovata una soluzione migliore.
+
+### <a name="new-webserviceproxy-cmdlet-removed"></a>Cmdlet `New-WebServiceProxy` rimosso
+
+.NET Core non supporta Windows Communication Framework, che offre servizi per l'uso del protocollo SOAP. Questo cmdlet è stato rimosso perché richiede SOAP.
 
 ### <a name="-computer-cmdlets"></a>Cmdlet di `*-Computer`
 
@@ -115,7 +119,7 @@ In precedenza, specificando `-Verbose` o `-Debug` veniva eseguito l'override del
 
 Quando un'API restituisce solo `null`, Invoke-RestMethod serializza questo valore come stringa `"null"` anziché come `$null`. Questa modifica consente di correggere la logica in `Invoke-RestMethod` per serializzare correttamente un singolo valore letterale valido JSON `null` come `$null`.
 
-### <a name="remove--protocol-from--computer-cmdlets-5277httpsgithubcompowershellpowershellissues5277"></a>Rimozione di `-Protocol` dai cmdlet `*-Computer` [#5277](https://github.com/PowerShell/PowerShell/issues/5277)
+### <a name="remove--protocol-from--computer-cmdlets-5277httpsgithubcompowershellpowershellissues5277"></a>Rimozione di `-Protocol` dai cmdlet `*-Computer`[#5277](https://github.com/PowerShell/PowerShell/issues/5277)
 
 A causa di problemi con la comunicazione remota RPC in CoreFX (in particolare nelle piattaforme non Windows) e per garantire un'esperienza coerente di comunicazione remota in PowerShell, il parametro `-Protocol` è stato rimosso dai cmdlet `\*-Computer`. DCOM non è più supportato per la comunicazione remota. I cmdlet seguenti supportano solo la comunicazione remota WS-Management:
 
@@ -123,7 +127,7 @@ A causa di problemi con la comunicazione remota RPC in CoreFX (in particolare ne
 - Restart-Computer
 - Stop-Computer
 
-### <a name="remove--computername-from--service-cmdlets-5090httpsgithubcompowershellpowershellissues5094"></a>Rimuovere `-ComputerName` dai cmdlet `*-Service` [#5090](https://github.com/PowerShell/PowerShell/issues/5094)
+### <a name="remove--computername-from--service-cmdlets-5090httpsgithubcompowershellpowershellissues5094"></a>Rimuovere `-ComputerName` dai cmdlet `*-Service`[#5090](https://github.com/PowerShell/PowerShell/issues/5094)
 
 Per favorire l'uso coerente di PSRP, il parametro `-ComputerName` è stato rimosso dai cmdlet `*-Service`.
 
@@ -145,15 +149,15 @@ In precedenza, il cmdlet restituiva un commento come prima riga, contenente il n
 
 Quando si usa HTTP, il contenuto che include password viene inviato come testo non crittografato. La modifica consiste nel non consentire questo comportamento per impostazione predefinita, con restituzione di un errore se le credenziali vengono passate in modo non sicuro. Gli utenti possono ignorare questa nuova impostazione usando l'opzione `-AllowUnencryptedAuthentication`.
 
-## <a name="api-changes"></a>Modifiche delle API
+## <a name="api-changes"></a>Modifiche all'API
 
-### <a name="remove-addtypecommandbase-class-5407httpsgithubcompowershellpowershellissues5407"></a>Rimuovere la classe `AddTypeCommandBase` [#5407](https://github.com/PowerShell/PowerShell/issues/5407)
+### <a name="remove-addtypecommandbase-class-5407httpsgithubcompowershellpowershellissues5407"></a>Rimuovere la classe `AddTypeCommandBase`[#5407](https://github.com/PowerShell/PowerShell/issues/5407)
 
 La classe `AddTypeCommandBase` è stata rimossa da `Add-Type` per migliorare le prestazioni. Questa classe viene usata solo dal cmdlet Add-Type e non dovrebbe avere effetti sugli utenti.
 
-### <a name="unify-cmdlets-with-parameter--encoding-to-be-of-type-systemtextencoding-5080httpsgithubcompowershellpowershellissues5080"></a>Tipo unificato `System.Text.Encoding` per i cmdlet con il parametro `-Encoding` [#5080](https://github.com/PowerShell/PowerShell/issues/5080)
+### <a name="unify-cmdlets-with-parameter--encoding-to-be-of-type-systemtextencoding-5080httpsgithubcompowershellpowershellissues5080"></a>Unificare i cmdlet con il parametro `-Encoding` in modo che siano di tipo `System.Text.Encoding` [#5080](https://github.com/PowerShell/PowerShell/issues/5080)
 
-Il valore `-Encoding` `Byte` è stato rimosso dai cmdlet per il provider filesystem. Viene ora usato un nuovo parametro, `-AsByteStream`, per specificare che un flusso di byte è richiesto come input o che l'output è un flusso di byte.
+Il valore `-Encoding``Byte` è stato rimosso dai cmdlet per il provider filesystem. Viene ora usato un nuovo parametro, `-AsByteStream`, per specificare che un flusso di byte è richiesto come input o che l'output è un flusso di byte.
 
 ### <a name="add-better-error-message-for-empty-and-null--uformat-parameter-5055httpsgithubcompowershellpowershellissues5055"></a>Aggiunta di un messaggio di errore migliore per il parametro `-UFormat` vuoto o Null [#5055](https://github.com/PowerShell/PowerShell/issues/5055)
 
@@ -163,7 +167,7 @@ In precedenza, al passaggio di una stringa di formato vuota a `-UFormat` veniva 
 
 Le funzionalità seguenti sono state rimosse e non sono supportate in PowerShell Core e non è prevista l'aggiunta del supporto perché esistono per motivi legacy per Windows PowerShell: opzione `-psconsolefile` e codice, opzione `-importsystemmodules` e codice e codice per la modifica del tipo di carattere.
 
-### <a name="removed-runspaceconfiguration-support-4942httpsgithubcompowershellpowershellissues4942"></a>Rimuovere il supporto di `RunspaceConfiguration` [#4942](https://github.com/PowerShell/PowerShell/issues/4942)
+### <a name="removed-runspaceconfiguration-support-4942httpsgithubcompowershellpowershellissues4942"></a>Rimuovere il supporto di `RunspaceConfiguration`[#4942](https://github.com/PowerShell/PowerShell/issues/4942)
 
 In precedenza, per la creazione di uno spazio di esecuzione di PowerShell a livello di codice con l'API era possibile usare la classe legacy [`RunspaceConfiguration`][runspaceconfig] o la più recente [`InitialSessionState`][iss]. Con questa modifica viene rimosso il supporto per `RunspaceConfiguration` ed è ora supportata solo la classe `InitialSessionState`.
 
@@ -174,7 +178,7 @@ In precedenza, per la creazione di uno spazio di esecuzione di PowerShell a live
 
 A causa della posizione non corretta di un parametro, gli argomenti vengono passati come input invece che come argomenti.
 
-### <a name="remove-unsupported--showwindow-switch-from-get-help-4903httpsgithubcompowershellpowershellissues4903"></a>Rimozione dell'opzione `-showwindow` non supportata da `Get-Help` [#4903](https://github.com/PowerShell/PowerShell/issues/4903)
+### <a name="remove-unsupported--showwindow-switch-from-get-help-4903httpsgithubcompowershellpowershellissues4903"></a>Rimuovere l'opzione `-showwindow` non supportata da `Get-Help` [#4903](https://github.com/PowerShell/PowerShell/issues/4903)
 
 `-showwindow` si basa su WPF, che non è supportato in CoreCLR.
 
@@ -182,9 +186,9 @@ A causa della posizione non corretta di un parametro, gli argomenti vengono pass
 
 In precedenza, `-LiteralPath` con un carattere jolly specificato veniva considerato uguale a `-Path` e se il carattere jolly non trovava alcun file, il cmdlet veniva chiuso senza messaggi. Il comportamento corretto prevede che `-LiteralPath` sia un valore letterale in modo che generi un errore se il file non esiste. La modifica consiste nel considerare i caratteri jolly usati con `-Literal` come valore letterale.
 
-### <a name="fix-set-service-failing-test-4802httpsgithubcompowershellpowershellissues4802"></a>Correzione per l'esito negativo del test per `Set-Service` [#4802](https://github.com/PowerShell/PowerShell/issues/4802)
+### <a name="fix-set-service-failing-test-4802httpsgithubcompowershellpowershellissues4802"></a>Correzione per l'esito negativo del test per `Set-Service`[#4802](https://github.com/PowerShell/PowerShell/issues/4802)
 
-In precedenza, usando `New-Service -StartupType foo` `foo` veniva ignorato e il servizio veniva creato con un tipo di avvio predefinito. La modifica consiste nel generare in modo esplicito un errore per un tipo di avvio non valido.
+In precedenza, usando `New-Service -StartupType foo``foo` veniva ignorato e il servizio veniva creato con un tipo di avvio predefinito. La modifica consiste nel generare in modo esplicito un errore per un tipo di avvio non valido.
 
 ### <a name="rename-isosx-to-ismacos-4700httpsgithubcompowershellpowershellissues4700"></a>Rinominare `$IsOSX` in `$IsMacOS` [#4700](https://github.com/PowerShell/PowerShell/issues/4700)
 
@@ -238,7 +242,7 @@ In Unix, l'accettazione di `-i` per una shell interattiva è una convenzione per
 
 `BiosSerialNumber` era digitata in modo errato come `BiosSeralNumber` ed è stata corretta.
 
-### <a name="add-get-stringhash-and-get-filehash-cmdlets-3024httpsgithubcompowershellpowershellissues3024"></a>Aggiunta dei cmdlet `Get-StringHash` e `Get-FileHash` [#3024](https://github.com/PowerShell/PowerShell/issues/3024)
+### <a name="add-get-stringhash-and-get-filehash-cmdlets-3024httpsgithubcompowershellpowershellissues3024"></a>Aggiunta dei cmdlet `Get-StringHash` e `Get-FileHash`[#3024](https://github.com/PowerShell/PowerShell/issues/3024)
 
 Questa modifica riguarda alcuni algoritmi di hash non supportati da CoreFX, che pertanto non sono più disponibili:
 
@@ -265,7 +269,7 @@ Il passaggio di `$null` a uno qualsiasi dei cmdlet seguenti ora genera un errore
 - `Get-WmiObject -Class`
 - `Get-WmiObject -Property`
 
-### <a name="add-support-w3c-extended-log-file-format-in-import-csv-2482httpsgithubcompowershellpowershellissues2482"></a>Aggiunta del supporto del formato di file di log esteso W3C `Import-Csv` [#2482](https://github.com/PowerShell/PowerShell/issues/2482)
+### <a name="add-support-w3c-extended-log-file-format-in-import-csv-2482httpsgithubcompowershellpowershellissues2482"></a>Aggiungere il supporto del formato di file di log esteso W3C in `Import-Csv` [#2482](https://github.com/PowerShell/PowerShell/issues/2482)
 
 In precedenza, il cmdlet `Import-Csv` non poteva essere usato per importare direttamente i file di log in formato W3C esteso ed era necessaria un'azione aggiuntiva. Con questa modifica, il formato di log esteso W3C è ora supportato.
 
@@ -273,7 +277,7 @@ In precedenza, il cmdlet `Import-Csv` non poteva essere usato per importare dire
 
 `ValueFromRemainingArguments` restituisce ora i valori come matrice anziché come valore singolo che è a sua volta una matrice.
 
-### <a name="buildversion-is-removed-from-psversiontable-1415httpsgithubcompowershellpowershellissues1415"></a>Rimozione di `BuildVersion` da `$PSVersionTable` [#1415](https://github.com/PowerShell/PowerShell/issues/1415)
+### <a name="buildversion-is-removed-from-psversiontable-1415httpsgithubcompowershellpowershellissues1415"></a>`BuildVersion` viene rimosso da `$PSVersionTable` [#1415](https://github.com/PowerShell/PowerShell/issues/1415)
 
 Rimuovere la proprietà `BuildVersion` da `$PSVersionTable`. Questa proprietà era associata alla versione della build di Windows. Si consiglia invece di usare `GitCommitId` per recuperare la versione build esatta di PowerShell Core.
 

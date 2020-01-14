@@ -1,13 +1,13 @@
 ---
-ms.date: 06/05/2017
+ms.date: 01/02/2020
 keywords: powershell,cmdlet
 title: Esplorazione di Windows PowerShell ISE
-ms.openlocfilehash: 7949b690cda73148f07922985b1fc30fe1e8b2d0
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 03728a8c83962894b27738609a5b1bec841fdb13
+ms.sourcegitcommit: 058a6e86eac1b27ca57a11687019df98709ed709
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74117449"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75737101"
 ---
 # <a name="exploring-the-windows-powershell-ise"></a>Esplorazione di Windows PowerShell ISE
 
@@ -31,25 +31,25 @@ Una scheda di Windows PowerShell è l'ambiente in cui viene eseguito uno script 
 
 Nella barra degli strumenti si trovano i seguenti pulsanti.
 
-|Pulsante|Function|
-|----------|------------|
-|**Nuovo**|Apre un nuovo script.|
-|**Apri**|Apre uno script o un file esistente.|
-|**Salva**|Salva uno script o un file.|
-|**Taglia**|Taglia il testo selezionato copiandolo negli Appunti.|
-|**Copia**|Copia il testo selezionato negli appunti.|
-|**Incolla**|Incolla il contenuto degli Appunti nella posizione del cursore.|
-|**Cancella riquadro di output**|Cancella l'intero contenuto del riquadro di output.|
-|**Annulla**|Inverte l'operazione appena eseguita.|
-|**Ripeti**|Esegue l'operazione appena annullata.|
-|**Esegui script**|Esegue uno script.|
-|**Esegui selezione**|Esegue una parte selezionata dello script.|
-|**Arresta esecuzione**|Arresta uno script che è in esecuzione.|
-|**Scheda Nuova sessione PowerShell remota**|Crea una nuova scheda di PowerShell che stabilisce una sessione in un computer remoto. Verrà visualizzata una finestra di dialogo che richiede di immettere i dettagli necessari per stabilire la connessione remota.|
-|**Avvia PowerShell.exe**|Apre una console di PowerShell.|
-|**Mostra riquadro di script in alto**|Sposta il riquadro di script in alto nello schermo.|
-|**Mostra riquadro di script a destra**|Sposta il riquadro di script a destra nello schermo.|
-|**Mostra riquadro di script ingrandito**|Ingrandisce il riquadro di script.|
+|             Pulsante             |                                                                                     Funzione                                                                                     |
+| ------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Nuovo**                        | Apre un nuovo script.                                                                                                                                                              |
+| **Apri**                       | Apre uno script o un file esistente.                                                                                                                                                |
+| **Salva**                       | Salva uno script o un file.                                                                                                                                                          |
+| **Taglia**                        | Taglia il testo selezionato copiandolo negli Appunti.                                                                                                                           |
+| **Copia**                       | Copia il testo selezionato negli appunti.                                                                                                                                       |
+| **Incolla**                      | Incolla il contenuto degli Appunti nella posizione del cursore.                                                                                                                     |
+| **Cancella riquadro di output**          | Cancella l'intero contenuto del riquadro di output.                                                                                                                                           |
+| **Annulla**                       | Inverte l'operazione appena eseguita.                                                                                                                                     |
+| **Ripeti**                       | Esegue l'operazione appena annullata.                                                                                                                                        |
+| **Esegui script**                 | Esegue uno script.                                                                                                                                                                   |
+| **Esegui selezione**              | Esegue una parte selezionata dello script.                                                                                                                                             |
+| **Arresta esecuzione**             | Arresta uno script che è in esecuzione.                                                                                                                                                  |
+| **Scheda Nuova sessione PowerShell remota**  | Crea una nuova scheda di PowerShell che stabilisce una sessione in un computer remoto. Verrà visualizzata una finestra di dialogo che richiede di immettere i dettagli necessari per stabilire la connessione remota. |
+| **Avvia PowerShell.exe**       | Apre una console di PowerShell.                                                                                                                                                      |
+| **Mostra riquadro di script in alto**       | Sposta il riquadro di script in alto nello schermo.                                                                                                                                 |
+| **Mostra riquadro di script a destra**     | Sposta il riquadro di script a destra nello schermo.                                                                                                                               |
+| **Mostra riquadro di script ingrandito** | Ingrandisce il riquadro di script.                                                                                                                                                       |
 
 ## <a name="script-tab"></a>Scheda dello script
 
@@ -67,7 +67,7 @@ Visualizza i risultati dei comandi e degli script eseguiti. È inoltre possibile
 
 ## <a name="command-pane"></a>Riquadro dei comandi
 
-Consente di scrivere comandi. È possibile eseguire un comando di una riga o su più righe nel riquadro dei comandi. Premere MAIUSC+INVIO per immettere ogni riga di un comando su più righe e premere INVIO dopo l'ultima riga per eseguire il comando su più righe. Il prompt visualizzato nella parte superiore del riquadro dei comandi mostra il percorso della directory di lavoro corrente.
+Consente di scrivere comandi. È possibile eseguire un comando di una riga o su più righe nel riquadro dei comandi. Premere <kbd>MAIUSC</kbd>+<kbd>INVIO</kbd> per immettere ogni riga di un comando su più righe e premere <kbd>INVIO</kbd> dopo l'ultima riga per eseguire il comando su più righe. Il prompt visualizzato nella parte superiore del riquadro dei comandi mostra il percorso della directory di lavoro corrente.
 
 ## <a name="status-bar"></a>Barra di stato
 
@@ -77,9 +77,10 @@ Consente di vedere se i comandi e gli script in esecuzione sono completi. La bar
 
 Aumenta o diminuisce le dimensioni del testo sullo schermo.
 
-## <a name="help"></a>?
+## <a name="help"></a>Guida
 
-La Guida di Windows PowerShell ISE è disponibile sul Web nella libreria TechNet. È possibile aprire la Guida scegliendo **Guida di Windows PowerShell ISE** dal menu **?** o premendo F1 in un punto qualsiasi tranne quando il cursore si trova sul nome di un cmdlet nel riquadro di script o in quello della console. Dal menu **?** è anche possibile eseguire il cmdlet Update-Help e visualizzare la finestra di comando che offre assistenza per la creazione di comandi visualizzando tutti i parametri di un cmdlet e consentendo di specificare i parametri in un modulo di semplice uso.
+La Guida di Windows PowerShell ISE è disponibile sul Web nella libreria TechNet. È possibile aprire la Guida scegliendo **Guida di Windows PowerShell ISE** dal menu **?** o premendo <kbd>F1</kbd> in un punto qualsiasi tranne quando il cursore si trova sul nome di un cmdlet nel riquadro di script o in quello della console.
+Dal menu **?** è anche possibile eseguire il cmdlet `Update-Help` e visualizzare la finestra di comando che offre assistenza per la creazione di comandi visualizzando tutti i parametri di un cmdlet e consentendo di specificare i parametri in un modulo di semplice uso.
 
 ## <a name="see-also"></a>Vedere anche
 

@@ -1,13 +1,13 @@
 ---
-ms.date: 06/05/2017
+ms.date: 12/31/2019
 keywords: powershell,cmdlet
 title: Oggetto ISEEditor
-ms.openlocfilehash: 2d4c3d941035384c591ca57e809c0e3a9b852f5c
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: cb63acebc1a8bb9fa6cc07199088ae0d5441bc91
+ms.sourcegitcommit: 058a6e86eac1b27ca57a11687019df98709ed709
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "62086766"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75736190"
 ---
 # <a name="the-iseeditor-object"></a>Oggetto ISEEditor
 
@@ -69,7 +69,7 @@ $psISE.CurrentPowerShellTab.ConsolePane.GetLineLength(1)
 
 Supportato in Windows PowerShell ISE 3.0 e versioni successive e non presente nelle versioni precedenti.
 
-Sposta il cursore sul carattere corrispondente se la proprietà **CanGoToMatch** dell'oggetto editor è **$true**, il che si verifica quando il cursore si trova immediatamente prima di una parentesi, di una parentesi quadra o di una parentesi graffa di apertura, \(, \[, { o immediatamente dopo una parentesi, una parentesi quadra o una parentesi graffa di chiusura, \), \], }.  Il cursore viene posizionato prima di un carattere di apertura o dopo un carattere di chiusura. Se la proprietà **CanGoToMatch** è **$false**, questo metodo non esegue alcuna operazione.
+Sposta il cursore sul carattere corrispondente se la proprietà **CanGoToMatch** dell'oggetto editor è `$true`, il che si verifica quando il cursore si trova immediatamente prima di una parentesi, parentesi quadra o parentesi graffa di apertura `(`,`[`,`{` o immediatamente dopo una parentesi, parentesi quadra o parentesi graffa di chiusura `)`,`]`,`}`. Il cursore viene posizionato prima di un carattere di apertura o dopo un carattere di chiusura. Se la proprietà **CanGoToMatch** è `$false`, questo metodo non esegue alcuna operazione.
 
 ```powershell
 # Goes to the matching character if CanGoToMatch() is $true
@@ -147,7 +147,7 @@ $psISE.CurrentFile.Editor.ToggleOutliningExpansion()
 
 Supportato in Windows PowerShell ISE 3.0 e versioni successive e non presente nelle versioni precedenti.
 
-Proprietà di sola lettura booleana che indica se il cursore si trova accanto a una parentesi, a una parentesi quadra o a una parentesi graffa - \(\), \[\], {}. Se il cursore si trova immediatamente prima del carattere di apertura o immediatamente dopo il carattere di chiusura di una coppia, il valore di questa proprietà è **$true**. In caso contrario, è **$false**.
+Proprietà booleana di sola lettura che indica se il cursore si trova accanto a una parentesi, parentesi quadra o parentesi graffa `()`, `[]`, `{}`. Se il cursore si trova immediatamente prima del carattere di apertura o immediatamente dopo il carattere di chiusura di una coppia, il valore di questa proprietà è `$true`. In caso contrario, è `$false`.
 
 ```powershell
 # Test to see if the caret is next to a parenthesis, bracket, or brace
@@ -206,7 +206,7 @@ Proprietà di sola lettura che ottiene il testo selezionato dall'editor.
 
 Vedere [Esempio di script](#scripting-example) più avanti in questo argomento.
 
-### <a name="text"></a>Testo
+### <a name="text"></a>Text
 
 Supportato in Windows PowerShell ISE 2.0 e versioni successive.
 

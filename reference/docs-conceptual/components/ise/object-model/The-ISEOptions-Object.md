@@ -1,13 +1,13 @@
 ---
-ms.date: 06/05/2017
+ms.date: 12/31/2019
 keywords: powershell,cmdlet
 title: Oggetto ISEOptions
-ms.openlocfilehash: e9dcb13c14212ec4aec40a7f163e2ed56ceea6f9
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 9caa78a70cb837c755b2eff9af6ce0aa5dbb7452
+ms.sourcegitcommit: 058a6e86eac1b27ca57a11687019df98709ed709
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "67028915"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75736948"
 ---
 # <a name="the-iseoptions-object"></a>Oggetto ISEOptions
 
@@ -80,7 +80,7 @@ $psISE.Options.AutoSaveMinuteInterval = 3
 
 ### <a name="commandpanebackgroundcolor"></a>CommandPaneBackgroundColor
 
-Questa funzionalità è presente in Windows PowerShell ISE 2.0, ma è stata rimossa o rinominata nelle versioni successive di ISE.  Per le versioni successive, vedere [ConsolePaneBackgroundColor](#consolepanebackgroundcolor).
+Questa funzionalità è presente in Windows PowerShell ISE 2.0, ma è stata rimossa o rinominata nelle versioni successive di ISE. Per le versioni successive, vedere [ConsolePaneBackgroundColor](#consolepanebackgroundcolor).
 
 Specifica il colore di sfondo per il riquadro dei comandi. È un'istanza della classe **System.Windows.Media.Color**.
 
@@ -137,7 +137,9 @@ $psISE.Options.ConsolePaneTextBackgroundColor = 'pink'
 
 Supportato in Windows PowerShell ISE 3.0 e versioni successive e non presente nelle versioni precedenti.
 
-Specifica i colori dei token di IntelliSense nel riquadro della console di Windows PowerShell ISE. Questa proprietà è un oggetto dizionario che contiene le coppie nome/valore dei tipi e dei colori dei token per il riquadro della console. Per modificare i colori dei token di IntelliSense nel riquadro di script, vedere [TokenColors](#tokencolors). Per reimpostare i colori ai valori predefiniti, vedere [RestoreDefaultConsoleTokenColors](#restoredefaultconsoletokencolors). È possibile impostare i colori dei token per gli elementi seguenti: Attribute, Command, CommandArgument, CommandParameter, Comment, GroupEnd, GroupStart, Keyword, LineContinuation, LoopLabel, Member, NewLine, Number, Operator, Position, StatementSeparator, String, Type, Unknown, Variable.
+Specifica i colori dei token di IntelliSense nel riquadro della console di Windows PowerShell ISE. Questa proprietà è un oggetto dizionario che contiene le coppie nome/valore dei tipi e dei colori dei token per il riquadro della console. Per modificare i colori dei token di IntelliSense nel riquadro di script, vedere [TokenColors](#tokencolors).
+Per reimpostare i colori ai valori predefiniti, vedere [RestoreDefaultConsoleTokenColors](#restoredefaultconsoletokencolors).
+È possibile impostare i colori dei token per gli elementi seguenti: Attribute, Command, CommandArgument, CommandParameter, Comment, GroupEnd, GroupStart, Keyword, LineContinuation, LoopLabel, Member, NewLine, Number, Operator, Position, StatementSeparator, String, Type, Unknown, Variable.
 
 ```powershell
 # Sets the color of commands to green.
@@ -177,7 +179,9 @@ Raccolta di proprietà che specificano i valori predefiniti da usare quando veng
 ```powershell
 # Displays the name of the default options. This example is from ISE 4.0.
 $psISE.Options.DefaultOptions
+```
 
+```Output
 SelectedScriptPaneState                   : Top
 ShowDefaultSnippets                       : True
 ShowToolBar                               : True
@@ -263,7 +267,8 @@ $psISE.Options.FontSize = 20
 
 Supportato in Windows PowerShell ISE 3.0 e versioni successive e non presente nelle versioni precedenti.
 
-Specifica il numero di secondi durante cui IntelliSense prova a risolvere il testo attualmente digitato. Dopo questo intervallo, IntelliSense raggiunge il timeout e consente di continuare la digitazione. Il valore predefinito è 3 secondi. Il valore è un numero intero.
+Specifica il numero di secondi durante cui IntelliSense prova a risolvere il testo attualmente digitato.
+Dopo questo intervallo, IntelliSense raggiunge il timeout e consente di continuare la digitazione. Il valore predefinito è 3 secondi. Il valore è un numero intero.
 
 ```powershell
 # Changes the number of seconds for IntelliSense syntax recognition to 5.
@@ -283,7 +288,7 @@ $psISE.Options.MruCount = 5
 
 ### <a name="outputpanebackgroundcolor"></a>OutputPaneBackgroundColor
 
-Questa funzionalità è presente in Windows PowerShell ISE 2.0, ma è stata rimossa o rinominata nelle versioni successive di ISE.  Per le versioni successive, vedere [ConsolePaneBackgroundColor](#consolepanebackgroundcolor).
+Questa funzionalità è presente in Windows PowerShell ISE 2.0, ma è stata rimossa o rinominata nelle versioni successive di ISE. Per le versioni successive, vedere [ConsolePaneBackgroundColor](#consolepanebackgroundcolor).
 
 Proprietà di lettura/scrittura che ottiene o imposta il colore di sfondo per il riquadro di output. È un'istanza della classe **System.Windows.Media.Color**.
 
@@ -294,7 +299,7 @@ $psISE.Options.OutputPaneForegroundColor = 'gold'
 
 ### <a name="outputpanetextforegroundcolor"></a>OutputPaneTextForegroundColor
 
-Questa funzionalità è presente in Windows PowerShell ISE 2.0, ma è stata rimossa o rinominata nelle versioni successive di ISE.  Per le versioni successive, vedere [ConsolePaneForegroundColor](#consolepaneforegroundcolor).
+Questa funzionalità è presente in Windows PowerShell ISE 2.0, ma è stata rimossa o rinominata nelle versioni successive di ISE. Per le versioni successive, vedere [ConsolePaneForegroundColor](#consolepaneforegroundcolor).
 
 Proprietà di lettura/scrittura che modifica il colore di primo piano del testo nel riquadro di output in Windows PowerShell ISE 2.0.
 
@@ -305,7 +310,7 @@ $psISE.Options.OutputPaneTextForegroundColor  = 'blue'
 
 ### <a name="outputpanetextbackgroundcolor"></a>OutputPaneTextBackgroundColor
 
-Questa funzionalità è presente in Windows PowerShell ISE 2.0, ma è stata rimossa o rinominata nelle versioni successive di ISE.  Per le versioni successive, vedere [ConsolePaneTextBackgroundColor](#consolepanetextbackgroundcolor).
+Questa funzionalità è presente in Windows PowerShell ISE 2.0, ma è stata rimossa o rinominata nelle versioni successive di ISE. Per le versioni successive, vedere [ConsolePaneTextBackgroundColor](#consolepanetextbackgroundcolor).
 
 Proprietà di lettura/scrittura che modifica il colore di sfondo del testo nel riquadro di output.
 
@@ -356,7 +361,8 @@ $psISE.Options.SelectedScriptPaneState = 'Maximized'
 
 Supportato in Windows PowerShell ISE 3.0 e versioni successive e non presente nelle versioni precedenti.
 
-Specifica se l'elenco di frammenti di codice di **CTRL+J** comprende il set iniziale incluso in Windows PowerShell. Se è impostato su **$false**, vengono visualizzati solo i frammenti di codice definiti dall'utente nell'elenco **CTRL+J**. Il valore predefinito è **$true**.
+Specifica se l'elenco di frammenti di codice <kbd>CTRL</kbd>+<kbd>J</kbd> comprende il set iniziale incluso in Windows PowerShell. Se è impostato su `$false`, l'elenco <kbd>CTRL</kbd>+<kbd>J</kbd> includerà solo i frammenti di codice definiti dall'utente.
+Il valore predefinito è `$true`.
 
 ```powershell
 # Hide the default snippets from the CTRL+J list.
@@ -367,7 +373,8 @@ $psISE.Options.ShowDefaultSnippets = $false
 
 Supportato in Windows PowerShell ISE 3.0 e versioni successive e non presente nelle versioni precedenti.
 
-Specifica se IntelliSense offre suggerimenti relativi a sintassi, parametri e valori nel riquadro della console. Il valore predefinito è **$true**.
+Specifica se IntelliSense offre suggerimenti relativi a sintassi, parametri e valori nel riquadro della console.
+Il valore predefinito è `$true`.
 
 ```powershell
 # Turn off IntelliSense in the console pane.
@@ -378,7 +385,8 @@ $psISE.Options.ShowIntellisenseInConsolePane = $false
 
 Supportato in Windows PowerShell ISE 3.0 e versioni successive e non presente nelle versioni precedenti.
 
-Specifica se IntelliSense offre suggerimenti relativi a sintassi, parametri e valori nel riquadro di script. Il valore predefinito è **$true**.
+Specifica se IntelliSense offre suggerimenti relativi a sintassi, parametri e valori nel riquadro di script.
+Il valore predefinito è `$true`.
 
 ```powershell
 # Turn off IntelliSense in the Script pane.
@@ -389,7 +397,7 @@ $psISE.Options.ShowIntellisenseInScriptPane = $false
 
 Supportato in Windows PowerShell ISE 3.0 e versioni successive e non presente nelle versioni precedenti.
 
-Specifica se il riquadro di script visualizza i numeri di riga nel margine sinistro. Il valore predefinito è **$true**.
+Specifica se il riquadro di script visualizza i numeri di riga nel margine sinistro. Il valore predefinito è `$true`.
 
 ```powershell
 # Turn off line numbers in the Script pane.
@@ -400,7 +408,7 @@ $psISE.Options.ShowLineNumbers = $false
 
 Supportato in Windows PowerShell ISE 3.0 e versioni successive e non presente nelle versioni precedenti.
 
-Specifica se il riquadro di script visualizza le parentesi espandibili e comprimibili accanto alle sezioni di codice nel margine sinistro. Quando sono visualizzate, è possibile fare clic sull'icona del segno meno \(-\) accanto a un blocco di testo per comprimerlo o sull'icona del segno più \(+\) per espanderlo. Il valore predefinito è **$true**.
+Specifica se il riquadro di script visualizza le parentesi espandibili e comprimibili accanto alle sezioni di codice nel margine sinistro. Quando sono visualizzate, è possibile fare clic sull'icona del segno meno (`-`) accanto a un blocco di testo per comprimerlo o sull'icona del segno più (`+`) per espanderlo. Il valore predefinito è `$true`.
 
 ```powershell
 # Turn off outlining in the Script pane.
@@ -411,7 +419,7 @@ $psISE.Options.ShowOutlining = $false
 
 Supportato in Windows PowerShell ISE 2.0 e versioni successive.
 
-Specifica se la barra degli strumenti ISE viene visualizzata nella parte superiore della finestra di Windows PowerShell ISE. Il valore predefinito è **$true**.
+Specifica se la barra degli strumenti ISE viene visualizzata nella parte superiore della finestra di Windows PowerShell ISE. Il valore predefinito è `$true`.
 
 ```powershell
 # Show the toolbar.
@@ -422,7 +430,8 @@ $psISE.Options.ShowToolBar = $true
 
 Supportato in Windows PowerShell ISE 2.0 e versioni successive.
 
-Specifica se viene visualizzato un messaggio di avviso quando uno script viene salvato automaticamente prima di essere eseguito. Il valore predefinito è **$true**.
+Specifica se viene visualizzato un messaggio di avviso quando uno script viene salvato automaticamente prima di essere eseguito.
+Il valore predefinito è `$true`.
 
 ```powershell
 # Enable the warning message when an attempt
@@ -434,7 +443,7 @@ $psISE.Options.ShowWarningBeforeSavingOnRun = $true
 
 Supportato in Windows PowerShell ISE 2.0 e versioni successive.
 
-Specifica se viene visualizzato un messaggio di avviso quando lo stesso file viene aperto in diverse schede di PowerShell. Se impostato su **$true**, se si apre lo stesso file in più schede viene visualizzato questo messaggio: "Una copia del file è aperta in un'altra scheda di PowerShell. Le modifiche apportate al file interesseranno tutte le copie aperte". Il valore predefinito è **$true**.
+Specifica se viene visualizzato un messaggio di avviso quando lo stesso file viene aperto in diverse schede di PowerShell. Se impostato su `$true`, l'apertura dello stesso file in più schede determina la visualizzazione di questo messaggio: "Una copia del file è aperta in un'altra scheda di PowerShell. Le modifiche apportate al file interesseranno tutte le copie aperte". Il valore predefinito è `$true`.
 
 ```powershell
 # Enable the warning message when a file is
@@ -446,7 +455,9 @@ $psISE.Options.ShowWarningForDuplicateFiles = $true
 
 Supportato in Windows PowerShell ISE 2.0 e versioni successive.
 
-Specifica i colori dei token di IntelliSense nel riquadro di script di Windows PowerShell ISE. Questa proprietà è un oggetto dizionario che contiene le coppie nome/valore dei tipi e dei colori dei token per il riquadro di script. Per modificare i colori dei token di IntelliSense nel riquadro della console, vedere [ConsoleTokenColors](#consoletokencolors). Per reimpostare i colori ai valori predefiniti, vedere [RestoreDefaultTokenColors](#restoredefaulttokencolors). È possibile impostare i colori dei token per gli elementi seguenti: Attribute, Command, CommandArgument, CommandParameter, Comment, GroupEnd, GroupStart, Keyword, LineContinuation, LoopLabel, Member, NewLine, Number, Operator, Position, StatementSeparator, String, Type, Unknown, Variable.
+Specifica i colori dei token di IntelliSense nel riquadro di script di Windows PowerShell ISE. Questa proprietà è un oggetto dizionario che contiene le coppie nome/valore dei tipi e dei colori dei token per il riquadro di script. Per modificare i colori dei token di IntelliSense nel riquadro della console, vedere [ConsoleTokenColors](#consoletokencolors).
+Per reimpostare i colori ai valori predefiniti, vedere [RestoreDefaultTokenColors](#restoredefaulttokencolors).
+È possibile impostare i colori dei token per gli elementi seguenti: Attribute, Command, CommandArgument, CommandParameter, Comment, GroupEnd, GroupStart, Keyword, LineContinuation, LoopLabel, Member, NewLine, Number, Operator, Position, StatementSeparator, String, Type, Unknown, Variable.
 
 ```powershell
 # Sets the color of commands to green.
@@ -459,7 +470,7 @@ $psISE.Options.TokenColors["Keyword"] = "magenta"
 
 Supportato in Windows PowerShell ISE 3.0 e versioni successive e non presente nelle versioni precedenti.
 
-Specifica se è possibile usare INVIO per selezionare un'opzione fornita da IntelliSense nel riquadro della console. Il valore predefinito è **$true**.
+Specifica se è possibile usare INVIO per selezionare un'opzione fornita da IntelliSense nel riquadro della console. Il valore predefinito è `$true`.
 
 ```powershell
 # Turn off using the ENTER key to select an IntelliSense provided option in the Console pane.
@@ -470,7 +481,7 @@ $psISE.Options.UseEnterToSelectInConsolePaneIntellisense = $false
 
 Supportato in Windows PowerShell ISE 3.0 e versioni successive e non presente nelle versioni precedenti.
 
-Specifica se è possibile usare INVIO per selezionare un'opzione fornita da IntelliSense nel riquadro di script. Il valore predefinito è **$true**.
+Specifica se è possibile usare INVIO per selezionare un'opzione fornita da IntelliSense nel riquadro di script. Il valore predefinito è `$true`.
 
 ```powershell
 # Turn on using the Enter key to select an IntelliSense provided option in the Console pane.
@@ -481,7 +492,7 @@ $psISE.Options.UseEnterToSelectInConsolePaneIntellisense = $true
 
 Supportato in Windows PowerShell ISE 3.0 e versioni successive e non presente nelle versioni precedenti.
 
-Specifica se la Guida installata in locale o la Guida della libreria TechNet online viene visualizzata quando si preme F1 con il cursore posizionato su una parola chiave. Se è impostato su **$true**, una finestra popup visualizza il contenuto della Guida installata in locale. È possibile installare i file della Guida con il comando `Update-Help`. Se è impostato su **$false**, il browser apre una pagina della libreria TechNet.
+Specifica se viene visualizzata la Guida installata in locale o la Guida della libreria TechNet online quando si preme <kbd>F1</kbd> con il cursore posizionato su una parola chiave. Se impostato su `$true`, una finestra popup visualizza il contenuto della Guida installata in locale. È possibile installare i file della Guida con il comando `Update-Help`. Se impostato su `$false`, il browser apre una pagina della libreria TechNet.
 
 ```powershell
 # Sets the option for the online help to be displayed.
@@ -551,7 +562,8 @@ $psISE.Options.XmlTokenColors["Comment"] = 'magenta'
 
 Supportato in Windows PowerShell ISE 3.0 e versioni successive e non presente nelle versioni precedenti.
 
-Specifica le dimensioni relative del testo nei riquadri della console e di script. Il valore predefinito è 100. Se si specificano valori inferiori o superiori, il testo in Windows PowerShell ISE risulta rimpicciolito o ingrandito. Il valore è un numero intero compreso tra 20 e 400.
+Specifica le dimensioni relative del testo nei riquadri della console e di script. Il valore predefinito è 100.
+Se si specificano valori inferiori o superiori, il testo in Windows PowerShell ISE risulta rimpicciolito o ingrandito. Il valore è un numero intero compreso tra 20 e 400.
 
 ```powershell
 # Changes the text in the Windows PowerShell ISE to be double its normal size.

@@ -1,13 +1,13 @@
 ---
-ms.date: 06/05/2017
+ms.date: 12/31/2019
 keywords: powershell,cmdlet
 title: Scopo del modello a oggetti di scripting di Windows PowerShell ISE
-ms.openlocfilehash: e59593ef06911c709e92fa7a1eabd96d2636ca30
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 1f48df112bd19297baa311116e79d3d7603d7c81
+ms.sourcegitcommit: 058a6e86eac1b27ca57a11687019df98709ed709
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "67030904"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75736233"
 ---
 # <a name="purpose-of-the-windows-powershell-ise-scripting-object-model"></a>Scopo del modello a oggetti di scripting di Windows PowerShell ISE
 
@@ -17,12 +17,13 @@ Gli oggetti sono associati al formato e alla funzione di Windows PowerShell Inte
 
 È possibile usare il modello a oggetti per modificare le impostazioni e le opzioni dell'applicazione. Ad esempio, è possibile modificarle come segue:
 
-- È possibile modificare il colore di errori, avvisi, output dettagliati e output di debug.
-- È possibile ottenere o impostare i colori di sfondo per il riquadro dei comandi, il riquadro di output e il riquadro di script.
-- È possibile impostare il colore di primo piano per il riquadro di output.
-- È possibile impostare il nome del tipo di carattere e la dimensione del carattere per Windows PowerShell ISE.
-- È possibile configurare gli avvisi. Questa impostazione include gli avvisi che vengono generati quando viene aperto un file in più schede di PowerShell o quando uno script nel file viene eseguito prima del salvataggio del file.
-- È possibile passare da una vista in cui il riquadro di script e il riquadro di output sono affiancati a una vista in cui il riquadro di script si trova sopra il riquadro di output. È possibile ancorare il riquadro dei comandi nella parte inferiore o superiore del riquadro di output.
+- Modificare il colore di errori, avvisi, output dettagliati e output di debug.
+- Ottenere o impostare i colori di sfondo per il riquadro dei comandi, il riquadro di output e il riquadro di script.
+- Impostare il colore di primo piano per il riquadro di output.
+- Impostare il nome del tipo di carattere e la dimensione del carattere per Windows PowerShell ISE.
+- Configurare gli avvisi. Questa impostazione include gli avvisi che vengono generati quando viene aperto un file in più schede di PowerShell o quando uno script nel file viene eseguito prima del salvataggio del file.
+- Passare da una vista in cui il riquadro di script e il riquadro di output sono affiancati a una vista in cui il riquadro di script si trova sopra il riquadro di output.
+- Ancorare il riquadro dei comandi nella parte inferiore o superiore del riquadro di output.
 
 ## <a name="enhancing-the-functionality-of-windows-powershell-ise"></a>Miglioramento della funzionalità di Windows PowerShell ISE
 

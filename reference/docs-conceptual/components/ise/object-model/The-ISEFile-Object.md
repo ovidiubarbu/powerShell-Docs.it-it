@@ -1,17 +1,17 @@
 ---
-ms.date: 06/05/2017
+ms.date: 12/31/2019
 keywords: powershell,cmdlet
 title: Oggetto ISEFile
-ms.openlocfilehash: ebb5a35f6ea9d93eab633b9f4e6c84e4fddd6ae8
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 1069e46aa586b8df2050129194a909b90f77b745
+ms.sourcegitcommit: 058a6e86eac1b27ca57a11687019df98709ed709
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "67028953"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75736999"
 ---
 # <a name="the-isefile-object"></a>Oggetto ISEFile
 
-Un oggetto **ISEFile** rappresenta un file in Windows PowerShell® Integrated Scripting Environment (ISE). È un'istanza della classe Microsoft.PowerShell.Host.ISE.ISEFile. Questo argomento elenca i relativi metodi membro e le proprietà del membro. L'oggetto **$psISE.CurrentFile** e i file nella raccolta File in una scheda di PowerShell sono tutte istanze della classe Microsoft.PowerShell.Host.ISE.ISEFile.
+Un oggetto **ISEFile** rappresenta un file in Windows PowerShell® Integrated Scripting Environment (ISE). È un'istanza della classe **Microsoft.PowerShell.Host.ISE.ISEFile**. Questo argomento elenca i relativi metodi membro e le proprietà del membro. `$psISE.CurrentFile` e i file nella raccolta File in una scheda di PowerShell sono tutte istanze della classe ****Microsoft.PowerShell.Host.ISE.ISEFile**.
 
 ## <a name="methods"></a>Metodi
 
@@ -69,7 +69,7 @@ $psISE.CurrentFile.SaveAs($fullPath, [System.Text.Encoding]::UTF8)
 
 Supportato in Windows PowerShell ISE 2.0 e versioni successive.
 
-Proprietà di sola lettura che ottiene la stringa contenente il nome visualizzato di questo file. Il nome viene visualizzato nella scheda **File** nella parte superiore dell'editor. La presenza di un asterisco \(\*\) alla fine del nome indica che il file contiene modifiche che non sono state salvate.
+Proprietà di sola lettura che ottiene la stringa contenente il nome visualizzato di questo file. Il nome viene visualizzato nella scheda **File** nella parte superiore dell'editor. La presenza di un asterisco (`(*)`) alla fine del nome indica che il file contiene modifiche che non sono state salvate.
 
 ```powershell
 # Shows the display name of the file.
@@ -87,7 +87,7 @@ Proprietà di sola lettura che ottiene l'[oggetto editor](The-ISEEditor-Object.m
 $psISE.CurrentFile.Editor.Text
 ```
 
-### <a name="encoding"></a>Encoding
+### <a name="encoding"></a>Codifica
 
 Supportato in Windows PowerShell ISE 2.0 e versioni successive.
 
@@ -113,7 +113,7 @@ $psISE.CurrentFile.FullPath
 
 Supportato in Windows PowerShell ISE 2.0 e versioni successive.
 
-Proprietà booleana di sola lettura che restituisce **$true** se il file è stato salvato dopo l'ultima modifica.
+Proprietà booleana di sola lettura che restituisce `$true` se il file è stato salvato dopo l'ultima modifica.
 
 ```powershell
 # Determines whether the file has been saved since it was last modified.
@@ -125,7 +125,7 @@ $myfile.IsSaved
 
 Supportato in Windows PowerShell ISE 2.0 e versioni successive.
 
-Proprietà di sola lettura che restituisce **$true** se al file non è mai stato assegnato un titolo.
+Proprietà di sola lettura che restituisce `$true` se al file non è mai stato assegnato un titolo.
 
 ```powershell
 # Determines whether the file has never been given a title.

@@ -2,12 +2,12 @@
 ms.date: 06/05/2017
 keywords: powershell,cmdlet
 title: Oggetto ISEAddOnTool
-ms.openlocfilehash: c71602d200b941ed4fb142b9c35f0fe68982e3e9
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: a5357005ec1a883f5a14882a42e3150e09ff33a2
+ms.sourcegitcommit: 058a6e86eac1b27ca57a11687019df98709ed709
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "67028991"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75736131"
 ---
 # <a name="the-iseaddontool-object"></a>Oggetto ISEAddOnTool
 
@@ -23,7 +23,7 @@ Non sono disponibili metodi specifici di Windows PowerShell ISE per gli oggetti 
 
 ## <a name="properties"></a>Proprietà
 
-### <a name="control"></a>Control
+### <a name="control"></a>Controllo
 
 Supportato in Windows PowerShell ISE 3.0 e versioni successive e non presente nelle versioni precedenti.
 
@@ -33,6 +33,9 @@ La proprietà **Control** offre l'accesso in lettura a molte informazioni dettag
 # View the properties of the Commands add-on tool.
 # (assumes that it is visible in the vertical pane)
 $psISE.CurrentVisibleVerticalTool.Control
+```
+
+```Output
 HostObject                  : Microsoft.PowerShell.Host.ISE.ObjectModelRoot
 Content                     :
 HasContent                  :
@@ -143,7 +146,7 @@ Dispatcher                  : System.Windows.Threading.Dispatcher
 
 Supportato in Windows PowerShell ISE 3.0 e versioni successive e non presente nelle versioni precedenti.
 
-Proprietà booleana che indica se lo strumento aggiuntivo è attualmente visibile nel relativo riquadro assegnato. Se è visibile, è possibile impostare la proprietà **IsVisible** su **$false** per nascondere lo strumento oppure impostare la proprietà **IsVisible** su **$true** per rendere uno strumento aggiuntivo visibile nella relativa scheda di PowerShell. Quando uno strumento aggiuntivo è nascosto, non è più accessibile attraverso gli oggetti **CurrentVisibleHorizontalTool** o **CurrentVisibleVerticalTool** e quindi non può essere reso visibile usando questa proprietà su tale oggetto.
+Proprietà booleana che indica se lo strumento aggiuntivo è attualmente visibile nel relativo riquadro assegnato. Se è visibile, è possibile impostare la proprietà **IsVisible** su `$false` per nascondere lo strumento oppure impostare la proprietà **IsVisible** su `$true` per rendere uno strumento aggiuntivo visibile nella relativa scheda di PowerShell. Quando uno strumento aggiuntivo è nascosto, non è più accessibile attraverso gli oggetti **CurrentVisibleHorizontalTool** o **CurrentVisibleVerticalTool** e quindi non può essere reso visibile usando questa proprietà su tale oggetto.
 
 ```powershell
 # Hide the current tool in the vertical tool pane
@@ -161,6 +164,9 @@ Proprietà di sola lettura che ottiene il nome dello strumento aggiuntivo.
 ```powershell
 # Gets the name of the visible vertical pane add-on tool.
 $psISE.CurrentVisibleVerticalTool.Name
+```
+
+```Output
 Commands
 ```
 
