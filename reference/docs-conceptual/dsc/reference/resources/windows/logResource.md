@@ -2,12 +2,12 @@
 ms.date: 09/20/2019
 keywords: dsc,powershell,configurazione,installazione
 title: Risorsa Log DSC
-ms.openlocfilehash: a1b7bf44fbaf36a3adaf0666e9f0a754fa3f6ee1
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 0a2f12793357fdf10bd4a2f6003f9dc2276b173c
+ms.sourcegitcommit: d97b200e7a49315ce6608cd619e3e2fd99193edd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "71954668"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75870762"
 ---
 # <a name="dsc-log-resource"></a>Risorsa Log DSC
 
@@ -31,16 +31,16 @@ Log [string] #ResourceName
 
 ## <a name="properties"></a>Proprietà
 
-|Proprietà |Description |
-|---|---|
-|Messaggio |Indica il messaggio che si vuole scrivere nel registro eventi Microsoft-Windows-Desired State Configuration/Analytic. |
+| Proprietà |                                                   Descrizione                                                    |
+| -------- | ---------------------------------------------------------------------------------------------------------------- |
+| Message  | Indica il messaggio che si vuole scrivere nel registro eventi Microsoft-Windows-Desired State Configuration/Analytic. |
 
 ## <a name="common-properties"></a>Proprietà comuni
 
-|Proprietà |Description |
-|---|---|
-|DependsOn |Indica che prima di configurare la risorsa è necessario eseguire la configurazione di un'altra risorsa. Ad esempio, se il valore di ID del blocco script di configurazione della risorsa che si vuole eseguire per primo è ResourceName e il tipo è ResourceType, la sintassi per usare questa proprietà è `DependsOn = "[ResourceType]ResourceName"`. |
-|PsDscRunAsCredential |Imposta le credenziali per l'esecuzione dell'intera risorsa. |
+|       Proprietà       |                                                                                                                                                          Descrizione                                                                                                                                                           |
+| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| DependsOn            | Indica che prima di configurare la risorsa è necessario eseguire la configurazione di un'altra risorsa. Ad esempio, se il valore di ID del blocco script di configurazione della risorsa che si vuole eseguire per primo è ResourceName e il tipo è ResourceType, la sintassi per usare questa proprietà è `DependsOn = "[ResourceType]ResourceName"`. |
+| PsDscRunAsCredential | Imposta le credenziali per l'esecuzione dell'intera risorsa.                                                                                                                                                                                                                                                                        |
 
 > [!NOTE]
 > La proprietà comune **PsDscRunAsCredential** è stata aggiunta in WMF 5.0 per consentire l'esecuzione di qualsiasi risorsa DSC nel contesto di altre credenziali. Per altre informazioni, vedere [Usare credenziali con risorse DSC](../../../configurations/runasuser.md).
@@ -50,7 +50,7 @@ Log [string] #ResourceName
 L'esempio seguente mostra come includere un messaggio nel registro eventi Microsoft-Windows-Desired State Configuration/Analytic.
 
 > [!NOTE]
-> Se si esegue [Test-DscConfiguration](https://technet.microsoft.com/en-us/library/dn407382.aspx) con questa risorsa configurata, il cmdlet restituisce sempre **$false**.
+> Se si esegue [Test-DscConfiguration](/powershell/module/PSDesiredStateConfiguration/test-dscconfiguration?view=powershell-5.1) con questa risorsa configurata, il cmdlet restituisce sempre **$false**.
 
 ```powershell
 Configuration logResourceTest

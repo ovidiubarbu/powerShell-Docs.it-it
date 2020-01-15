@@ -2,40 +2,32 @@
 ms.date: 06/12/2017
 keywords: dsc,powershell,configurazione,installazione
 title: Opzioni delle credenziali nei dati di configurazione
-ms.openlocfilehash: 660c3643f7eb2e9ccb91bd992747fb9d5da0ccdb
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: aac27f1ff4b4287b53745fa3b946fb3de84771c2
+ms.sourcegitcommit: d97b200e7a49315ce6608cd619e3e2fd99193edd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "71954538"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75870558"
 ---
 # <a name="credentials-options-in-configuration-data"></a>Opzioni delle credenziali nei dati di configurazione
 
->Si applica a: Windows PowerShell 5.0
+> Si applica a: Windows PowerShell 5.0
 
 ## <a name="plain-text-passwords-and-domain-users"></a>Password di testo normale e utenti di dominio
 
-Le configurazioni DSC che contengono una credenziale senza crittografia generano un messaggio di errore relativo alle password di testo normale.
-Inoltre, DSC genera un avviso quando si usano credenziali di dominio.
-Per eliminare questi messaggi di errore e di avviso, usare le parole chiave dei dati di configurazione DSC seguenti:
+Le configurazioni DSC che contengono una credenziale senza crittografia generano un messaggio di errore relativo alle password di testo normale. Inoltre, DSC genera un avviso quando si usano credenziali di dominio. Per eliminare questi messaggi di errore e di avviso, usare le parole chiave dei dati di configurazione DSC seguenti:
 
 - **PsDscAllowPlainTextPassword**
 - **PsDscAllowDomainUser**
 
 > [!NOTE]
-> L'archiviazione o la trasmissione di password di testo normale non crittografata in genere non è protetta. È consigliabile proteggere le credenziali tramite le tecniche illustrate più avanti in questo argomento.
-> Il servizio Automation DSC di Azure consente di gestire centralmente le credenziali da compilare nelle configurazioni e archiviare in modo sicuro.
-> Per informazioni, vedere: [Compilazione di configurazioni DSC/Asset credenziali](/azure/automation/automation-dsc-compile#credential-assets)
+> L'archiviazione o la trasmissione di password di testo normale non crittografata in genere non è protetta. È consigliabile proteggere le credenziali tramite le tecniche illustrate più avanti in questo argomento. Il servizio Automation DSC di Azure consente di gestire centralmente le credenziali da compilare nelle configurazioni e archiviare in modo sicuro. Per informazioni, vedere: [Compilazione di configurazioni DSC/Asset credenziali](/azure/automation/automation-dsc-compile#credential-assets)
 
 ## <a name="handling-credentials-in-dsc"></a>Gestione delle credenziali in DSC
 
-Le risorse di configurazione DSC vengono eseguite come `Local System` per impostazione predefinita.
-Tuttavia, per alcune risorse è necessaria una credenziale, ad esempio quando la risorsa `Package` deve installare software nell'ambito di un account utente specifico.
+Le risorse di configurazione DSC vengono eseguite come `Local System` per impostazione predefinita. Tuttavia, per alcune risorse è necessaria una credenziale, ad esempio quando la risorsa `Package` deve installare software nell'ambito di un account utente specifico.
 
-Le risorse delle versioni precedenti usano un nome di proprietà `Credential` hardcoded per gestire questo caso.
-In WMF 5.0 è stata aggiunta una proprietà `PsDscRunAsCredential` automatica per tutte le risorse.
-Per informazioni sull'uso di `PsDscRunAsCredential`, vedere [Esecuzione di DSC con le credenziali dell'utente](runAsUser.md).
-Le risorse più recenti e quelle personalizzate possono usare questa proprietà automatica invece di creare una proprietà personalizzata per le credenziali.
+Le risorse delle versioni precedenti usano un nome di proprietà `Credential` hardcoded per gestire questo caso. In WMF 5.0 è stata aggiunta una proprietà `PsDscRunAsCredential` automatica per tutte le risorse. Per informazioni sull'uso di `PsDscRunAsCredential`, vedere [Esecuzione di DSC con le credenziali dell'utente](runAsUser.md). Le risorse più recenti e quelle personalizzate possono usare questa proprietà automatica invece di creare una proprietà personalizzata per le credenziali.
 
 > [!NOTE]
 > La progettazione di alcune risorse prevede l'uso di più credenziali per un motivo specifico e tali risorse hanno proprietà delle credenziali proprie.
@@ -43,7 +35,10 @@ Le risorse più recenti e quelle personalizzate possono usare questa proprietà 
 Per trovare le proprietà delle credenziali disponibili in una risorsa, usare `Get-DscResource -Name ResourceName -Syntax` o Intellisense in ISE (`CTRL+SPACE`).
 
 ```powershell
-PS C:\> Get-DscResource -Name Group -Syntax
+Get-DscResource -Name Group -Syntax
+```
+
+```Output
 Group [String] #ResourceName
 {
     GroupName = [string]
@@ -58,22 +53,15 @@ Group [String] #ResourceName
 }
 ```
 
-Questo esempio usa una risorsa [Group](../resources/resources.md), inclusa nel modulo di risorse DSC `PSDesiredStateConfiguration` predefinito.
-La risorsa può creare gruppi locali e aggiungere o rimuovere membri.
-Accetta sia la proprietà `Credential` sia la proprietà `PsDscRunAsCredential` automatica.
-Tuttavia, la risorsa usa solo la proprietà `Credential`.
+Questo esempio usa una risorsa [Group](../resources/resources.md), inclusa nel modulo di risorse DSC `PSDesiredStateConfiguration` predefinito. La risorsa può creare gruppi locali e aggiungere o rimuovere membri. Accetta sia la proprietà `Credential` sia la proprietà `PsDscRunAsCredential` automatica. Tuttavia, la risorsa usa solo la proprietà `Credential`.
 
 Per altre informazioni sulla proprietà `PsDscRunAsCredential`, vedere [Esecuzione di DSC con le credenziali dell'utente](runAsUser.md).
 
 ## <a name="example-the-group-resource-credential-property"></a>Esempio: proprietà Credential della risorsa Group
 
-Poiché DSC viene eseguito in `Local System`, ha già le autorizzazioni necessarie per modificare gruppi e utenti locali.
-Se il membro aggiunto è un account locale, non è necessaria alcuna credenziale.
-Se la risorsa `Group` aggiunge un account di dominio al gruppo locale, è necessaria una credenziale.
+Poiché DSC viene eseguito in `Local System`, ha già le autorizzazioni necessarie per modificare gruppi e utenti locali. Se il membro aggiunto è un account locale, non è necessaria alcuna credenziale. Se la risorsa `Group` aggiunge un account di dominio al gruppo locale, è necessaria una credenziale.
 
-Le query anonime in Active Directory non sono consentite.
-La proprietà `Credential` della risorsa `Group` corrisponde all'account di dominio usato per eseguire query in Active Directory.
-Per quasi tutti gli scopi può trattarsi di un account utente generico, perché per impostazione predefinita gli utenti possono *leggere* la maggior parte degli oggetti in Active Directory.
+Le query anonime in Active Directory non sono consentite. La proprietà `Credential` della risorsa `Group` corrisponde all'account di dominio usato per eseguire query in Active Directory. Per quasi tutti gli scopi può trattarsi di un account utente generico, perché per impostazione predefinita gli utenti possono *leggere* la maggior parte degli oggetti in Active Directory.
 
 ## <a name="example-configuration"></a>Configurazione di esempio
 
@@ -141,9 +129,7 @@ I flag **PSDSCAllowPlainTextPassword** e **PSDSCAllowDomainUser** eliminano l'er
 
 ## <a name="psdscallowplaintextpassword"></a>PSDSCAllowPlainTextPassword
 
-Il primo messaggio di errore contiene un URL con la documentazione.
-Il collegamento descrive come crittografare le password usando una struttura [ConfigurationData](./configData.md) e un certificato.
-Per altre informazioni sui certificati e su DSC, [leggere questo post](https://aka.ms/certs4dsc).
+Il primo messaggio di errore contiene un URL con la documentazione. Il collegamento descrive come crittografare le password usando una struttura [ConfigurationData](./configData.md) e un certificato. Per altre informazioni sui certificati e su DSC, [leggere questo post](https://aka.ms/certs4dsc).
 
 Per forzare una password di testo semplice, la risorsa richiede la presenza della parola chiave `PsDscAllowPlainTextPassword` nella sezione dei dati di configurazione, nel modo seguente:
 
@@ -218,31 +204,27 @@ ModuleVersion = "1.0";
 
 ### <a name="credentials-in-transit-and-at-rest"></a>Credenziali in transito e inattive
 
-- Il flag **PSDscAllowPlainTextPassword** consente la compilazione di file MOF che contengono password come testo non crittografato.
-  Adottare le necessarie precauzioni quando si archiviano file MOF che contengono password come testo non crittografato.
+- Il flag **PSDscAllowPlainTextPassword** consente la compilazione di file MOF che contengono password come testo non crittografato. Adottare le necessarie precauzioni quando si archiviano file MOF che contengono password come testo non crittografato.
 - Quando il file MOF viene recapitato a un nodo in modalità **push**, WinRM crittografa la comunicazione per proteggere la password come testo non crittografato, a meno che non si ignori l'impostazione predefinita con il parametro **AllowUnencrypted**.
   - La crittografia del file MOF con un certificato protegge il file MOF nello stato inattivo prima dell'applicazione a un nodo.
 - Nella modalità **pull** è possibile configurare il server di pull Windows per usare HTTPS per crittografare il traffico tramite il protocollo specificato in Internet Information Server. Per altre informazioni, vedere gli articoli [Configurazione di un client di pull DSC](../pull-server/pullclient.md) e [Protezione del file MOF con certificati](../pull-server/secureMOF.md).
-  - Nel servizio di [configurazione dello stato di Automazione di Azure](https://docs.microsoft.com/en-us/azure/automation/automation-dsc-overview), il traffico pull viene sempre crittografato.
+  - Nel servizio di [configurazione dello stato di Automazione di Azure](/azure/automation/automation-dsc-overview), il traffico pull viene sempre crittografato.
 - Nel nodo i file MOF vengono crittografati nello stato inattivo a partire da PowerShell 5.0.
   - In PowerShell 4.0 i file MOF non vengono decrittografati nello stato inattivo a meno che non vengano crittografati con un certificato quando ne viene eseguito il push o pull sul nodo.
 
 **Microsoft consiglia di evitare password di testo semplice, che possono provocare rischi significativi per la sicurezza.**
 
-## <a name="domain-credentials"></a>Credenziali di dominio
+## <a name="domain-credentials"></a>Credenziali del dominio
 
-Una nuova esecuzione dello script di configurazione di esempio (con o senza crittografia) genera comunque l'avviso che sconsiglia l'uso di un account di dominio per una credenziale.
-L'uso di un account locale elimina la potenziale esposizione delle credenziali di dominio, che potrebbero essere usate in altri server.
+Una nuova esecuzione dello script di configurazione di esempio (con o senza crittografia) genera comunque l'avviso che sconsiglia l'uso di un account di dominio per una credenziale. L'uso di un account locale elimina la potenziale esposizione delle credenziali di dominio, che potrebbero essere usate in altri server.
 
 **Quando si usano credenziali con risorse DSC, se possibile preferire un account locale a un account di dominio.**
 
-Se la proprietà `Username` della credenziale contiene un carattere '\\' o '\@', DSC la considera un account di dominio.
-Un'eccezione riguarda "localhost", "127.0.0.1" e "::1" nella parte del dominio del nome utente.
+Se la proprietà `Username` della credenziale contiene un carattere '\\' o '\@', DSC la considera un account di dominio. Un'eccezione riguarda "localhost", "127.0.0.1" e "::1" nella parte del dominio del nome utente.
 
 ## <a name="psdscallowdomainuser"></a>PSDscAllowDomainUser
 
-Nell'esempio di risorsa `Group` DSC precedente per l'esecuzione di query su un dominio Active Directory *è necessario* un account di dominio.
-In questo caso, aggiungere la proprietà `PSDscAllowDomainUser` al blocco `ConfigurationData` nel modo seguente:
+Nell'esempio di risorsa `Group` DSC precedente per l'esecuzione di query su un dominio Active Directory *è necessario* un account di dominio. In questo caso, aggiungere la proprietà `PSDscAllowDomainUser` al blocco `ConfigurationData` nel modo seguente:
 
 ```powershell
 $password = "ThisIsAPlaintextPassword" | ConvertTo-SecureString -asPlainText -Force
