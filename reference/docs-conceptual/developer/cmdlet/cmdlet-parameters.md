@@ -16,12 +16,12 @@ helpviewer_keywords:
 - cmdlets [PowerShell SDK], parameters
 ms.assetid: 3f1cca5f-5b95-4bce-94a6-a22db1aefd47
 caps.latest.revision: 23
-ms.openlocfilehash: 914a10907bcf980eed8d7e2f819c382fe6b341ad
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: c1d8984f4aad7bae6f9be66a2222e2c74c8afa3d
+ms.sourcegitcommit: cab4e4e67dbed024864887c7f8984abb4db3a78b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72365930"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "76022214"
 ---
 # <a name="cmdlet-parameters"></a>Parametri dei cmdlet
 
@@ -33,7 +33,7 @@ I parametri del cmdlet forniscono il meccanismo che consente a un cmdlet di acce
 
 [Tipi di parametri dei cmdlet](./types-of-cmdlet-parameters.md) Vengono descritti i diversi tipi di parametri che è possibile dichiarare nei cmdlet.
 
-[Linee guida sul nome e la funzionalità del parametro del cmdlet](./standard-cmdlet-parameter-names-and-types.md) Discuses i nomi, il tipo di dati consigliato e la funzionalità dei parametri standard.
+[Linee guida sul nome e la funzionalità del parametro del cmdlet](./standard-cmdlet-parameter-names-and-types.md) Vengono illustrati i nomi, il tipo di dati consigliato e la funzionalità dei parametri standard.
 
 [Alias di parametro](./parameter-aliases.md) Vengono descritti gli alias che è possibile definire per i parametri.
 
