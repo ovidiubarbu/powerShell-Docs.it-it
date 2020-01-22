@@ -1,13 +1,13 @@
 ---
-ms.date: 12/14/2018
+ms.date: 01/10/2020
 keywords: powershell,cmdlet
 title: Scrittura di moduli portabili
-ms.openlocfilehash: 7871f524495c1ce5283b30696a24185d427edebf
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 124e6efadfd07b8c5214a5c0446b1589f7142388
+ms.sourcegitcommit: cab4e4e67dbed024864887c7f8984abb4db3a78b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74417635"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "76022253"
 ---
 # <a name="portable-modules"></a>Moduli portabili
 
@@ -200,7 +200,7 @@ Per prima cosa, verificare che il modulo funzioni in Linux e macOS. Successivame
 
 Nel manifesto del modulo, la proprietà `PrivateData` ha una sottoproprietà `PSData`. La proprietà `Tags` facoltativa di `PSData` accetta una matrice di valori che vengono visualizzati in PowerShell Gallery. PowerShell Gallery supporta i valori di compatibilità seguenti:
 
-| Tag               | Description                                |
+| Tag               | Descrizione                                |
 |-------------------|--------------------------------------------|
 | PSEdition_Core    | Compatibili con PowerShell Core 6          |
 | PSEdition_Desktop | Compatibile con Windows PowerShell         |
@@ -254,6 +254,45 @@ Esempio:
 }
 ```
 
+## <a name="dependency-on-native-libraries"></a>Dipendenza dalle librerie native
+
+I moduli destinati all'uso in vari sistemi operativi o architetture di processori possono dipendere da una libreria gestita che a sua volta dipende da alcune librerie native.
+
+Prima di PowerShell 7 era necessario avere codice personalizzato per caricare la DLL nativa appropriata, in modo che la libreria gestita potesse trovarla correttamente.
+
+Con PowerShell 7 i file binari nativi da caricare vengono ricercati in sottocartelle all'interno della posizione della libreria gestita, in base a un subset della notazione del [catalogo RID .NET][].
+
+```
+managed.dll folder
+                |
+                |--- 'win-x64' folder
+                |       |--- native.dll
+                |
+                |--- 'win-x86' folder
+                |       |--- native.dll
+                |
+                |--- 'win-arm' folder
+                |       |--- native.dll
+                |
+                |--- 'win-arm64' folder
+                |       |--- native.dll
+                |
+                |--- 'linux-x64' folder
+                |       |--- native.so
+                |
+                |--- 'linux-x86' folder
+                |       |--- native.so
+                |
+                |--- 'linux-arm' folder
+                |       |--- native.so
+                |
+                |--- 'linux-arm64' folder
+                |       |--- native.so
+                |
+                |--- 'osx-x64' folder
+                |       |--- native.dylib
+```
+
 <!-- reference links -->
 [.NET Framework]: /dotnet/framework/
 [.NET Core]: /dotnet/core/
@@ -267,3 +306,4 @@ Esempio:
 [PowerShell Gallery]: https://www.powershellgallery.com
 [.NET Portability Analyzer]: https://github.com/Microsoft/dotnet-apiport
 [CompatiblePSEditions]: /powershell/scripting/gallery/concepts/module-psedition-support
+[Catalogo RID .NET]: https://docs.microsoft.com/dotnet/core/rid-catalog

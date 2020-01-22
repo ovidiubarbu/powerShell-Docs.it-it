@@ -2,12 +2,12 @@
 title: Ciclo di vita del supporto di PowerShell Core
 description: Criteri che disciplinano il supporto per PowerShell Core
 ms.date: 08/06/2018
-ms.openlocfilehash: 27738514fc84105a0339eafcdbb540b7d3790052
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 57804df830da01bee0f48acc374658b025a46b85
+ms.sourcegitcommit: cab4e4e67dbed024864887c7f8984abb4db3a78b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74416292"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "76022224"
 ---
 # <a name="powershell-core-support-lifecycle"></a>Ciclo di vita del supporto di PowerShell Core
 
@@ -51,22 +51,24 @@ Le piattaforme elencate come `Experimental` non sono ufficialmente supportate, m
 
 | Piattaforma                                          |      6.2      |    7.0    |
 |---------------------------------------------------|:-------------:|:---------:|
-| Windows 7, 8.1 e 10                            |   Funzionalità supportata   | Funzionalità supportata |
-| Windows Server 2008 R2, 2012 R2, 2016             |   Funzionalità supportata   | Funzionalità supportata |
-| [Canale semestrale di Windows Server][semi-annual] |   Funzionalità supportata   | Funzionalità supportata |
-| Ubuntu 16.04 e 18.04                            |   Funzionalità supportata   | Funzionalità supportata |
+| Windows 7, 8.1 e 10                            |   Supportato   | Supportato |
+| Windows Server 2008 R2, 2012 R2, 2016             |   Supportato   | Supportato |
+| [Canale semestrale di Windows Server][semi-annual] |   Supportato   | Supportato |
+| Ubuntu 16.04 e 18.04                            |   Supportato   | Supportato |
 | Ubuntu 18.10 (tramite pacchetto Snap)                   |   Community   | Community |
 | Ubuntu 19.04 (tramite pacchetto Snap)                   |   Community   | Community |
-| Debian 9                                          |   Funzionalità supportata   | Funzionalità supportata |
-| Debian 10                                         | Non Supportato | Funzionalità supportata |
-| CentOS 7                                          |   Funzionalità supportata   | Funzionalità supportata |
-| Red Hat Enterprise Linux 7                        |   Funzionalità supportata   | Funzionalità supportata |
-| openSUSE 42.3                                     |   Funzionalità supportata   | Funzionalità supportata |
-| Fedora 28                                         |   Funzionalità supportata   | Funzionalità supportata |
-| Fedora 29, 30                                     | Non Supportato | Funzionalità supportata |
+| Debian 9                                          |   Supportato   | Supportato |
+| Debian 10                                         | Non supportato | Supportato |
+| CentOS 7                                          |   Supportato   | Supportato |
+| CentOS 8                                          | Non supportato | Supportato |
+| Red Hat Enterprise Linux 7                        |   Supportato   | Supportato |
+| Red Hat Enterprise Linux 8                        | Non supportato | Supportato |
+| openSUSE 42.3                                     |   Supportato   | Supportato |
+| Fedora 28                                         |   Supportato   | Supportato |
+| Fedora 29, 30                                     | Non supportato | Supportato |
 | Alpine 3.8                                        |   Vedere la nota    | Vedere la nota  |
-| Alpine 3.9 e 3.10                               | Non Supportato | Vedere la nota  |
-| macOS 10.12+                                      |   Funzionalità supportata   | Funzionalità supportata |
+| Alpine 3.9 e 3.10                               | Non supportato | Vedere la nota  |
+| macOS 10.12+                                      |   Supportato   | Supportato |
 | Arch                                              |   Community   | Community |
 | Raspbian                                          |   Community   | Community |
 | Kali                                              |   Community   | Community |
