@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 9ab83bcb-2d31-4744-a8bc-2ee22e48fc1b
 caps.latest.revision: 17
-ms.openlocfilehash: 34918f32a86718ce82987c029cb4dfa09b4359bd
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: cb21a4dd9bbc9ccd0f93ae6f7ecbc09cd89c29d3
+ms.sourcegitcommit: ea7d87a7a56f368e3175219686dfa2870053c644
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72367480"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76818091"
 ---
 # <a name="host02-sample"></a>Esempio di Host02
 
@@ -23,7 +23,7 @@ Questo esempio illustra come scrivere un'applicazione host che usa il runtime di
 
  Questo esempio richiede Windows PowerShell 2,0.
 
-## <a name="demonstrates"></a>Illustra
+## <a name="demonstrates"></a>Dimostra
 
 - Creazione di un host personalizzato le cui classi derivano dalla classe [System. Management. Automation. host. PSHost](/dotnet/api/System.Management.Automation.Host.PSHost) , dalla classe [System. Management. Automation. host. Pshostuserinterface](/dotnet/api/System.Management.Automation.Host.PSHostUserInterface) e dalla classe [System. Management. Automation. host. Pshostrawuserinterface](/dotnet/api/System.Management.Automation.Host.PSHostRawUserInterface) .
 
@@ -659,7 +659,7 @@ namespace Microsoft.Samples.PowerShell.Host
     }
 
     /// <summary>
-    /// Gets the dimentions of the largest window size that can be
+    /// Gets the dimensions of the largest window size that can be
     /// displayed. This example uses the Console.LargestWindowWidth and
     /// console.LargestWindowHeight properties to determine the returned
     /// value of this property.
