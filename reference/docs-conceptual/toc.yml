@@ -180,7 +180,7 @@
       href: gallery/installing-psget.md
     - name: Introduzione
       href: gallery/getting-started.md
-    - name: Procedura
+    - name: Procedure
       items:
         - name: Come trovare i pacchetti in PowerShell Gallery
           items:
@@ -258,7 +258,7 @@
           href: gallery/how-to/getting-support/dispute-resolution.md
         - name: Come contattare gli amministratori
           href: gallery/how-to/getting-support/contacting-administrators.md
-        - name: risoluzione dei problemi
+        - name: Risoluzione dei problemi
           href: gallery/how-to/getting-support/troubleshooting-cmdlets.md
         - name: Provider NuGet di bootstrap e NuGet.exe
           href: gallery/how-to/getting-support/bootstrapping-nuget.md
@@ -288,6 +288,8 @@
           href: whats-new/what-s-new-in-windows-powershell-50.md
         - name: Novità di PowerShell 5.0 ISE
           href: whats-new/what-s-new-in-the-powershell-50-ise.md
+    - name: Cronologia delle versioni di moduli e cmdlet
+      href: whats-new/cmdlet-versions.md
 - name: Ciclo di vita del supporto di PowerShell Core
   href: powershell-support-lifecycle.md
 - name: Windows Management Framework (WMF)
@@ -504,13 +506,13 @@
           href: dsc/tutorials/bootstrapDsc.md
         - name: Configurare la chiave del Registro di sistema DSCAutomationHostEnabled
           href: dsc/tutorials/DSCAutomationHostEnabled.md
-    - name: risoluzione dei problemi
+    - name: Risoluzione dei problemi
       items:
         - name: Problemi noti
           href: dsc/troubleshooting/troubleshooting.md
         - name: Eseguire il debug di risorse DSC
           href: dsc/troubleshooting/debugResource.md
-    - name: Riferimento
+    - name: Informazioni di riferimento
       items:
         - name: Risorse predefinite di Windows
           items:
