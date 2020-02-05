@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 3204599c-7159-47aa-82ec-4a476f461027
 caps.latest.revision: 7
-ms.openlocfilehash: 5c5707d1c533e0498c6794b60f4499e530e25813
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: cf181e8f26ebd4b9c57b5b0191809211f2471f13
+ms.sourcegitcommit: bc9a4904c2b1561386d748fc9ac242699d2f1694
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72360660"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "76995578"
 ---
 # <a name="supporting-online-help"></a>Supporto per la Guida in linea
 
@@ -56,7 +56,7 @@ Nel codice XML seguente viene illustrata la posizione corretta dell'URI. Il test
 <maml:relatedLinks>
     <maml:navigationLink>
         <maml:linkText>Online version:</maml:linkText>
-        <maml:uri>http://go.microsoft.com/fwlink/?LinkID=113279</maml:uri>
+        <maml:uri>https://go.microsoft.com/fwlink/?LinkID=113279</maml:uri>
     </maml:navigationLink>
     <maml:navigationLink>
         <maml:linkText>about_History</maml:linkText>
@@ -76,7 +76,7 @@ Per i cmdlet scritti in C#, aggiungere un attributo **HelpUri** alla classe cmdl
 Il codice seguente illustra l'attributo HelpUri della classe del cmdlet `Get-History`.
 
 ```
-[Cmdlet(VerbsCommon.Get, "History", HelpUri = "http://go.microsoft.com/fwlink/?LinkID=001122")]
+[Cmdlet(VerbsCommon.Get, "History", HelpUri = "https://go.microsoft.com/fwlink/?LinkID=001122")]
 ```
 
 ### <a name="adding-a-helpuri-property-to-an-advanced-function"></a>Aggiunta di una proprietà HelpUri a una funzione avanzata
@@ -89,7 +89,7 @@ Il codice seguente illustra l'attributo HelpUri della funzione New-Calendar
 
 function New-Calendar {
     [CmdletBinding(SupportsShouldProcess=$true,
-    HelpURI="http://go.microsoft.com/fwlink/?LinkID=01122")]
+    HelpURI="https://go.microsoft.com/fwlink/?LinkID=01122")]
 ```
 
 ### <a name="adding-a-helpuri-attribute-to-a-cim-command"></a>Aggiunta di un attributo HelpUri a un comando CIM
@@ -99,7 +99,7 @@ Per i comandi CIM, aggiungere un attributo **HelpUri** all'elemento **CMDLETMETA
 Il codice seguente illustra l'attributo HelpUri del comando Start-debug CIM
 
 ```
-<CmdletMetadata Verb="Debug" HelpUri="http://go.microsoft.com/fwlink/?LinkID=001122"/>
+<CmdletMetadata Verb="Debug" HelpUri="https://go.microsoft.com/fwlink/?LinkID=001122"/>
 ```
 
 ### <a name="adding-a-helpuri-attribute-to-a-workflow"></a>Aggiunta di un attributo HelpUri a un flusso di lavoro
@@ -112,5 +112,5 @@ Per i flussi di lavoro scritti nel linguaggio di Windows PowerShell, aggiungere 
 Nel codice seguente viene illustrato il. Direttiva ExternalHelp in un file del flusso di lavoro.
 
 ```powershell
-# .ExternalHelp "http://go.microsoft.com/fwlink/?LinkID=138338"
+# .ExternalHelp "https://go.microsoft.com/fwlink/?LinkID=138338"
 ```

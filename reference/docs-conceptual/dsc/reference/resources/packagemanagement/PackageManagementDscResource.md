@@ -2,18 +2,18 @@
 ms.date: 09/20/2019
 keywords: dsc,powershell,configurazione,installazione
 title: Risorsa PackageManagement DSC
-ms.openlocfilehash: dfc23bfabbc45041e15c56a29a77c5bdda430a30
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 28ae8772170bd4559c8a19c3a1df8c9118734857
+ms.sourcegitcommit: bc9a4904c2b1561386d748fc9ac242699d2f1694
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "71953238"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "76995973"
 ---
 # <a name="dsc-packagemanagement-resource"></a>Risorsa PackageManagement DSC
 
 Si applica a: Windows PowerShell 4.0, Windows PowerShell 5.0, Windows PowerShell 5.1
 
-La risorsa **PackageManagement** in Windows PowerShell DSC (Desired State Configuration) fornisce un meccanismo per installare o disinstallare pacchetti di Gestione pacchetti in un nodo di destinazione. Questa risorsa richiede il modulo **PackageManagement**, disponibile da [http://PowerShellGallery.com](https://PowerShellGallery.com).
+La risorsa **PackageManagement** in Windows PowerShell DSC (Desired State Configuration) fornisce un meccanismo per installare o disinstallare pacchetti di Gestione pacchetti in un nodo di destinazione. Questa risorsa richiede il modulo **PackageManagement**, disponibile da [https://PowerShellGallery.com](https://PowerShellGallery.com).
 
 > [!IMPORTANT]
 > La versione del modulo **PackageManagement** deve essere almeno la 1.1.7.0 affinché le informazioni sulle proprietà seguenti siano corrette.
@@ -39,7 +39,7 @@ PackageManagement [string] #ResourceName
 
 ## <a name="properties"></a>Proprietà
 
-|Proprietà |Description |
+|Proprietà |Descrizione |
 |---|---|
 |Nome |Specifica il nome del pacchetto da installare o disinstallare. |
 |AdditionalParameters |Tabella hash specifica del provider dei parametri passati a `Get-Package -AdditionalArguments`. Ad esempio, per il provider NuGet è possibile passare parametri aggiuntivi come DestinationPath. |
@@ -47,21 +47,21 @@ PackageManagement [string] #ResourceName
 |MinimumVersion |Specifica la versione minima consentita del pacchetto da trovare. Se non si aggiunge questo parametro, la risorsa trova la versione disponibile più recente del pacchetto che soddisfa anche l'eventuale requisito di versione massima specificato dal parametro **MaximumVersion**. |
 |ProviderName |Specifica il nome di un provider di pacchetti entro il cui ambito limitare la ricerca di pacchetti. Per ottenere i nomi di provider di pacchetti, è possibile eseguire il cmdlet `Get-PackageProvider`. |
 |RequiredVersion |Specifica la versione esatta del pacchetto da installare. Se non si specifica questo parametro, la risorsa DSC installa la versione disponibile più recente del pacchetto che soddisfa anche l'eventuale requisito di versione massima specificato dal parametro **MaximumVersion**. |
-|Source |Specifica il nome dell'origine del pacchetto in cui è possibile trovare il pacchetto. Può trattarsi di un URI o di un'origine registrata con la risorsa DSC `Register-PackageSource` o PackageManagementSource. |
+|Source (Sorgente) |Specifica il nome dell'origine del pacchetto in cui è possibile trovare il pacchetto. Può trattarsi di un URI o di un'origine registrata con la risorsa DSC `Register-PackageSource` o PackageManagementSource. |
 |SourceCredential |Specifica un account utente con i diritti per installare un pacchetto per un'origine o un provider di pacchetti specificato. |
 
 ## <a name="additional-parameters"></a>Parametri aggiuntivi
 
 Nella tabella seguente sono elencate le opzioni per la proprietà AdditionalParameters.
 
-|Parametro |Description |
+|Parametro |Descrizione |
 |---|---|
 |DestinationPath |Usato dai provider, ad esempio il provider NuGet predefinito. Specifica un percorso di file in cui si vuole installare il pacchetto. |
 |InstallationPolicy |Usato dai provider, ad esempio il provider NuGet predefinito. Determina se considerare attendibile l'origine del pacchetto. Uno dei valori possibili: **Untrusted** o **Trusted**. |
 
 ## <a name="common-properties"></a>Proprietà comuni
 
-|Proprietà |Description |
+|Proprietà |Descrizione |
 |---|---|
 |DependsOn |Indica che prima di configurare la risorsa è necessario eseguire la configurazione di un'altra risorsa. Ad esempio, se il valore di ID del blocco script di configurazione della risorsa che si vuole eseguire per primo è ResourceName e il tipo è ResourceType, la sintassi per usare questa proprietà è `DependsOn = "[ResourceType]ResourceName"`. |
 |Ensure |Determina se il pacchetto deve essere installato o disinstallato. Il valore predefinito è **Present**. |
