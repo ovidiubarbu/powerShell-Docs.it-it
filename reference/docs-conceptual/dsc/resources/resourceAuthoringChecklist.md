@@ -2,12 +2,12 @@
 ms.date: 06/12/2017
 keywords: dsc,powershell,configurazione,installazione
 title: Elenco di controllo per la creazione di risorse
-ms.openlocfilehash: c0a18169b5e9f6ba0c3848b00725731453763611
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: e7401071db9cb149fff572d79568d69a0b8ea004
+ms.sourcegitcommit: ea7d87a7a56f368e3175219686dfa2870053c644
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "71952878"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76818142"
 ---
 # <a name="resource-authoring-checklist"></a>Elenco di controllo per la creazione di risorse
 
@@ -36,7 +36,7 @@ xPSDesiredStateConfiguration
 ## <a name="resource-and-schema-are-correct"></a>La risorsa e lo schema sono corretti
 
 Verificare il file dello schema della risorsa (*. schema.mof). È possibile usare [Progettazione risorse DSC](https://www.powershellgallery.com/packages/xDSCResourceDesigner/1.12.0.0) per sviluppare e testare lo schema.
-Verificare che:
+Assicurarsi che:
 
 - I tipi di proprietà siano corretti (ad esempio, non usare il tipo String per proprietà che accettano valori numerici, ma usare invece UInt32 o altri tipi numerici)
 - Gli attributi delle proprietà siano specificati correttamente, ad esempio [key], [required], [write], [read]
@@ -130,7 +130,7 @@ Possibili tipi di problemi:
 - Possibili comportamenti diversi delle credenziali e/o della sessione perché l'agente DSC viene eseguito come servizio.  Assicurarsi di sottoporre qualsiasi funzionalità a test end-to-end.
 - Gli errori restituiti da `Start-DscConfiguration` potrebbero essere diversi da quelli visualizzati quando si chiama la funzione `Set-TargetResource` direttamente.
 
-## <a name="test-compatability-on-all-dsc-supported-platforms"></a>Testare la compatibilità su tutte le piattaforme supportate da DSC
+## <a name="test-compatibility-on-all-dsc-supported-platforms"></a>Testare la compatibilità su tutte le piattaforme supportate da DSC
 
 La risorsa dovrebbero funzionare in tutte le piattaforme supportate da DSC (Windows Server 2008 R2 e versioni successive). Installare la versione più recente di WMF (Windows Management Framework) nel sistema operativo per ottenere la versione più recente di DSC. Se la risorsa non funziona in alcune di queste piattaforme in base alla sua struttura di progettazione, verrà restituito un messaggio di errore specifico. Assicurarsi anche che la risorsa controlli che i cmdlet chiamati siano presenti nel computer specifico. In Windows Server 2012 sono stati aggiunti numerosi cmdlet nuovi, non disponibili in Windows Server 2008 R2 anche con WMF installato.
 
@@ -246,7 +246,7 @@ Se la risorsa deve accedere a percorsi specifici, usare le variabili di ambiente
 
 Esempio:
 
-Invece di:
+Anziché:
 
 ```powershell
 $tempPath = "C:\Users\kkaczma\AppData\Local\Temp\MyResource"

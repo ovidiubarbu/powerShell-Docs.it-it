@@ -2,12 +2,12 @@
 ms.date: 12/12/2018
 keywords: dsc,powershell,configurazione,servizio,impostazione
 title: Scrivere, compilare e applicare una configurazione
-ms.openlocfilehash: 8bcd55518b0409b9a4b02ca95f027a0a77eb5300
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: eb61e518762b9f13e617ecd4711bfef7a86814ec
+ms.sourcegitcommit: ea7d87a7a56f368e3175219686dfa2870053c644
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "71953998"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76818159"
 ---
 > Si applica a: Windows PowerShell 4.0, Windows PowerShell 5.0
 
@@ -47,7 +47,7 @@ Configuration HelloWorld {
 }
 ```
 
-> !Importante Negli scenari più avanzati in cui è necessario importare più moduli, in modo da poter usare molte risorse DSC nella stessa configurazione, assicurarsi di inserire ogni modulo in una riga separata usando `Import-DscResource`.
+> Importante Negli scenari più avanzati in cui è necessario importare più moduli per poter usare numerose risorse DSC nella stessa configurazione, assicurarsi di inserire ogni modulo in una riga separata usando `Import-DscResource`.
 > Questa operazione è più semplice da gestire nel controllo del codice sorgente ed è richiesta quando si usa DSC in State Configuration di Azure.
 >
 > ```powershell
@@ -108,7 +108,7 @@ Usare il codice seguente per eseguire il cmdlet `Start-DSCConfiguration`. Specif
 Start-DscConfiguration -Path C:\Scripts\HelloWorld -Verbose -Wait
 ```
 
-## <a name="test-the-configuration"></a>Verificare la configurazione
+## <a name="test-the-configuration"></a>Testare la configurazione
 
 Al termine del cmdlet `Start-DSCConfiguration`, viene visualizzato un file "HelloWorld.txt" nel percorso specificato. È possibile verificare il contenuto con il cmdlet [Get-Content](/powershell/module/microsoft.powershell.management/get-content).
 

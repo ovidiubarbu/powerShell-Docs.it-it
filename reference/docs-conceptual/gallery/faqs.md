@@ -3,12 +3,12 @@ ms.date: 06/12/2017
 contributor: JKeithB
 keywords: gallery,powershell,cmdlet,psgallery
 title: Domande frequenti su PowerShell Gallery
-ms.openlocfilehash: bcbb36a9ec60d88d1ef56fd270f0ae1862d5ca6b
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 70e2220bd68b351e0b09dd3c59901104f7874335
+ms.sourcegitcommit: ea7d87a7a56f368e3175219686dfa2870053c644
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "71328052"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76818125"
 ---
 # <a name="frequently-asked-questions"></a>Domande frequenti
 
@@ -36,7 +36,7 @@ Per altre informazioni dettagliate su come eseguire questi cmdlet, andare alla s
 
 **Non è necessario registrarsi o accedere a PowerShell Gallery per installare o salvare i pacchetti.**
 
-## <a name="i-received-failed-to-process-request-the-specified-api-key-is-invalid-or-does-not-have-permission-to-access-the-specified-package-the-remote-server-returned-an-error-403-forbidden-error-when-i-tried-to-publish-a-package-to-the-powershell-gallery-what-does-that-mean"></a>Viene visualizzato l'errore di mancata elaborazione della richiesta, causato dalla chiave API che non è valida o non ha le autorizzazioni per accedere al pacchetto specificato. Errore del server remoto: (403) Non consentito." quando si prova a pubblicare un pacchetto in PowerShell Gallery. Cosa significa?
+## <a name="i-received-failed-to-process-request-the-specified-api-key-is-invalid-or-does-not-have-permission-to-access-the-specified-package-the-remote-server-returned-an-error-403-forbidden-error-when-i-tried-to-publish-a-package-to-the-powershell-gallery-what-does-that-mean"></a>Viene visualizzato l'errore di mancata elaborazione della richiesta, causato dalla chiave API che non è valida o non ha le autorizzazioni per accedere al pacchetto specificato. Errore del server remoto: (403) Non consentito." quando si prova a pubblicare un pacchetto in PowerShell Gallery. Che cosa significa?
 
 Le cause di questo errore sono le seguenti:
 
@@ -63,8 +63,8 @@ Queste informazioni vengono lette nell'ambito del processo di pubblicazione dal 
 Tutti i moduli pubblicati nella raccolta devono includere manifesti dei moduli.
 Tutti i moduli che includono le informazioni seguenti nei propri manifesti possono essere pubblicati nella raccolta:
 
-- Version
-- Description
+- Versione
+- Descrizione
 - Autore
 - URI per le condizioni di licenza del modulo, come parte della sezione **PrivateData** del manifesto o nel parametro **LicenseUri** del cmdlet [Publish-Module][].
 
@@ -84,8 +84,8 @@ Queste informazioni vengono lette nell'ambito del processo di pubblicazione dall
 Tutti gli script pubblicati nella raccolta devono includere informazioni sui metadati.
 Tutti gli script che includono le informazioni seguenti nella sezione PSScriptInfo possono essere pubblicati nella raccolta:
 
-- Version
-- Description
+- Versione
+- Descrizione
 - Autore
 - URI per le condizioni di licenza dello script, come parte della sezione **PSScriptInfo** dello script o nel parametro **LicenseUri** del cmdlet [Publish-Script][].
 

@@ -3,12 +3,12 @@ ms.date: 06/12/2017
 contributor: JKeithB
 keywords: gallery,powershell,cmdlet,psgallery
 title: Introduzione a PowerShell Gallery
-ms.openlocfilehash: ee3fe7d9c65ad1a8f9ffd2ddec0f4ce6659bc3d5
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: fd4185234136dd9f3e628df50954b6ebff637639
+ms.sourcegitcommit: bc9a4904c2b1561386d748fc9ac242699d2f1694
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "71328462"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "76995881"
 ---
 # <a name="getting-started-with-the-powershell-gallery"></a>Introduzione a PowerShell Gallery
 
@@ -31,8 +31,8 @@ PowerShell Gallery è un repository di pacchetti che contiene gli script, i modu
 - Includes
 - DscResource
 - RoleCapability
-- Command
-- Filter
+- Comando
+- Filtro
 
 Se si vogliono solo trovare risorse DSC specifiche nella raccolta, è possibile eseguire il cmdlet [Find-DscResource][]. Find-DscResource restituisce dati sulle risorse DSC contenute nella raccolta. Dato che le risorse DSC vengono sempre fornite come parte di un modulo, è comunque necessario eseguire [Install-Module][] per installare tali risorse DSC.
 
@@ -56,7 +56,7 @@ Alcuni di questi pacchetti sono creati da Microsoft, altri dalla community di Po
 
 Se si individua un pacchetto che si ritiene non essere stato pubblicato in buona fede, fare clic su **Report Abuse** (Segnala abusi) nella pagina del pacchetto.
 
-### <a name="install"></a>Installare
+### <a name="install"></a>Installazione
 
 Per installare un pacchetto dalla raccolta per usarlo, eseguire il cmdlet [Install-Module][] o [Install-Script][], a seconda del tipo di pacchetto.
 
@@ -98,3 +98,5 @@ Analogamente, per scoprire quali script sono stati installati da PowerShell Gall
 [Register-PSRepository]: /powershell/module/powershellget/Register-Repository
 [Save-Module]: /powershell/module/powershellget/Save-Module
 [Save-Script]: /powershell/module/powershellget/Save-Script
+[Update-Module]: /powershell/module/powershellget/Update-Module
+[Update-Script]: /powershell/module/powershellget/Update-Script
