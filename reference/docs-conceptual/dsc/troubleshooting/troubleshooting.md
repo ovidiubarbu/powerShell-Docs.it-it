@@ -2,12 +2,12 @@
 ms.date: 10/30/2018
 keywords: dsc,powershell,configurazione,installazione
 title: Risoluzione dei problemi relativi a DSC
-ms.openlocfilehash: 2a0d2138f30573b9ae6cf52d8b106a05f1193407
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 5cbe6496a6e0b9940f4b69e13d1e19e43b3915f0
+ms.sourcegitcommit: 5f199cd2a1b31dbcebaab44f2fe496f289831a30
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "71954618"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77478786"
 ---
 # <a name="troubleshooting-dsc"></a>Risoluzione dei problemi relativi a DSC
 
@@ -119,7 +119,7 @@ Job {02C38626-D95A-47F1-9DA2-C1D44A7128E7} :
 Consistency engine was run successfully.
 ```
 
-Gli eventi DSC vengono registrati in una struttura specifica che consente all'utente di aggregare gli eventi relativi a un processo DSC. La struttura è la seguente:
+Gli eventi DSC vengono registrati in una struttura specifica che consente all'utente di aggregare gli eventi relativi a un processo DSC. La struttura è analoga alla seguente:
 
 ```
 Job ID : <Guid>
@@ -642,6 +642,16 @@ https://<serverfqdn>:8080/PSDSCPullServer.svc/Nodes(AgentId='<ID>') returned une
 
 Questo problema può verificarsi quando al certificato usato nel server per crittografare il traffico è assegnato un nome comune (CN) diverso da quello del nome DNS usato dal nodo per risolvere l'URL.
 Aggiornare l'istanza del server di pull Windows in modo che usi un certificato con il nome corretto.
+
+## <a name="error-when-running-sysprep-after-applying-a-dsc-configuration"></a>Errore durante l'esecuzione di Sysprep dopo l'applicazione di una configurazione DSC
+
+Quando si tenta di eseguire Sysprep per generalizzare un computer con Windows Server dopo l'applicazione di una configurazione DSC potrebbe essere visualizzato l'errore seguente.
+
+```
+SYSPRP LaunchDll:Failure occurred while executing 'DscCore.dll,SysPrep_Cleanup', returned error code 0x2
+```
+
+La generalizzazione di un server dopo averlo configurato con Windows PowerShell Desired State Configuration non è uno scenario supportato.  In alternativa, applicare le configurazioni a Windows al termine della fase di specializzazione dell'installazione di Windows.
 
 ## <a name="see-also"></a>Vedere anche
 

@@ -2,12 +2,12 @@
 title: Ciclo di vita del supporto di PowerShell Core
 description: Criteri che disciplinano il supporto per PowerShell Core
 ms.date: 08/06/2018
-ms.openlocfilehash: 57804df830da01bee0f48acc374658b025a46b85
-ms.sourcegitcommit: cab4e4e67dbed024864887c7f8984abb4db3a78b
+ms.openlocfilehash: d535199e19c1aabbbfdd140b38aad329bc5d957e
+ms.sourcegitcommit: 5f199cd2a1b31dbcebaab44f2fe496f289831a30
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "76022224"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77478803"
 ---
 # <a name="powershell-core-support-lifecycle"></a>Ciclo di vita del supporto di PowerShell Core
 
@@ -50,22 +50,20 @@ La nostra community ha anche reso disponibili pacchetti per alcune piattaforme, 
 Le piattaforme elencate come `Experimental` non sono ufficialmente supportate, ma sono disponibili per la sperimentazione e per l'invio di commenti e suggerimenti.
 
 | Piattaforma                                          |      6.2      |    7.0    |
-|---------------------------------------------------|:-------------:|:---------:|
-| Windows 7, 8.1 e 10                            |   Supportato   | Supportato |
-| Windows Server 2008 R2, 2012 R2, 2016             |   Supportato   | Supportato |
+| ------------------------------------------------- | :-----------: | :-------: |
+| Windows 8.1 e 10                               |   Supportato   | Supportato |
+| Windows Server 2012 R2, 2016                      |   Supportato   | Supportato |
 | [Canale semestrale di Windows Server][semi-annual] |   Supportato   | Supportato |
 | Ubuntu 16.04 e 18.04                            |   Supportato   | Supportato |
-| Ubuntu 18.10 (tramite pacchetto Snap)                   |   Community   | Community |
-| Ubuntu 19.04 (tramite pacchetto Snap)                   |   Community   | Community |
+| Ubuntu 19.10 (tramite pacchetto Snap)                   |   Community   | Community |
+| Ubuntu 20.04 (tramite pacchetto Snap)                   |   Community   | Community |
 | Debian 9                                          |   Supportato   | Supportato |
 | Debian 10                                         | Non supportato | Supportato |
 | CentOS 7                                          |   Supportato   | Supportato |
 | CentOS 8                                          | Non supportato | Supportato |
 | Red Hat Enterprise Linux 7                        |   Supportato   | Supportato |
 | Red Hat Enterprise Linux 8                        | Non supportato | Supportato |
-| openSUSE 42.3                                     |   Supportato   | Supportato |
-| Fedora 28                                         |   Supportato   | Supportato |
-| Fedora 29, 30                                     | Non supportato | Supportato |
+| Fedora 30                                         | Non supportato | Supportato |
 | Alpine 3.8                                        |   Vedere la nota    | Vedere la nota  |
 | Alpine 3.9 e 3.10                               | Non supportato | Vedere la nota  |
 | macOS 10.12+                                      |   Supportato   | Supportato |
@@ -97,19 +95,23 @@ Quando una versione di una piattaforma raggiunge la fine del ciclo di vita come 
 
 Pertanto, il supporto per le versioni seguenti è stato terminato dai proprietari della distribuzione e tali versioni non sono più supportate.
 
-| Piattaforma | Versione | Fine vita                                                                                 |
-|----------|---------|---------------------------------------------------------------------------------------------|
-| Fedora   | 24      | [Agosto 2017](https://fedoramagazine.org/fedora-24-eol/)                                    |
-| Fedora   | 25      | [Dicembre 2017](https://fedoramagazine.org/fedora-25-end-life/)                             |
-| Fedora   | 26      | [Maggio 2018](https://fedoramagazine.org/fedora-26-end-life/)                                  |
-| openSUSE | 42.1    | [Maggio 2017](https://lists.opensuse.org/opensuse-security-announce/2017-05/msg00053.html)     |
-| openSUSE | 42.2    | [Gennaio 2018](https://lists.opensuse.org/opensuse-security-announce/2017-11/msg00066.html) |
-| Ubuntu   | 16.10   | [Luglio 2017](https://lists.ubuntu.com/archives/ubuntu-announce/2017-July/000223.html)        |
-| Ubuntu   | 17.04   | [Gennaio 2018](https://lists.ubuntu.com/archives/ubuntu-announce/2018-January.txt)          |
-| Ubuntu   | 17.10   | [Luglio 2018](https://lists.ubuntu.com/archives/ubuntu-announce/2018-July/000232.html)        |
-| Debian   | 8       | [Giugno 2018](https://lists.debian.org/debian-security-announce/2018/msg00132.html)           |
-| Fedora   | 27      | [Novembre 2018](https://fedoramagazine.org/fedora-27-end-of-life/)                          |
-| Ubuntu   | 14.04   | [Aprile 2019](https://wiki.ubuntu.com/Releases)                                              |
+| Piattaforma       | Versione | Fine vita                                                                                                                        |
+| -------------- | ------- | ---------------------------------------------------------------------------------------------------------------------------------- |
+| Debian         | 8       | [Giugno 2018](https://lists.debian.org/debian-security-announce/2018/msg00132.html)                                                  |
+| Fedora         | 24      | [Agosto 2017](https://fedoramagazine.org/fedora-24-eol/)                                                                           |
+| Fedora         | 25      | [Dicembre 2017](https://fedoramagazine.org/fedora-25-end-life/)                                                                    |
+| Fedora         | 26      | [Maggio 2018](https://fedoramagazine.org/fedora-26-end-life/)                                                                         |
+| Fedora         | 27      | [Novembre 2018](https://fedoramagazine.org/fedora-27-end-of-life/)                                                                 |
+| Fedora         | 28      | [Maggio 2019](https://fedoramagazine.org/fedora-28-end-of-life/)                                                                      |
+| openSUSE       | 42.1    | [Maggio 2017](https://lists.opensuse.org/opensuse-security-announce/2017-05/msg00053.html)                                            |
+| openSUSE       | 42.2    | [Gennaio 2018](https://lists.opensuse.org/opensuse-security-announce/2017-11/msg00066.html)                                        |
+| openSUSE       | 42.3    | [Luglio 2019](https://lists.opensuse.org/opensuse-security-announce/2019-07/msg00000.html)                                           |
+| Ubuntu         | 14.04   | [Aprile 2019](https://wiki.ubuntu.com/Releases)                                                                                     |
+| Ubuntu         | 16.10   | [Luglio 2017](https://lists.ubuntu.com/archives/ubuntu-announce/2017-July/000223.html)                                               |
+| Ubuntu         | 17.04   | [Gennaio 2018](https://lists.ubuntu.com/archives/ubuntu-announce/2018-January.txt)                                                 |
+| Ubuntu         | 17.10   | [Luglio 2018](https://lists.ubuntu.com/archives/ubuntu-announce/2018-July/000232.html)                                               |
+| Windows        | 7       | [Gennaio 2020](https://support.microsoft.com/en-us/help/4057281/windows-7-support-ended-on-january-14-2020)                        |
+| Windows Server | 2008 R2 | [Gennaio 2020](https://support.microsoft.com/en-us/help/4456235/end-of-support-for-windows-server-2008-and-windows-server-2008-r2) |
 
 ## <a name="notes-on-licensing"></a>Note sulla licenza
 
