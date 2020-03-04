@@ -2,12 +2,12 @@
 ms.date: 07/10/2019
 keywords: jea,powershell,sicurezza
 title: Registrazione delle configurazioni JEA
-ms.openlocfilehash: dbed5c7dd71f2f7a09d97416be56dff675799548
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 7cc67e891bc14dd667c97e9a8b550b33b4c2b874
+ms.sourcegitcommit: 0a3f9945d52e963e9cba2538ffb33e42156e1395
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74417605"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77706207"
 ---
 # <a name="registering-jea-configurations"></a>Registrazione delle configurazioni JEA
 
@@ -51,7 +51,7 @@ Dopo la registrazione, sarà possibile [usare JEA](using-jea.md). È possibile e
 
 ## <a name="multi-machine-configuration-with-dsc"></a>Configurazione di più computer con DSC
 
-Quando si distribuisce JEA su più computer, il modello di distribuzione più semplice consiste nell'usare la risorsa [Desired State Configuration (DSC)](/powershell/scripting/dsc/overview) di JEA per distribuire rapidamente e in modo coerente JEA in ogni computer.
+Quando si distribuisce JEA su più computer, il modello di distribuzione più semplice consiste nell'usare la risorsa [Desired State Configuration (DSC)](../../../dsc/overview/overview.md) di JEA per distribuire rapidamente e in modo coerente JEA in ogni computer.
 
 Per distribuire JEA con DSC, assicurarsi che siano soddisfatti i prerequisiti seguenti:
 
