@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: fb55971a-4ea4-4c51-aeff-4e0bb05a51b2
 caps.latest.revision: 6
-ms.openlocfilehash: 98cac43698b3f537ee318cd2570b2174631665a7
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 7d399786b9b43ee302493359d9702981045212e9
+ms.sourcegitcommit: 01c60c0c97542dbad48ae34339cddbd813f1353b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72359630"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "78277466"
 ---
 # <a name="creating-a-workflow-with-windows-powershell-activities"></a>Creazione di un flusso di lavoro con le attività di Windows PowerShell
 
@@ -21,7 +21,7 @@ ms.locfileid: "72359630"
 
 Nelle procedure riportate di seguito viene descritto come creare un flusso di lavoro che controlla lo stato del dominio di un gruppo di computer specificati dall'utente, li aggiunge a un dominio se non sono già stati aggiunti, quindi controlla di nuovo lo stato.
 
-### <a name="setting-up-the-project"></a>Configurazione del progetto
+### <a name="setting-up-the-project"></a>Impostazione del progetto
 
 1. Per creare un progetto flusso di lavoro e aggiungere le attività dagli assembly [Microsoft. PowerShell. Activities](/dotnet/api/Microsoft.PowerShell.Activities) e [Microsoft. PowerShell. Management. Activities](/dotnet/api/Microsoft.PowerShell.Management.Activities) alla casella degli strumenti, seguire la procedura descritta in [aggiunta di attività di Windows PowerShell alla casella degli strumenti di Visual Studio](./adding-windows-powershell-activities-to-the-visual-studio-toolbox.md) .
 
@@ -45,9 +45,9 @@ Nelle procedure riportate di seguito viene descritto come creare un flusso di la
 
 8. Modificare le proprietà dell'attività **GetWmiObject** come indicato di seguito.
 
-   |Proprietà|Value|
+   |Proprietà|valore|
    |--------------|-----------|
-   |**Classe**|"Win32_ComputerSystem"|
+   |**Class**|"Win32_ComputerSystem"|
    |**PSComputerName**|comp|
    |**PSCredential**|MachineCred|
 
@@ -55,7 +55,7 @@ Nelle procedure riportate di seguito viene descritto come creare un flusso di la
 
 10. Modificare le proprietà dell'attività **AddComputer** come indicato di seguito.
 
-    |Proprietà|Value|
+    |Proprietà|valore|
     |--------------|-----------|
     |**NomeComputer**|comp|
     |**DomainCredential**|DomainCred|
@@ -64,18 +64,18 @@ Nelle procedure riportate di seguito viene descritto come creare un flusso di la
 
 12. Modificare le proprietà dell'attività **RestartComputer** come indicato di seguito.
 
-    |Proprietà|Value|
+    |Proprietà|valore|
     |--------------|-----------|
     |**NomeComputer**|comp|
     |**Credenziali**|MachineCred|
     |**Per**|Microsoft. PowerShell. Commands. WaitForServiceTypes. PowerShell|
     |**Forzare**|True|
-    |Wait|True|
+    |Attesa|True|
     |PSComputerName|{""}|
 
 13. Aggiungere un'attività **GetWmiObject** alla sequenza **JoinDomain** dopo l'attività **RestartComputer** . Modificare le proprietà in modo che corrispondano a quelle dell'attività **GetWmiObject** precedente.
 
     Una volta completate le procedure, la finestra di progettazione del flusso di lavoro avrà un aspetto simile al seguente.
 
-    ![XAML JoinDomain in Progettazione flussi di lavoro](../media/joindomainworkflow.png)
-    ![XAML di JoinDomain in Progettazione flussi di lavoro](../media/joindomainworkflow.png "JoinDomainWorkflow")
+    ![XAML JoinDomain in Progettazione flussi di lavoro](media/creating-a-workflow-with-windows-powershell-activities/joindomainworkflow.png)
+    ![XAML di JoinDomain in Progettazione flussi di lavoro](media/creating-a-workflow-with-windows-powershell-activities/joindomainworkflow.png "JoinDomainWorkflow")

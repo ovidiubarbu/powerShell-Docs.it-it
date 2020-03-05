@@ -8,12 +8,12 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: f902fd4d-8f6e-4ef1-b07f-59983039a0d1
 caps.latest.revision: 10
-ms.openlocfilehash: dfe747893b4aef6376ea3b12dd79b7c144455ed0
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 41cb32735091f065a0835378428de190d08f3160
+ms.sourcegitcommit: 01c60c0c97542dbad48ae34339cddbd813f1353b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74415695"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "78278985"
 ---
 # <a name="cmdlet-parameter-sets"></a>Set di parametri del cmdlet
 
@@ -31,7 +31,7 @@ Ogni set di parametri deve avere un parametro univoco usato dal runtime di Power
 
 Nella figura seguente la colonna sinistra mostra tre set di parametri validi. Il **parametro a** è univoco per il primo set di parametri, il **parametro B** è univoco per il secondo set di parametri e il **parametro C** è univoco per il terzo set di parametri. Nella colonna a destra i set di parametri non hanno un parametro univoco.
 
-![ps_parametersets](../media/ps-parametersets.gif)
+![ps_parametersets](media/cmdlet-parameter-sets/ps-parametersets.gif)
 
 ## <a name="parameter-set-requirements"></a>Requisiti per i set di parametri
 
