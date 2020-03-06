@@ -8,18 +8,21 @@ ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: dc5ce5a2-50e9-4c88-abf1-ac148a8a6b7b
 caps.latest.revision: 15
-ms.openlocfilehash: 5957ea4c15cd3778bd09b67c4b97de0ef0cfdd2a
-ms.sourcegitcommit: 0e4c69d8b5cf71431592fe41da816dec9b70f1f9
+ms.openlocfilehash: b176d8439025ac132962859f79e72ae6f9703e82
+ms.sourcegitcommit: 4a26c05f162c4fa347a9d67e339f8a33e230b9ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/09/2019
-ms.locfileid: "74953841"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78405045"
 ---
 # <a name="modifying-the-psmodulepath-installation-path"></a>Modifica del percorso di installazione di PSModulePath
 
 La variabile di ambiente `PSModulePath` archivia i percorsi delle posizioni dei moduli installati su disco. PowerShell usa questa variabile per individuare i moduli quando l'utente non specifica il percorso completo di un modulo. I percorsi in questa variabile vengono cercati nell'ordine in cui sono visualizzati.
 
-All'avvio di PowerShell, `PSModulePath` viene creato come variabile di ambiente di sistema con il valore predefinito seguente: `$HOME\Documents\PowerShell\Modules; $PSHOME\Modules` o `$HOME\Documents\WindowsPowerShell\Modules; $PSHOME\Modules` per Windows PowerShell.
+All'avvio di PowerShell, `PSModulePath` viene creato come variabile di ambiente di sistema con il valore predefinito seguente: `$HOME\Documents\PowerShell\Modules; $PSHOME\Modules` in Windows e `$HOME/.local/share/powershell/Modules: usr/local/share/powershell/Modules` su Linux o Mac e `$HOME\Documents\WindowsPowerShell\Modules; $PSHOME\Modules` per Windows PowerShell.
+
+> [!NOTE]
+> Il percorso **CurrentUser** specifico dell'utente è la cartella `WindowsPowerShell\Modules` che si trova nel percorso dei **documenti** nel profilo utente. Il percorso specifico di tale percorso varia in base alla versione di Windows e a seconda che si usi o meno il reindirizzamento cartelle. Per impostazione predefinita, in Windows 10 il percorso è `$HOME\Documents\WindowsPowerShell\Modules`.
 
 ## <a name="to-view-the-psmodulepath-variable"></a>Per visualizzare la variabile PSModulePath
 
@@ -56,3 +59,5 @@ Per aggiungere percorsi a questa variabile, usare uno dei metodi seguenti:
 ## <a name="see-also"></a>Vedere anche
 
 [Scrittura di un modulo di Windows PowerShell](./writing-a-windows-powershell-module.md)
+
+[about_Modules](/powershell/module/microsoft.powershell.core/about/about_modules)
