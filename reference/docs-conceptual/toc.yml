@@ -8,13 +8,13 @@
       href: install/installing-powershell.md
     - name: Installazione di PowerShell
       items:
-        - name: Installazione di PowerShell Core in Windows
+        - name: Installazione di PowerShell in Windows
           href: install/installing-powershell-core-on-windows.md
-        - name: Installazione di PowerShell Core in Linux
+        - name: Installazione di PowerShell in Linux
           href: install/installing-powershell-core-on-linux.md
-        - name: Installazione di PowerShell Core in macOS
+        - name: Installazione di PowerShell in macOS
           href: install/installing-powershell-core-on-macos.md
-        - name: Installazione di PowerShell Core in ARM
+        - name: Installazione di PowerShell in ARM
           href: install/powershell-core-on-arm.md
     - name: Installazione di Windows PowerShell 5.1
       items:
@@ -296,6 +296,8 @@
           href: whats-new/what-s-new-in-the-powershell-50-ise.md
     - name: Cronologia delle versioni di moduli e cmdlet
       href: whats-new/cmdlet-versions.md
+    - name: Elenco di compatibilità dei moduli
+      href: whats-new/module-compatibility.md
 - name: Ciclo di vita del supporto di PowerShell Core
   href: powershell-support-lifecycle.md
 - name: Windows Management Framework (WMF)
