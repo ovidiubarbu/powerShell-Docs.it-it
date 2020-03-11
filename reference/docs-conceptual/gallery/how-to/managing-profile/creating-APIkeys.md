@@ -3,12 +3,12 @@ ms.date: 09/10/2018
 contributor: JKeithB
 keywords: gallery,powershell,cmdlet,psgallery
 title: Gestione delle chiavi API
-ms.openlocfilehash: 954eb27c25babdb8efe50c13caf5f2d287c6b3e3
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 0f44a080415f1acf13680771b6e9db5b805f8f45
+ms.sourcegitcommit: 01c60c0c97542dbad48ae34339cddbd813f1353b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "71328292"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "78278300"
 ---
 # <a name="managing-api-keys"></a>Gestione delle chiavi API
 
@@ -19,7 +19,7 @@ PowerShell Gallery supporta la creazione di più chiavi API per supportare una g
 
 L'immagine seguente illustra le opzioni disponibili quando si crea una chiave API con ambito.
 
-![Creazione di chiavi API](../../Images/PSGallery_KeyScoped.png)
+![Creazione di chiavi API](media/creating-APIkeys/PSGallery_KeyScoped.png)
 
 In questo esempio viene creata una chiave API denominata **AzureRMDataFactory**. Il valore di questa chiave può essere usato per eseguire il push dei pacchetti i cui nomi iniziano con "AzureRM.DataFactory" ed è valido per 365 giorni. Questo è uno scenario tipico quando diversi team all'interno della stessa organizzazione lavorano su pacchetti diversi. I membri del team hanno una chiave che concede loro privilegi per il pacchetto specifico su cui lavorano.
 Il valore di scadenza impedisce l'uso di chiavi non aggiornate o dimenticate.
@@ -32,7 +32,7 @@ Se si lavora su più pacchetti, è possibile usare i criteri di GLOB per abbinar
 
 Per sicurezza, un valore di chiave appena creato non viene mai visualizzato sullo schermo ed è disponibile solo con il pulsante Copia, come illustrato di seguito.
 
-![Creazione di un nuovo valore della chiave API](../../Images/PSGallery_CopyCreatedKey.png)
+![Creazione di un nuovo valore della chiave API](media/creating-APIkeys/PSGallery_CopyCreatedKey.png)
 
 > [!IMPORTANT]
 > È possibile copiare il valore della chiave API solo immediatamente dopo averlo creato o aggiornato. Non verrà visualizzato e non sarà possibile accedervi nuovamente dopo che la pagina è stata aggiornata. Se si perde il valore della chiave, è necessario rigenerare la chiave e copiarla dopo che è stata rigenerata.
@@ -59,7 +59,7 @@ Queste impostazioni non possono essere modificate dopo la creazione della chiave
 
 È possibile modificare alcune impostazioni di una chiave esistente. Come indicato in precedenza, non è possibile modificare l'ambito di protezione per una chiave API esistente o modificare la scadenza. Le opzioni modificabili sono visualizzate nella schermata seguente:
 
-![Creazione di un nuovo valore della chiave API](../../Images/PSGallery_EditAPIKey.png)
+![Creazione di un nuovo valore della chiave API](media/creating-APIkeys/PSGallery_EditAPIKey.png)
 
 Per modificare i pacchetti controllati da una chiave, è possibile scegliere singoli pacchetti dall'elenco o modificare il criterio GLOB.
 

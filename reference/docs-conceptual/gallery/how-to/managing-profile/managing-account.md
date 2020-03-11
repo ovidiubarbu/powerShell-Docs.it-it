@@ -3,12 +3,12 @@ ms.date: 09/05/2018
 contributor: JKeithB
 keywords: gallery,powershell,cmdlet,psgallery
 title: Impostazioni dell'account di PowerShell Gallery
-ms.openlocfilehash: ebe784ec5aae5ff3a4d444d12a168ef38aaef65f
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: db61c3fd8c73048b51f3411a8c1dab52fb03d08a
+ms.sourcegitcommit: 01c60c0c97542dbad48ae34339cddbd813f1353b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "71328032"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "78278101"
 ---
 # <a name="powershell-gallery-account-settings"></a>Impostazioni dell'account di PowerShell Gallery
 
@@ -25,7 +25,7 @@ PowerShell Gallery offre le seguenti impostazioni dell'account:
 
 L'indirizzo di posta elettronica è la destinazione delle notifiche di PowerShell Gallery. Non deve necessariamente corrispondere all'account di accesso. Si può usare qualsiasi account di posta elettronica a cui si ha accesso. L'indirizzo di posta elettronica non viene mai comunicato ad altri utenti direttamente da PowerShell Gallery.
 
-![Modifica dell'indirizzo di posta elettronica](../../Images/PSGallery_AcccountEmailAddress.png)
+![Modifica dell'indirizzo di posta elettronica](media/managing-account/PSGallery_AcccountEmailAddress.png)
 
 Quando si immette un nuovo indirizzo di posta elettronica, PowerShell Gallery invia un messaggio di verifica a tale indirizzo. Il messaggio di verifica contiene un collegamento a PowerShell Gallery per completare il processo di modifica. Se non si completa il processo di verifica, tutte le notifiche vengono inviate all'indirizzo precedente.
 
@@ -36,10 +36,10 @@ PowerShell Gallery offre le seguenti opzioni di notifica:
 - Gli altri utenti possono contattare l'utente usando PowerShell Gallery
 - L'utente riceve una notifica quando viene eseguito il push di un pacchetto in PowerShell Gallery usando il suo account
 
-![Modifica dell'indirizzo di posta elettronica](../../Images/PSGallery_AccountEmailOptions.png)
+![Modifica dell'indirizzo di posta elettronica](media/managing-account/PSGallery_AccountEmailOptions.png)
 
 Come indicato nella pagina, le notifiche critiche inviate da PowerShell Gallery non possono essere disabilitate.
-Ad esempio:
+incluse le seguenti:
 
 - Notifiche relative alla sicurezza
 - Notifiche relative alla gestione dell'account dagli amministratori di PowerShell Gallery
@@ -49,20 +49,20 @@ Ad esempio:
 
 Per modificare l'account di accesso, è necessario accedere con l'account corrente. Per completare la modifica, eseguire la procedura seguente.
 
-![Impostazioni dell'account di accesso](../../Images/PSGallery_LoginAccountSettings.png)
+![Impostazioni dell'account di accesso](media/managing-account/PSGallery_LoginAccountSettings.png)
 
 1. Fare clic su **Cambia account**. In una finestra popup viene spiegato che la modifica dell'account di accesso viene applicata a tutti gli usi dell'account in PowerShell Gallery. Esaminare le informazioni, quindi fare clic su **OK** per continuare.
 
-   ![Impostazioni dell'account di accesso](../../Images/PSGallery_LoginAccountChange-1.png)
+   ![Impostazioni dell'account di accesso](media/managing-account/PSGallery_LoginAccountChange-1.png)
 
 2. Viene quindi chiesto di accedere usando il _nuovo account_.
 
-   ![Impostazioni dell'account di accesso](../../Images/PSGallery_LoginAccountChange-2.png)
+   ![Impostazioni dell'account di accesso](media/managing-account/PSGallery_LoginAccountChange-2.png)
 
 3. Quando fa clic su **Avanti**, un messaggio indica che si è connessi con l'account corrente.
    Scegliere l'opzione che consente di **uscire e accedere di nuovo con un altro account**.
 
-   ![Impostazioni dell'account di accesso](../../Images/PSGallery_LoginAccountChange-3.png)
+   ![Impostazioni dell'account di accesso](media/managing-account/PSGallery_LoginAccountChange-3.png)
 
 4. Immettere la password del nuovo account. Dopo aver immesso la password, si torna alla pagina delle impostazioni dell'account, che indica che l'account di accesso è stato aggiornato.
 

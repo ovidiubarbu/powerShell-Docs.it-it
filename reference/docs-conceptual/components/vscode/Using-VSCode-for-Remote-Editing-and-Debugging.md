@@ -2,12 +2,12 @@
 title: Uso di Visual Studio Code per la modifica e il debug remoti
 description: Uso di Visual Studio Code per la modifica e il debug remoti
 ms.date: 06/13/2019
-ms.openlocfilehash: ae3b7a3709498fcd547a48d0849b0dc880217225
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 5ce7f575d90ff47fd6b8a0a2b567e972ec3a9fef
+ms.sourcegitcommit: 01c60c0c97542dbad48ae34339cddbd813f1353b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "67263943"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "78279152"
 ---
 # <a name="using-visual-studio-code-for-remote-editing-and-debugging"></a>Uso di Visual Studio Code per la modifica e il debug remoti
 
@@ -38,7 +38,7 @@ Questi esempi illustrano le operazioni di modifica e debug remoti da un MacBook 
 
 Con l'estensione di PowerShell per VSCode avviata e la console integrata di PowerShell aperta, è possibile digitare `Open-EditorFile foo.ps1` o `psedit foo.ps1` per aprire il file locale foo.ps1 direttamente nell'editor.
 
-![Open-EditorFile foo.ps1 funziona localmente](images/Using-VSCode-for-Remote-Editing-and-Debugging/1-open-local-file.png)
+![Open-EditorFile foo.ps1 funziona localmente](media/Using-VSCode-for-Remote-Editing-and-Debugging/1-open-local-file.png)
 
 >[!NOTE]
 > Il file `foo.ps1` deve essere già presente.
@@ -47,11 +47,11 @@ Da qui, è possibile:
 
 - Aggiungere punti di interruzione alla barra di navigazione
 
-  ![aggiunta di punti di interruzione alla barra di navigazione](images/Using-VSCode-for-Remote-Editing-and-Debugging/2-adding-breakpoint-gutter.png)
+  ![aggiunta di punti di interruzione alla barra di navigazione](media/Using-VSCode-for-Remote-Editing-and-Debugging/2-adding-breakpoint-gutter.png)
 
 - Premere F5 per eseguire il debug dello script di PowerShell.
 
-  ![debug dello script locale di PowerShell](images/Using-VSCode-for-Remote-Editing-and-Debugging/3-local-debug.png)
+  ![debug dello script locale di PowerShell](media/Using-VSCode-for-Remote-Editing-and-Debugging/3-local-debug.png)
 
 Durante il debug, è possibile interagire con la console di debug, verificare le variabili nell'ambito a sinistra e tutti gli altri gli strumenti standard di debug.
 
@@ -73,20 +73,20 @@ Poiché si sta passando da macOS a una macchina virtuale Ubuntu in Azure, per la
 
 Nella console integrata eseguire prima di tutto `Enter-PSSession`. Quando `[<hostname>]` viene visualizzato a sinistra del prompt, si è connessi alla sessione remota.
 
-![La chiamata a Enter-PSSession](images/Using-VSCode-for-Remote-Editing-and-Debugging/4-enter-pssession.png)
+![La chiamata a Enter-PSSession](media/Using-VSCode-for-Remote-Editing-and-Debugging/4-enter-pssession.png)
 
 Ora è possibile eseguire gli stessi passaggi che si eseguono per modificare uno script locale.
 
 1. Eseguire `Open-EditorFile test.ps1` o `psedit test.ps1` per aprire il file remoto `test.ps1`
 
-  ![Eseguire Open-EditorFile sul file test.ps1](images/Using-VSCode-for-Remote-Editing-and-Debugging/5-open-remote-file.png)
+  ![Eseguire Open-EditorFile sul file test.ps1](media/Using-VSCode-for-Remote-Editing-and-Debugging/5-open-remote-file.png)
 
 1. Modificare i file/impostare punti di interruzione
 
-   ![modificare i file e impostare punti di interruzione](images/Using-VSCode-for-Remote-Editing-and-Debugging/6-set-breakpoints.png)
+   ![modificare i file e impostare punti di interruzione](media/Using-VSCode-for-Remote-Editing-and-Debugging/6-set-breakpoints.png)
 
 1. Avviare il debug del file remoto (F5)
 
-   ![debug del file remoto](images/Using-VSCode-for-Remote-Editing-and-Debugging/7-start-debugging.png)
+   ![debug del file remoto](media/Using-VSCode-for-Remote-Editing-and-Debugging/7-start-debugging.png)
 
 Se si verificano problemi, è possibile segnalarli [nel repository GitHub](https://github.com/powershell/vscode-powershell).

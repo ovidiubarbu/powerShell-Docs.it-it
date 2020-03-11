@@ -2,12 +2,12 @@
 ms.date: 10/20/2019
 keywords: powershell,cmdlet
 title: Come usare la documentazione di PowerShell
-ms.openlocfilehash: 80f72bb89b3bb82ee7c4d16b8969395f02d7d4ca
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 7b73bc82f32e3ce1e6015822e0cc82078183931b
+ms.sourcegitcommit: 01c60c0c97542dbad48ae34339cddbd813f1353b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72676151"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "78279308"
 ---
 # <a name="how-to-use-the-powershell-documentation"></a>Come usare la documentazione di PowerShell
 
@@ -25,7 +25,7 @@ Per impostazione predefinita, il sito visualizza la documentazione per la versio
 
 Usare il selettore di versione nella parte superiore della pagina per selezionare la versione di PowerShell desiderata.
 
-![Selettore di versione](images/how-to-use-docs/version-search.gif)
+![Selettore di versione](media/how-to-use-docs/version-search.gif)
 
 È possibile verificare la versione di PowerShell in uso esaminando il valore `$PSversionTable.PSVersion`. L'esempio seguente si riferisce all'output per Windows PowerShell v5.1.
 

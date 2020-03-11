@@ -3,12 +3,12 @@ ms.date: 06/12/2017
 contributor: JKeithB
 keywords: gallery,powershell,cmdlet,psgallery
 title: Domande frequenti su PowerShell Gallery
-ms.openlocfilehash: 70e2220bd68b351e0b09dd3c59901104f7874335
-ms.sourcegitcommit: ea7d87a7a56f368e3175219686dfa2870053c644
+ms.openlocfilehash: 9572a61d38b0d540b0b8933405810ac4f2b6377e
+ms.sourcegitcommit: 01c60c0c97542dbad48ae34339cddbd813f1353b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76818125"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "78278180"
 ---
 # <a name="frequently-asked-questions"></a>Domande frequenti
 
@@ -148,7 +148,7 @@ Al livello dei cmdlet di PowerShell, [Install-Module][] è un semplice wrapper p
 
 Al livello dei provider di pacchetti PackageManagement, il provider di pacchetti PSModule esegue una chiamata negli altri provider di pacchetti PackageManagement. Ad esempio, quando si lavora con le raccolte basate su NuGet (ad esempio la PowerShell Gallery), il provider di pacchetti PSModule usa il provider del pacchetto NuGet per lavorare con il repository.
 
-![Architettura di PowerShellGet](Images/powershellgetArchitecture.png)
+![Architettura di PowerShellGet](media/faqs/powershellgetArchitecture.png)
 
 Figura 1: Architettura di PowerShellGet
 

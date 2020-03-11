@@ -2,12 +2,12 @@
 title: Novità di PowerShell Core 6.1
 description: Nuove funzionalità e modifiche rilasciate in PowerShell Core 6.1
 ms.date: 09/13/2018
-ms.openlocfilehash: 531259217f2b71213776e7d394616c7790e9aca9
-ms.sourcegitcommit: bc9a4904c2b1561386d748fc9ac242699d2f1694
+ms.openlocfilehash: 079d5a472c743ce94f2e93143c1dcb4ff406951f
+ms.sourcegitcommit: 01c60c0c97542dbad48ae34339cddbd813f1353b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/04/2020
-ms.locfileid: "76995512"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "78277737"
 ---
 # <a name="whats-new-in-powershell-core-61"></a>Novità di PowerShell Core 6.1
 
@@ -169,7 +169,7 @@ Sono stati aggiunti alcuni cmdlet in 6.1 che consentono di convertire ed eseguir
 
 Ad esempio, `Show-Markdown` esegue il rendering di un file di markdown nella console:
 
-![Esempio di visualizzazione di markdown](./images/markdown_example.png)
+![Esempio di visualizzazione di markdown](media/What-s-New-in-PowerShell-Core-61/markdown_example.png)
 
 Per altre informazioni sul funzionamento di questi cmdlet, consultare [questo documento RFC](https://github.com/PowerShell/PowerShell-RFC/blob/master/5-Final/RFC0025-Native-Markdown-Rendering.md).
 
@@ -264,7 +264,7 @@ I client SSH in genere supportano una stringa di connessione nel formato `user@h
 
 Grazie a [@bergmeister](https://github.com/bergmeister), ora è possibile attivare un menu di scelta rapida in Windows. È ora possibile aprire l'installazione a livello di sistema di PowerShell 6.1 da qualsiasi cartella in Esplora risorse:
 
-![Menu di scelta rapida della shell per PowerShell 6](./images/shell_context_menu.png)
+![Menu di scelta rapida della shell per PowerShell 6](media/What-s-New-in-PowerShell-Core-61/shell_context_menu.png)
 
 ## <a name="goodies"></a>Novità
 
@@ -272,7 +272,7 @@ Grazie a [@bergmeister](https://github.com/bergmeister), ora è possibile attiva
 
 Grazie a [@bergmeister](https://github.com/bergmeister), il menu di scelta rapida di PowerShell Core ora include una voce che consente di eseguire PowerShell come amministratore:
 
-!["Run as administrator" nel menu di scelta rapida di PowerShell 6](./images/jumplist.png)
+!["Run as administrator" nel menu di scelta rapida di PowerShell 6](media/What-s-New-in-PowerShell-Core-61/jumplist.png)
 
 ### <a name="cd---returns-to-previous-directory"></a>`cd -` consente di tornare alla directory precedente
 

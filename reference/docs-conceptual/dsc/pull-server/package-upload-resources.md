@@ -2,12 +2,12 @@
 ms.date: 12/12/2018
 keywords: dsc,powershell,configurazione,installazione
 title: Creare un pacchetto e caricare le risorse in un server di pull
-ms.openlocfilehash: 29a62f96393a53c9e7da57a5e51732dcb0937194
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 8aac343d7495ecda94ed76d1d97079397eecd65f
+ms.sourcegitcommit: 01c60c0c97542dbad48ae34339cddbd813f1353b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "71954378"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "78278503"
 ---
 # <a name="package-and-upload-resources-to-a-pull-server"></a>Creare un pacchetto e caricare le risorse in un server di pull
 
@@ -27,7 +27,7 @@ Ogni risorsa disponibile per il download da un client deve essere archiviata in 
 
 È possibile comprimere la directory delle risorse usando qualsiasi utilità, script o metodo che si preferisce. In Windows, è possibile *fare clic con il pulsante destro del mouse* sulla directory "xPSDesiredStateConfiguration" e scegliere "Invia a", quindi "Cartella compressa".
 
-![Fare clic con il pulsante destro del mouse](../media/right-click.gif)
+![Fare clic con il pulsante destro del mouse](media/package-upload-resources/right-click.gif)
 
 ### <a name="naming-the-resource-archive"></a>Assegnazione di un nome all'archivio delle risorse
 

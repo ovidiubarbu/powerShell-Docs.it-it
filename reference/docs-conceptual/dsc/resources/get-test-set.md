@@ -2,18 +2,18 @@
 ms.date: 12/12/2018
 keywords: dsc,powershell,configurazione,installazione
 title: Get-Test-Set
-ms.openlocfilehash: 42c1df6df2fbf65cbbb8407db613cac2e5b81cfb
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: bf409f71c07c434fbc7389789e16575868d21b42
+ms.sourcegitcommit: 01c60c0c97542dbad48ae34339cddbd813f1353b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "71954288"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "78278419"
 ---
 # <a name="get-test-set"></a>Get-Test-Set
 
 >Si applica a: Windows PowerShell 4.0, Windows PowerShell 5.0
 
-![Ottenere, testare e impostare](../media/get-test-set.png)
+![Ottenere, testare e impostare](media/get-test-set/get-test-set.png)
 
 La configurazione dello stato desiderato di PowerShell è costruita su un processo **Get**, **Test** e **Set**. Le [risorse](resources.md) DSC contengono ciascuna i metodi per completare ognuna di queste operazioni. In una [Configurazione](../configurations/configurations.md) vengono definiti blocchi di risorse in cui inserire chiavi che diventano i parametri per i metodi **Get**, **Test** e **Set** di una risorsa.
 
@@ -123,7 +123,7 @@ ModuleVersion = "1.0";
 
 Quando applicata, [Gestione configurazione locale](../managing-nodes/metaConfig.md) leggerà il valore "Spooler" dal file "MOF" e lo passerà al parametro `-Name` dei metodi **Get**, **Test** e **Set** per l'istanza "MyService" della risorsa **Service**.
 
-## <a name="get"></a>Ottenere
+## <a name="get"></a>Recupero
 
 Il metodo **Get** di una risorsa recupera lo stato della risorsa così come è configurata nel nodo di destinazione. Questo stato viene restituito come [TabellaHash](/powershell/module/microsoft.powershell.core/about/about_hash_tables). Le chiavi della **TabellaHash** saranno i valori configurabili, o parametri, accettati dalla risorsa.
 
@@ -204,7 +204,7 @@ localhost       {[Service]Spooler}                                            Tr
 
 Per altre informazioni, vedere [Test-DSCConfiguration](/powershell/module/psdesiredstateconfiguration/Test-DSCConfiguration)
 
-## <a name="set"></a>Imposta
+## <a name="set"></a>Set
 
 Il metodo **Set** di una risorsa tenta di forzare il nodo affinché diventi conforme con lo *stato desiderato* della risorsa. Il metodo **Set** deve essere **idempotente**, che significa che **Set** potrebbe essere eseguito più volte e otterrà sempre lo stesso risultato senza errori.  Quando si esegue [Test-DSCConfiguration](/powershell/module/psdesiredstateconfiguration/Start-DSCConfiguration) la gestione configurazione locale (LCM) passa da una risorsa all'altra nella configurazione attualmente applicata. La gestione configurazione locale recupera i valori di chiave per l'istanza corrente delle risorse dal file "MOF" e li usa come parametri per il metodo **Test**. Se il metodo **Test** restituisce `$True`, il nodo è conforme con la risorsa corrente e il metodo **Set** viene ignorato. Se **Test** restituisce `$False`, il nodo non è conforme.  La gestione configurazione locale (LCM) passa i valori di chiave dell'istanza della risorsa come parametri al metodo **Set** ripristinando la conformità del nodo.
 
