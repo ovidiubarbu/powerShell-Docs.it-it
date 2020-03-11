@@ -726,6 +726,36 @@
           href: samples/appendix-1---compatibility-aliases.md
         - name: Appendice 2 Creazione di un collegamento personalizzato per PowerShell
           href: samples/appendix-2---creating-a-custom-powershell-shortcut.md
+- name: Community
+  items:
+    - name: Risorse della community
+      href: community/community-support.md
+    - name: Grafica digitale
+      href: community/digital-art.md
+    - name: Novità della documentazione di PowerShell
+      href: community/whats-new-in-docs.md
+    - name: Guida per i collaboratori
+      items:
+        - name: Panoramica
+          href: community/contributing/overview.md
+        - name: Come registrare un problema della documentazione
+          href: community/contributing/file-an-issue.md
+        - name: Introduzione alla scrittura della documentazione
+          href: community/contributing/get-started-writing.md
+        - name: Invio di una richiesta pull
+          href: community/contributing/pull-requests.md
+        - name: Guida di stile per la documentazione di PowerShell
+          href: community/contributing/powershell-style-guide.md
+        - name: Modifica delle informazioni di riferimento sui cmdlet
+          href: community/contributing/editing-cmdlet-ref.md
+        - name: Risorse aggiuntive
+          items:
+            - name: Elenco di controllo editoriale
+              href: community/contributing/editorial-checklist.md
+            - name: Modalità di gestione dei problemi
+              href: community/contributing/managing-issues.md
+            - name: Modalità di gestione delle richieste pull
+              href: community/contributing/managing-pull-requests.md
 - name: PowerShell SDK
   items:
     - name: Panoramica
