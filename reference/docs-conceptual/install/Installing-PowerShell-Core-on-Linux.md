@@ -1,21 +1,28 @@
 ---
-title: Installazione di PowerShell Core in Linux
-description: Informazioni sull'installazione di PowerShell Core in varie distribuzioni Linux
-ms.date: 07/19/2019
-ms.openlocfilehash: 3b0b9b1520247fa49760e631c837196fb7107b5f
-ms.sourcegitcommit: cab4e4e67dbed024864887c7f8984abb4db3a78b
+title: Installazione di PowerShell in Linux
+description: Informazioni sull'installazione di PowerShell in varie distribuzioni Linux
+ms.date: 03/09/2020
+ms.openlocfilehash: 0c7b2bd804d07b2fcb61a61240b139f84fabd6db
+ms.sourcegitcommit: c97dcf1e00ef540e7464c36c88f841474060044c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "76022256"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79402538"
 ---
-# <a name="installing-powershell-core-on-linux"></a>Installazione di PowerShell Core in Linux
+# <a name="installing-powershell-on-linux"></a>Installazione di PowerShell in Linux
 
 Supporta [Ubuntu 16.04][u16], [Ubuntu 18.04][u1804], [Ubuntu 18.10][u1810], [Ubuntu 19.04][u1904], [Debian 8][deb8], [Debian 9][deb9], [Debian 10][deb10], [CentOS 7][cos], [Red Hat Enterprise Linux (RHEL) 7][rhel7], [openSUSE 42.3][opensuse], [openSUSE Leap 15][opensuse], [Fedora 27][fedora], [Fedora 28][fedora] e [Arch Linux][arch].
 
 Per le distribuzioni Linux non supportate ufficialmente, è possibile provare a installare PowerShell con il [pacchetto PowerShell Snap][snap]. È anche possibile provare a distribuire i file binari di PowerShell direttamente usando l'archivio [`tar.gz`][tar] di Linux ma sarà necessario configurare le dipendenze necessarie in base al sistema operativo in passaggi distinti.
 
 Tutti i pacchetti sono disponibili nella pagina delle [versioni][] di GitHub. Dopo aver installato il pacchetto, eseguire `pwsh` da un terminale. Eseguire `pwsh-preview` se è stata installata una [versione di anteprima](#installing-preview-releases).
+
+> [!NOTE]
+> PowerShell 7.x è un aggiornamento sul posto che rimuove PowerShell Core 6.x.
+>
+> La cartella `/usr/local/microsoft/powershell/6` viene sostituita da `/usr/local/microsoft/powershell/7`.
+>
+> Se è necessario avere PowerShell 6 insieme a PowerShell 7, reinstallare PowerShell 6 usando il metodo degli [archivi di file binari](#binary-archives).
 
 [u16]: #ubuntu-1604
 [u1804]: #ubuntu-1804
@@ -32,32 +39,26 @@ Tutti i pacchetti sono disponibili nella pagina delle [versioni][] di GitHub. Do
 [snap]: #snap-package
 [tar]: #binary-archives
 
-> [!TIP]
-> Se [.NET Core SDK](/dotnet/core/sdk) è già installato, è facile installare PowerShell come [strumento globale .NET](/dotnet/core/tools/global-tools).
->
-> ```
-> dotnet tool install --global PowerShell
-> ```
 
 ## <a name="installing-preview-releases"></a>Installazione di versioni di anteprima
 
-Quando si installa una versione di anteprima di PowerShell Core per Linux tramite un repository dei pacchetti, il nome del pacchetto viene modificato da `powershell` a `powershell-preview`.
+Quando si installa una versione di anteprima di PowerShell per Linux tramite un repository dei pacchetti, il nome del pacchetto viene modificato da `powershell` a `powershell-preview`.
 
 L'installazione tramite download diretto non cambia, tranne per il nome del file.
 
 La tabella seguente contiene i comandi per installare i pacchetti stabili e di anteprima usando diversi strumenti di gestione dei pacchetti:
 
-|Distribuzione/i|Comando pacchetto stabile | Comando pacchetto anteprima |
-|---------------|---------------|-----------------|
-| Ubuntu, Debian |`sudo apt-get install -y powershell`| `sudo apt-get install -y powershell-preview`|
-| CentOS, RedHat |`sudo yum install -y powershell` | `sudo yum install -y powershell-preview`|
-| Fedora   |`sudo dnf install -y powershell` | `sudo dnf install -y powershell-preview`|
+| Distribuzione/i |            Comando pacchetto stabile            |               Comando pacchetto anteprima                |
+| --------------- | ------------------------------------ | -------------------------------------------- |
+| Ubuntu, Debian  | `sudo apt-get install -y powershell` | `sudo apt-get install -y powershell-preview` |
+| CentOS, RedHat  | `sudo yum install -y powershell`     | `sudo yum install -y powershell-preview`     |
+| Fedora          | `sudo dnf install -y powershell`     | `sudo dnf install -y powershell-preview`     |
 
 ## <a name="ubuntu-1604"></a>Ubuntu 16.04
 
 ### <a name="installation-via-package-repository---ubuntu-1604"></a>Ubuntu 16.04: installazione tramite repository dei pacchetti
 
-Per semplificare l'installazione e gli aggiornamenti, PowerShell Core per Linux è pubblicato nei repository dei pacchetti.
+Per semplificare l'installazione e gli aggiornamenti, PowerShell per Linux è pubblicato nei repository dei pacchetti.
 
 Il metodo preferito è il seguente:
 
@@ -104,7 +105,7 @@ sudo apt-get remove powershell
 
 ### <a name="installation-via-package-repository---ubuntu-1804"></a>Ubuntu 18.04: installazione tramite repository dei pacchetti
 
-Per semplificare l'installazione e gli aggiornamenti, PowerShell Core per Linux è pubblicato nei repository dei pacchetti.
+Per semplificare l'installazione e gli aggiornamenti, PowerShell per Linux è pubblicato nei repository dei pacchetti.
 
 Il metodo preferito è il seguente:
 
@@ -168,7 +169,7 @@ L'installazione è supportata tramite `snapd`. Per le istruzioni, vedere [Pacche
 
 ### <a name="installation-via-package-repository---debian-8"></a>Debian 8: installazione tramite repository dei pacchetti
 
-Per semplificare l'installazione e gli aggiornamenti, PowerShell Core per Linux è pubblicato nei repository dei pacchetti.
+Per semplificare l'installazione e gli aggiornamenti, PowerShell per Linux è pubblicato nei repository dei pacchetti.
 
 Il metodo preferito è il seguente:
 
@@ -199,7 +200,7 @@ Come utente con privilegi avanzati, registrare il repository di Microsoft una vo
 
 ### <a name="installation-via-package-repository---debian-9"></a>Debian 9: installazione tramite repository dei pacchetti
 
-Per semplificare l'installazione e gli aggiornamenti, PowerShell Core per Linux è pubblicato nei repository dei pacchetti.
+Per semplificare l'installazione e gli aggiornamenti, PowerShell per Linux è pubblicato nei repository dei pacchetti.
 
 Il metodo preferito è il seguente:
 
@@ -250,7 +251,7 @@ sudo apt-get remove powershell
 
 ### <a name="installation-via-direct-download---debian-10"></a>Debian 10: installazione tramite download diretto
 
-Scaricare il pacchetto tar. gz `powershell_7.0.0-preview-7-linux-x64.tar.gz` dalla pagina delle [versioni][] nel computer Debian.
+Scaricare il pacchetto tar. gz `powershell_7.0.0-linux-x64.tar.gz` dalla pagina delle [versioni][] nel computer Debian.
 
 Nel terminale eseguire quindi i comandi seguenti:
 
@@ -272,22 +273,22 @@ sudo apt-get install -y \
         curl
 
 # Download the powershell '.tar.gz' archive
-curl -L https://github.com/PowerShell/PowerShell/releases/download/v7.0.0-preview.4/powershell-7.0.0-preview.4-linux-x64.tar.gz -o /tmp/powershell.tar.gz
+curl -L  https://github.com/PowerShell/PowerShell/releases/download/v7.0.0/powershell-7.0.0-linux-x64.tar.gz -o /tmp/powershell.tar.gz
 
 # Create the target folder where powershell will be placed
-sudo mkdir -p /opt/microsoft/powershell/7-preview
+sudo mkdir -p /opt/microsoft/powershell/7
 
 # Expand powershell to the target folder
-sudo tar zxf /tmp/powershell.tar.gz -C /opt/microsoft/powershell/7-preview
+sudo tar zxf /tmp/powershell.tar.gz -C /opt/microsoft/powershell/7
 
 # Set execute permissions
-sudo chmod +x /opt/microsoft/powershell/7-preview/pwsh
+sudo chmod +x /opt/microsoft/powershell/7/pwsh
 
 # Create the symbolic link that points to pwsh
-sudo ln -s /opt/microsoft/powershell/7-preview/pwsh /usr/bin/pwsh-preview
+sudo ln -s /opt/microsoft/powershell/7/pwsh /usr/bin/pwsh
 
 # Start PowerShell
-pwsh-preview
+pwsh
 ```
 
 ## <a name="alpine-39-and-310"></a>Alpine 3.9 e 3.10
@@ -297,7 +298,7 @@ pwsh-preview
 
 ### <a name="installation-via-direct-download---alpine-39-and-310"></a>Alpine 3.9 e 3.10: installazione tramite download diretto
 
-Scaricare il pacchetto tar.gz `powershell_7.0.0-preview-7-linux-x64.tar.gz` dalla pagina delle [versioni][] nel computer Alpine.
+Scaricare il pacchetto tar.gz `powershell_7.0.0-linux-x64.tar.gz` dalla pagina delle [versioni][] nel computer Alpine.
 
 Nel terminale eseguire quindi i comandi seguenti:
 
@@ -322,22 +323,22 @@ sudo apk -X https://dl-cdn.alpinelinux.org/alpine/edge/main add --no-cache \
     lttng-ust
 
 # Download the powershell '.tar.gz' archive
-curl -L https://github.com/PowerShell/PowerShell/releases/download/v7.0.0-preview.4/powershell-7.0.0-preview.4-linux-alpine-x64.tar.gz -o /tmp/powershell.tar.gz
+curl -L https://github.com/PowerShell/PowerShell/releases/download/v7.0.0/powershell-7.0.0-linux-alpine-x64.tar.gz -o /tmp/powershell.tar.gz
 
 # Create the target folder where powershell will be placed
-sudo mkdir -p /opt/microsoft/powershell/7-preview
+sudo mkdir -p /opt/microsoft/powershell/7
 
 # Expand powershell to the target folder
-sudo tar zxf /tmp/powershell.tar.gz -C /opt/microsoft/powershell/7-preview
+sudo tar zxf /tmp/powershell.tar.gz -C /opt/microsoft/powershell/7
 
 # Set execute permissions
-sudo chmod +x /opt/microsoft/powershell/7-preview/pwsh
+sudo chmod +x /opt/microsoft/powershell/7/pwsh
 
 # Create the symbolic link that points to pwsh
-sudo ln -s /opt/microsoft/powershell/7-preview/pwsh /usr/bin/pwsh-preview
+sudo ln -s /opt/microsoft/powershell/7/pwsh /usr/bin/pwsh
 
 # Start PowerShell
-pwsh-preview
+pwsh
 ```
 
 ## <a name="centos-7"></a>CentOS 7
@@ -347,7 +348,7 @@ pwsh-preview
 
 ### <a name="installation-via-package-repository-preferred---centos-7"></a>CentOS 7: installazione tramite repository dei pacchetti
 
-Per semplificare l'installazione e gli aggiornamenti, PowerShell Core per Linux è pubblicato nei repository Microsoft ufficiali.
+Per semplificare l'installazione e gli aggiornamenti, PowerShell per Linux è pubblicato nei repository Microsoft ufficiali.
 
 ```sh
 # Register the Microsoft RedHat repository
@@ -390,7 +391,7 @@ sudo yum remove powershell
 
 ### <a name="installation-via-package-repository-preferred---red-hat-enterprise-linux-rhel-7"></a>Red Hat Enterprise Linux (RHEL) 7: installazione tramite repository dei pacchetti (scelta consigliata)
 
-Per semplificare l'installazione e gli aggiornamenti, PowerShell Core per Linux è pubblicato nei repository Microsoft ufficiali.
+Per semplificare l'installazione e gli aggiornamenti, PowerShell per Linux è pubblicato nei repository Microsoft ufficiali.
 
 ```sh
 # Register the Microsoft RedHat repository
@@ -488,14 +489,14 @@ rm -rf /usr/bin/pwsh /opt/microsoft/powershell
 ## <a name="fedora"></a>Fedora
 
 > [!NOTE]
-> Fedora 28 è supportato solo in PowerShell Core 6.1 e versioni successive.
+> Fedora 28 è supportato solo in PowerShell 6.1 e versioni successive.
 
 > [!NOTE]
 > Fedora 29 e 30 sono supportati solo in PowerShell 7.0 e versioni successive.
 
 ### <a name="installation-via-package-repository-preferred---fedora-28-29-and-30"></a>Fedora 28, 29 e 30: installazione tramite repository dei pacchetti (scelta consigliata)
 
-Per semplificare l'installazione e gli aggiornamenti, PowerShell Core per Linux è pubblicato nei repository Microsoft ufficiali.
+Per semplificare l'installazione e gli aggiornamenti, PowerShell per Linux è pubblicato nei repository Microsoft ufficiali.
 
 ```sh
 # Register the Microsoft signature key
@@ -569,7 +570,7 @@ Per altre informazioni sull'installazione dei pacchetti da AUR, vedere il [wiki 
 
 ### <a name="installation-via-snap"></a>Installazione tramite Snap
 
-Per semplificare l'installazione e gli aggiornamenti, PowerShell Core per Linux è pubblicato nello [store Snap](https://snapcraft.io/store).
+Per semplificare l'installazione e gli aggiornamenti, PowerShell per Linux è pubblicato nello [store Snap](https://snapcraft.io/store).
 
 Il metodo preferito è il seguente:
 
@@ -634,7 +635,7 @@ apt -y remove powershell
 
 Attualmente, PowerShell è supportato solo in Raspbian Stretch.
 
-CoreCLR e PowerShell Core funzionano solo nei dispositivi Pi 2 e Pi 3, perché altri dispositivi, come [Pi Zero](https://github.com/dotnet/coreclr/issues/10605), hanno un processore non supportato.
+CoreCLR e PowerShell funzionano solo nei dispositivi Pi 2 e Pi 3, perché altri dispositivi come [Pi Zero](https://github.com/dotnet/coreclr/issues/10605) hanno un processore non supportato.
 
 Scaricare [Raspbian Stretch](https://www.raspberrypi.org/downloads/raspbian/) e seguire le [istruzioni di installazione](https://www.raspberrypi.org/documentation/installation/installing-images/README.md) per installarlo nel dispositivo Pi.
 
@@ -683,6 +684,14 @@ sudo ~/powershell/pwsh -c New-Item -ItemType SymbolicLink -Path "/usr/bin/pwsh" 
 
 ```sh
 rm -rf ~/powershell
+```
+
+## <a name="install-as-a-net-global-tool"></a>Installare come strumento globale .NET
+
+Se [.NET Core SDK](/dotnet/core/sdk) è già installato, è facile installare PowerShell come [strumento globale .NET](/dotnet/core/tools/global-tools).
+
+```
+dotnet tool install --global PowerShell
 ```
 
 ## <a name="binary-archives"></a>Archivi di file binari
@@ -740,13 +749,13 @@ sudo rm -rf /usr/bin/pwsh /opt/microsoft/powershell
 
 ## <a name="paths"></a>Percorsi
 
-* `$PSHOME` è `/opt/microsoft/powershell/7/`
-* I profili utente vengono letti da `~/.config/powershell/profile.ps1`
-* I profili predefiniti vengono letti da `$PSHOME/profile.ps1`
-* I moduli utente vengono letti da `~/.local/share/powershell/Modules`
-* I moduli condivisi vengono letti da `/usr/local/share/powershell/Modules`
-* I moduli predefiniti vengono letti da `$PSHOME/Modules`
-* La cronologia PSReadline viene registrata in `~/.local/share/powershell/PSReadLine/ConsoleHost_history.txt`
+- `$PSHOME` è `/opt/microsoft/powershell/7/`
+- I profili utente vengono letti da `~/.config/powershell/profile.ps1`
+- I profili predefiniti vengono letti da `$PSHOME/profile.ps1`
+- I moduli utente vengono letti da `~/.local/share/powershell/Modules`
+- I moduli condivisi vengono letti da `/usr/local/share/powershell/Modules`
+- I moduli predefiniti vengono letti da `$PSHOME/Modules`
+- La cronologia PSReadline viene registrata in `~/.local/share/powershell/PSReadLine/ConsoleHost_history.txt`
 
 I profili di rispettano la configurazione per ogni host di PowerShell, pertanto i profili predefiniti specifici per l'host si trovano in `Microsoft.PowerShell_profile.ps1` negli stessi percorsi.
 

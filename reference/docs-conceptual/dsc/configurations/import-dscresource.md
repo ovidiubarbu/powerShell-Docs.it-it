@@ -2,12 +2,12 @@
 ms.date: 12/12/2018
 keywords: dsc,powershell,configurazione,installazione
 title: Uso di Import-DSCResource
-ms.openlocfilehash: 4bc269ab1dd4696298b4f33f7661473aae869eba
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: a041169ad557becf7ca87641d9ce5222ee8f6beb
+ms.sourcegitcommit: c97dcf1e00ef540e7464c36c88f841474060044c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74417416"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79402448"
 ---
 # <a name="using-import-dscresource"></a>Uso di Import-DSCResource
 
@@ -19,9 +19,9 @@ La sintassi per `Import-DSCResource` è illustrata di seguito.  Quando si specif
 Import-DscResource [-Name <ResourceName(s)>] [-ModuleName <ModuleName>] [-ModuleVersion <ModuleVersion>]
 ```
 
-|Parametro  |Description  |
+|Parametro  |Descrizione  |
 |---------|---------|
-|`-Name`|Nome della risorsa DSC che è necessario importare. Se viene specificato il nome del modulo, il comando cerca queste risorse DSC all'interno del modulo; in caso contrario, il comando cerca le risorse DSC in tutti i percorsi delle risorse DSC. I caratteri jolly sono supportati.|
+|`-Name`|Nome della risorsa DSC che è necessario importare. Se viene specificato il nome del modulo, il comando cerca queste risorse DSC all'interno del modulo; in caso contrario, il comando cerca le risorse DSC in tutti i percorsi delle risorse DSC. Sono supportati caratteri jolly.|
 |`-ModuleName`|Nome del modulo o specifica del modulo.  Se si specificano risorse per l'importazione da un modulo, il comando tenterà di importare solo queste risorse. Se si specifica solo il modulo, il comando importa tutte le risorse DSC nel modulo.|
 |`-ModuleVersion`|A partire da PowerShell 5,0, è possibile specificare la versione di un modulo che deve essere usata da una configurazione. Per altre informazioni, vedere [Importare una versione specifica di una risorsa installata](sxsresource.md).|
 
@@ -80,7 +80,7 @@ Questo utilizzo offre i vantaggi seguenti:
 
 Quando si crea la configurazione DSC in ISE, PowerShell fornisce IntelliSense per le risorse e le proprietà delle risorse. Le definizioni delle risorse nel percorso del modulo `$pshome` vengono caricate automaticamente. Quando si importano risorse con la parola chiave `Import-DSCResource`, le definizioni di risorse specificate vengono aggiunte e IntelliSense viene espanso per includere lo schema della risorsa importata.
 
-![Risorsa IntelliSense](../media/resource-intellisense.png)
+![Risorsa IntelliSense](media/import-dscresource/resource-intellisense.png)
 
 > [!NOTE]
 > A partire da PowerShell 5.0 è stato aggiunto il completamento tramite TAB a ISE per le risorse DSC e le relative proprietà. Per altre informazioni, vedere [Risorse](../resources/resources.md).
@@ -139,11 +139,11 @@ L'installazione e l'utilizzo di più versioni di risorse affiancate non sono sup
 
 Nell'immagine seguente sono installare due versioni del modulo **xPSDesiredStateConfiguration**.
 
-![Più versioni di risorse corrette](../media/multiple-resource-versions-broken.png)
+![Più versioni di risorse corrette](media/import-dscresource/multiple-resource-versions-broken.png)
 
 Copiare il contenuto della versione del modulo desiderata nel livello superiore della directory del modulo.
 
-![Più versioni di risorse corrette](../media/multiple-resource-versions-fixed.png)
+![Più versioni di risorse corrette](media/import-dscresource/multiple-resource-versions-fixed.png)
 
 ### <a name="resource-location"></a>Posizione risorsa
 

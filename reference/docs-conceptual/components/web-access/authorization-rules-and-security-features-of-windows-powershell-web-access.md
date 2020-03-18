@@ -3,11 +3,11 @@ ms.date: 06/27/2017
 keywords: powershell,cmdlet
 title: Regole di autorizzazione e funzionalità di sicurezza di Accesso Web Windows PowerShell
 ms.openlocfilehash: c426b8cfb10829241ba244a5d840c91e1de9f66e
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: c97dcf1e00ef540e7464c36c88f841474060044c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "62058421"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79402608"
 ---
 # <a name="authorization-rules-and-security-features-of-windows-powershell-web-access"></a>Regole di autorizzazione e funzionalità di sicurezza di Accesso Web Windows PowerShell
 
@@ -38,7 +38,7 @@ Se un utente non supera tali livelli di sicurezza, riceve un messaggio di "acces
 
 Per altre informazioni sulla configurazione delle regole di autorizzazione, vedere la sezione [Configurazione delle regole di autorizzazione](#configuring-authorization-rules-and-site-security) in questo argomento.
 
-### <a name="security"></a>Sicurezza
+### <a name="security"></a>Security
 
 Il modello di sicurezza di Accesso Web Windows PowerShell prevede quattro livelli fra l'utente finale della console basata sul Web e un computer di destinazione. Gli amministratori di Accesso Web Windows PowerShell possono aggiungere ulteriori livelli di sicurezza eseguendo alcune operazioni di configurazione nella console Gestione IIS. Per altre informazioni sulla protezione dei siti Web nella console Gestione IIS, vedere [Configurare la sicurezza del server Web (IIS7)](https://technet.microsoft.com/library/cc731278).
 
@@ -47,7 +47,7 @@ L'amministratore può anche acquistare e installare un prodotto di autenticazion
 
 I quattro livelli di sicurezza fra l'utente finale e il computer di destinazione sono illustrati nella tabella seguente.
 
-|Livello|Livello|
+|Level|Livello|
 |-|-|
 |1|[funzionalità per la sicurezza del server Web IIS](#iis-web-server-security-features)|
 |2|[autenticazione del gateway basata su moduli di Accesso Web Windows PowerShell](#windows-powershell-web-access-forms-based-gateway-authentication)|
@@ -104,7 +104,7 @@ L'unico carattere jolly supportato dai cmdlet di Accesso Web Windows PowerShell 
 
    - Nel desktop di Windows fare clic con il pulsante destro del mouse su **Windows PowerShell** nella barra delle applicazioni e scegliere **Esegui come amministratore**.
 
-   - Nella schermata **Start** di Windows fare clic con il pulsante destro del mouse su **Windows PowerShell**e quindi scegliere **Esegui come amministratore**.
+   - Nella schermata **Start** di Windows fare clic con il pulsante destro del mouse su **Windows PowerShell** e quindi scegliere **Esegui come amministratore**.
 
 2. **Passaggio facoltativo** Per limitare l'accesso agli utenti tramite le configurazioni di sessione:
 
@@ -127,13 +127,13 @@ L'unico carattere jolly supportato dai cmdlet di Accesso Web Windows PowerShell 
    ```
 
 4. Eseguire il cmdlet **Get-PswaAuthorizationRule** o `Test-PswaAuthorizationRule -UserName <domain\user | computer\user> -ComputerName** <computer_name>` per verificare che la regola sia stata creata.
-   Ad esempio, `Test-PswaAuthorizationRule -UserName Contoso\\JSmith -ComputerName Contoso_214`
+   Ad esempio: `Test-PswaAuthorizationRule -UserName Contoso\\JSmith -ComputerName Contoso_214`.
 
 #### <a name="to-remove-an-authorization-rule"></a>Per rimuovere una regola di autorizzazione
 
 1. Se non è ancora stata aperta una sessione di Windows PowerShell, vedere il passaggio 1 della procedura [Per aggiungere una regola di autorizzazione restrittiva](#to-add-a-restrictive-authorization-rule) in questa sezione.
 
-2. Digitare il comando seguente e premere **INVIO**. *ID regola* rappresenta l'ID univoco della regola che si desidera rimuovere.
+2. Digitare il comando seguente e premere **INVIO**. *ID regola* rappresenta l'ID univoco della regola che si vuole rimuovere.
 
    ```
    Remove-PswaAuthorizationRule -ID <rule ID>
@@ -147,18 +147,18 @@ L'unico carattere jolly supportato dai cmdlet di Accesso Web Windows PowerShell 
    ```
 
 > [!NOTE]
-> Non viene richiesto se si desidera eliminare la regola di autorizzazione specificata, poiché l'eliminazione avviene infatti quando si premere **INVIO**. Assicurarsi di voler rimuovere la regola di autorizzazione prima di eseguire il cmdlet `Remove-PswaAuthorizationRule`.
+> Non viene richiesto se si vuole eliminare la regola di autorizzazione specificata, perché l'eliminazione avviene infatti quando si premere **INVIO**. Assicurarsi di voler rimuovere la regola di autorizzazione prima di eseguire il cmdlet `Remove-PswaAuthorizationRule`.
 
 #### <a name="other-authorization-rule-scenario-examples"></a>Altri scenari di esempio per le regole di autorizzazione
 
 Per ogni sessione di Windows PowerShell viene usata una configurazione di sessione. Se non è specificata, Windows PowerShell usa la configurazione di sessione predefinita incorporata in Windows PowerShell, denominata Microsoft.PowerShell, che include tutti i cmdlet disponibili in un computer. Gli amministratori possono limitare l'accesso a tutti i computer definendo una configurazione di sessione basata su uno spazio di esecuzione con restrizioni, ovvero un insieme limitato di attività e cmdlet che possono essere eseguiti dagli utenti finali. Se si consente a un utente di accedere a un computer, con accesso al linguaggio completo o solo ai cmdlet di Windows PowerShell per la gestione remota, tale utente potrà connettersi agli altri computer connessi al primo. Definendo uno spazio di esecuzione con restrizioni si impedisce agli utenti di accedere ad altri computer dal relativo spazio di esecuzione di Windows PowerShell consentito, aumentando la sicurezza dell'ambiente Accesso Web Windows PowerShell. La configurazione di sessione può essere distribuita, usando Criteri di gruppo, a tutti i computer che gli amministratori vogliono rendere accessibili con Accesso Web Windows PowerShell. Per altre informazioni sulle configurazioni di sessione, vedere [about_Session_Configurations](https://technet.microsoft.com/library/dd819508.aspx). Di seguito sono riportati alcuni esempi relativi a questo scenario.
 
-- Un amministratore crea un endpoint, denominato **EndpointPswa**e basato su uno spazio di esecuzione con restrizioni, quindi crea la regola `*,*,PswaEndpoint` e distribuisce l'endpoint agli altri computer. La regola consente a tutti gli utenti di accedere a tutti i computer con endpoint **EndpointPswa**.
+- Un amministratore crea un endpoint, denominato **EndpointPswa** e basato su uno spazio di esecuzione con restrizioni, quindi crea la regola `*,*,PswaEndpoint` e distribuisce l'endpoint agli altri computer. La regola consente a tutti gli utenti di accedere a tutti i computer con endpoint **EndpointPswa**.
   Se questa è l'unica regola di autorizzazione definita nel set di regole, i computer che non dispongono di tale endpoint non sono accessibili.
 
-- L'amministratore ha creato un endpoint basato su uno spazio di esecuzione con restrizioni denominato **EndpointPswa**e desidera limitare l'accesso a utenti specifici. L'amministratore crea un gruppo di utenti denominato **Level1Support** e definisce la regola seguente: **Level1Support,\*,PswaEndpoint**. La regola concede agli utenti del gruppo **SupportoLivello1** l'accesso a tutti i computer che dispongono della configurazione **EndpointPswa** . Analogamente, è possibile impostare l'accesso con restrizioni per un insieme di computer specifico.
+- L'amministratore ha creato un endpoint basato su uno spazio di esecuzione con restrizioni denominato **EndpointPswa** e vuole limitare l'accesso a utenti specifici. L'amministratore crea un gruppo di utenti denominato **Level1Support** e definisce la regola seguente: **Level1Support,\*,PswaEndpoint**. La regola concede agli utenti del gruppo **SupportoLivello1** l'accesso a tutti i computer che dispongono della configurazione **EndpointPswa**. Analogamente, è possibile impostare l'accesso con restrizioni per un insieme di computer specifico.
 
-- Alcuni amministratori forniscono maggiori diritti di accesso a determinati utenti, ad esempio creando i due gruppi di utenti **Amministratori** e **SupportoBase**. L'amministratore crea anche un endpoint basato su uno spazio di esecuzione con restrizioni denominato **EndpointPswa** e definisce le due regole seguenti: **Amministratori,\*,\*** e **SupportoBase,\*,EndpointPswa**. La prima regola fornisce accesso a tutti i computer a tutti gli utenti del gruppo **Amministratori** , mentre la seconda consente a tutti gli utenti del gruppo **SupportoBase** di accedere ai soli computer dotati di configurazione **EndpointPswa**.
+- Alcuni amministratori forniscono maggiori diritti di accesso a determinati utenti, ad esempio creando i due gruppi di utenti **Amministratori** e **SupportoBase**. L'amministratore crea anche un endpoint basato su uno spazio di esecuzione con restrizioni denominato **EndpointPswa** e definisce le due regole seguenti: **Amministratori,\*,\*** e **SupportoBase,\*,EndpointPswa**. La prima regola fornisce l'accesso a tutti i computer a tutti gli utenti del gruppo **Amministratori**, mentre la seconda consente a tutti gli utenti del gruppo **SupportoBase** di accedere solo ai computer con **EndpointPswa**.
 
 - Un amministratore ha configurato un ambiente di test privato e desidera consentire a tutti gli utenti autorizzati della rete di accedere a tutti i computer della rete che utilizzando normalmente, con accesso a tutte le configurazioni di sessione che utilizzando normalmente. Poiché si tratta di un ambiente di test privato, l'amministratore crea una regola di autorizzazione non sicura. - L'amministratore esegue il cmdlet `Add-PswaAuthorizationRule * * *`, che utilizza il carattere jolly **\*** per rappresentare tutti gli utenti, tutti i computer e tutte le configurazioni. - Questa regola equivale alla seguente: `Add-PswaAuthorizationRule -UserName * -ComputerName * -ConfigurationName *`.
 
@@ -178,23 +178,23 @@ Nello scenario precedente Accesso Web Windows PowerShell può stabilire la conne
 
 1. Autenticazione nel server gateway del gruppo di lavoro, con l'aggiunta di un nome utente con formato *nome_server*\\*nome_utente* alla regola di autorizzazione
 
-2. Autenticazione nel computer di destinazione tramite le credenziali alternative specificate nell'area **Impostazioni di connessione facoltative** della pagina di accesso
+2. Autenticazione nel computer di destinazione con le credenziali alternative specificate nell'area **Impostazioni di connessione facoltative** della pagina di accesso
 
    > [!NOTE]
    > Se il gateway e i computer di destinazione si trovano in gruppi di lavoro o domini diversi, è necessario stabilire una relazione di trust tra i computer nei due gruppi di lavoro, i due domini o tra il gruppo di lavoro e il dominio. Tale relazione non può essere configurata usando i cmdlet di Accesso Web Windows PowerShell per le regole di autorizzazione. Le regole di autorizzazione non definiscono una relazione di trust fra computer, ma si limitano ad autorizzare gli utenti a connettersi a specifici computer di destinazione e configurazioni di sessione. Per altre informazioni su come configurare una relazione di trust fra domini diversi, vedere l'articolo relativo alla [creazione di relazioni di trust fra domini e foreste](https://technet.microsoft.com/library/cc794775.aspx).
-   > Per altre informazioni su come aggiungere i computer del gruppo di lavoro a un elenco di host attendibili, vedere l'articolo relativo alla [gestione remota con Server Manager](https://technet.microsoft.com/library/dd759202.aspx).
+   > Per ulteriori informazioni su come aggiungere i computer del gruppo di lavoro a un elenco di host attendibili, vedere l'articolo relativo alla [gestione remota con Server Manager](https://technet.microsoft.com/library/dd759202.aspx).
 
 ### <a name="using-a-single-set-of-authorization-rules-for-multiple-sites"></a>Utilizzo di un singolo set di regole di autorizzazione per più siti
 
 Le regole di autorizzazione sono archiviate in un file XML, Per impostazione predefinita, il nome del percorso del file XML è `$env:windir\Web\PowershellWebAccess\data\AuthorizationRules.xml`.
 
-Il percorso del file XML delle regole di autorizzazione è archiviato nel file **powwa.config**, disponibile in `$env:windir\Web\PowershellWebAccess\data`. L'amministratore ha la possibilità di modificare il riferimento al percorso predefinito in **powwa.config** , per soddisfare preferenze o requisiti specifici. La possibilità di modificare il percorso del file consente di usare le stesse regole di autorizzazione per più gateway di Accesso Web Windows PowerShell, se si vuole creare una configurazione di questo tipo.
+Il percorso del file XML delle regole di autorizzazione è archiviato nel file **powwa.config**, disponibile in `$env:windir\Web\PowershellWebAccess\data`. L'amministratore ha la possibilità di modificare il riferimento al percorso predefinito in **powwa.config**, per soddisfare preferenze o requisiti specifici. La possibilità di modificare il percorso del file consente di usare le stesse regole di autorizzazione per più gateway di Accesso Web Windows PowerShell, se si vuole creare una configurazione di questo tipo.
 
 ## <a name="session-management"></a>Gestione delle sessioni
 
 Per impostazione predefinita, Accesso Web Windows PowerShell consente un massimo di tre sessioni contemporanee per utente. Per modificare il numero di sessioni supportato per ogni utente, è possibile modificare il file **web.config** dell'applicazione Web in Gestione IIS. Il percorso del file **web.config** è `$env:windir\Web\PowerShellWebAccess\wwwroot\Web.config`.
 
-Per impostazione predefinita, il server Web IIS è configurato in modo da riavviare il pool di applicazioni in caso di modifica delle impostazioni. Ad esempio, se si modifica il file **web.config** , il pool di applicazioni viene riavviato. Dal momento che **Accesso Web Windows PowerShell** usa gli stati sessione in memoria, gli utenti connessi alle sessioni di **Accesso Web Windows PowerShell** perdono il proprio stato al riavvio del pool di applicazioni.
+Per impostazione predefinita, il server Web IIS è configurato in modo da riavviare il pool di applicazioni in caso di modifica delle impostazioni. Ad esempio, se si modifica il file **web.config**, il pool di applicazioni viene riavviato. Dal momento che **Accesso Web Windows PowerShell** usa gli stati sessione in memoria, gli utenti connessi alle sessioni di **Accesso Web Windows PowerShell** perdono il proprio stato al riavvio del pool di applicazioni.
 
 ### <a name="setting-default-parameters-on-the-sign-in-page"></a>Impostazione dei parametri predefiniti nella pagina di accesso
 
