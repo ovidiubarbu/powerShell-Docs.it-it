@@ -1,32 +1,30 @@
 ---
-title: Installazione di PowerShell Core in macOS
-description: Informazioni sull'installazione di PowerShell Core in macOS
+title: Installazione di PowerShell in macOS
+description: Informazioni sull'installazione di PowerShell in macOS
 ms.date: 12/12/2018
-ms.openlocfilehash: ad1306e99261e8e6e2fd49d3199d863929c31e92
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 7f0d6a1aa275deb39a7d670546ee7e833b8ef315
+ms.sourcegitcommit: 4a26c05f162c4fa347a9d67e339f8a33e230b9ba
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73444432"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78404828"
 ---
-# <a name="installing-powershell-core-on-macos"></a>Installazione di PowerShell Core in macOS
+# <a name="installing-powershell-on-macos"></a>Installazione di PowerShell in macOS
 
-PowerShell Core supporta macOS 10.12 e versioni successive.
+PowerShell supporta macOS 10.12 e versioni successive.
 Tutti i pacchetti sono disponibili nella pagina delle [versioni][] di GitHub.
 Dopo aver installato il pacchetto, eseguire `pwsh` da un terminale.
 
-> [!TIP]
-> Se [.NET Core SDK](/dotnet/core/sdk) è già installato, è facile installare PowerShell come [strumento globale .NET](/dotnet/core/tools/global-tools).
+> [!NOTE]
+> PowerShell Core 7.x è un aggiornamento sul posto che rimuove PowerShell Core 6.x.
 >
-> ```
-> dotnet tool install --global PowerShell
-> ```
+> La cartella `/usr/local/microsoft/powershell/6` viene sostituita da `/usr/local/microsoft/powershell/7`.
+>
+> Se è necessario disporre di PowerShell 6 insieme a PowerShell 7, reinstallare PowerShell 6 usando il metodo degli [archivi di file binari](#binary-archives).
 
 ## <a name="about-brew"></a>Informazioni su Brew
 
-[Homebrew][brew] è la soluzione di gestione pacchetti più diffusa per macOS.
-Se il comando `brew` non viene trovato, è necessario installare Homebrew seguendo [le istruzioni specifiche][brew].
-In alternativa, è possibile installare PowerShell tramite [download diretto](#installation-via-direct-download) o da [archivi di file binari](#binary-archives).
+[Homebrew][brew] è la soluzione di gestione pacchetti più diffusa per macOS. Se il comando `brew` non viene trovato, è necessario installare Homebrew seguendo [le istruzioni specifiche][brew]. In alternativa, è possibile installare PowerShell tramite [download diretto](#installation-via-direct-download) o da [archivi di file binari](#binary-archives).
 
 ## <a name="installation-of-latest-stable-release-via-homebrew-on-macos-1012-or-higher"></a>Installazione della versione stabile più recente con Homebrew in macOS 10.12 o versione successiva
 
@@ -103,6 +101,14 @@ sudo installer -pkg powershell-6.2.0-osx-x64.pkg -target /
 
 Installare [OpenSSL](#install-openssl). OpenSSL è necessario per la comunicazione remota di PowerShell e le operazioni CIM.
 
+## <a name="install-as-a-net-global-tool"></a>Installare PowerShell come strumento globale .NET
+
+Se [.NET Core SDK](/dotnet/core/sdk) è già installato, è facile installare PowerShell come [strumento globale .NET](/dotnet/core/tools/global-tools).
+
+```
+dotnet tool install --global PowerShell
+```
+
 ## <a name="binary-archives"></a>Archivi di file binari
 
 Gli archivi `tar.gz` di file binari di PowerShell possono essere usati per la piattaforma macOS per abilitare scenari di distribuzione avanzati.
@@ -161,7 +167,7 @@ sudo mkdir -p /usr/local/opt/openssl
 sudo ln -s /opt/local/lib /usr/local/opt/openssl/lib
 ```
 
-## <a name="uninstalling-powershell-core"></a>Disinstallazione di PowerShell Core
+## <a name="uninstalling-powershell"></a>Disinstallazione di PowerShell
 
 Se PowerShell è stato installato con Homebrew, usare il comando seguente per la disinstallazione:
 

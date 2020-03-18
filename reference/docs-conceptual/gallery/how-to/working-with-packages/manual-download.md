@@ -3,12 +3,12 @@ ms.date: 09/11/2018
 contributor: JKeithB
 keywords: raccolta,powershell,psgallery
 title: Download manuale del pacchetto
-ms.openlocfilehash: c0a96e866dfd27f9b2170ea540ec6dd0c67701fd
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: e562f5b94b4d2caa7d31269a324e417d1a9e844a
+ms.sourcegitcommit: 01c60c0c97542dbad48ae34339cddbd813f1353b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "71327892"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "78278716"
 ---
 # <a name="manual-package-download"></a>Download manuale del pacchetto
 
@@ -22,7 +22,7 @@ PowerShell Gallery supporta il download di un pacchetto direttamente dal sito We
 
 Ogni pagina contiene un collegamento per il download manuale, come illustrato di seguito:
 
-![Download manuale](../../Images/packagedisplaypagewithpseditions.png)
+![Download manuale](media/manual-download/packagedisplaypagewithpseditions.png)
 
 Per eseguire manualmente il download, fare clic su **Download the raw nupkg file** (Scarica il file NUPKG non elaborato). Una copia del pacchetto viene copiata nella cartella di download del browser con il nome `<name>.<version>.nupkg`.
 
@@ -44,9 +44,10 @@ Un file del pacchetto NuGet include i seguenti **elementi specifici di NuGet** c
 L'approccio più semplice consiste nel rimuovere gli elementi specifici di NuGet dalla cartella. In seguito alla rimozione degli elementi, il codice di PowerShell creato dall'autore del pacchetto rimane inalterato.
 Per l'elenco degli elementi specifici di NuGet vedere [Uso del download manuale per acquisire un pacchetto](#using-manual-download-to-acquire-a-package).
 
-I passaggi sono i seguenti:
+Attenersi alla procedura seguente:
 
-1. Estrarre il contenuto del pacchetto NuGet in una cartella locale.
+1. Sbloccare il file del pacchetto NuGet scaricato da Internet (`.nupkg`), ad esempio usando il cmdlet `Unblock-File -Path C:\Downloads\module.nupkg`.
+2. Estrarre il contenuto del pacchetto NuGet in una cartella locale.
 2. Eliminare gli elementi specifici di NuGet dalla cartella.
 3. Rinominare la cartella. Il nome della cartella predefinita è in genere `<name>.<version>`. La versione può includere `-prerelease` se il modulo è contrassegnato come versione non definitiva. Rinominare la cartella usando solo il nome del modulo. Ad esempio `azurerm.storage.5.0.4-preview` diventa `azurerm.storage`.
 4. Copiare la cartella in una delle cartelle in `$env:PSModulePath value`. `$env:PSModulePath` è un set di percorsi delimitati da punto e virgola in cui PowerShell ricerca i moduli.
@@ -61,9 +62,10 @@ I passaggi sono i seguenti:
 
 L'approccio più semplice è estrarre il pacchetto NuGet e quindi usare direttamente lo script.
 
-I passaggi sono i seguenti:
+Attenersi alla procedura seguente:
 
-1. Estrarre il contenuto del pacchetto NuGet.
+1. Sbloccare il file del pacchetto NuGet scaricato da Internet (`.nupkg`), ad esempio usando il cmdlet `Unblock-File -Path C:\Downloads\package.nupkg`.
+2. Estrarre il contenuto del pacchetto NuGet.
 2. Il file `.PS1` presente nella cartella può essere usato direttamente da questo percorso.
 3. Gli elementi specifici di NuGet si possono eliminare dalla cartella.
 

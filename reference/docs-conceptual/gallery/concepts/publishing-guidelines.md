@@ -4,12 +4,12 @@ contributor: JKeithB, SydneyhSmith
 keywords: gallery,powershell,cmdlet,psgallery
 description: Linee guida per gli autori
 title: Linee guida e procedure consigliate per la pubblicazione in PowerShell Gallery
-ms.openlocfilehash: 9047e938ab961c68e225c9029e52403c40afbe26
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 07271e037100350d3efc7ae63860f42afd22aae7
+ms.sourcegitcommit: 01c60c0c97542dbad48ae34339cddbd813f1353b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74417678"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "78278215"
 ---
 # <a name="powershellgallery-publishing-guidelines-and-best-practices"></a>Linee guida e procedure consigliate per la pubblicazione in PowerShell Gallery
 
@@ -128,7 +128,7 @@ Usare i tag seguenti per indicare agli utenti quali pacchetti funzioneranno con 
 - MacOS: i pacchetti compatibili con i sistemi operativi Mac
 
 L'assegnazione di tag al pacchetto con le piattaforme compatibili consentirà di includerlo nei filtri di ricerca della Gallery nel riquadro sinistro dei risultati della ricerca. Se si ospita il pacchetto in GitHub, quando si contrassegna il pacchetto è anche possibile sfruttare le [etichette di compatibilità di PowerShell Gallery](https://img.shields.io/powershellgallery/p/:packageName.svg)
-![etichetta di compatibilità](../Images/CosmosDB.svg).
+![etichetta di compatibilità](media/publishing-guidelines/CosmosDB.svg).
 
 ## <a name="include-tests"></a>Includere test
 
@@ -167,7 +167,7 @@ La firma dei file di PowerShell è un metodo consolidato e garantisce che il cod
 
 La firma di moduli mediante catalogo è una funzionalità aggiunta in PowerShell 5.1. Le modalità per la firma di un modulo sono descritte nell'argomento [Cmdlet di catalogo](/powershell/scripting/wmf/5.1/catalog-cmdlets). Per riassumere, la firma mediante catalogo viene eseguita creando un file di catalogo che contiene un valore hash per ogni file nel modulo, quindi firmando questo file.
 
-I cmdlet **PowerShellGet** `Publish-Module`, `Install-Module` e `Update-Module` verificano la validità della firma, quindi confermano che il valore hash di ogni pacchetto corrisponda a quello presente nel catalogo. `Save-Module` non convalida una firma. Se nel sistema è installata una versione precedente del modulo, `Install-Module` verifica che l'autorità di firma della nuova versione corrisponda a quella dell'installazione precedente. Se il pacchetto non ha una firma tramite catalogo, `Install-Module` e `Update-Module` usano la firma in un file `.PSD1`. La firma tramite catalogo può essere usata insieme alla firma dei file di script ma non la sostituisce. PowerShell non convalida le firme del catalogo al caricamento del modulo.
+I cmdlet di **PowerShellGet** `Publish-Module`, `Install-Module` e `Update-Module` verificano la validità della firma, quindi confermano che il valore hash di ogni pacchetto corrisponda a quello presente nel catalogo. `Save-Module` non convalida una firma. Se nel sistema è installata una versione precedente del modulo, `Install-Module` verifica che l'autorità di firma della nuova versione corrisponda a quella dell'installazione precedente. Se il pacchetto non ha una firma tramite catalogo, `Install-Module` e `Update-Module` usano la firma in un file `.PSD1`. La firma tramite catalogo può essere usata insieme alla firma dei file di script ma non la sostituisce. PowerShell non convalida le firme del catalogo al caricamento del modulo.
 
 ## <a name="follow-semver-guidelines-for-versioning"></a>Osservare le linee guida SemVer per il controllo delle versioni
 

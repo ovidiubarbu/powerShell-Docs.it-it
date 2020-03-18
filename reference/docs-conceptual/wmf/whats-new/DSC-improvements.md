@@ -3,12 +3,12 @@ ms.date: 06/12/2017
 ms.topic: conceptual
 keywords: wmf,powershell,installazione
 title: Miglioramenti di DSC in WMF 5.1
-ms.openlocfilehash: d9339ec9f316c4a32c5fa6cb2360c077973ee334
-ms.sourcegitcommit: ea7d87a7a56f368e3175219686dfa2870053c644
+ms.openlocfilehash: 99434d14100de54d2d4c89c5888741ab2f1c512a
+ms.sourcegitcommit: 01c60c0c97542dbad48ae34339cddbd813f1353b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76818108"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "78277624"
 ---
 # <a name="improvements-in-desired-state-configuration-dsc-in-wmf-51"></a>Miglioramenti di Desired State Configuration (DSC) in WMF 5.1
 
@@ -59,7 +59,7 @@ Vedere gli snapshot seguenti:
 
 - Impostazioni della configurazione locale che definisce una configurazione parziale che un nodo è autorizzato a ricevere.
 
-  ![Metaconfigurazione di esempio](../images/DSC-improvements/MetaConfigPartialOne.png)
+  ![Metaconfigurazione di esempio](media/DSC-improvements/MetaConfigPartialOne.png)
 
 - Definizione di configurazione parziale di esempio
 
@@ -80,11 +80,11 @@ Vedere gli snapshot seguenti:
 
 - 'ConfigurationName' incorporato nel file MOF generato.
 
-  ![Esempio di file MOF generato](../images/DSC-improvements/PartialGeneratedMof.png)
+  ![Esempio di file MOF generato](media/DSC-improvements/PartialGeneratedMof.png)
 
 - FileName nel repository di configurazione pull
 
-  ![FileName nel repository di configurazione](../images/DSC-improvements/PartialInConfigRepository.png)
+  ![FileName nel repository di configurazione](media/DSC-improvements/PartialInConfigRepository.png)
 
   File MOF del nome del servizio di automazione di Azure generati come `<ConfigurationName>.<NodeName>.mof`. La configurazione seguente viene compilata in PartialOne.localhost.mof.
 
@@ -249,7 +249,7 @@ In WMF 5.1 DSC supporta la convalida delle firme digitali su file di catalogo e 
 
 #### <a name="pull"></a>Pull
 
-La risorsa LocalConfigurationManager di un nodo esegue la convalida delle firme di moduli e configurazioni in base alle impostazioni correnti. Per impostazione predefinita, la convalida delle firme è disabilitata. La convalida delle firme può essere abilitata aggiungendo il blocco 'SignatureValidation' alla definizione della metaconfigurazione del nodo, come illustrato di seguito:
+La risorsa LocalConfigurationManager di un nodo esegue la convalida delle firme di moduli e configurazioni in base alle impostazioni correnti. Per impostazione predefinita, la convalida delle firme è disabilitata. La convalida delle firme può essere abilitata aggiungendo il blocco "SignatureValidation" alla definizione della metaconfigurazione del nodo, come illustrato di seguito:
 
 ```powershell
 [DSCLocalConfigurationManager()]
@@ -293,11 +293,11 @@ L'impostazione della metaconfigurazione precedente in un nodo abilita la convali
 > la convalida della firma nel catalogo del modulo e nella configurazione viene eseguita solo quando la configurazione viene applicata al sistema per la prima volta o quando il modulo viene scaricato e installato.
 > I controlli di coerenza non convalidano la firma di Current.mof o le dipendenze del modulo. Se la verifica ha esito negativo in una fase, ad esempio se la configurazione di cui viene eseguito il pull dal server di pull non è firmata, l'elaborazione della configurazione viene terminata con l'errore riportato di seguito e vengono eliminati tutti i file temporanei.
 
-![Configurazione di output degli errori di esempio](../images/DSC-improvements/PullUnsignedConfigFail.png)
+![Configurazione di output degli errori di esempio](media/DSC-improvements/PullUnsignedConfigFail.png)
 
 Analogamente, il pull di un modulo il cui catalogo non è firmato causa l'errore seguente:
 
-![Modulo di output degli errori di esempio](../images/DSC-improvements/PullUnisgnedCatalog.png)
+![Modulo di output degli errori di esempio](media/DSC-improvements/PullUnisgnedCatalog.png)
 
 #### <a name="push"></a>Push
 
@@ -345,12 +345,12 @@ Una configurazione inviata mediante push potrebbe essere alterata in origine pri
   Start-DscConfiguration -Path .\Test -Wait -Verbose -Force
   ```
 
-  ![ErrorUnsignedMofPushed](../images/DSC-improvements/PushUnsignedMof.png)
+  ![ErrorUnsignedMofPushed](media/DSC-improvements/PushUnsignedMof.png)
 
 - Firma del file di configurazione con il certificato di firma del codice.
 
-  ![SignMofFile](../images/DSC-improvements/SignMofFile.png)
+  ![SignMofFile](media/DSC-improvements/SignMofFile.png)
 
 - Tentativo di push del file MOF firmato.
 
-  ![PushSignedMofFile](../images/DSC-improvements/PushSignedMof.png)
+  ![PushSignedMofFile](media/DSC-improvements/PushSignedMof.png)
