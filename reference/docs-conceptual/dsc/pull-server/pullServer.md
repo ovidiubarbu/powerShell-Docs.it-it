@@ -2,12 +2,12 @@
 ms.date: 01/08/2020
 keywords: dsc,powershell,configurazione,installazione
 title: Servizio di pull DSC
-ms.openlocfilehash: f171c3dc579dfb24a8c9fb87fbb50dccae619091
-ms.sourcegitcommit: aaf1284dfec2e4c698009d6dc27ff103aaafd581
+ms.openlocfilehash: cf2420e6889f63ac3b2859e5ee36fa888b728afc
+ms.sourcegitcommit: c97dcf1e00ef540e7464c36c88f841474060044c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76885388"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79402438"
 ---
 # <a name="desired-state-configuration-pull-service"></a>Servizio di pull DSC (Desired State Configuration)
 
@@ -28,10 +28,10 @@ La scalabilità consigliata per ogni soluzione è la seguente:
 |                   Soluzione                   |              Nodi client              |
 | -------------------------------------------- | -------------------------------------- |
 | Server di pull Windows con database MDB/ESENT | Fino a 500 nodi                        |
-| Server di pull Windows con database SQL       | Fino a 1000 nodi                       |
-| Automation DSC per Azure                         | Scenari con più di 1000 nodi |
+| Server di pull Windows con database SQL       | Fino a 3500 nodi                       |
+| Automation DSC per Azure                         | Ambienti di piccole e grandi dimensioni      |
 
-**La soluzione consigliata**, e l'opzione con il maggior numero di funzionalità disponibili, è [Automation DSC di Azure](/azure/automation/automation-dsc-getting-started).
+**La soluzione consigliata**, e l'opzione con il maggior numero di funzionalità disponibili, è [Automation DSC di Azure](/azure/automation/automation-dsc-getting-started). Non è stato identificato un limite massimo del numero di nodi per l'account di Automazione.
 
 Il servizio di Azure può gestire i nodi in locale nei data center privati o in cloud pubblici, come Azure e AWS. Per gli ambienti privati in cui i server non possono connettersi direttamente a Internet, è consigliabile limitare il traffico in uscita esclusivamente all'intervallo di indirizzi IP di Azure pubblicato (vedere gli [intervalli di indirizzi IP dei data center di Azure](https://www.microsoft.com/download/details.aspx?id=41653)).
 
