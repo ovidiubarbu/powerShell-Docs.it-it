@@ -2,12 +2,12 @@
 ms.date: 08/23/2017
 keywords: powershell,cmdlet
 title: usare la console di windows powershell basata sul web
-ms.openlocfilehash: 2bb9c6ef486ef32012a15f9890997cf2fa6a3a0b
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 4c1bac2c712e430263d748b36897f4cfd8885919
+ms.sourcegitcommit: c97dcf1e00ef540e7464c36c88f841474060044c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "62086650"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79402588"
 ---
 # <a name="use-the-web-based-windows-powershell-console"></a>Usare la console di Windows PowerShell basata sul Web
 
@@ -23,14 +23,11 @@ La console di Windows PowerShell basata sul Web è destinata a un computer remot
 
 Questo argomento descrive come accedere e iniziare a usare la console di Accesso Web Windows PowerShell basata sul Web.
 
-Questo argomento non descrive come usare o eseguire i cmdlet o gli script di Windows PowerShell.
-Per informazioni su come usare Windows PowerShell e le risorse di script, vedere la sezione [Vedere anche](#see-also) alla fine di questo argomento.
+Questo argomento non descrive come usare o eseguire i cmdlet o gli script di Windows PowerShell. Per informazioni su come usare Windows PowerShell e le risorse di script, vedere la sezione [Vedere anche](#see-also) alla fine di questo argomento.
 
 ## <a name="supported-browsers-and-client-devices"></a>Browser e dispositivi client supportati
 
-Accesso Web Windows PowerShell supporta i browser Internet seguenti.
-Anche se i browser per dispositivi mobili non sono ufficialmente supportati, molti potrebbero essere in grado di eseguire la console di Windows PowerShell basata sul Web.
-Anche gli altri browser che accettano cookie, eseguono JavaScript e aprono i siti Web HTTPS dovrebbero funzionare, ma non sono stati testati ufficialmente.
+Accesso Web Windows PowerShell supporta i browser Internet seguenti. Anche se i browser per dispositivi mobili non sono ufficialmente supportati, molti potrebbero essere in grado di eseguire la console di Windows PowerShell basata sul Web. Anche gli altri browser che accettano cookie, eseguono JavaScript e aprono i siti Web HTTPS dovrebbero funzionare, ma non sono stati testati ufficialmente.
 
 ### <a name="supported-desktop-computer-browsers"></a>Browser per computer desktop supportati
 
@@ -53,18 +50,15 @@ Per usare la console di Accesso Web Windows PowerShell basata sul Web, i browser
 
 - Consentire i cookie dal sito Web del gateway di Accesso Web Windows PowerShell.
 - Sia in grado di aprire e leggere le pagine HTTPS.
-- Sia in grado di aprire ed eseguire siti Web che utilizzano JavaScript.
+- Aprire ed eseguire siti Web che usano JavaScript.
 
 ## <a name="signing-in-to-windows-powershell-web-access"></a>Connessione ad Accesso Web Windows PowerShell
 
-L'amministratore di Accesso Web Windows PowerShell deve specificare all'utente l'URL corrispondente all'indirizzo del sito Web del gateway di Accesso Web Windows PowerShell dell'organizzazione.
-Per impostazione predefinita, l'indirizzo di questo sito Web è *https://\<nome_server\>/pswa*.
+L'amministratore di Accesso Web Windows PowerShell deve specificare all'utente l'URL corrispondente all'indirizzo del sito Web del gateway di Accesso Web Windows PowerShell dell'organizzazione. Per impostazione predefinita, l'indirizzo di questo sito Web è `https://<server_name>/pswa`.
 
-Prima di accedere ad Accesso Web Windows PowerShell, assicurarsi di avere il nome o l'indirizzo IP del computer remoto da gestire.
-È necessario essere un utente autorizzato nel computer remoto, che deve essere configurato per consentire la gestione remota.
-Per altre informazioni sulla configurazione del computer per consentire la gestione remota, vedere [Abilitare e usare i comandi remoti in Windows PowerShell](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/enable-psremoting).
+Prima di accedere ad Accesso Web Windows PowerShell, assicurarsi di avere il nome o l'indirizzo IP del computer remoto da gestire. È necessario essere un utente autorizzato nel computer remoto, che deve essere configurato per consentire la gestione remota. Per altre informazioni sulla configurazione del computer per consentire la gestione remota, vedere [Abilitare e usare i comandi remoti in Windows PowerShell](/powershell/module/microsoft.powershell.core/enable-psremoting).
 
-Il metodo di configurazione del computer più semplice per consentire la gestione remota consiste nell'eseguire il cmdlet **Enable-PSRemoting -force** nel computer, in una sessione di Windows PowerShell aperta con diritti utente elevati, ovvero **Esegui come amministratore**.
+Il metodo di configurazione del computer più semplice per consentire la gestione remota è l'esecuzione del cmdlet `Enable-PSRemoting -force` nel computer, in una sessione di Windows PowerShell aperta con diritti utente elevati, ovvero **Esegui come amministratore**.
 
 ### <a name="to-sign-in-to-windows-powershell-web-access"></a>Per connettersi ad Accesso Web Windows PowerShell
 
@@ -72,17 +66,16 @@ Il metodo di configurazione del computer più semplice per consentire la gestion
 
 1. Nella pagina di accesso di Accesso Web Windows PowerShell specificare il nome utente e la password di rete e il nome del computer che si vuole gestire e del quale si è un utente autorizzato. Se l'amministratore di Accesso Web Windows PowerShell ha specificato di usare un URI in un server del sito o un server proxy personalizzato invece di un nome computer, selezionare **URI connessione** nel campo **Tipo di connessione** e quindi specificare l'URI.
 
-    > ![Nota](images/Note.jpeg) **Nota**:
-    >
-    > - Se il computer di destinazione fa parte di un gruppo di lavoro, usare la sintassi seguente per specificare il nome utente e accedere al computer: `<workgroup_name>\<user_name>`
-    > - Se il computer di destinazione è il server gateway, è possibile specificare `localhost` nel campo Nome computer
-    > - Se il computer di destinazione è il server gateway e il server gateway fa parte di un gruppo di lavoro, è necessario usare `<workgroup name>\<user_name>` nel campo Nome utente. È possibile usare `localhost` nel campo Nome computer.
+   > [!NOTE]
+   > - Se il computer di destinazione fa parte di un gruppo di lavoro, usare la sintassi seguente per specificare il nome utente e accedere al computer: `<workgroup_name>\<user_name>`
+   > - Se il computer di destinazione è il server gateway, è possibile specificare `localhost` nel campo Nome computer
+   > - Se il computer di destinazione è il server gateway e il server gateway fa parte di un gruppo di lavoro, è necessario usare `<workgroup name>\<user_name>` nel campo Nome utente. È possibile usare `localhost` nel campo Nome computer.
 
-1. La sezione **Impostazioni di connessione facoltative** è relativa ai requisiti di autorizzazione del computer remoto che si vuole gestire. Per altre informazioni sui parametri equivalenti alle impostazioni di connessione facoltative, vedere la guida del cmdlet [Enter-PSSession](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/enter-pssession).
+1. La sezione **Impostazioni di connessione facoltative** è relativa ai requisiti di autorizzazione del computer remoto che si vuole gestire. Per altre informazioni sui parametri equivalenti alle impostazioni di connessione facoltative, vedere la guida del cmdlet [Enter-PSSession](/powershell/module/microsoft.powershell.core/enter-pssession).
 
-    In genere, le credenziali che si usano per il passaggio attraverso il gateway di Accesso Web Windows PowerShell sono le stesse riconosciute dal computer remoto che si vuole gestire. Se tuttavia si preferisce usare credenziali diverse per gestire il computer remoto specificato nel passaggio 2, espandere la sezione **Impostazioni di connessione facoltative** e fornire le credenziali alternative. In caso contrario, andare al passaggio 6.
+   In genere, le credenziali che si usano per il passaggio attraverso il gateway di Accesso Web Windows PowerShell sono le stesse riconosciute dal computer remoto che si vuole gestire. Se tuttavia si preferisce usare credenziali diverse per gestire il computer remoto specificato nel passaggio 2, espandere la sezione **Impostazioni di connessione facoltative** e fornire le credenziali alternative. In caso contrario, andare al passaggio 6.
 
-1. Se l'amministratore di Accesso Web Windows PowerShell ha creato una configurazione di sessione personalizzata per gli utenti di Accesso Web Windows PowerShell, digitare il nome della configurazione di sessione nel campo **Nome configurazione**. Per altre informazioni sulle configurazioni di sessione, vedere [about_Session_Configurations](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_session_configurations).
+1. Se l'amministratore di Accesso Web Windows PowerShell ha creato una configurazione di sessione personalizzata per gli utenti di Accesso Web Windows PowerShell, digitare il nome della configurazione di sessione nel campo **Nome configurazione**. Per altre informazioni sulle configurazioni di sessione, vedere [about_Session_Configurations](/powershell/module/microsoft.powershell.core/about/about_session_configurations).
 
 1. Mantenere il valore di **Tipo di autenticazione** impostato su **Predefinito**, a meno che l'amministratore di Accesso Web Windows PowerShell non abbia fornito istruzioni per procedere diversamente.
 
@@ -93,24 +86,23 @@ Il metodo di configurazione del computer più semplice per consentire la gestion
 Una qualsiasi delle operazioni seguenti causa la disconnessione dell'utente da una sessione di Windows PowerShell basata sul Web.
 
 - Fare clic su **Disconnetti** nell'angolo in basso a destra della console. Solo Windows Server 2012
-
 - Fare clic su **Salva** o **Esci** nell'angolo in basso a destra della console (solo Windows Server 2012 R2). Se si fa clic su **Salva**, la sessione di Accesso Web Windows PowerShell viene salvata e chiusa. È possibile riconnettersi alla sessione in un secondo momento. Quando si accede di nuovo ad Accesso Web Windows PowerShell, viene visualizzato un elenco delle sessioni salvate. È possibile selezionare una sessione salvata e riconnettersi o avviare una nuova sessione. Il numero massimo di sessioni aperte consentito agli utenti, sia salvate che attive, viene configurato dall'amministratore del gateway.
 
-    Se si fa clic su **Esci**, la sessione di Accesso Web Windows PowerShell viene disconnessa senza essere salvata.
+  Se si fa clic su **Esci**, la sessione di Accesso Web Windows PowerShell viene disconnessa senza essere salvata.
 
 - Provare ad accedere per gestire un computer remoto diverso nella stessa sessione del browser o in una nuova scheda della stessa sessione del browser. Questo approccio non è applicabile se il server gateway esegue Windows Server 2012 R2. L'esecuzione di Accesso Web Windows PowerShell in Windows Server 2012 R2 consente più sessioni utente in nuove schede della stessa sessione del browser. Per altre informazioni su come usare più sessioni attive nello stesso computer, vedere Connessione a più computer di destinazione contemporaneamente. nella sezione [Limitazioni della console basata sul Web](#limitations-of-the-web-based-console) di questo argomento.
 
 - 20 minuti di inattività della sessione. L'amministratore del gateway può personalizzare il periodo di timeout di inattività. Per altre informazioni, vedere [Gestione delle sessioni](authorization-rules-and-security-features-of-windows-powershell-web-access.md#session-management).
 
-    - Se si viene disconnessi da una sessione nella console basata sul Web a causa di un errore di rete o di un altro arresto o errore non pianificato e non perché la sessione è stata volutamente chiusa, la sessione di Accesso Web Windows PowerShell rimane in esecuzione e connessa al computer di destinazione, finché non sarà trascorso il periodo di timeout sul lato client. Per impostazione predefinita, questo periodo di timeout è di 20 minuti e viene configurato dall'amministratore del gateway. La sessione viene disconnessa trascorsi i 20 minuti predefiniti o dopo il periodo di timeout specificato dall'amministratore del gateway, a seconda del valore inferiore.
+  - Se si viene disconnessi da una sessione nella console basata sul Web a causa di un errore di rete o di un altro arresto o errore non pianificato e non perché la sessione è stata volutamente chiusa, la sessione di Accesso Web Windows PowerShell rimane in esecuzione e connessa al computer di destinazione, finché non sarà trascorso il periodo di timeout sul lato client. Per impostazione predefinita, questo periodo di timeout è di 20 minuti e viene configurato dall'amministratore del gateway. La sessione viene disconnessa trascorsi i 20 minuti predefiniti o dopo il periodo di timeout specificato dall'amministratore del gateway, a seconda del valore inferiore.
 
-        Se il server gateway esegue Windows Server 2012 R2, Accesso Web Windows PowerShell consente agli utenti di riconnettersi alle sessioni salvate in un secondo momento, ma non si possono visualizzare le sessioni salvate o riconnettersi finché non sarà trascorso il periodo di timeout specificato dall'amministratore del gateway.
+    Se il server gateway esegue Windows Server 2012 R2, Accesso Web Windows PowerShell consente agli utenti di riconnettersi alle sessioni salvate in un secondo momento, ma non si possono visualizzare le sessioni salvate o riconnettersi finché non sarà trascorso il periodo di timeout specificato dall'amministratore del gateway.
 
 - Chiudere la finestra o la scheda del browser.
 
 - Disattivare il dispositivo client in cui è in esecuzione il browser o disconnettersi dalla rete.
 
-- Eseguire il comando **Esci** nella console Web. Questo comando non funziona se la configurazione della sessione a cui si è connessi è configurata per supportare la modalità [NoLanguage](https://msdn.microsoft.com/library/windows/desktop/system.management.automation.pslanguagemode.aspx) o si trova in uno spazio di esecuzione con restrizioni.
+- Esecuzione del comando **Esci** nella console Web. Questo comando non funziona se la configurazione della sessione a cui si è connessi è configurata per supportare la modalità [NoLanguage](https://msdn.microsoft.com/library/windows/desktop/system.management.automation.pslanguagemode.aspx) o si trova in uno spazio di esecuzione con restrizioni.
 
 Per accedere di nuovo, riaprire la pagina Web di Accesso Web Windows PowerShell ed eseguire l'accesso con la procedura descritta in [Connessione ad Accesso Web Windows PowerShell](#signing-in-to-windows-powershell-web-access) in questo argomento.
 
@@ -140,91 +132,86 @@ Quasi tutte le funzionalità host di Windows PowerShell sono disponibili nella c
 
 ### <a name="unsupported-shortcut-keys"></a>Tasti di scelta rapida non supportati
 
-Tasto funzione | Azione
--- | --
-CTRL+C | In Accesso Web Windows PowerShell **CTRL+C** viene usato dal browser per copiare il contenuto. La console fornisce un pulsante **Annulla** e gli utenti possono anche usare **CTRL+Q** per annullare i comandi.
+ Tasto funzione   |                                                                                         Azione
+--------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+CTRL+C          | In Accesso Web Windows PowerShell **CTRL+C** viene usato dal browser per copiare il contenuto. La console fornisce un pulsante **Annulla** e gli utenti possono anche usare **CTRL+Q** per annullare i comandi.
 ALT+BARRA SPAZ.+E+L | Scorre il buffer dello schermo.
 ALT+BARRA SPAZ.+E+F | Cerca il testo nel buffer dello schermo.
 ALT+BARRA SPAZ.+E+K | Seleziona il testo da copiare dal buffer dello schermo.
 ALT+BARRA SPAZ.+E+P | Incolla il contenuto degli Appunti nella console di Windows PowerShell.
-ALT+BARRA SPAZ.+C | Chiude la console di Windows PowerShell.
-CTRL+INTERR | Forza la chiusura della finestra di Windows PowerShell.
-CTRL+HOME | Elimina dall'inizio della riga di comando corrente.
-CTRL+FINE | Elimina fino alla fine della riga di comando.
-F1 | Sposta il cursore di un carattere a destra nella riga di comando.
-F2 | Crea un nuovo comando copiando l'ultimo comando fino al carattere digitato.
-F3 | Completa la riga di comando con il contenuto dell'ultima riga di comando.
-F4 | Elimina i caratteri dalla posizione del cursore.
-F5 | Scorre all'indietro nella cronologia del comando. Per accedere ai comandi nella cronologia dei comandi in Accesso Web Windows PowerShell, fare clic sui pulsanti di scorrimento **Cronologia** disponibili nella console basata sul Web.
-F7 | Seleziona in modo interattivo un comando dalla cronologia dei comandi.
-F8 | Analizza la cronologia visualizzando i comandi che corrispondono al testo corrente.
-F9 | Esegue un comando numerato specifico dalla cronologia.
-PGSU | Esegue il primo comando nella cronologia.
-PGGIÙ | Esegue l'ultimo comando nella cronologia.
-ALT+F7 | Cancella l'elenco della cronologia dei comandi.
+ALT+BARRA SPAZ.+C    | Chiude la console di Windows PowerShell.
+CTRL+INTERR      | Forza la chiusura della finestra di Windows PowerShell.
+CTRL+HOME       | Elimina dall'inizio della riga di comando corrente.
+CTRL+FINE        | Elimina fino alla fine della riga di comando.
+F1              | Sposta il cursore di un carattere a destra nella riga di comando.
+F2              | Crea un nuovo comando copiando l'ultimo comando fino al carattere digitato.
+F3              | Completa la riga di comando con il contenuto dell'ultima riga di comando.
+F4              | Elimina i caratteri dalla posizione del cursore.
+F5              | Scorre all'indietro nella cronologia del comando. Per accedere ai comandi nella cronologia dei comandi in Accesso Web Windows PowerShell, fare clic sui pulsanti di scorrimento **Cronologia** disponibili nella console basata sul Web.
+F7              | Seleziona in modo interattivo un comando dalla cronologia dei comandi.
+F8              | Analizza la cronologia visualizzando i comandi che corrispondono al testo corrente.
+F9              | Esegue un comando numerato specifico dalla cronologia.
+PGSU         | Esegue il primo comando nella cronologia.
+PGGIÙ       | Esegue l'ultimo comando nella cronologia.
+ALT+F7          | Cancella l'elenco della cronologia dei comandi.
 
 ### <a name="limitations-of-the-web-based-console"></a>Limitazioni della console basata sul Web
 
 - Doppio hop
 
-    Se si prova a creare una nuova sessione o a usarla con Accesso Web Windows PowerShell, si potrebbe riscontrare una limitazione al doppio hop, ovvero la connessione a un secondo computer dalla prima connessione. Accesso Web Windows PowerShell usa uno spazio di esecuzione remoto e attualmente **PowerShell.exe** non consente di stabilire una connessione remota a un secondo computer da uno spazio di esecuzione remoto. Se si prova a connettersi a un secondo computer remoto da una connessione esistente usando il cmdlet **Enter-PSSession**, potrebbero essere generati diversi errori, ad esempio un messaggio simile a "Non è possibile ottenere risorse di rete".
+  Se si prova a creare una nuova sessione o a usarla con Accesso Web Windows PowerShell, si potrebbe riscontrare una limitazione al doppio hop, ovvero la connessione a un secondo computer dalla prima connessione.
+  Accesso Web Windows PowerShell usa uno spazio di esecuzione remoto e attualmente **PowerShell.exe** non consente di stabilire una connessione remota a un secondo computer da uno spazio di esecuzione remoto. Se si prova a connettersi a un secondo computer remoto da una connessione esistente con il cmdlet **Enter-PSSession**, potrebbero essere visualizzati diversi errori, ad esempio un messaggio simile a &euro;Non è possibile ottenere risorse di rete.
 
-    Per evitare errori relativi al doppio hop, l'amministratore deve configurare l'autenticazione CredSSP nell'ambiente di rete dell'organizzazione. Per altre informazioni sulla configurazione dell'autenticazione CredSSP, vedere il blog relativo a [CredSSP per la comunicazione remota con un secondo hop](https://blogs.msdn.com/b/powershell/archive/2008/06/05/credssp-for-second-hop-remoting-part-i-domain-account.aspx) sul sito Web Microsoft. È anche possibile fornire credenziali esplicite quando si vuole gestire un secondo computer remoto. È improbabile che le credenziali implicite consentano il secondo hop.
+  Per evitare errori relativi al doppio hop, l'amministratore deve configurare l'autenticazione CredSSP nell'ambiente di rete dell'organizzazione. Per altre informazioni sulla configurazione dell'autenticazione CredSSP, vedere il blog relativo a [CredSSP per la comunicazione remota con un secondo hop](https://devblogs.microsoft.com/powershell/credssp-for-second-hop-remoting/) nel blog di PowerShell. È anche possibile fornire credenziali esplicite quando si vuole gestire un secondo computer remoto. È improbabile che le credenziali implicite consentano il secondo hop.
 
 - Comunicazione remota
 
-    Accesso Web Windows PowerShell usa e ha le stesse limitazioni di una sessione remota di Windows PowerShell. I comandi che chiamano direttamente le API della console di Windows, ad esempio quelle per gli editor basati su console o i programmi di menu basati su testo, non funzionano perché i comandi non leggono o scrivono su pipe standard di input, output e di errore. Di conseguenza, i comandi che avviano un file eseguibile, ad esempio **notepad.exe**, o che visualizzano un'interfaccia utente grafica, ad esempio `OpenGridView` o `ogv`, non funzionano. Questo comportamento influenza l'esperienza utente, perché sembra che Accesso Web Windows PowerShell non risponda al comando.
+  Accesso Web Windows PowerShell usa e ha le stesse limitazioni di una sessione remota di Windows PowerShell. I comandi che chiamano direttamente le API della console di Windows, ad esempio quelle per gli editor basati su console o i programmi di menu basati su testo, non funzionano perché i comandi non leggono o scrivono su pipe standard di input, output e di errore. Di conseguenza, i comandi che avviano un file eseguibile, ad esempio **notepad.exe**, o che visualizzano un'interfaccia utente grafica, ad esempio `OpenGridView` o `ogv`, non funzionano. Questo comportamento influenza l'esperienza utente, perché sembra che Accesso Web Windows PowerShell non risponda al comando.
 
 - Completamento tramite TAB
 
-    Il completamento tramite tasto TAB non funziona in una configurazione di sessione con uno spazio di esecuzione con restrizioni o in modalità **NoLanguage** . Anche se gli amministratori possono configurare una sessione per supportare il completamento tramite tasto TAB, è sconsigliato per motivi di sicurezza, perché può esporre le informazioni seguenti a utenti non autorizzati.
+  Il completamento tramite tasto TAB non funziona in una configurazione di sessione con uno spazio di esecuzione con restrizioni o in modalità **NoLanguage**. Anche se gli amministratori possono configurare una sessione per supportare il completamento tramite tasto TAB, è sconsigliato per motivi di sicurezza, perché può esporre le informazioni seguenti a utenti non autorizzati.
 
-    - Percorsi interni del file system
-
-    - Cartelle condivise in computer interni
-
-    - Variabili nello spazio di esecuzione
-
-    - Tipi caricati o spazi dei nomi di .NET Framework
-
-    - Variabili di ambiente
+  - Percorsi interni del file system
+  - Cartelle condivise in computer interni
+  - Variabili nello spazio di esecuzione
+  - Tipi caricati o spazi dei nomi di .NET Framework
+  - Variabili di ambiente
 
 - Sessione **NoLanguage** o uno spazio di esecuzione con restrizioni
 
-    Gli utenti connessi a una configurazione di sessione **NoLanguage** o a uno spazio di esecuzione con restrizioni in Accesso Web Windows PowerShell non possono eseguire il comando **Esci** per terminare la sessione. Per disconnettersi, gli utenti devono fare clic su **Disconnetti** nella pagina della console.
+  Gli utenti connessi a una configurazione di sessione **NoLanguage** o a uno spazio di esecuzione con restrizioni in Accesso Web Windows PowerShell non possono eseguire il comando **Esci** per terminare la sessione. Per disconnettersi, gli utenti devono fare clic su **Disconnetti** nella pagina della console.
 
 - Connessione a più computer di destinazione contemporaneamente.
 
-    Se il server gateway esegue Windows Server 2012, Accesso Web Windows PowerShell consente solo una connessione a un computer remoto per ogni sessione del browser. Non consente agli utenti di accedere una sola volta e connettersi a più computer remoti usando schede separate del browser. Quando si apre una nuova scheda o una nuova finestra del browser, Accesso Web Windows PowerShell chiede di disconnettere la sessione corrente e avviare una nuova sessione, per potersi connettere al computer remoto nuovo o esistente. Se si vogliono stabilire due o più sessioni separate per computer remoti diversi, in Internet Explorer è disponibile una funzionalità che consente tuttavia di creare una nuova sessione. Per avviare una nuova sessione del browser in Internet Explorer, premere **ALT**, aprire il menu **File** e scegliere **Nuova sessione**. Aprire quindi il sito Web di Accesso Web Windows PowerShell nella nuova sessione ed eseguire l'accesso a un altro computer remoto.
+  Se il server gateway esegue Windows Server 2012, Accesso Web Windows PowerShell consente solo una connessione a un computer remoto per ogni sessione del browser. Non consente agli utenti di accedere una sola volta e connettersi a più computer remoti usando schede separate del browser. Quando si apre una nuova scheda o una nuova finestra del browser, Accesso Web Windows PowerShell chiede di disconnettere la sessione corrente e avviare una nuova sessione, per potersi connettere al computer remoto nuovo o esistente. Se si vogliono stabilire due o più sessioni separate a diversi computer remoti, una funzionalità di Internet Explorer consente tuttavia di creare una nuova sessione. Per avviare una nuova sessione del browser in Internet Explorer, premere **ALT**, aprire il menu **File** e quindi scegliere **Nuova sessione**. Aprire quindi il sito Web di Accesso Web Windows PowerShell nella nuova sessione ed eseguire l'accesso a un altro computer remoto.
 
-    Quando il gateway di Accesso Web Windows PowerShell è in esecuzione in Windows Server 2012 R2, gli utenti possono aprire più connessioni a computer remoti in schede del browser diverse. Per aprire più connessioni a un computer remoto con la console di Windows PowerShell basata sul Web, verificare con l'amministratore del gateway di Accesso Web Windows PowerShell se questa funzionalità è supportata dal server gateway.
+  Quando il gateway di Accesso Web Windows PowerShell è in esecuzione in Windows Server 2012 R2, gli utenti possono aprire più connessioni a computer remoti in schede del browser diverse. Per aprire più connessioni a un computer remoto con la console di Windows PowerShell basata sul Web, verificare con l'amministratore del gateway di Accesso Web Windows PowerShell se questa funzionalità è supportata dal server gateway.
 
 - Sessioni di Windows PowerShell persistenti (riconnessione).
 
-    Dopo il timeout del gateway di Accesso Web Windows PowerShell, la connessione remota tra il gateway e il computer di destinazione viene chiusa. L'elaborazione degli eventuali cmdlet e script in corso viene arrestata. È consigliabile usare l'infrastruttura **-Job** di Windows PowerShell quando si eseguono attività di lunga durata, in modo da avviare i processi, disconnettersi dal computer e riconnettersi in seguito mantenendo i processi persistenti. Un altro vantaggio dell'uso dei cmdlet **-Job** è la possibilità di avviarli con Accesso Web Windows PowerShell, di disconnettersi e riconnettersi successivamente sia con Accesso Web Windows PowerShell che con un altro host, ad esempio Windows PowerShell Integrated Scripting Environment (ISE).
+  Dopo il timeout del gateway di Accesso Web Windows PowerShell, la connessione remota tra il gateway e il computer di destinazione viene chiusa. L'elaborazione degli eventuali cmdlet e script in corso viene arrestata. È consigliabile usare l'infrastruttura **-Job** di Windows PowerShell quando si eseguono attività di lunga durata, in modo da avviare i processi, disconnettersi dal computer e riconnettersi in seguito mantenendo i processi persistenti. Un altro vantaggio dell'uso dei cmdlet **-Job** è la possibilità di avviarli con Accesso Web Windows PowerShell, di disconnettersi e riconnettersi successivamente sia con Accesso Web Windows PowerShell che con un altro host, ad esempio Windows PowerShell Integrated Scripting Environment (ISE).
 
 - Ridimensionamento della console.
 
-    La sezione **PowerShell.exe** può essere ridimensionata nei tre modi seguenti.
+  La finestra della console di **PowerShell.exe** può essere ridimensionata nei tre modi seguenti.
 
-    - Trascinare e adattare le dimensioni della finestra della console con il mouse.
+  - Trascinare e adattare le dimensioni della finestra della console con il mouse.
+  - Modificare le proprietà di altezza e larghezza tramite un'interfaccia utente grafica per le proprietà della console.
+  - Modificare l'altezza e la larghezza delle finestre della console con un cmdlet.
 
-    - Modificare le proprietà di altezza e larghezza tramite un'interfaccia utente grafica per le proprietà della console.
+    La finestra della console per Accesso Web Windows PowerShell può essere configurata con i cmdlet, come indicato di seguito. Nell'esempio seguente un utente modifica la larghezza della console di Accesso Web Windows PowerShell in **20**.
 
-    - Modificare l'altezza e la larghezza delle finestre della console con un cmdlet.
+    ```powershell
+    $newSize = $Host.UI.RawUI.WindowSize
+    $newSize.Width = $newSize.Width - 20
+    $oldSize = $Host.UI.RawUI.WindowSize
+    $Host.UI.RawUI.WindowSize = $newSize
+    ```
 
-        La finestra della console per Accesso Web Windows PowerShell può essere configurata con i cmdlet, come indicato di seguito. Nell'esempio seguente un utente modifica la larghezza della console di Accesso Web Windows PowerShell in **20**.
+    Si può modificare l'altezza della console in modo simile.
 
-            $newSize = $Host.UI.RawUI.WindowSize
-            $newSize.Width = $newSize.Width - 20
-
-            $oldSize = $Host.UI.RawUI.WindowSize
-
-            $Host.UI.RawUI.WindowSize = $newSize
-
-        Si può modificare l'altezza della console in modo simile.
-
-        Altri esempi per personalizzare la visualizzazione della console sono disponibili nel [Blog del Team di Windows PowerShell](https://blogs.msdn.com/b/powershell/).
+    Altri esempi per personalizzare la visualizzazione della console sono disponibili nel [Blog del Team di Windows PowerShell](hhttps://devblogs.microsoft.com/powershell).
 
 ## <a name="see-also"></a>Vedere anche
 
