@@ -2,12 +2,12 @@
 title: Installazione di PowerShell in macOS
 description: Informazioni sull'installazione di PowerShell in macOS
 ms.date: 12/12/2018
-ms.openlocfilehash: 7f0d6a1aa275deb39a7d670546ee7e833b8ef315
-ms.sourcegitcommit: 4a26c05f162c4fa347a9d67e339f8a33e230b9ba
+ms.openlocfilehash: 2233bc01ee8c53087f79d83ca936c5a3800cfdba
+ms.sourcegitcommit: d36db3a1bc44aee6bc97422b557041c3aece4c67
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78404828"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80082764"
 ---
 # <a name="installing-powershell-on-macos"></a>Installazione di PowerShell in macOS
 
@@ -108,6 +108,8 @@ Se [.NET Core SDK](/dotnet/core/sdk) è già installato, è facile installare Po
 ```
 dotnet tool install --global PowerShell
 ```
+
+Il programma di installazione dello strumento DotNet aggiunge `~/.dotnet/tools` alla variabile di ambiente `PATH`. La shell attualmente in esecuzione non dispone tuttavia del parametro `PATH` aggiornato. Dovrebbe essere possibile avviare PowerShell da una nuova shell digitando `pwsh`.
 
 ## <a name="binary-archives"></a>Archivi di file binari
 

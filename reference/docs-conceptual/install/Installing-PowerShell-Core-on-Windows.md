@@ -2,12 +2,12 @@
 title: Installazione di PowerShell in Windows
 description: Informazioni sull'installazione di PowerShell in Windows
 ms.date: 08/06/2018
-ms.openlocfilehash: df05a16bcf7a81d43d24535e50517fa217f82e7a
-ms.sourcegitcommit: c97dcf1e00ef540e7464c36c88f841474060044c
+ms.openlocfilehash: bb0971b6c4ac99bde70b226da2becf2f4ed82083
+ms.sourcegitcommit: d36db3a1bc44aee6bc97422b557041c3aece4c67
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79402418"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80082786"
 ---
 # <a name="installing-powershell-on-windows"></a>Installazione di PowerShell in Windows
 
@@ -20,7 +20,7 @@ Per abilitare la comunicazione remota di PowerShell tramite WS-Management, è ne
 - Installare [Universal C Runtime](https://www.microsoft.com/download/details.aspx?id=50410) nelle versioni di Windows precedenti a Windows 10. È disponibile tramite download diretto o Windows Update. Nei sistemi supportati, in cui sono state applicate tutte le patch (inclusi i pacchetti facoltativi), è già installato.
 - Installare Windows Management Framework (WMF) 4.0 o versione successiva in Windows 7 e Windows Server 2008 R2. Per altre informazioni su WMF, vedere la [panoramica su Windows Management Framework](/powershell/scripting/wmf/overview).
 
-## <a name="a-idmsi-installing-the-msi-package"></a><a id="msi" />Installazione del pacchetto MSI
+## <a name="installing-the-msi-package"></a><a id="msi" />Installazione del pacchetto MSI
 
 Per installare PowerShell in un client Windows o Windows Server (funziona in Windows 7 SP1, Server 2008 R2 e versioni successive), scaricare il pacchetto MSI dalla pagina delle [versioni][releases] di GitHub. Scorrere verso il basso fino alla sezione **Assets** della versione da installare. È possibile che la sezione Assets sia compressa, quindi potrebbe essere necessario fare clic per espanderla.
 
@@ -58,7 +58,7 @@ msiexec.exe /package PowerShell-<version>-win-<os-arch>.msi /quiet ADD_EXPLORER_
 
 Per un elenco completo delle opzioni della riga di comando per Msiexec.exe, vedere [Opzioni della riga di comando](/windows/desktop/Msi/command-line-options).
 
-## <a name="a-idmsix-installing-the-msix-package"></a><a id="msix" />Installazione del pacchetto MSIX
+## <a name="installing-the-msix-package"></a><a id="msix" />Installazione del pacchetto MSIX
 
 Per installare manualmente il pacchetto MSIX in un client Windows 10, scaricare il pacchetto dalla pagina [releases][releases] di GitHub. Scorrere verso il basso fino alla sezione **Assets** della versione da installare. È possibile che la sezione Assets sia compressa, quindi potrebbe essere necessario fare clic per espanderla.
 
@@ -70,7 +70,7 @@ Dopo il download non è sufficiente fare doppio clic sul programma di installazi
 Add-AppxPackage PowerShell-<version>-win-<os-arch>.msix
 ```
 
-## <a name="a-idzip-installing-the-zip-package"></a><a id="zip" />Installazione del pacchetto ZIP
+## <a name="installing-the-zip-package"></a><a id="zip" />Installazione del pacchetto ZIP
 
 Sono disponibili archivi ZIP di file binari di PowerShell per abilitare scenari di distribuzione avanzati. Si noti che quando si usa l'archivio ZIP, non viene eseguito il controllo dei prerequisiti come nel pacchetto MSI. Per il corretto funzionamento della comunicazione remota su WSMan, verificare che siano soddisfatti i [prerequisiti](#prerequisites).
 
@@ -81,7 +81,8 @@ Windows IoT include già Windows PowerShell, che può essere usato per distribui
 1. Creare `PSSession` per il dispositivo di destinazione
 
    ```powershell
-   $s = New-PSSession -ComputerName <deviceIp> -Credential Administrator
+   Set-Item -Path WSMan:\localhost\Client\TrustedHosts <deviceip>
+   $S = New-PSSession -ComputerName <deviceIp> -Credential Administrator
    ```
 
 2. Copiare il pacchetto ZIP nel dispositivo
@@ -173,6 +174,8 @@ Se [.NET Core SDK](/dotnet/core/sdk) è già installato, è facile installare Po
 ```
 dotnet tool install --global PowerShell
 ```
+
+Il programma di installazione dello strumento DotNet aggiunge `$env:USERPROFILE\dotnet\tools` alla variabile di ambiente `$env:PATH`. La shell attualmente in esecuzione non dispone tuttavia del parametro `$env:PATH` aggiornato. Dovrebbe essere possibile avviare PowerShell da una nuova shell digitando `pwsh`.
 
 ## <a name="how-to-create-a-remoting-endpoint"></a>Come creare un endpoint di comunicazione remota
 
