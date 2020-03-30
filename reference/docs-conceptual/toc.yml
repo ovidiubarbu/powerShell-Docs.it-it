@@ -294,6 +294,8 @@
           href: whats-new/what-s-new-in-windows-powershell-50.md
         - name: Novità di PowerShell 5.0 ISE
           href: whats-new/what-s-new-in-the-powershell-50-ise.md
+    - name: Migrazione da Windows PowerShell 5.1 a PowerShell 7
+      href: whats-new/Migrating-from-Windows-PowerShell-51-to-PowerShell-7.md
     - name: Cronologia delle versioni di moduli e cmdlet
       href: whats-new/cmdlet-versions.md
     - name: Elenco di compatibilità dei moduli
