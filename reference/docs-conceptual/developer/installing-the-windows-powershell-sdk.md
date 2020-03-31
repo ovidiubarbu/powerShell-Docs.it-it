@@ -1,13 +1,13 @@
 ---
 title: Installazione di Windows PowerShell SDK
-ms.date: 09/13/2016
+ms.date: 03/30/2020
 ms.topic: article
-ms.openlocfilehash: e7ca38377b3e6533eec1a70027f6de1a9fb3091b
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: b47dddaf167024d30a7a31596f96569f976109d7
+ms.sourcegitcommit: bf71c8c5e2a4fc7d5c3a67a537db1285089d03a7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73444500"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80394982"
 ---
 # <a name="installing-the-windows-powershell-sdk"></a>Installazione di Windows PowerShell SDK
 
@@ -18,7 +18,7 @@ L'argomento seguente descrive come installare PowerShell SDK in diverse versioni
 ## <a name="installing-windows-powershell-30-sdk-for-windows-8-and-windows-server-2012"></a>Installazione di Windows PowerShell 3.0 SDK in Windows 8 e Windows Server 2012
 
 Windows PowerShell 3.0 viene installato automaticamente con Windows 8 e Windows Server 2012. È inoltre possibile scaricare e installare gli assembly di riferimento per Windows PowerShell 3.0 come parte di Windows 8 SDK. Questi assembly permettono di scrivere cmdlet, provider e programmi host per Windows PowerShell 3.0. Quando si installa Windows SDK per Windows 8, gli assembly di Windows PowerShell vengono automaticamente installati nella cartella degli assembly di riferimento, in `\Program Files
-(x86)\Reference Assemblies\Microsoft\WindowsPowerShell\3.0`. Per ulteriori informazioni, vedere il sito di download di Windows 8 SDK. Gli esempi di codice di Windows PowerShell sono disponibili anche nel centro di sviluppo di [Windows powershell 3,0 SDK Sample Pack](https://code.msdn.microsoft.com/Windows-PowerShell-30-SDK-9a34641d).
+(x86)\Reference Assemblies\Microsoft\WindowsPowerShell\3.0`. Per ulteriori informazioni, vedere il sito di download di Windows 8 SDK. Gli esempi di codice di Windows PowerShell sono disponibili anche nel repository [PowerShell-SDK-samples](https://github.com/MicrosoftDocs/powershell-sdk-samples/tree/master/SDK-3.0) .
 
 ## <a name="installing-windows-powershell-30-sdk-for-windows-7-and-windows-server-2008-r2"></a>Installazione di Windows PowerShell 3.0 SDK in Windows 7 e Windows Server 2008 R2
 
@@ -34,9 +34,7 @@ Gli assembly di riferimento sono installati per impostazione predefinita nel per
 Assemblies\Microsoft\WindowsPowerShell\V1.0`.
 
 > [!NOTE]
->
 > Il codice compilato per gli assembly di Windows PowerShell 2.0 non può essere caricato nelle installazioni di Windows PowerShell 1.0. Al contrario, il codice compilato per gli assembly di Windows PowerShell 1.0 può essere caricato nelle installazioni di Windows PowerShell 2.0.
-
 
 ### <a name="samples"></a>Esempi
 
@@ -73,7 +71,7 @@ SDKs\Windows\v7.0\Samples\sysmgmt\WindowsPowerShell\`. La sezione seguente ripor
 #### <a name="hosting-application-samples"></a>Esempi di applicazioni di hosting
 
 - Runspace01: Mostra come usare la classe PowerShell per eseguire il cmdlet `Get-Process` in modo sincrono.
-Il cmdlet `Get-Process` restituisce gli oggetti processo per ogni processo in esecuzione nel computer locale.
+  Il cmdlet `Get-Process` restituisce gli oggetti processo per ogni processo in esecuzione nel computer locale.
 - Runspace02: Mostra come usare la classe PowerShell per eseguire i cmdlet di `Get-Process` e `Sort-Object` in modo sincrono. Il cmdlet `Get-Process` restituisce gli oggetti processo per ogni processo in esecuzione nel computer locale e l'`Sort-Object` Ordina gli oggetti in base alla relativa proprietà ID. I risultati di questi comandi vengono visualizzati usando un controllo DataGridView.
 - Runspace03: Mostra come usare la classe PowerShell per eseguire uno script in modo sincrono e come gestire errori non fatali. Lo script riceve un elenco di nomi di processo e quindi recupera tali processi. I risultati dello script, compresi gli errori non fatali che si sono generati durante l'esecuzione dello script, vengono visualizzati in una finestra della console.
 - Runspace04: Mostra come usare la classe PowerShell per eseguire i comandi e come intercettare gli errori fatali generati quando si eseguono i comandi. Vengono eseguiti due comandi e all'ultimo viene passato un argomento di parametro non valido. Di conseguenza, non viene restituito alcun oggetto e viene generato un errore non fatale.
@@ -89,7 +87,7 @@ Il cmdlet `Get-Process` restituisce gli oggetti processo per ogni processo in es
 
 #### <a name="host-samples"></a>Esempi di host
 
-- Host01: Mostra come implementare un'applicazione host che usa un host personalizzato. In questo esempio viene creato un spazio che usa l'host personalizzato e quindi viene usata l'API di PowerShell per eseguire uno script che chiama "Exit". L'applicazione host esamina l'output dello script e stampa i risultati.
+- Host01: Mostra come implementare un'applicazione host che usa un host personalizzato. In questo esempio viene creato un spazio che usa l'host personalizzato e quindi viene usata l'API di PowerShell per eseguire uno script che chiama `exit`. L'applicazione host esamina l'output dello script e stampa i risultati.
 - Host02: Mostra come scrivere un'applicazione host che usa il runtime di Windows PowerShell insieme a un'implementazione host personalizzata. L'applicazione host imposta le impostazioni cultura dell'host su tedesco, esegue il cmdlet `Get-Process` e Visualizza i risultati così come verrebbero visualizzati usando pwrsh. exe e quindi stampa i dati e l'ora correnti in tedesco.
 - Host03: Mostra come creare un'applicazione host basata su console interattiva che legge i comandi dalla riga di comando, esegue i comandi e quindi Visualizza i risultati nella console.
 - Host04: Mostra come creare un'applicazione host basata su console interattiva che legge i comandi dalla riga di comando, esegue i comandi e quindi Visualizza i risultati nella console. L'applicazione host supporta anche la visualizzazione di messaggi di richiesta che consentono all'utente di specificare più opzioni.
