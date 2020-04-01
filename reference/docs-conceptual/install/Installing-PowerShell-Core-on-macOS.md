@@ -2,12 +2,12 @@
 title: Installazione di PowerShell in macOS
 description: Informazioni sull'installazione di PowerShell in macOS
 ms.date: 12/12/2018
-ms.openlocfilehash: 2233bc01ee8c53087f79d83ca936c5a3800cfdba
-ms.sourcegitcommit: d36db3a1bc44aee6bc97422b557041c3aece4c67
+ms.openlocfilehash: 3a5e71d0f69d0c39f9b7f3fa667863d7ec0a31dd
+ms.sourcegitcommit: bf71c8c5e2a4fc7d5c3a67a537db1285089d03a7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80082764"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80395003"
 ---
 # <a name="installing-powershell-on-macos"></a>Installazione di PowerShell in macOS
 
@@ -90,13 +90,13 @@ brew cask upgrade powershell-preview
 
 ## <a name="installation-via-direct-download"></a>Installazione tramite download diretto
 
-Scaricare il pacchetto PKG `powershell-6.2.0-osx-x64.pkg`
+Scaricare il pacchetto PKG `powershell-lts-7.0.0-osx-x64.pkg`
 dalla pagina delle [versioni][] nel computer macOS.
 
 È possibile fare doppio clic sul file e seguire le istruzioni oppure eseguire l'installazione dal terminale:
 
 ```sh
-sudo installer -pkg powershell-6.2.0-osx-x64.pkg -target /
+sudo installer -pkg powershell-lts-7.0.0-osx-x64.pkg -target /
 ```
 
 Installare [OpenSSL](#install-openssl). OpenSSL è necessario per la comunicazione remota di PowerShell e le operazioni CIM.
@@ -119,19 +119,19 @@ Gli archivi `tar.gz` di file binari di PowerShell possono essere usati per la pi
 
 ```sh
 # Download the powershell '.tar.gz' archive
-curl -L -o /tmp/powershell.tar.gz https://github.com/PowerShell/PowerShell/releases/download/v6.2.0/powershell-6.2.0-osx-x64.tar.gz
+curl -L -o /tmp/powershell.tar.gz https://github.com/PowerShell/PowerShell/releases/download/v7.0.0/powershell-7.0.0-osx-x64.tar.gz
 
 # Create the target folder where powershell will be placed
-sudo mkdir -p /usr/local/microsoft/powershell/6.2.0
+sudo mkdir -p /usr/local/microsoft/powershell/7.0.0
 
 # Expand powershell to the target folder
-sudo tar zxf /tmp/powershell.tar.gz -C /usr/local/microsoft/powershell/6.2.0
+sudo tar zxf /tmp/powershell.tar.gz -C /usr/local/microsoft/powershell/7.0.0
 
 # Set execute permissions
-sudo chmod +x /usr/local/microsoft/powershell/6.2.0/pwsh
+sudo chmod +x /usr/local/microsoft/powershell/7.0.0/pwsh
 
 # Create the symbolic link that points to pwsh
-sudo ln -s /usr/local/microsoft/powershell/6.2.0/pwsh /usr/local/bin/pwsh
+sudo ln -s /usr/local/microsoft/powershell/7.0.0/pwsh /usr/local/bin/pwsh
 ```
 
 Installare [OpenSSL](#install-openssl). OpenSSL è necessario per la comunicazione remota di PowerShell e le operazioni CIM.
@@ -190,7 +190,7 @@ Per rimuovere i percorsi aggiuntivi di PowerShell, vedere la sezione [Percorsi](
 
 ## <a name="paths"></a>Percorsi
 
-* `$PSHOME` è `/usr/local/microsoft/powershell/6.2.0/`
+* `$PSHOME` è `/usr/local/microsoft/powershell/7.0.0/`
 * I profili utente vengono letti da `~/.config/powershell/profile.ps1`
 * I profili predefiniti vengono letti da `$PSHOME/profile.ps1`
 * I moduli utente vengono letti da `~/.local/share/powershell/Modules`
@@ -204,7 +204,7 @@ Di conseguenza, il profilo specifico dell'host predefinito è presente in `Micro
 PowerShell rispetta la [specifica della directory Base XDG][xdg-bds] in macOS.
 
 Poiché macOS è una derivazione di BSD, viene usato il prefisso `/usr/local` invece di `/opt`.
-Di conseguenza, `$PSHOME` è `/usr/local/microsoft/powershell/6.2.0/` e il collegamento simbolico viene posizionato in `/usr/local/bin/pwsh`.
+Di conseguenza, `$PSHOME` è `/usr/local/microsoft/powershell/7.0.0/` e il collegamento simbolico viene posizionato in `/usr/local/bin/pwsh`.
 
 ## <a name="additional-resources"></a>Risorse aggiuntive
 

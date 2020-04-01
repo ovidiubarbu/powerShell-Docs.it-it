@@ -2,12 +2,12 @@
 ms.date: 12/12/2018
 keywords: dsc,powershell,configurazione,installazione
 title: Configurare un client di pull usando ID configurazione in PowerShell 5.0 e versioni successive
-ms.openlocfilehash: bd173a1079b916c450a0292dca7a595a9bcff985
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: a014e04fc5fbf2e813d9b0d79f39fe5aa3836f86
+ms.sourcegitcommit: 30ccbbb32915b551c4cd4c91ef1df96b5b7514c4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74417242"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80500744"
 ---
 # <a name="set-up-a-pull-client-using-configuration-ids-in-powershell-50-and-later"></a>Configurare un client di pull usando ID configurazione in PowerShell 5.0 e versioni successive
 
@@ -46,7 +46,7 @@ Gli esempi che seguono impostano la proprietà **ConfigurationID** di Gestione c
 [System.Guid]::NewGuid()
 ```
 
-Per altre informazioni sull'uso di **GUID** nell'ambiente in uso, vedere [Pianificare per i GUID](/powershell/scripting/dsc/secureserver#guids).
+Per altre informazioni sull'uso di **GUID** nell'ambiente in uso, vedere [Pianificare per i GUID](secureserver.md#guids).
 
 ## <a name="set-up-a-pull-client-to-download-configurations"></a>Configurare un client di pull per scaricare configurazioni
 
@@ -244,8 +244,7 @@ configuration PullClientConfigID
 PullClientConfigID
 ```
 
-Per specificare un server di report, usare un blocco **ReportRepositoryWeb**. Un server di report non può essere un server SMB.
-La metaconfigurazione seguente configura un client di pull in modo da ottenere le configurazioni da **CONTOSO-PullSrv** e le risorse da **CONTOSO-ResourceSrv** e inviare i report sullo stato a **CONTOSO-ReportSrv**:
+Per specificare un server di report, usare un blocco **ReportRepositoryWeb**. Un server di report non può essere un server SMB. La metaconfigurazione seguente configura un client di pull in modo da ottenere le configurazioni da **CONTOSO-PullSrv** e le risorse da **CONTOSO-ResourceSrv** e inviare i report sullo stato a **CONTOSO-ReportSrv**:
 
 ```powershell
 [DSCLocalConfigurationManager()]

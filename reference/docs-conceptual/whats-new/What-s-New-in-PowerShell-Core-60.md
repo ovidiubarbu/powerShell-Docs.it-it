@@ -2,12 +2,12 @@
 title: Novità di PowerShell Core 6.0
 description: Nuove funzionalità e modifiche rilasciate in PowerShell Core 6.0
 ms.date: 08/06/2018
-ms.openlocfilehash: d1bc1ef2676da60062b8bdd57042331f0f245bec
-ms.sourcegitcommit: bc9a4904c2b1561386d748fc9ac242699d2f1694
+ms.openlocfilehash: 39bcb343c44c32d183c8bb90306a8f4a57397eb6
+ms.sourcegitcommit: 30ccbbb32915b551c4cd4c91ef1df96b5b7514c4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/04/2020
-ms.locfileid: "76995486"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80500479"
 ---
 # <a name="whats-new-in-powershell-core-60"></a>Novità di PowerShell Core 6.0
 
@@ -231,7 +231,7 @@ Il posizionamento di `&` alla fine di una pipeline causa l'esecuzione della pipe
 - Supporto della paginazione delle intestazioni di collegamento nei cmdlet Web (#3828)
   - Per `Invoke-WebRequest`, quando la risposta include un'intestazione di collegamento, viene creata una proprietà RelationLink come dizionario che rappresenta gli URL e gli attributi `rel` e si verifica che gli URL siano assoluti per semplificarne l'uso da parte dello sviluppatore.
   - Per `Invoke-RestMethod`, quando la risposta include un'intestazione di collegamento, si espone un'opzione `-FollowRelLink` per seguire automaticamente i collegamenti `next` `rel` finché non esistono più o si raggiunge il valore del parametro facoltativo `-MaximumFollowRelLink`.
-- Aggiunta del parametro `-CustomMethod` ai cmdlet Web per consentire i verbi di metodo non standard. (#3142) (grazie a [@Lee303](https://github.com/Lee303))
+- Aggiunta del parametro `-CustomMethod` ai cmdlet Web per consentire i verbi di metodo non standard. (#3142) (grazie a @Lee303)
 - Aggiunta del supporto `SslProtocol` ai cmdlet Web. (#5329) (grazie [@markekraus](https://github.com/markekraus))
 - Aggiunta del supporto multiparte ai cmdlet Web. (#4782) (grazie [@markekraus](https://github.com/markekraus))
 - Aggiunta di `-NoProxy` ai cmdlet Web in modo che ignorino l'impostazione del proxy a livello di sistema. (#3447) (grazie a [@TheFlyingCorpse](https://github.com/TheFlyingCorpse))
@@ -248,7 +248,7 @@ Il posizionamento di `&` alla fine di una pipeline causa l'esecuzione della pipe
 - Modifica dei cmdlet Web `UserAgent` da `WindowsPowerShell` a `PowerShell`. (#4914) (grazie [@markekraus](https://github.com/markekraus))
 - Aggiunto il rilevamento esplicito di `ContentType` a `Invoke-RestMethod` (4692 #)
 - Correzione dei cmdlet Web `-SkipHeaderValidation` in modo che funzionino con le intestazioni agente utente non standard. (#4479 e
-  #<a name="4512-thanks-markekraushttpsgithubcommarkekraus"></a>4512) (grazie [@markekraus](https://github.com/markekraus))
+  #<a name="4512-thanks-markekraus"></a>4512) (grazie [@markekraus](https://github.com/markekraus))
 
 ### <a name="json-cmdlets"></a>Cmdlet JSON
 

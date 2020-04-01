@@ -2,12 +2,12 @@
 ms.date: 07/10/2019
 keywords: jea,powershell,sicurezza
 title: Uso di JEA
-ms.openlocfilehash: 912e7a3c46be40ff5b5dfa37fe92b67bab5f98dc
-ms.sourcegitcommit: bc9a4904c2b1561386d748fc9ac242699d2f1694
+ms.openlocfilehash: 1c424eb4a476dd0db3cc69c0e6f14c89a3c523ba
+ms.sourcegitcommit: 30ccbbb32915b551c4cd4c91ef1df96b5b7514c4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/04/2020
-ms.locfileid: "76995432"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80500509"
 ---
 # <a name="using-jea"></a>Uso di JEA
 
@@ -91,8 +91,8 @@ $filteredCommands = $commands.Name | Where-Object { $jeaDefaultCmdlets -notconta
 Import-PSSession -Session $jeasession -Prefix 'JEA' -CommandName $filteredCommands
 ```
 
-È anche possibile salvare i cmdlet proxy da una comunicazione remota implicita tramite [Export-PSSession](/powershell/microsoft.powershell.utility/Export-PSSession).
-Per altre informazioni sulla comunicazione remota implicita, vedere la documentazione relativa a [Import-PSSession](/powershell/microsoft.powershell.utility/import-pssession) e [Import-Module](/powershell/microsoft.powershell.core/import-module).
+È anche possibile salvare i cmdlet proxy da una comunicazione remota implicita tramite [Export-PSSession](/powershell/module/microsoft.powershell.utility/Export-PSSession).
+Per altre informazioni sulla comunicazione remota implicita, vedere la documentazione relativa a [Import-PSSession](/powershell/module/microsoft.powershell.utility/import-pssession) e [Import-Module](/powershell/module/microsoft.powershell.core/import-module).
 
 ## <a name="using-jea-programmatically"></a>Uso di JEA a livello di codice
 

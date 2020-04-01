@@ -3,12 +3,12 @@ ms.date: 06/12/2017
 contributor: JKeithB
 keywords: raccolta,powershell,cmdlet,psgallery, psget
 title: PowerShell Gallery
-ms.openlocfilehash: d3e3b9d8bb3d6cefd3a3bfe79b012bb1dc1d8a2d
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: e489d2dd4db087b53eb07d2a8793c8f586c9b210
+ms.sourcegitcommit: 30ccbbb32915b551c4cd4c91ef1df96b5b7514c4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "71327862"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80500570"
 ---
 # <a name="the-powershell-gallery"></a>PowerShell Gallery
 
@@ -21,31 +21,20 @@ Il modulo PowerShellGet contiene i cmdlet per l'individuazione, l'installazione,
 
 ## <a name="getting-started-with-the-gallery"></a>Introduzione a PowerShell Gallery
 
-L'installazione di pacchetti da PowerShell Gallery richiede la versione più recente del modulo PowerShellGet.
-Per istruzioni complete, vedere [Installazione di PowerShellGet](installing-psget.md).
+L'installazione di pacchetti da PowerShell Gallery richiede la versione più recente del modulo PowerShellGet. Per istruzioni complete, vedere [Installazione di PowerShellGet](installing-psget.md).
 
 Per altre informazioni su come usare i comandi PowerShellGet con PowerShell Gallery, consultare la pagina [Introduzione](getting-started.md). È inoltre possibile eseguire *Update-Help -Module PowerShellGet* per installare la Guida locale per tali comandi.
 
 ## <a name="supported-operating-systems"></a>Sistemi operativi supportati
 
-Il modulo **PowerShellGet** richiede **Windows PowerShell 3.0 o versione successiva** o **PowerShell Core 6.0 o versione successiva**.
-
-È disponibile una versione appropriata di **Windows PowerShell** per questi sistemi operativi:
-
-- Windows 10
-- Windows 8.1 Pro
-- Windows 8.1 Enterprise
-- Windows 7 SP1
-- Windows Server 2019
-- Windows Server 2016
-- Windows Server 2012 R2
-- Windows Server 2008 R2 SP1
+Il modulo **PowerShellGet** richiede **PowerShell 3.0 o versione successiva**.
 
 **PowerShellGet** richiede .NET Framework 4.5 o versione successiva. È possibile installare .NET Framework 4.5 o versione successiva da [qui](https://msdn.microsoft.com/library/5a4x27ek.aspx).
 
-Poiché **PowerShell Core** è multipiattaforma e questo significa che funziona in Windows, Linux e MacOS, anche **PowerShellGet** è disponibile in tali sistemi. Per un elenco completo dei sistemi supportati da **PowerShell Core** vedere [Installazione di varie versioni di PowerShell](/powershell/scripting/setup/installing-powershell).
+Poiché **PowerShell Core** è multipiattaforma e questo significa che funziona in Windows, Linux e MacOS, anche **PowerShellGet** è disponibile in tali sistemi. Per un elenco completo dei sistemi supportati da **PowerShell Core** vedere [Installazione di varie versioni di PowerShell](/powershell/scripting/install/installing-powershell).
 
-Molti moduli ospitati nella raccolta supporteranno sistemi operativi diversi e hanno requisiti aggiuntivi. Per altre informazioni, vedere la documentazione per i moduli.
+Molti moduli ospitati nella raccolta supporteranno sistemi operativi diversi e hanno requisiti aggiuntivi.
+Per altre informazioni, vedere la documentazione per i moduli.
 
 ## <a name="got-a-question-have-feedback"></a>Domande? Commenti e suggerimenti?
 

@@ -3,12 +3,12 @@ title: Creazione di un provider di navigazione di Windows PowerShell
 ms.date: 09/13/2016
 ms.topic: article
 ms.assetid: 8bd3224d-ca6f-4640-9464-cb4d9f4e13b1
-ms.openlocfilehash: 96a9167019c047bb9c6e56362b2c1110ece553dd
-ms.sourcegitcommit: d97b200e7a49315ce6608cd619e3e2fd99193edd
+ms.openlocfilehash: 7ca7e3ca6feeba018ad793d074caf67cd9506a68
+ms.sourcegitcommit: 30ccbbb32915b551c4cd4c91ef1df96b5b7514c4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75870694"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80500811"
 ---
 # <a name="creating-a-windows-powershell-navigation-provider"></a>Creazione di un provider di navigazione di Windows PowerShell
 
@@ -27,8 +27,7 @@ Il provider descritto di seguito consente all'utente di gestire un database di A
 
 Un provider di navigazione di Windows PowerShell deve creare una classe .NET che deriva dalla classe di base [System. Management. Automation. provider. Navigationcmdletprovider](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider) . Di seguito è riportata la definizione della classe per il provider di navigazione descritto in questa sezione.
 
-[!code-csharp[AccessDBProviderSample05.cs](../../../../powershell-sdk-samples/SDK-2.0/csharp/AccessDBProviderSample05/AccessDBProviderSample05.cs#L31-L32
-"AccessDBProviderSample05.cs")]
+[!code-csharp[AccessDBProviderSample05.cs](~/powershell-sdk-samples/SDK-2.0/csharp/AccessDBProviderSample05/AccessDBProviderSample05.cs#L31-L32 "AccessDBProviderSample05.cs")]
 
 Si noti che in questo provider l'attributo [System. Management. Automation. provider. CmdletProviderAttribute](/dotnet/api/System.Management.Automation.Provider.CmdletProviderAttribute) include due parametri. Il primo parametro specifica un nome descrittivo per il provider utilizzato da Windows PowerShell. Il secondo parametro specifica le funzionalità specifiche di Windows PowerShell che il provider espone al runtime di Windows PowerShell durante l'elaborazione del comando. Per questo provider non sono state aggiunte funzionalità specifiche di Windows PowerShell.
 
@@ -97,7 +96,7 @@ Il provider di navigazione può implementare il metodo [System. Management. Auto
 
 Il codice seguente illustra l'implementazione di [System. Management. Automation. provider. Navigationcmdletprovider. IsItemContainer *](/dotnet/api/System.Management.Automation.Provider.NavigationCmdletProvider.IsItemContainer) nel provider di navigazione di esempio. Il metodo verifica che il percorso specificato sia corretto e se la tabella esiste e restituisce true se il percorso indica un contenitore.
 
-[!code-csharp[AccessDBProviderSample05.cs](../../../../powershell-sdk-samples/SDK-2.0/csharp/AccessDBProviderSample05/AccessDBProviderSample05.cs#L847-L872 "AccessDBProviderSample05.cs")]
+[!code-csharp[AccessDBProviderSample05.cs](~/powershell-sdk-samples/SDK-2.0/csharp/AccessDBProviderSample05/AccessDBProviderSample05.cs#L847-L872 "AccessDBProviderSample05.cs")]
 
 #### <a name="things-to-remember-about-implementing-isitemcontainer"></a>Aspetti da ricordare sull'implementazione di IsItemContainer
 

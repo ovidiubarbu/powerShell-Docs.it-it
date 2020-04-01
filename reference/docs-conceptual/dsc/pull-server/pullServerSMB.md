@@ -2,12 +2,12 @@
 ms.date: 04/11/2018
 keywords: dsc,powershell,configurazione,installazione
 title: Configurazione di un server di pull SMB DSC
-ms.openlocfilehash: 25705d9ae06b3ce8daa352142cc0b84793ab6359
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: be41f7a708f1a129919fae8300fc4307441097f7
+ms.sourcegitcommit: 30ccbbb32915b551c4cd4c91ef1df96b5b7514c4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "71953588"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80500694"
 ---
 # <a name="setting-up-a-dsc-smb-pull-server"></a>Configurazione di un server di pull SMB DSC
 
@@ -32,7 +32,7 @@ Esistono diversi modi per configurare una condivisione file SMB, ma ecco come è
 Chiamare il cmdlet [Install-Module](/powershell/module/PowershellGet/Install-Module) per installare il modulo **xSmbShare**.
 
 > [!NOTE]
-> Il cmdlet `Install-Module` è incluso nel modulo **PowerShellGet**, disponibile in PowerShell 5.0. È possibile scaricare il modulo **PowerShellGet** per PowerShell 3.0 e 4.0 dalla pagina dell'[anteprima dei moduli PackageManagement di PowerShell](https://www.microsoft.com/en-us/download/details.aspx?id=49186).
+> Il cmdlet `Install-Module` è incluso nel modulo **PowerShellGet**, disponibile in PowerShell 5.0.
 > **xSmbShare** contiene la risorsa DSC **xSmbShare**, che può essere usata per creare una condivisione file SMB.
 
 ### <a name="create-the-directory-and-file-share"></a>Creare la directory e la condivisione file
@@ -76,7 +76,8 @@ La configurazione crea la directory `C:\DscSmbShare`, se non esiste già, e quin
 
 ### <a name="give-file-system-access-to-the-pull-client"></a>Consentire l'accesso al file system al client di pull
 
-L'assegnazione di **ReadAccess** a un nodo client consente a tale nodo di accedere alla condivisione SMB, ma non a file o cartelle al suo interno. È quindi necessario concedere in modo esplicito ai nodi client l'accesso alla cartella e alle sottocartelle della condivisione SMB. DSC consente tale operazione usando la risorsa **cNtfsPermissionEntry**, contenuta nel modulo [CNtfsAccessControl](https://www.powershellgallery.com/packages/cNtfsAccessControl/1.2.0). La configurazione seguente aggiunge un blocco **cNtfsPermissionEntry** che concede l'accesso ReadAndExecute al client di pull:
+L'assegnazione di **ReadAccess** a un nodo client consente a tale nodo di accedere alla condivisione SMB, ma non a file o cartelle al suo interno. È quindi necessario concedere in modo esplicito ai nodi client l'accesso alla cartella e alle sottocartelle della condivisione SMB. DSC consente tale operazione usando la risorsa **cNtfsPermissionEntry**, contenuta nel modulo [CNtfsAccessControl](https://www.powershellgallery.com/packages/cNtfsAccessControl/1.2.0).
+La configurazione seguente aggiunge un blocco **cNtfsPermissionEntry** che concede l'accesso ReadAndExecute al client di pull:
 
 ```powershell
 Configuration DSCSMB
@@ -135,7 +136,8 @@ Qualsiasi file MOF di configurazione deve essere denominato *ConfigurationID.mof
 > [!NOTE]
 > Se si usa un server di pull SMB, è necessario usare gli ID di configurazione. I nomi di configurazione non sono supportati per SMB.
 
-Ogni modulo di risorse deve essere compresso e denominato in base alla convenzione seguente `{Module Name}_{Module Version}.zip`. Ad esempio, un modulo denominato xWebAdminstration con versione 3.1.2.0 verrebbe denominato 'xWebAdministration_3.2.1.0.zip'. Ogni versione di un modulo deve essere contenuta in un unico file ZIP. Non sono supportate versioni distinte di un modulo in un file ZIP. Prima di creare un pacchetto per i moduli delle risorse DSC da usare con il server di pull è necessario apportare una piccola modifica alla struttura di directory.
+Ogni modulo di risorse deve essere compresso e denominato in base alla convenzione seguente `{Module Name}_{Module Version}.zip`. Ad esempio, un modulo denominato xWebAdminstration con versione 3.1.2.0 verrebbe denominato 'xWebAdministration_3.2.1.0.zip'. Ogni versione di un modulo deve essere contenuta in un unico file ZIP. Non sono supportate versioni distinte di un modulo in un file ZIP.
+Prima di creare un pacchetto per i moduli delle risorse DSC da usare con il server di pull è necessario apportare una piccola modifica alla struttura di directory.
 
 Il formato predefinito dei moduli contenenti risorse DSC in WMF 5.0 è `{Module Folder}\{Module Version}\DscResources\{DSC Resource Folder}\`.
 
@@ -143,9 +145,7 @@ Prima creare il pacchetto per il server di pull, rimuovere semplicemente la cart
 
 ## <a name="creating-the-mof-checksum"></a>Creazione del checksum per il file MOF
 
-Un file MOF di configurazione deve essere associato a un file di checksum in modo che Gestione configurazione locale in un nodo di destinazione possa convalidare la configurazione.
-Per creare un checksum, chiamare il cmdlet [New-DSCCheckSum](/powershell/module/PSDesiredStateConfiguration/New-DSCCheckSum). Il cmdlet accetta un parametro `Path` che specifica la cartella in cui si trova il file MOF di configurazione. Il cmdlet crea un file di checksum denominato `ConfigurationMOFName.mof.checksum`, in cui `ConfigurationMOFName` è il nome del file MOF di configurazione.
-Se nella cartella specificata sono presenti più file MOF di configurazione, viene creato un checksum per ogni configurazione nella cartella.
+Un file MOF di configurazione deve essere associato a un file di checksum in modo che Gestione configurazione locale in un nodo di destinazione possa convalidare la configurazione. Per creare un checksum, chiamare il cmdlet [New-DSCCheckSum](/powershell/module/PSDesiredStateConfiguration/New-DSCCheckSum). Il cmdlet accetta un parametro `Path` che specifica la cartella in cui si trova il file MOF di configurazione. Il cmdlet crea un file di checksum denominato `ConfigurationMOFName.mof.checksum`, in cui `ConfigurationMOFName` è il nome del file MOF di configurazione. Se nella cartella specificata sono presenti più file MOF di configurazione, viene creato un checksum per ogni configurazione nella cartella.
 
 Il file di checksum deve essere presente nella stessa directory del file MOF di configurazione (`$env:PROGRAMFILES\WindowsPowerShell\DscService\Configuration` per impostazione predefinita) e avere lo stesso nome, con estensione `.checksum`.
 
@@ -159,9 +159,7 @@ Per impostare un client che esegue il pull di configurazioni e/o di risorse da u
 Per altre informazioni sulla configurazione di Gestione configurazione locale, vedere [Configurazione di un client di pull usando un ID configurazione](pullClientConfigID.md).
 
 > [!NOTE]
-> Per semplicità, questo esempio usa **PSDscAllowPlainTextPassword** per consentire il passaggio di una password non crittografata al parametro **Credential**. Per informazioni sul passaggio di credenziali in modo più sicuro, vedere [Opzioni delle credenziali nei dati di configurazione](../configurations/configDataCredentials.md).
->
-> È **necessario** specificare **ConfigurationID** nel blocco **Impostazioni** di una metaconfigurazione per un server di pull SMB, anche se si esegue solo il pull di risorse.
+> Per semplicità, questo esempio usa **PSDscAllowPlainTextPassword** per consentire il passaggio di una password non crittografata al parametro **Credential**. Per informazioni sul passaggio di credenziali in modo più sicuro, vedere [Opzioni delle credenziali nei dati di configurazione](../configurations/configDataCredentials.md). È **necessario** specificare **ConfigurationID** nel blocco **Impostazioni** di una metaconfigurazione per un server di pull SMB, anche se si esegue solo il pull di risorse.
 
 ```powershell
 $secpasswd = ConvertTo-SecureString "Pass1Word" -AsPlainText -Force
@@ -214,7 +212,7 @@ Un ringraziamento speciale per:
 
 ## <a name="see-also"></a>Vedere anche
 
-[Panoramica di Windows PowerShell DSC (Desired State Configuration)](../overview/overview.md).
+[Panoramica di PowerShell DSC](../overview/overview.md)
 
 [Applicazione delle configurazioni](enactingConfigurations.md)
 

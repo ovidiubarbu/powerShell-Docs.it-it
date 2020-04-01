@@ -2,12 +2,12 @@
 ms.date: 06/12/2017
 keywords: dsc,powershell,configurazione,installazione
 title: Configurazioni parziali di PowerShell DSC (Desired State Configuration)
-ms.openlocfilehash: 379ecf804329f318e9604c1af43a60a0e24551f1
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 842acad221d468ca5e4c9e660f0205c567bcc220
+ms.sourcegitcommit: 30ccbbb32915b551c4cd4c91ef1df96b5b7514c4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74417753"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80500762"
 ---
 # <a name="powershell-desired-state-configuration-partial-configurations"></a>Configurazioni parziali di PowerShell DSC (Desired State Configuration)
 
@@ -23,7 +23,7 @@ Per usare le configurazioni parziali in modalità push, è necessario configurar
 
 ### <a name="configuring-the-lcm-for-push-mode-partial-configurations"></a>Configurazione di Gestione configurazione locale per le configurazioni parziali in modalità push
 
-Per configurare Gestione configurazione locale per le configurazioni parziali in modalità push, è necessario creare una configurazione **DSCLocalConfigurationManager** con un blocco **PartialConfiguration** per ogni configurazione parziale. Per altre informazioni sulla configurazione di Gestione configurazione locale, vedere [Configurazione di Gestione configurazione locale](/powershell/scripting/dsc/metaConfig). L'esempio seguente illustra una configurazione di Gestione configurazione locale che prevede due configurazioni parziali, una che distribuisce il sistema operativo e una che distribuisce e configura SharePoint.
+Per configurare Gestione configurazione locale per le configurazioni parziali in modalità push, è necessario creare una configurazione **DSCLocalConfigurationManager** con un blocco **PartialConfiguration** per ogni configurazione parziale. Per altre informazioni sulla configurazione di Gestione configurazione locale, vedere [Configurazione di Gestione configurazione locale](../managing-nodes/metaConfig.md). L'esempio seguente illustra una configurazione di Gestione configurazione locale che prevede due configurazioni parziali, una che distribuisce il sistema operativo e una che distribuisce e configura SharePoint.
 
 ```powershell
 [DSCLocalConfigurationManager()]

@@ -2,22 +2,18 @@
 ms.date: 06/12/2017
 keywords: dsc,powershell,configurazione,installazione
 title: Uso dello strumento di progettazione risorse
-ms.openlocfilehash: 4f678f4586c75c830bf876b891fe4784aa3b4e95
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 36eed0fc888380a03a3279e834748708f578d973
+ms.sourcegitcommit: 30ccbbb32915b551c4cd4c91ef1df96b5b7514c4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "71952858"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80500638"
 ---
 # <a name="using-the-resource-designer-tool"></a>Uso dello strumento di progettazione risorse
 
 > Si applica a: Windows PowerShell 4.0, Windows PowerShell 5.0
 
-Lo strumento di progettazione risorse è un set di cmdlet esposti dal modulo **xDscResourceDesigner** che semplifica la creazione di risorse Windows PowerShell DSC (Desired State Configuration). I cmdlet in questa risorsa offrono supporto per creare lo schema MOF, il modulo di script e la struttura di directory per la nuova risorsa. Per altre informazioni sulle risorse DSC, vedere [Creare risorse Windows PowerShell DSC (Desired State Configuration) personalizzate](authoringResource.md).
-In questo argomento verrà creata una risorsa DSC che gestisce gli utenti di Active Directory.
-Usare il cmdlet [Install-Module](/powershell/module/PowershellGet/Install-Module) per installare il modulo **xDscResourceDesigner**.
-
->**Nota**: Il cmdlet **Install-Module** è incluso nel modulo **PowerShellGet**, disponibile in PowerShell 5.0. È possibile scaricare il modulo **PowerShellGet** per PowerShell 3.0 e 4.0 dalla pagina dell'[anteprima dei moduli PackageManagement di PowerShell](https://www.microsoft.com/en-us/download/details.aspx?id=49186).
+Lo strumento di progettazione risorse è un set di cmdlet esposti dal modulo **xDscResourceDesigner** che semplifica la creazione di risorse Windows PowerShell DSC (Desired State Configuration). I cmdlet in questa risorsa offrono supporto per creare lo schema MOF, il modulo di script e la struttura di directory per la nuova risorsa. Per altre informazioni sulle risorse DSC, vedere [Creare risorse Windows PowerShell DSC (Desired State Configuration) personalizzate](authoringResource.md). In questo argomento verrà creata una risorsa DSC che gestisce gli utenti di Active Directory. Usare il cmdlet [Install-Module](/powershell/module/PowershellGet/Install-Module) per installare il modulo **xDscResourceDesigner**.
 
 ## <a name="creating-resource-properties"></a>Creazione delle proprietà della risorsa
 La prima cosa da fare è stabilire le proprietà che la risorsa dovrà esporre. In questo esempio verrà definito un utente di Active Directory con le proprietà seguenti.
@@ -37,7 +33,7 @@ $DomainCredential = New-xDscResourceProperty –Name DomainCredential -Type PSCr
 $Password = New-xDscResourceProperty –Name Password -Type PSCredential -Attribute Write
 ```
 
-## <a name="create-the-resource"></a>Creazione della risorsa
+## <a name="create-the-resource"></a>Creare la risorsa
 
 Dopo aver creato le proprietà della risorsa, è possibile chiamare il cmdlet **New-xDscResource** per creare la risorsa. Il cmdlet **New-xDscResource** accetta l'elenco di proprietà come parametri. Accetta anche il percorso in cui deve essere creato il modulo, il nome della nuova risorsa e il nome del modulo in cui è contenuta. Il comando di PowerShell seguente consente di creare la risorsa.
 
@@ -60,7 +56,8 @@ class Demo_ADUser : OMI_BaseResource
 };
 ```
 
-Lo script di risorsa si trova in **C:\Programmi\WindowsPowerShell\Modules\Demo_DSCModule\DSCResources\Demo_ADUser\Demo_ADUser.psm1**. Non include la logica effettiva per implementare la risorsa, che è necessario aggiungere manualmente. Il contenuto dello script di base è il seguente.
+Lo script di risorsa si trova in **C:\Programmi\WindowsPowerShell\Modules\Demo_DSCModule\DSCResources\Demo_ADUser\Demo_ADUser.psm1**.
+Non include la logica effettiva per implementare la risorsa, che è necessario aggiungere manualmente. Il contenuto dello script di base è il seguente.
 
 ```powershell
 function Get-TargetResource

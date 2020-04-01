@@ -2,16 +2,16 @@
 ms.date: 07/09/2019
 keywords: dsc,gpo,powershell,configurazione
 title: Avvio rapido - Convertire i criteri di gruppo in DSC
-ms.openlocfilehash: 8c89dbbce5b2b146194b799d7e36ecce3105bfeb
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 5e6b86be5127332fe4fd400980c8e147b735247b
+ms.sourcegitcommit: 30ccbbb32915b551c4cd4c91ef1df96b5b7514c4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "71953468"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80500647"
 ---
 > Si applica a: Windows PowerShell 4.0, Windows PowerShell 5.0
 
-# <a name="quickstart-convert-group-policy-into-dsc"></a>Avvio rapido: Convertire i criteri di gruppo in DSC
+# <a name="quickstart-convert-group-policy-into-dsc"></a>Guida introduttiva: Convertire i criteri di gruppo in DSC
 
 È possibile generare una configurazione DSC da una baseline dei criteri di gruppo o del Centro sicurezza di Azure. Il modulo [BaselineManagement](https://www.powershellgallery.com/packages/BaselineManagement) include i comandi seguenti per l'esecuzione di questa attività.
 
@@ -56,6 +56,6 @@ Ogni nodo gestito richiede anche i due moduli seguenti:
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-- Per caricare lo script di configurazione nel servizio State Configuration di Automazione di Azure, vedere [Introduzione](/automation/automation-dsc-getting-started#importing-a-configuration-into-azure-automation).
+- Per caricare lo script di configurazione nel servizio State Configuration di Automazione di Azure, vedere [Introduzione](/azure/automation/automation-dsc-getting-started#importing-a-configuration-into-azure-automation).
 - Aggiungere i moduli **SecurityPolicyDSC** e **AuditPolicyDSC** all'[Account di Automazione](/azure/automation/shared-resources/modules).
 - Le configurazioni e le risorse DSC sono disponibili in [PowerShell Gallery](https://www.powershellgallery.com/).

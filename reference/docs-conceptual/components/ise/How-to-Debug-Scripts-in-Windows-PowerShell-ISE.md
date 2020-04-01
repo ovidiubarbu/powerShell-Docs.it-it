@@ -2,12 +2,12 @@
 ms.date: 01/02/2020
 keywords: powershell,cmdlet
 title: Modalità di esecuzione del debug degli script in Windows PowerShell ISE
-ms.openlocfilehash: c5da80f3e0e013448533c80bbe1957a301be38f5
-ms.sourcegitcommit: 058a6e86eac1b27ca57a11687019df98709ed709
+ms.openlocfilehash: 6fbe340cbff832b5d0e2a5515ef432cec574a3c1
+ms.sourcegitcommit: 30ccbbb32915b551c4cd4c91ef1df96b5b7514c4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75737118"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80500935"
 ---
 # <a name="how-to-debug-scripts-in-windows-powershell-ise"></a>Modalità di esecuzione del debug degli script in Windows PowerShell ISE
 
@@ -26,13 +26,13 @@ Nell'ambiente di debug di Windows PowerShell si possono impostare tre tipi di pu
 
 1. **Punto di interruzione comando.** Lo script viene sospeso ogni volta che durante il funzionamento dello script sta per essere eseguito il comando specificato. Può includere parametri per filtrare ulteriormente il punto di interruzione alla sola operazione desiderata. Il comando può essere anche una funzione creata dall'utente.
 
-Nell'ambiente di debug di Windows PowerShell ISE solo i punti di interruzione riga possono essere impostati usando il menu o i tasti di scelta rapida. Gli altri due tipi di punti di interruzione vanno impostati dal riquadro della console usando il cmdlet [Set-PSBreakpoint](/reference/6/Microsoft.PowerShell.Utility/Set-PSBreakpoint.md). Questa sezione illustra come eseguire le attività di debug in Windows PowerShell ISE usando i comandi di menu, ove disponibili, e come eseguire una gamma di comandi più ampia dal riquadro della console usando gli script.
+Nell'ambiente di debug di Windows PowerShell ISE solo i punti di interruzione riga possono essere impostati usando il menu o i tasti di scelta rapida. Gli altri due tipi di punti di interruzione vanno impostati dal riquadro della console usando il cmdlet [Set-PSBreakpoint](/powershell/module/Microsoft.PowerShell.Utility/Set-PSBreakpoint). Questa sezione illustra come eseguire le attività di debug in Windows PowerShell ISE usando i comandi di menu, ove disponibili, e come eseguire una gamma di comandi più ampia dal riquadro della console usando gli script.
 
 ### <a name="to-set-a-breakpoint"></a>Per impostare un punto di interruzione
 
 È possibile impostare un punto di interruzione in uno script solo dopo averlo salvato. Fare clic con il pulsante destro del mouse sulla riga in cui si vuole impostare un punto di interruzione e scegliere **Attiva/disattiva punto di interruzione**. In alternativa, fare clic sulla riga in cui si vuole impostare un punto di interruzione e premere <kbd>F9</kbd> oppure scegliere **Attiva/disattiva punto di interruzione** dal menu **Debug**.
 
-Lo script seguente è un esempio di come si può impostare un punto di interruzione variabile dal riquadro della console usando il cmdlet [Set-PSBreakpoint](/reference/6/Microsoft.PowerShell.Utility/Set-PSBreakpoint.md).
+Lo script seguente è un esempio di come si può impostare un punto di interruzione variabile dal riquadro della console usando il cmdlet [Set-PSBreakpoint](/powershell/module/Microsoft.PowerShell.Utility/Set-PSBreakpoint).
 
 ```powershell
 # This command sets a breakpoint on the Server variable in the Sample.ps1 script.
@@ -43,7 +43,7 @@ Set-PSBreakpoint -Script sample.ps1 -Variable Server
 
 Visualizza tutti i punti di interruzione nella sessione di Windows PowerShell corrente.
 
-Scegliere **Elenca punti di interruzione** dal menu **Debug**. Lo script seguente è un esempio di come si può ottenere un elenco di tutti i punti di interruzione dal riquadro della console usando il cmdlet [Get-PSBreakpoint](/reference/6/Microsoft.PowerShell.Utility/Get-PSBreakpoint.md).
+Scegliere **Elenca punti di interruzione** dal menu **Debug**. Lo script seguente è un esempio di come si può ottenere un elenco di tutti i punti di interruzione dal riquadro della console usando il cmdlet [Get-PSBreakpoint](/powershell/module/Microsoft.PowerShell.Utility/Get-PSBreakpoint).
 
 ```powershell
 # This command lists all breakpoints in the current session.
@@ -55,7 +55,7 @@ Get-PSBreakpoint
 Rimuovere un punto di interruzione equivale a eliminarlo.
 
 Se si pensa di riutilizzarlo in un momento successivo, si può anche pensare di [disabilitare il punto di interruzione](#disable-a-breakpoint). Fare clic con il pulsante destro del mouse sulla riga in cui si vuole rimuovere un punto di interruzione e scegliere **Attiva/disattiva punto di interruzione**.
-In alternativa, fare clic sulla riga in cui si vuole rimuovere un punto di interruzione e scegliere **Attiva/disattiva punto di interruzione** dal menu **Debug**. Lo script seguente è un esempio di come si può rimuovere un punto di interruzione con un ID specificato dal riquadro della console usando il cmdlet [Remove-PSBreakpoint](/reference/6/Microsoft.PowerShell.Utility/Remove-PSBreakpoint.md).
+In alternativa, fare clic sulla riga in cui si vuole rimuovere un punto di interruzione e scegliere **Attiva/disattiva punto di interruzione** dal menu **Debug**. Lo script seguente è un esempio di come si può rimuovere un punto di interruzione con un ID specificato dal riquadro della console usando il cmdlet [Remove-PSBreakpoint](/powershell/module/Microsoft.PowerShell.Utility/Remove-PSBreakpoint).
 
 ```powershell
 # This command deletes the breakpoint with breakpoint ID 2.
@@ -66,7 +66,7 @@ Remove-PSBreakpoint -Id 2
 
 Per rimuovere tutti i punti di interruzione definiti nella sessione corrente, scegliere **Rimuovi tutti i punti di interruzione** dal menu **Debug**.
 
-Lo script seguente è un esempio di come si possono rimuovere tutti i punti di interruzione dal riquadro della console usando il cmdlet [Remove-PSBreakpoint](/reference/6/Microsoft.PowerShell.Utility/Remove-PSBreakpoint.md).
+Lo script seguente è un esempio di come si possono rimuovere tutti i punti di interruzione dal riquadro della console usando il cmdlet [Remove-PSBreakpoint](/powershell/module/Microsoft.PowerShell.Utility/Remove-PSBreakpoint).
 
 ```powershell
 # This command deletes all of the breakpoints in the current session.
@@ -75,7 +75,7 @@ Get-PSBreakpoint | Remove-PSBreakpoint
 
 ### <a name="disable-a-breakpoint"></a>Disabilitare un punto di interruzione
 
-La disabilitazione di un punto di interruzione non ne comporta la rimozione, ma la disattivazione fino a quando non viene abilitato di nuovo. Per disabilitare uno specifico punto di interruzione riga, fare clic con il pulsante destro del mouse sulla riga in cui si trova e quindi scegliere **Disattiva punto di interruzione**. In alternativa, fare clic sulla riga in cui si vuole disabilitare un punto di interruzione e premere <kbd>F9</kbd> oppure scegliere **Disattiva punto di interruzione** dal menu **Debug**. Lo script seguente è un esempio di come si può rimuovere un punto di interruzione con un ID specificato dal riquadro della console usando il cmdlet [Disable-PSBreakpoint](/reference/6/Microsoft.PowerShell.Utility/Disable-PSBreakpoint.md).
+La disabilitazione di un punto di interruzione non ne comporta la rimozione, ma la disattivazione fino a quando non viene abilitato di nuovo. Per disabilitare uno specifico punto di interruzione riga, fare clic con il pulsante destro del mouse sulla riga in cui si trova e quindi scegliere **Disattiva punto di interruzione**. In alternativa, fare clic sulla riga in cui si vuole disabilitare un punto di interruzione e premere <kbd>F9</kbd> oppure scegliere **Disattiva punto di interruzione** dal menu **Debug**. Lo script seguente è un esempio di come si può rimuovere un punto di interruzione con un ID specificato dal riquadro della console usando il cmdlet [Disable-PSBreakpoint](/powershell/module/Microsoft.PowerShell.Utility/Disable-PSBreakpoint).
 
 ```powershell
 # This command disables the breakpoint with breakpoint ID 0.
@@ -84,7 +84,7 @@ Disable-PSBreakpoint -Id 0
 
 ### <a name="disable-all-breakpoints"></a>Disabilitare tutti i punti di interruzione
 
-La disabilitazione di un punto di interruzione non ne comporta la rimozione, ma la disattivazione fino a quando non viene abilitato di nuovo. Per disabilitare tutti i punti di interruzione definiti nella sessione corrente, scegliere **Disattiva tutti i punti di interruzione** dal menu **Debug**. Lo script seguente è un esempio di come si possono disabilitare tutti i punti di interruzione dal riquadro della console usando il cmdlet [Disable-PSBreakpoint](/reference/6/Microsoft.PowerShell.Utility/Disable-PSBreakpoint.md).
+La disabilitazione di un punto di interruzione non ne comporta la rimozione, ma la disattivazione fino a quando non viene abilitato di nuovo. Per disabilitare tutti i punti di interruzione definiti nella sessione corrente, scegliere **Disattiva tutti i punti di interruzione** dal menu **Debug**. Lo script seguente è un esempio di come si possono disabilitare tutti i punti di interruzione dal riquadro della console usando il cmdlet [Disable-PSBreakpoint](/powershell/module/Microsoft.PowerShell.Utility/Disable-PSBreakpoint).
 
 ```powershell
 # This command disables all breakpoints in the current session.
@@ -94,7 +94,7 @@ Get-PSBreakpoint | Disable-PSBreakpoint
 
 ### <a name="enable-a-breakpoint"></a>Abilitare un punto di interruzione
 
-Per abilitare uno specifico punto di interruzione, fare clic con il pulsante destro del mouse sulla riga in cui si trova e quindi scegliere **Attiva punto di interruzione**. In alternativa, fare clic sulla riga in cui si vuole abilitare un punto di interruzione e premere <kbd>F9</kbd> oppure scegliere **Attiva punto di interruzione** dal menu **Debug**. Lo script seguente è un esempio di come si possono abilitare specifici punti di interruzione dal riquadro della console usando il cmdlet [Enable-PSBreakpoint](/reference/6/Microsoft.PowerShell.Utility/Enable-PSBreakpoint.md).
+Per abilitare uno specifico punto di interruzione, fare clic con il pulsante destro del mouse sulla riga in cui si trova e quindi scegliere **Attiva punto di interruzione**. In alternativa, fare clic sulla riga in cui si vuole abilitare un punto di interruzione e premere <kbd>F9</kbd> oppure scegliere **Attiva punto di interruzione** dal menu **Debug**. Lo script seguente è un esempio di come si possono abilitare specifici punti di interruzione dal riquadro della console usando il cmdlet [Enable-PSBreakpoint](/powershell/module/Microsoft.PowerShell.Utility/Enable-PSBreakpoint).
 
 ```powershell
 # This command enables breakpoints with breakpoint IDs 0, 1, and 5.
@@ -103,7 +103,7 @@ Enable-PSBreakpoint -Id 0, 1, 5
 
 ### <a name="enable-all-breakpoints"></a>Abilitare tutti i punti di interruzione
 
-Per abilitare tutti i punti di interruzione definiti nella sessione corrente, scegliere **Attiva tutti i punti di interruzione** dal menu **Debug**. Lo script seguente è un esempio di come si possono abilitare tutti i punti di interruzione dal riquadro della console usando il cmdlet [Enable-PSBreakpoint](/reference/6/Microsoft.PowerShell.Utility/Enable-PSBreakpoint.md).
+Per abilitare tutti i punti di interruzione definiti nella sessione corrente, scegliere **Attiva tutti i punti di interruzione** dal menu **Debug**. Lo script seguente è un esempio di come si possono abilitare tutti i punti di interruzione dal riquadro della console usando il cmdlet [Enable-PSBreakpoint](/powershell/module/Microsoft.PowerShell.Utility/Enable-PSBreakpoint).
 
 ```powershell
 # This command enables all breakpoints in the current session.
@@ -113,7 +113,7 @@ Get-PSBreakpoint | Enable-PSBreakpoint
 
 ## <a name="how-to-manage-a-debugging-session"></a>Come gestire una sessione di debug
 
-Prima di avviare il debug è necessario impostare uno o più punti di interruzione. Non si può impostare un punto di interruzione finché lo script di cui si vuole eseguire il debug non è stato salvato. Per istruzioni su come impostare un punto di interruzione, vedere [Come gestire i punti di interruzione](#how-to-manage-breakpoints) o [Set-PSBreakpoint](/reference/6/Microsoft.PowerShell.Utility/Set-PSBreakpoint.md).
+Prima di avviare il debug è necessario impostare uno o più punti di interruzione. Non si può impostare un punto di interruzione finché lo script di cui si vuole eseguire il debug non è stato salvato. Per istruzioni su come impostare un punto di interruzione, vedere [Come gestire i punti di interruzione](#how-to-manage-breakpoints) o [Set-PSBreakpoint](/powershell/module/Microsoft.PowerShell.Utility/Set-PSBreakpoint).
 Dopo avere avviato il debug, non è possibile modificare uno script se non si arresta il debug. Uno script in cui sono impostati uno o più punti di interruzione viene salvato automaticamente prima dell'esecuzione.
 
 ### <a name="to-start-debugging"></a>Per avviare il debug
@@ -198,4 +198,4 @@ C:\ps-test\MyScript.ps1
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Esplorazione di Windows PowerShell ISE](exploring-the-windows-powershell-ise.md)
+[Esplorazione di Windows PowerShell ISE](exploring-the-windows-powershell-ise.md)
