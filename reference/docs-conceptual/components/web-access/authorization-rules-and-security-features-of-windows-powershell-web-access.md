@@ -2,12 +2,12 @@
 ms.date: 06/27/2017
 keywords: powershell,cmdlet
 title: Regole di autorizzazione e funzionalità di sicurezza di Accesso Web Windows PowerShell
-ms.openlocfilehash: c426b8cfb10829241ba244a5d840c91e1de9f66e
-ms.sourcegitcommit: c97dcf1e00ef540e7464c36c88f841474060044c
+ms.openlocfilehash: 9bc1be125ebab4e9ba29ba832b442777e9bfc859
+ms.sourcegitcommit: 30ccbbb32915b551c4cd4c91ef1df96b5b7514c4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79402608"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80500894"
 ---
 # <a name="authorization-rules-and-security-features-of-windows-powershell-web-access"></a>Regole di autorizzazione e funzionalità di sicurezza di Accesso Web Windows PowerShell
 
@@ -85,7 +85,7 @@ Questo livello offre un meccanismo di sicurezza uguale a quello che valuta i ten
 
 Per impostazione predefinita, Accesso Web Windows PowerShell usa il nome utente e la password principali per eseguire l'autenticazione sia nel gateway che nel computer di destinazione. La sezione **Impostazioni di connessione facoltative** della pagina Web di accesso offre agli utenti la possibilità di specificare credenziali diverse per il computer di destinazione, se sono necessarie. Se l'utente non fornisce altre credenziali, per la connessione al computer di destinazione vengono utilizzati il nome utente e la password principali specificati per la connessione al gateway.
 
-Le regole di autorizzazione possono essere utilizzate per consentire agli utenti di accedere a una configurazione di sessione specifica. È possibile creare configurazioni di sessione o _spazi di esecuzione con restrizioni_ per Accesso Web Windows PowerShell e consentire a utenti specifici di connettersi solo a configurazioni di sessione specifiche, quando accedono ad Accesso Web Windows PowerShell. È possibile utilizzare gli elenchi di controllo di accesso (ACL) per identificare gli utenti che hanno accesso a endpoint specifici e limitare ulteriormente l'accesso all'endpoint per un gruppo di utenti specifico, utilizzando le regole di autorizzazione descritte in questa sezione. Per altre informazioni sugli spazi di esecuzione con restrizioni, vedere [Creating a constrained runspace](https://msdn.microsoft.com/library/dn614668) (Creazione di uno spazio di esecuzione con restrizioni).
+Le regole di autorizzazione possono essere utilizzate per consentire agli utenti di accedere a una configurazione di sessione specifica. È possibile creare configurazioni di sessione o _spazi di esecuzione con restrizioni_ per Accesso Web Windows PowerShell e consentire a utenti specifici di connettersi solo a configurazioni di sessione specifiche, quando accedono ad Accesso Web Windows PowerShell. È possibile utilizzare gli elenchi di controllo di accesso (ACL) per identificare gli utenti che hanno accesso a endpoint specifici e limitare ulteriormente l'accesso all'endpoint per un gruppo di utenti specifico, utilizzando le regole di autorizzazione descritte in questa sezione. Per altre informazioni sugli spazi di esecuzione con restrizioni, vedere [Creating a constrained runspace](/powershell/scripting/developer/hosting/creating-a-constrained-runspace) (Creazione di uno spazio di esecuzione con restrizioni).
 
 ### <a name="configuring-authorization-rules"></a>Configurazione delle regole di autorizzazione
 
@@ -151,7 +151,8 @@ L'unico carattere jolly supportato dai cmdlet di Accesso Web Windows PowerShell 
 
 #### <a name="other-authorization-rule-scenario-examples"></a>Altri scenari di esempio per le regole di autorizzazione
 
-Per ogni sessione di Windows PowerShell viene usata una configurazione di sessione. Se non è specificata, Windows PowerShell usa la configurazione di sessione predefinita incorporata in Windows PowerShell, denominata Microsoft.PowerShell, che include tutti i cmdlet disponibili in un computer. Gli amministratori possono limitare l'accesso a tutti i computer definendo una configurazione di sessione basata su uno spazio di esecuzione con restrizioni, ovvero un insieme limitato di attività e cmdlet che possono essere eseguiti dagli utenti finali. Se si consente a un utente di accedere a un computer, con accesso al linguaggio completo o solo ai cmdlet di Windows PowerShell per la gestione remota, tale utente potrà connettersi agli altri computer connessi al primo. Definendo uno spazio di esecuzione con restrizioni si impedisce agli utenti di accedere ad altri computer dal relativo spazio di esecuzione di Windows PowerShell consentito, aumentando la sicurezza dell'ambiente Accesso Web Windows PowerShell. La configurazione di sessione può essere distribuita, usando Criteri di gruppo, a tutti i computer che gli amministratori vogliono rendere accessibili con Accesso Web Windows PowerShell. Per altre informazioni sulle configurazioni di sessione, vedere [about_Session_Configurations](https://technet.microsoft.com/library/dd819508.aspx). Di seguito sono riportati alcuni esempi relativi a questo scenario.
+Per ogni sessione di Windows PowerShell viene usata una configurazione di sessione. Se non è specificata, Windows PowerShell usa la configurazione di sessione predefinita incorporata in Windows PowerShell, denominata Microsoft.PowerShell, che include tutti i cmdlet disponibili in un computer. Gli amministratori possono limitare l'accesso a tutti i computer definendo una configurazione di sessione basata su uno spazio di esecuzione con restrizioni, ovvero un insieme limitato di attività e cmdlet che possono essere eseguiti dagli utenti finali. Se si consente a un utente di accedere a un computer, con accesso al linguaggio completo o solo ai cmdlet di Windows PowerShell per la gestione remota, tale utente potrà connettersi agli altri computer connessi al primo. Definendo uno spazio di esecuzione con restrizioni si impedisce agli utenti di accedere ad altri computer dal relativo spazio di esecuzione di Windows PowerShell consentito, aumentando la sicurezza dell'ambiente Accesso Web Windows PowerShell. La configurazione di sessione può essere distribuita, usando Criteri di gruppo, a tutti i computer che gli amministratori vogliono rendere accessibili con Accesso Web Windows PowerShell. Per altre informazioni sulle configurazioni di sessione, vedere [about_Session_Configurations](/powershell/module/Microsoft.PowerShell.Core/About/about_session_configurations).
+Di seguito sono riportati alcuni esempi relativi a questo scenario.
 
 - Un amministratore crea un endpoint, denominato **EndpointPswa** e basato su uno spazio di esecuzione con restrizioni, quindi crea la regola `*,*,PswaEndpoint` e distribuisce l'endpoint agli altri computer. La regola consente a tutti gli utenti di accedere a tutti i computer con endpoint **EndpointPswa**.
   Se questa è l'unica regola di autorizzazione definita nel set di regole, i computer che non dispongono di tale endpoint non sono accessibili.
@@ -181,8 +182,8 @@ Nello scenario precedente Accesso Web Windows PowerShell può stabilire la conne
 2. Autenticazione nel computer di destinazione con le credenziali alternative specificate nell'area **Impostazioni di connessione facoltative** della pagina di accesso
 
    > [!NOTE]
-   > Se il gateway e i computer di destinazione si trovano in gruppi di lavoro o domini diversi, è necessario stabilire una relazione di trust tra i computer nei due gruppi di lavoro, i due domini o tra il gruppo di lavoro e il dominio. Tale relazione non può essere configurata usando i cmdlet di Accesso Web Windows PowerShell per le regole di autorizzazione. Le regole di autorizzazione non definiscono una relazione di trust fra computer, ma si limitano ad autorizzare gli utenti a connettersi a specifici computer di destinazione e configurazioni di sessione. Per altre informazioni su come configurare una relazione di trust fra domini diversi, vedere l'articolo relativo alla [creazione di relazioni di trust fra domini e foreste](https://technet.microsoft.com/library/cc794775.aspx).
-   > Per ulteriori informazioni su come aggiungere i computer del gruppo di lavoro a un elenco di host attendibili, vedere l'articolo relativo alla [gestione remota con Server Manager](https://technet.microsoft.com/library/dd759202.aspx).
+   > Se il gateway e i computer di destinazione si trovano in gruppi di lavoro o domini diversi, è necessario stabilire una relazione di trust tra i computer nei due gruppi di lavoro, i due domini o tra il gruppo di lavoro e il dominio. Tale relazione non può essere configurata usando i cmdlet di Accesso Web Windows PowerShell per le regole di autorizzazione. Le regole di autorizzazione non definiscono una relazione di trust fra computer, ma si limitano ad autorizzare gli utenti a connettersi a specifici computer di destinazione e configurazioni di sessione. Per altre informazioni su come configurare una relazione di trust fra domini diversi, vedere l'articolo relativo alla [creazione di relazioni di trust fra domini e foreste](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc794775(v=ws.10)).
+   > Per ulteriori informazioni su come aggiungere i computer del gruppo di lavoro a un elenco di host attendibili, vedere l'articolo relativo alla [gestione remota con Server Manager](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd759202(v=ws.11)).
 
 ### <a name="using-a-single-set-of-authorization-rules-for-multiple-sites"></a>Utilizzo di un singolo set di regole di autorizzazione per più siti
 
@@ -198,7 +199,7 @@ Per impostazione predefinita, il server Web IIS è configurato in modo da riavvi
 
 ### <a name="setting-default-parameters-on-the-sign-in-page"></a>Impostazione dei parametri predefiniti nella pagina di accesso
 
-Se il gateway di Accesso Web Windows PowerShell è in esecuzione in Windows Server 2012 R2, è possibile configurare valori predefiniti per le impostazioni visualizzate nella pagina di accesso di Accesso Web Windows PowerShell. I valori devono essere configurati nel file **web.config** descritto nel paragrafo precedente. I valori predefiniti per le impostazioni della pagina di accesso sono disponibili nella sezione **appSettings** del file web.config. Ecco un esempio della sezione **appSettings**. I valori validi per molte di queste impostazioni sono gli stessi di quelli dei parametri corrispondenti del cmdlet [New-PSSession](https://technet.microsoft.com/library/hh849717.aspx) in Windows PowerShell.
+Se il gateway di Accesso Web Windows PowerShell è in esecuzione in Windows Server 2012 R2, è possibile configurare valori predefiniti per le impostazioni visualizzate nella pagina di accesso di Accesso Web Windows PowerShell. I valori devono essere configurati nel file **web.config** descritto nel paragrafo precedente. I valori predefiniti per le impostazioni della pagina di accesso sono disponibili nella sezione **appSettings** del file web.config. Ecco un esempio della sezione **appSettings**. I valori validi per molte di queste impostazioni sono gli stessi di quelli dei parametri corrispondenti del cmdlet [New-PSSession](/powershell/module/Microsoft.PowerShell.Core/New-PSSession) in Windows PowerShell.
 
 Ad esempio, la chiave `defaultApplicationName`, come illustrato nel blocco di codice seguente, corrisponde al valore della variabile di preferenza **$PSSessionApplicationName** nel computer di destinazione.
 
@@ -225,8 +226,8 @@ Se il server gateway esegue Windows Server 2012 R2, Accesso Web Windows PowerShe
 
 ## <a name="see-also"></a>Vedere anche
 
-[Installare e usare Accesso Web Windows PowerShell](https://technet.microsoft.com/library/hh831611(v=ws.11).aspx)
+[Installare e usare Accesso Web Windows PowerShell](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831611(v=ws.11))
 
-[about_Session_Configurations](https://technet.microsoft.com/library/dd819508.aspx)
+[about_Session_Configurations](/powershell/module/microsoft.powershell.core/about/about_Session_Configurations)
 
 [Windows PowerShell Web Access Cmdlets](/powershell/module/powershellwebaccess/?view=winserver2012r2-ps) (Cmdlet di Accesso Web Windows PowerShell)
