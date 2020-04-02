@@ -2,12 +2,12 @@
 ms.date: 08/23/2017
 keywords: powershell,cmdlet
 title: usare la console di windows powershell basata sul web
-ms.openlocfilehash: 4c1bac2c712e430263d748b36897f4cfd8885919
-ms.sourcegitcommit: c97dcf1e00ef540e7464c36c88f841474060044c
+ms.openlocfilehash: 29aa123049884004dd4e1a8f042783538d80abc6
+ms.sourcegitcommit: 30ccbbb32915b551c4cd4c91ef1df96b5b7514c4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79402588"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80500876"
 ---
 # <a name="use-the-web-based-windows-powershell-console"></a>Usare la console di Windows PowerShell basata sul Web
 
@@ -102,7 +102,7 @@ Una qualsiasi delle operazioni seguenti causa la disconnessione dell'utente da u
 
 - Disattivare il dispositivo client in cui è in esecuzione il browser o disconnettersi dalla rete.
 
-- Esecuzione del comando **Esci** nella console Web. Questo comando non funziona se la configurazione della sessione a cui si è connessi è configurata per supportare la modalità [NoLanguage](https://msdn.microsoft.com/library/windows/desktop/system.management.automation.pslanguagemode.aspx) o si trova in uno spazio di esecuzione con restrizioni.
+- Esecuzione del comando **Esci** nella console Web. Questo comando non funziona se la configurazione della sessione a cui si è connessi è configurata per supportare la modalità [NoLanguage](/dotnet/api/system.management.automation.pslanguagemode) o si trova in uno spazio di esecuzione con restrizioni.
 
 Per accedere di nuovo, riaprire la pagina Web di Accesso Web Windows PowerShell ed eseguire l'accesso con la procedura descritta in [Connessione ad Accesso Web Windows PowerShell](#signing-in-to-windows-powershell-web-access) in questo argomento.
 
@@ -211,12 +211,9 @@ ALT+F7          | Cancella l'elenco della cronologia dei comandi.
 
     Si può modificare l'altezza della console in modo simile.
 
-    Altri esempi per personalizzare la visualizzazione della console sono disponibili nel [Blog del Team di Windows PowerShell](hhttps://devblogs.microsoft.com/powershell).
+    Altri esempi per personalizzare la visualizzazione della console sono disponibili nel [Blog del Team di Windows PowerShell](h https://devblogs.microsoft.com/powershell).
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Informazioni di riferimento per i cmdlet di Windows PowerShell](https://technet.microsoft.com/library/ee407531(ws.10).aspx)
-- [Windows PowerShell su Microsoft TechNet](https://technet.microsoft.com/library/bb978526.aspx)
-- [Archivio di Script Center su Technet](https://gallery.technet.microsoft.com/scriptcenter)
-- [Script Center: blog "Hey, Scripting Guy!"](https://technet.microsoft.com/scriptcenter)
-- [Blog del team di Windows PowerShell](https://blogs.msdn.com/b/powershell/)
+- [Hey, Scripting Guy!](https://devblogs.microsoft.com/scripting/)
+- [Blog del team di PowerShell](https://devblogs.microsoft.com/powershell/)
