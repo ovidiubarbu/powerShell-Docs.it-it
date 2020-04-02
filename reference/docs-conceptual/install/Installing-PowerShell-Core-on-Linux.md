@@ -2,16 +2,16 @@
 title: Installazione di PowerShell in Linux
 description: Informazioni sull'installazione di PowerShell in varie distribuzioni Linux
 ms.date: 03/09/2020
-ms.openlocfilehash: 13b8583ed45f1201e61225b377112a59d2b26cb2
-ms.sourcegitcommit: d36db3a1bc44aee6bc97422b557041c3aece4c67
+ms.openlocfilehash: 31da32b81dbbcf4b46fd5f0cd9d921f28f434763
+ms.sourcegitcommit: 30ccbbb32915b551c4cd4c91ef1df96b5b7514c4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80082806"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80500542"
 ---
 # <a name="installing-powershell-on-linux"></a>Installazione di PowerShell in Linux
 
-Supporta [Ubuntu 16.04][u16], [Ubuntu 18.04][u1804], [Ubuntu 18.10][u1810], [Ubuntu 19.04][u1904], [Debian 8][deb8], [Debian 9][deb9], [Debian 10][deb10], [CentOS 7][cos], [Red Hat Enterprise Linux (RHEL) 7][rhel7], [openSUSE 42.3][opensuse], [openSUSE Leap 15][opensuse], [Fedora 27][fedora], [Fedora 28][fedora] e [Arch Linux][arch].
+Supporta [Ubuntu 16.04][u16], [Ubuntu 18.04][u1804], [Ubuntu 18.10][u1810], [Ubuntu 19.04][u1904], [Debian 8][deb8], [Debian 9][deb9], [Debian 10][deb10], [Alpine 3.9 and 3.10][alpine], [CentOS 7][cos], [Red Hat Enterprise Linux (RHEL) 7][rhel7], [openSUSE 42.3][opensuse], [openSUSE Leap 15][opensuse], [Fedora 28][fedora], [Fedora 29][fedora], [Fedora 30][fedora] e [Arch Linux][arch].
 
 Per le distribuzioni Linux non supportate ufficialmente, è possibile provare a installare PowerShell con il [pacchetto PowerShell Snap][snap]. È anche possibile provare a distribuire i file binari di PowerShell direttamente usando l'archivio [`tar.gz`][tar] di Linux ma sarà necessario configurare le dipendenze necessarie in base al sistema operativo in passaggi distinti.
 
@@ -31,6 +31,7 @@ Tutti i pacchetti sono disponibili nella pagina delle [versioni][] di GitHub. Do
 [deb8]: #debian-8
 [deb9]: #debian-9
 [deb10]: #debian-10
+[alpine]: #alpine-39-and-310
 [cos]: #centos-7
 [rhel7]: #red-hat-enterprise-linux-rhel-7
 [opensuse]: #opensuse
@@ -83,12 +84,12 @@ Come utente con privilegi avanzati, registrare il repository di Microsoft una vo
 
 ### <a name="installation-via-direct-download---ubuntu-1604"></a>Installazione tramite download diretto - Ubuntu 16.04
 
-Scaricare il pacchetto Debian `powershell_7.0.0-1.ubuntu.16.04_amd64.deb` dalla pagina delle [versioni][] nel computer Ubuntu.
+Scaricare il pacchetto Debian `powershell-lts_7.0.0-1.ubuntu.16.04_amd64.deb` dalla pagina delle [versioni][] nel computer Ubuntu.
 
 Nel terminale eseguire quindi i comandi seguenti:
 
 ```sh
-sudo dpkg -i powershell_7.0.0-1.ubuntu.16.04_amd64.deb
+sudo dpkg -i powershell-lts_7.0.0-1.ubuntu.16.04_amd64.deb
 sudo apt-get install -f
 ```
 
@@ -133,12 +134,12 @@ Come utente con privilegi avanzati, registrare il repository di Microsoft una vo
 
 ### <a name="installation-via-direct-download---ubuntu-1804"></a>Ubuntu 18.04: installazione tramite download diretto
 
-Scaricare il pacchetto Debian `powershell_7.0.0-1.ubuntu.18.04_amd64.deb` dalla pagina delle [versioni][] nel computer Ubuntu.
+Scaricare il pacchetto Debian `powershell-lts_7.0.0-1.ubuntu.18.04_amd64.deb` dalla pagina delle [versioni][] nel computer Ubuntu.
 
 Nel terminale eseguire quindi i comandi seguenti:
 
 ```sh
-sudo dpkg -i powershell_7.0.0-1.ubuntu.18.04_amd64.deb
+sudo dpkg -i powershell-lts_7.0.0-1.ubuntu.18.04_amd64.deb
 sudo apt-get install -f
 ```
 
@@ -229,12 +230,12 @@ Come utente con privilegi avanzati, registrare il repository di Microsoft una vo
 
 ### <a name="installation-via-direct-download---debian-9"></a>Debian 9: installazione tramite download diretto
 
-Scaricare il pacchetto Debian `powershell_7.0.0-1.debian.9_amd64.deb` dalla pagina delle [versioni][] nel computer Debian.
+Scaricare il pacchetto Debian `powershell-lts_7.0.0-1.debian.9_amd64.deb` dalla pagina delle [versioni][] nel computer Debian.
 
 Nel terminale eseguire quindi i comandi seguenti:
 
 ```sh
-sudo dpkg -i powershell_7.0.0-1.debian.9_amd64.deb
+sudo dpkg -i powershell-lts_7.0.0-1.debian.9_amd64.deb
 sudo apt-get install -f
 ```
 
@@ -248,6 +249,29 @@ sudo apt-get remove powershell
 
 > [!NOTE]
 > Debian 10 è supportato solo in PowerShell 7.0 e versioni successive.
+
+### <a name="installation-via-package-repository---debian-10"></a>Debian 10: installazione tramite repository dei pacchetti
+
+Per semplificare l'installazione e gli aggiornamenti, PowerShell per Linux è pubblicato nei repository dei pacchetti.
+
+Il metodo preferito è il seguente:
+
+```sh
+# Download the Microsoft repository GPG keys
+wget https://packages.microsoft.com/config/debian/10/packages-microsoft-prod.deb
+
+# Register the Microsoft repository GPG keys
+sudo dpkg -i packages-microsoft-prod.deb
+
+# Update the list of products
+sudo apt-get update
+
+# Install PowerShell
+sudo apt-get install -y powershell
+
+# Start PowerShell
+pwsh
+```
 
 ### <a name="installation-via-direct-download---debian-10"></a>Debian 10: installazione tramite download diretto
 
@@ -365,18 +389,18 @@ Come utente con privilegi avanzati, registrare il repository di Microsoft una vo
 
 ### <a name="installation-via-direct-download---centos-7"></a>CentOS 7: installazione tramite download diretto
 
-Usando [CentOS 7][], scaricare il pacchetto RPM `powershell-7.0.0-1.rhel.7.x86_64.rpm` dalla pagina delle [versioni][] nel computer CentOS.
+Usando [CentOS 7][], scaricare il pacchetto RPM `powershell-lts-7.0.0-1.rhel.7.x86_64.rpm` dalla pagina delle [versioni][] nel computer CentOS.
 
 Nel terminale eseguire quindi i comandi seguenti:
 
 ```sh
-sudo yum install powershell-7.0.0-1.rhel.7.x86_64.rpm
+sudo yum install powershell-lts-7.0.0-1.rhel.7.x86_64.rpm
 ```
 
 È possibile installare il pacchetto RPM senza eseguire il passaggio intermedio di download del pacchetto:
 
 ```sh
-sudo yum install https://github.com/PowerShell/PowerShell/releases/download/v7.0.0/powershell-7.0.0-1.rhel.7.x86_64.rpm
+sudo yum install https://github.com/PowerShell/PowerShell/releases/download/v7.0.0/powershell-lts-7.0.0-1.rhel.7.x86_64.rpm
 ```
 
 ### <a name="uninstallation---centos-7"></a>CentOS 7: disinstallazione
@@ -408,18 +432,18 @@ Come utente con privilegi avanzati, registrare il repository di Microsoft una vo
 
 ### <a name="installation-via-direct-download---red-hat-enterprise-linux-rhel-7"></a>Red Hat Enterprise Linux (RHEL) 7: installazione tramite download diretto
 
-Scaricare il pacchetto RPM `powershell-7.0.0-1.rhel.7.x86_64.rpm` dalla pagina delle [versioni][] nel computer Red Hat Enterprise Linux.
+Scaricare il pacchetto RPM `powershell-lts-7.0.0-1.rhel.7.x86_64.rpm` dalla pagina delle [versioni][] nel computer Red Hat Enterprise Linux.
 
 Nel terminale eseguire quindi i comandi seguenti:
 
 ```sh
-sudo yum install powershell-7.0.0-1.rhel.7.x86_64.rpm
+sudo yum install powershell-lts-7.0.0-1.rhel.7.x86_64.rpm
 ```
 
 È possibile installare il pacchetto RPM senza eseguire il passaggio intermedio di download del pacchetto:
 
 ```sh
-sudo yum install https://github.com/PowerShell/PowerShell/releases/download/v7.0.0/powershell-7.0.0-1.rhel.7.x86_64.rpm
+sudo yum install https://github.com/PowerShell/PowerShell/releases/download/v7.0.0/powershell-lts-7.0.0-1.rhel.7.x86_64.rpm
 ```
 
 ### <a name="uninstallation---red-hat-enterprise-linux-rhel-7"></a>Red Hat Enterprise Linux (RHEL) 7: disinstallazione
@@ -555,7 +579,7 @@ PowerShell è disponibile nell'[Arch Linux][] User Repository (AUR).
 
 I pacchetti disponibili in AUR sono gestiti dalla community. Non esiste supporto ufficiale.
 
-Per altre informazioni sull'installazione dei pacchetti da AUR, vedere il [wiki Arch Linux](https://wiki.archlinux.org/index.php/Arch_User_Repository#Installing_packages) o fare riferimento alla community [DockerFile](https://github.com/PowerShell/PowerShell/blob/master/docker/community/archlinux/Dockerfile).
+Per altre informazioni sull'installazione dei pacchetti da AUR, vedere il [wiki Arch Linux](https://wiki.archlinux.org/index.php/Arch_User_Repository#Installing_packages) o [Uso di PowerShell in Docker](powershell-in-docker.md).
 
 [Arch Linux]: https://www.archlinux.org/download/
 [arch-release]: https://aur.archlinux.org/packages/powershell/
@@ -672,7 +696,7 @@ Facoltativamente, è possibile creare un collegamento simbolico per avviare Powe
 
 ```sh
 # Start PowerShell from bash with sudo to create a symbolic link
-sudo ~/powershell/pwsh -c New-Item -ItemType SymbolicLink -Path "/usr/bin/pwsh" -Target "\$PSHOME/pwsh" -Force
+sudo ~/powershell/pwsh -c New-Item -ItemType SymbolicLink -Path "/usr/bin/pwsh" -Target "$PSHOME/pwsh" -Force
 
 # alternatively you can run following to create a symbolic link
 # sudo ln -s ~/powershell/pwsh /usr/bin/pwsh

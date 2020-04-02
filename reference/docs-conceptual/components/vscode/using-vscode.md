@@ -2,12 +2,12 @@
 title: Uso di Visual Studio Code per sviluppare PowerShell
 description: Uso di Visual Studio Code per sviluppare PowerShell
 ms.date: 11/07/2019
-ms.openlocfilehash: 86739970b58460bef9686a75bf0604d0605d4888
-ms.sourcegitcommit: d36db3a1bc44aee6bc97422b557041c3aece4c67
+ms.openlocfilehash: 8644aa7c648d649651ca679238e0b79ff35ac579
+ms.sourcegitcommit: 30ccbbb32915b551c4cd4c91ef1df96b5b7514c4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80082417"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80500902"
 ---
 # <a name="using-visual-studio-code-for-powershell-development"></a>Uso di Visual Studio Code per sviluppare PowerShell
 
@@ -22,9 +22,9 @@ Supporta le versioni di PowerShell seguenti:
 
 Prima di iniziare, verificare che PowerShell sia presente nel sistema. Per carichi di lavoro moderni in Windows, macOS e Linux, vedere i collegamenti seguenti:
 
-- [Installazione di PowerShell Core in Linux][install-pscore-linux]
-- [Installazione di PowerShell Core in macOS][install-pscore-macos]
-- [Installazione di PowerShell Core in Windows][install-pscore-windows]
+- [Installazione di PowerShell in Linux][install-pscore-linux]
+- [Installazione di PowerShell in macOS][install-pscore-macos]
+- [Installazione di PowerShell in Windows][install-pscore-windows]
 
 Per carichi di lavoro di Windows PowerShell tradizionali, vedere [Installazione di Windows PowerShell][install-winps].
 
@@ -231,7 +231,7 @@ Seguire questi passaggi per creare il file di configurazione di debug:
 - **Avviare il file corrente**: avviare ed eseguire il debug del file nella finestra dell'editor attualmente attiva
 - **Avviare lo script**: avviare ed eseguire il debug del file o del comando specificato
 - **Sessione interattiva**: eseguire il debug dei comandi eseguiti dalla console integrata
-- **Collegare**: collegare il debugger a un processo host di PowerShell in esecuzione
+- **Attach** (Associa): collegare il debugger a un processo host di PowerShell in esecuzione
 
 Visual Studio Code creerà una directory e un file `.vscode\launch.json` nella radice della cartella dell'area di lavoro. In questa posizione è archiviata la configurazione di debug. Se i file si trovano in un repository Git, in genere si vuole eseguire il commit del file `launch.json`. Il contenuto del file `launch.json` è il seguente:
 
@@ -268,7 +268,16 @@ Il file rappresenta gli scenari di debug comuni. Quando si apre il file nell'edi
 
 Dopo aver definito la configurazione di debug, è possibile selezionare la configurazione che si vuole usare durante una sessione di debug. Selezionare una configurazione dall'elenco a discesa delle configurazioni di debug nella barra degli strumenti della visualizzazione **Debug**.
 
-Esistono alcuni blog che possono risultare utili per iniziare subito con l'estensione di PowerShell per Visual Studio Code:
+## <a name="useful-resources"></a>Risorse utili
+
+Sono disponibili video e blog che possono risultare utili per iniziare subito con l'estensione di PowerShell per Visual Studio Code:
+
+### <a name="videos"></a>Video
+
+- [Usare Visual Studio Code come editor di PowerShell predefinito](https://youtu.be/bGn45vIeAMM)
+- [Visual Studio Code: approfondimenti sul debug degli script di PowerShell](https://youtu.be/cSbIXmlkr8o)
+
+### <a name="blog-posts"></a>Post di BLOG
 
 - [Estensione PowerShell][ps-extension]
 - [Scrivere ed eseguire il debug degli script di PowerShell in Visual Studio Code][debug]
@@ -279,6 +288,16 @@ Esistono alcuni blog che possono risultare utili per iniziare subito con l'esten
 - [Funzionalità di modifica di Visual Studio Code per lo sviluppo di PowerShell - Parte 2 ][editing-part2]
 - [Debug di script di PowerShell in Visual Studio Code - Parte 1][debugging-part1]
 - [Debug di script di PowerShell in Visual Studio Code - Parte 2][debugging-part2]
+
+## <a name="powershell-extension-for-visual-studio-code"></a>Estensione di PowerShell per Visual Studio Code
+
+I codici sorgente dell'estensione di PowerShell sono disponibili in [GitHub](https://github.com/PowerShell/vscode-powershell).
+
+Per contribuire, è necessario usare le richieste pull. Per iniziare, seguire la [documentazione per gli sviluppatori su GitHub](https://github.com/PowerShell/vscode-powershell/blob/master/docs/development.md).
+
+## <a name="troubleshooting-the-powershell-extension-for-visual-studio-code"></a>Risoluzione dei problemi dell'estensione PowerShell per Visual Studio Code
+
+Se si verificano problemi con Visual Studio Code durante lo sviluppo di script di PowerShell, vedere la [guida alla risoluzione dei problemi su GitHub](https://github.com/PowerShell/vscode-powershell/blob/master/docs/troubleshooting.md)
 
 [ise]: ../ise/Introducing-the-Windows-PowerShell-ISE.md
 [install-pscore-linux]:  ../../install/Installing-PowerShell-Core-on-Linux.md
@@ -294,13 +313,3 @@ Esistono alcuni blog che possono risultare utili per iniziare subito con l'esten
 [editing-part2]: https://devblogs.microsoft.com/scripting/visual-studio-code-editing-features-for-powershell-development-part-2/
 [debugging-part1]: https://devblogs.microsoft.com/scripting/debugging-powershell-script-in-visual-studio-code-part-1/
 [debugging-part2]: https://devblogs.microsoft.com/scripting/debugging-powershell-script-in-visual-studio-code-part-2/
-
-## <a name="powershell-extension-for-visual-studio-code"></a>Estensione di PowerShell per Visual Studio Code
-
-I codici sorgente dell'estensione di PowerShell sono disponibili in [GitHub](https://github.com/PowerShell/vscode-powershell).
-
-Per contribuire, le richieste pull sono molto apprezzate. Per iniziare, seguire la [documentazione per gli sviluppatori su GitHub](https://github.com/PowerShell/vscode-powershell/blob/master/docs/development.md).
-
-## <a name="troubleshooting-the-powershell-extension-for-visual-studio-code"></a>Risoluzione dei problemi dell'estensione PowerShell per Visual Studio Code
-
-Se si verificano problemi con Visual Studio Code durante lo sviluppo di script di PowerShell, vedere la [guida alla risoluzione dei problemi su GitHub](https://github.com/PowerShell/vscode-powershell/blob/master/docs/troubleshooting.md)

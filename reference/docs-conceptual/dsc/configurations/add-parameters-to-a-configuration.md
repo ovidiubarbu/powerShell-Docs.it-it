@@ -2,12 +2,12 @@
 ms.date: 12/12/2018
 keywords: dsc,powershell,risorsa,raccolta,configurazione
 title: Aggiungere parametri a una configurazione
-ms.openlocfilehash: 72e6c15593d11ed39d7fe8ea79f794089f410cf8
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 9dd9f2be58c13840be2b24e7e21a0d4af79b67cc
+ms.sourcegitcommit: b0966d61293e28ecdb929c5065be9760884e4e7d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "71954198"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80263153"
 ---
 # <a name="add-parameters-to-a-configuration"></a>Aggiungere parametri a una configurazione
 
@@ -36,17 +36,18 @@ Configuration TestConfig
 
 Diversamente da una funzione, tuttavia, l'attributo [CmdletBinding](/powershell/module/microsoft.powershell.core/about/about_functions_cmdletbindingattribute) non aggiunge alcuna funzionalità. Oltre ai [parametri comuni](/powershell/module/microsoft.powershell.core/about/about_commonparameters), le configurazioni possono anche usare i seguenti parametri predefiniti, senza che sia necessario definirli.
 
-|Parametro  |Description  |
-|---------|---------|
-|`-InstanceName`|Usato nella definizione delle [configurazioni composite](compositeconfigs.md)|
-|`-DependsOn`|Usato nella definizione delle [configurazioni composite](compositeconfigs.md)|
-|`-PSDSCRunAsCredential`|Usato nella definizione delle [configurazioni composite](compositeconfigs.md)|
-|`-ConfigurationData`|Usato per passare i [ dati di configurazione](configData.md) strutturati per l'uso nella configurazione.|
-|`-OutputPath`|Usato per specificare dove verrà compilato il file "\<computername\>.mof"|
+|        Parametro        |                                         Descrizione                                          |
+| ----------------------- | -------------------------------------------------------------------------------------------- |
+| `-InstanceName`         | Usato nella definizione delle [configurazioni composite](compositeconfigs.md)                             |
+| `-DependsOn`            | Usato nella definizione delle [configurazioni composite](compositeconfigs.md)                             |
+| `-PSDSCRunAsCredential` | Usato nella definizione delle [configurazioni composite](compositeconfigs.md)                             |
+| `-ConfigurationData`    | Usato per passare i [ dati di configurazione](configData.md) strutturati per l'uso nella configurazione. |
+| `-OutputPath`           | Usato per specificare dove verrà compilato il file "\<computername\>.mof"                      |
 
 ## <a name="adding-your-own-parameters-to-configurations"></a>Aggiungere parametri definiti dall'utente alle configurazioni
 
-Oltre ai parametri predefiniti, è anche possibile aggiungere alle configurazioni parametri definiti dall'utente. Il blocco dei parametri viene indirizzato direttamente alla dichiarazione di configurazione, proprio come una funzione. Un blocco di parametri di configurazione deve trovarsi all'esterno delle dichiarazioni di **nodo** e al di sopra delle istruzioni di *importazione*. Aggiungendo i parametri, è possibile rendere le configurazioni maggiormente solide e dinamiche.
+Oltre ai parametri predefiniti, è anche possibile aggiungere alle configurazioni parametri definiti dall'utente.
+Il blocco dei parametri viene indirizzato direttamente alla dichiarazione di configurazione, proprio come una funzione. Un blocco di parametri di configurazione deve trovarsi all'esterno delle dichiarazioni di **nodo** e al di sopra delle istruzioni di *importazione*. Aggiungendo i parametri, è possibile rendere le configurazioni maggiormente solide e dinamiche.
 
 ```powershell
 Configuration TestConfig
@@ -117,7 +118,8 @@ TestConfig -ComputerName "server01", "server02", "server03"
 
 ## <a name="advanced-parameters-in-configurations"></a>Parametri avanzati nelle configurazioni
 
-Oltre a un parametro `-ComputerName`, è possibile aggiungere parametri per il nome e lo stato del servizio. L'esempio seguente aggiunge un blocco di parametri con un parametro `-ServiceName` e lo usa per definire in modo dinamico il blocco di risorse **Service**. Aggiunge anche un parametro `-State` per definire in modo dinamico **State** nel blocco di risorse **Service**.
+Oltre a un parametro `-ComputerName`, è possibile aggiungere parametri per il nome e lo stato del servizio.
+L'esempio seguente aggiunge un blocco di parametri con un parametro `-ServiceName` e lo usa per definire in modo dinamico il blocco di risorse **Service**. Aggiunge anche un parametro `-State` per definire in modo dinamico **State** nel blocco di risorse **Service**.
 
 ```powershell
 Configuration TestConfig
@@ -149,7 +151,7 @@ Configuration TestConfig
 ```
 
 > [!NOTE]
-> In scenari più avanzati, potrebbe essere più utile spostare i dati dinamici in [dati di configurazione](configData.md) strutturati.
+> In scenari più avanzati potrebbe essere più utile spostare i dati dinamici in [dati di configurazione](configData.md) strutturati.
 
 La configurazione di esempio usa qui un valore dinamico `$ServiceName`, ma se non ne è specificato uno la compilazione genera un errore. È possibile aggiungere un valore predefinito simile a questo esempio.
 
@@ -176,7 +178,7 @@ $ServiceName
 $ServiceName
 ```
 
-Per il parametro `$State`, sarebbe opportuno impedire all'utente di specificare valori di fuori di un set predefinito (come Running, Stopped). L'attributo `ValidationSet*`impedisce all'utente di specificare valori di fuori di un set predefinito (come Running, Stopped). L'esempio seguente aggiunge l'attributo `ValidationSet` al parametro `$State`. Poiché non si desidera rendere il parametro `$State` **obbligatorio**, è necessario aggiungere per esso un valore predefinito.
+Per il parametro `$State`, sarebbe opportuno impedire all'utente di specificare valori di fuori di un set predefinito (come Running, Stopped). L'attributo `ValidationSet*`impedisce all'utente di specificare valori di fuori di un set predefinito (come Running, Stopped). L'esempio seguente aggiunge l'attributo `ValidationSet` al parametro `$State`. Poiché non si desidera rendere il parametro `$State`**obbligatorio**, è necessario aggiungere per esso un valore predefinito.
 
 ```powershell
 [ValidateSet("Running", "Stopped")]
@@ -213,7 +215,7 @@ Configuration TestConfig
     # It is best practice to explicitly import any required resources or modules.
     Import-DSCResource -Module PSDesiredStateConfiguration
 
-    Node localhost
+    Node $ComputerName
     {
         Service $ServiceName
         {

@@ -2,12 +2,12 @@
 ms.date: 01/08/2020
 keywords: dsc,powershell,configurazione,installazione
 title: Servizio di pull DSC
-ms.openlocfilehash: cf2420e6889f63ac3b2859e5ee36fa888b728afc
-ms.sourcegitcommit: c97dcf1e00ef540e7464c36c88f841474060044c
+ms.openlocfilehash: 821f183c91e805154323f9f6a42f7f5006499182
+ms.sourcegitcommit: 30ccbbb32915b551c4cd4c91ef1df96b5b7514c4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79402438"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80500716"
 ---
 # <a name="desired-state-configuration-pull-service"></a>Servizio di pull DSC (Desired State Configuration)
 
@@ -70,7 +70,7 @@ Il modo migliore per configurare Windows Server per ospitare un servizio di pull
 | ------- | -------------------- | -------------------- | ---------------------------------------------- |
 | MDB     | ESENT (predefinito), MDB | ESENT (predefinito), MDB | ESENT (predefinito), SQL Server, MDB               |
 
-A partire dalla versione 17090 di [Windows Server Insider Preview](https://www.microsoft.com/software-download/windowsinsiderpreviewserver), SQL Server è un'opzione supportata per il servizio di pull (funzionalità di Windows *servizio DSC*). In questo modo si rende disponibile una nuova opzione per il ridimensionamento di ambienti DSC di grandi dimensioni che non sono stati migrati ad [Automation DSC per Azure](/azure/automation/automation-dsc-getting-started).
+A partire dalla versione 17090 di Windows Server, SQL Server è un'opzione supportata per il servizio di pull (funzionalità di Windows *servizio DSC*). In questo modo si rende disponibile una nuova opzione per il ridimensionamento di ambienti DSC di grandi dimensioni che non sono stati migrati ad [Automation DSC per Azure](/azure/automation/automation-dsc-getting-started).
 
 > [!NOTE]
 > il supporto per SQL Server non verrà aggiunto alle versioni precedenti di WMF 5.1 (o versioni precedenti) e sarà disponibile solo nelle versioni di Windows Server maggiori o uguali alla 17090.
@@ -82,7 +82,7 @@ Per un esempio di configurazione di SQL Server con **xDscWebService**, leggere p
 
 Il metodo più semplice per configurare un server di pull Web consiste nell'usare la risorsa **xDscWebService**, inclusa nel modulo **xPSDesiredStateConfiguration**. La procedura seguente descrive come usare la risorsa in un oggetto `Configuration` che imposta il servizio Web.
 
-1. Chiamare il cmdlet [Install-Module](/reference/6/PowerShellGet/Install-Module.md) per installare il modulo **xPSDesiredStateConfiguration**.
+1. Chiamare il cmdlet [Install-Module](/powershell/module/PowerShellGet/Install-Module) per installare il modulo **xPSDesiredStateConfiguration**.
 
    > [!NOTE]
    > Il cmdlet `Install-Module` è incluso nel modulo **PowerShellGet**, disponibile in PowerShell 5.0 o versioni successive.
@@ -234,7 +234,7 @@ Usare `New-DscChecksum {module zip file}` per creare un file di checksum per il 
 
 ### <a name="configuration-mof-format"></a>Formato del file MOF di configurazione
 
-Un file MOF di configurazione deve essere associato a un file di checksum in modo che Gestione configurazione locale in un nodo di destinazione possa convalidare la configurazione. Per creare un checksum, chiamare il cmdlet [New-DscChecksum](/reference/6/PSDesiredStateConfiguration/New-DSCCheckSum.md). Il cmdlet accetta un parametro **Path** che specifica la cartella in cui si trova il file MOF di configurazione. Il cmdlet crea un file di checksum denominato `ConfigurationMOFName.mof.checksum`, in cui `ConfigurationMOFName` è il nome del file MOF di configurazione. Se nella cartella specificata sono presenti più file MOF di configurazione, viene creato un checksum per ogni configurazione nella cartella. Posizionare i file MOF e i file di checksum associati nella cartella **ConfigurationPath**.
+Un file MOF di configurazione deve essere associato a un file di checksum in modo che Gestione configurazione locale in un nodo di destinazione possa convalidare la configurazione. Per creare un checksum, chiamare il cmdlet [New-DscChecksum](/powershell/module/PSDesiredStateConfiguration/New-DSCCheckSum). Il cmdlet accetta un parametro **Path** che specifica la cartella in cui si trova il file MOF di configurazione. Il cmdlet crea un file di checksum denominato `ConfigurationMOFName.mof.checksum`, in cui `ConfigurationMOFName` è il nome del file MOF di configurazione. Se nella cartella specificata sono presenti più file MOF di configurazione, viene creato un checksum per ogni configurazione nella cartella. Posizionare i file MOF e i file di checksum associati nella cartella **ConfigurationPath**.
 
 > [!NOTE]
 > Se si modifica il file MOF di configurazione in qualsiasi modo, è anche necessario ricreare il file di checksum.

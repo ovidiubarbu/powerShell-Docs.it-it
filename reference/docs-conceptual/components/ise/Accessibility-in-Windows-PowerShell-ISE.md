@@ -2,12 +2,12 @@
 ms.date: 12/19/2019
 keywords: powershell,cmdlet
 title: Accessibilità in Windows PowerShell ISE
-ms.openlocfilehash: e618daca98d76f767a8b60a3425760bfc0bd0f64
-ms.sourcegitcommit: 058a6e86eac1b27ca57a11687019df98709ed709
+ms.openlocfilehash: 89eff839d69fdbd5a1fa48b61dab627ef83f751b
+ms.sourcegitcommit: 30ccbbb32915b551c4cd4c91ef1df96b5b7514c4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75736284"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80500954"
 ---
 # <a name="accessibility-in-windows-powershell-ise"></a>Accessibilità in Windows PowerShell ISE
 
@@ -121,7 +121,7 @@ Eseguire una delle operazioni seguenti:
 | **Arresta debugger**          | <kbd>MAIUSC</kbd>+<kbd>F5</kbd>                 | Riquadro di script, durante il debug di uno script |
 
 > [!NOTE]
-> È anche possibile usare i tasti di scelta rapida progettati per la console di Windows PowerShell durante il debug degli script in Windows PowerShell ISE. Per usare questi tasti di scelta rapida, è necessario digitarli in Riquadro console e premere INVIO.
+> È anche possibile usare i tasti di scelta rapida progettati per la console di Windows PowerShell durante il debug degli script in Windows PowerShell ISE. Per usare la scelta rapida da tastiera, è necessario digitare la combinazione in Riquadro console e premere <kbd>INVIO</kbd>.
 
 |                 Azione                  |      Tasto di scelta rapida       |                Posizione                 |
 | --------------------------------------- | ---------------------------- | ------------------------------------- |
@@ -143,7 +143,7 @@ Eseguire una delle operazioni seguenti:
 | ------------------------------- | ---------------------------------------------------------------------------------- |
 | **Chiudi scheda di PowerShell**        | <kbd>CTRL</kbd>+<kbd>W</kbd>                                                       |
 | **Nuova scheda di PowerShell**          | <kbd>CTRL</kbd>+<kbd>T</kbd>                                                       |
-| **Scheda precedente di PowerShell**     | <kbd>CTRL</kbd>+<kbd>MAIUSC</kbd>+<kbd>TAB</kbd> (Solo se non ci sono file aperti in alcuna scheda di PowerShell)                 |
+| **Scheda precedente di PowerShell**     | <kbd>CTRL</kbd>+<kbd>MAIUSC</kbd>+<kbd>TAB</kbd> (Solo se non ci sono file aperti in alcuna scheda di PowerShell) |
 | **Scheda successiva di Windows PowerShell** | <kbd>CTRL</kbd>+<kbd>TAB</kbd> (Solo se non ci sono file aperti in alcuna scheda di PowerShell) |
 
 ## <a name="keyboard-shortcuts-for-starting-and-exiting"></a>Tasti di scelta rapida per avvio e uscita
@@ -157,8 +157,7 @@ Eseguire una delle operazioni seguenti:
 
 ## <a name="breakpoint-management"></a>Gestione dei punti di interruzione
 
-Per gli utenti con problemi di vista sono disponibili informazioni sui punti di interruzione tramite i cmdlet per la gestione dei punti di interruzione, come [Get-PSBreakpoint](/reference/6/Microsoft.PowerShell.Utility/Get-PSBreakpoint.md) e [Set-PSBreakpoint](/reference/6/Microsoft.PowerShell.Utility/Set-PSBreakpoint.md).
-Per altre informazioni, vedere 'Come gestire i punti di interruzione' in [Modalità di esecuzione del debug degli script in Windows PowerShell ISE](How-to-Debug-Scripts-in-Windows-PowerShell-ISE.md).
+Per gli utenti con problemi di vista sono disponibili informazioni sui punti di interruzione tramite i cmdlet per la gestione dei punti di interruzione, come [Get-PSBreakpoint](/powershell/module/Microsoft.PowerShell.Utility/Get-PSBreakpoint) e [Set-PSBreakpoint](/powershell/module/Microsoft.PowerShell.Utility/Set-PSBreakpoint). Per altre informazioni, vedere 'Come gestire i punti di interruzione' in [Modalità di esecuzione del debug degli script in Windows PowerShell ISE](How-to-Debug-Scripts-in-Windows-PowerShell-ISE.md).
 
 ## <a name="see-also"></a>Vedere anche
 

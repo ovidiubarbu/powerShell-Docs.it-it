@@ -2,12 +2,12 @@
 title: Novità di PowerShell 7.0
 description: Nuove funzionalità e modifiche rilasciate in PowerShell 7.0
 ms.date: 03/04/2020
-ms.openlocfilehash: 6915bb70d6e54da86d2b935e3feed8d7f3770ba9
-ms.sourcegitcommit: 4a26c05f162c4fa347a9d67e339f8a33e230b9ba
+ms.openlocfilehash: 84631d9fa169c8d1b4cd4dd23eb3d7c1bca120bb
+ms.sourcegitcommit: b0966d61293e28ecdb929c5065be9760884e4e7d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78405000"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80263136"
 ---
 # <a name="whats-new-in-powershell-70"></a>Novità di PowerShell 7.0
 
@@ -396,6 +396,7 @@ Per altre informazioni, vedere [Invoke-DSCResource](/powershell/module/psdesired
 - Correzione della perdita di una risorsa tramite l'annullamento della registrazione del gestore dell'evento da AppDomain.CurrentDomain.ProcessExit (#10626)
 - Aggiunta del supporto in ActionPreference.Break per interrompere l'esecuzione nel debugger quando vengono generati messaggi di debug, errore, informazioni, stato, Verbose o di avviso (#8205) (grazie @KirkMunro!)
 - Abilitazione dell'avvio di componenti aggiuntivi del pannello di controllo all'interno di PowerShell Core senza specificare l'estensione CPL. (#9828)
+- Supporto di numeri negativi nell'operatore -split (#8960) (ringraziamenti @ece-jacob-scott!)
 
 ### <a name="general-cmdlet-updates-and-fixes"></a>Aggiornamenti e correzioni generali dei cmdlet
 

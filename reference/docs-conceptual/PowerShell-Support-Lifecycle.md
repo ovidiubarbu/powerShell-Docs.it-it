@@ -2,18 +2,18 @@
 title: Ciclo di vita del supporto di PowerShell Core
 description: Criteri che disciplinano il supporto per PowerShell Core
 ms.date: 03/09/2020
-ms.openlocfilehash: c1e91aa193dd4a6353098e16ae18301c0753ea85
-ms.sourcegitcommit: d36db3a1bc44aee6bc97422b557041c3aece4c67
+ms.openlocfilehash: c319371778eb4615559ae12e0cd153a535ed22bf
+ms.sourcegitcommit: 30ccbbb32915b551c4cd4c91ef1df96b5b7514c4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80082401"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80500985"
 ---
 # <a name="powershell-support-lifecycle"></a>Ciclo di vita del supporto di PowerShell
 
 PowerShell è un set distinto di strumenti e componenti che viene offerto, installato e configurato separatamente da Windows PowerShell. PowerShell non è incluso nei contratti di licenza di Windows.
 
-PowerShell Core è supportato nei contratti di supporto Microsoft tradizionali, tra cui [Premier][], [Microsoft Enterprise Agreement][enterprise-agreement] e [Microsoft Software Assurance][assurance].
+PowerShell Core è supportato nei contratti di supporto Microsoft tradizionali, tra cui [supporto a pagamento][], [Microsoft Enterprise Agreement][enterprise-agreement] e [Microsoft Software Assurance][assurance].
 È anche possibile acquistare il [supporto assistito][] per PowerShell inviando una richiesta di supporto per il problema riscontrato.
 
 ## <a name="community-support"></a>Supporto della community
@@ -155,7 +155,7 @@ La tabella seguente contiene una sequenza temporale delle versioni principali di
 | PowerShell 1.0       |   Novembre 2006   | Può essere installata su Windows XP SP2, Windows Server 2003 SP1 e Windows Vista. Componente facoltativo di Windows Server 2008.                          |
 
 <!-- hyperlink references -->
-[Premier]: https://www.microsoft.com/microsoftservices/support.aspx
+[supporto a pagamento]: https://support.microsoft.com/hub/4343728/support-for-business
 [enterprise-agreement]: https://www.microsoft.com/licensing/licensing-programs/enterprise.aspx
 [assurance]: https://www.microsoft.com/licensing/licensing-programs/software-assurance-default.aspx
 [supporto della community]: /powershell/scripting/community/community-support
