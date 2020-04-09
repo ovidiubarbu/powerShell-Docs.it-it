@@ -11,16 +11,16 @@ helpviewer_keywords:
 - providers [PowerShell Programmer's Guide], base provider
 ms.assetid: 11eeea41-15c8-47ad-9016-0f4b72573305
 caps.latest.revision: 7
-ms.openlocfilehash: e825581b96f0f33893b38f9f6499dd46a7bf38eb
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 0f8621cd22ca402f3a564ccdfb36c97da68dac6a
+ms.sourcegitcommit: 7f2479edd329dfdc55726afff7019d45e45f9156
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72360520"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80978509"
 ---
 # <a name="creating-a-basic-windows-powershell-provider"></a>Creazione di un provider di Windows PowerShell di base
 
-Questo argomento è il punto di partenza per apprendere come creare un provider di Windows PowerShell. Il provider di base descritto di seguito fornisce i metodi per l'avvio e l'arresto del provider e anche se questo provider non fornisce un mezzo per accedere a un archivio dati o per ottenere o impostare i dati nell'archivio dati, fornisce le funzionalità di base richieste da tutti i provider.
+Questo argomento è il punto di partenza per apprendere come creare un provider di Windows PowerShell. Il provider di base descritto di seguito fornisce i metodi per l'avvio e l'arresto del provider, sebbene questo provider non fornisca un mezzo per accedere a un archivio dati o per ottenere o impostare i dati nell'archivio dati, fornisce le funzionalità di base richieste da tutti i provider.
 
 Come indicato in precedenza, il provider di base descritto di seguito implementa i metodi per l'avvio e l'arresto del provider. Il runtime di Windows PowerShell chiama questi metodi per inizializzare e annullare l'inizializzazione del provider.
 
@@ -38,7 +38,7 @@ Il primo passaggio nella creazione di un provider di Windows PowerShell consiste
 
 Di seguito è illustrata la definizione della classe per il provider Basic:
 
-[!code-csharp[AccessDBProviderSample01.cs](../../../../powershell-sdk-samples/SDK-2.0/csharp/AccessDBProviderSample01/AccessDBProviderSample01.cs#L23-L24 "AccessDBProviderSample01.cs")]
+:::code language="csharp" source="~/../powershell-sdk-samples/SDK-2.0/csharp/AccessDBProviderSample01/AccessDBProviderSample01.cs" range="23-24":::
 
 Immediatamente prima della definizione della classe, è necessario dichiarare l'attributo [System. Management. Automation. provider. CmdletProviderAttribute](/dotnet/api/System.Management.Automation.Provider.CmdletProviderAttribute) , con la sintassi [CmdletProvider ()].
 
@@ -93,7 +93,7 @@ Get-PSProvider
 
 Viene visualizzato l'output seguente:
 
-```output
+```Output
 Name                 Capabilities                  Drives
 ----                 ------------                  ------
 AccessDb             None                          {}

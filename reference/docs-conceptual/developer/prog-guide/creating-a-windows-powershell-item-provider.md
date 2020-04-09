@@ -11,12 +11,12 @@ helpviewer_keywords:
 - providers [PowerShell Programmer's Guide], item provider
 ms.assetid: a5a304ce-fc99-4a5b-a779-de7d85e031fe
 caps.latest.revision: 6
-ms.openlocfilehash: a64e49894ce5195cc177e97a7049740389b09456
-ms.sourcegitcommit: d97b200e7a49315ce6608cd619e3e2fd99193edd
+ms.openlocfilehash: 32f58d70dc01130f37639960109bf9ef4a8aa7cc
+ms.sourcegitcommit: 7f2479edd329dfdc55726afff7019d45e45f9156
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75870711"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80978441"
 ---
 # <a name="creating-a-windows-powershell-item-provider"></a>Creazione di un provider di elementi di Windows PowerShell
 
@@ -32,7 +32,7 @@ Il provider di elementi di Windows PowerShell descritto in questo argomento recu
 
 Un provider di elementi di Windows PowerShell deve definire una classe .NET che deriva dalla classe di base [System. Management. Automation. provider. Itemcmdletprovider](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider) . Di seguito è riportata la definizione della classe per il provider di elementi descritto in questa sezione.
 
-[!code-csharp[AccessDBProviderSample03.cs](../../../../powershell-sdk-samples/SDK-2.0/csharp/AccessDBProviderSample03/AccessDBProviderSample03.cs#L34-L36 "AccessDBProviderSample03.cs")]
+:::code language="csharp" source="~/../powershell-sdk-samples/SDK-2.0/csharp/AccessDBProviderSample03/AccessDBProviderSample03.cs" range="34-36":::
 
 Si noti che in questa definizione di classe l'attributo [System. Management. Automation. provider. CmdletProviderAttribute](/dotnet/api/System.Management.Automation.Provider.CmdletProviderAttribute) include due parametri. Il primo parametro specifica un nome descrittivo per il provider utilizzato da Windows PowerShell. Il secondo parametro specifica le funzionalità specifiche di Windows PowerShell che il provider espone al runtime di Windows PowerShell durante l'elaborazione del comando. Per questo provider non sono state aggiunte funzionalità specifiche di Windows PowerShell.
 
@@ -52,7 +52,7 @@ Un provider di elementi di Windows PowerShell deve verificare la validità sinta
 
 Di seguito è illustrata l'implementazione del metodo [System. Management. Automation. provider. Itemcmdletprovider. IsValidPath *](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.IsValidPath) per questo provider. Si noti che questa implementazione chiama un metodo helper NormalizePath per convertire tutti i separatori del percorso in uno uniforme.
 
-[!code-csharp[AccessDBProviderSample03.cs](../../../../powershell-sdk-samples/SDK-2.0/csharp/AccessDBProviderSample03/AccessDBProviderSample03.cs#L274-L298 "AccessDBProviderSample03.cs")]
+:::code language="csharp" source="~/../powershell-sdk-samples/SDK-2.0/csharp/AccessDBProviderSample03/AccessDBProviderSample03.cs" range="274-298":::
 
 ## <a name="determining-if-an-item-exists"></a>Determinare se esiste un elemento
 
@@ -60,7 +60,7 @@ Dopo aver verificato il percorso, il runtime di Windows PowerShell deve determin
 
 Di seguito è illustrata l'implementazione del metodo [System. Management. Automation. provider. Itemcmdletprovider. itemExists *](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.ItemExists) per questo provider. Si noti che questo metodo chiama i metodi helper PathIsDrive, ChunkPath e GetTable e usa un oggetto DatabaseTableInfo definito dal provider.
 
-[!code-csharp[AccessDBProviderSample03.cs](../../../../powershell-sdk-samples/SDK-2.0/csharp/AccessDBProviderSample03/AccessDBProviderSample03.cs#L229-L267 "AccessDBProviderSample03.cs")]
+:::code language="csharp" source="~/../powershell-sdk-samples/SDK-2.0/csharp/AccessDBProviderSample03/AccessDBProviderSample03.cs" range="229-267":::
 
 #### <a name="things-to-remember-about-implementing-itemexists"></a>Aspetti da ricordare sull'implementazione di ItemExists
 
@@ -84,7 +84,7 @@ Per recuperare un elemento, il provider di elementi di Windows PowerShell deve e
 
 Di seguito è illustrata l'implementazione del metodo [System. Management. Automation. provider. Itemcmdletprovider. GetItem *](/dotnet/api/System.Management.Automation.Provider.ItemCmdletProvider.GetItem) per questo provider. Si noti che questo metodo usa i metodi helper GetTable e GetRow per recuperare elementi che sono tabelle nel database di Access o righe in una tabella di dati.
 
-[!code-csharp[AccessDBProviderSample03.cs](../../../../powershell-sdk-samples/SDK-2.0/csharp/AccessDBProviderSample03/AccessDBProviderSample03.cs#L132-L163 "AccessDBProviderSample03.cs")]
+:::code language="csharp" source="~/../powershell-sdk-samples/SDK-2.0/csharp/AccessDBProviderSample03/AccessDBProviderSample03.cs" range="132-163":::
 
 #### <a name="things-to-remember-about-implementing-getitem"></a>Aspetti da ricordare sull'implementazione di GetItem
 

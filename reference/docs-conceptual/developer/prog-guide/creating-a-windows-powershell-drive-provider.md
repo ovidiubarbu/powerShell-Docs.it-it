@@ -12,30 +12,33 @@ helpviewer_keywords:
 - drives [PowerShell Programmer's Guide]
 ms.assetid: 2b446841-6616-4720-9ff8-50801d7576ed
 caps.latest.revision: 6
-ms.openlocfilehash: 2e3d97e224b06bdf36ac0bc1237911e029ea762d
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 88be7cc6cc0ab54604bc9de71e0ae07c20457514
+ms.sourcegitcommit: 7f2479edd329dfdc55726afff7019d45e45f9156
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72366830"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80978458"
 ---
 # <a name="creating-a-windows-powershell-drive-provider"></a>Creazione di un provider di unità di Windows PowerShell
 
 Questo argomento descrive come creare un provider di unità di Windows PowerShell che fornisce un modo per accedere a un archivio dati tramite un'unità di Windows PowerShell. Questo tipo di provider è anche noto come provider di unità di Windows PowerShell. Le unità di Windows PowerShell utilizzate dal provider forniscono i mezzi per connettersi all'archivio dati.
 
-Il provider di unità di Windows PowerShell descritto di seguito consente di accedere a un database di Microsoft Access. Per questo provider, l'unità di Windows PowerShell rappresenta il database (è possibile aggiungere un numero qualsiasi di unità a un provider di unità), i contenitori di livello superiore dell'unità rappresentano le tabelle nel database e gli elementi dei contenitori rappresentano le righe in tabelle.
+Il provider di unità di Windows PowerShell descritto di seguito consente di accedere a un database di Microsoft Access.
+Per questo provider, l'unità di Windows PowerShell rappresenta il database (è possibile aggiungere un numero qualsiasi di unità a un provider di unità), i contenitori di livello superiore dell'unità rappresentano le tabelle nel database e gli elementi dei contenitori rappresentano le righe nelle tabelle.
 
 ## <a name="defining-the-windows-powershell-provider-class"></a>Definizione della classe del provider di Windows PowerShell
 
 Il provider di unità deve definire una classe .NET che deriva dalla classe di base [System. Management. Automation. provider. Drivecmdletprovider](/dotnet/api/System.Management.Automation.Provider.DriveCmdletProvider) . Di seguito è illustrata la definizione di classe per questo provider di unità:
 
-[!code-csharp[AccessDBProviderSample02.cs](../../../../powershell-sdk-samples/SDK-2.0/csharp/AccessDBProviderSample02/AccessDBProviderSample02.cs#L29-L30 "AccessDBProviderSample02.cs")]
+:::code language="csharp" source="~/../powershell-sdk-samples/SDK-2.0/csharp/AccessDBProviderSample02/AccessDBProviderSample02.cs" range="29-30":::
 
-Si noti che in questo esempio l'attributo [System. Management. Automation. provider. CmdletProviderAttribute](/dotnet/api/System.Management.Automation.Provider.CmdletProviderAttribute) specifica un nome descrittivo per il provider e le funzionalità specifiche di Windows PowerShell che il provider espone al runtime di Windows PowerShell durante l'elaborazione del comando. I valori possibili per le funzionalità del provider sono definiti dall'enumerazione [System. Management. Automation. provider. ProviderCapabilities](/dotnet/api/System.Management.Automation.Provider.ProviderCapabilities) . Questo provider di unità non supporta nessuna di queste funzionalità.
+Si noti che in questo esempio l'attributo [System. Management. Automation. provider. CmdletProviderAttribute](/dotnet/api/System.Management.Automation.Provider.CmdletProviderAttribute) specifica un nome descrittivo per il provider e le funzionalità specifiche di Windows PowerShell che il provider espone al runtime di Windows PowerShell durante l'elaborazione del comando.
+I valori possibili per le funzionalità del provider sono definiti dall'enumerazione [System. Management. Automation. provider. ProviderCapabilities](/dotnet/api/System.Management.Automation.Provider.ProviderCapabilities) . Questo provider di unità non supporta nessuna di queste funzionalità.
 
 ## <a name="defining-base-functionality"></a>Definizione della funzionalità di base
 
-Come descritto nella pagina relativa alla [progettazione del provider di Windows PowerShell](./designing-your-windows-powershell-provider.md), la classe [System. Management. Automation. provider. Drivecmdletprovider](/dotnet/api/System.Management.Automation.Provider.DriveCmdletProvider) deriva dalla classe di base [System. Management. Automation. provider. CmdletProvider](/dotnet/api/System.Management.Automation.Provider.CmdletProvider) che definisce i metodi necessari per l'inizializzazione e l'annullamento dell'inizializzazione del provider. Per implementare la funzionalità per l'aggiunta di informazioni di inizializzazione specifiche della sessione e per il rilascio di risorse utilizzate dal provider, vedere [creazione di un provider di Windows PowerShell di base](./creating-a-basic-windows-powershell-provider.md). Tuttavia, la maggior parte dei provider (incluso il provider descritto qui) può usare l'implementazione predefinita di questa funzionalità fornita da Windows PowerShell.
+Come descritto nella pagina relativa alla [progettazione del provider di Windows PowerShell](./designing-your-windows-powershell-provider.md), la classe [System. Management. Automation. provider. Drivecmdletprovider](/dotnet/api/System.Management.Automation.Provider.DriveCmdletProvider) deriva dalla classe di base [System. Management. Automation. provider. CmdletProvider](/dotnet/api/System.Management.Automation.Provider.CmdletProvider) che definisce i metodi necessari per l'inizializzazione e l'annullamento dell'inizializzazione del provider. Per implementare la funzionalità per l'aggiunta di informazioni di inizializzazione specifiche della sessione e per il rilascio di risorse utilizzate dal provider, vedere [creazione di un provider di Windows PowerShell di base](./creating-a-basic-windows-powershell-provider.md).
+Tuttavia, la maggior parte dei provider (incluso il provider descritto qui) può usare l'implementazione predefinita di questa funzionalità fornita da Windows PowerShell.
 
 ## <a name="creating-drive-state-information"></a>Creazione di informazioni sullo stato dell'unità
 
@@ -43,24 +46,20 @@ Tutti i provider di Windows PowerShell sono considerati senza stato, il che sign
 
 Per questo provider di unità, le informazioni sullo stato includono la connessione al database mantenuto come parte delle informazioni sull'unità. Ecco il codice che Mostra come queste informazioni vengono archiviate nell'oggetto [System. Management. Automation. PSDriveinfo](/dotnet/api/System.Management.Automation.PSDriveInfo) che descrive l'unità:
 
-[!code-csharp[AccessDBProviderSample02.cs](../../../../powershell-sdk-samples/SDK-2.0/csharp/AccessDBProviderSample02/AccessDBProviderSample02.cs#L130-L151 "AccessDBProviderSample02.cs")]
+:::code language="csharp" source="~/../powershell-sdk-samples/SDK-2.0/csharp/AccessDBProviderSample02/AccessDBProviderSample02.cs" range="130-151":::
 
 ## <a name="creating-a-drive"></a>Creazione di un'unità
 
 Per consentire al runtime di Windows PowerShell di creare un'unità, il provider di unità deve implementare il metodo [System. Management. Automation. provider. Drivecmdletprovider. nuovaunità *](/dotnet/api/System.Management.Automation.Provider.DriveCmdletProvider.NewDrive) . Il codice seguente illustra l'implementazione del metodo [System. Management. Automation. provider. Drivecmdletprovider. nuovaunità *](/dotnet/api/System.Management.Automation.Provider.DriveCmdletProvider.NewDrive) per questo provider di unità:
 
-[!code-csharp[AccessDBProviderSample02.cs](../../../../powershell-sdk-samples/SDK-2.0/csharp/AccessDBProviderSample02/AccessDBProviderSample02.cs#L42-L84 "AccessDBProviderSample02.cs")]
+:::code language="csharp" source="~/../powershell-sdk-samples/SDK-2.0/csharp/AccessDBProviderSample02/AccessDBProviderSample02.cs" range="42-84":::
 
 L'override di questo metodo deve eseguire le operazioni seguenti:
 
 - Verificare che il membro [System. Management. Automation. PSDriveinfo. root *](/dotnet/api/System.Management.Automation.PSDriveInfo.Root) esista e che sia possibile effettuare una connessione all'archivio dati.
-
 - Creare un'unità e popolare il membro della connessione, in supporto del cmdlet `New-PSDrive`.
-
 - Convalidare l'oggetto [System. Management. Automation. PSDriveinfo](/dotnet/api/System.Management.Automation.PSDriveInfo) per l'unità proposta.
-
 - Modificare l'oggetto [System. Management. Automation. PSDriveinfo](/dotnet/api/System.Management.Automation.PSDriveInfo) che descrive l'unità con le informazioni sulle prestazioni o sull'affidabilità richieste oppure fornire dati aggiuntivi per i chiamanti che usano l'unità.
-
 - Gestire gli errori usando il metodo [System. Management. Automation. provider. CmdletProvider. WriteError](/dotnet/api/System.Management.Automation.Provider.CmdletProvider.WriteError) e quindi restituire `null`.
 
   Questo metodo restituisce le informazioni sull'unità passate al metodo o a una versione specifica del provider.
@@ -79,7 +78,7 @@ Per chiudere la connessione al database, il provider di unità deve implementare
 
 Il codice seguente illustra l'implementazione del metodo [System. Management. Automation. provider. Drivecmdletprovider. Removedrive *](/dotnet/api/System.Management.Automation.Provider.DriveCmdletProvider.RemoveDrive) per questo provider di unità:
 
-[!code-csharp[AccessDBProviderSample02.cs](../../../../powershell-sdk-samples/SDK-2.0/csharp/AccessDBProviderSample02/AccessDBProviderSample02.cs#L91-L116 "AccessDBProviderSample02.cs")]
+:::code language="csharp" source="~/../powershell-sdk-samples/SDK-2.0/csharp/AccessDBProviderSample02/AccessDBProviderSample02.cs" range="91-116":::
 
 Se è possibile rimuovere l'unità, il metodo deve restituire le informazioni passate al metodo tramite il parametro `drive`. Se non è possibile rimuovere l'unità, il metodo deve scrivere un'eccezione e quindi restituire `null`. Se il provider non esegue l'override di questo metodo, l'implementazione predefinita di questo metodo restituisce solo le informazioni sull'unità passate come input.
 
@@ -111,7 +110,7 @@ Quando il provider di Windows PowerShell è stato registrato con Windows PowerSh
 
    Viene visualizzato l'output seguente:
 
-   ```output
+   ```Output
    Name                 Capabilities                  Drives
    ----                 ------------                  ------
    AccessDB             None                          {}
@@ -122,15 +121,17 @@ Quando il provider di Windows PowerShell è stato registrato con Windows PowerSh
    Registry             ShouldProcess                 {HKLM, HKCU}
    ```
 
-2. Assicurarsi che esista un nome del server di database (DSN) per il database accedendo alla parte **origini dati** degli **strumenti di amministrazione** per il sistema operativo. Nella tabella **DSN utente** fare doppio clic su **database di MS Access** e aggiungere il percorso dell'unità C:\ps\northwind.mdb.
+2. Assicurarsi che esista un nome del server di database (DSN) per il database accedendo alla parte **origini dati** degli **strumenti di amministrazione** per il sistema operativo. Nella tabella **DSN utente** fare doppio clic su **database di MS Access** e aggiungere il percorso dell'unità `C:\ps\northwind.mdb`.
 
 3. Creare una nuova unità utilizzando il provider di unità di esempio:
 
-   **PS > New-PSDrive-Name MyDB-root c:\ps\northwind.mdb-PSProvider AccessDb**
+   ```powershell
+   new-psdrive -name mydb -root c:\ps\northwind.mdb -psprovider AccessDb`
+   ```
 
    Viene visualizzato l'output seguente:
 
-   ```output
+   ```Output
    Name     Provider     Root                   CurrentLocation
    ----     --------     ----                   ---------------
    mydb     AccessDB     c:\ps\northwind.mdb
@@ -145,7 +146,7 @@ Quando il provider di Windows PowerShell è stato registrato con Windows PowerSh
 
    Viene visualizzato l'output seguente:
 
-   ```output
+   ```Output
    ConnectionString  : Driver={Microsoft Access Driver (*.mdb)};DBQ=c:\ps\northwind.mdb
    ConnectionTimeout : 15
    Database          : c:\ps\northwind
@@ -159,9 +160,10 @@ Quando il provider di Windows PowerShell è stato registrato con Windows PowerSh
 
 5. Rimuovere l'unità e uscire dalla shell:
 
-   **PS > Remove-PSDrive MyDB**
-
-   **Uscita da PS >**
+   ```powershell
+   PS> remove-psdrive mydb
+   PS> exit
+   ```
 
 ## <a name="see-also"></a>Vedere anche
 

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - parameters [PowerShell Programmer's Guide], pipeline input
 ms.assetid: 09bf70a9-7c76-4ffe-b3f0-a1d5f10a0931
 caps.latest.revision: 8
-ms.openlocfilehash: 9ecb73a4138a5853fa5fb378874da2d81c5dbdba
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: 4966ac274713899e7ea9e0c375dca220a972a1b5
+ms.sourcegitcommit: 7f2479edd329dfdc55726afff7019d45e45f9156
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72364600"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80978730"
 ---
 # <a name="adding-parameters-that-process-pipeline-input"></a>Aggiunta di parametri che elaborano gli input della pipeline
 
@@ -43,13 +43,14 @@ Public Class GetProcCommand
 
 ## <a name="defining-input-from-the-pipeline"></a>Definizione dell'input dalla pipeline
 
-Questa sezione descrive come definire l'input dalla pipeline per un cmdlet. Questo cmdlet Get-proc definisce una proprietà che rappresenta il parametro `Name` come descritto in [aggiunta di parametri che elaborano l'input della riga di comando](./adding-parameters-that-process-command-line-input.md). Per informazioni generali sulla dichiarazione dei parametri, vedere questo argomento.
+Questa sezione descrive come definire l'input dalla pipeline per un cmdlet. Questo cmdlet Get-proc definisce una proprietà che rappresenta il parametro `Name` come descritto in [aggiunta di parametri che elaborano l'input della riga di comando](./adding-parameters-that-process-command-line-input.md).
+Per informazioni generali sulla dichiarazione dei parametri, vedere questo argomento.
 
 Tuttavia, quando un cmdlet deve elaborare l'input della pipeline, i parametri devono essere associati ai valori di input dal runtime di Windows PowerShell. A tale scopo, è necessario aggiungere la parola chiave `ValueFromPipeline` o aggiungere la parola chiave `ValueFromPipelineByProperty` alla dichiarazione dell'attributo [System. Management. Automation. ParameterAttribute](/dotnet/api/System.Management.Automation.ParameterAttribute) . Specificare la parola chiave `ValueFromPipeline` se il cmdlet accede all'oggetto di input completo. Specificare il `ValueFromPipelineByProperty` se il cmdlet accede solo a una proprietà dell'oggetto.
 
 Di seguito è illustrata la dichiarazione di parametro per il parametro `Name` di questo cmdlet Get-proc che accetta input della pipeline.
 
-[!code-csharp[GetProcessSample03.cs](../../../../powershell-sdk-samples/SDK-2.0/csharp/GetProcessSample03/GetProcessSample03.cs#L35-L44 "GetProcessSample03.cs")]
+:::code language="csharp" source="~/../powershell-sdk-samples/SDK-2.0/csharp/GetProcessSample03/GetProcessSample03.cs" range="35-44":::
 
 ```vb
 <Parameter(Position:=0, ValueFromPipeline:=True, _
@@ -77,7 +78,7 @@ La dichiarazione precedente imposta la parola chiave `ValueFromPipeline` su `tru
 
 Se il cmdlet prevede di gestire l'input della pipeline, è necessario eseguire l'override dei metodi di elaborazione dell'input appropriati. I metodi di elaborazione dell'input di base sono introdotti nella [creazione del primo cmdlet](./creating-a-cmdlet-without-parameters.md).
 
-Questo cmdlet Get-proc esegue l'override del metodo [System. Management. Automation. cmdlet. ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) per gestire l'input del parametro `Name` fornito dall'utente o da uno script. Questo metodo otterrà i processi per ogni nome di processo richiesto o per tutti i processi se non viene specificato alcun nome. Si noti che all'interno di [System. Management. Automation. cmdlet. ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord)la chiamata a [WriteObject (System. Object, System. Boolean)](/dotnet/api/system.management.automation.cmdlet.writeobject?view=pscore-6.2.0#System_Management_Automation_Cmdlet_WriteObject_System_Object_System_Boolean_) è il meccanismo di output per l'invio di oggetti di output alla pipeline. Il secondo parametro di questa chiamata, `enumerateCollection`, viene impostato su `true` per indicare al runtime di Windows PowerShell di enumerare la matrice di oggetti processo e scrivere un processo alla volta nella riga di comando.
+Questo cmdlet Get-proc esegue l'override del metodo [System. Management. Automation. cmdlet. ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord) per gestire l'input del parametro `Name` fornito dall'utente o da uno script. Questo metodo otterrà i processi per ogni nome di processo richiesto o per tutti i processi se non viene specificato alcun nome. Si noti che all'interno di [System. Management. Automation. cmdlet. ProcessRecord](/dotnet/api/System.Management.Automation.Cmdlet.ProcessRecord)la chiamata a [WriteObject (System. Object, System. Boolean)](/dotnet/api/system.management.automation.cmdlet.writeobject#System_Management_Automation_Cmdlet_WriteObject_System_Object_System_Boolean_) è il meccanismo di output per l'invio di oggetti di output alla pipeline. Il secondo parametro di questa chiamata, `enumerateCollection`, viene impostato su `true` per indicare al runtime di Windows PowerShell di enumerare la matrice di oggetti processo e scrivere un processo alla volta nella riga di comando.
 
 ```csharp
 protected override void ProcessRecord()
@@ -142,37 +143,37 @@ Quando il cmdlet è stato registrato con Windows PowerShell, testarlo eseguendol
 
 - Al prompt di Windows PowerShell, immettere i comandi seguenti per recuperare i nomi dei processi tramite la pipeline.
 
-    ```powershell
-    PS> type ProcessNames | get-proc
-    ```
+  ```powershell
+  PS> type ProcessNames | get-proc
+  ```
 
-Viene visualizzato l'output seguente:
+  Viene visualizzato l'output seguente.
 
-    ```
-    Handles  NPM(K)  PM(K)   WS(K)  VS(M)  CPU(s)    Id  ProcessName
-    -------  ------  -----   ----- -----   ------    --  -----------
-        809      21  40856    4448    147    9.50  2288  iexplore
-        737      21  26036   16348    144   22.03  3860  iexplore
-         39       2   1024     388     30    0.08  3396  notepad
-       3927      62  71836   26984    467  195.19  1848  OUTLOOK
-    ```
+  ```
+  Handles  NPM(K)  PM(K)   WS(K)  VS(M)  CPU(s)    Id  ProcessName
+  -------  ------  -----   ----- -----   ------    --  -----------
+      809      21  40856    4448    147    9.50  2288  iexplore
+      737      21  26036   16348    144   22.03  3860  iexplore
+       39       2   1024     388     30    0.08  3396  notepad
+     3927      62  71836   26984    467  195.19  1848  OUTLOOK
+  ```
 
 - Immettere le righe seguenti per ottenere gli oggetti processo con una proprietà `Name` dai processi chiamati "IEXPLORE". Questo esempio usa il cmdlet `Get-Process` (fornito da Windows PowerShell) come comando upstream per recuperare i processi "IEXPLORE".
 
-    ```powershell
-    PS> get-process iexplore | get-proc
-    ```
+  ```powershell
+  PS> get-process iexplore | get-proc
+  ```
 
-Viene visualizzato l'output seguente:
+  Viene visualizzato l'output seguente.
 
-    ```
-    Handles  NPM(K)  PM(K)   WS(K)  VS(M)  CPU(s)    Id  ProcessName
-    -------  ------  -----      ----- -----   ------     -- -----------
-        801      21  40720    6544    142    9.52  2288  iexplore
-        726      21  25872   16652    138   22.09  3860  iexplore
-        801      21  40720    6544    142    9.52  2288  iexplore
-        726      21  25872   16652    138   22.09  3860  iexplore
-    ```
+  ```
+  Handles  NPM(K)  PM(K)   WS(K)  VS(M)  CPU(s)    Id  ProcessName
+  -------  ------  -----   ----- -----   ------    --  -----------
+      801      21  40720    6544    142    9.52  2288  iexplore
+      726      21  25872   16652    138   22.09  3860  iexplore
+      801      21  40720    6544    142    9.52  2288  iexplore
+      726      21  25872   16652    138   22.09  3860  iexplore
+  ```
 
 ## <a name="see-also"></a>Vedere anche
 
@@ -184,6 +185,6 @@ Viene visualizzato l'output seguente:
 
 [Come registrare cmdlet, provider e applicazioni host](/previous-versions//ms714644(v=vs.85))
 
-[Windows PowerShell Reference](../windows-powershell-reference.md) (Guida di riferimento di PowerShell)
+[Riferimenti Windows PowerShell](../windows-powershell-reference.md)
 
 [Esempi di cmdlet](./cmdlet-samples.md)
