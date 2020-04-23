@@ -3,10 +3,10 @@ ms.date: 09/20/2019
 keywords: dsc,powershell,configurazione,installazione
 title: Risorsa WaitForAny DSC
 ms.openlocfilehash: 61fee456d2652e08ed9bdbe64457627ff5b2e145
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "71952998"
 ---
 # <a name="dsc-waitforany-resource"></a>Risorsa WaitForAny DSC
@@ -37,7 +37,7 @@ WaitForAny [string] #ResourceName
 
 ## <a name="properties"></a>Proprietà
 
-|Proprietà |Description |
+|Proprietà |Descrizione |
 |---|---|
 |NomeRisorsa |Il nome della risorsa da cui dipendere. Se questa risorsa appartiene a una configurazione diversa, formattare il nome come `[ResourceType]ResourceName::[ConfigurationName]::[ConfigurationName]`. |
 |NodeName |I nodi di destinazione della risorsa da cui dipendere. |
@@ -47,7 +47,7 @@ WaitForAny [string] #ResourceName
 
 ## <a name="common-properties"></a>Proprietà comuni
 
-|Proprietà |Description |
+|Proprietà |Descrizione |
 |---|---|
 |DependsOn |Indica che prima di configurare la risorsa è necessario eseguire la configurazione di un'altra risorsa. Ad esempio, se il valore di ID del blocco script di configurazione della risorsa che si vuole eseguire per primo è ResourceName e il tipo è ResourceType, la sintassi per usare questa proprietà è `DependsOn = "[ResourceType]ResourceName"`. |
 |PsDscRunAsCredential |Imposta le credenziali per l'esecuzione dell'intera risorsa. |

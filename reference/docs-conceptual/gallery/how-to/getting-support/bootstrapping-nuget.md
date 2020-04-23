@@ -3,10 +3,10 @@ ms.date: 06/12/2017
 keywords: raccolta,powershell,cmdlet,psget
 title: Bootstrap di NuGet
 ms.openlocfilehash: 70403006c7a48ac70a6766de3aa52d80cebbd86a
-ms.sourcegitcommit: 1fa89ab20d14a61f139f1394c45aaedd5a7c5438
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2020
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "78935170"
 ---
 # <a name="bootstrap-the-nuget-provider-and-nugetexe"></a>Bootstrap del provider NuGet e di NuGet.exe
@@ -158,7 +158,7 @@ La prima opzione consiste nell'eseguire il bootstrap di un computer connesso a I
   $env:userprofile\AppData\Local\Microsoft\Windows\PowerShell\PowerShellGet\
   ```
 
-La seconda opzione consiste nello scaricare NuGet.exe dal sito Web NuGet.Org: [https://dist.nuget.org/index.html](https://www.nuget.org/downloads) Quando si seleziona una versione di NugGet per i computer di produzione, assicurarsi che sia successiva alla versione 2.8.5.208 e identificare la versione con etichetta "recommended" (consigliata). Ricordarsi di sbloccare il file se è stato scaricato tramite un browser. Questa operazione può essere eseguita usando il cmdlet `Unblock-File`.
+Una seconda alternativa è il download di NuGet.exe dal sito Web NuGet.Org: [https://dist.nuget.org/index.html](https://www.nuget.org/downloads) Quando si seleziona una versione NugGet per i computer di produzione, assicurarsi che sia successiva alla versione 2.8.5.208 e identificare la versione con etichetta "consigliata". Ricordarsi di sbloccare il file se è stato scaricato tramite un browser. Questa operazione può essere eseguita usando il cmdlet `Unblock-File`.
 
 In entrambi i casi, è possibile copiare il file di NuGet.exe in qualsiasi percorso in `$env:path`, ma i percorsi standard sono:
 

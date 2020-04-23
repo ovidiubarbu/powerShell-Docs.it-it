@@ -3,10 +3,10 @@ ms.date: 12/06/2019
 keywords: powershell,cmdlet
 title: Requisiti di sistema di Windows PowerShell
 ms.openlocfilehash: 713b062916fec0c5c70ea9a7f95fea3570afb64a
-ms.sourcegitcommit: 0e4c69d8b5cf71431592fe41da816dec9b70f1f9
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/09/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "74953790"
 ---
 # <a name="windows-powershell-system-requirements"></a>Requisiti di sistema di Windows PowerShell
@@ -147,7 +147,7 @@ Il servizio **WinRM** non è presente in Windows PE.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Guida introduttiva a Windows PowerShell](../getting-started/Getting-Started-with-Windows-PowerShell.md)
+[Introduzione a Windows PowerShell](../getting-started/Getting-Started-with-Windows-PowerShell.md)
 
 [Installazione di Windows PowerShell](Installing-Windows-PowerShell.md)
 

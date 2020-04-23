@@ -3,12 +3,12 @@ ms.date: 06/12/2017
 ms.topic: conceptual
 keywords: wmf,powershell,installazione
 title: Miglioramenti di DSC in WMF 5.1
-ms.openlocfilehash: 99434d14100de54d2d4c89c5888741ab2f1c512a
-ms.sourcegitcommit: 01c60c0c97542dbad48ae34339cddbd813f1353b
+ms.openlocfilehash: 78c15f453977384ba437b0bd69cd620eb1a29fbd
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2020
-ms.locfileid: "78277624"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "80978288"
 ---
 # <a name="improvements-in-desired-state-configuration-dsc-in-wmf-51"></a>Miglioramenti di Desired State Configuration (DSC) in WMF 5.1
 
@@ -147,7 +147,7 @@ Vedere gli snapshot seguenti:
 
 ## <a name="using-psdscrunascredential-with-dsc-composite-resources"></a>Usare PsDscRunAsCredential con le risorse composite DSC
 
-È stato aggiunto il supporto per l'uso di [PsDscRunAsCredential](/powershell/scripting/dsc/configurations/runAsUser) con le risorse [Composite](/powershell/scripting/dsc/authoringresourcecomposite) DSC.
+È stato aggiunto il supporto per l'uso di [PsDscRunAsCredential](/powershell/scripting/dsc/configurations/runAsUser) con le risorse [Composite](/powershell/scripting/dsc/resources/authoringresourcecomposite) DSC.
 
 È ora possibile specificare un valore per **PsDscRunAsCredential** quando si usano risorse composite all'interno delle configurazioni. Quando specificato, tutte le risorse vengono eseguite all'interno di una risorsa composita come utente RunAs. Se una risorsa composita chiama un'altra risorsa composita, anche tutte queste risorse vengono eseguite come utente RunAs. Le credenziali RunAs vengono propagate a tutti i livelli della gerarchia di risorse composite. Se una risorsa all'interno di una risorsa composita specifica un valore per **PsDscRunAsCredential**, durante la compilazione della configurazione si verifica un errore di merge.
 
@@ -239,7 +239,7 @@ In WMF 5.1 DSC supporta la convalida delle firme digitali su file di catalogo e 
 
 ### <a name="how-to-sign-configuration-and-module"></a>Come firmare la configurazione e il modulo
 
-- File di configurazione (MOF): il cmdlet di PowerShell esistente [Set-AuthenticodeSignature](/powershell/module/Microsoft.PowerShell.Security/Set-AuthenticodeSignature) supporta ora la firma dei file MOF.
+- File di configurazione (.MOFs): il cmdlet di PowerShell esistente [Set-AuthenticodeSignature](/powershell/module/Microsoft.PowerShell.Security/Set-AuthenticodeSignature) supporta ora la firma dei file MOF.
 - Moduli: la firma dei moduli viene effettuata firmando il catalogo del modulo corrispondente eseguendo i passaggi seguenti:
   1. Creare un file di catalogo: un file di catalogo contiene una raccolta di hash di crittografia o identificazioni personali. Ogni identificazione personale corrisponde a un file incluso nel modulo. Il nuovo cmdlet [New-FileCatalog](/powershell/module/microsoft.powershell.security/new-filecatalog) è stato aggiunto per consentire agli utenti di creare un file di catalogo per il modulo.
   2. Firmare il file di catalogo: usare [Set-AuthenticodeSignature](/powershell/module/Microsoft.PowerShell.Security/Set-AuthenticodeSignature) per firmare il file di catalogo.

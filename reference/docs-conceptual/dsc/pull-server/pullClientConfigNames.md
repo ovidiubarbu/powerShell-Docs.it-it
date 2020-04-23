@@ -3,10 +3,10 @@ ms.date: 06/12/2017
 keywords: dsc,powershell,configurazione,installazione
 title: Configurare un client di pull usando nomi di configurazione in PowerShell 5.0 e versioni successive
 ms.openlocfilehash: d591e2a757130ccecaf4eaf9f363f607fca82b93
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "71953628"
 ---
 # <a name="set-up-a-pull-client-using-configuration-names-in-powershell-50-and-later"></a>Configurare un client di pull usando nomi di configurazione in PowerShell 5.0 e versioni successive
@@ -55,7 +55,7 @@ Lo script seguente configura Gestione configurazione locale per il pull delle co
   > Per informazioni sulla configurazione di un server di pull usando **ConfigurationID**, vedere [Configurazione di un client di pull usando un ID configurazione](pullClientConfigId.md).
 
 - La proprietà **ConfigurationNames** è una matrice che specifica i nomi delle configurazioni per il nodo client.
-  >**Nota:** se si specifica più di un valore in **ConfigurationNames**, è necessario specificare anche i blocchi **PartialConfiguration** nella configurazione.
+  >**Nota:** se si specifica più di un valore in **ConfigurationNames**, è necessario specificare nella configurazione anche i blocchi di **PartialConfiguration**.
   >Per informazioni sulle configurazioni parziali, vedere [configurazioni parziali di PowerShell DSC](partialConfigs.md).
 
 ```powershell

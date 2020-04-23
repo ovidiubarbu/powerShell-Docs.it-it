@@ -3,10 +3,10 @@ ms.date: 12/12/2018
 keywords: dsc,powershell,configurazione,installazione
 title: Configurazione di Gestione configurazione locale in PowerShell 4.0
 ms.openlocfilehash: 747b15c483c79a7ecbb62214ef5a59f8dc137bd4
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "71953828"
 ---
 # <a name="configuring-the-lcm-in-powershell-40"></a>Configurazione di Gestione configurazione locale in PowerShell 4.0
@@ -26,7 +26,7 @@ Di seguito sono elencate le proprietà di Gestione configurazione locale che è 
 - **AllowModuleOverwrite**: controlla se le nuove configurazioni scaricate dal servizio di configurazione possono sovrascrivere quelle meno recenti nel nodo di destinazione. I possibili valori sono True e False.
 - **CertificateID**: Identificazione personale di un certificato usato per credenziali protette passate in una configurazione. Per altre informazioni, vedere [Protezione delle credenziali in Windows PowerShell DSC (Desired State Configuration)](https://blogs.msdn.microsoft.com/powershell/2014/01/31/want-to-secure-credentials-in-windows-powershell-desired-state-configuration/).
 - **ConfigurationID**: indica un GUID usato per ottenere un file di configurazione specifico da un servizio di pull. Il GUID garantisce l'accesso al file di configurazione corretto.
-- **ConfigurationMode**: specifica il modo in cui Gestione configurazione locale applica effettivamente la configurazione ai nodi di destinazione. Può accettare i valori seguenti:
+- **ConfigurationMode**: specifica il modo in cui Gestione configurazione locale applica effettivamente la configurazione ai nodi di destinazione. I valori possibili sono i seguenti:
   - **ApplyOnly**: con questa opzione, DSC applica la configurazione e non esegue altre operazioni, a meno che non venga rilevata una nuova configurazione quando si invia una nuova configurazione direttamente al nodo di destinazione o se ci si connette a un servizio di pull e DSC individua una nuova configurazione quando controlla nel servizio di pull. Se la configurazione del nodo di destinazione non è sincronizzata, non viene eseguita alcuna azione.
   - **ApplyAndMonitor**: con questa opzione, che corrisponde all'impostazione predefinita, DSC applica tutte le nuove configurazioni, sia quelle inviate direttamente al nodo di destinazione sia quelle individuate in un servizio di pull. Quindi, se la configurazione del nodo di destinazione non è sincronizzata rispetto al file di configurazione, DSC segnala la discrepanza nei log. Per altre informazioni sulla registrazione di DSC, vedere la pagina sull'[uso di registri eventi per la diagnosi di errori in DSC (Desired State Configuration)](https://blogs.msdn.com/b/powershell/archive/2014/01/03/using-event-logs-to-diagnose-errors-in-desired-state-configuration.aspx).
   - **ApplyAndAutoCorrect**: con questa opzione DSC applica tutte le nuove configurazioni, sia quelle inviate direttamente al nodo di destinazione sia quelle individuate in un servizio di pull. Quindi, se la configurazione del nodo di destinazione non è sincronizzata rispetto al file di configurazione, DSC segnala la discrepanza nei log e quindi tenta di modificare la configurazione del nodo di destinazione per garantire la conformità con il file di configurazione.

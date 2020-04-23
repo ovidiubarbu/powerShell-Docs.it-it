@@ -3,10 +3,10 @@ ms.date: 06/12/2017
 keywords: wmf,powershell,installazione
 title: Cmdlet nuovi e aggiornati
 ms.openlocfilehash: ffd5db2d4fc9bf8f67ef5e352633ad3209f72c87
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "71147591"
 ---
 # <a name="new-and-updated-cmdlets"></a>Cmdlet nuovi e aggiornati
@@ -45,7 +45,7 @@ Lo standard di crittografia CMS implementa la crittografia a chiave pubblica, in
 
 La chiave pubblica può essere condivisa liberamente e non contiene dati sensibili. Qualsiasi contenuto crittografato con la chiave pubblica può essere decrittografato solo usando la chiave privata. Per altre informazioni, vedere: [Crittografia a chiave pubblica](https://en.wikipedia.org/wiki/Public-key_cryptography).
 
-Per ulteriori informazioni, vedere:
+Per altre informazioni, vedere:
 
 - [Get-CmsMessage](/powershell/module/Microsoft.PowerShell.Security/Get-CmsMessage)
 - [Protect-CmsMessage](/powershell/module/Microsoft.PowerShell.Security/Protect-CmsMessage)

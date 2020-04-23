@@ -3,10 +3,10 @@ ms.date: 09/20/2019
 keywords: dsc,powershell,configurazione,installazione
 title: Risorsa Environment DSC
 ms.openlocfilehash: d6d3b4a2086be28fbfa2bf200acef9b13b7b7825
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "71954718"
 ---
 # <a name="dsc-environment-resource"></a>Risorsa Environment DSC
@@ -31,15 +31,15 @@ Environment [string] #ResourceName
 
 ## <a name="properties"></a>Proprietà
 
-|Proprietà |Description |
+|Proprietà |Descrizione |
 |---|---|
 |Nome |Indica il nome della variabile di ambiente per cui si vuole specificare un determinato stato. |
 |Path |Definisce la variabile di ambiente configurata. Impostare questa proprietà su `$true` se la variabile è **Path**. In caso contrario, impostarla su `$false`. Il valore predefinito è `$false`. Se la variabile configurata è **Path**, il valore specificato tramite la proprietà **Value** viene aggiunto al valore esistente. |
-|Value |Valore da assegnare alla variabile di ambiente. |
+|valore |Valore da assegnare alla variabile di ambiente. |
 
 ## <a name="common-properties"></a>Proprietà comuni
 
-|Proprietà |Description |
+|Proprietà |Descrizione |
 |---|---|
 |DependsOn |Indica che prima di configurare la risorsa è necessario eseguire la configurazione di un'altra risorsa. Ad esempio, se il valore di ID del blocco script di configurazione della risorsa che si vuole eseguire per primo è ResourceName e il tipo è ResourceType, la sintassi per usare questa proprietà è `DependsOn = "[ResourceType]ResourceName"`. |
 |Ensure |Indica se una variabile esiste. Impostare questa proprietà su **Present** per creare una variabile di ambiente se non esiste o per specificare che il suo valore corrisponde a quello fornito tramite la proprietà **Value** se la variabile esiste già. Impostarla su **Absent** per eliminare la variabile, se esiste. |

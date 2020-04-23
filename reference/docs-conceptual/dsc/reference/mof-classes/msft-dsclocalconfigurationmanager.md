@@ -3,10 +3,10 @@ ms.date: 06/12/2017
 keywords: dsc,powershell,configurazione,installazione
 title: Classe MSFT_DSCLocalConfigurationManager
 ms.openlocfilehash: 09b30edd48384c0e8412e0e6ee926a719249c5b8
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "71953268"
 ---
 # <a name="msft_dsclocalconfigurationmanager-class"></a>Classe MSFT_DSCLocalConfigurationManager
@@ -34,7 +34,7 @@ La classe **MSFT_DSCLocalConfigurationManager** ha i membri seguenti:
 
 La classe **MSFT_DSCLocalConfigurationManager** dispone di questi metodi.
 
-|Metodo |Description |
+|Metodo |Descrizione |
 |:--- |:---|
 | [ApplyConfiguration](msft-dsclocalconfigurationmanager-applyconfiguration.md)| Usa l'agente di configurazione per applicare la configurazione in sospeso.|
 | [DisableDebugConfiguration](msft-dsclocalconfigurationmanager-disabledebugconfiguration.md)| Disabilita il debug delle risorse DSC.|

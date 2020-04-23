@@ -3,10 +3,10 @@ ms.date: 07/10/2019
 keywords: jea,powershell,sicurezza
 title: Considerazioni sulla sicurezza in JEA
 ms.openlocfilehash: befc24fec368c4f6d60477daf63bf17e9431133e
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "70017772"
 ---
 # <a name="jea-security-considerations"></a>Considerazioni sulla sicurezza in JEA
@@ -31,9 +31,9 @@ La tabella seguente illustra le opzioni di configurazione possibili e le autoriz
 
 |        Tipo di computer         | Configurazione del gruppo di account virtuali |                   Contesto dell'utente locale                    | Contesto dell'utente di rete |
 | ---------------------------- | ----------------------------------- | ------------------------------------------------------- | -------------------- |
-| Controller di dominio            | Default                             | Utente di dominio, membro di "*DOMAIN*\Domain Admins"         | Account del computer     |
+| Controller di dominio            | Predefinito                             | Utente di dominio, membro di "*DOMAIN*\Domain Admins"         | Account del computer     |
 | Controller di dominio            | Gruppi di dominio A e B               | Utente di dominio, membro di "*DOMAIN*\A", "*DOMAIN*\B"       | Account del computer     |
-| Workstation o server membro | Default                             | Utente locale, membro di "*BUILTIN*\Administrators"        | Account del computer     |
+| Workstation o server membro | Predefinito                             | Utente locale, membro di "*BUILTIN*\Administrators"        | Account del computer     |
 | Workstation o server membro | Gruppi locali C e D                | Utente locale, membro di "*COMPUTER*\C" e "*COMPUTER*\D" | Account del computer     |
 
 Quando si esaminano gli eventi del controllo di sicurezza e i log eventi dell'applicazione, si noterà che ogni sessione utente JEA ha un account virtuale univoco. Questo account univoco consente di far risalire le azioni dell'utente in un endpoint JEA all'utente originale che ha eseguito il comando. I nomi degli account virtuali hanno il formato `WinRM Virtual Users\WinRM_VA_<ACCOUNTNUMBER>_<DOMAIN>_<sAMAccountName>`. Se ad esempio l'utente **Alice** del dominio **Contoso** riavvia un servizio in un endpoint JEA, il nome utente associato a eventi di gestione del controllo del servizio sarà `WinRM Virtual Users\WinRM_VA_1_contoso_alice`.

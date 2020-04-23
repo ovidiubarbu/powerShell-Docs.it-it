@@ -3,10 +3,10 @@ ms.date: 06/05/2017
 keywords: powershell,cmdlet
 title: Avvio del motore di Windows PowerShell 2.0
 ms.openlocfilehash: 824077008d2dcfd707e977d2112f0882d07a8aca
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "67030434"
 ---
 # <a name="starting-the-windows-powershell-20-engine"></a>Avvio del motore di Windows PowerShell 2.0

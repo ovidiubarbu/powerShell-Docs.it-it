@@ -3,10 +3,10 @@ ms.date: 06/12/2017
 keywords: dsc,powershell,configurazione,installazione
 title: Informazioni sul ruolo di DSC in una pipeline CI/CD
 ms.openlocfilehash: 8d7244a6e5e2c215d9d3ada959b716df2cce0b83
-ms.sourcegitcommit: 30ccbbb32915b551c4cd4c91ef1df96b5b7514c4
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/01/2020
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "80500817"
 ---
 # <a name="understanding-dscs-role-in-a-cicd-pipeline"></a>Informazioni sul ruolo di DSC in una pipeline CI/CD
@@ -97,4 +97,4 @@ Tuttavia, questo offre la possibilità di valutare l'impatto sulle applicazioni 
 > [!NOTE]
 > Il feedback relativo all'uso delle risorse composite include anche critiche per il fatto che apportare modifiche richiede la compilazione e il rilascio di un nuovo file MOF. Questo si verifica per motivi strutturali. Ogni nuova versione della configurazione deve includere un riferimento statico a una versione specifica di ogni risorsa e deve essere convalidata dai test prima di raggiungere i nodi del server di produzione. Il processo di test e rilascio delle modifiche dal controllo del codice sorgente consente di creare un ambiente sicuro per il rilascio delle modifiche in batch di piccole dimensioni ma frequenti.
 
-Per altre informazioni sull'uso di pipeline di versione per gestire l'infrastruttura di base, vedere il white paper: [The Release Pipeline Model](../further-reading/whitepapers.md) (Il modello della pipeline di versione).
+Per altre informazioni sull'uso di pipeline di versione per gestire l'infrastruttura di base, vedere il white paper sul [modello di pipeline di versione](../further-reading/whitepapers.md).

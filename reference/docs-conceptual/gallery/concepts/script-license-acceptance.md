@@ -4,10 +4,10 @@ schema: 2.0.0
 keywords: powershell
 title: Richiedere l'accettazione della licenza per gli script
 ms.openlocfilehash: e7101eb6a480dd87965b7b9be9d49583042b603f
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "71328082"
 ---
 # <a name="requiring-license-acceptance-for-scripts"></a>Richiedere l'accettazione della licenza per gli script
@@ -46,7 +46,7 @@ Lo script 'ScriptRequireLicenseAcceptance' dipende dal modulo 'ModuleRequireLice
 PS> Install-Script -Name ScriptRequireLicenseAcceptance -AcceptLicense
 ```
 
-## <a name="more-details"></a>Altri dettagli
+## <a name="more-details"></a>Altre informazioni
 
 - [Richiedere il supporto dell'accettazione della licenza per i moduli](module-license-acceptance.md)
 - [Richiedere il supporto dell'accettazione della licenza in PowerShell Gallery](../how-to/working-with-packages/packages-that-require-license-acceptance.md)

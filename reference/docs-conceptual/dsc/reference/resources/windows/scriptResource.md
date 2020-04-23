@@ -3,10 +3,10 @@ ms.date: 09/20/2019
 keywords: dsc,powershell,configurazione,installazione
 title: Risorsa Script DSC
 ms.openlocfilehash: e09e86011fa7dbb2a4d7f28b5032b4328b6f6ec2
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "71953068"
 ---
 # <a name="dsc-script-resource"></a>Risorsa Script DSC
@@ -34,16 +34,16 @@ Script [string] #ResourceName
 
 ## <a name="properties"></a>Proprietà
 
-|Proprietà |Description |
+|Proprietà |Descrizione |
 |---|---|
 |GetScript |Blocco di script che restituisce lo stato corrente del nodo. |
 |SetScript |Blocco di script usato da DSC per garantire la conformità quando il nodo non è nello stato desiderato. |
 |TestScript |Blocco di script che determina se il nodo è nello stato desiderato. |
-|Credential |Indica le credenziali da usare per l'esecuzione dello script, se sono necessarie credenziali. |
+|Credenziale |Indica le credenziali da usare per l'esecuzione dello script, se sono necessarie credenziali. |
 
 ## <a name="common-properties"></a>Proprietà comuni
 
-|Proprietà |Description |
+|Proprietà |Descrizione |
 |---|---|
 |DependsOn |Indica che prima di configurare la risorsa è necessario eseguire la configurazione di un'altra risorsa. Ad esempio, se il valore di ID del blocco script di configurazione della risorsa che si vuole eseguire per primo è ResourceName e il tipo è ResourceType, la sintassi per usare questa proprietà è `DependsOn = "[ResourceType]ResourceName"`. |
 |PsDscRunAsCredential |Imposta le credenziali per l'esecuzione dell'intera risorsa. |
@@ -51,7 +51,7 @@ Script [string] #ResourceName
 > [!NOTE]
 > La proprietà comune **PsDscRunAsCredential** è stata aggiunta in WMF 5.0 per consentire l'esecuzione di qualsiasi risorsa DSC nel contesto di altre credenziali. Per altre informazioni, vedere [Usare credenziali con risorse DSC](../../../configurations/runasuser.md).
 
-### <a name="additional-information"></a>Altre informazioni
+### <a name="additional-information"></a>Informazioni aggiuntive
 
 #### <a name="getscript"></a>GetScript
 

@@ -3,10 +3,10 @@ ms.date: 06/12/2017
 keywords: wmf,powershell,installazione
 title: Traccia e registrazione degli script
 ms.openlocfilehash: 6b7e5022cb4c974da5ddb3d670b5808dc9fb7bdc
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "71147801"
 ---
 # <a name="script-tracing-and-logging"></a>Traccia e registrazione degli script
@@ -17,27 +17,27 @@ La registrazione può essere abilitata tramite l'impostazione di Criteri di grup
 
 Gli eventi sono:
 
-| Canale |                               Operativo                               |
+| Channel |                               Operativo                               |
 | ------- | ----------------------------------------------------------------------- |
-| Livello   | Verbose                                                                 |
-| Opcode  | Creazione                                                                  |
+| Level   | Dettagliato                                                                 |
+| Opcode  | Create                                                                  |
 | Attività    | CommandStart                                                            |
 | Parola chiave | Spazio di esecuzione                                                                |
-| ID evento | Engine_ScriptBlockCompiled (0x1008 = 4104)                              |
-| Messaggio | Creazione del testo di Scriptblock (%1 di %2): </br> %3 </br> ID ScriptBlock: %4 |
+| EventId | Engine_ScriptBlockCompiled (0x1008 = 4104)                              |
+| Message | Creazione del testo di Scriptblock (%1 di %2): </br> %3 </br> ID ScriptBlock: %4 |
 
 
 Il testo incorporato nel messaggio è l'estensione del blocco di script compilato. L'ID è un GUID mantenuto per tutta la durata del blocco di script.
 
 Quando si abilita la registrazione dettagliata, la funzionalità scrive indicatori di inizio e di fine:
 
-| Canale |                                 Operativo                                |
+| Channel |                                 Operativo                                |
 | ------- | -------------------------------------------------------------------------- |
-| Livello   | Verbose                                                                    |
+| Level   | Dettagliato                                                                    |
 | Opcode  | Apri/Chiudi                                                               |
 | Attività    | CommandStart/CommandStop                                                 |
 | Parola chiave | Spazio di esecuzione                                                                   |
-| ID evento | ScriptBlock\_Invoke\_Start\_Detail (0x1009 = 4105) / </br> ScriptBlock\_Invoke\_Complete\_Detail (0x100A = 4106) |
+| EventId | ScriptBlock\_Invoke\_Start\_Detail (0x1009 = 4105) / </br> ScriptBlock\_Invoke\_Complete\_Detail (0x100A = 4106) |
 | Message | Chiamata ID ScriptBlock avviata/completata: %1 </br> ID spazio di esecuzione: %2 |
 
 L'ID è il GUID che rappresenta il blocco di script (correlabile con l'ID evento 0x1008) e l'ID dello spazio di esecuzione rappresenta lo spazio di esecuzione in cui è stato eseguito il blocco di script.

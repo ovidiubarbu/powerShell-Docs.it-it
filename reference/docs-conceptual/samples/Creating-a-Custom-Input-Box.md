@@ -3,10 +3,10 @@ ms.date: 06/05/2017
 keywords: powershell,cmdlet
 title: Creazione di una casella di input personalizzata
 ms.openlocfilehash: ff0588b44169bc276e2833254cec60eda759e2c8
-ms.sourcegitcommit: 0a3f9945d52e963e9cba2538ffb33e42156e1395
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2020
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "77706190"
 ---
 # <a name="creating-a-custom-input-box"></a>Creazione di una casella di input personalizzata
@@ -160,4 +160,4 @@ if ($result -eq [System.Windows.Forms.DialogResult]::OK)
 ## <a name="see-also"></a>Vedere anche
 
 - [GitHub: WinFormsExampleUpdates di Dave Wyatt](/previous-versions/windows/it-pro/windows-powershell-1.0/ff730941(v=technet.10))
-- [Windows PowerShell Tip of the Week:  Creating a Custom Input Box](https://technet.microsoft.com/library/ff730941.aspx) (Suggerimento della settimana per Windows PowerShell: Creazione di una casella di input personalizzata)
+- [Suggerimento della settimana su Windows PowerShell: Creazione di una casella di input personalizzata](https://technet.microsoft.com/library/ff730941.aspx)

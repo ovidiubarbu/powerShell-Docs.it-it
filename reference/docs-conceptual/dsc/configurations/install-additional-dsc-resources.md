@@ -3,10 +3,10 @@ ms.date: 12/12/2018
 keywords: dsc,powershell,risorsa,raccolta,configurazione
 title: Installare risorse DSC aggiuntive
 ms.openlocfilehash: 7a6a935349358e11a77d2f00c0bf88e0ad18c097
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "74417789"
 ---
 # <a name="install-additional-dsc-resources"></a>Installare risorse DSC aggiuntive
@@ -18,18 +18,18 @@ Questo è un elenco delle risorse OOB incluse in PowerShell 4.0 e una descrizion
 > [!NOTE]
 > Si tratta di un elenco incompleto, in quanto il numero di risorse OOB è aumentato con ogni versione di PowerShell.
 
-|Resource  |Description  |
+|Risorsa  |Descrizione  |
 |---------|---------|
 |**File**|Controlla lo stato dei file e delle directory. Copia i file da un'**origine** a una **destinazione** e li aggiorna quando l'**origine** viene modificata confrontando le date, i valori di checksum e gli hash.|
-|**Archive**|Decomprime archivi e una posizione specificata. Convalida gli archivi con un oggetto **Checksum** specificato.|
+|**Archiviazione**|Decomprime archivi e una posizione specificata. Convalida gli archivi con un oggetto **Checksum** specificato.|
 |**Environment**|Gestisce le variabili di ambiente.|
 |**Gruppo**|Gestisce i gruppi locali e controlla l'appartenenza al gruppo.|
 |**Log**|Scrive i messaggi sul registro eventi `Microsoft-Windows-Desired State Configuration/Analytic`.|
 |**Pacchetto**|Installa o disinstalla i pacchetti usando **Arguments**, **LogPath**, **ReturnCode** e altre impostazioni.|
-|**Registry**|Gestisce i valori e le chiavi del Registro di sistema.|
+|**Registro**|Gestisce i valori e le chiavi del Registro di sistema.|
 |**Script**|Consente di progettare il propri blocchi di script [get-test-set](../resources/get-test-set.md).|
 |**Service**|Configura i servizi di Windows.|
-|**User** |Gestisce gli utenti e gli attributi locali.|
+|**Utente** |Gestisce gli utenti e gli attributi locali.|
 |**WindowsFeature**|Gestisce i ruoli e le funzionalità.|
 |**WindowsProcess**|Configura i processi di Windows.|
 
@@ -39,7 +39,7 @@ Le risorse OOB sono un buon punto di partenza per le operazioni comuni. Se le ri
 
 ## <a name="installing-powershellget"></a>Installazione di PowerShellGet
 
-Per determinare se si ha già **PowerShellGet** o per ottenere assistenza nell'installazione, vedere la guida seguente: [Installazione di PowerShellGet](/powershell/scripting/gallery/installing-psget).
+Per determinare se si ha già **PowerShell** ottenere o per ottenere assistenza installarlo, vedere la Guida seguente: [installazione PowerShellGet](/powershell/scripting/gallery/installing-psget).
 
 ## <a name="finding-dsc-resources-using-powershellget"></a>Trovare risorse DSC con PowerShellGet
 

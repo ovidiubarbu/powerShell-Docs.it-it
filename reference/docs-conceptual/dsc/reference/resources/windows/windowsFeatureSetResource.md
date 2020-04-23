@@ -3,10 +3,10 @@ ms.date: 09/20/2019
 keywords: dsc,powershell,configurazione,installazione
 title: Risorsa WindowsFeatureSet DSC
 ms.openlocfilehash: 1758d248dde4fdee57bd01c157a3f9a8340d6194
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "71952958"
 ---
 # <a name="dsc-windowsfeatureset-resource"></a>Risorsa WindowsFeatureSet DSC
@@ -35,17 +35,17 @@ WindowsFeatureSet [string] #ResourceName
 
 ## <a name="properties"></a>Proprietà
 
-|  Proprietà  |  Description   |
+|  Proprietà  |  Descrizione   |
 |---|---|
 |Nome |Nomi dei ruoli o delle funzionalità che si vogliono aggiungere o rimuovere. Corrisponde alla proprietà **Name** del cmdlet [Get-WindowsFeature](/powershell/module/servermanager/get-windowsfeature?view=winserver2012r2-ps) e non al nome visualizzato dei ruoli o delle funzionalità. |
-|Source |Indica il percorso del file di origine da usare per l'installazione, se necessario. |
+|Source (Sorgente) |Indica il percorso del file di origine da usare per l'installazione, se necessario. |
 |IncludeAllSubFeature |Impostare questa proprietà su `$true` per includere tutte le funzionalità secondarie necessarie insieme alle funzionalità specificata con la proprietà **Name**. |
-|Credential |Credenziali da usare per aggiungere o rimuovere i ruoli o le funzionalità. |
+|Credenziale |Credenziali da usare per aggiungere o rimuovere i ruoli o le funzionalità. |
 |LogPath |Percorso di un file di registro in cui si vuole che il provider di risorse registri l'operazione. |
 
 ## <a name="common-properties"></a>Proprietà comuni
 
-|Proprietà |Description |
+|Proprietà |Descrizione |
 |---|---|
 |DependsOn |Indica che prima di configurare la risorsa è necessario eseguire la configurazione di un'altra risorsa. Ad esempio, se il valore di ID del blocco script di configurazione della risorsa che si vuole eseguire per primo è ResourceName e il tipo è ResourceType, la sintassi per usare questa proprietà è `DependsOn = "[ResourceType]ResourceName"`. |
 |Ensure |Indica se i ruoli o le funzionalità vengono aggiunte. Per assicurarsi che i ruoli o le funzionalità vengano aggiunti, impostare questa proprietà su **Present**. Per assicurarsi che i ruoli o le funzionalità vengano rimossi, impostare la proprietà su **Absent**. Il valore predefinito è **Present**. |

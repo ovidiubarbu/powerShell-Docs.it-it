@@ -2,10 +2,10 @@
 ms.date: 09/13/2019
 title: Creazione di query Get-WinEvent con FilterHashtable
 ms.openlocfilehash: 35d18dc894d90e698b38395b79ff4cf395515909
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "73444387"
 ---
 # <a name="creating-get-winevent-queries-with-filterhashtable"></a>Creazione di query Get-WinEvent con FilterHashtable
@@ -50,18 +50,18 @@ Le coppie **chiave-valore** accettate sono riportate nella tabella seguente e so
 
 Nella tabella seguente vengono visualizzati i nomi delle chiavi, i tipi di dati e viene indicato se i caratteri jolly sono consentiti per un valore di dati.
 
-|    Nome chiave    | Tipo di dati del valore | Caratteri jolly accettati? |
+|    Nome della chiave    | Tipo di dati del valore | Caratteri jolly accettati? |
 | -------------- | --------------- | ---------------------------- |
 | LogName        | `<String[]>`    | Sì                          |
 | ProviderName   | `<String[]>`    | Sì                          |
 | Path           | `<String[]>`    | No                           |
 | Parole chiave       | `<Long[]>`      | No                           |
 | ID             | `<Int32[]>`     | No                           |
-| Livello          | `<Int32[]>`     | No                           |
+| Level          | `<Int32[]>`     | No                           |
 | StartTime      | `<DateTime>`    | No                           |
 | EndTime        | `<DateTime>`    | No                           |
 | UserID         | `<SID>`         | No                           |
-| Dati           | `<String[]>`    | No                           |
+| Data           | `<String[]>`    | No                           |
 | `<named-data>` | `<String[]>`    | No                           |
 
 La chiave `<named-data>` rappresenta un campo dati dell'evento denominato. Ad esempio, l'evento 1008 Perflib può contenere i dati dell'evento seguenti:
@@ -108,7 +108,7 @@ Get-WinEvent -FilterHashtable @{
 }
 ```
 
-Se la query deve ottenere dati da registri eventi archiviati, usare la chiave **Path**. Il valore **Path** specifica il percorso completo del file di log. Per altre informazioni, vedere il post del blog **Scripting Guy** [Use PowerShell to Parse Saved Event Logs for Errors](https://devblogs.microsoft.com/scripting/use-powershell-to-parse-saved-event-logs-for-errors) (Usare PowerShell per analizzare i registri eventi salvati per individuare gli errori).
+Se la query deve ottenere dati da registri eventi archiviati, usare la chiave **Path**. Il valore **Path** specifica il percorso completo del file di log. Per altre informazioni, vedere il post del blog **Scripting Guy**[Use PowerShell to Parse Saved Event Logs for Errors](https://devblogs.microsoft.com/scripting/use-powershell-to-parse-saved-event-logs-for-errors) (Usare PowerShell per analizzare i registri eventi salvati per individuare gli errori).
 
 ## <a name="using-enumerated-values-in-a-hash-table"></a>Uso dei valori enumerati in una tabella hash
 
@@ -155,7 +155,7 @@ I valori enumerati sono documentati in **.NET Framework**. Per altre informazion
 
 I nomi e i valori enumerati per **Keywords** sono i seguenti:
 
-| Nome             |  Value            |
+| Nome             |  valore            |
 | ---------------- | ------------------|
 | AuditFailure     | 4503599627370496  |
 | AuditSuccess     | 9007199254740992  |
@@ -165,7 +165,7 @@ I nomi e i valori enumerati per **Keywords** sono i seguenti:
 | WdiDiagnostic    | 1125899906842624  |
 | WdiContext       | 562949953421312   |
 | ResponseTime     | 281474976710656   |
-| Nessuno             | 0                 |
+| nessuno             | 0                 |
 
 Aggiornare la tabella hash e includere la coppia **chiave-valore** con la chiave **Keywords** e il valore di enumerazione **EventLogClassic** **36028797018963968**.
 
@@ -236,12 +236,12 @@ I valori enumerati sono documentati in **.NET Framework**. Per altre informazion
 
 I nomi e i valori enumerati per la chiave **Level** sono i seguenti:
 
-| Nome           | Value |
+| Nome           | valore |
 | -------------- | ----- |
-| Verbose        |   5   |
+| Dettagliato        |   5   |
 | Informativo  |   4   |
 | Avviso        |   3   |
-| Errore di          |   2   |
+| Errore          |   2   |
 | Critico       |   1   |
 | LogAlways      |   0   |
 

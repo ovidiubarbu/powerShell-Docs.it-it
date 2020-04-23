@@ -3,10 +3,10 @@ ms.date: 06/12/2017
 keywords: wmf,powershell,installazione
 title: Creazione di tipi personalizzati con le classi di PowerShell
 ms.openlocfilehash: c2c50fb65ce4931fcf6ae529b4146df391c831c4
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "71147841"
 ---
 # <a name="creating-custom-types-using-powershell-classes"></a>Creazione di tipi personalizzati con le classi di PowerShell
@@ -310,7 +310,7 @@ Tutte le proprietà sono pubbliche. Le proprietà richiedono un carattere di nuo
 
 Le proprietà che usano gli attributi di convalida o di trasformazione degli argomenti (ad esempio `[ValidateSet("aaa")]`) funzionano come previsto.
 
-### <a name="hidden"></a>Hidden
+### <a name="hidden"></a>Nascosto
 
 È stata aggiunta la nuova parola chiave `Hidden`. È possibile applicare `Hidden` alle proprietà e ai metodi (inclusi i costruttori).
 

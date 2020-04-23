@@ -4,10 +4,10 @@ contributor: JKeithB
 keywords: raccolta,powershell,psgallery
 title: Download manuale del pacchetto
 ms.openlocfilehash: e562f5b94b4d2caa7d31269a324e417d1a9e844a
-ms.sourcegitcommit: 01c60c0c97542dbad48ae34339cddbd813f1353b
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2020
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "78278716"
 ---
 # <a name="manual-package-download"></a>Download manuale del pacchetto

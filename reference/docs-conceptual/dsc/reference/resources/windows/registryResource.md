@@ -3,10 +3,10 @@ ms.date: 09/20/2019
 keywords: dsc,powershell,configurazione,installazione
 title: Risorsa Registry DSC
 ms.openlocfilehash: be2f9134368784ad2d208362104ce046c49492e0
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "71953078"
 ---
 # <a name="dsc-registry-resource"></a>Risorsa Registry DSC
@@ -34,9 +34,9 @@ Registry [string] #ResourceName
 
 ## <a name="properties"></a>Proprietà
 
-|Proprietà |Description |
+|Proprietà |Descrizione |
 |---|---|
-|Key |Indica il percorso della chiave del Registro di sistema per cui si vuole specificare un determinato stato. Questo percorso deve includere l'hive. |
+|Chiave |Indica il percorso della chiave del Registro di sistema per cui si vuole specificare un determinato stato. Questo percorso deve includere l'hive. |
 |ValueName |Indica il nome del valore del Registro di sistema. Per aggiungere o rimuovere una chiave del Registro di sistema, specificare questa proprietà come stringa vuota, senza specificare **ValueType** o **ValueData**. Per modificare o rimuovere il valore predefinito di una chiave del Registro di sistema, specificare questa proprietà come stringa vuota e specificare anche **ValueType** o **ValueData**. |
 |Force |Se la chiave del Registro di sistema è presente, **Force** la sovrascrive con il nuovo valore. Se si elimina una chiave del Registro di sistema con sottochiavi il valore deve essere `$true`. |
 |Hex |Indica se i dati verranno espressi in formato esadecimale. Se questa proprietà è specificata, i dati con valori DWORD o QWORD vengono presentati in formato esadecimale. La proprietà non è valida per altri tipi. Il valore predefinito è `$false`. |
@@ -45,7 +45,7 @@ Registry [string] #ResourceName
 
 ## <a name="common-properties"></a>Proprietà comuni
 
-|Proprietà |Description |
+|Proprietà |Descrizione |
 |---|---|
 |DependsOn |Indica che prima di configurare la risorsa è necessario eseguire la configurazione di un'altra risorsa. Ad esempio, se il valore di ID del blocco script di configurazione della risorsa che si vuole eseguire per primo è ResourceName e il tipo è ResourceType, la sintassi per usare questa proprietà è `DependsOn = "[ResourceType]ResourceName"`. |
 |Ensure |Indica se la chiave e il valore esistono. Impostare questa proprietà su **Present** per assicurarsi che esistano. Impostare questa proprietà su **Absent** per assicurarsi che non esistano. Il valore predefinito è **Present**. |

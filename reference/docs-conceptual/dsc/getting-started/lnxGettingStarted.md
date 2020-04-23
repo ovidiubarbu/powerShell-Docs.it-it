@@ -3,10 +3,10 @@ ms.date: 06/12/2017
 keywords: dsc,powershell,configurazione,installazione
 title: Introduzione a DSC (Desired State Configuration) per Linux
 ms.openlocfilehash: b1bc9b9fafd89a1af0f967de38a817bff1f3ffe3
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "73933842"
 ---
 # <a name="get-started-with-desired-state-configuration-dsc-for-linux"></a>Introduzione a DSC (Desired State Configuration) per Linux
@@ -26,7 +26,7 @@ DSC per Linux supporta le versioni seguenti del sistema operativo Linux.
 
 La tabella seguente descrive le dipendenze dei pacchetti necessarie per DSC per Linux.
 
-|  Pacchetto necessario |  Description |  Versione minima |
+|  Pacchetto necessario |  Descrizione |  Versione minima |
 |---|---|---|
 | glibc| Libreria GNU| 2…4 - 31.30|
 | python| Python| 2.4 - 3.4|
@@ -41,7 +41,7 @@ Prima di installare DSC per Linux, è necessario installare [OMI (Open Managemen
 
 ### <a name="installing-omi"></a>Installazione di OMI
 
-DSC (Desired State Configuration) per Linux richiede il server CIM OMI (Open Management Infrastructure), versione 1.0.8.1 o successive. È possibile scaricare OMI da The Open Group: [Open Management Infrastructure (OMI)](https://github.com/Microsoft/omi).
+DSC (Desired State Configuration) per Linux richiede il server CIM OMI (Open Management Infrastructure), versione 1.0.8.1 o successive. È possibile scaricare OMI dal sito The Open Group: [Open Management Infrastructure (OMI)](https://github.com/Microsoft/omi).
 
 Per installare OMI, installare il pacchetto appropriato per il sistema Linux (RPM o DEB), la versione OpenSSL (ssl_098 o ssl_100) e l'architettura (x64/x86). I pacchetti RPM sono appropriati per CentOS, Red Hat Enterprise Linux, SUSE Linux Enterprise Server e Oracle Linux. I pacchetti DEB sono appropriati per Debian GNU/Linux e Ubuntu Server. I pacchetti ssl_098 sono appropriati per i computer in cui è installato OpenSSL 0.9.8, mentre i pacchetti ssl_100 sono appropriati per i computer in cui è installato OpenSSL 1.0.
 
@@ -183,7 +183,7 @@ Applica un file MOF di metaconfigurazione al computer. Simile al cmdlet [Set-DSC
 
 I file di registro seguenti vengono generati per i messaggi di DSC per Linux.
 
-|File di registro|Directory|Description|
+|File di registro|Directory|Descrizione|
 |---|---|---|
 |**omiserver.log**|`/var/opt/omi/log`|Messaggi relativi al funzionamento del server CIM OMI.|
 |**dsc.log**|`/var/opt/omi/log`|Messaggi relativi al funzionamento delle operazioni delle risorse DSC e di Gestione configurazione locale.|

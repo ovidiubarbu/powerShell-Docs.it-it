@@ -1,12 +1,12 @@
 ---
 ms.date: 09/20/2019
-keywords: dsc,powershell,configurazione,impostazione
+keywords: dsc,powershell,configurazione,installazione
 title: Risorsa nxSshAuthorizedKeys DSC per Linux
 ms.openlocfilehash: 6e008efcbff2e679650d0bc3d5b8b573f6ef83e0
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "71953258"
 ---
 # <a name="dsc-for-linux-nxsshauthorizedkeys-resource"></a>Risorsa nxSshAuthorizedKeys DSC per Linux
@@ -28,15 +28,15 @@ nxAuthorizedKeys <string> #ResourceName
 
 ## <a name="properties"></a>Proprietà
 
-|Proprietà |Description |
+|Proprietà |Descrizione |
 |---|---|
 |KeyComment |Commento univoco per la chiave. Questa proprietà viene usata per identificare in modo univoco la chiave. |
 |Username |Nome utente per cui gestire le chiavi ssh autorizzate. Se questa proprietà non è definita, l'utente predefinito è **root**. |
-|Key |Contenuto della chiave. Questa proprietà è obbligatoria se la proprietà **Ensure** è impostata su **Present**.|
+|Chiave |Contenuto della chiave. Questa proprietà è obbligatoria se la proprietà **Ensure** è impostata su **Present**.|
 
 ## <a name="common-properties"></a>Proprietà comuni
 
-|Proprietà |Description |
+|Proprietà |Descrizione |
 |---|---|
 |DependsOn |Indica che prima di configurare la risorsa è necessario eseguire la configurazione di un'altra risorsa. Ad esempio, se il valore di ID del blocco script di configurazione della risorsa che si vuole eseguire per primo è ResourceName e il tipo è ResourceType, la sintassi per usare questa proprietà è `DependsOn = "[ResourceType]ResourceName"`. |
 |Ensure |Specifica se la chiave è definita. Impostare questa proprietà su **Absent** per assicurarsi che la chiave non esista nel file delle chiavi autorizzate dell'utente. Impostarla su **Present** per assicurarsi che la chiave sia definita nel file delle chiavi autorizzate dell'utente. |

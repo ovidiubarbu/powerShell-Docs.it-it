@@ -3,10 +3,10 @@ ms.date: 08/27/2018
 keywords: powershell,cmdlet
 title: Uso di nomi di comandi familiari
 ms.openlocfilehash: 30b33bc8739975c1a40e51c04a3ee4e426c199e7
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "67030887"
 ---
 # <a name="using-familiar-command-names"></a>Uso di nomi di comandi familiari
@@ -22,12 +22,12 @@ L'elenco seguente mostra alcuni dei comandi di UNIX e **cmd.exe** comuni che è 
 |||||
 |-|-|-|-|
 |cat|dir|montare|rm|
-|cd|echo|move|rmdir|
+|cd|echo (eco)|spostamento|rmdir|
 |chdir|erase|popd|sleep|
-|clear|h|ps|sort|
+|deselezionare|h|ps|sort|
 |cls|history|pushd|tee|
-|copy|kill|pwd|tipo|
-|del|lp|r|write|
+|copy|kill|pwd|type|
+|del|lp|r|scrivere|
 |diff|ls|ren||
 
 Il cmdlet `Get-Alias` mostra il vero nome del comando di PowerShell nativo associato a un alias.
@@ -53,11 +53,11 @@ Esempi di abbreviazioni:
 
 | Sostantivo o verbo | Abbreviazione |
 |--------------|--------------|
-| Get          | g            |
-| Imposta          | s            |
-| Item         | i            |
-| Posizione     | l            |
-| Command      | cm           |
+| Recupero          | g            |
+| Configurazione          | s            |
+| Elemento         | i            |
+| Location     | l            |
+| Comando      | cm           |
 | Alias        | al           |
 
 Questi alias sono comprensibili quando si conoscono i nomi abbreviati.

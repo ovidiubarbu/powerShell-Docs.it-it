@@ -3,10 +3,10 @@ ms.date: 09/20/2019
 keywords: dsc,powershell,configurazione,installazione
 title: Risorsa WindowsOptionalFeatureSet DSC
 ms.openlocfilehash: f378006a6c362ee9890d70dd76fb552dd262a544
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "71952868"
 ---
 # <a name="dsc-windowsoptionalfeatureset-resource"></a>Risorsa WindowsOptionalFeatureSet DSC
@@ -36,10 +36,10 @@ WindowsOptionalFeatureSet [string] #ResourceName
 
 ## <a name="properties"></a>Proprietà
 
-|Proprietà |Description |
+|Proprietà |Descrizione |
 |---|---|
 |Nome |Indica il nome delle funzionalità che si vogliono abilitare o disabilitare. |
-|Source |Non implementata. |
+|Source (Sorgente) |Non implementato. |
 |NoWindowsUpdateCheck |Specifica se DISM contatta Windows Update (WU) durante la ricerca dei file di origine per abilitare le funzionalità. Se `$true`, DISM non contatta WU. |
 |RemoveFilesOnDisable |Impostare su `$true` per rimuovere tutti i file associati alle funzionalità quando **Ensure** è impostata su **Absent**. |
 |LogLevel |Livello di output massimo per i log. I valori accettati sono: **ErrorsOnly**, **ErrorsAndWarning** e **ErrorsAndWarningAndInformation**. |
@@ -47,7 +47,7 @@ WindowsOptionalFeatureSet [string] #ResourceName
 
 ## <a name="common-properties"></a>Proprietà comuni
 
-|Proprietà |Description |
+|Proprietà |Descrizione |
 |---|---|
 |DependsOn |Indica che prima di configurare la risorsa è necessario eseguire la configurazione di un'altra risorsa. Ad esempio, se il valore di ID del blocco script di configurazione della risorsa che si vuole eseguire per primo è ResourceName e il tipo è ResourceType, la sintassi per usare questa proprietà è `DependsOn = "[ResourceType]ResourceName"`. |
 |Ensure |Specifica se le funzionalità sono abilitate. Per assicurarsi che le funzionalità siano abilitate, impostare questa proprietà su **Enable**. Per assicurarsi che le funzionalità siano disabilitate, impostare la proprietà su **Disable**. Il valore predefinito è **Enable**. |

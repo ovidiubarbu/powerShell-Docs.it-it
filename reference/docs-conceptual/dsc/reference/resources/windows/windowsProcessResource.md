@@ -3,10 +3,10 @@ ms.date: 09/20/2019
 keywords: dsc,powershell,configurazione,installazione
 title: Risorsa WindowsProcess DSC
 ms.openlocfilehash: e168cdebb04f7ec83b73a537a5f188299f40d8b7
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "71952838"
 ---
 # <a name="dsc-windowsprocess-resource"></a>Risorsa WindowsProcess DSC
@@ -35,11 +35,11 @@ WindowsProcess [string] #ResourceName
 
 ## <a name="properties"></a>Proprietà
 
-|Proprietà |Description |
+|Proprietà |Descrizione |
 |---|---|
-|Arguments |Indica una stringa di argomenti da passare al processo come è. Se è necessario passare più argomenti, inserirli tutti in questa stringa. |
+|Argomenti |Indica una stringa di argomenti da passare al processo come è. Se è necessario passare più argomenti, inserirli tutti in questa stringa. |
 |Path |Percorso dell'eseguibile del processo. Se è il nome del file eseguibile (non il percorso completo), la risorsa DSC cercherà il file eseguibile nella variabile `$env:Path` di ambiente. Se il valore di questa proprietà è un percorso completo, DSC non userà la variabile `$env:Path` per individuare il file e genererà un errore se il percorso non esiste. I percorsi relativi non sono consentiti. |
-|Credential |Indica le credenziali per l'avvio del processo. |
+|Credenziale |Indica le credenziali per l'avvio del processo. |
 |StandardErrorPath |Indica il percorso della directory in cui scrivere l'errore standard. Qualsiasi file esistente verrà sovrascritto. |
 |StandardInputPath |Indica il percorso di input standard. |
 |StandardOutputPath |Indica il percorso in cui scrivere l'output standard. Qualsiasi file esistente verrà sovrascritto. |
@@ -47,7 +47,7 @@ WindowsProcess [string] #ResourceName
 
 ## <a name="common-properties"></a>Proprietà comuni
 
-|Proprietà |Description |
+|Proprietà |Descrizione |
 |---|---|
 |DependsOn |Indica che prima di configurare la risorsa è necessario eseguire la configurazione di un'altra risorsa. Ad esempio, se il valore di ID del blocco script di configurazione della risorsa che si vuole eseguire per primo è ResourceName e il tipo è ResourceType, la sintassi per usare questa proprietà è `DependsOn = "[ResourceType]ResourceName"`. |
 |Ensure |Indica se il processo esiste. Impostare questa proprietà su **Present** per specificare che il processo esiste. In caso contrario, impostarla su **Absent**. Il valore predefinito è **Present**. |

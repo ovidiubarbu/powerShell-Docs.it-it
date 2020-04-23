@@ -3,10 +3,10 @@ ms.date: 10/31/2017
 keywords: dsc,powershell,configurazione,installazione
 title: Protezione del file MOF
 ms.openlocfilehash: ab03db8bf4ed7d412691ae87fd12da5131607886
-ms.sourcegitcommit: 01c60c0c97542dbad48ae34339cddbd813f1353b
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2020
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "78278469"
 ---
 # <a name="securing-the-mof-file"></a>Protezione del file MOF
@@ -20,7 +20,7 @@ A partire dalla versione 5.0 di PowerShell, l'intero file MOF viene crittografat
 > [!NOTE]
 > Questo argomento illustra i certificati usati per la crittografia. Per la crittografia è sufficiente un certificato autofirmato, dal momento che la chiave privata viene sempre mantenuta segreta e la crittografia non implica l'attendibilità del documento. I certificati autofirmati *non* vanno usati a scopo di autenticazione. È consigliabile usare un certificato proveniente da un'Autorità di certificazione attendibile a scopo di autenticazione.
 
-## <a name="prerequisites"></a>Prerequisiti
+## <a name="prerequisites"></a>Prerequisites
 
 Per crittografare correttamente le credenziali usate per proteggere una configurazione DSC, assicurarsi di avere a disposizione quanto segue:
 
@@ -47,7 +47,7 @@ Per applicare la crittografia delle credenziali, è necessario che un certificat
    - _Non_ deve contenere: 'Firma digitale'.
 2. **Utilizzo chiavi avanzato**:
    - Deve contenere: Crittografia documento (1.3.6.1.4.1.311.80.1).
-   - _Non_ deve contenere: Autenticazione client (1.3.6.1.5.5.7.3.2) e autenticazione server (1.3.6.1.5.5.7.3.1).
+   - _Non_ deve contenere: Autenticazione client (1.3.6.1.5.5.7.3.2) e Autenticazione server (1.3.6.1.5.5.7.3.1).
 3. La chiave privata per il certificato è disponibile nel *nodo di destinazione_.
 4. Il **provider** per il certificato deve essere "Microsoft RSA SChannel Cryptographic Provider".
 

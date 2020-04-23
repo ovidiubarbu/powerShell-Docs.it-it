@@ -3,10 +3,10 @@ ms.date: 06/05/2017
 keywords: powershell,cmdlet
 title: Gestione delle voci del Registro di sistema
 ms.openlocfilehash: c1fd6f57f13240eb2039f2d5756796678800aee0
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "67030725"
 ---
 # <a name="working-with-registry-entries"></a>Gestione delle voci del Registro di sistema
@@ -196,7 +196,7 @@ PowerShellPath : C:\Program Files\Windows PowerShell\v1.0
 |DWord|Numero che corrisponde a un valore UInt32 valido|
 |ExpandString|Stringa che può contenere variabili di ambiente espanse dinamicamente|
 |MultiString|Stringa su più righe|
-|String|Qualsiasi valore di stringa|
+|string|Qualsiasi valore di stringa|
 |QWord|8 byte di dati binari|
 
 > [!NOTE]

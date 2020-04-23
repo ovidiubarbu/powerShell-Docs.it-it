@@ -4,10 +4,10 @@ schema: 2.0.0
 keywords: powershell
 title: Moduli per cui è richiesta l'accettazione della licenza
 ms.openlocfilehash: a2f7ed72aae8579a6723f65b86dd0993f1a22afd
-ms.sourcegitcommit: d36db3a1bc44aee6bc97422b557041c3aece4c67
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/21/2020
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "80082822"
 ---
 # <a name="modules-requiring-license-acceptance"></a>Moduli per cui è richiesta l'accettazione della licenza

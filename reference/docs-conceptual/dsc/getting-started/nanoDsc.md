@@ -3,10 +3,10 @@ ms.date: 06/12/2017
 keywords: dsc,powershell,configurazione,installazione
 title: Uso di DSC in Nano Server
 ms.openlocfilehash: fb826455c21833ae4c8dc2ecd731ffce6bf7eaba
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "71953858"
 ---
 # <a name="using-dsc-on-nano-server"></a>Uso di DSC in Nano Server
@@ -50,7 +50,7 @@ Modalità push e pull
 
 - Compilazione di configurazioni. Vedere [Configurazioni DSC](../configurations/configurations.md)
 
-  **Problema:** la crittografia delle password durante la compilazione della configurazione non funziona. Vedere [Protezione del file MOF](../pull-server/secureMOF.md).
+  **Problema:** la crittografia delle password durante la compilazione della configurazione non funziona. Vedere [Protezione del file MOF](../pull-server/secureMOF.md)
 
 - Compilazione di metaconfigurazioni. Vedere [Configurazione di Gestione configurazione locale](../managing-nodes/metaConfig.md)
 
@@ -74,18 +74,18 @@ Modalità push e pull
 
 - Crittografia MOF
 
-- Registrazione degli eventi
+- Registrazione eventi
 
 - Creazione di report DSC di Automazione di Azure
 
 - Risorse completamente funzionanti
 
-- **Archive**
+- **Archiviazione**
 - **Environment**
 - **File**
 - **Log**
 - **ProcessSet**
-- **Registry**
+- **Registro**
 - **Script**
 - **WindowsPackageCab**
 - **WindowsProcess**
@@ -107,7 +107,7 @@ Modalità push e pull
   *Impossibile trovare il tipo [management.managementobject]: verificare che l'assembly contenente questo tipo sia caricato.*
 
 - Risorse non funzionanti
-- **User**
+- **Utente**
 
 ## <a name="dsc-features-not-available-on-nano-server"></a>Funzionalità DSC non disponibili su Nano Server
 

@@ -4,10 +4,10 @@ contributor: JKeithB
 keywords: gallery,powershell,cmdlet,psgallery
 title: Domande frequenti su PowerShell Gallery
 ms.openlocfilehash: 035681e108e1a3e05fe5d659d527ae1ad1c64cf4
-ms.sourcegitcommit: 30ccbbb32915b551c4cd4c91ef1df96b5b7514c4
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/01/2020
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "80500579"
 ---
 # <a name="frequently-asked-questions"></a>Domande frequenti
@@ -36,7 +36,7 @@ Dopo la registrazione in PowerShell Gallery, usare i cmdlet [Publish-Module][] o
 
 **Non è necessario registrarsi o accedere a PowerShell Gallery per installare o salvare i pacchetti.**
 
-## <a name="i-received-failed-to-process-request-the-specified-api-key-is-invalid-or-does-not-have-permission-to-access-the-specified-package-the-remote-server-returned-an-error-403-forbidden-error-when-i-tried-to-publish-a-package-to-the-powershell-gallery-what-does-that-mean"></a>Viene visualizzato l'errore di mancata elaborazione della richiesta, causato dalla chiave API che non è valida o non ha le autorizzazioni per accedere al pacchetto specificato. Errore del server remoto: (403) Non consentito." quando si prova a pubblicare un pacchetto in PowerShell Gallery. Che cosa significa?
+## <a name="i-received-failed-to-process-request-the-specified-api-key-is-invalid-or-does-not-have-permission-to-access-the-specified-package-the-remote-server-returned-an-error-403-forbidden-error-when-i-tried-to-publish-a-package-to-the-powershell-gallery-what-does-that-mean"></a>Viene visualizzato l'errore di mancata elaborazione della richiesta, causato dalla chiave API che non è valida o non ha le autorizzazioni per accedere al pacchetto specificato. Il server remoto restituisce l'errore di accesso negato (403) quando si prova a pubblicare un pacchetto in PowerShell Gallery. Che cosa significa?
 
 Le cause di questo errore sono le seguenti:
 
@@ -56,7 +56,7 @@ Quando si seleziona una casella di controllo Category (Categoria), implicitament
 
 ## <a name="what-are-the-requirements-to-publish-a-module-to-the-powershell-gallery"></a>Quali sono i requisiti per la pubblicazione di un modulo in PowerShell Gallery?
 
-Qualsiasi tipo di modulo di PowerShell, inclusi i moduli di script, i moduli binari e i moduli del manifesto, può essere pubblicato nella raccolta. Per pubblicare un modulo, PowerShellGet deve avere alcune informazioni, ovvero la versione, la descrizione, l'autore e la modalità di licenza. Queste informazioni vengono lette nell'ambito del processo di pubblicazione dal file *manifesto del modulo* (con estensione psd1) o nel valore del parametro **LicenseUri** del cmdlet [Publish-Module][]. Tutti i moduli pubblicati nella raccolta devono includere manifesti dei moduli. Tutti i moduli che includono le informazioni seguenti nei propri manifesti possono essere pubblicati nella raccolta:
+Qualsiasi tipo di modulo di PowerShell, inclusi i moduli di script, i moduli binari e i moduli del manifesto, può essere pubblicato nella raccolta. Per pubblicare un modulo, PowerShellGet deve avere alcune informazioni, ovvero la versione, la descrizione, l'autore e la modalità di licenza. Queste informazioni vengono lette nell'ambito del processo di pubblicazione dal file *manifesto del modulo* (con estensione psd1) o nel valore del parametro [Publish-Module][] del cmdlet **Publish-Module**. Tutti i moduli pubblicati nella raccolta devono includere manifesti dei moduli. Tutti i moduli che includono le informazioni seguenti nei propri manifesti possono essere pubblicati nella raccolta:
 
 - Versione
 - Descrizione
@@ -73,7 +73,7 @@ Per aggiornare i campi del file manifesto del modulo, usare il cmdlet [Update-Mo
 
 ## <a name="what-are-the-requirements-to-publish-a-script-to-the-gallery"></a>Quali sono i requisiti per la pubblicazione di uno script nella raccolta?
 
-Nella raccolta può essere pubblicato qualsiasi tipo di script PowerShell, sia script che flussi di lavoro. Per pubblicare uno script, PowerShellGet deve avere alcune informazioni, ovvero la versione, la descrizione, l'autore e la modalità di licenza. Queste informazioni vengono lette nell'ambito del processo di pubblicazione dalla sezione *PSScriptInfo* del file di script o dal valore del parametro **LicenseUri** del cmdlet [Publish-Script][]. Tutti gli script pubblicati nella raccolta devono includere informazioni sui metadati. Tutti gli script che includono le informazioni seguenti nella sezione PSScriptInfo possono essere pubblicati nella raccolta:
+Nella raccolta può essere pubblicato qualsiasi tipo di script PowerShell, sia script che flussi di lavoro. Per pubblicare uno script, PowerShellGet deve avere alcune informazioni, ovvero la versione, la descrizione, l'autore e la modalità di licenza. Queste informazioni vengono lette nell'ambito del processo di pubblicazione dalla sezione *PSScriptInfo* del file di script o dal valore del parametro [Publish-Script][] del cmdlet **Publish-Script**. Tutti gli script pubblicati nella raccolta devono includere informazioni sui metadati. Tutti gli script che includono le informazioni seguenti nella sezione PSScriptInfo possono essere pubblicati nella raccolta:
 
 - Versione
 - Descrizione

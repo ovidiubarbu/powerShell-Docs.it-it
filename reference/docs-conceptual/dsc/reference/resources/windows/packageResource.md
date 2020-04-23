@@ -3,10 +3,10 @@ ms.date: 09/20/2019
 keywords: dsc,powershell,configurazione,installazione
 title: Risorsa Package DSC
 ms.openlocfilehash: efac07b4b051564cadd5aa1542a6afda6cd453ad
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "71953148"
 ---
 # <a name="dsc-package-resource"></a>Risorsa Package DSC
@@ -35,19 +35,19 @@ Package [string] #ResourceName
 
 ## <a name="properties"></a>Proprietà
 
-|Proprietà |Description |
+|Proprietà |Descrizione |
 |---|---|
 |Nome |Indica il nome del pacchetto per cui si vuole specificare un determinato stato. |
 |Path |Percorso in cui si trova il pacchetto. |
 |ProductId |Indica l'ID prodotto che identifica in modo univoco il pacchetto. |
-|Arguments |Elenca una stringa di argomenti che verrà passata al pacchetto esattamente nel modo specificato. |
-|Credential |Fornisce l'accesso al pacchetto in un'origine remota. Questa proprietà non viene usata per installare il pacchetto. Il pacchetto viene sempre installato nel sistema locale. |
+|Argomenti |Elenca una stringa di argomenti che verrà passata al pacchetto esattamente nel modo specificato. |
+|Credenziale |Fornisce l'accesso al pacchetto in un'origine remota. Questa proprietà non viene usata per installare il pacchetto. Il pacchetto viene sempre installato nel sistema locale. |
 |LogPath |Indica il percorso completo in cui il provider deve salvare un file di log per installare o disinstallare il pacchetto. |
 |ReturnCode |Indica il codice restituito previsto. Se l'effettivo codice restituito non corrisponde al valore previsto specificato qui, la configurazione restituirà un errore. |
 
 ## <a name="common-properties"></a>Proprietà comuni
 
-|Proprietà |Description |
+|Proprietà |Descrizione |
 |---|---|
 |DependsOn |Indica che prima di configurare la risorsa è necessario eseguire la configurazione di un'altra risorsa. Ad esempio, se il valore di ID del blocco script di configurazione della risorsa che si vuole eseguire per primo è ResourceName e il tipo è ResourceType, la sintassi per usare questa proprietà è `DependsOn = "[ResourceType]ResourceName"`. |
 |Ensure |Indica se il pacchetto è installato. Impostare questa proprietà su **Absent** per assicurarsi che il pacchetto non sia installato (o disinstallare il pacchetto se è installato). Impostarla su **Present** per assicurarsi che il pacchetto sia installato. Il valore predefinito è **Present**. |

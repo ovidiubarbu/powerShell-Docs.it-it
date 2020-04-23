@@ -3,10 +3,10 @@ ms.date: 06/05/2017
 keywords: powershell,cmdlet
 title: Glossario di Windows PowerShell
 ms.openlocfilehash: 0827ec771b1744b87a8c0f0ddf48438f9ba484b2
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "67030347"
 ---
 # <a name="windows-powershell-glossary"></a>Glossario di Windows PowerShell
@@ -41,15 +41,15 @@ ms.locfileid: "67030347"
 |shell|Interprete dei comandi usato per passare i comandi al sistema operativo.|
 |parametro opzionale|Parametro che non accetta un argomento.|
 |errore fatale|Errore che impedisce a Windows PowerShell di continuare a elaborare il comando.|
-|transazione|Unità di lavoro atomica. Il lavoro in una transazione deve essere completato nel suo complesso. Se qualsiasi parte della transazione non riesce, l'intera transazione avrà esito negativo.|
+|transaction|Unità di lavoro atomica. Il lavoro in una transazione deve essere completato nel suo complesso. Se qualsiasi parte della transazione non riesce, l'intera transazione avrà esito negativo.|
 |file dei tipi|File XML di Windows PowerShell con estensione ps1xml che estende le proprietà dei tipi di Microsoft .NET Framework in Windows PowerShell.|
-|verbo|Parola che precede il segno meno nel nome di un cmdlet di Windows PowerShell. Il verbo descrive l'azione eseguita dal cmdlet.|
+|verb|Parola che precede il segno meno nel nome di un cmdlet di Windows PowerShell. Il verbo descrive l'azione eseguita dal cmdlet.|
 |Windows PowerShell|Shell da riga di comando e tecnologia di scripting basata su attività che consente agli amministratori IT di controllare e automatizzare in modo completo le attività di amministrazione del sistema.|
 |comando di Windows PowerShell|Elementi in una pipeline che determinano l'esecuzione di un'azione. I comandi di Windows PowerShell vengono digitati tramite la tastiera o richiamati a livello di codice.|
 |file di dati di Windows PowerShell|File di testo con estensione psd1. Windows PowerShell usa i file di dati per vari scopi, ad esempio l'archiviazione dei dati del manifesto del modulo e l'archiviazione delle stringhe tradotte per l'internazionalizzazione degli script.|
 |unità di Windows PowerShell|Unità virtuale che consente l'accesso diretto a un archivio dati. Può essere definita da un provider di Windows PowerShell o creata nella riga di comando. Le unità create nella riga di comando sono specifiche della sessione e non sono più disponibili dopo la chiusura della sessione.|
 |Windows PowerShell Integrated Scripting Environment (ISE)|Applicazione host di Windows PowerShell che consente di eseguire comandi e di scrivere, testare ed eseguire il debug di script in un ambiente conforme a Unicode, familiare e con sintassi a colori.|
-|modulo di Windows PowerShell|Unità autosufficiente e riutilizzabile per il partizionamento, l'organizzazione e l'astrazione del codice di Windows PowerShell. Un modulo può contenere cmdlet, provider, funzioni, variabili e altri tipi di risorse che possono essere importati come singola unità.|
+|Modulo di Windows PowerShell|Unità autosufficiente e riutilizzabile per il partizionamento, l'organizzazione e l'astrazione del codice di Windows PowerShell. Un modulo può contenere cmdlet, provider, funzioni, variabili e altri tipi di risorse che possono essere importati come singola unità.|
 |provider di Windows PowerShell|Programma basato su Microsoft .NET Framework che rende disponibili in Windows PowerShell i dati presenti in archivi dati speciali, consentendo di visualizzarli e gestirli.|
 |script di Windows PowerShell|Script scritto nel linguaggio di Windows PowerShell.|
 |file di script di Windows PowerShell|File con estensione ps1 che contiene uno script che viene scritto nel linguaggio di Windows PowerShell.|

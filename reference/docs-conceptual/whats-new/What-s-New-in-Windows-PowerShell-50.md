@@ -2,12 +2,12 @@
 ms.date: 06/05/2017
 keywords: powershell,cmdlet
 title: Novità di Windows PowerShell 5.0
-ms.openlocfilehash: 8c1858a63adad467e389a683708bccba2a6768c7
-ms.sourcegitcommit: 30ccbbb32915b551c4cd4c91ef1df96b5b7514c4
+ms.openlocfilehash: dba016546fe034684f6b7afe43ec2e7a1b793d96
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80500456"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "80978203"
 ---
 # <a name="whats-new-in-windows-powershell-50"></a>Novità di Windows PowerShell 5.0
 
@@ -460,7 +460,7 @@ Analogamente alle attività dell'Utilità di pianificazione, è possibile esegui
 
 Inoltre, i processi pianificati includono un set personalizzato di cmdlet per gestirli. I cmdlet consentono di creare, modificare, gestire, disabilitare e riabilitare i processi pianificati, creare appositi trigger e impostare le opzioni.
 
-Per altre informazioni sui processi pianificati, vedere [about_Scheduled_Jobs](/powershell/module/microsoft.powershell.core/about/about_Scheduled_Jobs).
+Per altre informazioni sui processi pianificati, vedere [about_Scheduled_Jobs](/powershell/module/psscheduledjob/about/about_scheduled_jobs?view=powershell-5.1).
 
 ### <a name="windows-powershell-language-enhancements"></a>Miglioramenti del linguaggio di Windows PowerShell
 

@@ -3,10 +3,10 @@ ms.date: 09/20/2019
 keywords: dsc,powershell,configurazione,installazione
 title: Risorsa Service DSC
 ms.openlocfilehash: 0bef6aa6d3526c9d8d92187c1e738d5c46b5665a
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "71953048"
 ---
 # <a name="dsc-service-resource"></a>Risorsa Service DSC
@@ -36,20 +36,20 @@ Service [string] #ResourceName
 
 ## <a name="properties"></a>Proprietà
 
-|Proprietà |Description |
+|Proprietà |Descrizione |
 |---|---|
 |Nome |Indica il nome del servizio. A volte questo nome è diverso da quello visualizzato. È possibile ottenere un elenco dei servizi e del rispettivo stato corrente usando il cmdlet `Get-Service`. |
 |BuiltInAccount |Indica l'account di accesso da usare per il servizio. I valori consentiti per questa proprietà sono: **LocalService**, **LocalSystem** e **NetworkService**. |
-|Credential |Indica le credenziali per l'account in cui verrà eseguito il servizio. Questa proprietà e la proprietà **BuiltinAccount** non possono essere usate insieme. |
+|Credenziale |Indica le credenziali per l'account in cui verrà eseguito il servizio. Questa proprietà e la proprietà **BuiltinAccount** non possono essere usate insieme. |
 |StartupType |Indica il tipo di avvio per il servizio. I valori consentiti per questa proprietà sono: **Automatic**, **Disabled** e **Manual**. |
-|State |Indica lo stato che si vuole specificare per il servizio. I valori sono: **Running** o **Stopped**. |
-|Description |Specifica la descrizione del servizio di destinazione. |
+|State |Indica lo stato che si vuole specificare per il servizio. I valori possibili sono: **Running** o **Stopped**. |
+|Descrizione |Specifica la descrizione del servizio di destinazione. |
 |DisplayName |Indica il nome visualizzato del servizio di destinazione. |
 |Path |Indica il percorso del file binario per un nuovo servizio. |
 
 ## <a name="common-properties"></a>Proprietà comuni
 
-|Proprietà |Description |
+|Proprietà |Descrizione |
 |---|---|
 |DependsOn |Indica che prima di configurare la risorsa è necessario eseguire la configurazione di un'altra risorsa. Ad esempio, se il valore di ID del blocco script di configurazione della risorsa che si vuole eseguire per primo è ResourceName e il tipo è ResourceType, la sintassi per usare questa proprietà è `DependsOn = "[ResourceType]ResourceName"`. |
 |Ensure |Indica se il servizio di destinazione è presente nel sistema. Impostare questa proprietà su **Absent** per specificare che il servizio di destinazione non esiste. Impostando il valore su **Present** ci si assicura che il servizio di destinazione esista. Il valore predefinito è **Present**. |

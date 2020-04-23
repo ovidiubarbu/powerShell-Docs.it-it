@@ -4,10 +4,10 @@ contributor: JKeithB
 keywords: raccolta,powershell,psgallery,GDPR
 title: Conformità al regolamento GDPR di PowerShell Gallery
 ms.openlocfilehash: fb1191d8a1cd12d5994e41238c384eb504d0c261
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "71328322"
 ---
 # <a name="powershell-gallery-gdpr-compliance"></a>Conformità al regolamento GDPR di PowerShell Gallery
@@ -41,7 +41,7 @@ Le informazioni seguenti visualizzano come ottenere tutti i pacchetti pubblicati
 
 Le sezioni seguenti descrivono come PowerShell Gallery supporta le richieste DSR (Data Subject Rights, Diritti del soggetto dei dati) e illustrano come esportare le informazioni archiviate in PowerShell Gallery e come richiedere l'eliminazione di queste informazioni.
 
-### <a name="email"></a>Posta elettronica
+### <a name="email"></a>Email
 
 La corrispondenza tramite posta elettronica può includere quanto segue:
 

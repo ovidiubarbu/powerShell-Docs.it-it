@@ -3,10 +3,10 @@ ms.date: 06/12/2017
 keywords: dsc,powershell,configurazione,installazione
 title: Separazione dei dati di configurazione e dell'ambiente
 ms.openlocfilehash: b16243fc9096f786a25ed20868e94a3aa85e403e
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "71954438"
 ---
 # <a name="separating-configuration-and-environment-data"></a>Separazione dei dati di configurazione e dell'ambiente
@@ -135,7 +135,7 @@ Anche il contenuto del sito è diverso, come specificato dalle proprietà `SiteC
 
 Alla fine dello script di configurazione viene chiamata la configurazione (compilata in un documento MOF), passando `DevProdEnvData.psd1` come parametro `$ConfigurationData`.
 
->**Nota:** Per questa configurazione è necessario installare i moduli `xSqlPs` e `xWebAdministration` nel nodo di destinazione.
+>**Nota:** per questa configurazione è necessario installare i moduli `xSqlPs` e `xWebAdministration` nel nodo di destinazione.
 
 Definire la configurazione in un file denominato `MyWebApp.ps1`:
 

@@ -3,10 +3,10 @@ ms.date: 06/05/2017
 keywords: powershell,cmdlet
 title: Gestione del percorso corrente
 ms.openlocfilehash: 42ab56759dec882d140f813c8614e578957722b3
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "67030193"
 ---
 # <a name="managing-current-location"></a>Gestione del percorso corrente
@@ -161,7 +161,7 @@ C:\Documents and Settings\PowerUser
 Set-Location \\FS01\Public
 ```
 
-oppure
+o
 
 ```powershell
 Push-Location \\FS01\Public

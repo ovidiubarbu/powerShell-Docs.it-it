@@ -3,10 +3,10 @@ ms.date: 12/12/2018
 keywords: dsc,powershell,configurazione,installazione
 title: Get-Test-Set
 ms.openlocfilehash: bf409f71c07c434fbc7389789e16575868d21b42
-ms.sourcegitcommit: 01c60c0c97542dbad48ae34339cddbd813f1353b
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2020
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "78278419"
 ---
 # <a name="get-test-set"></a>Get-Test-Set
@@ -204,7 +204,7 @@ localhost       {[Service]Spooler}                                            Tr
 
 Per altre informazioni, vedere [Test-DSCConfiguration](/powershell/module/psdesiredstateconfiguration/Test-DSCConfiguration)
 
-## <a name="set"></a>Set
+## <a name="set"></a>Configurazione
 
 Il metodo **Set** di una risorsa tenta di forzare il nodo affinché diventi conforme con lo *stato desiderato* della risorsa. Il metodo **Set** deve essere **idempotente**, che significa che **Set** potrebbe essere eseguito più volte e otterrà sempre lo stesso risultato senza errori.  Quando si esegue [Test-DSCConfiguration](/powershell/module/psdesiredstateconfiguration/Start-DSCConfiguration) la gestione configurazione locale (LCM) passa da una risorsa all'altra nella configurazione attualmente applicata. La gestione configurazione locale recupera i valori di chiave per l'istanza corrente delle risorse dal file "MOF" e li usa come parametri per il metodo **Test**. Se il metodo **Test** restituisce `$True`, il nodo è conforme con la risorsa corrente e il metodo **Set** viene ignorato. Se **Test** restituisce `$False`, il nodo non è conforme.  La gestione configurazione locale (LCM) passa i valori di chiave dell'istanza della risorsa come parametri al metodo **Set** ripristinando la conformità del nodo.
 

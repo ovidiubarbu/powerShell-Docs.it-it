@@ -3,10 +3,10 @@ ms.date: 06/12/2017
 keywords: dsc,powershell,configurazione,installazione
 title: Uso dei dati di configurazione
 ms.openlocfilehash: 7d13b19ba932d1a818194a221f145fd1a3832547
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "71954188"
 ---
 # <a name="using-configuration-data-in-dsc"></a>Uso dei dati di configurazione in DSC
@@ -23,7 +23,7 @@ Per esempi di come usare i dati di configurazione, vedere [Separazione dei dati 
 ## <a name="the-configurationdata-common-parameter"></a>Parametro comune ConfigurationData
 
 Una configurazione DSC accetta il parametro comune **ConfigurationData** specificato quando si compila la configurazione.
-Per informazioni sulla compilazione delle configurazioni, vedere [Configurazioni DSC](configurations.md).
+Per altre informazioni sulla compilazione di configurazioni, vedere [Configurazioni DSC](configurations.md).
 
 Il parametro **ConfigurationData** è una tabella hash che deve avere almeno una chiave denominata **AllNodes**.
 Può avere anche una o più chiavi aggiuntive.
@@ -94,7 +94,7 @@ $MyData =
 }
 ```
 
-Per applicare una proprietà a tutti i nodi, è possibile creare un membro della matrice **AllNodes** ha come **NodeName** `*`.
+Per applicare una proprietà a tutti i nodi, è possibile creare un membro della matrice **AllNodes** ha come **NodeName**`*`.
 Ad esempio, per assegnare a ogni nodo una proprietà `LogPath`, è possibile usare questo script:
 
 ```powershell

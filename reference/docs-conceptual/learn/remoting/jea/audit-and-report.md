@@ -3,10 +3,10 @@ ms.date: 07/10/2019
 keywords: jea,powershell,sicurezza
 title: Controllo e creazione di report in JEA
 ms.openlocfilehash: 2afefe83acecc1fc3643d49766120ffecc25378f
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "70017792"
 ---
 # <a name="auditing-and-reporting-on-jea"></a>Controllo e creazione di report in JEA

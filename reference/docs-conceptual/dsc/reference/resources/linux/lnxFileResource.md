@@ -3,10 +3,10 @@ ms.date: 09/20/2019
 keywords: dsc,powershell,configurazione,installazione
 title: Risorsa nxFile DSC per Linux
 ms.openlocfilehash: be5f098d2fe1c8b354c07e6a8f882b8fdf00e1db
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "71954828"
 ---
 # <a name="dsc-for-linux-nxfile-resource"></a>Risorsa nxFile DSC per Linux
@@ -36,23 +36,23 @@ nxFile <string> #ResourceName
 
 ## <a name="properties"></a>Proprietà
 
-|Proprietà |Description |
+|Proprietà |Descrizione |
 |---|---|
 |DestinationPath |Indica il percorso in cui si vuole specificare lo stato di un file o una directory. |
 |SourcePath |Specifica il percorso da cui copiare la risorsa file o cartella. Questo percorso può essere un percorso locale o un URL `http/https/ftp`. Gli URL `http/https/ftp` remoti sono supportati solo quando il valore della proprietà **Type** è **file**. |
-|Tipo |Specifica se la risorsa configurata è una directory o un file. Impostare questa proprietà su **directory** per indicare che la risorsa è una directory. Impostarla su **file** per indicare che la risorsa è un file. Il valore predefinito è **file**. |
-|Contents |Specifica il contenuto di un file, ad esempio una determinata stringa. |
+|Type |Specifica se la risorsa configurata è una directory o un file. Impostare questa proprietà su **directory** per indicare che la risorsa è una directory. Impostarla su **file** per indicare che la risorsa è un file. Il valore predefinito è **file**. |
+|Sommario |Specifica il contenuto di un file, ad esempio una determinata stringa. |
 |Checksum |Definisce il tipo da usare per determinare se due file sono uguali. Se la proprietà **Checksum** non è specificata, per il confronto viene usato solo il nome del file o della directory. I valori sono: **ctime**, **mtime** o **md5**. |
 |Recurse |Indica se le sottodirectory sono incluse. Impostare questa proprietà su `$true` per indicare che le sottodirectory devono essere incluse. Il valore predefinito è `$false`. Questa proprietà è valida solo quando la proprietà **Type** è impostata su **directory**. |
 |Force |Determinate operazioni sui file, ad esempio quando si sovrascrive un file o si elimina una directory non vuota, generano un errore. Usando la proprietà **Force**, tali errori vengono ignorati. Il valore predefinito è `$false`. |
-|Links |Specifica il comportamento desiderato per i collegamenti simbolici. Impostare questa proprietà su **follow** per seguire i collegamenti simbolici e agire sulla destinazione dei collegamenti. Ad esempio, copiare il file invece del collegamento. Impostare questa proprietà su **manage** per agire sul collegamento. Ad esempio, copiare il collegamento stesso. Impostare questa proprietà su **ignore** per ignorare i collegamenti simbolici. |
-|Group |Nome del **Group** che avrà le autorizzazioni per il file o la directory. |
+|Collegamenti |Specifica il comportamento desiderato per i collegamenti simbolici. Impostare questa proprietà su **follow** per seguire i collegamenti simbolici e agire sulla destinazione dei collegamenti. Ad esempio, copiare il file invece del collegamento. Impostare questa proprietà su **manage** per agire sul collegamento. Ad esempio, copiare il collegamento stesso. Impostare questa proprietà su **ignore** per ignorare i collegamenti simbolici. |
+|Gruppo |Nome del **Group** che avrà le autorizzazioni per il file o la directory. |
 |Mode |Specifica le autorizzazioni desiderate per la risorsa, in notazione ottale o simbolica Ad esempio, **777** o **rwxrwxrwx**. Se si usa la notazione simbolica, non fornire il primo carattere che indica una directory o un file. |
 |Proprietario |Nome del gruppo proprietario del file o della directory. |
 
 ## <a name="common-properties"></a>Proprietà comuni
 
-|Proprietà |Description |
+|Proprietà |Descrizione |
 |---|---|
 |DependsOn |Indica che prima di configurare la risorsa è necessario eseguire la configurazione di un'altra risorsa. Ad esempio, se il valore di ID del blocco script di configurazione della risorsa che si vuole eseguire per primo è ResourceName e il tipo è ResourceType, la sintassi per usare questa proprietà è `DependsOn = "[ResourceType]ResourceName"`. |
 |Ensure |Determina se verificare l'esistenza del file. Impostare questa proprietà su **Present** per assicurarsi che il file esista. Impostarla su **Absent** per assicurarsi che il file non esista. Il valore predefinito è **Present**. |

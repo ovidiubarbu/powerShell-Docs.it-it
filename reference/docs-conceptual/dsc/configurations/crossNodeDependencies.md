@@ -3,10 +3,10 @@ ms.date: 12/12/2018
 keywords: dsc,powershell,configurazione,installazione
 title: Specifica delle dipendenze tra nodi
 ms.openlocfilehash: 62e553d894897ae1908745c2788b7b7b9cbe50ff
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "71954108"
 ---
 # <a name="specifying-cross-node-dependencies"></a>Specifica delle dipendenze tra nodi
@@ -55,7 +55,7 @@ WaitForSome [String] #ResourceName
 
 Tutte le risorse **WaitForXXXX** condividono le chiavi di sintassi seguenti.
 
-|Proprietà|  Description   |
+|Proprietà|  Descrizione   |
 |---------|---------------------|
 | RetryIntervalSec| Il numero di secondi prima di riprovare. Il valore minimo è 1.|
 | RetryCount| Il numero massimo di tentativi.|

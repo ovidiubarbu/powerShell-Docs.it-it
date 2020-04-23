@@ -3,10 +3,10 @@ ms.date: 08/24/2018
 keywords: powershell,cmdlet
 title: Apprendimento dei nomi dei comandi di PowerShell
 ms.openlocfilehash: a65ffcdca6510093b0a77234e20546b6cc1f02bf
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "67030424"
 ---
 # <a name="learning-powershell-command-names"></a>Apprendimento dei nomi dei comandi di PowerShell
@@ -21,7 +21,7 @@ Questo approccio sembra logico per i nomi di comando, poiché ogni comando è un
 La maggior parte dei comandi serve per gestire elementi del sistema operativo o applicazioni, ad esempio servizi o processi. I comandi hanno nomi che possono o meno appartenere a una famiglia. Ad esempio, nei sistemi Windows è possibile usare i comandi `net start` e `net stop` per avviare e arrestare un servizio. **Sc.exe** è un altro strumento di controllo dei servizi per Windows. Questo nome non corrisponde al modello di denominazione per i comandi del servizio **net.exe**. Per la gestione dei processi, Windows offre il comando **tasklist.exe** per elencare i processi e il comando **taskkill.exe** per terminarli.
 
 Inoltre, questi comandi prevedono specifiche irregolari per i parametri. Non è possibile usare il comando `net start` per avviare un servizio in un computer remoto. Il comando **sc.exe** può avviare un servizio in un computer remoto. Tuttavia, per specificare il computer remoto, è necessario aggiungere al nome un prefisso costituito da una doppia barra rovesciata. Per avviare il servizio spooler in un computer remoto denominato DC01, è necessario digitare `sc.exe \\DC01 start spooler`.
-Per elencare le attività in esecuzione in DC01, usare il parametro **/S** e il nome del computer senza barre rovesciate. Ad esempio, `tasklist /S DC01`
+Per elencare le attività in esecuzione in DC01, usare il parametro **/S** e il nome del computer senza barre rovesciate. Ad esempio: `tasklist /S DC01`.
 
 > [!NOTE]
 > Prima di PowerShell v6, `sc` era un alias per il cmdlet `Set-Content`. Pertanto, per eseguire il comando **sc.exe** in una versione di PowerShell precedente alla versione 6, è necessario includere il nome completo del file **sc.exe** inclusa l'estensione **exe**.

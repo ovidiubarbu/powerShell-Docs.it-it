@@ -4,10 +4,10 @@ schema: 2.0.0
 keywords: powershell
 title: Valori del manifesto dei pacchetti con effetti sull'interfaccia utente di PowerShell Gallery
 ms.openlocfilehash: 9e37fec879f2f5cbe3926c7dbc946389425d856a
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "74417056"
 ---
 # <a name="package-manifest-values-that-impact-the-powershell-gallery-ui"></a>Valori del manifesto dei pacchetti con effetti sull'interfaccia utente di PowerShell Gallery
@@ -21,10 +21,10 @@ Questo argomento offre informazioni di riepilogo per gli editori sulle procedure
 
 La tabella seguente illustra gli elementi dell'interfaccia utente della pagina dei pacchetti di PowerShell Gallery controllati dall'editore. Per ogni elemento viene indicato se può essere controllato dal manifesto del modulo o dello script.
 
-| Elemento dell'interfaccia utente | Description | Modulo | Script |
+| Elemento dell'interfaccia utente | Descrizione | Modulo | Script |
 | --- | --- | --- | --- |
 | **Titolo** | Si tratta del nome del pacchetto pubblicato in PowerShell Gallery  | No | No |
-| **Versione** | La versione visualizzata è la stringa di versione nei metadati, con versione non definitiva se specificata. La parte principale della versione in un manifesto del modulo è rappresentata da ModuleVersion. Nel caso di uno script è identificata come .VERSION. Se viene specificata una stringa di versione non definitiva, verrà aggiunta a ModuleVersion per i moduli o specificata come parte di .VERSION per gli script. È disponibile documentazione su come specificare le stringhe di versione non definitiva nei [moduli](module-prerelease-support.md) negli [script](script-prerelease-support.md). | Sì | Sì |
+| **Version** | La versione visualizzata è la stringa di versione nei metadati, con versione non definitiva se specificata. La parte principale della versione in un manifesto del modulo è rappresentata da ModuleVersion. Nel caso di uno script è identificata come .VERSION. Se viene specificata una stringa di versione non definitiva, verrà aggiunta a ModuleVersion per i moduli o specificata come parte di .VERSION per gli script. È disponibile documentazione su come specificare le stringhe di versione non definitiva nei [moduli](module-prerelease-support.md) negli [script](script-prerelease-support.md). | Sì | Sì |
 | **Descrizione** | Queste informazioni corrispondono a Description nel manifesto del modulo e a .DESCRIPTION nel manifesto del file di script. | Sì | Sì |
 | **Richiedi accettazione della licenza** | Un modulo può richiedere che l'utente accetti una licenza, modificando il manifesto del modulo con RequireLicenseAcceptance = $true, specificando un LicenseURI e fornendo un file license.txt nella radice della cartella del modulo. Ulteriori informazioni sono disponibili nell'argomento [Richiedi accettazione della licenza](../how-to/working-with-packages/packages-that-require-license-acceptance.md). | Sì | No |
 | **Note sulla versione** | Per i moduli, queste informazioni vengono recuperate dalla sezione ReleaseNotes in PSData\PrivateData. Nei manifesti degli script corrisponde all'elemento .RELEASENOTES. | Sì | Sì |
@@ -34,7 +34,7 @@ La tabella seguente illustra gli elementi dell'interfaccia utente della pagina d
 | **FileList** | L'elenco dei file viene ricavato dal pacchetto quando viene pubblicato in PowerShell Gallery. Non è controllabile tramite le informazioni del manifesto. Nota: per ogni pacchetto in PowerShell Gallery viene elencato un file aggiuntivo con estensione nuspec, che non è presente dopo aver installato il pacchetto in un sistema. Si tratta del manifesto del pacchetto NuGet per il pacchetto e può essere ignorato. | No | No |
 | **Tag** | Per i moduli, i tag sono inclusi in PSData\PrivateData. Per gli script, viene usata la sezione .TAGS. Si noti che i tag non possono contenere spazi, anche tra virgolette. Per i tag esistono altri requisiti e significati, descritti più avanti in questo argomento nella sezione Dettagli dei tag. | Sì | Sì |
 | **Cmdlet** | Queste informazioni vengono specificate nel manifesto del modulo tramite CmdletsToExport. Si noti che la procedura consigliata prevede di elencare gli elementi in modo esplicito, invece di usare il carattere jolly "*", perché consentirà di migliorare le prestazioni di caricamento del modulo per gli utenti. | Sì | No |
-| **Functions** | Queste informazioni vengono specificate nel manifesto del modulo tramite FunctionsToExport. Si noti che la procedura consigliata prevede di elencare gli elementi in modo esplicito, invece di usare il carattere jolly "*", perché consentirà di migliorare le prestazioni di caricamento del modulo per gli utenti. | Sì | No |
+| **Funzioni** | Queste informazioni vengono specificate nel manifesto del modulo tramite FunctionsToExport. Si noti che la procedura consigliata prevede di elencare gli elementi in modo esplicito, invece di usare il carattere jolly "*", perché consentirà di migliorare le prestazioni di caricamento del modulo per gli utenti. | Sì | No |
 | **Risorse DSC** | Per i moduli che verranno usati in PowerShell versione 5.0 e versioni successive, queste informazioni vengono specificate nel manifesto tramite DscResourcesToExport. Se il modulo deve essere usato in PowerShell 4, è sconsigliabile usare DSCResourcesToExport perché non è una chiave di manifesto supportata. (DSC non era disponibile prima di PowerShell 4.) | Sì | No |
 | **Flussi di lavoro** | I flussi di lavoro vengono pubblicati in PowerShell Gallery come script e identificati come flussi di lavoro nel codice (vedere [Connect-AzureVM](https://www.powershellgallery.com/packages/Connect-AzureVM/1.0/Content/Connect-AzureVM.ps1) per un esempio). Queste informazioni non sono controllate dal manifesto. | No | No |
 | **Funzionalità di ruolo** | Queste informazioni verranno presentate quando il modulo pubblicato in PowerShell Gallery contiene uno o più file di funzionalità di ruolo (con estensione psrc), usati da JEA. Vedere la documentazione di JEA per altri dettagli sulle [funzionalità di ruolo](/powershell/scripting/learn/remoting/jea/role-capabilities). | Sì | No |
@@ -43,7 +43,7 @@ La tabella seguente illustra gli elementi dell'interfaccia utente della pagina d
 | **Versione minima di PowerShell** | Queste informazioni possono essere specificate in un manifesto del modulo come PowerShellVersion | Sì | No |
 | **Cronologia versioni** | La cronologia delle versioni riflette gli aggiornamenti apportati a un modulo in PowerShell Gallery. Se una versione di un pacchetto viene nascosta tramite la funzionalità di eliminazione, non verrà visualizzata nella cronologia delle versioni, se non per i proprietari del pacchetto. | No | No |
 | **Sito di progetto** | Il sito di progetto viene specificato per i moduli nella sezione Privatedata\PSData del manifesto del modulo tramite un ProjectURI. Nel manifesto di uno script queste informazioni sono controllate tramite .PROJECTURI. | Sì | Sì |
-| **Licenza** | È possibile specificare un collegamento alla licenza per i moduli nella sezione Privatedata\PSData del manifesto del modulo tramite un LicenseURI. Nel manifesto di uno script queste informazioni sono controllate tramite .LICENSEURI. È importante notare che se non viene specificata una licenza tramite LicenseURI, o in un modulo, le condizioni per l'uso del pacchetto sono quelle definite per PowerShell Gallery. Vedere le condizioni per l'utilizzo per altri dettagli. | Sì | Sì |
+| **License** | È possibile specificare un collegamento alla licenza per i moduli nella sezione Privatedata\PSData del manifesto del modulo tramite un LicenseURI. Nel manifesto di uno script queste informazioni sono controllate tramite .LICENSEURI. È importante notare che se non viene specificata una licenza tramite LicenseURI, o in un modulo, le condizioni per l'uso del pacchetto sono quelle definite per PowerShell Gallery. Vedere le condizioni per l'utilizzo per altri dettagli. | Sì | Sì |
 | **Icona** | Un'icona può essere specificata per qualsiasi pacchetto in PowerShell Gallery specificando il flag IconURI nel manifesto dello script o nella sezione Privatedata-PSData del manifesto del modulo. Il flag IconURI deve puntare a un'immagine 32x32 con sfondo trasparente. L'URI **deve** essere un URL diretto dell'immagine e **non deve** passare a una pagina Web contenente l'immagine o a un file nel pacchetto di PowerShell Gallery. | Sì | Sì |
 
 
@@ -51,9 +51,9 @@ La tabella seguente illustra gli elementi dell'interfaccia utente della pagina d
 
 La pagina Modifica pacchetto di PowerShell Gallery consente agli editori di modificare vari campi visualizzati per un pacchetto, in particolare:
 
-- Title
-- Description
-- Riepilogo
+- Titolo
+- Descrizione
+- Summary
 - URL dell'icona
 - URL della pagina iniziale del progetto
 - Autori
@@ -89,30 +89,30 @@ Per riferimento, ecco alcuni dei tag usati più di frequente alla data del 14/12
 | ActiveDirectory | AD non è attualmente usato da solo  |
 | SQLServer |  |
 | DBA |  |
-| Sicurezza | Defense è meno preciso |
+| Security | Defense è meno preciso |
 | Database | Il plurale inglese databases è meno consigliato |
 | DevOps |  |
 | Windows |  |
-| Build |  |
+| Compilare |  |
 | Distribuzione | Il verbo deploy è usato meno frequentemente |
 | Cloud |  |
 | GIT |  |
 | Test | Testing è meno consigliato |
 | VersionControl | Version è meno preciso, anche se usato più frequentemente  |
 | Registrazione | Uso preferito come azione |
-| Log | Uso preferito come oggetto |
+| File di log | Uso preferito come oggetto |
 | Backup |  |
 | IaaS |  |
 | Linux |  |
 | IIS |  |
 | AzureAutomation |  |
-| Archiviazione: |  |
+| Archiviazione |  |
 | GitHub |  |
 | Json |  |
 | Exchange |  |
 | Rete | Il tag networking è simile, ma meno usato |
 | SharePoint |  |
-| Creazione di report | Reporting è un'azione, report è un oggetto |
+| Report | Reporting è un'azione, report è un oggetto |
 | Report | Report è un oggetto |
 | WinRM |  |
 | Monitoraggio |  |
@@ -129,13 +129,13 @@ Per riferimento, ecco alcuni dei tag usati più di frequente alla data del 14/12
 | Hyper-V | HyperV è usato meno comunemente come tag |
 | Configurazione |  |
 | ChatOps |  |
-| PackageManagement |  |
+| Modulo PackageManagement |  |
 | WMI |  |
 | Firewall |  |
 | Docker |  |
 | Appveyor |  |
 | AzureRm | Usato principalmente per i moduli AzureRM |
 | Zip |  |
-| MSI |  |
+| Identità del servizio gestita |  |
 | MacOS |  |
 | PoshBot |  |

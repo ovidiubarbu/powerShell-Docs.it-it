@@ -3,10 +3,10 @@ title: Uso di Visual Studio Code per la modifica e il debug remoti
 description: Uso di Visual Studio Code per la modifica e il debug remoti
 ms.date: 06/13/2019
 ms.openlocfilehash: 5ce7f575d90ff47fd6b8a0a2b567e972ec3a9fef
-ms.sourcegitcommit: 01c60c0c97542dbad48ae34339cddbd813f1353b
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2020
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "78279152"
 ---
 # <a name="using-visual-studio-code-for-remote-editing-and-debugging"></a>Uso di Visual Studio Code per la modifica e il debug remoti
@@ -15,7 +15,7 @@ Gli utenti che hanno familiarità con l'ambiente ISE ricorderanno forse che è p
 
 Questa funzionalità è disponibile anche nell'estensione di PowerShell per VSCode. Questa guida illustra come eseguire queste operazioni.
 
-## <a name="prerequisites"></a>Prerequisiti
+## <a name="prerequisites"></a>Prerequisites
 
 Questa guida presuppone che si disponga di:
 

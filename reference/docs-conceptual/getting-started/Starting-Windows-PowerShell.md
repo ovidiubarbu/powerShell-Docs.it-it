@@ -3,10 +3,10 @@ ms.date: 12/05/2019
 keywords: powershell,cmdlet
 title: Avvio di Windows PowerShell
 ms.openlocfilehash: 97b15a4cd79c77a391451ba917f985f9d99db3f5
-ms.sourcegitcommit: 0e4c69d8b5cf71431592fe41da816dec9b70f1f9
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/09/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "74953824"
 ---
 # <a name="starting-windows-powershell"></a>Avvio di Windows PowerShell
@@ -23,7 +23,7 @@ A partire da PowerShell 6, il file binario di PowerShell è stato rinominato **p
 
 Per trovare la documentazione di riferimento sui cmdlet e per l'installazione di PowerShell 7, usare i collegamenti seguenti:
 
-| Documento | Collegamento |
+| Document | Collegamento |
 | ----- | ----- |
 | Informazioni di riferimento sui cmdlet | [Visualizzatore dei moduli di PowerShell](/powershell/module/?view=powershell-7) |
 | Installazione in Windows | [Installazione di PowerShell Core in Windows](/powershell/scripting/install/installing-powershell-core-on-windows?view=powershell-7) |

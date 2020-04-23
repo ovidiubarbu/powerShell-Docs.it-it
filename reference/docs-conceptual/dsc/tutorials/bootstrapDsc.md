@@ -3,10 +3,10 @@ ms.date: 06/12/2017
 keywords: dsc,powershell,configurazione,installazione
 title: Configurare una macchina virtuale all'avvio iniziale tramite DSC
 ms.openlocfilehash: f9634c330832e23fb2c6f08c5b299b55a5505ac9
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "71954608"
 ---
 # <a name="configure-a-virtual-machines-at-initial-boot-up-by-using-dsc"></a>Configurare una macchina virtuale all'avvio iniziale tramite DSC
@@ -74,7 +74,7 @@ Configuration SampleIISInstall
 
 2. In un computer che esegue PowerShell 5.0 o versione successiva salvare la configurazione precedente (**SampleIISInstall**) come file di script PowerShell (con estensione ps1).
 
-3. Nella console di PowerShell, passare alla cartella in cui è stato salvato il file con estensione ps1.
+3. Nella console di PowerShell passare alla cartella in cui è stato salvato il file con estensione ps1.
 
 4. Eseguire i comandi PowerShell seguenti per compilare il documento MOF. Per informazioni sulla compilazione delle configurazioni DSC, vedere [Configurazioni DSC](../configurations/configurations.md):
 

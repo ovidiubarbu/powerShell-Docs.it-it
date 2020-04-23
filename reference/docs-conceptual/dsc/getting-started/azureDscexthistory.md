@@ -4,10 +4,10 @@ ms.date: 06/21/2018
 keywords: dsc, powershell, azure, estensione
 title: Cronologia delle versioni dell'estensione DSC di Azure
 ms.openlocfilehash: 7a89037d62cb2c8580141d2b177fdded5db654eb
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "74417289"
 ---
 # <a name="azure-desired-state-configuration-extension-version-history"></a>Cronologia delle versioni dell'estensione DSC (Desired State Configuration) di Azure
@@ -34,10 +34,10 @@ Questo articolo contiene informazioni su ogni versione dell'estensione VM DSC di
   - WMF 5.0 RTM
   - Aggiornamento di WMF 4.0
   - WMF 4.0
-- **Ambiente:**
+- **Environment:**
   - Azure
   - Azure Cina
-  - Azure per enti pubblici
+  - Azure Government
 - **Note:** questa versione usa DSC nella versione inclusa in Windows Server 2016, per gli altri sistemi operativi Windows installa [Windows Management Framework 5.1](https://blogs.msdn.microsoft.com/powershell/2016/12/06/wmf-5-1-releasing-january-2017/) (l'installazione di WMF richiede il riavvio). Per Nano Server, il ruolo DSC viene installato nella macchina virtuale.
 - **Nuove funzionalità:**
   - Miglioramento dei metadati di estensione per lo stato secondario e altre correzioni di bug secondari.
@@ -50,8 +50,8 @@ Questo articolo contiene informazioni su ogni versione dell'estensione VM DSC di
 ### <a name="version-275"></a>Versione 2.75
 
 - **Data di rilascio:** 5 marzo 2018
-- **Supporto sistema operativo** Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2 SP1, Windows Client 7/8.1/10, Nano Server
-- **Supporto WMF:** WMF 5.1, WMF 5.0 RTM, WMF 4.0 Update, WMF 4.0
+- **Supporto sistema operativo:** Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2 SP1, Client Windows 7/8.1/10, Nano Server
+- **Supporto WMF:** WMF 5.1, WMF 5.0 RTM, aggiornamento di WMF 4.0, WMF 4.0
 - **Ambiente:** Azure
 - **Note:** questa versione usa DSC nella versione inclusa in Windows Server 2016, per gli altri sistemi operativi Windows installa [Windows Management Framework 5.1](https://blogs.msdn.microsoft.com/powershell/2016/12/06/wmf-5-1-releasing-january-2017/) (l'installazione di WMF richiede il riavvio). Per Nano Server, il ruolo DSC viene installato nella macchina virtuale.
 - **Nuove funzionalità:**
@@ -87,8 +87,8 @@ Questo articolo contiene informazioni su ogni versione dell'estensione VM DSC di
 ### <a name="version-270---272"></a>Versioni da 2.70 a 2.72
 
 - **Data di rilascio:** 13 novembre 2017
-- **Supporto sistema operativo** Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2 SP1, Windows Client 7/8.1/10, Nano Server
-- **Supporto WMF:** WMF 5.1, WMF 5.0 RTM, WMF 4.0 Update, WMF 4.0
+- **Supporto sistema operativo:** Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2 SP1, Client Windows 7/8.1/10, Nano Server
+- **Supporto WMF:** WMF 5.1, WMF 5.0 RTM, aggiornamento di WMF 4.0, WMF 4.0
 - **Ambiente:** Azure
 - **Note:** questa versione usa DSC nella versione inclusa in Windows Server 2016, per gli altri sistemi operativi Windows installa [Windows Management Framework 5.1](https://blogs.msdn.microsoft.com/powershell/2016/12/06/wmf-5-1-releasing-january-2017/) (l'installazione di WMF richiede il riavvio). Per Nano Server, il ruolo DSC viene installato nella macchina virtuale.
 - **Nuove funzionalità:**
@@ -97,8 +97,8 @@ Questo articolo contiene informazioni su ogni versione dell'estensione VM DSC di
 ### <a name="version-226"></a>Versione 2.26
 
 - **Data di rilascio:** 9 giugno 2017
-- **Supporto sistema operativo** Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2 SP1, Windows Client 7/8.1/10, Nano Server
-- **Supporto WMF:** WMF 5.1, WMF 5.0 RTM, WMF 4.0 Update, WMF 4.0
+- **Supporto sistema operativo:** Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2 SP1, Client Windows 7/8.1/10, Nano Server
+- **Supporto WMF:** WMF 5.1, WMF 5.0 RTM, aggiornamento di WMF 4.0, WMF 4.0
 - **Ambiente:** Azure
 - **Note:** questa versione usa DSC nella versione inclusa in Windows Server 2016, per gli altri sistemi operativi Windows installa [Windows Management Framework 5.1](https://blogs.msdn.microsoft.com/powershell/2016/12/06/wmf-5-1-releasing-january-2017/) (l'installazione di WMF richiede il riavvio). Per Nano Server, il ruolo DSC viene installato nella macchina virtuale.
 - **Nuove funzionalità:**
@@ -107,8 +107,8 @@ Questo articolo contiene informazioni su ogni versione dell'estensione VM DSC di
 ### <a name="version-225"></a>Versione 2.25
 
 - **Data di rilascio:** 2 giugno 2017
-- **Supporto sistema operativo** Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2 SP1, Windows Client 7/8.1/10, Nano Server
-- **Supporto WMF:** WMF 5.1, WMF 5.0 RTM, WMF 4.0 Update, WMF 4.0
+- **Supporto sistema operativo:** Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2 SP1, Client Windows 7/8.1/10, Nano Server
+- **Supporto WMF:** WMF 5.1, WMF 5.0 RTM, aggiornamento di WMF 4.0, WMF 4.0
 - **Ambiente:** Azure
 - **Note:** questa versione usa DSC nella versione inclusa in Windows Server 2016, per gli altri sistemi operativi Windows installa [Windows Management Framework 5.1](https://blogs.msdn.microsoft.com/powershell/2016/12/06/wmf-5-1-releasing-january-2017/) (l'installazione di WMF richiede il riavvio). Per Nano Server, il ruolo DSC viene installato nella macchina virtuale.
 - **Nuove funzionalità:**
@@ -117,8 +117,8 @@ Questo articolo contiene informazioni su ogni versione dell'estensione VM DSC di
 ### <a name="version-224"></a>Versione 2.24
 
 - **Data di rilascio:** 13 aprile 2017
-- **Supporto sistema operativo** Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2 SP1, Nano Server
-- **Supporto WMF:** WMF 5.1, WMF 5.0 RTM, WMF 4.0 Update, WMF 4.0
+- **Supporto sistema operativo:** Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2 SP1, Nano Server
+- **Supporto WMF:** WMF 5.1, WMF 5.0 RTM, aggiornamento di WMF 4.0, WMF 4.0
 - **Ambiente:** Azure
 - **Note:** questa versione usa DSC nella versione inclusa in Windows Server 2016, per gli altri sistemi operativi Windows installa [Windows Management Framework 5.1](https://blogs.msdn.microsoft.com/powershell/2016/12/06/wmf-5-1-releasing-january-2017/) (l'installazione di WMF richiede il riavvio). Per Nano Server, il ruolo DSC viene installato nella macchina virtuale.
 - **Nuove funzionalità:**
@@ -127,8 +127,8 @@ Questo articolo contiene informazioni su ogni versione dell'estensione VM DSC di
 ### <a name="version-223"></a>Versione 2.23
 
 - **Data di rilascio:** 15 marzo 2017
-- **Supporto sistema operativo** Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2 SP1, Nano Server
-- **Supporto WMF:** WMF 5.1, WMF 5.0 RTM, WMF 4.0 Update, WMF 4.0
+- **Supporto sistema operativo:** Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2 SP1, Nano Server
+- **Supporto WMF:** WMF 5.1, WMF 5.0 RTM, aggiornamento di WMF 4.0, WMF 4.0
 - **Ambiente:** Azure
 - **Note:** questa versione usa DSC nella versione inclusa in Windows Server 2016, per gli altri sistemi operativi Windows installa [Windows Management Framework 5.1](https://blogs.msdn.microsoft.com/powershell/2016/12/06/wmf-5-1-releasing-january-2017/) (l'installazione di WMF richiede il riavvio). Per Nano Server, il ruolo DSC viene installato nella macchina virtuale.
 - **Nuove funzionalità:**
@@ -137,8 +137,8 @@ Questo articolo contiene informazioni su ogni versione dell'estensione VM DSC di
 ### <a name="version-222"></a>Versione 2.22
 
 - **Data di rilascio:** 8 febbraio 2017
-- **Supporto sistema operativo** Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2 SP1, Nano Server
-- **Supporto WMF:** WMF 5.1, WMF 5.0 RTM, WMF 4.0 Update, WMF 4.0
+- **Supporto sistema operativo:** Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2 SP1, Nano Server
+- **Supporto WMF:** WMF 5.1, WMF 5.0 RTM, aggiornamento di WMF 4.0, WMF 4.0
 - **Ambiente:** Azure
 - **Note:** questa versione usa DSC nella versione inclusa in Windows Server 2016, per gli altri sistemi operativi Windows installa [Windows Management Framework 5.1](https://blogs.msdn.microsoft.com/powershell/2016/12/06/wmf-5-1-releasing-january-2017/) (l'installazione di WMF richiede il riavvio). Per Nano Server, il ruolo DSC viene installato nella macchina virtuale.
 - **Nuove funzionalità:**
@@ -148,8 +148,8 @@ Questo articolo contiene informazioni su ogni versione dell'estensione VM DSC di
 ### <a name="version-221"></a>Versione 2.21
 
 - **Data di rilascio:** 2 dicembre 2016
-- **Supporto sistema operativo** Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2 SP1, Nano Server
-- **Supporto WMF:** WMF 5.1 Preview, WMF 5.0 RTM, WMF 4.0 Update, WMF 4.0
+- **Supporto sistema operativo:** Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2 SP1, Nano Server
+- **Supporto WMF:** anteprima di WMF 5.1, WMF 5.0 RTM, aggiornamento di WMF 4.0, WMF 4.0
 - **Ambiente:** Azure
 - **Note:** questa versione usa DSC nella versione inclusa in Windows Server 2016, per gli altri sistemi operativi Windows installa [Windows Management Framework 5.0 RTM](https://blogs.msdn.microsoft.com/powershell/2015/12/16/windows-management-framework-wmf-5-0-rtm-is-now-available/) (l'installazione di WMF richiede il riavvio). Per Nano Server, il ruolo DSC viene installato nella macchina virtuale.
 - **Nuove funzionalità:**
@@ -159,8 +159,8 @@ Questo articolo contiene informazioni su ogni versione dell'estensione VM DSC di
 ### <a name="version-220"></a>Versione 2.20
 
 - **Data di rilascio:** 2 agosto 2016
-- **Supporto sistema operativo** Windows Server 2016 Technical Preview, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2 SP1
-- **Supporto WMF:** WMF 5.1 Preview, WMF 5.0 RTM, WMF 4.0 Update, WMF 4.0
+- **Supporto sistema operativo:** Windows Server 2016 Technical Preview, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2 SP1
+- **Supporto WMF:** anteprima di WMF 5.1, WMF 5.0 RTM, aggiornamento di WMF 4.0, WMF 4.0
 - **Ambiente:** Azure
 - **Note:** questa versione usa DSC nella versione inclusa in Windows Server 2016 Technical Preview, per gli altri sistemi operativi Windows installa [Windows Management Framework 5.0 RTM](https://blogs.msdn.microsoft.com/powershell/2015/12/16/windows-management-framework-wmf-5-0-rtm-is-now-available/) (l'installazione di WMF richiede il riavvio).
 - **Nuove funzionalità:**
@@ -170,8 +170,8 @@ Questo articolo contiene informazioni su ogni versione dell'estensione VM DSC di
 ### <a name="version--219"></a>Versione 2.19
 
 - **Data di rilascio:** 3 giugno 2016
-- **Supporto sistema operativo** Windows Server 2016 Technical Preview, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2 SP1
-- **Supporto WMF:** WMF 5.0 RTM, WMF 4.0 Update, WMF 4.0
+- **Supporto sistema operativo:** Windows Server 2016 Technical Preview, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2 SP1
+- **Supporto WMF:** WMF 5.0 RTM, aggiornamento di WMF 4.0, WMF 4.0
 - **Ambiente:** Azure, Azure Cina, Azure per enti pubblici
 - **Note:** questa versione usa DSC nella versione inclusa in Windows Server 2016 Technical Preview, per gli altri sistemi operativi Windows installa [Windows Management Framework 5.0 RTM](https://blogs.msdn.microsoft.com/powershell/2015/12/16/windows-management-framework-wmf-5-0-rtm-is-now-available/) (l'installazione di WMF richiede il riavvio).
 - **Nuove funzionalità:**
@@ -180,8 +180,8 @@ Questo articolo contiene informazioni su ogni versione dell'estensione VM DSC di
 ### <a name="version-218"></a>Versione 2.18
 
 - **Data di rilascio:** 3 giugno 2016
-- **Supporto sistema operativo** Windows Server 2016 Technical Preview, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2 SP1
-- **Supporto WMF:** WMF 5.0 RTM, WMF 4.0 Update, WMF 4.0
+- **Supporto sistema operativo:** Windows Server 2016 Technical Preview, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2 SP1
+- **Supporto WMF:** WMF 5.0 RTM, aggiornamento di WMF 4.0, WMF 4.0
 - **Ambiente:** Azure
 - **Note:** questa versione usa DSC nella versione inclusa in Windows Server 2016 Technical Preview, per gli altri sistemi operativi Windows installa [Windows Management Framework 5.0 RTM](https://blogs.msdn.microsoft.com/powershell/2015/12/16/windows-management-framework-wmf-5-0-rtm-is-now-available/) (l'installazione di WMF richiede il riavvio).
 - **Nuove funzionalità:**
@@ -192,8 +192,8 @@ Questo articolo contiene informazioni su ogni versione dell'estensione VM DSC di
 ### <a name="version-217"></a>Versione 2.17
 
 - **Data di rilascio:** 26 aprile 2016
-- **Supporto sistema operativo** Windows Server 2016 Technical Preview, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2 SP1
-- **Supporto WMF:** WMF 5.0 RTM, WMF 4.0 Update, WMF 4.0
+- **Supporto sistema operativo:** Windows Server 2016 Technical Preview, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2 SP1
+- **Supporto WMF:** WMF 5.0 RTM, aggiornamento di WMF 4.0, WMF 4.0
 - **Ambiente:** Azure
 - **Note:** questa versione usa DSC nella versione inclusa in Windows Server 2016 Technical Preview, per gli altri sistemi operativi Windows installa [Windows Management Framework 5.0 RTM](https://blogs.msdn.microsoft.com/powershell/2015/12/16/windows-management-framework-wmf-5-0-rtm-is-now-available/) (l'installazione di WMF richiede il riavvio).
 - **Nuove funzionalità:**
@@ -203,7 +203,7 @@ Questo articolo contiene informazioni su ogni versione dell'estensione VM DSC di
 ### <a name="version-216"></a>Versione 2.16
 
 - **Data di rilascio:** 21 aprile 2016
-- **Supporto sistema operativo** Windows Server 2016 Technical Preview, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2 SP1
+- **Supporto sistema operativo:** Windows Server 2016 Technical Preview, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2 SP1
 - **Supporto WMF:** WMF 5.0 RTM, WMF 4.0
 - **Ambiente:** Azure
 - **Note:** questa versione usa DSC nella versione inclusa in Windows Server 2016 Technical Preview, per gli altri sistemi operativi Windows installa [Windows Management Framework 5.0 RTM](https://blogs.msdn.microsoft.com/powershell/2015/12/16/windows-management-framework-wmf-5-0-rtm-is-now-available/) (l'installazione di WMF richiede il riavvio).
@@ -214,7 +214,7 @@ Questo articolo contiene informazioni su ogni versione dell'estensione VM DSC di
 ### <a name="version-215"></a>Versione 2.15
 
 - **Data di rilascio:** 14 marzo 2016
-- **Supporto sistema operativo** Windows Server 2016 Technical Preview, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2 SP1
+- **Supporto sistema operativo:** Windows Server 2016 Technical Preview, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2 SP1
 - **Supporto WMF:** WMF 5.0 RTM, WMF 4.0
 - **Ambiente:** Azure
 - **Note:** questa versione usa DSC nella versione inclusa in Windows Server 2016 Technical Preview, per gli altri sistemi operativi Windows installa [Windows Management Framework 5.0 RTM](https://blogs.msdn.microsoft.com/powershell/2015/12/16/windows-management-framework-wmf-5-0-rtm-is-now-available/) (l'installazione di WMF richiede il riavvio).
@@ -227,7 +227,7 @@ Questo articolo contiene informazioni su ogni versione dell'estensione VM DSC di
 ### <a name="version-214"></a>Versione 2.14
 
 - **Data di rilascio:** 25 febbraio 2016
-- **Supporto sistema operativo** Windows Server 2016 Technical Preview, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2 SP1
+- **Supporto sistema operativo:** Windows Server 2016 Technical Preview, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2 SP1
 - **Supporto WMF:** WMF 5.0 RTM, WMF 4.0
 - **Ambiente:** Azure
 - **Note:** questa versione usa DSC nella versione inclusa in Windows Server 2016 Technical Preview, per gli altri sistemi operativi Windows installa [Windows Management Framework 5.0 RTM](https://blogs.msdn.microsoft.com/powershell/2015/12/16/windows-management-framework-wmf-5-0-rtm-is-now-available/) (l'installazione di WMF richiede il riavvio).
@@ -239,7 +239,7 @@ Questo articolo contiene informazioni su ogni versione dell'estensione VM DSC di
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-- Per altre informazioni su PowerShell DSC, visitare il [centro di documentazione di PowerShell](../overview/overview.md).
+- Per altre informazioni su PowerShell DSC, passare al [centro di documentazione di PowerShell](../overview/overview.md).
 - Esaminare il [modello di Resource Manager per l'estensione DSC](/azure/virtual-machines/extensions/dsc-template).
-- Per altre funzionalità che è possibile gestire usando PowerShell DSC e altre risorse DSC, consultare [PowerShell Gallery](https://www.powershellgallery.com/packages?q=DscResource&x=0&y=0).
-- Per informazioni dettagliate sul passaggio di parametri sensibili nelle configurazioni, vedere l'articolo relativo alla [gestione sicura delle credenziali con il gestore dell'estensione DSC](/azure/virtual-machines/extensions/dsc-credentials).
+- Per altre funzionalità che è possibile gestire tramite PowerShell DSC e per altre risorse DSC, cercare in [PowerShell Gallery](https://www.powershellgallery.com/packages?q=DscResource&x=0&y=0).
+- Per altre informazioni sul passaggio di parametri sensibili nelle configurazioni, vedere [Gestire credenziali in modo sicuro con il gestore dell'estensione DSC](/azure/virtual-machines/extensions/dsc-credentials).

@@ -3,10 +3,10 @@ title: Installazione di PowerShell in Linux
 description: Informazioni sull'installazione di PowerShell in varie distribuzioni Linux
 ms.date: 03/09/2020
 ms.openlocfilehash: 31da32b81dbbcf4b46fd5f0cd9d921f28f434763
-ms.sourcegitcommit: 30ccbbb32915b551c4cd4c91ef1df96b5b7514c4
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/01/2020
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "80500542"
 ---
 # <a name="installing-powershell-on-linux"></a>Installazione di PowerShell in Linux
@@ -18,11 +18,11 @@ Per le distribuzioni Linux non supportate ufficialmente, è possibile provare a 
 Tutti i pacchetti sono disponibili nella pagina delle [versioni][] di GitHub. Dopo aver installato il pacchetto, eseguire `pwsh` da un terminale. Eseguire `pwsh-preview` se è stata installata una [versione di anteprima](#installing-preview-releases).
 
 > [!NOTE]
-> PowerShell 7.x è un aggiornamento sul posto che rimuove PowerShell Core 6.x.
+> PowerShell Core 7.x è un aggiornamento sul posto che rimuove PowerShell Core 6.x.
 >
 > La cartella `/usr/local/microsoft/powershell/6` viene sostituita da `/usr/local/microsoft/powershell/7`.
 >
-> Se è necessario avere PowerShell 6 insieme a PowerShell 7, reinstallare PowerShell 6 usando il metodo degli [archivi di file binari](#binary-archives).
+> Se è necessario disporre di PowerShell 6 insieme a PowerShell 7, reinstallare PowerShell 6 usando il metodo degli [archivi di file binari](#binary-archives).
 
 [u16]: #ubuntu-1604
 [u1804]: #ubuntu-1804
@@ -710,7 +710,7 @@ sudo ~/powershell/pwsh -c New-Item -ItemType SymbolicLink -Path "/usr/bin/pwsh" 
 rm -rf ~/powershell
 ```
 
-## <a name="install-as-a-net-global-tool"></a>Installare come strumento globale .NET
+## <a name="install-as-a-net-global-tool"></a>Installare PowerShell come strumento globale .NET
 
 Se [.NET Core SDK](/dotnet/core/sdk) è già installato, è facile installare PowerShell come [strumento globale .NET](/dotnet/core/tools/global-tools).
 

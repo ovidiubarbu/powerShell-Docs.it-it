@@ -3,10 +3,10 @@ title: Comunicazione remota di PowerShell su SSH
 description: Comunicazione remota in PowerShell Core tramite SSH
 ms.date: 09/30/2019
 ms.openlocfilehash: 0f2fb13010d62dec5b19b373a24a199bff22665d
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "73444369"
 ---
 # <a name="powershell-remoting-over-ssh"></a>Comunicazione remota di PowerShell su SSH
@@ -97,7 +97,7 @@ PowerShell 6 o versione successiva e SSH devono essere installati in tutti i com
    Restart-Service sshd
    ```
 
-1. Aggiungere il percorso in cui è installato OpenSSH alla variabile di ambiente Path. Ad esempio, `C:\Program Files\OpenSSH\` Questa voce permette di trovare `ssh.exe`.
+1. Aggiungere il percorso in cui è installato OpenSSH alla variabile di ambiente Path. Ad esempio: `C:\Program Files\OpenSSH\`. Questa voce permette di trovare `ssh.exe`.
 
 ## <a name="set-up-on-an-ubuntu-1604-linux-computer"></a>Eseguire la configurazione in un computer Linux Ubuntu 16.04
 
@@ -179,7 +179,7 @@ PowerShell 6 o versione successiva e SSH devono essere installati in tutti i com
    sudo launchctl start com.openssh.sshd
    ```
 
-## <a name="authentication"></a>Autenticazione
+## <a name="authentication"></a>Authentication
 
 La comunicazione remota di PowerShell su SSH si affida allo scambio di autenticazioni tra il clienti SSH e il servizio SSH e non implementa alcuno schema di autenticazione. Ciò significa che tutti gli schemi di autenticazione configurati, tra cui l'autenticazione a più fattori, sono gestiti da SSH e indipendenti da PowerShell. Ad esempio, è possibile configurare il servizio SSH per richiedere l'autenticazione con chiave pubblica e una password monouso per maggiore sicurezza. La configurazione dell'autenticazione a più fattori non rientra nell'ambito di questa documentazione. Fare riferimento alla documentazione per SSH su come configurare l'autenticazione a più fattori in modo corretto e verificare se funziona all'esterno di PowerShell prima di provare a usarlo con la comunicazione remota di PowerShell.
 

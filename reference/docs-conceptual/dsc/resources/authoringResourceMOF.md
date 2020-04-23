@@ -3,10 +3,10 @@ ms.date: 06/12/2017
 keywords: dsc,powershell,configurazione,installazione
 title: Scrittura di una risorsa DSC personalizzata con MOF
 ms.openlocfilehash: 24e9d15bcbe1eddd297daeb04e0713c443e52c38
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "71952898"
 ---
 # <a name="writing-a-custom-dsc-resource-with-mof"></a>Scrittura di una risorsa DSC personalizzata con MOF
@@ -129,7 +129,7 @@ A seconda dei valori specificati per le proprietà della risorsa nello script di
 * Aggiornare un sito Web esistente
 * Eliminare un sito Web esistente
 
-Ciò è illustrato nell'esempio seguente.
+Questa condizione è illustrata nell'esempio seguente.
 
 ```powershell
 # The Set-TargetResource function is used to create, delete or configure a website on the target machine.

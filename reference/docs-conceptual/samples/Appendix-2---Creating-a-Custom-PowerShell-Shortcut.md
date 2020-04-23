@@ -3,10 +3,10 @@ ms.date: 06/05/2017
 keywords: powershell,cmdlet
 title: Appendice 2 Creazione di un collegamento personalizzato per PowerShell
 ms.openlocfilehash: 6f1a6a8187b1797103e3620b2cf9155978807ea5
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "67030295"
 ---
 # <a name="appendix-2---creating-a-custom-powershell-shortcut"></a>Appendice 2 - Creazione di un collegamento personalizzato per PowerShell
@@ -17,7 +17,7 @@ La procedura seguente descrive come creare un collegamento a Windows PowerShell 
 
 2. Fare clic con il pulsante destro del mouse sul collegamento e quindi scegliere **Proprietà**.
 
-3. Fare clic sulla scheda **Opzioni**.
+3. Scegliere la scheda **Options (Opzioni)** .
 
 4. Nella sezione **Opzioni di modifica** selezionare la casella di controllo **Modifica rapida**.
 

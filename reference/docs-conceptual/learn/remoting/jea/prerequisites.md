@@ -3,13 +3,13 @@ ms.date: 07/10/2019
 keywords: jea,powershell,sicurezza
 title: Prerequisiti di JEA
 ms.openlocfilehash: 1833bacf49eebcccefc10f7c85a39732559c1a97
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "74416718"
 ---
-# <a name="prerequisites"></a>Prerequisiti
+# <a name="prerequisites"></a>Prerequisites
 
 Just Enough Administration (JEA) è una funzionalità inclusa in PowerShell 5.0 e versioni successive. Questo articolo descrive i prerequisiti che devono essere soddisfatti per poter usare JEA.
 

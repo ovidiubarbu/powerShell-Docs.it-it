@@ -3,10 +3,10 @@ ms.date: 09/20/2019
 keywords: dsc,powershell,configurazione,installazione
 title: Risorsa User DSC
 ms.openlocfilehash: dec432c2ff1b4e4408165fef391e77cbf1d85ac4
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "71953008"
 ---
 # <a name="dsc-user-resource"></a>Risorsa User DSC
@@ -36,10 +36,10 @@ User [string] #ResourceName
 
 ## <a name="properties"></a>Proprietà
 
-|Proprietà |Description |
+|Proprietà |Descrizione |
 |---|---|
 |UserName |Indica il nome dell'account per cui si vuole specificare un determinato stato. |
-|Description |Indica la descrizione che si vuole usare per l'account utente. |
+|Descrizione |Indica la descrizione che si vuole usare per l'account utente. |
 |Disabled |Indica se l'account è abilitato. Impostare questa proprietà su `$true` per assicurarsi che l'account sia disabilitato e su `$false` per assicurarsi che sia abilitato. |
 |FullName |Rappresenta una stringa che contiene il nome completo da usare per l'account utente. |
 |Password |Indica la password da usare per l'account. |
@@ -49,7 +49,7 @@ User [string] #ResourceName
 
 ## <a name="common-properties"></a>Proprietà comuni
 
-|Proprietà |Description |
+|Proprietà |Descrizione |
 |---|---|
 |DependsOn |Indica che prima di configurare la risorsa è necessario eseguire la configurazione di un'altra risorsa. Ad esempio, se il valore di ID del blocco script di configurazione della risorsa che si vuole eseguire per primo è ResourceName e il tipo è ResourceType, la sintassi per usare questa proprietà è `DependsOn = "[ResourceType]ResourceName"`. |
 |Ensure |Indica se l'account esiste. Impostare questa proprietà su **Present** per assicurarsi che l'account esista e su **Absent** per specificare che non esiste. Il valore predefinito è **Present**. |

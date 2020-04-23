@@ -3,17 +3,17 @@ ms.date: 06/12/2017
 keywords: wmf,powershell,installazione
 title: Problemi noti in WMF 5.0
 ms.openlocfilehash: 91f556cb43ef971107f05c4041b725b1c7e4f1bd
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "71147741"
 ---
 # <a name="known-issues-in-wmf-50"></a>Problemi noti in WMF 5.0
 
 ## <a name="powershell-shortcuts-are-broken-when-used-for-the-first-time"></a>I collegamenti per PowerShell non funzionano la prima volta
 
-**Soluzione:** Eseguire una delle azioni seguenti:
+**Risoluzione:** Eseguire una delle azioni seguenti:
 
 1. Fare clic con il pulsante destro del mouse sul collegamento di PowerShell. Selezionare "Windows PowerShell" per avviare il programma in modalità senza privilegi elevati.
 2. Fare clic con il pulsante destro del mouse sul collegamento di PowerShell. Fare clic con il pulsante destro del mouse su "Windows PowerShell" e scegliere "Esegui come amministratore" per avviare il programma in modalità con privilegi elevati.
@@ -24,7 +24,7 @@ Dopo aver eseguito una delle azioni precedenti, i collegamenti per PowerShell fu
 
 In Windows 7 l'uso dei moduli di PowerShell e delle risorse DSC potrebbe causare la segnalazione di errori per ExecutionPolicy.
 
-**Soluzione:** impostare ExecutionPolicy su **RemoteSigned** eseguendo il comando seguente in una sessione di PowerShell con privilegi elevati (Esegui come amministratore):
+**Risoluzione:** impostare ExecutionPolicy su **RemoteSigned** eseguendo il comando seguente in una sessione di PowerShell con privilegi elevati (Esegui come amministratore):
 
 ```powershell
 Set-ExecutionPolicy RemoteSigned
@@ -34,25 +34,25 @@ Set-ExecutionPolicy RemoteSigned
 
 L'endpoint di Exchange precedente reindirizza a un nuovo endpoint. È presente un bug nella logica di reindirizzamento che causa un arresto anomalo.
 
-**Soluzione:** connettersi direttamente al nuovo endpoint.
+**Risoluzione:** connettersi direttamente al nuovo endpoint.
 
 ## <a name="software-inventory-logging-feature-is-erroneously-stopped-after-wmf-50-installation-on-windows-server-2012-r2"></a>La funzionalità Registrazione inventario software viene arrestata erroneamente dopo l'installazione di WMF 5.0 in Windows Server 2012 R2
 
 Quando si installa WMF 5.0 in un computer Windows Server 2012 R2 in cui è già in esecuzione Registrazione inventario software, questa funzionalità viene arrestata erroneamente dopo l'installazione.
 
-**Soluzione:** eseguire il cmdlet `Start-SilLogging` una volta dopo l'installazione di WMF, perché il processo di installazione arresta erroneamente la funzionalità Registrazione inventario software.
+**Risoluzione:** eseguire il cmdlet `Start-SilLogging` una volta dopo l'installazione di WMF, perché il processo di installazione arresta erroneamente la funzionalità Registrazione inventario software.
 
 ## <a name="get-childitem-does-not-work-if--literalpath-and--recurse-are-used-together"></a>`Get-ChildItem` non funziona se si usano insieme -LiteralPath e -Recurse
 
 Se un nome di directory contiene un carattere jolly non valido, `Get-ChildItem` non produrrà i risultati previsti quando si usano insieme entrambe le opzioni -LiteralPath e -Recurse.
 
-**Soluzione:** non è ideale, ma la soluzione attuale consiste nell'implementare la ricorsione nello script anziché affidarsi al cmdlet.
+**Risoluzione:** non è ideale, ma la soluzione attuale consiste nell'implementare la ricorsione nello script anziché affidarsi al cmdlet.
 
 ## <a name="sysprep-fails-after-wmf-50-installation"></a>Sysprep smette di funzionare dopo l'installazione di WMF 5.0
 
 Esistono due possibili soluzioni al problema in base alla versione di Windows Server in esecuzione.
 
-**Soluzione:**
+**Risoluzione:**
 
 - Per i sistemi che eseguono **Windows Server 2008 R2**
   1. Aprire PowerShell con un account amministratore
