@@ -60,7 +60,7 @@
           items:
             - name: Panoramica
               href: learn/remoting/jea/overview.md
-            - name: Prerequisiti
+            - name: Prerequisites
               href: learn/remoting/jea/prerequisites.md
             - name: Capacità del ruolo
               href: learn/remoting/jea/role-capabilities.md
@@ -182,7 +182,7 @@
       href: gallery/installing-psget.md
     - name: Introduzione
       href: gallery/getting-started.md
-    - name: Procedure
+    - name: Procedura
       items:
         - name: Come trovare i pacchetti in PowerShell Gallery
           items:
@@ -260,7 +260,7 @@
           href: gallery/how-to/getting-support/dispute-resolution.md
         - name: Come contattare gli amministratori
           href: gallery/how-to/getting-support/contacting-administrators.md
-        - name: Risoluzione dei problemi
+        - name: risoluzione dei problemi
           href: gallery/how-to/getting-support/troubleshooting-cmdlets.md
         - name: Provider NuGet di bootstrap e NuGet.exe
           href: gallery/how-to/getting-support/bootstrapping-nuget.md
@@ -516,13 +516,13 @@
           href: dsc/tutorials/bootstrapDsc.md
         - name: Configurare la chiave del Registro di sistema DSCAutomationHostEnabled
           href: dsc/tutorials/DSCAutomationHostEnabled.md
-    - name: Risoluzione dei problemi
+    - name: risoluzione dei problemi
       items:
         - name: Problemi noti
           href: dsc/troubleshooting/troubleshooting.md
         - name: Eseguire il debug di risorse DSC
           href: dsc/troubleshooting/debugResource.md
-    - name: Informazioni di riferimento
+    - name: Riferimento
       items:
         - name: Risorse predefinite di Windows
           items:
