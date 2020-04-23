@@ -3,10 +3,10 @@ ms.date: 08/27/2018
 keywords: powershell,cmdlet
 title: Scripting di PowerShell
 ms.openlocfilehash: 281f2e798b3d3fa1c150b079d633cb7e8490dcec
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "62058489"
 ---
 # <a name="powershell"></a>PowerShell
@@ -48,7 +48,7 @@ La maggior parte dei cmdlet restituisce oggetti che possono essere modificati e 
 Get-Service | Get-Member
 ```
 
-### <a name="consistency"></a>Coerenza
+### <a name="consistency"></a>Consistenza
 
 La gestione dei sistemi può essere un'attività complessa. Gli strumenti con un'interfaccia coerente sono utili per assicurare un maggiore controllo sulla complessità intrinseca. Sfortunatamente, gli strumenti da riga di comando o gli oggetti COM (Component Object Model) gestibili tramite script non sono certo noti per la loro coerenza.
 

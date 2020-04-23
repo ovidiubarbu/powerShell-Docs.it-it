@@ -3,10 +3,10 @@ ms.date: 06/05/2017
 keywords: powershell,cmdlet
 title: Selezione di elementi di una casella di riepilogo
 ms.openlocfilehash: 048bccd403e01e2290a8930a0faba30d4c7caa73
-ms.sourcegitcommit: 0a3f9945d52e963e9cba2538ffb33e42156e1395
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2020
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "77706173"
 ---
 # <a name="selecting-items-from-a-list-box"></a>Selezione di elementi di una casella di riepilogo
@@ -180,4 +180,4 @@ if ($result -eq [System.Windows.Forms.DialogResult]::OK)
 ## <a name="see-also"></a>Vedere anche
 
 - [GitHub: WinFormsExampleUpdates di Dave Wyatt](https://github.com/dlwyatt/WinFormsExampleUpdates)
-- [Windows PowerShell Tip of the Week:  Selecting Items from a List Box](/previous-versions/windows/it-pro/windows-powershell-1.0/ff730949(v=technet.10)) (Suggerimento della settimana per Windows PowerShell: Selezione di elementi in una casella di riepilogo)
+- [Suggerimento della settimana su Windows PowerShell: Selezione di elementi di una casella di riepilogo](/previous-versions/windows/it-pro/windows-powershell-1.0/ff730949(v=technet.10))

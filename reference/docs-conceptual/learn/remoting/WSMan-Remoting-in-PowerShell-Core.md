@@ -3,10 +3,10 @@ title: Comunicazione remota di WS-Management (WS-Management) in PowerShell Core
 description: Comunicazione remota in PowerShell Core tramite WSMan
 ms.date: 08/06/2018
 ms.openlocfilehash: e5f00128bc8ebc1b432cc77a5896a9e09d684109
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "62058880"
 ---
 # <a name="ws-management-wsman-remoting-in-powershell-core"></a>Comunicazione remota di WS-Management (WS-Management) in PowerShell Core
@@ -24,7 +24,7 @@ Si tratta di uno scenario di consenso esplicito in cui l'utente esegue Install-P
 Lo script di installazione è una soluzione provvisoria fino a quando non verranno aggiunte altre funzionalità a `Enable-PSRemoting` per eseguire la stessa azione.
 Per altri dettagli, vedere il problema [n. 1193](https://github.com/PowerShell/PowerShell/issues/1193).
 
-### <a name="script-actions"></a>Azioni dello script
+### <a name="script-actions"></a>Azioni script
 
 Lo script
 
@@ -56,7 +56,7 @@ Set-Location -Path 'C:\Program Files\PowerShell\6.0.0\'
 .\Install-PowerShellRemoting.ps1 -PowerShellHome "C:\Program Files\PowerShell\6.0.0\"
 ```
 
-**NOTA**: lo script di registrazione della comunicazione remota riavvierà WinRM, in modo che tutte le sessioni PSRP esistenti vengano terminate subito dopo l'esecuzione dello script. Se eseguito durante una sessione remota, la connessione viene interrotta.
+**NOTA:** lo script di registrazione della comunicazione remota riavvierà WinRM, in modo che tutte le sessioni PSRP esistenti verranno terminate subito dopo l'esecuzione dello script. Se eseguito durante una sessione remota, la connessione viene interrotta.
 
 ## <a name="how-to-connect-to-the-new-endpoint"></a>Come connettersi al nuovo endpoint
 
