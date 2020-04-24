@@ -60,7 +60,7 @@
           items:
             - name: Panoramica
               href: learn/remoting/jea/overview.md
-            - name: Prerequisites
+            - name: Prerequisiti
               href: learn/remoting/jea/prerequisites.md
             - name: Capacità del ruolo
               href: learn/remoting/jea/role-capabilities.md
@@ -182,7 +182,7 @@
       href: gallery/installing-psget.md
     - name: Introduzione
       href: gallery/getting-started.md
-    - name: Procedura
+    - name: Procedure
       items:
         - name: Come trovare i pacchetti in PowerShell Gallery
           items:
@@ -260,7 +260,7 @@
           href: gallery/how-to/getting-support/dispute-resolution.md
         - name: Come contattare gli amministratori
           href: gallery/how-to/getting-support/contacting-administrators.md
-        - name: risoluzione dei problemi
+        - name: Risoluzione dei problemi
           href: gallery/how-to/getting-support/troubleshooting-cmdlets.md
         - name: Provider NuGet di bootstrap e NuGet.exe
           href: gallery/how-to/getting-support/bootstrapping-nuget.md
@@ -372,9 +372,9 @@
         - name: Introduzione a DSC per Nano
           href: dsc/getting-started/nanoDSC.md
         - name: Introduzione a DSC in Automazione di Azure
-          href: dsc/getting-started/azureDSC.md
-        - name: Introduzione a DSC in Macchine virtuali di Azure
-          href: dsc/getting-started/azureDSCexthistory.md
+          href: /azure/automation/automation-dsc-getting-started
+        - name: Introduzione alla configurazione guest di Criteri di Azure
+          href: /azure/governance/policy/concepts/guest-configuration
     - name: Avvi rapidi
       expanded: true
       items:
@@ -516,13 +516,13 @@
           href: dsc/tutorials/bootstrapDsc.md
         - name: Configurare la chiave del Registro di sistema DSCAutomationHostEnabled
           href: dsc/tutorials/DSCAutomationHostEnabled.md
-    - name: risoluzione dei problemi
+    - name: Risoluzione dei problemi
       items:
         - name: Problemi noti
           href: dsc/troubleshooting/troubleshooting.md
         - name: Eseguire il debug di risorse DSC
           href: dsc/troubleshooting/debugResource.md
-    - name: Riferimento
+    - name: Informazioni di riferimento
       items:
         - name: Risorse predefinite di Windows
           items:
