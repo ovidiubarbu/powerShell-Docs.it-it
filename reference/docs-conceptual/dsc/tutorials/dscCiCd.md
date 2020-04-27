@@ -3,10 +3,10 @@ ms.date: 06/12/2017
 keywords: dsc,powershell,configurazione,installazione
 title: Creazione di una pipeline di integrazione continua e distribuzione continua con DSC
 ms.openlocfilehash: 2d049cd640f0df9b018a88ad106e59dbeed7bcee
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "71954238"
 ---
 # <a name="building-a-continuous-integration-and-continuous-deployment-pipeline-with-dsc"></a>Creazione di una pipeline di integrazione continua e distribuzione continua con DSC
@@ -324,14 +324,14 @@ In questo esempio verranno trattati solo i passaggi di compilazione da aggiunger
 Creare una nuova definizione di compilazione (selezionare il modello **vuoto**) denominato "InfraDNS".
 Aggiungere alla definizione di compilazione i passaggi seguenti:
 
-- Script PowerShell
+- Script di PowerShell
 - Pubblicazione dei risultati dei test
 - Copia dei file
 - Pubblicazione dell'elemento
 
 Dopo l'aggiunta di queste istruzioni di compilazione, modificare le proprietà di ogni istruzione nel modo seguente:
 
-### <a name="powershell-script"></a>Script PowerShell
+### <a name="powershell-script"></a>Script di PowerShell
 
 1. Impostare la proprietà **Tipo** su `File Path`.
 1. Impostare la proprietà **Percorso script** su `initiate.ps1`.
@@ -344,7 +344,7 @@ Questa istruzione di compilazione esegue il file `initiate.ps1`, che chiama lo s
 1. Impostare **Formato dei risultati test** su `NUnit`
 1. Impostare **File dei risultati del test** su `InfraDNS/Tests/Results/*.xml`
 1. Impostare **Titolo esecuzione dei test** su `Unit`.
-1. Assicurarsi che in **Opzioni di controllo** le opzioni **Abilitato** ed **Esegui sempre** siano entrambe selezionate.
+1. Verificare che in **Opzioni di controllo** le opzioni **Abilitato** ed **Esegui sempre** siano entrambe selezionate.
 
 Questa istruzione di compilazione esegue gli unit test dello script Pester esaminato in precedenza e archivia i risultati nella cartella `InfraDNS/Tests/Results/*.xml`.
 
@@ -392,13 +392,13 @@ Assicurarsi di selezionare **Distribuzione continua**, in modo che venga attivat
 
 Aggiungere alla definizione di versione i passaggi seguenti:
 
-- Script PowerShell
+- Script di PowerShell
 - Pubblicazione dei risultati dei test
 - Pubblicazione dei risultati dei test
 
 Modificare i passaggi come segue:
 
-### <a name="powershell-script"></a>Script PowerShell
+### <a name="powershell-script"></a>Script di PowerShell
 
 1. Impostare il campo **Percorso script** su `$(Build.DefinitionName)\Deploy\initiate.ps1"`
 1. Impostare il campo **Argomenti** su `-fileName Deploy`

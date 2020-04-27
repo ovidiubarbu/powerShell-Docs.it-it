@@ -3,12 +3,12 @@ title: Elenco di controllo editoriale
 description: Elenco riassuntivo delle regole per la modifica della documentazione di PowerShell.
 ms.date: 03/05/2020
 ms.topic: conceptual
-ms.openlocfilehash: 511e0c323e1a3256039e819d06f32f6e1ac42767
-ms.sourcegitcommit: 18d832858a7b8ea094763afa753e0f48f01372e7
+ms.openlocfilehash: b5baf7366239084779d34e23f218e5e6222ed1a3
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/10/2020
-ms.locfileid: "79060336"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81624738"
 ---
 # <a name="editors-checklist"></a>Elenco di controllo del redattore
 
@@ -36,7 +36,8 @@ Di seguito è riportato un riepilogo delle regole da applicare quando si scrivon
   - Esempi sintattici `Verb-Noun -Parameter`
   - Percorsi di file `C:\Program Files\PowerShell`, `/usr/bin/pwsh`
   - URL non selezionabili nel documento
-- Usare il grassetto per nomi di proprietà, valori di parametri, nomi di parametri, nomi di classi, nomi di moduli, nomi di entità, nomi di oggetti o tipi
+  - Valori di proprietà o parametri
+- Usare il grassetto per nomi di proprietà, nomi di parametri, nomi di classi, nomi di moduli, nomi di entità, nomi di oggetti o tipi
   - Il grassetto viene usato per il markup semantico, non per dare enfasi
   - Grassetto: usare gli asterischi `**`
 - Corsivo: usare il carattere di sottolineatura `_`
@@ -60,7 +61,7 @@ Di seguito è riportato un riepilogo delle regole da applicare quando si scrivon
 - Riga vuota prima e dopo
 - Usare blocchi di codice con tag: **powershell**, **Output** o altro ID di linguaggio appropriato
 - Blocco senza tag: blocchi di sintassi o altre shell
-- Inserire **Output** in un blocco di codice separato, ad eccezione di esempi semplici in cui non si vuole che il lettore usi il pulsante **Copy**
+- Inserire Output in un blocco di codice separato, ad eccezione di esempi semplici in cui non si vuole che il lettore usi il pulsante **Copy**
 - Vedere l'elenco dei [linguaggi supportati](/contribute/code-in-docs#supported-languages)
 
 ### <a name="lists"></a>Elenchi

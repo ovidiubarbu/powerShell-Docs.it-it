@@ -3,10 +3,10 @@ ms.date: 09/20/2019
 keywords: dsc,powershell,configurazione,installazione
 title: Risorsa File DSC
 ms.openlocfilehash: 4c6945d4cdcbc64ac6d52db563823efe8fd0247e
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "71954678"
 ---
 # <a name="dsc-file-resource"></a>Risorsa File DSC
@@ -38,15 +38,15 @@ File [string] #ResourceName
 
 ## <a name="properties"></a>Proprietà
 
-|Proprietà |Description |
+|Proprietà |Descrizione |
 |---|---|
 |DestinationPath |Il percorso, nel nodo di destinazione, per il quale ci si vuole assicurare che sia **Present** o **Absent** con **Ensure**. |
-|Attributi |Lo stato desiderato degli attributi per il file o la directory di destinazione. I valori validi sono _Archive_, _Hidden_, _ReadOnly_ e _System_. |
+|Attributes |Lo stato desiderato degli attributi per il file o la directory di destinazione. I valori validi sono _Archive_, _Hidden_, _ReadOnly_ e _System_. |
 |Checksum |Il tipo di checksum da usare per determinare se due file sono uguali. I valori validi includono: **SHA-1**, **SHA-256**, **SHA-512**, **createdDate**, **modifiedDate**. |
-|Contenuti |Valido solo se usato con **Type** **File**. Indica il contenuto per il quale ci si vuole assicurare (**Ensure**) che sia **Present** o **Absent** nel file di destinazione. |
-|Credential |Le credenziali necessarie per accedere alle risorse, ad esempio i file di origine. |
+|Sommario |Valido solo se usato con **Tipo** **File**. Indica il contenuto per il quale ci si vuole assicurare (**Ensure**) che sia **Present** o **Absent** nel file di destinazione. |
+|Credenziale |Le credenziali necessarie per accedere alle risorse, ad esempio i file di origine. |
 |Force |Esegue l'override di operazioni di accesso che genererebbero un errore, ad esempio quando si sovrascrive un file o si elimina una directory non vuota. Il valore predefinito è `$false`. |
-|Recurse |Valido solo se usato con **Type** **Directory**. Esegue in modo ricorsivo l'operazione di stato per tutte le sottodirectory. Il valore predefinito è `$false`. |
+|Recurse |Valido solo se usato con **Tipo** **Directory**. Esegue in modo ricorsivo l'operazione di stato per tutte le sottodirectory. Il valore predefinito è `$false`. |
 |SourcePath |Il percorso da cui copiare la risorsa file o cartella. |
 |Type |Il tipo di risorsa configurata. I valori validi sono **Directory** e **File**. Il valore predefinito è **File**. |
 |MatchSource |Determina se la risorsa deve monitorare i nuovi file aggiunti alla directory di origine dopo la copia iniziale. Un valore di `$true` indica che, dopo la copia iniziale, i nuovi file di origine devono essere copiati nella destinazione. Se impostato su `$false`, la risorsa memorizza nella cache il contenuto della directory di origine e ignora eventuali file aggiunti dopo la copia iniziale. Il valore predefinito è `$false`. |
@@ -56,7 +56,7 @@ File [string] #ResourceName
 
 ## <a name="common-properties"></a>Proprietà comuni
 
-|Proprietà |Description |
+|Proprietà |Descrizione |
 |---|---|
 |DependsOn |Indica che prima di configurare la risorsa è necessario eseguire la configurazione di un'altra risorsa. Ad esempio, se il valore di ID del blocco script di configurazione della risorsa che si vuole eseguire per primo è ResourceName e il tipo è ResourceType, la sintassi per usare questa proprietà è `DependsOn = "[ResourceType]ResourceName"`. |
 |Ensure |Determina se il file e **Contents** in **Destination** devono esistere o meno. Impostare questa proprietà su **Present** per assicurarsi che il file esista. Impostarla su **Absent** per specificare che il contenuto non esiste. Il valore predefinito è **Present**. |
@@ -65,7 +65,7 @@ File [string] #ResourceName
 > [!NOTE]
 > La proprietà comune **PsDscRunAsCredential** è stata aggiunta in WMF 5.0 per consentire l'esecuzione di qualsiasi risorsa DSC nel contesto di altre credenziali. Per altre informazioni, vedere [Usare credenziali con risorse DSC](../../../configurations/runasuser.md).
 
-### <a name="additional-information"></a>Altre informazioni
+### <a name="additional-information"></a>Informazioni aggiuntive
 
 - Quando si specifica solo un **DestinationPath**, la risorsa garantisce che il percorso esista se **Present** o non esista se **Absent**.
 - Quando si specifica un **SourcePath** e un **DestinationPath** con un valore **Type** **Directory**, la risorsa copia la directory di origine nel percorso di destinazione. Le proprietà **Recurse**, **Force** e **MatchSource** modificano il tipo di operazione di copia eseguita, mentre **Credential** determina quale account usare per accedere alla directory di origine.

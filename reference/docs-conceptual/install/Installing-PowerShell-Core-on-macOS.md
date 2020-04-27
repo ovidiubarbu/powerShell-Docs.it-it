@@ -2,12 +2,12 @@
 title: Installazione di PowerShell in macOS
 description: Informazioni sull'installazione di PowerShell in macOS
 ms.date: 12/12/2018
-ms.openlocfilehash: 3a5e71d0f69d0c39f9b7f3fa667863d7ec0a31dd
-ms.sourcegitcommit: bf71c8c5e2a4fc7d5c3a67a537db1285089d03a7
+ms.openlocfilehash: 4640cef3f99aefe36d69d4eb7cb4859bde1c0347
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80395003"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "80977523"
 ---
 # <a name="installing-powershell-on-macos"></a>Installazione di PowerShell in macOS
 
@@ -146,13 +146,7 @@ xcode-select --install
 
 ### <a name="install-openssl"></a>Installare OpenSSL
 
-OpenSSL è necessario per la comunicazione remota di PowerShell e le operazioni CIM. È possibile eseguire l'installazione tramite MacPorts o Brew.
-
-#### <a name="install-openssl-via-brew"></a>Installare OpenSSL tramite Brew
-
-Vedere [Informazioni su Brew](#about-brew) per informazioni su Brew.
-
-Per installare OpenSSL, eseguire `brew install openssl`.
+OpenSSL è necessario per la comunicazione remota di PowerShell e le operazioni CIM. È possibile eseguire l'installazione tramite MacPorts.
 
 #### <a name="install-openssl-via-macports"></a>Installare OpenSSL tramite MacPorts
 
@@ -161,12 +155,12 @@ Per installare OpenSSL, eseguire `brew install openssl`.
    Se sono necessarie istruzioni, vedere la [guida all'installazione](https://guide.macports.org/chunked/installing.macports.html).
 1. Aggiornare MacPorts eseguendo `sudo port selfupdate`.
 1. Aggiornare i pacchetti MacPorts eseguendo `sudo port upgrade outdated`.
-1. Installare OpenSSL eseguendo `sudo port install openssl`.
+1. Installare OpenSSL eseguendo `sudo port install openssl10`.
 1. Collegare le librerie per renderle disponibili per PowerShell:
 
 ```sh
 sudo mkdir -p /usr/local/opt/openssl
-sudo ln -s /opt/local/lib /usr/local/opt/openssl/lib
+sudo ln -s /opt/local/lib/openssl-1.0 /usr/local/opt/openssl/lib
 ```
 
 ## <a name="uninstalling-powershell"></a>Disinstallazione di PowerShell

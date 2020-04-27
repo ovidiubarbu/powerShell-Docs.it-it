@@ -3,10 +3,10 @@ ms.date: 06/12/2017
 keywords: dsc,powershell,configurazione,installazione
 title: Metodo PerformRequiredConfigurationChecks
 ms.openlocfilehash: 909e3a48d08e0220ab0efc6a03bea7ead5d9843e
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "71955008"
 ---
 # <a name="performrequiredconfigurationchecks-method"></a>Metodo PerformRequiredConfigurationChecks
@@ -25,7 +25,7 @@ uint32 PerformRequiredConfigurationChecks(
 
 *Flags* \[in\] Maschera di bit che specifica il tipo di verifica di coerenza da eseguire. I valori seguenti sono validi e possono essere combinati tramite un'operazione bit per bit **OR**:
 
-|Value |Description |
+|valore |Descrizione |
 |:--- |:---|
 |**1** | Una verifica di coerenza normale. |
 |**2** | La continuazione di una verifica di coerenza dopo un riavvio. Questo valore non deve essere combinato con altri valori. |

@@ -3,12 +3,12 @@ title: Guida introduttiva ai contributi alla documentazione di PowerShell
 description: Questo articolo offre una panoramica su come contribuire alla documentazione di PowerShell.
 ms.date: 03/05/2020
 ms.topic: conceptual
-ms.openlocfilehash: 95eb2c3157a99fcb6560914da8464022e1b64fad
-ms.sourcegitcommit: 18d832858a7b8ea094763afa753e0f48f01372e7
+ms.openlocfilehash: fdf29feb75abb6592205aaf1726c07a60ce3a924
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/10/2020
-ms.locfileid: "79060306"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81005517"
 ---
 # <a name="get-started-contributing-to-powershell-documentation"></a>Guida introduttiva ai contributi alla documentazione di PowerShell
 

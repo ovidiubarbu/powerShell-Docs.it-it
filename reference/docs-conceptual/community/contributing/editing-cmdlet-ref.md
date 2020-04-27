@@ -3,12 +3,12 @@ title: Modifica degli articoli di riferimento
 description: Questo articolo illustra i requisiti specifici per la modifica delle informazioni di riferimento sui cmdlet e degli argomenti About nella documentazione di PowerShell.
 ms.date: 03/05/2020
 ms.topic: conceptual
-ms.openlocfilehash: 3aed1c14429310c57681397d4877a3a6f48400fd
-ms.sourcegitcommit: 30ccbbb32915b551c4cd4c91ef1df96b5b7514c4
+ms.openlocfilehash: e135f6cc81ba7537a535a08421e1ca9b2b2af573
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80500966"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81624772"
 ---
 # <a name="editing-reference-articles"></a>Modifica degli articoli di riferimento
 
@@ -26,18 +26,17 @@ PlatyPS ha uno schema hardcoded per le informazioni di riferimento del cmdlet sc
 
 ## <a name="formatting-about_-files"></a>Formattazione dei file About_
 
-I file `About_*` vengono ora elaborati da [Pandoc][], anziché da PlatyPS. I file `About_*` sono formattati in modo da ottenere la massima compatibilità con tutte le versioni di PowerShell e con gli strumenti di pubblicazione.
+I file `About_*` sono scritti in Markdown ma vengono spediti come file di testo normale. Per convertire il Markdown in testo normale si usa [Pandoc][]. I file `About_*` sono formattati in modo da ottenere la massima compatibilità con tutte le versioni di PowerShell e con gli strumenti di pubblicazione.
 
 Linee guida di base per la formattazione:
 
-- Limitare le righe a 80 caratteri
-- Il limite per i blocchi di codice e le tabelle è di 76 caratteri perché Pandoc imposta un rientro di quattro spazi durante la conversione in testo normale
-- Le tabelle devono rientrare nei 76 caratteri
-  - Mandare a capo manualmente il contenuto delle celle su più righe
-  - Usare i caratteri `|` di apertura e chiusura in ogni riga
-  - Vedere un esempio funzionante in [about_Comparison_Operators][about-example]
-- Uso dei caratteri speciali Pandoc `\`,`$` e `<`
-  - All'interno di un'intestazione, questi caratteri devono essere preceduti dal carattere di escape `\` o racchiusi tra apici inversi (`` ` ``)
+- Limitare le righe a 80 caratteri. In Pandoc alcuni blocchi Markdown vengono rientrati e devono quindi essere modificati.
+  - I blocchi di codice sono limitati a 76 caratteri
+  - Le tabelle sono limitate a 76 caratteri
+  - Le citazioni e gli avvisi sono limitati a 78 caratteri
+
+- Uso dei metacaratteri speciali Pandoc `\`,`$` e `<`
+  - All'interno di un'intestazione, questi caratteri devono essere preceduti dal carattere di escape `\` o racchiusi in intervalli di codice con apici inversi (`` ` ``)
   - All'interno di un paragrafo, questi caratteri devono essere inseriti in intervalli di codice. Ad esempio:
 
     ~~~markdown
@@ -45,6 +44,29 @@ Linee guida di base per la formattazione:
 
     The `$foo` variable is used to store ...
     ~~~
+
+- Le tabelle devono rientrare nei 76 caratteri
+  - Mandare a capo manualmente il contenuto delle celle su più righe
+  - Usare i caratteri `|` di apertura e chiusura in ogni riga
+  - Nell'esempio seguente viene illustrato come costruire correttamente una tabella contenente informazioni in cui viene eseguito il wrapping su più righe all'interno di una cella.
+
+    ~~~markdown
+    ```
+    |Operator|Description                |Example                          |
+    |--------|---------------------------|---------------------------------|
+    |`-is`   |Returns TRUE when the input|`(get-date) -is [DateTime]`      |
+    |        |is an instance of the      |`True`                           |
+    |        |specified .NET type.       |                                 |
+    |`-isNot`|Returns TRUE when the input|`(get-date) -isNot [DateTime]`   |
+    |        |not an instance of the     |`False`                          |
+    |        |specified.NET type.        |                                 |
+    |`-as`   |Converts the input to the  |`"5/7/07" -as [DateTime]`        |
+    |        |specified .NET type.       |`Monday, May 7, 2007 12:00:00 AM`|
+    ```
+    ~~~
+
+    > [!NOTE]
+    > Il limite di 76 colonne si applica solo agli argomenti `About_*`. È possibile usare colonne di grandi dimensioni in articoli concettuali o di riferimento sui cmdlet.
 
 ## <a name="structuring-examples"></a>Formato per gli esempi
 

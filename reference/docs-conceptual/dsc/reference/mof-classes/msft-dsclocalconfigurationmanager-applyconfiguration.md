@@ -3,10 +3,10 @@ ms.date: 06/12/2017
 keywords: dsc,powershell,configurazione,installazione
 title: Metodo ApplyConfiguration
 ms.openlocfilehash: 0425b9a7db37e421830ba37da8f5c0a4877a1b72
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "71953458"
 ---
 # <a name="applyconfiguration-method"></a>Metodo ApplyConfiguration

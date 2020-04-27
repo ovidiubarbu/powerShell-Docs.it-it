@@ -3,10 +3,10 @@ ms.date: 09/20/2019
 keywords: dsc,powershell,configurazione,installazione
 title: Risorsa Archive DSC
 ms.openlocfilehash: ddabe1a623783fe213b8059f47851184d5253fc5
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "71954768"
 ---
 # <a name="dsc-archive-resource"></a>Risorsa Archive DSC
@@ -33,17 +33,17 @@ Archive [string] #ResourceName
 
 ## <a name="properties"></a>Proprietà
 
-|Proprietà |Description |
+|Proprietà |Descrizione |
 |---|---|
 |Destination |Indica il percorso in cui si vuole specificare di estrarre il contenuto dell'archivio. |
 |Path |Specifica il percorso di origine del file di archivio. |
 |Checksum |Definisce il tipo da usare per determinare se due file sono uguali. Se la proprietà **Checksum** non è specificata, per il confronto viene usato solo il nome del file o della directory. I valori validi includono: **SHA-1**, **SHA-256**, **SHA-512**, **createdDate**, **modifiedDate**. Se si specifica **Checksum** senza **Validate**, la configurazione non riesce. |
 |Force |Determinate operazioni sui file, ad esempio quando si sovrascrive un file o si elimina una directory non vuota, generano un errore. Usando la proprietà **Force**, tali errori vengono ignorati. Il valore predefinito è **False**. |
-|Validate| Usa la proprietà **Checksum** per determinare se l'archivio corrisponde alla firma. Se si specifica **Checksum** senza **Validate**, la configurazione non riesce. Se si specifica **Validate** senza **Checksum**, per impostazione predefinita viene usato un _checksum_ **SHA-256**. |
+|Convalida| Usa la proprietà **Checksum** per determinare se l'archivio corrisponde alla firma. Se si specifica **Checksum** senza **Validate**, la configurazione non riesce. Se si specifica **Validate** senza **Checksum**, per impostazione predefinita viene usato un **Checksum** _SHA-256_. |
 
 ## <a name="common-properties"></a>Proprietà comuni
 
-|Proprietà |Description |
+|Proprietà |Descrizione |
 |---|---|
 |DependsOn |Indica che prima di configurare la risorsa è necessario eseguire la configurazione di un'altra risorsa. Ad esempio, se il valore di ID del blocco script di configurazione della risorsa che si vuole eseguire per primo è ResourceName e il tipo è ResourceType, la sintassi per usare questa proprietà è `DependsOn = "[ResourceType]ResourceName"`. |
 |Ensure |Determina se verificare l'esistenza del contenuto dell'archivio in **Destination**. Impostare questa proprietà su **Present** per specificare che il contenuto esiste. Impostarla su **Absent** per specificare che il contenuto non esiste. Il valore predefinito è **Present**. |

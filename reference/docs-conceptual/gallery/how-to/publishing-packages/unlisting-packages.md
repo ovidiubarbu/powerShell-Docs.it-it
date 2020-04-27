@@ -3,12 +3,12 @@ ms.date: 06/12/2017
 contributor: JKeithB
 keywords: gallery,powershell,cmdlet,psgallery
 title: Esclusione di pacchetti dall'elenco
-ms.openlocfilehash: fb66fd23dae1d4640056a764c31426f61f56d910
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.openlocfilehash: b7404420db531ac5d97debd46e1b84c6fdd49d9a
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "71328272"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "80978271"
 ---
 # <a name="unlisting-packages"></a>Esclusione di pacchetti dall'elenco
 
@@ -16,9 +16,9 @@ ms.locfileid: "71328272"
 
 PowerShell Gallery non supporta l'eliminazione permanente di pacchetti da parte degli utenti.
 Questo consente ad altre persone di creare dipendenze dai pacchetti di un utente senza preoccupazioni per possibili interruzioni nel futuro.
-Se, ad esempio, il modulo Pester dipende dal modulo Azure e quest'ultimo viene rimosso da PowerShell Gallery, l'utente non può più usare il modulo Pester.
+Se, ad esempio, il modulo Pester dipende dal modulo Azure e quest'ultimo viene rimosso da PowerShell Gallery, gli utenti non possono più usare il modulo Pester.
 
-Anziché rimuovere un pacchetto, tuttavia, è possibile escluderlo dall'elenco.
+Anziché rimuovere un pacchetto, è possibile escluderlo dall'elenco.
 
 **Quali sono le conseguenze dell'esclusione di un pacchetto dall'elenco in PowerShell Gallery?**
 
@@ -26,7 +26,7 @@ L'esclusione di un pacchetto dall'elenco, ad esempio un modulo o uno script, in 
 Il solo modo per scaricare un pacchetto escluso dall'elenco consiste nello specificarne esattamente il nome e la versione.
 Per questo motivo, l'esclusione di un pacchetto dall'elenco non causa interruzioni per altri moduli o script dipendenti.
 
-Per escludere il pacchetto dall'elenco, visitare la pagina dei dettagli del pacchetto e selezionare 'Delete Module' (Elimina modulo). Deselezionare la casella di controllo 'Listed' (Elencato) e fare clic su Salva.
+Per escludere il pacchetto dall'elenco, visitare la pagina dei dettagli del pacchetto e selezionare 'Delete Module' (Elimina modulo). Deselezionare la casella di controllo "Listed" (Elencato) e selezionare "Salva".
 
 **In che modo è possibile rimuovere un pacchetto?**
 

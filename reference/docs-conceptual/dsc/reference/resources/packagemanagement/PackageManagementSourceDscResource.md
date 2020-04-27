@@ -3,10 +3,10 @@ ms.date: 09/20/2019
 keywords: dsc,powershell,configurazione,installazione
 title: Risorsa PackageManagementSource DSC
 ms.openlocfilehash: 20b7851e44751d4bd0add718d2f7294d5215ab70
-ms.sourcegitcommit: debd2b38fb8070a7357bf1a4bf9cc736f3702f31
+ms.sourcegitcommit: 6545c60578f7745be015111052fd7769f8289296
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 04/22/2020
 ms.locfileid: "71954788"
 ---
 # <a name="dsc-packagemanagementsource-resource"></a>Risorsa PackageManagementSource DSC
@@ -37,7 +37,7 @@ PackageManagementSource [String] #ResourceName
 
 ## <a name="properties"></a>Proprietà
 
-|Proprietà |Description |
+|Proprietà |Descrizione |
 |---|---|
 |Nome |Specifica il nome dell'origine del pacchetto da registrare o di cui annullare la registrazione nel sistema. |
 |ProviderName |Specifica il nome del provider OneGet tramite il quale è possibile l'interoperabilità con l'origine del pacchetto. |
@@ -47,7 +47,7 @@ PackageManagementSource [String] #ResourceName
 
 ## <a name="common-properties"></a>Proprietà comuni
 
-|Proprietà |Description |
+|Proprietà |Descrizione |
 |---|---|
 |DependsOn |Indica che prima di configurare la risorsa è necessario eseguire la configurazione di un'altra risorsa. Ad esempio, se il valore di ID del blocco script di configurazione della risorsa che si vuole eseguire per primo è ResourceName e il tipo è ResourceType, la sintassi per usare questa proprietà è `DependsOn = "[ResourceType]ResourceName"`. |
 |Ensure |Determina se l'origine del pacchetto deve essere registrata oppure se ne deve essere annullata la registrazione. Il valore predefinito è **Present**. |
